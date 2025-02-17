@@ -18,15 +18,26 @@ export const zip = (arr1: Array<Roll[]>, arr2: Array<Roll[]>) => arr1.map((_, i)
 
 const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: GatyaSetTrackRolls[] }) => {  
 
-  console.log('rollsA', rollsA);
+  // console.log('rollsA', rollsA);
   // console.log('rollsB', rollsB);
-  console.log('rollsA.map', rollsA.map((roll) => roll.track));
+  // console.log('rollsA.map', rollsA.map((roll) => roll.track));
   // console.log('rollsB.map', rollsB.map((roll) => roll.track));
-  console.log('rollsA.T', T(rollsA.map((roll) => roll.track)));
+  // console.log('rollsA.T', T(rollsA.map((roll) => roll.track)));
   // console.log('rollsB.T', T(rollsB.map((roll) => roll.track)));
 
   const zippedRolls = zip(T(rollsA.map((roll) => roll.track)), T(rollsB.map((roll) => roll.track)));
-  console.log('rollsAB.zip', zippedRolls);
+  console.log('zippedRolls', zippedRolls);
+  const aodamas: string[] = [
+    'にゃんこ砲攻撃力',
+    'にゃんこ砲チャージ',
+    '働きネコ仕事効率',
+    '働きネコお財布',
+    'お城体力',
+    '研究力',
+    '会計力',
+    '勉強力',
+    '統率力'
+  ];
 
   return (
     <table>
@@ -54,8 +65,12 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
             { // track A
               row[0].map((unit: Roll, j: number) => (
               <React.Fragment key={j}>
-                <td className='rolltable-cell-numeric rolltable-row-A'>{unit.unitIfDistinct.unitIndex}</td>
-                <td className={`rolltable-cell-unitname rarity-${unit.rarity}A rolltable-row-A`}>
+                <td className='rolltable-cell-numeric'>{unit.unitIfDistinct.unitIndex}</td>
+                <td className={`
+                  rolltable-cell-unitname
+                  ${aodamas.includes(unit.unitIfDistinct.unitName) ? 'aodama' : ''}
+                  rarity-${unit.rarity}A
+                `}>
                   {unit.unitIfDistinct.unitName}
                   {unit.dupeInfo?.showDupe && ( // dupe track switch
                     <span className='rolltable-switch-AtoB'><br/>

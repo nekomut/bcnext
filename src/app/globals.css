@@ -23,7 +23,7 @@ body {
 }
 
 .rolltable-header {
-  @apply text-teal-600 text-left;
+  @apply text-teal-600 text-left whitespace-nowrap;
 }
 .rolltable-header-seed {
   @apply text-gray-600 text-right font-normal pl-2
@@ -40,15 +40,18 @@ body {
 .rolltable-cellid-B {
   @apply text-green-600 text-right font-bold pl-1;
 }
+.rolltable-cell-unitname {
+  @apply text-left whitespace-nowrap;
+}
 .rolltable-cell-numeric {
   @apply text-right;
 }
 
 .rolltable-switch-AtoB {
-  @apply text-red-700 font-normal;
+  @apply text-red-700 font-bold;
 }
 .rolltable-switch-BtoA {
-  @apply text-green-700 font-normal;
+  @apply text-green-700 font-bold;
 }
 
 .rarity-0A {
@@ -72,12 +75,12 @@ body {
   @apply text-pink-500;
 }
 .rarity-3B {
-  @apply text-pink-800;
+  @apply text-pink-900 font-bold;
 }
 
 .rarity-4A {
-  @apply text-purple-500 border-purple-500 border border-collapse;
+  @apply text-purple-500 border-purple-500 border-y-2;
 }
 .rarity-4B {
-  @apply text-purple-800 border-purple-800 border-collapse border font-bold;
+  @apply text-purple-700 font-bold border-purple-700 border-y-2;
 }

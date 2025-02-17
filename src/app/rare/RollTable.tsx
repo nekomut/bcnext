@@ -48,7 +48,7 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
               row[0].map((unit: Roll, j: number) => (
               <React.Fragment key={j}>
                 <td className='rolltable-cell-numeric px-1'>{unit.unitIfDistinct.unitIndex}</td>
-                <td className={`rarity-${unit.rarity}A`}>
+                <td className={`rolltable-cell-unitname rarity-${unit.rarity}A`}>
                   {unit.unitIfDistinct.unitName}
                   {unit.dupeInfo?.showDupe && ( // dupe track switch
                     <span className='switch-AtoB'><br/>
@@ -71,7 +71,7 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
               row[1].map((unit: Roll, j: number) => (
               <React.Fragment key={j}>
                 <td className='rolltable-cell-numeric px-1'>{unit.unitIfDistinct.unitIndex}</td>
-                <td className={`rarity-${unit.rarity}B`}>
+                <td className={`rolltable-cell-unitname rarity-${unit.rarity}B`}>
                   {unit.unitIfDistinct.unitName}
                   {unit.dupeInfo?.showDupe && ( // dupe track switch
                     <span className='switch-BtoA'><br/>

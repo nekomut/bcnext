@@ -21,12 +21,27 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+.label-seed {
+  @apply pl-3;
+}
+.input-seed {
+  @apply bg-gray-100 font-bold text-right text-green-600 rounded w-[79px] pr-1 mx-1;
+}
+.label-rolls {
+  @apply pl-3;
+}
+.input-rolls {
+  @apply bg-gray-100 font-bold text-right text-gray-600 rounded w-[50px] pr-1 mx-1;
+}
+.button-update {
+  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold px-1 mx-1 my-1 rounded;
+}
 
 .rolltable-header {
-  @apply text-teal-600 text-left whitespace-nowrap;
+  @apply text-zinc-400 text-left whitespace-nowrap border border-x-0 border-t-0 border-slate-500;
 }
 .rolltable-header-seed {
-  @apply text-gray-600 text-right font-normal pl-2
+  @apply text-gray-600 min-w-[80px] text-right font-normal pl-3
 }
 .rolltable-row-A {
   @apply flex-row align-top font-bold;
@@ -35,13 +50,13 @@ body {
   @apply flex-row align-top text-gray-500;
 }
 .rolltable-cellid-A {
-  @apply text-rose-500 text-right font-bold pl-1;
+  @apply text-rose-500 min-w-[38px] text-right font-bold pl-2;
 }
 .rolltable-cellid-B {
-  @apply text-green-600 text-right font-bold pl-1;
+  @apply text-green-600 text-right font-bold pl-2;
 }
 .rolltable-cell-unitname {
-  @apply text-left whitespace-nowrap;
+  @apply text-left px-1 whitespace-nowrap;
 }
 .rolltable-cell-numeric {
   @apply text-right;

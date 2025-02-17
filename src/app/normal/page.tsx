@@ -16,7 +16,6 @@ export default function Page() {
       <Suspense>
         <GatyaSets />
         <SeedAndRolls />
-        <hr />
         <RollTable />
       </Suspense>
     </div>

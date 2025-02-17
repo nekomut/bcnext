@@ -32,12 +32,12 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
     <table>
       <thead>
         <tr>
-          <th></th>
-          <th className='rolltable-header-seed'>{zippedRolls[0][0][0].raritySeed}</th>
-          <th></th>
+          <th className='rolltable-header'></th>
+          <th className='rolltable-header rolltable-header-seed'>{zippedRolls[0][0][0].raritySeed}</th>
+          <th className='rolltable-header'></th>
           {rollsA.map((roll, i) => (
           <React.Fragment key={i}>
-            <th></th>
+            <th className='rolltable-header'></th>
             <th className='rolltable-header'>{roll.gatyasetName}({roll.gatyasetId})</th>
           </React.Fragment>
           ))}
@@ -49,12 +49,12 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
           <tr className='rolltable-row-A'>
             <td className='rolltable-cellid-A'>{i + 1}A</td>
             <td className='rolltable-cell-numeric'>{row[0][0].unitIfDistinct.unitSeed}</td>
-            <td className='rolltable-cell-numeric px-1'>{row[0][0].raritySeed % 10000}</td>
+            <td className='rolltable-cell-numeric'>{row[0][0].raritySeed % 10000}</td>
 
             { // track A
               row[0].map((unit: Roll, j: number) => (
               <React.Fragment key={j}>
-                <td className='rolltable-cell-numeric rolltable-row-A px-1'>{unit.unitIfDistinct.unitIndex}</td>
+                <td className='rolltable-cell-numeric rolltable-row-A'>{unit.unitIfDistinct.unitIndex}</td>
                 <td className={`rolltable-cell-unitname rarity-${unit.rarity}A rolltable-row-A`}>
                   {unit.unitIfDistinct.unitName}
                   {unit.dupeInfo?.showDupe && ( // dupe track switch
@@ -72,12 +72,12 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
           <tr className='rolltable-row-B'>
             <td className='rolltable-cellid-B'>{i + 1}B</td>
             <td className='rolltable-cell-numeric'>{row[1][0].unitIfDistinct.unitSeed}</td>
-            <td className='rolltable-cell-numeric px-1'>{row[1][0].raritySeed % 10000}</td>
+            <td className='rolltable-cell-numeric'>{row[1][0].raritySeed % 10000}</td>
 
             { // track B
               row[1].map((unit: Roll, j: number) => (
               <React.Fragment key={j}>
-                <td className='rolltable-cell-numeric px-1'>{unit.unitIfDistinct.unitIndex}</td>
+                <td className='rolltable-cell-numeric'>{unit.unitIfDistinct.unitIndex}</td>
                 <td className={`rolltable-cell-unitname rarity-${unit.rarity}B font-normal`}>
                   {unit.unitIfDistinct.unitName}
                   {unit.dupeInfo?.showDupe && ( // dupe track switch

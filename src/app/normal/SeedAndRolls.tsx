@@ -29,26 +29,26 @@ export default function SeedAndRolls() {
 
   return (
     <div>
-      <label className="ml-1" htmlFor="input-seed">seed</label>
+      <label className="label-seed" htmlFor="input-seed">seed</label>
       <input
         id="input-seed"
         name="seed"
         type="text"
         min={1}
-        className="bg-gray-100 font-bold text-right text-green-600 rounded w-[72px] pr-1 mx-1"
+        className="input-seed"
         value={seedInput}
         onChange={(event) => {
           setSeedInput(event.target.value);
           setQueryParam("seed", event.target.value);
         }}
       />
-      <label className="ml-1" htmlFor='input-rolls'>rolls</label>
+      <label className="label-rolls" htmlFor='input-rolls'>rolls</label>
       <input
         id="input-rolls"
         name="rolls"
         type="number"
         min={1}
-        className="bg-gray-100 font-bold text-right text-gray-600 rounded w-[50px] pr-1 mx-1"
+        className="input-rolls"
         value={rollsInput}
         onChange={(event) => {
           setRollsInput(event.target.value);
@@ -57,7 +57,7 @@ export default function SeedAndRolls() {
       />
       <button
         type="button"
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-1 mx-1 my-1 rounded"
+        className="button-update"
         onClick={() => {
           // setQueryParam("seed", seedInput);
           // setQueryParam("rolls", rollsInput);

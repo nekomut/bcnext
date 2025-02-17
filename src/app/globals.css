@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #222222;
+  --foreground: #dddddd;
+}
+
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #999999;
+    --foreground: #222222;
+  }
+}
+*/
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.rolltable-header {
+  @apply text-teal-600 text-left;
+}
+.rolltable-header-seed {
+  @apply text-gray-600 text-right font-normal pl-2
+}
+.rolltable-row-A {
+  @apply flex-row align-top font-bold;
+}
+.rolltable-row-B {
+  @apply flex-row align-top text-gray-500;
+}
+.rolltable-cellid-A {
+  @apply text-rose-500 text-right font-bold pl-1;
+}
+.rolltable-cellid-B {
+  @apply text-green-600 text-right font-bold pl-1;
+}
+.rolltable-cell-numeric {
+  @apply text-right;
+}
+
+.rolltable-switch-AtoB {
+  @apply text-red-700 font-normal;
+}
+.rolltable-switch-BtoA {
+  @apply text-green-700 font-normal;
+}
+
+.rarity-0A {
+}
+.rarity-0B {
+}
+
+.rarity-1A {
+}
+.rarity-1B {
+}
+
+.rarity-2A {
+  @apply text-yellow-500;
+}
+.rarity-2B {
+  @apply text-yellow-800;
+}
+
+.rarity-3A {
+  @apply text-pink-500;
+}
+.rarity-3B {
+  @apply text-pink-800;
+}
+
+.rarity-4A {
+  @apply text-purple-500 border-purple-500 border border-collapse;
+}
+.rarity-4B {
+  @apply text-purple-800 border-purple-800 border-collapse border font-bold;
+}

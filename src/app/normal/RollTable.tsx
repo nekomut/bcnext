@@ -438,8 +438,6 @@ const RollTable = () => {
   //   }
   // }
 
-  console.log('allRolls', allRolls);
-
   const trackARolls = allRolls.map((roll) => ({
     gatyasetName: roll.gatyasetName,
     gatyasetShortName: roll.gatyasetShortName,

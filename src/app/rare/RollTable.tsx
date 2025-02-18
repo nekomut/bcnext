@@ -83,8 +83,8 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
           <tr className='rolltable-row-B'>
             <td className='rolltable-cellid-B'>{i + 1}B</td>
             <td className='rolltable-cell-numeric hover:underline'>
-              <a href={`?seed=${row[0][0].unitIfDistinct.unitSeed}&lastCat=${row[0][0].unitIfDistinct.unitName}&rolls=${rolls}&gatyasets=${gatyasets}`}>
-                {row[0][0].unitIfDistinct.unitSeed}
+              <a href={`?seed=${row[1][0].unitIfDistinct.unitSeed}&lastCat=${row[1][0].unitIfDistinct.unitName}&rolls=${rolls}&gatyasets=${gatyasets}`}>
+                {row[1][0].unitIfDistinct.unitSeed}
               </a>
             </td>
             <td className='rolltable-cell-numeric'>{row[1][0].raritySeed % 10000}</td>

@@ -52,17 +52,13 @@ export default function SeedAndRolls() {
         value={rollsInput}
         onChange={(event) => {
           setRollsInput(event.target.value);
-          setQueryParam("rolls", event.target.value);
+          setQueryParam("rolls", Number(event.target.value) > 0 ? event.target.value : DEFAULTS.rolls);
         }}
       />
       <button
         type="button"
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold px-1 mx-1 my-1 rounded"
+        className="button-update"
         onClick={() => {
-          // setQueryParam("seed", seedInput);
-          // setQueryParam("rolls", rollsInput);
-          // console.log("seedInput", seedInput, getQueryParam("seed"));
-          // console.log("rollsInput", rollsInput, getQueryParam("rolls"));
           router.refresh();
         }}
       >

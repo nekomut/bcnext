@@ -2,7 +2,6 @@
 
 import React from "react";
 import { useSearchParams } from 'next/navigation';
-// import { T, zip } from "@/app/utils";
 import { Roll, xorShift32, GenerateAllRolls } from "./seed";
 import { DEFAULTS } from "./constants";
 
@@ -24,6 +23,15 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
   // console.log('rollsB.map', rollsB.map((roll) => roll.track));
   // console.log('rollsA.T', T(rollsA.map((roll) => roll.track)));
   // console.log('rollsB.T', T(rollsB.map((roll) => roll.track)));
+
+  const searchParams = useSearchParams();
+  const getQueryParam = (key: keyof typeof DEFAULTS) => {
+    return searchParams.get(key);
+  };
+  const seed = parseInt(getQueryParam("seed") || DEFAULTS.seed, 10);
+  const rolls = parseInt(getQueryParam("rolls") || DEFAULTS.rolls, 10);
+  const lastCat = getQueryParam("lastCat") || DEFAULTS.lastCat;
+  const gatyasets = getQueryParam("gatyasets") || DEFAULTS.gatyasets;
 
   const zippedRolls = zip(T(rollsA.map((roll) => roll.track)), T(rollsB.map((roll) => roll.track)));
   console.log('zippedRolls', zippedRolls);
@@ -59,7 +67,11 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
         <React.Fragment key={i}>
           <tr className='rolltable-row-A'>
             <td className='rolltable-cellid-A'>{i + 1}A</td>
-            <td className='rolltable-cell-numeric'>{row[0][0].unitIfDistinct.unitSeed}</td>
+            <td className='rolltable-cell-numeric hover:underline'>
+              <a href={`?seed=${row[0][0].unitIfDistinct.unitSeed}&lastCat=${row[0][0].unitIfDistinct.unitName}&rolls=${rolls}&gatyasets=${gatyasets}`}>
+                {row[0][0].unitIfDistinct.unitSeed}
+              </a>
+            </td>
             <td className='rolltable-cell-numeric'>{row[0][0].raritySeed % 10000}</td>
 
             { // track A
@@ -73,10 +85,16 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
                 `}>
                   {unit.unitIfDistinct.unitName}
                   {unit.dupeInfo?.showDupe && ( // dupe track switch
-                    <span className='rolltable-switch-AtoB'><br/>
-                      {unit.unitIfDupe?.unitName}
-                      {` -> ${unit.dupeInfo.targetCellId}${unit.dupeInfo.targetWillRerollAgain ? 'R' : ''}`}
-                    </span>
+                    <>
+                      <br/>
+                      <span className='rolltable-switch-AtoB'>
+                        {unit.unitIfDupe?.unitName}
+                        {` -> ${unit.dupeInfo.targetCellId}`}
+                      </span>
+                      <span className='rolltable-switch-BtoA'>
+                        {`${unit.dupeInfo.targetWillRerollAgain ? 'R' : ''}`}
+                      </span>
+                    </>
                   )}
                 </td>
               </React.Fragment>
@@ -86,7 +104,11 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
           </tr>
           <tr className='rolltable-row-B'>
             <td className='rolltable-cellid-B'>{i + 1}B</td>
-            <td className='rolltable-cell-numeric'>{row[1][0].unitIfDistinct.unitSeed}</td>
+            <td className='rolltable-cell-numeric hover:underline'>
+              <a href={`?seed=${row[0][0].unitIfDistinct.unitSeed}&lastCat=${row[0][0].unitIfDistinct.unitName}&rolls=${rolls}&gatyasets=${gatyasets}`}>
+                {row[0][0].unitIfDistinct.unitSeed}
+              </a>
+            </td>
             <td className='rolltable-cell-numeric'>{row[1][0].raritySeed % 10000}</td>
 
             { // track B
@@ -96,10 +118,16 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
                 <td className={`rolltable-cell-unitname rarity-${unit.rarity}B font-normal`}>
                   {unit.unitIfDistinct.unitName}
                   {unit.dupeInfo?.showDupe && ( // dupe track switch
-                    <span className='rolltable-switch-BtoA'><br/>
-                      {unit.unitIfDupe?.unitName}
-                      {` -> ${unit.dupeInfo.targetCellId}${unit.dupeInfo.targetWillRerollAgain ? 'R' : ''}`}
-                    </span>
+                    <>
+                      <br/>
+                      <span className='rolltable-switch-BtoA'>
+                        {unit.unitIfDupe?.unitName}
+                        {` -> ${unit.dupeInfo.targetCellId}`}
+                      </span>
+                      <span className='rolltable-switch-AtoB'>
+                        {`${unit.dupeInfo.targetWillRerollAgain ? 'R' : ''}`}
+                      </span>
+                    </>
                   )}
                 </td>
               </React.Fragment>

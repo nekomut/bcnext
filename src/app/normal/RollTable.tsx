@@ -28,9 +28,9 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
   const getQueryParam = (key: keyof typeof DEFAULTS) => {
     return searchParams.get(key);
   };
-  const seed = parseInt(getQueryParam("seed") || DEFAULTS.seed, 10);
+  // const seed = parseInt(getQueryParam("seed") || DEFAULTS.seed, 10);
   const rolls = parseInt(getQueryParam("rolls") || DEFAULTS.rolls, 10);
-  const lastCat = getQueryParam("lastCat") || DEFAULTS.lastCat;
+  // const lastCat = getQueryParam("lastCat") || DEFAULTS.lastCat;
   const gatyasets = getQueryParam("gatyasets") || DEFAULTS.gatyasets;
 
   const zippedRolls = zip(T(rollsA.map((roll) => roll.track)), T(rollsB.map((roll) => roll.track)));

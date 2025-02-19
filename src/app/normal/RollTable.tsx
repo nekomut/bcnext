@@ -2,8 +2,9 @@
 
 import React from "react";
 import { useSearchParams } from 'next/navigation';
-import { Roll, xorShift32, GenerateAllRolls } from "./seed";
+import { Roll, GenerateAllRolls } from "./seed";
 import { DEFAULTS } from "./constants";
+import { NormalGatyaSetList } from "@/data/gatyasets";
 
 export type GatyaSetTrackRolls = {
   gatyasetName: string;
@@ -34,7 +35,8 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
   const gatyasets = getQueryParam("gatyasets") || DEFAULTS.gatyasets;
 
   const zippedRolls = zip(T(rollsA.map((roll) => roll.track)), T(rollsB.map((roll) => roll.track)));
-  console.log('zippedRolls', zippedRolls);
+  // console.log('zippedRolls', zippedRolls);
+  
   const aodamas: string[] = [
     'にゃんこ砲攻撃力',
     'にゃんこ砲チャージ',
@@ -92,8 +94,8 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
                         {` -> ${unit.dupeInfo.targetCellId}`}
                       </span>
                       <span className='rolltable-switch-BtoA'>
-                        {`${unit.dupeInfo.targetCellId.endsWith('A') ? '＊' : ''}`}
                         {`${unit.dupeInfo.targetWillRerollAgain ? 'R' : ''}`}
+                        {`${unit.dupeInfo.targetCellId.endsWith('A') ? '＊' : ''}`}
                       </span>
                     </>
                   )}
@@ -126,8 +128,8 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
                         {` -> ${unit.dupeInfo.targetCellId}`}
                       </span>
                       <span className='rolltable-switch-AtoB'>
-                        {`${unit.dupeInfo.targetCellId.endsWith('B') ? '＊' : ''}`}
                         {`${unit.dupeInfo.targetWillRerollAgain ? 'R' : ''}`}
+                        {`${unit.dupeInfo.targetCellId.endsWith('B') ? '＊' : ''}`}
                       </span>
                     </>
                   )}
@@ -306,7 +308,7 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
 
 
 const RollTable = () => {
-    
+
   const searchParams = useSearchParams();
   const getQueryParam = (key: keyof typeof DEFAULTS) => {
     return searchParams.get(key);
@@ -315,69 +317,74 @@ const RollTable = () => {
   const initialSeed = parseInt(getQueryParam("seed") || DEFAULTS.seed, 10);
   const numRolls = parseInt(getQueryParam("rolls") || DEFAULTS.rolls, 10);
   // Buffer so that track switches near the end of numRolls can be processed
-  const NUM_ROLLS_BUFFER = 10;
-  const lastCatFromQueryParams = getQueryParam("lastCat") || DEFAULTS.lastCat;
+  const NUM_ROLLS_BUFFER = 3;
+  const lastCat = getQueryParam("lastCat") || DEFAULTS.lastCat;
   // const [selectedType, selectedSeedStr, selectedGatyaSet] = getQueryParam("selected")?.split(",") || "";
   // const selectedSeed = parseInt(selectedSeedStr, 10) || 0;
 
-  const allRolls = GenerateAllRolls(initialSeed, numRolls + NUM_ROLLS_BUFFER);
+  const selectedGatyaSets = getQueryParam("gatyasets")?.split(",") || DEFAULTS.gatyasets.split(",");
+  const gatyasets = NormalGatyaSetList.filter((gatyaset) =>
+    selectedGatyaSets.includes(gatyaset.shortName)
+  );
+
+  const allRolls = GenerateAllRolls(initialSeed, numRolls + NUM_ROLLS_BUFFER, gatyasets, lastCat);
 
   // Augment roll data with dupe track switch data
   // For this processing we'll identify each cell by its raritySeed
-  allRolls.forEach(({ trackA, trackB }) => {
-    // Find all cells that should dupe track switch
-    const cellsWithDupeTrackSwitches: number[] = [];
-    const findCellsWithDupeTrackSwitches = (lastCat: string, track: Roll[]) => {
-      track.forEach((roll) => {
-        if (roll.unitIfDupe && roll.unitIfDistinct.unitName === lastCat) {
-          cellsWithDupeTrackSwitches.push(roll.raritySeed);
-        }
-        lastCat = roll.unitIfDistinct.unitName;
-      });
-    };
-    findCellsWithDupeTrackSwitches(lastCatFromQueryParams, trackA);
-    findCellsWithDupeTrackSwitches("", trackB);
+  // allRolls.forEach(({ trackA, trackB }) => {
+  //   // Find all cells that should dupe track switch
+  //   const cellsWithDupeTrackSwitches: number[] = [];
+  //   const findCellsWithDupeTrackSwitches = (lastCat: string, track: Roll[]) => {
+  //     track.forEach((roll) => {
+  //       if (roll.unitIfDupe && roll.unitIfDistinct.unitName === lastCat) {
+  //         cellsWithDupeTrackSwitches.push(roll.raritySeed);
+  //       }
+  //       lastCat = roll.unitIfDistinct.unitName;
+  //     });
+  //   };
+  //   findCellsWithDupeTrackSwitches(lastCat, trackA);
+  //   findCellsWithDupeTrackSwitches("", trackB);
 
-    // Process all cells that should dupe track switch
-    cellsWithDupeTrackSwitches.forEach((raritySeed) => {
-      const findCell = (raritySeed: number) =>
-        trackA.find((roll) => roll.raritySeed === raritySeed) ||
-        trackB.find((roll) => roll.raritySeed === raritySeed);
-      const findCellId = (raritySeed: number) => {
-        const trackAIndex = trackA.findIndex(
-          (roll) => roll.raritySeed === raritySeed
-        );
-        if (trackAIndex >= 0) {
-          return `${trackAIndex + 1}A`;
-        }
-        const trackBIndex = trackB.findIndex(
-          (roll) => roll.raritySeed === raritySeed
-        );
-        return `${trackBIndex + 1}B`;
-      };
+  //   // Process all cells that should dupe track switch
+  //   cellsWithDupeTrackSwitches.forEach((raritySeed) => {
+  //     const findCell = (raritySeed: number) =>
+  //       trackA.find((roll) => roll.raritySeed === raritySeed) ||
+  //       trackB.find((roll) => roll.raritySeed === raritySeed);
+  //     const findCellId = (raritySeed: number) => {
+  //       const trackAIndex = trackA.findIndex(
+  //         (roll) => roll.raritySeed === raritySeed
+  //       );
+  //       if (trackAIndex >= 0) {
+  //         return `${trackAIndex + 1}A`;
+  //       }
+  //       const trackBIndex = trackB.findIndex(
+  //         (roll) => roll.raritySeed === raritySeed
+  //       );
+  //       return `${trackBIndex + 1}B`;
+  //     };
 
-      let sourceCell = findCell(raritySeed)!;
-      let prevUnit = sourceCell.unitIfDistinct.unitName;
-      while (sourceCell.unitIfDistinct.unitName === prevUnit) {
-        prevUnit = sourceCell.unitIfDupe!.unitName;
-        const destinationRaritySeed = xorShift32(
-          sourceCell.unitIfDupe!.unitSeed
-        );
-        const destinationCell = findCell(destinationRaritySeed);
-        if (!destinationCell) {
-          break;
-        }
-        sourceCell.dupeInfo = {
-          showDupe: true,
-          targetCellId: findCellId(destinationRaritySeed),
-          targetWillRerollAgain:
-            sourceCell.unitIfDupe!.unitName ===
-            destinationCell.unitIfDistinct.unitName,
-        };
-        sourceCell = destinationCell;
-      }
-    });
-  });
+  //     let sourceCell = findCell(raritySeed)!;
+  //     let prevUnit = sourceCell.unitIfDistinct.unitName;
+  //     while (sourceCell.unitIfDistinct.unitName === prevUnit) {
+  //       prevUnit = sourceCell.unitIfDupe!.unitName;
+  //       const destinationRaritySeed = xorShift32(
+  //         sourceCell.unitIfDupe!.unitSeed
+  //       );
+  //       const destinationCell = findCell(destinationRaritySeed);
+  //       if (!destinationCell) {
+  //         break;
+  //       }
+  //       sourceCell.dupeInfo = {
+  //         showDupe: true,
+  //         targetCellId: findCellId(destinationRaritySeed),
+  //         targetWillRerollAgain:
+  //           sourceCell.unitIfDupe!.unitName ===
+  //           destinationCell.unitIfDistinct.unitName,
+  //       };
+  //       sourceCell = destinationCell;
+  //     }
+  //   });
+  // });
 
   // // Highlight the next 10 pulls from selected
   // if (selectedType) {

@@ -5,6 +5,7 @@ export const DEFAULTS = {
     945,
     941,
     967,
+    950,
     954,
     953,
   ].join(","),

@@ -68,8 +68,11 @@ body {
 .rolltable-switch-BtoA {
   @apply text-green-700 font-bold;
 }
-.aodama {
+.aodama-A {
   @apply text-cyan-500;
+}
+.aodama-B {
+  @apply text-cyan-700;
 }
 .rarity-0A {
 }

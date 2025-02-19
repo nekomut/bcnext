@@ -18,13 +18,6 @@ export const zip = (arr1: Array<Roll[]>, arr2: Array<Roll[]>) => arr1.map((_, i)
 
 const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: GatyaSetTrackRolls[] }) => {  
 
-  // console.log('rollsA', rollsA);
-  // console.log('rollsB', rollsB);
-  // console.log('rollsA.map', rollsA.map((roll) => roll.track));
-  // console.log('rollsB.map', rollsB.map((roll) => roll.track));
-  // console.log('rollsA.T', T(rollsA.map((roll) => roll.track)));
-  // console.log('rollsB.T', T(rollsB.map((roll) => roll.track)));
-
   const searchParams = useSearchParams();
   const getQueryParam = (key: keyof typeof DEFAULTS) => {
     return searchParams.get(key);
@@ -37,7 +30,7 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
   const zippedRolls = zip(T(rollsA.map((roll) => roll.track)), T(rollsB.map((roll) => roll.track)));
   // console.log('zippedRolls', zippedRolls);
   
-  const aodamas: string[] = [
+  const AODAMA_LIST: string[] = [
     'にゃんこ砲攻撃力',
     'にゃんこ砲チャージ',
     '働きネコ仕事効率',
@@ -82,7 +75,7 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
                 <td className='rolltable-cell-numeric'>{unit.unitIfDistinct.unitIndex}</td>
                 <td className={`
                   rolltable-cell-unitname
-                  ${aodamas.includes(unit.unitIfDistinct.unitName) ? 'aodama' : ''}
+                  ${AODAMA_LIST.includes(unit.unitIfDistinct.unitName) ? 'aodama-A' : ''}
                   rarity-${unit.rarity}A
                 `}>
                   {unit.unitIfDistinct.unitName}
@@ -118,7 +111,10 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
               row[1].map((unit: Roll, j: number) => (
               <React.Fragment key={j}>
                 <td className='rolltable-cell-numeric'>{unit.unitIfDistinct.unitIndex}</td>
-                <td className={`rolltable-cell-unitname rarity-${unit.rarity}B font-normal`}>
+                <td className={`
+                  rolltable-cell-unitname rarity-${unit.rarity}B font-normal
+                  ${AODAMA_LIST.includes(unit.unitIfDistinct.unitName) ? 'aodama-B' : ''}
+                `}>
                   {unit.unitIfDistinct.unitName}
                   {unit.dupeInfo?.showDupe && ( // dupe track switch
                     <>

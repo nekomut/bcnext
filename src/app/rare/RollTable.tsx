@@ -3,7 +3,7 @@
 import React from "react";
 import { useSearchParams } from 'next/navigation';
 import { Roll, xorShift32, GenerateAllRolls } from "./seed";
-import { DEFAULTS } from "./constants";
+import { DEFAULTS, MISTIC_CATS, LIMITED_CATS, PICKUP_UBER_CATS } from "./constants";
 
 export type GatyaSetTrackRolls = {
   gatyasetName: string;
@@ -17,13 +17,13 @@ export const zip = (arr1: Array<Roll[]>, arr2: Array<Roll[]>) => arr1.map((_, i)
 
 const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: GatyaSetTrackRolls[] }) => {  
 
+  console.log('rollsA', rollsA);
+
   const searchParams = useSearchParams();
   const getQueryParam = (key: keyof typeof DEFAULTS) => {
     return searchParams.get(key);
   };
-  // const seed = parseInt(getQueryParam("seed") || DEFAULTS.seed, 10);
   const rolls = parseInt(getQueryParam("rolls") || DEFAULTS.rolls, 10);
-  // const lastCat = getQueryParam("lastCat") || DEFAULTS.lastCat;
   const gatyasets = getQueryParam("gatyasets") || DEFAULTS.gatyasets;
 
   const zippedRolls = zip(T(rollsA.map((roll) => roll.track)), T(rollsB.map((roll) => roll.track)));
@@ -60,7 +60,14 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
               row[0].map((unit: Roll, j: number) => (
               <React.Fragment key={j}>
                 <td className='rolltable-cell-numeric'>{unit.unitIfDistinct.unitIndex}</td>
-                <td className={`rolltable-cell-unitname rarity-${unit.rarity}A`}>
+                <td className={`
+                  rolltable-cell-unitname
+                  rarity-${unit.rarity}A
+                  ${rollsA[j].gatyasetName.startsWith('プラチケ') ? 'platinum-ticket-A' : rollsA[j].gatyasetName.startsWith('レジェチケ') ? 'legendary-ticket-A' : ''}
+                  ${MISTIC_CATS.includes(unit.unitIfDistinct.unitName) ? 'mistic-A' : ''}
+                  ${LIMITED_CATS.includes(unit.unitIfDistinct.unitName) ? 'limited-A' : ''}
+                  ${PICKUP_UBER_CATS.includes(unit.unitIfDistinct.unitName) ? 'pickup-A' : ''}
+                `}>
                   {unit.unitIfDistinct.unitName}
                   {unit.dupeInfo?.showDupe && ( // dupe track switch
                     <>
@@ -93,7 +100,14 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
               row[1].map((unit: Roll, j: number) => (
               <React.Fragment key={j}>
                 <td className='rolltable-cell-numeric'>{unit.unitIfDistinct.unitIndex}</td>
-                <td className={`rolltable-cell-unitname rarity-${unit.rarity}B`}>
+                <td className={`
+                  rolltable-cell-unitname
+                  rarity-${unit.rarity}B
+                  ${rollsA[j].gatyasetName.startsWith('プラチケ') ? 'platinum-ticket-B' : rollsA[j].gatyasetName.startsWith('レジェチケ') ? 'legendary-ticket-B' : ''}
+                  ${MISTIC_CATS.includes(unit.unitIfDistinct.unitName) ? 'mistic-B' : ''}
+                  ${LIMITED_CATS.includes(unit.unitIfDistinct.unitName) ? 'limited-B' : ''}
+                  ${PICKUP_UBER_CATS.includes(unit.unitIfDistinct.unitName) ? 'pickup-B' : ''}
+                `}>
                   {unit.unitIfDistinct.unitName}
                   {unit.dupeInfo?.showDupe && ( // dupe track switch
                     <>

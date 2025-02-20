@@ -74,45 +74,6 @@ const getUnit = ({
   }
 };
 
-// export const generateRollsLightweight = (
-//   seed: number,
-//   numRolls: number,
-//   gatyaset: GatyaSet
-// ): [number, boolean] => {
-//   let lastRoll = "";
-//   let finalRollSeed = 0;
-//   let finalRollIsReroll = false;
-//   // Roll to numRolls + 1 to check if the next one is a rare dupe, but return the seed at numRolls
-//   for (let i = 0; i < numRolls + 1; i++) {
-//     if (i === numRolls) {
-//       finalRollSeed = seed;
-//     }
-//     seed = xorShift32(seed);
-//     const rarity = getRarity({ seed, rateCumSum: gatyaset.rateCumSum });
-// 
-//     seed = xorShift32(seed);
-//     let [unitId, unitName] = getUnit({ seed,
-//       units: gatyaset.pools[rarity].units,
-//     });
-//     if (unitName === lastRoll && gatyaset.pools[rarity].reroll) {
-//       if (i === numRolls) {
-//         finalRollIsReroll = true;
-//       }
-//       seed = xorShift32(seed);
-//       const [_, rerolledUnitName] = getUnit({
-//         seed,
-//         units: gatyaset.pools[rarity].units,
-//         removedIndices: [unitId],
-//       });
-//       lastRoll = rerolledUnitName;
-//     } else {
-//       lastRoll = unitName;
-//     }
-//   }
-// 
-//   return [finalRollSeed, finalRollIsReroll];
-// };
-
 const generateRolls = (seed: number, numRolls: number, gatyaset: GatyaSet, track: "A" | "B") => {
 
   const rolls: Roll[] = [];

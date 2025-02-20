@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 import { DEFAULTS } from './constants';
 
@@ -10,9 +10,9 @@ export default function SeedAndRolls() {
   const pathname = usePathname();
   const router = useRouter();
   
-  const getQueryParam = (key: keyof typeof DEFAULTS) => {
+  const getQueryParam = useCallback((key: keyof typeof DEFAULTS) => {
     return searchParams.get(key);
-  };
+  }, [searchParams]);
   
   const setQueryParam = (key: keyof typeof DEFAULTS, value: string) => {
     const params = new URLSearchParams(searchParams);
@@ -24,8 +24,21 @@ export default function SeedAndRolls() {
     router.replace(`${pathname}?${params.toString()}`);
   };
 
-  const [seedInput, setSeedInput] = useState(getQueryParam("seed") || DEFAULTS.seed);
+  const [seedInput, setSeedInput] = useState<string>('');
   const [rollsInput, setRollsInput] = useState(getQueryParam("rolls") || DEFAULTS.rolls);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const storedSeed = localStorage.getItem("rare_seed");
+      setSeedInput(getQueryParam("seed") || storedSeed || DEFAULTS.seed);
+    }
+  }, [getQueryParam]);
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && seedInput !== null) {
+      localStorage.setItem("rare_seed", seedInput);
+    }
+  }, [seedInput]);
 
   return (
     <div>

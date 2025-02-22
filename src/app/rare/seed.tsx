@@ -1,7 +1,5 @@
 'use client'
-import { useSearchParams } from 'next/navigation';
-import { GatyaSet, RareGatyaSetList } from "@/data/gatyasets";
-import { DEFAULTS } from './constants';
+import { GatyaSet } from "@/data/gatyasets";
 
 export type Roll = {
   cellId: string;
@@ -13,21 +11,23 @@ export type Roll = {
     unitSeed: number;
   };
   unitIfDupe?: {
+    raritySeed: number;
     unitIndex: number;
     unitName: string;
     unitSeed: number;
     rerolledTimes: number;
+    rerolls?: {
+      raritySeed: number;
+      unitIndex: number;
+      unitName: string;
+      unitSeed: number;
+    }[];
   };
   dupeInfo?: {
     showDupe: boolean;
     targetCellId: string;
     targetWillRerollAgain: boolean;
   };
-  // highlight?: {
-  //   isLast?: boolean;
-  //   top: boolean;
-  //   bottom: boolean;
-  // };
 };
 
 export const xorShift32 = (seed: number) => {
@@ -74,7 +74,7 @@ const getUnit = ({
   }
 };
 
-const generateRolls = (seed: number, numRolls: number, gatyaset: GatyaSet, track: "A" | "B") => {
+const generateRolls = (seed: number, numRolls: number, gatyaset: GatyaSet, lastCat: string, track: "A" | "B") => {
 
   const rolls: Roll[] = [];
   // let lastRoll = "";
@@ -108,55 +108,124 @@ const generateRolls = (seed: number, numRolls: number, gatyaset: GatyaSet, track
     // Calculate unit if the previous unit was a dupe
     if (gatyaset.pools[rarity].reroll) {
       // Here we clone the seed since we don't actually want to reroll
+      let raritySeed = roll.raritySeed;
       let rerollSeed = unitSeed;
       let rerollUnitIndex = unitIndex;
       let rerollUnitName = unitName;
       const rerollRemovedIndices = [unitIndex];
       let rerollTimes = 0;
-      // Reroll until we get something different from the canonical roll
-      while (rerollUnitName === unitName) {
+      const rerolls = [];
+
+      rerollTimes++;
+      raritySeed = xorShift32(raritySeed);
+      rerollSeed = xorShift32(rerollSeed);
+      const [nextUnitIndex, nextUnitName] = getUnit({
+        seed: rerollSeed,
+        units: gatyaset.pools[rarity].units,
+        removedIndices: rerollRemovedIndices,
+      });
+      rerollUnitIndex = nextUnitIndex;
+      rerollUnitName = nextUnitName;
+      rerollRemovedIndices.push(nextUnitIndex);
+      rerolls.push({
+        raritySeed: xorShift32(roll.raritySeed),
+        unitIndex: rerollUnitIndex,
+        unitName: rerollUnitName,
+        unitSeed: rerollSeed,
+      })
+
+      if (rerollUnitName === unitName) {
         rerollTimes++;
+        raritySeed = xorShift32(raritySeed);
         rerollSeed = xorShift32(rerollSeed);
         const [nextUnitIndex, nextUnitName] = getUnit({
           seed: rerollSeed,
           units: gatyaset.pools[rarity].units,
-          removedIndices: rerollRemovedIndices,
+          removedIndices: [],
         });
         rerollUnitIndex = nextUnitIndex;
         rerollUnitName = nextUnitName;
         rerollRemovedIndices.push(nextUnitIndex);
+        rerolls.push({
+          raritySeed: raritySeed,
+          unitIndex: rerollUnitIndex,
+          unitName: rerollUnitName,
+          unitSeed: rerollSeed,
+        })
       }
+
       roll.unitIfDupe = {
+        raritySeed: raritySeed,
         unitIndex: rerollUnitIndex,
         unitName: rerollUnitName,
         unitSeed: rerollSeed,
         rerolledTimes: rerollTimes,
+        rerolls: rerolls,
       };
     }
-    // lastRoll = roll.unitIfDistinct.unitName;
     rolls.push(roll);
   }
 
   return rolls;
 };
 
-export const GenerateAllRolls = (seed: number, numRolls: number) => {
+export const GenerateAllRolls = (seed: number, numRolls: number, gatyasets: GatyaSet[], lastCat: string) => {
 
-  const searchParams = useSearchParams();
-  const getQueryParam = (key: keyof typeof DEFAULTS) => {
-    return searchParams.get(key);
-  };
-
-  const selectedGatyaSets = getQueryParam("gatyasets")?.split(",") || DEFAULTS.gatyasets.split(",");
-  const gatyasets = RareGatyaSetList.filter((gatyaset) =>
-    selectedGatyaSets.includes(gatyaset.shortName)
-  );
-
-  return gatyasets.map((gatyaset) => ({
+  const allRolls = gatyasets.map((gatyaset) => ({
     gatyasetName: gatyaset.name,
     gatyasetShortName: gatyaset.shortName,
     gatyasetId: gatyaset.gatyasetId,
-    trackA: generateRolls(seed, numRolls, gatyaset, "A"),
-    trackB: generateRolls(xorShift32(seed), numRolls, gatyaset, "B"),
+    trackA: generateRolls(seed, numRolls, gatyaset, lastCat, "A"),
+    trackB: generateRolls(xorShift32(seed), numRolls, gatyaset, lastCat, "B"),
   }));
+
+  // Augment roll data with dupe track switch data
+  // For this processing we'll identify each cell by its raritySeed
+  allRolls.forEach(({ trackA, trackB }) => {
+    // Find all cells that should dupe track switch
+    const cellsWithDupeTrackSwitches: number[] = [];
+    const findCellsWithDupeTrackSwitches = (lastCat: string, track: Roll[]) => {
+      track.forEach((roll) => {
+        if (roll.unitIfDupe && roll.unitIfDistinct.unitName === lastCat) {
+          cellsWithDupeTrackSwitches.push(roll.raritySeed);
+        }
+        lastCat = roll.unitIfDistinct.unitName;
+      });
+    };
+    findCellsWithDupeTrackSwitches(lastCat, trackA);
+    findCellsWithDupeTrackSwitches("", trackB);
+
+    // Process all cells that should dupe track switch
+    cellsWithDupeTrackSwitches.forEach((raritySeed) => {
+      const findCell = (raritySeed: number) =>
+        trackA.find((roll) => roll.raritySeed === raritySeed) ||
+        trackB.find((roll) => roll.raritySeed === raritySeed);
+
+      let sourceCell = findCell(raritySeed)!;
+      let prevUnit = sourceCell.unitIfDistinct.unitName;
+
+      while (sourceCell.unitIfDistinct.unitName === prevUnit) {
+        prevUnit = sourceCell.unitIfDupe!.unitName;
+        const destinationRaritySeed = xorShift32(
+          sourceCell.unitIfDupe!.unitSeed
+        );
+        const destinationCell = findCell(destinationRaritySeed);
+        if (!destinationCell) {
+          break;
+        }
+        sourceCell.dupeInfo = {
+          showDupe: true,
+          targetCellId: findCell(destinationRaritySeed)?.cellId || "",
+          targetWillRerollAgain:
+            sourceCell.unitIfDupe!.unitName ===
+            destinationCell.unitIfDistinct.unitName,
+        };
+        sourceCell = destinationCell;
+      }
+
+     });
+  });
+
+  console.log('allRolls', allRolls);
+  return allRolls;
 };

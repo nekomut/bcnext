@@ -2,8 +2,9 @@
 
 import React from "react";
 import { useSearchParams } from 'next/navigation';
-import { Roll, xorShift32, GenerateAllRolls } from "./seed";
+import { Roll, GenerateAllRolls } from "./seed";
 import { DEFAULTS, MISTIC_CATS, LIMITED_CATS, PICKUP_UBER_CATS } from "./constants";
+import { RareGatyaSetList } from "@/data/gatyasets";
 
 export type GatyaSetTrackRolls = {
   gatyasetName: string;
@@ -17,8 +18,6 @@ export const zip = (arr1: Array<Roll[]>, arr2: Array<Roll[]>) => arr1.map((_, i)
 
 const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: GatyaSetTrackRolls[] }) => {  
 
-  console.log('rollsA', rollsA);
-
   const searchParams = useSearchParams();
   const getQueryParam = (key: keyof typeof DEFAULTS) => {
     return searchParams.get(key);
@@ -27,7 +26,6 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
   const gatyasets = getQueryParam("gatyasets") || DEFAULTS.gatyasets;
 
   const zippedRolls = zip(T(rollsA.map((roll) => roll.track)), T(rollsB.map((roll) => roll.track)));
-  console.log('zippedRolls', zippedRolls);
 
   return (
     <table>
@@ -145,68 +143,14 @@ const RollTable = () => {
   const numRolls = parseInt(getQueryParam("rolls") || DEFAULTS.rolls, 10);
   // Buffer so that track switches near the end of numRolls can be processed
   const NUM_ROLLS_BUFFER = 10;
-  const lastCatFromQueryParams = getQueryParam("lastCat") || DEFAULTS.lastCat;
-  // const [selectedType, selectedSeedStr, selectedGatyaSet] = getQueryParam("selected")?.split(",") || "";
-  // const selectedSeed = parseInt(selectedSeedStr, 10) || 0;
+  const lastCat = getQueryParam("lastCat") || DEFAULTS.lastCat;
 
-  const allRolls = GenerateAllRolls(initialSeed, numRolls + NUM_ROLLS_BUFFER);
+  const selectedGatyaSets = getQueryParam("gatyasets")?.split(",") || DEFAULTS.gatyasets.split(",");
+  const gatyasets = RareGatyaSetList.filter((gatyaset) =>
+    selectedGatyaSets.includes(gatyaset.shortName)
+  );
 
-  // Augment roll data with dupe track switch data
-  // For this processing we'll identify each cell by its raritySeed
-  allRolls.forEach(({ trackA, trackB }) => {
-    // Find all cells that should dupe track switch
-    const cellsWithDupeTrackSwitches: number[] = [];
-    const findCellsWithDupeTrackSwitches = (lastCat: string, track: Roll[]) => {
-      track.forEach((roll) => {
-        if (roll.unitIfDupe && roll.unitIfDistinct.unitName === lastCat) {
-          cellsWithDupeTrackSwitches.push(roll.raritySeed);
-        }
-        lastCat = roll.unitIfDistinct.unitName;
-      });
-    };
-    findCellsWithDupeTrackSwitches(lastCatFromQueryParams, trackA);
-    findCellsWithDupeTrackSwitches("", trackB);
-
-    // Process all cells that should dupe track switch
-    cellsWithDupeTrackSwitches.forEach((raritySeed) => {
-      const findCell = (raritySeed: number) =>
-        trackA.find((roll) => roll.raritySeed === raritySeed) ||
-        trackB.find((roll) => roll.raritySeed === raritySeed);
-      const findCellId = (raritySeed: number) => {
-        const trackAIndex = trackA.findIndex(
-          (roll) => roll.raritySeed === raritySeed
-        );
-        if (trackAIndex >= 0) {
-          return `${trackAIndex + 1}A`;
-        }
-        const trackBIndex = trackB.findIndex(
-          (roll) => roll.raritySeed === raritySeed
-        );
-        return `${trackBIndex + 1}B`;
-      };
-
-      let sourceCell = findCell(raritySeed)!;
-      let prevUnit = sourceCell.unitIfDistinct.unitName;
-      while (sourceCell.unitIfDistinct.unitName === prevUnit) {
-        prevUnit = sourceCell.unitIfDupe!.unitName;
-        const destinationRaritySeed = xorShift32(
-          sourceCell.unitIfDupe!.unitSeed
-        );
-        const destinationCell = findCell(destinationRaritySeed);
-        if (!destinationCell) {
-          break;
-        }
-        sourceCell.dupeInfo = {
-          showDupe: true,
-          targetCellId: findCellId(destinationRaritySeed),
-          targetWillRerollAgain:
-            sourceCell.unitIfDupe!.unitName ===
-            destinationCell.unitIfDistinct.unitName,
-        };
-        sourceCell = destinationCell;
-      }
-    });
-  });
+  const allRolls = GenerateAllRolls(initialSeed, numRolls + NUM_ROLLS_BUFFER, gatyasets, lastCat);
 
   const trackARolls = allRolls.map((roll) => ({
     gatyasetName: roll.gatyasetName,

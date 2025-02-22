@@ -6,6 +6,18 @@ import { Roll, GenerateAllRolls } from "./seed";
 import { DEFAULTS } from "./constants";
 import { NormalGatyaSetList } from "@/data/gatyasets";
 
+const AODAMA_LIST: string[] = [
+  'にゃんこ砲攻撃力',
+  'にゃんこ砲チャージ',
+  '働きネコ仕事効率',
+  '働きネコお財布',
+  'お城体力',
+  '研究力',
+  '会計力',
+  '勉強力',
+  '統率力'
+];
+
 export type GatyaSetTrackRolls = {
   gatyasetName: string;
   gatyasetShortName: string;
@@ -22,26 +34,11 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
   const getQueryParam = (key: keyof typeof DEFAULTS) => {
     return searchParams.get(key);
   };
-  // const seed = parseInt(getQueryParam("seed") || DEFAULTS.seed, 10);
   const rolls = parseInt(getQueryParam("rolls") || DEFAULTS.rolls, 10);
-  // const lastCat = getQueryParam("lastCat") || DEFAULTS.lastCat;
   const gatyasets = getQueryParam("gatyasets") || DEFAULTS.gatyasets;
 
   const zippedRolls = zip(T(rollsA.map((roll) => roll.track)), T(rollsB.map((roll) => roll.track)));
-  // console.log('zippedRolls', zippedRolls);
   
-  const AODAMA_LIST: string[] = [
-    'にゃんこ砲攻撃力',
-    'にゃんこ砲チャージ',
-    '働きネコ仕事効率',
-    '働きネコお財布',
-    'お城体力',
-    '研究力',
-    '会計力',
-    '勉強力',
-    '統率力'
-  ];
-
   return (
     <table>
       <thead>
@@ -155,8 +152,6 @@ const RollTable = () => {
   // Buffer so that track switches near the end of numRolls can be processed
   const NUM_ROLLS_BUFFER = 3;
   const lastCat = getQueryParam("lastCat") || DEFAULTS.lastCat;
-  // const [selectedType, selectedSeedStr, selectedGatyaSet] = getQueryParam("selected")?.split(",") || "";
-  // const selectedSeed = parseInt(selectedSeedStr, 10) || 0;
 
   const selectedGatyaSets = getQueryParam("gatyasets")?.split(",") || DEFAULTS.gatyasets.split(",");
   const gatyasets = NormalGatyaSetList.filter((gatyaset) =>

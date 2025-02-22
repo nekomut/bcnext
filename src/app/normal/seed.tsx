@@ -1,7 +1,5 @@
 'use client'
-// import { useSearchParams } from 'next/navigation';
 import { GatyaSet } from "@/data/gatyasets";
-// import { DEFAULTS } from './constants';
 
 export type Roll = {
   cellId: string;
@@ -30,11 +28,6 @@ export type Roll = {
     targetCellId: string;
     targetWillRerollAgain: boolean;
   };
-  // highlight?: {
-  //   isLast?: boolean;
-  //   top: boolean;
-  //   bottom: boolean;
-  // };
 };
 
 export const xorShift32 = (seed: number) => {
@@ -172,75 +165,12 @@ const generateRolls = (seed: number, numRolls: number, gatyaset: GatyaSet, lastC
     }
     rolls.push(roll);
   }
-  // lastRoll = roll.unitIfDistinct.unitName;
-
-  // console.log('rolls', rolls);
-
-  // Augment roll data with dupe track switch data
-  // For this processing we'll identify each cell by its raritySeed
-  // const cellsWithDupeTrackSwitches: number[] = [];
-  // const findCellsWithDupeTrackSwitches = (lastCat: string, track: Roll[]) => {
-  //   track.forEach((roll) => {
-  //     if (roll.unitIfDupe && roll.unitIfDistinct.unitName === lastCat) {
-  //       cellsWithDupeTrackSwitches.push(roll.raritySeed);
-  //     }
-  //     lastCat = roll.unitIfDistinct.unitName;
-  //   });
-  // };
-  // findCellsWithDupeTrackSwitches(lastCat, rolls);
-  // console.log('cellsWithDupeTrackSwitches', cellsWithDupeTrackSwitches);
-
-  // // Process all cells that should dupe track switch
-  // cellsWithDupeTrackSwitches.forEach((raritySeed) => {
-  //   const findCell = (raritySeed: number) =>
-  //     rolls.find((roll) => roll.raritySeed === raritySeed)
-  //   console.log('findCell', findCell(raritySeed));
-  //   // const findCellId = (raritySeed: number) => {
-  //   //   const trackIndex = rolls.findIndex(
-  //   //     (roll) => roll.raritySeed === raritySeed
-  //   //   );
-  //   //   if (trackIndex >= 0) {
-  //   //     return `${trackIndex + 1}`;
-  //   //   }
-  //   // };
-
-  //   let sourceCell = findCell(raritySeed)!;
-  //   const destinationRaritySeed = xorShift32(sourceCell.unitIfDupe!.unitSeed);
-  //   console.log('destinationRaritySeed', destinationRaritySeed);
-  //   const destinationCell = findCell(destinationRaritySeed);
-  //   console.log('destinationCell', destinationCell, rolls);
-  //   sourceCell.dupeInfo = {
-  //     showDupe: true,
-  //       targetCellId: findCell(destinationRaritySeed)?.cellId || "",
-  //       targetWillRerollAgain:
-  //         sourceCell.unitIfDupe!.unitName === destinationCell?.unitIfDistinct.unitName,
-  //   };
-
-  //   // let prevUnit = sourceCell.unitIfDistinct.unitName;
-  //   // while (sourceCell.unitIfDistinct.unitName === prevUnit) {
-  //   //   prevUnit = sourceCell.unitIfDupe!.unitName;
-  //   //   const destinationRaritySeed = xorShift32(
-  //   //     sourceCell.unitIfDupe!.unitSeed
-  //   //   );
-  //   //   const destinationCell = findCell(destinationRaritySeed);
-  //   //   if (!destinationCell) {
-  //   //     break;
-  //   //   }
-  //   //   sourceCell.dupeInfo = {
-  //   //     showDupe: true,
-  //   //     targetCellId: findCell(destinationRaritySeed)?.cellId || "",
-  //   //     targetWillRerollAgain:
-  //   //       sourceCell.unitIfDupe!.unitName ===
-  //   //       destinationCell.unitIfDistinct.unitName,
-  //   //   };
-  //   //   sourceCell = destinationCell;
-  //   // }
-  // });
 
   return rolls;
 };
 
 export const GenerateAllRolls = (seed: number, numRolls: number, gatyasets: GatyaSet[], lastCat: string ) => {
+
   const allRolls = gatyasets.map((gatyaset) => ({
     gatyasetName: gatyaset.name,
     gatyasetShortName: gatyaset.shortName,
@@ -252,7 +182,7 @@ export const GenerateAllRolls = (seed: number, numRolls: number, gatyasets: Gaty
   // Augment roll data with dupe track switch data
   // For this processing we'll identify each cell by its raritySeed
   allRolls.forEach(({ trackA, trackB }) => {
-  //   // Find all cells that should dupe track switch
+    // Find all cells that should dupe track switch
     const cellsWithDupeTrackSwitches: number[] = [];
     const findCellsWithDupeTrackSwitches = (lastCat: string, track: Roll[]) => {
       track.forEach((roll) => {
@@ -265,37 +195,14 @@ export const GenerateAllRolls = (seed: number, numRolls: number, gatyasets: Gaty
     findCellsWithDupeTrackSwitches(lastCat, trackA);
     findCellsWithDupeTrackSwitches("", trackB);
 
-  //   // Process all cells that should dupe track switch
+    // Process all cells that should dupe track switch
     cellsWithDupeTrackSwitches.forEach((raritySeed) => {
       const findCell = (raritySeed: number) =>
         trackA.find((roll) => roll.raritySeed === raritySeed) ||
         trackB.find((roll) => roll.raritySeed === raritySeed);
-  //     const findCellId = (raritySeed: number) => {
-  //       const trackAIndex = trackA.findIndex(
-  //         (roll) => roll.raritySeed === raritySeed
-  //       );
-  //       if (trackAIndex >= 0) {
-  //         return `${trackAIndex + 1}A`;
-  //       }
-  //       const trackBIndex = trackB.findIndex(
-  //         (roll) => roll.raritySeed === raritySeed
-  //       );
-  //       return `${trackBIndex + 1}B`;
-  //     };
 
       let sourceCell = findCell(raritySeed)!;
       let prevUnit = sourceCell.unitIfDistinct.unitName;
-
-      // console.log('sourceCell', sourceCell);
-      // const destinationRaritySeed = xorShift32(sourceCell.unitIfDupe!.unitSeed);
-      // const destinationCell = findCell(destinationRaritySeed);
-      // console.log('destinationCell', destinationCell);
-      // sourceCell.dupeInfo = {
-      //   showDupe: true,
-      //     targetCellId: findCell(destinationRaritySeed)?.cellId || "",
-      //     targetWillRerollAgain:
-      //       sourceCell.unitIfDupe!.unitName === destinationCell?.unitIfDistinct.unitName,
-      // };
 
       while (sourceCell.unitIfDistinct.unitName === prevUnit) {
         prevUnit = sourceCell.unitIfDupe!.unitName;
@@ -361,4 +268,3 @@ export const GenerateAllRolls = (seed: number, numRolls: number, gatyasets: Gaty
 // 
 //   return [finalRollSeed, finalRollIsReroll];
 // };
-

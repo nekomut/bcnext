@@ -3,5 +3,4 @@ export const DEFAULTS = {
   gatyasets: "p,f,g,c",
   rolls: "50",
   lastCat: "",
-  // selected: "",
 };

@@ -40,16 +40,16 @@ export const FukubikiGatyaSet: GatyaSet = {
     {
       rate: 2100,
       units: [
-        "ネコボン",       // 2
-        "おかめはちもく", // 4
-        "スニャイパー",   // 5
+        "ネコボン",           //   2
+        "おかめはちもく",     //   4
+        "スニャイパー",       //   5
       ],
       reroll: false,
     },
     {
       rate: 500,
       units: [
-        "トレジャーレーダー", // 1
+        "トレジャーレーダー", //   1
       ],
       reroll: false,
     },

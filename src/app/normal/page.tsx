@@ -2,11 +2,16 @@
 
 import Link from "next/link"
 import { Suspense } from "react"
+import { useEffect } from "react";
 import GatyaSets from "./GatyaSets"
 import SeedAndRolls from "./SeedAndRolls"
 import RollTable from "./RollTable"
 
+
 export default function Page() {
+  useEffect(() => {
+      document.title = 'bcnext/normal';
+  }, []);
   return (
     <div>
       <Link href="/" className="font-bold hover:text-green-600 px-1">bcnext</Link>|

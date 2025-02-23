@@ -76,6 +76,7 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
                   rarity-${unit.rarity}A
                 `}>
                   {unit.unitIfDistinct.unitName}
+                  {unit.unitIfDistinct.unitName.startsWith('闇') ? <span>⚠️</span> : ''}
                   {unit.dupeInfo?.showDupe && ( // dupe track switch
                     <>
                       <br/>
@@ -118,6 +119,7 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
                   ${AODAMA_LIST.includes(unit.unitIfDistinct.unitName) ? 'aodama-B' : ''}
                 `}>
                   {unit.unitIfDistinct.unitName}
+                  {unit.unitIfDistinct.unitName.startsWith('闇') ? <span>⚠️</span> : ''}
                   {unit.dupeInfo?.showDupe && ( // dupe track switch
                     <>
                       <br/>

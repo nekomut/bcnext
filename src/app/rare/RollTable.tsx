@@ -72,9 +72,14 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
                       <br/>
                       <span className='rolltable-switch-AtoB'>
                         {unit.unitIfDupe?.unitName}
-                        {` -> ${unit.dupeInfo.targetCellId}`}
                       </span>
-                      <span className='rolltable-switch-BtoA'>
+                      <span className="text-gray-400">→</span>
+                      <span className={`
+                        ${unit.dupeInfo.targetCellId.endsWith('A') ? 'rolltable-switch-AtoB' : 'rolltable-switch-BtoA'}
+                      `}>
+                        {`${unit.dupeInfo.targetCellId}`}
+                      </span>
+                      <span className='rolltable-switch-AtoB'>
                         {`${unit.dupeInfo.targetWillRerollAgain ? 'R' : ''}`}
                       </span>
                     </>
@@ -111,9 +116,14 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
                     <>
                       <span className='rolltable-switch-BtoA'><br/>
                         {unit.unitIfDupe?.unitName}
-                        {` -> ${unit.dupeInfo.targetCellId}`}
                       </span>
-                      <span className='rolltable-switch-AtoB'>
+                      <span className="text-gray-400">→</span>
+                      <span className={`
+                        ${unit.dupeInfo.targetCellId.endsWith('A') ? 'rolltable-switch-AtoB' : 'rolltable-switch-BtoA'}
+                      `}>
+                        {`${unit.dupeInfo.targetCellId}`}
+                      </span>
+                      <span className='rolltable-switch-BtoA'>
                         {`${unit.dupeInfo.targetWillRerollAgain ? 'R' : ''}`}
                       </span>
                     </>

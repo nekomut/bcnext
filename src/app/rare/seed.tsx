@@ -212,13 +212,15 @@ export const GenerateAllRolls = (seed: number, numRolls: number, gatyasets: Gaty
         const destinationCell = findCell(destinationRaritySeed);
         if (!destinationCell) {
           break;
-        }
-        sourceCell.dupeInfo = {
-          showDupe: true,
-          targetCellId: findCell(destinationRaritySeed)?.cellId || "",
-          targetWillRerollAgain:
-            sourceCell.unitIfDupe!.unitName ===
-            destinationCell.unitIfDistinct.unitName,
+        };
+        if (cellsWithDupeTrackSwitches.includes(sourceCell.raritySeed)) {
+          sourceCell.dupeInfo = {
+            showDupe: true,
+            targetCellId: findCell(destinationRaritySeed)?.cellId || "",
+            targetWillRerollAgain:
+              sourceCell.unitIfDupe!.unitName ===
+              destinationCell.unitIfDistinct.unitName,
+          };
         };
         sourceCell = destinationCell;
       }

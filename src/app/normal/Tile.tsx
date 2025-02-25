@@ -106,7 +106,7 @@ const Tile = () => {
   }));
 
   return (
-    <div className="fixed top-6 right-0">
+    <div className="float-right">
       <TileTable rollsA={trackARolls} rollsB={trackBRolls} />
     </div>
   )

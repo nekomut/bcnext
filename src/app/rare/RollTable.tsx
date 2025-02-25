@@ -10,6 +10,7 @@ export type GatyaSetTrackRolls = {
   gatyasetName: string;
   gatyasetShortName: string;
   gatyasetId: number;
+  gatyasetGuaranteed: number;
   track: Roll[];
 };
 
@@ -38,6 +39,12 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
           <React.Fragment key={i}>
             <th className='rolltable-header'></th>
             <th className='rolltable-header'>{roll.gatyasetName}({roll.gatyasetId})</th>
+            {(roll.gatyasetGuaranteed > 0) && (
+              <>
+                <th className='rolltable-header'></th>
+                <th className='rolltable-header'></th>
+              </>
+            )}
           </React.Fragment>
           ))}
         </tr>
@@ -85,10 +92,23 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
                     </>
                   )}
                 </td>
+                {(rollsA[j].gatyasetGuaranteed > 0) && (
+                  <>
+                    <td className="rolltable-cell-numeric rolltable-guaranteed-A">{unit.unitIfGuaranteed?.unitIndex}</td>
+                    <td className="rolltable-cell-unitname">
+                      <span className="rolltable-guaranteed-A">{unit.unitIfGuaranteed?.unitName}</span>
+                      <span className="text-gray-400">→</span>
+                      <span className={`
+                        ${unit.unitIfGuaranteed?.targetCellId.endsWith('A') ? 'rolltable-switch-AtoB' : 'rolltable-switch-BtoA'}
+                      `}>
+                        {unit.unitIfGuaranteed?.targetCellId}
+                      </span>
+                    </td>
+                  </>
+                )}
               </React.Fragment>
               ))
             }
-
           </tr>
           <tr className='rolltable-row-B'>
             <td className='rolltable-cellid-B'>{i + 1}B</td>
@@ -129,6 +149,20 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
                     </>
                   )}
                 </td>
+                {(rollsB[j].gatyasetGuaranteed > 0) && (
+                  <>
+                    <td className="rolltable-cell-numeric rolltable-guaranteed-B">{unit.unitIfGuaranteed?.unitIndex}</td>
+                    <td className="rolltable-cell-unitname">
+                      <span className="rolltable-guaranteed-B">{unit.unitIfGuaranteed?.unitName}</span>
+                      <span className="text-gray-400">→</span>
+                      <span className={`
+                        ${unit.unitIfGuaranteed?.targetCellId.endsWith('A') ? 'rolltable-switch-AtoB' : 'rolltable-switch-BtoA'}
+                      `}>
+                        {unit.unitIfGuaranteed?.targetCellId}
+                      </span>
+                    </td>
+                  </>
+                )}
               </React.Fragment>
               ))
             }
@@ -152,7 +186,7 @@ const RollTable = () => {
   const initialSeed = parseInt(getQueryParam("seed") || DEFAULTS.seed, 10);
   const numRolls = parseInt(getQueryParam("rolls") || DEFAULTS.rolls, 10);
   // Buffer so that track switches near the end of numRolls can be processed
-  const NUM_ROLLS_BUFFER = 10;
+  const NUM_ROLLS_BUFFER = 16;
   const lastCat = getQueryParam("lastCat") || DEFAULTS.lastCat;
 
   const selectedGatyaSets = getQueryParam("gatyasets")?.split(",") || DEFAULTS.gatyasets.split(",");
@@ -166,6 +200,7 @@ const RollTable = () => {
     gatyasetName: roll.gatyasetName,
     gatyasetShortName: roll.gatyasetShortName,
     gatyasetId: roll.gatyasetId,
+    gatyasetGuaranteed: roll.gatyasetGuaranteed ?? -1,
     track: roll.trackA.slice(0, numRolls),
   }));
 
@@ -173,6 +208,7 @@ const RollTable = () => {
     gatyasetName: roll.gatyasetName,
     gatyasetShortName: roll.gatyasetShortName,
     gatyasetId: roll.gatyasetId,
+    gatyasetGuaranteed: roll.gatyasetGuaranteed ?? -1, 
     track: roll.trackB.slice(0, numRolls),
   }));
 

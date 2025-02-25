@@ -56,7 +56,7 @@ body {
   @apply text-green-600 text-right font-bold pl-2;
 }
 .rolltable-cell-unitname {
-  @apply text-left px-1 whitespace-nowrap;
+  @apply text-left pl-1 pr-2 whitespace-nowrap;
 }
 .rolltable-cell-numeric {
   @apply text-right;
@@ -68,6 +68,13 @@ body {
 .rolltable-switch-BtoA {
   @apply text-green-700 font-bold;
 }
+.rolltable-guaranteed-A {
+  @apply text-pink-500 font-bold;
+} 
+.rolltable-guaranteed-B {
+  @apply text-cyan-600 font-bold;
+}
+
 .aodama-A {
   @apply text-cyan-500;
 }

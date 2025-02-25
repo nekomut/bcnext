@@ -4,6 +4,7 @@ export const Set968: GatyaSet = {
   name: "ホワイトデー",
   shortName: "968",
   gatyasetId: 968,
+  guaranteed: -1,
   rateCumSum: [0, 7000, 9500, 10000],
   pools: [
     {

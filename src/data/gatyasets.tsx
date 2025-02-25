@@ -5,6 +5,7 @@ export type GatyaSet = {
   name: string;
   shortName: string;
   gatyasetId: number;
+  guaranteed?: number;
   rateCumSum: number[];
   pools: {
     rate: number;

@@ -23,6 +23,13 @@ export type Roll = {
       unitSeed: number;
     }[];
   };
+  unitIfGuaranteed?: {
+    cellId: string;
+    unitIndex: number;
+    unitName: string;
+    unitSeed: number;
+    targetCellId: string;
+  };
   dupeInfo?: {
     showDupe: boolean;
     targetCellId: string;
@@ -175,14 +182,13 @@ export const GenerateAllRolls = (seed: number, numRolls: number, gatyasets: Gaty
     gatyasetName: gatyaset.name,
     gatyasetShortName: gatyaset.shortName,
     gatyasetId: gatyaset.gatyasetId,
+    gatyasetGuaranteed: gatyaset.guaranteed,
     trackA: generateRolls(seed, numRolls, gatyaset, lastCat, "A"),
     trackB: generateRolls(xorShift32(seed), numRolls, gatyaset, lastCat, "B"),
   }));
 
-  // Augment roll data with dupe track switch data
-  // For this processing we'll identify each cell by its raritySeed
+  // レア被り処理
   allRolls.forEach(({ trackA, trackB }) => {
-    // Find all cells that should dupe track switch
     const cellsWithDupeTrackSwitches: number[] = [];
     const findCellsWithDupeTrackSwitches = (lastCat: string, track: Roll[]) => {
       track.forEach((roll) => {
@@ -195,7 +201,6 @@ export const GenerateAllRolls = (seed: number, numRolls: number, gatyasets: Gaty
     findCellsWithDupeTrackSwitches(lastCat, trackA);
     findCellsWithDupeTrackSwitches("", trackB);
 
-    // Process all cells that should dupe track switch
     cellsWithDupeTrackSwitches.forEach((raritySeed) => {
       const findCell = (raritySeed: number) =>
         trackA.find((roll) => roll.raritySeed === raritySeed) ||
@@ -224,8 +229,82 @@ export const GenerateAllRolls = (seed: number, numRolls: number, gatyasets: Gaty
         };
         sourceCell = destinationCell;
       }
-
      });
+  });
+  
+  // 確定処理
+  // unitIfGuaranteed?: {
+  //   cellId: string;
+  //   unitIndex: number;
+  //   unitName: string;
+  //   unitSeed: number;
+  //   targetCellId: string;
+  // };
+  allRolls.forEach((rolls) => {
+    if (rolls.gatyasetGuaranteed !== undefined && rolls.gatyasetGuaranteed > 0) {
+
+      const findCell = (raritySeed: number) =>
+        rolls.trackA.find((roll) => roll.raritySeed === raritySeed) ||
+        rolls.trackB.find((roll) => roll.raritySeed === raritySeed);
+
+      for (const track of [rolls.trackA, rolls.trackB]) { 
+
+        let guaranteedRoll = findCell(track[track.length-1].unitIfDistinct.unitSeed);
+
+        console.log('rolls', rolls);
+        track.some((roll, i: number) => {
+          if (i < (numRolls-16)) {
+            // console.log(`roll[${i}]`, roll);
+            let seed: number = roll.raritySeed;
+            let cell: Roll | undefined = findCell(seed);
+            if (!cell) {
+              return true;
+            }
+            for (let j = 0; j < (rolls.gatyasetGuaranteed!); j++) {
+              if (cell && cell.unitIfDistinct) {
+                cell = findCell(seed)!;
+                if (j > 0 && cell.dupeInfo?.showDupe) {
+                  seed = xorShift32(cell.unitIfDupe!.unitSeed);
+                  cell = findCell(cell.unitIfDupe!.raritySeed);
+                } else {
+                  seed = xorShift32(cell.unitIfDistinct?.unitSeed);
+                }
+              }
+              // console.log(`rolls[${i}].cell[${j}]`, cell);
+            };
+            // 確定枠
+            if (cell!.dupeInfo?.showDupe) {
+              guaranteedRoll = findCell(cell!.unitIfDupe!.unitSeed);
+              guaranteedRoll = findCell(guaranteedRoll!.unitIfDupe!.raritySeed);
+            } else {
+              guaranteedRoll = findCell(cell!.unitIfDistinct?.unitSeed);
+            }
+            // roll.unitIfGuaranteed追加
+            const unitSeed = guaranteedRoll?.unitIfDistinct.unitSeed;
+            if (unitSeed !== undefined) {
+              const gatyaset = gatyasets.find((gatyaset) => gatyaset.gatyasetId === rolls.gatyasetId);
+              if (gatyaset) {
+                const [unitIndex, unitName] = getUnit({
+                  seed: unitSeed,
+                  units: gatyaset.pools[3].units,
+                });
+                roll.unitIfGuaranteed = {
+                  cellId: guaranteedRoll?.cellId || "",
+                  unitIndex,
+                  unitName,
+                  unitSeed,
+                  targetCellId: findCell(xorShift32(guaranteedRoll?.unitIfDistinct?.unitSeed ?? 0))?.cellId || "",
+                };
+              }
+            };
+          } else {
+            return true;
+          }
+        });
+
+      };
+
+    };
   });
 
   console.log('allRolls', allRolls);

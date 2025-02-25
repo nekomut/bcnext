@@ -179,10 +179,8 @@ export const GenerateAllRolls = (seed: number, numRolls: number, gatyasets: Gaty
     trackB: generateRolls(xorShift32(seed), numRolls, gatyaset, lastCat, "B"),
   }));
   
-  // Augment roll data with dupe track switch data
-  // For this processing we'll identify each cell by its raritySeed
+  // レア被り処理
   allRolls.forEach(({ trackA, trackB }) => {
-    // Find all cells that should dupe track switch
     const cellsWithDupeTrackSwitches: number[] = [];
     const findCellsWithDupeTrackSwitches = (lastCat: string, track: Roll[]) => {
       track.forEach((roll) => {
@@ -195,7 +193,6 @@ export const GenerateAllRolls = (seed: number, numRolls: number, gatyasets: Gaty
     findCellsWithDupeTrackSwitches(lastCat, trackA);
     findCellsWithDupeTrackSwitches("", trackB);
 
-    // Process all cells that should dupe track switch
     cellsWithDupeTrackSwitches.forEach((raritySeed) => {
       const findCell = (raritySeed: number) =>
         trackA.find((roll) => roll.raritySeed === raritySeed) ||

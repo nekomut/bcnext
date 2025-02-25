@@ -4,6 +4,7 @@ export const Set785: GatyaSet = {
   name: "バレンタイン",
   shortName: "785",
   gatyasetId: 785,
+  guaranteed: -1,
   rateCumSum: [0, 7000, 9500, 10000],
   pools: [
     {

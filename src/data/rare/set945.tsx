@@ -4,6 +4,7 @@ export const Set945: GatyaSet = {
   name: "エンペラーズ2x",
   shortName: "945",
   gatyasetId: 945,
+  guaranteed: -1,
   rateCumSum: [0, 6440, 8940, 9940, 10000],
   pools: [
     {

@@ -4,6 +4,7 @@ export const Set950: GatyaSet = {
   name: "ギャルモン",
   shortName: "950",
   gatyasetId: 950,
+  guaranteed: -1,
   rateCumSum: [0, 6970, 9470, 9970, 10000],
   pools: [
     {

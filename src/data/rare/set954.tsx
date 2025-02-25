@@ -4,6 +4,7 @@ export const Set954: GatyaSet = {
   name: "レジェチケ",
   shortName: "954",
   gatyasetId: 954,
+  guaranteed: -1,
   rateCumSum: [0, 0, 0, 9500, 10000],
   pools: [
     {

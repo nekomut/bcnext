@@ -4,6 +4,7 @@ export const Set951: GatyaSet = {
   name: "ピクシーズ2x",
   shortName: "951",
   gatyasetId: 951,
+  guaranteed: -1,
   rateCumSum: [0, 6440, 8940, 9940, 10000],
   pools: [
     {

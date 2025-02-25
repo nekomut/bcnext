@@ -54,7 +54,9 @@ export default function GatyaSets() {
                 setQueryParam("gatyasets", newSelectedGatyaSets.join(","));
               }}
             ></input>
-            {`${gatyaset.name}(${gatyaset.gatyasetId})`}
+            {gatyaset.name}
+            <span className="text-yellow-500 font-bold">{gatyaset.guaranteed! > 0 ? '確定':''}</span>
+            ({gatyaset.gatyasetId})
           </label>
         );
       })}

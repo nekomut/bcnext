@@ -36,7 +36,7 @@ const TileTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: G
           <th></th>
         {chunkedRolls[0].map((_, i) => (
         <React.Fragment key={i}>
-          <th className="text-right text-xs">{(i+1) % 10 ? '' : (i+1)}</th>
+          <th className="text-right text-[0.75em]">{(i+1) % 10 ? '' : (i+1)}</th>
         </React.Fragment>
         ))}
         </tr>
@@ -45,22 +45,22 @@ const TileTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: G
         {chunkedRolls.map((chunk, i) => (   
           <React.Fragment key={`${i}`}>
             <tr>
-              <td className='tile-chunkId-A leading-[0.9] pr-1'>{`${i*100+1}A`}</td>
+              <td className='tile-chunkId-A text-[0.8em] leading-[0.9] pr-1'>{`${i*100+1}A`}</td>
               {chunk.map((row, j) => (
               <React.Fragment key={`${j}-1`}>
               <td className={`tile-rarity-${row[0][1].rarity}A`}>■</td>
               </React.Fragment>
               ))}
-              <td className="tile-rarity-4A text-right font-bold">{chunk.filter(x => x[0][1].rarity == 4).length}</td>
+              <td className="tile-rarity-4A text-[0.9em] text-right font-bold">{chunk.filter(x => x[0][1].rarity == 4).length}</td>
             </tr> 
             <tr>
-              <td className='tile-chunkId-B leading-[0.9] pr-1'>{`${i*100+1}B`}</td>
+              <td className='tile-chunkId-B text-[0.8em] leading-[0.9] pr-1'>{`${i*100+1}B`}</td>
               {chunk.map((row, j) => (
               <React.Fragment key={`${j}-2`}>
               <td className={`tile-rarity-${row[1][1].rarity}B`}>■</td>
               </React.Fragment>
               ))}
-              <td className="tile-rarity-4B text-right font-bold">{chunk.filter(x => x[1][1].rarity == 4).length}</td>
+              <td className="tile-rarity-4B text-[0.9em] text-right font-bold">{chunk.filter(x => x[1][1].rarity == 4).length}</td>
             </tr> 
           </React.Fragment>
         ))}

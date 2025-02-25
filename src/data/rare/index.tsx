@@ -1,3 +1,9 @@
+import { Set943 } from './set943'; // バサラーズ
+import { Set946 } from './set946'; // ウルトラソウルズ
+import { Set947 } from './set947'; // ダークヒーローズ
+import { Set948 } from './set948'; // ギガントゼウス
+import { Set949 } from './set949'; // アイアンウォーズ
+import { Set952 } from './set952'; // 超ネコ祭
 import { Set953 } from './set953'; // プラチケ
 import { Set954 } from './set954'; // レジェチケ
 import { Set962 } from './set962'; // ルガ族
@@ -13,6 +19,12 @@ import { Set968 } from './set968'; // ホワイトデー
 
 export const RareGatyaSetList = [
     Set967, // 1億DL記念選抜
+    Set946, // ウルトラソウルズ
+    Set949, // アイアンウォーズ
+    Set947, // ダークヒーローズ
+    Set948, // ギガントゼウス
+    Set943, // バサラーズ
+    Set952, // 超ネコ祭
     Set954, // レジェチケ
     Set953, // プラチケ
     Set962, // ルガ族 

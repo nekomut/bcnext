@@ -187,7 +187,7 @@ const RollTable = () => {
   }));
 
   return (
-    <div>
+    <div className="float-left">
       <TrackTable rollsA={trackARolls} rollsB={trackBRolls} />
     </div>
   );

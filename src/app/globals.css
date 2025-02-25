@@ -49,10 +49,10 @@ body {
 .rolltable-row-B {
   @apply flex-row align-top text-gray-500;
 }
-.rolltable-cellid-A {
+.rolltable-cellid-A, .tile-chunkId-A {
   @apply text-rose-500 min-w-[38px] text-right font-bold pl-2;
 }
-.rolltable-cellid-B {
+.rolltable-cellid-B, .tile-chunkId-B {
   @apply text-green-600 text-right font-bold pl-2;
 }
 .rolltable-cell-unitname {
@@ -134,4 +134,17 @@ body {
 }
 .rarity-4B {
   @apply text-purple-700 font-bold border-purple-700 border border-x-0;
+}
+
+.tile-rarity-0A, .tile-rarity-1A, .tile-rarity-2A, .tile-rarity-3A {
+  @apply text-gray-500 m-0 px-0 leading-[0.5];
+}
+.tile-rarity-0B, .tile-rarity-1B, .tile-rarity-2B, .tile-rarity-3B {
+  @apply text-gray-700 m-0 px-0 leading-[0.5];
+}
+.tile-rarity-4A {
+  @apply text-purple-500 m-0 px-0 leading-[0.5];
+}
+.tile-rarity-4B {
+  @apply text-purple-800 m-0 px-0 leading-[0.5];
 }

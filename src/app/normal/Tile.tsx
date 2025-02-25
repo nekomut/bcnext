@@ -28,7 +28,7 @@ const TileTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: G
 
   return (
     <div className="pr-1 py-1">
-      <h1 className="font-bold text-purple-500 pl-3">闇目レーダー</h1>
+      <h1 className="font-bold text-purple-500 pl-3">猫目レーダー</h1>
       <table>
        <thead>
         <tr>

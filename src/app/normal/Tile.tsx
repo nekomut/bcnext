@@ -25,10 +25,9 @@ const TileTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: G
 
   const zippedRolls = zip(T(rollsA.map((roll) => roll.track)), T(rollsB.map((roll) => roll.track)));
   const chunkedRolls = chunk(zippedRolls, 100);
-  console.log(chunkedRolls);
 
   return (
-    <>
+    <div className="pr-1 py-1">
       <h1 className="font-bold text-purple-500 pl-3">闇目レーダー</h1>
       <table>
        <thead>
@@ -66,7 +65,7 @@ const TileTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: G
         ))}
        </tbody>
       </table>
-    </>
+    </div>
   );
 };
 
@@ -84,7 +83,7 @@ const Tile = () => {
   const NUM_ROLLS_BUFFER = 0;
   const lastCat = getQueryParam("lastCat") || DEFAULTS.lastCat;
 
-  const selectedGatyaSets = 'p,c'.split(','); 
+  const selectedGatyaSets = 'p,c,g'.split(','); 
   const gatyasets = NormalGatyaSetList.filter((gatyaset) =>
     selectedGatyaSets.includes(gatyaset.shortName)
   );

@@ -7,15 +7,6 @@
   --foreground: #dddddd;
 }
 
-/*
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #999999;
-    --foreground: #222222;
-  }
-}
-*/
-
 body {
   color: var(--foreground);
   background: var(--background);
@@ -81,23 +72,21 @@ body {
 .aodama-B {
   @apply text-cyan-700;
 }
+
 .rarity-0A {
 }
 .rarity-0B {
 }
-
 .rarity-1A {
 }
 .rarity-1B {
 }
-
 .rarity-2A {
   @apply text-yellow-500;
 }
 .rarity-2B {
   @apply text-yellow-800;
 }
-
 .rarity-3A {
   @apply text-pink-500 border-pink-500 border border-x-0;
 }
@@ -128,7 +117,6 @@ body {
 .rarity-3B.platinum-ticket-B.pickup-B, .rarity-3B.legendary-ticket-B.pickup-B {
   @apply text-rose-800 border-0;
 }
-
 .rarity-4A {
   @apply text-purple-500 border-purple-500 border-y-2;
 }
@@ -136,15 +124,21 @@ body {
   @apply text-purple-700 font-bold border-purple-700 border border-x-0;
 }
 
-.tile-rarity-0A, .tile-rarity-1A, .tile-rarity-2A, .tile-rarity-3A {
+.tile-rarity-0A, .tile-rarity-1A, .tile-rarity-2A {
   @apply text-gray-500 m-0 px-0 leading-[0.5];
 }
-.tile-rarity-0B, .tile-rarity-1B, .tile-rarity-2B, .tile-rarity-3B {
+.tile-rarity-0B, .tile-rarity-1B, .tile-rarity-2B {
   @apply text-gray-700 m-0 px-0 leading-[0.5];
+}
+.tile-rarity-3A {
+  @apply text-rose-500 m-0 px-0 leading-[0.5];
+}
+.tile-rarity-3B {
+  @apply text-rose-800 m-0 px-0 leading-[0.5];
 }
 .tile-rarity-4A {
   @apply text-purple-500 m-0 px-0 leading-[0.5];
 }
 .tile-rarity-4B {
-  @apply text-purple-800 m-0 px-0 leading-[0.5];
+  @apply text-purple-700 m-0 px-0 leading-[0.5];
 }

@@ -32,7 +32,7 @@ body {
   @apply text-zinc-400 text-left whitespace-nowrap border border-x-0 border-t-0 border-slate-500;
 }
 .rolltable-header-seed {
-  @apply text-gray-600 min-w-[80px] text-right font-normal pl-3
+  @apply text-gray-600 min-w-[80px] text-right font-normal pl-3;
 }
 .rolltable-row-A {
   @apply flex-row align-top font-bold;

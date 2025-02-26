@@ -27,7 +27,7 @@ const TileTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: G
   const chunkedRolls = chunk(zippedRolls, 100);
 
   return (
-    <div className="pr-1 py-1">
+    <div className="pr-1 py-3">
       <h1 className="font-bold text-purple-500 pl-3">猫目レーダー</h1>
       <table>
        <thead>

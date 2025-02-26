@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import GatyaSets from "./GatyaSets"
 import SeedAndRolls from "./SeedAndRolls"
 import RollTable from "./RollTable"
+import Tile from "./Tile";
 
 export default function Page() {
   useEffect(() => {
@@ -21,6 +22,7 @@ export default function Page() {
         <GatyaSets />
         <SeedAndRolls />
         <RollTable />
+        <Tile />
       </Suspense>
     </div>
   );

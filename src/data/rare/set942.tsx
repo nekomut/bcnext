@@ -2,9 +2,9 @@ import { GatyaSet } from "@/data/gatyasets";
 
 export const Set942: GatyaSet = {
   name: "ダイナマイツ2x",
+  guaranteed: -1,
   shortName: "942",
   gatyasetId: 942,
-  guaranteed: -1,
   rateCumSum: [0, 6440, 8940, 9940, 10000],
   pools: [
     {

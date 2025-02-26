@@ -1,4 +1,5 @@
 'use client'
+
 import { GatyaSet } from "@/data/gatyasets";
 
 export type Roll = {

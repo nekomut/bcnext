@@ -4,7 +4,7 @@ import React from "react";
 import { useSearchParams } from 'next/navigation';
 import { Roll, GenerateAllRolls } from "./seed";
 import { DEFAULTS } from "./constants";
-import { NormalGatyaSetList } from "@/data/gatyasets";
+import { NormalGatyaSetList as GatyaSetList } from "@/data/gatyasets";
 
 const AODAMA_LIST: string[] = [
   'にゃんこ砲攻撃力',
@@ -166,7 +166,7 @@ const RollTable = () => {
   const lastCat = getQueryParam("lastCat") || DEFAULTS.lastCat;
 
   const selectedGatyaSets = getQueryParam("gatyasets")?.split(",") || DEFAULTS.gatyasets.split(",");
-  const gatyasets = NormalGatyaSetList.filter((gatyaset) =>
+  const gatyasets = GatyaSetList.filter((gatyaset) =>
     selectedGatyaSets.includes(gatyaset.shortName)
   );
 

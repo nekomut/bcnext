@@ -4,7 +4,7 @@ import React from "react";
 import { useSearchParams } from 'next/navigation';
 import { Roll, GenerateAllRolls } from "./seed";
 import { DEFAULTS, MISTIC_CATS, LIMITED_CATS, PICKUP_UBER_CATS } from "./constants";
-import { RareGatyaSetList } from "@/data/gatyasets";
+import { RareGatyaSetList as GatyaSetList } from "@/data/gatyasets";
 
 export type GatyaSetTrackRolls = {
   gatyasetName: string;
@@ -190,7 +190,7 @@ const RollTable = () => {
   const lastCat = getQueryParam("lastCat") || DEFAULTS.lastCat;
 
   const selectedGatyaSets = getQueryParam("gatyasets")?.split(",") || DEFAULTS.gatyasets.split(",");
-  const gatyasets = RareGatyaSetList.filter((gatyaset) =>
+  const gatyasets = GatyaSetList.filter((gatyaset) =>
     selectedGatyaSets.includes(gatyaset.shortName)
   );
 

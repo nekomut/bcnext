@@ -27,6 +27,9 @@ body {
 .button-update {
   @apply bg-blue-500 hover:bg-blue-700 text-white font-bold px-1 mx-1 my-1 rounded;
 }
+.button-blue {
+  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold px-1 mr-1 my-1 rounded;
+}
 
 .rolltable-header {
   @apply text-zinc-400 text-left whitespace-nowrap border border-x-0 border-t-0 border-slate-500;

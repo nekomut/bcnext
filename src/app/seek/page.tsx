@@ -6,7 +6,7 @@ import Seeker from "./Seeker";
 
 export default function Page() {
   useEffect(() => {
-      document.title = 'bcnext/seeker';
+      document.title = 'bcnext/seek';
   }, []);
   return (
     <Suspense fallback={<div>Loading...</div>}> 

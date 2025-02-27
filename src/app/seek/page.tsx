@@ -9,14 +9,17 @@ export default function Page() {
       document.title = 'bcnext/seek';
   }, []);
   return (
-    <Suspense fallback={<div>Loading...</div>}> 
-      <Link href="/" className="font-bold hover:text-green-600 px-1">bcnext</Link>|
-      <Link href="/normal" className="hover:text-green-600 px-1">Normal</Link>|
-      <Link href="/rare" className="hover:text-green-600 px-1">Rare</Link>|
-      <Link href="/seek" className="text-green-500 hover:text-green-600 px-1">Seek</Link>|
-      <hr />
-      <Seeker />
-    </Suspense>
+    <div>
+      <Suspense fallback={<div>Loading...</div>}> 
+        <Link href="/" className="font-bold hover:text-green-600 px-1">bcnext</Link>|
+        <Link href="/normal" className="hover:text-green-600 px-1">Normal</Link>|
+        <Link href="/rare" className="hover:text-green-600 px-1">Rare</Link>|
+        <Link href="/event" className="hover:text-green-600 px-1">Event</Link>|
+        <Link href="/seek" className="text-green-500 hover:text-green-600 px-1">Seek</Link>|
+        <hr />
+        <Seeker />
+      </Suspense>
+    </div>
   );
 
 }

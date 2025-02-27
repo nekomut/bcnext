@@ -5,7 +5,7 @@ import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 
 import { generateWorkerInitializationMessage } from "./workerMsg";
 import Results from "./Results";
-import { RareGatyaSetList, NormalGatyaSetList, GatyaSet } from '@/data/gatyasets';
+import { RareGatyaSetList, NormalGatyaSetList, EventGatyaSetList, GatyaSet } from '@/data/gatyasets';
 
 type WorkerMessage = {
   type: "progress" | "seedFound";
@@ -33,7 +33,7 @@ export default function Seeker() {
     router.replace(`${pathname}?${params.toString()}`);
   };
 
-  const GatyaSetList = [...RareGatyaSetList, ...NormalGatyaSetList]
+  const GatyaSetList = [...RareGatyaSetList, ...NormalGatyaSetList, ...EventGatyaSetList]
   const findGatyaSet = (shortName: string) => {
     return GatyaSetList.find((gatyaset) => gatyaset.shortName === shortName);
   };

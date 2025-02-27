@@ -6,26 +6,24 @@ import { useEffect } from "react";
 import GatyaSets from "./GatyaSets";
 import SeedAndRolls from "./SeedAndRolls";
 import RollTable from "./RollTable";
-import Tile from "./Tile";
 
 export default function Page() {
   useEffect(() => {
-      document.title = 'bcnext/normal';
+      document.title = 'bcnext/rare';
   }, []);
   return (
     <div>
       <Link href="/" className="font-bold hover:text-green-600 px-1">bcnext</Link>|
-      <Link href="/normal" className="text-green-500 hover:text-green-600 px-1">Normal</Link>|
+      <Link href="/normal" className="hover:text-green-600 px-1">Normal</Link>|
       <Link href="/rare" className="hover:text-green-600 px-1">Rare</Link>|
-      <Link href="/event" className="hover:text-green-600 px-1">Event</Link>|
+      <Link href="/event" className="text-green-500 hover:text-green-600 px-1">Event</Link>|
       <Link href="/seek" className="hover:text-green-600 px-1">Seek</Link>|
       <hr />
       <Suspense>
         <GatyaSets />
         <SeedAndRolls />
         <RollTable />
-        <Tile />
       </Suspense>
     </div>
   );
-};
+}

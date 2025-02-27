@@ -4,7 +4,7 @@ import React from "react";
 import { useSearchParams } from 'next/navigation';
 import { Roll, GenerateAllRolls } from "./seed";
 import { DEFAULTS } from "./constants";
-import { NormalGatyaSetList } from "@/data/gatyasets";
+import { NormalGatyaSetList as GatyaSetList } from "@/data/gatyasets";
 
 export type GatyaSetTrackRolls = {
   gatyasetName: string;
@@ -84,7 +84,7 @@ const Tile = () => {
   const lastCat = getQueryParam("lastCat") || DEFAULTS.lastCat;
 
   const selectedGatyaSets = 'p,c,g'.split(','); 
-  const gatyasets = NormalGatyaSetList.filter((gatyaset) =>
+  const gatyasets = GatyaSetList.filter((gatyaset) =>
     selectedGatyaSets.includes(gatyaset.shortName)
   );
 

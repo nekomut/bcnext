@@ -4,7 +4,7 @@ import React from "react";
 import { useSearchParams } from 'next/navigation';
 import { Roll, GenerateAllRolls } from "./seed";
 import { DEFAULTS } from "./constants";
-import { RareGatyaSetList as GatyaSetList } from "@/data/gatyasets";
+import { EventGatyaSetList as GatyaSetList } from "@/data/gatyasets";
 
 export type GatyaSetTrackRolls = {
   gatyasetName: string;
@@ -28,7 +28,7 @@ const TileTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: G
 
   return (
     <div className="pr-1 py-3">
-      <h1 className="font-bold text-purple-500 pl-3">伝説・超激レーダー({rollsA[0].gatyasetName})</h1>
+      <h1 className="font-bold text-purple-500 pl-3">限定キャラレーダー({rollsA[0].gatyasetName})</h1>
       <table>
        <thead>
         <tr>

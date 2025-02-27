@@ -13,7 +13,7 @@ type WorkerMessage = {
   seed?: number;
 };
 
-export default function Seek() {
+export default function Seeker() {
 
   const searchParams = useSearchParams();
   const pathname = usePathname();
@@ -123,10 +123,9 @@ export default function Seek() {
   
   return (
     <> 
-      <div>GatyaSet:</div>
-
+      <p className="mx-1 mt-2 mb-0">GatyaSet:</p>
       <select
-        className="text-gray-800 my-1"
+        className="text-gray-800 mx-1 mt-0 mb-1"
         onChange={(event) => {
           const selectedGatyaSet = findGatyaSet(event.target.value);
           console.log(selectedGatyaSet);
@@ -172,7 +171,7 @@ export default function Seek() {
                 <select
                   key={i}
                   onChange={(e) => setUserRoll(i, e.target.value)}
-                  className="text-gray-800 max-w-xs mb-1 "
+                  className="text-gray-800 max-w-xs mx-1 mb-1 "
                 >
                   <option value="null" defaultValue={roll === null ? "true" : "false"}>
                     -- Select roll {i + 1} --
@@ -191,7 +190,7 @@ export default function Seek() {
 
           <button
             type="button"
-            className="button-blue"
+            className="button-blue mx-1"
             onClick={onClick}
             disabled={userRolls.every((roll) => roll === null) || isSearching}
           >

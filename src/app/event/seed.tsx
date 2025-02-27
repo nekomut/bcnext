@@ -252,33 +252,21 @@ export const GenerateAllRolls = (seed: number, numRolls: number, gatyasets: Gaty
 
         let guaranteedRoll = findCell(track[track.length-1].unitIfDistinct.unitSeed);
 
-        console.log('rolls', rolls);
+        // console.log('rolls', rolls);
         track.some((roll, i: number) => {
-          if (i < (numRolls-16)) {
+          if (i < (numRolls+2)) {
             // console.log(`roll[${i}]`, roll);
-            let seed: number = roll.raritySeed;
-            let cell: Roll | undefined = findCell(seed);
+            const seed: number = roll.raritySeed;
+            const cell: Roll | undefined = findCell(seed);
             if (!cell) {
               return true;
             }
-            for (let j = 0; j < (rolls.gatyasetGuaranteed!); j++) {
-              if (cell && cell.unitIfDistinct) {
-                cell = findCell(seed)!;
-                if (j > 0 && cell.dupeInfo?.showDupe) {
-                  seed = xorShift32(cell.unitIfDupe!.unitSeed);
-                  cell = findCell(cell.unitIfDupe!.raritySeed);
-                } else {
-                  seed = xorShift32(cell.unitIfDistinct?.unitSeed);
-                }
-              }
-              // console.log(`rolls[${i}].cell[${j}]`, cell);
-            };
+
             // 確定枠
-            if (cell!.dupeInfo?.showDupe) {
-              guaranteedRoll = findCell(cell!.unitIfDupe!.unitSeed);
-              guaranteedRoll = findCell(guaranteedRoll!.unitIfDupe!.raritySeed);
+            if (!cell!.dupeInfo?.showDupe) {
+              guaranteedRoll = findCell(cell!.raritySeed);
             } else {
-              guaranteedRoll = findCell(cell!.unitIfDistinct?.unitSeed);
+              guaranteedRoll = findCell(cell!.unitIfDupe!.raritySeed);
             }
             // roll.unitIfGuaranteed追加
             const unitSeed = guaranteedRoll?.unitIfDistinct.unitSeed;

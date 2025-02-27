@@ -68,7 +68,6 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
                 <td className={`
                   rolltable-cell-unitname
                   rarity-${unit.rarity}A
-                  ${rollsA[j].gatyasetName.startsWith('プラチケ') ? 'platinum-ticket-A' : rollsA[j].gatyasetName.startsWith('レジェチケ') ? 'legendary-ticket-A' : ''}
                 `}>
                   {unit.unitIfDistinct.unitName}
                   {unit.dupeInfo?.showDupe && ( // dupe track switch
@@ -81,7 +80,7 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
                       <span className={`
                         ${unit.dupeInfo.targetCellId.endsWith('A') ? 'rolltable-switch-AtoB' : 'rolltable-switch-BtoA'}
                       `}>
-                        {`${unit.dupeInfo.targetCellId}`}
+                       {`${unit.dupeInfo.targetCellId}`}
                       </span>
                       <span className='rolltable-switch-AtoB'>
                         {`${unit.dupeInfo.targetWillRerollAgain ? 'R' : ''}`}
@@ -94,12 +93,6 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
                     <td className="rolltable-cell-numeric rolltable-guaranteed-A">{unit.unitIfGuaranteed?.unitIndex}</td>
                     <td className="rolltable-cell-unitname">
                       <span className="rolltable-guaranteed-A">{unit.unitIfGuaranteed?.unitName}</span>
-                      <span className="text-gray-400">→</span>
-                      <span className={`
-                        ${unit.unitIfGuaranteed?.targetCellId.endsWith('A') ? 'rolltable-switch-AtoB' : 'rolltable-switch-BtoA'}
-                      `}>
-                        {unit.unitIfGuaranteed?.targetCellId}
-                      </span>
                     </td>
                   </>
                 )}
@@ -123,7 +116,6 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
                 <td className={`
                   rolltable-cell-unitname
                   rarity-${unit.rarity}B
-                  ${rollsA[j].gatyasetName.startsWith('プラチケ') ? 'platinum-ticket-B' : rollsA[j].gatyasetName.startsWith('レジェチケ') ? 'legendary-ticket-B' : ''}
                 `}>
                   {unit.unitIfDistinct.unitName}
                   {unit.dupeInfo?.showDupe && ( // dupe track switch
@@ -148,12 +140,6 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
                     <td className="rolltable-cell-numeric rolltable-guaranteed-B">{unit.unitIfGuaranteed?.unitIndex}</td>
                     <td className="rolltable-cell-unitname">
                       <span className="rolltable-guaranteed-B">{unit.unitIfGuaranteed?.unitName}</span>
-                      <span className="text-gray-400">→</span>
-                      <span className={`
-                        ${unit.unitIfGuaranteed?.targetCellId.endsWith('A') ? 'rolltable-switch-AtoB' : 'rolltable-switch-BtoA'}
-                      `}>
-                        {unit.unitIfGuaranteed?.targetCellId}
-                      </span>
                     </td>
                   </>
                 )}
@@ -180,7 +166,7 @@ const RollTable = () => {
   const initialSeed = parseInt(getQueryParam("seed") || DEFAULTS.seed, 10);
   const numRolls = parseInt(getQueryParam("rolls") || DEFAULTS.rolls, 10);
   // Buffer so that track switches near the end of numRolls can be processed
-  const NUM_ROLLS_BUFFER = 16;
+  const NUM_ROLLS_BUFFER = 2;
   const lastCat = getQueryParam("lastCat") || DEFAULTS.lastCat;
 
   const selectedGatyaSets = getQueryParam("gatyasets")?.split(",") || DEFAULTS.gatyasets.split(",");

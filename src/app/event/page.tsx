@@ -9,7 +9,7 @@ import RollTable from "./RollTable";
 
 export default function Page() {
   useEffect(() => {
-      document.title = 'bcnext/rare';
+      document.title = 'bcnext/event';
   }, []);
   return (
     <div>

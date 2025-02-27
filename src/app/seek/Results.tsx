@@ -46,10 +46,24 @@ const Results = ({
               <div key={i} className="mx-1 mt-1">
                 <strong>Seed {i + 1}</strong>
                 <div>
-                  <span className="text-yellow-500">現在のシード値: <strong>{seedAfterRolls}</strong></span>
-                  <span className="text-gray-500"> ({numPulls}連を回す直前のシード値: <strong>{seedBeforeRolls}</strong>)</span>
-                  {!guaranteed && nextRollIsReroll && (<p className="text-yellow-500">⚠️ 次回レア被り検知‼️</p>)}
-                  {guaranteed && (<p>確定枠のシード値: <strong>{xorShift32(seedAfterRolls)}</strong></p>)}
+                  <span className="text-yellow-500">
+                    現在のシード値: 
+                    <a href={`/${isNaN(Number(gatyaSet.shortName)) ? 'normal' : 'rare' }?seed=${seedAfterRolls}`} target="_blank" rel="noreferrer">
+                      <strong>{`${seedAfterRolls} `}</strong>
+                    </a>
+                  </span>
+                  <span className="text-gray-500">
+                    ({numPulls}連を回す直前のシード値:
+                    <a href={`/${isNaN(Number(gatyaSet.shortName)) ? 'normal' : 'rare' }?seed=${seedAfterRolls}`} target="_blank" rel="noreferrer">
+                      <strong>{seedBeforeRolls}</strong>)
+                    </a>
+                  </span>
+                  {!guaranteed && nextRollIsReroll && (
+                    <p className="text-yellow-500">⚠️ 次回レア被り検知‼️</p>
+                  )}
+                  {guaranteed && (
+                    <p>確定枠のシード値: <strong>{xorShift32(seedAfterRolls)}</strong></p>
+                  )}
                 </div>
               </div>
             );

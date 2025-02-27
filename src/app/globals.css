@@ -121,10 +121,10 @@ body {
   @apply text-rose-800 border-0;
 }
 .rarity-4A {
-  @apply text-purple-500 border-purple-500 border-y-2;
+  @apply text-fuchsia-400 border-fuchsia-400 border-y-2;
 }
 .rarity-4B {
-  @apply text-purple-700 font-bold border-purple-700 border border-x-0;
+  @apply text-purple-600 font-bold border-purple-600 border border-x-0;
 }
 
 .tile-rarity-0A, .tile-rarity-1A, .tile-rarity-2A {
@@ -140,8 +140,8 @@ body {
   @apply text-rose-800 m-0 px-0 leading-[0.5];
 }
 .tile-rarity-4A {
-  @apply text-purple-500 m-0 px-0 leading-[0.5];
+  @apply text-fuchsia-400 m-0 px-0 leading-[0.5];
 }
 .tile-rarity-4B {
-  @apply text-purple-700 m-0 px-0 leading-[0.5];
+  @apply text-purple-600 m-0 px-0 leading-[0.5];
 }

@@ -126,7 +126,7 @@ export default function Seek() {
       <div>GatyaSet:</div>
 
       <select
-        className="text-gray-800"
+        className="text-gray-800 my-1"
         onChange={(event) => {
           const selectedGatyaSet = findGatyaSet(event.target.value);
           console.log(selectedGatyaSet);
@@ -150,9 +150,10 @@ export default function Seek() {
 
       {hasGatyaSet && (
         <>
-          <label>
+          <label className="align-middle">
             <input
               type="checkbox"
+              className="mx-1 align-text-bottom"
               defaultChecked={guaranteed}
               onClick={(event) => {
                 setGuaranteed((event.target as HTMLInputElement).checked);
@@ -194,7 +195,7 @@ export default function Seek() {
             onClick={onClick}
             disabled={userRolls.every((roll) => roll === null) || isSearching}
           >
-            Start searching
+            run 
           </button>
           {(isSearching || startedAndFinishedSearching) && (
             <Results

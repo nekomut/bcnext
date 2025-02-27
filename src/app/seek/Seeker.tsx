@@ -194,7 +194,7 @@ export default function Seeker() {
             onClick={onClick}
             disabled={userRolls.every((roll) => roll === null) || isSearching}
           >
-            run 
+            計算実行 
           </button>
           {(isSearching || startedAndFinishedSearching) && (
             <Results

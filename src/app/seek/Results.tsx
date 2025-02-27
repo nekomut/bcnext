@@ -48,13 +48,13 @@ const Results = ({
                 <div>
                   <span className="text-yellow-500">
                     現在のシード値: 
-                    <a href={`/${isNaN(Number(gatyaSet.shortName)) ? 'normal' : 'rare' }?seed=${seedAfterRolls}`} target="_blank" rel="noreferrer">
+                    <a href={`${isNaN(Number(gatyaSet.shortName)) ? 'normal' : 'rare' }?seed=${seedAfterRolls}`} target="_blank" rel="noreferrer">
                       <strong>{`${seedAfterRolls} `}</strong>
                     </a>
                   </span>
                   <span className="text-gray-500">
                     ({numPulls}連を回す直前のシード値:
-                    <a href={`/${isNaN(Number(gatyaSet.shortName)) ? 'normal' : 'rare' }?seed=${seedAfterRolls}`} target="_blank" rel="noreferrer">
+                    <a href={`${isNaN(Number(gatyaSet.shortName)) ? 'normal' : 'rare' }?seed=${seedBeforeRolls}`} target="_blank" rel="noreferrer">
                       <strong>{seedBeforeRolls}</strong>)
                     </a>
                   </span>

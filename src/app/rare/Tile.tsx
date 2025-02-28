@@ -1,7 +1,7 @@
 'use client'
 
-import React from "react";
-import { useSearchParams } from 'next/navigation';
+import React, { useState, useCallback } from 'react';
+import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 import { Roll, GenerateAllRolls } from "./seed";
 import { DEFAULTS } from "./constants";
 import { RareGatyaSetList as GatyaSetList } from "@/data/gatyasets";
@@ -21,23 +21,72 @@ export const chunk = <Roll, >(array: Roll[], size: number): Roll[][] => {
   );
 };
 
-const TileTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: GatyaSetTrackRolls[] }) => {  
+const TileTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: GatyaSetTrackRolls[]; }) => {  
+
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+  const router = useRouter();
+  
+  const getQueryParam = useCallback((key: keyof typeof DEFAULTS) => {
+    return searchParams.get(key);
+  }, [searchParams]);
+  
+  const setQueryParam = (key: keyof typeof DEFAULTS, value: string) => {
+    const params = new URLSearchParams(searchParams);
+    if (value) {
+      params.set(key, value);
+    } else {
+      params.delete(key);
+    }
+    router.replace(`${pathname}?${params.toString()}`);
+  };
+
+  const findGatyaSet = (shortName: string) => {
+    return GatyaSetList.find((gatyaset) => gatyaset.shortName === shortName);
+  };
+  const gatyaSet = findGatyaSet(rollsA[0].gatyasetShortName);
+  const gatyasetPool = gatyaSet?.pools.flatMap((pool, i) => (i > 2? pool.units : []));
+  const [selected, setSelected] = useState(getQueryParam("selected") || DEFAULTS.selected);
 
   const zippedRolls = zip(T(rollsA.map((roll) => roll.track)), T(rollsB.map((roll) => roll.track)));
   const chunkedRolls = chunk(zippedRolls, 100);
+  console.log(chunkedRolls[0]);
 
   return (
     <div className="pr-1 py-3">
       <h1 className="font-bold text-purple-500 pl-3">伝説・超激レーダー({rollsA[0].gatyasetName})</h1>
+
+      <select
+        onChange={(event) => {
+          setSelected(event.target.value)
+          setQueryParam("selected", event.target.value);
+          console.log(getQueryParam("selected"));
+        }}
+        className="text-gray-800 max-w-xs mx-3 mb-1 "
+      >
+        <option value="null" defaultValue={selected}>
+          -- Select Unit --
+        </option>
+        {gatyasetPool!.map((unit, i) => {
+          return (
+            <option key={`${i}.${unit}`} value={unit} defaultValue={selected}>
+              {unit}
+            </option>
+          );
+        })}
+      </select>
+
       <table>
        <thead>
         <tr>
           <th></th>
-        {chunkedRolls[0].map((_, i) => (
-        <React.Fragment key={i}>
-          <th className="text-right text-[0.75em]">{(i+1) % 10 ? '' : (i+1)}</th>
-        </React.Fragment>
-        ))}
+          {chunkedRolls[0].map((_, i) => (
+          <React.Fragment key={i}>
+            <th className="text-right text-[0.75em]">{(i+1) % 10 ? '' : (i+1)}</th>
+          </React.Fragment>
+          ))}
+          <th></th>
+          <th className='px-2'></th>
         </tr>
        </thead>
        <tbody>
@@ -47,19 +96,21 @@ const TileTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: G
               <td className='tile-chunkId-A text-[0.8em] leading-[0.9] pr-1'>{`${i*100+1}A`}</td>
               {chunk.map((row, j) => (
               <React.Fragment key={`${j}-1`}>
-              <td className={`tile-rarity-${row[0][0].rarity}A`}>■</td>
+              <td className={`tile-rarity-${row[0][0].rarity}A ${row[0][0].unitIfDistinct.unitName === selected ? 'tile-selected' : ''}`}>■</td>
               </React.Fragment>
               ))}
               <td className="tile-rarity-4A text-[0.9em] text-right font-bold">{(chunk.filter(x => x[0][0].rarity == 4).length > 0) ? chunk.filter(x => x[0][0].rarity == 4).length: ''}</td>
+              <td className="tile-rarity-4A text-[0.9em] text-right font-bold tile-selected">{(chunk.filter(x => x[0][0].unitIfDistinct.unitName === selected).length > 0) ? chunk.filter(x => x[0][0].unitIfDistinct.unitName === selected).length: ''}</td>
             </tr> 
             <tr>
               <td className='tile-chunkId-B text-[0.8em] leading-[0.9] pr-1'>{`${i*100+1}B`}</td>
               {chunk.map((row, j) => (
               <React.Fragment key={`${j}-2`}>
-              <td className={`tile-rarity-${row[1][0].rarity}B`}>■</td>
+              <td className={`tile-rarity-${row[1][0].rarity}B ${row[1][0].unitIfDistinct.unitName === selected ? 'tile-selected' : ''}`}>■</td>
               </React.Fragment>
               ))}
               <td className="tile-rarity-4B text-[0.9em] text-right font-bold">{(chunk.filter(x => x[1][0].rarity == 4).length > 0) ? chunk.filter(x => x[1][0].rarity == 4).length : ''}</td>
+              <td className="tile-rarity-4B text-[0.9em] text-right font-bold tile-selected">{(chunk.filter(x => x[1][0].unitIfDistinct.unitName === selected).length > 0) ? chunk.filter(x => x[1][0].unitIfDistinct.unitName === selected).length: ''}</td>
             </tr> 
           </React.Fragment>
         ))}

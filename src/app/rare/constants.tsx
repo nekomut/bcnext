@@ -23,6 +23,7 @@ export const DEFAULTS = {
   ].join(","),
   rolls: "50",
   lastCat: "",
+  selected: "",
 };
 
 export const MISTIC_CATS = [

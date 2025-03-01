@@ -128,7 +128,6 @@ export default function Seeker() {
         className="text-gray-800 mx-1 mt-0 mb-1"
         onChange={(event) => {
           const selectedGatyaSet = findGatyaSet(event.target.value);
-          console.log(selectedGatyaSet);
           setGatyaSet(selectedGatyaSet || null);
           setQueryParam("gatyaset", event.target.value);
         }}
@@ -140,7 +139,7 @@ export default function Seeker() {
               key={gatyaset.shortName} value={gatyaset.shortName}
             >
               {gatyaset.name}
-              {gatyaset.guaranteed! > 0 ? '[確定]':''}
+              {(gatyaset.guaranteed! > 0 && !gatyaset.shortName.startsWith('e')) ? '[確定]':''}
               ({gatyaset.gatyasetId})
             </option>
           );

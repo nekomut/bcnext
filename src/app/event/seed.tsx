@@ -252,10 +252,8 @@ export const GenerateAllRolls = (seed: number, numRolls: number, gatyasets: Gaty
 
         let guaranteedRoll = findCell(track[track.length-1].unitIfDistinct.unitSeed);
 
-        // console.log('rolls', rolls);
         track.some((roll, i: number) => {
           if (i < (numRolls+2)) {
-            // console.log(`roll[${i}]`, roll);
             const seed: number = roll.raritySeed;
             const cell: Roll | undefined = findCell(seed);
             if (!cell) {
@@ -296,6 +294,6 @@ export const GenerateAllRolls = (seed: number, numRolls: number, gatyasets: Gaty
     };
   });
 
-  console.log('allRolls', allRolls);
+  // console.log('allRolls', allRolls);
   return allRolls;
 };

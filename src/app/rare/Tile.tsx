@@ -50,7 +50,6 @@ const TileTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: G
 
   const zippedRolls = zip(T(rollsA.map((roll) => roll.track)), T(rollsB.map((roll) => roll.track)));
   const chunkedRolls = chunk(zippedRolls, 100);
-  console.log(chunkedRolls[0]);
 
   return (
     <div className="pr-1 py-3">
@@ -60,7 +59,6 @@ const TileTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: G
         onChange={(event) => {
           setSelected(event.target.value)
           setQueryParam("selected", event.target.value);
-          console.log(getQueryParam("selected"));
         }}
         className="text-gray-800 max-w-xs mx-3 mb-1 "
       >

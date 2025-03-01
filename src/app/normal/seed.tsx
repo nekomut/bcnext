@@ -226,7 +226,7 @@ export const GenerateAllRolls = (seed: number, numRolls: number, gatyasets: Gaty
      });
   });
   
-  console.log('allRolls', allRolls);
+  // console.log('allRolls', allRolls);
   return allRolls;
 };
 

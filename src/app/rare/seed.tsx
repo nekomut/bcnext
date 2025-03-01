@@ -252,10 +252,8 @@ export const GenerateAllRolls = (seed: number, numRolls: number, gatyasets: Gaty
 
         let guaranteedRoll = findCell(track[track.length-1].unitIfDistinct.unitSeed);
 
-        console.log('rolls', rolls);
         track.some((roll, i: number) => {
           if (i < (numRolls-16)) {
-            // console.log(`roll[${i}]`, roll);
             let seed: number = roll.raritySeed;
             let cell: Roll | undefined = findCell(seed);
             if (!cell) {
@@ -271,7 +269,6 @@ export const GenerateAllRolls = (seed: number, numRolls: number, gatyasets: Gaty
                   seed = xorShift32(cell.unitIfDistinct?.unitSeed);
                 }
               }
-              // console.log(`rolls[${i}].cell[${j}]`, cell);
             };
             // 確定枠
             if (cell!.dupeInfo?.showDupe) {
@@ -308,6 +305,6 @@ export const GenerateAllRolls = (seed: number, numRolls: number, gatyasets: Gaty
     };
   });
 
-  console.log('allRolls', allRolls);
+  // console.log('allRolls', allRolls);
   return allRolls;
 };

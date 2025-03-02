@@ -5,7 +5,7 @@ import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 
 import { generateWorkerInitializationMessage } from "./workerMsg";
 import Results from "./Results";
-import { RareGatyaSetList, NormalGatyaSetList, EventGatyaSetList, GatyaSet } from '@/data/gatyasets';
+import { RareGatyaSetList, NormalGatyaSetList, EventGatyaSetList } from '@/data/gatyasets';
 
 type WorkerMessage = {
   type: "progress" | "seedFound";

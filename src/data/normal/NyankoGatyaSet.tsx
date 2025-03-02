@@ -1,7 +1,7 @@
 import { GatyaSet } from "@/data/gatyasets";
 
 export const NyankoGatyaSet: GatyaSet = {
-  name: "にゃんこ",
+  name: "にゃんこガチャ",
   shortName: "n",
   gatyasetId: 0,
   rateCumSum: [10000],

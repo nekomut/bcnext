@@ -24,16 +24,18 @@ const Results = ({
   return isSearching ? (
     <div>
       <p className="text-yellow-500 mx-1 mt-2">計算中...</p>
-      {workerProgresses.map((progress, i) => {
-        return (
-          <div key={i}>
-            <p>
-              <strong className="block float float-left text-right min-w-[25px] mx-1">#{i + 1}</strong>
-              <span className="text-green-500">{"■".repeat(progress/5)}</span> {progress}%
-            </p>
-          </div>
-        );
-      })}
+      <div>
+        {workerProgresses.map((progress, i) => {
+          return (
+            <div key={i}>
+              <p>
+                <strong className="block float float-left text-right min-w-[25px] mx-1">#{i + 1}</strong>
+                <span className="text-green-500">{"■".repeat(progress/5)}</span> {progress}%
+              </p>
+            </div>
+          );
+        })}
+        </div>
     </div>
   ) : (
     <div>

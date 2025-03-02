@@ -19,9 +19,9 @@ export default function Seeker() {
   const pathname = usePathname();
   const router = useRouter();
   
-  // const getQueryParam = (key: string) => {
-  //   return searchParams.get(key);
-  // };
+  const getQueryParam = (key: string) => {
+    return searchParams.get(key);
+  };
   
   const setQueryParam = (key: string, value: string) => {
     const params = new URLSearchParams(searchParams);
@@ -38,7 +38,7 @@ export default function Seeker() {
     return GatyaSetList.find((gatyaset) => gatyaset.shortName === shortName);
   };
 
-  const [gatyaSet, setGatyaSet] = useState<GatyaSet | null>(null);
+  const [gatyaSet, setGatyaSet] = useState(findGatyaSet(getQueryParam('gatyaset')!) || GatyaSetList[0]);
   const hasGatyaSet = gatyaSet !== null;
 
   const [guaranteed, setGuaranteed] = useState<boolean>(false);
@@ -128,15 +128,19 @@ export default function Seeker() {
         className="text-gray-800 mx-1 mt-0 mb-1"
         onChange={(event) => {
           const selectedGatyaSet = findGatyaSet(event.target.value);
-          setGatyaSet(selectedGatyaSet || null);
+          if (selectedGatyaSet) {
+            setGatyaSet(selectedGatyaSet);
+          }
           setQueryParam("gatyaset", event.target.value);
         }}
+        defaultValue={gatyaSet?.shortName}  
       >
         {GatyaSetList.map((gatyaset) => {
           return (
             <option
               className="text-gray-800"
-              key={gatyaset.shortName} value={gatyaset.shortName}
+              key={gatyaset.shortName}
+              value={gatyaset.shortName}
             >
               {gatyaset.name}
               {(gatyaset.guaranteed! > 0 && !gatyaset.shortName.startsWith('e')) ? '[確定]':''}

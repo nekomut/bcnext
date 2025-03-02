@@ -27,8 +27,9 @@ const Results = ({
       {workerProgresses.map((progress, i) => {
         return (
           <div key={i} >
-            <strong className="block float float-left text-right min-w-[25px] mx-1">#{i + 1}</strong>
-            <span className="block float float-left text-green-500">{"■".repeat(progress/5)}</span> {progress}%
+            <strong className="block float float-left text-right min-w-[25px]">#{i + 1}</strong>
+            <span className="block float float-left text-emerald-500 mx-1">{"■".repeat(progress/5)}</span>
+            <span className="block clearfix">{progress}%</span>
           </div>
         );
       })}

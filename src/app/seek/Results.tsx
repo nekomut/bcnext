@@ -28,7 +28,7 @@ const Results = ({
         return (
           <div key={i} >
             <strong className="block float float-left text-right min-w-[25px] mx-1">#{i + 1}</strong>
-            <span className="text-green-500">{"■".repeat(progress/5)}</span> {progress}%
+            <span className="block float float-left text-green-500">{"■".repeat(progress/5)}</span> {progress}%
           </div>
         );
       })}

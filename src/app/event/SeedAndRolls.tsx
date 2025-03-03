@@ -29,14 +29,14 @@ export default function SeedAndRolls() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const storedSeed = localStorage.getItem("rare_seed");
+      const storedSeed = localStorage.getItem("event_seed");
       setSeedInput(getQueryParam("seed") || storedSeed || DEFAULTS.seed);
     }
   }, [getQueryParam]);
 
   useEffect(() => {
     if (typeof window !== 'undefined' && seedInput !== null) {
-      localStorage.setItem("rare_seed", seedInput);
+      localStorage.setItem("event_seed", seedInput);
     }
   }, [seedInput]);
 

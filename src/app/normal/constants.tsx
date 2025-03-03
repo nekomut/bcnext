@@ -1,6 +1,6 @@
 export const DEFAULTS = {
-  seed: "3864178602",
+  seed: "1488088050",
   gatyasets: "p,f,g,c",
-  rolls: "50",
+  rolls: "20",
   lastCat: "",
 };

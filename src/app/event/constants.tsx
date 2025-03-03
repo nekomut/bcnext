@@ -4,6 +4,6 @@ export const DEFAULTS = {
     // "e36", // 春節
     "e37", // トキメキにゃんこ学園
   ].join(","),
-  rolls: "50",
+  rolls: "20",
   lastCat: "",
 };

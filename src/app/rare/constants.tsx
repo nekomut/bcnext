@@ -1,5 +1,5 @@
 export const DEFAULTS = {
-  seed: "1019061186",
+  seed: "797424354",
   gatyasets: [
     952, // 超ネコ祭
     943, // バサラーズ
@@ -21,7 +21,7 @@ export const DEFAULTS = {
     // 951, // ピクシーズ2x
     // 967, // 1億DL記念選抜
   ].join(","),
-  rolls: "50",
+  rolls: "20",
   lastCat: "",
   selected: "",
 };

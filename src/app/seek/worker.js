@@ -74,18 +74,18 @@ const searchRange = (data) => {
     gatyasetRerollablePools,
   } = data;
 
-  const oneTenthBlock = (endSeed - startSeed) / 10;
+  const chunkBlock = (endSeed - startSeed) / 20;
   let percentageSearched = 0;
-  let outputBreakpoint = startSeed + oneTenthBlock;
+  let outputBreakpoint = startSeed + chunkBlock;
 
   for (let seed = startSeed; seed < endSeed; seed++) {
     if (seed >= outputBreakpoint) {
-      percentageSearched += 10;
+      percentageSearched += 5;
       postMessage({
         type: "progress",
         percentageSearched: percentageSearched,
       });
-      outputBreakpoint += oneTenthBlock;
+      outputBreakpoint += chunkBlock;
     }
     const seedIsValid = check({
       seed,

@@ -90,4 +90,3 @@ export const Set523: GatyaSet = {
   ],
 
 };
-

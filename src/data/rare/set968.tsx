@@ -85,4 +85,3 @@ export const Set968: GatyaSet = {
   ],
 
 };
-

@@ -1,11 +1,11 @@
 import { GatyaSet } from "@/data/gatyasets";
 
 export const Set945: GatyaSet = {
-  name: "エンペラーズ2x",
+  name: "エンペラーズ",
   guaranteed: -1,
   shortName: "945",
   gatyasetId: 945,
-  rateCumSum: [0, 6440, 8940, 9940, 10000],
+  rateCumSum: [0, 6970, 9470, 9970, 10000],
   pools: [
     {
       rate: 0,
@@ -13,7 +13,7 @@ export const Set945: GatyaSet = {
       reroll: false,
     },
     {
-      rate: 6440,
+      rate: 6970,
       units: [
        'ネコ武闘家',            // 523
        'ネコマタドール',        // 495
@@ -79,7 +79,7 @@ export const Set945: GatyaSet = {
       reroll: false,
     },
     {
-      rate: 1000,
+      rate: 500,
       units: [
        '砲龍ガンドロス',        // 760
        '海龍ダライアサン',      // 660
@@ -96,11 +96,12 @@ export const Set945: GatyaSet = {
       reroll: false,
     },
     {
-      rate: 60,
+      rate: 30,
       units: [
        '天城龍バベル',          // 450
       ],
       reroll: false,
     },
   ],
+
 };

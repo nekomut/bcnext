@@ -1,11 +1,11 @@
 import { GatyaSet } from "@/data/gatyasets";
 
 export const Set951: GatyaSet = {
-  name: "ピクシーズ2x",
+  name: "ピクシーズ",
   guaranteed: -1,
   shortName: "951",
   gatyasetId: 951,
-  rateCumSum: [0, 6440, 8940, 9940, 10000],
+  rateCumSum: [0, 6970, 9470, 9970, 10000],
   pools: [
     {
       rate: 0,
@@ -13,7 +13,7 @@ export const Set951: GatyaSet = {
       reroll: false,
     },
     {
-      rate: 6440,
+      rate: 6970,
       units: [
        'ネコ武闘家',            // 523
        'ネコマタドール',        // 495
@@ -79,7 +79,7 @@ export const Set951: GatyaSet = {
       reroll: false,
     },
     {
-      rate: 1000,
+      rate: 500,
       units: [
        '鉄の精霊カッチン',      // 719
        '氷の精霊フリズ',        // 655
@@ -93,11 +93,12 @@ export const Set951: GatyaSet = {
       reroll: false,
     },
     {
-      rate: 60,
+      rate: 30,
       units: [
        '幻の精霊ルミナ',        // 478
       ],
       reroll: false,
     },
   ],
+
 };

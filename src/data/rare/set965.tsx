@@ -1,10 +1,10 @@
 import { GatyaSet } from "@/data/gatyasets";
 
-export const Set953: GatyaSet = {
+export const Set965: GatyaSet = {
   name: "プラチケ",
   guaranteed: -1,
-  shortName: "953",
-  gatyasetId: 953,
+  shortName: "965",
+  gatyasetId: 965,
   rateCumSum: [0, 0, 0, 10000],
   pools: [
     {
@@ -25,6 +25,7 @@ export const Set953: GatyaSet = {
     {
       rate: 10000,
       units: [
+       'マモルガ',               // 781
        '幼天女ルーナ',           // 779
        '特命機動アクセル',       // 774
        '花咲かじいさん',         // 769

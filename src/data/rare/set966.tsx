@@ -1,11 +1,11 @@
 import { GatyaSet } from "@/data/gatyasets";
 
-export const Set953: GatyaSet = {
-  name: "プラチケ",
+export const Set966: GatyaSet = {
+  name: "レジェチケ",
   guaranteed: -1,
-  shortName: "953",
-  gatyasetId: 953,
-  rateCumSum: [0, 0, 0, 10000],
+  shortName: "966",
+  gatyasetId: 966,
+  rateCumSum: [0, 0, 0, 9500, 10000],
   pools: [
     {
       rate: 0,
@@ -23,8 +23,9 @@ export const Set953: GatyaSet = {
       reroll: false,
     },
     {
-      rate: 10000,
+      rate: 9500,
       units: [
+       'マモルガ',               // 781
        '幼天女ルーナ',           // 779
        '特命機動アクセル',       // 774
        '花咲かじいさん',         // 769
@@ -152,5 +153,25 @@ export const Set953: GatyaSet = {
       ],
       reroll: false,
     },
+    {
+      rate: 500,
+      units: [
+       '宵のイザナミ',          // 738
+       '暁のイザナギ',          // 731
+       'ネコ王子',              // 586
+       '創造神ガイア',          // 493
+       '超越科学者ヘヴン博士',  // 481
+       '幻の精霊ルミナ',        // 478
+       '終末兵器ムー',          // 463
+       'レジェルガ',            // 461
+       'ワンダー・モモコ',      // 455
+       'うしわか丸',            // 451
+       '天城龍バベル',          // 450
+       '聖会長ジャンヌダルク',  // 449
+       '宮本武蔵',              // 448
+      ],
+      reroll: false,
+    },
   ],
+
 };

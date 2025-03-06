@@ -171,6 +171,7 @@ const RollTable = () => {
   );
 
   const allRolls = GenerateAllRolls(initialSeed, numRolls + NUM_ROLLS_BUFFER, gatyasets, lastCat);
+  console.log('allRolls', allRolls);
 
   const trackARolls = allRolls.map((roll) => ({
     gatyasetName: roll.gatyasetName,

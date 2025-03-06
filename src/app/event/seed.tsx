@@ -263,8 +263,8 @@ export const GenerateAllRolls = (seed: number, numRolls: number, gatyasets: Gaty
             // 確定枠
             if (!cell!.dupeInfo?.showDupe) {
               guaranteedRoll = findCell(cell!.raritySeed);
-            } else {
-              guaranteedRoll = findCell(cell!.unitIfDupe!.raritySeed);
+              // } else {
+              //   guaranteedRoll = findCell(cell!.unitIfDupe!.raritySeed);
             }
             // roll.unitIfGuaranteed追加
             const unitSeed = guaranteedRoll?.unitIfDistinct.unitSeed;
@@ -294,6 +294,5 @@ export const GenerateAllRolls = (seed: number, numRolls: number, gatyasets: Gaty
     };
   });
 
-  // console.log('allRolls', allRolls);
   return allRolls;
 };

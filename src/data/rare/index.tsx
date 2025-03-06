@@ -22,7 +22,7 @@ import { Set953 } from './set953'; // プラチケ
 import { Set954 } from './set954'; // レジェチケ
 // import { Set955 } from './set955'; // 超国王祭
 import { Set962 } from './set962'; // ルガ族
-// import { Set963 } from './set963'; // 超ネコ祭
+import { Set963 } from './set963'; // 超ネコ祭
 import { Set964 } from './set964'; // 極ネコ祭
 import { Set965 } from './set965'; // プラチケ
 import { Set966 } from './set966'; // レジェチケ
@@ -47,7 +47,7 @@ export const RareGatyaSetList = [
     Set949, // アイアンウォーズ
     Set964, // 極ネコ祭
     //
-    // Set963, // 超ネコ祭
+    Set963, // 超ネコ祭
     // Set942, // ダイナマイツ
     // Set943, // バサラーズ
     // Set944, // ギャルズ

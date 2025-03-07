@@ -26,8 +26,6 @@ import { Set966 } from './set966'; // レジェチケ
 import { Set968 } from './set968'; // ホワイトデー
 
 export const RareGatyaSetList = [
-    Set966, // レジェチケ
-    Set965, // プラチケ
     Set962, // ルガ族 
     Set945, // エンペラーズ
     Set523, // 波動バスターズ
@@ -51,6 +49,9 @@ export const RareGatyaSetList = [
     // Set939, // バスターズ祭
     // Set861, // 女王祭
     // Set955, // 超国王祭
+    //
+    Set966, // レジェチケ
+    Set965, // プラチケ
     //
     // Set785, // バレンタイン
     // Set967, // 1億DL記念選抜

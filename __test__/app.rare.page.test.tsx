@@ -1,13 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import Page from '../src/app/rare/page';
+import Page from '@/app/rare/page';
 // import { useEffect } from 'react';
 
 // Mock the components used in Page
-jest.mock('../src/app/rare/GatyaSets', () => () => <div>GatyaSets Component</div>);
-jest.mock('../src/app/rare/SeedAndRolls', () => () => <div>SeedAndRolls Component</div>);
-jest.mock('../src/app/rare/RollTable', () => () => <div>RollTable Component</div>);
-jest.mock('../src/app/rare/Tile', () => () => <div>Tile Component</div>);
+jest.mock('@/app/rare/GatyaSets', () => () => <div>GatyaSets Component</div>);
+jest.mock('@/app/rare/SeedAndRolls', () => () => <div>SeedAndRolls Component</div>);
+jest.mock('@/app/rare/RollTable', () => () => <div>RollTable Component</div>);
+jest.mock('@/app/rare/Tile', () => () => <div>Tile Component</div>);
 
 describe('Page', () => {
     it('should set the document title to "bcnext/rare"', () => {

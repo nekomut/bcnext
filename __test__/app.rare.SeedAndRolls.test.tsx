@@ -3,8 +3,8 @@ import '@testing-library/jest-dom'
 // import '@testing-library/jest-dom/extend-expect';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
-import SeedAndRolls from '../src/app/rare/SeedAndRolls';
-import { DEFAULTS } from '../src/app/rare/constants';
+import SeedAndRolls from '@/app/rare/SeedAndRolls';
+import { DEFAULTS } from '@/app/rare/constants';
 
 
 jest.mock('next/navigation', () => ({

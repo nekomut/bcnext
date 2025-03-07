@@ -154,4 +154,5 @@ export const Set965: GatyaSet = {
       reroll: false,
     },
   ],
+
 };

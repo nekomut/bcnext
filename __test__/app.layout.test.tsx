@@ -3,7 +3,7 @@ import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 
 // Mock CSS imports to prevent Jest from trying to parse CSS
-jest.mock('../src/app/globals.css', () => ({}), { virtual: true });
+jest.mock('@/app/globals.css', () => ({}), { virtual: true });
 
 // RootLayout uses <html> as its root element, which makes it challenging
 // to test in a standard React testing environment. We'll focus on testing the 

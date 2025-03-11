@@ -1,5 +1,6 @@
 .next/
 coverage/
+docs/
 node_modules/
 out/
 

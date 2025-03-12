@@ -56,24 +56,27 @@ const TileTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: G
       <h1 className="font-bold pl-3">
         <span className="tile-rarity-4A">伝説レア</span> / <span className="tile-rarity-3A">超激レア</span> ({rollsA[0].gatyasetName})
       </h1>
-      <select
-        onChange={(event) => {
-          setSelected(event.target.value)
-          setQueryParam("selected", event.target.value);
-        }}
-        className="text-gray-800 max-w-xs mx-3 mb-1 "
-      >
-        <option value="null" defaultValue={selected}>
-          -- Select Unit --
-        </option>
-        {gatyasetPool!.map((unit, i) => {
-          return (
-            <option key={`${i}.${unit}`} value={unit} defaultValue={selected}>
-              {unit}
-            </option>
-          );
-        })}
-      </select>
+      <div className="ml-3">
+        <span className="tile-rarity-4A tile-selected">■</span>
+        <select
+          onChange={(event) => {
+            setSelected(event.target.value)
+            setQueryParam("selected", event.target.value);
+          }}
+          className="text-gray-800 max-w-xs ml-1 mb-1 "
+        >
+          <option value="null" defaultValue={selected}>
+            -- Select Unit --
+          </option>
+          {gatyasetPool!.map((unit, i) => {
+            return (
+              <option key={`${i}.${unit}`} value={unit} defaultValue={selected}>
+                {unit}
+              </option>
+            );
+          })}
+        </select>
+      </div>
 
       <table>
        <thead>
@@ -85,6 +88,7 @@ const TileTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: G
           </React.Fragment>
           ))}
           <th></th>
+          <th className='px-2'></th>
           <th className='px-2'></th>
         </tr>
        </thead>
@@ -98,6 +102,7 @@ const TileTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: G
               <td className={`tile-rarity-${row[0][0].rarity}A ${row[0][0].unitIfDistinct.unitName === selected ? 'tile-selected' : ''}`}>■</td>
               </React.Fragment>
               ))}
+              <td className="tile-rarity-3A text-[0.9em] text-right font-bold">{(chunk.filter(x => x[0][0].rarity == 3).length > 0) ? chunk.filter(x => x[0][0].rarity == 3).length: ''}</td>
               <td className="tile-rarity-4A text-[0.9em] text-right font-bold">{(chunk.filter(x => x[0][0].rarity == 4).length > 0) ? chunk.filter(x => x[0][0].rarity == 4).length: ''}</td>
               <td className="tile-rarity-4A text-[0.9em] text-right font-bold tile-selected">{(chunk.filter(x => x[0][0].unitIfDistinct.unitName === selected).length > 0) ? chunk.filter(x => x[0][0].unitIfDistinct.unitName === selected).length: ''}</td>
             </tr> 
@@ -108,6 +113,7 @@ const TileTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: G
               <td className={`tile-rarity-${row[1][0].rarity}B ${row[1][0].unitIfDistinct.unitName === selected ? 'tile-selected' : ''}`}>■</td>
               </React.Fragment>
               ))}
+              <td className="tile-rarity-3B text-[0.9em] text-right font-bold">{(chunk.filter(x => x[1][0].rarity == 3).length > 0) ? chunk.filter(x => x[1][0].rarity == 3).length : ''}</td>
               <td className="tile-rarity-4B text-[0.9em] text-right font-bold">{(chunk.filter(x => x[1][0].rarity == 4).length > 0) ? chunk.filter(x => x[1][0].rarity == 4).length : ''}</td>
               <td className="tile-rarity-4B text-[0.9em] text-right font-bold tile-selected">{(chunk.filter(x => x[1][0].unitIfDistinct.unitName === selected).length > 0) ? chunk.filter(x => x[1][0].unitIfDistinct.unitName === selected).length: ''}</td>
             </tr> 

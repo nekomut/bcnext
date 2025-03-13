@@ -45,7 +45,7 @@ const TileTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: G
     return GatyaSetList.find((gatyaset) => gatyaset.shortName === shortName);
   };
   const gatyaSet = findGatyaSet(rollsA[0].gatyasetShortName);
-  const gatyasetPool = gatyaSet?.pools.flatMap((pool, i) => (i > 2? pool.units : []));
+  const gatyasetPool = gatyaSet?.pools.flatMap((pool, i) => (i >= 2? pool.units : [])).reverse();
   const [selected, setSelected] = useState(getQueryParam("selected") || DEFAULTS.selected);
 
   const zippedRolls = zip(T(rollsA.map((roll) => roll.track)), T(rollsB.map((roll) => roll.track)));

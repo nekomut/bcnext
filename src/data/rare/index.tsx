@@ -1,7 +1,7 @@
 // import { Set452 } from './set452'; // エアバスターズ
-import { Set523 } from './set523'; // 波動バスターズ
+// import { Set523 } from './set523'; // 波動バスターズ
 // import { Set696 } from './set696'; // レッドバスターズ
-import { Set772 } from './set772'; // 超生命体バスターズ
+// import { Set772 } from './set772'; // 超生命体バスターズ
 // import { Set785 } from './set785'; // バレンタイン
 // import { Set861 } from './set861'; // 女王祭
 // import { Set906 } from './set906'; // メタルバスターズ
@@ -26,8 +26,6 @@ import { Set966 } from './set966'; // レジェチケ
 import { Set968 } from './set968'; // ホワイトデー
 
 export const RareGatyaSetList = [
-    Set523, // 波動バスターズ
-    Set772, // 超生命体バスターズ
     Set951, // ピクシーズ
     Set968, // ホワイトデー
     Set946, // ウルトラソウルズ
@@ -46,6 +44,8 @@ export const RareGatyaSetList = [
     // Set696, // レッドバスターズ
     // Set452, // エアバスターズ
     // Set906, // メタルバスターズ
+    // Set523, // 波動バスターズ
+    // Set772, // 超生命体バスターズ
     // Set939, // バスターズ祭
     // Set861, // 女王祭
     // Set955, // 超国王祭

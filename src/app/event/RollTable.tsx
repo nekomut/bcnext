@@ -1,6 +1,6 @@
 'use client'
 
-import React from "react";
+import React, { useState } from "react";
 import { useSearchParams } from 'next/navigation';
 import { Roll, GenerateAllRolls } from "./seed";
 import { DEFAULTS } from "./constants";
@@ -19,6 +19,7 @@ export const zip = (arr1: Array<Roll[]>, arr2: Array<Roll[]>) => arr1.map((_, i)
 
 const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: GatyaSetTrackRolls[] }) => {  
 
+  const [copiedSeed, setCopiedSeed] = useState<string | null>(null);
   const searchParams = useSearchParams();
   const getQueryParam = (key: keyof typeof DEFAULTS) => {
     return searchParams.get(key);
@@ -27,7 +28,16 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
   const gatyasets = getQueryParam("gatyasets") || DEFAULTS.gatyasets;
 
   const zippedRolls = zip(T(rollsA.map((roll) => roll.track)), T(rollsB.map((roll) => roll.track)));
-
+  
+  const copySeedToClipboard = (seed: string) => {
+    navigator.clipboard.writeText(seed)
+      .then(() => {
+        setCopiedSeed(seed);
+        setTimeout(() => setCopiedSeed(null), 1500); // 1.5秒後に通知を消す
+      })
+      .catch(err => console.error('クリップボードへのコピーに失敗しました', err));
+  };
+  
   return (
     <table>
       <thead>
@@ -53,7 +63,14 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
         {zippedRolls.map((row, i) => (
         <React.Fragment key={i}>
           <tr className='rolltable-row-A'>
-            <td className='rolltable-cellid-A'>{i + 1}A</td>
+            <td 
+              className={`rolltable-cellid-A cursor-pointer hover:bg-gray-100 ${copiedSeed === row[0][0].unitIfDistinct.unitSeed.toString() ? 'bg-green-100' : ''}`}
+              onClick={() => copySeedToClipboard(row[0][0].unitIfDistinct.unitSeed.toString())}
+              title="クリックしてシードをコピー"
+            >
+              {i + 1}A
+              {copiedSeed === row[0][0].unitIfDistinct.unitSeed.toString() && <span className="ml-1 text-xs text-green-600">✓</span>}
+            </td>
             <td className='rolltable-cell-numeric hover:underline'>
               <a href={`?seed=${row[0][0].unitIfDistinct.unitSeed}&lastCat=${row[0][0].unitIfDistinct.unitName}&rolls=${rolls}&gatyasets=${gatyasets}`}>
                 {row[0][0].unitIfDistinct.unitSeed}
@@ -101,7 +118,14 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
             }
           </tr>
           <tr className='rolltable-row-B'>
-            <td className='rolltable-cellid-B'>{i + 1}B</td>
+            <td 
+              className={`rolltable-cellid-B cursor-pointer hover:bg-gray-100 ${copiedSeed === row[1][0].unitIfDistinct.unitSeed.toString() ? 'bg-green-100' : ''}`}
+              onClick={() => copySeedToClipboard(row[1][0].unitIfDistinct.unitSeed.toString())}
+              title="クリックしてシードをコピー"
+            >
+              {i + 1}B
+              {copiedSeed === row[1][0].unitIfDistinct.unitSeed.toString() && <span className="ml-1 text-xs text-green-600">✓</span>}
+            </td>
             <td className='rolltable-cell-numeric hover:underline'>
               <a href={`?seed=${row[1][0].unitIfDistinct.unitSeed}&lastCat=${row[1][0].unitIfDistinct.unitName}&rolls=${rolls}&gatyasets=${gatyasets}`}>
                 {row[1][0].unitIfDistinct.unitSeed}

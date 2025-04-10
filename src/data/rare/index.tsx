@@ -4,6 +4,7 @@
 // import { Set772 } from './set772'; // 超生命体バスターズ
 // import { Set785 } from './set785'; // バレンタイン
 import { Set861 } from './set861'; // 女王祭
+import { Set875 } from './set875'; // イースター
 // import { Set906 } from './set906'; // メタルバスターズ
 // import { Set939 } from './set939'; // バスターズ祭
 // import { Set942 } from './set942'; // ダイナマイツ
@@ -38,6 +39,7 @@ export const RareGatyaSetList = [
     Set949, // アイアンウォーズ
     Set948, // ギガントゼウス
     
+    Set875, // イースター
     Set969, // 極ネコ祭
     Set972, // 超極ネコ祭 
     Set963, // 超ネコ祭

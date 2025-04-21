@@ -10,9 +10,9 @@ import { Set936 } from './set936'; // ウルトラ4
 import { Set937 } from './set937'; // ミラクル4
 import { Set938 } from './set938'; // エクセレント4
 // import { Set939 } from './set939'; // バスターズ祭
-import { Set942 } from './set942'; // ダイナマイツ
+// import { Set942 } from './set942'; // ダイナマイツ
 // import { Set943 } from './set943'; // バサラーズ
-import { Set944 } from './set944'; // ギャルズ
+// import { Set944 } from './set944'; // ギャルズ
 import { Set945 } from './set945'; // エンペラーズ
 import { Set946 } from './set946'; // ウルトラソウルズ
 // import { Set947 } from './set947'; // ダークヒーローズ
@@ -23,35 +23,35 @@ import { Set951 } from './set951'; // ピクシーズ
 // import { Set973 } from './set973'; // 超国王祭
 import { Set962 } from './set962'; // ルガ族
 // import { Set963 } from './set963'; // 超ネコ祭
-import { Set964 } from './set964'; // 極ネコ祭
+// import { Set964 } from './set964'; // 極ネコ祭
 import { Set965 } from './set965'; // プラチケ
 import { Set966 } from './set966'; // レジェチケ
 // import { Set967 } from './set967'; // 1億DL記念選抜
 // import { Set968 } from './set968'; // ホワイトデー
-import { Set969 } from './set969'; // 極ネコ祭
+// import { Set969 } from './set969'; // 極ネコ祭
 import { Set970 } from './set970'; // プラチケ
 import { Set971 } from './set971'; // レジェチケ
 import { Set972 } from './set972'; // 超極ネコ祭
 // import { Set977 } from './set977'; // バキコラボ
 
 export const RareGatyaSetList = [
-    Set964, // 極ネコ祭
-    Set942, // ダイナマイツ
-    Set944, // ギャルズ
+
+    Set936, // ウルトラ4
     Set950, // ギャルモン
     Set962, // ルガ族 
+
+    Set937, // ミラクル4
     Set951, // ピクシーズ
     Set945, // エンペラーズ
+
+    Set938, // エクセレント4
     Set946, // ウルトラソウルズ
     Set949, // アイアンウォーズ
 
-    Set936, // ウルトラ4
-    Set937, // ミラクル4
-    Set938, // エクセレント4
-
     Set972, // 超極ネコ祭 
-    Set969, // 極ネコ祭
     // Set963, // 超ネコ祭
+    // Set964, // 極ネコ祭
+    // Set969, // 極ネコ祭
 
     // Set696, // レッドバスターズ
     // Set452, // エアバスターズ
@@ -66,6 +66,8 @@ export const RareGatyaSetList = [
     // Set948, // ギガントゼウス
     // Set947, // ダークヒーローズ
     // Set943, // バサラーズ
+    // Set942, // ダイナマイツ
+    // Set944, // ギャルズ
 
     Set966, // レジェチケ
     Set965, // プラチケ

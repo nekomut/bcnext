@@ -14,14 +14,12 @@ export const Set971: GatyaSet = {
     },
     {
       rate: 0,
-      units: [
-      ],
-      reroll: true,
+      units: [],
+      reroll: false,
     },
     {
       rate: 0,
-      units: [
-      ],
+      units: [],
       reroll: false,
     },
     {

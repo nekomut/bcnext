@@ -9,7 +9,7 @@
 // import { Set936 } from './set936'; // ウルトラ4
 // import { Set937 } from './set937'; // ミラクル4
 // import { Set938 } from './set938'; // エクセレント4
-import { Set939 } from './set939'; // バスターズ祭
+// import { Set939 } from './set939'; // バスターズ祭
 import { Set942 } from './set942'; // ダイナマイツ
 import { Set943 } from './set943'; // バサラーズ
 import { Set944 } from './set944'; // ギャルズ
@@ -42,11 +42,6 @@ export const RareGatyaSetList = [
     Set971, // レジェチケ
     Set970, // プラチケ
 
-    Set939, // バスターズ祭
-
-    Set946, // ウルトラソウルズ
-    Set949, // アイアンウォーズ
-
     Set975, // 超選抜祭
     Set976, // 極選抜祭
 
@@ -61,11 +56,14 @@ export const RareGatyaSetList = [
     Set962, // ルガ族 
     Set951, // ピクシーズ
     Set945, // エンペラーズ
+    Set946, // ウルトラソウルズ
+    Set949, // アイアンウォーズ
 
     // Set963, // 超ネコ祭
     // Set969, // 極ネコ祭
     // Set972, // 超極ネコ祭 
 
+    // Set939, // バスターズ祭
     // Set696, // レッドバスターズ
     // Set452, // エアバスターズ
     // Set906, // メタルバスターズ

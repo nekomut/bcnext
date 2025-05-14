@@ -1,11 +1,11 @@
-// import { Set452 } from './set452'; // エアバスターズ
-// import { Set523 } from './set523'; // 波動バスターズ
-// import { Set696 } from './set696'; // レッドバスターズ
-// import { Set772 } from './set772'; // 超生命体バスターズ
+import { Set452 } from './set452'; // エアバスターズ
+import { Set523 } from './set523'; // 波動バスターズ
+import { Set696 } from './set696'; // レッドバスターズ
+import { Set772 } from './set772'; // 超生命体バスターズ
 // import { Set785 } from './set785'; // バレンタイン
 // import { Set861 } from './set861'; // 女王祭
 // import { Set875 } from './set875'; // イースター
-// import { Set906 } from './set906'; // メタルバスターズ
+import { Set906 } from './set906'; // メタルバスターズ
 // import { Set936 } from './set936'; // ウルトラ4
 // import { Set937 } from './set937'; // ミラクル4
 // import { Set938 } from './set938'; // エクセレント4
@@ -21,57 +21,62 @@ import { Set949 } from './set949'; // アイアンウォーズ
 import { Set950 } from './set950'; // ギャルモン
 import { Set951 } from './set951'; // ピクシーズ
 // import { Set973 } from './set973'; // 超国王祭
-import { Set962 } from './set962'; // ルガ族
+// import { Set962 } from './set962'; // ルガ族
 // import { Set963 } from './set963'; // 超ネコ祭
 // import { Set964 } from './set964'; // 極ネコ祭
 // import { Set965 } from './set965'; // プラチケ
 // import { Set966 } from './set966'; // レジェチケ
 // import { Set967 } from './set967'; // 1億DL記念選抜
 // import { Set968 } from './set968'; // ホワイトデー
-// import { Set969 } from './set969'; // 極ネコ祭
+import { Set969 } from './set969'; // 極ネコ祭
 import { Set970 } from './set970'; // プラチケ
 import { Set971 } from './set971'; // レジェチケ
 // import { Set972 } from './set972'; // 超極ネコ祭
 import { Set974 } from './set974'; // アウトレット
-import { Set975 } from './set975'; // 超選抜祭
-import { Set976 } from './set976'; // 極選抜祭
+// import { Set975 } from './set975'; // 超選抜祭
+// import { Set976 } from './set976'; // 極選抜祭
 // import { Set977 } from './set977'; // バキコラボ
+import { Set986 } from './set986'; // ルガ族
 
 export const RareGatyaSetList = [
 
     Set971, // レジェチケ
     Set970, // プラチケ
 
-    Set975, // 超選抜祭
-    Set976, // 極選抜祭
-
-    Set948, // ギガントゼウス
-    Set947, // ダークヒーローズ
     Set950, // ギャルモン
     Set943, // バサラーズ
     Set942, // ダイナマイツ
 
-    Set974, // アウトレット
+    Set969, // 極ネコ祭
+
     Set944, // ギャルズ
-    Set962, // ルガ族 
+    Set986, // ルガ族 
+
+    Set696, // レッドバスターズ
+    Set452, // エアバスターズ
+    Set906, // メタルバスターズ
+    Set523, // 波動バスターズ
+    Set772, // 超生命体バスターズ
+
+    Set974, // アウトレット
+
     Set951, // ピクシーズ
     Set945, // エンペラーズ
     Set946, // ウルトラソウルズ
     Set949, // アイアンウォーズ
+    Set948, // ギガントゼウス
+    Set947, // ダークヒーローズ
 
     // Set963, // 超ネコ祭
-    // Set969, // 極ネコ祭
     // Set972, // 超極ネコ祭 
 
     // Set939, // バスターズ祭
-    // Set696, // レッドバスターズ
-    // Set452, // エアバスターズ
-    // Set906, // メタルバスターズ
-    // Set523, // 波動バスターズ
-    // Set772, // 超生命体バスターズ
 
     // Set973, // 超国王祭
     // Set861, // 女王祭
+
+    // Set975, // 超選抜祭
+    // Set976, // 極選抜祭
 
     // Set967, // 1億DL記念選抜
 

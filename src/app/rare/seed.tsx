@@ -187,6 +187,7 @@ export const GenerateAllRolls = (seed: number, numRolls: number, gatyasets: Gaty
     trackA: generateRolls(seed, numRolls, gatyaset, lastCat, "A"),
     trackB: generateRolls(xorShift32(seed), numRolls, gatyaset, lastCat, "B"),
   }));
+  console.log('allRolls_1:', allRolls);
 
   // レア被り処理
   allRolls.forEach(({ trackA, trackB }) => {
@@ -208,10 +209,10 @@ export const GenerateAllRolls = (seed: number, numRolls: number, gatyasets: Gaty
         trackB.find((roll) => roll.raritySeed === raritySeed);
 
       let sourceCell = findCell(raritySeed)!;
-      let prevUnit = sourceCell.unitIfDistinct.unitName;
+      let prevUnitName = sourceCell.unitIfDistinct.unitName;
 
-      while (sourceCell.unitIfDistinct.unitName === prevUnit) {
-        prevUnit = sourceCell.unitIfDupe!.unitName;
+      while (sourceCell.unitIfDistinct.unitName === prevUnitName) {
+        prevUnitName = sourceCell.unitIfDupe!.unitName;
         const destinationRaritySeed = xorShift32(
           sourceCell.unitIfDupe!.unitSeed
         );
@@ -223,9 +224,7 @@ export const GenerateAllRolls = (seed: number, numRolls: number, gatyasets: Gaty
           sourceCell.dupeInfo = {
             showDupe: true,
             targetCellId: findCell(destinationRaritySeed)?.cellId || "",
-            targetWillRerollAgain:
-              sourceCell.unitIfDupe!.unitName ===
-              destinationCell.unitIfDistinct.unitName,
+            targetWillRerollAgain: sourceCell.unitIfDupe!.unitName === destinationCell.unitIfDistinct.unitName,
           };
         };
         sourceCell = destinationCell;
@@ -273,9 +272,9 @@ export const GenerateAllRolls = (seed: number, numRolls: number, gatyasets: Gaty
             // 確定枠
             if (cell!.dupeInfo?.showDupe) {
               guaranteedRoll = findCell(cell!.unitIfDupe!.unitSeed);
-              if (guaranteedRoll?.unitIfDistinct.unitName === cell!.unitIfDistinct.unitName) {
+              if (guaranteedRoll!.unitIfDupe) {
                 guaranteedRoll = findCell(guaranteedRoll!.unitIfDupe!.raritySeed);
-              }  
+              }
             } else {
               guaranteedRoll = findCell(cell!.unitIfDistinct?.unitSeed);
             }

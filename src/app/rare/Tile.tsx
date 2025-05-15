@@ -136,7 +136,7 @@ const Tile = () => {
   const initialSeed = parseInt(getQueryParam("seed") || DEFAULTS.seed, 10);
   const numRolls = 2000;
 
-  const NUM_ROLLS_BUFFER = 0;
+  const NUM_ROLLS_BUFFER = 20;
   const lastCat = getQueryParam("lastCat") || DEFAULTS.lastCat;
 
   const selectedGatyaSets = getQueryParam("gatyasets")?.split(",") || DEFAULTS.gatyasets.split(",");

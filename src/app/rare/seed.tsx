@@ -273,7 +273,9 @@ export const GenerateAllRolls = (seed: number, numRolls: number, gatyasets: Gaty
             // 確定枠
             if (cell!.dupeInfo?.showDupe) {
               guaranteedRoll = findCell(cell!.unitIfDupe!.unitSeed);
-              guaranteedRoll = findCell(guaranteedRoll!.unitIfDupe!.raritySeed);
+              if (guaranteedRoll?.unitIfDistinct.unitName === cell!.unitIfDistinct.unitName) {
+                guaranteedRoll = findCell(guaranteedRoll!.unitIfDupe!.raritySeed);
+              }  
             } else {
               guaranteedRoll = findCell(cell!.unitIfDistinct?.unitSeed);
             }

@@ -61,7 +61,6 @@ export const RareGatyaSetList = [
 
     Set523, // 波動バスターズ
     Set772, // 超生命体バスターズ
-    
 
     Set974, // アウトレット
 

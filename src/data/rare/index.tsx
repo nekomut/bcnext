@@ -36,6 +36,7 @@ import { Set974 } from './set974'; // アウトレット
 // import { Set975 } from './set975'; // 超選抜祭
 // import { Set976 } from './set976'; // 極選抜祭
 // import { Set977 } from './set977'; // バキコラボ
+import { Set985 } from './set985'; // ソニック
 import { Set986 } from './set986'; // ルガ族
 
 export const RareGatyaSetList = [
@@ -55,8 +56,12 @@ export const RareGatyaSetList = [
     Set696, // レッドバスターズ
     Set452, // エアバスターズ
     Set906, // メタルバスターズ
+
+    Set985, // ソニック
+
     Set523, // 波動バスターズ
     Set772, // 超生命体バスターズ
+    
 
     Set974, // アウトレット
 

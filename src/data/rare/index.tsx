@@ -47,8 +47,8 @@ export const RareGatyaSetList = [
 
     Set985, // ソニックコラボ
 
-    Set951, // ピクシーズ
     Set945, // エンペラーズ
+    Set951, // ピクシーズ
 
     Set523, // 波動バスターズ
     Set772, // 超生命体バスターズ

@@ -42,16 +42,13 @@ import { Set986 } from './set986'; // ルガ族
 
 export const RareGatyaSetList = [
 
-    Set971, // レジェチケ
-    Set970, // プラチケ
-
     Set985, // ソニックコラボ
-
-    Set945, // エンペラーズ
-    Set951, // ピクシーズ
 
     Set523, // 波動バスターズ
     Set772, // 超生命体バスターズ
+
+    Set971, // レジェチケ
+    Set970, // プラチケ
 
     Set946, // ウルトラソウルズ
     Set979, // アイアンウォーズ
@@ -64,6 +61,8 @@ export const RareGatyaSetList = [
     Set942, // ダイナマイツ
     Set944, // ギャルズ
     Set986, // ルガ族 
+    Set945, // エンペラーズ
+    Set951, // ピクシーズ
 
     // Set950, // ギャルモン
 

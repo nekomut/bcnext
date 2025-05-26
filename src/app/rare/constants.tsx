@@ -79,4 +79,5 @@ export const LIMITED_CATS = [
 export const PICKUP_UBER_CATS = [
   '鬼にゃんま',             //  44
   '真田幸村',               //  71
+  '呪術師デスピエロ',       // 226
 ];

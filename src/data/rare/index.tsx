@@ -44,9 +44,6 @@ export const RareGatyaSetList = [
 
     Set985, // ソニックコラボ
 
-    Set946, // ウルトラソウルズ
-    Set979, // アイアンウォーズ
-
     Set943, // バサラーズ
     Set945, // エンペラーズ
 
@@ -61,6 +58,8 @@ export const RareGatyaSetList = [
     Set944, // ギャルズ
     Set986, // ルガ族 
     Set951, // ピクシーズ
+    Set946, // ウルトラソウルズ
+    Set979, // アイアンウォーズ
 
     // Set950, // ギャルモン
 

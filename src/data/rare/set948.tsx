@@ -2,7 +2,7 @@ import { GatyaSet } from "@/data/gatyasets";
 
 export const Set948: GatyaSet = {
   name: "ギガントゼウス",
-  guaranteed: -1,
+  guaranteed: -1, // 10,
   shortName: "948",
   gatyasetId: 948,
   rateCumSum: [0, 6970, 9470, 9970, 10000],

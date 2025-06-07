@@ -37,7 +37,7 @@ import { Set974 } from './set974'; // アウトレット
 // import { Set976 } from './set976'; // 極選抜祭
 // import { Set977 } from './set977'; // バキコラボ
 import { Set979 } from './set979'; // アイアンウォーズ
-// import { Set981 } from './set981'; // 超ネコ祭
+import { Set981 } from './set981'; // 超ネコ祭
 import { Set982 } from './set982'; // 極ネコ祭
 import { Set983 } from './set983'; // プラチケ
 import { Set984 } from './set984'; // レジェチケ
@@ -68,7 +68,7 @@ export const RareGatyaSetList = [
 
     // Set950, // ギャルモン
 
-    // Set981, // 超ネコ祭
+    Set981, // 超ネコ祭
     // Set969, // 極ネコ祭
     Set982, // 極ネコ祭
     // Set972, // 超極ネコ祭 

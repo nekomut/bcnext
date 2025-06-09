@@ -37,6 +37,9 @@ body {
 .rolltable-header-seed {
   @apply text-gray-600 min-w-[80px] text-right font-normal pl-3;
 }
+.rolltable-header-numeric {
+  @apply text-gray-600 text-right font-normal pl-3;
+}
 .rolltable-row-A {
   @apply flex-row align-top font-bold;
 }

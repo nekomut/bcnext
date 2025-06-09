@@ -44,7 +44,7 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
         <tr>
           <th className='rolltable-header'></th>
           <th className='rolltable-header rolltable-header-seed'>{zippedRolls[0][0][0].raritySeed}</th>
-          <th className='rolltable-header'></th>
+          <th className='rolltable-header rolltable-header-numeric'></th>
           {rollsA.map((roll, i) => (
           <React.Fragment key={i}>
             <th className='rolltable-header'></th>

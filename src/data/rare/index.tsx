@@ -18,7 +18,7 @@ import { Set946 } from './set946'; // ウルトラソウルズ
 import { Set947 } from './set947'; // ダークヒーローズ
 import { Set948 } from './set948'; // ギガントゼウス
 // import { Set949 } from './set949'; // アイアンウォーズ
-// import { Set950 } from './set950'; // ギャルモン
+import { Set950 } from './set950'; // ギャルモン
 import { Set951 } from './set951'; // ピクシーズ
 // import { Set973 } from './set973'; // 超国王祭
 // import { Set962 } from './set962'; // ルガ族
@@ -48,24 +48,26 @@ export const RareGatyaSetList = [
 
     Set974, // アウトレット
 
-    Set979, // アイアンウォーズ
-
-    Set984, // レジェチケ
-    Set983, // プラチケ
-    Set981, // 超ネコ祭
-    Set982, // 極ネコ祭
-
-    Set946, // ウルトラソウルズ
-    Set948, // ギガントゼウス
-    Set947, // ダークヒーローズ
-    Set943, // バサラーズ
     Set945, // エンペラーズ
+    Set948, // ギガントゼウス
+
+    Set982, // 極ネコ祭
+    Set947, // ダークヒーローズ
     Set942, // ダイナマイツ
+
     Set944, // ギャルズ
     Set986, // ルガ族 
     Set951, // ピクシーズ
 
-    // Set950, // ギャルモン
+    Set979, // アイアンウォーズ
+    Set946, // ウルトラソウルズ
+    Set943, // バサラーズ
+
+    Set950, // ギャルモン
+
+    Set984, // レジェチケ
+    Set983, // プラチケ
+    Set981, // 超ネコ祭
 
     // Set972, // 超極ネコ祭 
 

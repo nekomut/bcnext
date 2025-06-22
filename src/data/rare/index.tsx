@@ -32,7 +32,7 @@ import { Set951 } from './set951'; // ピクシーズ
 // import { Set970 } from './set970'; // プラチケ
 // import { Set971 } from './set971'; // レジェチケ
 // import { Set972 } from './set972'; // 超極ネコ祭
-import { Set974 } from './set974'; // アウトレット
+// import { Set974 } from './set974'; // アウトレット
 // import { Set975 } from './set975'; // 超選抜祭
 // import { Set976 } from './set976'; // 極選抜祭
 // import { Set977 } from './set977'; // バキコラボ
@@ -45,11 +45,6 @@ import { Set984 } from './set984'; // レジェチケ
 import { Set986 } from './set986'; // ルガ族
 
 export const RareGatyaSetList = [
-
-    Set974, // アウトレット
-
-    Set945, // エンペラーズ
-    Set948, // ギガントゼウス
 
     Set982, // 極ネコ祭
     Set947, // ダークヒーローズ
@@ -64,6 +59,8 @@ export const RareGatyaSetList = [
     Set943, // バサラーズ
 
     Set950, // ギャルモン
+    Set945, // エンペラーズ
+    Set948, // ギガントゼウス
 
     Set984, // レジェチケ
     Set983, // プラチケ
@@ -89,6 +86,8 @@ export const RareGatyaSetList = [
     // Set936, // ウルトラ4
     // Set937, // ミラクル4
     // Set938, // エクセレント4
+
+    // Set974, // アウトレット
 
     // Set785, // バレンタイン
     // Set968, // ホワイトデー

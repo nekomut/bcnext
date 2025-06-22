@@ -19,7 +19,7 @@ export default function Page() {
       <Link href="/rare" className="hover:text-green-600 px-1">Rare</Link>|
       <Link href="/event" className="text-green-500 hover:text-green-600 px-1">Event</Link>|
       <Link href="/seek" className="hover:text-green-600 px-1">Seek</Link>|
-      <Link href="/status" className="hover:text-green-600 px-1">Status</Link>|
+      <Link href="/unit" className="hover:text-green-600 px-1">Unit</Link>|
       <hr />
       <Suspense>
         <GatyaSets />

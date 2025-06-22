@@ -2,9 +2,51 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
+import React, { useState } from 'react';
 import { sozai } from '@/data/materials';
+import { UnitDisplay } from './UnitDisplay';
+import { UnitData, getUnitData } from './types';
 
 export default function Page() {
+  const [unitId, setUnitId] = useState<string>('');
+  const [level, setLevel] = useState<number>(30);
+  const [plusLevel, setPlusLevel] = useState<number>(0);
+  const [currentUnit, setCurrentUnit] = useState<UnitData | null>(null);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string>('');
+
+  const handleUnitSearch = async () => {
+    const id = parseInt(unitId);
+    if (isNaN(id) || id < 0) {
+      setError('Invalid unit ID');
+      return;
+    }
+
+    setLoading(true);
+    setError('');
+
+    try {
+      const unitData = await getUnitData(id);
+      if (unitData) {
+        setCurrentUnit(unitData);
+      } else {
+        setError(`Unit ${id.toString().padStart(3, '0')} not found`);
+        setCurrentUnit(null);
+      }
+    } catch {
+      setError(`Unit ${id.toString().padStart(3, '0')} not found`);
+      setCurrentUnit(null);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key === 'Enter') {
+      handleUnitSearch();
+    }
+  };
+
   return (
     <div>
       <Link href="/" className="font-bold hover:text-green-600 px-1">bcnext</Link>|
@@ -15,6 +57,66 @@ export default function Page() {
       <Link href="/unit" className="text-green-500 hover:text-green-600 px-1">Unit</Link>|
       <hr />
       <Image src= {`data:image/png;base64,${sozai.new}`} alt="img_new" width={20} height={0} />
+
+      {/* ユニット検索UI */}
+      <div className="p-4">
+        <div className="mb-4 flex gap-2 items-end flex-wrap">
+          <div>
+            <label className="block text-sm text-gray-600 mb-1">Unit ID</label>
+            <input
+              type="text"
+              placeholder="000, 025, etc."
+              value={unitId}
+              onChange={(e) => setUnitId(e.target.value)}
+              onKeyPress={handleKeyPress}
+              className="border rounded px-3 py-2 text-sm"
+            />
+          </div>
+          <div>
+            <label className="block text-sm text-gray-600 mb-1">Level</label>
+            <input
+              type="number"
+              value={level}
+              onChange={(e) => setLevel(Math.max(1, parseInt(e.target.value) || 1))}
+              min="1"
+              max="60"
+              className="border rounded px-3 py-2 w-20 text-sm"
+            />
+          </div>
+          <div>
+            <label className="block text-sm text-gray-600 mb-1">+Level</label>
+            <input
+              type="number"
+              value={plusLevel}
+              onChange={(e) => setPlusLevel(Math.max(0, parseInt(e.target.value) || 0))}
+              min="0"
+              max="80"
+              className="border rounded px-3 py-2 w-20 text-sm"
+            />
+          </div>
+          <button
+            onClick={handleUnitSearch}
+            disabled={loading}
+            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-sm disabled:opacity-50"
+          >
+            {loading ? 'Loading...' : 'Search'}
+          </button>
+        </div>
+
+        {/* エラーメッセージ */}
+        {error && (
+          <div className="text-red-500 mb-4 text-sm">{error}</div>
+        )}
+
+        {/* ユニット表示 */}
+        {currentUnit && (
+          <UnitDisplay
+            unitData={currentUnit}
+            initialLevel={level}
+            initialPlusLevel={plusLevel}
+          />
+        )}
+      </div>
     </div>
   );
 }

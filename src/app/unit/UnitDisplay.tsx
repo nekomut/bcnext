@@ -12,6 +12,7 @@ interface UnitDisplayProps {
   initialPlusLevel?: number;
   initialFormId?: number;
   className?: string;
+  onParamsChange?: (params: { level: number; plusLevel: number; formId: number }) => void;
 }
 
 export function UnitDisplay({
@@ -19,7 +20,8 @@ export function UnitDisplay({
   initialLevel = 30,
   initialPlusLevel = 0,
   initialFormId = 0,
-  className = ""
+  className = "",
+  onParamsChange
 }: UnitDisplayProps) {
   const [level, setLevel] = useState(initialLevel);
   const [plusLevel, setPlusLevel] = useState(initialPlusLevel);
@@ -88,6 +90,7 @@ export function UnitDisplay({
                 setLevelInput(value);
                 const numValue = value === '' ? 1 : Math.max(1, Math.min(maxLevel, parseInt(value) || 1));
                 setLevel(numValue);
+                onParamsChange?.({ level: numValue, plusLevel, formId: actualCurrentForm });
               }
             }}
             onBlur={(e) => {
@@ -96,9 +99,11 @@ export function UnitDisplay({
                 const numValue = Math.max(1, Math.min(maxLevel, Number(value)));
                 setLevel(numValue);
                 setLevelInput(numValue.toString());
+                onParamsChange?.({ level: numValue, plusLevel, formId: actualCurrentForm });
               } else if (value === '') {
                 setLevel(1);
                 setLevelInput('1');
+                onParamsChange?.({ level: 1, plusLevel, formId: actualCurrentForm });
               }
             }}
             className="border rounded px-1 sm:px-2 py-1 w-12 sm:w-16 text-xs sm:text-sm text-gray-900"
@@ -116,6 +121,7 @@ export function UnitDisplay({
                 setPlusLevelInput(value);
                 const numValue = value === '' ? 0 : Math.max(0, Math.min(maxPlusLevel, parseInt(value) || 0));
                 setPlusLevel(numValue);
+                onParamsChange?.({ level, plusLevel: numValue, formId: actualCurrentForm });
               }
             }}
             onBlur={(e) => {
@@ -124,9 +130,11 @@ export function UnitDisplay({
                 const numValue = Math.max(0, Math.min(maxPlusLevel, Number(value)));
                 setPlusLevel(numValue);
                 setPlusLevelInput(numValue.toString());
+                onParamsChange?.({ level, plusLevel: numValue, formId: actualCurrentForm });
               } else if (value === '') {
                 setPlusLevel(0);
                 setPlusLevelInput('0');
+                onParamsChange?.({ level, plusLevel: 0, formId: actualCurrentForm });
               }
             }}
             className="border rounded px-1 sm:px-2 py-1 w-12 sm:w-16 text-xs sm:text-sm text-gray-900"
@@ -139,6 +147,7 @@ export function UnitDisplay({
               setPlusLevel(maxPlusLevel);
               setLevelInput(maxLevel.toString());
               setPlusLevelInput(maxPlusLevel.toString());
+              onParamsChange?.({ level: maxLevel, plusLevel: maxPlusLevel, formId: actualCurrentForm });
             }}
             className="bg-blue-500 hover:bg-blue-600 text-white px-2 py-1 rounded text-xs sm:text-sm"
           >
@@ -153,7 +162,10 @@ export function UnitDisplay({
           {unitData.coreData.forms.slice(0, validFormCount).map((form, index) => (
             <button
               key={index}
-              onClick={() => setCurrentForm(index)}
+              onClick={() => {
+                setCurrentForm(index);
+                onParamsChange?.({ level, plusLevel, formId: index });
+              }}
               className={`flex items-center gap-1 px-1 sm:px-2 py-1 rounded text-xs sm:text-sm transition-colors ${
                 actualCurrentForm === index
                   ? 'bg-blue-500 text-white'
@@ -246,14 +258,14 @@ function StatsTable({ stats }: { stats: CalculatedStats }) {
         />
         <StatItem
           label="攻撃頻度"
-          value={
+          value={`${frameToSecond(stats.freq).toFixed(2)}s`}
+          detail={
             <>
-              {`${frameToSecond(stats.freq).toFixed(2)}s`}
+              {`(${stats.freq}f)`}
               <br />
               [{stats.frames.join(' ')}]
             </>
           }
-          detail={`(${stats.freq}f)`}
         />
       </div>
     </div>
@@ -268,7 +280,7 @@ function StatItem({
 }: {
   label: string | React.ReactNode;
   value: string | React.ReactNode;
-  detail?: string;
+  detail?: string | React.ReactNode;
   className?: string;
 }) {
   return (

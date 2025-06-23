@@ -214,7 +214,7 @@ function StatItem({
   className?: string;
 }) {
   return (
-    <div className="flex justify-between py-1 border-b border-gray-100">
+    <div className="flex justify-between py-0.5 border-b border-gray-100">
       <span className="text-gray-600 truncate pr-2 text-xs font-bold">{label}</span>
       <div className="text-right flex-shrink-0">
         <span className={`text-gray-900 ${className}`}>{value}</span>
@@ -228,13 +228,13 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
   return (
     <div className="mb-4">
       <h3 className="text-sm sm:text-base font-semibold mb-2 text-gray-800">能力・効果</h3>
-      <div className="space-y-1">
+      <div className="space-y-0.5">
         {abilities.map((ability, index) => (
           <div key={index} className="bg-gray-50 p-2 rounded">
-            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
-              <div className="font-medium text-gray-800 text-sm">{ability.name}</div>
+            <div className="flex justify-between items-start gap-2">
+              <div className="font-bold text-xs text-gray-800">{ability.name}</div>
               {ability.value && (
-                <div className="text-xs sm:text-sm text-blue-600 font-medium break-words">{ability.value}</div>
+                <div className="text-[10px] text-blue-600 font-medium text-right break-words flex-shrink-0 max-w-[50%]">{ability.value}</div>
               )}
             </div>
           </div>
@@ -250,23 +250,23 @@ function TalentsList({ talents }: { talents: readonly UnitTalent[] }) {
   return (
     <div>
       <h3 className="text-sm sm:text-base font-semibold mb-2 text-gray-800">本能・超本能</h3>
-      <div className="space-y-1">
+      <div className="space-y-0.5">
         {talents.map((talent, index) => (
           <div key={index} className={`p-2 rounded ${talent.type === 'ultra' ? 'bg-red-50 border-l-4 border-red-500' : 'bg-yellow-50 border-l-4 border-yellow-500'}`}>
-            <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-1">
-              <div className={`font-medium text-sm ${talent.type === 'ultra' ? 'text-red-600' : 'text-yellow-600'}`}>
+            <div className="flex justify-between items-start gap-2">
+              <div className={`font-bold text-xs ${talent.type === 'ultra' ? 'text-red-600' : 'text-yellow-600'}`}>
                 {talent.name} ({talent.id})
                 {talent.type === 'ultra' && <span className="text-xs ml-1 px-1 bg-red-100 rounded">超</span>}
+                {talent.npCost > 0 && (
+                  <span className="text-[10px] text-gray-600 font-medium ml-1">
+                    [{talent.isTotal ? '合計' : ''}{talent.npCost}NP]
+                  </span>
+                )}
               </div>
-              {talent.npCost > 0 && (
-                <div className="text-xs sm:text-sm text-gray-600 font-medium flex-shrink-0">
-                  {talent.isTotal ? '合計' : ''}{talent.npCost}NP
-                </div>
+              {talent.effect && (
+                <div className="text-[10px] text-gray-700 text-right break-words flex-shrink-0 max-w-[50%]">{talent.effect}</div>
               )}
             </div>
-            {talent.effect && (
-              <div className="text-xs sm:text-sm text-gray-700 mt-1 break-words">{talent.effect}</div>
-            )}
           </div>
         ))}
       </div>

@@ -197,8 +197,13 @@ function StatsTable({ stats }: { stats: CalculatedStats }) {
         {stats.multihit ? (
           <StatItem
             label={<>AP<br className="sm:hidden" />({stats.attackType === 'area' ? '範囲' : '単体'})</>}
-            value={stats.ap.toLocaleString()}
-            detail={`[${[stats.atk1, stats.atk2, stats.atk3].filter(Boolean).map(x => x?.toLocaleString()).join(' ')}]`}
+            value={
+              <>
+                {stats.ap.toLocaleString()}
+                <br />
+                {`[${[stats.atk1, stats.atk2, stats.atk3].filter(Boolean).map(x => x?.toLocaleString()).join(' ')}]`}
+              </>
+            }
           />
         ) : (
           <StatItem
@@ -253,7 +258,7 @@ function StatItem({
   className = ""
 }: {
   label: string | React.ReactNode;
-  value: string;
+  value: string | React.ReactNode;
   detail?: string;
   className?: string;
 }) {

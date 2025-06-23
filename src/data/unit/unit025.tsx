@@ -27,7 +27,7 @@ export const unit025Data: UnitData = {
     ],
     rarity: {
       id: 1,
-      name: "特殊",
+      name: "EX",
       maxLevels: [50, 0]
     },
     levelRates: [20, 20, 20, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10]

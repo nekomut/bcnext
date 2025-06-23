@@ -65,7 +65,6 @@ export default function Page() {
             <label className="block text-sm text-gray-600 mb-1">Unit ID</label>
             <input
               type="text"
-              placeholder="025"
               value={unitId}
               onChange={(e) => setUnitId(e.target.value)}
               onKeyPress={handleKeyPress}

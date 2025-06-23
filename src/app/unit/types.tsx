@@ -260,12 +260,15 @@ export const calculateUnitStats = (
   };
 };
 
-export const getAbilities = (unitData: UnitData, formId: number): UnitAbility[] => {
+export const getAbilities = (unitData: UnitData, formId: number, level: number = 30, plusLevel: number = 0): UnitAbility[] => {
   const form = unitData.coreData.forms[formId];
   if (!form) return [];
 
   const stats = form.stats;
   const abilities: UnitAbility[] = [];
+  
+  // レベル補正済みの計算ステータスを取得
+  const calculatedStats = calculateUnitStats(unitData, formId, level, plusLevel);
 
   // 攻撃対象限定の判定
   const targets: Array<{name: string, iconKey: string}> = [];
@@ -371,9 +374,55 @@ export const getAbilities = (unitData: UnitData, formId: number): UnitAbility[] 
 
   // 超ダメージ
   if (stats[30] && stats[30] > 0) {
+    let superDamageValues = "";
+    if (calculatedStats.multihit) {
+      const hit1_3x = calculatedStats.atk1 ? calculatedStats.atk1 * 3 : 0;
+      const hit1_4x = calculatedStats.atk1 ? calculatedStats.atk1 * 4 : 0;
+      const hit2_3x = calculatedStats.atk2 ? calculatedStats.atk2 * 3 : 0;
+      const hit2_4x = calculatedStats.atk2 ? calculatedStats.atk2 * 4 : 0;
+      const hit3_3x = calculatedStats.atk3 ? calculatedStats.atk3 * 3 : 0;
+      const hit3_4x = calculatedStats.atk3 ? calculatedStats.atk3 * 4 : 0;
+      
+      const minValues = [hit1_3x, hit2_3x, hit3_3x].filter(v => v > 0).map(v => v.toLocaleString());
+      const maxValues = [hit1_4x, hit2_4x, hit3_4x].filter(v => v > 0).map(v => v.toLocaleString());
+      
+      superDamageValues = `AP 3x~4x\n[${minValues.join(' ')}]~[${maxValues.join(' ')}]`;
+    } else {
+      const ap_3x = (calculatedStats.ap * 3).toLocaleString();
+      const ap_4x = (calculatedStats.ap * 4).toLocaleString();
+      superDamageValues = `AP 3x~4x\n[${ap_3x}]~[${ap_4x}]`;
+    }
+    
     abilities.push({
       name: "超ダメージ",
-      value: "3x~4x"
+      value: superDamageValues
+    });
+  }
+
+  // 極ダメージ
+  if (stats[81] && stats[81] > 0) {
+    let insaneDamageValues = "";
+    if (calculatedStats.multihit) {
+      const hit1_5x = calculatedStats.atk1 ? calculatedStats.atk1 * 5 : 0;
+      const hit1_6x = calculatedStats.atk1 ? calculatedStats.atk1 * 6 : 0;
+      const hit2_5x = calculatedStats.atk2 ? calculatedStats.atk2 * 5 : 0;
+      const hit2_6x = calculatedStats.atk2 ? calculatedStats.atk2 * 6 : 0;
+      const hit3_5x = calculatedStats.atk3 ? calculatedStats.atk3 * 5 : 0;
+      const hit3_6x = calculatedStats.atk3 ? calculatedStats.atk3 * 6 : 0;
+      
+      const minValues = [hit1_5x, hit2_5x, hit3_5x].filter(v => v > 0).map(v => v.toLocaleString());
+      const maxValues = [hit1_6x, hit2_6x, hit3_6x].filter(v => v > 0).map(v => v.toLocaleString());
+      
+      insaneDamageValues = `AP 5x~6x\n[${minValues.join(' ')}]~[${maxValues.join(' ')}]`;
+    } else {
+      const ap_5x = (calculatedStats.ap * 5).toLocaleString();
+      const ap_6x = (calculatedStats.ap * 6).toLocaleString();
+      insaneDamageValues = `AP 5x~6x\n[${ap_5x}]~[${ap_6x}]`;
+    }
+    
+    abilities.push({
+      name: "極ダメージ",
+      value: insaneDamageValues
     });
   }
 
@@ -448,10 +497,51 @@ export const getAbilities = (unitData: UnitData, formId: number): UnitAbility[] 
 
   // 遠方攻撃・全方位攻撃
   if (stats[44] && stats[44] !== 0) {
-    const rng1 = stats[44] || 0;
-    const rng2 = rng1 + (stats[45] || 0);
+    const ranges: string[] = [];
+    
+    // 多段攻撃で複数の範囲がある場合
+    if (multihit && stats.length > 100 && stats[100]) {
+      // 1段目の範囲
+      const rng1_1 = stats[44] || 0;
+      const rng1_2 = rng1_1 + (stats[45] || 0);
+      if ((stats[45] || 0) > 0) {
+        ranges.push(`${rng1_1}~${rng1_2}`);
+      } else {
+        ranges.push(`${rng1_2}~${rng1_1}`);
+      }
+      
+      // 2段目の範囲
+      const rng2_1 = stats[100] || 0;
+      const rng2_2 = rng2_1 + (stats[101] || 0);
+      if ((stats[101] || 0) > 0) {
+        ranges.push(`${rng2_1}~${rng2_2}`);
+      } else {
+        ranges.push(`${rng2_2}~${rng2_1}`);
+      }
+      
+      // 3段目の範囲（存在する場合）
+      if (stats.length > 104 && stats[103]) {
+        const rng3_1 = stats[103] || 0;
+        const rng3_2 = rng3_1 + (stats[104] || 0);
+        if ((stats[104] || 0) > 0) {
+          ranges.push(`${rng3_1}~${rng3_2}`);
+        } else {
+          ranges.push(`${rng3_2}~${rng3_1}`);
+        }
+      }
+    } else {
+      // 単段攻撃または多段攻撃でも範囲が1つの場合
+      const rng1 = stats[44] || 0;
+      const rng2 = rng1 + (stats[45] || 0);
+      if ((stats[45] || 0) > 0) {
+        ranges.push(`${rng1}~${rng2}`);
+      } else {
+        ranges.push(`${rng2}~${rng1}`);
+      }
+    }
+    
     const attackType = (stats[45] || 0) > 0 ? '遠方攻撃' : '全方位攻撃';
-    const rangeInfo = (stats[45] || 0) > 0 ? `${rng1}~${rng2}` : `${rng2}~${rng1}`;
+    const rangeInfo = ranges.join(' ');
 
     abilities.push({
       name: attackType,

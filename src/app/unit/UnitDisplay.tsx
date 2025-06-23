@@ -35,7 +35,7 @@ export function UnitDisplay({
   const actualCurrentForm = Math.min(currentForm, validFormCount - 1);
   
   const stats = calculateUnitStats(unitData, actualCurrentForm, level, plusLevel);
-  const abilities = getAbilities(unitData, actualCurrentForm);
+  const abilities = getAbilities(unitData, actualCurrentForm, level, plusLevel);
   const currentFormData = unitData.coreData.forms[actualCurrentForm];
 
   if (!currentFormData) {

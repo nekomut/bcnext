@@ -165,7 +165,7 @@ function StatsTable({ stats }: { stats: CalculatedStats }) {
 
         <StatItem
           label="DPS"
-          value={stats.dps.toLocaleString()}
+          value={Math.round(stats.dps).toLocaleString()}
           className="text-purple-600 font-medium"
         />
         <StatItem label="射程" value={stats.range.toString()} />
@@ -218,7 +218,7 @@ function StatItem({
       <span className="text-gray-600 truncate pr-2 text-xs font-bold">{label}</span>
       <div className="text-right flex-shrink-0">
         <span className={`text-gray-900 ${className}`}>{value}</span>
-        {detail && <div className="text-xs text-gray-500 break-all">{detail}</div>}
+        {detail && <span className="text-xs text-gray-500 ml-1">{detail}</span>}
       </div>
     </div>
   );

@@ -2,6 +2,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Image from 'next/image';
 import { UnitData, CalculatedStats, UnitAbility, UnitTalent, calculateUnitStats, getAbilities, frameToSecond } from './types';
 
 interface UnitDisplayProps {
@@ -41,10 +42,12 @@ export function UnitDisplay({
         {/* Unit Icon */}
         {currentFormData.icon && (
           <div className="flex-shrink-0">
-            <img 
+            <Image 
               src={`data:image/png;base64,${currentFormData.icon}`}
-              alt={currentFormData.name}
-              className="w-20 h-20 rounded-lg border-2 border-gray-200 object-cover"
+              alt={currentFormData.name || 'Unit Icon'}
+              width={80}
+              height={80}
+              className="rounded-lg border-2 border-gray-200 object-cover"
             />
           </div>
         )}
@@ -112,10 +115,12 @@ export function UnitDisplay({
             >
               {/* Form Icon */}
               {form.icon && (
-                <img 
+                <Image 
                   src={`data:image/png;base64,${form.icon}`}
-                  alt={form.name}
-                  className="w-8 h-8 rounded object-cover"
+                  alt={form.name || 'Form Icon'}
+                  width={32}
+                  height={32}
+                  className="rounded object-cover"
                 />
               )}
               <span>{form.name || `Form ${index + 1}`}</span>

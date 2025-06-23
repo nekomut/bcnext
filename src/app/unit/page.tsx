@@ -9,8 +9,6 @@ import { UnitData, getUnitData } from './types';
 
 export default function Page() {
   const [unitId, setUnitId] = useState<string>('');
-  const [level, setLevel] = useState<number>(30);
-  const [plusLevel, setPlusLevel] = useState<number>(0);
   const [currentUnit, setCurrentUnit] = useState<UnitData | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
@@ -90,8 +88,6 @@ export default function Page() {
         {currentUnit && (
           <UnitDisplay
             unitData={currentUnit}
-            initialLevel={level}
-            initialPlusLevel={plusLevel}
           />
         )}
       </div>

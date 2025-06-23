@@ -122,7 +122,7 @@ export const calculateUnitStats = (
   const [m, p] = getReduction(unitData.coreData.levelRates);
 
   // Basic stats
-  const hp = calcStat(stats[0] || 0, m, p, totalLevel);
+  const hp = Math.floor(calcStat(stats[0] || 0, m, p, totalLevel));
   const kb = stats[1] || 0;
   const speed = stats[2] || 0;
   const ap_base = stats[3] || 0;
@@ -133,7 +133,7 @@ export const calculateUnitStats = (
   const foreswing = stats[13] || 0;
 
   // Attack power calculation
-  let ap = calcStat(ap_base, m, p, totalLevel);
+  let ap = Math.floor(calcStat(ap_base, m, p, totalLevel));
   let atk1 = ap;
   let atk2 = 0;
   let atk3 = 0;
@@ -141,9 +141,9 @@ export const calculateUnitStats = (
   // Multi-hit attack
   const multihit = (stats[59] || 0) > 0;
   if (multihit) {
-    atk1 = calcStat(ap_base, m, p, totalLevel);
-    atk2 = calcStat(stats[59] || 0, m, p, totalLevel);
-    atk3 = calcStat(stats[60] || 0, m, p, totalLevel);
+    atk1 = Math.floor(calcStat(ap_base, m, p, totalLevel));
+    atk2 = Math.floor(calcStat(stats[59] || 0, m, p, totalLevel));
+    atk3 = Math.floor(calcStat(stats[60] || 0, m, p, totalLevel));
     ap = atk1 + atk2 + atk3;
   }
 

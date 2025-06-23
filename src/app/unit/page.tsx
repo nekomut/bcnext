@@ -67,6 +67,12 @@ export default function Page() {
               type="text"
               value={unitId}
               onChange={(e) => setUnitId(e.target.value)}
+              onBlur={(e) => {
+                const value = e.target.value.trim();
+                if (value && !isNaN(Number(value))) {
+                  setUnitId(Number(value).toString());
+                }
+              }}
               onKeyPress={handleKeyPress}
               className="border rounded px-1 py-0.5 text-xs w-20 sm:w-24 text-gray-900"
             />

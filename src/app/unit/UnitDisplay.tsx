@@ -24,6 +24,10 @@ export function UnitDisplay({
   const [level, setLevel] = useState(initialLevel);
   const [plusLevel, setPlusLevel] = useState(initialPlusLevel);
   const [currentForm, setCurrentForm] = useState(initialFormId);
+  
+  // 入力用の文字列state
+  const [levelInput, setLevelInput] = useState(initialLevel.toString());
+  const [plusLevelInput, setPlusLevelInput] = useState(initialPlusLevel.toString());
 
   const stats = calculateUnitStats(unitData, currentForm, level, plusLevel);
   const abilities = getAbilities(unitData, currentForm);
@@ -68,32 +72,71 @@ export function UnitDisplay({
       </div>
 
       {/* Level Controls */}
-      <div className="mb-3 flex gap-1 sm:gap-2 items-end flex-wrap">
-        <div>
-          <label className="block text-sm text-gray-600 mb-1">Level</label>
+      <div className="mb-3 flex gap-1 sm:gap-2 items-center flex-wrap">
+        <div className="flex items-center gap-1">
+          <label className="text-sm text-gray-600">Lv</label>
           <input
-            type="number"
-            value={level}
-            onChange={(e) => setLevel(Math.max(1, Math.min(maxLevel, parseInt(e.target.value) || 1)))}
-            min="1"
-            max={maxLevel}
+            type="text"
+            value={levelInput}
+            onChange={(e) => {
+              const value = e.target.value;
+              // 数値または空文字列のみ許可
+              if (value === '' || /^\d+$/.test(value)) {
+                setLevelInput(value);
+                const numValue = value === '' ? 1 : Math.max(1, Math.min(maxLevel, parseInt(value) || 1));
+                setLevel(numValue);
+              }
+            }}
+            onBlur={(e) => {
+              const value = e.target.value.trim();
+              if (value && !isNaN(Number(value))) {
+                const numValue = Math.max(1, Math.min(maxLevel, Number(value)));
+                setLevel(numValue);
+                setLevelInput(numValue.toString());
+              } else if (value === '') {
+                setLevel(1);
+                setLevelInput('1');
+              }
+            }}
             className="border rounded px-1 sm:px-2 py-1 w-12 sm:w-16 text-xs sm:text-sm text-gray-900"
           />
         </div>
-        <div>
-          <label className="block text-sm text-gray-600 mb-1">+Level</label>
+        <div className="flex items-center gap-1">
+          <label className="text-sm text-gray-600">+</label>
           <input
-            type="number"
-            value={plusLevel}
-            onChange={(e) => setPlusLevel(Math.max(0, Math.min(maxPlusLevel, parseInt(e.target.value) || 0)))}
-            min="0"
-            max={maxPlusLevel}
+            type="text"
+            value={plusLevelInput}
+            onChange={(e) => {
+              const value = e.target.value;
+              // 数値または空文字列のみ許可
+              if (value === '' || /^\d+$/.test(value)) {
+                setPlusLevelInput(value);
+                const numValue = value === '' ? 0 : Math.max(0, Math.min(maxPlusLevel, parseInt(value) || 0));
+                setPlusLevel(numValue);
+              }
+            }}
+            onBlur={(e) => {
+              const value = e.target.value.trim();
+              if (value && !isNaN(Number(value))) {
+                const numValue = Math.max(0, Math.min(maxPlusLevel, Number(value)));
+                setPlusLevel(numValue);
+                setPlusLevelInput(numValue.toString());
+              } else if (value === '') {
+                setPlusLevel(0);
+                setPlusLevelInput('0');
+              }
+            }}
             className="border rounded px-1 sm:px-2 py-1 w-12 sm:w-16 text-xs sm:text-sm text-gray-900"
           />
         </div>
         <div className="ml-1">
           <button
-            onClick={() => { setLevel(maxLevel); setPlusLevel(maxPlusLevel); }}
+            onClick={() => { 
+              setLevel(maxLevel); 
+              setPlusLevel(maxPlusLevel);
+              setLevelInput(maxLevel.toString());
+              setPlusLevelInput(maxPlusLevel.toString());
+            }}
             className="bg-blue-500 hover:bg-blue-600 text-white px-2 py-1 rounded text-xs sm:text-sm"
           >
             Max

@@ -4,6 +4,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { UnitData, CalculatedStats, UnitAbility, UnitTalent, calculateUnitStats, getAbilities, frameToSecond } from './types';
+import { icons } from '@/data/icons';
 
 interface UnitDisplayProps {
   unitData: UnitData;
@@ -233,9 +234,24 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
           <div key={index} className="bg-gray-50 p-2 rounded">
             <div className="flex justify-between items-start gap-2">
               <div className="font-bold text-xs text-gray-800">{ability.name}</div>
-              {ability.value && (
-                <div className="text-[10px] text-blue-600 font-medium text-right break-words flex-shrink-0 max-w-[50%]">{ability.value}</div>
-              )}
+              <div className="text-right flex-shrink-0 max-w-[50%]">
+                {ability.name === "ターゲット属性" && ability.iconKeys ? (
+                  <div className="flex gap-1 flex-wrap justify-end">
+                    {ability.iconKeys.map((iconKey, i) => (
+                      <Image
+                        key={i}
+                        src={`data:image/png;base64,${icons[iconKey as keyof typeof icons]}`}
+                        alt={`trait-${iconKey}`}
+                        width={20}
+                        height={20}
+                        className="rounded"
+                      />
+                    ))}
+                  </div>
+                ) : ability.value ? (
+                  <div className="text-[10px] text-blue-600 font-medium break-words">{ability.value}</div>
+                ) : null}
+              </div>
             </div>
           </div>
         ))}

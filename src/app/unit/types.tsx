@@ -63,6 +63,7 @@ export interface CalculatedStats {
 export interface UnitAbility {
   readonly name: string;
   readonly value: string;
+  readonly iconKeys?: string[];
 }
 
 // Calculation functions (from stat.py)
@@ -204,20 +205,32 @@ export const getAbilities = (unitData: UnitData, formId: number): UnitAbility[] 
   const abilities: UnitAbility[] = [];
 
   // 攻撃対象限定の判定
-  const targets: string[] = [];
+  const targets: Array<{name: string, iconKey: string}> = [];
   const targetIndices = [10, 16, 17, 18, 19, 20, 21, 22, 78, 96];
-  const targetNames = ['赤い敵', '浮いてる敵', '黒い敵', 'メタルな敵', '属性を持たない敵', '天使', 'エイリアン', 'ゾンビ', '古代種', '悪魔'];
+  const targetData = [
+    {name: '赤い敵', iconKey: 'traitRed'},
+    {name: '浮いてる敵', iconKey: 'traitFloating'},
+    {name: '黒い敵', iconKey: 'traitBlack'},
+    {name: 'メタルな敵', iconKey: 'traitMetal'},
+    {name: '属性を持たない敵', iconKey: 'traitNone'},
+    {name: '天使', iconKey: 'traitAngel'},
+    {name: 'エイリアン', iconKey: 'traitAlien'},
+    {name: 'ゾンビ', iconKey: 'traitZombie'},
+    {name: '古代種', iconKey: 'traitRelic'},
+    {name: '悪魔', iconKey: 'traitAku'}
+  ];
 
   targetIndices.forEach((index, i) => {
     if (stats[index] && stats[index] !== 0 && stats[index] !== -1) {
-      targets.push(targetNames[i]);
+      targets.push(targetData[i]);
     }
   });
 
   if (targets.length > 0) {
     abilities.push({
       name: "ターゲット属性",
-      value: targets.join(' ')
+      value: targets.map(t => t.name).join(' '),
+      iconKeys: targets.map(t => t.iconKey)
     });
   }
 

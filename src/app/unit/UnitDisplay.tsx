@@ -36,17 +36,17 @@ export function UnitDisplay({
   const maxPlusLevel = unitData.coreData.rarity.maxLevels[1];
 
   return (
-    <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
+    <div className={`bg-white rounded-lg shadow-lg p-3 ${className}`}>
       {/* Header */}
-      <div className="mb-4 flex items-start gap-4">
+      <div className="mb-3 flex items-start gap-3">
         {/* Unit Icon */}
         {currentFormData.icon && (
           <div className="flex-shrink-0">
             <Image 
               src={`data:image/png;base64,${currentFormData.icon}`}
               alt={currentFormData.name || 'Unit Icon'}
-              width={80}
-              height={80}
+              width={64}
+              height={64}
               className="rounded-lg border-2 border-gray-200 object-cover"
             />
           </div>
@@ -54,7 +54,7 @@ export function UnitDisplay({
         
         {/* Unit Info */}
         <div className="flex-1">
-          <h2 className="text-2xl font-bold text-gray-800">
+          <h2 className="text-xl font-bold text-gray-800">
             {currentFormData.name || `Unit ${unitData.unitId.toString().padStart(3, '0')}`}
           </h2>
           <p className="text-gray-600">
@@ -67,7 +67,7 @@ export function UnitDisplay({
       </div>
 
       {/* Level Controls */}
-      <div className="mb-4 flex gap-2 items-end">
+      <div className="mb-3 flex gap-2 items-end">
         <div>
           <label className="block text-sm text-gray-600 mb-1">Level</label>
           <input
@@ -76,7 +76,7 @@ export function UnitDisplay({
             onChange={(e) => setLevel(Math.max(1, Math.min(maxLevel, parseInt(e.target.value) || 1)))}
             min="1"
             max={maxLevel}
-            className="border rounded px-2 py-1 w-20 text-sm"
+            className="border rounded px-2 py-1 w-16 text-sm"
           />
         </div>
         <div>
@@ -87,13 +87,13 @@ export function UnitDisplay({
             onChange={(e) => setPlusLevel(Math.max(0, Math.min(maxPlusLevel, parseInt(e.target.value) || 0)))}
             min="0"
             max={maxPlusLevel}
-            className="border rounded px-2 py-1 w-20 text-sm"
+            className="border rounded px-2 py-1 w-16 text-sm"
           />
         </div>
-        <div className="ml-2">
+        <div className="ml-1">
           <button
             onClick={() => { setLevel(maxLevel); setPlusLevel(maxPlusLevel); }}
-            className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm"
+            className="bg-blue-500 hover:bg-blue-600 text-white px-2 py-1 rounded text-sm"
           >
             Max
           </button>
@@ -102,12 +102,12 @@ export function UnitDisplay({
 
       {/* Form Tabs */}
       {unitData.coreData.forms.length > 1 && (
-        <div className="flex mb-4 space-x-2 flex-wrap">
+        <div className="flex mb-3 space-x-1 flex-wrap">
           {unitData.coreData.forms.map((form, index) => (
             <button
               key={index}
               onClick={() => setCurrentForm(index)}
-              className={`flex items-center gap-2 px-3 py-2 rounded text-sm transition-colors ${
+              className={`flex items-center gap-1 px-2 py-1 rounded text-sm transition-colors ${
                 currentForm === index
                   ? 'bg-blue-500 text-white'
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -118,8 +118,8 @@ export function UnitDisplay({
                 <Image 
                   src={`data:image/png;base64,${form.icon}`}
                   alt={form.name || 'Form Icon'}
-                  width={32}
-                  height={32}
+                  width={24}
+                  height={24}
                   className="rounded object-cover"
                 />
               )}
@@ -145,9 +145,9 @@ export function UnitDisplay({
 
 function StatsTable({ stats }: { stats: CalculatedStats }) {
   return (
-    <div className="mb-6">
-      <h3 className="text-lg font-semibold mb-3 text-gray-800">基本ステータス</h3>
-      <div className="grid grid-cols-2 gap-2 text-sm">
+    <div className="mb-4">
+      <h3 className="text-base font-semibold mb-2 text-gray-800">基本ステータス</h3>
+      <div className="grid grid-cols-2 gap-1 text-sm">
         <StatItem label="体力" value={stats.hp.toLocaleString()} />
 
         {stats.multihit ? (
@@ -226,11 +226,11 @@ function StatItem({
 
 function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
   return (
-    <div className="mb-6">
-      <h3 className="text-lg font-semibold mb-3 text-gray-800">能力・効果</h3>
-      <div className="space-y-2">
+    <div className="mb-4">
+      <h3 className="text-base font-semibold mb-2 text-gray-800">能力・効果</h3>
+      <div className="space-y-1">
         {abilities.map((ability, index) => (
-          <div key={index} className="bg-gray-50 p-3 rounded">
+          <div key={index} className="bg-gray-50 p-2 rounded">
             <div className="flex justify-between items-start">
               <div className="font-medium text-gray-800">{ability.name}</div>
               {ability.value && (
@@ -249,10 +249,10 @@ function TalentsList({ talents }: { talents: readonly UnitTalent[] }) {
 
   return (
     <div>
-      <h3 className="text-lg font-semibold mb-3 text-gray-800">本能・超本能</h3>
-      <div className="space-y-2">
+      <h3 className="text-base font-semibold mb-2 text-gray-800">本能・超本能</h3>
+      <div className="space-y-1">
         {talents.map((talent, index) => (
-          <div key={index} className={`p-3 rounded ${talent.type === 'ultra' ? 'bg-red-50 border-l-4 border-red-500' : 'bg-yellow-50 border-l-4 border-yellow-500'}`}>
+          <div key={index} className={`p-2 rounded ${talent.type === 'ultra' ? 'bg-red-50 border-l-4 border-red-500' : 'bg-yellow-50 border-l-4 border-yellow-500'}`}>
             <div className="flex justify-between items-start">
               <div className={`font-medium ${talent.type === 'ultra' ? 'text-red-600' : 'text-yellow-600'}`}>
                 {talent.name} ({talent.id})

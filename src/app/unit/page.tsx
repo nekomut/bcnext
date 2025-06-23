@@ -57,8 +57,8 @@ export default function Page() {
       <Image src= {`data:image/png;base64,${sozai.new}`} alt="img_new" width={20} height={0} />
 
       {/* ユニット検索UI */}
-      <div className="p-4">
-        <div className="mb-4 flex gap-2 items-end flex-wrap">
+      <div className="p-2">
+        <div className="mb-2 flex gap-2 items-end flex-wrap">
           <div>
             <label className="block text-sm text-gray-600 mb-1">Unit ID</label>
             <input
@@ -67,13 +67,13 @@ export default function Page() {
               value={unitId}
               onChange={(e) => setUnitId(e.target.value)}
               onKeyPress={handleKeyPress}
-              className="border rounded px-3 py-2 text-sm"
+              className="border rounded px-2 py-1 text-sm w-32"
             />
           </div>
           <button
             onClick={handleUnitSearch}
             disabled={loading}
-            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded text-sm disabled:opacity-50"
+            className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm disabled:opacity-50"
           >
             {loading ? 'Loading...' : 'Search'}
           </button>
@@ -81,7 +81,7 @@ export default function Page() {
 
         {/* エラーメッセージ */}
         {error && (
-          <div className="text-red-500 mb-4 text-sm">{error}</div>
+          <div className="text-red-500 mb-2 text-sm">{error}</div>
         )}
 
         {/* ユニット表示 */}

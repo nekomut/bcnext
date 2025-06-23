@@ -37,16 +37,30 @@ export function UnitDisplay({
   return (
     <div className={`bg-white rounded-lg shadow-lg p-6 ${className}`}>
       {/* Header */}
-      <div className="mb-4">
-        <h2 className="text-2xl font-bold text-gray-800">
-          {currentFormData.name || `Unit ${unitData.unitId.toString().padStart(3, '0')}`}
-        </h2>
-        <p className="text-gray-600">
-          {unitData.coreData.rarity.name} | Lv{level}+{plusLevel} / MaxLv{maxLevel}+{maxPlusLevel}
-        </p>
-        <p className="text-sm text-gray-500">
-          Unit ID: {unitData.unitId.toString().padStart(3, '0')}-{currentForm + 1}
-        </p>
+      <div className="mb-4 flex items-start gap-4">
+        {/* Unit Icon */}
+        {currentFormData.icon && (
+          <div className="flex-shrink-0">
+            <img 
+              src={`data:image/png;base64,${currentFormData.icon}`}
+              alt={currentFormData.name}
+              className="w-20 h-20 rounded-lg border-2 border-gray-200 object-cover"
+            />
+          </div>
+        )}
+        
+        {/* Unit Info */}
+        <div className="flex-1">
+          <h2 className="text-2xl font-bold text-gray-800">
+            {currentFormData.name || `Unit ${unitData.unitId.toString().padStart(3, '0')}`}
+          </h2>
+          <p className="text-gray-600">
+            {unitData.coreData.rarity.name} | Lv{level}+{plusLevel} / MaxLv{maxLevel}+{maxPlusLevel}
+          </p>
+          <p className="text-sm text-gray-500">
+            Unit ID: {unitData.unitId.toString().padStart(3, '0')}-{currentForm + 1}
+          </p>
+        </div>
       </div>
 
       {/* Level Controls */}
@@ -85,18 +99,26 @@ export function UnitDisplay({
 
       {/* Form Tabs */}
       {unitData.coreData.forms.length > 1 && (
-        <div className="flex mb-4 space-x-2">
+        <div className="flex mb-4 space-x-2 flex-wrap">
           {unitData.coreData.forms.map((form, index) => (
             <button
               key={index}
               onClick={() => setCurrentForm(index)}
-              className={`px-3 py-1 rounded text-sm ${
+              className={`flex items-center gap-2 px-3 py-2 rounded text-sm transition-colors ${
                 currentForm === index
                   ? 'bg-blue-500 text-white'
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
               }`}
             >
-              {form.name || `Form ${index + 1}`}
+              {/* Form Icon */}
+              {form.icon && (
+                <img 
+                  src={`data:image/png;base64,${form.icon}`}
+                  alt={form.name}
+                  className="w-8 h-8 rounded object-cover"
+                />
+              )}
+              <span>{form.name || `Form ${index + 1}`}</span>
             </button>
           ))}
         </div>
@@ -210,9 +232,6 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                 <div className="text-sm text-blue-600 font-medium">{ability.value}</div>
               )}
             </div>
-            {ability.detail && (
-              <div className="text-sm text-gray-600 mt-1">{ability.detail}</div>
-            )}
           </div>
         ))}
       </div>

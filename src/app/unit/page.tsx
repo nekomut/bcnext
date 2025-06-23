@@ -72,28 +72,6 @@ export default function Page() {
               className="border rounded px-3 py-2 text-sm"
             />
           </div>
-          <div>
-            <label className="block text-sm text-gray-600 mb-1">Level</label>
-            <input
-              type="number"
-              value={level}
-              onChange={(e) => setLevel(Math.max(1, parseInt(e.target.value) || 1))}
-              min="1"
-              max="60"
-              className="border rounded px-3 py-2 w-20 text-sm"
-            />
-          </div>
-          <div>
-            <label className="block text-sm text-gray-600 mb-1">+Level</label>
-            <input
-              type="number"
-              value={plusLevel}
-              onChange={(e) => setPlusLevel(Math.max(0, parseInt(e.target.value) || 0))}
-              min="0"
-              max="80"
-              className="border rounded px-3 py-2 w-20 text-sm"
-            />
-          </div>
           <button
             onClick={handleUnitSearch}
             disabled={loading}

@@ -5,6 +5,7 @@ export interface UnitForm {
   readonly formId: number;
   readonly name: string;
   readonly stats: readonly number[];
+  readonly icon: string;
 }
 
 export interface UnitRarity {
@@ -62,7 +63,6 @@ export interface CalculatedStats {
 export interface UnitAbility {
   readonly name: string;
   readonly value: string;
-  readonly detail: string;
 }
 
 // Calculation functions (from stat.py)
@@ -216,9 +216,8 @@ export const getAbilities = (unitData: UnitData, formId: number): UnitAbility[] 
 
   if (targets.length > 0) {
     abilities.push({
-      name: "攻撃ターゲット限定",
-      value: targets.join(''),
-      detail: ""
+      name: "ターゲット属性",
+      value: targets.join(' ')
     });
   }
 
@@ -226,8 +225,7 @@ export const getAbilities = (unitData: UnitData, formId: number): UnitAbility[] 
   if (stats[23] && stats[23] > 0) {
     abilities.push({
       name: "めっぽう強い",
-      value: "1.5x~1.8x",
-      detail: "対象属性への攻撃力・耐久力強化"
+      value: "1.5x~1.8x"
     });
   }
 
@@ -235,8 +233,7 @@ export const getAbilities = (unitData: UnitData, formId: number): UnitAbility[] 
   if (stats[24] && stats[24] > 0) {
     abilities.push({
       name: "ふっとばす",
-      value: `${stats[24]}%`,
-      detail: ""
+      value: `${stats[24]}%`
     });
   }
 
@@ -246,8 +243,7 @@ export const getAbilities = (unitData: UnitData, formId: number): UnitAbility[] 
     const durationMax = frameToSecond(Math.round((stats[26] || 0) * 1.2));
     abilities.push({
       name: "動きを止める",
-      value: `${duration}s~${durationMax}s`,
-      detail: `${stats[25]}%`
+      value: `${stats[25]}% ${duration}s~${durationMax}s`
     });
   }
 
@@ -257,8 +253,7 @@ export const getAbilities = (unitData: UnitData, formId: number): UnitAbility[] 
     const durationMax = frameToSecond(Math.round((stats[28] || 0) * 1.2));
     abilities.push({
       name: "動きを遅くする",
-      value: `${duration}s~${durationMax}s`,
-      detail: `${stats[27]}%`
+      value: `${stats[27]}% ${duration}s~${durationMax}s`
     });
   }
 
@@ -266,8 +261,7 @@ export const getAbilities = (unitData: UnitData, formId: number): UnitAbility[] 
   if (stats[29] && stats[29] > 0) {
     abilities.push({
       name: "打たれ強い",
-      value: "0.25x~0.2x",
-      detail: "対象属性からのダメージ軽減"
+      value: "0.25x~0.2x"
     });
   }
 
@@ -275,8 +269,7 @@ export const getAbilities = (unitData: UnitData, formId: number): UnitAbility[] 
   if (stats[30] && stats[30] > 0) {
     abilities.push({
       name: "超ダメージ",
-      value: "3x~4x",
-      detail: "対象属性への攻撃力強化"
+      value: "3x~4x"
     });
   }
 
@@ -284,8 +277,7 @@ export const getAbilities = (unitData: UnitData, formId: number): UnitAbility[] 
   if (stats[31] && stats[31] > 0) {
     abilities.push({
       name: "クリティカル",
-      value: `${stats[31]}%`,
-      detail: ""
+      value: `${stats[31]}%`
     });
   }
 
@@ -293,8 +285,7 @@ export const getAbilities = (unitData: UnitData, formId: number): UnitAbility[] 
   if (stats[33] && stats[33] > 0) {
     abilities.push({
       name: "撃破時お金アップ",
-      value: "2x",
-      detail: ""
+      value: "2x"
     });
   }
 
@@ -302,8 +293,7 @@ export const getAbilities = (unitData: UnitData, formId: number): UnitAbility[] 
   if (stats[34] && stats[34] > 0) {
     abilities.push({
       name: "城破壊が得意",
-      value: "4x",
-      detail: ""
+      value: "4x"
     });
   }
 
@@ -314,8 +304,7 @@ export const getAbilities = (unitData: UnitData, formId: number): UnitAbility[] 
     const waveType = stats[94] === 1 ? '小波動' : '波動攻撃';
     abilities.push({
       name: waveType,
-      value: `Lv${waveLevel} ${waveRange}`,
-      detail: `${stats[35]}%`
+      value: `${stats[35]}% Lv${waveLevel} ${waveRange}`
     });
   }
 
@@ -325,8 +314,7 @@ export const getAbilities = (unitData: UnitData, formId: number): UnitAbility[] 
     const durationMax = frameToSecond(Math.round((stats[38] || 0) * 1.2));
     abilities.push({
       name: "攻撃力ダウン",
-      value: `-${stats[39]}% ${duration}s~${durationMax}s`,
-      detail: `${stats[37]}%`
+      value: `${stats[37]}% -${stats[39]}% ${duration}s~${durationMax}s`
     });
   }
 
@@ -334,8 +322,7 @@ export const getAbilities = (unitData: UnitData, formId: number): UnitAbility[] 
   if (stats[40] && stats[40] > 0) {
     abilities.push({
       name: "攻撃力アップ",
-      value: `+${stats[41]}%`,
-      detail: `HP≦${100 - stats[40]}%`
+      value: `+${stats[41]}% HP≦${100 - stats[40]}%`
     });
   }
 
@@ -343,8 +330,7 @@ export const getAbilities = (unitData: UnitData, formId: number): UnitAbility[] 
   if (stats[42] && stats[42] > 0) {
     abilities.push({
       name: "生き残る",
-      value: `${stats[42]}%`,
-      detail: ""
+      value: `${stats[42]}%`
     });
   }
 
@@ -352,8 +338,7 @@ export const getAbilities = (unitData: UnitData, formId: number): UnitAbility[] 
   if (stats[43] && stats[43] > 0) {
     abilities.push({
       name: "メタル",
-      value: "",
-      detail: ""
+      value: ""
     });
   }
 
@@ -366,8 +351,7 @@ export const getAbilities = (unitData: UnitData, formId: number): UnitAbility[] 
 
     abilities.push({
       name: attackType,
-      value: rangeInfo,
-      detail: ""
+      value: rangeInfo
     });
   }
 
@@ -391,8 +375,7 @@ export const getAbilities = (unitData: UnitData, formId: number): UnitAbility[] 
     if (stats[index] && stats[index] > 0) {
       abilities.push({
         name,
-        value: "",
-        detail: ""
+        value: ""
       });
     }
   });
@@ -401,8 +384,7 @@ export const getAbilities = (unitData: UnitData, formId: number): UnitAbility[] 
   if (stats[70] && stats[70] > 0) {
     abilities.push({
       name: "バリアブレイカー",
-      value: `${stats[70]}%`,
-      detail: ""
+      value: `${stats[70]}%`
     });
   }
 

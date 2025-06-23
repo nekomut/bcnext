@@ -65,11 +65,11 @@ export default function Page() {
             <label className="block text-sm text-gray-600 mb-1">Unit ID</label>
             <input
               type="text"
-              placeholder="000, 025, etc."
+              placeholder="025"
               value={unitId}
               onChange={(e) => setUnitId(e.target.value)}
               onKeyPress={handleKeyPress}
-              className="border rounded px-2 py-1 text-sm w-24 sm:w-32"
+              className="border rounded px-2 py-1 text-sm w-24 sm:w-32 text-gray-900"
             />
           </div>
           <button

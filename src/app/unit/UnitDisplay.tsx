@@ -76,7 +76,7 @@ export function UnitDisplay({
             onChange={(e) => setLevel(Math.max(1, Math.min(maxLevel, parseInt(e.target.value) || 1)))}
             min="1"
             max={maxLevel}
-            className="border rounded px-1 sm:px-2 py-1 w-12 sm:w-16 text-xs sm:text-sm"
+            className="border rounded px-1 sm:px-2 py-1 w-12 sm:w-16 text-xs sm:text-sm text-gray-900"
           />
         </div>
         <div>
@@ -87,7 +87,7 @@ export function UnitDisplay({
             onChange={(e) => setPlusLevel(Math.max(0, Math.min(maxPlusLevel, parseInt(e.target.value) || 0)))}
             min="0"
             max={maxPlusLevel}
-            className="border rounded px-1 sm:px-2 py-1 w-12 sm:w-16 text-xs sm:text-sm"
+            className="border rounded px-1 sm:px-2 py-1 w-12 sm:w-16 text-xs sm:text-sm text-gray-900"
           />
         </div>
         <div className="ml-1">
@@ -148,17 +148,17 @@ function StatsTable({ stats }: { stats: CalculatedStats }) {
     <div className="mb-4">
       <h3 className="text-sm sm:text-base font-semibold mb-2 text-gray-800">基本ステータス</h3>
       <div className="grid grid-cols-2 gap-2 sm:gap-3 text-xs sm:text-sm">
-        <StatItem label="体力" value={stats.hp.toLocaleString()} />
+        <StatItem label="HP" value={stats.hp.toLocaleString()} />
 
         {stats.multihit ? (
           <StatItem
-            label={`攻撃力(${stats.attackType === 'area' ? '範囲' : '単体'})`}
+            label={`AP(${stats.attackType === 'area' ? '範囲' : '単体'})`}
             value={stats.ap.toLocaleString()}
             detail={`[${[stats.atk1, stats.atk2, stats.atk3].filter(Boolean).map(x => x?.toLocaleString()).join(' ')}]`}
           />
         ) : (
           <StatItem
-            label={`攻撃力(${stats.attackType === 'area' ? '範囲' : '単体'})`}
+            label={`AP(${stats.attackType === 'area' ? '範囲' : '単体'})`}
             value={stats.ap.toLocaleString()}
           />
         )}
@@ -215,7 +215,7 @@ function StatItem({
 }) {
   return (
     <div className="flex justify-between py-1 border-b border-gray-100">
-      <span className="text-gray-600 truncate pr-2 text-xs">{label}</span>
+      <span className="text-gray-600 truncate pr-2 text-xs font-bold">{label}</span>
       <div className="text-right flex-shrink-0">
         <span className={`text-gray-900 ${className}`}>{value}</span>
         {detail && <div className="text-xs text-gray-500 break-all">{detail}</div>}

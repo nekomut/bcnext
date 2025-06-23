@@ -289,7 +289,7 @@ function StatItem({
 }) {
   return (
     <div className="flex justify-between py-0.5 border-b border-gray-100">
-      <span className={`text-gray-600 truncate pr-2 text-xs font-bold ${labelClassName}`}>{label}</span>
+      <span className={`${labelClassName || 'text-gray-600'} truncate pr-2 text-xs font-bold`}>{label}</span>
       <div className="text-right flex-shrink-0">
         <span className={`text-gray-900 ${className}`}>{value}</span>
         {detail && <span className="text-xs text-gray-500 ml-1">{detail}</span>}

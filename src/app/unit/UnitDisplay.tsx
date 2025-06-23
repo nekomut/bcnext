@@ -298,35 +298,141 @@ function StatItem({
   );
 }
 
+function DynamicSuperDamage({ ability }: { ability: UnitAbility }) {
+  const [multiplier, setMultiplier] = useState(4);
+  
+  if (!ability.calculatedStats || !ability.isDynamic) return null;
+  
+  const calculateDamage = (mult: number) => {
+    const stats = ability.calculatedStats!;
+    if (stats.multihit) {
+      const hit1 = stats.atk1 ? Math.floor(stats.atk1 * mult) : 0;
+      const hit2 = stats.atk2 ? Math.floor(stats.atk2 * mult) : 0;
+      const hit3 = stats.atk3 ? Math.floor(stats.atk3 * mult) : 0;
+      
+      const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => v.toLocaleString());
+      return `[${values.join(' ')}]`;
+    } else {
+      const damage = Math.floor(stats.ap * mult);
+      return damage.toLocaleString();
+    }
+  };
+  
+  return (
+    <div className="bg-gray-50 p-2 rounded">
+      <div className="flex justify-between items-start gap-2">
+        <div className="font-bold text-xs text-gray-600">
+          超ダメージ <span className="text-red-500">AP
+          <input
+            type="number"
+            value={multiplier}
+            onChange={(e) => {
+              const value = Number(e.target.value);
+              if (value >= 3 && value <= 4) {
+                setMultiplier(value);
+              }
+            }}
+            className="w-8 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
+            min="3"
+            max="4"
+            step="0.1"
+          />x</span>
+        </div>
+        <div className="text-right flex-shrink-0 max-w-[50%]">
+          <div className="text-gray-600 font-medium break-words">
+            {calculateDamage(multiplier)}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function DynamicExtremeDamage({ ability }: { ability: UnitAbility }) {
+  const [multiplier, setMultiplier] = useState(6);
+  
+  if (!ability.calculatedStats || !ability.isDynamic) return null;
+  
+  const calculateDamage = (mult: number) => {
+    const stats = ability.calculatedStats!;
+    if (stats.multihit) {
+      const hit1 = stats.atk1 ? Math.floor(stats.atk1 * mult) : 0;
+      const hit2 = stats.atk2 ? Math.floor(stats.atk2 * mult) : 0;
+      const hit3 = stats.atk3 ? Math.floor(stats.atk3 * mult) : 0;
+      
+      const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => v.toLocaleString());
+      return `[${values.join(' ')}]`;
+    } else {
+      const damage = Math.floor(stats.ap * mult);
+      return damage.toLocaleString();
+    }
+  };
+  
+  return (
+    <div className="bg-gray-50 p-2 rounded">
+      <div className="flex justify-between items-start gap-2">
+        <div className="font-bold text-xs text-gray-600">
+          極ダメージ <span className="text-red-500">AP
+          <input
+            type="number"
+            value={multiplier}
+            onChange={(e) => {
+              const value = Number(e.target.value);
+              if (value >= 5 && value <= 6) {
+                setMultiplier(value);
+              }
+            }}
+            className="w-8 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
+            min="5"
+            max="6"
+            step="0.1"
+          />x</span>
+        </div>
+        <div className="text-right flex-shrink-0 max-w-[50%]">
+          <div className="text-gray-600 font-medium break-words">
+            {calculateDamage(multiplier)}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
   return (
     <div className="mb-4">
       <h3 className="text-sm sm:text-base font-semibold mb-2 text-gray-800">能力・効果</h3>
       <div className="space-y-0.5">
         {abilities.map((ability, index) => (
-          <div key={index} className="bg-gray-50 p-2 rounded">
-            <div className="flex justify-between items-start gap-2">
-              <div className="font-bold text-xs text-gray-600">{ability.name}</div>
-              <div className="text-right flex-shrink-0 max-w-[50%]">
-                {ability.name === "ターゲット属性" && ability.iconKeys ? (
-                  <div className="flex gap-1 flex-wrap justify-end">
-                    {ability.iconKeys.map((iconKey, i) => (
-                      <Image
-                        key={i}
-                        src={`data:image/png;base64,${icons[iconKey as keyof typeof icons]}`}
-                        alt={`trait-${iconKey}`}
-                        width={20}
-                        height={20}
-                        className="rounded"
-                      />
-                    ))}
-                  </div>
-                ) : ability.value ? (
-                  <div className="text-gray-600 font-medium break-words">{ability.value}</div>
-                ) : null}
+          ability.isDynamic && ability.name === "超ダメージ" ? (
+            <DynamicSuperDamage key={index} ability={ability} />
+          ) : ability.isDynamic && ability.name === "極ダメージ" ? (
+            <DynamicExtremeDamage key={index} ability={ability} />
+          ) : (
+            <div key={index} className="bg-gray-50 p-2 rounded">
+              <div className="flex justify-between items-start gap-2">
+                <div className="font-bold text-xs text-gray-600">{ability.name}</div>
+                <div className="text-right flex-shrink-0 max-w-[50%]">
+                  {ability.name === "ターゲット属性" && ability.iconKeys ? (
+                    <div className="flex gap-1 flex-wrap justify-end">
+                      {ability.iconKeys.map((iconKey, i) => (
+                        <Image
+                          key={i}
+                          src={`data:image/png;base64,${icons[iconKey as keyof typeof icons]}`}
+                          alt={`trait-${iconKey}`}
+                          width={20}
+                          height={20}
+                          className="rounded"
+                        />
+                      ))}
+                    </div>
+                  ) : ability.value ? (
+                    <div className="text-gray-600 font-medium break-words">{ability.value}</div>
+                  ) : null}
+                </div>
               </div>
             </div>
-          </div>
+          )
         ))}
       </div>
     </div>

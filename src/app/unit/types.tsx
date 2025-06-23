@@ -89,6 +89,9 @@ export interface UnitAbility {
   readonly name: string | React.ReactNode;
   readonly value: string | React.ReactNode;
   readonly iconKeys?: string[];
+  readonly isDynamic?: boolean;
+  readonly baseAP?: number;
+  readonly calculatedStats?: CalculatedStats;
 }
 
 // Calculation functions (from stat.py)
@@ -374,87 +377,23 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
 
   // 超ダメージ
   if (stats[30] && stats[30] > 0) {
-    let superDamageValues: React.ReactNode;
-    if (calculatedStats.multihit) {
-      const hit1_3x = calculatedStats.atk1 ? calculatedStats.atk1 * 3 : 0;
-      const hit1_4x = calculatedStats.atk1 ? calculatedStats.atk1 * 4 : 0;
-      const hit2_3x = calculatedStats.atk2 ? calculatedStats.atk2 * 3 : 0;
-      const hit2_4x = calculatedStats.atk2 ? calculatedStats.atk2 * 4 : 0;
-      const hit3_3x = calculatedStats.atk3 ? calculatedStats.atk3 * 3 : 0;
-      const hit3_4x = calculatedStats.atk3 ? calculatedStats.atk3 * 4 : 0;
-      
-      const minValues = [hit1_3x, hit2_3x, hit3_3x].filter(v => v > 0).map(v => v.toLocaleString());
-      const maxValues = [hit1_4x, hit2_4x, hit3_4x].filter(v => v > 0).map(v => v.toLocaleString());
-      
-      superDamageValues = (
-        <>
-          [{minValues.join(' ')}]~
-          <br />
-          [{maxValues.join(' ')}]
-        </>
-      );
-    } else {
-      const ap_3x = (calculatedStats.ap * 3).toLocaleString();
-      const ap_4x = (calculatedStats.ap * 4).toLocaleString();
-      superDamageValues = (
-        <>
-          [{ap_3x}]~
-          <br />
-          [{ap_4x}]
-        </>
-      );
-    }
-    
     abilities.push({
-      name: (
-        <>
-          超ダメージ <span className="text-red-500">(AP 3x~4x)</span>
-        </>
-      ),
-      value: superDamageValues
+      name: "超ダメージ",
+      value: "",
+      isDynamic: true,
+      baseAP: calculatedStats.ap,
+      calculatedStats: calculatedStats
     });
   }
 
   // 極ダメージ
   if (stats[81] && stats[81] > 0) {
-    let insaneDamageValues: React.ReactNode;
-    if (calculatedStats.multihit) {
-      const hit1_5x = calculatedStats.atk1 ? calculatedStats.atk1 * 5 : 0;
-      const hit1_6x = calculatedStats.atk1 ? calculatedStats.atk1 * 6 : 0;
-      const hit2_5x = calculatedStats.atk2 ? calculatedStats.atk2 * 5 : 0;
-      const hit2_6x = calculatedStats.atk2 ? calculatedStats.atk2 * 6 : 0;
-      const hit3_5x = calculatedStats.atk3 ? calculatedStats.atk3 * 5 : 0;
-      const hit3_6x = calculatedStats.atk3 ? calculatedStats.atk3 * 6 : 0;
-      
-      const minValues = [hit1_5x, hit2_5x, hit3_5x].filter(v => v > 0).map(v => v.toLocaleString());
-      const maxValues = [hit1_6x, hit2_6x, hit3_6x].filter(v => v > 0).map(v => v.toLocaleString());
-      
-      insaneDamageValues = (
-        <>
-          [{minValues.join(' ')}]~
-          <br />
-          [{maxValues.join(' ')}]
-        </>
-      );
-    } else {
-      const ap_5x = (calculatedStats.ap * 5).toLocaleString();
-      const ap_6x = (calculatedStats.ap * 6).toLocaleString();
-      insaneDamageValues = (
-        <>
-          [{ap_5x}]~
-          <br />
-          [{ap_6x}]
-        </>
-      );
-    }
-    
     abilities.push({
-      name: (
-        <>
-          極ダメージ <span className="text-red-500">(AP 5x~6x)</span>
-        </>
-      ),
-      value: insaneDamageValues
+      name: "極ダメージ",
+      value: "",
+      isDynamic: true,
+      baseAP: calculatedStats.ap,
+      calculatedStats: calculatedStats
     });
   }
 

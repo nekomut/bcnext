@@ -86,8 +86,8 @@ export interface CalculatedStats {
 }
 
 export interface UnitAbility {
-  readonly name: string;
-  readonly value: string;
+  readonly name: string | React.ReactNode;
+  readonly value: string | React.ReactNode;
   readonly iconKeys?: string[];
 }
 
@@ -374,7 +374,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
 
   // 超ダメージ
   if (stats[30] && stats[30] > 0) {
-    let superDamageValues = "";
+    let superDamageValues: React.ReactNode;
     if (calculatedStats.multihit) {
       const hit1_3x = calculatedStats.atk1 ? calculatedStats.atk1 * 3 : 0;
       const hit1_4x = calculatedStats.atk1 ? calculatedStats.atk1 * 4 : 0;
@@ -386,22 +386,38 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
       const minValues = [hit1_3x, hit2_3x, hit3_3x].filter(v => v > 0).map(v => v.toLocaleString());
       const maxValues = [hit1_4x, hit2_4x, hit3_4x].filter(v => v > 0).map(v => v.toLocaleString());
       
-      superDamageValues = `AP 3x~4x\n[${minValues.join(' ')}]~[${maxValues.join(' ')}]`;
+      superDamageValues = (
+        <>
+          [{minValues.join(' ')}]~
+          <br />
+          [{maxValues.join(' ')}]
+        </>
+      );
     } else {
       const ap_3x = (calculatedStats.ap * 3).toLocaleString();
       const ap_4x = (calculatedStats.ap * 4).toLocaleString();
-      superDamageValues = `AP 3x~4x\n[${ap_3x}]~[${ap_4x}]`;
+      superDamageValues = (
+        <>
+          [{ap_3x}]~
+          <br />
+          [{ap_4x}]
+        </>
+      );
     }
     
     abilities.push({
-      name: "超ダメージ",
+      name: (
+        <>
+          超ダメージ <span className="text-red-500">(AP 3x~4x)</span>
+        </>
+      ),
       value: superDamageValues
     });
   }
 
   // 極ダメージ
   if (stats[81] && stats[81] > 0) {
-    let insaneDamageValues = "";
+    let insaneDamageValues: React.ReactNode;
     if (calculatedStats.multihit) {
       const hit1_5x = calculatedStats.atk1 ? calculatedStats.atk1 * 5 : 0;
       const hit1_6x = calculatedStats.atk1 ? calculatedStats.atk1 * 6 : 0;
@@ -413,15 +429,31 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
       const minValues = [hit1_5x, hit2_5x, hit3_5x].filter(v => v > 0).map(v => v.toLocaleString());
       const maxValues = [hit1_6x, hit2_6x, hit3_6x].filter(v => v > 0).map(v => v.toLocaleString());
       
-      insaneDamageValues = `AP 5x~6x\n[${minValues.join(' ')}]~[${maxValues.join(' ')}]`;
+      insaneDamageValues = (
+        <>
+          [{minValues.join(' ')}]~
+          <br />
+          [{maxValues.join(' ')}]
+        </>
+      );
     } else {
       const ap_5x = (calculatedStats.ap * 5).toLocaleString();
       const ap_6x = (calculatedStats.ap * 6).toLocaleString();
-      insaneDamageValues = `AP 5x~6x\n[${ap_5x}]~[${ap_6x}]`;
+      insaneDamageValues = (
+        <>
+          [{ap_5x}]~
+          <br />
+          [{ap_6x}]
+        </>
+      );
     }
     
     abilities.push({
-      name: "極ダメージ",
+      name: (
+        <>
+          極ダメージ <span className="text-red-500">(AP 5x~6x)</span>
+        </>
+      ),
       value: insaneDamageValues
     });
   }
@@ -579,6 +611,15 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     abilities.push({
       name: "バリアブレイカー",
       value: `${stats[70]}%`
+    });
+  }
+
+  // 召喚
+  if (stats[110] && stats[110] > 0) {
+    const summonedUnitId = stats[110];
+    abilities.push({
+      name: "召喚",
+      value: `Unit ${summonedUnitId.toString().padStart(3, '0')}`
     });
   }
 

@@ -207,7 +207,7 @@ function StatsTable({ stats }: { stats: CalculatedStats }) {
     <div className="mb-4">
       <h3 className="text-sm sm:text-base font-semibold mb-2 text-gray-800">基本ステータス</h3>
       <div className="grid grid-cols-2 gap-2 sm:gap-3 text-xs sm:text-sm">
-        <StatItem label="HP" value={stats.hp.toLocaleString()} />
+        <StatItem label="HP" value={stats.hp.toLocaleString()} labelClassName="text-blue-500" />
 
         {stats.multihit ? (
           <StatItem
@@ -219,11 +219,13 @@ function StatsTable({ stats }: { stats: CalculatedStats }) {
                 {`[${[stats.atk1, stats.atk2, stats.atk3].filter(Boolean).map(x => x?.toLocaleString()).join(' ')}]`}
               </>
             }
+            labelClassName="text-red-500"
           />
         ) : (
           <StatItem
             label={<>AP<br className="sm:hidden" />({stats.attackType === 'area' ? '範囲' : '単体'})</>}
             value={stats.ap.toLocaleString()}
+            labelClassName="text-red-500"
           />
         )}
 
@@ -276,16 +278,18 @@ function StatItem({
   label,
   value,
   detail,
-  className = ""
+  className = "",
+  labelClassName = ""
 }: {
   label: string | React.ReactNode;
   value: string | React.ReactNode;
   detail?: string | React.ReactNode;
   className?: string;
+  labelClassName?: string;
 }) {
   return (
     <div className="flex justify-between py-0.5 border-b border-gray-100">
-      <span className="text-gray-600 truncate pr-2 text-xs font-bold">{label}</span>
+      <span className={`text-gray-600 truncate pr-2 text-xs font-bold ${labelClassName}`}>{label}</span>
       <div className="text-right flex-shrink-0">
         <span className={`text-gray-900 ${className}`}>{value}</span>
         {detail && <span className="text-xs text-gray-500 ml-1">{detail}</span>}
@@ -302,7 +306,7 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
         {abilities.map((ability, index) => (
           <div key={index} className="bg-gray-50 p-2 rounded">
             <div className="flex justify-between items-start gap-2">
-              <div className="font-bold text-xs text-gray-800">{ability.name}</div>
+              <div className="font-bold text-xs text-gray-600">{ability.name}</div>
               <div className="text-right flex-shrink-0 max-w-[50%]">
                 {ability.name === "ターゲット属性" && ability.iconKeys ? (
                   <div className="flex gap-1 flex-wrap justify-end">
@@ -318,7 +322,7 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                     ))}
                   </div>
                 ) : ability.value ? (
-                  <div className="text-[10px] text-blue-600 font-medium break-words">{ability.value}</div>
+                  <div className="text-gray-600 font-medium break-words">{ability.value}</div>
                 ) : null}
               </div>
             </div>
@@ -349,7 +353,7 @@ function TalentsList({ talents }: { talents: readonly UnitTalent[] }) {
                 )}
               </div>
               {talent.effect && (
-                <div className="text-[10px] text-gray-700 text-right break-words flex-shrink-0 max-w-[50%]">{talent.effect}</div>
+                <div className="text-gray-700 text-right break-words flex-shrink-0 max-w-[50%]">{talent.effect}</div>
               )}
             </div>
           </div>

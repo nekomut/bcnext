@@ -47,12 +47,14 @@ export default function Page() {
 
   return (
     <div>
-      <Link href="/" className="font-bold hover:text-green-600 px-1">bcnext</Link>|
-      <Link href="/normal" className="hover:text-green-600 px-1">Normal</Link>|
-      <Link href="/rare" className="hover:text-green-600 px-1">Rare</Link>|
-      <Link href="/event" className="hover:text-green-600 px-1">Event</Link>|
-      <Link href="/seek" className="hover:text-green-600 px-1">Seek</Link>|
-      <Link href="/unit" className="text-green-500 hover:text-green-600 px-1">Unit</Link>|
+      <div className="flex flex-wrap items-center text-sm sm:text-base">
+        <Link href="/" className="font-bold hover:text-green-600 px-1">bcnext</Link><span>|</span>
+        <Link href="/normal" className="hover:text-green-600 px-1">Normal</Link><span>|</span>
+        <Link href="/rare" className="hover:text-green-600 px-1">Rare</Link><span>|</span>
+        <Link href="/event" className="hover:text-green-600 px-1">Event</Link><span>|</span>
+        <Link href="/seek" className="hover:text-green-600 px-1">Seek</Link><span>|</span>
+        <Link href="/unit" className="text-green-500 hover:text-green-600 px-1">Unit</Link><span>|</span>
+      </div>
       <hr />
       <Image src= {`data:image/png;base64,${sozai.new}`} alt="img_new" width={20} height={0} />
 
@@ -67,7 +69,7 @@ export default function Page() {
               value={unitId}
               onChange={(e) => setUnitId(e.target.value)}
               onKeyPress={handleKeyPress}
-              className="border rounded px-2 py-1 text-sm w-32"
+              className="border rounded px-2 py-1 text-sm w-24 sm:w-32"
             />
           </div>
           <button

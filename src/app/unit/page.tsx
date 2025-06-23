@@ -56,33 +56,34 @@ export default function Page() {
         <Link href="/unit" className="text-green-500 hover:text-green-600 px-1">Unit</Link><span>|</span>
       </div>
       <hr />
-      <Image src= {`data:image/png;base64,${sozai.new}`} alt="img_new" width={20} height={0} />
+      
 
       {/* ユニット検索UI */}
       <div className="p-2">
-        <div className="mb-2 flex gap-2 items-end flex-wrap">
-          <div>
-            <label className="block text-sm text-gray-600 mb-1">Unit ID</label>
+        <div className="mb-1 flex gap-1 items-end flex-wrap">
+          <div className="flex items-center gap-1">
+            <label className="text-xs text-white-600">UnitID</label>
             <input
               type="text"
               value={unitId}
               onChange={(e) => setUnitId(e.target.value)}
               onKeyPress={handleKeyPress}
-              className="border rounded px-2 py-1 text-sm w-24 sm:w-32 text-gray-900"
+              className="border rounded px-1 py-0.5 text-xs w-20 sm:w-24 text-gray-900"
             />
           </div>
           <button
             onClick={handleUnitSearch}
             disabled={loading}
-            className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-sm disabled:opacity-50"
+            className="bg-blue-500 hover:bg-blue-600 text-white px-2 py-0.5 rounded text-xs disabled:opacity-50"
           >
             {loading ? 'Loading...' : 'Search'}
           </button>
+          <Image src= {`data:image/png;base64,${sozai.new}`} alt="img_new" width={20} height={0} />
         </div>
 
         {/* エラーメッセージ */}
         {error && (
-          <div className="text-red-500 mb-2 text-sm">{error}</div>
+          <div className="text-red-500 mb-1 text-xs">{error}</div>
         )}
 
         {/* ユニット表示 */}

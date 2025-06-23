@@ -3,7 +3,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { UnitData, CalculatedStats, UnitAbility, UnitTalent, calculateUnitStats, getAbilities, frameToSecond } from './types';
+import { UnitData, CalculatedStats, UnitAbility, UnitTalent, calculateUnitStats, getAbilities, frameToSecond, getValidFormCount } from './types';
 import { icons } from '@/data/icons';
 
 interface UnitDisplayProps {
@@ -29,12 +29,15 @@ export function UnitDisplay({
   const [levelInput, setLevelInput] = useState(initialLevel.toString());
   const [plusLevelInput, setPlusLevelInput] = useState(initialPlusLevel.toString());
 
-  const stats = calculateUnitStats(unitData, currentForm, level, plusLevel);
-  const abilities = getAbilities(unitData, currentForm);
-  const currentFormData = unitData.coreData.forms[currentForm];
+  const validFormCount = getValidFormCount(unitData);
+  const actualCurrentForm = Math.min(currentForm, validFormCount - 1);
+  
+  const stats = calculateUnitStats(unitData, actualCurrentForm, level, plusLevel);
+  const abilities = getAbilities(unitData, actualCurrentForm);
+  const currentFormData = unitData.coreData.forms[actualCurrentForm];
 
   if (!currentFormData) {
-    return <div className="text-red-500">Invalid form ID: {currentForm}</div>;
+    return <div className="text-red-500">Invalid form ID: {actualCurrentForm}</div>;
   }
 
   const maxLevel = unitData.coreData.rarity.maxLevels[0];
@@ -145,14 +148,14 @@ export function UnitDisplay({
       </div>
 
       {/* Form Tabs */}
-      {unitData.coreData.forms.length > 1 && (
+      {validFormCount > 1 && (
         <div className="flex mb-3 gap-1 flex-wrap">
-          {unitData.coreData.forms.map((form, index) => (
+          {unitData.coreData.forms.slice(0, validFormCount).map((form, index) => (
             <button
               key={index}
               onClick={() => setCurrentForm(index)}
               className={`flex items-center gap-1 px-1 sm:px-2 py-1 rounded text-xs sm:text-sm transition-colors ${
-                currentForm === index
+                actualCurrentForm === index
                   ? 'bg-blue-500 text-white'
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
               }`}
@@ -215,7 +218,7 @@ function StatsTable({ stats }: { stats: CalculatedStats }) {
         <StatItem
           label="DPS"
           value={Math.round(stats.dps).toLocaleString()}
-          className="text-purple-600 font-medium"
+          className="text-purple-600 font-bold"
         />
         <StatItem label="射程" value={stats.range.toString()} />
         <StatItem label="KB" value={stats.kb.toString()} />
@@ -223,28 +226,34 @@ function StatsTable({ stats }: { stats: CalculatedStats }) {
         <StatItem label="コスト[円]" value={stats.cost.toLocaleString()} />
         <StatItem
           label="再生産"
-          value={`${stats.recharge}s`}
+          value={`${stats.recharge.toFixed(2)}s`}
           detail={`(${Math.round(stats.recharge * 30)}f)`}
         />
         <StatItem
-          label="攻撃頻度"
-          value={`${frameToSecond(stats.freq)}s`}
-          detail={`(${stats.freq}f)`}
-        />
-        <StatItem
           label="攻撃発生"
-          value={`${frameToSecond(stats.foreswing)}s`}
+          value={`${frameToSecond(stats.foreswing).toFixed(2)}s`}
           detail={`(${stats.foreswing}f)`}
         />
         <StatItem
+          label="攻撃間隔"
+          value={`${frameToSecond(stats.tba).toFixed(2)}s`}
+          detail={`(${stats.tba}f)`}
+        />
+        <StatItem
           label="攻撃後硬直"
-          value={`${frameToSecond(stats.backswing)}s`}
+          value={`${frameToSecond(stats.backswing).toFixed(2)}s`}
           detail={`(${stats.backswing}f)`}
         />
         <StatItem
-          label="攻撃間隔"
-          value={`${frameToSecond(stats.tba)}s`}
-          detail={`(${stats.tba}f)`}
+          label="攻撃頻度"
+          value={
+            <>
+              {`${frameToSecond(stats.freq).toFixed(2)}s`}
+              <br />
+              [{stats.frames.join(' ')}]
+            </>
+          }
+          detail={`(${stats.freq}f)`}
         />
       </div>
     </div>

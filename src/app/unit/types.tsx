@@ -6,6 +6,7 @@ export interface UnitForm {
   readonly name: string;
   readonly stats: readonly number[];
   readonly icon: string;
+  readonly animLength?: number;
 }
 
 export interface UnitRarity {
@@ -40,6 +41,29 @@ export interface UnitData {
   };
 }
 
+// フォーム数を適切に決定する関数
+export const getValidFormCount = (unitData: UnitData): number => {
+  const maxForms = Math.min(unitData.coreData.forms.length, unitData.auxiliaryData.names.length, 4);
+  
+  // フォーム名が適切でない場合や、auxiliaryDataの名前が不足している場合はフォーム数を制限
+  for (let i = 0; i < maxForms; i++) {
+    const form = unitData.coreData.forms[i];
+    const auxName = unitData.auxiliaryData.names[i];
+    
+    // フォーム名が仮の名前（"Form X"形式）、空文字列、またはauxiliaryDataの名前がない場合
+    if (!form || 
+        !form.name || 
+        form.name.match(/^Form \d+$/) || 
+        form.name.trim() === '' ||
+        !auxName ||
+        auxName.trim() === '') {
+      return i;
+    }
+  }
+  
+  return maxForms;
+};
+
 export interface CalculatedStats {
   readonly hp: number;
   readonly ap: number;
@@ -55,6 +79,7 @@ export interface CalculatedStats {
   readonly foreswing: number;
   readonly backswing: number;
   readonly tba: number;
+  readonly frames: readonly number[];
   readonly atk1?: number;
   readonly atk2?: number;
   readonly atk3?: number;
@@ -86,6 +111,17 @@ export const calcStat = (
 export const frameToSecond = (frames: number, round: boolean = true): number => {
   const s = frames / 30;
   return round ? (Number.isInteger(s) ? s : Math.round(s * 100) / 100) : s;
+};
+
+// アニメーション長を取得する関数
+const getAnimLength = (form: UnitForm): number => {
+  // フォームにanimLengthが定義されている場合はそれを使用
+  if (form.animLength) {
+    return form.animLength;
+  }
+  
+  // デフォルト値
+  return 30;
 };
 
 // Growth rates calculation
@@ -147,23 +183,49 @@ export const calculateUnitStats = (
     ap = atk1 + atk2 + atk3;
   }
 
-  // Animation length calculation (simplified)
-  const animLength = 30; // Default value
-  const backswing = animLength - foreswing;
-
-  // Attack frequency calculation
+  // Animation length calculation
+  const animLength = getAnimLength(form);
+  let backswing: number;
   let freq: number;
-  if (tba !== 0) {
-    if (multihit && stats[61]) {
-      // Multi-hit frequency calculation
-      const f2 = (stats[61] || 0) - foreswing;
-      const f3 = stats[62] ? (stats[62] - (stats[61] || 0)) : 0;
-      freq = Math.max(0, tba - backswing - 1) + foreswing + f2 + f3 + backswing;
+  let frames: number[];
+
+  // stat.pyに基づく正確な計算
+  if (multihit) {
+    const atk2 = stats[59] || 0;
+    const atk3 = stats[60] || 0;
+    
+    if (atk2 > 0 && atk3 === 0 && stats[61]) {
+      // 2段攻撃: [pre, foreswing, f2, backswing]
+      const f2 = stats[61] - foreswing;
+      backswing = animLength - stats[61];
+      const pre = Math.max(0, tba - backswing - 1);
+      frames = [pre, foreswing, f2, backswing];
+      freq = pre + foreswing + f2 + backswing;
+    } else if (atk2 > 0 && atk3 > 0 && stats[61] && stats[62]) {
+      // 3段攻撃: [pre, foreswing, f2, f3, backswing]
+      const f2 = stats[61] - foreswing;
+      const f3 = stats[62] - stats[61];
+      backswing = animLength - stats[62];
+      const pre = Math.max(0, tba - backswing - 1);
+      frames = [pre, foreswing, f2, f3, backswing];
+      freq = pre + foreswing + f2 + f3 + backswing;
     } else {
-      freq = tba + foreswing - 1;
+      // フォールバック
+      backswing = animLength - foreswing;
+      const pre = Math.max(0, tba - backswing - 1);
+      frames = [pre, foreswing, backswing];
+      freq = tba !== 0 ? tba + foreswing - 1 : foreswing + backswing;
     }
   } else {
-    freq = foreswing + backswing;
+    // 単段攻撃: [pre, foreswing, backswing]
+    backswing = animLength - foreswing;
+    const pre = Math.max(0, tba - backswing - 1);
+    frames = [pre, foreswing, backswing];
+    if (tba !== 0) {
+      freq = tba + foreswing - 1;
+    } else {
+      freq = foreswing + backswing;
+    }
   }
 
   // DPS calculation
@@ -191,6 +253,7 @@ export const calculateUnitStats = (
     foreswing,
     backswing,
     tba,
+    frames,
     atk1: multihit ? atk1 : undefined,
     atk2: multihit && atk2 > 0 ? atk2 : undefined,
     atk3: multihit && atk3 > 0 ? atk3 : undefined
@@ -231,6 +294,34 @@ export const getAbilities = (unitData: UnitData, formId: number): UnitAbility[] 
       name: "ターゲット属性",
       value: targets.map(t => t.name).join(' '),
       iconKeys: targets.map(t => t.iconKey)
+    });
+  }
+
+  // 多段攻撃
+  const multihit = (stats[59] || 0) > 0;
+  if (multihit) {
+    const hit1_time = stats[13] || 0; // 第一攻撃: foreswing
+    const hit2_time = stats[61] || 0; // 第二攻撃の絶対時間
+    const hit3_time = stats[62] || 0; // 第三攻撃の絶対時間
+    
+    const hit2_ap = stats[59] || 0; // 第二攻撃力
+    const hit3_ap = stats[60] || 0; // 第三攻撃力
+    
+    const timings = [`${frameToSecond(hit1_time)}s(${hit1_time}f)`];
+    
+    if (hit2_ap > 0) {
+      timings.push(`${frameToSecond(hit2_time)}s(${hit2_time}f)`);
+    }
+    
+    if (hit3_ap > 0) {
+      timings.push(`${frameToSecond(hit3_time)}s(${hit3_time}f)`);
+    }
+    
+    const timeInfo = `[${timings.join(' ')}]`;
+    
+    abilities.push({
+      name: "多段攻撃",
+      value: timeInfo
     });
   }
 

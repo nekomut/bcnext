@@ -504,8 +504,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   // ふっとばす
   if (stats[24] && stats[24] > 0) {
     abilities.push({
-      name: "ふっとばす",
-      value: `${stats[24]}%`
+      name: `ふっとばす ${stats[24]}%`,
+      value: ""
     });
   }
 
@@ -524,8 +524,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const duration = frameToSecond(stats[28] || 0);
     const durationMax = frameToSecond(Math.round((stats[28] || 0) * 1.2));
     abilities.push({
-      name: "動きを遅くする",
-      value: `${stats[27]}% ${duration}s~${durationMax}s`
+      name: `動きを遅くする ${stats[27]}%`,
+      value: `${duration}s~${durationMax}s`
     });
   }
 
@@ -577,8 +577,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const duration = frameToSecond(stats[38] || 0);
     const durationMax = frameToSecond(Math.round((stats[38] || 0) * 1.2));
     abilities.push({
-      name: "攻撃力ダウン",
-      value: `${stats[37]}% -${stats[39]}% ${duration}s~${durationMax}s`
+      name: `攻撃力ダウン ${stats[37]}%`,
+      value: `敵AP-${stats[39]}% ${duration}s~${durationMax}s`
     });
   }
 

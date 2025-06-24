@@ -398,6 +398,90 @@ function DynamicExtremeDamage({ ability }: { ability: UnitAbility }) {
   );
 }
 
+function DynamicToughness({ ability }: { ability: UnitAbility }) {
+  const [damageMultiplier, setDamageMultiplier] = useState(0.2);
+  
+  if (!ability.calculatedStats || !ability.isDynamic) return null;
+  
+  const calculateEquivalentHP = (damageMult: number) => {
+    const stats = ability.calculatedStats!;
+    const hpMultiplier = 1 / damageMult; // 0.2 -> 5倍, 0.25 -> 4倍
+    const equivalentHP = Math.floor(stats.hp * hpMultiplier);
+    return equivalentHP.toLocaleString();
+  };
+  
+  return (
+    <div className="bg-gray-50 p-2 rounded">
+      <div className="flex justify-between items-start gap-2">
+        <div className="font-bold text-xs text-gray-600">
+          打たれ強い <span className="text-red-500">DMG
+          <input
+            type="number"
+            value={damageMultiplier}
+            onChange={(e) => {
+              const value = Number(e.target.value);
+              if (value >= 0.2 && value <= 0.25) {
+                setDamageMultiplier(value);
+              }
+            }}
+            className="w-12 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
+            min="0.2"
+            max="0.25"
+            step="0.01"
+          />x</span>
+        </div>
+        <div className="text-right flex-shrink-0 max-w-[50%]">
+          <div className="text-gray-600 font-medium break-words">
+            HP {calculateEquivalentHP(damageMultiplier)} 相当
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function DynamicSuperToughness({ ability }: { ability: UnitAbility }) {
+  const [damageMultiplier, setDamageMultiplier] = useState(0.143);
+  
+  if (!ability.calculatedStats || !ability.isDynamic) return null;
+  
+  const calculateEquivalentHP = (damageMult: number) => {
+    const stats = ability.calculatedStats!;
+    const hpMultiplier = 1 / damageMult; // 0.143 -> 約7倍, 0.167 -> 約6倍
+    const equivalentHP = Math.floor(stats.hp * hpMultiplier);
+    return equivalentHP.toLocaleString();
+  };
+  
+  return (
+    <div className="bg-gray-50 p-2 rounded">
+      <div className="flex justify-between items-start gap-2">
+        <div className="font-bold text-xs text-gray-600">
+          超打たれ強い <span className="text-red-500">DMG
+          <input
+            type="number"
+            value={damageMultiplier}
+            onChange={(e) => {
+              const value = Number(e.target.value);
+              if (value >= 0.143 && value <= 0.167) {
+                setDamageMultiplier(value);
+              }
+            }}
+            className="w-12 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
+            min="0.143"
+            max="0.167"
+            step="0.001"
+          />x</span>
+        </div>
+        <div className="text-right flex-shrink-0 max-w-[50%]">
+          <div className="text-gray-600 font-medium break-words">
+            HP {calculateEquivalentHP(damageMultiplier)} 相当
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
   return (
     <div className="mb-4">
@@ -408,6 +492,10 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
             <DynamicSuperDamage key={index} ability={ability} />
           ) : ability.isDynamic && ability.name === "極ダメージ" ? (
             <DynamicExtremeDamage key={index} ability={ability} />
+          ) : ability.isDynamic && ability.name === "打たれ強い" ? (
+            <DynamicToughness key={index} ability={ability} />
+          ) : ability.isDynamic && ability.name === "超打たれ強い" ? (
+            <DynamicSuperToughness key={index} ability={ability} />
           ) : (
             <div key={index} className="bg-gray-50 p-2 rounded">
               <div className="flex justify-between items-start gap-2">

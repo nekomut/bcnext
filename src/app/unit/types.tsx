@@ -533,7 +533,21 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[29] && stats[29] > 0) {
     abilities.push({
       name: "打たれ強い",
-      value: "0.25x~0.2x"
+      value: "",
+      isDynamic: true,
+      baseAP: calculatedStats.ap,
+      calculatedStats: calculatedStats
+    });
+  }
+
+  // 超打たれ強い
+  if (stats[80] && stats[80] > 0) {
+    abilities.push({
+      name: "超打たれ強い",
+      value: "",
+      isDynamic: true,
+      baseAP: calculatedStats.ap,
+      calculatedStats: calculatedStats
     });
   }
 

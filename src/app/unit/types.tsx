@@ -490,7 +490,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
           {savageValues}
           {additionalValues}
         </>
-      )
+      ),
+      iconKeys: ["abilityBerserk"]
     });
   }
 
@@ -509,7 +510,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[24] && stats[24] > 0) {
     abilities.push({
       name: `ふっとばす ${stats[24]}%`,
-      value: ""
+      value: "",
+      iconKeys: ["abilityKnockback"]
     });
   }
 
@@ -519,7 +521,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const durationMax = frameToSecond(Math.round((stats[26] || 0) * 1.2));
     abilities.push({
       name: "動きを止める",
-      value: `${stats[25]}% ${duration}s~${durationMax}s`
+      value: `${stats[25]}% ${duration}s~${durationMax}s`,
+      iconKeys: ["abilityFreeze"]
     });
   }
 
@@ -529,7 +532,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const durationMax = frameToSecond(Math.round((stats[28] || 0) * 1.2));
     abilities.push({
       name: `動きを遅くする ${stats[27]}%`,
-      value: `${duration}s~${durationMax}s`
+      value: `${duration}s~${durationMax}s`,
+      iconKeys: ["abilitySlow"]
     });
   }
 
@@ -559,7 +563,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[31] && stats[31] > 0) {
     abilities.push({
       name: "クリティカル",
-      value: `${stats[31]}%`
+      value: `${stats[31]}%`,
+      iconKeys: ["abilityCritical"]
     });
   }
 
@@ -586,7 +591,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const waveType = stats[94] === 1 ? '小波動' : '波動攻撃';
     abilities.push({
       name: `${waveType} Lv${waveLevel} ${stats[35]}%`,
-      value: `${waveRange}`
+      value: `${waveRange}`,
+      iconKeys: ["abilityWave"]
     });
   }
 
@@ -596,7 +602,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const durationMax = frameToSecond(Math.round((stats[38] || 0) * 1.2));
     abilities.push({
       name: `攻撃力ダウン ${stats[37]}%`,
-      value: `敵AP-${stats[39]}% ${duration}s~${durationMax}s`
+      value: `敵AP-${stats[39]}% ${duration}s~${durationMax}s`,
+      iconKeys: ["abilityWeaken"]
     });
   }
 
@@ -604,7 +611,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[40] && stats[40] > 0) {
     abilities.push({
       name: "攻撃力アップ",
-      value: `+${stats[41]}% HP≦${100 - stats[40]}%`
+      value: `+${stats[41]}% HP≦${100 - stats[40]}%`,
+      iconKeys: ["abilityStrengthen"]
     });
   }
 
@@ -612,7 +620,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[42] && stats[42] > 0) {
     abilities.push({
       name: "生き残る",
-      value: `${stats[42]}%`
+      value: `${stats[42]}%`,
+      iconKeys: ["abilitySurvive"]
     });
   }
 
@@ -627,25 +636,26 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
 
   // 各種無効・耐性
   const immunities = [
-    { index: 46, name: "波動ダメージ無効" },
+    { index: 46, name: "波動ダメージ無効", iconKey: "abilityImmuneWave" },
     { index: 47, name: "波動ストッパー" },
-    { index: 48, name: "ふっとばす無効" },
-    { index: 49, name: "動きを止める無効" },
-    { index: 50, name: "動きを遅くする無効" },
-    { index: 51, name: "攻撃力ダウン無効" },
+    { index: 48, name: "ふっとばす無効", iconKey: "abilityImmuneKnockback" },
+    { index: 49, name: "動きを止める無効", iconKey: "abilityImmuneFreeze" },
+    { index: 50, name: "動きを遅くする無効", iconKey: "abilityImmuneSlow" },
+    { index: 51, name: "攻撃力ダウン無効", iconKey: "abilityImmuneWeaken" },
     { index: 52, name: "ゾンビキラー" },
     { index: 53, name: "魔女キラー" },
     { index: 56, name: "衝撃波無効" },
-    { index: 75, name: "ワープ無効" },
+    { index: 75, name: "ワープ無効", iconKey: "abilityImmuneWarp" },
     { index: 77, name: "使徒キラー" },
-    { index: 79, name: "呪い無効" }
+    { index: 79, name: "古代の呪い無効", iconKey: "abilityImmuneCurse" }
   ];
 
-  immunities.forEach(({ index, name }) => {
+  immunities.forEach(({ index, name, iconKey }) => {
     if (stats[index] && stats[index] > 0) {
       abilities.push({
         name,
-        value: ""
+        value: "",
+        iconKeys: iconKey ? [iconKey] : undefined
       });
     }
   });

@@ -49,16 +49,41 @@ export function UnitDisplay({
     <div className={`bg-white rounded-lg shadow-lg p-3 ${className}`}>
       {/* Header */}
       <div className="mb-3 flex items-center gap-2 sm:gap-3">
-        {/* Unit Icon */}
+        {/* Unit Icon and Rarity */}
         {currentFormData.icon && (
-          <div className="flex-shrink-0">
-            <Image 
-              src={`data:image/png;base64,${currentFormData.icon}`}
-              alt={currentFormData.name || 'Unit Icon'}
-              width={64}
-              height={64}
-              className="rounded-lg border-2 border-gray-200 object-cover"
-            />
+          <div className="flex-shrink-0 flex flex-col items-center gap-1">
+            <div className="w-16 h-12 rounded-lg border-2 border-gray-200 overflow-hidden">
+              <Image 
+                src={`data:image/png;base64,${currentFormData.icon}`}
+                alt={currentFormData.name || 'Unit Icon'}
+                width={64}
+                height={64}
+                className="object-cover object-center w-full h-full"
+              />
+            </div>
+            {(() => {
+              const rarityName = unitData.coreData.rarity.name;
+              const rarityIconMap: { [key: string]: string } = {
+                '基本': 'rarityBasic',
+                'EX': 'rarityEx', 
+                'レア': 'rarityRare',
+                '激レア': 'raritySuperRare',
+                '超激レア': 'rarityUberRare',
+                '伝説レア': 'rarityLegendRare'
+              };
+              
+              const iconKey = rarityIconMap[rarityName];
+              
+              return iconKey ? (
+                <Image
+                  src={`data:image/png;base64,${icons[iconKey as keyof typeof icons]}`}
+                  alt={rarityName}
+                  width={48}
+                  height={24}
+                  className="align-top"
+                />
+              ) : null;
+            })()}
           </div>
         )}
         
@@ -67,91 +92,84 @@ export function UnitDisplay({
           <h2 className="text-lg sm:text-xl font-bold text-gray-800 break-words">
             <span className="text-sm sm:text-base text-gray-600 font-normal">{unitData.unitId.toString().padStart(3, '0')}-{currentForm + 1}</span> {currentFormData.name || `Unit ${unitData.unitId.toString().padStart(3, '0')}`}
           </h2>
-          <p className="text-sm sm:text-base text-gray-600 break-words">
-            {unitData.coreData.rarity.name} | Lv{level}+{plusLevel} / MaxLv{maxLevel}+{maxPlusLevel}
-          </p>
+          <div className="text-sm sm:text-base text-gray-600 break-words flex items-center gap-2 flex-wrap">
+            <div className="flex items-center gap-1">
+              <span>Lv</span>
+              <input
+                type="text"
+                value={levelInput}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  // 数値または空文字列のみ許可
+                  if (value === '' || /^\d+$/.test(value)) {
+                    setLevelInput(value);
+                    const numValue = value === '' ? 1 : Math.max(1, Math.min(maxLevel, parseInt(value) || 1));
+                    setLevel(numValue);
+                    onParamsChange?.({ level: numValue, plusLevel, formId: actualCurrentForm });
+                  }
+                }}
+                onBlur={(e) => {
+                  const value = e.target.value.trim();
+                  if (value && !isNaN(Number(value))) {
+                    const numValue = Math.max(1, Math.min(maxLevel, Number(value)));
+                    setLevel(numValue);
+                    setLevelInput(numValue.toString());
+                    onParamsChange?.({ level: numValue, plusLevel, formId: actualCurrentForm });
+                  } else if (value === '') {
+                    setLevel(1);
+                    setLevelInput('1');
+                    onParamsChange?.({ level: 1, plusLevel, formId: actualCurrentForm });
+                  }
+                }}
+                className="border rounded px-1 sm:px-2 py-1 w-6 sm:w-16 text-right text-xs sm:text-sm text-gray-900"
+              />
+              <span>+</span>
+              <input
+                type="text"
+                value={plusLevelInput}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  // 数値または空文字列のみ許可
+                  if (value === '' || /^\d+$/.test(value)) {
+                    setPlusLevelInput(value);
+                    const numValue = value === '' ? 0 : Math.max(0, Math.min(maxPlusLevel, parseInt(value) || 0));
+                    setPlusLevel(numValue);
+                    onParamsChange?.({ level, plusLevel: numValue, formId: actualCurrentForm });
+                  }
+                }}
+                onBlur={(e) => {
+                  const value = e.target.value.trim();
+                  if (value && !isNaN(Number(value))) {
+                    const numValue = Math.max(0, Math.min(maxPlusLevel, Number(value)));
+                    setPlusLevel(numValue);
+                    setPlusLevelInput(numValue.toString());
+                    onParamsChange?.({ level, plusLevel: numValue, formId: actualCurrentForm });
+                  } else if (value === '') {
+                    setPlusLevel(0);
+                    setPlusLevelInput('0');
+                    onParamsChange?.({ level, plusLevel: 0, formId: actualCurrentForm });
+                  }
+                }}
+                className="border rounded px-1 sm:px-2 py-1 w-6 sm:w-16 text-right text-xs sm:text-sm text-gray-900"
+              />
+            </div>
+            <span className="text-xs text-gray-500">/ MaxLv{maxLevel}+{maxPlusLevel}</span>
+            <button
+              onClick={() => { 
+                setLevel(maxLevel); 
+                setPlusLevel(maxPlusLevel);
+                setLevelInput(maxLevel.toString());
+                setPlusLevelInput(maxPlusLevel.toString());
+                onParamsChange?.({ level: maxLevel, plusLevel: maxPlusLevel, formId: actualCurrentForm });
+              }}
+              className="bg-blue-500 hover:bg-blue-600 text-white px-2 py-1 rounded text-xs sm:text-sm"
+            >
+              Max
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* Level Controls */}
-      <div className="mb-3 flex gap-1 sm:gap-2 items-center flex-wrap">
-        <div className="flex items-center gap-1">
-          <label className="text-sm text-gray-600">Lv</label>
-          <input
-            type="text"
-            value={levelInput}
-            onChange={(e) => {
-              const value = e.target.value;
-              // 数値または空文字列のみ許可
-              if (value === '' || /^\d+$/.test(value)) {
-                setLevelInput(value);
-                const numValue = value === '' ? 1 : Math.max(1, Math.min(maxLevel, parseInt(value) || 1));
-                setLevel(numValue);
-                onParamsChange?.({ level: numValue, plusLevel, formId: actualCurrentForm });
-              }
-            }}
-            onBlur={(e) => {
-              const value = e.target.value.trim();
-              if (value && !isNaN(Number(value))) {
-                const numValue = Math.max(1, Math.min(maxLevel, Number(value)));
-                setLevel(numValue);
-                setLevelInput(numValue.toString());
-                onParamsChange?.({ level: numValue, plusLevel, formId: actualCurrentForm });
-              } else if (value === '') {
-                setLevel(1);
-                setLevelInput('1');
-                onParamsChange?.({ level: 1, plusLevel, formId: actualCurrentForm });
-              }
-            }}
-            className="border rounded px-1 sm:px-2 py-1 w-12 sm:w-16 text-xs sm:text-sm text-gray-900"
-          />
-        </div>
-        <div className="flex items-center gap-1">
-          <label className="text-sm text-gray-600">+</label>
-          <input
-            type="text"
-            value={plusLevelInput}
-            onChange={(e) => {
-              const value = e.target.value;
-              // 数値または空文字列のみ許可
-              if (value === '' || /^\d+$/.test(value)) {
-                setPlusLevelInput(value);
-                const numValue = value === '' ? 0 : Math.max(0, Math.min(maxPlusLevel, parseInt(value) || 0));
-                setPlusLevel(numValue);
-                onParamsChange?.({ level, plusLevel: numValue, formId: actualCurrentForm });
-              }
-            }}
-            onBlur={(e) => {
-              const value = e.target.value.trim();
-              if (value && !isNaN(Number(value))) {
-                const numValue = Math.max(0, Math.min(maxPlusLevel, Number(value)));
-                setPlusLevel(numValue);
-                setPlusLevelInput(numValue.toString());
-                onParamsChange?.({ level, plusLevel: numValue, formId: actualCurrentForm });
-              } else if (value === '') {
-                setPlusLevel(0);
-                setPlusLevelInput('0');
-                onParamsChange?.({ level, plusLevel: 0, formId: actualCurrentForm });
-              }
-            }}
-            className="border rounded px-1 sm:px-2 py-1 w-12 sm:w-16 text-xs sm:text-sm text-gray-900"
-          />
-        </div>
-        <div className="ml-1">
-          <button
-            onClick={() => { 
-              setLevel(maxLevel); 
-              setPlusLevel(maxPlusLevel);
-              setLevelInput(maxLevel.toString());
-              setPlusLevelInput(maxPlusLevel.toString());
-              onParamsChange?.({ level: maxLevel, plusLevel: maxPlusLevel, formId: actualCurrentForm });
-            }}
-            className="bg-blue-500 hover:bg-blue-600 text-white px-2 py-1 rounded text-xs sm:text-sm"
-          >
-            Max
-          </button>
-        </div>
-      </div>
 
       {/* Form Tabs */}
       {validFormCount > 1 && (
@@ -333,6 +351,13 @@ function DynamicSuperDamage({ ability }: { ability: UnitAbility }) {
     <div className="bg-gray-50 p-2 rounded">
       <div className="flex justify-between items-center gap-2">
         <div className="font-bold text-xs text-gray-600">
+          <Image
+            src={`data:image/png;base64,${icons.abilityMassiveDamage}`}
+            alt="超ダメージ"
+            width={16}
+            height={16}
+            className="inline mr-1 align-top"
+          />
           超ダメージ <span className="text-red-500">攻撃力
           <input
             type="number"
@@ -383,6 +408,13 @@ function DynamicExtremeDamage({ ability }: { ability: UnitAbility }) {
     <div className="bg-gray-50 p-2 rounded">
       <div className="flex justify-between items-center gap-2">
         <div className="font-bold text-xs text-gray-600">
+          <Image
+            src={`data:image/png;base64,${icons.abilityInsaneDamage}`}
+            alt="極ダメージ"
+            width={16}
+            height={16}
+            className="inline mr-1 align-top"
+          />
           極ダメージ <span className="text-red-500">攻撃力
           <input
             type="number"
@@ -425,6 +457,13 @@ function DynamicToughness({ ability }: { ability: UnitAbility }) {
     <div className="bg-gray-50 p-2 rounded">
       <div className="flex justify-between items-center gap-2">
         <div className="font-bold text-xs text-gray-600">
+          <Image
+            src={`data:image/png;base64,${icons.abilityTough}`}
+            alt="打たれ強い"
+            width={16}
+            height={16}
+            className="inline mr-1 align-top"
+          />
           打たれ強い <span className="text-red-500">ダメージ
           <input
             type="number"
@@ -467,6 +506,13 @@ function DynamicSuperToughness({ ability }: { ability: UnitAbility }) {
     <div className="bg-gray-50 p-2 rounded">
       <div className="flex justify-between items-center gap-2">
         <div className="font-bold text-xs text-gray-600">
+          <Image
+            src={`data:image/png;base64,${icons.abilityInsanelyTough}`}
+            alt="超打たれ強い"
+            width={16}
+            height={16}
+            className="inline mr-1 align-top"
+          />
           超打たれ強い <span className="text-red-500">ダメージ
           <input
             type="number"
@@ -539,6 +585,13 @@ function DynamicMighty({ ability }: { ability: UnitAbility }) {
     <div className="bg-gray-50 p-2 rounded">
       <div className="flex justify-between items-center gap-2">
         <div className="font-bold text-xs text-gray-600">
+          <Image
+            src={`data:image/png;base64,${icons.abilityStrongAgainst}`}
+            alt="めっぽう強い"
+            width={16}
+            height={16}
+            className="inline mr-1 align-top"
+          />
           めっぽう強い<small>攻撃力1.5~1.8倍 ダメージ0.5~0.4倍</small><br /> <span className="text-red-500">攻撃力
           <input
             type="number"
@@ -616,6 +669,182 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                         className="inline mr-1 align-top"
                       />
                       遠方攻撃
+                    </>
+                  ) : ability.name === '攻撃力ダウン無効' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityImmuneWeaken}`}
+                        alt="攻撃力ダウン無効"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      攻撃力ダウン無効
+                    </>
+                  ) : ability.name === 'クリティカル' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityCritical}`}
+                        alt="クリティカル"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      クリティカル
+                    </>
+                  ) : ability.name === '動きを止める' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityFreeze}`}
+                        alt="動きを止める"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      動きを止める
+                    </>
+                  ) : (typeof ability.name === 'string' && (ability.name.includes('波動攻撃') || ability.name.includes('小波動')) && ability.iconKeys) ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityWave}`}
+                        alt="波動攻撃"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      {ability.name}
+                    </>
+                  ) : ability.name === '波動ダメージ無効' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityImmuneWave}`}
+                        alt="波動ダメージ無効"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      波動ダメージ無効
+                    </>
+                  ) : ability.name === 'ふっとばす無効' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityImmuneKnockback}`}
+                        alt="ふっとばす無効"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      ふっとばす無効
+                    </>
+                  ) : ability.name === '動きを止める無効' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityImmuneFreeze}`}
+                        alt="動きを止める無効"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      動きを止める無効
+                    </>
+                  ) : ability.name === '動きを遅くする無効' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityImmuneSlow}`}
+                        alt="動きを遅くする無効"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      動きを遅くする無効
+                    </>
+                  ) : (typeof ability.name === 'string' && ability.name.includes('ふっとばす') && !ability.name.includes('無効') && ability.iconKeys) ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityKnockback}`}
+                        alt="ふっとばす"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      {ability.name}
+                    </>
+                  ) : (typeof ability.name === 'string' && ability.name.includes('動きを遅くする') && !ability.name.includes('無効') && ability.iconKeys) ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilitySlow}`}
+                        alt="動きを遅くする"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      {ability.name}
+                    </>
+                  ) : (typeof ability.name === 'string' && ability.name.includes('攻撃力ダウン') && !ability.name.includes('無効') && ability.iconKeys) ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityWeaken}`}
+                        alt="攻撃力ダウン"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      {ability.name}
+                    </>
+                  ) : ability.name === '古代の呪い無効' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityImmuneCurse}`}
+                        alt="古代の呪い無効"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      古代の呪い無効
+                    </>
+                  ) : ability.name === 'ワープ無効' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityImmuneWarp}`}
+                        alt="ワープ無効"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      ワープ無効
+                    </>
+                  ) : (typeof ability.name === 'object' && React.isValidElement(ability.name) && ability.iconKeys?.includes('abilityBerserk')) ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityBerserk}`}
+                        alt="渾身の一撃"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      {ability.name}
+                    </>
+                  ) : ability.name === '攻撃力アップ' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityStrengthen}`}
+                        alt="攻撃力アップ"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      攻撃力アップ
+                    </>
+                  ) : ability.name === '生き残る' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilitySurvive}`}
+                        alt="生き残る"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      生き残る
                     </>
                   ) : (
                     ability.name

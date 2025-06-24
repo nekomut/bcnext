@@ -45,7 +45,7 @@ export const unit247Data: UnitData = {
         id: 40,
         name: "属性 古代種",
         type: "normal" as const,
-        effect: "",
+        data: [40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 6, -1, 0],
         npCost: 75,
         isTotal: false
       },
@@ -53,7 +53,7 @@ export const unit247Data: UnitData = {
         id: 29,
         name: "古代の呪い無効",
         type: "normal" as const,
-        effect: "",
+        data: [29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 6, -1, 0],
         npCost: 75,
         isTotal: false
       },
@@ -61,7 +61,7 @@ export const unit247Data: UnitData = {
         id: 60,
         name: "呪い",
         type: "normal" as const,
-        effect: "",
+        data: [60, 10, 20, 20, 24, 60, 0, 0, 0, 0, 80, 4, -1, 0],
         npCost: 165,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit247Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 5, -1, 0],
         npCost: 125,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit247Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 5, -1, 0],
         npCost: 125,
         isTotal: true
       }

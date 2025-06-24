@@ -45,7 +45,7 @@ export const unit105Data: UnitData = {
         id: 1,
         name: "攻撃力ダウン",
         type: "normal" as const,
-        effect: "",
+        data: [1, 10, 40, 40, 39, 120, 50, 50, 0, 0, 1, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit105Data: UnitData = {
         id: 22,
         name: "波動ダメージ耐性",
         type: "normal" as const,
-        effect: "+5%/Lv Max50%",
+        data: [22, 10, 5, 50, 0, 0, 0, 0, 0, 0, 22, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -61,7 +61,7 @@ export const unit105Data: UnitData = {
         id: 29,
         name: "古代の呪い無効",
         type: "normal" as const,
-        effect: "",
+        data: [29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 9, -1, 0],
         npCost: 100,
         isTotal: false
       },
@@ -69,7 +69,7 @@ export const unit105Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit105Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -85,7 +85,7 @@ export const unit105Data: UnitData = {
         id: 61,
         name: "攻撃間隔短縮",
         type: "ultra" as const,
-        effect: "-0.67s(20f)/Lv Max-6.67s(200f)",
+        data: [61, 10, 5, 50, 0, 0, 0, 0, 0, 0, 82, 14, -1, 1],
         npCost: 225,
         isTotal: true
       },
@@ -93,7 +93,7 @@ export const unit105Data: UnitData = {
         id: 40,
         name: "属性 古代種",
         type: "ultra" as const,
-        effect: "",
+        data: [40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 10, -1, 1],
         npCost: 150,
         isTotal: false
       },
@@ -101,7 +101,7 @@ export const unit105Data: UnitData = {
         id: 55,
         name: "裂波ダメージ無効",
         type: "ultra" as const,
-        effect: "",
+        data: [55, 0, 0, 0, 0, 0, 0, 0, 0, 0, 67, 10, -1, 1],
         npCost: 150,
         isTotal: false
       }

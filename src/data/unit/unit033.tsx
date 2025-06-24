@@ -45,7 +45,7 @@ export const unit033Data: UnitData = {
         id: 1,
         name: "攻撃力ダウン",
         type: "normal" as const,
-        effect: "",
+        data: [1, 10, 0, 0, 5, 50, 0, 0, 0, 0, 42, 5, -1, 0],
         npCost: 125,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit033Data: UnitData = {
         id: 19,
         name: "動きを止める耐性",
         type: "normal" as const,
-        effect: "+16%/Lv Max70%",
+        data: [19, 10, 16, 70, 0, 0, 0, 0, 0, 0, 19, 5, -1, 0],
         npCost: 125,
         isTotal: true
       },
@@ -61,7 +61,7 @@ export const unit033Data: UnitData = {
         id: 20,
         name: "動きを遅くする耐性",
         type: "normal" as const,
-        effect: "+16%/Lv Max70%",
+        data: [20, 10, 16, 70, 0, 0, 0, 0, 0, 0, 20, 5, -1, 0],
         npCost: 125,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit033Data: UnitData = {
         id: 29,
         name: "古代の呪い無効",
         type: "normal" as const,
-        effect: "",
+        data: [29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 6, -1, 0],
         npCost: 75,
         isTotal: false
       },
@@ -77,7 +77,7 @@ export const unit033Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 5, -1, 0],
         npCost: 125,
         isTotal: true
       }

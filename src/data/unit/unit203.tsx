@@ -45,7 +45,7 @@ export const unit203Data: UnitData = {
         id: 20,
         name: "動きを遅くする耐性",
         type: "normal" as const,
-        effect: "+16%/Lv Max70%",
+        data: [20, 10, 16, 70, 0, 0, 0, 0, 0, 0, 20, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit203Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -61,7 +61,7 @@ export const unit203Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit203Data: UnitData = {
         id: 25,
         name: "生産コスト割引[円]",
         type: "normal" as const,
-        effect: "-60/Lv Max-600",
+        data: [25, 10, 40, 400, 0, 0, 0, 0, 0, 0, 31, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit203Data: UnitData = {
         id: 26,
         name: "生産スピードアップ",
         type: "normal" as const,
-        effect: "",
+        data: [26, 10, 20, 200, 0, 0, 0, 0, 0, 0, 32, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -85,7 +85,7 @@ export const unit203Data: UnitData = {
         id: 29,
         name: "古代の呪い無効",
         type: "ultra" as const,
-        effect: "",
+        data: [29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 10, -1, 1],
         npCost: 150,
         isTotal: false
       },
@@ -93,7 +93,7 @@ export const unit203Data: UnitData = {
         id: 10,
         name: "攻撃力アップ",
         type: "ultra" as const,
-        effect: "AP+5%/Lv Max+50% HP≦50%",
+        data: [10, 10, 50, 50, 5, 50, 0, 0, 0, 0, 10, 12, -1, 1],
         npCost: 285,
         isTotal: true
       },
@@ -101,7 +101,7 @@ export const unit203Data: UnitData = {
         id: 3,
         name: "動きを遅くする",
         type: "ultra" as const,
-        effect: "1.37s(41f)/Lv Max4.67s(140f) 40%",
+        data: [3, 10, 40, 40, 41, 140, 0, 0, 0, 0, 3, 12, -1, 1],
         npCost: 285,
         isTotal: true
       }

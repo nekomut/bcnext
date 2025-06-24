@@ -3,7 +3,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { UnitData, CalculatedStats, UnitAbility, UnitTalent, calculateUnitStats, getAbilities, frameToSecond, getValidFormCount } from './types';
+import { UnitData, CalculatedStats, UnitAbility, UnitTalent, calculateUnitStats, getAbilities, frameToSecond, getValidFormCount, calculateTalentEffect } from './types';
 import { icons } from '@/data/icons';
 
 interface UnitDisplayProps {
@@ -641,8 +641,8 @@ function TalentsList({ talents }: { talents: readonly UnitTalent[] }) {
                   </span>
                 )}
               </div>
-              {talent.effect && (
-                <div className="text-gray-700 text-right break-words flex-shrink-0 max-w-[50%]">{talent.effect}</div>
+              {talent.data && (
+                <div className="text-gray-700 text-right break-words flex-shrink-0 max-w-[50%]">{calculateTalentEffect(talent)}</div>
               )}
             </div>
           </div>

@@ -45,7 +45,7 @@ export const unit125Data: UnitData = {
         id: 15,
         name: "バリアブレイカー",
         type: "normal" as const,
-        effect: "+32%/Lv Max50%",
+        data: [15, 10, 32, 50, 0, 0, 0, 0, 0, 0, 15, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit125Data: UnitData = {
         id: 37,
         name: "属性 天使",
         type: "normal" as const,
-        effect: "",
+        data: [37, 0, 0, 0, 0, 0, 0, 0, 0, 0, 37, 9, -1, 0],
         npCost: 100,
         isTotal: false
       },
@@ -61,7 +61,7 @@ export const unit125Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit125Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit125Data: UnitData = {
         id: 25,
         name: "生産コスト割引[円]",
         type: "normal" as const,
-        effect: "-150/Lv Max-1,500",
+        data: [25, 10, 100, 1000, 0, 0, 0, 0, 0, 0, 31, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -85,7 +85,7 @@ export const unit125Data: UnitData = {
         id: 33,
         name: "属性 赤い敵",
         type: "ultra" as const,
-        effect: "",
+        data: [33, 0, 0, 0, 0, 0, 0, 0, 0, 0, 33, 10, -1, 1],
         npCost: 150,
         isTotal: false
       },
@@ -93,7 +93,7 @@ export const unit125Data: UnitData = {
         id: 39,
         name: "属性 ゾンビ",
         type: "ultra" as const,
-        effect: "",
+        data: [39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 39, 10, -1, 1],
         npCost: 150,
         isTotal: false
       },
@@ -101,7 +101,7 @@ export const unit125Data: UnitData = {
         id: 57,
         name: "属性 悪魔",
         type: "ultra" as const,
-        effect: "",
+        data: [57, 0, 0, 0, 0, 0, 0, 0, 0, 0, 77, 10, -1, 1],
         npCost: 150,
         isTotal: false
       }

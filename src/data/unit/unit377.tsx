@@ -45,7 +45,7 @@ export const unit377Data: UnitData = {
         id: 8,
         name: "ふっとばす",
         type: "normal" as const,
-        effect: "+5%/Lv Max50%",
+        data: [8, 10, 5, 50, 0, 0, 0, 0, 0, 0, 75, 4, 305, 0],
         npCost: 165,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit377Data: UnitData = {
         id: 49,
         name: "ワープ無効",
         type: "normal" as const,
-        effect: "",
+        data: [49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 58, 6, -1, 0],
         npCost: 75,
         isTotal: false
       },
@@ -61,7 +61,7 @@ export const unit377Data: UnitData = {
         id: 30,
         name: "古代の呪い耐性",
         type: "normal" as const,
-        effect: "",
+        data: [30, 10, 16, 70, 0, 0, 0, 0, 0, 0, 26, 5, -1, 0],
         npCost: 125,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit377Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 5, -1, 0],
         npCost: 125,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit377Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 5, -1, 0],
         npCost: 125,
         isTotal: true
       }

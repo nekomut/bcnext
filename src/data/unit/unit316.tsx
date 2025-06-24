@@ -45,7 +45,7 @@ export const unit316Data: UnitData = {
         id: 51,
         name: "攻撃無効",
         type: "normal" as const,
-        effect: "",
+        data: [51, 10, 20, 20, 23, 50, 0, 0, 0, 0, 60, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit316Data: UnitData = {
         id: 19,
         name: "動きを止める耐性",
         type: "normal" as const,
-        effect: "+16%/Lv Max70%",
+        data: [19, 10, 16, 70, 0, 0, 0, 0, 0, 0, 19, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -61,7 +61,7 @@ export const unit316Data: UnitData = {
         id: 50,
         name: "渾身の一撃",
         type: "normal" as const,
-        effect: "AP 3x 140,250",
+        data: [50, 10, 3, 30, 200, 200, 0, 0, 0, 0, 59, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit316Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit316Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
         npCost: 175,
         isTotal: true
       }

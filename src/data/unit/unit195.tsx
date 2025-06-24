@@ -45,7 +45,7 @@ export const unit195Data: UnitData = {
         id: 1,
         name: "攻撃力ダウン",
         type: "normal" as const,
-        effect: "",
+        data: [1, 10, 40, 40, 51, 150, 50, 50, 0, 0, 1, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit195Data: UnitData = {
         id: 8,
         name: "ふっとばす",
         type: "normal" as const,
-        effect: "+12%/Lv Max30%",
+        data: [8, 10, 12, 30, 0, 0, 0, 0, 0, 0, 8, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -61,7 +61,7 @@ export const unit195Data: UnitData = {
         id: 11,
         name: "生き残る",
         type: "normal" as const,
-        effect: "+14% +4%/Lv Max50%",
+        data: [11, 10, 14, 50, 0, 0, 0, 0, 0, 0, 11, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit195Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit195Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -85,7 +85,7 @@ export const unit195Data: UnitData = {
         id: 37,
         name: "属性 天使",
         type: "ultra" as const,
-        effect: "",
+        data: [37, 0, 0, 0, 0, 0, 0, 0, 0, 0, 37, 10, -1, 1],
         npCost: 150,
         isTotal: false
       },
@@ -93,7 +93,7 @@ export const unit195Data: UnitData = {
         id: 51,
         name: "攻撃無効",
         type: "ultra" as const,
-        effect: "",
+        data: [51, 10, 5, 50, 60, 60, 0, 0, 0, 0, 88, 12, -1, 1],
         npCost: 285,
         isTotal: true
       }

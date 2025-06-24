@@ -45,7 +45,7 @@ export const unit010Data: UnitData = {
         id: 56,
         name: "裂波攻撃",
         type: "normal" as const,
-        effect: "480~750 2%/Lv Max20% Lv1",
+        data: [56, 10, 2, 20, 1, 1, 1920, 1920, 1080, 1080, 68, 4, -1, 0],
         npCost: 165,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit010Data: UnitData = {
         id: 45,
         name: "動きを止める無効",
         type: "normal" as const,
-        effect: "",
+        data: [45, 1, 0, 0, 0, 0, 0, 0, 0, 0, 54, 6, -1, 0],
         npCost: 75,
         isTotal: false
       },
@@ -61,7 +61,7 @@ export const unit010Data: UnitData = {
         id: 48,
         name: "波動ダメージ無効",
         type: "normal" as const,
-        effect: "",
+        data: [48, 1, 0, 0, 0, 0, 0, 0, 0, 0, 57, 6, -1, 0],
         npCost: 75,
         isTotal: false
       },
@@ -69,7 +69,7 @@ export const unit010Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+8%/Lv Max+80%",
+        data: [32, 10, 8, 80, 0, 0, 0, 0, 0, 0, 27, 5, -1, 0],
         npCost: 125,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit010Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+8%/Lv Max+80%",
+        data: [31, 10, 8, 80, 0, 0, 0, 0, 0, 0, 28, 5, -1, 0],
         npCost: 125,
         isTotal: true
       }

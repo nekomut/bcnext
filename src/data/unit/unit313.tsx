@@ -45,7 +45,7 @@ export const unit313Data: UnitData = {
         id: 58,
         name: "シールドブレイカー",
         type: "normal" as const,
-        effect: "+3%/Lv Max30%",
+        data: [58, 10, 3, 30, 0, 0, 0, 0, 0, 0, 78, 4, -1, 0],
         npCost: 165,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit313Data: UnitData = {
         id: 44,
         name: "攻撃力ダウン無効",
         type: "normal" as const,
-        effect: "",
+        data: [44, 0, 0, 0, 0, 0, 0, 0, 0, 0, 53, 6, -1, 0],
         npCost: 75,
         isTotal: false
       },
@@ -61,7 +61,7 @@ export const unit313Data: UnitData = {
         id: 54,
         name: "裂波ダメージ耐性",
         type: "normal" as const,
-        effect: "",
+        data: [54, 10, 5, 50, 0, 0, 0, 0, 0, 0, 66, 5, -1, 0],
         npCost: 125,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit313Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 5, -1, 0],
         npCost: 125,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit313Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 5, -1, 0],
         npCost: 125,
         isTotal: true
       }

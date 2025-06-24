@@ -45,7 +45,7 @@ export const unit334Data: UnitData = {
         id: 40,
         name: "属性 古代種",
         type: "normal" as const,
-        effect: "",
+        data: [40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 9, -1, 0],
         npCost: 100,
         isTotal: false
       },
@@ -53,7 +53,7 @@ export const unit334Data: UnitData = {
         id: 29,
         name: "古代の呪い無効",
         type: "normal" as const,
-        effect: "",
+        data: [29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 9, -1, 0],
         npCost: 100,
         isTotal: false
       },
@@ -61,7 +61,7 @@ export const unit334Data: UnitData = {
         id: 19,
         name: "動きを止める耐性",
         type: "normal" as const,
-        effect: "+16%/Lv Max70%",
+        data: [19, 10, 16, 70, 0, 0, 0, 0, 0, 0, 19, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit334Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit334Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -85,7 +85,7 @@ export const unit334Data: UnitData = {
         id: 65,
         name: "小裂波",
         type: "ultra" as const,
-        effect: "+5%/Lv Max50% Lv1 150~850",
+        data: [65, 10, 5, 50, 1, 1, 600, 600, 2800, 2800, 89, 12, -1, 1],
         npCost: 285,
         isTotal: true
       },
@@ -93,7 +93,7 @@ export const unit334Data: UnitData = {
         id: 25,
         name: "生産コスト割引[円]",
         type: "ultra" as const,
-        effect: "-75/Lv Max-750",
+        data: [25, 10, 50, 500, 0, 0, 0, 0, 0, 0, 31, 14, -1, 1],
         npCost: 225,
         isTotal: true
       }

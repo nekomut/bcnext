@@ -45,7 +45,7 @@ export const unit023Data: UnitData = {
         id: 15,
         name: "バリアブレイカー",
         type: "normal" as const,
-        effect: "+2%/Lv Max20%",
+        data: [15, 10, 2, 20, 0, 0, 0, 0, 0, 0, 49, 5, -1, 0],
         npCost: 125,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit023Data: UnitData = {
         id: 49,
         name: "ワープ無効",
         type: "normal" as const,
-        effect: "",
+        data: [49, 1, 0, 0, 0, 0, 0, 0, 0, 0, 58, 6, -1, 0],
         npCost: 75,
         isTotal: false
       },
@@ -61,7 +61,7 @@ export const unit023Data: UnitData = {
         id: 1,
         name: "攻撃力ダウン",
         type: "normal" as const,
-        effect: "",
+        data: [1, 10, 30, 30, 39, 120, 50, 50, 0, 0, 71, 13, 302, 0],
         npCost: 215,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit023Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+8%/Lv Max+80%",
+        data: [32, 10, 8, 80, 0, 0, 0, 0, 0, 0, 27, 5, -1, 0],
         npCost: 125,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit023Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+8%/Lv Max+80%",
+        data: [31, 10, 8, 80, 0, 0, 0, 0, 0, 0, 28, 5, -1, 0],
         npCost: 125,
         isTotal: true
       }

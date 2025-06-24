@@ -45,7 +45,7 @@ export const unit272Data: UnitData = {
         id: 10,
         name: "攻撃力アップ",
         type: "normal" as const,
-        effect: "AP+23%/Lv Max+50% HP≦100%",
+        data: [10, 10, 0, 0, 23, 50, 0, 0, 0, 0, 46, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit272Data: UnitData = {
         id: 18,
         name: "攻撃力ダウン耐性",
         type: "normal" as const,
-        effect: "+16%/Lv Max70%",
+        data: [18, 10, 16, 70, 0, 0, 0, 0, 0, 0, 18, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -61,7 +61,7 @@ export const unit272Data: UnitData = {
         id: 47,
         name: "ふっとばし無効",
         type: "normal" as const,
-        effect: "",
+        data: [47, 0, 0, 0, 0, 0, 0, 0, 0, 0, 56, 9, -1, 0],
         npCost: 100,
         isTotal: false
       },
@@ -69,7 +69,7 @@ export const unit272Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit272Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -85,7 +85,7 @@ export const unit272Data: UnitData = {
         id: 61,
         name: "攻撃間隔短縮",
         type: "ultra" as const,
-        effect: "-0.2s(6f)/Lv Max-2s(60f)",
+        data: [61, 10, 3, 30, 0, 0, 0, 0, 0, 0, 82, 14, -1, 1],
         npCost: 225,
         isTotal: true
       },
@@ -93,7 +93,7 @@ export const unit272Data: UnitData = {
         id: 48,
         name: "波動ダメージ無効",
         type: "ultra" as const,
-        effect: "",
+        data: [48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 57, 10, -1, 1],
         npCost: 150,
         isTotal: false
       },
@@ -101,7 +101,7 @@ export const unit272Data: UnitData = {
         id: 45,
         name: "動きを止める無効",
         type: "ultra" as const,
-        effect: "",
+        data: [45, 0, 0, 0, 0, 0, 0, 0, 0, 0, 54, 10, -1, 1],
         npCost: 150,
         isTotal: false
       }

@@ -45,7 +45,7 @@ export const unit056Data: UnitData = {
         id: 14,
         name: "ゾンビキラー",
         type: "normal" as const,
-        effect: "",
+        data: [14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 3, -1, 0],
         npCost: 50,
         isTotal: false
       },
@@ -53,7 +53,7 @@ export const unit056Data: UnitData = {
         id: 39,
         name: "属性 ゾンビ",
         type: "normal" as const,
-        effect: "",
+        data: [39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 39, 3, -1, 0],
         npCost: 50,
         isTotal: false
       },
@@ -61,7 +61,7 @@ export const unit056Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 2, -1, 0],
         npCost: 75,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit056Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 2, -1, 0],
         npCost: 75,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit056Data: UnitData = {
         id: 26,
         name: "生産スピードアップ",
         type: "normal" as const,
-        effect: "",
+        data: [26, 10, 15, 60, 0, 0, 0, 0, 0, 0, 32, 2, -1, 0],
         npCost: 75,
         isTotal: true
       }

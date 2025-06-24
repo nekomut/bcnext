@@ -45,7 +45,7 @@ export const unit258Data: UnitData = {
         id: 56,
         name: "裂波攻撃",
         type: "normal" as const,
-        effect: "200~450 3%/Lv Max30% Lv1",
+        data: [56, 10, 3, 30, 1, 1, 800, 800, 1000, 1000, 68, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit258Data: UnitData = {
         id: 55,
         name: "裂波ダメージ無効",
         type: "normal" as const,
-        effect: "",
+        data: [55, 0, 0, 0, 0, 0, 0, 0, 0, 0, 67, 9, -1, 0],
         npCost: 100,
         isTotal: false
       },
@@ -61,7 +61,7 @@ export const unit258Data: UnitData = {
         id: 15,
         name: "バリアブレイカー",
         type: "normal" as const,
-        effect: "+16%/Lv Max70%",
+        data: [15, 10, 16, 70, 0, 0, 0, 0, 0, 0, 15, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit258Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit258Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -85,7 +85,7 @@ export const unit258Data: UnitData = {
         id: 61,
         name: "攻撃間隔短縮",
         type: "ultra" as const,
-        effect: "-0.56s(17f)/Lv Max-3.75s(112f)",
+        data: [61, 10, 11, 74, 0, 0, 0, 0, 0, 0, 82, 14, -1, 1],
         npCost: 225,
         isTotal: true
       },
@@ -93,7 +93,7 @@ export const unit258Data: UnitData = {
         id: 25,
         name: "生産コスト割引[円]",
         type: "ultra" as const,
-        effect: "-60/Lv Max-600",
+        data: [25, 10, 40, 400, 0, 0, 0, 0, 0, 0, 31, 14, -1, 1],
         npCost: 225,
         isTotal: true
       },
@@ -101,7 +101,7 @@ export const unit258Data: UnitData = {
         id: 58,
         name: "シールドブレイカー",
         type: "ultra" as const,
-        effect: "+16%/Lv Max70%",
+        data: [58, 10, 16, 70, 0, 0, 0, 0, 0, 0, 78, 12, -1, 1],
         npCost: 285,
         isTotal: true
       }

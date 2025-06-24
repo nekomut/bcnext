@@ -45,7 +45,7 @@ export const unit151Data: UnitData = {
         id: 3,
         name: "動きを遅くする",
         type: "normal" as const,
-        effect: "0.50s(15f)/Lv Max2.00s(60f) 50%",
+        data: [3, 10, 50, 50, 15, 60, 0, 0, 0, 0, 3, 4, -1, 0],
         npCost: 165,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit151Data: UnitData = {
         id: 17,
         name: "波動攻撃",
         type: "normal" as const,
-        effect: "+3%/Lv Max30% Lv2 532.5",
+        data: [17, 10, 3, 30, 2, 2, 0, 0, 0, 0, 17, 4, -1, 0],
         npCost: 165,
         isTotal: true
       },
@@ -61,7 +61,7 @@ export const unit151Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 5, -1, 0],
         npCost: 125,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit151Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 5, -1, 0],
         npCost: 125,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit151Data: UnitData = {
         id: 25,
         name: "生産コスト割引[円]",
         type: "normal" as const,
-        effect: "-30/Lv Max-300",
+        data: [25, 10, 20, 200, 0, 0, 0, 0, 0, 0, 31, 5, -1, 0],
         npCost: 125,
         isTotal: true
       }

@@ -45,7 +45,7 @@ export const unit083Data: UnitData = {
         id: 1,
         name: "攻撃力ダウン",
         type: "normal" as const,
-        effect: "",
+        data: [1, 10, 30, 30, 57, 120, 50, 50, 0, 0, 1, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit083Data: UnitData = {
         id: 29,
         name: "古代の呪い無効",
         type: "normal" as const,
-        effect: "",
+        data: [29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 9, -1, 0],
         npCost: 100,
         isTotal: false
       },
@@ -61,7 +61,7 @@ export const unit083Data: UnitData = {
         id: 40,
         name: "属性 古代種",
         type: "normal" as const,
-        effect: "",
+        data: [40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 9, -1, 0],
         npCost: 100,
         isTotal: false
       },
@@ -69,7 +69,7 @@ export const unit083Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit083Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -85,7 +85,7 @@ export const unit083Data: UnitData = {
         id: 64,
         name: "超獣特効",
         type: "ultra" as const,
-        effect: "AP 2.5x 184,662\nDMG 0.6x 197,310",
+        data: [64, 0, 5, 5, 30, 30, 0, 0, 0, 0, 86, 10, -1, 1],
         npCost: 150,
         isTotal: false
       },
@@ -93,7 +93,7 @@ export const unit083Data: UnitData = {
         id: 66,
         name: "超賢者特効",
         type: "ultra" as const,
-        effect: "AP 1.2x 88,638\nDMG 0.5x 236,300",
+        data: [66, 0, 0, 0, 0, 0, 0, 0, 0, 0, 91, 10, -1, 1],
         npCost: 150,
         isTotal: false
       },
@@ -101,7 +101,7 @@ export const unit083Data: UnitData = {
         id: 44,
         name: "攻撃力ダウン無効",
         type: "ultra" as const,
-        effect: "",
+        data: [44, 0, 0, 0, 0, 0, 0, 0, 0, 0, 53, 10, -1, 1],
         npCost: 150,
         isTotal: false
       }

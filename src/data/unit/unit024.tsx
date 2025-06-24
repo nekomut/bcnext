@@ -45,7 +45,7 @@ export const unit024Data: UnitData = {
         id: 10,
         name: "攻撃力アップ",
         type: "normal" as const,
-        effect: "AP+10%/Lv Max+100% HP≦50%",
+        data: [10, 10, 50, 50, 10, 100, 0, 0, 0, 0, 10, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit024Data: UnitData = {
         id: 2,
         name: "動きを止める",
         type: "normal" as const,
-        effect: "0.40s(12f)~0.47s(14f)/Lv Max1.00s(30f)~1.20s(36f) 0%",
+        data: [2, 10, 0, 0, 12, 30, 0, 0, 0, 0, 43, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -61,7 +61,7 @@ export const unit024Data: UnitData = {
         id: 25,
         name: "生産コスト割引[円]",
         type: "normal" as const,
-        effect: "-75/Lv Max-750",
+        data: [25, 10, 50, 500, 0, 0, 0, 0, 0, 0, 31, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit024Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+8%/Lv Max+80%",
+        data: [32, 10, 8, 80, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit024Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+8%/Lv Max+80%",
+        data: [31, 10, 8, 80, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
         npCost: 175,
         isTotal: true
       }

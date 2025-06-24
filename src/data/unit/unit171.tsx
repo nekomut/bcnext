@@ -45,7 +45,7 @@ export const unit171Data: UnitData = {
         id: 11,
         name: "生き残る",
         type: "normal" as const,
-        effect: "+14% +4%/Lv Max50%",
+        data: [11, 10, 14, 50, 0, 0, 0, 0, 0, 0, 11, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit171Data: UnitData = {
         id: 1,
         name: "攻撃力ダウン",
         type: "normal" as const,
-        effect: "",
+        data: [1, 10, 0, 0, 3, 30, 0, 0, 0, 0, 42, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -61,7 +61,7 @@ export const unit171Data: UnitData = {
         id: 22,
         name: "波動ダメージ耐性",
         type: "normal" as const,
-        effect: "+5%/Lv Max50%",
+        data: [22, 10, 5, 50, 0, 0, 0, 0, 0, 0, 22, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit171Data: UnitData = {
         id: 54,
         name: "裂波ダメージ耐性",
         type: "normal" as const,
-        effect: "",
+        data: [54, 10, 5, 50, 0, 0, 0, 0, 0, 0, 66, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit171Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
         npCost: 175,
         isTotal: true
       }

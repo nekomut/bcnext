@@ -45,7 +45,7 @@ export const unit084Data: UnitData = {
         id: 8,
         name: "ふっとばす",
         type: "normal" as const,
-        effect: "+3%/Lv Max30%",
+        data: [8, 10, 3, 30, 0, 0, 0, 0, 0, 0, 45, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit084Data: UnitData = {
         id: 17,
         name: "波動攻撃",
         type: "normal" as const,
-        effect: "+5%/Lv Max15% Lv3 732.5",
+        data: [17, 10, 5, 15, 3, 3, 0, 0, 0, 0, 17, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -61,7 +61,7 @@ export const unit084Data: UnitData = {
         id: 29,
         name: "古代の呪い無効",
         type: "normal" as const,
-        effect: "",
+        data: [29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 9, -1, 0],
         npCost: 100,
         isTotal: false
       },
@@ -69,7 +69,7 @@ export const unit084Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit084Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -85,7 +85,7 @@ export const unit084Data: UnitData = {
         id: 25,
         name: "生産コスト割引[円]",
         type: "ultra" as const,
-        effect: "-150/Lv Max-1,500",
+        data: [25, 10, 100, 1000, 0, 0, 0, 0, 0, 0, 31, 14, -1, 1],
         npCost: 225,
         isTotal: true
       },
@@ -93,7 +93,7 @@ export const unit084Data: UnitData = {
         id: 36,
         name: "属性 メタル",
         type: "ultra" as const,
-        effect: "",
+        data: [36, 0, 0, 0, 0, 0, 0, 0, 0, 0, 36, 10, -1, 1],
         npCost: 150,
         isTotal: false
       },
@@ -101,7 +101,7 @@ export const unit084Data: UnitData = {
         id: 40,
         name: "属性 古代種",
         type: "ultra" as const,
-        effect: "",
+        data: [40, 0, 0, 0, 0, 0, 0, 0, 0, 0, 40, 10, -1, 1],
         npCost: 150,
         isTotal: false
       }

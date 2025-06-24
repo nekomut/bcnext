@@ -45,7 +45,7 @@ export const unit344Data: UnitData = {
         id: 8,
         name: "ふっとばす",
         type: "normal" as const,
-        effect: "+2%/Lv Max20%",
+        data: [8, 10, 2, 20, 0, 0, 0, 0, 0, 0, 45, 5, -1, 0],
         npCost: 125,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit344Data: UnitData = {
         id: 46,
         name: "動きを遅くする無効",
         type: "normal" as const,
-        effect: "",
+        data: [46, 0, 0, 0, 0, 0, 0, 0, 0, 0, 55, 6, -1, 0],
         npCost: 75,
         isTotal: false
       },
@@ -61,7 +61,7 @@ export const unit344Data: UnitData = {
         id: 65,
         name: "小裂波",
         type: "normal" as const,
-        effect: "+10%/Lv Max100% Lv1 150~450",
+        data: [65, 10, 10, 100, 1, 1, 600, 600, 1200, 1200, 89, 4, -1, 0],
         npCost: 165,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit344Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 5, -1, 0],
         npCost: 125,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit344Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 5, -1, 0],
         npCost: 125,
         isTotal: true
       }

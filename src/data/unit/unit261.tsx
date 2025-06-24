@@ -45,7 +45,7 @@ export const unit261Data: UnitData = {
         id: 57,
         name: "属性 悪魔",
         type: "normal" as const,
-        effect: "",
+        data: [57, 0, 0, 0, 0, 0, 0, 0, 0, 0, 77, 9, -1, 0],
         npCost: 100,
         isTotal: false
       },
@@ -53,7 +53,7 @@ export const unit261Data: UnitData = {
         id: 58,
         name: "シールドブレイカー",
         type: "normal" as const,
-        effect: "+4%/Lv Max40%",
+        data: [58, 10, 4, 40, 0, 0, 0, 0, 0, 0, 78, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -61,7 +61,7 @@ export const unit261Data: UnitData = {
         id: 30,
         name: "古代の呪い耐性",
         type: "normal" as const,
-        effect: "",
+        data: [30, 10, 16, 70, 0, 0, 0, 0, 0, 0, 26, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit261Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit261Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
         npCost: 175,
         isTotal: true
       }

@@ -45,7 +45,7 @@ export const unit042Data: UnitData = {
         id: 11,
         name: "生き残る",
         type: "normal" as const,
-        effect: "+28% +8%/Lv Max100%",
+        data: [11, 10, 28, 100, 0, 0, 0, 0, 0, 0, 11, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit042Data: UnitData = {
         id: 20,
         name: "動きを遅くする耐性",
         type: "normal" as const,
-        effect: "+16%/Lv Max70%",
+        data: [20, 10, 16, 70, 0, 0, 0, 0, 0, 0, 20, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -61,7 +61,7 @@ export const unit042Data: UnitData = {
         id: 29,
         name: "古代の呪い無効",
         type: "normal" as const,
-        effect: "",
+        data: [29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 9, -1, 0],
         npCost: 100,
         isTotal: false
       },
@@ -69,7 +69,7 @@ export const unit042Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit042Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -85,7 +85,7 @@ export const unit042Data: UnitData = {
         id: 10,
         name: "攻撃力アップ",
         type: "ultra" as const,
-        effect: "AP+10%/Lv Max+100% HP≦66%",
+        data: [10, 10, 34, 34, 10, 100, 0, 0, 0, 0, 10, 12, -1, 1],
         npCost: 285,
         isTotal: true
       },
@@ -93,7 +93,7 @@ export const unit042Data: UnitData = {
         id: 51,
         name: "攻撃無効",
         type: "ultra" as const,
-        effect: "",
+        data: [51, 10, 40, 40, 6, 60, 0, 0, 0, 0, 60, 12, -1, 1],
         npCost: 285,
         isTotal: true
       },
@@ -101,7 +101,7 @@ export const unit042Data: UnitData = {
         id: 36,
         name: "属性 メタル",
         type: "ultra" as const,
-        effect: "",
+        data: [36, 0, 0, 0, 0, 0, 0, 0, 0, 0, 36, 10, -1, 1],
         npCost: 150,
         isTotal: false
       }

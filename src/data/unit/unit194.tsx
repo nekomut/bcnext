@@ -45,7 +45,7 @@ export const unit194Data: UnitData = {
         id: 2,
         name: "動きを止める",
         type: "normal" as const,
-        effect: "1.30s(39f)~1.57s(47f)/Lv Max4.00s(120f)~4.80s(144f) 40%",
+        data: [2, 10, 40, 40, 39, 120, 0, 0, 0, 0, 2, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit194Data: UnitData = {
         id: 10,
         name: "攻撃力アップ",
         type: "normal" as const,
-        effect: "AP+23%/Lv Max+50% HP≦33%",
+        data: [10, 10, 67, 67, 23, 50, 0, 0, 0, 0, 10, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -61,7 +61,7 @@ export const unit194Data: UnitData = {
         id: 11,
         name: "生き残る",
         type: "normal" as const,
-        effect: "+28% +8%/Lv Max100%",
+        data: [11, 10, 28, 100, 0, 0, 0, 0, 0, 0, 11, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit194Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit194Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -85,7 +85,7 @@ export const unit194Data: UnitData = {
         id: 57,
         name: "属性 悪魔",
         type: "ultra" as const,
-        effect: "",
+        data: [57, 0, 0, 0, 0, 0, 0, 0, 0, 0, 77, 10, -1, 1],
         npCost: 150,
         isTotal: false
       },
@@ -93,7 +93,7 @@ export const unit194Data: UnitData = {
         id: 56,
         name: "裂波攻撃",
         type: "ultra" as const,
-        effect: "430~780 10%/Lv Max100% Lv1",
+        data: [56, 10, 10, 100, 1, 1, 1720, 1720, 1400, 1400, 68, 12, -1, 1],
         npCost: 285,
         isTotal: true
       }

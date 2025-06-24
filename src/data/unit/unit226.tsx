@@ -45,7 +45,7 @@ export const unit226Data: UnitData = {
         id: 29,
         name: "古代の呪い無効",
         type: "normal" as const,
-        effect: "",
+        data: [29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 9, -1, 0],
         npCost: 100,
         isTotal: false
       },
@@ -53,7 +53,7 @@ export const unit226Data: UnitData = {
         id: 48,
         name: "波動ダメージ無効",
         type: "normal" as const,
-        effect: "",
+        data: [48, 0, 0, 0, 0, 0, 0, 0, 0, 0, 57, 9, -1, 0],
         npCost: 100,
         isTotal: false
       },
@@ -61,7 +61,7 @@ export const unit226Data: UnitData = {
         id: 49,
         name: "ワープ無効",
         type: "normal" as const,
-        effect: "",
+        data: [49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 58, 9, -1, 0],
         npCost: 100,
         isTotal: false
       },
@@ -69,7 +69,7 @@ export const unit226Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit226Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -85,7 +85,7 @@ export const unit226Data: UnitData = {
         id: 41,
         name: "属性を持たない敵",
         type: "ultra" as const,
-        effect: "",
+        data: [41, 0, 0, 0, 0, 0, 0, 0, 0, 0, 41, 10, -1, 1],
         npCost: 150,
         isTotal: false
       },
@@ -93,7 +93,7 @@ export const unit226Data: UnitData = {
         id: 55,
         name: "裂波ダメージ無効",
         type: "ultra" as const,
-        effect: "",
+        data: [55, 0, 0, 0, 0, 0, 0, 0, 0, 0, 67, 10, -1, 1],
         npCost: 150,
         isTotal: false
       },
@@ -101,7 +101,7 @@ export const unit226Data: UnitData = {
         id: 63,
         name: "超生命体特効",
         type: "ultra" as const,
-        effect: "AP 1.6x 261,528\nDMG 0.7x 226,083",
+        data: [63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 85, 10, -1, 1],
         npCost: 150,
         isTotal: false
       }

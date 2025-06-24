@@ -45,7 +45,7 @@ export const unit107Data: UnitData = {
         id: 22,
         name: "波動ダメージ耐性",
         type: "normal" as const,
-        effect: "+5%/Lv Max50%",
+        data: [22, 10, 5, 50, 0, 0, 0, 0, 0, 0, 22, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit107Data: UnitData = {
         id: 20,
         name: "動きを遅くする耐性",
         type: "normal" as const,
-        effect: "+16%/Lv Max70%",
+        data: [20, 10, 16, 70, 0, 0, 0, 0, 0, 0, 20, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -61,7 +61,7 @@ export const unit107Data: UnitData = {
         id: 25,
         name: "生産コスト割引[円]",
         type: "normal" as const,
-        effect: "-75/Lv Max-750",
+        data: [25, 10, 50, 500, 0, 0, 0, 0, 0, 0, 31, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit107Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit107Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -85,7 +85,7 @@ export const unit107Data: UnitData = {
         id: 61,
         name: "攻撃間隔短縮",
         type: "ultra" as const,
-        effect: "-0.21s(6f)/Lv Max-0.75s(22f)",
+        data: [61, 10, 7, 25, 0, 0, 0, 0, 0, 0, 82, 14, -1, 1],
         npCost: 225,
         isTotal: true
       },
@@ -93,7 +93,7 @@ export const unit107Data: UnitData = {
         id: 39,
         name: "属性 ゾンビ",
         type: "ultra" as const,
-        effect: "",
+        data: [39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 39, 10, -1, 1],
         npCost: 150,
         isTotal: false
       },
@@ -101,7 +101,7 @@ export const unit107Data: UnitData = {
         id: 65,
         name: "小裂波",
         type: "ultra" as const,
-        effect: "+10%/Lv Max100% Lv3 150~850",
+        data: [65, 10, 10, 100, 3, 3, 600, 600, 2800, 2800, 89, 12, -1, 1],
         npCost: 285,
         isTotal: true
       }

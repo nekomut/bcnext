@@ -45,7 +45,7 @@ export const unit038Data: UnitData = {
         id: 8,
         name: "ふっとばす",
         type: "normal" as const,
-        effect: "+13%/Lv Max40%",
+        data: [8, 10, 13, 40, 0, 0, 0, 0, 0, 0, 8, 1, -1, 0],
         npCost: 95,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit038Data: UnitData = {
         id: 18,
         name: "攻撃力ダウン耐性",
         type: "normal" as const,
-        effect: "+16%/Lv Max70%",
+        data: [18, 10, 16, 70, 0, 0, 0, 0, 0, 0, 18, 2, -1, 0],
         npCost: 75,
         isTotal: true
       },
@@ -61,7 +61,7 @@ export const unit038Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 2, -1, 0],
         npCost: 75,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit038Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 2, -1, 0],
         npCost: 75,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit038Data: UnitData = {
         id: 25,
         name: "生産コスト割引[円]",
         type: "normal" as const,
-        effect: "-30/Lv Max-300",
+        data: [25, 10, 20, 200, 0, 0, 0, 0, 0, 0, 31, 2, -1, 0],
         npCost: 75,
         isTotal: true
       }

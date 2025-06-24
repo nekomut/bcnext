@@ -45,7 +45,7 @@ export const unit025Data: UnitData = {
         id: 67,
         name: "爆波攻撃",
         type: "normal" as const,
-        effect: "+28%/Lv Max100%",
+        data: [67, 10, 28, 100, 800, 800, 0, 0, 0, 0, 94, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit025Data: UnitData = {
         id: 27,
         name: "移動速度アップ",
         type: "normal" as const,
-        effect: "+1/Lv Max+10",
+        data: [27, 10, 1, 10, 0, 0, 0, 0, 0, 0, 29, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -61,7 +61,7 @@ export const unit025Data: UnitData = {
         id: 46,
         name: "動きを遅くする無効",
         type: "normal" as const,
-        effect: "",
+        data: [46, 0, 0, 0, 0, 0, 0, 0, 0, 0, 55, 9, -1, 0],
         npCost: 100,
         isTotal: false
       }

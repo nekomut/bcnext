@@ -45,7 +45,7 @@ export const unit021Data: UnitData = {
         id: 45,
         name: "動きを止める無効",
         type: "normal" as const,
-        effect: "",
+        data: [45, 1, 0, 0, 0, 0, 0, 0, 0, 0, 54, 6, -1, 0],
         npCost: 75,
         isTotal: false
       },
@@ -53,7 +53,7 @@ export const unit021Data: UnitData = {
         id: 53,
         name: "毒撃ダメージ無効",
         type: "normal" as const,
-        effect: "",
+        data: [53, 1, 0, 0, 0, 0, 0, 0, 0, 0, 65, 6, -1, 0],
         npCost: 75,
         isTotal: false
       },
@@ -61,7 +61,7 @@ export const unit021Data: UnitData = {
         id: 46,
         name: "動きを遅くする無効",
         type: "normal" as const,
-        effect: "",
+        data: [46, 1, 0, 0, 0, 0, 0, 0, 0, 0, 55, 6, -1, 0],
         npCost: 75,
         isTotal: false
       },
@@ -69,7 +69,7 @@ export const unit021Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+8%/Lv Max+80%",
+        data: [32, 10, 8, 80, 0, 0, 0, 0, 0, 0, 27, 5, -1, 0],
         npCost: 125,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit021Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+8%/Lv Max+80%",
+        data: [31, 10, 8, 80, 0, 0, 0, 0, 0, 0, 28, 5, -1, 0],
         npCost: 125,
         isTotal: true
       }

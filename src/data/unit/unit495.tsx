@@ -45,7 +45,7 @@ export const unit495Data: UnitData = {
         id: 57,
         name: "属性 悪魔",
         type: "normal" as const,
-        effect: "",
+        data: [57, 0, 0, 0, 0, 0, 0, 0, 0, 0, 77, 3, -1, 0],
         npCost: 50,
         isTotal: false
       },
@@ -53,7 +53,7 @@ export const unit495Data: UnitData = {
         id: 3,
         name: "動きを遅くする",
         type: "normal" as const,
-        effect: "0.80s(24f)/Lv Max2.00s(60f) 30%",
+        data: [3, 10, 30, 30, 24, 60, 0, 0, 0, 0, 3, 1, -1, 0],
         npCost: 95,
         isTotal: true
       },
@@ -61,7 +61,7 @@ export const unit495Data: UnitData = {
         id: 19,
         name: "動きを止める耐性",
         type: "normal" as const,
-        effect: "+16%/Lv Max70%",
+        data: [19, 10, 16, 70, 0, 0, 0, 0, 0, 0, 19, 2, -1, 0],
         npCost: 75,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit495Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 2, -1, 0],
         npCost: 75,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit495Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 2, -1, 0],
         npCost: 75,
         isTotal: true
       }

@@ -45,7 +45,7 @@ export const unit032Data: UnitData = {
         id: 16,
         name: "撃破時お金アップ",
         type: "normal" as const,
-        effect: "2x",
+        data: [16, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 6, -1, 0],
         npCost: 75,
         isTotal: false
       },
@@ -53,7 +53,7 @@ export const unit032Data: UnitData = {
         id: 38,
         name: "属性 エイリアン",
         type: "normal" as const,
-        effect: "",
+        data: [38, 0, 0, 0, 0, 0, 0, 0, 0, 0, 38, 6, -1, 0],
         npCost: 75,
         isTotal: false
       },
@@ -61,7 +61,7 @@ export const unit032Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 5, -1, 0],
         npCost: 125,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit032Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 5, -1, 0],
         npCost: 125,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit032Data: UnitData = {
         id: 27,
         name: "移動速度アップ",
         type: "normal" as const,
-        effect: "+1/Lv Max+10",
+        data: [27, 10, 1, 10, 0, 0, 0, 0, 0, 0, 29, 5, -1, 0],
         npCost: 125,
         isTotal: true
       }

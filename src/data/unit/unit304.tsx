@@ -52,7 +52,7 @@ export const unit304Data: UnitData = {
         id: 3,
         name: "動きを遅くする",
         type: "normal" as const,
-        effect: "1.30s(39f)/Lv Max4.00s(120f) 40%",
+        data: [3, 10, 40, 40, 39, 120, 0, 0, 0, 0, 3, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -60,7 +60,7 @@ export const unit304Data: UnitData = {
         id: 17,
         name: "波動攻撃",
         type: "normal" as const,
-        effect: "+2%/Lv Max20% Lv4 932.5",
+        data: [17, 10, 2, 20, 4, 4, 0, 0, 0, 0, 17, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -68,7 +68,7 @@ export const unit304Data: UnitData = {
         id: 19,
         name: "動きを止める耐性",
         type: "normal" as const,
-        effect: "+16%/Lv Max70%",
+        data: [19, 10, 16, 70, 0, 0, 0, 0, 0, 0, 19, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -76,7 +76,7 @@ export const unit304Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -84,7 +84,7 @@ export const unit304Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
         npCost: 175,
         isTotal: true
       }

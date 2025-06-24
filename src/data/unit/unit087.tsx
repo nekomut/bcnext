@@ -45,7 +45,7 @@ export const unit087Data: UnitData = {
         id: 51,
         name: "攻撃無効",
         type: "normal" as const,
-        effect: "",
+        data: [51, 10, 30, 30, 24, 60, 0, 0, 0, 0, 60, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit087Data: UnitData = {
         id: 47,
         name: "ふっとばし無効",
         type: "normal" as const,
-        effect: "",
+        data: [47, 0, 0, 0, 0, 0, 0, 0, 0, 0, 56, 9, -1, 0],
         npCost: 100,
         isTotal: false
       },
@@ -61,7 +61,7 @@ export const unit087Data: UnitData = {
         id: 19,
         name: "動きを止める耐性",
         type: "normal" as const,
-        effect: "+16%/Lv Max70%",
+        data: [19, 10, 16, 70, 0, 0, 0, 0, 0, 0, 19, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit087Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit087Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -85,7 +85,7 @@ export const unit087Data: UnitData = {
         id: 46,
         name: "動きを遅くする無効",
         type: "ultra" as const,
-        effect: "",
+        data: [46, 0, 0, 0, 0, 0, 0, 0, 0, 0, 55, 10, -1, 1],
         npCost: 150,
         isTotal: false
       },
@@ -93,7 +93,7 @@ export const unit087Data: UnitData = {
         id: 55,
         name: "裂波ダメージ無効",
         type: "ultra" as const,
-        effect: "",
+        data: [55, 0, 0, 0, 0, 0, 0, 0, 0, 0, 67, 10, -1, 1],
         npCost: 150,
         isTotal: false
       },
@@ -101,7 +101,7 @@ export const unit087Data: UnitData = {
         id: 64,
         name: "超獣特効",
         type: "ultra" as const,
-        effect: "AP 2.5x 64,387\nDMG 0.6x 113,560",
+        data: [64, 0, 5, 5, 30, 30, 0, 0, 0, 0, 86, 10, -1, 1],
         npCost: 150,
         isTotal: false
       }

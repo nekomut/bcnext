@@ -19,7 +19,7 @@ export interface UnitTalent {
   readonly id: number;
   readonly name: string;
   readonly type: 'normal' | 'ultra';
-  readonly effect: string;
+  readonly data: readonly number[];
   readonly npCost: number;
   readonly isTotal: boolean;
 }
@@ -676,5 +676,49 @@ export const getUnitData = async (unitId: number): Promise<UnitData | null> => {
     return unitModule.default;
   } catch {
     return null;
+  }
+};
+
+// 本能・超本能の効果を計算する関数
+export const calculateTalentEffect = (talent: UnitTalent): string => {
+  const data = talent.data;
+  
+  switch (talent.id) {
+    case 67: // 爆波攻撃
+      const initial_chance = data[2] || 0;
+      const chance_max = data[3] || 0;
+      const max_lv = data[1] || 1;
+      
+      if (max_lv > 1 && chance_max > initial_chance) {
+        const chance_per_level = Math.floor((chance_max - initial_chance) / (max_lv - 1));
+        if (chance_per_level > 0) {
+          return `+${initial_chance}% +${chance_per_level}%/Lv Max${chance_max}%`;
+        }
+      }
+      
+      return `+${initial_chance}%/Lv Max${chance_max}%`;
+      
+    case 27: // 移動速度アップ
+      const speed_per_level = data[2] || 0;
+      const speed_max = data[3] || 0;
+      return `+${speed_per_level}/Lv Max+${speed_max}`;
+      
+    case 46: // 動きを遅くする無効
+    case 44: // 攻撃力ダウン無効
+    case 45: // 動きを止める無効
+    case 47: // ふっとばし無効
+    case 48: // 波動ダメージ無効
+    case 49: // ワープ無効
+      return "";
+      
+    default:
+      // その他の本能は基本形式
+      const per_level = data[2] || 0;
+      const max_value = data[3] || 0;
+      if (per_level === max_value) {
+        return `${per_level}%`;
+      } else {
+        return `+${per_level}%/Lv Max${max_value}%`;
+      }
   }
 };

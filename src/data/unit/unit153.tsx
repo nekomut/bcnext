@@ -45,7 +45,7 @@ export const unit153Data: UnitData = {
         id: 15,
         name: "バリアブレイカー",
         type: "normal" as const,
-        effect: "+2%/Lv Max20%",
+        data: [15, 10, 2, 20, 0, 0, 0, 0, 0, 0, 49, 5, -1, 0],
         npCost: 125,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit153Data: UnitData = {
         id: 38,
         name: "属性 エイリアン",
         type: "normal" as const,
-        effect: "",
+        data: [38, 0, 0, 0, 0, 0, 0, 0, 0, 0, 38, 6, -1, 0],
         npCost: 75,
         isTotal: false
       },
@@ -61,7 +61,7 @@ export const unit153Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 5, -1, 0],
         npCost: 125,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit153Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 5, -1, 0],
         npCost: 125,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit153Data: UnitData = {
         id: 25,
         name: "生産コスト割引[円]",
         type: "normal" as const,
-        effect: "-30/Lv Max-300",
+        data: [25, 10, 20, 200, 0, 0, 0, 0, 0, 0, 31, 5, -1, 0],
         npCost: 125,
         isTotal: true
       }

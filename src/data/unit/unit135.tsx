@@ -52,7 +52,7 @@ export const unit135Data: UnitData = {
         id: 63,
         name: "超生命体特効",
         type: "normal" as const,
-        effect: "AP 1.6x 91,120\nDMG 0.7x 38,896",
+        data: [63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 85, 9, -1, 0],
         npCost: 100,
         isTotal: false
       },
@@ -60,7 +60,7 @@ export const unit135Data: UnitData = {
         id: 60,
         name: "呪い",
         type: "normal" as const,
-        effect: "",
+        data: [60, 10, 100, 100, 30, 300, 0, 0, 0, 0, 80, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -68,7 +68,7 @@ export const unit135Data: UnitData = {
         id: 29,
         name: "古代の呪い無効",
         type: "normal" as const,
-        effect: "",
+        data: [29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 9, -1, 0],
         npCost: 100,
         isTotal: false
       },
@@ -76,7 +76,7 @@ export const unit135Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -84,7 +84,7 @@ export const unit135Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
         npCost: 175,
         isTotal: true
       }

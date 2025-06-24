@@ -45,7 +45,7 @@ export const unit143Data: UnitData = {
         id: 3,
         name: "動きを遅くする",
         type: "normal" as const,
-        effect: "0.00s(0f)/Lv Max0.00s(0f) 3%~30%",
+        data: [3, 10, 3, 30, 0, 0, 0, 0, 0, 0, 63, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit143Data: UnitData = {
         id: 8,
         name: "ふっとばす",
         type: "normal" as const,
-        effect: "+3%/Lv Max30%",
+        data: [8, 10, 3, 30, 0, 0, 0, 0, 0, 0, 45, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -61,7 +61,7 @@ export const unit143Data: UnitData = {
         id: 29,
         name: "古代の呪い無効",
         type: "normal" as const,
-        effect: "",
+        data: [29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 9, -1, 0],
         npCost: 100,
         isTotal: false
       },
@@ -69,7 +69,7 @@ export const unit143Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit143Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -85,7 +85,7 @@ export const unit143Data: UnitData = {
         id: 66,
         name: "超賢者特効",
         type: "ultra" as const,
-        effect: "AP 1.2x 46,002\nDMG 0.5x 96,900",
+        data: [66, 0, 0, 0, 0, 0, 0, 0, 0, 0, 91, 10, -1, 1],
         npCost: 150,
         isTotal: false
       },
@@ -93,7 +93,7 @@ export const unit143Data: UnitData = {
         id: 65,
         name: "小裂波",
         type: "ultra" as const,
-        effect: "+10%/Lv Max100% Lv1 300~900",
+        data: [65, 10, 10, 100, 1, 1, 1200, 1200, 2400, 2400, 89, 12, -1, 1],
         npCost: 285,
         isTotal: true
       },
@@ -101,7 +101,7 @@ export const unit143Data: UnitData = {
         id: 25,
         name: "生産コスト割引[円]",
         type: "ultra" as const,
-        effect: "-45/Lv Max-450",
+        data: [25, 10, 30, 300, 0, 0, 0, 0, 0, 0, 31, 14, -1, 1],
         npCost: 225,
         isTotal: true
       }

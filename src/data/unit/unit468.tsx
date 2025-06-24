@@ -45,7 +45,7 @@ export const unit468Data: UnitData = {
         id: 63,
         name: "超生命体特効",
         type: "normal" as const,
-        effect: "AP 1.6x 48,960\nDMG 0.7x 72,930",
+        data: [63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 85, 9, -1, 0],
         npCost: 100,
         isTotal: false
       },
@@ -53,7 +53,7 @@ export const unit468Data: UnitData = {
         id: 8,
         name: "ふっとばす",
         type: "normal" as const,
-        effect: "+12%/Lv Max30%",
+        data: [8, 10, 12, 30, 0, 0, 0, 0, 0, 0, 8, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -61,7 +61,7 @@ export const unit468Data: UnitData = {
         id: 46,
         name: "動きを遅くする無効",
         type: "normal" as const,
-        effect: "",
+        data: [46, 0, 0, 0, 0, 0, 0, 0, 0, 0, 55, 9, -1, 0],
         npCost: 100,
         isTotal: false
       },
@@ -69,7 +69,7 @@ export const unit468Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit468Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
         npCost: 175,
         isTotal: true
       }

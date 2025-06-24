@@ -45,7 +45,7 @@ export const unit197Data: UnitData = {
         id: 1,
         name: "攻撃力ダウン",
         type: "normal" as const,
-        effect: "",
+        data: [1, 10, 30, 30, 39, 120, 30, 30, 0, 0, 1, 1, -1, 0],
         npCost: 95,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit197Data: UnitData = {
         id: 3,
         name: "動きを遅くする",
         type: "normal" as const,
-        effect: "0.40s(12f)/Lv Max1.00s(30f) 0%",
+        data: [3, 10, 0, 0, 12, 30, 0, 0, 0, 0, 44, 2, -1, 0],
         npCost: 75,
         isTotal: true
       },
@@ -61,7 +61,7 @@ export const unit197Data: UnitData = {
         id: 19,
         name: "動きを止める耐性",
         type: "normal" as const,
-        effect: "+16%/Lv Max70%",
+        data: [19, 10, 16, 70, 0, 0, 0, 0, 0, 0, 19, 2, -1, 0],
         npCost: 75,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit197Data: UnitData = {
         id: 39,
         name: "属性 ゾンビ",
         type: "normal" as const,
-        effect: "",
+        data: [39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 39, 3, -1, 0],
         npCost: 50,
         isTotal: false
       },
@@ -77,7 +77,7 @@ export const unit197Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 2, -1, 0],
         npCost: 75,
         isTotal: true
       }

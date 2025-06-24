@@ -45,7 +45,7 @@ export const unit271Data: UnitData = {
         id: 14,
         name: "ゾンビキラー",
         type: "normal" as const,
-        effect: "",
+        data: [14, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 9, -1, 0],
         npCost: 100,
         isTotal: false
       },
@@ -53,7 +53,7 @@ export const unit271Data: UnitData = {
         id: 15,
         name: "バリアブレイカー",
         type: "normal" as const,
-        effect: "+32%/Lv Max50%",
+        data: [15, 10, 32, 50, 0, 0, 0, 0, 0, 0, 15, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -61,7 +61,7 @@ export const unit271Data: UnitData = {
         id: 11,
         name: "生き残る",
         type: "normal" as const,
-        effect: "+28% +8%/Lv Max100%",
+        data: [11, 10, 28, 100, 0, 0, 0, 0, 0, 0, 11, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit271Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit271Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
         npCost: 175,
         isTotal: true
       }

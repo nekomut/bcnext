@@ -45,7 +45,7 @@ export const unit376Data: UnitData = {
         id: 15,
         name: "バリアブレイカー",
         type: "normal" as const,
-        effect: "+1%/Lv Max10%",
+        data: [15, 10, 1, 10, 0, 0, 0, 0, 0, 0, 15, 1, -1, 0],
         npCost: 95,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit376Data: UnitData = {
         id: 29,
         name: "古代の呪い無効",
         type: "normal" as const,
-        effect: "",
+        data: [29, 0, 0, 0, 0, 0, 0, 0, 0, 0, 25, 3, -1, 0],
         npCost: 50,
         isTotal: false
       },
@@ -61,7 +61,7 @@ export const unit376Data: UnitData = {
         id: 21,
         name: "ふっとばし耐性",
         type: "normal" as const,
-        effect: "",
+        data: [21, 10, 5, 50, 0, 0, 0, 0, 0, 0, 21, 2, -1, 0],
         npCost: 75,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit376Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 2, -1, 0],
         npCost: 75,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit376Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 2, -1, 0],
         npCost: 75,
         isTotal: true
       }

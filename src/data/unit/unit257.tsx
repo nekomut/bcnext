@@ -45,7 +45,7 @@ export const unit257Data: UnitData = {
         id: 22,
         name: "波動ダメージ耐性",
         type: "normal" as const,
-        effect: "+5%/Lv Max50%",
+        data: [22, 10, 5, 50, 0, 0, 0, 0, 0, 0, 22, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit257Data: UnitData = {
         id: 18,
         name: "攻撃力ダウン耐性",
         type: "normal" as const,
-        effect: "+16%/Lv Max70%",
+        data: [18, 10, 16, 70, 0, 0, 0, 0, 0, 0, 18, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -61,7 +61,7 @@ export const unit257Data: UnitData = {
         id: 39,
         name: "属性 ゾンビ",
         type: "normal" as const,
-        effect: "",
+        data: [39, 0, 0, 0, 0, 0, 0, 0, 0, 0, 39, 9, -1, 0],
         npCost: 100,
         isTotal: false
       },
@@ -69,7 +69,7 @@ export const unit257Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -77,7 +77,7 @@ export const unit257Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -85,7 +85,7 @@ export const unit257Data: UnitData = {
         id: 64,
         name: "超獣特効",
         type: "ultra" as const,
-        effect: "AP 2.5x 90,312\nDMG 0.6x 118,670",
+        data: [64, 0, 5, 5, 30, 30, 0, 0, 0, 0, 86, 10, -1, 1],
         npCost: 150,
         isTotal: false
       },
@@ -93,7 +93,7 @@ export const unit257Data: UnitData = {
         id: 3,
         name: "動きを遅くする",
         type: "ultra" as const,
-        effect: "0.33s(10f)/Lv Max1.00s(30f) 100%",
+        data: [3, 10, 100, 100, 10, 30, 0, 0, 0, 0, 3, 12, -1, 1],
         npCost: 285,
         isTotal: true
       }

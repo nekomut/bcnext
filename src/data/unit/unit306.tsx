@@ -45,7 +45,7 @@ export const unit306Data: UnitData = {
         id: 10,
         name: "攻撃力アップ",
         type: "normal" as const,
-        effect: "AP+5%/Lv Max+50% HP≦43%",
+        data: [10, 10, 57, 57, 5, 50, 0, 0, 0, 0, 10, 7, -1, 0],
         npCost: 235,
         isTotal: true
       },
@@ -53,7 +53,7 @@ export const unit306Data: UnitData = {
         id: 53,
         name: "毒撃ダメージ無効",
         type: "normal" as const,
-        effect: "",
+        data: [53, 0, 0, 0, 0, 0, 0, 0, 0, 0, 65, 9, -1, 0],
         npCost: 100,
         isTotal: false
       },
@@ -61,7 +61,7 @@ export const unit306Data: UnitData = {
         id: 19,
         name: "動きを止める耐性",
         type: "normal" as const,
-        effect: "+16%/Lv Max70%",
+        data: [19, 10, 16, 70, 0, 0, 0, 0, 0, 0, 19, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -69,7 +69,7 @@ export const unit306Data: UnitData = {
         id: 59,
         name: "魂攻撃",
         type: "normal" as const,
-        effect: "",
+        data: [59, 0, 0, 0, 0, 0, 0, 0, 0, 0, 79, 9, -1, 0],
         npCost: 100,
         isTotal: false
       },
@@ -77,7 +77,7 @@ export const unit306Data: UnitData = {
         id: 32,
         name: "基本体力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
         npCost: 175,
         isTotal: true
       },
@@ -85,7 +85,7 @@ export const unit306Data: UnitData = {
         id: 31,
         name: "基本攻撃力アップ",
         type: "normal" as const,
-        effect: "+2%/Lv Max+20%",
+        data: [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
         npCost: 175,
         isTotal: true
       }

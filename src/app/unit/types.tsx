@@ -497,7 +497,10 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[23] && stats[23] > 0) {
     abilities.push({
       name: "めっぽう強い",
-      value: "1.5x~1.8x"
+      value: "",
+      isDynamic: true,
+      baseAP: calculatedStats.ap,
+      calculatedStats: calculatedStats
     });
   }
 
@@ -581,8 +584,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const waveRange = 332.5 + (waveLevel - 1) * 200;
     const waveType = stats[94] === 1 ? '小波動' : '波動攻撃';
     abilities.push({
-      name: waveType,
-      value: `${stats[35]}% Lv${waveLevel} ${waveRange}`
+      name: `${waveType} Lv${waveLevel} ${stats[35]}%`,
+      value: `${waveRange}`
     });
   }
 

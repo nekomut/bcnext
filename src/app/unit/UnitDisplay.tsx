@@ -241,29 +241,29 @@ function StatsTable({ stats }: { stats: CalculatedStats }) {
         <StatItem
           label="再生産"
           value={`${stats.recharge.toFixed(2)}s`}
-          detail={`(${Math.round(stats.recharge * 30)}f)`}
+          detail={`(${Math.round(stats.recharge * 30).toLocaleString()}f)`}
         />
         <StatItem
           label="攻撃発生"
           value={`${frameToSecond(stats.foreswing).toFixed(2)}s`}
-          detail={`(${stats.foreswing}f)`}
+          detail={`(${stats.foreswing.toLocaleString()}f)`}
         />
         <StatItem
           label="攻撃間隔"
           value={`${frameToSecond(stats.tba).toFixed(2)}s`}
-          detail={`(${stats.tba}f)`}
+          detail={`(${stats.tba.toLocaleString()}f)`}
         />
         <StatItem
           label="攻撃後硬直"
           value={`${frameToSecond(stats.backswing).toFixed(2)}s`}
-          detail={`(${stats.backswing}f)`}
+          detail={`(${stats.backswing.toLocaleString()}f)`}
         />
         <StatItem
           label="攻撃頻度"
           value={`${frameToSecond(stats.freq).toFixed(2)}s`}
           detail={
             <>
-              {`(${stats.freq}f)`}
+              {`(${stats.freq.toLocaleString()}f)`}
               <br />
               [{stats.frames.join(' ')}]
             </>
@@ -482,6 +482,99 @@ function DynamicSuperToughness({ ability }: { ability: UnitAbility }) {
   );
 }
 
+function DynamicMighty({ ability }: { ability: UnitAbility }) {
+  const [apMultiplier, setApMultiplier] = useState(1.8);
+  const [dmgMultiplier, setDmgMultiplier] = useState(0.4);
+  
+  if (!ability.calculatedStats || !ability.isDynamic) return null;
+  
+  const calculateDamage = (apMult: number, dmgMult: number) => {
+    const stats = ability.calculatedStats!;
+    if (stats.multihit) {
+      const hit1 = stats.atk1 ? Math.floor(stats.atk1 * apMult) : 0;
+      const hit2 = stats.atk2 ? Math.floor(stats.atk2 * apMult) : 0;
+      const hit3 = stats.atk3 ? Math.floor(stats.atk3 * apMult) : 0;
+      
+      const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => v.toLocaleString());
+      const apDisplay = `[${values.join(' ')}]`;
+      
+      // HP相当計算
+      const hpMultiplier = 1 / dmgMult;
+      const equivalentHP = Math.floor(stats.hp * hpMultiplier);
+      
+      return (
+        <>
+          <span className="text-red-500">AP</span> {apDisplay}
+          <br />
+          <span className="text-blue-500">HP</span> {equivalentHP.toLocaleString()} 相当
+        </>
+      );
+    } else {
+      const damage = Math.floor(stats.ap * apMult);
+      const hpMultiplier = 1 / dmgMult;
+      const equivalentHP = Math.floor(stats.hp * hpMultiplier);
+      
+      return (
+        <>
+          <span className="text-red-500">AP</span> {damage.toLocaleString()}
+          <br />
+          <span className="text-blue-500">HP</span> {equivalentHP.toLocaleString()} 相当
+        </>
+      );
+    }
+  };
+  
+  return (
+    <div className="bg-gray-50 p-2 rounded">
+      <div className="flex justify-between items-start gap-2">
+        <div className="font-bold text-xs text-gray-600">
+          めっぽう強い<br /> <span className="text-red-500">AP
+          <input
+            type="number"
+            value={apMultiplier}
+            onChange={(e) => {
+              const value = Number(e.target.value);
+              if (value >= 1.5 && value <= 1.8) {
+                setApMultiplier(value);
+                // AP倍率に対応するDMG倍率を設定 (1.5x->0.5x, 1.8x->0.4x)
+                const newDmgMult = 1.9 - value;
+                setDmgMultiplier(newDmgMult);
+              }
+            }}
+            className="w-10 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
+            min="1.5"
+            max="1.8"
+            step="0.1"
+          />x </span>
+          <span className="text-blue-500">DMG
+          <input
+            type="number"
+            value={dmgMultiplier}
+            onChange={(e) => {
+              const value = Number(e.target.value);
+              if (value >= 0.4 && value <= 0.5) {
+                setDmgMultiplier(value);
+                // DMG倍率に対応するAP倍率を設定
+                const newApMult = 1.9 - value;
+                setApMultiplier(newApMult);
+              }
+            }}
+            className="w-10 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
+            min="0.4"
+            max="0.5"
+            step="0.1"
+          />x</span>
+        </div>
+        <div className="text-right flex-shrink-0 max-w-[50%]">
+          <div className="text-gray-600 font-medium break-words">
+            {calculateDamage(apMultiplier, dmgMultiplier)}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
   return (
     <div className="mb-4">
@@ -496,6 +589,8 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
             <DynamicToughness key={index} ability={ability} />
           ) : ability.isDynamic && ability.name === "超打たれ強い" ? (
             <DynamicSuperToughness key={index} ability={ability} />
+          ) : ability.isDynamic && ability.name === "めっぽう強い" ? (
+            <DynamicMighty key={index} ability={ability} />
           ) : (
             <div key={index} className="bg-gray-50 p-2 rounded">
               <div className="flex justify-between items-start gap-2">

@@ -846,12 +846,67 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                       />
                       生き残る
                     </>
+                  ) : ability.name === '召喚' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilitySummon}`}
+                        alt="召喚"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      召喚
+                    </>
+                  ) : ability.name === '波動ストッパー' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityWaveShield}`}
+                        alt="波動ストッパー"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      波動ストッパー
+                    </>
+                  ) : ability.name === '城破壊が得意' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityBaseDestroyer}`}
+                        alt="城破壊が得意"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      城破壊が得意
+                    </>
+                  ) : ability.name === '撃破時お金アップ' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityExtraMoney}`}
+                        alt="撃破時お金アップ"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      撃破時お金アップ
+                    </>
+                  ) : ability.name === '攻撃ターゲット限定' ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityAttacksOnly}`}
+                        alt="攻撃ターゲット限定"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      <span className="text-red-500">攻撃ターゲット限定</span>
+                    </>
                   ) : (
                     ability.name
                   )}
                 </div>
                 <div className="text-right flex-shrink-0 max-w-[50%]">
-                  {ability.name === "ターゲット属性" && ability.iconKeys ? (
+                  {(ability.name === "ターゲット属性" || ability.name === "攻撃ターゲット限定") && ability.iconKeys ? (
                     <div className="flex gap-1 flex-wrap justify-end">
                       {ability.iconKeys.map((iconKey, i) => (
                         <Image

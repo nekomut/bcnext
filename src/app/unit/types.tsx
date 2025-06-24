@@ -295,7 +295,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     }
   });
 
-  if (targets.length > 0) {
+  // 攻撃ターゲット限定がない場合のみターゲット属性を表示
+  if (targets.length > 0 && !(stats[32] && stats[32] > 0)) {
     abilities.push({
       name: "ターゲット属性",
       value: targets.map(t => t.name).join(' '),
@@ -303,8 +304,44 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     });
   }
 
-  // 遠方攻撃・全方位攻撃
+  // 攻撃ターゲット限定
+  if (stats[32] && stats[32] > 0) {
+    abilities.push({
+      name: "攻撃ターゲット限定",
+      value: targets.map(t => t.name).join(' '),
+      iconKeys: targets.map(t => t.iconKey)
+    });
+  }
+
+  // 多段攻撃
   const multihit = (stats[59] || 0) > 0;
+  if (multihit) {
+    const hit1_time = stats[13] || 0; // 第一攻撃: foreswing
+    const hit2_time = stats[61] || 0; // 第二攻撃の絶対時間
+    const hit3_time = stats[62] || 0; // 第三攻撃の絶対時間
+    
+    const hit2_ap = stats[59] || 0; // 第二攻撃力
+    const hit3_ap = stats[60] || 0; // 第三攻撃力
+    
+    const timings = [`${frameToSecond(hit1_time)}s(${hit1_time}f)`];
+    
+    if (hit2_ap > 0) {
+      timings.push(`${frameToSecond(hit2_time)}s(${hit2_time}f)`);
+    }
+    
+    if (hit3_ap > 0) {
+      timings.push(`${frameToSecond(hit3_time)}s(${hit3_time}f)`);
+    }
+    
+    const timeInfo = `[${timings.join(' ')}]`;
+    
+    abilities.push({
+      name: "多段攻撃",
+      value: timeInfo
+    });
+  }
+
+  // 遠方攻撃・全方位攻撃
   if (stats[44] && stats[44] !== 0) {
     const ranges: string[] = [];
     
@@ -356,33 +393,6 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
       name: attackType === '遠方攻撃' ? 'abilityLongDistance' : attackType,
       value: rangeInfo,
       iconKeys: attackType === '遠方攻撃' ? ['abilityLongDistance'] : undefined
-    });
-  }
-
-  // 多段攻撃
-  if (multihit) {
-    const hit1_time = stats[13] || 0; // 第一攻撃: foreswing
-    const hit2_time = stats[61] || 0; // 第二攻撃の絶対時間
-    const hit3_time = stats[62] || 0; // 第三攻撃の絶対時間
-    
-    const hit2_ap = stats[59] || 0; // 第二攻撃力
-    const hit3_ap = stats[60] || 0; // 第三攻撃力
-    
-    const timings = [`${frameToSecond(hit1_time)}s(${hit1_time}f)`];
-    
-    if (hit2_ap > 0) {
-      timings.push(`${frameToSecond(hit2_time)}s(${hit2_time}f)`);
-    }
-    
-    if (hit3_ap > 0) {
-      timings.push(`${frameToSecond(hit3_time)}s(${hit3_time}f)`);
-    }
-    
-    const timeInfo = `[${timings.join(' ')}]`;
-    
-    abilities.push({
-      name: "多段攻撃",
-      value: timeInfo
     });
   }
 
@@ -572,7 +582,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[33] && stats[33] > 0) {
     abilities.push({
       name: "撃破時お金アップ",
-      value: "2倍"
+      value: "2倍",
+      iconKeys: ["abilityExtraMoney"]
     });
   }
 
@@ -580,7 +591,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[34] && stats[34] > 0) {
     abilities.push({
       name: "城破壊が得意",
-      value: "4倍"
+      value: "4倍",
+      iconKeys: ["abilityBaseDestroyer"]
     });
   }
 
@@ -633,11 +645,10 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     });
   }
 
-
   // 各種無効・耐性
   const immunities = [
     { index: 46, name: "波動ダメージ無効", iconKey: "abilityImmuneWave" },
-    { index: 47, name: "波動ストッパー" },
+    { index: 47, name: "波動ストッパー", iconKey: "abilityWaveShield" },
     { index: 48, name: "ふっとばす無効", iconKey: "abilityImmuneKnockback" },
     { index: 49, name: "動きを止める無効", iconKey: "abilityImmuneFreeze" },
     { index: 50, name: "動きを遅くする無効", iconKey: "abilityImmuneSlow" },
@@ -673,7 +684,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const summonedUnitId = stats[110];
     abilities.push({
       name: "召喚",
-      value: `Unit ${summonedUnitId.toString().padStart(3, '0')}`
+      value: `Unit ${summonedUnitId.toString().padStart(3, '0')}`,
+      iconKeys: ["abilitySummon"]
     });
   }
 

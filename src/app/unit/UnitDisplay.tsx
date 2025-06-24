@@ -299,7 +299,7 @@ function StatItem({
   labelClassName?: string;
 }) {
   return (
-    <div className="flex justify-between py-0.5 border-b border-gray-100">
+    <div className="flex justify-between items-center py-0.5 border-b border-gray-100">
       <span className={`${labelClassName || 'text-gray-600'} truncate pr-2 text-xs font-bold`}>{label}</span>
       <div className="text-right flex-shrink-0">
         <span className={`text-gray-900 ${className}`}>{value}</span>

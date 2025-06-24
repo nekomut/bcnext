@@ -528,7 +528,7 @@ function DynamicMighty({ ability }: { ability: UnitAbility }) {
     <div className="bg-gray-50 p-2 rounded">
       <div className="flex justify-between items-start gap-2">
         <div className="font-bold text-xs text-gray-600">
-          めっぽう強い<br /> <span className="text-red-500">AP
+          めっぽう強い<small>AP1.5~1.8x DMG0.5~0.4x</small><br /> <span className="text-red-500">AP
           <input
             type="number"
             value={apMultiplier}

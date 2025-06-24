@@ -428,7 +428,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     // 超ダメージ・極ダメージがある場合の追加表示
     let additionalValues: React.ReactNode = null;
     
-    // 超ダメージがある場合（3x~4xの4倍 * 3 = 12倍）
+    // 超ダメージがある場合（3倍~4倍の4倍 * 3 = 12倍）
     if (stats[30] && stats[30] > 0) {
       if (calculatedStats.multihit) {
         const hit1_12x = calculatedStats.atk1 ? calculatedStats.atk1 * 12 : 0;
@@ -453,7 +453,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
       }
     }
     
-    // 極ダメージがある場合（5x~6xの6倍 * 3 = 18倍）
+    // 極ダメージがある場合（5倍~6倍の6倍 * 3 = 18倍）
     if (stats[81] && stats[81] > 0) {
       if (calculatedStats.multihit) {
         const hit1_18x = calculatedStats.atk1 ? calculatedStats.atk1 * 18 : 0;
@@ -481,7 +481,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     abilities.push({
       name: (
         <>
-          渾身の一撃 <span className="text-red-500">AP 3x {chance}% </span>
+          渾身の一撃 <span className="text-red-500">攻撃力 3倍 {chance}% </span>
         </>
       ),
       value: (
@@ -566,7 +566,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[33] && stats[33] > 0) {
     abilities.push({
       name: "撃破時お金アップ",
-      value: "2x"
+      value: "2倍"
     });
   }
 
@@ -574,7 +574,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[34] && stats[34] > 0) {
     abilities.push({
       name: "城破壊が得意",
-      value: "4x"
+      value: "4倍"
     });
   }
 

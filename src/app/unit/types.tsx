@@ -392,7 +392,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     abilities.push({
       name: attackType === '遠方攻撃' ? 'abilityLongDistance' : attackType,
       value: rangeInfo,
-      iconKeys: attackType === '遠方攻撃' ? ['abilityLongDistance'] : undefined
+      iconKeys: attackType === '遠方攻撃' ? ['abilityLongDistance'] : attackType === '全方位攻撃' ? ['abilityOmniStrike'] : undefined
     });
   }
 

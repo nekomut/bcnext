@@ -17,7 +17,7 @@ interface UnitDisplayProps {
 
 export function UnitDisplay({
   unitData,
-  initialLevel = 30,
+  initialLevel = 50,
   initialPlusLevel = 0,
   initialFormId = 0,
   className = "",
@@ -153,7 +153,7 @@ export function UnitDisplay({
                 className="border rounded px-1 sm:px-2 py-1 w-6 sm:w-16 text-right text-xs sm:text-sm text-gray-900"
               />
             </div>
-            <span className="text-xs text-gray-500">/ MaxLv{maxLevel}+{maxPlusLevel}</span>
+            <span className="text-xs text-gray-500">/ <small><b>{maxLevel} + {maxPlusLevel}</b></small></span>
             <button
               onClick={() => { 
                 setLevel(maxLevel); 
@@ -669,6 +669,17 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                         className="inline mr-1 align-top"
                       />
                       遠方攻撃
+                    </>
+                  ) : ability.name === '全方位攻撃' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityOmniStrike}`}
+                        alt="全方位攻撃"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      全方位攻撃
                     </>
                   ) : ability.name === '攻撃力ダウン無効' && ability.iconKeys ? (
                     <>

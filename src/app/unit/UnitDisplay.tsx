@@ -48,7 +48,7 @@ export function UnitDisplay({
   return (
     <div className={`bg-white rounded-lg shadow-lg p-3 ${className}`}>
       {/* Header */}
-      <div className="mb-3 flex items-start gap-2 sm:gap-3">
+      <div className="mb-3 flex items-center gap-2 sm:gap-3">
         {/* Unit Icon */}
         {currentFormData.icon && (
           <div className="flex-shrink-0">
@@ -213,7 +213,7 @@ function StatsTable({ stats }: { stats: CalculatedStats }) {
                 alt={stats.attackType === 'area' ? '範囲攻撃' : '単体攻撃'}
                 width={16}
                 height={16}
-                className="inline ml-1"
+                className="inline ml-1 align-top"
               />
             </>}
             value={
@@ -232,7 +232,7 @@ function StatsTable({ stats }: { stats: CalculatedStats }) {
                 alt={stats.attackType === 'area' ? '範囲攻撃' : '単体攻撃'}
                 width={16}
                 height={16}
-                className="inline ml-1"
+                className="inline ml-1 align-top"
               />
             </>}
             value={stats.ap.toLocaleString()}
@@ -331,7 +331,7 @@ function DynamicSuperDamage({ ability }: { ability: UnitAbility }) {
   
   return (
     <div className="bg-gray-50 p-2 rounded">
-      <div className="flex justify-between items-start gap-2">
+      <div className="flex justify-between items-center gap-2">
         <div className="font-bold text-xs text-gray-600">
           超ダメージ <span className="text-red-500">攻撃力
           <input
@@ -381,7 +381,7 @@ function DynamicExtremeDamage({ ability }: { ability: UnitAbility }) {
   
   return (
     <div className="bg-gray-50 p-2 rounded">
-      <div className="flex justify-between items-start gap-2">
+      <div className="flex justify-between items-center gap-2">
         <div className="font-bold text-xs text-gray-600">
           極ダメージ <span className="text-red-500">攻撃力
           <input
@@ -423,7 +423,7 @@ function DynamicToughness({ ability }: { ability: UnitAbility }) {
   
   return (
     <div className="bg-gray-50 p-2 rounded">
-      <div className="flex justify-between items-start gap-2">
+      <div className="flex justify-between items-center gap-2">
         <div className="font-bold text-xs text-gray-600">
           打たれ強い <span className="text-red-500">ダメージ
           <input
@@ -465,7 +465,7 @@ function DynamicSuperToughness({ ability }: { ability: UnitAbility }) {
   
   return (
     <div className="bg-gray-50 p-2 rounded">
-      <div className="flex justify-between items-start gap-2">
+      <div className="flex justify-between items-center gap-2">
         <div className="font-bold text-xs text-gray-600">
           超打たれ強い <span className="text-red-500">ダメージ
           <input
@@ -537,7 +537,7 @@ function DynamicMighty({ ability }: { ability: UnitAbility }) {
   
   return (
     <div className="bg-gray-50 p-2 rounded">
-      <div className="flex justify-between items-start gap-2">
+      <div className="flex justify-between items-center gap-2">
         <div className="font-bold text-xs text-gray-600">
           めっぽう強い<small>攻撃力1.5~1.8倍 ダメージ0.5~0.4倍</small><br /> <span className="text-red-500">攻撃力
           <input
@@ -604,8 +604,23 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
             <DynamicMighty key={index} ability={ability} />
           ) : (
             <div key={index} className="bg-gray-50 p-2 rounded">
-              <div className="flex justify-between items-start gap-2">
-                <div className="font-bold text-xs text-gray-600">{ability.name}</div>
+              <div className="flex justify-between items-center gap-2">
+                <div className="font-bold text-xs text-gray-600">
+                  {ability.name === 'abilityLongDistance' ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityLongDistance}`}
+                        alt="遠方攻撃"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      遠方攻撃
+                    </>
+                  ) : (
+                    ability.name
+                  )}
+                </div>
                 <div className="text-right flex-shrink-0 max-w-[50%]">
                   {ability.name === "ターゲット属性" && ability.iconKeys ? (
                     <div className="flex gap-1 flex-wrap justify-end">
@@ -642,7 +657,7 @@ function TalentsList({ talents }: { talents: readonly UnitTalent[] }) {
       <div className="space-y-0.5">
         {talents.map((talent, index) => (
           <div key={index} className={`p-2 rounded ${talent.type === 'ultra' ? 'bg-red-50 border-l-4 border-red-500' : 'bg-yellow-50 border-l-4 border-yellow-500'}`}>
-            <div className="flex justify-between items-start gap-2">
+            <div className="flex justify-between items-center gap-2">
               <div className={`font-bold text-xs ${talent.type === 'ultra' ? 'text-red-600' : 'text-yellow-600'}`}>
                 {talent.name} ({talent.id})
                 {talent.type === 'ultra' && <span className="text-xs ml-1 px-1 bg-red-100 rounded">超</span>}

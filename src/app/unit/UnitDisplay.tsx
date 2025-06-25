@@ -592,7 +592,7 @@ function DynamicMighty({ ability }: { ability: UnitAbility }) {
             height={16}
             className="inline mr-1 align-top"
           />
-          めっぽう強い<small>攻撃力1.5~1.8倍 ダメージ0.5~0.4倍</small><br /> <span className="text-red-500">攻撃力
+          めっぽう強い<br /> <span className="text-red-500">攻撃力
           <input
             type="number"
             value={apMultiplier}
@@ -609,8 +609,9 @@ function DynamicMighty({ ability }: { ability: UnitAbility }) {
             min="1.5"
             max="1.8"
             step="0.1"
-          />倍 </span>
-          <span className="text-blue-500">ダメージ
+          />倍 </span><small>(1.5~1.8)</small>
+          <br />
+          <span className="text-blue-500">被ダメ
           <input
             type="number"
             value={dmgMultiplier}
@@ -627,10 +628,11 @@ function DynamicMighty({ ability }: { ability: UnitAbility }) {
             min="0.4"
             max="0.5"
             step="0.1"
-          />倍</span>
+          />倍 </span><small>(0.5~0.4)</small>
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
+            <br />
             {calculateDamage(apMultiplier, dmgMultiplier)}
           </div>
         </div>

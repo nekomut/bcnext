@@ -1033,6 +1033,28 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                       />
                       メタル
                     </>
+                  ) : ability.name === '使徒キラー' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityEvaAngelKiller}`}
+                        alt="使徒キラー"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      使徒キラー
+                    </>
+                  ) : ability.name === '魔女キラー' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityWitchKiller}`}
+                        alt="魔女キラー"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      魔女キラー
+                    </>
                   ) : ability.name === '攻撃ターゲット限定' ? (
                     <>
                       <Image

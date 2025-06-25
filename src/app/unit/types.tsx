@@ -727,10 +727,10 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     { index: 50, name: "動きを遅くする無効", iconKey: "abilityImmuneSlow" },
     { index: 51, name: "攻撃力ダウン無効", iconKey: "abilityImmuneWeaken" },
     { index: 52, name: "ゾンビキラー", iconKey: "abilityZombieKiller" },
-    { index: 53, name: "魔女キラー" },
+    { index: 53, name: "魔女キラー", iconKey: "abilityWitchKiller" },
     { index: 56, name: "衝撃波無効" },
     { index: 75, name: "ワープ無効", iconKey: "abilityImmuneWarp" },
-    { index: 77, name: "使徒キラー" },
+    { index: 77, name: "使徒キラー", iconKey: "abilityEvaAngelKiller" },
     { index: 79, name: "古代の呪い無効", iconKey: "abilityImmuneCurse" }
   ];
 

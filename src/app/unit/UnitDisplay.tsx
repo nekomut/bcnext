@@ -482,7 +482,7 @@ function DynamicToughness({ ability }: { ability: UnitAbility }) {
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
-            体力 {calculateEquivalentHP(damageMultiplier)} 相当
+            体力<small>(換算値)</small> {calculateEquivalentHP(damageMultiplier)}
           </div>
         </div>
       </div>
@@ -531,7 +531,7 @@ function DynamicSuperToughness({ ability }: { ability: UnitAbility }) {
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
-            体力 {calculateEquivalentHP(damageMultiplier)} 相当
+            体力<small>(換算値)</small> {calculateEquivalentHP(damageMultiplier)}
           </div>
         </div>
       </div>
@@ -563,7 +563,7 @@ function DynamicMighty({ ability }: { ability: UnitAbility }) {
         <>
           <span className="text-red-500">攻撃力</span> {apDisplay}
           <br />
-          <span className="text-blue-500">体力</span> {equivalentHP.toLocaleString()} 相当
+          <span className="text-blue-500">体力<small>(換算値)</small></span> {equivalentHP.toLocaleString()}
         </>
       );
     } else {
@@ -575,7 +575,7 @@ function DynamicMighty({ ability }: { ability: UnitAbility }) {
         <>
           <span className="text-red-500">攻撃力</span> {damage.toLocaleString()}
           <br />
-          <span className="text-blue-500">体力</span> {equivalentHP.toLocaleString()} 相当
+          <span className="text-blue-500">体力<small>(換算値)</small></span> {equivalentHP.toLocaleString()}
         </>
       );
     }

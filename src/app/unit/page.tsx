@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import React, { useState, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { sozai } from '@/data/materials';
+import { icons } from '@/data/icons';
 import { UnitDisplay } from './UnitDisplay';
 import { UnitData, getUnitData } from './types';
 
@@ -111,6 +111,105 @@ function UnitPageContent() {
       </div>
       <hr />
       
+      <div className='flex-wrap hidden'>
+        <div className='flex'>
+          <Image src= {`data:image/png;base64,${icons.abilityWeaken}`} alt="abilityWeaken" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityFreeze}`} alt="abilityFreeze" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilitySlow}`} alt="abilitySlow" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityAttacksOnly}`} alt="abilityAttacksOnly" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityStrongAgainst}`} alt="abilityStrongAgainst" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityResistant}`} alt="abilityTough" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityInsanelyTough}`} alt="abilityInsanelyTough" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityMassiveDamage}`} alt="abilityMassiveDamage" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityInsaneDamage}`} alt="abilityInsaneDamage" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityKnockback}`} alt="abilityKnockback" width={20} height={0} />
+        </div>
+        <div className='flex'>
+          <Image src= {`data:image/png;base64,${icons.abilityWarp}`} alt="abilityWarp" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityCurse}`} alt="abilityCurse" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityDodgeAttack}`} alt="abilityDodgeAttack" width={20} height={0} />
+        </div>
+        <div className='flex'>
+          <Image src= {`data:image/png;base64,${icons.abilityStrengthen}`} alt="abilityStrengthen" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilitySurvive}`} alt="abilitySurvive" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityBaseDestroyer}`} alt="abilityBaseDestroyer" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityCritical}`} alt="abilityCritical" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityMetalKiller}`} alt="abilityMetalKiller" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityZombieKiller}`} alt="abilityZombieKiller" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilitySoulStrike}`} alt="abilitySoulStrike" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityBarrierBreaker}`} alt="abilityBarrierBreaker" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityShieldPiercing}`} alt="abilityShieldPiercing" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityBerserk}`} alt="abilityBerserk" width={20} height={0} />
+        </div>
+        <div className='flex'>
+          <Image src= {`data:image/png;base64,${icons.abilityExtraMoney}`} alt="abilityExtraMoney" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityMetal}`} alt="abilityMetal" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityMiniWave}`} alt="abilityMiniWave" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityWave}`} alt="abilityWave" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityMiniSurge}`} alt="abilityMiniSurge" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilitySurge}`} alt="abilitySurge" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityExplosion}`} alt="abilityExplosion" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityCounterSurge}`} alt="abilityCounterSurge" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityWaveShield}`} alt="abilityWaveShield" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilitySummon}`} alt="abilitySummon" width={20} height={0} />
+        </div>
+        <div className='flex'>
+          <Image src= {`data:image/png;base64,${icons.abilitySingleTarget}`} alt="abilitySingleTarget" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityAreaAttack}`} alt="abilityAreaAttack" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityLongDistance}`} alt="abilityLongDistance" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityOmniStrike}`} alt="abilityOmniStrike" width={20} height={0} />
+        </div>
+        <div className='flex'>
+          <Image src= {`data:image/png;base64,${icons.abilityColossusSlayer}`} alt="abilityColossusSlayer" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityBehemothSlayer}`} alt="abilityBehemothSlayer" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilitySageSlayer}`} alt="abilitySageSlayer" width={20} height={0} />
+        </div>
+        <div className='flex'>
+          <Image src= {`data:image/png;base64,${icons.abilityImmuneWeaken}`} alt="abilityImmuneWeaken" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityImmuneFreeze}`} alt="abilityImmuneFreeze" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityImmuneSlow}`} alt="abilityImmuneSlow" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityImmuneKnockback}`} alt="abilityImmuneKnockback" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityImmuneWave}`} alt="abilityImmuneWave" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityImmuneSurge}`} alt="abilityImmuneSurge" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityImmuneExplosion}`} alt="abilityImmuneExplosion" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityImmuneWarp}`} alt="abilityImmuneWarp" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityImmuneCurse}`} alt="abilityImmuneCurse" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityImmuneToxic}`} alt="abilityImmuneToxic" width={20} height={0} />
+        </div>
+        <div className='flex'>
+          <Image src= {`data:image/png;base64,${icons.abilityResistWeaken}`} alt="abilityResistWeaken" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityResistFreeze}`} alt="abilityResistFreeze" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityResistSlow}`} alt="abilityResistSlow" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityResistKnockback}`} alt="abilityResistKnockback" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityResistWave}`} alt="abilityResistWave" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityResistSurge}`} alt="abilityResistSurge" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityResistWarp}`} alt="abilityResistWarp" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityResistCurse}`} alt="abilityResistCurse" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityResistToxic}`} alt="abilityResistToxic" width={20} height={0} />
+        </div>
+        <div className='flex'>
+          <Image src= {`data:image/png;base64,${icons.abilityDefenseBuff}`} alt="abilityDefenseBuff" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityAttackBuff}`} alt="abilityAttackBuff" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityMoveSpeedUp}`} alt="abilityMoveSpeedUp" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityImprovedKnockback}`} alt="abilityMoveSpeedUp" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityCostDown}`} alt="abilityCostDown" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityRecoverSpeedUp}`} alt="abilityRecoverSpeedUp" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityAttackFrequencyUp}`} alt="abilityAttackFrequencyUp" width={20} height={0} />
+        </div>
+        <div className='flex'>
+          <Image src= {`data:image/png;base64,${icons.abilityWitchKiller}`} alt="abilityWitchKiller" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityEvaAngelKiller}`} alt="abilityEvaAngelKiller" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityWitch}`} alt="abilityWitch" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityEvaAngel}`} alt="abilityEvaAngel" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityCollossus}`} alt="abilityCollossus" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityBehemoth}`} alt="abilityBehemoth" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilitySage}`} alt="abilitySage" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityBarrier}`} alt="abilityBarrier" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityShield}`} alt="abilityShield" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityDeathSurge}`} alt="abilityDeathSurge" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityToxic}`} alt="abilityToxic" width={20} height={0} />
+        </div>
+      </div>
 
       {/* ユニット検索UI */}
       <div className="p-2">
@@ -138,7 +237,6 @@ function UnitPageContent() {
           >
             {loading ? 'Loading...' : 'Search'}
           </button>
-          <Image src= {`data:image/png;base64,${sozai.new}`} alt="img_new" width={20} height={0} />
         </div>
 
         {/* エラーメッセージ */}

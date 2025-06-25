@@ -458,7 +458,7 @@ function DynamicToughness({ ability }: { ability: UnitAbility }) {
       <div className="flex justify-between items-center gap-2">
         <div className="font-bold text-xs text-gray-600">
           <Image
-            src={`data:image/png;base64,${icons.abilityTough}`}
+            src={`data:image/png;base64,${icons.abilityResistant}`}
             alt="打たれ強い"
             width={16}
             height={16}
@@ -1056,6 +1056,17 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                         className="inline mr-1 align-top"
                       />
                       魔女キラー
+                    </>
+                  ) : ability.name === '裂波カウンター' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityCounterSurge}`}
+                        alt="裂波カウンター"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      裂波カウンター
                     </>
                   ) : ability.name === '攻撃ターゲット限定' ? (
                     <>

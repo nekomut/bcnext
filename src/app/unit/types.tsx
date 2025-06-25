@@ -718,6 +718,15 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     });
   }
 
+  // 裂波カウンター
+  if (stats[109] && stats[109] > 0) {
+    abilities.push({
+      name: "裂波カウンター",
+      value: "",
+      iconKeys: ["abilityCounterSurge"]
+    });
+  }
+
   // 各種無効・耐性
   const immunities = [
     { index: 46, name: "波動ダメージ無効", iconKey: "abilityImmuneWave" },

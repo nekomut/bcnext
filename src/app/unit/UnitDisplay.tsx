@@ -714,7 +714,18 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                       />
                       動きを止める
                     </>
-                  ) : (typeof ability.name === 'string' && (ability.name.includes('波動攻撃') || ability.name.includes('小波動')) && ability.iconKeys) ? (
+                  ) : (typeof ability.name === 'string' && ability.name.includes('小波動') && ability.iconKeys) ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityMiniWave}`}
+                        alt="小波動"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      {ability.name}
+                    </>
+                  ) : (typeof ability.name === 'string' && ability.name.includes('波動攻撃') && ability.iconKeys) ? (
                     <>
                       <Image
                         src={`data:image/png;base64,${icons.abilityWave}`}
@@ -900,6 +911,127 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                         className="inline mr-1 align-top"
                       />
                       撃破時お金アップ
+                    </>
+                  ) : (typeof ability.name === 'string' && ability.name.includes('小裂波') && ability.iconKeys) ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityMiniSurge}`}
+                        alt="小裂波"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      {ability.name}
+                    </>
+                  ) : (typeof ability.name === 'string' && ability.name.includes('裂波攻撃') && ability.iconKeys) ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilitySurge}`}
+                        alt="裂波攻撃"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      {ability.name}
+                    </>
+                  ) : ability.name === '裂波ダメージ無効' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityImmuneSurge}`}
+                        alt="裂波ダメージ無効"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      裂波ダメージ無効
+                    </>
+                  ) : ability.name === '呪い' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityCurse}`}
+                        alt="呪い"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      呪い
+                    </>
+                  ) : ability.name === '爆波攻撃' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityExplosion}`}
+                        alt="爆波攻撃"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      爆波攻撃
+                    </>
+                  ) : ability.name === '爆波ダメージ無効' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityImmuneExplosion}`}
+                        alt="爆波ダメージ無効"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      爆波ダメージ無効
+                    </>
+                  ) : ability.name === 'ゾンビキラー' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityZombieKiller}`}
+                        alt="ゾンビキラー"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      ゾンビキラー
+                    </>
+                  ) : ability.name === 'バリアブレイカー' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityBarrierBreaker}`}
+                        alt="バリアブレイカー"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      バリアブレイカー
+                    </>
+                  ) : ability.name === '魂攻撃' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilitySoulStrike}`}
+                        alt="魂攻撃"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      魂攻撃
+                    </>
+                  ) : ability.name === 'シールドブレイカー' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityShieldPiercing}`}
+                        alt="シールドブレイカー"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      シールドブレイカー
+                    </>
+                  ) : ability.name === 'メタル' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityMetal}`}
+                        alt="メタル"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      メタル
                     </>
                   ) : ability.name === '攻撃ターゲット限定' ? (
                     <>

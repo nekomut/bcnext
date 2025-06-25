@@ -418,6 +418,17 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     });
   }
 
+  // めっぽう強い
+  if (stats[23] && stats[23] > 0) {
+    abilities.push({
+      name: "めっぽう強い",
+      value: "",
+      isDynamic: true,
+      baseAP: calculatedStats.ap,
+      calculatedStats: calculatedStats
+    });
+  }
+
   // 渾身の一撃
   if (stats[82] && stats[82] > 0) {
     const chance = stats[82];
@@ -505,10 +516,21 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     });
   }
 
-  // めっぽう強い
-  if (stats[23] && stats[23] > 0) {
+  // 打たれ強い
+  if (stats[29] && stats[29] > 0) {
     abilities.push({
-      name: "めっぽう強い",
+      name: "打たれ強い",
+      value: "",
+      isDynamic: true,
+      baseAP: calculatedStats.ap,
+      calculatedStats: calculatedStats
+    });
+  }
+
+  // 超打たれ強い
+  if (stats[80] && stats[80] > 0) {
+    abilities.push({
+      name: "超打たれ強い",
       value: "",
       isDynamic: true,
       baseAP: calculatedStats.ap,
@@ -547,25 +569,30 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     });
   }
 
-  // 打たれ強い
-  if (stats[29] && stats[29] > 0) {
+  // 攻撃力アップ
+  if (stats[40] && stats[40] > 0) {
     abilities.push({
-      name: "打たれ強い",
-      value: "",
-      isDynamic: true,
-      baseAP: calculatedStats.ap,
-      calculatedStats: calculatedStats
+      name: "攻撃力アップ",
+      value: `+${stats[41]}% HP≦${100 - stats[40]}%`,
+      iconKeys: ["abilityStrengthen"]
     });
   }
 
-  // 超打たれ強い
-  if (stats[80] && stats[80] > 0) {
+  // 生き残る
+  if (stats[42] && stats[42] > 0) {
     abilities.push({
-      name: "超打たれ強い",
-      value: "",
-      isDynamic: true,
-      baseAP: calculatedStats.ap,
-      calculatedStats: calculatedStats
+      name: "生き残る",
+      value: `${stats[42]}%`,
+      iconKeys: ["abilitySurvive"]
+    });
+  }
+
+  // 城破壊が得意
+  if (stats[34] && stats[34] > 0) {
+    abilities.push({
+      name: "城破壊が得意",
+      value: "4倍",
+      iconKeys: ["abilityBaseDestroyer"]
     });
   }
 
@@ -587,12 +614,20 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     });
   }
 
-  // 城破壊が得意
-  if (stats[34] && stats[34] > 0) {
+  // メタル
+  if (stats[43] && stats[43] > 0) {
     abilities.push({
-      name: "城破壊が得意",
-      value: "4倍",
-      iconKeys: ["abilityBaseDestroyer"]
+      name: "メタル",
+      value: "",
+      iconKeys: ["abilityMetal"]
+    });
+  }
+
+  // メタルキラー
+  if (stats[112] && stats[112] > 0) {
+    abilities.push({
+      name: "メタルキラー",
+      value: `${stats[112]}%`
     });
   }
 
@@ -608,6 +643,30 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     });
   }
 
+  // 裂波攻撃
+  if (stats[86] && stats[86] > 0) {
+    const waveType = (stats.length >= 109 && stats[108] === 1) ? '小裂波' : '裂波攻撃';
+    const waveLevel = stats[89] || 0;
+    const range1 = Math.floor((stats[87] || 0) / 4);
+    const range2 = range1 + Math.floor((stats[88] || 0) / 4);
+    const rangeInfo = `Lv${waveLevel} ${range1}~${range2}`;
+    abilities.push({
+      name: waveType,
+      value: `${rangeInfo} ${stats[86]}%`,
+      iconKeys: ["abilitySurge"]
+    });
+  }
+
+  // 爆波攻撃
+  if (stats[113] && stats[113] > 0) {
+    const range = Math.floor((stats[114] || 0) / 4);
+    abilities.push({
+      name: "爆波攻撃",
+      value: `${range} ${stats[113]}%`,
+      iconKeys: ["abilityExplosion"]
+    });
+  }
+
   // 攻撃力ダウン
   if (stats[37] && stats[37] > 0) {
     const duration = frameToSecond(stats[38] || 0);
@@ -619,29 +678,43 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     });
   }
 
-  // 攻撃力アップ
-  if (stats[40] && stats[40] > 0) {
+  // バリアブレイカー
+  if (stats[70] && stats[70] > 0) {
     abilities.push({
-      name: "攻撃力アップ",
-      value: `+${stats[41]}% HP≦${100 - stats[40]}%`,
-      iconKeys: ["abilityStrengthen"]
+      name: "バリアブレイカー",
+      value: `${stats[70]}%`,
+      iconKeys: ["abilityBarrierBreaker"]
     });
   }
 
-  // 生き残る
-  if (stats[42] && stats[42] > 0) {
+  // シールドブレイカー
+  if (stats[95] && stats[95] > 0) {
     abilities.push({
-      name: "生き残る",
-      value: `${stats[42]}%`,
-      iconKeys: ["abilitySurvive"]
+      name: "シールドブレイカー",
+      value: `${stats[95]}%`,
+      iconKeys: ["abilityShieldPiercing"]
     });
   }
 
-  // メタル
-  if (stats[43] && stats[43] > 0) {
+  // 呪い
+  if (stats[92] && stats[92] > 0) {
+    const durationBase = stats[93] || 0;
+    const durationMax = Math.round(durationBase * 1.2);
+    const durationBaseS = frameToSecond(durationBase);
+    const durationMaxS = frameToSecond(durationMax);
     abilities.push({
-      name: "メタル",
-      value: ""
+      name: "呪い",
+      value: `${durationBaseS.toFixed(2)}s~${durationMaxS.toFixed(2)}s (${durationBase}f~${durationMax}f) ${stats[92]}%`,
+      iconKeys: ["abilityCurse"]
+    });
+  }
+
+  // 魂攻撃
+  if (stats[98] && stats[98] > 0) {
+    abilities.push({
+      name: "魂攻撃",
+      value: "",
+      iconKeys: ["abilitySoulStrike"]
     });
   }
 
@@ -653,7 +726,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     { index: 49, name: "動きを止める無効", iconKey: "abilityImmuneFreeze" },
     { index: 50, name: "動きを遅くする無効", iconKey: "abilityImmuneSlow" },
     { index: 51, name: "攻撃力ダウン無効", iconKey: "abilityImmuneWeaken" },
-    { index: 52, name: "ゾンビキラー" },
+    { index: 52, name: "ゾンビキラー", iconKey: "abilityZombieKiller" },
     { index: 53, name: "魔女キラー" },
     { index: 56, name: "衝撃波無効" },
     { index: 75, name: "ワープ無効", iconKey: "abilityImmuneWarp" },
@@ -671,11 +744,21 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     }
   });
 
-  // バリアブレイカー
-  if (stats[70] && stats[70] > 0) {
+  // 裂波ダメージ無効
+  if (stats[91] && stats[91] > 0) {
     abilities.push({
-      name: "バリアブレイカー",
-      value: `${stats[70]}%`
+      name: "裂波ダメージ無効",
+      value: "",
+      iconKeys: ["abilityImmuneSurge"]
+    });
+  }
+
+  // 爆波ダメージ無効
+  if (stats[116] && stats[116] > 0) {
+    abilities.push({
+      name: "爆波ダメージ無効",
+      value: "",
+      iconKeys: ["abilityImmuneExplosion"]
     });
   }
 

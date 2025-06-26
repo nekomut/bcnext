@@ -238,7 +238,7 @@ function StatsTable({ stats }: { stats: CalculatedStats }) {
               <>
                 {stats.ap.toLocaleString()}
                 <br />
-                <small>{`[${[stats.atk1, stats.atk2, stats.atk3].filter(Boolean).map(x => x?.toLocaleString()).join(' / ')}]`}</small>
+                <small>{`${[stats.atk1, stats.atk2, stats.atk3].filter(Boolean).map(x => x?.toLocaleString()).join(' / ')}`}</small>
               </>
             }
             labelClassName="text-red-500"
@@ -341,7 +341,7 @@ function DynamicSuperDamage({ ability }: { ability: UnitAbility }) {
       const hit3 = stats.atk3 ? Math.floor(stats.atk3 * mult) : 0;
       
       const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => v.toLocaleString());
-      return `[ ${values.join(' / ')} ]`;
+      return `${values.join(' / ')}`;
     } else {
       const damage = Math.floor(stats.ap * mult);
       return damage.toLocaleString();
@@ -398,7 +398,7 @@ function DynamicExtremeDamage({ ability }: { ability: UnitAbility }) {
       const hit3 = stats.atk3 ? Math.floor(stats.atk3 * mult) : 0;
       
       const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => v.toLocaleString());
-      return `[ ${values.join(' / ')} ]`;
+      return `${values.join(' / ')}`;
     } else {
       const damage = Math.floor(stats.ap * mult);
       return damage.toLocaleString();
@@ -554,7 +554,7 @@ function DynamicMighty({ ability }: { ability: UnitAbility }) {
       const hit3 = stats.atk3 ? Math.floor(stats.atk3 * apMult) : 0;
       
       const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => v.toLocaleString());
-      const apDisplay = `[ ${values.join(' ')} ]`;
+      const apDisplay = `${values.join(' ')}`;
       
       // HP相当計算
       const hpMultiplier = 1 / dmgMult;
@@ -695,7 +695,7 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                       />
                       攻撃力ダウン無効
                     </>
-                  ) : ability.name === 'クリティカル' && ability.iconKeys ? (
+                  ) : (typeof ability.name === 'string' && ability.name.includes('クリティカル') && ability.iconKeys) ? (
                     <>
                       <Image
                         src={`data:image/png;base64,${icons.abilityCritical}`}
@@ -704,9 +704,9 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                         height={16}
                         className="inline mr-1 align-top"
                       />
-                      クリティカル
+                      {ability.name}
                     </>
-                  ) : ability.name === '動きを止める' && ability.iconKeys ? (
+                  ) : (typeof ability.name === 'string' && ability.name.includes('動きを止める') && ability.iconKeys) ? (
                     <>
                       <Image
                         src={`data:image/png;base64,${icons.abilityFreeze}`}
@@ -715,7 +715,7 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                         height={16}
                         className="inline mr-1 align-top"
                       />
-                      動きを止める
+                      {ability.name}
                     </>
                   ) : (typeof ability.name === 'string' && ability.name.includes('小波動') && ability.iconKeys) ? (
                     <>

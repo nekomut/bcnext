@@ -1,5 +1,4 @@
 // Common unit types and calculation functions
-// Based on stat.py logic
 
 export interface UnitForm {
   readonly formId: number;
@@ -94,7 +93,7 @@ export interface UnitAbility {
   readonly calculatedStats?: CalculatedStats;
 }
 
-// Calculation functions (from stat.py)
+// Calculation functions
 export const calcStat = (
   base: number,
   m: number = 60,
@@ -192,7 +191,7 @@ export const calculateUnitStats = (
   let freq: number;
   let frames: number[];
 
-  // stat.pyに基づく正確な計算
+  // 正確な計算
   if (multihit) {
     const atk2 = stats[59] || 0;
     const atk3 = stats[60] || 0;
@@ -323,17 +322,17 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const hit2_ap = stats[59] || 0; // 第二攻撃力
     const hit3_ap = stats[60] || 0; // 第三攻撃力
     
-    const timings = [`${frameToSecond(hit1_time)}s (${hit1_time}f)`];
+    const timings = [`${frameToSecond(hit1_time).toFixed(2)}s (${hit1_time}f)`];
     
     if (hit2_ap > 0) {
-      timings.push(`/ ${frameToSecond(hit2_time)}s (${hit2_time}f)`);
+      timings.push(`/ ${frameToSecond(hit2_time).toFixed(2)}s (${hit2_time}f)`);
     }
     
     if (hit3_ap > 0) {
-      timings.push(`/ ${frameToSecond(hit3_time)}s (${hit3_time}f)`);
+      timings.push(`/ ${frameToSecond(hit3_time).toFixed(2)}s (${hit3_time}f)`);
     }
     
-    const timeInfo = `[ ${timings.join(' ')} ]`;
+    const timeInfo = `${timings.join(' ')}`;
     
     abilities.push({
       name: "多段攻撃",
@@ -387,7 +386,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     }
     
     const attackType = (stats[45] || 0) > 0 ? '遠方攻撃' : '全方位攻撃';
-    const rangeInfo = ranges.length > 1 ? `[ ${ranges.join(' ')} ]` : ranges.join(' ');
+    const rangeInfo = ranges.length > 1 ? `${ranges.join(' ')}` : ranges.join(' ');
 
     abilities.push({
       name: attackType === '遠方攻撃' ? 'abilityLongDistance' : attackType,
@@ -441,7 +440,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
       const hit3_3x = calculatedStats.atk3 ? calculatedStats.atk3 * 3 : 0;
       
       const values = [hit1_3x, hit2_3x, hit3_3x].filter(v => v > 0).map(v => v.toLocaleString());
-      savageValues = `[ ${values.join(' / ')} ]~`;
+      savageValues = `${values.join(' / ')} ~`;
     } else {
       const savageAP = calculatedStats.ap * 3;
       savageValues = savageAP.toLocaleString();
@@ -461,7 +460,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
         additionalValues = (
           <>
             <br />
-            [ {superValues.join(' / ')} ]
+            {superValues.join(' / ')}
           </>
         );
       } else {
@@ -486,7 +485,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
         additionalValues = (
           <>
             <br />
-            [ {extremeValues.join(' / ')} ]
+            {extremeValues.join(' / ')}
           </>
         );
       } else {
@@ -503,7 +502,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     abilities.push({
       name: (
         <>
-          渾身の一撃 <span className="text-red-500">攻撃力 3倍 {chance}% </span>
+          渾身の一撃 <small><span className="text-red-500">攻撃力3倍</span> 確率{chance}% </small>
         </>
       ),
       value: (
@@ -552,8 +551,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const duration = frameToSecond(stats[26] || 0);
     const durationMax = frameToSecond(Math.round((stats[26] || 0) * 1.2));
     abilities.push({
-      name: "動きを止める",
-      value: `${stats[25]}% ${duration}s~${durationMax}s`,
+      name: `動きを止める ${stats[25]}%`,
+      value: `${duration}s~${durationMax}s`,
       iconKeys: ["abilityFreeze"]
     });
   }
@@ -599,8 +598,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   // クリティカル
   if (stats[31] && stats[31] > 0) {
     abilities.push({
-      name: "クリティカル",
-      value: `${stats[31]}%`,
+      name: `クリティカル ${stats[31]}%`,
+      value: "",
       iconKeys: ["abilityCritical"]
     });
   }

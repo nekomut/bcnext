@@ -238,7 +238,7 @@ function StatsTable({ stats }: { stats: CalculatedStats }) {
               <>
                 {stats.ap.toLocaleString()}
                 <br />
-                {`[${[stats.atk1, stats.atk2, stats.atk3].filter(Boolean).map(x => x?.toLocaleString()).join(' ')}]`}
+                <small>{`[${[stats.atk1, stats.atk2, stats.atk3].filter(Boolean).map(x => x?.toLocaleString()).join(' ')}]`}</small>
               </>
             }
             labelClassName="text-red-500"
@@ -261,40 +261,41 @@ function StatsTable({ stats }: { stats: CalculatedStats }) {
         <StatItem
           label="DPS"
           value={Math.round(stats.dps).toLocaleString()}
-          className="text-purple-600 font-bold"
+          labelClassName="text-fuchsia-600"
+          className="text-fuchsia-600 font-bold"
         />
         <StatItem label="射程" value={stats.range.toString()} />
         <StatItem label="KB" value={stats.kb.toString()} />
         <StatItem label="速度" value={stats.speed.toString()} />
-        <StatItem label="コスト[円]" value={stats.cost.toLocaleString()} />
+        <StatItem label="コスト" value={stats.cost.toLocaleString()} />
         <StatItem
           label="再生産"
           value={`${stats.recharge.toFixed(2)}s`}
-          detail={`(${Math.round(stats.recharge * 30).toLocaleString()}f)`}
+          detail={<small>({Math.round(stats.recharge * 30).toLocaleString()}f)</small>}
         />
         <StatItem
           label="攻撃発生"
           value={`${frameToSecond(stats.foreswing).toFixed(2)}s`}
-          detail={`(${stats.foreswing.toLocaleString()}f)`}
+          detail={<small>({stats.foreswing.toLocaleString()}f)</small>}
         />
         <StatItem
           label="攻撃間隔"
           value={`${frameToSecond(stats.tba).toFixed(2)}s`}
-          detail={`(${stats.tba.toLocaleString()}f)`}
+          detail={<small>({stats.tba.toLocaleString()}f)</small>}
         />
         <StatItem
           label="攻撃後硬直"
           value={`${frameToSecond(stats.backswing).toFixed(2)}s`}
-          detail={`(${stats.backswing.toLocaleString()}f)`}
+          detail={<small>({stats.backswing.toLocaleString()}f)</small>}
         />
         <StatItem
           label="攻撃頻度"
           value={`${frameToSecond(stats.freq).toFixed(2)}s`}
           detail={
             <>
-              {`(${stats.freq.toLocaleString()}f)`}
+              {<small>({stats.freq.toLocaleString()}f)</small>}
               <br />
-              [{stats.frames.join(' ')}]
+              <small>[{stats.frames.join(' ')}]</small>
             </>
           }
         />
@@ -464,7 +465,7 @@ function DynamicToughness({ ability }: { ability: UnitAbility }) {
             height={16}
             className="inline mr-1 align-top"
           />
-          打たれ強い <span className="text-red-500">ダメージ
+          打たれ強い <span className="text-blue-500">被ダメ
           <input
             type="number"
             value={damageMultiplier}
@@ -474,15 +475,15 @@ function DynamicToughness({ ability }: { ability: UnitAbility }) {
                 setDamageMultiplier(value);
               }
             }}
-            className="w-12 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
+            className="w-9 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
             min="0.2"
             max="0.25"
             step="0.01"
-          />倍</span>
+          />倍 </span><small>(0.25~0.2)</small>
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
-            体力<small>(換算値)</small> {calculateEquivalentHP(damageMultiplier)}
+            <span className='text-blue-500'>体力<small>(換算値)</small></span> {calculateEquivalentHP(damageMultiplier)}
           </div>
         </div>
       </div>

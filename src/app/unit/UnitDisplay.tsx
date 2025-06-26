@@ -564,7 +564,7 @@ function DynamicMighty({ ability }: { ability: UnitAbility }) {
         <>
           <span className="text-red-500"><small>攻撃力</small></span> {apDisplay}
           <br />
-          <span className="text-blue-500">体力<small>(換算値)</small></span> {equivalentHP.toLocaleString()}
+          <span className="text-blue-500"><small>体力(換算値)</small></span> {equivalentHP.toLocaleString()}
         </>
       );
     } else {

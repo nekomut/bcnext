@@ -295,7 +295,7 @@ function StatsTable({ stats }: { stats: CalculatedStats }) {
             <>
               {<small>({stats.freq.toLocaleString()}f)</small>}
               <br />
-              <small>[ {stats.frames.join(' / ')} ]</small>
+              <small>[ {stats.frames.join(' ')} ]</small>
             </>
           }
         />

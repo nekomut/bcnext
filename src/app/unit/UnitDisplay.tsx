@@ -210,7 +210,7 @@ export function UnitDisplay({
       {abilities.length > 0 && <AbilitiesList abilities={abilities} />}
 
       {/* Talents */}
-      {unitData.auxiliaryData.talents.hasTalents && (
+      {unitData.auxiliaryData.talents.hasTalents && actualCurrentForm >= 2 && (
         <TalentsList talents={unitData.auxiliaryData.talents.talentList} />
       )}
     </div>
@@ -628,7 +628,7 @@ function DynamicMighty({ ability }: { ability: UnitAbility }) {
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
             <br />
-            {calculateDamage(apMultiplier, dmgMultiplier)}
+            <b>{calculateDamage(apMultiplier, dmgMultiplier)}</b>
           </div>
         </div>
       </div>
@@ -1089,6 +1089,17 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                       />
                       裂波カウンター
                     </>
+                  ) : ability.name === '攻撃無効' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityDodgeAttack}`}
+                        alt="攻撃無効"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      攻撃無効
+                    </>
                   ) : ability.name === '攻撃ターゲット限定' ? (
                     <>
                       <Image
@@ -1120,10 +1131,11 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                     </div>
                   ) : ability.value ? (
                     <div className="text-gray-600 font-medium break-words">
-                      {ability.name === '多段攻撃' && typeof ability.value === 'string' ? (
+                      {(ability.name === '多段攻撃' || ability.name === '攻撃無効' || (typeof ability.value === 'string' && ability.value.includes('s(') && ability.value.includes('f)'))) && typeof ability.value === 'string' ? (
                         <span dangerouslySetInnerHTML={{
                           __html: ability.value
-                            .replace(/(\d+\.\d+)s/g, '<b>$1s</b>')
+                            .replace(/(\d+)%/g, '<b>$1%</b>')
+                            .replace(/(\d+\.?\d*)s/g, '<b>$1s</b>')
                             .replace(/\((\d+)f\)/g, '<small>($1f)</small>')
                         }} />
                       ) : (typeof ability.value === 'string' && ability.value.includes('敵攻撃力')) ? (
@@ -1157,7 +1169,6 @@ function TalentsList({ talents }: { talents: readonly UnitTalent[] }) {
             <div className="flex justify-between items-center gap-2">
               <div className={`font-bold text-xs ${talent.type === 'ultra' ? 'text-red-600' : 'text-yellow-600'}`}>
                 {talent.name} ({talent.id})
-                {talent.type === 'ultra' && <span className="text-xs ml-1 px-1 bg-red-100 rounded">超</span>}
                 {talent.npCost > 0 && (
                   <span className="text-[10px] text-gray-600 font-medium ml-1">
                     [{talent.isTotal ? '合計' : ''}{talent.npCost}NP]
@@ -1165,7 +1176,47 @@ function TalentsList({ talents }: { talents: readonly UnitTalent[] }) {
                 )}
               </div>
               {talent.data && (
-                <div className="text-gray-700 text-right break-words flex-shrink-0 max-w-[50%]">{calculateTalentEffect(talent)}</div>
+                <div className="text-gray-700 text-right break-words flex-shrink-0 max-w-[50%]">
+                  {/* 属性追加の本能の場合はアイコンを表示 */}
+                  {(talent.id >= 33 && talent.id <= 43) || talent.id === 57 ? (
+                    <div className="flex justify-end">
+                      <Image
+                        src={`data:image/png;base64,${icons[
+                          talent.id === 33 ? 'traitRed' :
+                          talent.id === 34 ? 'traitFloating' :
+                          talent.id === 35 ? 'traitBlack' :
+                          talent.id === 36 ? 'traitMetal' :
+                          talent.id === 37 ? 'traitAngel' :
+                          talent.id === 38 ? 'traitNone' :
+                          talent.id === 39 ? 'traitZombie' :
+                          talent.id === 40 ? 'traitRelic' :
+                          talent.id === 41 ? 'traitNone' :
+                          talent.id === 43 ? 'traitNone' :
+                          talent.id === 57 ? 'traitAku' : 'traitNone'
+                        ] as keyof typeof icons}`}
+                        alt={talent.name}
+                        width={20}
+                        height={20}
+                        className="rounded"
+                      />
+                    </div>
+                  ) : (
+                    (() => {
+                      const talentEffect = calculateTalentEffect(talent);
+                      if (typeof talentEffect === 'string' && talentEffect.includes('s(') && talentEffect.includes('f)')) {
+                        return (
+                          <span dangerouslySetInnerHTML={{
+                            __html: talentEffect
+                              .replace(/(\d+)%/g, '<b>$1%</b>')
+                              .replace(/(\d+\.?\d*)s/g, '<b>$1s</b>')
+                              .replace(/\((\d+)f\)/g, '<small>($1f)</small>')
+                          }} />
+                        );
+                      }
+                      return talentEffect;
+                    })()
+                  )}
+                </div>
               )}
             </div>
           </div>

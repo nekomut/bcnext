@@ -66,7 +66,7 @@ export const unit203Data: UnitData = {
       },
       {
         id: 25,
-        name: "生産コスト割引[円]",
+        name: "生産コスト割引",
         type: "normal" as const,
         data: [25, 10, 40, 400, 0, 0, 0, 0, 0, 0, 31, 8, -1, 0],
         npCost: 175,

@@ -725,6 +725,18 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     });
   }
 
+  // 攻撃無効
+  if (stats[63] && stats[63] > 0) {
+    const dodge_chance = 30; // デフォルト確率
+    const dodge_duration = 60; // デフォルト持続時間（フレーム）
+    const dodge_duration_s = (dodge_duration / 30).toFixed(1);
+    abilities.push({
+      name: "攻撃無効",
+      value: `${dodge_chance}% ${dodge_duration_s}s(${dodge_duration}f)`,
+      iconKeys: ["abilityDodgeAttack"]
+    });
+  }
+
   // 各種無効・耐性
   const immunities = [
     { index: 46, name: "波動ダメージ無効", iconKey: "abilityImmuneWave" },
@@ -816,12 +828,41 @@ export const calculateTalentEffect = (talent: UnitTalent): string => {
       const speed_max = data[3] || 0;
       return `+${speed_per_level}/Lv Max+${speed_max}`;
       
+    case 51: // 攻撃無効
+      const dodge_chance = data[2] || 0;
+      const dodge_initial_duration = data[4] || 0;
+      const dodge_max_duration = data[5] || 0;
+      const dodge_max_lv = data[1] || 1;
+      
+      // 持続時間の計算（フレームを秒に変換）
+      const dodge_duration_per_level = dodge_max_lv > 1 ? Math.floor((dodge_max_duration - dodge_initial_duration) / (dodge_max_lv - 1)) : 0;
+      const dodge_initial_duration_s = (dodge_initial_duration / 30).toFixed(1);
+      const dodge_max_duration_s = (dodge_max_duration / 30).toFixed(1);
+      
+      if (dodge_max_lv > 1 && dodge_duration_per_level > 0) {
+        return `${dodge_chance}% ${dodge_initial_duration_s}s(${dodge_initial_duration}f)~${dodge_max_duration_s}s(${dodge_max_duration}f)`;
+      }
+      
+      return `${dodge_chance}% ${dodge_initial_duration_s}s(${dodge_initial_duration}f)`;
+      
     case 46: // 動きを遅くする無効
     case 44: // 攻撃力ダウン無効
     case 45: // 動きを止める無効
     case 47: // ふっとばし無効
     case 48: // 波動ダメージ無効
     case 49: // ワープ無効
+    case 33: // 属性 赤い敵
+    case 34: // 属性 浮いてる敵
+    case 35: // 属性 黒い敵
+    case 36: // 属性 赤い敵  
+    case 37: // 属性 浮いてる敵
+    case 38: // 属性 白い敵
+    case 39: // 属性 メタル
+    case 40: // 属性 天使
+    case 41: // 属性 エイリアン
+    case 42: // 属性 ゾンビ
+    case 43: // 属性を持たない敵
+    case 57: // 属性 悪魔
       return "";
       
     default:

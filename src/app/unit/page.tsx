@@ -225,7 +225,7 @@ function UnitPageContent() {
                 handleUnitSearchWithId(prevId);
               }}
               disabled={loading || parseInt(unitId) <= 1}
-              className="bg-gray-500 hover:bg-gray-600 text-white px-2 py-0.5 rounded text-xs disabled:opacity-50"
+              className="bg-blue-500 hover:bg-blue-600 text-white px-2 py-0.5 rounded text-xs disabled:opacity-50"
             >
               ◁
             </button>
@@ -251,9 +251,9 @@ function UnitPageContent() {
           <button
             onClick={handleUnitSearch}
             disabled={loading}
-            className="bg-blue-500 hover:bg-blue-600 text-white px-2 py-0.5 rounded text-xs disabled:opacity-50"
+            className="bg-blue-500 hover:bg-blue-600 text-white px-2 py-0.5 rounded text-xs disabled:opacity-50 w-12"
           >
-            {loading ? 'Loading...' : 'Search'}
+            {loading ? '読込..' : '表示'}
           </button>
           
           {/* 次のIDボタン - 右端 */}
@@ -267,7 +267,7 @@ function UnitPageContent() {
                 handleUnitSearchWithId(nextId);
               }}
               disabled={loading}
-              className="bg-gray-500 hover:bg-gray-600 text-white px-2 py-0.5 rounded text-xs disabled:opacity-50"
+              className="bg-blue-500 hover:bg-blue-600 text-white px-2 py-0.5 rounded text-xs disabled:opacity-50"
             >
               ▷
             </button>

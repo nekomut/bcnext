@@ -1099,7 +1099,15 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                       ))}
                     </div>
                   ) : ability.value ? (
-                    <div className="text-gray-600 font-medium break-words">{ability.value}</div>
+                    <div className="text-gray-600 font-medium break-words">
+                      {ability.name === '多段攻撃' && typeof ability.value === 'string' ? (
+                        <span dangerouslySetInnerHTML={{
+                          __html: ability.value.replace(/\((\d+)f\)/g, '<small>($1f)</small>')
+                        }} />
+                      ) : (
+                        ability.value
+                      )}
+                    </div>
                   ) : null}
                 </div>
               </div>

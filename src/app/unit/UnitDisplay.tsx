@@ -89,10 +89,10 @@ export function UnitDisplay({
         
         {/* Unit Info */}
         <div className="flex-1 min-w-0">
-          <h2 className="text-lg sm:text-xl font-bold text-gray-800 break-words">
-            <span className="text-sm sm:text-base text-gray-600 font-normal">{unitData.unitId.toString().padStart(3, '0')}-{currentForm + 1}</span> {currentFormData.name || `Unit ${unitData.unitId.toString().padStart(3, '0')}`}
+          <h2 className="text-sm sm:text-base font-bold text-gray-800 break-words">
+            <span className="text-xs sm:text-sm text-gray-600 font-normal">{unitData.unitId.toString().padStart(3, '0')}-{currentForm + 1}</span> {currentFormData.name || `Unit ${unitData.unitId.toString().padStart(3, '0')}`}
           </h2>
-          <div className="text-sm sm:text-base text-gray-600 break-words flex items-center gap-2 flex-wrap">
+          <div className="text-xs sm:text-sm text-gray-600 break-words flex items-center gap-2 flex-wrap">
             <div className="flex items-center gap-1">
               <span>Lv</span>
               <input

@@ -359,7 +359,7 @@ function DynamicSuperDamage({ ability }: { ability: UnitAbility }) {
             height={16}
             className="inline mr-1 align-top"
           />
-          超ダメージ <span className="text-red-500">攻撃力
+          超ダメージ <span className="text-red-500"><small>攻撃力
           <input
             type="number"
             value={multiplier}
@@ -369,11 +369,11 @@ function DynamicSuperDamage({ ability }: { ability: UnitAbility }) {
                 setMultiplier(value);
               }
             }}
-            className="w-8 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
+            className="w-7 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
             min="3"
             max="4"
             step="0.1"
-          />倍</span>
+          />倍</small></span>
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
@@ -416,7 +416,7 @@ function DynamicExtremeDamage({ ability }: { ability: UnitAbility }) {
             height={16}
             className="inline mr-1 align-top"
           />
-          極ダメージ <span className="text-red-500">攻撃力
+          極ダメージ <span className="text-red-500"><small>攻撃力
           <input
             type="number"
             value={multiplier}
@@ -426,11 +426,11 @@ function DynamicExtremeDamage({ ability }: { ability: UnitAbility }) {
                 setMultiplier(value);
               }
             }}
-            className="w-8 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
+            className="w-7 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
             min="5"
             max="6"
             step="0.1"
-          />倍</span>
+          />倍</small></span>
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">

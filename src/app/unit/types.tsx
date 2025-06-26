@@ -680,8 +680,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   // バリアブレイカー
   if (stats[70] && stats[70] > 0) {
     abilities.push({
-      name: "バリアブレイカー",
-      value: `${stats[70]}%`,
+      name: `バリアブレイカー ${stats[70]}%`,
+      value: "",
       iconKeys: ["abilityBarrierBreaker"]
     });
   }
@@ -689,8 +689,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   // シールドブレイカー
   if (stats[95] && stats[95] > 0) {
     abilities.push({
-      name: "シールドブレイカー",
-      value: `${stats[95]}%`,
+      name: `シールドブレイカー ${stats[95]}%`,
+      value: "",
       iconKeys: ["abilityShieldPiercing"]
     });
   }

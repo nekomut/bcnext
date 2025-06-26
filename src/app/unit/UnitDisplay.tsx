@@ -222,7 +222,7 @@ function StatsTable({ stats }: { stats: CalculatedStats }) {
     <div className="mb-4">
       <h3 className="text-sm sm:text-base font-semibold mb-2 text-gray-800">基本ステータス</h3>
       <div className="grid grid-cols-2 gap-2 sm:gap-3 text-xs sm:text-sm">
-        <StatItem label="体力" value={stats.hp.toLocaleString()} labelClassName="text-blue-500" />
+        <StatItem label="体力" value={<b className="text-gray-500">{stats.hp.toLocaleString()}</b>} labelClassName="text-blue-500" />
 
         {stats.multihit ? (
           <StatItem
@@ -236,7 +236,7 @@ function StatsTable({ stats }: { stats: CalculatedStats }) {
             </>}
             value={
               <>
-                {stats.ap.toLocaleString()}
+                <b className="text-gray-500">{stats.ap.toLocaleString()}</b>
                 <br />
                 <small>{`${[stats.atk1, stats.atk2, stats.atk3].filter(Boolean).map(x => x?.toLocaleString()).join(' / ')}`}</small>
               </>
@@ -253,7 +253,7 @@ function StatsTable({ stats }: { stats: CalculatedStats }) {
                 className="inline ml-1 align-top"
               />
             </>}
-            value={stats.ap.toLocaleString()}
+            value={<b className="text-gray-500">{stats.ap.toLocaleString()}</b>}
             labelClassName="text-red-500"
           />
         )}
@@ -264,40 +264,34 @@ function StatsTable({ stats }: { stats: CalculatedStats }) {
           labelClassName="text-fuchsia-600"
           className="text-fuchsia-600 font-bold"
         />
-        <StatItem label="射程" value={stats.range.toString()} />
-        <StatItem label="KB" value={stats.kb.toString()} />
-        <StatItem label="速度" value={stats.speed.toString()} />
-        <StatItem label="コスト" value={stats.cost.toLocaleString()} />
+        <StatItem label="射程" value={<b className="text-gray-500">{stats.range.toString()}</b>} />
+        <StatItem label="KB" value={<b className="text-gray-500">{stats.kb.toString()}</b>} />
+        <StatItem label="速度" value={<b className="text-gray-500">{stats.speed.toString()}</b>} />
+        <StatItem label="コスト" value={<b className="text-gray-500">{stats.cost.toLocaleString()}</b>} />
         <StatItem
           label="再生産"
-          value={`${stats.recharge.toFixed(2)}s`}
-          detail={<small>({Math.round(stats.recharge * 30).toLocaleString()}f)</small>}
+          value={<span className="text-gray-500"><small className="text-gray-400">({Math.round(stats.recharge * 30).toLocaleString()}f)</small> <b>{stats.recharge.toFixed(2)}s</b></span>}
+          detail=""
         />
         <StatItem
           label="攻撃発生"
-          value={`${frameToSecond(stats.foreswing).toFixed(2)}s`}
-          detail={<small>({stats.foreswing.toLocaleString()}f)</small>}
+          value={<span className="text-gray-500"><small className="text-gray-400">({stats.foreswing.toLocaleString()}f)</small> <b>{frameToSecond(stats.foreswing).toFixed(2)}s</b></span>}
+          detail=""
         />
         <StatItem
           label="攻撃間隔"
-          value={`${frameToSecond(stats.tba).toFixed(2)}s`}
-          detail={<small>({stats.tba.toLocaleString()}f)</small>}
+          value={<span className="text-gray-500"><small className="text-gray-400">({stats.tba.toLocaleString()}f)</small> <b>{frameToSecond(stats.tba).toFixed(2)}s</b></span>}
+          detail=""
         />
         <StatItem
           label="攻撃後硬直"
-          value={`${frameToSecond(stats.backswing).toFixed(2)}s`}
-          detail={<small>({stats.backswing.toLocaleString()}f)</small>}
+          value={<span className="text-gray-500"><small className="text-gray-400">({stats.backswing.toLocaleString()}f)</small> <b>{frameToSecond(stats.backswing).toFixed(2)}s</b></span>}
+          detail=""
         />
         <StatItem
           label="攻撃頻度"
-          value={`${frameToSecond(stats.freq).toFixed(2)}s`}
-          detail={
-            <>
-              {<small>({stats.freq.toLocaleString()}f)</small>}
-              <br />
-              <small>[ {stats.frames.join(' ')} ]</small>
-            </>
-          }
+          value={<span className="text-gray-500"><small className="text-gray-400">({stats.freq.toLocaleString()}f)</small> <b>{frameToSecond(stats.freq).toFixed(2)}s</b><br /></span>}
+          detail={<small>[ {stats.frames.join(' ')} ]</small>}
         />
       </div>
     </div>
@@ -373,11 +367,11 @@ function DynamicSuperDamage({ ability }: { ability: UnitAbility }) {
             min="3"
             max="4"
             step="0.1"
-          />倍 </small></span><small>(3~4)</small>
+          />倍 </small></span><small className="text-gray-400">(3~4)</small>
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
-            {calculateDamage(multiplier)}
+            <b className="text-gray-500">{calculateDamage(multiplier)}</b>
           </div>
         </div>
       </div>
@@ -430,7 +424,7 @@ function DynamicExtremeDamage({ ability }: { ability: UnitAbility }) {
             min="5"
             max="6"
             step="0.1"
-          />倍 </small></span><small>(5~6)</small>
+          />倍 </small></span><small className="text-gray-400">(5~6)</small>
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
@@ -479,11 +473,11 @@ function DynamicToughness({ ability }: { ability: UnitAbility }) {
             min="0.2"
             max="0.25"
             step="0.01"
-          />倍 </small></span><small>(0.25~0.2)</small>
+          />倍 </small></span><small className="text-gray-400">(0.25~0.2)</small>
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
-            <span className='text-blue-500'><small>体力(換算値)</small></span> {calculateEquivalentHP(damageMultiplier)}
+            <span className='text-blue-500'><small>体力(換算値)</small></span> <b className="text-gray-500">{calculateEquivalentHP(damageMultiplier)}</b>
           </div>
         </div>
       </div>
@@ -704,7 +698,9 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                         height={16}
                         className="inline mr-1 align-top"
                       />
-                      {ability.name}
+                      <span dangerouslySetInnerHTML={{
+                        __html: ability.name.replace(/(\d+%)/g, '<small>$1</small>')
+                      }} />
                     </>
                   ) : (typeof ability.name === 'string' && ability.name.includes('動きを止める') && ability.iconKeys) ? (
                     <>
@@ -715,7 +711,9 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                         height={16}
                         className="inline mr-1 align-top"
                       />
-                      {ability.name}
+                      <span dangerouslySetInnerHTML={{
+                        __html: ability.name.replace(/(\d+%)/g, '<small>$1</small>')
+                      }} />
                     </>
                   ) : (typeof ability.name === 'string' && ability.name.includes('小波動') && ability.iconKeys) ? (
                     <>
@@ -992,7 +990,7 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                       />
                       ゾンビキラー
                     </>
-                  ) : ability.name === 'バリアブレイカー' && ability.iconKeys ? (
+                  ) : (typeof ability.name === 'string' && ability.name.includes('バリアブレイカー') && ability.iconKeys) ? (
                     <>
                       <Image
                         src={`data:image/png;base64,${icons.abilityBarrierBreaker}`}
@@ -1001,7 +999,9 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                         height={16}
                         className="inline mr-1 align-top"
                       />
-                      バリアブレイカー
+                      <span dangerouslySetInnerHTML={{
+                        __html: ability.name.replace(/(\d+%)/g, '<small>$1</small>')
+                      }} />
                     </>
                   ) : ability.name === '魂攻撃' && ability.iconKeys ? (
                     <>
@@ -1014,7 +1014,7 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                       />
                       魂攻撃
                     </>
-                  ) : ability.name === 'シールドブレイカー' && ability.iconKeys ? (
+                  ) : (typeof ability.name === 'string' && ability.name.includes('シールドブレイカー') && ability.iconKeys) ? (
                     <>
                       <Image
                         src={`data:image/png;base64,${icons.abilityShieldPiercing}`}
@@ -1023,7 +1023,9 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                         height={16}
                         className="inline mr-1 align-top"
                       />
-                      シールドブレイカー
+                      <span dangerouslySetInnerHTML={{
+                        __html: ability.name.replace(/(\d+%)/g, '<small>$1</small>')
+                      }} />
                     </>
                   ) : ability.name === 'メタル' && ability.iconKeys ? (
                     <>

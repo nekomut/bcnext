@@ -214,8 +214,25 @@ function UnitPageContent() {
       {/* ユニット検索UI */}
       <div className="p-2">
         <div className="mb-1 flex gap-1 items-end flex-wrap">
+          {/* 前のIDボタン - 左端 */}
+          {unitId && !isNaN(parseInt(unitId)) && (
+            <button
+              onClick={() => {
+                const currentId = parseInt(unitId);
+                const prevId = Math.max(1, currentId - 1);
+                setUnitId(prevId.toString());
+                router.push(`/unit?unit=${prevId}`);
+                handleUnitSearchWithId(prevId);
+              }}
+              disabled={loading || parseInt(unitId) <= 1}
+              className="bg-gray-500 hover:bg-gray-600 text-white px-2 py-0.5 rounded text-xs disabled:opacity-50"
+            >
+              ◁
+            </button>
+          )}
+          
           <div className="flex items-center gap-1">
-            <label className="text-xs text-white-600">UnitID</label>
+            <label className="text-xs text-white-600">Unit ID</label>
             <input
               type="text"
               value={unitId}
@@ -230,6 +247,7 @@ function UnitPageContent() {
               className="border rounded px-1 py-0.5 text-xs w-20 sm:w-24 text-gray-900"
             />
           </div>
+          
           <button
             onClick={handleUnitSearch}
             disabled={loading}
@@ -237,6 +255,23 @@ function UnitPageContent() {
           >
             {loading ? 'Loading...' : 'Search'}
           </button>
+          
+          {/* 次のIDボタン - 右端 */}
+          {unitId && !isNaN(parseInt(unitId)) && (
+            <button
+              onClick={() => {
+                const currentId = parseInt(unitId);
+                const nextId = currentId + 1;
+                setUnitId(nextId.toString());
+                router.push(`/unit?unit=${nextId}`);
+                handleUnitSearchWithId(nextId);
+              }}
+              disabled={loading}
+              className="bg-gray-500 hover:bg-gray-600 text-white px-2 py-0.5 rounded text-xs disabled:opacity-50"
+            >
+              ▷
+            </button>
+          )}
         </div>
 
         {/* エラーメッセージ */}

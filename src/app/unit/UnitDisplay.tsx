@@ -295,7 +295,7 @@ function StatsTable({ stats }: { stats: CalculatedStats }) {
             <>
               {<small>({stats.freq.toLocaleString()}f)</small>}
               <br />
-              <small>[{stats.frames.join(' ')}]</small>
+              <small>[ {stats.frames.join(' ')} ]</small>
             </>
           }
         />
@@ -341,7 +341,7 @@ function DynamicSuperDamage({ ability }: { ability: UnitAbility }) {
       const hit3 = stats.atk3 ? Math.floor(stats.atk3 * mult) : 0;
       
       const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => v.toLocaleString());
-      return `[${values.join(' ')}]`;
+      return `[ ${values.join(' ')} ]`;
     } else {
       const damage = Math.floor(stats.ap * mult);
       return damage.toLocaleString();
@@ -373,7 +373,7 @@ function DynamicSuperDamage({ ability }: { ability: UnitAbility }) {
             min="3"
             max="4"
             step="0.1"
-          />倍</small></span>
+          />倍 </small></span><small>(3~4)</small>
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
@@ -398,7 +398,7 @@ function DynamicExtremeDamage({ ability }: { ability: UnitAbility }) {
       const hit3 = stats.atk3 ? Math.floor(stats.atk3 * mult) : 0;
       
       const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => v.toLocaleString());
-      return `[${values.join(' ')}]`;
+      return `[ ${values.join(' ')} ]`;
     } else {
       const damage = Math.floor(stats.ap * mult);
       return damage.toLocaleString();
@@ -430,7 +430,7 @@ function DynamicExtremeDamage({ ability }: { ability: UnitAbility }) {
             min="5"
             max="6"
             step="0.1"
-          />倍</small></span>
+          />倍 </small></span><small>(5~6)</small>
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
@@ -465,7 +465,7 @@ function DynamicToughness({ ability }: { ability: UnitAbility }) {
             height={16}
             className="inline mr-1 align-top"
           />
-          打たれ強い <span className="text-blue-500">被ダメ
+          打たれ強い <span className="text-blue-500"><small>被ダメ
           <input
             type="number"
             value={damageMultiplier}
@@ -479,11 +479,11 @@ function DynamicToughness({ ability }: { ability: UnitAbility }) {
             min="0.2"
             max="0.25"
             step="0.01"
-          />倍 </span><small>(0.25~0.2)</small>
+          />倍 </small></span><small>(0.25~0.2)</small>
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
-            <span className='text-blue-500'>体力<small>(換算値)</small></span> {calculateEquivalentHP(damageMultiplier)}
+            <span className='text-blue-500'><small>体力(換算値)</small></span> {calculateEquivalentHP(damageMultiplier)}
           </div>
         </div>
       </div>
@@ -514,7 +514,7 @@ function DynamicSuperToughness({ ability }: { ability: UnitAbility }) {
             height={16}
             className="inline mr-1 align-top"
           />
-          超打たれ強い <span className="text-red-500">ダメージ
+          超打たれ強い <span className="text-red-500"><small>被ダメ
           <input
             type="number"
             value={damageMultiplier}
@@ -524,15 +524,15 @@ function DynamicSuperToughness({ ability }: { ability: UnitAbility }) {
                 setDamageMultiplier(value);
               }
             }}
-            className="w-12 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
+            className="w-10 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
             min="0.143"
             max="0.167"
             step="0.001"
-          />倍</span>
+          />倍 </small></span><small>(0.167~0.143)</small>
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
-            体力<small>(換算値)</small> {calculateEquivalentHP(damageMultiplier)}
+            <small className="text-blue-500">体力(換算値)</small> {calculateEquivalentHP(damageMultiplier)}
           </div>
         </div>
       </div>
@@ -562,7 +562,7 @@ function DynamicMighty({ ability }: { ability: UnitAbility }) {
       
       return (
         <>
-          <span className="text-red-500">攻撃力</span> {apDisplay}
+          <span className="text-red-500"><small>攻撃力</small></span> {apDisplay}
           <br />
           <span className="text-blue-500">体力<small>(換算値)</small></span> {equivalentHP.toLocaleString()}
         </>
@@ -574,9 +574,9 @@ function DynamicMighty({ ability }: { ability: UnitAbility }) {
       
       return (
         <>
-          <span className="text-red-500">攻撃力</span> {damage.toLocaleString()}
+          <span className="text-red-500"><small>攻撃力</small></span> {damage.toLocaleString()}
           <br />
-          <span className="text-blue-500">体力<small>(換算値)</small></span> {equivalentHP.toLocaleString()}
+          <span className="text-blue-500"><small>体力(換算値)</small></span> {equivalentHP.toLocaleString()}
         </>
       );
     }
@@ -593,7 +593,7 @@ function DynamicMighty({ ability }: { ability: UnitAbility }) {
             height={16}
             className="inline mr-1 align-top"
           />
-          めっぽう強い<br /> <span className="text-red-500">攻撃力
+          めっぽう強い<br /> <span className="text-red-500"><small>攻撃力
           <input
             type="number"
             value={apMultiplier}
@@ -606,13 +606,13 @@ function DynamicMighty({ ability }: { ability: UnitAbility }) {
                 setDmgMultiplier(newDmgMult);
               }
             }}
-            className="w-10 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
+            className="w-8 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
             min="1.5"
             max="1.8"
             step="0.1"
-          />倍 </span><small>(1.5~1.8)</small>
+          />倍 </small></span><small>(1.5~1.8)</small>
           <br />
-          <span className="text-blue-500">被ダメ
+          <span className="text-blue-500"><small>被ダメ
           <input
             type="number"
             value={dmgMultiplier}
@@ -625,11 +625,11 @@ function DynamicMighty({ ability }: { ability: UnitAbility }) {
                 setApMultiplier(newApMult);
               }
             }}
-            className="w-10 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
+            className="w-8 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
             min="0.4"
             max="0.5"
             step="0.1"
-          />倍 </span><small>(0.5~0.4)</small>
+          />倍 </small></span><small>(0.5~0.4)</small>
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">

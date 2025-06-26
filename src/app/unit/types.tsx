@@ -333,7 +333,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
       timings.push(`${frameToSecond(hit3_time)}s(${hit3_time}f)`);
     }
     
-    const timeInfo = `[${timings.join(' ')}]`;
+    const timeInfo = `[ ${timings.join(' ')} ]`;
     
     abilities.push({
       name: "多段攻撃",
@@ -387,7 +387,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     }
     
     const attackType = (stats[45] || 0) > 0 ? '遠方攻撃' : '全方位攻撃';
-    const rangeInfo = ranges.join(' ');
+    const rangeInfo = ranges.length > 1 ? `[ ${ranges.join(' ')} ]` : ranges.join(' ');
 
     abilities.push({
       name: attackType === '遠方攻撃' ? 'abilityLongDistance' : attackType,

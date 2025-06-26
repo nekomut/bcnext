@@ -238,7 +238,7 @@ function StatsTable({ stats }: { stats: CalculatedStats }) {
               <>
                 {stats.ap.toLocaleString()}
                 <br />
-                <small>{`[${[stats.atk1, stats.atk2, stats.atk3].filter(Boolean).map(x => x?.toLocaleString()).join(' ')}]`}</small>
+                <small>{`[${[stats.atk1, stats.atk2, stats.atk3].filter(Boolean).map(x => x?.toLocaleString()).join(' / ')}]`}</small>
               </>
             }
             labelClassName="text-red-500"
@@ -295,7 +295,7 @@ function StatsTable({ stats }: { stats: CalculatedStats }) {
             <>
               {<small>({stats.freq.toLocaleString()}f)</small>}
               <br />
-              <small>[ {stats.frames.join(' ')} ]</small>
+              <small>[ {stats.frames.join(' / ')} ]</small>
             </>
           }
         />
@@ -341,7 +341,7 @@ function DynamicSuperDamage({ ability }: { ability: UnitAbility }) {
       const hit3 = stats.atk3 ? Math.floor(stats.atk3 * mult) : 0;
       
       const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => v.toLocaleString());
-      return `[ ${values.join(' ')} ]`;
+      return `[ ${values.join(' / ')} ]`;
     } else {
       const damage = Math.floor(stats.ap * mult);
       return damage.toLocaleString();
@@ -398,7 +398,7 @@ function DynamicExtremeDamage({ ability }: { ability: UnitAbility }) {
       const hit3 = stats.atk3 ? Math.floor(stats.atk3 * mult) : 0;
       
       const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => v.toLocaleString());
-      return `[ ${values.join(' ')} ]`;
+      return `[ ${values.join(' / ')} ]`;
     } else {
       const damage = Math.floor(stats.ap * mult);
       return damage.toLocaleString();

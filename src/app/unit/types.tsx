@@ -323,14 +323,14 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const hit2_ap = stats[59] || 0; // 第二攻撃力
     const hit3_ap = stats[60] || 0; // 第三攻撃力
     
-    const timings = [`${frameToSecond(hit1_time)}s(${hit1_time}f)`];
+    const timings = [`${frameToSecond(hit1_time)}s (${hit1_time}f)`];
     
     if (hit2_ap > 0) {
-      timings.push(`${frameToSecond(hit2_time)}s(${hit2_time}f)`);
+      timings.push(`/ ${frameToSecond(hit2_time)}s (${hit2_time}f)`);
     }
     
     if (hit3_ap > 0) {
-      timings.push(`${frameToSecond(hit3_time)}s(${hit3_time}f)`);
+      timings.push(`/ ${frameToSecond(hit3_time)}s (${hit3_time}f)`);
     }
     
     const timeInfo = `[ ${timings.join(' ')} ]`;
@@ -360,9 +360,9 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
       const rng2_1 = stats[100] || 0;
       const rng2_2 = rng2_1 + (stats[101] || 0);
       if ((stats[101] || 0) > 0) {
-        ranges.push(`${rng2_1}~${rng2_2}`);
+        ranges.push(`/ ${rng2_1}~${rng2_2}`);
       } else {
-        ranges.push(`${rng2_2}~${rng2_1}`);
+        ranges.push(`/ ${rng2_2}~${rng2_1}`);
       }
       
       // 3段目の範囲（存在する場合）
@@ -370,9 +370,9 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
         const rng3_1 = stats[103] || 0;
         const rng3_2 = rng3_1 + (stats[104] || 0);
         if ((stats[104] || 0) > 0) {
-          ranges.push(`${rng3_1}~${rng3_2}`);
+          ranges.push(`/ ${rng3_1}~${rng3_2}`);
         } else {
-          ranges.push(`${rng3_2}~${rng3_1}`);
+          ranges.push(`/ ${rng3_2}~${rng3_1}`);
         }
       }
     } else {
@@ -441,7 +441,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
       const hit3_3x = calculatedStats.atk3 ? calculatedStats.atk3 * 3 : 0;
       
       const values = [hit1_3x, hit2_3x, hit3_3x].filter(v => v > 0).map(v => v.toLocaleString());
-      savageValues = `[ ${values.join(' ')} ]~`;
+      savageValues = `[ ${values.join(' / ')} ]~`;
     } else {
       const savageAP = calculatedStats.ap * 3;
       savageValues = savageAP.toLocaleString();
@@ -461,7 +461,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
         additionalValues = (
           <>
             <br />
-            [ {superValues.join(' ')} ]
+            [ {superValues.join(' / ')} ]
           </>
         );
       } else {
@@ -486,7 +486,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
         additionalValues = (
           <>
             <br />
-            [ {extremeValues.join(' ')} ]
+            [ {extremeValues.join(' / ')} ]
           </>
         );
       } else {

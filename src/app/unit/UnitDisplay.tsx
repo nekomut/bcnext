@@ -724,7 +724,9 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                         height={16}
                         className="inline mr-1 align-top"
                       />
-                      {ability.name}
+                      <span dangerouslySetInnerHTML={{
+                        __html: ability.name.replace(/(Lv\d+|\d+%)/g, '<small>$1</small>')
+                      }} />
                     </>
                   ) : (typeof ability.name === 'string' && ability.name.includes('波動攻撃') && ability.iconKeys) ? (
                     <>
@@ -735,7 +737,9 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                         height={16}
                         className="inline mr-1 align-top"
                       />
-                      {ability.name}
+                      <span dangerouslySetInnerHTML={{
+                        __html: ability.name.replace(/(Lv\d+|\d+%)/g, '<small>$1</small>')
+                      }} />
                     </>
                   ) : ability.name === '波動ダメージ無効' && ability.iconKeys ? (
                     <>
@@ -790,7 +794,9 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                         height={16}
                         className="inline mr-1 align-top"
                       />
-                      {ability.name}
+                      <span dangerouslySetInnerHTML={{
+                        __html: ability.name.replace(/(\d+%)/g, '<small>$1</small>')
+                      }} />
                     </>
                   ) : (typeof ability.name === 'string' && ability.name.includes('動きを遅くする') && !ability.name.includes('無効') && ability.iconKeys) ? (
                     <>
@@ -801,7 +807,9 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                         height={16}
                         className="inline mr-1 align-top"
                       />
-                      {ability.name}
+                      <span dangerouslySetInnerHTML={{
+                        __html: ability.name.replace(/(\d+%)/g, '<small>$1</small>')
+                      }} />
                     </>
                   ) : (typeof ability.name === 'string' && ability.name.includes('攻撃力ダウン') && !ability.name.includes('無効') && ability.iconKeys) ? (
                     <>
@@ -812,7 +820,9 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                         height={16}
                         className="inline mr-1 align-top"
                       />
-                      {ability.name}
+                      <span dangerouslySetInnerHTML={{
+                        __html: ability.name.replace(/(\d+%)/g, '<small>$1</small>')
+                      }} />
                     </>
                   ) : ability.name === '古代の呪い無効' && ability.iconKeys ? (
                     <>
@@ -858,7 +868,7 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                       />
                       攻撃力アップ
                     </>
-                  ) : ability.name === '生き残る' && ability.iconKeys ? (
+                  ) : (typeof ability.name === 'string' && ability.name.includes('生き残る') && ability.iconKeys) ? (
                     <>
                       <Image
                         src={`data:image/png;base64,${icons.abilitySurvive}`}
@@ -867,7 +877,9 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                         height={16}
                         className="inline mr-1 align-top"
                       />
-                      生き残る
+                      <span dangerouslySetInnerHTML={{
+                        __html: ability.name.replace(/(\d+%)/g, '<small>$1</small>')
+                      }} />
                     </>
                   ) : ability.name === '召喚' && ability.iconKeys ? (
                     <>
@@ -902,7 +914,7 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                       />
                       城破壊が得意
                     </>
-                  ) : ability.name === '撃破時お金アップ' && ability.iconKeys ? (
+                  ) : (typeof ability.name === 'string' && ability.name.includes('撃破時お金アップ') && ability.iconKeys) ? (
                     <>
                       <Image
                         src={`data:image/png;base64,${icons.abilityExtraMoney}`}
@@ -911,7 +923,9 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                         height={16}
                         className="inline mr-1 align-top"
                       />
-                      撃破時お金アップ
+                      <span dangerouslySetInnerHTML={{
+                        __html: ability.name.replace(/(\d+倍)/g, '<small>$1</small>')
+                      }} />
                     </>
                   ) : (typeof ability.name === 'string' && ability.name.includes('小裂波') && ability.iconKeys) ? (
                     <>
@@ -922,7 +936,9 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                         height={16}
                         className="inline mr-1 align-top"
                       />
-                      {ability.name}
+                      <span dangerouslySetInnerHTML={{
+                        __html: ability.name.replace(/(Lv\d+|\d+%)/g, '<small>$1</small>')
+                      }} />
                     </>
                   ) : (typeof ability.name === 'string' && ability.name.includes('裂波攻撃') && ability.iconKeys) ? (
                     <>
@@ -933,7 +949,9 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                         height={16}
                         className="inline mr-1 align-top"
                       />
-                      {ability.name}
+                      <span dangerouslySetInnerHTML={{
+                        __html: ability.name.replace(/(Lv\d+|\d+%)/g, '<small>$1</small>')
+                      }} />
                     </>
                   ) : ability.name === '裂波ダメージ無効' && ability.iconKeys ? (
                     <>
@@ -1104,7 +1122,13 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                     <div className="text-gray-600 font-medium break-words">
                       {ability.name === '多段攻撃' && typeof ability.value === 'string' ? (
                         <span dangerouslySetInnerHTML={{
-                          __html: ability.value.replace(/\((\d+)f\)/g, '<small>($1f)</small>')
+                          __html: ability.value
+                            .replace(/(\d+\.\d+)s/g, '<b>$1s</b>')
+                            .replace(/\((\d+)f\)/g, '<small>($1f)</small>')
+                        }} />
+                      ) : (typeof ability.value === 'string' && ability.value.includes('敵攻撃力')) ? (
+                        <span dangerouslySetInnerHTML={{
+                          __html: ability.value.replace(/敵攻撃力/g, '<small>敵攻撃力</small>')
                         }} />
                       ) : (
                         ability.value

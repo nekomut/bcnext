@@ -580,8 +580,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   // 生き残る
   if (stats[42] && stats[42] > 0) {
     abilities.push({
-      name: "生き残る",
-      value: `${stats[42]}%`,
+      name: `生き残る ${stats[42]}%`,
+      value: "",
       iconKeys: ["abilitySurvive"]
     });
   }
@@ -607,8 +607,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   // 撃破時お金アップ
   if (stats[33] && stats[33] > 0) {
     abilities.push({
-      name: "撃破時お金アップ",
-      value: "2倍",
+      name: "撃破時お金アップ 2倍",
+      value: "",
       iconKeys: ["abilityExtraMoney"]
     });
   }
@@ -648,10 +648,9 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const waveLevel = stats[89] || 0;
     const range1 = Math.floor((stats[87] || 0) / 4);
     const range2 = range1 + Math.floor((stats[88] || 0) / 4);
-    const rangeInfo = `Lv${waveLevel} ${range1}~${range2}`;
     abilities.push({
-      name: waveType,
-      value: `${rangeInfo} ${stats[86]}%`,
+      name: `${waveType} Lv${waveLevel} ${stats[86]}%`,
+      value: `${range1}~${range2}`,
       iconKeys: ["abilitySurge"]
     });
   }
@@ -672,7 +671,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const durationMax = frameToSecond(Math.round((stats[38] || 0) * 1.2));
     abilities.push({
       name: `攻撃力ダウン ${stats[37]}%`,
-      value: `敵AP-${stats[39]}% ${duration}s~${durationMax}s`,
+      value: `敵攻撃力-${stats[39]}% ${duration}s~${durationMax}s`,
       iconKeys: ["abilityWeaken"]
     });
   }

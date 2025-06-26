@@ -441,7 +441,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
       const hit3_3x = calculatedStats.atk3 ? calculatedStats.atk3 * 3 : 0;
       
       const values = [hit1_3x, hit2_3x, hit3_3x].filter(v => v > 0).map(v => v.toLocaleString());
-      savageValues = `[${values.join(' ')}]~`;
+      savageValues = `[ ${values.join(' ')} ]~`;
     } else {
       const savageAP = calculatedStats.ap * 3;
       savageValues = savageAP.toLocaleString();
@@ -461,7 +461,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
         additionalValues = (
           <>
             <br />
-            [{superValues.join(' ')}]
+            [ {superValues.join(' ')} ]
           </>
         );
       } else {
@@ -486,7 +486,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
         additionalValues = (
           <>
             <br />
-            [{extremeValues.join(' ')}]
+            [ {extremeValues.join(' ')} ]
           </>
         );
       } else {

@@ -554,7 +554,7 @@ function DynamicMighty({ ability }: { ability: UnitAbility }) {
       const hit3 = stats.atk3 ? Math.floor(stats.atk3 * apMult) : 0;
       
       const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => v.toLocaleString());
-      const apDisplay = `[${values.join(' ')}]`;
+      const apDisplay = `[ ${values.join(' ')} ]`;
       
       // HP相当計算
       const hpMultiplier = 1 / dmgMult;

@@ -1262,7 +1262,18 @@ function TalentsList({ talents }: { talents: readonly UnitTalent[] }) {
           <div key={index} className={`p-2 rounded ${talent.type === 'ultra' ? 'bg-red-50 border-l-4 border-red-500' : 'bg-yellow-50 border-l-4 border-yellow-500'}`}>
             <div className="flex justify-between items-center gap-2">
               <div className={`font-bold text-xs ${talent.type === 'ultra' ? 'text-red-600' : 'text-yellow-600'}`}>
-                {talent.id === 67 || talent.id === 62 ? (
+                {talent.id === 67 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityExplosion}`}
+                      alt="爆波攻撃"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 62 ? (
                   <>
                     <Image
                       src={`data:image/png;base64,${icons.abilityMiniWave}`}

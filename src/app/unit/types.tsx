@@ -588,8 +588,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   // 生き残る
   if (stats[42] && stats[42] > 0) {
     abilities.push({
-      name: `生き残る ${stats[42]}%`,
-      value: "",
+      name: "生き残る",
+      value: `${stats[42]}%`,
       iconKeys: ["abilitySurvive"]
     });
   }
@@ -736,9 +736,9 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   }
 
   // 攻撃無効
-  if (stats[63] && stats[63] > 0) {
-    const dodge_chance = 30; // デフォルト確率
-    const dodge_duration = 60; // デフォルト持続時間（フレーム）
+  if (stats[63] && stats[63] > 0 && stats[84] && stats[85]) {
+    const dodge_chance = stats[84]; // 攻撃無効確率
+    const dodge_duration = stats[85]; // 攻撃無効持続時間（フレーム）
     const dodge_duration_s = (dodge_duration / 30).toFixed(1);
     abilities.push({
       name: "攻撃無効",

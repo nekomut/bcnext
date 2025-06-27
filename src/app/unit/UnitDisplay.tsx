@@ -225,7 +225,7 @@ export function UnitDisplay({
       <StatsTable stats={enhancedStats} attackUpEnabled={attackUpEnabled} />
 
       {/* Abilities */}
-      {abilities.length > 0 && <AbilitiesList abilities={abilities} attackUpEnabled={attackUpEnabled} setAttackUpEnabled={setAttackUpEnabled} />}
+      {abilities.length > 0 && <AbilitiesList abilities={abilities} attackUpEnabled={attackUpEnabled} setAttackUpEnabled={setAttackUpEnabled} attackUpMultiplier={attackUpMultiplier} />}
 
       {/* Talents */}
       {unitData.auxiliaryData.talents.hasTalents && actualCurrentForm >= 2 && (
@@ -340,7 +340,7 @@ function StatItem({
   );
 }
 
-function DynamicSuperDamage({ ability }: { ability: UnitAbility }) {
+function DynamicSuperDamage({ ability, attackUpMultiplier }: { ability: UnitAbility, attackUpMultiplier: number }) {
   const [multiplier, setMultiplier] = useState(4);
   
   if (!ability.calculatedStats || !ability.isDynamic) return null;
@@ -348,15 +348,18 @@ function DynamicSuperDamage({ ability }: { ability: UnitAbility }) {
   const calculateDamage = (mult: number) => {
     const stats = ability.calculatedStats!;
     if (stats.multihit) {
-      const hit1 = stats.atk1 ? Math.floor(stats.atk1 * mult) : 0;
-      const hit2 = stats.atk2 ? Math.floor(stats.atk2 * mult) : 0;
-      const hit3 = stats.atk3 ? Math.floor(stats.atk3 * mult) : 0;
+      const hit1 = stats.atk1 ? Math.floor(stats.atk1 * attackUpMultiplier * mult) : 0;
+      const hit2 = stats.atk2 ? Math.floor(stats.atk2 * attackUpMultiplier * mult) : 0;
+      const hit3 = stats.atk3 ? Math.floor(stats.atk3 * attackUpMultiplier * mult) : 0;
       
-      const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => v.toLocaleString());
-      return `${values.join(' / ')}`;
+      const isEnhanced = attackUpMultiplier > 1;
+      const colorClass = isEnhanced ? 'color: red;' : '';
+      const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => `<span style="${colorClass}">${v.toLocaleString()}</span>`);
+      return values.join(' / ');
     } else {
-      const damage = Math.floor(stats.ap * mult);
-      return damage.toLocaleString();
+      const damage = Math.floor(stats.ap * attackUpMultiplier * mult);
+      const isEnhanced = attackUpMultiplier > 1;
+      return `<span ${isEnhanced ? 'style="color: red;"' : ''}>${damage.toLocaleString()}</span>`;
     }
   };
   
@@ -389,7 +392,7 @@ function DynamicSuperDamage({ ability }: { ability: UnitAbility }) {
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
-            <b className="text-gray-500">{calculateDamage(multiplier)}</b>
+            <b className="text-gray-500" dangerouslySetInnerHTML={{ __html: calculateDamage(multiplier) }}></b>
           </div>
         </div>
       </div>
@@ -397,7 +400,7 @@ function DynamicSuperDamage({ ability }: { ability: UnitAbility }) {
   );
 }
 
-function DynamicExtremeDamage({ ability }: { ability: UnitAbility }) {
+function DynamicExtremeDamage({ ability, attackUpMultiplier }: { ability: UnitAbility, attackUpMultiplier: number }) {
   const [multiplier, setMultiplier] = useState(6);
   
   if (!ability.calculatedStats || !ability.isDynamic) return null;
@@ -405,15 +408,18 @@ function DynamicExtremeDamage({ ability }: { ability: UnitAbility }) {
   const calculateDamage = (mult: number) => {
     const stats = ability.calculatedStats!;
     if (stats.multihit) {
-      const hit1 = stats.atk1 ? Math.floor(stats.atk1 * mult) : 0;
-      const hit2 = stats.atk2 ? Math.floor(stats.atk2 * mult) : 0;
-      const hit3 = stats.atk3 ? Math.floor(stats.atk3 * mult) : 0;
+      const hit1 = stats.atk1 ? Math.floor(stats.atk1 * attackUpMultiplier * mult) : 0;
+      const hit2 = stats.atk2 ? Math.floor(stats.atk2 * attackUpMultiplier * mult) : 0;
+      const hit3 = stats.atk3 ? Math.floor(stats.atk3 * attackUpMultiplier * mult) : 0;
       
-      const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => v.toLocaleString());
-      return `${values.join(' / ')}`;
+      const isEnhanced = attackUpMultiplier > 1;
+      const colorClass = isEnhanced ? 'color: red;' : '';
+      const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => `<span style="${colorClass}">${v.toLocaleString()}</span>`);
+      return values.join(' / ');
     } else {
-      const damage = Math.floor(stats.ap * mult);
-      return damage.toLocaleString();
+      const damage = Math.floor(stats.ap * attackUpMultiplier * mult);
+      const isEnhanced = attackUpMultiplier > 1;
+      return `<span ${isEnhanced ? 'style="color: red;"' : ''}>${damage.toLocaleString()}</span>`;
     }
   };
   
@@ -446,7 +452,7 @@ function DynamicExtremeDamage({ ability }: { ability: UnitAbility }) {
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
-            <b className="text-gray-500">{calculateDamage(multiplier)}</b>
+            <b className="text-gray-500" dangerouslySetInnerHTML={{ __html: calculateDamage(multiplier) }}></b>
           </div>
         </div>
       </div>
@@ -552,7 +558,7 @@ function DynamicSuperToughness({ ability }: { ability: UnitAbility }) {
   );
 }
 
-function DynamicMighty({ ability }: { ability: UnitAbility }) {
+function DynamicMighty({ ability, attackUpMultiplier }: { ability: UnitAbility, attackUpMultiplier: number }) {
   const [apMultiplier, setApMultiplier] = useState(1.8);
   const [dmgMultiplier, setDmgMultiplier] = useState(0.4);
   
@@ -561,12 +567,14 @@ function DynamicMighty({ ability }: { ability: UnitAbility }) {
   const calculateDamage = (apMult: number, dmgMult: number) => {
     const stats = ability.calculatedStats!;
     if (stats.multihit) {
-      const hit1 = stats.atk1 ? Math.floor(stats.atk1 * apMult) : 0;
-      const hit2 = stats.atk2 ? Math.floor(stats.atk2 * apMult) : 0;
-      const hit3 = stats.atk3 ? Math.floor(stats.atk3 * apMult) : 0;
+      const hit1 = stats.atk1 ? Math.floor(stats.atk1 * attackUpMultiplier * apMult) : 0;
+      const hit2 = stats.atk2 ? Math.floor(stats.atk2 * attackUpMultiplier * apMult) : 0;
+      const hit3 = stats.atk3 ? Math.floor(stats.atk3 * attackUpMultiplier * apMult) : 0;
       
-      const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => v.toLocaleString());
-      const apDisplay = `${values.join(' ')}`;
+      const isEnhanced = attackUpMultiplier > 1;
+      const colorClass = isEnhanced ? 'color: red;' : '';
+      const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => `<span style="${colorClass}">${v.toLocaleString()}</span>`);
+      const apDisplay = values.join(' ');
       
       // HP相当計算
       const hpMultiplier = 1 / dmgMult;
@@ -574,19 +582,20 @@ function DynamicMighty({ ability }: { ability: UnitAbility }) {
       
       return (
         <>
-          <span className="text-red-500"><small>攻撃力</small></span> {apDisplay}
+          <span className="text-red-500"><small>攻撃力</small></span> <span dangerouslySetInnerHTML={{ __html: apDisplay }}></span>
           <br />
           <span className="text-blue-500"><small><b>体力(換算値)</b></small></span> {equivalentHP.toLocaleString()}
         </>
       );
     } else {
-      const damage = Math.floor(stats.ap * apMult);
+      const damage = Math.floor(stats.ap * attackUpMultiplier * apMult);
       const hpMultiplier = 1 / dmgMult;
       const equivalentHP = Math.floor(stats.hp * hpMultiplier);
+      const isEnhanced = attackUpMultiplier > 1;
       
       return (
         <>
-          <span className="text-red-500"><small>攻撃力</small></span> {damage.toLocaleString()}
+          <span className="text-red-500"><small>攻撃力</small></span> <span className={isEnhanced ? "text-red-500" : ""}>{damage.toLocaleString()}</span>
           <br />
           <span className="text-blue-500"><small><b>体力(換算値)</b></small></span> {equivalentHP.toLocaleString()}
         </>
@@ -654,10 +663,11 @@ function DynamicMighty({ ability }: { ability: UnitAbility }) {
   );
 }
 
-function AbilitiesList({ abilities, attackUpEnabled, setAttackUpEnabled }: { 
+function AbilitiesList({ abilities, attackUpEnabled, setAttackUpEnabled, attackUpMultiplier }: { 
   abilities: UnitAbility[], 
   attackUpEnabled: boolean, 
-  setAttackUpEnabled: (enabled: boolean) => void
+  setAttackUpEnabled: (enabled: boolean) => void,
+  attackUpMultiplier: number
 }) {
   return (
     <div className="mb-4">
@@ -665,15 +675,15 @@ function AbilitiesList({ abilities, attackUpEnabled, setAttackUpEnabled }: {
       <div className="space-y-0.5">
         {abilities.map((ability, index) => (
           ability.isDynamic && ability.name === "超ダメージ" ? (
-            <DynamicSuperDamage key={index} ability={ability} />
+            <DynamicSuperDamage key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} />
           ) : ability.isDynamic && ability.name === "極ダメージ" ? (
-            <DynamicExtremeDamage key={index} ability={ability} />
+            <DynamicExtremeDamage key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} />
           ) : ability.isDynamic && ability.name === "打たれ強い" ? (
             <DynamicToughness key={index} ability={ability} />
           ) : ability.isDynamic && ability.name === "超打たれ強い" ? (
             <DynamicSuperToughness key={index} ability={ability} />
           ) : ability.isDynamic && ability.name === "めっぽう強い" ? (
-            <DynamicMighty key={index} ability={ability} />
+            <DynamicMighty key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} />
           ) : (
             <div key={index} className="bg-gray-50 p-2 rounded">
               <div className="flex justify-between items-center gap-2">
@@ -896,7 +906,7 @@ function AbilitiesList({ abilities, attackUpEnabled, setAttackUpEnabled }: {
                       />
                       攻撃力アップ
                     </>
-                  ) : (typeof ability.name === 'string' && ability.name.includes('生き残る') && ability.iconKeys) ? (
+                  ) : ability.name === '生き残る' && ability.iconKeys ? (
                     <>
                       <Image
                         src={`data:image/png;base64,${icons.abilitySurvive}`}
@@ -905,9 +915,7 @@ function AbilitiesList({ abilities, attackUpEnabled, setAttackUpEnabled }: {
                         height={16}
                         className="inline mr-1 align-top"
                       />
-                      <span dangerouslySetInnerHTML={{
-                        __html: ability.name.replace(/(\d+%)/g, '<small>$1</small>')
-                      }} />
+                      生き残る
                     </>
                   ) : ability.name === '召喚' && ability.iconKeys ? (
                     <>
@@ -1181,7 +1189,7 @@ function AbilitiesList({ abilities, attackUpEnabled, setAttackUpEnabled }: {
                     </div>
                   ) : ability.value ? (
                     <div className="text-gray-600 font-medium break-words">
-                      {(ability.name === '多段攻撃' || ability.name === '攻撃無効' || ability.name === '動きを止める' || ability.name === '動きを遅くする' || ability.name === 'ふっとばす' || ability.name === 'クリティカル' || ability.name === '攻撃力ダウン' || ability.name === '撃破時お金アップ' || ability.name === 'バリアブレイカー' || ability.name === 'シールドブレイカー' || ability.name === '遠方攻撃' || ability.name === '全方位攻撃' || ability.name === '波動攻撃' || ability.name === '小波動' || ability.name === '裂波攻撃' || ability.name === '小裂波' || ability.name === '攻撃力アップ' || (typeof ability.value === 'string' && ability.value.includes('s(') && ability.value.includes('f)'))) && typeof ability.value === 'string' ? (
+                      {(ability.name === '多段攻撃' || ability.name === '攻撃無効' || ability.name === '動きを止める' || ability.name === '動きを遅くする' || ability.name === 'ふっとばす' || ability.name === 'クリティカル' || ability.name === '攻撃力ダウン' || ability.name === '撃破時お金アップ' || ability.name === 'バリアブレイカー' || ability.name === 'シールドブレイカー' || ability.name === '遠方攻撃' || ability.name === '全方位攻撃' || ability.name === '波動攻撃' || ability.name === '小波動' || ability.name === '裂波攻撃' || ability.name === '小裂波' || ability.name === '攻撃力アップ' || ability.name === '生き残る' || (typeof ability.value === 'string' && ability.value.includes('s(') && ability.value.includes('f)'))) && typeof ability.value === 'string' ? (
                         <span dangerouslySetInnerHTML={{
                           __html: (() => {
                             let text = ability.value;

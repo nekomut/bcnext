@@ -389,7 +389,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const rangeInfo = ranges.length > 1 ? `${ranges.join(' ')}` : ranges.join(' ');
 
     abilities.push({
-      name: attackType === '遠方攻撃' ? 'abilityLongDistance' : attackType,
+      name: attackType,
       value: rangeInfo,
       iconKeys: attackType === '遠方攻撃' ? ['abilityLongDistance'] : attackType === '全方位攻撃' ? ['abilityOmniStrike'] : undefined
     });
@@ -439,11 +439,11 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
       const hit2_3x = calculatedStats.atk2 ? calculatedStats.atk2 * 3 : 0;
       const hit3_3x = calculatedStats.atk3 ? calculatedStats.atk3 * 3 : 0;
       
-      const values = [hit1_3x, hit2_3x, hit3_3x].filter(v => v > 0).map(v => v.toLocaleString());
-      savageValues = `${values.join(' / ')} ~`;
+      const values = [hit1_3x, hit2_3x, hit3_3x].filter(v => v > 0).map(v => `<b>${v.toLocaleString()}</b>`);
+      savageValues = <span dangerouslySetInnerHTML={{ __html: `${values.join(' / ')} ~` }} />;
     } else {
       const savageAP = calculatedStats.ap * 3;
-      savageValues = savageAP.toLocaleString();
+      savageValues = <b>{savageAP.toLocaleString()}</b>;
     }
     
     // 超ダメージ・極ダメージがある場合の追加表示
@@ -456,11 +456,11 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
         const hit2_12x = calculatedStats.atk2 ? calculatedStats.atk2 * 12 : 0;
         const hit3_12x = calculatedStats.atk3 ? calculatedStats.atk3 * 12 : 0;
         
-        const superValues = [hit1_12x, hit2_12x, hit3_12x].filter(v => v > 0).map(v => v.toLocaleString());
+        const superValues = [hit1_12x, hit2_12x, hit3_12x].filter(v => v > 0).map(v => `<b>${v.toLocaleString()}</b>`);
         additionalValues = (
           <>
             <br />
-            {superValues.join(' / ')}
+            <span dangerouslySetInnerHTML={{ __html: superValues.join(' / ') }} />
           </>
         );
       } else {
@@ -468,7 +468,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
         additionalValues = (
           <>
             <br />
-            {superAP.toLocaleString()}
+            <b>{superAP.toLocaleString()}</b>
           </>
         );
       }
@@ -500,14 +500,10 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     }
     
     abilities.push({
-      name: (
-        <>
-          渾身の一撃 <small><span className="text-red-500">攻撃力3倍</span> 確率{chance}% </small>
-        </>
-      ),
+      name: "渾身の一撃",
       value: (
         <>
-          {savageValues}
+          <span className="text-red-500"><small><b>攻撃力</b></small><b>3</b><small><b>倍</b></small></span> <b>{chance}</b><small><b>%</b></small> {savageValues}
           {additionalValues}
         </>
       ),
@@ -540,8 +536,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   // ふっとばす
   if (stats[24] && stats[24] > 0) {
     abilities.push({
-      name: `ふっとばす ${stats[24]}%`,
-      value: "",
+      name: "ふっとばす",
+      value: `${stats[24]}%`,
       iconKeys: ["abilityKnockback"]
     });
   }
@@ -550,9 +546,11 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[25] && stats[25] > 0) {
     const duration = frameToSecond(stats[26] || 0);
     const durationMax = frameToSecond(Math.round((stats[26] || 0) * 1.2));
+    const durationFrames = stats[26] || 0;
+    const durationMaxFrames = Math.round(durationFrames * 1.2);
     abilities.push({
-      name: `動きを止める ${stats[25]}%`,
-      value: `${duration}s~${durationMax}s`,
+      name: "動きを止める",
+      value: `${stats[25]}% ${duration.toFixed(1)}s(${durationFrames}f)~${durationMax.toFixed(1)}s(${durationMaxFrames}f)`,
       iconKeys: ["abilityFreeze"]
     });
   }
@@ -561,9 +559,11 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[27] && stats[27] > 0) {
     const duration = frameToSecond(stats[28] || 0);
     const durationMax = frameToSecond(Math.round((stats[28] || 0) * 1.2));
+    const durationFrames = stats[28] || 0;
+    const durationMaxFrames = Math.round(durationFrames * 1.2);
     abilities.push({
-      name: `動きを遅くする ${stats[27]}%`,
-      value: `${duration}s~${durationMax}s`,
+      name: "動きを遅くする",
+      value: `${stats[27]}% ${duration.toFixed(1)}s(${durationFrames}f)~${durationMax.toFixed(1)}s(${durationMaxFrames}f)`,
       iconKeys: ["abilitySlow"]
     });
   }
@@ -598,8 +598,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   // クリティカル
   if (stats[31] && stats[31] > 0) {
     abilities.push({
-      name: `クリティカル ${stats[31]}%`,
-      value: "",
+      name: "クリティカル",
+      value: `${stats[31]}%`,
       iconKeys: ["abilityCritical"]
     });
   }
@@ -607,8 +607,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   // 撃破時お金アップ
   if (stats[33] && stats[33] > 0) {
     abilities.push({
-      name: "撃破時お金アップ 2倍",
-      value: "",
+      name: "撃破時お金アップ",
+      value: "2倍",
       iconKeys: ["abilityExtraMoney"]
     });
   }
@@ -636,8 +636,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const waveRange = 332.5 + (waveLevel - 1) * 200;
     const waveType = stats[94] === 1 ? '小波動' : '波動攻撃';
     abilities.push({
-      name: `${waveType} Lv${waveLevel} ${stats[35]}%`,
-      value: `${waveRange}`,
+      name: waveType,
+      value: `Lv${waveLevel} ${stats[35]}% ${waveRange}`,
       iconKeys: ["abilityWave"]
     });
   }
@@ -649,8 +649,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const range1 = Math.floor((stats[87] || 0) / 4);
     const range2 = range1 + Math.floor((stats[88] || 0) / 4);
     abilities.push({
-      name: `${waveType} Lv${waveLevel} ${stats[86]}%`,
-      value: `${range1}~${range2}`,
+      name: waveType,
+      value: `Lv${waveLevel} ${stats[86]}% ${range1}~${range2}`,
       iconKeys: ["abilitySurge"]
     });
   }
@@ -669,9 +669,11 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[37] && stats[37] > 0) {
     const duration = frameToSecond(stats[38] || 0);
     const durationMax = frameToSecond(Math.round((stats[38] || 0) * 1.2));
+    const durationFrames = stats[38] || 0;
+    const durationMaxFrames = Math.round(durationFrames * 1.2);
     abilities.push({
-      name: `攻撃力ダウン ${stats[37]}%`,
-      value: `敵攻撃力-${stats[39]}% ${duration}s~${durationMax}s`,
+      name: "攻撃力ダウン",
+      value: `${stats[37]}% 敵攻撃力-${stats[39]}%<br/>${duration.toFixed(1)}s(${durationFrames}f)~${durationMax.toFixed(1)}s(${durationMaxFrames}f)`,
       iconKeys: ["abilityWeaken"]
     });
   }
@@ -679,8 +681,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   // バリアブレイカー
   if (stats[70] && stats[70] > 0) {
     abilities.push({
-      name: `バリアブレイカー ${stats[70]}%`,
-      value: "",
+      name: "バリアブレイカー",
+      value: `${stats[70]}%`,
       iconKeys: ["abilityBarrierBreaker"]
     });
   }
@@ -688,8 +690,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   // シールドブレイカー
   if (stats[95] && stats[95] > 0) {
     abilities.push({
-      name: `シールドブレイカー ${stats[95]}%`,
-      value: "",
+      name: "シールドブレイカー",
+      value: `${stats[95]}%`,
       iconKeys: ["abilityShieldPiercing"]
     });
   }

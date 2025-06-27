@@ -428,7 +428,7 @@ function DynamicExtremeDamage({ ability }: { ability: UnitAbility }) {
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
-            {calculateDamage(multiplier)}
+            <b className="text-gray-500">{calculateDamage(multiplier)}</b>
           </div>
         </div>
       </div>
@@ -477,7 +477,7 @@ function DynamicToughness({ ability }: { ability: UnitAbility }) {
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
-            <span className='text-blue-500'><small>体力(換算値)</small></span> <b className="text-gray-500">{calculateEquivalentHP(damageMultiplier)}</b>
+            <span className='text-blue-500'><small><b>体力(換算値)</b></small></span> <b className="text-gray-500">{calculateEquivalentHP(damageMultiplier)}</b>
           </div>
         </div>
       </div>
@@ -522,11 +522,11 @@ function DynamicSuperToughness({ ability }: { ability: UnitAbility }) {
             min="0.143"
             max="0.167"
             step="0.001"
-          />倍 </small></span><small>(0.167~0.143)</small>
+          />倍 </small></span><small className="text-gray-400">(0.167~0.143)</small>
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
-            <small className="text-blue-500">体力(換算値)</small> {calculateEquivalentHP(damageMultiplier)}
+            <small className="text-blue-500"><b>体力(換算値)</b></small> <b>{calculateEquivalentHP(damageMultiplier)}</b>
           </div>
         </div>
       </div>
@@ -558,7 +558,7 @@ function DynamicMighty({ ability }: { ability: UnitAbility }) {
         <>
           <span className="text-red-500"><small>攻撃力</small></span> {apDisplay}
           <br />
-          <span className="text-blue-500"><small>体力(換算値)</small></span> {equivalentHP.toLocaleString()}
+          <span className="text-blue-500"><small><b>体力(換算値)</b></small></span> {equivalentHP.toLocaleString()}
         </>
       );
     } else {
@@ -570,7 +570,7 @@ function DynamicMighty({ ability }: { ability: UnitAbility }) {
         <>
           <span className="text-red-500"><small>攻撃力</small></span> {damage.toLocaleString()}
           <br />
-          <span className="text-blue-500"><small>体力(換算値)</small></span> {equivalentHP.toLocaleString()}
+          <span className="text-blue-500"><small><b>体力(換算値)</b></small></span> {equivalentHP.toLocaleString()}
         </>
       );
     }
@@ -1100,6 +1100,28 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                       />
                       攻撃無効
                     </>
+                  ) : ability.name === '遠方攻撃' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityLongDistance}`}
+                        alt="遠方攻撃"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      遠方攻撃
+                    </>
+                  ) : ability.name === '渾身の一撃' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityBerserk}`}
+                        alt="渾身の一撃"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      渾身の一撃
+                    </>
                   ) : ability.name === '攻撃ターゲット限定' ? (
                     <>
                       <Image
@@ -1131,12 +1153,40 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                     </div>
                   ) : ability.value ? (
                     <div className="text-gray-600 font-medium break-words">
-                      {(ability.name === '多段攻撃' || ability.name === '攻撃無効' || (typeof ability.value === 'string' && ability.value.includes('s(') && ability.value.includes('f)'))) && typeof ability.value === 'string' ? (
+                      {(ability.name === '多段攻撃' || ability.name === '攻撃無効' || ability.name === '動きを止める' || ability.name === '動きを遅くする' || ability.name === 'ふっとばす' || ability.name === 'クリティカル' || ability.name === '攻撃力ダウン' || ability.name === '撃破時お金アップ' || ability.name === 'バリアブレイカー' || ability.name === 'シールドブレイカー' || ability.name === '遠方攻撃' || ability.name === '全方位攻撃' || ability.name === '波動攻撃' || ability.name === '小波動' || ability.name === '裂波攻撃' || ability.name === '小裂波' || (typeof ability.value === 'string' && ability.value.includes('s(') && ability.value.includes('f)'))) && typeof ability.value === 'string' ? (
                         <span dangerouslySetInnerHTML={{
-                          __html: ability.value
-                            .replace(/(\d+)%/g, '<b>$1%</b>')
-                            .replace(/(\d+\.?\d*)s/g, '<b>$1s</b>')
-                            .replace(/\((\d+)f\)/g, '<small>($1f)</small>')
+                          __html: (() => {
+                            let text = ability.value;
+                            // フレーム数を先にプレースホルダーで置換
+                            const frameMatches: string[] = [];
+                            text = text.replace(/\((\d+)f\)~/g, (match, frames) => {
+                              const replacement = `<small class="text-gray-400">(${frames}f)</small> ~ `;
+                              frameMatches.push(replacement);
+                              return `___FRAME_PLACEHOLDER_${frameMatches.length - 1}___`;
+                            });
+                            text = text.replace(/\((\d+)f\)/g, (match, frames) => {
+                              const replacement = `<small class="text-gray-400">(${frames}f)</small>`;
+                              frameMatches.push(replacement);
+                              return `___FRAME_PLACEHOLDER_${frameMatches.length - 1}___`;
+                            });
+                            
+                            // 他の数字のスタイリング（プレースホルダーを避ける）
+                            text = text
+                              .replace(/Lv(\d+)/g, '<b>Lv$1</b>')
+                              .replace(/(\d+)%/g, '<b>$1</b><small><b>%</b></small>')
+                              .replace(/(\d+\.?\d*)s/g, '<b>$1s</b>')
+                              .replace(/(\d+)倍/g, '<b>$1</b><small><b>倍</b></small>')
+                              .replace(/(\d+)~(\d+)/g, '<b>$1</b>~<b>$2</b>')
+                              .replace(/(?!___FRAME_PLACEHOLDER_)(\d+\.?\d*)(?!___)/g, '<b>$1</b>')
+                              .replace(/敵攻撃力/g, '<small class="text-red-500">敵攻撃力</small>');
+                            
+                            // プレースホルダーを元に戻す
+                            frameMatches.forEach((replacement, index) => {
+                              text = text.replace(`___FRAME_PLACEHOLDER_${index}___`, replacement);
+                            });
+                            
+                            return text;
+                          })()
                         }} />
                       ) : (typeof ability.value === 'string' && ability.value.includes('敵攻撃力')) ? (
                         <span dangerouslySetInnerHTML={{
@@ -1207,7 +1257,7 @@ function TalentsList({ talents }: { talents: readonly UnitTalent[] }) {
                         return (
                           <span dangerouslySetInnerHTML={{
                             __html: talentEffect
-                              .replace(/(\d+)%/g, '<b>$1%</b>')
+                              .replace(/(\d+)%/g, '<b>$1</b><small><b>%</b></small>')
                               .replace(/(\d+\.?\d*)s/g, '<b>$1s</b>')
                               .replace(/\((\d+)f\)/g, '<small>($1f)</small>')
                           }} />

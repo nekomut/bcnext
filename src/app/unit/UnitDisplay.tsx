@@ -37,6 +37,10 @@ export function UnitDisplay({
   // 基本攻撃力アップの状態
   const [baseAttackUpEnabled, setBaseAttackUpEnabled] = useState(true);
   const [baseAttackUpValue, setBaseAttackUpValue] = useState(20);
+  
+  // 攻撃力アップ(10)の状態
+  const [talentAttackUpEnabled, setTalentAttackUpEnabled] = useState(false);
+  const [talentAttackUpValue, setTalentAttackUpValue] = useState(200);
 
   const validFormCount = getValidFormCount(unitData);
   const actualCurrentForm = Math.min(currentForm, validFormCount - 1);
@@ -53,8 +57,11 @@ export function UnitDisplay({
   // 基本攻撃力アップのマルチプライヤー
   const baseAttackUpMultiplier = baseAttackUpEnabled ? (1 + baseAttackUpValue / 100) : 1;
   
+  // 攻撃力アップ(10)のマルチプライヤー
+  const talentAttackUpMultiplier = talentAttackUpEnabled ? (1 + talentAttackUpValue / 100) : 1;
+  
   // 総合的な攻撃力マルチプライヤー
-  const totalAttackMultiplier = attackUpMultiplier * baseAttackUpMultiplier;
+  const totalAttackMultiplier = attackUpMultiplier * baseAttackUpMultiplier * talentAttackUpMultiplier;
   
   const abilities = getAbilities(unitData, actualCurrentForm, level, plusLevel, totalAttackMultiplier);
   const enhancedStats = {
@@ -245,6 +252,10 @@ export function UnitDisplay({
           setBaseAttackUpEnabled={setBaseAttackUpEnabled}
           baseAttackUpValue={baseAttackUpValue}
           setBaseAttackUpValue={setBaseAttackUpValue}
+          talentAttackUpEnabled={talentAttackUpEnabled}
+          setTalentAttackUpEnabled={setTalentAttackUpEnabled}
+          talentAttackUpValue={talentAttackUpValue}
+          setTalentAttackUpValue={setTalentAttackUpValue}
         />
       )}
     </div>
@@ -1272,13 +1283,21 @@ function TalentsList({
   baseAttackUpEnabled, 
   setBaseAttackUpEnabled, 
   baseAttackUpValue, 
-  setBaseAttackUpValue 
+  setBaseAttackUpValue,
+  talentAttackUpEnabled,
+  setTalentAttackUpEnabled,
+  talentAttackUpValue,
+  setTalentAttackUpValue
 }: { 
   talents: readonly UnitTalent[];
   baseAttackUpEnabled: boolean;
   setBaseAttackUpEnabled: (enabled: boolean) => void;
   baseAttackUpValue: number;
   setBaseAttackUpValue: (value: number) => void;
+  talentAttackUpEnabled: boolean;
+  setTalentAttackUpEnabled: (enabled: boolean) => void;
+  talentAttackUpValue: number;
+  setTalentAttackUpValue: (value: number) => void;
 }) {
   if (talents.length === 0) return null;
 
@@ -1657,6 +1676,12 @@ function TalentsList({
                       height={16}
                       className="inline mr-1 align-top"
                     />
+                    <input
+                      type="checkbox"
+                      checked={talentAttackUpEnabled}
+                      onChange={(e) => setTalentAttackUpEnabled(e.target.checked)}
+                      className="mr-1 align-middle"
+                    />
                     {talent.name} ({talent.id})
                   </>
                 ) : talent.id === 52 ? (
@@ -1858,6 +1883,31 @@ function TalentsList({
                         />
                         <span className="text-xs">%</span>
                         <small className="text-gray-400 text-xs">(0~20)</small>
+                      </div>
+                    </div>
+                  ) : /* 攻撃力アップ(10)の場合はテキストボックスを表示 */
+                  talent.id === 10 ? (
+                    <div className="text-right">
+                      <div className="flex items-center justify-end gap-1">
+                        <span className="text-xs">+</span>
+                        <input
+                          type="number"
+                          value={talentAttackUpValue}
+                          onChange={(e) => {
+                            const value = Number(e.target.value);
+                            const minValue = talent.data[4] || 20; // 初期値20%
+                            const maxValue = talent.data[5] || 200; // 最大値200%
+                            if (value >= minValue && value <= maxValue) {
+                              setTalentAttackUpValue(value);
+                            }
+                          }}
+                          className="w-10 px-1 text-center border border-gray-300 rounded text-xs"
+                          min={talent.data[4] || 20}
+                          max={talent.data[5] || 200}
+                          step="20"
+                        />
+                        <span className="text-xs">%</span>
+                        <small className="text-gray-400 text-xs">({talent.data[4] || 20}~{talent.data[5] || 200})</small>
                       </div>
                     </div>
                   ) : /* 属性追加の本能の場合はアイコンを表示 */

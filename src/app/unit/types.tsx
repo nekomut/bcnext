@@ -262,7 +262,7 @@ export const calculateUnitStats = (
   };
 };
 
-export const getAbilities = (unitData: UnitData, formId: number, level: number = 30, plusLevel: number = 0, attackUpMultiplier: number = 1): UnitAbility[] => {
+export const getAbilities = (unitData: UnitData, formId: number, level: number = 30, plusLevel: number = 0, attackUpMultiplier: number = 1, hpUpMultiplier: number = 1): UnitAbility[] => {
   const form = unitData.coreData.forms[formId];
   if (!form) return [];
 
@@ -271,6 +271,10 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   
   // レベル補正済みの計算ステータスを取得
   const calculatedStats = calculateUnitStats(unitData, formId, level, plusLevel);
+  const enhancedStats = {
+    ...calculatedStats,
+    hp: Math.floor(calculatedStats.hp * hpUpMultiplier)
+  };
 
   // 攻撃対象限定の判定
   const targets: Array<{name: string, iconKey: string}> = [];
@@ -402,7 +406,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
       value: "",
       isDynamic: true,
       baseAP: calculatedStats.ap,
-      calculatedStats: calculatedStats
+      calculatedStats: enhancedStats
     });
   }
 
@@ -413,7 +417,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
       value: "",
       isDynamic: true,
       baseAP: calculatedStats.ap,
-      calculatedStats: calculatedStats
+      calculatedStats: enhancedStats
     });
   }
 
@@ -424,7 +428,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
       value: "",
       isDynamic: true,
       baseAP: calculatedStats.ap,
-      calculatedStats: calculatedStats
+      calculatedStats: enhancedStats
     });
   }
 
@@ -526,7 +530,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
       value: "",
       isDynamic: true,
       baseAP: calculatedStats.ap,
-      calculatedStats: calculatedStats
+      calculatedStats: enhancedStats
     });
   }
 
@@ -537,7 +541,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
       value: "",
       isDynamic: true,
       baseAP: calculatedStats.ap,
-      calculatedStats: calculatedStats
+      calculatedStats: enhancedStats
     });
   }
 
@@ -580,7 +584,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[40] && stats[40] > 0) {
     abilities.push({
       name: "攻撃力アップ",
-      value: `攻撃力+${stats[41]}% 体力≦${100 - stats[40]}%`,
+      value: `体力≦${100 - stats[40]}% 攻撃力+${stats[41]}%`,
       iconKeys: ["abilityStrengthen"]
     });
   }

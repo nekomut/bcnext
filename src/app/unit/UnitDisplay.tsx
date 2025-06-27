@@ -1,7 +1,7 @@
 // Common unit display component
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { UnitData, CalculatedStats, UnitAbility, UnitTalent, calculateUnitStats, getAbilities, frameToSecond, getValidFormCount, calculateTalentEffect } from './types';
 import { icons } from '@/data/icons';
@@ -34,13 +34,34 @@ export function UnitDisplay({
   // 攻撃力アップの状態
   const [attackUpEnabled, setAttackUpEnabled] = useState(false);
   
+  // ユニットが基本攻撃力アップ(31)、基本体力アップ(32)を持っているかチェック
+  const hasBaseAttackUp = unitData.auxiliaryData.talents.talentList.some(talent => talent.id === 31);
+  const hasBaseHpUp = unitData.auxiliaryData.talents.talentList.some(talent => talent.id === 32);
+
   // 基本攻撃力アップの状態
-  const [baseAttackUpEnabled, setBaseAttackUpEnabled] = useState(true);
+  const [baseAttackUpEnabled, setBaseAttackUpEnabled] = useState(hasBaseAttackUp);
   const [baseAttackUpValue, setBaseAttackUpValue] = useState(20);
   
   // 攻撃力アップ(10)の状態
   const [talentAttackUpEnabled, setTalentAttackUpEnabled] = useState(false);
-  const [talentAttackUpValue, setTalentAttackUpValue] = useState(200);
+  const attackUpTalent = unitData.auxiliaryData.talents.talentList.find(talent => talent.id === 10);
+  const [talentAttackUpValue, setTalentAttackUpValue] = useState(attackUpTalent?.data[5] || 200);
+  
+  // 基本体力アップ(32)の状態
+  const [baseHpUpEnabled, setBaseHpUpEnabled] = useState(hasBaseHpUp);
+  const [baseHpUpValue, setBaseHpUpValue] = useState(20);
+
+  // ユニットが変更されたときにフラグを再初期化
+  useEffect(() => {
+    const talentList = unitData.auxiliaryData.talents.talentList;
+    const newHasBaseAttackUp = talentList.some(talent => talent.id === 31);
+    const newHasBaseHpUp = talentList.some(talent => talent.id === 32);
+    const newAttackUpTalent = talentList.find(talent => talent.id === 10);
+    
+    setBaseAttackUpEnabled(newHasBaseAttackUp);
+    setBaseHpUpEnabled(newHasBaseHpUp);
+    setTalentAttackUpValue(newAttackUpTalent?.data[5] || 200);
+  }, [unitData.unitId, unitData.auxiliaryData.talents.talentList]);
 
   const validFormCount = getValidFormCount(unitData);
   const actualCurrentForm = Math.min(currentForm, validFormCount - 1);
@@ -60,12 +81,16 @@ export function UnitDisplay({
   // 攻撃力アップ(10)のマルチプライヤー
   const talentAttackUpMultiplier = talentAttackUpEnabled ? (1 + talentAttackUpValue / 100) : 1;
   
+  // 基本体力アップのマルチプライヤー
+  const baseHpUpMultiplier = baseHpUpEnabled ? (1 + baseHpUpValue / 100) : 1;
+  
   // 総合的な攻撃力マルチプライヤー
   const totalAttackMultiplier = attackUpMultiplier * baseAttackUpMultiplier * talentAttackUpMultiplier;
   
-  const abilities = getAbilities(unitData, actualCurrentForm, level, plusLevel, totalAttackMultiplier);
+  const abilities = getAbilities(unitData, actualCurrentForm, level, plusLevel, totalAttackMultiplier, baseHpUpMultiplier);
   const enhancedStats = {
     ...stats,
+    hp: Math.floor(stats.hp * baseHpUpMultiplier),
     ap: Math.floor(stats.ap * totalAttackMultiplier),
     atk1: stats.atk1 ? Math.floor(stats.atk1 * totalAttackMultiplier) : stats.atk1,
     atk2: stats.atk2 ? Math.floor(stats.atk2 * totalAttackMultiplier) : stats.atk2,
@@ -239,10 +264,10 @@ export function UnitDisplay({
       )}
 
       {/* Stats Table */}
-      <StatsTable stats={enhancedStats} attackUpEnabled={totalAttackMultiplier > 1} />
+      <StatsTable stats={enhancedStats} attackUpEnabled={totalAttackMultiplier > 1} hpUpEnabled={baseHpUpMultiplier > 1} />
 
       {/* Abilities */}
-      {abilities.length > 0 && <AbilitiesList abilities={abilities} attackUpEnabled={attackUpEnabled} setAttackUpEnabled={setAttackUpEnabled} attackUpMultiplier={totalAttackMultiplier} />}
+      {abilities.length > 0 && <AbilitiesList abilities={abilities} attackUpEnabled={attackUpEnabled} setAttackUpEnabled={setAttackUpEnabled} attackUpMultiplier={totalAttackMultiplier} hpUpMultiplier={baseHpUpMultiplier} />}
 
       {/* Talents */}
       {unitData.auxiliaryData.talents.hasTalents && actualCurrentForm >= 2 && (
@@ -256,18 +281,22 @@ export function UnitDisplay({
           setTalentAttackUpEnabled={setTalentAttackUpEnabled}
           talentAttackUpValue={talentAttackUpValue}
           setTalentAttackUpValue={setTalentAttackUpValue}
+          baseHpUpEnabled={baseHpUpEnabled}
+          setBaseHpUpEnabled={setBaseHpUpEnabled}
+          baseHpUpValue={baseHpUpValue}
+          setBaseHpUpValue={setBaseHpUpValue}
         />
       )}
     </div>
   );
 }
 
-function StatsTable({ stats, attackUpEnabled }: { stats: CalculatedStats, attackUpEnabled: boolean }) {
+function StatsTable({ stats, attackUpEnabled, hpUpEnabled }: { stats: CalculatedStats, attackUpEnabled: boolean, hpUpEnabled: boolean }) {
   return (
     <div className="mb-4">
       <h3 className="text-sm sm:text-base font-semibold mb-2 text-gray-800">基本ステータス</h3>
       <div className="grid grid-cols-2 gap-2 sm:gap-3 text-xs sm:text-sm">
-        <StatItem label="体力" value={<b className="text-gray-500">{stats.hp.toLocaleString()}</b>} labelClassName="text-blue-500" />
+        <StatItem label="体力" value={<b className={hpUpEnabled ? "text-blue-500" : "text-gray-500"}>{stats.hp.toLocaleString()}</b>} labelClassName="text-blue-500" />
 
         {stats.multihit ? (
           <StatItem
@@ -487,7 +516,7 @@ function DynamicExtremeDamage({ ability, attackUpMultiplier }: { ability: UnitAb
   );
 }
 
-function DynamicToughness({ ability }: { ability: UnitAbility }) {
+function DynamicToughness({ ability, hpUpMultiplier }: { ability: UnitAbility, hpUpMultiplier: number }) {
   const [damageMultiplier, setDamageMultiplier] = useState(0.2);
   
   if (!ability.calculatedStats || !ability.isDynamic) return null;
@@ -528,7 +557,7 @@ function DynamicToughness({ ability }: { ability: UnitAbility }) {
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
-            <span className='text-blue-500'><small><b>体力(換算値)</b></small></span> <b className="text-gray-500">{calculateEquivalentHP(damageMultiplier)}</b>
+            <span className='text-blue-500'><small><b>体力(換算値)</b></small></span> <b className={hpUpMultiplier > 1 ? "text-blue-500" : "text-gray-500"}>{calculateEquivalentHP(damageMultiplier)}</b>
           </div>
         </div>
       </div>
@@ -536,7 +565,7 @@ function DynamicToughness({ ability }: { ability: UnitAbility }) {
   );
 }
 
-function DynamicSuperToughness({ ability }: { ability: UnitAbility }) {
+function DynamicSuperToughness({ ability, hpUpMultiplier }: { ability: UnitAbility, hpUpMultiplier: number }) {
   const [damageMultiplier, setDamageMultiplier] = useState(0.143);
   
   if (!ability.calculatedStats || !ability.isDynamic) return null;
@@ -577,7 +606,7 @@ function DynamicSuperToughness({ ability }: { ability: UnitAbility }) {
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
-            <small className="text-blue-500"><b>体力(換算値)</b></small> <b>{calculateEquivalentHP(damageMultiplier)}</b>
+            <small className="text-blue-500"><b>体力(換算値)</b></small> <b className={hpUpMultiplier > 1 ? "text-blue-500" : "text-gray-500"}>{calculateEquivalentHP(damageMultiplier)}</b>
           </div>
         </div>
       </div>
@@ -585,7 +614,7 @@ function DynamicSuperToughness({ ability }: { ability: UnitAbility }) {
   );
 }
 
-function DynamicMighty({ ability, attackUpMultiplier }: { ability: UnitAbility, attackUpMultiplier: number }) {
+function DynamicMighty({ ability, attackUpMultiplier, hpUpMultiplier }: { ability: UnitAbility, attackUpMultiplier: number, hpUpMultiplier: number }) {
   const [apMultiplier, setApMultiplier] = useState(1.8);
   const [dmgMultiplier, setDmgMultiplier] = useState(0.4);
   
@@ -603,7 +632,7 @@ function DynamicMighty({ ability, attackUpMultiplier }: { ability: UnitAbility, 
       const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => `<span style="${colorClass}">${v.toLocaleString()}</span>`);
       const apDisplay = values.join(' ');
       
-      // HP相当計算
+      // HP相当計算（statsは既にhpUpMultiplierが適用済みのenhancedStats）
       const hpMultiplier = 1 / dmgMult;
       const equivalentHP = Math.floor(stats.hp * hpMultiplier);
       
@@ -611,7 +640,7 @@ function DynamicMighty({ ability, attackUpMultiplier }: { ability: UnitAbility, 
         <>
           <span className="text-red-500"><small>攻撃力</small></span> <span dangerouslySetInnerHTML={{ __html: apDisplay }}></span>
           <br />
-          <span className="text-blue-500"><small><b>体力(換算値)</b></small></span> {equivalentHP.toLocaleString()}
+          <span className="text-blue-500"><small><b>体力(換算値)</b></small></span> <span className={hpUpMultiplier > 1 ? "text-blue-500" : ""}>{equivalentHP.toLocaleString()}</span>
         </>
       );
     } else {
@@ -624,7 +653,7 @@ function DynamicMighty({ ability, attackUpMultiplier }: { ability: UnitAbility, 
         <>
           <span className="text-red-500"><small>攻撃力</small></span> <span className={isEnhanced ? "text-red-500" : ""}>{damage.toLocaleString()}</span>
           <br />
-          <span className="text-blue-500"><small><b>体力(換算値)</b></small></span> {equivalentHP.toLocaleString()}
+          <span className="text-blue-500"><small><b>体力(換算値)</b></small></span> <span className={hpUpMultiplier > 1 ? "text-blue-500" : ""}>{equivalentHP.toLocaleString()}</span>
         </>
       );
     }
@@ -690,11 +719,12 @@ function DynamicMighty({ ability, attackUpMultiplier }: { ability: UnitAbility, 
   );
 }
 
-function AbilitiesList({ abilities, attackUpEnabled, setAttackUpEnabled, attackUpMultiplier }: { 
+function AbilitiesList({ abilities, attackUpEnabled, setAttackUpEnabled, attackUpMultiplier, hpUpMultiplier }: { 
   abilities: UnitAbility[], 
   attackUpEnabled: boolean, 
   setAttackUpEnabled: (enabled: boolean) => void,
-  attackUpMultiplier: number
+  attackUpMultiplier: number,
+  hpUpMultiplier: number
 }) {
   return (
     <div className="mb-4">
@@ -706,11 +736,11 @@ function AbilitiesList({ abilities, attackUpEnabled, setAttackUpEnabled, attackU
           ) : ability.isDynamic && ability.name === "極ダメージ" ? (
             <DynamicExtremeDamage key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} />
           ) : ability.isDynamic && ability.name === "打たれ強い" ? (
-            <DynamicToughness key={index} ability={ability} />
+            <DynamicToughness key={index} ability={ability} hpUpMultiplier={hpUpMultiplier} />
           ) : ability.isDynamic && ability.name === "超打たれ強い" ? (
-            <DynamicSuperToughness key={index} ability={ability} />
+            <DynamicSuperToughness key={index} ability={ability} hpUpMultiplier={hpUpMultiplier} />
           ) : ability.isDynamic && ability.name === "めっぽう強い" ? (
-            <DynamicMighty key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} />
+            <DynamicMighty key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} hpUpMultiplier={hpUpMultiplier} />
           ) : (
             <div key={index} className="bg-gray-50 p-2 rounded">
               <div className="flex justify-between items-center gap-2">
@@ -1249,7 +1279,7 @@ function AbilitiesList({ abilities, attackUpEnabled, setAttackUpEnabled, attackU
                               .replace(/(\d+)~(\d+)/g, '<b>$1</b>~<b>$2</b>')
                               .replace(/(?!___FRAME_PLACEHOLDER_)(?![^<]*>)(\d+\.?\d*)(?!___)/g, '<b>$1</b>')
                               .replace(/敵攻撃力/g, '<small class="text-red-500"><b>敵攻撃力</b></small>')
-                              .replace(/^攻撃力/g, '<small class="text-red-500"><b>攻撃力</b></small>');
+                              .replace(/攻撃力\+/g, '<small class="text-red-500"><b>攻撃力</b></small><b>+</b>');
                             
                             // プレースホルダーを元に戻す
                             frameMatches.forEach((replacement, index) => {
@@ -1287,7 +1317,11 @@ function TalentsList({
   talentAttackUpEnabled,
   setTalentAttackUpEnabled,
   talentAttackUpValue,
-  setTalentAttackUpValue
+  setTalentAttackUpValue,
+  baseHpUpEnabled,
+  setBaseHpUpEnabled,
+  baseHpUpValue,
+  setBaseHpUpValue
 }: { 
   talents: readonly UnitTalent[];
   baseAttackUpEnabled: boolean;
@@ -1298,6 +1332,10 @@ function TalentsList({
   setTalentAttackUpEnabled: (enabled: boolean) => void;
   talentAttackUpValue: number;
   setTalentAttackUpValue: (value: number) => void;
+  baseHpUpEnabled: boolean;
+  setBaseHpUpEnabled: (enabled: boolean) => void;
+  baseHpUpValue: number;
+  setBaseHpUpValue: (value: number) => void;
 }) {
   if (talents.length === 0) return null;
 
@@ -1471,6 +1509,12 @@ function TalentsList({
                       width={16}
                       height={16}
                       className="inline mr-1 align-top"
+                    />
+                    <input
+                      type="checkbox"
+                      checked={baseHpUpEnabled}
+                      onChange={(e) => setBaseHpUpEnabled(e.target.checked)}
+                      className="mr-1 align-middle"
                     />
                     {talent.name} ({talent.id})
                   </>
@@ -1862,8 +1906,31 @@ function TalentsList({
               </div>
               {talent.data && (
                 <div className="text-gray-700 text-right break-words flex-shrink-0 max-w-[50%]">
-                  {/* 基本攻撃力アップ(31)の場合はテキストボックスを表示 */}
-                  {talent.id === 31 ? (
+                  {/* 基本体力アップ(32)の場合はテキストボックスを表示 */}
+                  {talent.id === 32 ? (
+                    <div className="text-right">
+                      <div className="flex items-center justify-end gap-1">
+                        <span className="text-xs">+</span>
+                        <input
+                          type="number"
+                          value={baseHpUpValue}
+                          onChange={(e) => {
+                            const value = Number(e.target.value);
+                            if (value >= 0 && value <= 20) {
+                              setBaseHpUpValue(value);
+                            }
+                          }}
+                          className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                          min="0"
+                          max="20"
+                          step="2"
+                        />
+                        <span className="text-xs">%</span>
+                        <small className="text-gray-400 text-xs">(0~20)</small>
+                      </div>
+                    </div>
+                  ) : /* 基本攻撃力アップ(31)の場合はテキストボックスを表示 */
+                  talent.id === 31 ? (
                     <div className="text-right">
                       <div className="flex items-center justify-end gap-1">
                         <span className="text-xs">+</span>
@@ -1888,26 +1955,29 @@ function TalentsList({
                   ) : /* 攻撃力アップ(10)の場合はテキストボックスを表示 */
                   talent.id === 10 ? (
                     <div className="text-right">
-                      <div className="flex items-center justify-end gap-1">
-                        <span className="text-xs">+</span>
+                      <div className="text-xs mb-1">
+                        <small className="text-blue-500"><b>体力</b></small><small><b>≦</b></small><b>{100 - (talent.data[2])}</b><small><b>% </b></small>
+                        <small className="text-red-500"><b>攻撃力</b></small><b>+</b>
                         <input
                           type="number"
                           value={talentAttackUpValue}
                           onChange={(e) => {
                             const value = Number(e.target.value);
-                            const minValue = talent.data[4] || 20; // 初期値20%
-                            const maxValue = talent.data[5] || 200; // 最大値200%
+                            const minValue = talent.data[4];
+                            const maxValue = talent.data[5];
                             if (value >= minValue && value <= maxValue) {
                               setTalentAttackUpValue(value);
                             }
                           }}
-                          className="w-10 px-1 text-center border border-gray-300 rounded text-xs"
-                          min={talent.data[4] || 20}
-                          max={talent.data[5] || 200}
-                          step="20"
+                          className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                          min={talent.data[4]}
+                          max={talent.data[5]}
+                          step={(talent.data[5]-talent.data[4])/(talent.data[1]-1)}
                         />
-                        <span className="text-xs">%</span>
-                        <small className="text-gray-400 text-xs">({talent.data[4] || 20}~{talent.data[5] || 200})</small>
+                        <small><b>%</b></small>
+                      </div>
+                      <div className="flex items-center justify-end gap-1">
+                        <small className="text-gray-400" style={{fontSize: '10px'}}>({talent.data[4]}~{talent.data[5]})</small>
                       </div>
                     </div>
                   ) : /* 属性追加の本能の場合はアイコンを表示 */

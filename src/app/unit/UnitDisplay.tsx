@@ -47,6 +47,14 @@ export function UnitDisplay({
   const attackUpTalent = unitData.auxiliaryData.talents.talentList.find(talent => talent.id === 10);
   const [talentAttackUpValue, setTalentAttackUpValue] = useState(attackUpTalent?.data[5] || 200);
   
+  // ユニットが攻撃間隔短縬(61)を持っているかチェック
+  const hasAttackIntervalReduction = unitData.auxiliaryData.talents.talentList.some(talent => talent.id === 61);
+  
+  // 攻撃間隔短縮(61)の状態
+  const [attackIntervalReductionEnabled, setAttackIntervalReductionEnabled] = useState(hasAttackIntervalReduction);
+  const attackIntervalReductionTalent = unitData.auxiliaryData.talents.talentList.find(talent => talent.id === 61);
+  const [attackIntervalReductionValue, setAttackIntervalReductionValue] = useState(attackIntervalReductionTalent?.data[3] || 74);
+  
   // 基本体力アップ(32)の状態
   const [baseHpUpEnabled, setBaseHpUpEnabled] = useState(hasBaseHpUp);
   const [baseHpUpValue, setBaseHpUpValue] = useState(20);
@@ -57,16 +65,23 @@ export function UnitDisplay({
     const newHasBaseAttackUp = talentList.some(talent => talent.id === 31);
     const newHasBaseHpUp = talentList.some(talent => talent.id === 32);
     const newAttackUpTalent = talentList.find(talent => talent.id === 10);
+    const newAttackIntervalReductionTalent = talentList.find(talent => talent.id === 61);
+    const newHasAttackIntervalReduction = talentList.some(talent => talent.id === 61);
     
     setBaseAttackUpEnabled(newHasBaseAttackUp);
     setBaseHpUpEnabled(newHasBaseHpUp);
     setTalentAttackUpValue(newAttackUpTalent?.data[5] || 200);
+    setAttackIntervalReductionValue(newAttackIntervalReductionTalent?.data[3] || 74);
+    setAttackIntervalReductionEnabled(newHasAttackIntervalReduction);
   }, [unitData.unitId, unitData.auxiliaryData.talents.talentList]);
 
   const validFormCount = getValidFormCount(unitData);
   const actualCurrentForm = Math.min(currentForm, validFormCount - 1);
   
-  const stats = calculateUnitStats(unitData, actualCurrentForm, level, plusLevel);
+  // 攻撃間隔短縮の倍率を計算（本能を持っている場合のみ適用）
+  const attackIntervalReductionMultiplier = (hasAttackIntervalReduction && attackIntervalReductionEnabled) ? (1 - attackIntervalReductionValue / 100) : 1;
+  
+  const stats = calculateUnitStats(unitData, actualCurrentForm, level, plusLevel, attackIntervalReductionMultiplier);
   const currentFormData = unitData.coreData.forms[actualCurrentForm];
   
   // 攻撃力アップのパーセンテージを取得（仮の値で初期化）
@@ -264,7 +279,7 @@ export function UnitDisplay({
       )}
 
       {/* Stats Table */}
-      <StatsTable stats={enhancedStats} attackUpEnabled={totalAttackMultiplier > 1} hpUpEnabled={baseHpUpMultiplier > 1} />
+      <StatsTable stats={enhancedStats} attackUpEnabled={totalAttackMultiplier > 1} hpUpEnabled={baseHpUpMultiplier > 1} attackIntervalReductionEnabled={attackIntervalReductionEnabled} />
 
       {/* Abilities */}
       {abilities.length > 0 && <AbilitiesList abilities={abilities} attackUpEnabled={attackUpEnabled} setAttackUpEnabled={setAttackUpEnabled} attackUpMultiplier={totalAttackMultiplier} hpUpMultiplier={baseHpUpMultiplier} />}
@@ -285,13 +300,17 @@ export function UnitDisplay({
           setBaseHpUpEnabled={setBaseHpUpEnabled}
           baseHpUpValue={baseHpUpValue}
           setBaseHpUpValue={setBaseHpUpValue}
+          attackIntervalReductionEnabled={attackIntervalReductionEnabled}
+          setAttackIntervalReductionEnabled={setAttackIntervalReductionEnabled}
+          attackIntervalReductionValue={attackIntervalReductionValue}
+          setAttackIntervalReductionValue={setAttackIntervalReductionValue}
         />
       )}
     </div>
   );
 }
 
-function StatsTable({ stats, attackUpEnabled, hpUpEnabled }: { stats: CalculatedStats, attackUpEnabled: boolean, hpUpEnabled: boolean }) {
+function StatsTable({ stats, attackUpEnabled, hpUpEnabled, attackIntervalReductionEnabled }: { stats: CalculatedStats, attackUpEnabled: boolean, hpUpEnabled: boolean, attackIntervalReductionEnabled: boolean }) {
   return (
     <div className="mb-4">
       <h3 className="text-sm sm:text-base font-semibold mb-2 text-gray-800">基本ステータス</h3>
@@ -336,7 +355,7 @@ function StatsTable({ stats, attackUpEnabled, hpUpEnabled }: { stats: Calculated
           label="DPS"
           value={Math.round(stats.dps).toLocaleString()}
           labelClassName="text-fuchsia-600"
-          className={attackUpEnabled ? "text-red-500 font-bold" : "text-fuchsia-600 font-bold"}
+          className={(attackUpEnabled || attackIntervalReductionEnabled) ? "text-red-500 font-bold" : "text-fuchsia-600 font-bold"}
         />
         <StatItem label="射程" value={<b className="text-gray-500">{stats.range.toString()}</b>} />
         <StatItem label="KB" value={<b className="text-gray-500">{stats.kb.toString()}</b>} />
@@ -354,7 +373,7 @@ function StatsTable({ stats, attackUpEnabled, hpUpEnabled }: { stats: Calculated
         />
         <StatItem
           label="攻撃間隔"
-          value={<span className="text-gray-500"><small className="text-gray-400">({stats.tba.toLocaleString()}f)</small> <b>{frameToSecond(stats.tba).toFixed(2)}s</b></span>}
+          value={<span className={attackIntervalReductionEnabled ? "text-purple-500" : "text-gray-500"}><small className="text-gray-400">({stats.tba.toLocaleString()}f)</small> <b>{frameToSecond(stats.tba).toFixed(2)}s</b></span>}
           detail=""
         />
         <StatItem
@@ -364,7 +383,7 @@ function StatsTable({ stats, attackUpEnabled, hpUpEnabled }: { stats: Calculated
         />
         <StatItem
           label="攻撃頻度"
-          value={<span className="text-gray-500"><small className="text-gray-400">({stats.freq.toLocaleString()}f)</small> <b>{frameToSecond(stats.freq).toFixed(2)}s</b><br /></span>}
+          value={<span className={attackIntervalReductionEnabled ? "text-purple-500" : "text-gray-500"}><small className="text-gray-400">({stats.freq.toLocaleString()}f)</small> <b>{frameToSecond(stats.freq).toFixed(2)}s</b><br /></span>}
           detail={<small>[ {stats.frames.join(' ')} ]</small>}
         />
       </div>
@@ -1321,7 +1340,11 @@ function TalentsList({
   baseHpUpEnabled,
   setBaseHpUpEnabled,
   baseHpUpValue,
-  setBaseHpUpValue
+  setBaseHpUpValue,
+  attackIntervalReductionEnabled,
+  setAttackIntervalReductionEnabled,
+  attackIntervalReductionValue,
+  setAttackIntervalReductionValue
 }: { 
   talents: readonly UnitTalent[];
   baseAttackUpEnabled: boolean;
@@ -1336,6 +1359,10 @@ function TalentsList({
   setBaseHpUpEnabled: (enabled: boolean) => void;
   baseHpUpValue: number;
   setBaseHpUpValue: (value: number) => void;
+  attackIntervalReductionEnabled: boolean;
+  setAttackIntervalReductionEnabled: (enabled: boolean) => void;
+  attackIntervalReductionValue: number;
+  setAttackIntervalReductionValue: (value: number) => void;
 }) {
   if (talents.length === 0) return null;
 
@@ -1847,6 +1874,12 @@ function TalentsList({
                       height={16}
                       className="inline mr-1 align-top"
                     />
+                    <input
+                      type="checkbox"
+                      checked={attackIntervalReductionEnabled}
+                      onChange={(e) => setAttackIntervalReductionEnabled(e.target.checked)}
+                      className="mr-1 align-middle"
+                    />
                     {talent.name} ({talent.id})
                   </>
                 ) : talent.id === 50 ? (
@@ -1978,6 +2011,33 @@ function TalentsList({
                       </div>
                       <div className="flex items-center justify-end gap-1">
                         <small className="text-gray-400" style={{fontSize: '10px'}}>({talent.data[4]}~{talent.data[5]})</small>
+                      </div>
+                    </div>
+                  ) : /* 攻撃間隔短縮(61)の場合はテキストボックスを表示 */
+                  talent.id === 61 ? (
+                    <div className="text-right">
+                      <div className="text-xs mb-1">
+                        <small className="text-purple-500"><b>攻撃間隔</b></small><b>-</b>
+                        <input
+                          type="number"
+                          value={attackIntervalReductionValue}
+                          onChange={(e) => {
+                            const value = Number(e.target.value);
+                            const minValue = talent.data[2];
+                            const maxValue = talent.data[3];
+                            if (value >= minValue && value <= maxValue) {
+                              setAttackIntervalReductionValue(value);
+                            }
+                          }}
+                          className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                          min={talent.data[2]}
+                          max={talent.data[3]}
+                          step={(talent.data[3]-talent.data[2])/(talent.data[1]-1)}
+                        />
+                        <small><b>%</b></small>
+                      </div>
+                      <div className="flex items-center justify-end gap-1">
+                        <small className="text-gray-400" style={{fontSize: '10px'}}>({talent.data[2]}~{talent.data[3]})</small>
                       </div>
                     </div>
                   ) : /* 属性追加の本能の場合はアイコンを表示 */

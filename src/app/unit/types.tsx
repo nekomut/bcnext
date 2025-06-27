@@ -150,7 +150,8 @@ export const calculateUnitStats = (
   unitData: UnitData,
   formId: number,
   level: number,
-  plusLevel: number
+  plusLevel: number,
+  attackIntervalReductionMultiplier: number = 1
 ): CalculatedStats => {
   const form = unitData.coreData.forms[formId];
   if (!form) throw new Error(`Invalid form ID: ${formId}`);
@@ -164,7 +165,9 @@ export const calculateUnitStats = (
   const kb = stats[1] || 0;
   const speed = stats[2] || 0;
   const ap_base = stats[3] || 0;
-  const tba = (stats[4] || 0) * 2;
+  const tba_original = (stats[4] || 0) * 2;
+  // 攻撃間隔短縮を適用
+  const tba = Math.round(tba_original * attackIntervalReductionMultiplier);
   const range = stats[5] || 0;
   const cost = Math.floor((stats[6] || 0) * 1.5);
   const recharge_raw = (stats[7] || 0) * 2;
@@ -188,10 +191,9 @@ export const calculateUnitStats = (
   // Animation length calculation
   const animLength = getAnimLength(form);
   let backswing: number;
-  let freq: number;
   let frames: number[];
 
-  // 正確な計算
+  // フレーム配列の計算
   if (multihit) {
     const atk2 = stats[59] || 0;
     const atk3 = stats[60] || 0;
@@ -202,7 +204,6 @@ export const calculateUnitStats = (
       backswing = animLength - stats[61];
       const pre = Math.max(0, tba - backswing - 1);
       frames = [pre, foreswing, f2, backswing];
-      freq = pre + foreswing + f2 + backswing;
     } else if (atk2 > 0 && atk3 > 0 && stats[61] && stats[62]) {
       // 3段攻撃: [pre, foreswing, f2, f3, backswing]
       const f2 = stats[61] - foreswing;
@@ -210,27 +211,28 @@ export const calculateUnitStats = (
       backswing = animLength - stats[62];
       const pre = Math.max(0, tba - backswing - 1);
       frames = [pre, foreswing, f2, f3, backswing];
-      freq = pre + foreswing + f2 + f3 + backswing;
     } else {
       // フォールバック
       backswing = animLength - foreswing;
       const pre = Math.max(0, tba - backswing - 1);
       frames = [pre, foreswing, backswing];
-      freq = tba !== 0 ? tba + foreswing - 1 : foreswing + backswing;
     }
   } else {
     // 単段攻撃: [pre, foreswing, backswing]
     backswing = animLength - foreswing;
     const pre = Math.max(0, tba - backswing - 1);
     frames = [pre, foreswing, backswing];
-    if (tba !== 0) {
-      freq = tba + foreswing - 1;
-    } else {
-      freq = foreswing + backswing;
-    }
   }
+  
+  // TBA=0の場合はpreフレームを0に修正
+  if (tba === 0) {
+    frames[0] = 0;
+  }
+  
+  // 攻撃頻度はフレーム配列の合計
+  const freq = frames.reduce((sum, frame) => sum + frame, 0);
 
-  // DPS calculation
+  // DPS calculation (stat.py参考)
   const dps = freq > 0 ? Math.round(ap / freq * 30 * 100) / 100 : 0;
 
   // Recharge time

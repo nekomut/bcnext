@@ -55,6 +55,14 @@ export function UnitDisplay({
   const attackIntervalReductionTalent = unitData.auxiliaryData.talents.talentList.find(talent => talent.id === 61);
   const [attackIntervalReductionValue, setAttackIntervalReductionValue] = useState(attackIntervalReductionTalent?.data[3] || 74);
   
+  // ユニットが生産コスト割引(25)を持っているかチェック
+  const hasCostReduction = unitData.auxiliaryData.talents.talentList.some(talent => talent.id === 25);
+  
+  // 生産コスト割引(25)の状態
+  const [costReductionEnabled, setCostReductionEnabled] = useState(hasCostReduction);
+  const costReductionTalent = unitData.auxiliaryData.talents.talentList.find(talent => talent.id === 25);
+  const [costReductionValue, setCostReductionValue] = useState(costReductionTalent ? Math.floor(costReductionTalent.data[3] * 1.5) : 500);
+  
   // 基本体力アップ(32)の状態
   const [baseHpUpEnabled, setBaseHpUpEnabled] = useState(hasBaseHpUp);
   const [baseHpUpValue, setBaseHpUpValue] = useState(20);
@@ -67,19 +75,23 @@ export function UnitDisplay({
     const newAttackUpTalent = talentList.find(talent => talent.id === 10);
     const newAttackIntervalReductionTalent = talentList.find(talent => talent.id === 61);
     const newHasAttackIntervalReduction = talentList.some(talent => talent.id === 61);
+    const newCostReductionTalent = talentList.find(talent => talent.id === 25);
+    const newHasCostReduction = talentList.some(talent => talent.id === 25);
     
     setBaseAttackUpEnabled(newHasBaseAttackUp);
     setBaseHpUpEnabled(newHasBaseHpUp);
     setTalentAttackUpValue(newAttackUpTalent?.data[5] || 200);
     setAttackIntervalReductionValue(newAttackIntervalReductionTalent?.data[3] || 74);
     setAttackIntervalReductionEnabled(newHasAttackIntervalReduction);
+    setCostReductionValue(newCostReductionTalent ? Math.floor(newCostReductionTalent.data[3] * 1.5) : 500);
+    setCostReductionEnabled(newHasCostReduction);
   }, [unitData.unitId, unitData.auxiliaryData.talents.talentList]);
 
   const validFormCount = getValidFormCount(unitData);
   const actualCurrentForm = Math.min(currentForm, validFormCount - 1);
   
-  // 攻撃間隔短縮の倍率を計算（本能を持っている場合のみ適用）
-  const attackIntervalReductionMultiplier = (hasAttackIntervalReduction && attackIntervalReductionEnabled) ? (1 - attackIntervalReductionValue / 100) : 1;
+  // 攻撃間隔短縮の倍率を計算（本能を持っている場合かつ第三形態以上のみ適用）
+  const attackIntervalReductionMultiplier = (hasAttackIntervalReduction && attackIntervalReductionEnabled && actualCurrentForm >= 2) ? (1 - attackIntervalReductionValue / 100) : 1;
   
   const stats = calculateUnitStats(unitData, actualCurrentForm, level, plusLevel, attackIntervalReductionMultiplier);
   const currentFormData = unitData.coreData.forms[actualCurrentForm];
@@ -90,17 +102,21 @@ export function UnitDisplay({
   // 攻撃力アップが適用された統計を計算
   const attackUpMultiplier = attackUpEnabled ? (1 + attackUpPercentage / 100) : 1;
   
-  // 基本攻撃力アップのマルチプライヤー
-  const baseAttackUpMultiplier = baseAttackUpEnabled ? (1 + baseAttackUpValue / 100) : 1;
+  // 基本攻撃力アップのマルチプライヤー（第三形態以上のみ適用）
+  const baseAttackUpMultiplier = (baseAttackUpEnabled && actualCurrentForm >= 2) ? (1 + baseAttackUpValue / 100) : 1;
   
-  // 攻撃力アップ(10)のマルチプライヤー
-  const talentAttackUpMultiplier = talentAttackUpEnabled ? (1 + talentAttackUpValue / 100) : 1;
+  // 攻撃力アップ(10)のマルチプライヤー（第三形態以上のみ適用）
+  const talentAttackUpMultiplier = (talentAttackUpEnabled && actualCurrentForm >= 2) ? (1 + talentAttackUpValue / 100) : 1;
   
-  // 基本体力アップのマルチプライヤー
-  const baseHpUpMultiplier = baseHpUpEnabled ? (1 + baseHpUpValue / 100) : 1;
+  // 基本体力アップのマルチプライヤー（第三形態以上のみ適用）
+  const baseHpUpMultiplier = (baseHpUpEnabled && actualCurrentForm >= 2) ? (1 + baseHpUpValue / 100) : 1;
   
   // 総合的な攻撃力マルチプライヤー
   const totalAttackMultiplier = attackUpMultiplier * baseAttackUpMultiplier * talentAttackUpMultiplier;
+  
+  // コスト割引の計算（第三形態以上のみ適用）
+  const costReduction = (hasCostReduction && costReductionEnabled && actualCurrentForm >= 2) ? costReductionValue : 0;
+  const discountedCost = Math.max(0, stats.cost - costReduction);
   
   const abilities = getAbilities(unitData, actualCurrentForm, level, plusLevel, totalAttackMultiplier, baseHpUpMultiplier);
   const enhancedStats = {
@@ -110,7 +126,8 @@ export function UnitDisplay({
     atk1: stats.atk1 ? Math.floor(stats.atk1 * totalAttackMultiplier) : stats.atk1,
     atk2: stats.atk2 ? Math.floor(stats.atk2 * totalAttackMultiplier) : stats.atk2,
     atk3: stats.atk3 ? Math.floor(stats.atk3 * totalAttackMultiplier) : stats.atk3,
-    dps: stats.freq > 0 ? Math.round(Math.floor(stats.ap * totalAttackMultiplier) / stats.freq * 30 * 100) / 100 : 0
+    dps: stats.freq > 0 ? Math.round(Math.floor(stats.ap * totalAttackMultiplier) / stats.freq * 30 * 100) / 100 : 0,
+    cost: discountedCost
   };
 
   if (!currentFormData) {
@@ -279,7 +296,7 @@ export function UnitDisplay({
       )}
 
       {/* Stats Table */}
-      <StatsTable stats={enhancedStats} attackUpEnabled={totalAttackMultiplier > 1} hpUpEnabled={baseHpUpMultiplier > 1} attackIntervalReductionEnabled={attackIntervalReductionEnabled} />
+      <StatsTable stats={enhancedStats} attackUpEnabled={totalAttackMultiplier > 1} hpUpEnabled={baseHpUpMultiplier > 1} attackIntervalReductionEnabled={attackIntervalReductionEnabled && actualCurrentForm >= 2} costReductionEnabled={costReductionEnabled && actualCurrentForm >= 2} />
 
       {/* Abilities */}
       {abilities.length > 0 && <AbilitiesList abilities={abilities} attackUpEnabled={attackUpEnabled} setAttackUpEnabled={setAttackUpEnabled} attackUpMultiplier={totalAttackMultiplier} hpUpMultiplier={baseHpUpMultiplier} />}
@@ -304,13 +321,17 @@ export function UnitDisplay({
           setAttackIntervalReductionEnabled={setAttackIntervalReductionEnabled}
           attackIntervalReductionValue={attackIntervalReductionValue}
           setAttackIntervalReductionValue={setAttackIntervalReductionValue}
+          costReductionEnabled={costReductionEnabled}
+          setCostReductionEnabled={setCostReductionEnabled}
+          costReductionValue={costReductionValue}
+          setCostReductionValue={setCostReductionValue}
         />
       )}
     </div>
   );
 }
 
-function StatsTable({ stats, attackUpEnabled, hpUpEnabled, attackIntervalReductionEnabled }: { stats: CalculatedStats, attackUpEnabled: boolean, hpUpEnabled: boolean, attackIntervalReductionEnabled: boolean }) {
+function StatsTable({ stats, attackUpEnabled, hpUpEnabled, attackIntervalReductionEnabled, costReductionEnabled }: { stats: CalculatedStats, attackUpEnabled: boolean, hpUpEnabled: boolean, attackIntervalReductionEnabled: boolean, costReductionEnabled: boolean }) {
   return (
     <div className="mb-4">
       <h3 className="text-sm sm:text-base font-semibold mb-2 text-gray-800">基本ステータス</h3>
@@ -360,7 +381,7 @@ function StatsTable({ stats, attackUpEnabled, hpUpEnabled, attackIntervalReducti
         <StatItem label="射程" value={<b className="text-gray-500">{stats.range.toString()}</b>} />
         <StatItem label="KB" value={<b className="text-gray-500">{stats.kb.toString()}</b>} />
         <StatItem label="速度" value={<b className="text-gray-500">{stats.speed.toString()}</b>} />
-        <StatItem label="コスト" value={<b className="text-gray-500">{stats.cost.toLocaleString()}</b>} />
+        <StatItem label="コスト" value={<b className={costReductionEnabled ? "text-green-500" : "text-gray-500"}>{stats.cost.toLocaleString()}</b>} />
         <StatItem
           label="再生産"
           value={<span className="text-gray-500"><small className="text-gray-400">({Math.round(stats.recharge * 30).toLocaleString()}f)</small> <b>{stats.recharge.toFixed(2)}s</b></span>}
@@ -1344,7 +1365,11 @@ function TalentsList({
   attackIntervalReductionEnabled,
   setAttackIntervalReductionEnabled,
   attackIntervalReductionValue,
-  setAttackIntervalReductionValue
+  setAttackIntervalReductionValue,
+  costReductionEnabled,
+  setCostReductionEnabled,
+  costReductionValue,
+  setCostReductionValue
 }: { 
   talents: readonly UnitTalent[];
   baseAttackUpEnabled: boolean;
@@ -1363,6 +1388,10 @@ function TalentsList({
   setAttackIntervalReductionEnabled: (enabled: boolean) => void;
   attackIntervalReductionValue: number;
   setAttackIntervalReductionValue: (value: number) => void;
+  costReductionEnabled: boolean;
+  setCostReductionEnabled: (enabled: boolean) => void;
+  costReductionValue: number;
+  setCostReductionValue: (value: number) => void;
 }) {
   if (talents.length === 0) return null;
 
@@ -1636,6 +1665,12 @@ function TalentsList({
                       width={16}
                       height={16}
                       className="inline mr-1 align-top"
+                    />
+                    <input
+                      type="checkbox"
+                      checked={costReductionEnabled}
+                      onChange={(e) => setCostReductionEnabled(e.target.checked)}
+                      className="mr-1 align-middle"
                     />
                     {talent.name} ({talent.id})
                   </>
@@ -2038,6 +2073,30 @@ function TalentsList({
                       </div>
                       <div className="flex items-center justify-end gap-1">
                         <small className="text-gray-400" style={{fontSize: '10px'}}>({talent.data[2]}~{talent.data[3]})</small>
+                      </div>
+                    </div>
+                  ) : talent.id === 25 ? (
+                    <div className="text-right">
+                      <div className="text-xs mb-1">
+                        <b>-</b>
+                        <input
+                          type="number"
+                          value={costReductionValue}
+                          onChange={(e) => {
+                            const value = Number(e.target.value);
+                            const minValue = Math.floor(talent.data[2] * 1.5);
+                            const maxValue = Math.floor(talent.data[3] * 1.5);
+                            if (value >= minValue && value <= maxValue) {
+                              setCostReductionValue(value);
+                            }
+                          }}
+                          className="w-10 px-1 text-center border border-gray-300 rounded text-xs"
+                          min={Math.floor(talent.data[2] * 1.5)}
+                          max={Math.floor(talent.data[3] * 1.5)}
+                          step={Math.floor((talent.data[3] - talent.data[2]) * 1.5 / (talent.data[1] - 1))}
+                        />
+                        <small><b>円</b></small>
+                        <small className="text-gray-400" style={{fontSize: '10px'}}> ({Math.floor(talent.data[2] * 1.5)}~{Math.floor(talent.data[3] * 1.5)})</small>
                       </div>
                     </div>
                   ) : /* 属性追加の本能の場合はアイコンを表示 */

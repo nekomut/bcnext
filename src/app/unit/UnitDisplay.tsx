@@ -1909,8 +1909,8 @@ function TalentsList({
                   {/* 基本体力アップ(32)の場合はテキストボックスを表示 */}
                   {talent.id === 32 ? (
                     <div className="text-right">
-                      <div className="flex items-center justify-end gap-1">
-                        <span className="text-xs">+</span>
+                      <div className="text-xs mb-1">
+                        <b>+</b>
                         <input
                           type="number"
                           value={baseHpUpValue}
@@ -1925,15 +1925,15 @@ function TalentsList({
                           max="20"
                           step="2"
                         />
-                        <span className="text-xs">%</span>
-                        <small className="text-gray-400 text-xs">(0~20)</small>
+                        <small><b>%</b></small>
+                        <small className="text-gray-400" style={{fontSize: '10px'}}> (0-20)</small>
                       </div>
                     </div>
                   ) : /* 基本攻撃力アップ(31)の場合はテキストボックスを表示 */
                   talent.id === 31 ? (
                     <div className="text-right">
-                      <div className="flex items-center justify-end gap-1">
-                        <span className="text-xs">+</span>
+                      <div className="text-xs mb-1">
+                        <b>+</b>
                         <input
                           type="number"
                           value={baseAttackUpValue}
@@ -1948,8 +1948,8 @@ function TalentsList({
                           max="20"
                           step="2"
                         />
-                        <span className="text-xs">%</span>
-                        <small className="text-gray-400 text-xs">(0~20)</small>
+                        <small><b>%</b></small>
+                        <small className="text-gray-400" style={{fontSize: '10px'}}> (0-20)</small>
                       </div>
                     </div>
                   ) : /* 攻撃力アップ(10)の場合はテキストボックスを表示 */

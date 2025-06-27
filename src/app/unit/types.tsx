@@ -883,12 +883,13 @@ export const calculateTalentEffect = (talent: UnitTalent): string => {
       
     default:
       // その他の本能は基本形式
-      const per_level = data[2] || 0;
-      const max_value = data[3] || 0;
-      if (per_level === max_value) {
-        return `${per_level}%`;
+      const step_count = data[1];
+      const min_value = data[2];
+      const max_value = data[3];
+      if (min_value === max_value) {
+        return `${min_value}%`;
       } else {
-        return `+${per_level}%/Lv Max${max_value}%`;
+        return `+${min_value}~${max_value}% (+${(max_value - min_value) / (step_count - 1)}%/Lv)`;
       }
   }
 };

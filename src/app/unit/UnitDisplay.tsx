@@ -30,13 +30,31 @@ export function UnitDisplay({
   // 入力用の文字列state
   const [levelInput, setLevelInput] = useState(initialLevel.toString());
   const [plusLevelInput, setPlusLevelInput] = useState(initialPlusLevel.toString());
+  
+  // 攻撃力アップの状態
+  const [attackUpEnabled, setAttackUpEnabled] = useState(false);
 
   const validFormCount = getValidFormCount(unitData);
   const actualCurrentForm = Math.min(currentForm, validFormCount - 1);
   
   const stats = calculateUnitStats(unitData, actualCurrentForm, level, plusLevel);
-  const abilities = getAbilities(unitData, actualCurrentForm, level, plusLevel);
   const currentFormData = unitData.coreData.forms[actualCurrentForm];
+  
+  // 攻撃力アップのパーセンテージを取得（仮の値で初期化）
+  const attackUpPercentage = currentFormData.stats[41] || 0;
+  
+  // 攻撃力アップが適用された統計を計算
+  const attackUpMultiplier = attackUpEnabled ? (1 + attackUpPercentage / 100) : 1;
+  
+  const abilities = getAbilities(unitData, actualCurrentForm, level, plusLevel, attackUpMultiplier);
+  const enhancedStats = {
+    ...stats,
+    ap: Math.floor(stats.ap * attackUpMultiplier),
+    atk1: stats.atk1 ? Math.floor(stats.atk1 * attackUpMultiplier) : stats.atk1,
+    atk2: stats.atk2 ? Math.floor(stats.atk2 * attackUpMultiplier) : stats.atk2,
+    atk3: stats.atk3 ? Math.floor(stats.atk3 * attackUpMultiplier) : stats.atk3,
+    dps: stats.freq > 0 ? Math.round(Math.floor(stats.ap * attackUpMultiplier) / stats.freq * 30 * 100) / 100 : 0
+  };
 
   if (!currentFormData) {
     return <div className="text-red-500">Invalid form ID: {actualCurrentForm}</div>;
@@ -204,10 +222,10 @@ export function UnitDisplay({
       )}
 
       {/* Stats Table */}
-      <StatsTable stats={stats} />
+      <StatsTable stats={enhancedStats} attackUpEnabled={attackUpEnabled} />
 
       {/* Abilities */}
-      {abilities.length > 0 && <AbilitiesList abilities={abilities} />}
+      {abilities.length > 0 && <AbilitiesList abilities={abilities} attackUpEnabled={attackUpEnabled} setAttackUpEnabled={setAttackUpEnabled} />}
 
       {/* Talents */}
       {unitData.auxiliaryData.talents.hasTalents && actualCurrentForm >= 2 && (
@@ -217,7 +235,7 @@ export function UnitDisplay({
   );
 }
 
-function StatsTable({ stats }: { stats: CalculatedStats }) {
+function StatsTable({ stats, attackUpEnabled }: { stats: CalculatedStats, attackUpEnabled: boolean }) {
   return (
     <div className="mb-4">
       <h3 className="text-sm sm:text-base font-semibold mb-2 text-gray-800">基本ステータス</h3>
@@ -236,9 +254,9 @@ function StatsTable({ stats }: { stats: CalculatedStats }) {
             </>}
             value={
               <>
-                <b className="text-gray-500">{stats.ap.toLocaleString()}</b>
+                <b className={attackUpEnabled ? "text-red-500" : "text-gray-500"}>{stats.ap.toLocaleString()}</b>
                 <br />
-                <small>{`${[stats.atk1, stats.atk2, stats.atk3].filter(Boolean).map(x => x?.toLocaleString()).join(' / ')}`}</small>
+                <small className={attackUpEnabled ? "text-red-500" : ""}>{`${[stats.atk1, stats.atk2, stats.atk3].filter(Boolean).map(x => x?.toLocaleString()).join(' / ')}`}</small>
               </>
             }
             labelClassName="text-red-500"
@@ -253,7 +271,7 @@ function StatsTable({ stats }: { stats: CalculatedStats }) {
                 className="inline ml-1 align-top"
               />
             </>}
-            value={<b className="text-gray-500">{stats.ap.toLocaleString()}</b>}
+            value={<b className={attackUpEnabled ? "text-red-500" : "text-gray-500"}>{stats.ap.toLocaleString()}</b>}
             labelClassName="text-red-500"
           />
         )}
@@ -262,7 +280,7 @@ function StatsTable({ stats }: { stats: CalculatedStats }) {
           label="DPS"
           value={Math.round(stats.dps).toLocaleString()}
           labelClassName="text-fuchsia-600"
-          className="text-fuchsia-600 font-bold"
+          className={attackUpEnabled ? "text-red-500 font-bold" : "text-fuchsia-600 font-bold"}
         />
         <StatItem label="射程" value={<b className="text-gray-500">{stats.range.toString()}</b>} />
         <StatItem label="KB" value={<b className="text-gray-500">{stats.kb.toString()}</b>} />
@@ -636,7 +654,11 @@ function DynamicMighty({ ability }: { ability: UnitAbility }) {
   );
 }
 
-function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
+function AbilitiesList({ abilities, attackUpEnabled, setAttackUpEnabled }: { 
+  abilities: UnitAbility[], 
+  attackUpEnabled: boolean, 
+  setAttackUpEnabled: (enabled: boolean) => void
+}) {
   return (
     <div className="mb-4">
       <h3 className="text-sm sm:text-base font-semibold mb-2 text-gray-800">能力・効果</h3>
@@ -865,6 +887,12 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                         width={16}
                         height={16}
                         className="inline mr-1 align-top"
+                      />
+                      <input
+                        type="checkbox"
+                        checked={attackUpEnabled}
+                        onChange={(e) => setAttackUpEnabled(e.target.checked)}
+                        className="mr-1 align-middle"
                       />
                       攻撃力アップ
                     </>
@@ -1153,7 +1181,7 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                     </div>
                   ) : ability.value ? (
                     <div className="text-gray-600 font-medium break-words">
-                      {(ability.name === '多段攻撃' || ability.name === '攻撃無効' || ability.name === '動きを止める' || ability.name === '動きを遅くする' || ability.name === 'ふっとばす' || ability.name === 'クリティカル' || ability.name === '攻撃力ダウン' || ability.name === '撃破時お金アップ' || ability.name === 'バリアブレイカー' || ability.name === 'シールドブレイカー' || ability.name === '遠方攻撃' || ability.name === '全方位攻撃' || ability.name === '波動攻撃' || ability.name === '小波動' || ability.name === '裂波攻撃' || ability.name === '小裂波' || (typeof ability.value === 'string' && ability.value.includes('s(') && ability.value.includes('f)'))) && typeof ability.value === 'string' ? (
+                      {(ability.name === '多段攻撃' || ability.name === '攻撃無効' || ability.name === '動きを止める' || ability.name === '動きを遅くする' || ability.name === 'ふっとばす' || ability.name === 'クリティカル' || ability.name === '攻撃力ダウン' || ability.name === '撃破時お金アップ' || ability.name === 'バリアブレイカー' || ability.name === 'シールドブレイカー' || ability.name === '遠方攻撃' || ability.name === '全方位攻撃' || ability.name === '波動攻撃' || ability.name === '小波動' || ability.name === '裂波攻撃' || ability.name === '小裂波' || ability.name === '攻撃力アップ' || (typeof ability.value === 'string' && ability.value.includes('s(') && ability.value.includes('f)'))) && typeof ability.value === 'string' ? (
                         <span dangerouslySetInnerHTML={{
                           __html: (() => {
                             let text = ability.value;
@@ -1173,12 +1201,20 @@ function AbilitiesList({ abilities }: { abilities: UnitAbility[] }) {
                             // 他の数字のスタイリング（プレースホルダーを避ける）
                             text = text
                               .replace(/Lv(\d+)/g, '<b>Lv$1</b>')
+                              // 攻撃力アップの場合は体力のみ青字
+                              .replace(/体力≦(\d+)%/g, (match, number) => {
+                                if (ability.name === '攻撃力アップ') {
+                                  return `<small class="text-blue-500"><b>体力</b></small><small><b>≦</b></small><b>${number}</b><small><b>%</b></small>`;
+                                }
+                                return `<small class="text-blue-500"><b>体力≦</b></small><b class="text-blue-500">${number}</b><small class="text-blue-500"><b>%</b></small>`;
+                              })
                               .replace(/(\d+)%/g, '<b>$1</b><small><b>%</b></small>')
                               .replace(/(\d+\.?\d*)s/g, '<b>$1s</b>')
                               .replace(/(\d+)倍/g, '<b>$1</b><small><b>倍</b></small>')
                               .replace(/(\d+)~(\d+)/g, '<b>$1</b>~<b>$2</b>')
-                              .replace(/(?!___FRAME_PLACEHOLDER_)(\d+\.?\d*)(?!___)/g, '<b>$1</b>')
-                              .replace(/敵攻撃力/g, '<small class="text-red-500">敵攻撃力</small>');
+                              .replace(/(?!___FRAME_PLACEHOLDER_)(?![^<]*>)(\d+\.?\d*)(?!___)/g, '<b>$1</b>')
+                              .replace(/敵攻撃力/g, '<small class="text-red-500"><b>敵攻撃力</b></small>')
+                              .replace(/^攻撃力/g, '<small class="text-red-500"><b>攻撃力</b></small>');
                             
                             // プレースホルダーを元に戻す
                             frameMatches.forEach((replacement, index) => {

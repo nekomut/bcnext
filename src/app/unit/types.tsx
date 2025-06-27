@@ -262,7 +262,7 @@ export const calculateUnitStats = (
   };
 };
 
-export const getAbilities = (unitData: UnitData, formId: number, level: number = 30, plusLevel: number = 0): UnitAbility[] => {
+export const getAbilities = (unitData: UnitData, formId: number, level: number = 30, plusLevel: number = 0, attackUpMultiplier: number = 1): UnitAbility[] => {
   const form = unitData.coreData.forms[formId];
   if (!form) return [];
 
@@ -432,18 +432,21 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[82] && stats[82] > 0) {
     const chance = stats[82];
     
-    // 基本APの3倍値を計算
+    // 基本APの3倍値を計算（攻撃力アップを適用）
     let savageValues: React.ReactNode;
     if (calculatedStats.multihit) {
-      const hit1_3x = calculatedStats.atk1 ? calculatedStats.atk1 * 3 : 0;
-      const hit2_3x = calculatedStats.atk2 ? calculatedStats.atk2 * 3 : 0;
-      const hit3_3x = calculatedStats.atk3 ? calculatedStats.atk3 * 3 : 0;
+      const hit1_3x = calculatedStats.atk1 ? Math.floor(calculatedStats.atk1 * attackUpMultiplier * 3) : 0;
+      const hit2_3x = calculatedStats.atk2 ? Math.floor(calculatedStats.atk2 * attackUpMultiplier * 3) : 0;
+      const hit3_3x = calculatedStats.atk3 ? Math.floor(calculatedStats.atk3 * attackUpMultiplier * 3) : 0;
       
-      const values = [hit1_3x, hit2_3x, hit3_3x].filter(v => v > 0).map(v => `<b>${v.toLocaleString()}</b>`);
+      const isEnhanced = attackUpMultiplier > 1;
+      const colorClass = isEnhanced ? 'color: red;' : '';
+      const values = [hit1_3x, hit2_3x, hit3_3x].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
       savageValues = <span dangerouslySetInnerHTML={{ __html: `${values.join(' / ')} ~` }} />;
     } else {
-      const savageAP = calculatedStats.ap * 3;
-      savageValues = <b>{savageAP.toLocaleString()}</b>;
+      const savageAP = Math.floor(calculatedStats.ap * attackUpMultiplier * 3);
+      const isEnhanced = attackUpMultiplier > 1;
+      savageValues = <b className={isEnhanced ? "text-red-500" : ""}>{savageAP.toLocaleString()}</b>;
     }
     
     // 超ダメージ・極ダメージがある場合の追加表示
@@ -452,11 +455,13 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     // 超ダメージがある場合（3倍~4倍の4倍 * 3 = 12倍）
     if (stats[30] && stats[30] > 0) {
       if (calculatedStats.multihit) {
-        const hit1_12x = calculatedStats.atk1 ? calculatedStats.atk1 * 12 : 0;
-        const hit2_12x = calculatedStats.atk2 ? calculatedStats.atk2 * 12 : 0;
-        const hit3_12x = calculatedStats.atk3 ? calculatedStats.atk3 * 12 : 0;
+        const hit1_12x = calculatedStats.atk1 ? Math.floor(calculatedStats.atk1 * attackUpMultiplier * 12) : 0;
+        const hit2_12x = calculatedStats.atk2 ? Math.floor(calculatedStats.atk2 * attackUpMultiplier * 12) : 0;
+        const hit3_12x = calculatedStats.atk3 ? Math.floor(calculatedStats.atk3 * attackUpMultiplier * 12) : 0;
         
-        const superValues = [hit1_12x, hit2_12x, hit3_12x].filter(v => v > 0).map(v => `<b>${v.toLocaleString()}</b>`);
+        const isEnhanced = attackUpMultiplier > 1;
+        const colorClass = isEnhanced ? 'color: red;' : '';
+        const superValues = [hit1_12x, hit2_12x, hit3_12x].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
         additionalValues = (
           <>
             <br />
@@ -464,11 +469,12 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
           </>
         );
       } else {
-        const superAP = calculatedStats.ap * 12;
+        const superAP = Math.floor(calculatedStats.ap * attackUpMultiplier * 12);
+        const isEnhanced = attackUpMultiplier > 1;
         additionalValues = (
           <>
             <br />
-            <b>{superAP.toLocaleString()}</b>
+            <b className={isEnhanced ? "text-red-500" : ""}>{superAP.toLocaleString()}</b>
           </>
         );
       }
@@ -477,23 +483,25 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     // 極ダメージがある場合（5倍~6倍の6倍 * 3 = 18倍）
     if (stats[81] && stats[81] > 0) {
       if (calculatedStats.multihit) {
-        const hit1_18x = calculatedStats.atk1 ? calculatedStats.atk1 * 18 : 0;
-        const hit2_18x = calculatedStats.atk2 ? calculatedStats.atk2 * 18 : 0;
-        const hit3_18x = calculatedStats.atk3 ? calculatedStats.atk3 * 18 : 0;
+        const hit1_18x = calculatedStats.atk1 ? Math.floor(calculatedStats.atk1 * attackUpMultiplier * 18) : 0;
+        const hit2_18x = calculatedStats.atk2 ? Math.floor(calculatedStats.atk2 * attackUpMultiplier * 18) : 0;
+        const hit3_18x = calculatedStats.atk3 ? Math.floor(calculatedStats.atk3 * attackUpMultiplier * 18) : 0;
         
+        const isEnhanced = attackUpMultiplier > 1;
         const extremeValues = [hit1_18x, hit2_18x, hit3_18x].filter(v => v > 0).map(v => v.toLocaleString());
         additionalValues = (
           <>
             <br />
-            {extremeValues.join(' / ')}
+            <span className={isEnhanced ? "text-red-500" : ""}>{extremeValues.join(' / ')}</span>
           </>
         );
       } else {
-        const extremeAP = calculatedStats.ap * 18;
+        const extremeAP = Math.floor(calculatedStats.ap * attackUpMultiplier * 18);
+        const isEnhanced = attackUpMultiplier > 1;
         additionalValues = (
           <>
             <br />
-            {extremeAP.toLocaleString()}
+            <span className={isEnhanced ? "text-red-500" : ""}>{extremeAP.toLocaleString()}</span>
           </>
         );
       }
@@ -503,7 +511,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
       name: "渾身の一撃",
       value: (
         <>
-          <span className="text-red-500"><small><b>攻撃力</b></small><b>3</b><small><b>倍</b></small></span> <b>{chance}</b><small><b>%</b></small> {savageValues}
+          <span className="text-red-500"><small><b>攻撃力</b></small></span><b>+200</b><small><b>%</b></small> <small><b>確率</b></small><b>{chance}</b><small><b>%</b></small> {savageValues}
           {additionalValues}
         </>
       ),
@@ -572,7 +580,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[40] && stats[40] > 0) {
     abilities.push({
       name: "攻撃力アップ",
-      value: `+${stats[41]}% HP≦${100 - stats[40]}%`,
+      value: `攻撃力+${stats[41]}% 体力≦${100 - stats[40]}%`,
       iconKeys: ["abilityStrengthen"]
     });
   }
@@ -608,7 +616,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[33] && stats[33] > 0) {
     abilities.push({
       name: "撃破時お金アップ",
-      value: "2倍",
+      value: "+100%",
       iconKeys: ["abilityExtraMoney"]
     });
   }

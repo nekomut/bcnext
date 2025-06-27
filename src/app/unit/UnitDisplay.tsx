@@ -33,6 +33,10 @@ export function UnitDisplay({
   
   // 攻撃力アップの状態
   const [attackUpEnabled, setAttackUpEnabled] = useState(false);
+  
+  // 基本攻撃力アップの状態
+  const [baseAttackUpEnabled, setBaseAttackUpEnabled] = useState(true);
+  const [baseAttackUpValue, setBaseAttackUpValue] = useState(20);
 
   const validFormCount = getValidFormCount(unitData);
   const actualCurrentForm = Math.min(currentForm, validFormCount - 1);
@@ -46,14 +50,20 @@ export function UnitDisplay({
   // 攻撃力アップが適用された統計を計算
   const attackUpMultiplier = attackUpEnabled ? (1 + attackUpPercentage / 100) : 1;
   
-  const abilities = getAbilities(unitData, actualCurrentForm, level, plusLevel, attackUpMultiplier);
+  // 基本攻撃力アップのマルチプライヤー
+  const baseAttackUpMultiplier = baseAttackUpEnabled ? (1 + baseAttackUpValue / 100) : 1;
+  
+  // 総合的な攻撃力マルチプライヤー
+  const totalAttackMultiplier = attackUpMultiplier * baseAttackUpMultiplier;
+  
+  const abilities = getAbilities(unitData, actualCurrentForm, level, plusLevel, totalAttackMultiplier);
   const enhancedStats = {
     ...stats,
-    ap: Math.floor(stats.ap * attackUpMultiplier),
-    atk1: stats.atk1 ? Math.floor(stats.atk1 * attackUpMultiplier) : stats.atk1,
-    atk2: stats.atk2 ? Math.floor(stats.atk2 * attackUpMultiplier) : stats.atk2,
-    atk3: stats.atk3 ? Math.floor(stats.atk3 * attackUpMultiplier) : stats.atk3,
-    dps: stats.freq > 0 ? Math.round(Math.floor(stats.ap * attackUpMultiplier) / stats.freq * 30 * 100) / 100 : 0
+    ap: Math.floor(stats.ap * totalAttackMultiplier),
+    atk1: stats.atk1 ? Math.floor(stats.atk1 * totalAttackMultiplier) : stats.atk1,
+    atk2: stats.atk2 ? Math.floor(stats.atk2 * totalAttackMultiplier) : stats.atk2,
+    atk3: stats.atk3 ? Math.floor(stats.atk3 * totalAttackMultiplier) : stats.atk3,
+    dps: stats.freq > 0 ? Math.round(Math.floor(stats.ap * totalAttackMultiplier) / stats.freq * 30 * 100) / 100 : 0
   };
 
   if (!currentFormData) {
@@ -222,14 +232,20 @@ export function UnitDisplay({
       )}
 
       {/* Stats Table */}
-      <StatsTable stats={enhancedStats} attackUpEnabled={attackUpEnabled} />
+      <StatsTable stats={enhancedStats} attackUpEnabled={totalAttackMultiplier > 1} />
 
       {/* Abilities */}
-      {abilities.length > 0 && <AbilitiesList abilities={abilities} attackUpEnabled={attackUpEnabled} setAttackUpEnabled={setAttackUpEnabled} attackUpMultiplier={attackUpMultiplier} />}
+      {abilities.length > 0 && <AbilitiesList abilities={abilities} attackUpEnabled={attackUpEnabled} setAttackUpEnabled={setAttackUpEnabled} attackUpMultiplier={totalAttackMultiplier} />}
 
       {/* Talents */}
       {unitData.auxiliaryData.talents.hasTalents && actualCurrentForm >= 2 && (
-        <TalentsList talents={unitData.auxiliaryData.talents.talentList} />
+        <TalentsList 
+          talents={unitData.auxiliaryData.talents.talentList} 
+          baseAttackUpEnabled={baseAttackUpEnabled}
+          setBaseAttackUpEnabled={setBaseAttackUpEnabled}
+          baseAttackUpValue={baseAttackUpValue}
+          setBaseAttackUpValue={setBaseAttackUpValue}
+        />
       )}
     </div>
   );
@@ -1251,7 +1267,19 @@ function AbilitiesList({ abilities, attackUpEnabled, setAttackUpEnabled, attackU
   );
 }
 
-function TalentsList({ talents }: { talents: readonly UnitTalent[] }) {
+function TalentsList({ 
+  talents, 
+  baseAttackUpEnabled, 
+  setBaseAttackUpEnabled, 
+  baseAttackUpValue, 
+  setBaseAttackUpValue 
+}: { 
+  talents: readonly UnitTalent[];
+  baseAttackUpEnabled: boolean;
+  setBaseAttackUpEnabled: (enabled: boolean) => void;
+  baseAttackUpValue: number;
+  setBaseAttackUpValue: (value: number) => void;
+}) {
   if (talents.length === 0) return null;
 
   return (
@@ -1435,6 +1463,12 @@ function TalentsList({ talents }: { talents: readonly UnitTalent[] }) {
                       width={16}
                       height={16}
                       className="inline mr-1 align-top"
+                    />
+                    <input
+                      type="checkbox"
+                      checked={baseAttackUpEnabled}
+                      onChange={(e) => setBaseAttackUpEnabled(e.target.checked)}
+                      className="mr-1 align-middle"
                     />
                     {talent.name} ({talent.id})
                   </>
@@ -1803,8 +1837,31 @@ function TalentsList({ talents }: { talents: readonly UnitTalent[] }) {
               </div>
               {talent.data && (
                 <div className="text-gray-700 text-right break-words flex-shrink-0 max-w-[50%]">
-                  {/* 属性追加の本能の場合はアイコンを表示 */}
-                  {(talent.id >= 33 && talent.id <= 43) || talent.id === 57 ? (
+                  {/* 基本攻撃力アップ(31)の場合はテキストボックスを表示 */}
+                  {talent.id === 31 ? (
+                    <div className="text-right">
+                      <div className="flex items-center justify-end gap-1">
+                        <span className="text-xs">+</span>
+                        <input
+                          type="number"
+                          value={baseAttackUpValue}
+                          onChange={(e) => {
+                            const value = Number(e.target.value);
+                            if (value >= 0 && value <= 20) {
+                              setBaseAttackUpValue(value);
+                            }
+                          }}
+                          className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                          min="0"
+                          max="20"
+                          step="2"
+                        />
+                        <span className="text-xs">%</span>
+                        <small className="text-gray-400 text-xs">(0~20)</small>
+                      </div>
+                    </div>
+                  ) : /* 属性追加の本能の場合はアイコンを表示 */
+                  (talent.id >= 33 && talent.id <= 43) || talent.id === 57 ? (
                     <div className="flex justify-end">
                       <Image
                         src={`data:image/png;base64,${icons[

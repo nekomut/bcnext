@@ -7,6 +7,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { icons } from '@/data/icons';
 import { UnitDisplay } from './UnitDisplay';
 import { UnitData, getUnitData } from './types';
+import { unitNamesData, UnitNameData } from '@/data/unit-names';
 
 function UnitPageContent() {
   const [unitId, setUnitId] = useState<string>('');
@@ -17,8 +18,32 @@ function UnitPageContent() {
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
   
+  // ユニット名プルダウン用のstate
+  const [selectedUnitName, setSelectedUnitName] = useState<string>('');
+  const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
+  const [nameFilter, setNameFilter] = useState<string>('');
+  
   const searchParams = useSearchParams();
   const router = useRouter();
+
+  // フィルタリングされたユニット名リスト
+  const filteredUnits = unitNamesData.filter(unit =>
+    unit.displayName.toLowerCase().includes(nameFilter.toLowerCase()) ||
+    unit.forms.some(form => form.toLowerCase().includes(nameFilter.toLowerCase()))
+  );
+
+  // ユニット名選択時の処理
+  const handleUnitNameSelect = (unit: UnitNameData) => {
+    setSelectedUnitName(unit.displayName);
+    setUnitId(unit.unitId);
+    setNameFilter('');
+    setIsDropdownOpen(false);
+    
+    // IDを数値に変換して検索実行
+    const numericId = parseInt(unit.unitId);
+    router.push(`/unit?unit=${numericId}`);
+    handleUnitSearchWithId(numericId);
+  };
 
   const handleUnitSearchWithId = async (id: number) => {
     if (isNaN(id) || id < 0) {
@@ -54,6 +79,12 @@ function UnitPageContent() {
 
     if (unitParam) {
       setUnitId(unitParam);
+      // ユニット名も同期
+      const paddedId = unitParam.padStart(3, '0');
+      const matchingUnit = unitNamesData.find(unit => unit.unitId === paddedId);
+      if (matchingUnit) {
+        setSelectedUnitName(matchingUnit.displayName);
+      }
     }
     if (levelParam) {
       const lvl = parseInt(levelParam);
@@ -85,6 +116,13 @@ function UnitPageContent() {
     if (isNaN(id) || id < 0) {
       setError('Invalid unit ID');
       return;
+    }
+
+    // ユニット名も同期
+    const paddedId = id.toString().padStart(3, '0');
+    const matchingUnit = unitNamesData.find(unit => unit.unitId === paddedId);
+    if (matchingUnit) {
+      setSelectedUnitName(matchingUnit.displayName);
     }
 
     // URLを更新（Unit IDのみ）
@@ -221,6 +259,14 @@ function UnitPageContent() {
                 const currentId = parseInt(unitId);
                 const prevId = Math.max(1, currentId - 1);
                 setUnitId(prevId.toString());
+                
+                // ユニット名も同期
+                const paddedId = prevId.toString().padStart(3, '0');
+                const matchingUnit = unitNamesData.find(unit => unit.unitId === paddedId);
+                if (matchingUnit) {
+                  setSelectedUnitName(matchingUnit.displayName);
+                }
+                
                 router.push(`/unit?unit=${prevId}`);
                 handleUnitSearchWithId(prevId);
               }}
@@ -244,8 +290,62 @@ function UnitPageContent() {
                 }
               }}
               onKeyPress={handleKeyPress}
-              className="border rounded px-1 py-0.5 text-xs w-20 sm:w-24 text-gray-900"
+              className="border rounded px-1 py-0.5 text-xs w-8 sm:w-24 text-gray-900 text-center"
             />
+          </div>
+          
+          {/* ユニット名プルダウン */}
+          <div className="relative">
+            <label className="text-xs text-white-600">Unit Name</label>
+            <div className="relative">
+              <input
+                type="text"
+                value={isDropdownOpen ? nameFilter : selectedUnitName}
+                onChange={(e) => {
+                  setNameFilter(e.target.value);
+                  setIsDropdownOpen(true);
+                }}
+                onFocus={() => {
+                  setIsDropdownOpen(true);
+                  setNameFilter('');
+                }}
+                onBlur={() => {
+                  // 少し遅延させてドロップダウンのクリックを可能にする
+                  setTimeout(() => setIsDropdownOpen(false), 200);
+                }}
+                placeholder="ユニット名で選択..."
+                className="border rounded px-1 py-0.5 text-xs w-52 sm:w-52 text-gray-900"
+              />
+              
+              {isDropdownOpen && (
+                <div className="absolute z-10 w-full max-h-60 overflow-y-auto bg-white border border-gray-300 rounded-md shadow-lg mt-1">
+                  {filteredUnits.slice(0, 50).map((unit) => (
+                    <div
+                      key={unit.unitId}
+                      className="px-2 py-1 hover:bg-gray-100 cursor-pointer text-xs text-gray-900"
+                      onMouseDown={(e) => {
+                        e.preventDefault(); // onBlurより先に実行されるように
+                        handleUnitNameSelect(unit);
+                      }}
+                    >
+                      {unit.displayName}
+                    </div>
+                  ))}
+                  
+                  {filteredUnits.length > 50 && (
+                    <div className="px-2 py-1 text-xs text-gray-500 italic">
+                      検索結果が多すぎます。キーワードを絞ってください。
+                    </div>
+                  )}
+                  
+                  {filteredUnits.length === 0 && nameFilter && (
+                    <div className="px-2 py-1 text-xs text-gray-500 italic">
+                      該当するユニットが見つかりません。
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
           </div>
           
           <button
@@ -263,6 +363,14 @@ function UnitPageContent() {
                 const currentId = parseInt(unitId);
                 const nextId = currentId + 1;
                 setUnitId(nextId.toString());
+                
+                // ユニット名も同期
+                const paddedId = nextId.toString().padStart(3, '0');
+                const matchingUnit = unitNamesData.find(unit => unit.unitId === paddedId);
+                if (matchingUnit) {
+                  setSelectedUnitName(matchingUnit.displayName);
+                }
+                
                 router.push(`/unit?unit=${nextId}`);
                 handleUnitSearchWithId(nextId);
               }}

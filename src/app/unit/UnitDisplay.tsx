@@ -71,6 +71,14 @@ export function UnitDisplay({
   const moveSpeedUpTalent = unitData.auxiliaryData.talents.talentList.find(talent => talent.id === 27);
   const [moveSpeedUpValue, setMoveSpeedUpValue] = useState(moveSpeedUpTalent?.data[3] || 20);
   
+  // ユニットが生産スピードアップ(26)を持っているかチェック
+  const hasRechargeSpeedUp = unitData.auxiliaryData.talents.talentList.some(talent => talent.id === 26);
+  
+  // 生産スピードアップ(26)の状態
+  const [rechargeSpeedUpEnabled, setRechargeSpeedUpEnabled] = useState(hasRechargeSpeedUp);
+  const rechargeSpeedUpTalent = unitData.auxiliaryData.talents.talentList.find(talent => talent.id === 26);
+  const [rechargeSpeedUpValue, setRechargeSpeedUpValue] = useState(rechargeSpeedUpTalent?.data[3] || 30);
+  
   // 基本体力アップ(32)の状態
   const [baseHpUpEnabled, setBaseHpUpEnabled] = useState(hasBaseHpUp);
   const [baseHpUpValue, setBaseHpUpValue] = useState(20);
@@ -95,6 +103,8 @@ export function UnitDisplay({
     const newHasCostReduction = talentList.some(talent => talent.id === 25);
     const newMoveSpeedUpTalent = talentList.find(talent => talent.id === 27);
     const newHasMoveSpeedUp = talentList.some(talent => talent.id === 27);
+    const newRechargeSpeedUpTalent = talentList.find(talent => talent.id === 26);
+    const newHasRechargeSpeedUp = talentList.some(talent => talent.id === 26);
     const newTalentCriticalTalent = talentList.find(talent => talent.id === 13);
     const newHasTalentCritical = talentList.some(talent => talent.id === 13);
     
@@ -107,6 +117,8 @@ export function UnitDisplay({
     setCostReductionEnabled(newHasCostReduction);
     setMoveSpeedUpValue(newMoveSpeedUpTalent?.data[3] || 20);
     setMoveSpeedUpEnabled(newHasMoveSpeedUp);
+    setRechargeSpeedUpValue(newRechargeSpeedUpTalent?.data[3] || 30);
+    setRechargeSpeedUpEnabled(newHasRechargeSpeedUp);
     setTalentCriticalValue(newTalentCriticalTalent?.data[3] || 20);
     setTalentCriticalEnabled(newHasTalentCritical);
   }, [unitData.unitId, unitData.auxiliaryData.talents.talentList]);
@@ -146,6 +158,10 @@ export function UnitDisplay({
   const speedUpBonus = (hasMoveSpeedUp && moveSpeedUpEnabled && actualCurrentForm >= 2) ? moveSpeedUpValue : 0;
   const enhancedSpeed = stats.speed + speedUpBonus;
   
+  // 生産スピードアップの計算（第三形態以上のみ適用）
+  const rechargeSpeedUpBonus = (hasRechargeSpeedUp && rechargeSpeedUpEnabled && actualCurrentForm >= 2) ? rechargeSpeedUpValue : 0;
+  const enhancedRecharge = Math.max(0, stats.recharge - frameToSecond(rechargeSpeedUpBonus));
+  
   // クリティカル本能の情報を計算
   const talentCriticalBonus = (hasTalentCritical && talentCriticalEnabled && actualCurrentForm >= 2) ? talentCriticalValue : 0;
   
@@ -159,7 +175,8 @@ export function UnitDisplay({
     atk3: stats.atk3 ? Math.floor(stats.atk3 * totalAttackMultiplier) : stats.atk3,
     dps: stats.freq > 0 ? Math.round(Math.floor(stats.ap * totalAttackMultiplier) / stats.freq * 30 * 100) / 100 : 0,
     cost: discountedCost,
-    speed: enhancedSpeed
+    speed: enhancedSpeed,
+    recharge: enhancedRecharge
   };
 
   if (!currentFormData) {
@@ -328,7 +345,7 @@ export function UnitDisplay({
       )}
 
       {/* Stats Table */}
-      <StatsTable stats={enhancedStats} attackUpEnabled={totalAttackMultiplier > 1} hpUpEnabled={baseHpUpMultiplier > 1} attackIntervalReductionEnabled={attackIntervalReductionEnabled && actualCurrentForm >= 2} costReductionEnabled={costReductionEnabled && actualCurrentForm >= 2} moveSpeedUpEnabled={moveSpeedUpEnabled && actualCurrentForm >= 2} />
+      <StatsTable stats={enhancedStats} attackUpEnabled={totalAttackMultiplier > 1} hpUpEnabled={baseHpUpMultiplier > 1} attackIntervalReductionEnabled={attackIntervalReductionEnabled && actualCurrentForm >= 2} costReductionEnabled={costReductionEnabled && actualCurrentForm >= 2} moveSpeedUpEnabled={moveSpeedUpEnabled && actualCurrentForm >= 2} rechargeSpeedUpEnabled={rechargeSpeedUpEnabled && actualCurrentForm >= 2} />
 
       {/* Abilities */}
       {abilities.length > 0 && <AbilitiesList abilities={abilities} attackUpEnabled={attackUpEnabled} setAttackUpEnabled={setAttackUpEnabled} attackUpMultiplier={totalAttackMultiplier} hpUpMultiplier={baseHpUpMultiplier} />}
@@ -361,6 +378,10 @@ export function UnitDisplay({
           setMoveSpeedUpEnabled={setMoveSpeedUpEnabled}
           moveSpeedUpValue={moveSpeedUpValue}
           setMoveSpeedUpValue={setMoveSpeedUpValue}
+          rechargeSpeedUpEnabled={rechargeSpeedUpEnabled}
+          setRechargeSpeedUpEnabled={setRechargeSpeedUpEnabled}
+          rechargeSpeedUpValue={rechargeSpeedUpValue}
+          setRechargeSpeedUpValue={setRechargeSpeedUpValue}
           talentCriticalEnabled={talentCriticalEnabled}
           setTalentCriticalEnabled={setTalentCriticalEnabled}
           talentCriticalValue={talentCriticalValue}
@@ -371,7 +392,7 @@ export function UnitDisplay({
   );
 }
 
-function StatsTable({ stats, attackUpEnabled, hpUpEnabled, attackIntervalReductionEnabled, costReductionEnabled, moveSpeedUpEnabled }: { stats: CalculatedStats, attackUpEnabled: boolean, hpUpEnabled: boolean, attackIntervalReductionEnabled: boolean, costReductionEnabled: boolean, moveSpeedUpEnabled: boolean }) {
+function StatsTable({ stats, attackUpEnabled, hpUpEnabled, attackIntervalReductionEnabled, costReductionEnabled, moveSpeedUpEnabled, rechargeSpeedUpEnabled }: { stats: CalculatedStats, attackUpEnabled: boolean, hpUpEnabled: boolean, attackIntervalReductionEnabled: boolean, costReductionEnabled: boolean, moveSpeedUpEnabled: boolean, rechargeSpeedUpEnabled: boolean }) {
   return (
     <div className="mb-4">
       <h3 className="text-sm sm:text-base font-semibold mb-2 text-gray-800">基本ステータス</h3>
@@ -424,7 +445,7 @@ function StatsTable({ stats, attackUpEnabled, hpUpEnabled, attackIntervalReducti
         <StatItem label="コスト" value={<b className={costReductionEnabled ? "text-green-500" : "text-gray-500"}>{stats.cost.toLocaleString()}</b>} />
         <StatItem
           label="再生産"
-          value={<span className="text-gray-500"><small className="text-gray-400">({Math.round(stats.recharge * 30).toLocaleString()}f)</small> <b>{stats.recharge.toFixed(2)}s</b></span>}
+          value={<span className={rechargeSpeedUpEnabled ? "text-green-500" : "text-gray-500"}><small className="text-gray-400">({Math.round(stats.recharge * 30).toLocaleString()}f)</small> <b>{stats.recharge.toFixed(2)}s</b></span>}
           detail=""
         />
         <StatItem
@@ -1427,6 +1448,10 @@ function TalentsList({
   setMoveSpeedUpEnabled,
   moveSpeedUpValue,
   setMoveSpeedUpValue,
+  rechargeSpeedUpEnabled,
+  setRechargeSpeedUpEnabled,
+  rechargeSpeedUpValue,
+  setRechargeSpeedUpValue,
   talentCriticalEnabled,
   setTalentCriticalEnabled,
   talentCriticalValue,
@@ -1457,6 +1482,10 @@ function TalentsList({
   setMoveSpeedUpEnabled: (enabled: boolean) => void;
   moveSpeedUpValue: number;
   setMoveSpeedUpValue: (value: number) => void;
+  rechargeSpeedUpEnabled: boolean;
+  setRechargeSpeedUpEnabled: (enabled: boolean) => void;
+  rechargeSpeedUpValue: number;
+  setRechargeSpeedUpValue: (value: number) => void;
   talentCriticalEnabled: boolean;
   setTalentCriticalEnabled: (enabled: boolean) => void;
   talentCriticalValue: number;
@@ -1768,6 +1797,12 @@ function TalentsList({
                       width={16}
                       height={16}
                       className="inline mr-1 align-top"
+                    />
+                    <input
+                      type="checkbox"
+                      checked={rechargeSpeedUpEnabled}
+                      onChange={(e) => setRechargeSpeedUpEnabled(e.target.checked)}
+                      className="mr-1 align-middle"
                     />
                     {talent.name} ({talent.id})
                   </>
@@ -2178,6 +2213,31 @@ function TalentsList({
                         />
                         <small><b>円</b></small>
                         <small className="text-gray-400" style={{fontSize: '10px'}}> ({Math.floor(talent.data[2] * 1.5)}~{Math.floor(talent.data[3] * 1.5)})</small>
+                      </div>
+                    </div>
+                  ) : /* 生産スピードアップ(26)の場合はテキストボックスを表示 */
+                  talent.id === 26 ? (
+                    <div className="text-right">
+                      <div className="text-xs mb-1">
+                        <b>-</b>
+                        <input
+                          type="number"
+                          value={rechargeSpeedUpValue}
+                          onChange={(e) => {
+                            const value = Number(e.target.value);
+                            const minValue = talent.data[2];
+                            const maxValue = talent.data[3];
+                            if (value >= minValue && value <= maxValue) {
+                              setRechargeSpeedUpValue(value);
+                            }
+                          }}
+                          className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                          min={talent.data[2]}
+                          max={talent.data[3]}
+                          step={(talent.data[3]-talent.data[2])/(talent.data[1]-1)}
+                        />
+                        <small>f</small>
+                        <small className="text-gray-400" style={{fontSize: '10px'}}> ({talent.data[2]}~{talent.data[3]})</small>
                       </div>
                     </div>
                   ) : /* 移動速度アップ(27)の場合はテキストボックスを表示 */

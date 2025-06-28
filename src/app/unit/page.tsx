@@ -296,7 +296,6 @@ function UnitPageContent() {
           
           {/* ユニット名プルダウン */}
           <div className="relative">
-            <label className="text-xs text-white-600">Unit Name</label>
             <div className="relative">
               <input
                 type="text"

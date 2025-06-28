@@ -66,6 +66,14 @@ export function UnitDisplay({
   // 基本体力アップ(32)の状態
   const [baseHpUpEnabled, setBaseHpUpEnabled] = useState(hasBaseHpUp);
   const [baseHpUpValue, setBaseHpUpValue] = useState(20);
+  
+  // ユニットがクリティカル(13)を持っているかチェック
+  const hasTalentCritical = unitData.auxiliaryData.talents.talentList.some(talent => talent.id === 13);
+  
+  // クリティカル(13)の状態
+  const [talentCriticalEnabled, setTalentCriticalEnabled] = useState(hasTalentCritical);
+  const talentCriticalTalent = unitData.auxiliaryData.talents.talentList.find(talent => talent.id === 13);
+  const [talentCriticalValue, setTalentCriticalValue] = useState(talentCriticalTalent?.data[3] || 20);
 
   // ユニットが変更されたときにフラグを再初期化
   useEffect(() => {
@@ -77,6 +85,8 @@ export function UnitDisplay({
     const newHasAttackIntervalReduction = talentList.some(talent => talent.id === 61);
     const newCostReductionTalent = talentList.find(talent => talent.id === 25);
     const newHasCostReduction = talentList.some(talent => talent.id === 25);
+    const newTalentCriticalTalent = talentList.find(talent => talent.id === 13);
+    const newHasTalentCritical = talentList.some(talent => talent.id === 13);
     
     setBaseAttackUpEnabled(newHasBaseAttackUp);
     setBaseHpUpEnabled(newHasBaseHpUp);
@@ -85,6 +95,8 @@ export function UnitDisplay({
     setAttackIntervalReductionEnabled(newHasAttackIntervalReduction);
     setCostReductionValue(newCostReductionTalent ? Math.floor(newCostReductionTalent.data[3] * 1.5) : 500);
     setCostReductionEnabled(newHasCostReduction);
+    setTalentCriticalValue(newTalentCriticalTalent?.data[3] || 20);
+    setTalentCriticalEnabled(newHasTalentCritical);
   }, [unitData.unitId, unitData.auxiliaryData.talents.talentList]);
 
   const validFormCount = getValidFormCount(unitData);
@@ -118,7 +130,10 @@ export function UnitDisplay({
   const costReduction = (hasCostReduction && costReductionEnabled && actualCurrentForm >= 2) ? costReductionValue : 0;
   const discountedCost = Math.max(0, stats.cost - costReduction);
   
-  const abilities = getAbilities(unitData, actualCurrentForm, level, plusLevel, totalAttackMultiplier, baseHpUpMultiplier);
+  // クリティカル本能の情報を計算
+  const talentCriticalBonus = (hasTalentCritical && talentCriticalEnabled && actualCurrentForm >= 2) ? talentCriticalValue : 0;
+  
+  const abilities = getAbilities(unitData, actualCurrentForm, level, plusLevel, totalAttackMultiplier, baseHpUpMultiplier, talentCriticalBonus);
   const enhancedStats = {
     ...stats,
     hp: Math.floor(stats.hp * baseHpUpMultiplier),
@@ -325,6 +340,10 @@ export function UnitDisplay({
           setCostReductionEnabled={setCostReductionEnabled}
           costReductionValue={costReductionValue}
           setCostReductionValue={setCostReductionValue}
+          talentCriticalEnabled={talentCriticalEnabled}
+          setTalentCriticalEnabled={setTalentCriticalEnabled}
+          talentCriticalValue={talentCriticalValue}
+          setTalentCriticalValue={setTalentCriticalValue}
         />
       )}
     </div>
@@ -827,9 +846,7 @@ function AbilitiesList({ abilities, attackUpEnabled, setAttackUpEnabled, attackU
                         height={16}
                         className="inline mr-1 align-top"
                       />
-                      <span dangerouslySetInnerHTML={{
-                        __html: ability.name.replace(/(\d+%)/g, '<small>$1</small>')
-                      }} />
+                      クリティカル
                     </>
                   ) : (typeof ability.name === 'string' && ability.name.includes('動きを止める') && ability.iconKeys) ? (
                     <>
@@ -1295,21 +1312,25 @@ function AbilitiesList({ abilities, attackUpEnabled, setAttackUpEnabled, attackU
                         />
                       ))}
                     </div>
+                  ) : ability.name === 'クリティカル' && ability.value ? (
+                    <div className={`font-medium break-words ${ability.enhanced ? 'text-orange-500' : 'text-gray-600'}`}>
+                      {ability.value}
+                    </div>
                   ) : ability.value ? (
                     <div className="text-gray-600 font-medium break-words">
-                      {(ability.name === '多段攻撃' || ability.name === '攻撃無効' || ability.name === '動きを止める' || ability.name === '動きを遅くする' || ability.name === 'ふっとばす' || ability.name === 'クリティカル' || ability.name === '攻撃力ダウン' || ability.name === '撃破時お金アップ' || ability.name === 'バリアブレイカー' || ability.name === 'シールドブレイカー' || ability.name === '遠方攻撃' || ability.name === '全方位攻撃' || ability.name === '波動攻撃' || ability.name === '小波動' || ability.name === '裂波攻撃' || ability.name === '小裂波' || ability.name === '攻撃力アップ' || ability.name === '生き残る' || (typeof ability.value === 'string' && ability.value.includes('s(') && ability.value.includes('f)'))) && typeof ability.value === 'string' ? (
+                      {(ability.name === '多段攻撃' || ability.name === '攻撃無効' || ability.name === '動きを止める' || ability.name === '動きを遅くする' || ability.name === 'ふっとばす' || ability.name === '攻撃力ダウン' || ability.name === '撃破時お金アップ' || ability.name === 'バリアブレイカー' || ability.name === 'シールドブレイカー' || ability.name === '遠方攻撃' || ability.name === '全方位攻撃' || ability.name === '波動攻撃' || ability.name === '小波動' || ability.name === '裂波攻撃' || ability.name === '小裂波' || ability.name === '攻撃力アップ' || ability.name === '生き残る' || (typeof ability.value === 'string' && ability.value.includes('s(') && ability.value.includes('f)'))) && typeof ability.value === 'string' ? (
                         <span dangerouslySetInnerHTML={{
                           __html: (() => {
                             let text = ability.value;
                             // フレーム数を先にプレースホルダーで置換
                             const frameMatches: string[] = [];
                             text = text.replace(/\((\d+)f\)~/g, (match, frames) => {
-                              const replacement = `<small class="text-gray-400">(${frames}f)</small> ~ `;
+                              const replacement = `<small class="text-gray-400"> (${frames}f)</small> ~ `;
                               frameMatches.push(replacement);
                               return `___FRAME_PLACEHOLDER_${frameMatches.length - 1}___`;
                             });
                             text = text.replace(/\((\d+)f\)/g, (match, frames) => {
-                              const replacement = `<small class="text-gray-400">(${frames}f)</small>`;
+                              const replacement = `<small class="text-gray-400"> (${frames}f)</small>`;
                               frameMatches.push(replacement);
                               return `___FRAME_PLACEHOLDER_${frameMatches.length - 1}___`;
                             });
@@ -1380,7 +1401,11 @@ function TalentsList({
   costReductionEnabled,
   setCostReductionEnabled,
   costReductionValue,
-  setCostReductionValue
+  setCostReductionValue,
+  talentCriticalEnabled,
+  setTalentCriticalEnabled,
+  talentCriticalValue,
+  setTalentCriticalValue
 }: { 
   talents: readonly UnitTalent[];
   baseAttackUpEnabled: boolean;
@@ -1403,6 +1428,10 @@ function TalentsList({
   setCostReductionEnabled: (enabled: boolean) => void;
   costReductionValue: number;
   setCostReductionValue: (value: number) => void;
+  talentCriticalEnabled: boolean;
+  setTalentCriticalEnabled: (enabled: boolean) => void;
+  talentCriticalValue: number;
+  setTalentCriticalValue: (value: number) => void;
 }) {
   if (talents.length === 0) return null;
 
@@ -1499,6 +1528,12 @@ function TalentsList({
                       width={16}
                       height={16}
                       className="inline mr-1 align-top"
+                    />
+                    <input
+                      type="checkbox"
+                      checked={talentCriticalEnabled}
+                      onChange={(e) => setTalentCriticalEnabled(e.target.checked)}
+                      className="mr-1 align-middle"
                     />
                     {talent.name} ({talent.id})
                   </>
@@ -2108,6 +2143,31 @@ function TalentsList({
                         />
                         <small><b>円</b></small>
                         <small className="text-gray-400" style={{fontSize: '10px'}}> ({Math.floor(talent.data[2] * 1.5)}~{Math.floor(talent.data[3] * 1.5)})</small>
+                      </div>
+                    </div>
+                  ) : /* クリティカル(13)の場合はテキストボックスを表示 */
+                  talent.id === 13 ? (
+                    <div className="text-right">
+                      <div className="text-xs mb-1">
+                        <b>+</b>
+                        <input
+                          type="number"
+                          value={talentCriticalValue}
+                          onChange={(e) => {
+                            const value = Number(e.target.value);
+                            const minValue = talent.data[2];
+                            const maxValue = talent.data[3];
+                            if (value >= minValue && value <= maxValue) {
+                              setTalentCriticalValue(value);
+                            }
+                          }}
+                          className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                          min={talent.data[2]}
+                          max={talent.data[3]}
+                          step={(talent.data[3]-talent.data[2])/(talent.data[1]-1)}
+                        />
+                        <small><b>% </b></small>
+                        <small className="text-gray-400" style={{fontSize: '10px'}}>({talent.data[2]}~{talent.data[3]})</small>
                       </div>
                     </div>
                   ) : /* 属性追加の本能の場合はアイコンを表示 */

@@ -91,6 +91,7 @@ export interface UnitAbility {
   readonly isDynamic?: boolean;
   readonly baseAP?: number;
   readonly calculatedStats?: CalculatedStats;
+  readonly enhanced?: boolean;
 }
 
 // Calculation functions
@@ -264,7 +265,7 @@ export const calculateUnitStats = (
   };
 };
 
-export const getAbilities = (unitData: UnitData, formId: number, level: number = 30, plusLevel: number = 0, attackUpMultiplier: number = 1, hpUpMultiplier: number = 1): UnitAbility[] => {
+export const getAbilities = (unitData: UnitData, formId: number, level: number = 30, plusLevel: number = 0, attackUpMultiplier: number = 1, hpUpMultiplier: number = 1, talentCriticalBonus: number = 0): UnitAbility[] => {
   const form = unitData.coreData.forms[formId];
   if (!form) return [];
 
@@ -610,11 +611,15 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   }
 
   // クリティカル
-  if (stats[31] && stats[31] > 0) {
+  if ((stats[31] && stats[31] > 0) || talentCriticalBonus > 0) {
+    const baseCritical = stats[31] || 0;
+    const totalCritical = baseCritical + talentCriticalBonus;
+    
     abilities.push({
       name: "クリティカル",
-      value: (<b>{stats[31]}<small>%</small></b>),
-      iconKeys: ["abilityCritical"]
+      value: (<b>{totalCritical}<small>%</small></b>),
+      iconKeys: ["abilityCritical"],
+      enhanced: talentCriticalBonus > 0
     });
   }
 
@@ -749,7 +754,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const dodge_duration_s = (dodge_duration / 30).toFixed(1);
     abilities.push({
       name: "攻撃無効",
-      value: `${dodge_chance}% ${dodge_duration_s}s(${dodge_duration}f)`,
+      value: (<b>{dodge_chance}% {dodge_duration_s}s <small className="text-gray-400"> ({dodge_duration}f)</small></b>),
       iconKeys: ["abilityDodgeAttack"]
     });
   }
@@ -826,25 +831,6 @@ export const calculateTalentEffect = (talent: UnitTalent): string | React.ReactN
   const data = talent.data;
   
   switch (talent.id) {
-    // case 67: // 爆波攻撃
-    //   const initial_chance = data[2] || 0;
-    //   const chance_max = data[3] || 0;
-    //   const max_lv = data[1] || 1;
-    //   
-    //   if (max_lv > 1 && chance_max > initial_chance) {
-    //     const chance_per_level = Math.floor((chance_max - initial_chance) / (max_lv - 1));
-    //     if (chance_per_level > 0) {
-    //       return `+${initial_chance}% +${chance_per_level}%/Lv Max${chance_max}%`;
-    //     }
-    //   }
-    //   
-    //   return `+${initial_chance}%/Lv Max${chance_max}%`;
-      
-    // case 27: // 移動速度アップ
-    //   const speed_per_level = data[2] || 0;
-    //   const speed_max = data[3] || 0;
-    //   return `+${speed_per_level}/Lv Max+${speed_max}`;
-      
     case 51: // 攻撃無効
       const dodge_chance = data[2] || 0;
       const dodge_initial_duration = data[4] || 0;
@@ -857,10 +843,10 @@ export const calculateTalentEffect = (talent: UnitTalent): string | React.ReactN
       const dodge_max_duration_s = (dodge_max_duration / 30).toFixed(1);
       
       if (dodge_max_lv > 1 && dodge_duration_per_level > 0) {
-        return `${dodge_chance}% ${dodge_initial_duration_s}s(${dodge_initial_duration}f)~${dodge_max_duration_s}s(${dodge_max_duration}f)`;
+        return (<><b>{dodge_chance}% {dodge_initial_duration_s}s <small className="text-gray-400">({dodge_initial_duration}f)</small>~{dodge_max_duration_s}s <small className="text-gray-400">({dodge_max_duration}f)</small></b></>);
       }
       
-      return `${dodge_chance}% ${dodge_initial_duration_s}s(${dodge_initial_duration}f)`;
+      return (<><b>{dodge_chance}% {dodge_initial_duration_s}s <small className="text-gray-400">({dodge_initial_duration}f)</small></b></>);
       
     case 46: // 動きを遅くする無効
     case 44: // 攻撃力ダウン無効
@@ -890,7 +876,7 @@ export const calculateTalentEffect = (talent: UnitTalent): string | React.ReactN
       if (min_value === max_value) {
         return "";
       } else {
-        return (<b><small>+</small>{min_value}~{max_value}<small>% (+{((max_value - min_value) / (step_count - 1)).toFixed(0)}%/Lv)</small></b>);
+        return (<b><small>+</small>{min_value}~{max_value}<small>%</small> <small className="text-gray-400">(+{((max_value - min_value) / (step_count - 1)).toFixed(0)}%/Lv)</small></b>);
       }
   }
 };

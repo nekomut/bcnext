@@ -2236,7 +2236,7 @@ function TalentsList({
                           max={talent.data[3]}
                           step={(talent.data[3]-talent.data[2])/(talent.data[1]-1)}
                         />
-                        <small>f</small>
+                        <small><b> f</b></small>
                         <small className="text-gray-400" style={{fontSize: '10px'}}> ({talent.data[2]}~{talent.data[3]})</small>
                       </div>
                     </div>

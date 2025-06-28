@@ -1211,6 +1211,17 @@ function AbilitiesList({ abilities, attackUpEnabled, setAttackUpEnabled, attackU
                       />
                       魔女キラー
                     </>
+                  ) : ability.name === 'メタルキラー' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityMetalKiller}`}
+                        alt="メタルキラー"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      メタルキラー
+                    </>
                   ) : ability.name === '裂波カウンター' && ability.iconKeys ? (
                     <>
                       <Image

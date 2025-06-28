@@ -517,7 +517,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
       name: "渾身の一撃",
       value: (
         <>
-          <span className="text-red-500"><small><b>攻撃力</b></small></span><b>+200</b><small><b>%</b></small> <small><b>確率</b></small><b>{chance}</b><small><b>%</b></small> {savageValues}
+          <span className="text-red-500"><small><b>攻撃力</b></small></span><b>+200</b><small><b>%</b></small> <b>{chance}</b><small><b>%</b></small> {savageValues}
           {additionalValues}
         </>
       ),
@@ -551,7 +551,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[24] && stats[24] > 0) {
     abilities.push({
       name: "ふっとばす",
-      value: `${stats[24]}%`,
+      value: (<b>{stats[24]}<small>%</small></b>),
       iconKeys: ["abilityKnockback"]
     });
   }
@@ -613,7 +613,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[31] && stats[31] > 0) {
     abilities.push({
       name: "クリティカル",
-      value: `${stats[31]}%`,
+      value: (<b>{stats[31]}<small>%</small></b>),
       iconKeys: ["abilityCritical"]
     });
   }
@@ -640,7 +640,8 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[112] && stats[112] > 0) {
     abilities.push({
       name: "メタルキラー",
-      value: `${stats[112]}%`
+      value: (<b><small className="text-blue-500">敵体力</small>-{stats[112]}<small>%</small></b>),
+      iconKeys: ["abilityMetalKiller"]
     });
   }
 
@@ -674,7 +675,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const range = Math.floor((stats[114] || 0) / 4);
     abilities.push({
       name: "爆波攻撃",
-      value: `${range} ${stats[113]}%`,
+      value: (<b>{stats[113]}<small>% </small>{range}</b>),
       iconKeys: ["abilityExplosion"]
     });
   }
@@ -696,7 +697,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[70] && stats[70] > 0) {
     abilities.push({
       name: "バリアブレイカー",
-      value: `${stats[70]}%`,
+      value: (<b>{stats[70]}<small>%</small></b>),
       iconKeys: ["abilityBarrierBreaker"]
     });
   }
@@ -705,7 +706,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[95] && stats[95] > 0) {
     abilities.push({
       name: "シールドブレイカー",
-      value: `${stats[95]}%`,
+      value: (<b>{stats[95]}<small>%</small></b>),
       iconKeys: ["abilityShieldPiercing"]
     });
   }
@@ -718,7 +719,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const durationMaxS = frameToSecond(durationMax);
     abilities.push({
       name: "呪い",
-      value: `${durationBaseS.toFixed(2)}s~${durationMaxS.toFixed(2)}s (${durationBase}f~${durationMax}f) ${stats[92]}%`,
+      value: (<b>{stats[92]}<small>%</small> {durationBaseS.toFixed(2)}s~{durationMaxS.toFixed(2)}s <small className="text-gray-400">({durationBase}f~{durationMax}f)</small></b>),
       iconKeys: ["abilityCurse"]
     });
   }
@@ -802,7 +803,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const summonedUnitId = stats[110];
     abilities.push({
       name: "召喚",
-      value: `Unit ${summonedUnitId.toString().padStart(3, '0')}`,
+      value: (<b><small>Unit</small> {summonedUnitId.toString().padStart(3, '0')}</b>),
       iconKeys: ["abilitySummon"]
     });
   }
@@ -821,28 +822,28 @@ export const getUnitData = async (unitId: number): Promise<UnitData | null> => {
 };
 
 // 本能・超本能の効果を計算する関数
-export const calculateTalentEffect = (talent: UnitTalent): string => {
+export const calculateTalentEffect = (talent: UnitTalent): string | React.ReactNode => {
   const data = talent.data;
   
   switch (talent.id) {
-    case 67: // 爆波攻撃
-      const initial_chance = data[2] || 0;
-      const chance_max = data[3] || 0;
-      const max_lv = data[1] || 1;
+    // case 67: // 爆波攻撃
+    //   const initial_chance = data[2] || 0;
+    //   const chance_max = data[3] || 0;
+    //   const max_lv = data[1] || 1;
+    //   
+    //   if (max_lv > 1 && chance_max > initial_chance) {
+    //     const chance_per_level = Math.floor((chance_max - initial_chance) / (max_lv - 1));
+    //     if (chance_per_level > 0) {
+    //       return `+${initial_chance}% +${chance_per_level}%/Lv Max${chance_max}%`;
+    //     }
+    //   }
+    //   
+    //   return `+${initial_chance}%/Lv Max${chance_max}%`;
       
-      if (max_lv > 1 && chance_max > initial_chance) {
-        const chance_per_level = Math.floor((chance_max - initial_chance) / (max_lv - 1));
-        if (chance_per_level > 0) {
-          return `+${initial_chance}% +${chance_per_level}%/Lv Max${chance_max}%`;
-        }
-      }
-      
-      return `+${initial_chance}%/Lv Max${chance_max}%`;
-      
-    case 27: // 移動速度アップ
-      const speed_per_level = data[2] || 0;
-      const speed_max = data[3] || 0;
-      return `+${speed_per_level}/Lv Max+${speed_max}`;
+    // case 27: // 移動速度アップ
+    //   const speed_per_level = data[2] || 0;
+    //   const speed_max = data[3] || 0;
+    //   return `+${speed_per_level}/Lv Max+${speed_max}`;
       
     case 51: // 攻撃無効
       const dodge_chance = data[2] || 0;
@@ -887,9 +888,9 @@ export const calculateTalentEffect = (talent: UnitTalent): string => {
       const min_value = data[2];
       const max_value = data[3];
       if (min_value === max_value) {
-        return `${min_value}%`;
+        return "";
       } else {
-        return `+${min_value}~${max_value}% (+${(max_value - min_value) / (step_count - 1)}%/Lv)`;
+        return (<b><small>+</small>{min_value}~{max_value}<small>% (+{((max_value - min_value) / (step_count - 1)).toFixed(0)}%/Lv)</small></b>);
       }
   }
 };

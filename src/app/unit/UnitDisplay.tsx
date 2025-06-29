@@ -32,7 +32,7 @@ export function UnitDisplay({
   const [plusLevelInput, setPlusLevelInput] = useState(initialPlusLevel.toString());
   
   // 攻撃力アップの状態
-  const [attackUpEnabled, setAttackUpEnabled] = useState(false);
+  const [attackUpEnabled] = useState(false);
   
   // ユニットが基本攻撃力アップ(31)、基本体力アップ(32)を持っているかチェック
   const hasBaseAttackUp = unitData.auxiliaryData.talents.talentList.some(talent => talent.id === 31);
@@ -70,6 +70,41 @@ export function UnitDisplay({
   const [moveSpeedUpEnabled, setMoveSpeedUpEnabled] = useState(hasMoveSpeedUp);
   const moveSpeedUpTalent = unitData.auxiliaryData.talents.talentList.find(talent => talent.id === 27);
   const [moveSpeedUpValue, setMoveSpeedUpValue] = useState(moveSpeedUpTalent?.data[3] || 20);
+
+  // ユニットが動きを止める(2)を持っているかチェック
+  const hasTalentFreeze = unitData.auxiliaryData.talents.talentList.some(talent => talent.id === 2);
+  
+  // 動きを止める(2)の状態
+  const [talentFreezeEnabled, setTalentFreezeEnabled] = useState(hasTalentFreeze);
+  const talentFreezeTalent = unitData.auxiliaryData.talents.talentList.find(talent => talent.id === 2);
+  const [talentFreezeChance, setTalentFreezeChance] = useState(talentFreezeTalent?.data[2] || 0);
+  const [talentFreezeDuration, setTalentFreezeDuration] = useState(talentFreezeTalent?.data[5] || 0);
+
+  // ユニットが攻撃力ダウン(1)を持っているかチェック
+  const hasTalentWeaken = unitData.auxiliaryData.talents.talentList.some(talent => talent.id === 1);
+  
+  // 攻撃力ダウン(1)の状態
+  const [talentWeakenEnabled, setTalentWeakenEnabled] = useState(hasTalentWeaken);
+  const talentWeakenTalent = unitData.auxiliaryData.talents.talentList.find(talent => talent.id === 1);
+  const [talentWeakenChance, setTalentWeakenChance] = useState(talentWeakenTalent?.data[2] || 0);
+  const [talentWeakenDuration, setTalentWeakenDuration] = useState(talentWeakenTalent?.data[5] || 0);
+
+  // ユニットが動きを遅くする(3)を持っているかチェック
+  const hasTalentSlow = unitData.auxiliaryData.talents.talentList.some(talent => talent.id === 3);
+  
+  // 動きを遅くする(3)の状態
+  const [talentSlowEnabled, setTalentSlowEnabled] = useState(hasTalentSlow);
+  const talentSlowTalent = unitData.auxiliaryData.talents.talentList.find(talent => talent.id === 3);
+  const [talentSlowChance, setTalentSlowChance] = useState(talentSlowTalent?.data[2] || 0);
+  const [talentSlowDuration, setTalentSlowDuration] = useState(talentSlowTalent?.data[5] || 0);
+
+  // ユニットがふっとばす(8)を持っているかチェック
+  const hasTalentKnockback = unitData.auxiliaryData.talents.talentList.some(talent => talent.id === 8);
+  
+  // ふっとばす(8)の状態
+  const [talentKnockbackEnabled, setTalentKnockbackEnabled] = useState(hasTalentKnockback);
+  const talentKnockbackTalent = unitData.auxiliaryData.talents.talentList.find(talent => talent.id === 8);
+  const [talentKnockbackChance, setTalentKnockbackChance] = useState(talentKnockbackTalent?.data[3] || 0);
   
   // ユニットが生産スピードアップ(26)を持っているかチェック
   const hasRechargeSpeedUp = unitData.auxiliaryData.talents.talentList.some(talent => talent.id === 26);
@@ -117,6 +152,14 @@ export function UnitDisplay({
     const newHasRechargeSpeedUp = talentList.some(talent => talent.id === 26);
     const newTalentCriticalTalent = talentList.find(talent => talent.id === 13);
     const newHasTalentCritical = talentList.some(talent => talent.id === 13);
+    const newTalentFreezeTalent = talentList.find(talent => talent.id === 2);
+    const newHasTalentFreeze = talentList.some(talent => talent.id === 2);
+    const newTalentWeakenTalent = talentList.find(talent => talent.id === 1);
+    const newHasTalentWeaken = talentList.some(talent => talent.id === 1);
+    const newTalentSlowTalent = talentList.find(talent => talent.id === 3);
+    const newHasTalentSlow = talentList.some(talent => talent.id === 3);
+    const newTalentKnockbackTalent = talentList.find(talent => talent.id === 8);
+    const newHasTalentKnockback = talentList.some(talent => talent.id === 8);
     
     setBaseAttackUpEnabled(newHasBaseAttackUp);
     setBaseHpUpEnabled(newHasBaseHpUp);
@@ -131,6 +174,17 @@ export function UnitDisplay({
     setRechargeSpeedUpEnabled(newHasRechargeSpeedUp);
     setTalentCriticalValue(newTalentCriticalTalent?.data[3] || 20);
     setTalentCriticalEnabled(newHasTalentCritical);
+    setTalentFreezeChance(newTalentFreezeTalent?.data[2] || 0);
+    setTalentFreezeDuration(newTalentFreezeTalent?.data[5] || 0);
+    setTalentFreezeEnabled(newHasTalentFreeze);
+    setTalentWeakenChance(newTalentWeakenTalent?.data[2] || 0);
+    setTalentWeakenDuration(newTalentWeakenTalent?.data[5] || 0);
+    setTalentWeakenEnabled(newHasTalentWeaken);
+    setTalentSlowChance(newTalentSlowTalent?.data[2] || 0);
+    setTalentSlowDuration(newTalentSlowTalent?.data[5] || 0);
+    setTalentSlowEnabled(newHasTalentSlow);
+    setTalentKnockbackChance(newTalentKnockbackTalent?.data[3] || 0);
+    setTalentKnockbackEnabled(newHasTalentKnockback);
     setTalentToughnessValue(0.2);
     setTalentMightyApValue(1.8);
     setTalentMightyDmgValue(0.4);
@@ -182,7 +236,38 @@ export function UnitDisplay({
   // クリティカル本能の情報を計算
   const talentCriticalBonus = (hasTalentCritical && talentCriticalEnabled && actualCurrentForm >= 2) ? talentCriticalValue : 0;
   
-  const abilities = getAbilities(unitData, actualCurrentForm, level, plusLevel, totalAttackMultiplier, baseHpUpMultiplier, talentCriticalBonus);
+  // 「動きを止める」の本能によるボーナス値（第三形態以上のみ適用）
+  // 加算値が0の場合は効果なしとして扱う
+  const actualFreezeChance = (hasTalentFreeze && talentFreezeEnabled && actualCurrentForm >= 2) ? talentFreezeChance : 0;
+  const actualFreezeDuration = (hasTalentFreeze && talentFreezeEnabled && actualCurrentForm >= 2) ? talentFreezeDuration : 0;
+  const talentFreezeBonus = { 
+    chance: actualFreezeChance, 
+    duration: actualFreezeDuration 
+  };
+
+  // 「攻撃力ダウン」の本能によるボーナス値（第三形態以上のみ適用）
+  const actualWeakenChance = (hasTalentWeaken && talentWeakenEnabled && actualCurrentForm >= 2) ? talentWeakenChance : 0;
+  const actualWeakenDuration = (hasTalentWeaken && talentWeakenEnabled && actualCurrentForm >= 2) ? talentWeakenDuration : 0;
+  const talentWeakenBonus = { 
+    chance: actualWeakenChance, 
+    duration: actualWeakenDuration 
+  };
+
+  // 「動きを遅くする」の本能によるボーナス値（第三形態以上のみ適用）
+  const actualSlowChance = (hasTalentSlow && talentSlowEnabled && actualCurrentForm >= 2) ? talentSlowChance : 0;
+  const actualSlowDuration = (hasTalentSlow && talentSlowEnabled && actualCurrentForm >= 2) ? talentSlowDuration : 0;
+  const talentSlowBonus = { 
+    chance: actualSlowChance, 
+    duration: actualSlowDuration 
+  };
+
+  // 「ふっとばす」の本能によるボーナス値（第三形態以上のみ適用）
+  const actualKnockbackChance = (hasTalentKnockback && talentKnockbackEnabled && actualCurrentForm >= 2) ? talentKnockbackChance : 0;
+  const talentKnockbackBonus = { 
+    chance: actualKnockbackChance 
+  };
+
+  const abilities = getAbilities(unitData, actualCurrentForm, level, plusLevel, totalAttackMultiplier, baseHpUpMultiplier, talentCriticalBonus, talentFreezeBonus, talentWeakenBonus, talentSlowBonus, talentKnockbackBonus);
   const enhancedStats = {
     ...stats,
     hp: Math.floor(stats.hp * baseHpUpMultiplier),
@@ -365,7 +450,7 @@ export function UnitDisplay({
       <StatsTable stats={enhancedStats} attackUpEnabled={totalAttackMultiplier > 1} hpUpEnabled={baseHpUpMultiplier > 1} attackIntervalReductionEnabled={attackIntervalReductionEnabled && actualCurrentForm >= 2} costReductionEnabled={costReductionEnabled && actualCurrentForm >= 2} moveSpeedUpEnabled={moveSpeedUpEnabled && actualCurrentForm >= 2} rechargeSpeedUpEnabled={rechargeSpeedUpEnabled && actualCurrentForm >= 2} />
 
       {/* Abilities */}
-      {abilities.length > 0 && <AbilitiesList abilities={abilities} attackUpEnabled={attackUpEnabled} setAttackUpEnabled={setAttackUpEnabled} attackUpMultiplier={totalAttackMultiplier} hpUpMultiplier={baseHpUpMultiplier} />}
+      {abilities.length > 0 && <AbilitiesList abilities={abilities} attackUpMultiplier={totalAttackMultiplier} hpUpMultiplier={baseHpUpMultiplier} />}
 
       {/* Talents */}
       {unitData.auxiliaryData.talents.hasTalents && actualCurrentForm >= 2 && (
@@ -411,6 +496,28 @@ export function UnitDisplay({
           setTalentMightyDmgValue={setTalentMightyDmgValue}
           talentBerserkValue={talentBerserkValue}
           setTalentBerserkValue={setTalentBerserkValue}
+          talentFreezeEnabled={talentFreezeEnabled}
+          setTalentFreezeEnabled={setTalentFreezeEnabled}
+          talentFreezeChance={talentFreezeChance}
+          setTalentFreezeChance={setTalentFreezeChance}
+          talentFreezeDuration={talentFreezeDuration}
+          setTalentFreezeDuration={setTalentFreezeDuration}
+          talentWeakenEnabled={talentWeakenEnabled}
+          setTalentWeakenEnabled={setTalentWeakenEnabled}
+          talentWeakenChance={talentWeakenChance}
+          setTalentWeakenChance={setTalentWeakenChance}
+          talentWeakenDuration={talentWeakenDuration}
+          setTalentWeakenDuration={setTalentWeakenDuration}
+          talentSlowEnabled={talentSlowEnabled}
+          setTalentSlowEnabled={setTalentSlowEnabled}
+          talentSlowChance={talentSlowChance}
+          setTalentSlowChance={setTalentSlowChance}
+          talentSlowDuration={talentSlowDuration}
+          setTalentSlowDuration={setTalentSlowDuration}
+          talentKnockbackEnabled={talentKnockbackEnabled}
+          setTalentKnockbackEnabled={setTalentKnockbackEnabled}
+          talentKnockbackChance={talentKnockbackChance}
+          setTalentKnockbackChance={setTalentKnockbackChance}
           currentHp={enhancedStats.hp}
           currentAp={enhancedStats.ap}
           totalAttackMultiplier={totalAttackMultiplier}
@@ -848,10 +955,8 @@ function DynamicMighty({ ability, attackUpMultiplier, hpUpMultiplier }: { abilit
   );
 }
 
-function AbilitiesList({ abilities, attackUpEnabled, setAttackUpEnabled, attackUpMultiplier, hpUpMultiplier }: { 
+function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier }: { 
   abilities: UnitAbility[], 
-  attackUpEnabled: boolean, 
-  setAttackUpEnabled: (enabled: boolean) => void,
   attackUpMultiplier: number,
   hpUpMultiplier: number
 }) {
@@ -1081,12 +1186,6 @@ function AbilitiesList({ abilities, attackUpEnabled, setAttackUpEnabled, attackU
                         width={16}
                         height={16}
                         className="inline mr-1 align-top"
-                      />
-                      <input
-                        type="checkbox"
-                        checked={attackUpEnabled}
-                        onChange={(e) => setAttackUpEnabled(e.target.checked)}
-                        className="mr-1 align-middle"
                       />
                       攻撃力アップ
                     </>
@@ -1492,6 +1591,28 @@ function TalentsList({
   setTalentMightyDmgValue,
   talentBerserkValue,
   setTalentBerserkValue,
+  talentFreezeEnabled,
+  setTalentFreezeEnabled,
+  talentFreezeChance,
+  setTalentFreezeChance,
+  talentFreezeDuration,
+  setTalentFreezeDuration,
+  talentWeakenEnabled,
+  setTalentWeakenEnabled,
+  talentWeakenChance,
+  setTalentWeakenChance,
+  talentWeakenDuration,
+  setTalentWeakenDuration,
+  talentSlowEnabled,
+  setTalentSlowEnabled,
+  talentSlowChance,
+  setTalentSlowChance,
+  talentSlowDuration,
+  setTalentSlowDuration,
+  talentKnockbackEnabled,
+  setTalentKnockbackEnabled,
+  talentKnockbackChance,
+  setTalentKnockbackChance,
   currentHp,
   currentAp,
   totalAttackMultiplier
@@ -1537,6 +1658,28 @@ function TalentsList({
   setTalentMightyDmgValue: (value: number) => void;
   talentBerserkValue: number;
   setTalentBerserkValue: (value: number) => void;
+  talentFreezeEnabled: boolean;
+  setTalentFreezeEnabled: (enabled: boolean) => void;
+  talentFreezeChance: number;
+  setTalentFreezeChance: (value: number) => void;
+  talentFreezeDuration: number;
+  setTalentFreezeDuration: (value: number) => void;
+  talentWeakenEnabled: boolean;
+  setTalentWeakenEnabled: (enabled: boolean) => void;
+  talentWeakenChance: number;
+  setTalentWeakenChance: (value: number) => void;
+  talentWeakenDuration: number;
+  setTalentWeakenDuration: (value: number) => void;
+  talentSlowEnabled: boolean;
+  setTalentSlowEnabled: (enabled: boolean) => void;
+  talentSlowChance: number;
+  setTalentSlowChance: (value: number) => void;
+  talentSlowDuration: number;
+  setTalentSlowDuration: (value: number) => void;
+  talentKnockbackEnabled: boolean;
+  setTalentKnockbackEnabled: (enabled: boolean) => void;
+  talentKnockbackChance: number;
+  setTalentKnockbackChance: (value: number) => void;
   currentHp: number;
   currentAp: number;
   totalAttackMultiplier: number;
@@ -1582,6 +1725,12 @@ function TalentsList({
                       height={16}
                       className="inline mr-1 align-top"
                     />
+                    <input
+                      type="checkbox"
+                      checked={talentWeakenEnabled}
+                      onChange={(e) => setTalentWeakenEnabled(e.target.checked)}
+                      className="mr-1 align-middle"
+                    />
                     {talent.name} ({talent.id})
                   </>
                 ) : talent.id === 2 ? (
@@ -1592,6 +1741,12 @@ function TalentsList({
                       width={16}
                       height={16}
                       className="inline mr-1 align-top"
+                    />
+                    <input
+                      type="checkbox"
+                      checked={talentFreezeEnabled}
+                      onChange={(e) => setTalentFreezeEnabled(e.target.checked)}
+                      className="mr-1 align-middle"
                     />
                     {talent.name} ({talent.id})
                   </>
@@ -1604,6 +1759,12 @@ function TalentsList({
                       height={16}
                       className="inline mr-1 align-top"
                     />
+                    <input
+                      type="checkbox"
+                      checked={talentSlowEnabled}
+                      onChange={(e) => setTalentSlowEnabled(e.target.checked)}
+                      className="mr-1 align-middle"
+                    />
                     {talent.name} ({talent.id})
                   </>
                 ) : talent.id === 8 ? (
@@ -1614,6 +1775,12 @@ function TalentsList({
                       width={16}
                       height={16}
                       className="inline mr-1 align-top"
+                    />
+                    <input
+                      type="checkbox"
+                      checked={talentKnockbackEnabled}
+                      onChange={(e) => setTalentKnockbackEnabled(e.target.checked)}
+                      className="mr-1 align-middle"
                     />
                     {talent.name} ({talent.id})
                   </>
@@ -2356,6 +2523,196 @@ function TalentsList({
                         />
                         <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
                       </div>
+                    </div>
+                  ) : /* 動きを止める(2)の場合はテキストボックスを表示 */
+                  talent.id === 2 ? (
+                    <div className="text-right">
+                      {/* 確率の範囲が変動する場合のみテキストボックスを表示 */}
+                      {talent.data[2] !== talent.data[3] ? (
+                        <div className="text-xs mb-1">
+                          <b className="text-gray-500">+</b>
+                          <input
+                            type="number"
+                            value={talentFreezeChance}
+                            onChange={(e) => {
+                              const value = Number(e.target.value);
+                              const minValue = talent.data[2];
+                              const maxValue = talent.data[3];
+                              if (value >= minValue && value <= maxValue) {
+                                setTalentFreezeChance(value);
+                              }
+                            }}
+                            className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                            min={talent.data[2]}
+                            max={talent.data[3]}
+                            step={(talent.data[3]-talent.data[2])/(talent.data[1]-1)}
+                          />
+                          <small><b className="text-gray-500">%</b></small>
+                          <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
+                        </div>
+                      ) : talent.data[2] !== 0 ? (
+                        <div className="text-xs mb-1">
+                          <b className="text-gray-500">+{talent.data[2]}%</b>
+                        </div>
+                      ) : null}
+                      <div className="text-xs mb-1">
+                        <b className="text-gray-500"><small>+{(talentFreezeDuration/30).toFixed(2)}s</small></b> <b className="text-gray-500">( </b><small><b className="text-gray-500">+</b></small>
+                        <input
+                          type="number"
+                          value={talentFreezeDuration}
+                          onChange={(e) => {
+                            const value = Number(e.target.value);
+                            const minValue = talent.data[4];
+                            const maxValue = talent.data[5];
+                            if (value >= minValue && value <= maxValue) {
+                              setTalentFreezeDuration(value);
+                            }
+                          }}
+                          className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                          min={talent.data[4]}
+                          max={talent.data[5]}
+                          step={(talent.data[5]-talent.data[4])/(talent.data[1]-1)}
+                        />
+                        <small><b className="text-gray-500">f</b></small><b className="text-gray-500"> )</b>
+                        <br />
+                        <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[4]}~{talent.data[5]})</b></small>
+                      </div>
+                    </div>
+                  ) : /* 攻撃力ダウン(1)の場合はテキストボックスを表示 */
+                  talent.id === 1 ? (
+                    <div className="text-right">
+                      {/* 確率の範囲が変動する場合のみテキストボックスを表示 */}
+                      {talent.data[2] !== talent.data[3] ? (
+                        <div className="text-xs mb-1">
+                          <b className="text-gray-500">+</b>
+                          <input
+                            type="number"
+                            value={talentWeakenChance}
+                            onChange={(e) => {
+                              const value = Number(e.target.value);
+                              const minValue = talent.data[2];
+                              const maxValue = talent.data[3];
+                              if (value >= minValue && value <= maxValue) {
+                                setTalentWeakenChance(value);
+                              }
+                            }}
+                            className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                            min={talent.data[2]}
+                            max={talent.data[3]}
+                            step={(talent.data[3]-talent.data[2])/(talent.data[1]-1)}
+                          />
+                          <small><b className="text-gray-500">%</b></small>
+                          <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
+                        </div>
+                      ) : talent.data[2] !== 0 ? (
+                        <div className="text-xs mb-1">
+                          <b className="text-gray-500">+{talent.data[2]}%</b>
+                        </div>
+                      ) : null}
+                      <div className="text-xs mb-1">
+                        <b className="text-gray-500"><small>+{(talentWeakenDuration/30).toFixed(2)}s</small></b> <b className="text-gray-500">( </b><small><b className="text-gray-500">+</b></small>
+                        <input
+                          type="number"
+                          value={talentWeakenDuration}
+                          onChange={(e) => {
+                            const value = Number(e.target.value);
+                            const minValue = talent.data[4];
+                            const maxValue = talent.data[5];
+                            if (value >= minValue && value <= maxValue) {
+                              setTalentWeakenDuration(value);
+                            }
+                          }}
+                          className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                          min={talent.data[4]}
+                          max={talent.data[5]}
+                          step={(talent.data[5]-talent.data[4])/(talent.data[1]-1)}
+                        />
+                        <small><b className="text-gray-500">f</b></small><b className="text-gray-500"> )</b>
+                        <br />
+                        <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[4]}~{talent.data[5]})</b></small>
+                      </div>
+                    </div>
+                  ) : /* 動きを遅くする(3)の場合はテキストボックスを表示 */
+                  talent.id === 3 ? (
+                    <div className="text-right">
+                      {/* 確率の範囲が変動する場合のみテキストボックスを表示 */}
+                      {talent.data[2] !== talent.data[3] ? (
+                        <div className="text-xs mb-1">
+                          <b className="text-gray-500">+</b>
+                          <input
+                            type="number"
+                            value={talentSlowChance}
+                            onChange={(e) => {
+                              const value = Number(e.target.value);
+                              const minValue = talent.data[2];
+                              const maxValue = talent.data[3];
+                              if (value >= minValue && value <= maxValue) {
+                                setTalentSlowChance(value);
+                              }
+                            }}
+                            className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                            min={talent.data[2]}
+                            max={talent.data[3]}
+                            step={(talent.data[3]-talent.data[2])/(talent.data[1]-1)}
+                          />
+                          <small><b className="text-gray-500">%</b></small>
+                          <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
+                        </div>
+                      ) : talent.data[2] !== 0 ? (
+                        <div className="text-xs mb-1">
+                          <b className="text-gray-500">+{talent.data[2]}%</b>
+                        </div>
+                      ) : null}
+                      <div className="text-xs mb-1">
+                        <b className="text-gray-500"><small>+{(talentSlowDuration/30).toFixed(2)}s</small></b> <b className="text-gray-500">( </b><small><b className="text-gray-500">+</b></small>
+                        <input
+                          type="number"
+                          value={talentSlowDuration}
+                          onChange={(e) => {
+                            const value = Number(e.target.value);
+                            const minValue = talent.data[4];
+                            const maxValue = talent.data[5];
+                            if (value >= minValue && value <= maxValue) {
+                              setTalentSlowDuration(value);
+                            }
+                          }}
+                          className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                          min={talent.data[4]}
+                          max={talent.data[5]}
+                          step={(talent.data[5]-talent.data[4])/(talent.data[1]-1)}
+                        />
+                        <small><b className="text-gray-500">f</b></small><b className="text-gray-500"> )</b>
+                        <br />
+                        <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[4]}~{talent.data[5]})</b></small>
+                      </div>
+                    </div>
+                  ) : /* ふっとばす(8)の場合はテキストボックスを表示 */
+                  talent.id === 8 ? (
+                    <div className="text-right">
+                      {/* 確率の範囲が0~0でない場合のみ表示 */}
+                      {talent.data[2] !== 0 || talent.data[3] !== 0 ? (
+                        <div className="text-xs mb-1">
+                          <b className="text-gray-500">+</b>
+                          <input
+                            type="number"
+                            value={talentKnockbackChance}
+                            onChange={(e) => {
+                              const value = Number(e.target.value);
+                              const minValue = talent.data[2];
+                              const maxValue = talent.data[3];
+                              if (value >= minValue && value <= maxValue) {
+                                setTalentKnockbackChance(value);
+                              }
+                            }}
+                            className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                            min={talent.data[2]}
+                            max={talent.data[3]}
+                            step={(talent.data[3]-talent.data[2])/(talent.data[1]-1)}
+                          />
+                          <small><b className="text-gray-500">%</b></small>
+                          <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
+                        </div>
+                      ) : null}
                     </div>
                   ) : /* クリティカル(13)の場合はテキストボックスを表示 */
                   talent.id === 13 ? (

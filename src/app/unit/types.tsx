@@ -265,7 +265,7 @@ export const calculateUnitStats = (
   };
 };
 
-export const getAbilities = (unitData: UnitData, formId: number, level: number = 30, plusLevel: number = 0, attackUpMultiplier: number = 1, hpUpMultiplier: number = 1, talentCriticalBonus: number = 0): UnitAbility[] => {
+export const getAbilities = (unitData: UnitData, formId: number, level: number = 30, plusLevel: number = 0, attackUpMultiplier: number = 1, hpUpMultiplier: number = 1, talentCriticalBonus: number = 0, talentFreezeBonus: { chance: number; duration: number } = { chance: 0, duration: 0 }, talentWeakenBonus: { chance: number; duration: number } = { chance: 0, duration: 0 }, talentSlowBonus: { chance: number; duration: number } = { chance: 0, duration: 0 }, talentKnockbackBonus: { chance: number } = { chance: 0 }): UnitAbility[] => {
   const form = unitData.coreData.forms[formId];
   if (!form) return [];
 
@@ -578,36 +578,100 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
 
   // ふっとばす
   if (stats[24] && stats[24] > 0) {
+    const baseChance = stats[24];
+    
+    // 本能によるボーナスを加算
+    const totalChance = baseChance + talentKnockbackBonus.chance;
+    
+    // 確率が強化されているかチェック
+    const chanceEnhanced = talentKnockbackBonus.chance > 0;
+    
+    // 確率の色を設定
+    const chanceColor = chanceEnhanced ? "text-orange-600" : "text-gray-500";
+    
     abilities.push({
       name: "ふっとばす",
-      value: (<b className="text-gray-500">{stats[24]}<small>%</small></b>),
-      iconKeys: ["abilityKnockback"]
+      value: (<b className={chanceColor}>{totalChance}<small>%</small></b>),
+      iconKeys: ["abilityKnockback"],
+      enhanced: chanceEnhanced
     });
   }
 
   // 動きを止める
   if (stats[25] && stats[25] > 0) {
-    const duration = frameToSecond(stats[26] || 0);
-    const durationMax = frameToSecond(Math.round((stats[26] || 0) * 1.2));
-    const durationFrames = stats[26] || 0;
-    const durationMaxFrames = Math.round(durationFrames * 1.2);
+    const baseChance = stats[25];
+    const baseDuration = stats[26] || 0;
+    
+    // 本能によるボーナスを加算
+    const totalChance = baseChance + talentFreezeBonus.chance;
+    const totalDuration = baseDuration + talentFreezeBonus.duration;
+    
+    // 最大持続時間は基本値の1.2倍に本能ボーナスを加算
+    const baseDurationMax = Math.round(baseDuration * 1.2);
+    const totalDurationMax = baseDurationMax + talentFreezeBonus.duration;
+    
+    const duration = frameToSecond(totalDuration);
+    const durationMax = frameToSecond(totalDurationMax);
+    
+    // 確率と持続時間それぞれ個別に強化判定
+    const chanceEnhanced = talentFreezeBonus.chance > 0;
+    const durationEnhanced = talentFreezeBonus.duration > 0;
+    const isEnhanced = chanceEnhanced || durationEnhanced;
+    
+    // 確率と持続時間の色を個別に設定
+    const chanceColor = chanceEnhanced ? "text-orange-600" : "text-gray-500";
+    const durationColor = durationEnhanced ? "text-orange-600" : "text-gray-500";
+    
     abilities.push({
       name: "動きを止める",
-      value: (<b className="text-gray-500">{stats[25]}<small>%</small> {duration.toFixed(1)}s~{durationMax.toFixed(1)}s <small className="text-gray-400">({durationFrames}f~{durationMaxFrames}f)</small></b>),
-      iconKeys: ["abilityFreeze"]
+      value: (
+        <>
+          <b className={chanceColor}>{totalChance}<small>%</small></b>{' '}
+          <b className={durationColor}>{duration.toFixed(1)}s~{durationMax.toFixed(1)}s</b>{' '}
+          <small className="text-gray-400">({totalDuration}f~{totalDurationMax}f)</small>
+        </>
+      ),
+      iconKeys: ["abilityFreeze"],
+      enhanced: isEnhanced
     });
   }
 
   // 動きを遅くする
   if (stats[27] && stats[27] > 0) {
-    const duration = frameToSecond(stats[28] || 0);
-    const durationMax = frameToSecond(Math.round((stats[28] || 0) * 1.2));
-    const durationFrames = stats[28] || 0;
-    const durationMaxFrames = Math.round(durationFrames * 1.2);
+    const baseChance = stats[27];
+    const baseDuration = stats[28] || 0;
+    
+    // 本能によるボーナスを加算
+    const totalChance = baseChance + talentSlowBonus.chance;
+    const totalDuration = baseDuration + talentSlowBonus.duration;
+    
+    // 最大持続時間は基本値の1.2倍に本能ボーナスを加算
+    const baseDurationMax = Math.round(baseDuration * 1.2);
+    const totalDurationMax = baseDurationMax + talentSlowBonus.duration;
+    
+    const duration = frameToSecond(totalDuration);
+    const durationMax = frameToSecond(totalDurationMax);
+    
+    // 確率と持続時間それぞれ個別に強化判定
+    const chanceEnhanced = talentSlowBonus.chance > 0;
+    const durationEnhanced = talentSlowBonus.duration > 0;
+    const isEnhanced = chanceEnhanced || durationEnhanced;
+    
+    // 確率と持続時間の色を個別に設定
+    const chanceColor = chanceEnhanced ? "text-orange-600" : "text-gray-500";
+    const durationColor = durationEnhanced ? "text-orange-600" : "text-gray-500";
+    
     abilities.push({
       name: "動きを遅くする",
-      value: (<b className="text-gray-500">{stats[27]}<small>%</small> {duration.toFixed(1)}s~{durationMax.toFixed(1)}s <small className="text-gray-400">({durationFrames}f~{durationMaxFrames}f)</small></b>),
-      iconKeys: ["abilitySlow"]
+      value: (
+        <>
+          <b className={chanceColor}>{totalChance}<small>%</small></b>{' '}
+          <b className={durationColor}>{duration.toFixed(1)}s~{durationMax.toFixed(1)}s</b>{' '}
+          <small className="text-gray-400">({totalDuration}f~{totalDurationMax}f)</small>
+        </>
+      ),
+      iconKeys: ["abilitySlow"],
+      enhanced: isEnhanced
     });
   }
 
@@ -715,14 +779,42 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
 
   // 攻撃力ダウン
   if (stats[37] && stats[37] > 0) {
-    const duration = frameToSecond(stats[38] || 0);
-    const durationMax = frameToSecond(Math.round((stats[38] || 0) * 1.2));
-    const durationFrames = stats[38] || 0;
-    const durationMaxFrames = Math.round(durationFrames * 1.2);
+    const baseChance = stats[37];
+    const baseDuration = stats[38] || 0;
+    const weakenPower = stats[39] || 0;
+    
+    // 本能によるボーナスを加算
+    const totalChance = baseChance + talentWeakenBonus.chance;
+    const totalDuration = baseDuration + talentWeakenBonus.duration;
+    
+    // 最大持続時間は基本値の1.2倍に本能ボーナスを加算
+    const baseDurationMax = Math.round(baseDuration * 1.2);
+    const totalDurationMax = baseDurationMax + talentWeakenBonus.duration;
+    
+    const duration = frameToSecond(totalDuration);
+    const durationMax = frameToSecond(totalDurationMax);
+    
+    // 確率と持続時間それぞれ個別に強化判定
+    const chanceEnhanced = talentWeakenBonus.chance > 0;
+    const durationEnhanced = talentWeakenBonus.duration > 0;
+    const isEnhanced = chanceEnhanced || durationEnhanced;
+    
+    // 確率と持続時間の色を個別に設定
+    const chanceColor = chanceEnhanced ? "text-orange-600" : "text-gray-500";
+    const durationColor = durationEnhanced ? "text-orange-600" : "text-gray-500";
+    
     abilities.push({
       name: "攻撃力ダウン",
-      value: (<b className="text-gray-500">{stats[37]}<small>%</small> <small className="text-red-500">敵攻撃力</small>-{stats[39]}<small>%</small> {duration.toFixed(1)}s~{durationMax.toFixed(1)}s <small className="text-gray-400">({durationFrames}f~{durationMaxFrames}f)</small></b>),
-      iconKeys: ["abilityWeaken"]
+      value: (
+        <>
+          <b className={chanceColor}>{totalChance}<small>%</small></b>{' '}
+          <small className="text-red-500">敵攻撃力</small>-{weakenPower}<small>%</small>{' '}
+          <b className={durationColor}>{duration.toFixed(1)}s~{durationMax.toFixed(1)}s</b>{' '}
+          <small className="text-gray-400">({totalDuration}f~{totalDurationMax}f)</small>
+        </>
+      ),
+      iconKeys: ["abilityWeaken"],
+      enhanced: isEnhanced
     });
   }
 

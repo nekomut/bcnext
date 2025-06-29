@@ -91,6 +91,9 @@ export function UnitDisplay({
   const talentCriticalTalent = unitData.auxiliaryData.talents.talentList.find(talent => talent.id === 13);
   const [talentCriticalValue, setTalentCriticalValue] = useState(talentCriticalTalent?.data[3] || 20);
 
+  // 打たれ強い(6)の状態
+  const [talentToughnessValue, setTalentToughnessValue] = useState(0.2);
+
   // ユニットが変更されたときにフラグを再初期化
   useEffect(() => {
     const talentList = unitData.auxiliaryData.talents.talentList;
@@ -121,6 +124,7 @@ export function UnitDisplay({
     setRechargeSpeedUpEnabled(newHasRechargeSpeedUp);
     setTalentCriticalValue(newTalentCriticalTalent?.data[3] || 20);
     setTalentCriticalEnabled(newHasTalentCritical);
+    setTalentToughnessValue(0.2);
   }, [unitData.unitId, unitData.auxiliaryData.talents.talentList]);
 
   const validFormCount = getValidFormCount(unitData);
@@ -386,6 +390,9 @@ export function UnitDisplay({
           setTalentCriticalEnabled={setTalentCriticalEnabled}
           talentCriticalValue={talentCriticalValue}
           setTalentCriticalValue={setTalentCriticalValue}
+          talentToughnessValue={talentToughnessValue}
+          setTalentToughnessValue={setTalentToughnessValue}
+          currentHp={enhancedStats.hp}
         />
       )}
     </div>
@@ -445,27 +452,27 @@ function StatsTable({ stats, attackUpEnabled, hpUpEnabled, attackIntervalReducti
         <StatItem label="コスト" value={<b className={costReductionEnabled ? "text-green-500" : "text-gray-500"}>{stats.cost.toLocaleString()}</b>} />
         <StatItem
           label="再生産"
-          value={<span className={rechargeSpeedUpEnabled ? "text-green-500" : "text-gray-500"}><small className="text-gray-400">({Math.round(stats.recharge * 30).toLocaleString()}f)</small> <b>{stats.recharge.toFixed(2)}s</b></span>}
+          value={<span className={rechargeSpeedUpEnabled ? "text-green-500" : "text-gray-500"}><small className="text-gray-400"><b>({Math.round(stats.recharge * 30).toLocaleString()}f)</b></small> <b>{stats.recharge.toFixed(2)}s</b></span>}
           detail=""
         />
         <StatItem
           label="攻撃発生"
-          value={<span className="text-gray-500"><small className="text-gray-400">({stats.foreswing.toLocaleString()}f)</small> <b>{frameToSecond(stats.foreswing).toFixed(2)}s</b></span>}
+          value={<span className="text-gray-500"><small className="text-gray-400"><b>({stats.foreswing.toLocaleString()}f)</b></small> <b>{frameToSecond(stats.foreswing).toFixed(2)}s</b></span>}
           detail=""
         />
         <StatItem
           label="攻撃間隔"
-          value={<span className={attackIntervalReductionEnabled ? "text-purple-500" : "text-gray-500"}><small className="text-gray-400">({stats.tba.toLocaleString()}f)</small> <b>{frameToSecond(stats.tba).toFixed(2)}s</b></span>}
+          value={<span className={attackIntervalReductionEnabled ? "text-purple-500" : "text-gray-500"}><small className="text-gray-400"><b>({stats.tba.toLocaleString()}f)</b></small> <b>{frameToSecond(stats.tba).toFixed(2)}s</b></span>}
           detail=""
         />
         <StatItem
           label="攻撃後硬直"
-          value={<span className="text-gray-500"><small className="text-gray-400">({stats.backswing.toLocaleString()}f)</small> <b>{frameToSecond(stats.backswing).toFixed(2)}s</b></span>}
+          value={<span className="text-gray-500"><small className="text-gray-400"><b>({stats.backswing.toLocaleString()}f)</b></small> <b>{frameToSecond(stats.backswing).toFixed(2)}s</b></span>}
           detail=""
         />
         <StatItem
           label="攻撃頻度"
-          value={<span className={attackIntervalReductionEnabled ? "text-purple-500" : "text-gray-500"}><small className="text-gray-400">({stats.freq.toLocaleString()}f)</small> <b>{frameToSecond(stats.freq).toFixed(2)}s</b><br /></span>}
+          value={<span className={attackIntervalReductionEnabled ? "text-purple-500" : "text-gray-500"}><small className="text-gray-400"><b>({stats.freq.toLocaleString()}f)</b></small> <b>{frameToSecond(stats.freq).toFixed(2)}s</b><br /></span>}
           detail={<small>[ {stats.frames.join(' ')} ]</small>}
         />
       </div>
@@ -1455,7 +1462,10 @@ function TalentsList({
   talentCriticalEnabled,
   setTalentCriticalEnabled,
   talentCriticalValue,
-  setTalentCriticalValue
+  setTalentCriticalValue,
+  talentToughnessValue,
+  setTalentToughnessValue,
+  currentHp
 }: { 
   talents: readonly UnitTalent[];
   baseAttackUpEnabled: boolean;
@@ -1490,6 +1500,9 @@ function TalentsList({
   setTalentCriticalEnabled: (enabled: boolean) => void;
   talentCriticalValue: number;
   setTalentCriticalValue: (value: number) => void;
+  talentToughnessValue: number;
+  setTalentToughnessValue: (value: number) => void;
+  currentHp: number;
 }) {
   if (talents.length === 0) return null;
 
@@ -2089,12 +2102,12 @@ function TalentsList({
                 )}
               </div>
               {talent.data && (
-                <div className="text-gray-700 text-right break-words flex-shrink-0 max-w-[50%]">
+                <div className="text-gray-500 text-right break-words flex-shrink-0 max-w-[50%]">
                   {/* 基本体力アップ(32)の場合はテキストボックスを表示 */}
                   {talent.id === 32 ? (
                     <div className="text-right">
                       <div className="text-xs mb-1">
-                        <b>+</b>
+                        <b className="text-gray-500">+</b>
                         <input
                           type="number"
                           value={baseHpUpValue}
@@ -2109,15 +2122,15 @@ function TalentsList({
                           max="20"
                           step="2"
                         />
-                        <small><b>%</b></small>
-                        <small className="text-gray-400" style={{fontSize: '10px'}}> (0-20)</small>
+                        <small><b className="text-gray-500">%</b></small>
+                        <small className="text-gray-400" style={{fontSize: '10px'}}> <b>(0-20)</b></small>
                       </div>
                     </div>
                   ) : /* 基本攻撃力アップ(31)の場合はテキストボックスを表示 */
                   talent.id === 31 ? (
                     <div className="text-right">
                       <div className="text-xs mb-1">
-                        <b>+</b>
+                        <b className="text-gray-500">+</b>
                         <input
                           type="number"
                           value={baseAttackUpValue}
@@ -2132,16 +2145,16 @@ function TalentsList({
                           max="20"
                           step="2"
                         />
-                        <small><b>%</b></small>
-                        <small className="text-gray-400" style={{fontSize: '10px'}}> (0-20)</small>
+                        <small><b className="text-gray-500">%</b></small>
+                        <small className="text-gray-400" style={{fontSize: '10px'}}> <b>(0-20)</b></small>
                       </div>
                     </div>
                   ) : /* 攻撃力アップ(10)の場合はテキストボックスを表示 */
                   talent.id === 10 ? (
                     <div className="text-right">
                       <div className="text-xs mb-1">
-                        <small className="text-blue-500"><b>体力</b></small><small><b>≦</b></small><b>{100 - (talent.data[2])}</b><small><b>% </b></small>
-                        <small className="text-red-500"><b>攻撃力</b></small><b>+</b>
+                        <small className="text-blue-500"><b>体力</b></small><small><b className="text-gray-500">≦</b></small><b className="text-gray-500">{100 - (talent.data[2])}</b><small><b className="text-gray-500">% </b></small>
+                        <small className="text-red-500"><b>攻撃力</b></small><b className="text-gray-500">+</b>
                         <input
                           type="number"
                           value={talentAttackUpValue}
@@ -2158,17 +2171,17 @@ function TalentsList({
                           max={talent.data[5]}
                           step={(talent.data[5]-talent.data[4])/(talent.data[1]-1)}
                         />
-                        <small><b>%</b></small>
+                        <small><b className="text-gray-500">%</b></small>
                       </div>
                       <div className="flex items-center justify-end gap-1">
-                        <small className="text-gray-400" style={{fontSize: '10px'}}>({talent.data[4]}~{talent.data[5]})</small>
+                        <small className="text-gray-400" style={{fontSize: '10px'}}><b>({talent.data[4]}~{talent.data[5]})</b></small>
                       </div>
                     </div>
                   ) : /* 攻撃間隔短縮(61)の場合はテキストボックスを表示 */
                   talent.id === 61 ? (
                     <div className="text-right">
                       <div className="text-xs mb-1">
-                        <small className="text-purple-500"><b>攻撃間隔</b></small><b>-</b>
+                        <small className="text-purple-500"><b>攻撃間隔</b></small><b className="text-gray-500">-</b>
                         <input
                           type="number"
                           value={attackIntervalReductionValue}
@@ -2185,16 +2198,17 @@ function TalentsList({
                           max={talent.data[3]}
                           step={(talent.data[3]-talent.data[2])/(talent.data[1]-1)}
                         />
-                        <small><b>%</b></small>
+                        <small><b className="text-gray-500">%</b></small>
                       </div>
                       <div className="flex items-center justify-end gap-1">
-                        <small className="text-gray-400" style={{fontSize: '10px'}}>({talent.data[2]}~{talent.data[3]})</small>
+                        <small className="text-gray-400" style={{fontSize: '10px'}}><b>({talent.data[2]}~{talent.data[3]})</b></small>
                       </div>
                     </div>
-                  ) : talent.id === 25 ? (
+                  ) :  /* 生産コスト割引(25)の場合はテキストボックスを表示 */ 
+                  talent.id === 25 ? (
                     <div className="text-right">
                       <div className="text-xs mb-1">
-                        <b>-</b>
+                        <b className="text-gray-500">-</b>
                         <input
                           type="number"
                           value={costReductionValue}
@@ -2211,14 +2225,14 @@ function TalentsList({
                           max={Math.floor(talent.data[3] * 1.5)}
                           step={Math.floor((talent.data[3] - talent.data[2]) * 1.5 / (talent.data[1] - 1))}
                         />
-                        <small className="text-gray-400" style={{fontSize: '10px'}}> ({Math.floor(talent.data[2] * 1.5)}~{Math.floor(talent.data[3] * 1.5)})</small>
+                        <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({Math.floor(talent.data[2] * 1.5)}~{Math.floor(talent.data[3] * 1.5)})</b></small>
                       </div>
                     </div>
                   ) : /* 生産スピードアップ(26)の場合はテキストボックスを表示 */
                   talent.id === 26 ? (
                     <div className="text-right">
                       <div className="text-xs mb-1">
-                        <b>-</b>
+                        <b className="text-gray-500">-</b>
                         <input
                           type="number"
                           value={rechargeSpeedUpValue}
@@ -2235,15 +2249,15 @@ function TalentsList({
                           max={talent.data[3]}
                           step={(talent.data[3]-talent.data[2])/(talent.data[1]-1)}
                         />
-                        <small><b> f</b></small>
-                        <small className="text-gray-400" style={{fontSize: '10px'}}> ({talent.data[2]}~{talent.data[3]})</small>
+                        <small><b className="text-gray-500"> f</b></small>
+                        <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
                       </div>
                     </div>
                   ) : /* 移動速度アップ(27)の場合はテキストボックスを表示 */
                   talent.id === 27 ? (
                     <div className="text-right">
                       <div className="text-xs mb-1">
-                        <b>+</b>
+                        <b className="text-gray-500">+</b>
                         <input
                           type="number"
                           value={moveSpeedUpValue}
@@ -2260,14 +2274,14 @@ function TalentsList({
                           max={talent.data[3]}
                           step={(talent.data[3]-talent.data[2])/(talent.data[1]-1)}
                         />
-                        <small className="text-gray-400" style={{fontSize: '10px'}}> ({talent.data[2]}~{talent.data[3]})</small>
+                        <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
                       </div>
                     </div>
                   ) : /* クリティカル(13)の場合はテキストボックスを表示 */
                   talent.id === 13 ? (
                     <div className="text-right">
                       <div className="text-xs mb-1">
-                        <b>+</b>
+                        <b className="text-gray-500">+</b>
                         <input
                           type="number"
                           value={talentCriticalValue}
@@ -2284,8 +2298,34 @@ function TalentsList({
                           max={talent.data[3]}
                           step={(talent.data[3]-talent.data[2])/(talent.data[1]-1)}
                         />
-                        <small><b>% </b></small>
+                        <small><b className="text-gray-500">% </b></small>
                         <small className="text-gray-400" style={{fontSize: '10px'}}>({talent.data[2]}~{talent.data[3]})</small>
+                      </div>
+                    </div>
+                  ) : /* 打たれ強い(6)の場合はテキストボックスを表示 */
+                  talent.id === 6 ? (
+                    <div className="text-right">
+                      <div className="text-xs mb-1">
+                        <small className="text-blue-500"><b>被ダメ</b></small>
+                        <input
+                          type="number"
+                          value={talentToughnessValue}
+                          onChange={(e) => {
+                            const value = Number(e.target.value);
+                            if (value >= 0.2 && value <= 0.25) {
+                              setTalentToughnessValue(value);
+                            }
+                          }}
+                          className="w-9 px-1 text-center border border-gray-300 rounded text-xs"
+                          min="0.2"
+                          max="0.25"
+                          step="0.01"
+                        />
+                        <small><b className="text-gray-500">倍</b></small>
+                        <small className="text-gray-400" style={{fontSize: '10px'}}> (0.25~0.2)</small>
+                      </div>
+                      <div className="text-xs">
+                        <small className="text-blue-500"><b>体力(換算値)</b></small> <b className="text-gray-500">{Math.floor(currentHp / talentToughnessValue).toLocaleString()}</b>
                       </div>
                     </div>
                   ) : /* 属性追加の本能の場合はアイコンを表示 */

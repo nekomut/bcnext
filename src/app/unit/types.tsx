@@ -329,21 +329,37 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const hit2_ap = stats[59] || 0; // 第二攻撃力
     const hit3_ap = stats[60] || 0; // 第三攻撃力
     
-    const timings = [`${frameToSecond(hit1_time).toFixed(2)}s (${hit1_time}f)`];
+    const timings = [
+      <>
+        <b className="text-gray-500">{frameToSecond(hit1_time).toFixed(2)}s <small className="text-gray-400"><b>({hit1_time}f)</b></small></b>
+      </>
+    ];
     
     if (hit2_ap > 0) {
-      timings.push(`/ ${frameToSecond(hit2_time).toFixed(2)}s (${hit2_time}f)`);
+      timings.push(
+        <>
+          <b className="text-gray-500"> / {frameToSecond(hit2_time).toFixed(2)}s <small className="text-gray-400"><b>({hit2_time}f)</b></small></b>
+        </>
+      );
     }
     
     if (hit3_ap > 0) {
-      timings.push(`/ ${frameToSecond(hit3_time).toFixed(2)}s (${hit3_time}f)`);
+      timings.push(
+        <>
+          <b className="text-gray-500"> / {frameToSecond(hit3_time).toFixed(2)}s <small className="text-gray-400"><b>({hit3_time}f)</b></small></b>
+        </>
+      );
     }
-    
-    const timeInfo = `${timings.join(' ')}`;
     
     abilities.push({
       name: "多段攻撃",
-      value: timeInfo
+      value: (
+        <>
+          {timings.map((timing, index) => (
+            <span key={index}>{timing}</span>
+          ))}
+        </>
+      )
     });
   }
 
@@ -552,7 +568,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[24] && stats[24] > 0) {
     abilities.push({
       name: "ふっとばす",
-      value: (<b>{stats[24]}<small>%</small></b>),
+      value: (<b className="text-gray-500">{stats[24]}<small>%</small></b>),
       iconKeys: ["abilityKnockback"]
     });
   }
@@ -565,7 +581,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const durationMaxFrames = Math.round(durationFrames * 1.2);
     abilities.push({
       name: "動きを止める",
-      value: `${stats[25]}% ${duration.toFixed(1)}s(${durationFrames}f)~${durationMax.toFixed(1)}s(${durationMaxFrames}f)`,
+      value: (<b className="text-gray-500">{stats[25]}<small>%</small> {duration.toFixed(1)}s~{durationMax.toFixed(1)}s <small className="text-gray-400">({durationFrames}f~{durationMaxFrames}f)</small></b>),
       iconKeys: ["abilityFreeze"]
     });
   }
@@ -578,7 +594,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const durationMaxFrames = Math.round(durationFrames * 1.2);
     abilities.push({
       name: "動きを遅くする",
-      value: `${stats[27]}% ${duration.toFixed(1)}s(${durationFrames}f)~${durationMax.toFixed(1)}s(${durationMaxFrames}f)`,
+      value: (<b className="text-gray-500">{stats[27]}<small>%</small> {duration.toFixed(1)}s~{durationMax.toFixed(1)}s <small className="text-gray-400">({durationFrames}f~{durationMaxFrames}f)</small></b>),
       iconKeys: ["abilitySlow"]
     });
   }
@@ -587,7 +603,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[40] && stats[40] > 0) {
     abilities.push({
       name: "攻撃力アップ",
-      value: `体力≦${100 - stats[40]}% 攻撃力+${stats[41]}%`,
+      value: (<b className="text-gray-500"><small className="text-blue-500">体力</small><small>≦</small>{100 - stats[40]}<small>%</small> <small className="text-red-500">攻撃力</small><small>+</small>{stats[41]}<small>%</small></b>),
       iconKeys: ["abilityStrengthen"]
     });
   }
@@ -596,7 +612,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[42] && stats[42] > 0) {
     abilities.push({
       name: "生き残る",
-      value: `${stats[42]}%`,
+      value: (<b className="text-gray-500">{stats[42]}<small>%</small></b>),
       iconKeys: ["abilitySurvive"]
     });
   }
@@ -605,7 +621,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[34] && stats[34] > 0) {
     abilities.push({
       name: "城破壊が得意",
-      value: "4倍",
+      value: (<b className="text-gray-500">4倍</b>),
       iconKeys: ["abilityBaseDestroyer"]
     });
   }
@@ -627,7 +643,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[33] && stats[33] > 0) {
     abilities.push({
       name: "撃破時お金アップ",
-      value: "+100%",
+      value: (<b className="text-gray-500">+100<small>%</small></b>),
       iconKeys: ["abilityExtraMoney"]
     });
   }
@@ -657,7 +673,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const waveType = stats[94] === 1 ? '小波動' : '波動攻撃';
     abilities.push({
       name: waveType,
-      value: `Lv${waveLevel} ${stats[35]}% ${waveRange}`,
+      value: (<b className="text-gray-500">Lv{waveLevel} {stats[35]}<small>%</small> {waveRange}</b>),
       iconKeys: ["abilityWave"]
     });
   }
@@ -670,7 +686,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const range2 = range1 + Math.floor((stats[88] || 0) / 4);
     abilities.push({
       name: waveType,
-      value: `Lv${waveLevel} ${stats[86]}% ${range1}~${range2}`,
+      value: (<b className="text-gray-500">Lv{waveLevel} {stats[86]}<small>%</small> {range1}~{range2}</b>),
       iconKeys: ["abilitySurge"]
     });
   }
@@ -693,7 +709,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const durationMaxFrames = Math.round(durationFrames * 1.2);
     abilities.push({
       name: "攻撃力ダウン",
-      value: `${stats[37]}% 敵攻撃力-${stats[39]}%<br/>${duration.toFixed(1)}s(${durationFrames}f)~${durationMax.toFixed(1)}s(${durationMaxFrames}f)`,
+      value: (<b className="text-gray-500">{stats[37]}<small>%</small> <small className="text-red-500">敵攻撃力</small>-{stats[39]}<small>%</small> {duration.toFixed(1)}s~{durationMax.toFixed(1)}s <small className="text-gray-400">({durationFrames}f~{durationMaxFrames}f)</small></b>),
       iconKeys: ["abilityWeaken"]
     });
   }
@@ -724,7 +740,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const durationMaxS = frameToSecond(durationMax);
     abilities.push({
       name: "呪い",
-      value: (<b>{stats[92]}<small>%</small> {durationBaseS.toFixed(2)}s~{durationMaxS.toFixed(2)}s <small className="text-gray-400">({durationBase}f~{durationMax}f)</small></b>),
+      value: (<b className="text-gray-500">{stats[92]}<small>%</small> {durationBaseS.toFixed(1)}s~{durationMaxS.toFixed(1)}s <small className="text-gray-400">({durationBase}f~{durationMax}f)</small></b>),
       iconKeys: ["abilityCurse"]
     });
   }
@@ -754,7 +770,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const dodge_duration_s = (dodge_duration / 30).toFixed(1);
     abilities.push({
       name: "攻撃無効",
-      value: (<b>{dodge_chance}% {dodge_duration_s}s <small className="text-gray-400"> ({dodge_duration}f)</small></b>),
+      value: (<b className="text-gray-500">{dodge_chance}<small>%</small> {dodge_duration_s}s <small className="text-gray-400">({dodge_duration}f)</small></b>),
       iconKeys: ["abilityDodgeAttack"]
     });
   }
@@ -843,10 +859,79 @@ export const calculateTalentEffect = (talent: UnitTalent): string | React.ReactN
       const dodge_max_duration_s = (dodge_max_duration / 30).toFixed(1);
       
       if (dodge_max_lv > 1 && dodge_duration_per_level > 0) {
-        return (<><b>{dodge_chance}% {dodge_initial_duration_s}s <small className="text-gray-400">({dodge_initial_duration}f)</small>~{dodge_max_duration_s}s <small className="text-gray-400">({dodge_max_duration}f)</small></b></>);
+        return (<><b>{dodge_chance}<small>%</small> {dodge_initial_duration_s}s~{dodge_max_duration_s}s <small className="text-gray-400">({dodge_initial_duration}f~{dodge_max_duration}f)</small></b></>);
       }
       
-      return (<><b>{dodge_chance}% {dodge_initial_duration_s}s <small className="text-gray-400">({dodge_initial_duration}f)</small></b></>);
+      return (<><b>{dodge_chance}<small>%</small> {dodge_initial_duration_s}s <small className="text-gray-400">({dodge_initial_duration}f)</small></b></>);
+      
+    case 2: // 動きを止める
+      const freeze_chance = data[2] || 0;
+      const freeze_initial_duration = data[4] || 0;
+      const freeze_max_duration = data[5] || 0;
+      const freeze_max_lv = data[1] || 1;
+      
+      // 持続時間の計算（フレームを秒に変換）
+      const freeze_initial_duration_s = (freeze_initial_duration / 30).toFixed(1);
+      const freeze_max_duration_s = (freeze_max_duration / 30).toFixed(1);
+      
+      if (freeze_max_lv > 1 && freeze_max_duration > freeze_initial_duration) {
+        return (<><b className="text-gray-500">{freeze_chance}<small>%</small> {freeze_initial_duration_s}s~{freeze_max_duration_s}s <small className="text-gray-400">({freeze_initial_duration}f~{freeze_max_duration}f)</small></b></>);
+      }
+      
+      return (<><b className="text-gray-500">{freeze_chance}<small>%</small> {freeze_initial_duration_s}s <small className="text-gray-400">({freeze_initial_duration}f)</small></b></>);
+      
+    case 3: // 動きを遅くする
+      const slow_chance = data[2] || 0;
+      const slow_initial_duration = data[4] || 0;
+      const slow_max_duration = data[5] || 0;
+      const slow_max_lv = data[1] || 1;
+      
+      // 持続時間の計算（フレームを秒に変換）
+      const slow_initial_duration_s = (slow_initial_duration / 30).toFixed(1);
+      const slow_max_duration_s = (slow_max_duration / 30).toFixed(1);
+      
+      if (slow_max_lv > 1 && slow_max_duration > slow_initial_duration) {
+        return (<><b className="text-gray-500">{slow_chance}<small>%</small> {slow_initial_duration_s}s~{slow_max_duration_s}s <small className="text-gray-400">({slow_initial_duration}f~{slow_max_duration}f)</small></b></>);
+      }
+      
+      return (<><b className="text-gray-500">{slow_chance}<small>%</small> {slow_initial_duration_s}s <small className="text-gray-400">({slow_initial_duration}f)</small></b></>);
+      
+    case 1: // 攻撃力ダウン
+      const weaken_chance = data[2] || 0;
+      const weaken_initial_duration = data[4] || 0;
+      const weaken_max_duration = data[5] || 0;
+      const weaken_max_lv = data[1] || 1;
+      const weaken_power = data[3] || 0;
+      
+      // 持続時間の計算（フレームを秒に変換）
+      const weaken_initial_duration_s = (weaken_initial_duration / 30).toFixed(1);
+      const weaken_max_duration_s = (weaken_max_duration / 30).toFixed(1);
+      
+      if (weaken_max_lv > 1 && weaken_max_duration > weaken_initial_duration) {
+        return (<><b className="text-gray-500">{weaken_chance}<small>%</small> <small className="text-red-500">敵攻撃力</small>-{weaken_power}<small>%</small> {weaken_initial_duration_s}s~{weaken_max_duration_s}s <small className="text-gray-400">({weaken_initial_duration}f~{weaken_max_duration}f)</small></b></>);
+      }
+      
+      return (<><b className="text-gray-500">{weaken_chance}<small>%</small> <small className="text-red-500">敵攻撃力</small>-{weaken_power}<small>%</small> {weaken_initial_duration_s}s <small className="text-gray-400">({weaken_initial_duration}f)</small></b></>);
+      
+    case 6: // 打たれ強い
+      // この効果はテキストボックスで動的に計算されるため、空文字列を返す
+      return "";
+      
+    case 60: // 呪い
+      const curse_chance = data[2] || 0;
+      const curse_initial_duration = data[4] || 0;
+      const curse_max_duration = data[5] || 0;
+      const curse_max_lv = data[1] || 1;
+      
+      // 持続時間の計算（フレームを秒に変換）
+      const curse_initial_duration_s = (curse_initial_duration / 30).toFixed(1);
+      const curse_max_duration_s = (curse_max_duration / 30).toFixed(1);
+      
+      if (curse_max_lv > 1 && curse_max_duration > curse_initial_duration) {
+        return (<><b className="text-gray-500">{curse_chance}<small>%</small> {curse_initial_duration_s}s~{curse_max_duration_s}s <small className="text-gray-400">({curse_initial_duration}f~{curse_max_duration}f)</small></b></>);
+      }
+      
+      return (<><b className="text-gray-500">{curse_chance}<small>%</small> {curse_initial_duration_s}s <small className="text-gray-400">({curse_initial_duration}f)</small></b></>);
       
     case 46: // 動きを遅くする無効
     case 44: // 攻撃力ダウン無効
@@ -876,7 +961,7 @@ export const calculateTalentEffect = (talent: UnitTalent): string | React.ReactN
       if (min_value === max_value) {
         return "";
       } else {
-        return (<b><small>+</small>{min_value}~{max_value}<small>%</small> <small className="text-gray-400">(+{((max_value - min_value) / (step_count - 1)).toFixed(0)}%/Lv)</small></b>);
+        return (<b className="text-gray-500"><small>+</small>{min_value}~{max_value}<small>%</small> <small className="text-gray-400">(+{((max_value - min_value) / (step_count - 1)).toFixed(0)}%/Lv)</small></b>);
       }
   }
 };

@@ -2211,7 +2211,6 @@ function TalentsList({
                           max={Math.floor(talent.data[3] * 1.5)}
                           step={Math.floor((talent.data[3] - talent.data[2]) * 1.5 / (talent.data[1] - 1))}
                         />
-                        <small><b>円</b></small>
                         <small className="text-gray-400" style={{fontSize: '10px'}}> ({Math.floor(talent.data[2] * 1.5)}~{Math.floor(talent.data[3] * 1.5)})</small>
                       </div>
                     </div>

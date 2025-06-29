@@ -94,6 +94,13 @@ export function UnitDisplay({
   // 打たれ強い(6)の状態
   const [talentToughnessValue, setTalentToughnessValue] = useState(0.2);
 
+  // めっぽう強い(5)の状態
+  const [talentMightyApValue, setTalentMightyApValue] = useState(1.8);
+  const [talentMightyDmgValue, setTalentMightyDmgValue] = useState(0.4);
+
+  // 渾身の一撃(50)の状態
+  const [talentBerserkValue, setTalentBerserkValue] = useState(10);
+
   // ユニットが変更されたときにフラグを再初期化
   useEffect(() => {
     const talentList = unitData.auxiliaryData.talents.talentList;
@@ -125,6 +132,12 @@ export function UnitDisplay({
     setTalentCriticalValue(newTalentCriticalTalent?.data[3] || 20);
     setTalentCriticalEnabled(newHasTalentCritical);
     setTalentToughnessValue(0.2);
+    setTalentMightyApValue(1.8);
+    setTalentMightyDmgValue(0.4);
+    
+    // 渾身の一撃の最大値を設定
+    const berserkTalent = talentList.find(talent => talent.id === 50);
+    setTalentBerserkValue(berserkTalent?.data[3] || 10);
   }, [unitData.unitId, unitData.auxiliaryData.talents.talentList]);
 
   const validFormCount = getValidFormCount(unitData);
@@ -392,7 +405,15 @@ export function UnitDisplay({
           setTalentCriticalValue={setTalentCriticalValue}
           talentToughnessValue={talentToughnessValue}
           setTalentToughnessValue={setTalentToughnessValue}
+          talentMightyApValue={talentMightyApValue}
+          setTalentMightyApValue={setTalentMightyApValue}
+          talentMightyDmgValue={talentMightyDmgValue}
+          setTalentMightyDmgValue={setTalentMightyDmgValue}
+          talentBerserkValue={talentBerserkValue}
+          setTalentBerserkValue={setTalentBerserkValue}
           currentHp={enhancedStats.hp}
+          currentAp={enhancedStats.ap}
+          totalAttackMultiplier={totalAttackMultiplier}
         />
       )}
     </div>
@@ -736,7 +757,7 @@ function DynamicMighty({ ability, attackUpMultiplier, hpUpMultiplier }: { abilit
       const hit3 = stats.atk3 ? Math.floor(stats.atk3 * attackUpMultiplier * apMult) : 0;
       
       const isEnhanced = attackUpMultiplier > 1;
-      const colorClass = isEnhanced ? 'color: red;' : '';
+      const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
       const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => `<span style="${colorClass}">${v.toLocaleString()}</span>`);
       const apDisplay = values.join(' ');
       
@@ -748,7 +769,7 @@ function DynamicMighty({ ability, attackUpMultiplier, hpUpMultiplier }: { abilit
         <>
           <span className="text-red-500"><small>攻撃力</small></span> <span dangerouslySetInnerHTML={{ __html: apDisplay }}></span>
           <br />
-          <span className="text-blue-500"><small><b>体力(換算値)</b></small></span> <span className={hpUpMultiplier > 1 ? "text-blue-500" : ""}>{equivalentHP.toLocaleString()}</span>
+          <span className="text-blue-500"><small><b>体力(換算値)</b></small></span> <span className={hpUpMultiplier > 1 ? "text-blue-500" : "text-gray-500"}>{equivalentHP.toLocaleString()}</span>
         </>
       );
     } else {
@@ -759,9 +780,9 @@ function DynamicMighty({ ability, attackUpMultiplier, hpUpMultiplier }: { abilit
       
       return (
         <>
-          <span className="text-red-500"><small>攻撃力</small></span> <span className={isEnhanced ? "text-red-500" : ""}>{damage.toLocaleString()}</span>
+          <span className="text-red-500"><small>攻撃力</small></span> <span className={isEnhanced ? "text-red-500" : "text-gray-500"}>{damage.toLocaleString()}</span>
           <br />
-          <span className="text-blue-500"><small><b>体力(換算値)</b></small></span> <span className={hpUpMultiplier > 1 ? "text-blue-500" : ""}>{equivalentHP.toLocaleString()}</span>
+          <span className="text-blue-500"><small><b>体力(換算値)</b></small></span> <span className={hpUpMultiplier > 1 ? "text-blue-500" : "text-gray-500"}>{equivalentHP.toLocaleString()}</span>
         </>
       );
     }
@@ -778,7 +799,7 @@ function DynamicMighty({ ability, attackUpMultiplier, hpUpMultiplier }: { abilit
             height={16}
             className="inline mr-1 align-top"
           />
-          めっぽう強い<br /> <span className="text-red-500"><small>攻撃力
+          めっぽう強い<br /> <span className="text-red-500 ml-5"><small>攻撃力
           <input
             type="number"
             value={apMultiplier}
@@ -797,7 +818,7 @@ function DynamicMighty({ ability, attackUpMultiplier, hpUpMultiplier }: { abilit
             step="0.1"
           />倍 </small></span><small>(1.5~1.8)</small>
           <br />
-          <span className="text-blue-500"><small>被ダメ
+          <span className="text-blue-500 ml-5"><small>被ダメ
           <input
             type="number"
             value={dmgMultiplier}
@@ -1465,7 +1486,15 @@ function TalentsList({
   setTalentCriticalValue,
   talentToughnessValue,
   setTalentToughnessValue,
-  currentHp
+  talentMightyApValue,
+  setTalentMightyApValue,
+  talentMightyDmgValue,
+  setTalentMightyDmgValue,
+  talentBerserkValue,
+  setTalentBerserkValue,
+  currentHp,
+  currentAp,
+  totalAttackMultiplier
 }: { 
   talents: readonly UnitTalent[];
   baseAttackUpEnabled: boolean;
@@ -1502,7 +1531,15 @@ function TalentsList({
   setTalentCriticalValue: (value: number) => void;
   talentToughnessValue: number;
   setTalentToughnessValue: (value: number) => void;
+  talentMightyApValue: number;
+  setTalentMightyApValue: (value: number) => void;
+  talentMightyDmgValue: number;
+  setTalentMightyDmgValue: (value: number) => void;
+  talentBerserkValue: number;
+  setTalentBerserkValue: (value: number) => void;
   currentHp: number;
+  currentAp: number;
+  totalAttackMultiplier: number;
 }) {
   if (talents.length === 0) return null;
 
@@ -2067,6 +2104,49 @@ function TalentsList({
                       className="inline mr-1 align-top"
                     />
                     {talent.name} ({talent.id})
+                    {talent.npCost > 0 && (
+                      <span className="text-[10px] text-gray-600 font-medium ml-1">
+                        [{talent.isTotal ? '合計' : ''}{talent.npCost}NP]
+                      </span>
+                    )}<br />
+                    <small className="text-red-500 ml-5"><b>攻撃力</b></small>
+                    <input
+                      type="number"
+                      value={talentMightyApValue}
+                      onChange={(e) => {
+                        const value = Number(e.target.value);
+                        if (value >= 1.5 && value <= 1.8) {
+                          setTalentMightyApValue(value);
+                          // AP倍率に対応するダメージ倍率を設定 (1.5倍->0.5倍, 1.8倍->0.4倍)
+                          const newDmgMult = 1.9 - value;
+                          setTalentMightyDmgValue(newDmgMult);
+                        }
+                      }}
+                      className="w-8 mx-1 px-1 text-center text-gray-500 border border-gray-300 rounded text-xs"
+                      min="1.5"
+                      max="1.8"
+                      step="0.1"
+                    />
+                    <small><b className="text-gray-500">倍</b></small> <small className="text-gray-400" style={{fontSize: '10px'}}>(1.5~1.8)</small><br />
+                    <small className="text-blue-500 ml-5"><b>被ダメ</b></small>
+                    <input
+                      type="number"
+                      value={talentMightyDmgValue}
+                      onChange={(e) => {
+                        const value = Number(e.target.value);
+                        if (value >= 0.4 && value <= 0.5) {
+                          setTalentMightyDmgValue(value);
+                          // ダメージ倍率に対応するAP倍率を設定
+                          const newApMult = 1.9 - value;
+                          setTalentMightyApValue(newApMult);
+                        }
+                      }}
+                      className="w-8 mx-1 px-1 text-center text-gray-500 border border-gray-300 rounded text-xs"
+                      min="0.4"
+                      max="0.5"
+                      step="0.1"
+                    />
+                    <small><b className="text-gray-500">倍</b></small> <small className="text-gray-400" style={{fontSize: '10px'}}>(0.5~0.4)</small>
                   </>
                 ) : talent.id === 6 ? (
                   <>
@@ -2095,7 +2175,7 @@ function TalentsList({
                     {talent.name} ({talent.id})
                   </>
                 )}
-                {talent.npCost > 0 && (
+                {talent.npCost > 0 && talent.id !== 5 && (
                   <span className="text-[10px] text-gray-600 font-medium ml-1">
                     [{talent.isTotal ? '合計' : ''}{talent.npCost}NP]
                   </span>
@@ -2326,6 +2406,53 @@ function TalentsList({
                       </div>
                       <div className="text-xs">
                         <small className="text-blue-500"><b>体力(換算値)</b></small> <b className="text-gray-500">{Math.floor(currentHp / talentToughnessValue).toLocaleString()}</b>
+                      </div>
+                    </div>
+                  ) : /* めっぽう強い(5)の場合は計算結果を表示 */
+                  talent.id === 5 ? (
+                    <div className="text-right">
+                      <br />
+                      <div className="text-xs">
+                        <small className="text-red-500"><b>攻撃力</b></small> <b className="text-gray-500">{Math.floor(currentAp * talentMightyApValue).toLocaleString()}</b>
+                      </div>
+                      <div className="text-xs">
+                        <small className="text-blue-500"><b>体力(換算値)</b></small> <b className="text-gray-500">{Math.floor(currentHp / talentMightyDmgValue).toLocaleString()}</b>
+                      </div>
+                    </div>
+                  ) : /* 渾身の一撃(50)の場合は能力・効果と同じ表示 */
+                  talent.id === 50 ? (
+                    <div className="text-right">
+                      <div className="text-xs mb-1">
+                        <input
+                          type="number"
+                          value={talentBerserkValue}
+                          onChange={(e) => {
+                            const value = Number(e.target.value);
+                            const minValue = talent.data[2];
+                            const maxValue = talent.data[3];
+                            if (value >= minValue && value <= maxValue) {
+                              setTalentBerserkValue(value);
+                            }
+                          }}
+                          className="w-8 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
+                          min={talent.data[2]}
+                          max={talent.data[3]}
+                          step="1"
+                        />
+                        <small><b className="text-gray-500">%</b></small>
+                        <small className="text-gray-400" style={{fontSize: '10px'}}> ({talent.data[2]}~{talent.data[3]})<br /></small>
+                        <span className="text-red-500"><small><b>攻撃力</b></small></span><b className="text-gray-500">+200</b><small><b className="text-gray-500">%</b> </small>
+                        {(() => {
+                          // 基本APの3倍値を計算（攻撃力アップを適用）
+                          let savageValues: React.ReactNode;
+                          if (currentAp && totalAttackMultiplier) {
+                            const calculatedAp = currentAp / totalAttackMultiplier; // 元の攻撃力に戻す
+                            const savageAP = Math.floor(calculatedAp * totalAttackMultiplier * 3);
+                            const isEnhanced = totalAttackMultiplier > 1;
+                            savageValues = <><b className={isEnhanced ? "text-red-500" : "text-gray-500"}>{savageAP.toLocaleString()}</b><br/></>;
+                          }
+                          return savageValues;
+                        })()}
                       </div>
                     </div>
                   ) : /* 属性追加の本能の場合はアイコンを表示 */

@@ -413,7 +413,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
 
     abilities.push({
       name: attackType,
-      value: rangeInfo,
+      value: <b className="text-gray-500">{rangeInfo}</b>,
       iconKeys: attackType === '遠方攻撃' ? ['abilityLongDistance'] : attackType === '全方位攻撃' ? ['abilityOmniStrike'] : undefined
     });
   }
@@ -457,19 +457,30 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     
     // 基本APの3倍値を計算（攻撃力アップを適用）
     let savageValues: React.ReactNode;
+    
+    // 超ダメージ・極ダメージがあるかチェック
+    const hasAdditionalDamage = (stats[30] && stats[30] > 0) || (stats[81] && stats[81] > 0);
+    
     if (calculatedStats.multihit) {
       const hit1_3x = calculatedStats.atk1 ? Math.floor(calculatedStats.atk1 * attackUpMultiplier * 3) : 0;
       const hit2_3x = calculatedStats.atk2 ? Math.floor(calculatedStats.atk2 * attackUpMultiplier * 3) : 0;
       const hit3_3x = calculatedStats.atk3 ? Math.floor(calculatedStats.atk3 * attackUpMultiplier * 3) : 0;
       
       const isEnhanced = attackUpMultiplier > 1;
-      const colorClass = isEnhanced ? 'color: red;' : '';
+      const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
       const values = [hit1_3x, hit2_3x, hit3_3x].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
-      savageValues = <span dangerouslySetInnerHTML={{ __html: `${values.join(' / ')} ~` }} />;
+      const tilde = hasAdditionalDamage ? ' ~' : '';
+      savageValues = <span dangerouslySetInnerHTML={{ __html: `${values.join(' / ')}${tilde}` }} />;
     } else {
       const savageAP = Math.floor(calculatedStats.ap * attackUpMultiplier * 3);
       const isEnhanced = attackUpMultiplier > 1;
-      savageValues = <b className={isEnhanced ? "text-red-500" : ""}>{savageAP.toLocaleString()}</b>;
+      const tilde = hasAdditionalDamage ? ' ~' : '';
+      savageValues = (
+        <>
+          <b className={isEnhanced ? "text-red-500" : "text-gray-500"}>{savageAP.toLocaleString()}</b>
+          {tilde}
+        </>
+      );
     }
     
     // 超ダメージ・極ダメージがある場合の追加表示
@@ -483,7 +494,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
         const hit3_12x = calculatedStats.atk3 ? Math.floor(calculatedStats.atk3 * attackUpMultiplier * 12) : 0;
         
         const isEnhanced = attackUpMultiplier > 1;
-        const colorClass = isEnhanced ? 'color: red;' : '';
+        const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
         const superValues = [hit1_12x, hit2_12x, hit3_12x].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
         additionalValues = (
           <>
@@ -497,7 +508,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
         additionalValues = (
           <>
             <br />
-            <b className={isEnhanced ? "text-red-500" : ""}>{superAP.toLocaleString()}</b>
+            <b className={isEnhanced ? "text-red-500" : "text-gray-500"}>{superAP.toLocaleString()}</b>
           </>
         );
       }
@@ -511,11 +522,12 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
         const hit3_18x = calculatedStats.atk3 ? Math.floor(calculatedStats.atk3 * attackUpMultiplier * 18) : 0;
         
         const isEnhanced = attackUpMultiplier > 1;
-        const extremeValues = [hit1_18x, hit2_18x, hit3_18x].filter(v => v > 0).map(v => v.toLocaleString());
+        const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
+        const extremeValues = [hit1_18x, hit2_18x, hit3_18x].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
         additionalValues = (
           <>
             <br />
-            <span className={isEnhanced ? "text-red-500" : ""}>{extremeValues.join(' / ')}</span>
+            <span dangerouslySetInnerHTML={{ __html: extremeValues.join(' / ') }} />
           </>
         );
       } else {
@@ -524,7 +536,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
         additionalValues = (
           <>
             <br />
-            <span className={isEnhanced ? "text-red-500" : ""}>{extremeAP.toLocaleString()}</span>
+            <b className={isEnhanced ? "text-red-500" : "text-gray-500"}>{extremeAP.toLocaleString()}</b>
           </>
         );
       }
@@ -534,7 +546,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
       name: "渾身の一撃",
       value: (
         <>
-          <span className="text-red-500"><small><b>攻撃力</b></small></span><b>+200</b><small><b>%</b></small> <b>{chance}</b><small><b>%</b></small> {savageValues}
+          <span className="text-red-500"><b className="text-gray-500">{chance}</b><small><b className="text-gray-500">%</b></small> <small><b>攻撃力</b></small></span><b className="text-gray-500">+200</b><small><b className="text-gray-500">%</b></small> {calculatedStats.multihit ? <br /> : ' '}{savageValues}
           {additionalValues}
         </>
       ),
@@ -633,7 +645,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     
     abilities.push({
       name: "クリティカル",
-      value: (<b>{totalCritical}<small>%</small></b>),
+      value: (<b className="text-gray-500">{totalCritical}<small>%</small></b>),
       iconKeys: ["abilityCritical"],
       enhanced: talentCriticalBonus > 0
     });
@@ -661,7 +673,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[112] && stats[112] > 0) {
     abilities.push({
       name: "メタルキラー",
-      value: (<b><small className="text-blue-500">敵体力</small>-{stats[112]}<small>%</small></b>),
+      value: (<b className="text-gray-500"><small className="text-blue-500">敵体力</small>-{stats[112]}<small>%</small></b>),
       iconKeys: ["abilityMetalKiller"]
     });
   }
@@ -696,7 +708,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const range = Math.floor((stats[114] || 0) / 4);
     abilities.push({
       name: "爆波攻撃",
-      value: (<b>{stats[113]}<small>% </small>{range}</b>),
+      value: (<b className="text-gray-500">{stats[113]}<small>% </small>{range}</b>),
       iconKeys: ["abilityExplosion"]
     });
   }
@@ -718,7 +730,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[70] && stats[70] > 0) {
     abilities.push({
       name: "バリアブレイカー",
-      value: (<b>{stats[70]}<small>%</small></b>),
+      value: (<b className="text-gray-500">{stats[70]}<small>%</small></b>),
       iconKeys: ["abilityBarrierBreaker"]
     });
   }
@@ -727,7 +739,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[95] && stats[95] > 0) {
     abilities.push({
       name: "シールドブレイカー",
-      value: (<b>{stats[95]}<small>%</small></b>),
+      value: (<b className="text-gray-500">{stats[95]}<small>%</small></b>),
       iconKeys: ["abilityShieldPiercing"]
     });
   }
@@ -824,7 +836,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const summonedUnitId = stats[110];
     abilities.push({
       name: "召喚",
-      value: (<b><small>Unit</small> {summonedUnitId.toString().padStart(3, '0')}</b>),
+      value: (<b className="text-gray-500"><small>Unit</small> {summonedUnitId.toString().padStart(3, '0')}</b>),
       iconKeys: ["abilitySummon"]
     });
   }
@@ -913,6 +925,10 @@ export const calculateTalentEffect = (talent: UnitTalent): string | React.ReactN
       
       return (<><b className="text-gray-500">{weaken_chance}<small>%</small> <small className="text-red-500">敵攻撃力</small>-{weaken_power}<small>%</small> {weaken_initial_duration_s}s <small className="text-gray-400">({weaken_initial_duration}f)</small></b></>);
       
+    case 5: // めっぽう強い
+      // この効果はテキストボックスで動的に計算されるため、空文字列を返す
+      return "";
+
     case 6: // 打たれ強い
       // この効果はテキストボックスで動的に計算されるため、空文字列を返す
       return "";

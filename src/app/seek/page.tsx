@@ -17,6 +17,7 @@ export default function Page() {
         <Link href="/event" className="hover:text-green-600 px-1">Event</Link>|
         <Link href="/seek" className="text-green-500 hover:text-green-600 px-1">Seek</Link>|
         <Link href="/unit" className="hover:text-green-600 px-1">Unit</Link>|
+        <Link href="/stage" className="hover:text-green-600 px-1">Stage</Link>|
         <hr />
         <Seeker />
       </Suspense>

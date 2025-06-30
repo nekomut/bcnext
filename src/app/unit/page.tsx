@@ -139,14 +139,13 @@ function UnitPageContent() {
 
   return (
     <div>
-      <div className="flex flex-wrap items-center text-sm sm:text-base">
-        <Link href="/" className="font-bold hover:text-green-600 px-1">bcnext</Link><span>|</span>
-        <Link href="/normal" className="hover:text-green-600 px-1">Normal</Link><span>|</span>
-        <Link href="/rare" className="hover:text-green-600 px-1">Rare</Link><span>|</span>
-        <Link href="/event" className="hover:text-green-600 px-1">Event</Link><span>|</span>
-        <Link href="/seek" className="hover:text-green-600 px-1">Seek</Link><span>|</span>
-        <Link href="/unit" className="text-green-500 hover:text-green-600 px-1">Unit</Link><span>|</span>
-      </div>
+      <Link href="/" className="font-bold hover:text-green-600 px-1">bcnext</Link>|
+      <Link href="/normal" className="hover:text-green-600 px-1">Normal</Link>|
+      <Link href="/rare" className="hover:text-green-600 px-1">Rare</Link>|
+      <Link href="/event" className="hover:text-green-600 px-1">Event</Link>|
+      <Link href="/seek" className="hover:text-green-600 px-1">Seek</Link>|
+      <Link href="/unit" className="text-green-500 hover:text-green-600 px-1">Unit</Link>|
+      <Link href="/stage" className="hover:text-green-600 px-1">Stage</Link>|
       <hr />
       
       <div className='flex-wrap hidden'>

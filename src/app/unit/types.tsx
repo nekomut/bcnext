@@ -657,19 +657,9 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const durationEnhanced = talentSlowBonus.duration > 0;
     const isEnhanced = chanceEnhanced || durationEnhanced;
     
-    // 確率と持続時間の色を個別に設定
-    const chanceColor = chanceEnhanced ? "text-orange-600" : "text-gray-500";
-    const durationColor = durationEnhanced ? "text-orange-600" : "text-gray-500";
-    
     abilities.push({
       name: "動きを遅くする",
-      value: (
-        <>
-          <b className={chanceColor}>{totalChance}<small>%</small></b>{' '}
-          <b className={durationColor}>{duration.toFixed(1)}s~{durationMax.toFixed(1)}s</b>{' '}
-          <small className="text-gray-400">({totalDuration}f~{totalDurationMax}f)</small>
-        </>
-      ),
+      value: `${totalChance}% ${duration.toFixed(1)}s~${durationMax.toFixed(1)}s (${totalDuration}f~${totalDurationMax}f)`,
       iconKeys: ["abilitySlow"],
       enhanced: isEnhanced
     });
@@ -799,9 +789,20 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const durationEnhanced = talentWeakenBonus.duration > 0;
     const isEnhanced = chanceEnhanced || durationEnhanced;
     
+    // 確率と持続時間の色を個別に設定
+    const chanceColor = chanceEnhanced ? "text-orange-600" : "text-gray-500";
+    const durationColor = durationEnhanced ? "text-orange-600" : "text-gray-500";
+    
     abilities.push({
       name: "攻撃力ダウン",
-      value: (<b>{totalChance}<small>%</small> <small className="text-red-500">敵攻撃力</small>-{weakenPower}<small>%</small> {duration.toFixed(1)}s~{durationMax.toFixed(1)}s <small className="text-gray-400">({totalDuration}f~{totalDurationMax}f)</small></b>),
+      value: (
+        <span>
+          <b className={chanceColor}>{totalChance}<small>%</small></b>{' '}
+          <b><small className="text-red-500">敵攻撃力</small>-{weakenPower}<small>%</small>{' '}</b>
+          <b className={durationColor}>{duration.toFixed(1)}s~{durationMax.toFixed(1)}s</b>{' '}
+          <b><small className="text-gray-400">({totalDuration}f~{totalDurationMax}f)</small></b>
+        </span>
+      ),
       iconKeys: ["abilityWeaken"],
       enhanced: isEnhanced
     });
@@ -950,22 +951,22 @@ export const calculateTalentEffect = (talent: UnitTalent): string | React.ReactN
   const data = talent.data;
   
   switch (talent.id) {
-    case 51: // 攻撃無効
-      const dodge_chance = data[2] || 0;
-      const dodge_initial_duration = data[4] || 0;
-      const dodge_max_duration = data[5] || 0;
-      const dodge_max_lv = data[1] || 1;
+    case 1: // 攻撃力ダウン
+      const weaken_chance = data[2] || 0;
+      const weaken_initial_duration = data[4] || 0;
+      const weaken_max_duration = data[5] || 0;
+      const weaken_max_lv = data[1] || 1;
+      const weaken_power = data[3] || 0;
       
       // 持続時間の計算（フレームを秒に変換）
-      const dodge_duration_per_level = dodge_max_lv > 1 ? Math.floor((dodge_max_duration - dodge_initial_duration) / (dodge_max_lv - 1)) : 0;
-      const dodge_initial_duration_s = (dodge_initial_duration / 30).toFixed(1);
-      const dodge_max_duration_s = (dodge_max_duration / 30).toFixed(1);
+      const weaken_initial_duration_s = (weaken_initial_duration / 30).toFixed(1);
+      const weaken_max_duration_s = (weaken_max_duration / 30).toFixed(1);
       
-      if (dodge_max_lv > 1 && dodge_duration_per_level > 0) {
-        return (<><b>{dodge_chance}<small>%</small> {dodge_initial_duration_s}s~{dodge_max_duration_s}s <small className="text-gray-400">({dodge_initial_duration}f~{dodge_max_duration}f)</small></b></>);
+      if (weaken_max_lv > 1 && weaken_max_duration > weaken_initial_duration) {
+        return (<><b className="text-gray-500">{weaken_chance}<small>%</small> <small className="text-red-500">敵攻撃力</small>-{weaken_power}<small>%</small> {weaken_initial_duration_s}s~{weaken_max_duration_s}s <small className="text-gray-400">({weaken_initial_duration}f~{weaken_max_duration}f)</small></b></>);
       }
       
-      return (<><b>{dodge_chance}<small>%</small> {dodge_initial_duration_s}s <small className="text-gray-400">({dodge_initial_duration}f)</small></b></>);
+      return (<><b className="text-gray-500">{weaken_chance}<small>%</small> <small className="text-red-500">敵攻撃力</small>-{weaken_power}<small>%</small> {weaken_initial_duration_s}s <small className="text-gray-400">({weaken_initial_duration}f)</small></b></>);
       
     case 2: // 動きを止める
       const freeze_chance = data[2] || 0;
@@ -999,22 +1000,22 @@ export const calculateTalentEffect = (talent: UnitTalent): string | React.ReactN
       
       return (<><b className="text-gray-500">{slow_chance}<small>%</small> {slow_initial_duration_s}s <small className="text-gray-400">({slow_initial_duration}f)</small></b></>);
       
-    case 1: // 攻撃力ダウン
-      const weaken_chance = data[2] || 0;
-      const weaken_initial_duration = data[4] || 0;
-      const weaken_max_duration = data[5] || 0;
-      const weaken_max_lv = data[1] || 1;
-      const weaken_power = data[3] || 0;
+    case 51: // 攻撃無効
+      const dodge_chance = data[2] || 0;
+      const dodge_initial_duration = data[4] || 0;
+      const dodge_max_duration = data[5] || 0;
+      const dodge_max_lv = data[1] || 1;
       
       // 持続時間の計算（フレームを秒に変換）
-      const weaken_initial_duration_s = (weaken_initial_duration / 30).toFixed(1);
-      const weaken_max_duration_s = (weaken_max_duration / 30).toFixed(1);
+      const dodge_duration_per_level = dodge_max_lv > 1 ? Math.floor((dodge_max_duration - dodge_initial_duration) / (dodge_max_lv - 1)) : 0;
+      const dodge_initial_duration_s = (dodge_initial_duration / 30).toFixed(1);
+      const dodge_max_duration_s = (dodge_max_duration / 30).toFixed(1);
       
-      if (weaken_max_lv > 1 && weaken_max_duration > weaken_initial_duration) {
-        return (<><b className="text-gray-500">{weaken_chance}<small>%</small> <small className="text-red-500">敵攻撃力</small>-{weaken_power}<small>%</small> {weaken_initial_duration_s}s~{weaken_max_duration_s}s <small className="text-gray-400">({weaken_initial_duration}f~{weaken_max_duration}f)</small></b></>);
+      if (dodge_max_lv > 1 && dodge_duration_per_level > 0) {
+        return (<><b>{dodge_chance}<small>%</small> {dodge_initial_duration_s}s~{dodge_max_duration_s}s <small className="text-gray-400">({dodge_initial_duration}f~{dodge_max_duration}f)</small></b></>);
       }
       
-      return (<><b className="text-gray-500">{weaken_chance}<small>%</small> <small className="text-red-500">敵攻撃力</small>-{weaken_power}<small>%</small> {weaken_initial_duration_s}s <small className="text-gray-400">({weaken_initial_duration}f)</small></b></>);
+      return (<><b>{dodge_chance}<small>%</small> {dodge_initial_duration_s}s <small className="text-gray-400">({dodge_initial_duration}f)</small></b></>);
       
     case 5: // めっぽう強い
       // この効果はテキストボックスで動的に計算されるため、空文字列を返す

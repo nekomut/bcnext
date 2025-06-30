@@ -368,8 +368,11 @@ function EnemyRow({ enemy, showDetail, getTraitColor, formatNumber }: EnemyRowPr
       </td>
       {showDetail && (
         <>
-          <td className="px-2 py-1 text-right text-xs text-gray-400">
-            {/* 頻度s - stg.pyから計算式を移植する必要があります */}
+          <td className="px-2 py-1 text-right text-xs text-gray-500">
+            {enemy.baseStats.freq > 0 ? `${(enemy.baseStats.freq / 30).toFixed(2)}s` : '-'}
+          </td>
+          <td className="px-2 py-1 text-right text-xs text-gray-500">
+            {enemy.baseStats.freq > 0 ? `${enemy.baseStats.freq}f` : '-'}
           </td>
         </>
       )}

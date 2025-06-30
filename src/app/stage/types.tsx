@@ -48,6 +48,10 @@ export interface EnemyStageInfo {
     rangeType: string;
     kbLevel: number;
     money: number;
+    freq: number;
+    foreswing: number;
+    backswing: number;
+    tba: number;
   };
   stageStats: {
     actualHp: number;

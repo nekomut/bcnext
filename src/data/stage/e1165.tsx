@@ -51,7 +51,11 @@ export const e1165Data: StageData = {
             range: 120,
             rangeType: "単体",
             kbLevel: 3,
-            money: 90
+            money: 90,
+            freq: 41,
+            foreswing: 8,
+            backswing: 10,
+            tba: 17
           },
           stageStats: {
             actualHp: 2700,
@@ -80,7 +84,11 @@ export const e1165Data: StageData = {
             range: 222,
             rangeType: "範囲",
             kbLevel: 2,
-            money: 350
+            money: 350,
+            freq: 33,
+            foreswing: 8,
+            backswing: 25,
+            tba: 13
           },
           stageStats: {
             actualHp: 21000,
@@ -109,7 +117,11 @@ export const e1165Data: StageData = {
             range: 370,
             rangeType: "範囲",
             kbLevel: 1,
-            money: 1555
+            money: 1555,
+            freq: 88,
+            foreswing: 34,
+            backswing: 54,
+            tba: 0
           },
           stageStats: {
             actualHp: 53331,
@@ -138,7 +150,11 @@ export const e1165Data: StageData = {
             range: 225,
             rangeType: "範囲",
             kbLevel: 4,
-            money: 1800
+            money: 1800,
+            freq: 16,
+            foreswing: 6,
+            backswing: 10,
+            tba: 0
           },
           stageStats: {
             actualHp: 200000,
@@ -167,7 +183,11 @@ export const e1165Data: StageData = {
             range: 800,
             rangeType: "単体",
             kbLevel: 10000,
-            money: 1
+            money: 1,
+            freq: 607,
+            foreswing: 8,
+            backswing: 6,
+            tba: 300
           },
           stageStats: {
             actualHp: 10000,
@@ -226,7 +246,11 @@ export const e1165Data: StageData = {
             range: 450,
             rangeType: "範囲",
             kbLevel: 3,
-            money: 2000
+            money: 2000,
+            freq: 426,
+            foreswing: 27,
+            backswing: 49,
+            tba: 200
           },
           stageStats: {
             actualHp: 600000,
@@ -255,7 +279,11 @@ export const e1165Data: StageData = {
             range: 110,
             rangeType: "単体",
             kbLevel: 3,
-            money: 100
+            money: 100,
+            freq: 16,
+            foreswing: 8,
+            backswing: 8,
+            tba: 0
           },
           stageStats: {
             actualHp: 800,
@@ -284,7 +312,11 @@ export const e1165Data: StageData = {
             range: 300,
             rangeType: "範囲",
             kbLevel: 20,
-            money: 800
+            money: 800,
+            freq: 41,
+            foreswing: 20,
+            backswing: 21,
+            tba: 0
           },
           stageStats: {
             actualHp: 180000,
@@ -313,7 +345,11 @@ export const e1165Data: StageData = {
             range: 150,
             rangeType: "範囲",
             kbLevel: 3,
-            money: 550
+            money: 550,
+            freq: 16,
+            foreswing: 8,
+            backswing: 8,
+            tba: 1
           },
           stageStats: {
             actualHp: 10000,
@@ -342,7 +378,11 @@ export const e1165Data: StageData = {
             range: 225,
             rangeType: "範囲",
             kbLevel: 4,
-            money: 1800
+            money: 1800,
+            freq: 16,
+            foreswing: 6,
+            backswing: 10,
+            tba: 0
           },
           stageStats: {
             actualHp: 260000,
@@ -371,7 +411,11 @@ export const e1165Data: StageData = {
             range: 800,
             rangeType: "単体",
             kbLevel: 10000,
-            money: 1
+            money: 1,
+            freq: 607,
+            foreswing: 8,
+            backswing: 6,
+            tba: 300
           },
           stageStats: {
             actualHp: 10000,
@@ -438,7 +482,11 @@ export const e1165Data: StageData = {
             range: 190,
             rangeType: "範囲",
             kbLevel: 2,
-            money: 250
+            money: 250,
+            freq: 23,
+            foreswing: 14,
+            backswing: 9,
+            tba: 0
           },
           stageStats: {
             actualHp: 175000,
@@ -467,7 +515,11 @@ export const e1165Data: StageData = {
             range: 110,
             rangeType: "単体",
             kbLevel: 8,
-            money: 400
+            money: 400,
+            freq: 41,
+            foreswing: 4,
+            backswing: 37,
+            tba: 0
           },
           stageStats: {
             actualHp: 20000,
@@ -496,7 +548,11 @@ export const e1165Data: StageData = {
             range: 225,
             rangeType: "範囲",
             kbLevel: 4,
-            money: 1800
+            money: 1800,
+            freq: 16,
+            foreswing: 6,
+            backswing: 10,
+            tba: 0
           },
           stageStats: {
             actualHp: 500000,
@@ -525,7 +581,11 @@ export const e1165Data: StageData = {
             range: 150,
             rangeType: "範囲",
             kbLevel: 3,
-            money: 550
+            money: 550,
+            freq: 16,
+            foreswing: 8,
+            backswing: 8,
+            tba: 1
           },
           stageStats: {
             actualHp: 15000,
@@ -554,7 +614,11 @@ export const e1165Data: StageData = {
             range: 155,
             rangeType: "範囲",
             kbLevel: 8,
-            money: 500
+            money: 500,
+            freq: 16,
+            foreswing: 6,
+            backswing: 10,
+            tba: 0
           },
           stageStats: {
             actualHp: 80000,
@@ -583,7 +647,11 @@ export const e1165Data: StageData = {
             range: 110,
             rangeType: "単体",
             kbLevel: 8,
-            money: 400
+            money: 400,
+            freq: 41,
+            foreswing: 4,
+            backswing: 37,
+            tba: 0
           },
           stageStats: {
             actualHp: 20000,
@@ -612,7 +680,11 @@ export const e1165Data: StageData = {
             range: 110,
             rangeType: "単体",
             kbLevel: 8,
-            money: 400
+            money: 400,
+            freq: 41,
+            foreswing: 4,
+            backswing: 37,
+            tba: 0
           },
           stageStats: {
             actualHp: 20000,
@@ -641,7 +713,11 @@ export const e1165Data: StageData = {
             range: 110,
             rangeType: "単体",
             kbLevel: 8,
-            money: 400
+            money: 400,
+            freq: 41,
+            foreswing: 4,
+            backswing: 37,
+            tba: 0
           },
           stageStats: {
             actualHp: 20000,
@@ -670,7 +746,11 @@ export const e1165Data: StageData = {
             range: 150,
             rangeType: "範囲",
             kbLevel: 3,
-            money: 550
+            money: 550,
+            freq: 16,
+            foreswing: 8,
+            backswing: 8,
+            tba: 1
           },
           stageStats: {
             actualHp: 15000,
@@ -699,7 +779,11 @@ export const e1165Data: StageData = {
             range: 175,
             rangeType: "範囲",
             kbLevel: 7,
-            money: 1789
+            money: 1789,
+            freq: 16,
+            foreswing: 6,
+            backswing: 10,
+            tba: 0
           },
           stageStats: {
             actualHp: 850000,
@@ -728,7 +812,11 @@ export const e1165Data: StageData = {
             range: 800,
             rangeType: "単体",
             kbLevel: 10000,
-            money: 1
+            money: 1,
+            freq: 607,
+            foreswing: 8,
+            backswing: 6,
+            tba: 300
           },
           stageStats: {
             actualHp: 10000,
@@ -795,7 +883,11 @@ export const e1165Data: StageData = {
             range: 60,
             rangeType: "範囲",
             kbLevel: 1,
-            money: 800
+            money: 800,
+            freq: 16,
+            foreswing: 8,
+            backswing: 8,
+            tba: 0
           },
           stageStats: {
             actualHp: 300000,
@@ -824,7 +916,11 @@ export const e1165Data: StageData = {
             range: 120,
             rangeType: "単体",
             kbLevel: 3,
-            money: 90
+            money: 90,
+            freq: 41,
+            foreswing: 8,
+            backswing: 10,
+            tba: 17
           },
           stageStats: {
             actualHp: 5400,
@@ -853,7 +949,11 @@ export const e1165Data: StageData = {
             range: 160,
             rangeType: "単体",
             kbLevel: 4,
-            money: 1000
+            money: 1000,
+            freq: 41,
+            foreswing: 17,
+            backswing: 24,
+            tba: 0
           },
           stageStats: {
             actualHp: 11250,
@@ -882,7 +982,11 @@ export const e1165Data: StageData = {
             range: 170,
             rangeType: "範囲",
             kbLevel: 2,
-            money: 170
+            money: 170,
+            freq: 49,
+            foreswing: 6,
+            backswing: 6,
+            tba: 22
           },
           stageStats: {
             actualHp: 54000,
@@ -911,7 +1015,11 @@ export const e1165Data: StageData = {
             range: 225,
             rangeType: "範囲",
             kbLevel: 4,
-            money: 1800
+            money: 1800,
+            freq: 16,
+            foreswing: 6,
+            backswing: 10,
+            tba: 0
           },
           stageStats: {
             actualHp: 900000,
@@ -940,7 +1048,11 @@ export const e1165Data: StageData = {
             range: 125,
             rangeType: "範囲",
             kbLevel: 2,
-            money: 1800
+            money: 1800,
+            freq: 17,
+            foreswing: 8,
+            backswing: 3,
+            tba: 5
           },
           stageStats: {
             actualHp: 400000,
@@ -969,7 +1081,11 @@ export const e1165Data: StageData = {
             range: 800,
             rangeType: "単体",
             kbLevel: 10000,
-            money: 1
+            money: 1,
+            freq: 607,
+            foreswing: 8,
+            backswing: 6,
+            tba: 300
           },
           stageStats: {
             actualHp: 10000,
@@ -1036,7 +1152,11 @@ export const e1165Data: StageData = {
             range: 150,
             rangeType: "範囲",
             kbLevel: 3,
-            money: 550
+            money: 550,
+            freq: 16,
+            foreswing: 8,
+            backswing: 8,
+            tba: 1
           },
           stageStats: {
             actualHp: 18000,
@@ -1065,7 +1185,11 @@ export const e1165Data: StageData = {
             range: 155,
             rangeType: "範囲",
             kbLevel: 8,
-            money: 500
+            money: 500,
+            freq: 16,
+            foreswing: 6,
+            backswing: 10,
+            tba: 0
           },
           stageStats: {
             actualHp: 100000,
@@ -1094,7 +1218,11 @@ export const e1165Data: StageData = {
             range: 150,
             rangeType: "範囲",
             kbLevel: 3,
-            money: 550
+            money: 550,
+            freq: 16,
+            foreswing: 8,
+            backswing: 8,
+            tba: 1
           },
           stageStats: {
             actualHp: 18000,
@@ -1123,7 +1251,11 @@ export const e1165Data: StageData = {
             range: 249,
             rangeType: "単体",
             kbLevel: 7,
-            money: 250
+            money: 250,
+            freq: 32,
+            foreswing: 9,
+            backswing: 6,
+            tba: 12
           },
           stageStats: {
             actualHp: 200000,
@@ -1152,7 +1284,11 @@ export const e1165Data: StageData = {
             range: 199,
             rangeType: "範囲",
             kbLevel: 3,
-            money: 700
+            money: 700,
+            freq: 51,
+            foreswing: 12,
+            backswing: 39,
+            tba: 1
           },
           stageStats: {
             actualHp: 144000,
@@ -1181,7 +1317,11 @@ export const e1165Data: StageData = {
             range: 175,
             rangeType: "範囲",
             kbLevel: 7,
-            money: 1789
+            money: 1789,
+            freq: 16,
+            foreswing: 6,
+            backswing: 10,
+            tba: 0
           },
           stageStats: {
             actualHp: 1020000,
@@ -1210,7 +1350,11 @@ export const e1165Data: StageData = {
             range: 225,
             rangeType: "範囲",
             kbLevel: 4,
-            money: 1800
+            money: 1800,
+            freq: 16,
+            foreswing: 6,
+            backswing: 10,
+            tba: 0
           },
           stageStats: {
             actualHp: 1900000,
@@ -1239,7 +1383,11 @@ export const e1165Data: StageData = {
             range: 800,
             rangeType: "単体",
             kbLevel: 10000,
-            money: 1
+            money: 1,
+            freq: 607,
+            foreswing: 8,
+            backswing: 6,
+            tba: 300
           },
           stageStats: {
             actualHp: 10000,

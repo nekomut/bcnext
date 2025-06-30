@@ -628,7 +628,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
         <>
           <b className={chanceColor}>{totalChance}<small>%</small></b>{' '}
           <b className={durationColor}>{duration.toFixed(1)}s~{durationMax.toFixed(1)}s</b>{' '}
-          <small className="text-gray-400">({totalDuration}f~{totalDurationMax}f)</small>
+          <b><small className="text-gray-400">({totalDuration}f~{totalDurationMax}f)</small></b>
         </>
       ),
       iconKeys: ["abilityFreeze"],
@@ -659,7 +659,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     
     abilities.push({
       name: "動きを遅くする",
-      value: `${totalChance}% ${duration.toFixed(1)}s~${durationMax.toFixed(1)}s (${totalDuration}f~${totalDurationMax}f)`,
+      value: (<b>{totalChance}% {duration.toFixed(1)}s~{durationMax.toFixed(1)}s <small className="text-gray-400">({totalDuration}f~{totalDurationMax}f)</small></b>),
       iconKeys: ["abilitySlow"],
       enhanced: isEnhanced
     });
@@ -979,10 +979,10 @@ export const calculateTalentEffect = (talent: UnitTalent): string | React.ReactN
       const freeze_max_duration_s = (freeze_max_duration / 30).toFixed(1);
       
       if (freeze_max_lv > 1 && freeze_max_duration > freeze_initial_duration) {
-        return (<><b className="text-gray-500">{freeze_chance}<small>%</small> {freeze_initial_duration_s}s~{freeze_max_duration_s}s <small className="text-gray-400">({freeze_initial_duration}f~{freeze_max_duration}f)</small></b></>);
+        return (<b className="text-gray-500">{freeze_chance}<small>%</small> {freeze_initial_duration_s}s~{freeze_max_duration_s}s <small className="text-gray-400">({freeze_initial_duration}f~{freeze_max_duration}f)</small></b>);
       }
       
-      return (<><b className="text-gray-500">{freeze_chance}<small>%</small> {freeze_initial_duration_s}s <small className="text-gray-400">({freeze_initial_duration}f)</small></b></>);
+      return (<b className="text-gray-500">{freeze_chance}<small>%</small> {freeze_initial_duration_s}s <small className="text-gray-400">({freeze_initial_duration}f)</small></b>);
       
     case 3: // 動きを遅くする
       const slow_chance = data[2] || 0;

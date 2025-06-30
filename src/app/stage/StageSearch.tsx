@@ -57,11 +57,6 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
   return (
     <div className="bg-white rounded-lg shadow-sm border p-3 mb-3">
       <div className="flex items-center gap-2 mb-2">
-        <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center">
-          <svg className="w-3 h-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
-        </div>
         <h2 className="text-base font-semibold text-gray-900">ステージ検索</h2>
       </div>
       
@@ -74,7 +69,7 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
             onChange={(e) => setEventId(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder="例: 1001"
-            className="w-full px-2 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm"
+            className="w-full px-2 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
           />
         </div>
         
@@ -86,7 +81,7 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
             onChange={(e) => setStageName(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder="例: ドラゴン"
-            className="w-full px-2 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm"
+            className="w-full px-2 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
           />
         </div>
         
@@ -95,7 +90,7 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
           <select
             value={typeId}
             onChange={(e) => setTypeId(e.target.value)}
-            className="w-full px-2 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm"
+            className="w-full px-2 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
           >
             <option value="">すべてのタイプ</option>
             <option value="0">レジェンドストーリー</option>
@@ -124,7 +119,7 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as 'id' | 'type' | 'name' | 'stages')}
-            className="w-full px-2 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm"
+            className="w-full px-2 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
           >
             <option value="id">ID順</option>
             <option value="type">タイプ順</option>

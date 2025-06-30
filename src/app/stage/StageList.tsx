@@ -13,11 +13,6 @@ export function StageList({ events, searchTerm, onStageSelect }: StageListProps)
   if (events.length === 0) {
     return (
       <div className="bg-white rounded-lg shadow-sm border p-4 text-center">
-        <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-2">
-          <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-          </svg>
-        </div>
         <h3 className="text-base font-medium text-gray-900 mb-1">ステージが見つかりませんでした</h3>
         <p className="text-sm text-gray-500">検索条件を変更してお試しください</p>
       </div>
@@ -43,11 +38,6 @@ export function StageList({ events, searchTerm, onStageSelect }: StageListProps)
     <div className="bg-white rounded-lg shadow-sm border">
       <div className="p-3 border-b border-gray-200">
         <div className="flex items-center gap-2 mb-1">
-          <div className="w-5 h-5 bg-green-100 rounded-full flex items-center justify-center">
-            <svg className="w-2.5 h-2.5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-            </svg>
-          </div>
           <h3 className="text-base font-semibold text-gray-900">
             検索結果 ({events.length}件のイベント)
           </h3>

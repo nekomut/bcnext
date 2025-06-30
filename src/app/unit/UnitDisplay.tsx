@@ -455,7 +455,9 @@ export function UnitDisplay({
       {/* Talents */}
       {unitData.auxiliaryData.talents.hasTalents && actualCurrentForm >= 2 && (
         <TalentsList 
-          talents={unitData.auxiliaryData.talents.talentList} 
+          talents={unitData.auxiliaryData.talents.talentList}
+          unitData={unitData}
+          actualCurrentForm={actualCurrentForm}
           baseAttackUpEnabled={baseAttackUpEnabled}
           setBaseAttackUpEnabled={setBaseAttackUpEnabled}
           baseAttackUpValue={baseAttackUpValue}
@@ -1551,6 +1553,8 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier }: {
 
 function TalentsList({ 
   talents, 
+  unitData,
+  actualCurrentForm,
   baseAttackUpEnabled, 
   setBaseAttackUpEnabled, 
   baseAttackUpValue, 
@@ -1618,6 +1622,8 @@ function TalentsList({
   totalAttackMultiplier
 }: { 
   talents: readonly UnitTalent[];
+  unitData: UnitData;
+  actualCurrentForm: number;
   baseAttackUpEnabled: boolean;
   setBaseAttackUpEnabled: (enabled: boolean) => void;
   baseAttackUpValue: number;
@@ -2689,30 +2695,43 @@ function TalentsList({
                   ) : /* ふっとばす(8)の場合はテキストボックスを表示 */
                   talent.id === 8 ? (
                     <div className="text-right">
-                      {/* 確率の範囲が0~0でない場合のみ表示 */}
-                      {talent.data[2] !== 0 || talent.data[3] !== 0 ? (
-                        <div className="text-xs mb-1">
-                          <b className="text-gray-500">+</b>
-                          <input
-                            type="number"
-                            value={talentKnockbackChance}
-                            onChange={(e) => {
-                              const value = Number(e.target.value);
-                              const minValue = talent.data[2];
-                              const maxValue = talent.data[3];
-                              if (value >= minValue && value <= maxValue) {
-                                setTalentKnockbackChance(value);
-                              }
-                            }}
-                            className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
-                            min={talent.data[2]}
-                            max={talent.data[3]}
-                            step={(talent.data[3]-talent.data[2])/(talent.data[1]-1)}
-                          />
-                          <small><b className="text-gray-500">%</b></small>
-                          <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
-                        </div>
-                      ) : null}
+                      {/* 能力・効果にふっとばすがある場合のみテキストボックスを表示 */}
+                      {unitData.coreData.forms[actualCurrentForm]?.stats[24] && unitData.coreData.forms[actualCurrentForm]?.stats[24] > 0 ? (
+                        /* 確率の範囲が変動する場合のみテキストボックスを表示 */
+                        talent.data[2] !== talent.data[3] ? (
+                          <div className="text-xs mb-1">
+                            <b className="text-gray-500">+</b>
+                            <input
+                              type="number"
+                              value={talentKnockbackChance}
+                              onChange={(e) => {
+                                const value = Number(e.target.value);
+                                const minValue = talent.data[2];
+                                const maxValue = talent.data[3];
+                                if (value >= minValue && value <= maxValue) {
+                                  setTalentKnockbackChance(value);
+                                }
+                              }}
+                              className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                              min={talent.data[2]}
+                              max={talent.data[3]}
+                              step={(talent.data[3]-talent.data[2])/(talent.data[1]-1)}
+                            />
+                            <small><b className="text-gray-500">%</b></small>
+                            <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
+                          </div>
+                        ) : talent.data[2] !== 0 ? (
+                          <div className="text-xs mb-1">
+                            <b className="text-gray-500">+{talent.data[2]}%</b>
+                          </div>
+                        ) : null
+                      ) : (
+                        /* 能力・効果にふっとばすがない場合は従来のテキスト表示 */
+                        (() => {
+                          const talentEffect = calculateTalentEffect(talent);
+                          return talentEffect;
+                        })()
+                      )}
                     </div>
                   ) : /* クリティカル(13)の場合はテキストボックスを表示 */
                   talent.id === 13 ? (

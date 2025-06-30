@@ -141,8 +141,6 @@ export function UnitDisplay({
   const [talentMightyApValue, setTalentMightyApValue] = useState(1.8);
   const [talentMightyDmgValue, setTalentMightyDmgValue] = useState(0.4);
 
-  // 渾身の一撃(50)の状態
-  const [talentBerserkValue, setTalentBerserkValue] = useState(10);
 
   // 超ダメージ(7)の状態
   const [talentSuperDamageMultiplier, setTalentSuperDamageMultiplier] = useState(4);
@@ -203,10 +201,6 @@ export function UnitDisplay({
     setTalentToughnessValue(0.2);
     setTalentMightyApValue(1.8);
     setTalentMightyDmgValue(0.4);
-    
-    // 渾身の一撃の最大値を設定
-    const berserkTalent = talentList.find(talent => talent.id === 50);
-    setTalentBerserkValue(berserkTalent?.data[3] || 10);
   }, [unitData.unitId, unitData.auxiliaryData.talents.talentList]);
 
   const validFormCount = getValidFormCount(unitData);
@@ -517,8 +511,6 @@ export function UnitDisplay({
           setTalentMightyApValue={setTalentMightyApValue}
           talentMightyDmgValue={talentMightyDmgValue}
           setTalentMightyDmgValue={setTalentMightyDmgValue}
-          talentBerserkValue={talentBerserkValue}
-          setTalentBerserkValue={setTalentBerserkValue}
           talentFreezeEnabled={talentFreezeEnabled}
           setTalentFreezeEnabled={setTalentFreezeEnabled}
           talentFreezeChance={talentFreezeChance}
@@ -1624,8 +1616,6 @@ function TalentsList({
   setTalentMightyApValue,
   talentMightyDmgValue,
   setTalentMightyDmgValue,
-  talentBerserkValue,
-  setTalentBerserkValue,
   talentFreezeEnabled,
   setTalentFreezeEnabled,
   talentFreezeChance,
@@ -1699,8 +1689,6 @@ function TalentsList({
   setTalentMightyApValue: (value: number) => void;
   talentMightyDmgValue: number;
   setTalentMightyDmgValue: (value: number) => void;
-  talentBerserkValue: number;
-  setTalentBerserkValue: (value: number) => void;
   talentFreezeEnabled: boolean;
   setTalentFreezeEnabled: (enabled: boolean) => void;
   talentFreezeChance: number;
@@ -2903,24 +2891,10 @@ function TalentsList({
                   talent.id === 50 ? (
                     <div className="text-right">
                       <div className="text-xs mb-1">
-                        <input
-                          type="number"
-                          value={talentBerserkValue}
-                          onChange={(e) => {
-                            const value = Number(e.target.value);
-                            const minValue = talent.data[2];
-                            const maxValue = talent.data[3];
-                            if (value >= minValue && value <= maxValue) {
-                              setTalentBerserkValue(value);
-                            }
-                          }}
-                          className="w-8 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
-                          min={talent.data[2]}
-                          max={talent.data[3]}
-                          step="1"
-                        />
+                        <b className="text-gray-500">+{talent.data[2]}~{talent.data[3]}</b>
                         <small><b className="text-gray-500">%</b></small>
-                        <small className="text-gray-400" style={{fontSize: '10px'}}> ({talent.data[2]}~{talent.data[3]})<br /></small>
+                        <small className="text-gray-400"> (+{Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}%/Lv) </small>
+                        <br />
                         <span className="text-red-500"><small><b>攻撃力</b></small></span><b className="text-gray-500">+200</b><small><b className="text-gray-500">%</b> </small>
                         {(() => {
                           // 基本APの3倍値を計算（攻撃力アップを適用）
@@ -2929,7 +2903,7 @@ function TalentsList({
                             const calculatedAp = currentAp / totalAttackMultiplier; // 元の攻撃力に戻す
                             const savageAP = Math.floor(calculatedAp * totalAttackMultiplier * 3);
                             const isEnhanced = totalAttackMultiplier > 1;
-                            savageValues = <><b className={isEnhanced ? "text-red-500" : "text-gray-500"}>{savageAP.toLocaleString()}</b><br/></>;
+                            savageValues = <b className={isEnhanced ? "text-red-500" : "text-gray-500"}>{savageAP.toLocaleString()}</b>;
                           }
                           return savageValues;
                         })()}

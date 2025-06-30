@@ -455,7 +455,7 @@ export function UnitDisplay({
                   className="rounded object-cover"
                 />
               )}
-              <span className="truncate max-w-[80px] sm:max-w-none">{form.name || `Form ${index + 1}`}</span>
+              <span className="truncate max-w-[90px] sm:max-w-none">{form.name || `Form ${index + 1}`}</span>
             </button>
           ))}
         </div>

@@ -265,7 +265,7 @@ export const calculateUnitStats = (
   };
 };
 
-export const getAbilities = (unitData: UnitData, formId: number, level: number = 30, plusLevel: number = 0, attackUpMultiplier: number = 1, hpUpMultiplier: number = 1, talentCriticalBonus: number = 0, talentFreezeBonus: { chance: number; duration: number } = { chance: 0, duration: 0 }, talentWeakenBonus: { chance: number; duration: number } = { chance: 0, duration: 0 }, talentSlowBonus: { chance: number; duration: number } = { chance: 0, duration: 0 }, talentKnockbackBonus: { chance: number } = { chance: 0 }): UnitAbility[] => {
+export const getAbilities = (unitData: UnitData, formId: number, level: number = 30, plusLevel: number = 0, attackUpMultiplier: number = 1, hpUpMultiplier: number = 1, talentCriticalBonus: number = 0, talentFreezeBonus: { chance: number; duration: number } = { chance: 0, duration: 0 }, talentWeakenBonus: { chance: number; duration: number } = { chance: 0, duration: 0 }, talentSlowBonus: { chance: number; duration: number } = { chance: 0, duration: 0 }, talentKnockbackBonus: { chance: number } = { chance: 0 }, talentBarrierBreakerBonus: { chance: number } = { chance: 0 }): UnitAbility[] => {
   const form = unitData.coreData.forms[formId];
   if (!form) return [];
 
@@ -820,10 +820,20 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
 
   // バリアブレイカー
   if (stats[70] && stats[70] > 0) {
+    const baseChance = stats[70];
+    
+    // 本能によるボーナスを加算
+    const totalChance = baseChance + talentBarrierBreakerBonus.chance;
+    
+    // 本能によるボーナスがあるかチェック
+    const isEnhanced = talentBarrierBreakerBonus.chance > 0;
+    const chanceColor = isEnhanced ? "text-orange-600" : "text-gray-500";
+    
     abilities.push({
       name: "バリアブレイカー",
-      value: (<b className="text-gray-500">{stats[70]}<small>%</small></b>),
-      iconKeys: ["abilityBarrierBreaker"]
+      value: (<b className={chanceColor}>{totalChance}<small>%</small></b>),
+      iconKeys: ["abilityBarrierBreaker"],
+      enhanced: isEnhanced
     });
   }
 

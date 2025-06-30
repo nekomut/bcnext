@@ -105,6 +105,14 @@ export function UnitDisplay({
   const [talentKnockbackEnabled, setTalentKnockbackEnabled] = useState(hasTalentKnockback);
   const talentKnockbackTalent = unitData.auxiliaryData.talents.talentList.find(talent => talent.id === 8);
   const [talentKnockbackChance, setTalentKnockbackChance] = useState(talentKnockbackTalent?.data[3] || 0);
+
+  // ユニットがバリアブレイカー(15)を持っているかチェック
+  const hasTalentBarrierBreaker = unitData.auxiliaryData.talents.talentList.some(talent => talent.id === 15);
+  
+  // バリアブレイカー(15)の状態
+  const [talentBarrierBreakerEnabled, setTalentBarrierBreakerEnabled] = useState(hasTalentBarrierBreaker);
+  const talentBarrierBreakerTalent = unitData.auxiliaryData.talents.talentList.find(talent => talent.id === 15);
+  const [talentBarrierBreakerChance, setTalentBarrierBreakerChance] = useState(talentBarrierBreakerTalent?.data[3] || 0);
   
   // ユニットが生産スピードアップ(26)を持っているかチェック
   const hasRechargeSpeedUp = unitData.auxiliaryData.talents.talentList.some(talent => talent.id === 26);
@@ -160,6 +168,8 @@ export function UnitDisplay({
     const newHasTalentSlow = talentList.some(talent => talent.id === 3);
     const newTalentKnockbackTalent = talentList.find(talent => talent.id === 8);
     const newHasTalentKnockback = talentList.some(talent => talent.id === 8);
+    const newTalentBarrierBreakerTalent = talentList.find(talent => talent.id === 15);
+    const newHasTalentBarrierBreaker = talentList.some(talent => talent.id === 15);
     
     setBaseAttackUpEnabled(newHasBaseAttackUp);
     setBaseHpUpEnabled(newHasBaseHpUp);
@@ -185,6 +195,8 @@ export function UnitDisplay({
     setTalentSlowEnabled(newHasTalentSlow);
     setTalentKnockbackChance(newTalentKnockbackTalent?.data[3] || 0);
     setTalentKnockbackEnabled(newHasTalentKnockback);
+    setTalentBarrierBreakerChance(newTalentBarrierBreakerTalent?.data[3] || 0);
+    setTalentBarrierBreakerEnabled(newHasTalentBarrierBreaker);
     setTalentToughnessValue(0.2);
     setTalentMightyApValue(1.8);
     setTalentMightyDmgValue(0.4);
@@ -267,7 +279,13 @@ export function UnitDisplay({
     chance: actualKnockbackChance 
   };
 
-  const abilities = getAbilities(unitData, actualCurrentForm, level, plusLevel, totalAttackMultiplier, baseHpUpMultiplier, talentCriticalBonus, talentFreezeBonus, talentWeakenBonus, talentSlowBonus, talentKnockbackBonus);
+  // 「バリアブレイカー」の本能によるボーナス値（第三形態以上のみ適用）
+  const actualBarrierBreakerChance = (hasTalentBarrierBreaker && talentBarrierBreakerEnabled && actualCurrentForm >= 2) ? talentBarrierBreakerChance : 0;
+  const talentBarrierBreakerBonus = { 
+    chance: actualBarrierBreakerChance 
+  };
+
+  const abilities = getAbilities(unitData, actualCurrentForm, level, plusLevel, totalAttackMultiplier, baseHpUpMultiplier, talentCriticalBonus, talentFreezeBonus, talentWeakenBonus, talentSlowBonus, talentKnockbackBonus, talentBarrierBreakerBonus);
   const enhancedStats = {
     ...stats,
     hp: Math.floor(stats.hp * baseHpUpMultiplier),
@@ -520,6 +538,10 @@ export function UnitDisplay({
           setTalentKnockbackEnabled={setTalentKnockbackEnabled}
           talentKnockbackChance={talentKnockbackChance}
           setTalentKnockbackChance={setTalentKnockbackChance}
+          talentBarrierBreakerEnabled={talentBarrierBreakerEnabled}
+          setTalentBarrierBreakerEnabled={setTalentBarrierBreakerEnabled}
+          talentBarrierBreakerChance={talentBarrierBreakerChance}
+          setTalentBarrierBreakerChance={setTalentBarrierBreakerChance}
           currentHp={enhancedStats.hp}
           currentAp={enhancedStats.ap}
           totalAttackMultiplier={totalAttackMultiplier}
@@ -1617,6 +1639,10 @@ function TalentsList({
   setTalentKnockbackEnabled,
   talentKnockbackChance,
   setTalentKnockbackChance,
+  talentBarrierBreakerEnabled,
+  setTalentBarrierBreakerEnabled,
+  talentBarrierBreakerChance,
+  setTalentBarrierBreakerChance,
   currentHp,
   currentAp,
   totalAttackMultiplier
@@ -1686,6 +1712,10 @@ function TalentsList({
   setTalentKnockbackEnabled: (enabled: boolean) => void;
   talentKnockbackChance: number;
   setTalentKnockbackChance: (value: number) => void;
+  talentBarrierBreakerEnabled: boolean;
+  setTalentBarrierBreakerEnabled: (enabled: boolean) => void;
+  talentBarrierBreakerChance: number;
+  setTalentBarrierBreakerChance: (value: number) => void;
   currentHp: number;
   currentAp: number;
   totalAttackMultiplier: number;
@@ -1748,12 +1778,15 @@ function TalentsList({
                       height={16}
                       className="inline mr-1 align-top"
                     />
-                    <input
-                      type="checkbox"
-                      checked={talentFreezeEnabled}
-                      onChange={(e) => setTalentFreezeEnabled(e.target.checked)}
-                      className="mr-1 align-middle"
-                    />
+                    {/* 能力・効果に動きを止めるがある場合のみチェックボックスを表示 */}
+                    {(unitData.coreData.forms[actualCurrentForm]?.stats[17] && unitData.coreData.forms[actualCurrentForm]?.stats[17] > 0) ? (
+                      <input
+                        type="checkbox"
+                        checked={talentFreezeEnabled}
+                        onChange={(e) => setTalentFreezeEnabled(e.target.checked)}
+                        className="mr-1 align-middle"
+                      />
+                    ) : null}
                     {talent.name} ({talent.id})
                   </>
                 ) : talent.id === 3 ? (
@@ -1782,12 +1815,15 @@ function TalentsList({
                       height={16}
                       className="inline mr-1 align-top"
                     />
-                    <input
-                      type="checkbox"
-                      checked={talentKnockbackEnabled}
-                      onChange={(e) => setTalentKnockbackEnabled(e.target.checked)}
-                      className="mr-1 align-middle"
-                    />
+                    {/* 能力・効果にふっとばすがある場合のみチェックボックスを表示 */}
+                    {(unitData.coreData.forms[actualCurrentForm]?.stats[24] && unitData.coreData.forms[actualCurrentForm]?.stats[24] > 0) ? (
+                      <input
+                        type="checkbox"
+                        checked={talentKnockbackEnabled}
+                        onChange={(e) => setTalentKnockbackEnabled(e.target.checked)}
+                        className="mr-1 align-middle"
+                      />
+                    ) : null}
                     {talent.name} ({talent.id})
                   </>
                 ) : talent.id === 11 ? (
@@ -1838,6 +1874,15 @@ function TalentsList({
                       height={16}
                       className="inline mr-1 align-top"
                     />
+                    {/* 能力・効果にバリアブレイカーがある場合のみチェックボックスを表示 */}
+                    {(unitData.coreData.forms[actualCurrentForm]?.stats[70] && unitData.coreData.forms[actualCurrentForm]?.stats[70] > 0) ? (
+                      <input
+                        type="checkbox"
+                        checked={talentBarrierBreakerEnabled}
+                        onChange={(e) => setTalentBarrierBreakerEnabled(e.target.checked)}
+                        className="mr-1 align-middle"
+                      />
+                    ) : null}
                     {talent.name} ({talent.id})
                   </>
                 ) : talent.id === 20 ? (
@@ -2422,7 +2467,7 @@ function TalentsList({
                           className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
                           min={talent.data[4]}
                           max={talent.data[5]}
-                          step={(talent.data[5]-talent.data[4])/(talent.data[1]-1)}
+                          step={Math.ceil((talent.data[5]-talent.data[4])/(talent.data[1]-1))}
                         />
                         <small><b className="text-gray-500">%</b></small>
                       </div>
@@ -2449,7 +2494,7 @@ function TalentsList({
                           className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
                           min={talent.data[2]}
                           max={talent.data[3]}
-                          step={(talent.data[3]-talent.data[2])/(talent.data[1]-1)}
+                          step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
                         />
                         <small><b className="text-gray-500">%</b></small>
                       </div>
@@ -2500,7 +2545,7 @@ function TalentsList({
                           className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
                           min={talent.data[2]}
                           max={talent.data[3]}
-                          step={(talent.data[3]-talent.data[2])/(talent.data[1]-1)}
+                          step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
                         />
                         <small><b className="text-gray-500"> f</b></small>
                         <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
@@ -2525,7 +2570,7 @@ function TalentsList({
                           className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
                           min={talent.data[2]}
                           max={talent.data[3]}
-                          step={(talent.data[3]-talent.data[2])/(talent.data[1]-1)}
+                          step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
                         />
                         <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
                       </div>
@@ -2533,56 +2578,67 @@ function TalentsList({
                   ) : /* 動きを止める(2)の場合はテキストボックスを表示 */
                   talent.id === 2 ? (
                     <div className="text-right">
-                      {/* 確率の範囲が変動する場合のみテキストボックスを表示 */}
-                      {talent.data[2] !== talent.data[3] ? (
-                        <div className="text-xs mb-1">
-                          <b className="text-gray-500">+</b>
-                          <input
-                            type="number"
-                            value={talentFreezeChance}
-                            onChange={(e) => {
-                              const value = Number(e.target.value);
-                              const minValue = talent.data[2];
-                              const maxValue = talent.data[3];
-                              if (value >= minValue && value <= maxValue) {
-                                setTalentFreezeChance(value);
-                              }
-                            }}
-                            className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
-                            min={talent.data[2]}
-                            max={talent.data[3]}
-                            step={(talent.data[3]-talent.data[2])/(talent.data[1]-1)}
-                          />
-                          <small><b className="text-gray-500">%</b></small>
-                          <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
-                        </div>
-                      ) : talent.data[2] !== 0 ? (
-                        <div className="text-xs mb-1">
-                          <b className="text-gray-500">+{talent.data[2]}%</b>
-                        </div>
-                      ) : null}
-                      <div className="text-xs mb-1">
-                        <b className="text-gray-500"><small>+{(talentFreezeDuration/30).toFixed(2)}s</small></b> <b className="text-gray-500">( </b><small><b className="text-gray-500">+</b></small>
-                        <input
-                          type="number"
-                          value={talentFreezeDuration}
-                          onChange={(e) => {
-                            const value = Number(e.target.value);
-                            const minValue = talent.data[4];
-                            const maxValue = talent.data[5];
-                            if (value >= minValue && value <= maxValue) {
-                              setTalentFreezeDuration(value);
-                            }
-                          }}
-                          className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
-                          min={talent.data[4]}
-                          max={talent.data[5]}
-                          step={(talent.data[5]-talent.data[4])/(talent.data[1]-1)}
-                        />
-                        <small><b className="text-gray-500">f</b></small><b className="text-gray-500"> )</b>
-                        <br />
-                        <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[4]}~{talent.data[5]})</b></small>
-                      </div>
+                      {/* 能力・効果に動きを止めるがある場合のみテキストボックスを表示 */}
+                      {unitData.coreData.forms[actualCurrentForm]?.stats[17] && unitData.coreData.forms[actualCurrentForm]?.stats[17] > 0 ? (
+                        <>
+                          {/* 確率の範囲が変動する場合のみテキストボックスを表示 */}
+                          {talent.data[2] !== talent.data[3] ? (
+                            <div className="text-xs mb-1">
+                              <b className="text-gray-500">+</b>
+                              <input
+                                type="number"
+                                value={talentFreezeChance}
+                                onChange={(e) => {
+                                  const value = Number(e.target.value);
+                                  const minValue = talent.data[2];
+                                  const maxValue = talent.data[3];
+                                  if (value >= minValue && value <= maxValue) {
+                                    setTalentFreezeChance(value);
+                                  }
+                                }}
+                                className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                                min={talent.data[2]}
+                                max={talent.data[3]}
+                                step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
+                              />
+                              <small><b className="text-gray-500">%</b></small>
+                              <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
+                            </div>
+                          ) : talent.data[2] !== 0 ? (
+                            <div className="text-xs mb-1">
+                              <b className="text-gray-500">+{talent.data[2]}%</b>
+                            </div>
+                          ) : null}
+                          <div className="text-xs mb-1">
+                            <b className="text-gray-500"><small>+{(talentFreezeDuration/30).toFixed(2)}s</small></b> <b className="text-gray-500">( </b><small><b className="text-gray-500">+</b></small>
+                            <input
+                              type="number"
+                              value={talentFreezeDuration}
+                              onChange={(e) => {
+                                const value = Number(e.target.value);
+                                const minValue = talent.data[4];
+                                const maxValue = talent.data[5];
+                                if (value >= minValue && value <= maxValue) {
+                                  setTalentFreezeDuration(value);
+                                }
+                              }}
+                              className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                              min={talent.data[4]}
+                              max={talent.data[5]}
+                              step={Math.ceil((talent.data[5]-talent.data[4])/(talent.data[1]-1))}
+                            />
+                            <small><b className="text-gray-500">f</b></small><b className="text-gray-500"> )</b>
+                            <br />
+                            <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[4]}~{talent.data[5]})</b></small>
+                          </div>
+                        </>
+                      ) : (
+                        /* 能力・効果に動きを止めるがない場合は従来のテキスト表示 */
+                        (() => {
+                          const talentEffect = calculateTalentEffect(talent);
+                          return talentEffect;
+                        })()
+                      )}
                     </div>
                   ) : /* 攻撃力ダウン(1)の場合はテキストボックスを表示 */
                   talent.id === 1 ? (
@@ -2605,7 +2661,7 @@ function TalentsList({
                             className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
                             min={talent.data[2]}
                             max={talent.data[3]}
-                            step={(talent.data[3]-talent.data[2])/(talent.data[1]-1)}
+                            step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
                           />
                           <small><b className="text-gray-500">%</b></small>
                           <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
@@ -2631,7 +2687,7 @@ function TalentsList({
                           className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
                           min={talent.data[4]}
                           max={talent.data[5]}
-                          step={(talent.data[5]-talent.data[4])/(talent.data[1]-1)}
+                          step={Math.ceil((talent.data[5]-talent.data[4])/(talent.data[1]-1))}
                         />
                         <small><b className="text-gray-500">f</b></small><b className="text-gray-500"> )</b>
                         <br />
@@ -2659,7 +2715,7 @@ function TalentsList({
                             className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
                             min={talent.data[2]}
                             max={talent.data[3]}
-                            step={(talent.data[3]-talent.data[2])/(talent.data[1]-1)}
+                            step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
                           />
                           <small><b className="text-gray-500">%</b></small>
                           <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
@@ -2685,7 +2741,7 @@ function TalentsList({
                           className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
                           min={talent.data[4]}
                           max={talent.data[5]}
-                          step={(talent.data[5]-talent.data[4])/(talent.data[1]-1)}
+                          step={Math.ceil((talent.data[5]-talent.data[4])/(talent.data[1]-1))}
                         />
                         <small><b className="text-gray-500">f</b></small><b className="text-gray-500"> )</b>
                         <br />
@@ -2715,7 +2771,7 @@ function TalentsList({
                               className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
                               min={talent.data[2]}
                               max={talent.data[3]}
-                              step={(talent.data[3]-talent.data[2])/(talent.data[1]-1)}
+                              step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
                             />
                             <small><b className="text-gray-500">%</b></small>
                             <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
@@ -2752,7 +2808,7 @@ function TalentsList({
                           className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
                           min={talent.data[2]}
                           max={talent.data[3]}
-                          step={(talent.data[3]-talent.data[2])/(talent.data[1]-1)}
+                          step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
                         />
                         <small><b className="text-gray-500">% </b></small>
                         <small className="text-gray-400" style={{fontSize: '10px'}}>({talent.data[2]}~{talent.data[3]})</small>
@@ -2829,6 +2885,54 @@ function TalentsList({
                           }
                           return savageValues;
                         })()}
+                      </div>
+                    </div>
+                  ) : /* バリアブレイカー(15)の場合はテキストボックスを表示 */
+                  talent.id === 15 ? (
+                    <div className="text-right">
+                      {/* 能力・効果にバリアブレイカーがある場合のみテキストボックスを表示 */}
+                      {unitData.coreData.forms[actualCurrentForm]?.stats[70] && unitData.coreData.forms[actualCurrentForm]?.stats[70] > 0 ? (
+                        /* 確率の範囲が変動する場合のみテキストボックスを表示 */
+                        talent.data[2] !== talent.data[3] ? (
+                          <div className="text-xs mb-1">
+                            <b className="text-gray-500">+</b>
+                            <input
+                              type="number"
+                              value={talentBarrierBreakerChance}
+                              onChange={(e) => {
+                                const value = Number(e.target.value);
+                                const minValue = talent.data[2];
+                                const maxValue = talent.data[3];
+                                if (value >= minValue && value <= maxValue) {
+                                  setTalentBarrierBreakerChance(value);
+                                }
+                              }}
+                              className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                              min={talent.data[2]}
+                              max={talent.data[3]}
+                              step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
+                            />
+                            <small><b className="text-gray-500">%</b></small>
+                            <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
+                          </div>
+                        ) : talent.data[2] !== 0 ? (
+                          <div className="text-xs mb-1">
+                            <b className="text-gray-500">+{talent.data[2]}%</b>
+                          </div>
+                        ) : null
+                      ) : (
+                        /* 能力・効果にバリアブレイカーがない場合は従来のテキスト表示 */
+                        (() => {
+                          const talentEffect = calculateTalentEffect(talent);
+                          return talentEffect;
+                        })()
+                      )}
+                    </div>
+                  ) : /* 撃破時お金アップ(16)の場合は2倍を表示 */
+                  talent.id === 16 ? (
+                    <div className="text-right">
+                      <div className="text-xs">
+                        <b className="text-gray-500">2倍</b>
                       </div>
                     </div>
                   ) : /* 属性追加の本能の場合はアイコンを表示 */

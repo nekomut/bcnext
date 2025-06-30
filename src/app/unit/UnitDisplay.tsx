@@ -95,7 +95,7 @@ export function UnitDisplay({
   // 動きを遅くする(3)の状態
   const [talentSlowEnabled, setTalentSlowEnabled] = useState(hasTalentSlow);
   const talentSlowTalent = unitData.auxiliaryData.talents.talentList.find(talent => talent.id === 3);
-  const [talentSlowChance, setTalentSlowChance] = useState(talentSlowTalent?.data[2] || 0);
+  const [talentSlowChance, setTalentSlowChance] = useState(talentSlowTalent?.data[3] || 0);
   const [talentSlowDuration, setTalentSlowDuration] = useState(talentSlowTalent?.data[5] || 0);
 
   // ユニットがふっとばす(8)を持っているかチェック
@@ -190,7 +190,7 @@ export function UnitDisplay({
     setTalentWeakenChance(newTalentWeakenTalent?.data[2] || 0);
     setTalentWeakenDuration(newTalentWeakenTalent?.data[5] || 0);
     setTalentWeakenEnabled(newHasTalentWeaken);
-    setTalentSlowChance(newTalentSlowTalent?.data[2] || 0);
+    setTalentSlowChance(newTalentSlowTalent?.data[3] || 0);
     setTalentSlowDuration(newTalentSlowTalent?.data[5] || 0);
     setTalentSlowEnabled(newHasTalentSlow);
     setTalentKnockbackChance(newTalentKnockbackTalent?.data[3] || 0);
@@ -2725,28 +2725,31 @@ function TalentsList({
                           <b className="text-gray-500">+{talent.data[2]}%</b>
                         </div>
                       ) : null}
-                      <div className="text-xs mb-1">
-                        <b className="text-gray-500"><small>+{(talentSlowDuration/30).toFixed(2)}s</small></b> <b className="text-gray-500">( </b><small><b className="text-gray-500">+</b></small>
-                        <input
-                          type="number"
-                          value={talentSlowDuration}
-                          onChange={(e) => {
-                            const value = Number(e.target.value);
-                            const minValue = talent.data[4];
-                            const maxValue = talent.data[5];
-                            if (value >= minValue && value <= maxValue) {
-                              setTalentSlowDuration(value);
-                            }
-                          }}
-                          className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
-                          min={talent.data[4]}
-                          max={talent.data[5]}
-                          step={Math.ceil((talent.data[5]-talent.data[4])/(talent.data[1]-1))}
-                        />
-                        <small><b className="text-gray-500">f</b></small><b className="text-gray-500"> )</b>
-                        <br />
-                        <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[4]}~{talent.data[5]})</b></small>
-                      </div>
+                      {/* フレーム数が0~0の場合は非表示 */}
+                      {talent.data[4] !== 0 || talent.data[5] !== 0 ? (
+                        <div className="text-xs mb-1">
+                          <b className="text-gray-500"><small>+{(talentSlowDuration/30).toFixed(2)}s</small></b> <b className="text-gray-500">( </b><small><b className="text-gray-500">+</b></small>
+                          <input
+                            type="number"
+                            value={talentSlowDuration}
+                            onChange={(e) => {
+                              const value = Number(e.target.value);
+                              const minValue = talent.data[4];
+                              const maxValue = talent.data[5];
+                              if (value >= minValue && value <= maxValue) {
+                                setTalentSlowDuration(value);
+                              }
+                            }}
+                            className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                            min={talent.data[4]}
+                            max={talent.data[5]}
+                            step={Math.ceil((talent.data[5]-talent.data[4])/(talent.data[1]-1))}
+                          />
+                          <small><b className="text-gray-500">f</b></small><b className="text-gray-500"> )</b>
+                          <br />
+                          <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[4]}~{talent.data[5]})</b></small>
+                        </div>
+                      ) : null}
                     </div>
                   ) : /* ふっとばす(8)の場合はテキストボックスを表示 */
                   talent.id === 8 ? (

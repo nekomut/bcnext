@@ -144,6 +144,9 @@ export function UnitDisplay({
   // 渾身の一撃(50)の状態
   const [talentBerserkValue, setTalentBerserkValue] = useState(10);
 
+  // 超ダメージ(7)の状態
+  const [talentSuperDamageMultiplier, setTalentSuperDamageMultiplier] = useState(4);
+
   // ユニットが変更されたときにフラグを再初期化
   useEffect(() => {
     const talentList = unitData.auxiliaryData.talents.talentList;
@@ -545,6 +548,8 @@ export function UnitDisplay({
           currentHp={enhancedStats.hp}
           currentAp={enhancedStats.ap}
           totalAttackMultiplier={totalAttackMultiplier}
+          talentSuperDamageMultiplier={talentSuperDamageMultiplier}
+          setTalentSuperDamageMultiplier={setTalentSuperDamageMultiplier}
         />
       )}
     </div>
@@ -1554,10 +1559,6 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier }: {
                             return text;
                           })()
                         }} />
-                      ) : (typeof ability.value === 'string' && ability.value.includes('敵攻撃力')) ? (
-                        <span dangerouslySetInnerHTML={{
-                          __html: ability.value.replace(/敵攻撃力/g, '<small>敵攻撃力</small>')
-                        }} />
                       ) : (
                         ability.value
                       )}
@@ -1645,7 +1646,9 @@ function TalentsList({
   setTalentBarrierBreakerChance,
   currentHp,
   currentAp,
-  totalAttackMultiplier
+  totalAttackMultiplier,
+  talentSuperDamageMultiplier,
+  setTalentSuperDamageMultiplier
 }: { 
   talents: readonly UnitTalent[];
   unitData: UnitData;
@@ -1719,6 +1722,8 @@ function TalentsList({
   currentHp: number;
   currentAp: number;
   totalAttackMultiplier: number;
+  talentSuperDamageMultiplier: number;
+  setTalentSuperDamageMultiplier: (value: number) => void;
 }) {
   if (talents.length === 0) return null;
 
@@ -2388,6 +2393,17 @@ function TalentsList({
                     />
                     {talent.name} ({talent.id})
                   </>
+                ) : talent.id === 7 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityMassiveDamage}`}
+                      alt="超ダメージ"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
                 ) : (
                   <>
                     {talent.name} ({talent.id})
@@ -2936,6 +2952,30 @@ function TalentsList({
                     <div className="text-right">
                       <div className="text-xs">
                         <b className="text-gray-500">2倍</b>
+                      </div>
+                    </div>
+                  ) : /* 超ダメージ(7)の場合は能力・効果と同じ表示 */
+                  talent.id === 7 ? (
+                    <div className="text-right">
+                      <div className="text-xs mb-1">
+                        <small className="text-red-500"><b>攻撃力</b></small>
+                        <input
+                          type="number"
+                          value={talentSuperDamageMultiplier}
+                          onChange={(e) => {
+                            const value = Number(e.target.value);
+                            if (value >= 3 && value <= 4) {
+                              setTalentSuperDamageMultiplier(value);
+                            }
+                          }}
+                          className="w-7 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
+                          min="3"
+                          max="4"
+                          step="0.1"
+                        />
+                        <small><b className="text-gray-500">倍</b></small>
+                        <small className="text-gray-400" style={{fontSize: '10px'}}> (3~4)</small>
+                        <b className={totalAttackMultiplier > 1 ? "text-red-500" : "text-gray-500"}> {Math.floor(currentAp * talentSuperDamageMultiplier).toLocaleString()}</b>
                       </div>
                     </div>
                   ) : /* 属性追加の本能の場合はアイコンを表示 */

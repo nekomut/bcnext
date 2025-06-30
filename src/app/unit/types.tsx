@@ -799,20 +799,9 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const durationEnhanced = talentWeakenBonus.duration > 0;
     const isEnhanced = chanceEnhanced || durationEnhanced;
     
-    // 確率と持続時間の色を個別に設定
-    const chanceColor = chanceEnhanced ? "text-orange-600" : "text-gray-500";
-    const durationColor = durationEnhanced ? "text-orange-600" : "text-gray-500";
-    
     abilities.push({
       name: "攻撃力ダウン",
-      value: (
-        <>
-          <b className={chanceColor}>{totalChance}<small>%</small></b>{' '}
-          <small className="text-red-500">敵攻撃力</small>-{weakenPower}<small>%</small>{' '}
-          <b className={durationColor}>{duration.toFixed(1)}s~{durationMax.toFixed(1)}s</b>{' '}
-          <small className="text-gray-400">({totalDuration}f~{totalDurationMax}f)</small>
-        </>
-      ),
+      value: (<b>{totalChance}<small>%</small> <small className="text-red-500">敵攻撃力</small>-{weakenPower}<small>%</small> {duration.toFixed(1)}s~{durationMax.toFixed(1)}s <small className="text-gray-400">({totalDuration}f~{totalDurationMax}f)</small></b>),
       iconKeys: ["abilityWeaken"],
       enhanced: isEnhanced
     });

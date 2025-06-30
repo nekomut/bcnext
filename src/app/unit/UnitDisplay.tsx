@@ -310,7 +310,7 @@ export function UnitDisplay({
         {/* Unit Icon and Rarity */}
         {currentFormData.icon && (
           <div className="flex-shrink-0 flex flex-col items-center gap-1">
-            <div className="w-16 h-12 rounded-lg border-2 border-gray-200 overflow-hidden">
+            <div className="w-12 h-8 border-0 border-gray-200 overflow-hidden">
               <Image 
                 src={`data:image/png;base64,${currentFormData.icon}`}
                 alt={currentFormData.name || 'Unit Icon'}
@@ -420,7 +420,7 @@ export function UnitDisplay({
                 setPlusLevelInput(maxPlusLevel.toString());
                 onParamsChange?.({ level: maxLevel, plusLevel: maxPlusLevel, formId: actualCurrentForm });
               }}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-2 py-1 rounded text-xs sm:text-sm"
+              className="bg-blue-500 hover:bg-blue-600 text-white px-1.5 py-1 rounded text-xs sm:text-sm"
             >
               Max
             </button>
@@ -431,7 +431,7 @@ export function UnitDisplay({
 
       {/* Form Tabs */}
       {validFormCount > 1 && (
-        <div className="flex mb-3 gap-1 flex-wrap">
+        <div className="flex mb-2.5 gap-1 flex-wrap">
           {unitData.coreData.forms.slice(0, validFormCount).map((form, index) => (
             <button
               key={index}
@@ -439,7 +439,7 @@ export function UnitDisplay({
                 setCurrentForm(index);
                 onParamsChange?.({ level, plusLevel, formId: index });
               }}
-              className={`flex items-center gap-1 px-1 sm:px-2 py-1 rounded text-xs sm:text-sm transition-colors ${
+              className={`flex items-center gap-1 px-1 sm:px-1 py-0 rounded text-xs sm:text-sm transition-colors ${
                 actualCurrentForm === index
                   ? 'bg-blue-500 text-white'
                   : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
@@ -550,9 +550,9 @@ export function UnitDisplay({
 
 function StatsTable({ stats, attackUpEnabled, hpUpEnabled, attackIntervalReductionEnabled, costReductionEnabled, moveSpeedUpEnabled, rechargeSpeedUpEnabled }: { stats: CalculatedStats, attackUpEnabled: boolean, hpUpEnabled: boolean, attackIntervalReductionEnabled: boolean, costReductionEnabled: boolean, moveSpeedUpEnabled: boolean, rechargeSpeedUpEnabled: boolean }) {
   return (
-    <div className="mb-4">
-      <h3 className="text-sm sm:text-base font-semibold mb-2 text-gray-800">基本ステータス</h3>
-      <div className="grid grid-cols-2 gap-2 sm:gap-3 text-xs sm:text-sm">
+    <div className="mb-2.5">
+      <h3 className="text-sm sm:text-base font-semibold mb-1 text-gray-800">基本ステータス</h3>
+      <div className="grid grid-cols-2 gap-1.5 sm:gap-3 text-xs sm:text-sm">
         <StatItem label="体力" value={<b className={hpUpEnabled ? "text-blue-500" : "text-gray-500"}>{stats.hp.toLocaleString()}</b>} labelClassName="text-blue-500" />
 
         {stats.multihit ? (
@@ -982,8 +982,8 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier }: {
   hpUpMultiplier: number
 }) {
   return (
-    <div className="mb-4">
-      <h3 className="text-sm sm:text-base font-semibold mb-2 text-gray-800">能力・効果</h3>
+    <div className="mb-2.5">
+      <h3 className="text-sm sm:text-base font-semibold mb-0.3 text-gray-800">能力・効果</h3>
       <div className="space-y-0.5">
         {abilities.map((ability, index) => (
           ability.isDynamic && ability.name === "超ダメージ" ? (
@@ -997,7 +997,7 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier }: {
           ) : ability.isDynamic && ability.name === "めっぽう強い" ? (
             <DynamicMighty key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} hpUpMultiplier={hpUpMultiplier} />
           ) : (
-            <div key={index} className="bg-gray-50 p-2 rounded">
+            <div key={index} className="bg-gray-50 p-1.5 rounded">
               <div className="flex justify-between items-center gap-2">
                 <div className="font-bold text-xs text-gray-600">
                   {ability.name === 'abilityLongDistance' ? (
@@ -1728,7 +1728,7 @@ function TalentsList({
       <h3 className="text-sm sm:text-base font-semibold mb-2 text-gray-800">本能・超本能</h3>
       <div className="space-y-0.5">
         {talents.map((talent, index) => (
-          <div key={index} className={`p-2 rounded ${talent.type === 'ultra' ? 'bg-red-50 border-l-4 border-red-500' : 'bg-yellow-50 border-l-4 border-yellow-500'}`}>
+          <div key={index} className={`p-1.5 rounded ${talent.type === 'ultra' ? 'bg-red-50 border-l-4 border-red-500' : 'bg-yellow-50 border-l-4 border-yellow-500'}`}>
             <div className="flex justify-between items-center gap-2">
               <div className={`font-bold text-xs ${talent.type === 'ultra' ? 'text-red-600' : 'text-yellow-600'}`}>
                 {talent.id === 67 ? (

@@ -293,9 +293,9 @@ function EnemyTable({ enemies, showDetail, getTraitColor, getTraitIcon, formatNu
           <thead>
             <tr className="border-b border-gray-500">
               <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider w-4 min-w-4 whitespace-nowrap">ID</th>
-              <th className="px-0.5 py-1 text-left font-bold text-gray-500 tracking-wider w-12 min-w-4 whitespace-nowrap">敵名</th>
-              <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider w-16 min-w-16 whitespace-nowrap">属性</th>
-              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">倍率</th>
+              <th className="px-0.5 py-1 text-left font-bold text-gray-500 tracking-wider w-20 min-w-4 whitespace-nowrap">敵名</th>
+              <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider w-4 min-w-4 whitespace-nowrap">属性</th>
+              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider w-8 min-w-4 whitespace-nowrap">倍率</th>
               <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">体力</th>
               <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">攻撃力</th>
               <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">DPS</th>

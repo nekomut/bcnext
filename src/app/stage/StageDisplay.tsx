@@ -206,32 +206,45 @@ function TreasureDisplay({ treasures }: { treasures: TreasureInfo[] }) {
           <h4 className="text-xs mt-1 font-semibold text-gray-900">ドロップ報酬</h4>
         </div>
       </div>
-      <div className="p-1 space-y-0">
-        {treasures.map((treasure, index) => (
-          <div key={index} className="flex items-center gap-1.5 text-xs">
-            {treasures.length > 1 && (
-              <span className="inline-flex items-right px-1 py-0.5 rounded text-gray-500 text-xs font-medium flex-shrink-0 w-4">
-                {index + 1}
-              </span>
-            )}
-            <span className="font-medium text-green-800 flex-shrink-0 w-20 text-left">
-              {treasure.treasureName}
-            </span>
-            {treasure.amount !== '0' && (
-              <span className="text-green-600 flex-shrink-0 w-16 text-right">
-                +{treasure.amount}
-              </span>
-            )}
-            <span className="inline-flex items-center px-1 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-800 flex-shrink-0 w-10 justify-end">
-              {treasure.probability}%
-            </span>
-            {treasure.limitText !== '-1' && (
-              <span className="text-gray-600 flex-shrink-0">
-                制限: {treasure.limitText}回
-              </span>
-            )}
-          </div>
-        ))}
+      <div className="overflow-x-auto mx-1">
+        <table className="whitespace-nowrap" style={{fontSize: '10px'}}>
+          <thead>
+            <tr className="border-b border-gray-500">
+              {treasures.length > 1 && (
+                <th className="px-0.5 py-0 text-center font-bold text-gray-500 tracking-wider w-4 min-w-4 whitespace-nowrap">#</th>
+              )}
+              <th className="px-0.5 py-0 text-left font-bold text-gray-500 tracking-wider whitespace-nowrap">アイテム名</th>
+              <th className="px-0.5 py-0 text-center font-bold text-gray-500 tracking-wider whitespace-nowrap">数量</th>
+              <th className="px-0.5 py-0 text-center font-bold text-gray-500 tracking-wider whitespace-nowrap">確率</th>
+              <th className="px-0.5 py-0 text-center font-bold text-gray-500 tracking-wider whitespace-nowrap">制限</th>
+            </tr>
+          </thead>
+          <tbody>
+            {treasures.map((treasure, index) => (
+              <tr key={index} className="hover:bg-gray-50 transition-colors">
+                {treasures.length > 1 && (
+                  <td className="px-1 py-0 text-gray-500 font-mono text-right w-4 min-w-4">
+                    {index + 1}
+                  </td>
+                )}
+                <td className="px-2 py-0 font-medium text-gray-500 whitespace-nowrap">
+                  {treasure.treasureName}
+                </td>
+                <td className="px-2 py-0 text-right text-gray-500">
+                  {treasure.amount !== '0' ? `+${treasure.amount}` : '-'}
+                </td>
+                <td className="px-2 py-0 text-right">
+                  <span className="inline-flex items-right px-1 py-0.5 rounded text-xs font-medium text-yellow-600">
+                    {treasure.probability}
+                  </span>
+                </td>
+                <td className="px-2 py-0 text-gray-600">
+                  {treasure.limitText !== '-1' ? `${treasure.limitText}` : '-'}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </div>
     </div>
   );

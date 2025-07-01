@@ -1,7 +1,7 @@
 // Stage 27 Data
 import type { StageData } from '../../app/stage/types';
 
-export const e027Data: StageData = {
+export const e27Data: StageData = {
   eventId: 27,
   eventName: "脆弱性と弱酸性",
   typeId: 0,
@@ -2370,5 +2370,5 @@ export const e027Data: StageData = {
   ]
 } as const;
 
-export default e027Data;
+export default e27Data;
 

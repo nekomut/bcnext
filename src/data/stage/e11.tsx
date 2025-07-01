@@ -1,7 +1,7 @@
 // Stage 11 Data
 import type { StageData } from '../../app/stage/types';
 
-export const e011Data: StageData = {
+export const e11Data: StageData = {
   eventId: 11,
   eventName: "アオ・ザ・カナ",
   typeId: 0,
@@ -2036,5 +2036,5 @@ export const e011Data: StageData = {
   ]
 } as const;
 
-export default e011Data;
+export default e11Data;
 

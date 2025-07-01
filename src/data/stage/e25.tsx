@@ -1,7 +1,7 @@
 // Stage 25 Data
 import type { StageData } from '../../app/stage/types';
 
-export const e025Data: StageData = {
+export const e25Data: StageData = {
   eventId: 25,
   eventName: "海を汚す悪しき者",
   typeId: 0,
@@ -2331,5 +2331,5 @@ export const e025Data: StageData = {
   ]
 } as const;
 
-export default e025Data;
+export default e25Data;
 

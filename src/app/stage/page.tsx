@@ -20,9 +20,17 @@ function StagePageContent() {
 
   const loadStageData = async (eventId: number): Promise<StageData | null> => {
     try {
-      const stageModule = await import(`../../data/stage/e${eventId.toString().padStart(3, '0')}.tsx`);
+      console.log(`Loading stage data for eventId: ${eventId}`);
+      const importPath = `../../data/stage/e${eventId}`;
+      console.log(`Import path: ${importPath}`);
+      
+      const stageModule = await import(`../../data/stage/e${eventId}`);
+      console.log('Stage module loaded:', stageModule);
+      console.log('Stage module default:', stageModule.default);
+      
       return stageModule.default;
-    } catch {
+    } catch (error) {
+      console.error(`Failed to load stage data for eventId ${eventId}:`, error);
       return null;
     }
   };

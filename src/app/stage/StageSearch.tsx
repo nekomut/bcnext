@@ -62,8 +62,9 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
       
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 mb-3">
         <div>
-          <label className="block text-xs font-medium text-gray-700 mb-1">イベントID</label>
+          <label htmlFor="stage-event-id" className="block text-xs font-medium text-gray-700 mb-1">イベントID</label>
           <input
+            id="stage-event-id"
             type="text"
             value={eventId}
             onChange={(e) => setEventId(e.target.value)}
@@ -74,8 +75,9 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
         </div>
         
         <div>
-          <label className="block text-xs font-medium text-gray-700 mb-1">ステージ名</label>
+          <label htmlFor="stage-name" className="block text-xs font-medium text-gray-700 mb-1">ステージ名</label>
           <input
+            id="stage-name"
             type="text"
             value={stageName}
             onChange={(e) => setStageName(e.target.value)}
@@ -86,8 +88,9 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
         </div>
         
         <div>
-          <label className="block text-xs font-medium text-gray-700 mb-1">ステージタイプ</label>
+          <label htmlFor="stage-type" className="block text-xs font-medium text-gray-700 mb-1">ステージタイプ</label>
           <select
+            id="stage-type"
             value={typeId}
             onChange={(e) => setTypeId(e.target.value)}
             className="w-full px-2 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
@@ -115,8 +118,9 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
         </div>
         
         <div>
-          <label className="block text-xs font-medium text-gray-700 mb-1">並び順</label>
+          <label htmlFor="stage-sort" className="block text-xs font-medium text-gray-700 mb-1">並び順</label>
           <select
+            id="stage-sort"
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as 'id' | 'type' | 'name' | 'stages')}
             className="w-full px-2 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
@@ -131,9 +135,11 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
       
       <div className="flex flex-wrap gap-2">
         <button
+          id="search-button"
           onClick={handleSearch}
           disabled={loading}
           className="inline-flex items-center gap-1 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-1 focus:ring-blue-500"
+          aria-label="ステージを検索"
         >
           {loading ? (
             <>
@@ -151,9 +157,11 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
         </button>
         
         <button
+          id="clear-button"
           onClick={handleClear}
           disabled={loading}
           className="inline-flex items-center gap-1 bg-gray-600 hover:bg-gray-700 disabled:bg-gray-400 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-1 focus:ring-gray-500"
+          aria-label="検索条件をクリア"
         >
           <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />

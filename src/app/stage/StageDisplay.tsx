@@ -210,15 +210,15 @@ function TreasureDisplay({ treasures }: { treasures: TreasureInfo[] }) {
         {treasures.map((treasure, index) => (
           <div key={index} className="flex items-center gap-1.5 text-xs">
             {treasures.length > 1 && (
-              <span className="inline-flex items-right px-1 py-0.5 rounded text-gray-500 text-xs font-medium flex-shrink-0">
+              <span className="inline-flex items-right px-1 py-0.5 rounded text-gray-500 text-xs font-medium flex-shrink-0 w-4">
                 {index + 1}
               </span>
             )}
-            <span className="font-medium text-green-800 flex-shrink-0">
+            <span className="font-medium text-green-800 flex-shrink-0 w-20 text-left">
               {treasure.treasureName}
             </span>
             {treasure.amount !== '0' && (
-              <span className="text-green-600 flex-shrink-0">
+              <span className="text-green-600 flex-shrink-0 w-16 text-right">
                 +{treasure.amount}
               </span>
             )}
@@ -274,30 +274,30 @@ function EnemyTable({ enemies, showDetail, getTraitColor, getTraitIcon, formatNu
         <table className="w-full whitespace-nowrap" style={{fontSize: '10px'}}>
           <thead>
             <tr className="border-b border-gray-500">
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">ID</th>
-              <th className="px-1 py-1 text-left font-bold text-gray-500 tracking-wider whitespace-nowrap">敵名</th>
-              <th className="px-1 py-1 text-center font-bold text-gray-500 tracking-wider w-16 min-w-16 whitespace-nowrap">属性</th>
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">倍率</th>
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">体力</th>
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">攻撃力</th>
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">DPS</th>
+              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider w-4 min-w-4 whitespace-nowrap">ID</th>
+              <th className="px-0.5 py-1 text-left font-bold text-gray-500 tracking-wider w-12 min-w-4 whitespace-nowrap">敵名</th>
+              <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider w-16 min-w-16 whitespace-nowrap">属性</th>
+              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">倍率</th>
+              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">体力</th>
+              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">攻撃力</th>
+              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">DPS</th>
               {showDetail && (
                 <>
-                  <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">頻度s</th>
-                  <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">頻度f</th>
+                  <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">頻度s</th>
+                  <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">頻度f</th>
                 </>
               )}
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">射程</th>
-              <th className="px-1 py-1 text-center font-bold text-gray-500 tracking-wider whitespace-nowrap">範囲</th>
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">速度</th>
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">KB</th>
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">お金</th>
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">城連動</th>
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">出現数</th>
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">出現s</th>
-              {showDetail && <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">出現f</th>}
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">間隔s</th>
-              {showDetail && <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">間隔f</th>}
+              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">射程</th>
+              <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider whitespace-nowrap">範囲</th>
+              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">速度</th>
+              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">KB</th>
+              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">お金</th>
+              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">城連動</th>
+              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">出現数</th>
+              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">出現s</th>
+              {showDetail && <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">出現f</th>}
+              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">間隔s</th>
+              {showDetail && <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">間隔f</th>}
             </tr>
           </thead>
           <tbody>
@@ -334,7 +334,7 @@ function EnemyRow({ enemy, showDetail, getTraitColor, getTraitIcon, formatNumber
   
   return (
     <tr className="hover:bg-gray-50 transition-colors">
-      <td className="px-2 py-1 text-gray-500 font-mono text-right">
+      <td className="px-1 py-1 text-gray-500 font-mono text-right w-8 min-w-8">
         {enemy.enemyId}
       </td>
       <td className={`px-2 py-1 ${nameClass}`}>
@@ -405,13 +405,27 @@ function EnemyRow({ enemy, showDetail, getTraitColor, getTraitIcon, formatNumber
         {enemy.baseStats.range > 0 ? enemy.baseStats.range : <span className="text-gray-400">-</span>}
       </td>
       <td className="px-2 py-1 text-center whitespace-nowrap">
-        <span className={`inline-flex items-center px-1 py-0.5 rounded font-medium ${
-          enemy.baseStats.rangeType === '範囲' 
-            ? 'bg-cyan-100 text-cyan-800' 
-            : 'bg-gray-100 text-gray-800'
-        }`}>
-          {enemy.baseStats.rangeType}
-        </span>
+        <div className="flex justify-center items-center">
+          {enemy.baseStats.rangeType === '範囲' ? (
+            <Image
+              src={`data:image/png;base64,${icons.abilityAreaAttack}`}
+              alt="範囲攻撃"
+              className="w-4 h-4"
+              width={16}
+              height={16}
+              title="範囲攻撃"
+            />
+          ) : (
+            <Image
+              src={`data:image/png;base64,${icons.abilitySingleTarget}`}
+              alt="単体攻撃"
+              className="w-4 h-4"
+              width={16}
+              height={16}
+              title="単体攻撃"
+            />
+          )}
+        </div>
       </td>
       <td className="px-2 py-1 text-right text-gray-500">
         {enemy.baseStats.speed > 0 ? enemy.baseStats.speed : <span className="text-gray-400">-</span>}

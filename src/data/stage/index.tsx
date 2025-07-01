@@ -1,5 +1,5 @@
 // Stage Index Data
-import type { StageIndexData } from '../app/stage/types';
+import type { StageIndexData } from '../../app/stage/types';
 
 export const stageIndexData: StageIndexData = {
   events: [

@@ -60,10 +60,10 @@ export function StageDisplay({ stageData }: StageDisplayProps) {
   };
 
   return (
-    <div className="mt-3">
+    <div className="mt-1">
       {/* イベント情報 */}
-      <div className="bg-white rounded-lg shadow-sm border mb-3">
-        <div className="p-3 border-b border-gray-200">
+      <div className="bg-white rounded-lg shadow-sm border mb-1">
+        <div className="p-1 border-b border-gray-200">
           <div className="flex items-center gap-2 mb-1">
             <div>
               <h2 className="text-sm font-bold text-gray-900">
@@ -88,7 +88,7 @@ export function StageDisplay({ stageData }: StageDisplayProps) {
 
         {/* ステージ選択 */}
         {stageData.stages.length > 1 && (
-          <div className="p-3">
+          <div className="p-1">
             <label className="block text-xs font-medium text-gray-700 mb-2">ステージ選択:</label>
             <div className="flex flex-wrap gap-1">
               {stageData.stages.map((stage, index) => (
@@ -109,7 +109,7 @@ export function StageDisplay({ stageData }: StageDisplayProps) {
         )}
 
         {/* 表示オプション */}
-        <div className="px-3 pb-3">
+        <div className="px-1 pb-1">
           <label className="flex items-center gap-1">
             <input
               type="checkbox"
@@ -189,7 +189,7 @@ function StageBasicInfo({ stage }: { stage: StageInfo }) {
           </div>
         </div>
         {getCostLimitText() && (
-          <div className="mt-1 p-2 bg-orange-50 border border-orange-200 rounded">
+          <div className="mt-1 p-1 bg-orange-50 border border-orange-200 rounded">
             <div className="flex items-center gap-1">
               <svg className="w-3 h-3 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
@@ -212,7 +212,7 @@ function TreasureDisplay({ treasures }: { treasures: TreasureInfo[] }) {
         </div>
       </div>
       <div className="overflow-x-auto mx-1">
-        <table className="whitespace-nowrap" style={{fontSize: '10px'}}>
+        <table className="whitespace-nowrap mb-2" style={{fontSize: '10px'}}>
           <thead>
             <tr className="border-b border-gray-500">
               {treasures.length > 1 && (

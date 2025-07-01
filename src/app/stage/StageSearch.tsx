@@ -55,12 +55,12 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border p-3 mb-3">
-      <div className="flex items-center gap-2 mb-2">
+    <div className="bg-white rounded-lg shadow-sm border p-1 mb-1">
+      <div className="flex items-center gap-1 mb-1">
         <h2 className="text-base font-semibold text-gray-900">ステージ検索</h2>
       </div>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3 mb-3">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-1 mb-1">
         <div>
           <label htmlFor="stage-event-id" className="block text-xs font-medium text-gray-700 mb-1">イベントID</label>
           <input
@@ -69,8 +69,8 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
             value={eventId}
             onChange={(e) => setEventId(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder="例: 1001"
-            className="w-full px-2 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
+            placeholder="1173"
+            className="w-full px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
           />
         </div>
         
@@ -82,8 +82,8 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
             value={stageName}
             onChange={(e) => setStageName(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder="例: ドラゴン"
-            className="w-full px-2 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
+            placeholder="メタル"
+            className="w-full px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
           />
         </div>
         
@@ -93,7 +93,7 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
             id="stage-type"
             value={typeId}
             onChange={(e) => setTypeId(e.target.value)}
-            className="w-full px-2 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
+            className="w-full px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
           >
             <option value="">すべてのタイプ</option>
             <option value="0">レジェンドストーリー</option>
@@ -123,7 +123,7 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
             id="stage-sort"
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as 'id' | 'type' | 'name' | 'stages')}
-            className="w-full px-2 py-1 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
+            className="w-full px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
           >
             <option value="id">ID順</option>
             <option value="type">タイプ順</option>

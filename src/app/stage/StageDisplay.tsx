@@ -271,33 +271,33 @@ function EnemyTable({ enemies, showDetail, getTraitColor, getTraitIcon, formatNu
       </div>
       
       <div className="overflow-x-scroll mx-1">
-        <table className="w-full whitespace-nowrap">
+        <table className="w-full whitespace-nowrap" style={{fontSize: '10px'}}>
           <thead>
             <tr className="border-b border-gray-500">
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>ID</th>
-              <th className="px-1 py-1 text-left font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>敵名</th>
-              <th className="px-1 py-1 text-center font-bold text-gray-500 tracking-wider w-16 min-w-16 whitespace-nowrap" style={{fontSize: '10px'}}>属性</th>
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>倍率</th>
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>体力</th>
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>攻撃力</th>
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>DPS</th>
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">ID</th>
+              <th className="px-1 py-1 text-left font-bold text-gray-500 tracking-wider whitespace-nowrap">敵名</th>
+              <th className="px-1 py-1 text-center font-bold text-gray-500 tracking-wider w-16 min-w-16 whitespace-nowrap">属性</th>
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">倍率</th>
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">体力</th>
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">攻撃力</th>
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">DPS</th>
               {showDetail && (
                 <>
-                  <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>頻度s</th>
-                  <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>頻度f</th>
+                  <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">頻度s</th>
+                  <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">頻度f</th>
                 </>
               )}
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>射程</th>
-              <th className="px-1 py-1 text-center font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>範囲</th>
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>速度</th>
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>KB</th>
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>お金</th>
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>城連動</th>
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>出現数</th>
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>出現s</th>
-              {showDetail && <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>出現f</th>}
-              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>間隔s</th>
-              {showDetail && <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>間隔f</th>}
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">射程</th>
+              <th className="px-1 py-1 text-center font-bold text-gray-500 tracking-wider whitespace-nowrap">範囲</th>
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">速度</th>
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">KB</th>
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">お金</th>
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">城連動</th>
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">出現数</th>
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">出現s</th>
+              {showDetail && <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">出現f</th>}
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">間隔s</th>
+              {showDetail && <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap">間隔f</th>}
             </tr>
           </thead>
           <tbody>
@@ -334,7 +334,7 @@ function EnemyRow({ enemy, showDetail, getTraitColor, getTraitIcon, formatNumber
   
   return (
     <tr className="hover:bg-gray-50 transition-colors">
-      <td className="px-2 py-1 text-gray-500 font-mono text-xxs text-right" style={{fontSize: '10px'}}>
+      <td className="px-2 py-1 text-gray-500 font-mono text-right">
         {enemy.enemyId}
       </td>
       <td className={`px-2 py-1 ${nameClass}`}>
@@ -348,7 +348,7 @@ function EnemyRow({ enemy, showDetail, getTraitColor, getTraitIcon, formatNumber
               height={16}
             />
           )}
-          <div className="max-w-28 truncate text-xs font-medium" title={displayName}>
+          <div className="max-w-28 truncate font-medium" title={displayName}>
             {displayName}
           </div>
         </div>
@@ -369,7 +369,7 @@ function EnemyRow({ enemy, showDetail, getTraitColor, getTraitIcon, formatNumber
                   title={trait}
                 />
               ) : (
-                <span key={index} className={`${getTraitColor(trait)} inline-flex items-center px-1 py-0.5 rounded text-xs font-medium`}>
+                <span key={index} className={`${getTraitColor(trait)} inline-flex items-center px-1 py-0.5 rounded font-medium`}>
                   {trait}
                 </span>
               );
@@ -379,33 +379,33 @@ function EnemyRow({ enemy, showDetail, getTraitColor, getTraitIcon, formatNumber
           <span className="text-gray-400">-</span>
         )}
       </td>
-      <td className={`px-2 py-1 text-right text-xs ${magClass}`}>
+      <td className={`px-2 py-1 text-right ${magClass}`}>
         {enemy.stageStats.magnification}
       </td>
-      <td className="px-2 py-1 text-right text-xs font-medium text-gray-500">
+      <td className="px-2 py-1 text-right font-medium text-gray-500">
         {formatNumber(enemy.stageStats.actualHp)}
       </td>
-      <td className="px-2 py-1 text-right text-xs font-medium text-gray-500">
+      <td className="px-2 py-1 text-right font-medium text-gray-500">
         {formatNumber(enemy.stageStats.actualAp)}
       </td>
-      <td className="px-2 py-1 text-right text-xs font-bold text-red-600">
+      <td className="px-2 py-1 text-right font-bold text-red-600">
         {formatNumber(Math.round(enemy.stageStats.actualDps))}
       </td>
       {showDetail && (
         <>
-          <td className="px-2 py-1 text-right text-xs text-gray-500">
+          <td className="px-2 py-1 text-right text-gray-500">
             {enemy.baseStats.freq > 0 ? `${(enemy.baseStats.freq / 30).toFixed(2)}s` : '-'}
           </td>
-          <td className="px-2 py-1 text-right text-xs text-gray-500">
+          <td className="px-2 py-1 text-right text-gray-500">
             {enemy.baseStats.freq > 0 ? `${enemy.baseStats.freq}f` : '-'}
           </td>
         </>
       )}
-      <td className="px-2 py-1 text-right text-xs text-gray-500">
+      <td className="px-2 py-1 text-right text-gray-500">
         {enemy.baseStats.range > 0 ? enemy.baseStats.range : <span className="text-gray-400">-</span>}
       </td>
       <td className="px-2 py-1 text-center whitespace-nowrap">
-        <span className={`inline-flex items-center px-1 py-0.5 rounded text-xs font-medium ${
+        <span className={`inline-flex items-center px-1 py-0.5 rounded font-medium ${
           enemy.baseStats.rangeType === '範囲' 
             ? 'bg-cyan-100 text-cyan-800' 
             : 'bg-gray-100 text-gray-800'
@@ -413,37 +413,37 @@ function EnemyRow({ enemy, showDetail, getTraitColor, getTraitIcon, formatNumber
           {enemy.baseStats.rangeType}
         </span>
       </td>
-      <td className="px-2 py-1 text-right text-xs text-gray-500">
+      <td className="px-2 py-1 text-right text-gray-500">
         {enemy.baseStats.speed > 0 ? enemy.baseStats.speed : <span className="text-gray-400">-</span>}
       </td>
-      <td className="px-2 py-1 text-right text-xs text-gray-500">
+      <td className="px-2 py-1 text-right text-gray-500">
         {enemy.baseStats.kbLevel > 0 ? enemy.baseStats.kbLevel : <span className="text-gray-400">-</span>}
       </td>
-      <td className="px-2 py-1 text-right text-xs font-medium text-yellow-600">
+      <td className="px-2 py-1 text-right font-medium text-yellow-600">
         {formatNumber(enemy.baseStats.money)}
       </td>
-      <td className="px-2 py-1 text-right text-xs text-gray-500">
+      <td className="px-2 py-1 text-right text-gray-500">
         {enemy.stageStats.baseHpRatio}
       </td>
-      <td className="px-2 py-1 text-right text-xs text-gray-500">
+      <td className="px-2 py-1 text-right text-gray-500">
         {enemy.stageStats.count === '0' ? 
           <span className="text-gray-400">-</span> : 
           <span className="font-medium">{formatNumber(enemy.stageStats.count)}</span>
         }
       </td>
-      <td className="px-2 py-1 text-right text-xs text-gray-500">
+      <td className="px-2 py-1 text-right text-gray-500">
         {enemy.stageStats.spawnTime}
       </td>
       {showDetail && (
-        <td className="px-2 py-1 text-right text-xs text-gray-600">
+        <td className="px-2 py-1 text-right text-gray-600">
           {enemy.stageStats.spawnTimeFrames}
         </td>
       )}
-      <td className="px-2 py-1 text-right text-xs text-gray-500">
+      <td className="px-2 py-1 text-right text-gray-500">
         {enemy.stageStats.delay}
       </td>
       {showDetail && (
-        <td className="px-2 py-1 text-right text-xs text-gray-600">
+        <td className="px-2 py-1 text-right text-gray-600">
           {enemy.stageStats.delayFrames}
         </td>
       )}

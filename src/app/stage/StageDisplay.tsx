@@ -36,7 +36,7 @@ export function StageDisplay({ stageData }: StageDisplayProps) {
       '天': 'traitAngel',
       'エ': 'traitAlien',
       'ゾ': 'traitZombie',
-      '古': 'traitAncient',
+      '古': 'traitRelic',
       '悪': 'traitEvil'
     };
     const iconKey = traitIconMap[trait];

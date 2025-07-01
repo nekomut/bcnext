@@ -78,7 +78,7 @@ function StagePageContent() {
 
   const updateURL = useCallback((params: StageSearchParams) => {
     const searchParams = new URLSearchParams();
-    if (params.eventId) searchParams.set('event', params.eventId.toString());
+    if (params.eventId !== undefined && params.eventId !== null) searchParams.set('event', params.eventId.toString());
     if (params.stageName) searchParams.set('name', params.stageName);
     if (params.typeId !== undefined) searchParams.set('type', params.typeId.toString());
     
@@ -93,7 +93,7 @@ function StagePageContent() {
     
     try {
       // イベントIDが指定されている場合は詳細表示
-      if (params.eventId) {
+      if (params.eventId !== undefined && params.eventId !== null) {
         const stageData = await loadStageData(params.eventId);
         if (stageData) {
           setSelectedStage(stageData);
@@ -133,7 +133,7 @@ function StagePageContent() {
     setSearchParams(params);
     
     // 初期検索実行
-    if (params.eventId || params.stageName || params.typeId) {
+    if (params.eventId !== undefined && params.eventId !== null || params.stageName || params.typeId !== undefined && params.typeId !== null) {
       handleSearch(params);
     }
   }, [urlSearchParams, handleSearch]);

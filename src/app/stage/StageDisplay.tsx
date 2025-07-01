@@ -270,34 +270,34 @@ function EnemyTable({ enemies, showDetail, getTraitColor, getTraitIcon, formatNu
         </div>
       </div>
       
-      <div className="overflow-x-scroll">
-        <table className="w-full">
+      <div className="overflow-x-scroll mx-1">
+        <table className="w-full whitespace-nowrap">
           <thead>
-            <tr className="bg-gray-50">
-              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">ID</th>
-              <th className="px-1 py-1 text-left text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">敵名</th>
-              <th className="px-1 py-1 text-center text-xs font-medium text-gray-500 tracking-wider w-16 min-w-16 whitespace-nowrap">属性</th>
-              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">倍率</th>
-              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">体力</th>
-              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">攻撃力</th>
-              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">DPS</th>
+            <tr className="border-b border-gray-500">
+              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">ID</th>
+              <th className="px-1 py-1 text-left text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">敵名</th>
+              <th className="px-1 py-1 text-center text-xs font-bold text-gray-500 tracking-wider w-16 min-w-16 whitespace-nowrap">属性</th>
+              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">倍率</th>
+              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">体力</th>
+              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">攻撃力</th>
+              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">DPS</th>
               {showDetail && (
                 <>
-                  <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">頻度s</th>
-                  <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">頻度f</th>
+                  <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">頻度s</th>
+                  <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">頻度f</th>
                 </>
               )}
-              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">射程</th>
-              <th className="px-1 py-1 text-center text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">範囲</th>
-              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">速度</th>
-              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">KB</th>
-              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">お金</th>
-              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">城連動</th>
-              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">出現数</th>
-              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">出現s</th>
-              {showDetail && <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">出現f</th>}
-              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">間隔s</th>
-              {showDetail && <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">間隔f</th>}
+              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">射程</th>
+              <th className="px-1 py-1 text-center text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">範囲</th>
+              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">速度</th>
+              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">KB</th>
+              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">お金</th>
+              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">城連動</th>
+              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">出現数</th>
+              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">出現s</th>
+              {showDetail && <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">出現f</th>}
+              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">間隔s</th>
+              {showDetail && <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">間隔f</th>}
             </tr>
           </thead>
           <tbody>

@@ -122,11 +122,6 @@ export function StageDisplay({ stageData }: StageDisplayProps) {
         {/* ステージ基本情報 */}
         <StageBasicInfo stage={selectedStage} />
 
-        {/* ドロップ報酬 */}
-        {selectedStage.treasures.length > 0 && (
-          <TreasureDisplay treasures={selectedStage.treasures} />
-        )}
-
         {/* 敵情報テーブル */}
         <EnemyTable 
           enemies={selectedStage.enemies} 
@@ -135,6 +130,11 @@ export function StageDisplay({ stageData }: StageDisplayProps) {
           getTraitIcon={getTraitIcon}
           formatNumber={formatNumber}
         />
+
+        {/* ドロップ報酬 */}
+        {selectedStage.treasures.length > 0 && (
+          <TreasureDisplay treasures={selectedStage.treasures} />
+        )}
       </div>
     </div>
   );
@@ -274,30 +274,30 @@ function EnemyTable({ enemies, showDetail, getTraitColor, getTraitIcon, formatNu
         <table className="w-full whitespace-nowrap">
           <thead>
             <tr className="border-b border-gray-500">
-              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">ID</th>
-              <th className="px-1 py-1 text-left text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">敵名</th>
-              <th className="px-1 py-1 text-center text-xs font-bold text-gray-500 tracking-wider w-16 min-w-16 whitespace-nowrap">属性</th>
-              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">倍率</th>
-              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">体力</th>
-              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">攻撃力</th>
-              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">DPS</th>
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>ID</th>
+              <th className="px-1 py-1 text-left font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>敵名</th>
+              <th className="px-1 py-1 text-center font-bold text-gray-500 tracking-wider w-16 min-w-16 whitespace-nowrap" style={{fontSize: '10px'}}>属性</th>
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>倍率</th>
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>体力</th>
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>攻撃力</th>
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>DPS</th>
               {showDetail && (
                 <>
-                  <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">頻度s</th>
-                  <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">頻度f</th>
+                  <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>頻度s</th>
+                  <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>頻度f</th>
                 </>
               )}
-              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">射程</th>
-              <th className="px-1 py-1 text-center text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">範囲</th>
-              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">速度</th>
-              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">KB</th>
-              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">お金</th>
-              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">城連動</th>
-              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">出現数</th>
-              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">出現s</th>
-              {showDetail && <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">出現f</th>}
-              <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">間隔s</th>
-              {showDetail && <th className="px-1 py-1 text-right text-xs font-bold text-gray-500 tracking-wider whitespace-nowrap">間隔f</th>}
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>射程</th>
+              <th className="px-1 py-1 text-center font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>範囲</th>
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>速度</th>
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>KB</th>
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>お金</th>
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>城連動</th>
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>出現数</th>
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>出現s</th>
+              {showDetail && <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>出現f</th>}
+              <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>間隔s</th>
+              {showDetail && <th className="px-1 py-1 text-right font-bold text-gray-500 tracking-wider whitespace-nowrap" style={{fontSize: '10px'}}>間隔f</th>}
             </tr>
           </thead>
           <tbody>
@@ -334,7 +334,7 @@ function EnemyRow({ enemy, showDetail, getTraitColor, getTraitIcon, formatNumber
   
   return (
     <tr className="hover:bg-gray-50 transition-colors">
-      <td className="px-2 py-1 text-green-600 font-mono text-xs text-right font-medium">
+      <td className="px-2 py-1 text-gray-500 font-mono text-xxs text-right" style={{fontSize: '10px'}}>
         {enemy.enemyId}
       </td>
       <td className={`px-2 py-1 ${nameClass}`}>

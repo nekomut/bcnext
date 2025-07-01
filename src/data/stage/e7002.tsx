@@ -8,6 +8,7 @@ export const e7002Data: StageData = {
   typeName: "にゃんこ塔",
   prefix: "V",
   mapId: 2,
+  specialRule: null,
   stages: [
     {
       stageId: 0,

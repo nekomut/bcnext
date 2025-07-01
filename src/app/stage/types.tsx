@@ -7,6 +7,12 @@ export interface StageData {
   typeName: string;
   prefix: string;
   mapId: number;
+  specialRule?: {
+    name: string;
+    explanation: string;
+    ruleTypes: Record<string, { Parameters: number[] }>;
+    contentsType: number;
+  } | null;
   stages: StageInfo[];
 }
 

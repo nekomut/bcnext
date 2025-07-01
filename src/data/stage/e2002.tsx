@@ -8,6 +8,7 @@ export const e2002Data: StageData = {
   typeName: "コラボステージ",
   prefix: "C",
   mapId: 2,
+  specialRule: null,
   stages: [
     {
       stageId: 0,

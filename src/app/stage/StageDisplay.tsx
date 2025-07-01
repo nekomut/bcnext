@@ -69,6 +69,16 @@ export function StageDisplay({ stageData }: StageDisplayProps) {
               <h2 className="text-sm font-bold text-gray-900">
                 #{stageData.eventId} {stageData.eventName}
               </h2>
+              {stageData.specialRule && stageData.specialRule !== null && (
+                <div className="mt-1 p-2 bg-yellow-50 border border-yellow-200 rounded">
+                  <div className="text-xs font-medium text-yellow-800">
+                    {stageData.specialRule.name}
+                  </div>
+                  <div className="text-xs text-yellow-700 mt-1 whitespace-pre-line">
+                    {stageData.specialRule.explanation}
+                  </div>
+                </div>
+              )}
               <p className="text-xs text-gray-600">
                 {stageData.typeName} ({stageData.typeId}) | マップID: {stageData.mapId} | プレフィックス: {stageData.prefix}
               </p>

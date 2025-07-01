@@ -8,6 +8,7 @@ export const e10Data: StageData = {
   typeName: "レジェンドストーリー",
   prefix: "N",
   mapId: 10,
+  specialRule: null,
   stages: [
     {
       stageId: 0,

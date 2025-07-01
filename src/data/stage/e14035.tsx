@@ -8,6 +8,7 @@ export const e14035Data: StageData = {
   typeName: "ネコビタン",
   prefix: "B",
   mapId: 35,
+  specialRule: null,
   stages: [
     {
       stageId: 0,

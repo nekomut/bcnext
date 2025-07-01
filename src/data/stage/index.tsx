@@ -16673,10 +16673,231 @@ export const stageIndexData: StageIndexData = {
         4: "仮説不要説",
         5: "力を計り得ぬ者"
       }
+    },
+    {
+      eventId: 36000,
+      eventName: "異次元コロシアム",
+      typeId: 36,
+      typeName: "異次元コロシアム",
+      mapId: 0,
+      prefix: "SR",
+      stageCount: 5,
+      stageIds: [0, 1, 2, 3, 4],
+      stageInfo: {
+        0: "Round 1",
+        1: "Round 2",
+        2: "Round 3",
+        3: "Round 4",
+        4: "Round 5"
+      }
+    },
+    {
+      eventId: 36001,
+      eventName: "異次元コロシアム",
+      typeId: 36,
+      typeName: "異次元コロシアム",
+      mapId: 1,
+      prefix: "SR",
+      stageCount: 5,
+      stageIds: [0, 1, 2, 3, 4],
+      stageInfo: {
+        0: "Round 1",
+        1: "Round 2",
+        2: "Round 3",
+        3: "Round 4",
+        4: "Round 5"
+      }
+    },
+    {
+      eventId: 36002,
+      eventName: "異次元コロシアム",
+      typeId: 36,
+      typeName: "異次元コロシアム",
+      mapId: 2,
+      prefix: "SR",
+      stageCount: 5,
+      stageIds: [0, 1, 2, 3, 4],
+      stageInfo: {
+        0: "Round 1",
+        1: "Round 2",
+        2: "Round 3",
+        3: "Round 4",
+        4: "Round 5"
+      }
+    },
+    {
+      eventId: 36003,
+      eventName: "異次元コロシアム",
+      typeId: 36,
+      typeName: "異次元コロシアム",
+      mapId: 3,
+      prefix: "SR",
+      stageCount: 5,
+      stageIds: [0, 1, 2, 3, 4],
+      stageInfo: {
+        0: "Round 1",
+        1: "Round 2",
+        2: "Round 3",
+        3: "Round 4",
+        4: "Round 5"
+      }
+    },
+    {
+      eventId: 36004,
+      eventName: "異次元コロシアム",
+      typeId: 36,
+      typeName: "異次元コロシアム",
+      mapId: 4,
+      prefix: "SR",
+      stageCount: 5,
+      stageIds: [0, 1, 2, 3, 4],
+      stageInfo: {
+        0: "Round 1",
+        1: "Round 2",
+        2: "Round 3",
+        3: "Round 4",
+        4: "Round 5"
+      }
+    },
+    {
+      eventId: 36005,
+      eventName: "異次元コロシアム",
+      typeId: 36,
+      typeName: "異次元コロシアム",
+      mapId: 5,
+      prefix: "SR",
+      stageCount: 5,
+      stageIds: [0, 1, 2, 3, 4],
+      stageInfo: {
+        0: "Round 1",
+        1: "Round 2",
+        2: "Round 3",
+        3: "Round 4",
+        4: "Round 5"
+      }
+    },
+    {
+      eventId: 36006,
+      eventName: "異次元コロシアム",
+      typeId: 36,
+      typeName: "異次元コロシアム",
+      mapId: 6,
+      prefix: "SR",
+      stageCount: 5,
+      stageIds: [0, 1, 2, 3, 4],
+      stageInfo: {
+        0: "Round 1",
+        1: "Round 2",
+        2: "Round 3",
+        3: "Round 4",
+        4: "Round 5"
+      }
+    },
+    {
+      eventId: 36007,
+      eventName: "異次元コロシアム",
+      typeId: 36,
+      typeName: "異次元コロシアム",
+      mapId: 7,
+      prefix: "SR",
+      stageCount: 5,
+      stageIds: [0, 1, 2, 3, 4],
+      stageInfo: {
+        0: "Round 1",
+        1: "Round 2",
+        2: "Round 3",
+        3: "Round 4",
+        4: "Round 5"
+      }
+    },
+    {
+      eventId: 36008,
+      eventName: "異次元コロシアム",
+      typeId: 36,
+      typeName: "異次元コロシアム",
+      mapId: 8,
+      prefix: "SR",
+      stageCount: 5,
+      stageIds: [0, 1, 2, 3, 4],
+      stageInfo: {
+        0: "Round 1",
+        1: "Round 2",
+        2: "Round 3",
+        3: "Round 4",
+        4: "Round 5"
+      }
+    },
+    {
+      eventId: 36009,
+      eventName: "異次元コロシアム",
+      typeId: 36,
+      typeName: "異次元コロシアム",
+      mapId: 9,
+      prefix: "SR",
+      stageCount: 5,
+      stageIds: [0, 1, 2, 3, 4],
+      stageInfo: {
+        0: "Round 1",
+        1: "Round 2",
+        2: "Round 3",
+        3: "Round 4",
+        4: "Round 5"
+      }
+    },
+    {
+      eventId: 36010,
+      eventName: "異次元コロシアム",
+      typeId: 36,
+      typeName: "異次元コロシアム",
+      mapId: 10,
+      prefix: "SR",
+      stageCount: 5,
+      stageIds: [0, 1, 2, 3, 4],
+      stageInfo: {
+        0: "Round 1",
+        1: "Round 2",
+        2: "Round 3",
+        3: "Round 4",
+        4: "Round 5"
+      }
+    },
+    {
+      eventId: 36011,
+      eventName: "異次元コロシアム",
+      typeId: 36,
+      typeName: "異次元コロシアム",
+      mapId: 11,
+      prefix: "SR",
+      stageCount: 5,
+      stageIds: [0, 1, 2, 3, 4],
+      stageInfo: {
+        0: "Round 1",
+        1: "Round 2",
+        2: "Round 3",
+        3: "Round 4",
+        4: "Round 5"
+      }
+    },
+    {
+      eventId: 36012,
+      eventName: "異次元コロシアム",
+      typeId: 36,
+      typeName: "異次元コロシアム",
+      mapId: 12,
+      prefix: "SR",
+      stageCount: 5,
+      stageIds: [0, 1, 2, 3, 4],
+      stageInfo: {
+        0: "Round 1",
+        1: "Round 2",
+        2: "Round 3",
+        3: "Round 4",
+        4: "Round 5"
+      }
     }
   ],
-  totalEvents: 1017,
-  totalStages: 4467
+  totalEvents: 1030,
+  totalStages: 4532
 } as const;
 
 export default stageIndexData;

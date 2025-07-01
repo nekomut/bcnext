@@ -8,6 +8,7 @@ export const e31002Data: StageData = {
   typeName: "超獣討伐",
   prefix: "Q",
   mapId: 2,
+  specialRule: null,
   stages: [
     {
       stageId: 0,

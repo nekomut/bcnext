@@ -8,6 +8,7 @@ export const e1007Data: StageData = {
   typeName: "イベントステージ",
   prefix: "S",
   mapId: 7,
+  specialRule: null,
   stages: [
     {
       stageId: 0,

@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import type { StageData, StageInfo, EnemyStageInfo, TreasureInfo } from './types';
+import { icons } from '../../data/icons';
 
 interface StageDisplayProps {
   stageData: StageData;
@@ -23,6 +24,23 @@ export function StageDisplay({ stageData }: StageDisplayProps) {
   const formatNumber = (value: number | string): string => {
     const num = typeof value === 'string' ? parseInt(value) : value;
     return isNaN(num) ? '-' : num.toLocaleString();
+  };
+
+  const getTraitIcon = (trait: string): string | null => {
+    const traitIconMap: Record<string, string> = {
+      '赤': 'traitRed',
+      '浮': 'traitFloating',
+      '黒': 'traitBlack',
+      'メ': 'traitMetal',
+      '無': 'traitNone',
+      '天': 'traitAngel',
+      'エ': 'traitAlien',
+      'ゾ': 'traitZombie',
+      '古': 'traitAncient',
+      '悪': 'traitEvil'
+    };
+    const iconKey = traitIconMap[trait];
+    return iconKey && icons[iconKey as keyof typeof icons] ? icons[iconKey as keyof typeof icons] : null;
   };
 
   const getTraitColor = (trait: string): string => {
@@ -114,6 +132,7 @@ export function StageDisplay({ stageData }: StageDisplayProps) {
           enemies={selectedStage.enemies} 
           showDetail={showDetail}
           getTraitColor={getTraitColor}
+          getTraitIcon={getTraitIcon}
           formatNumber={formatNumber}
         />
       </div>
@@ -140,35 +159,32 @@ function StageBasicInfo({ stage }: { stage: StageInfo }) {
 
   return (
     <div>
-      <div className="p-3 border-b border-gray-200">
-        <h3 className="text-sm font-semibold text-gray-900 flex items-center gap-2">
-          <span className="inline-flex items-center px-1 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800">
-            {stage.stageId + 1}
-          </span>
-          {stage.stageName}
+      <div className="p-1">
+        <h3 className="text-sm font-semibold text-gray-900 flex items-center gap-1">
+          {stage.stageId + 1}{': '}{stage.stageName}
         </h3>
       </div>
-      <div className="p-3">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-          <div className="flex flex-col">
-            <span className="text-xs font-medium text-gray-500 uppercase tracking-wider">必要統率力</span>
-            <span className="text-xs font-semibold text-gray-900">{formatNumber(stage.requiredCost)}</span>
+      <div className="p-1">
+        <div className="flex flex-wrap items-center gap-2 text-xs">
+          <div className="flex items-center gap-1">
+            <span className="font-medium text-gray-500">必要統率力:</span>
+            <span className="font-semibold text-gray-900">{formatNumber(stage.requiredCost)}</span>
           </div>
-          <div className="flex flex-col">
-            <span className="text-xs font-medium text-gray-500 uppercase tracking-wider">城HP</span>
-            <span className="text-xs font-semibold text-gray-900">{formatNumber(stage.baseHp)}</span>
+          <div className="flex items-center gap-1">
+            <span className="font-medium text-gray-500">城HP:</span>
+            <span className="font-semibold text-gray-900">{formatNumber(stage.baseHp)}</span>
           </div>
-          <div className="flex flex-col">
-            <span className="text-xs font-medium text-gray-500 uppercase tracking-wider">ステージ幅</span>
-            <span className="text-xs font-semibold text-gray-900">{formatNumber(stage.width)}</span>
+          <div className="flex items-center gap-1">
+            <span className="font-medium text-gray-500">ステージ幅:</span>
+            <span className="font-semibold text-gray-900">{formatNumber(stage.width)}</span>
           </div>
-          <div className="flex flex-col">
-            <span className="text-xs font-medium text-gray-500 uppercase tracking-wider">敵最大数</span>
-            <span className="text-xs font-semibold text-gray-900">{formatNumber(stage.enemyLimit)}</span>
+          <div className="flex items-center gap-1">
+            <span className="font-medium text-gray-500">敵最大数:</span>
+            <span className="font-semibold text-gray-900">{formatNumber(stage.enemyLimit)}</span>
           </div>
         </div>
         {getCostLimitText() && (
-          <div className="mt-2 p-2 bg-orange-50 border border-orange-200 rounded">
+          <div className="mt-1 p-2 bg-orange-50 border border-orange-200 rounded">
             <div className="flex items-center gap-1">
               <svg className="w-3 h-3 text-orange-600" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
@@ -185,42 +201,35 @@ function StageBasicInfo({ stage }: { stage: StageInfo }) {
 function TreasureDisplay({ treasures }: { treasures: TreasureInfo[] }) {
   return (
     <div>
-      <div className="p-3 border-b border-gray-200">
-        <div className="flex items-center gap-2">
-          <div className="w-5 h-5 bg-yellow-100 rounded-full flex items-center justify-center">
-            <svg className="w-2.5 h-2.5 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm8 0a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1h-6a1 1 0 01-1-1V8z" clipRule="evenodd" />
-            </svg>
-          </div>
-          <h4 className="text-sm font-semibold text-gray-900">ドロップ報酬</h4>
+      <div className="p-1">
+        <div className="flex items-center gap-1">
+          <h4 className="text-xs mt-1 font-semibold text-gray-900">ドロップ報酬</h4>
         </div>
       </div>
-      <div className="p-3 space-y-2">
+      <div className="p-1 space-y-0">
         {treasures.map((treasure, index) => (
-          <div key={index} className="flex items-center justify-between p-2 bg-green-50 border border-green-200 rounded">
-            <div className="flex items-center gap-2">
-              {treasures.length > 1 && (
-                <span className="inline-flex items-center px-1 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800">
-                  {index + 1}
-                </span>
-              )}
-              <div>
-                <div className="text-xs font-medium text-green-800">{treasure.treasureName}</div>
-                {treasure.amount !== '0' && (
-                  <div className="text-xs text-green-600">+{treasure.amount}</div>
-                )}
-              </div>
-            </div>
-            <div className="text-right">
-              <div className="inline-flex items-center px-1 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-800">
-                {treasure.probability}%
-              </div>
-              {treasure.limitText !== '-1' && (
-                <div className="text-xs text-gray-600 mt-0.5">
-                  制限: {treasure.limitText}回
-                </div>
-              )}
-            </div>
+          <div key={index} className="flex items-center gap-1.5 text-xs">
+            {treasures.length > 1 && (
+              <span className="inline-flex items-right px-1 py-0.5 rounded text-gray-500 text-xs font-medium flex-shrink-0">
+                {index + 1}
+              </span>
+            )}
+            <span className="font-medium text-green-800 flex-shrink-0">
+              {treasure.treasureName}
+            </span>
+            {treasure.amount !== '0' && (
+              <span className="text-green-600 flex-shrink-0">
+                +{treasure.amount}
+              </span>
+            )}
+            <span className="inline-flex items-center px-1 py-0.5 rounded text-xs font-medium bg-yellow-100 text-yellow-800 flex-shrink-0 w-10 justify-end">
+              {treasure.probability}%
+            </span>
+            {treasure.limitText !== '-1' && (
+              <span className="text-gray-600 flex-shrink-0">
+                制限: {treasure.limitText}回
+              </span>
+            )}
           </div>
         ))}
       </div>
@@ -232,20 +241,21 @@ interface EnemyTableProps {
   enemies: EnemyStageInfo[];
   showDetail: boolean;
   getTraitColor: (trait: string) => string;
+  getTraitIcon: (trait: string) => string | null;
   formatNumber: (value: number | string) => string;
 }
 
-function EnemyTable({ enemies, showDetail, getTraitColor, formatNumber }: EnemyTableProps) {
+function EnemyTable({ enemies, showDetail, getTraitColor, getTraitIcon, formatNumber }: EnemyTableProps) {
   if (enemies.length === 0) {
     return (
       <div>
-        <div className="p-3 border-b border-gray-200">
+        <div className="p-3">
           <div className="flex items-center gap-2">
-            <h4 className="text-sm font-semibold text-gray-900">敵情報 (0種類)</h4>
+            <h4 className="text-xs font-semibold text-gray-900">敵情報 (0種類)</h4>
           </div>
         </div>
         <div className="p-4 text-center">
-          <h3 className="text-sm font-medium text-gray-900 mb-1">敵データがありません</h3>
+          <h3 className="text-xs font-medium text-gray-900 mb-1">敵データがありません</h3>
           <p className="text-xs text-gray-500">このステージには敵情報が設定されていません</p>
         </div>
       </div>
@@ -254,49 +264,50 @@ function EnemyTable({ enemies, showDetail, getTraitColor, formatNumber }: EnemyT
 
   return (
     <div>
-      <div className="p-3 border-b border-gray-200">
+      <div className="p-1">
         <div className="flex items-center gap-2">
-          <h4 className="text-sm font-semibold text-gray-900">敵情報 ({enemies.length}種類)</h4>
+          <h4 className="text-xs font-semibold text-gray-900">敵情報 ({enemies.length}種類)</h4>
         </div>
       </div>
       
-      <div className="overflow-x-auto">
+      <div className="overflow-x-scroll">
         <table className="w-full">
           <thead>
-            <tr className="bg-gray-50 border-b border-gray-200">
-              <th className="px-2 py-1 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
-              <th className="px-2 py-1 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">敵名</th>
-              <th className="px-2 py-1 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">属性</th>
-              <th className="px-2 py-1 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">倍率</th>
-              <th className="px-2 py-1 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">体力</th>
-              <th className="px-2 py-1 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">攻撃力</th>
-              <th className="px-2 py-1 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">DPS</th>
+            <tr className="bg-gray-50">
+              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">ID</th>
+              <th className="px-1 py-1 text-left text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">敵名</th>
+              <th className="px-1 py-1 text-center text-xs font-medium text-gray-500 tracking-wider w-16 min-w-16 whitespace-nowrap">属性</th>
+              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">倍率</th>
+              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">体力</th>
+              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">攻撃力</th>
+              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">DPS</th>
               {showDetail && (
                 <>
-                  <th className="px-2 py-1 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">頻度s</th>
-                  <th className="px-2 py-1 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">頻度f</th>
+                  <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">頻度s</th>
+                  <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">頻度f</th>
                 </>
               )}
-              <th className="px-2 py-1 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">射程</th>
-              <th className="px-2 py-1 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">範囲</th>
-              <th className="px-2 py-1 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">速度</th>
-              <th className="px-2 py-1 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">KB</th>
-              <th className="px-2 py-1 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">お金</th>
-              <th className="px-2 py-1 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">城連動</th>
-              <th className="px-2 py-1 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">出現数</th>
-              <th className="px-2 py-1 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">出現s</th>
-              {showDetail && <th className="px-2 py-1 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">出現f</th>}
-              <th className="px-2 py-1 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">間隔s</th>
-              {showDetail && <th className="px-2 py-1 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">間隔f</th>}
+              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">射程</th>
+              <th className="px-1 py-1 text-center text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">範囲</th>
+              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">速度</th>
+              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">KB</th>
+              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">お金</th>
+              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">城連動</th>
+              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">出現数</th>
+              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">出現s</th>
+              {showDetail && <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">出現f</th>}
+              <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">間隔s</th>
+              {showDetail && <th className="px-1 py-1 text-right text-xs font-medium text-gray-500 tracking-wider whitespace-nowrap">間隔f</th>}
             </tr>
           </thead>
-          <tbody className="divide-y divide-gray-200">
+          <tbody>
             {enemies.map((enemy, index) => (
               <EnemyRow 
                 key={index}
                 enemy={enemy}
                 showDetail={showDetail}
                 getTraitColor={getTraitColor}
+                getTraitIcon={getTraitIcon}
                 formatNumber={formatNumber}
               />
             ))}
@@ -311,12 +322,13 @@ interface EnemyRowProps {
   enemy: EnemyStageInfo;
   showDetail: boolean;
   getTraitColor: (trait: string) => string;
+  getTraitIcon: (trait: string) => string | null;
   formatNumber: (value: number | string) => string;
 }
 
-function EnemyRow({ enemy, showDetail, getTraitColor, formatNumber }: EnemyRowProps) {
+function EnemyRow({ enemy, showDetail, getTraitColor, getTraitIcon, formatNumber }: EnemyRowProps) {
   const isBoss = enemy.stageStats.isBoss;
-  const nameClass = isBoss ? 'text-red-600 font-bold' : 'text-blue-600';
+  const nameClass = isBoss ? 'text-red-500 font-bold' : 'text-gray-500';
   const displayName = isBoss ? `${enemy.enemyName}*` : enemy.enemyName;
   const magClass = enemy.stageStats.magnification !== '100%' ? 'text-yellow-600 font-semibold' : 'text-gray-600';
   
@@ -341,14 +353,27 @@ function EnemyRow({ enemy, showDetail, getTraitColor, formatNumber }: EnemyRowPr
           </div>
         </div>
       </td>
-      <td className="px-2 py-1 text-center">
+      <td className="px-2 py-1 text-center w-16 min-w-16">
         {enemy.traits.length > 0 ? (
           <div className="flex flex-wrap gap-0.5 justify-center">
-            {enemy.traits.map((trait, index) => (
-              <span key={index} className={`${getTraitColor(trait)} inline-flex items-center px-1 py-0.5 rounded text-xs font-medium`}>
-                {trait}
-              </span>
-            ))}
+            {enemy.traits.map((trait, index) => {
+              const iconData = getTraitIcon(trait);
+              return iconData ? (
+                <Image
+                  key={index}
+                  src={`data:image/png;base64,${iconData}`}
+                  alt={trait}
+                  className="w-4 h-4 flex-shrink-0"
+                  width={16}
+                  height={16}
+                  title={trait}
+                />
+              ) : (
+                <span key={index} className={`${getTraitColor(trait)} inline-flex items-center px-1 py-0.5 rounded text-xs font-medium`}>
+                  {trait}
+                </span>
+              );
+            })}
           </div>
         ) : (
           <span className="text-gray-400">-</span>
@@ -379,7 +404,7 @@ function EnemyRow({ enemy, showDetail, getTraitColor, formatNumber }: EnemyRowPr
       <td className="px-2 py-1 text-right text-xs text-gray-500">
         {enemy.baseStats.range > 0 ? enemy.baseStats.range : <span className="text-gray-400">-</span>}
       </td>
-      <td className="px-2 py-1 text-center">
+      <td className="px-2 py-1 text-center whitespace-nowrap">
         <span className={`inline-flex items-center px-1 py-0.5 rounded text-xs font-medium ${
           enemy.baseStats.rangeType === '範囲' 
             ? 'bg-cyan-100 text-cyan-800' 

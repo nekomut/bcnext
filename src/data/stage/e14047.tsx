@@ -1,0 +1,632 @@
+// Stage 14047 Data
+import type { StageData } from '../../app/stage/types';
+
+export const e14047Data: StageData = {
+  eventId: 14047,
+  eventName: "大狂乱のトカゲ降臨",
+  typeId: 14,
+  typeName: "ネコビタン",
+  prefix: "B",
+  mapId: 47,
+  stages: [
+    {
+      stageId: 0,
+      stageName: "狂竜？ 極ムズ",
+      baseHp: 400000,
+      width: 4800,
+      enemyLimit: 15,
+      requiredCost: 4,
+      costLimits: {
+        lower: 0,
+        upper: 0
+      },
+      treasures: [
+        {
+          treasureId: "10099",
+          treasureName: "大狂乱のネコキングドラゴンへの進化権(狂乱のネコトカゲの第3形態)",
+          probability: "100",
+          amount: "1",
+          times: "-1",
+          limitText: "-1"
+        }],
+      enemies: [
+        {
+          enemyId: "022",
+          enemyName: "ガガガガ",
+          icon: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAA3NCSVQICAjb4U/gAAAAwFBMVEUAAAAAAAAAAAAAAAACAgIDAwMFBQUFBQUHBwcICAgJCQkKCgoKCgoODg4PDw8VFRUWFhYcHBweHh4eHh4jIyMjIyMoKCgsLCwuLi4vLy8yMjIyMjIzMzM1NTU6OjpCQkJISEhLS0tMTExXV1dYWFhcXFxiYmJlZWVtbW1tbW1ycnJzc3N7e3uBgYGHh4eLi4uNjY2VlZWampqjo6Oqqqqrq6u1tbW/v7/Dw8PQ0NDX19fg4ODq6urz8/P7+/v///8F0x8XAAAAQHRSTlMACBCL/z5KVh0nZS53/xQ3Qf+GqUph/1R3aZe9pv7jj//xo9ux//L/xObT/uD/8P/h/u7/8v//9f7/////////YcASAgAAA+pJREFUWIXtl29vqkoQxoWDrYqotJVqLbpFKB6XdV2BdWH/8P2/1R28Nyc5SdNCc192YuKLZn4+s/PM7HYw+Cjs4WIxtj/8U7ewH7PzMV4tRtZ3Ceur0UpcjtF6/i0hthvLxjSNltdztOgvw1q9TjPdEprG1Of17Aadr9ejroD4mm0JELTWptHF2hpYi+gsTovOAKUFk5olKMlVo7O5tT7XRh06K4gUaDe55ziOl6qmjpZn3TTXdcf8gbWroXoZOijHvpcbc9nnpNbHcVfAYFkAgHuQq4mT6KZOAo/IqHs7JhgUC88hGgBINxqHCFerzvn2BkMNCjk+TnwHGyNynLLrc3dALKF9TYXgEJ1ANIrwEPEeAGtX3TwkSRggbhqRcFTmPQCDp8KYxvBcSqmMMSQsmaB9AKNDawTioRK+G50EJSNYdD/EwWB1hUThO34qW0P4JUNpL0ArwegUzjDVAPJzEqTdjQhhvbZeZADwuQFHMQyAHmfwn5lzz0+IAIBDsIeKpx6AwdMF2pD7eesHAGDmhZdegBmsJI2QklWtYCoT4QeXHiXY7vNLbmQY1okfhIHjoCrwOwOs8TrOCiFl4vn85mbHCSvks44Ae7q/gv20JB7kYVgpbS8E9k/dzsBencACMk9CmGBhSkhHyPFKEnTbiNbqots59DxcKZiEKvAcJAIAhNkcNrP71VJZwPLTIDxgqsIgAoGCoCIASI7j2e58/ELGrXuwB0OhGfy2c/t4XAR5SiJ7Vcjz/dOniOfCNDIISGW4365kTEJgMIkIwsun8yVexUX2Sb4dwfBpymEH0CQJfWiDpLDUKMbJ+zTO1uPdtT5+AnAzrWoJ6XAfabhdSQhrFVycaybk6X1nP19O0WcljKNjvKHa3AIQuialhn0oFVUqZ/vJ4bj8/La2R/b4Zf/7BJEdD78vSmKS50RLpgn4InhbdbgbrPHw7v7+zh2Nho+4pFhLqkFBQjnCOJp9DfgT82hPVc2MItrkNUlLRMuiz2aNa86bKgeAbATlKcI573O/LQvDRQMKNG3dRWkpaKUPnWtwN3UDAEWhkcIYzjijpe4OmMUYhPOm/fmawoCUhLJKic4lPBesbvWbksPdKGBDKsnT/YvbMd/ayTaTqkZSZWrCajBn9jLufIRWXAt4lLCyrV4ZSZOyLnY93ozWMo4fdofD5sTLJC1LglK26frG+pdgW5Zlz9w9IzlTjAnC+tyNf2J+5rnC5ds73b51fSX+FW7GMd9uHzf7133XBvwV1nIbbjePDw+vk4fvPd2t5ebX43DoutZ3n/62Oxp++9+Gn/iJn/g/YnQ3mUynv24xnU7uP57JfwBG47Z/ChBmWwAAAABJRU5ErkJggg==",
+          traits: ["浮"],
+          baseStats: {
+            hp: 5000,
+            ap: 350,
+            dps: 119.32,
+            speed: 20,
+            range: 340,
+            rangeType: "範囲",
+            kbLevel: 1,
+            money: 1800,
+            freq: 88,
+            foreswing: 34,
+            backswing: 54,
+            tba: 0
+          },
+          stageStats: {
+            actualHp: 100000,
+            actualAp: 7000,
+            actualDps: 2386.4,
+            magnification: "2000%",
+            count: "6",
+            spawnTime: "0.7s",
+            spawnTimeFrames: "20f",
+            delay: "1.3-2.0s",
+            delayFrames: "40-60f",
+            baseHpRatio: "100%",
+            isBoss: false
+          }
+        },
+        {
+          enemyId: "001",
+          enemyName: "にょろ",
+          icon: "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",
+          traits: ["無"],
+          baseStats: {
+            hp: 100,
+            ap: 15,
+            dps: 12.16,
+            speed: 8,
+            range: 110,
+            rangeType: "単体",
+            kbLevel: 3,
+            money: 30,
+            freq: 37,
+            foreswing: 8,
+            backswing: 8,
+            tba: 15
+          },
+          stageStats: {
+            actualHp: 6000,
+            actualAp: 900,
+            actualDps: 729.6,
+            magnification: "6000%",
+            count: "0",
+            spawnTime: "34.0s",
+            spawnTimeFrames: "1,020f",
+            delay: "26.7-26.7s",
+            delayFrames: "800-800f",
+            baseHpRatio: "100%",
+            isBoss: false
+          }
+        },
+        {
+          enemyId: "001",
+          enemyName: "にょろ",
+          icon: "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",
+          traits: ["無"],
+          baseStats: {
+            hp: 100,
+            ap: 15,
+            dps: 12.16,
+            speed: 8,
+            range: 110,
+            rangeType: "単体",
+            kbLevel: 3,
+            money: 30,
+            freq: 37,
+            foreswing: 8,
+            backswing: 8,
+            tba: 15
+          },
+          stageStats: {
+            actualHp: 6000,
+            actualAp: 900,
+            actualDps: 729.6,
+            magnification: "6000%",
+            count: "0",
+            spawnTime: "34.7s",
+            spawnTimeFrames: "1,040f",
+            delay: "26.7-26.7s",
+            delayFrames: "800-800f",
+            baseHpRatio: "100%",
+            isBoss: false
+          }
+        },
+        {
+          enemyId: "001",
+          enemyName: "にょろ",
+          icon: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAA3NCSVQICAjb4U/gAAAAwFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAQEBAQECAgICAgICAgIDAwMDAwMEBAQFBQUGBgYGBgYHBwcICAgICAgJCQkLCwsUFBQXFxcYGBgaGhodHR0nJycoKCgpKSkuLi4yMjI+Pj4/Pz8/Pz9MTExOTk5bW1tubm59fX2Ojo6cnJypqamvr6+zs7O5ubm/v7/GxsbNzc3X19fd3d3i4uLn5+fu7u7z8/P5+fn8/Pz///////+/QMgwAAAAQHRSTlMABw8XHycuNTtHUVjmacrUYXb/goy9nLD0puC3/8Tu1f/N3+3+5PL/8v/7/f3+/////////////////////wD/Fa4qEgAABctJREFUWIXtV9l2qkgUDThrSDQMikYwoCBFFUMV89D+/1/1gWjiTS7GrH7trS+6PJsz7DP48M9/xMP/BP883AGuN5zMFyJAmE3HfY67x+jKejwXlc3bwQIYb1tVEiYD/hfmk4X6Zh5d4vkAj2BkGRtpPrqTgh8vNibCXpQVZYsij33iHnVlNrgnEH6iGkcS52Vdn86oq7LIKLZ06Q4n+OnSxEnxYXyq2zeQ5CFaq5OfGOD5Fkmr0yfqqqpbilMZYXP5AwM3VEySXj++yuMoq96dKBNiKqObeegtdHxlfzpVMXYcHJ9dqhJsiINbDoyWR3ZtX6d49/Kyu5DWVezq8xtB8DOdZFf2p8Lfv768vOyD8vxFGVq3guiLRlBee5Dhxv5lR4qLSznWhW4XhooVXTtwysmuIdj7Fw9OZWAp3VkYbVDyB0GVuPvX1537mdg6QctJJ8F4i9M/CE5l4rkIR9UHQVXg7fwXBGCQJll1lZeSGIsbBO5Xgm+ovIN4fw6aoE91+758vOnBQLHY1W+bV5FDAco0Li40kINZJ0FP0L38KtwszzzCqjohLiuBJilBm2jTXQVuvEHR2YO6SCghnv3qJpm3e8UJtIUbVxVz1GEnQSNFkrcMdR0TZ7ez9zub+Gi/c2hGdnuSl5DDXjcBuGCB6ur3vtmBhjBxbOQQd088Z287LHG301sNzc+3iLUM0DfYdRwaoVebxGS/t5Hv2a5rSrf6+YHrL3SItGUACUVRkeO9GxfMfrW9PEY7bTm5PVm5oWR8DJBTG0oQV3WGHS+D6aDJsxsZOKdBMdzoqqnrZiZWMcuq3D9uhZ/sm7EkbpHfDNarDqgBmQf2/R/tAf35xsI0qy6CfJdFRCz5jue34Cey5nhxVrRqrpq9EvvIUH+M/wM94dnGfhBDQfOYUt/DyNgs7l2OD00tVBTEIStOFXXtvWnoG3HS+82K70kHvyyKqlkMtiYLk1H/dxcCL+gwiZvFlMbEUoc/WXMcD+A+7xB+2g6nKoto7Dub8Q/qg4NkIUqiMB1d4oQdheK6SlkQUB/dWgUP7UWx1A1T0/SNIk7PsfakY1gVURCEIcWmcks/sNE1y8XYBRw1WRy3T+MXBimzsLFnvrO9sc7A3kReyFjI0ozh/VqdNnLhprKbpQ1ByEJXn3bGwI0UzaURDcOA5VWVefZKngMDN1BQlLQEFAjmnRrkhWfHZzQMglZ30DEOlB0SwS8Ofhq2oNhYdCahr5iYwY8CnzULqEqYj62tOOJ5wSApDVoXiCF2EXAT2fEa/wOawl1Wl1FIKbEgEf35G26qGNwm4OGmgfyFNHrv3hIKxyhxtKUg6m6ehn5L0D0Iodx+niZpVrx3f5WEvh8yKP3Tk0mKMqaBHwTk0HkT9FUEEw8AogtpnFdFwmiUlqmHmtuqhqXGWOx3HhXccOMm7Qxn+Hg4IBIVZQ7e1HURM5hqMEyKLC/YsSsEbizDBQanLEO6KkobA9Gi9QeGUAk00I1JnObhoSuJ0HQ4g4dEriGOev2xqCMKaiizJEmatMAkDAPKiPF1GEL3cu85XJMchhZ+v0C5ITCwEr5oqgeFKSGnAQ3QVylzo8V8AM3PDWXLL+Dn6LzwuIEESyEOGmE00ihiYGqa6ctA4GfykzIHn4W1m0DPepYyvGQVGAJKGwWDIhohNDL42s789GllvqmStD2GZZGEWPtIEjdWNReEEDbyDJNmJgfo7etAgaNcc7BrmUcvg0QHzvqz2/jpxnR9xii4EUQFbIS/nej87Mn2It8L4Zqoc09Tr2LszZYGIhAGkERFXdKj/H0acH1pbROWNkXPIYWzQf8Tg6n6uEfNX66AJkmI/rZQuf5Mfnl1PJbEkeesZEFYfEKYS88ruLBtB7nYtVfK+NtK4QaC8vT4+KiZR8vUVqvH9frxE/BhdYamaY/PS/FbCFx/Cn9KJUlRVHW5XMryE+D5guaDLMP3qqookiguhPEXgn8Bp56rfE5s2DUAAAAASUVORK5CYII=",
+          traits: ["無"],
+          baseStats: {
+            hp: 100,
+            ap: 15,
+            dps: 12.16,
+            speed: 8,
+            range: 110,
+            rangeType: "単体",
+            kbLevel: 3,
+            money: 30,
+            freq: 37,
+            foreswing: 8,
+            backswing: 8,
+            tba: 15
+          },
+          stageStats: {
+            actualHp: 6000,
+            actualAp: 900,
+            actualDps: 729.6,
+            magnification: "6000%",
+            count: "0",
+            spawnTime: "35.3s",
+            spawnTimeFrames: "1,060f",
+            delay: "26.7-26.7s",
+            delayFrames: "800-800f",
+            baseHpRatio: "100%",
+            isBoss: false
+          }
+        },
+        {
+          enemyId: "001",
+          enemyName: "にょろ",
+          icon: "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",
+          traits: ["無"],
+          baseStats: {
+            hp: 100,
+            ap: 15,
+            dps: 12.16,
+            speed: 8,
+            range: 110,
+            rangeType: "単体",
+            kbLevel: 3,
+            money: 30,
+            freq: 37,
+            foreswing: 8,
+            backswing: 8,
+            tba: 15
+          },
+          stageStats: {
+            actualHp: 6000,
+            actualAp: 900,
+            actualDps: 729.6,
+            magnification: "6000%",
+            count: "5",
+            spawnTime: "5.3s",
+            spawnTimeFrames: "160f",
+            delay: "0.7-1.3s",
+            delayFrames: "20-40f",
+            baseHpRatio: "100%",
+            isBoss: false
+          }
+        },
+        {
+          enemyId: "033",
+          enemyName: "フルぼっこ",
+          icon: "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",
+          traits: ["無"],
+          baseStats: {
+            hp: 30000,
+            ap: 1497,
+            dps: 1952.61,
+            speed: 10,
+            range: 180,
+            rangeType: "範囲",
+            kbLevel: 1,
+            money: 200,
+            freq: 23,
+            foreswing: 14,
+            backswing: 9,
+            tba: 0
+          },
+          stageStats: {
+            actualHp: 120000,
+            actualAp: 5988,
+            actualDps: 7810.44,
+            magnification: "400%",
+            count: "1",
+            spawnTime: "20.0s",
+            spawnTimeFrames: "600f",
+            delay: "0.1-0.1s",
+            delayFrames: "2-2f",
+            baseHpRatio: "100%",
+            isBoss: false
+          }
+        },
+        {
+          enemyId: "033",
+          enemyName: "フルぼっこ",
+          icon: "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",
+          traits: ["無"],
+          baseStats: {
+            hp: 30000,
+            ap: 1497,
+            dps: 1952.61,
+            speed: 10,
+            range: 180,
+            rangeType: "範囲",
+            kbLevel: 1,
+            money: 200,
+            freq: 23,
+            foreswing: 14,
+            backswing: 9,
+            tba: 0
+          },
+          stageStats: {
+            actualHp: 180000,
+            actualAp: 8982,
+            actualDps: 11715.66,
+            magnification: "600%",
+            count: "0",
+            spawnTime: "60.0s",
+            spawnTimeFrames: "1,800f",
+            delay: "60.0-66.7s",
+            delayFrames: "1,800-2,000f",
+            baseHpRatio: "100%",
+            isBoss: false
+          }
+        },
+        {
+          enemyId: "033",
+          enemyName: "フルぼっこ",
+          icon: "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",
+          traits: ["無"],
+          baseStats: {
+            hp: 30000,
+            ap: 1497,
+            dps: 1952.61,
+            speed: 10,
+            range: 180,
+            rangeType: "範囲",
+            kbLevel: 1,
+            money: 200,
+            freq: 23,
+            foreswing: 14,
+            backswing: 9,
+            tba: 0
+          },
+          stageStats: {
+            actualHp: 180000,
+            actualAp: 8982,
+            actualDps: 11715.66,
+            magnification: "600%",
+            count: "0",
+            spawnTime: "62.0s",
+            spawnTimeFrames: "1,860f",
+            delay: "60.0-66.7s",
+            delayFrames: "1,800-2,000f",
+            baseHpRatio: "100%",
+            isBoss: false
+          }
+        },
+        {
+          enemyId: "033",
+          enemyName: "フルぼっこ",
+          icon: "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",
+          traits: ["無"],
+          baseStats: {
+            hp: 30000,
+            ap: 1497,
+            dps: 1952.61,
+            speed: 10,
+            range: 180,
+            rangeType: "範囲",
+            kbLevel: 1,
+            money: 200,
+            freq: 23,
+            foreswing: 14,
+            backswing: 9,
+            tba: 0
+          },
+          stageStats: {
+            actualHp: 180000,
+            actualAp: 8982,
+            actualDps: 11715.66,
+            magnification: "600%",
+            count: "0",
+            spawnTime: "124.0s",
+            spawnTimeFrames: "3,720f",
+            delay: "60.0-66.7s",
+            delayFrames: "1,800-2,000f",
+            baseHpRatio: "100%",
+            isBoss: false
+          }
+        },
+        {
+          enemyId: "033",
+          enemyName: "フルぼっこ",
+          icon: "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",
+          traits: ["無"],
+          baseStats: {
+            hp: 30000,
+            ap: 1497,
+            dps: 1952.61,
+            speed: 10,
+            range: 180,
+            rangeType: "範囲",
+            kbLevel: 1,
+            money: 200,
+            freq: 23,
+            foreswing: 14,
+            backswing: 9,
+            tba: 0
+          },
+          stageStats: {
+            actualHp: 180000,
+            actualAp: 8982,
+            actualDps: 11715.66,
+            magnification: "600%",
+            count: "0",
+            spawnTime: "186.0s",
+            spawnTimeFrames: "5,580f",
+            delay: "60.0-66.7s",
+            delayFrames: "1,800-2,000f",
+            baseHpRatio: "100%",
+            isBoss: false
+          }
+        },
+        {
+          enemyId: "013",
+          enemyName: "ワニック",
+          icon: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAA3NCSVQICAjb4U/gAAAAwFBMVEUAAAAAAAAAAAAAAAAAAAABAQECAgICAgIFBQUFBQUGBgYGBgYGBgYICAgKCgoLCwsMDAwNDQ0REREUFBQXFxcYGBgaGhobGxsgICAkJCQqKiosLCwwMDAxMTEyMjI1NTU4ODg6OjpBQUFCQkJISEhLS0tRUVFYWFhkZGRmZmZra2ttbW1zc3N6enqEhISPj4+QkJCcnJynp6enp6exsbG6urrExMTMzMzU1NTe3t7m5ubr6+vx8fH4+Pj///////8Am0WmAAAAQHRSTlMABw8WHCY0PVRhSHvAp5Vx1IuCnLrgzaj7U77m127N/u/e/uXN/+n+/u3W//T+/+3+/e/////+/////////wD/aoqRJwAAA7pJREFUWIXtlV2XojgQhuVLUVQEP2DVQZEWsCGZZAgESLL+/381QdttPd19dmb2Zi98LzjA4X2qUlUJvb//o3pPwBPwBDwBT8AT8AQ8Af8/wL9L0QxDU37hwy+kjqYLzx2pPUVV1T/gGG5wQvj7i9s3HW9qqr/r15yYtFxwelqFOcy3w2sOyi8koxiDga6MwlIIzoWoDgkuKfD0C9Z0nKGhGn39K4yqacNFEHjD6ak91yCj5xakCKF0ZRqaqtlhDiJvug680efB+9Z8uoKUgs0eCw59X17rhvOmhK/ruesEpKFVlmACvI9m3dBHixNKDlTwBhN25sg/lOJ8lWhKlOe4RWnVUAzIywe/6a3ni7wRNWkIannnaUvKz+/ijPE22ZXn5rgjr48rH5gjLy/kexmI1Rli4t0nkYRUdcNkRQUnRZcarF8fo6+j1YbwEtQMwpbVD35y7HQ4JBlABW1kbwVn7QNAnQKKDlim3HLa3Jk7scxHdQX8XZYlO/+YAoiKsvrx7R6gzSFnpOJEdu2DmsQHrDmNQ7m2xM8KuPPT9BA8tNGYJC3HiNUV/wio48m2QOvRPG/wdhJXaLnBJLTvR1t3IsQYQJ+4O0BkO/vtUB0FWWj3vTi03Ti9zuXNb0WlLEzDxOeA/bA/tbWeOhy7ujKYuLoxHZt3k6xZYfGZVYh/AIZlyYjGdN7vKSOrrwzcQQdQLtLtEDMhPiB4SW8A291sbFW1N3tXM+ZLy3CWU00CbbeTF+MCAljyx7jnJsU3wDgq8NYcBbgITDfOFlYIgn6vN1jFuRQqYZJmKWw797ktCL917wY4+JgzuF7krM1X26LcL0EZyiLosi9ciiTy4GDXCrYwIeKWAbreycGHRYF2PiQE+jsAumny50ZPGayRnLr79jF083POAGCXNTF0GeXd7ph0StNMziKKXVnEgXcq6jor31Z/FsWbX9S4kg/1Wzmbuq4ppfLatFIya8FRdx4ohr2O0rS6fFUR3qbwkowoM9ic6RHft6a7F7zzd3uyjJ3rLjKGk80lapkUMmt4zRofK3HmsLu+uduKVLTEeRzHJ/j9hzyrjdtONpxT1wCaoIri43WkmgzU8tjZJbhqGGspwXm4CoK15w7Noez+t7+Mu63QXxcyqxbsw/1xdw0qquQYRxv/IGsmN3G0nltmfzCQv6mb3o8STTOcGGGM4cqZpSjLaFs3NYX+xLJmCUEwyzZOX//qt6IY5tCajmez2XI5G8/CON7Ep+gURZF8HM+WL9tt8LJyRvon3p+SwAYl3XvW+wAAAABJRU5ErkJggg==",
+          traits: ["無"],
+          baseStats: {
+            hp: 70,
+            ap: 30,
+            dps: 50.0,
+            speed: 14,
+            range: 110,
+            rangeType: "単体",
+            kbLevel: 1,
+            money: 50,
+            freq: 18,
+            foreswing: 8,
+            backswing: 10,
+            tba: 0
+          },
+          stageStats: {
+            actualHp: 4200,
+            actualAp: 1800,
+            actualDps: 3000.0,
+            magnification: "6000%",
+            count: "0",
+            spawnTime: "46.7s",
+            spawnTimeFrames: "1,400f",
+            delay: "20.0-20.0s",
+            delayFrames: "600-600f",
+            baseHpRatio: "100%",
+            isBoss: false
+          }
+        },
+        {
+          enemyId: "013",
+          enemyName: "ワニック",
+          icon: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAA3NCSVQICAjb4U/gAAAAwFBMVEUAAAAAAAAAAAAAAAAAAAABAQECAgICAgIFBQUFBQUGBgYGBgYGBgYICAgKCgoLCwsMDAwNDQ0REREUFBQXFxcYGBgaGhobGxsgICAkJCQqKiosLCwwMDAxMTEyMjI1NTU4ODg6OjpBQUFCQkJISEhLS0tRUVFYWFhkZGRmZmZra2ttbW1zc3N6enqEhISPj4+QkJCcnJynp6enp6exsbG6urrExMTMzMzU1NTe3t7m5ubr6+vx8fH4+Pj///////8Am0WmAAAAQHRSTlMABw8WHCY0PVRhSHvAp5Vx1IuCnLrgzaj7U77m127N/u/e/uXN/+n+/u3W//T+/+3+/e/////+/////////wD/aoqRJwAAA7pJREFUWIXtlV2XojgQhuVLUVQEP2DVQZEWsCGZZAgESLL+/381QdttPd19dmb2Zi98LzjA4X2qUlUJvb//o3pPwBPwBDwBT8AT8AQ8Af8/wL9L0QxDU37hwy+kjqYLzx2pPUVV1T/gGG5wQvj7i9s3HW9qqr/r15yYtFxwelqFOcy3w2sOyi8koxiDga6MwlIIzoWoDgkuKfD0C9Z0nKGhGn39K4yqacNFEHjD6ak91yCj5xakCKF0ZRqaqtlhDiJvug680efB+9Z8uoKUgs0eCw59X17rhvOmhK/ruesEpKFVlmACvI9m3dBHixNKDlTwBhN25sg/lOJ8lWhKlOe4RWnVUAzIywe/6a3ni7wRNWkIannnaUvKz+/ijPE22ZXn5rgjr48rH5gjLy/kexmI1Rli4t0nkYRUdcNkRQUnRZcarF8fo6+j1YbwEtQMwpbVD35y7HQ4JBlABW1kbwVn7QNAnQKKDlim3HLa3Jk7scxHdQX8XZYlO/+YAoiKsvrx7R6gzSFnpOJEdu2DmsQHrDmNQ7m2xM8KuPPT9BA8tNGYJC3HiNUV/wio48m2QOvRPG/wdhJXaLnBJLTvR1t3IsQYQJ+4O0BkO/vtUB0FWWj3vTi03Ti9zuXNb0WlLEzDxOeA/bA/tbWeOhy7ujKYuLoxHZt3k6xZYfGZVYh/AIZlyYjGdN7vKSOrrwzcQQdQLtLtEDMhPiB4SW8A291sbFW1N3tXM+ZLy3CWU00CbbeTF+MCAljyx7jnJsU3wDgq8NYcBbgITDfOFlYIgn6vN1jFuRQqYZJmKWw797ktCL917wY4+JgzuF7krM1X26LcL0EZyiLosi9ciiTy4GDXCrYwIeKWAbreycGHRYF2PiQE+jsAumny50ZPGayRnLr79jF083POAGCXNTF0GeXd7ph0StNMziKKXVnEgXcq6jor31Z/FsWbX9S4kg/1Wzmbuq4ppfLatFIya8FRdx4ohr2O0rS6fFUR3qbwkowoM9ic6RHft6a7F7zzd3uyjJ3rLjKGk80lapkUMmt4zRofK3HmsLu+uduKVLTEeRzHJ/j9hzyrjdtONpxT1wCaoIri43WkmgzU8tjZJbhqGGspwXm4CoK15w7Noez+t7+Mu63QXxcyqxbsw/1xdw0qquQYRxv/IGsmN3G0nltmfzCQv6mb3o8STTOcGGGM4cqZpSjLaFs3NYX+xLJmCUEwyzZOX//qt6IY5tCajmez2XI5G8/CON7Ep+gURZF8HM+WL9tt8LJyRvon3p+SwAYl3XvW+wAAAABJRU5ErkJggg==",
+          traits: ["無"],
+          baseStats: {
+            hp: 70,
+            ap: 30,
+            dps: 50.0,
+            speed: 14,
+            range: 110,
+            rangeType: "単体",
+            kbLevel: 1,
+            money: 50,
+            freq: 18,
+            foreswing: 8,
+            backswing: 10,
+            tba: 0
+          },
+          stageStats: {
+            actualHp: 4200,
+            actualAp: 1800,
+            actualDps: 3000.0,
+            magnification: "6000%",
+            count: "0",
+            spawnTime: "48.0s",
+            spawnTimeFrames: "1,440f",
+            delay: "20.0-20.0s",
+            delayFrames: "600-600f",
+            baseHpRatio: "100%",
+            isBoss: false
+          }
+        },
+        {
+          enemyId: "249",
+          enemyName: "大狂乱のネコキングドラゴン",
+          icon: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAA3NCSVQICAjb4U/gAAAAwFBMVEUAAAACAQIIAwwSASYTACoPBRoWAC0XAy0bATIaAD8WCCYVFBUBAH8hBz4lAFYnAFkoAV4qAV8wAG4yAHM6AH46AIA6AIM9AIM+AIVJAJNLAJpMAJtSAKJVAKdZAKsxMDFhALQAAP5kALljAbh/AH9oAb5sAMI+L01vAMdxAMZ1AMl/AMZ7AP5IQk2cANdbNXZKSkplZWb/AP9vZ3Z1dXaFhYWTk5Opqam2trbAwMDLy8vZ2dnl5eXy8vL+/v7///9FXYjtAAAAQHRSTlMA/eqnd8SGspRs2/0C0V2avndpjVWvf51gSYl2awRc/kQBTjwCNCvGCR8TBwLmBXP+/AHM+v/+//////////8Ae+V0PgAABtlJREFUWIXtl3tzoswSxgOES2CNokYlBpGokQT1gGFuXHy//7d6nxnUNYnu2arz7+lKbe1Wtn/zTPf0hbt//ke7+z9AAe5uWizt9q/v/gCIl2EY7lLYbhcuYRtl+78FLOGYSEvxs0uTNG3/ES7jvwHEIf73x1drceEmXO73/w0Qh6n0f/9ukoI7hZuzjBsA+Ev3t7eVtLeztQh1kT8CNrukdV/MgyCYw4aPw2CxWKwkQt5kE+7/AIhT5b9aLIJgOJFmGbbhTIZBIBGtiOUfABvc//0NJwfDYf/B90ddV9dd17h/lEJW7yqgm9uAOE3hv3AecXz/4d6yHFOTptvWwyMIb0HwgczubwL2iMDbam4bJ39DVwDNNR1FsBwZiE18C7DcSQFzW7f699L/KECaCQ3Dx44NwK6NwjVAiAis5oGhuRb8beMkQN3i4eHB1mxEMklvKVA5WM1fBzoOtJxOsdV+m3F/b+NP5OI24C5RgJnvai6SZ5OKRGcFhu16mubMkYrk5hVkDgDo4yhPd82obESmeREctbwoskjT/VcA0jC+Dmhj+Dp7Geiep3k5oYzmtKzKwstoVdHcM/rDxfvxKVwBhFCwkoCR6XleVPCqaerDoSkrUVFSV7k7eJnNVRiX1wD7JJWvQAK6ehRFpKqbA6yi/FARwlhk+ADIIKS7+ApAJlHdYPo8ML0o4xWtJaDh1UFQURad0fRl9rqAhBRx/AE4JVECxl034zUvD62Vpcgoqz4H/hGA7hL/AGwuAeMnN6dUNEcALVhB6s+zAtTkD0C8UTdoAYPu2HazUtRHCQ2tWdUAMJkFC1XW6f47YK8ELILX2WQ6GnS7XbtDT/6HhjDKy7XfR2dQjeEKYNneYB7MJv7Icuz1eu0WzQnAuaCf1gMKKggW1wHh7kNVEirZt5wt3lBmdjh8W0LNt879g6rpNgjLb4BYNUM8I/j7VqeQZhuRwNmMM1psbeseACXhKuAubQshkAA7QgoIKUydNDVjFV87DvzvlYQbCn6l6btKwuTFt9yIUJITXng5YwhlUxiOZbWA61eIVQjVO1aAznqbZXmeeznlrOY16XQdGAj9x0BlIdl8AWAcqkKa+NMXJNF2Boa+zaNIy0vOKiKKjm2vi60BwEQ152TzRcEyTVoBju7a3efBeOB00VB0VyM1YSWvy2ybC5ptHbyEefsSLwG4/zEFM7QSvTfujrtdMLq2RhinnPOSEZ4XrmuPpm09h+HFO8A8TT/aCM6mpiIAIK2nsQoCBEU0dDdye0/PL6iFD9UQfgOWahwfy2CMZqT3nmDj8bjjiYYRQvKCYD51OgqgYhhe9oPwtz/qqINu5vZ6iuF6vBJCFDTnmX4CqCyGFx1pmZwyCAGj514UQYK0p54eIQBlTUvaiEhKeBpPZ7KthpctTQmQAYSA0fPYjPJINxWgI7OIpspRCoVU0OmNn6cztFU54k+AODz1ASlg0O1QQT3XtKUAj3DB0MuqQ90qQHifAUjQEs+AX+GxEeENwt/YlqLMXNu2e64WCWSRMS57G2uDAMDqXYbgDNgcWykugHXAsLdlWRPdtE1diyiO50L25eaApn4dsEuPvRj+EIB5VtYs0l3pX4uqZLwRlNZlflSgYpD+BsTHMm4DYBgmLXEoy7OsoJhGSCI/1JgPDb0EJPEVgGyEAEjVmEQ1I0zOlZIgBwzNsYzah9Bm4SKI3wGEQgFaYAEpVXOoCyEpIDBXhWD6+i0G7Vokr9ACCnihhhkRAhKapkAGOIKIKCrAy22AisGaYRhgJnFcRSAhDS0PpSSxzFUCUI0fl4D43IrUKzA+Oe5f04oxNEMmeCXTiChULDPt7mAkx/OHWpK+BnEh54kEFCXH3fO8oFJBU9ZCAg54TDmWlgFmG8o5+fUTIHvBCEEoBBeiQgHniIPAdSSg4ZhMaKyO77/IDSO93FDC5NRM1B1yvNuq4TSLiCgRi5qVBzynmtMtGrPvq5YoQ3AGLI95VAB7u0X2RE1J5GXohhVHBtUzoIUpG3vbU9P9BSBOT+Us87CNclYKXhRyR8JI4gWT201ZQgDmgt9XG/PXHSlMzhJeph0vwi6TszrHohZlWZQjqXWde56h/CfD+Q/AcpN+tIlASXalX9RZU6K2Qy9D/qoD8XTDx2Dst+tBcplGLAbhLjl+Jcxf+7qm653RSMduGBUFrQTBpvfpWD68J7Nh0O5Yl0GEhDA5f+YEpmY6/mwmt2xv+wlbIxquISfK8DWYt9vF5isAGpAJ9aH19mZhLrif/7HaLR9/G7ryJvnnVHm3Hz4/duWlHE3SVo+WrnmUbG21p2PIF7YEUFKs+9gL5KdXujt/L/wLy14aAzAoE2MAAAAASUVORK5CYII=",
+          traits: ["無"],
+          baseStats: {
+            hp: 700000,
+            ap: 2900,
+            dps: 1775.51,
+            speed: 7,
+            range: 785,
+            rangeType: "範囲",
+            kbLevel: 8,
+            money: 1350,
+            freq: 49,
+            foreswing: 10,
+            backswing: 19,
+            tba: 20
+          },
+          stageStats: {
+            actualHp: 700000,
+            actualAp: 2900,
+            actualDps: 1775.51,
+            magnification: "100%",
+            count: "3",
+            spawnTime: "0.0s",
+            spawnTimeFrames: "0f",
+            delay: "133.3-133.3s",
+            delayFrames: "4,000-4,000f",
+            baseHpRatio: "80%",
+            isBoss: false
+          }
+        },
+        {
+          enemyId: "249",
+          enemyName: "大狂乱のネコキングドラゴン",
+          icon: "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",
+          traits: ["無"],
+          baseStats: {
+            hp: 700000,
+            ap: 2900,
+            dps: 1775.51,
+            speed: 7,
+            range: 785,
+            rangeType: "範囲",
+            kbLevel: 8,
+            money: 1350,
+            freq: 49,
+            foreswing: 10,
+            backswing: 19,
+            tba: 20
+          },
+          stageStats: {
+            actualHp: 700000,
+            actualAp: 2900,
+            actualDps: 1775.51,
+            magnification: "100%",
+            count: "3",
+            spawnTime: "0.0s",
+            spawnTimeFrames: "0f",
+            delay: "133.3-133.3s",
+            delayFrames: "4,000-4,000f",
+            baseHpRatio: "99%",
+            isBoss: false
+          }
+        },
+        {
+          enemyId: "249",
+          enemyName: "大狂乱のネコキングドラゴン",
+          icon: "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",
+          traits: ["無"],
+          baseStats: {
+            hp: 700000,
+            ap: 2900,
+            dps: 1775.51,
+            speed: 7,
+            range: 785,
+            rangeType: "範囲",
+            kbLevel: 8,
+            money: 1350,
+            freq: 49,
+            foreswing: 10,
+            backswing: 19,
+            tba: 20
+          },
+          stageStats: {
+            actualHp: 700000,
+            actualAp: 2900,
+            actualDps: 1775.51,
+            magnification: "100%",
+            count: "1",
+            spawnTime: "40.0s",
+            spawnTimeFrames: "1,200f",
+            delay: "133.3-133.3s",
+            delayFrames: "4,000-4,000f",
+            baseHpRatio: "100%",
+            isBoss: false
+          }
+        },
+        {
+          enemyId: "249",
+          enemyName: "大狂乱のネコキングドラゴン",
+          icon: "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",
+          traits: ["無"],
+          baseStats: {
+            hp: 700000,
+            ap: 2900,
+            dps: 1775.51,
+            speed: 7,
+            range: 785,
+            rangeType: "範囲",
+            kbLevel: 8,
+            money: 1350,
+            freq: 49,
+            foreswing: 10,
+            backswing: 19,
+            tba: 20
+          },
+          stageStats: {
+            actualHp: 700000,
+            actualAp: 2900,
+            actualDps: 1775.51,
+            magnification: "100%",
+            count: "1",
+            spawnTime: "41.3s",
+            spawnTimeFrames: "1,240f",
+            delay: "133.3-133.3s",
+            delayFrames: "4,000-4,000f",
+            baseHpRatio: "100%",
+            isBoss: false
+          }
+        },
+        {
+          enemyId: "249",
+          enemyName: "大狂乱のネコキングドラゴン",
+          icon: "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",
+          traits: ["無"],
+          baseStats: {
+            hp: 700000,
+            ap: 2900,
+            dps: 1775.51,
+            speed: 7,
+            range: 785,
+            rangeType: "範囲",
+            kbLevel: 8,
+            money: 1350,
+            freq: 49,
+            foreswing: 10,
+            backswing: 19,
+            tba: 20
+          },
+          stageStats: {
+            actualHp: 700000,
+            actualAp: 2900,
+            actualDps: 1775.51,
+            magnification: "100%",
+            count: "1",
+            spawnTime: "43.3s",
+            spawnTimeFrames: "1,300f",
+            delay: "133.3-133.3s",
+            delayFrames: "4,000-4,000f",
+            baseHpRatio: "100%",
+            isBoss: false
+          }
+        },
+        {
+          enemyId: "001",
+          enemyName: "にょろ",
+          icon: "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",
+          traits: ["無"],
+          baseStats: {
+            hp: 100,
+            ap: 15,
+            dps: 12.16,
+            speed: 8,
+            range: 110,
+            rangeType: "単体",
+            kbLevel: 3,
+            money: 30,
+            freq: 37,
+            foreswing: 8,
+            backswing: 8,
+            tba: 15
+          },
+          stageStats: {
+            actualHp: 100,
+            actualAp: 15,
+            actualDps: 12.16,
+            magnification: "100%",
+            count: "1",
+            spawnTime: "40.0s",
+            spawnTimeFrames: "1,200f",
+            delay: "0.1-0.1s",
+            delayFrames: "2-2f",
+            baseHpRatio: "100%",
+            isBoss: true
+          }
+        }]
+    }
+  ]
+} as const;
+
+export default e14047Data;
+

@@ -1,11 +1,11 @@
 // Stage Index Data
-import type { StageIndexData } from '../../app/stage/types';
+import type { StageIndexData } from '../app/stage/types';
 
 export const stageIndexData: StageIndexData = {
   events: [
     {
       eventId: 0,
-      eventName: "イベント0",
+      eventName: "伝説のはじまり",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 0,
@@ -25,7 +25,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1,
-      eventName: "イベント1",
+      eventName: "情熱の国",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 1,
@@ -45,7 +45,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2,
-      eventName: "イベント2",
+      eventName: "グルコサミン砂漠",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 2,
@@ -65,7 +65,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 3,
-      eventName: "イベント3",
+      eventName: "猫ども海を渡る",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 3,
@@ -85,7 +85,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 4,
-      eventName: "イベント4",
+      eventName: "見つめてキャッツアイ",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 4,
@@ -103,7 +103,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 5,
-      eventName: "イベント5",
+      eventName: "ウエスタン街道",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 5,
@@ -123,7 +123,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 6,
-      eventName: "イベント6",
+      eventName: "マグロ海域",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 6,
@@ -143,7 +143,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 7,
-      eventName: "イベント7",
+      eventName: "バンブー島",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 7,
@@ -163,7 +163,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 8,
-      eventName: "イベント8",
+      eventName: "ぷにぷに鍾乳洞",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 8,
@@ -183,7 +183,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 9,
-      eventName: "イベント9",
+      eventName: "ボルケーノ火山",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 9,
@@ -201,7 +201,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 10,
-      eventName: "イベント10",
+      eventName: "千里の道",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 10,
@@ -221,7 +221,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 11,
-      eventName: "イベント11",
+      eventName: "アオ・ザ・カナ",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 11,
@@ -241,7 +241,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 12,
-      eventName: "イベント12",
+      eventName: "軍艦島",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 12,
@@ -261,7 +261,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13,
-      eventName: "イベント13",
+      eventName: "つめとぎの廊下",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 13,
@@ -279,7 +279,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14,
-      eventName: "イベント14",
+      eventName: "パルテノン神殿",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 14,
@@ -297,7 +297,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 15,
-      eventName: "イベント15",
+      eventName: "ずんどこ海水浴場",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 15,
@@ -317,7 +317,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 16,
-      eventName: "イベント16",
+      eventName: "アルカトラズ島",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 16,
@@ -337,7 +337,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 17,
-      eventName: "イベント17",
+      eventName: "脱獄トンネル",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 17,
@@ -355,7 +355,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 18,
-      eventName: "イベント18",
+      eventName: "カポネの監獄",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 18,
@@ -373,7 +373,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 19,
-      eventName: "イベント19",
+      eventName: "シルクロード",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 19,
@@ -393,7 +393,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 20,
-      eventName: "イベント20",
+      eventName: "闇へと続く地下道",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 20,
@@ -411,7 +411,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 21,
-      eventName: "イベント21",
+      eventName: "魔王の豪邸",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 21,
@@ -429,7 +429,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 22,
-      eventName: "イベント22",
+      eventName: "終わりを告げる夜",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 22,
@@ -447,7 +447,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 23,
-      eventName: "イベント23",
+      eventName: "バトルロワイアル",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 23,
@@ -465,7 +465,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 24,
-      eventName: "イベント24",
+      eventName: "戦争のつめあと",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 24,
@@ -485,7 +485,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25,
-      eventName: "イベント25",
+      eventName: "海を汚す悪しき者",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 25,
@@ -505,7 +505,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 26,
-      eventName: "イベント26",
+      eventName: "心と体、繋ぐもの",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 26,
@@ -525,7 +525,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 27,
-      eventName: "イベント27",
+      eventName: "脆弱性と弱酸性",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 27,
@@ -543,7 +543,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 28,
-      eventName: "イベント28",
+      eventName: "導かれしネコ達",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 28,
@@ -560,7 +560,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 29,
-      eventName: "イベント29",
+      eventName: "暗黒コスモポリス",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 29,
@@ -578,7 +578,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 30,
-      eventName: "イベント30",
+      eventName: "ガラ・パ・ゴス",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 30,
@@ -596,7 +596,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 31,
-      eventName: "イベント31",
+      eventName: "岩海苔半島",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 31,
@@ -614,7 +614,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 32,
-      eventName: "イベント32",
+      eventName: "恐ろし連邦",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 32,
@@ -632,7 +632,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 33,
-      eventName: "イベント33",
+      eventName: "亡者の住まう地",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 33,
@@ -650,7 +650,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 34,
-      eventName: "イベント34",
+      eventName: "絶島パンデミック",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 34,
@@ -668,7 +668,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 35,
-      eventName: "イベント35",
+      eventName: "ふくろのねずみランド",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 35,
@@ -686,7 +686,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 36,
-      eventName: "イベント36",
+      eventName: "ハリーウッド帝国",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 36,
@@ -704,7 +704,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 37,
-      eventName: "イベント37",
+      eventName: "こしぎんちゃくの浜辺",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 37,
@@ -722,7 +722,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 38,
-      eventName: "イベント38",
+      eventName: "雲泥温泉郷",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 38,
@@ -740,7 +740,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 39,
-      eventName: "イベント39",
+      eventName: "風待ちアイランド",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 39,
@@ -758,7 +758,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 40,
-      eventName: "イベント40",
+      eventName: "ITカタコンベ",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 40,
@@ -776,7 +776,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 41,
-      eventName: "イベント41",
+      eventName: "変覧会の絵",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 41,
@@ -794,7 +794,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 42,
-      eventName: "イベント42",
+      eventName: "エリア２２",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 42,
@@ -812,7 +812,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 43,
-      eventName: "イベント43",
+      eventName: "超越サバンナ",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 43,
@@ -830,7 +830,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 44,
-      eventName: "イベント44",
+      eventName: "ブリザード自動車道",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 44,
@@ -848,7 +848,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 45,
-      eventName: "イベント45",
+      eventName: "シンギュラリティ村",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 45,
@@ -866,7 +866,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 46,
-      eventName: "イベント46",
+      eventName: "オワーリ大陸",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 46,
@@ -884,7 +884,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 47,
-      eventName: "イベント47",
+      eventName: "伝説のおわり",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 47,
@@ -904,7 +904,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 48,
-      eventName: "イベント48",
+      eventName: "古代研究所",
       typeId: 0,
       typeName: "レジェンドストーリー",
       mapId: 48,
@@ -992,7 +992,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1005,
-      eventName: "イベント1005",
+      eventName: "土日ステージ(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 5,
@@ -1033,7 +1033,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1008,
-      eventName: "イベント1008",
+      eventName: "秋だよ運動会！(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 8,
@@ -1497,7 +1497,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1037,
-      eventName: "イベント1037",
+      eventName: "韓国版☆特別ステージ",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 37,
@@ -1543,7 +1543,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1040,
-      eventName: "イベント1040",
+      eventName: "バースデープレゼント！その1",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 40,
@@ -1556,7 +1556,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1041,
-      eventName: "イベント1041",
+      eventName: "バースデープレゼント！その2",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 41,
@@ -1569,7 +1569,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1042,
-      eventName: "イベント1042",
+      eventName: "バースデープレゼント！その3",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 42,
@@ -1595,7 +1595,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1044,
-      eventName: "イベント1044",
+      eventName: "ことよろにゃ！",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 44,
@@ -1817,7 +1817,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1060,
-      eventName: "イベント1060",
+      eventName: "バレンタインVSホワイトデー大戦争(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 60,
@@ -1832,7 +1832,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1061,
-      eventName: "イベント1061",
+      eventName: "闇討ち 1st(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 61,
@@ -1845,7 +1845,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1062,
-      eventName: "イベント1062",
+      eventName: "闇討ち 2nd(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 62,
@@ -1858,7 +1858,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1063,
-      eventName: "イベント1063",
+      eventName: "闇討ち 3rd(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 63,
@@ -1871,7 +1871,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1064,
-      eventName: "イベント1064",
+      eventName: "闇討ち Last(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 64,
@@ -1884,7 +1884,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1065,
-      eventName: "イベント1065",
+      eventName: "とびだす！にゃんこ大戦争",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 65,
@@ -1917,7 +1917,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1067,
-      eventName: "イベント1067",
+      eventName: "TWその１",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 67,
@@ -1930,7 +1930,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1068,
-      eventName: "イベント1068",
+      eventName: "2000万ダウンロード記念 ハッピープレゼント！",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 68,
@@ -1970,7 +1970,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1071,
-      eventName: "イベント1071",
+      eventName: "EN１",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 71,
@@ -2092,7 +2092,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1080,
-      eventName: "イベント1080",
+      eventName: "バースデープレゼント！",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 80,
@@ -2105,7 +2105,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1081,
-      eventName: "イベント1081",
+      eventName: "赤鼻サンタのプレゼント！(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 81,
@@ -2122,7 +2122,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1082,
-      eventName: "イベント1082",
+      eventName: "ことよろにゃ！(ΦωΦ)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 82,
@@ -2547,7 +2547,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1113,
-      eventName: "イベント1113",
+      eventName: "協賛BitSummit記念！",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 113,
@@ -2591,7 +2591,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1116,
-      eventName: "イベント1116",
+      eventName: "謎の宅配便",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 116,
@@ -2659,7 +2659,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1121,
-      eventName: "イベント1121",
+      eventName: "文化祭グルメ戦争(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 121,
@@ -2690,7 +2690,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1123,
-      eventName: "イベント1123",
+      eventName: "バースデープレゼント！",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 123,
@@ -2733,7 +2733,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1126,
-      eventName: "イベント1126",
+      eventName: "ことよろにゃ！(ΦωΦ)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 126,
@@ -2746,7 +2746,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1127,
-      eventName: "イベント1127",
+      eventName: "２２２ ～猫の日～(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 127,
@@ -2909,7 +2909,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1139,
-      eventName: "イベント1139",
+      eventName: "謎のプレゼント",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 139,
@@ -2939,7 +2939,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1141,
-      eventName: "イベント1141",
+      eventName: "協賛BitSummit記念！",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 141,
@@ -2952,7 +2952,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1142,
-      eventName: "イベント1142",
+      eventName: "じめじめなめなめ大進撃！(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 142,
@@ -2996,7 +2996,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1145,
-      eventName: "イベント1145",
+      eventName: "3000万ダウンロード記念 ハッピープレゼント！",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 145,
@@ -3022,7 +3022,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1147,
-      eventName: "イベント1147",
+      eventName: "謎のプレゼント2",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 147,
@@ -3035,7 +3035,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1148,
-      eventName: "イベント1148",
+      eventName: "開眼のネコフラワー襲来！",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 148,
@@ -3151,7 +3151,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1156,
-      eventName: "イベント1156",
+      eventName: "バースデープレゼント！",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 156,
@@ -3190,7 +3190,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1159,
-      eventName: "イベント1159",
+      eventName: "ことよろにゃ！(ΦωΦ)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 159,
@@ -3248,7 +3248,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1163,
-      eventName: "イベント1163",
+      eventName: "協賛BitSummit記念！",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 163,
@@ -3483,7 +3483,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1178,
-      eventName: "イベント1178",
+      eventName: "赤狩り 1st(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 178,
@@ -3496,7 +3496,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1179,
-      eventName: "イベント1179",
+      eventName: "赤狩り 2nd(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 179,
@@ -3509,7 +3509,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1180,
-      eventName: "イベント1180",
+      eventName: "赤狩り 3rd(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 180,
@@ -3522,7 +3522,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1181,
-      eventName: "イベント1181",
+      eventName: "赤狩り Last(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 181,
@@ -3548,7 +3548,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1183,
-      eventName: "イベント1183",
+      eventName: "バースデープレゼント！",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 183,
@@ -3623,7 +3623,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1188,
-      eventName: "イベント1188",
+      eventName: "ことよろにゃ！(ΦωΦ)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 188,
@@ -3663,7 +3663,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1191,
-      eventName: "イベント1191",
+      eventName: "4000万ダウンロード記念 ハッピープレゼント！",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 191,
@@ -3797,7 +3797,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1200,
-      eventName: "イベント1200",
+      eventName: "にゃんこグミ大戦争",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 200,
@@ -3824,7 +3824,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1202,
-      eventName: "イベント1202",
+      eventName: "協賛BitSummit記念！",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 202,
@@ -3851,7 +3851,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1204,
-      eventName: "イベント1204",
+      eventName: "謎の宅配便",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 204,
@@ -3939,7 +3939,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1210,
-      eventName: "イベント1210",
+      eventName: "草原の決闘(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 210,
@@ -3954,7 +3954,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1211,
-      eventName: "イベント1211",
+      eventName: "夕焼けの決闘(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 211,
@@ -3969,7 +3969,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1212,
-      eventName: "イベント1212",
+      eventName: "星空の決闘(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 212,
@@ -3984,7 +3984,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1213,
-      eventName: "イベント1213",
+      eventName: "砂浜の決闘(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 213,
@@ -4026,7 +4026,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1216,
-      eventName: "イベント1216",
+      eventName: "バースデープレゼント！",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 216,
@@ -4052,7 +4052,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1218,
-      eventName: "イベント1218",
+      eventName: "謎の宅配便",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 218,
@@ -4091,7 +4091,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1221,
-      eventName: "イベント1221",
+      eventName: "ことよろにゃ！(ΦωΦ)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 221,
@@ -4117,7 +4117,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1223,
-      eventName: "イベント1223",
+      eventName: "2019年最多出演敵ベスト５！",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 223,
@@ -4148,7 +4148,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1225,
-      eventName: "イベント1225",
+      eventName: "謎の宅配便",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 225,
@@ -4174,7 +4174,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1227,
-      eventName: "イベント1227",
+      eventName: "火口の決闘(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 227,
@@ -4189,7 +4189,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1228,
-      eventName: "イベント1228",
+      eventName: "5000万ダウンロード記念 ハッピープレゼント！",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 228,
@@ -4215,7 +4215,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1230,
-      eventName: "イベント1230",
+      eventName: "バースデープレゼント!",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 230,
@@ -4254,7 +4254,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1233,
-      eventName: "イベント1233",
+      eventName: "地図王の眠る島(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 233,
@@ -4337,7 +4337,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1238,
-      eventName: "イベント1238",
+      eventName: "タッグ闘技場 ルーキー(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 238,
@@ -4352,7 +4352,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1239,
-      eventName: "イベント1239",
+      eventName: "タッグ闘技場 ビギナー(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 239,
@@ -4367,7 +4367,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1240,
-      eventName: "イベント1240",
+      eventName: "タッグ闘技場 ベテラン(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 240,
@@ -4382,7 +4382,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1241,
-      eventName: "イベント1241",
+      eventName: "タッグ闘技場 プロ(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 241,
@@ -4397,7 +4397,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1242,
-      eventName: "イベント1242",
+      eventName: "タッグ闘技場 エキスパート(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 242,
@@ -4426,7 +4426,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1244,
-      eventName: "イベント1244",
+      eventName: "バースデープレゼント!",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 244,
@@ -4439,7 +4439,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1245,
-      eventName: "イベント1245",
+      eventName: "2020年最多出演敵ベスト５！",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 245,
@@ -4484,7 +4484,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1248,
-      eventName: "イベント1248",
+      eventName: "海底の決闘(旧)",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 248,
@@ -4570,7 +4570,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1254,
-      eventName: "イベント1254",
+      eventName: "6000万ダウンロード記念 ハッピープレゼント！",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 254,
@@ -4788,7 +4788,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1268,
-      eventName: "イベント1268",
+      eventName: "ネコたちの解放",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 268,
@@ -5004,7 +5004,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1282,
-      eventName: "イベント1282",
+      eventName: "Q1.箱の中身クイズ",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 282,
@@ -5028,7 +5028,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1283,
-      eventName: "イベント1283",
+      eventName: "Q5.時の運クイズ",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 283,
@@ -5045,7 +5045,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1284,
-      eventName: "イベント1284",
+      eventName: "バースデープレゼント！",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 284,
@@ -5058,7 +5058,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1285,
-      eventName: "イベント1285",
+      eventName: "2021年最多出演敵ベスト５！",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 285,
@@ -5194,7 +5194,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1293,
-      eventName: "イベント1293",
+      eventName: "中秋節ハッピープレゼント！",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 293,
@@ -5207,7 +5207,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1294,
-      eventName: "イベント1294",
+      eventName: "ダミー",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 294,
@@ -5222,7 +5222,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1295,
-      eventName: "イベント1295",
+      eventName: "ダミー",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 295,
@@ -5366,7 +5366,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1304,
-      eventName: "イベント1304",
+      eventName: "7000万ダウンロード記念 ハッピープレゼント！",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 304,
@@ -5457,7 +5457,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1310,
-      eventName: "イベント1310",
+      eventName: "決闘チャレンジ",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 310,
@@ -5472,7 +5472,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1311,
-      eventName: "イベント1311",
+      eventName: "タッグ闘技チャレンジ",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 311,
@@ -5626,7 +5626,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1322,
-      eventName: "イベント1322",
+      eventName: "第2部 敵軍団行進",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 322,
@@ -5649,7 +5649,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1323,
-      eventName: "イベント1323",
+      eventName: "第5部 名曲パレード",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 323,
@@ -5669,7 +5669,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1324,
-      eventName: "イベント1324",
+      eventName: "バースデープレゼント!",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 324,
@@ -5713,7 +5713,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1327,
-      eventName: "イベント1327",
+      eventName: "2022年最多出演敵ベスト５！",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 327,
@@ -5731,7 +5731,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1328,
-      eventName: "イベント1328",
+      eventName: "8000万ダウンロード記念 ハッピープレゼント！",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 328,
@@ -5925,7 +5925,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1341,
-      eventName: "イベント1341",
+      eventName: "バースデープレゼント",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 341,
@@ -6366,7 +6366,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1371,
-      eventName: "イベント1371",
+      eventName: "8888万ダウンロード記念",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 371,
@@ -6713,7 +6713,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1394,
-      eventName: "イベント1394",
+      eventName: "ネコヴァルキリー大試練",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 394,
@@ -6726,7 +6726,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1395,
-      eventName: "イベント1395",
+      eventName: "ネコムート大試練",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 395,
@@ -6845,7 +6845,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 1403,
-      eventName: "イベント1403",
+      eventName: "謎の宅配便",
       typeId: 1,
       typeName: "イベントステージ",
       mapId: 403,
@@ -6872,7 +6872,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2000,
-      eventName: "イベント2000",
+      eventName: "ふるさと自衛隊",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 0,
@@ -6925,7 +6925,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2003,
-      eventName: "イベント2003",
+      eventName: "黎明期からの使者",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 3,
@@ -6945,7 +6945,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2004,
-      eventName: "イベント2004",
+      eventName: "拡散性ミリオンアーサー",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 4,
@@ -6965,7 +6965,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2005,
-      eventName: "イベント2005",
+      eventName: "ドラゴンポーカー",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 5,
@@ -7031,7 +7031,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2009,
-      eventName: "イベント2009",
+      eventName: "ドラゴンリーグ",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 9,
@@ -7046,7 +7046,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2010,
-      eventName: "イベント2010",
+      eventName: "超激突！氣志團！！",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 10,
@@ -7064,7 +7064,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2011,
-      eventName: "イベント2011",
+      eventName: "生きろ！マンボウ！(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 11,
@@ -7079,7 +7079,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2012,
-      eventName: "イベント2012",
+      eventName: "開眼のドロイド襲来！",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 12,
@@ -7093,7 +7093,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2013,
-      eventName: "イベント2013",
+      eventName: "消滅都市 ～第１章～(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 13,
@@ -7108,7 +7108,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2014,
-      eventName: "イベント2014",
+      eventName: "消滅都市 ～第２章～(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 14,
@@ -7123,7 +7123,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2015,
-      eventName: "イベント2015",
+      eventName: "消滅都市 ～第３章～(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 15,
@@ -7136,7 +7136,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2016,
-      eventName: "イベント2016",
+      eventName: "極道大戦争",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 16,
@@ -7151,7 +7151,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2017,
-      eventName: "イベント2017",
+      eventName: "逆襲のメルクストーリア(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 17,
@@ -7180,7 +7180,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2019,
-      eventName: "イベント2019",
+      eventName: "モンハン大狩猟クエスト",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 19,
@@ -7195,7 +7195,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2020,
-      eventName: "イベント2020",
+      eventName: "【緊急】モンハン大狩猟クエスト",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 20,
@@ -7238,7 +7238,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2023,
-      eventName: "イベント2023",
+      eventName: "神略！ゆるドラシル",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 23,
@@ -7310,7 +7310,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2027,
-      eventName: "イベント2027",
+      eventName: "まもるよネコさん",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 27,
@@ -7325,7 +7325,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2028,
-      eventName: "イベント2028",
+      eventName: "開眼のタクヤとユキ(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 28,
@@ -7339,7 +7339,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2029,
-      eventName: "イベント2029",
+      eventName: "なめこからの挑戦状",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 29,
@@ -7354,7 +7354,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2030,
-      eventName: "イベント2030",
+      eventName: "ふてたネコあらわる",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 30,
@@ -7368,7 +7368,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2031,
-      eventName: "イベント2031",
+      eventName: "魔法少女まどか☆マギカ",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 31,
@@ -7385,7 +7385,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2032,
-      eventName: "イベント2032",
+      eventName: "魔女の結界",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 32,
@@ -7399,7 +7399,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2033,
-      eventName: "イベント2033",
+      eventName: "魔女の結界",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 33,
@@ -7413,7 +7413,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2034,
-      eventName: "イベント2034",
+      eventName: "魔女の結界",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 34,
@@ -7427,7 +7427,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2035,
-      eventName: "イベント2035",
+      eventName: "ワルプルギスの夜",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 35,
@@ -7440,7 +7440,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2036,
-      eventName: "イベント2036",
+      eventName: "突撃！キャットバスターズ",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 36,
@@ -7469,7 +7469,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2038,
-      eventName: "イベント2038",
+      eventName: "ピコ太郎",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 38,
@@ -7482,7 +7482,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2039,
-      eventName: "イベント2039",
+      eventName: "TWその２",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 39,
@@ -7495,7 +7495,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2040,
-      eventName: "イベント2040",
+      eventName: "ナゾのウサギ登場!?",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 40,
@@ -7512,7 +7512,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2041,
-      eventName: "イベント2041",
+      eventName: "ALICEの入り口",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 41,
@@ -7527,7 +7527,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2042,
-      eventName: "イベント2042",
+      eventName: "月夜のオールドシティ",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 42,
@@ -7570,7 +7570,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2045,
-      eventName: "イベント2045",
+      eventName: "失われし世界(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 45,
@@ -7613,7 +7613,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2048,
-      eventName: "イベント2048",
+      eventName: "神秘のメルクストーリア(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 48,
@@ -7628,7 +7628,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2049,
-      eventName: "イベント2049",
+      eventName: "ぐでぐでしてます",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 49,
@@ -7643,7 +7643,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2050,
-      eventName: "イベント2050",
+      eventName: "どうせ食べられるだけだし",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 50,
@@ -7658,7 +7658,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2051,
-      eventName: "イベント2051",
+      eventName: "ＴＷその３",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 51,
@@ -7671,7 +7671,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2052,
-      eventName: "イベント2052",
+      eventName: "聖杯戦争の始まり",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 52,
@@ -7688,7 +7688,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2053,
-      eventName: "イベント2053",
+      eventName: "激闘！セイバー襲来！",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 53,
@@ -7702,7 +7702,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2054,
-      eventName: "イベント2054",
+      eventName: "激闘！ランサー襲来！",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 54,
@@ -7716,7 +7716,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2055,
-      eventName: "イベント2055",
+      eventName: "激闘！アーチャー襲来！",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 55,
@@ -7730,7 +7730,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2056,
-      eventName: "イベント2056",
+      eventName: "激闘！ライダー襲来！",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 56,
@@ -7744,7 +7744,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2057,
-      eventName: "イベント2057",
+      eventName: "大激闘！ギルガメッシュ襲来！",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 57,
@@ -7758,7 +7758,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2058,
-      eventName: "イベント2058",
+      eventName: "パワフル高校2年の夏",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 58,
@@ -7773,7 +7773,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2059,
-      eventName: "イベント2059",
+      eventName: "ダイジョーブ博士の挑戦状",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 59,
@@ -7787,7 +7787,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2060,
-      eventName: "イベント2060",
+      eventName: "デートステージ 猫塚かりん",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 60,
@@ -7801,7 +7801,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2061,
-      eventName: "イベント2061",
+      eventName: "デートステージ 紺野美崎",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 61,
@@ -7815,7 +7815,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2062,
-      eventName: "イベント2062",
+      eventName: "デートステージ 虹谷彩理",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 62,
@@ -7829,7 +7829,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2063,
-      eventName: "イベント2063",
+      eventName: "デートステージ 片桐恋",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 63,
@@ -7843,7 +7843,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2064,
-      eventName: "イベント2064",
+      eventName: "つくね荘からの挑戦状",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 64,
@@ -7889,7 +7889,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2067,
-      eventName: "イベント2067",
+      eventName: "第９の使徒、襲来(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 67,
@@ -7903,7 +7903,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2068,
-      eventName: "イベント2068",
+      eventName: "第１０の使徒、襲来(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 68,
@@ -7917,7 +7917,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2069,
-      eventName: "イベント2069",
+      eventName: "ポコ森の仲間たち",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 69,
@@ -7932,7 +7932,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2070,
-      eventName: "イベント2070",
+      eventName: "仲良し３人組",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 70,
@@ -7947,7 +7947,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2071,
-      eventName: "イベント2071",
+      eventName: "太秦萌の通学",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 71,
@@ -7964,7 +7964,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2072,
-      eventName: "イベント2072",
+      eventName: "松賀咲の通学",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 72,
@@ -7981,7 +7981,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2073,
-      eventName: "イベント2073",
+      eventName: "小野ミサの通学",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 73,
@@ -7998,7 +7998,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2074,
-      eventName: "イベント2074",
+      eventName: "地下鉄に乗るっ",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 74,
@@ -8015,7 +8015,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2075,
-      eventName: "イベント2075",
+      eventName: "タマシイの都(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 75,
@@ -8030,7 +8030,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2076,
-      eventName: "イベント2076",
+      eventName: "ぐでぐでしてて忙しい",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 76,
@@ -8047,7 +8047,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2077,
-      eventName: "イベント2077",
+      eventName: "開眼のぐでたまにゃんこ襲来！",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 77,
@@ -8078,7 +8078,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2079,
-      eventName: "イベント2079",
+      eventName: "キモ激しく動くクマ",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 79,
@@ -8110,7 +8110,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2081,
-      eventName: "イベント2081",
+      eventName: "偽りの見滝原",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 81,
@@ -8124,7 +8124,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2082,
-      eventName: "イベント2082",
+      eventName: "女王暴走",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 82,
@@ -8141,7 +8141,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2083,
-      eventName: "イベント2083",
+      eventName: "ヒカキン降臨",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 83,
@@ -8155,7 +8155,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2084,
-      eventName: "イベント2084",
+      eventName: "開眼のヒカキン襲来！",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 84,
@@ -8198,7 +8198,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2087,
-      eventName: "イベント2087",
+      eventName: "超激闘！セイバーオルタ襲来！",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 87,
@@ -8244,7 +8244,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2090,
-      eventName: "イベント2090",
+      eventName: "開眼の三原慧悟襲来",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 90,
@@ -8258,7 +8258,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2091,
-      eventName: "イベント2091",
+      eventName: "Majimeowと一緒に台湾を巡ろう！",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 91,
@@ -8333,7 +8333,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2096,
-      eventName: "イベント2096",
+      eventName: "ゆる～い！ねこ娘襲来！",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 96,
@@ -8348,7 +8348,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2097,
-      eventName: "イベント2097",
+      eventName: "ゆる～いゲゲゲの鬼太郎",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 97,
@@ -8365,7 +8365,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2098,
-      eventName: "イベント2098",
+      eventName: "消滅都市 ～ロストへ～(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 98,
@@ -8384,7 +8384,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2099,
-      eventName: "イベント2099",
+      eventName: "天上の世界(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 99,
@@ -8414,7 +8414,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2101,
-      eventName: "イベント2101",
+      eventName: "開眼のチョコレート襲来！",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 101,
@@ -8428,7 +8428,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2102,
-      eventName: "イベント2102",
+      eventName: "第１３号機、襲来(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 102,
@@ -8442,7 +8442,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2103,
-      eventName: "イベント2103",
+      eventName: "高雄MRT レッドライン",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 103,
@@ -8459,7 +8459,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2104,
-      eventName: "イベント2104",
+      eventName: "高雄MRT オレンジライン",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 104,
@@ -8476,7 +8476,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2105,
-      eventName: "イベント2105",
+      eventName: "シャクレルプラネット",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 105,
@@ -8493,7 +8493,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2106,
-      eventName: "イベント2106",
+      eventName: "ドットヒーローズ",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 106,
@@ -8510,7 +8510,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2107,
-      eventName: "イベント2107",
+      eventName: "ストリートファイター EASY(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 107,
@@ -8530,7 +8530,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2108,
-      eventName: "イベント2108",
+      eventName: "ストリートファイター NORMAL(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 108,
@@ -8550,7 +8550,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2109,
-      eventName: "イベント2109",
+      eventName: "ストリートファイター HARD(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 109,
@@ -8570,7 +8570,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2110,
-      eventName: "イベント2110",
+      eventName: "New Challenger(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 110,
@@ -8583,7 +8583,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2111,
-      eventName: "イベント2111",
+      eventName: "New Challenger(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 111,
@@ -8596,7 +8596,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2112,
-      eventName: "イベント2112",
+      eventName: "New Challenger(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 112,
@@ -8609,7 +8609,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2113,
-      eventName: "イベント2113",
+      eventName: "New Challenger(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 113,
@@ -8622,7 +8622,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2114,
-      eventName: "イベント2114",
+      eventName: "New Challenger(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 114,
@@ -8635,7 +8635,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2115,
-      eventName: "イベント2115",
+      eventName: "New Challenger(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 115,
@@ -8648,7 +8648,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2116,
-      eventName: "イベント2116",
+      eventName: "New Challenger(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 116,
@@ -8661,7 +8661,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2117,
-      eventName: "イベント2117",
+      eventName: "New Challenger(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 117,
@@ -8674,7 +8674,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2118,
-      eventName: "イベント2118",
+      eventName: "New Challenger(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 118,
@@ -8687,7 +8687,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2119,
-      eventName: "イベント2119",
+      eventName: "New Challenger(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 119,
@@ -8700,7 +8700,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2120,
-      eventName: "イベント2120",
+      eventName: "New Challenger(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 120,
@@ -8713,7 +8713,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2121,
-      eventName: "イベント2121",
+      eventName: "New Challenger(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 121,
@@ -8726,7 +8726,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2122,
-      eventName: "イベント2122",
+      eventName: "New Challenger(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 122,
@@ -8739,7 +8739,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2123,
-      eventName: "イベント2123",
+      eventName: "New Challenger(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 123,
@@ -8752,7 +8752,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2124,
-      eventName: "イベント2124",
+      eventName: "New Challenger(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 124,
@@ -8766,7 +8766,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2125,
-      eventName: "イベント2125",
+      eventName: "７周年★東京スカイツリー",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 125,
@@ -8828,7 +8828,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2129,
-      eventName: "イベント2129",
+      eventName: "ハマンボ崎あゆみ 強襲！(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 129,
@@ -8852,7 +8852,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2130,
-      eventName: "イベント2130",
+      eventName: "MIKU EXPO（韓国版）",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 130,
@@ -8869,7 +8869,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2131,
-      eventName: "イベント2131",
+      eventName: "MIKU CHERRY（韓国版）",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 131,
@@ -8884,7 +8884,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2132,
-      eventName: "イベント2132",
+      eventName: "にゃんこ大泥棒",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 132,
@@ -8897,7 +8897,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2133,
-      eventName: "イベント2133",
+      eventName: "U.F.O.襲来！",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 133,
@@ -8912,7 +8912,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2134,
-      eventName: "イベント2134",
+      eventName: "初音ミクの誕生日！",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 134,
@@ -8925,7 +8925,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2135,
-      eventName: "イベント2135",
+      eventName: "ストリートファイター EASY",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 135,
@@ -8949,7 +8949,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2136,
-      eventName: "イベント2136",
+      eventName: "ストリートファイター NORMAL",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 136,
@@ -8973,7 +8973,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2137,
-      eventName: "イベント2137",
+      eventName: "ストリートファイター HARD",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 137,
@@ -8997,7 +8997,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2138,
-      eventName: "イベント2138",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 138,
@@ -9010,7 +9010,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2139,
-      eventName: "イベント2139",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 139,
@@ -9023,7 +9023,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2140,
-      eventName: "イベント2140",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 140,
@@ -9036,7 +9036,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2141,
-      eventName: "イベント2141",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 141,
@@ -9049,7 +9049,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2142,
-      eventName: "イベント2142",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 142,
@@ -9062,7 +9062,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2143,
-      eventName: "イベント2143",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 143,
@@ -9075,7 +9075,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2144,
-      eventName: "イベント2144",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 144,
@@ -9088,7 +9088,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2145,
-      eventName: "イベント2145",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 145,
@@ -9101,7 +9101,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2146,
-      eventName: "イベント2146",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 146,
@@ -9114,7 +9114,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2147,
-      eventName: "イベント2147",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 147,
@@ -9127,7 +9127,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2148,
-      eventName: "イベント2148",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 148,
@@ -9140,7 +9140,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2149,
-      eventName: "イベント2149",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 149,
@@ -9153,7 +9153,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2150,
-      eventName: "イベント2150",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 150,
@@ -9166,7 +9166,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2151,
-      eventName: "イベント2151",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 151,
@@ -9179,7 +9179,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2152,
-      eventName: "イベント2152",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 152,
@@ -9192,7 +9192,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2153,
-      eventName: "イベント2153",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 153,
@@ -9205,7 +9205,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2154,
-      eventName: "イベント2154",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 154,
@@ -9218,7 +9218,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2155,
-      eventName: "イベント2155",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 155,
@@ -9231,7 +9231,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2156,
-      eventName: "イベント2156",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 156,
@@ -9244,7 +9244,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2157,
-      eventName: "イベント2157",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 157,
@@ -9257,7 +9257,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2158,
-      eventName: "イベント2158",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 158,
@@ -9270,7 +9270,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2159,
-      eventName: "イベント2159",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 159,
@@ -9283,7 +9283,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2160,
-      eventName: "イベント2160",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 160,
@@ -9296,7 +9296,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2161,
-      eventName: "イベント2161",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 161,
@@ -9309,7 +9309,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2162,
-      eventName: "イベント2162",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 162,
@@ -9338,7 +9338,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2164,
-      eventName: "イベント2164",
+      eventName: "波乱！天道道場",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 164,
@@ -9355,7 +9355,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2165,
-      eventName: "イベント2165",
+      eventName: "伝説の呪泉郷",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 165,
@@ -9450,7 +9450,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2171,
-      eventName: "イベント2171",
+      eventName: "決戦！巨大生物ゴジラ",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 171,
@@ -9463,7 +9463,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2172,
-      eventName: "イベント2172",
+      eventName: "ゴジラ対にゃんこ",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 172,
@@ -9512,7 +9512,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2175,
-      eventName: "イベント2175",
+      eventName: "魔女の結界 ～薔薇園の魔女～(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 175,
@@ -9529,7 +9529,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2176,
-      eventName: "イベント2176",
+      eventName: "魔女の結界 ～お菓子の魔女～(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 176,
@@ -9546,7 +9546,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2177,
-      eventName: "イベント2177",
+      eventName: "魔女の結界 ～ハコの魔女～(旧)",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 177,
@@ -9580,7 +9580,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2179,
-      eventName: "イベント2179",
+      eventName: "秋華賞（ＧⅠ）",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 179,
@@ -9595,7 +9595,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2180,
-      eventName: "イベント2180",
+      eventName: "菊花賞（ＧⅠ）",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 180,
@@ -9610,7 +9610,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2181,
-      eventName: "イベント2181",
+      eventName: "天皇賞（秋）（ＧⅠ）",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 181,
@@ -9625,7 +9625,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2182,
-      eventName: "イベント2182",
+      eventName: "有馬記念（ＧⅠ）",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 182,
@@ -9645,7 +9645,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2183,
-      eventName: "イベント2183",
+      eventName: "高雄メトロ レッドライン",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 183,
@@ -9662,7 +9662,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2184,
-      eventName: "イベント2184",
+      eventName: "高雄ライトレール",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 184,
@@ -9692,7 +9692,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2186,
-      eventName: "イベント2186",
+      eventName: "対決！玉狛第２のリーダー",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 186,
@@ -9709,7 +9709,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2187,
-      eventName: "イベント2187",
+      eventName: "対決！玉狛第２のエース",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 187,
@@ -9726,7 +9726,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2188,
-      eventName: "イベント2188",
+      eventName: "VS訓練用モールモッド",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 188,
@@ -9743,7 +9743,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2189,
-      eventName: "イベント2189",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 189,
@@ -9756,7 +9756,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2190,
-      eventName: "イベント2190",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 190,
@@ -9769,7 +9769,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2191,
-      eventName: "イベント2191",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 191,
@@ -9782,7 +9782,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2192,
-      eventName: "イベント2192",
+      eventName: "New Challenger",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 192,
@@ -9795,7 +9795,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2193,
-      eventName: "イベント2193",
+      eventName: "ストリートファイター VERY HARD",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 193,
@@ -9817,7 +9817,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2194,
-      eventName: "イベント2194",
+      eventName: "激闘！セイバー襲来！",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 194,
@@ -9831,7 +9831,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2195,
-      eventName: "イベント2195",
+      eventName: "激闘！ランサー襲来！",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 195,
@@ -9845,7 +9845,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2196,
-      eventName: "イベント2196",
+      eventName: "激闘！アーチャー襲来！",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 196,
@@ -9859,7 +9859,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2197,
-      eventName: "イベント2197",
+      eventName: "激闘！ライダー襲来！",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 197,
@@ -9873,7 +9873,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2198,
-      eventName: "イベント2198",
+      eventName: "大激闘！ギルガメッシュ襲来！",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 198,
@@ -9887,7 +9887,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2199,
-      eventName: "イベント2199",
+      eventName: "救出！にゃんこ仮面ライダー",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 199,
@@ -9904,7 +9904,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2200,
-      eventName: "イベント2200",
+      eventName: "救出！ゴジラにゃんこ",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 200,
@@ -9921,7 +9921,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2201,
-      eventName: "イベント2201",
+      eventName: "救出！エヴァンゲリオンにゃんこ",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 201,
@@ -9938,7 +9938,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2202,
-      eventName: "イベント2202",
+      eventName: "救出！ウルトラマンにゃんこ",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 202,
@@ -9955,7 +9955,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2203,
-      eventName: "イベント2203",
+      eventName: "シン・にゃんこ・ヒーローズ",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 203,
@@ -10085,7 +10085,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2212,
-      eventName: "イベント2212",
+      eventName: "週末ライブ DAY1（韓国版専用）",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 212,
@@ -10100,7 +10100,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 2213,
-      eventName: "イベント2213",
+      eventName: "週末ライブ DAY2（韓国版専用）",
       typeId: 2,
       typeName: "コラボステージ",
       mapId: 213,
@@ -10339,7 +10339,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 6000,
-      eventName: "イベント6000",
+      eventName: "初心の間",
       typeId: 6,
       typeName: "ランキング道場",
       mapId: 0,
@@ -10352,7 +10352,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 6001,
-      eventName: "イベント6001",
+      eventName: "ニコニコの間",
       typeId: 6,
       typeName: "ランキング道場",
       mapId: 1,
@@ -10857,7 +10857,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 11010,
-      eventName: "イベント11010",
+      eventName: "ランキングの間",
       typeId: 11,
       typeName: "ランキング道場",
       mapId: 10,
@@ -11156,7 +11156,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 12000,
-      eventName: "イベント12000",
+      eventName: "チャレンジバトル",
       typeId: 12,
       typeName: "チャレンジバトル",
       mapId: 0,
@@ -11169,7 +11169,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13000,
-      eventName: "イベント13000",
+      eventName: "真・伝説のはじまり",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 0,
@@ -11182,7 +11182,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13001,
-      eventName: "イベント13001",
+      eventName: "まんぷく秘境",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 1,
@@ -11200,7 +11200,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13002,
-      eventName: "イベント13002",
+      eventName: "アドベン大森林",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 2,
@@ -11218,7 +11218,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13003,
-      eventName: "イベント13003",
+      eventName: "じゃぶじゃぶ旧海道",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 3,
@@ -11236,7 +11236,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13004,
-      eventName: "イベント13004",
+      eventName: "ワンワン湾",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 4,
@@ -11254,7 +11254,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13005,
-      eventName: "イベント13005",
+      eventName: "深淵を覗く者",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 5,
@@ -11272,7 +11272,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13006,
-      eventName: "イベント13006",
+      eventName: "デスメガシティ",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 6,
@@ -11290,7 +11290,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13007,
-      eventName: "イベント13007",
+      eventName: "無法地帯のオキテ",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 7,
@@ -11308,7 +11308,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13008,
-      eventName: "イベント13008",
+      eventName: "パラリラ半島",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 8,
@@ -11326,7 +11326,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13009,
-      eventName: "イベント13009",
+      eventName: "キャットクーデター",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 9,
@@ -11344,7 +11344,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13010,
-      eventName: "イベント13010",
+      eventName: "桜んぼ島",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 10,
@@ -11362,7 +11362,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13011,
-      eventName: "イベント13011",
+      eventName: "魂底からの帰化",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 11,
@@ -11380,7 +11380,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13012,
-      eventName: "イベント13012",
+      eventName: "絶滅海洋タウン",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 12,
@@ -11398,7 +11398,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13013,
-      eventName: "イベント13013",
+      eventName: "島流しリゾート",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 13,
@@ -11416,7 +11416,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13014,
-      eventName: "イベント13014",
+      eventName: "まどいの魔道路",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 14,
@@ -11434,7 +11434,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13015,
-      eventName: "イベント13015",
+      eventName: "天界バル横丁",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 15,
@@ -11452,7 +11452,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13016,
-      eventName: "イベント13016",
+      eventName: "バトル銭湯",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 16,
@@ -11470,7 +11470,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13017,
-      eventName: "イベント13017",
+      eventName: "はえぬき三連山",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 17,
@@ -11488,7 +11488,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13018,
-      eventName: "イベント13018",
+      eventName: "マリン官邸",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 18,
@@ -11506,7 +11506,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13019,
-      eventName: "イベント13019",
+      eventName: "学園に巣くう悪意",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 19,
@@ -11524,7 +11524,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13020,
-      eventName: "イベント13020",
+      eventName: "ところてん金鉱",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 20,
@@ -11542,7 +11542,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13021,
-      eventName: "イベント13021",
+      eventName: "酩酊製鉄所",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 21,
@@ -11560,7 +11560,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13022,
-      eventName: "イベント13022",
+      eventName: "暴かれし神殿の秘宝",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 22,
@@ -11578,7 +11578,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13023,
-      eventName: "イベント13023",
+      eventName: "帝政エイジャナイカ",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 23,
@@ -11596,7 +11596,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13024,
-      eventName: "イベント13024",
+      eventName: "鋼鉄スポーツジム",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 24,
@@ -11614,7 +11614,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13025,
-      eventName: "イベント13025",
+      eventName: "明星おきの島",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 25,
@@ -11632,7 +11632,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13026,
-      eventName: "イベント13026",
+      eventName: "眠れる森の何か",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 26,
@@ -11650,7 +11650,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13027,
-      eventName: "イベント13027",
+      eventName: "ラボラ・トリ島",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 27,
@@ -11668,7 +11668,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13028,
-      eventName: "イベント13028",
+      eventName: "忘らるる墓所",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 28,
@@ -11686,7 +11686,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13029,
-      eventName: "イベント13029",
+      eventName: "始まりを告げる朝",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 29,
@@ -11704,7 +11704,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13030,
-      eventName: "イベント13030",
+      eventName: "ハッピーラッキー寺院",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 30,
@@ -11722,7 +11722,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13031,
-      eventName: "イベント13031",
+      eventName: "キネマ怪館",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 31,
@@ -11740,7 +11740,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13032,
-      eventName: "イベント13032",
+      eventName: "ダイバー都市",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 32,
@@ -11758,7 +11758,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13033,
-      eventName: "イベント13033",
+      eventName: "ナシゴ・レン",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 33,
@@ -11776,7 +11776,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13034,
-      eventName: "イベント13034",
+      eventName: "DNA果樹園",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 34,
@@ -11794,7 +11794,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13035,
-      eventName: "イベント13035",
+      eventName: "古代樹の迷宮",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 35,
@@ -11812,7 +11812,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13036,
-      eventName: "イベント13036",
+      eventName: "立ちはだかる者達の城",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 36,
@@ -11830,7 +11830,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13037,
-      eventName: "イベント13037",
+      eventName: "時空のゆがみ",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 37,
@@ -11848,7 +11848,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13038,
-      eventName: "イベント13038",
+      eventName: "大厄災のはじまり",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 38,
@@ -11866,7 +11866,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13039,
-      eventName: "イベント13039",
+      eventName: "魔海域ビックラ港",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 39,
@@ -11884,7 +11884,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13040,
-      eventName: "イベント13040",
+      eventName: "デッドヒートランド",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 40,
@@ -11902,7 +11902,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13041,
-      eventName: "イベント13041",
+      eventName: "バラ色の袋小路",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 41,
@@ -11920,7 +11920,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13042,
-      eventName: "イベント13042",
+      eventName: "千年獣の霊峰",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 42,
@@ -11938,7 +11938,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13043,
-      eventName: "イベント13043",
+      eventName: "ムーディストビーチ",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 43,
@@ -11956,7 +11956,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13044,
-      eventName: "イベント13044",
+      eventName: "猫追いしふるさと",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 44,
@@ -11974,7 +11974,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13045,
-      eventName: "イベント13045",
+      eventName: "海賊王商店街",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 45,
@@ -11992,7 +11992,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13046,
-      eventName: "イベント13046",
+      eventName: "真なる虚実を紡ぐ道",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 46,
@@ -12010,7 +12010,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13047,
-      eventName: "イベント13047",
+      eventName: "人類ネコ化計画",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 47,
@@ -12030,7 +12030,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 13048,
-      eventName: "イベント13048",
+      eventName: "古代神樹",
       typeId: 13,
       typeName: "真レジェンドストーリー",
       mapId: 48,
@@ -12043,7 +12043,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14000,
-      eventName: "イベント14000",
+      eventName: "進化の黄マタタビ",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 0,
@@ -12058,7 +12058,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14001,
-      eventName: "イベント14001",
+      eventName: "進化の青マタタビ",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 1,
@@ -12073,7 +12073,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14002,
-      eventName: "イベント14002",
+      eventName: "進化の赤マタタビ",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 2,
@@ -12088,7 +12088,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14003,
-      eventName: "イベント14003",
+      eventName: "進化の紫マタタビ",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 3,
@@ -12103,7 +12103,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14004,
-      eventName: "イベント14004",
+      eventName: "進化の緑マタタビ",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 4,
@@ -12118,7 +12118,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14005,
-      eventName: "イベント14005",
+      eventName: "逆襲のカオル君",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 5,
@@ -12131,7 +12131,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14006,
-      eventName: "イベント14006",
+      eventName: "逆襲のカバちゃん",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 6,
@@ -12144,7 +12144,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14007,
-      eventName: "イベント14007",
+      eventName: "にゃんチケ★チャンス！",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 7,
@@ -12157,7 +12157,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14008,
-      eventName: "イベント14008",
+      eventName: "超極ゲリラ経験値にゃ！",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 8,
@@ -12170,7 +12170,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14009,
-      eventName: "イベント14009",
+      eventName: "極ゲリラ経験値にゃ！",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 9,
@@ -12183,7 +12183,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14010,
-      eventName: "イベント14010",
+      eventName: "超ゲリラ経験値にゃ！",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 10,
@@ -12196,7 +12196,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14011,
-      eventName: "イベント14011",
+      eventName: "ゲリラ経験値にゃ！",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 11,
@@ -12214,7 +12214,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14012,
-      eventName: "イベント14012",
+      eventName: "断罪天使クオリネル降臨",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 12,
@@ -12227,7 +12227,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14013,
-      eventName: "イベント14013",
+      eventName: "地獄門",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 13,
@@ -12240,7 +12240,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14014,
-      eventName: "イベント14014",
+      eventName: "女帝飛来",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 14,
@@ -12253,7 +12253,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14015,
-      eventName: "イベント14015",
+      eventName: "亡者デブウ降臨",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 15,
@@ -12266,7 +12266,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14016,
-      eventName: "イベント14016",
+      eventName: "チワワン伯爵降臨",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 16,
@@ -12279,7 +12279,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14017,
-      eventName: "イベント14017",
+      eventName: "夜は短し夢みよ乙女",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 17,
@@ -12292,7 +12292,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14018,
-      eventName: "イベント14018",
+      eventName: "紅のカタストロフ",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 18,
@@ -12305,7 +12305,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14019,
-      eventName: "イベント14019",
+      eventName: "ダークネスヘブン",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 19,
@@ -12318,7 +12318,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14020,
-      eventName: "イベント14020",
+      eventName: "国士無双",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 20,
@@ -12331,7 +12331,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14021,
-      eventName: "イベント14021",
+      eventName: "天罰",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 21,
@@ -12344,7 +12344,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14022,
-      eventName: "イベント14022",
+      eventName: "鉄子の部屋",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 22,
@@ -12357,7 +12357,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14023,
-      eventName: "イベント14023",
+      eventName: "絶望異次元",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 23,
@@ -12370,7 +12370,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14024,
-      eventName: "イベント14024",
+      eventName: "狂乱のネコ降臨",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 24,
@@ -12383,7 +12383,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14025,
-      eventName: "イベント14025",
+      eventName: "狂乱のタンク降臨",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 25,
@@ -12396,7 +12396,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14026,
-      eventName: "イベント14026",
+      eventName: "狂乱のバトル降臨",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 26,
@@ -12409,7 +12409,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14027,
-      eventName: "イベント14027",
+      eventName: "狂乱のキモネコ降臨",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 27,
@@ -12422,7 +12422,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14028,
-      eventName: "イベント14028",
+      eventName: "狂乱のウシ降臨",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 28,
@@ -12435,7 +12435,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14029,
-      eventName: "イベント14029",
+      eventName: "狂乱のトリ降臨",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 29,
@@ -12448,7 +12448,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14030,
-      eventName: "イベント14030",
+      eventName: "狂乱のフィッシュ降臨",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 30,
@@ -12461,7 +12461,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14031,
-      eventName: "イベント14031",
+      eventName: "狂乱のトカゲ降臨",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 31,
@@ -12474,7 +12474,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14032,
-      eventName: "イベント14032",
+      eventName: "狂乱の巨神降臨",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 32,
@@ -12487,7 +12487,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14033,
-      eventName: "イベント14033",
+      eventName: "ブルーインパクト",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 33,
@@ -12500,7 +12500,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14034,
-      eventName: "イベント14034",
+      eventName: "狂乱のもねこ降臨",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 34,
@@ -12515,7 +12515,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14035,
-      eventName: "イベント14035",
+      eventName: "緊急爆風警報",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 35,
@@ -12528,7 +12528,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14036,
-      eventName: "イベント14036",
+      eventName: "ローリングデッド",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 36,
@@ -12541,7 +12541,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14037,
-      eventName: "イベント14037",
+      eventName: "台風零号",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 37,
@@ -12554,7 +12554,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14038,
-      eventName: "イベント14038",
+      eventName: "メガサターン",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 38,
@@ -12567,7 +12567,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14039,
-      eventName: "イベント14039",
+      eventName: "ほの暗い沼の底から",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 39,
@@ -12580,7 +12580,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14040,
-      eventName: "イベント14040",
+      eventName: "大狂乱のネコ降臨",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 40,
@@ -12593,7 +12593,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14041,
-      eventName: "イベント14041",
+      eventName: "大狂乱のタンク降臨",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 41,
@@ -12606,7 +12606,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14042,
-      eventName: "イベント14042",
+      eventName: "大狂乱のバトル降臨",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 42,
@@ -12619,7 +12619,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14043,
-      eventName: "イベント14043",
+      eventName: "大狂乱のキモネコ降臨",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 43,
@@ -12632,7 +12632,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14044,
-      eventName: "イベント14044",
+      eventName: "大狂乱のウシ降臨",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 44,
@@ -12645,7 +12645,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14045,
-      eventName: "イベント14045",
+      eventName: "大狂乱のトリ降臨",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 45,
@@ -12658,7 +12658,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14046,
-      eventName: "イベント14046",
+      eventName: "大狂乱のフィッシュ降臨",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 46,
@@ -12671,7 +12671,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14047,
-      eventName: "イベント14047",
+      eventName: "大狂乱のトカゲ降臨",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 47,
@@ -12684,7 +12684,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14048,
-      eventName: "イベント14048",
+      eventName: "大狂乱の巨神降臨",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 48,
@@ -12697,7 +12697,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14049,
-      eventName: "イベント14049",
+      eventName: "絶望新次元",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 49,
@@ -12710,7 +12710,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14050,
-      eventName: "イベント14050",
+      eventName: "超極悪ゲリラ経験値にゃ！",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 50,
@@ -12725,7 +12725,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 14051,
-      eventName: "イベント14051",
+      eventName: "進化の悪マタタビ",
       typeId: 14,
       typeName: "ネコビタン",
       mapId: 51,
@@ -12741,7 +12741,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 24000,
-      eventName: "イベント24000",
+      eventName: "ヒュージゴマ強襲 !(旧)",
       typeId: 24,
       typeName: "強襲ステージ",
       mapId: 0,
@@ -12773,7 +12773,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 24001,
-      eventName: "イベント24001",
+      eventName: "ヒュージゴマ強襲 !!(旧)",
       typeId: 24,
       typeName: "強襲ステージ",
       mapId: 1,
@@ -12805,7 +12805,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 24002,
-      eventName: "イベント24002",
+      eventName: "ヒュージゴマ強襲 !!!(旧)",
       typeId: 24,
       typeName: "強襲ステージ",
       mapId: 2,
@@ -12837,7 +12837,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 24003,
-      eventName: "イベント24003",
+      eventName: "ジャイアント黒蔵強襲 !(旧)",
       typeId: 24,
       typeName: "強襲ステージ",
       mapId: 3,
@@ -12869,7 +12869,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 24004,
-      eventName: "イベント24004",
+      eventName: "ジャイアント黒蔵強襲 !!(旧)",
       typeId: 24,
       typeName: "強襲ステージ",
       mapId: 4,
@@ -12901,7 +12901,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 24005,
-      eventName: "イベント24005",
+      eventName: "ジャイアント黒蔵強襲 !!!(旧)",
       typeId: 24,
       typeName: "強襲ステージ",
       mapId: 5,
@@ -12933,7 +12933,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 24006,
-      eventName: "イベント24006",
+      eventName: "ギガガガ強襲 !(旧)",
       typeId: 24,
       typeName: "強襲ステージ",
       mapId: 6,
@@ -12965,7 +12965,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 24007,
-      eventName: "イベント24007",
+      eventName: "ギガガガ強襲 !!(旧)",
       typeId: 24,
       typeName: "強襲ステージ",
       mapId: 7,
@@ -12997,7 +12997,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 24008,
-      eventName: "イベント24008",
+      eventName: "ギガガガ強襲 !!!(旧)",
       typeId: 24,
       typeName: "強襲ステージ",
       mapId: 8,
@@ -13029,7 +13029,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 24009,
-      eventName: "イベント24009",
+      eventName: "デッカーバチャン強襲 !(旧)",
       typeId: 24,
       typeName: "強襲ステージ",
       mapId: 9,
@@ -13061,7 +13061,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 24010,
-      eventName: "イベント24010",
+      eventName: "デッカーバチャン強襲 !!(旧)",
       typeId: 24,
       typeName: "強襲ステージ",
       mapId: 10,
@@ -13093,7 +13093,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 24011,
-      eventName: "イベント24011",
+      eventName: "デッカーバチャン強襲 !!!(旧)",
       typeId: 24,
       typeName: "強襲ステージ",
       mapId: 11,
@@ -13125,7 +13125,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 24012,
-      eventName: "イベント24012",
+      eventName: "ことよろにゃ強襲！(ΦωΦ)",
       typeId: 24,
       typeName: "強襲ステージ",
       mapId: 12,
@@ -13147,7 +13147,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 24013,
-      eventName: "イベント24013",
+      eventName: "バレンタイン強襲！",
       typeId: 24,
       typeName: "強襲ステージ",
       mapId: 13,
@@ -13723,7 +13723,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 24036,
-      eventName: "イベント24036",
+      eventName: "ことよろにゃ強襲！(ΦωΦ)",
       typeId: 24,
       typeName: "強襲ステージ",
       mapId: 36,
@@ -14252,7 +14252,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 24057,
-      eventName: "イベント24057",
+      eventName: "第1部 10年の軌跡パレード",
       typeId: 24,
       typeName: "強襲ステージ",
       mapId: 57,
@@ -14306,7 +14306,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 24059,
-      eventName: "イベント24059",
+      eventName: "ことよろにゃ強襲！(ΦωΦ)",
       typeId: 24,
       typeName: "強襲ステージ",
       mapId: 59,
@@ -14328,7 +14328,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 24060,
-      eventName: "イベント24060",
+      eventName: "タンクネコたちの逆襲(旧)",
       typeId: 24,
       typeName: "強襲ステージ",
       mapId: 60,
@@ -14605,7 +14605,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25000,
-      eventName: "イベント25000",
+      eventName: "アテイム古戦場",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 0,
@@ -14618,7 +14618,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25001,
-      eventName: "イベント25001",
+      eventName: "ビタミン渓谷",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 1,
@@ -14631,7 +14631,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25002,
-      eventName: "イベント25002",
+      eventName: "にゃんチケ★ハンター",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 2,
@@ -14644,7 +14644,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25003,
-      eventName: "イベント25003",
+      eventName: "精神と時間の小屋",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 3,
@@ -14657,7 +14657,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25004,
-      eventName: "イベント25004",
+      eventName: "精神と時間の洞窟",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 4,
@@ -14670,7 +14670,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25005,
-      eventName: "イベント25005",
+      eventName: "精神と時間の迷宮",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 5,
@@ -14683,7 +14683,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25006,
-      eventName: "イベント25006",
+      eventName: "ねこの目洞窟",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 6,
@@ -14696,7 +14696,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25007,
-      eventName: "イベント25007",
+      eventName: "ビタミン火山",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 7,
@@ -14709,7 +14709,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25008,
-      eventName: "イベント25008",
+      eventName: "にゃんチケ★ハンターG",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 8,
@@ -14722,7 +14722,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25009,
-      eventName: "イベント25009",
+      eventName: "紅き本能の起源",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 9,
@@ -14735,7 +14735,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25010,
-      eventName: "イベント25010",
+      eventName: "紅き本能の頂",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 10,
@@ -14748,7 +14748,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25011,
-      eventName: "イベント25011",
+      eventName: "紅き本能の秘境",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 11,
@@ -14761,7 +14761,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25012,
-      eventName: "イベント25012",
+      eventName: "浮ける本能の起源",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 12,
@@ -14774,7 +14774,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25013,
-      eventName: "イベント25013",
+      eventName: "浮ける本能の頂",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 13,
@@ -14787,7 +14787,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25014,
-      eventName: "イベント25014",
+      eventName: "浮ける本能の秘境",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 14,
@@ -14800,7 +14800,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25015,
-      eventName: "イベント25015",
+      eventName: "黒き本能の起源",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 15,
@@ -14813,7 +14813,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25016,
-      eventName: "イベント25016",
+      eventName: "黒き本能の頂",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 16,
@@ -14826,7 +14826,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25017,
-      eventName: "イベント25017",
+      eventName: "黒き本能の秘境",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 17,
@@ -14839,7 +14839,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25018,
-      eventName: "イベント25018",
+      eventName: "聖なる本能の起源",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 18,
@@ -14852,7 +14852,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25019,
-      eventName: "イベント25019",
+      eventName: "聖なる本能の頂",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 19,
@@ -14865,7 +14865,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25020,
-      eventName: "イベント25020",
+      eventName: "聖なる本能の秘境",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 20,
@@ -14878,7 +14878,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25021,
-      eventName: "イベント25021",
+      eventName: "蒼き本能の起源",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 21,
@@ -14891,7 +14891,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25022,
-      eventName: "イベント25022",
+      eventName: "蒼き本能の頂",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 22,
@@ -14904,7 +14904,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25023,
-      eventName: "イベント25023",
+      eventName: "蒼き本能の秘境",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 23,
@@ -14917,7 +14917,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25024,
-      eventName: "イベント25024",
+      eventName: "朽ちた本能の起源",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 24,
@@ -14930,7 +14930,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25025,
-      eventName: "イベント25025",
+      eventName: "朽ちた本能の頂",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 25,
@@ -14943,7 +14943,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25026,
-      eventName: "イベント25026",
+      eventName: "朽ちた本能の秘境",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 26,
@@ -14956,7 +14956,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25027,
-      eventName: "イベント25027",
+      eventName: "硬き本能の起源",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 27,
@@ -14969,7 +14969,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25028,
-      eventName: "イベント25028",
+      eventName: "硬き本能の頂",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 28,
@@ -14982,7 +14982,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25029,
-      eventName: "イベント25029",
+      eventName: "硬き本能の秘境",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 29,
@@ -14995,7 +14995,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25030,
-      eventName: "イベント25030",
+      eventName: "おんぼろ秘密基地",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 30,
@@ -15008,7 +15008,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25031,
-      eventName: "イベント25031",
+      eventName: "イケてる秘密基地",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 31,
@@ -15021,7 +15021,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25032,
-      eventName: "イベント25032",
+      eventName: "かんぺきな秘密基地",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 32,
@@ -15034,7 +15034,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25033,
-      eventName: "イベント25033",
+      eventName: "紅き本能の起源",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 33,
@@ -15047,7 +15047,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25034,
-      eventName: "イベント25034",
+      eventName: "紅き本能の頂",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 34,
@@ -15060,7 +15060,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25035,
-      eventName: "イベント25035",
+      eventName: "紅き本能の秘境",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 35,
@@ -15073,7 +15073,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25036,
-      eventName: "イベント25036",
+      eventName: "浮ける本能の起源",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 36,
@@ -15086,7 +15086,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25037,
-      eventName: "イベント25037",
+      eventName: "浮ける本能の頂",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 37,
@@ -15099,7 +15099,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25038,
-      eventName: "イベント25038",
+      eventName: "浮ける本能の秘境",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 38,
@@ -15112,7 +15112,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25039,
-      eventName: "イベント25039",
+      eventName: "黒き本能の起源",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 39,
@@ -15125,7 +15125,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25040,
-      eventName: "イベント25040",
+      eventName: "黒き本能の頂",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 40,
@@ -15138,7 +15138,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25041,
-      eventName: "イベント25041",
+      eventName: "黒き本能の秘境",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 41,
@@ -15151,7 +15151,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25042,
-      eventName: "イベント25042",
+      eventName: "聖なる本能の起源",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 42,
@@ -15164,7 +15164,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25043,
-      eventName: "イベント25043",
+      eventName: "聖なる本能の頂",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 43,
@@ -15177,7 +15177,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25044,
-      eventName: "イベント25044",
+      eventName: "聖なる本能の秘境",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 44,
@@ -15190,7 +15190,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25045,
-      eventName: "イベント25045",
+      eventName: "朽ちた本能の起源",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 45,
@@ -15203,7 +15203,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25046,
-      eventName: "イベント25046",
+      eventName: "朽ちた本能の頂",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 46,
@@ -15216,7 +15216,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25047,
-      eventName: "イベント25047",
+      eventName: "朽ちた本能の秘境",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 47,
@@ -15229,7 +15229,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25048,
-      eventName: "イベント25048",
+      eventName: "蒼き本能の起源",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 48,
@@ -15242,7 +15242,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25049,
-      eventName: "イベント25049",
+      eventName: "蒼き本能の頂",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 49,
@@ -15255,7 +15255,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25050,
-      eventName: "イベント25050",
+      eventName: "蒼き本能の秘境",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 50,
@@ -15268,7 +15268,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25051,
-      eventName: "イベント25051",
+      eventName: "おんぼろ秘密基地",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 51,
@@ -15281,7 +15281,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25052,
-      eventName: "イベント25052",
+      eventName: "おんぼろ秘密基地",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 52,
@@ -15294,7 +15294,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25053,
-      eventName: "イベント25053",
+      eventName: "おんぼろ秘密基地",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 53,
@@ -15307,7 +15307,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25054,
-      eventName: "イベント25054",
+      eventName: "イケてる秘密基地",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 54,
@@ -15320,7 +15320,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25055,
-      eventName: "イベント25055",
+      eventName: "イケてる秘密基地",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 55,
@@ -15333,7 +15333,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25056,
-      eventName: "イベント25056",
+      eventName: "イケてる秘密基地",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 56,
@@ -15346,7 +15346,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25057,
-      eventName: "イベント25057",
+      eventName: "かんぺきな秘密基地",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 57,
@@ -15359,7 +15359,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25058,
-      eventName: "イベント25058",
+      eventName: "かんぺきな秘密基地",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 58,
@@ -15372,7 +15372,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25059,
-      eventName: "イベント25059",
+      eventName: "かんぺきな秘密基地",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 59,
@@ -15385,7 +15385,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25060,
-      eventName: "イベント25060",
+      eventName: "狩人の地図Ⅰ",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 60,
@@ -15399,7 +15399,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25061,
-      eventName: "イベント25061",
+      eventName: "狩人の地図Ⅱ",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 61,
@@ -15415,7 +15415,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25062,
-      eventName: "イベント25062",
+      eventName: "狩人の地図Ⅲ",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 62,
@@ -15432,7 +15432,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25063,
-      eventName: "イベント25063",
+      eventName: "悪しき本能の起源",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 63,
@@ -15445,7 +15445,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25064,
-      eventName: "イベント25064",
+      eventName: "悪しき本能の頂",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 64,
@@ -15458,7 +15458,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25065,
-      eventName: "イベント25065",
+      eventName: "悪しき本能の秘境",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 65,
@@ -15471,7 +15471,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25066,
-      eventName: "イベント25066",
+      eventName: "狩人の地図Ⅳ",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 66,
@@ -15488,7 +15488,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25067,
-      eventName: "イベント25067",
+      eventName: "古き本能の起源",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 67,
@@ -15501,7 +15501,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25068,
-      eventName: "イベント25068",
+      eventName: "古き本能の頂",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 68,
@@ -15514,7 +15514,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 25069,
-      eventName: "イベント25069",
+      eventName: "古き本能の秘境",
       typeId: 25,
       typeName: "発掘ステージ",
       mapId: 69,
@@ -15559,7 +15559,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 27001,
-      eventName: "イベント27001",
+      eventName: "U.F.O.軍団 強襲！",
       typeId: 27,
       typeName: "コラボ強襲ステージ",
       mapId: 1,
@@ -15719,7 +15719,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 27006,
-      eventName: "イベント27006",
+      eventName: "強襲！電子の歌姫(韓国版)",
       typeId: 27,
       typeName: "コラボ強襲ステージ",
       mapId: 6,
@@ -15783,7 +15783,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 27008,
-      eventName: "イベント27008",
+      eventName: "強襲！らんま１/２",
       typeId: 27,
       typeName: "コラボ強襲ステージ",
       mapId: 8,
@@ -15837,7 +15837,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 27010,
-      eventName: "イベント27010",
+      eventName: "めざせＧＩ にゃんこ競馬",
       typeId: 27,
       typeName: "コラボ強襲ステージ",
       mapId: 10,
@@ -15901,7 +15901,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 27012,
-      eventName: "イベント27012",
+      eventName: "強襲！らんま1/2",
       typeId: 27,
       typeName: "コラボ強襲ステージ",
       mapId: 12,
@@ -15975,7 +15975,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 27014,
-      eventName: "イベント27014",
+      eventName: "サーヴァント強襲！",
       typeId: 27,
       typeName: "コラボ強襲ステージ",
       mapId: 14,
@@ -16321,7 +16321,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 34000,
-      eventName: "イベント34000",
+      eventName: "ゼロフィールド",
       typeId: 34,
       typeName: "レジェンドストーリー0",
       mapId: 0,
@@ -16334,7 +16334,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 34001,
-      eventName: "イベント34001",
+      eventName: "時空の最果て",
       typeId: 34,
       typeName: "レジェンドストーリー0",
       mapId: 1,
@@ -16352,7 +16352,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 34002,
-      eventName: "イベント34002",
+      eventName: "バリチッチ盆地",
       typeId: 34,
       typeName: "レジェンドストーリー0",
       mapId: 2,
@@ -16370,7 +16370,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 34003,
-      eventName: "イベント34003",
+      eventName: "ウルルブ島滞在記",
       typeId: 34,
       typeName: "レジェンドストーリー0",
       mapId: 3,
@@ -16386,7 +16386,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 34004,
-      eventName: "イベント34004",
+      eventName: "新世界アリ＝エヘン",
       typeId: 34,
       typeName: "レジェンドストーリー0",
       mapId: 4,
@@ -16406,7 +16406,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 34005,
-      eventName: "イベント34005",
+      eventName: "われら海の猫",
       typeId: 34,
       typeName: "レジェンドストーリー0",
       mapId: 5,
@@ -16424,7 +16424,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 34006,
-      eventName: "イベント34006",
+      eventName: "対極にある真実",
       typeId: 34,
       typeName: "レジェンドストーリー0",
       mapId: 6,
@@ -16442,7 +16442,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 34007,
-      eventName: "イベント34007",
+      eventName: "デシリットル湾の魔物",
       typeId: 34,
       typeName: "レジェンドストーリー0",
       mapId: 7,
@@ -16460,7 +16460,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 34008,
-      eventName: "イベント34008",
+      eventName: "枯れた思考の庭",
       typeId: 34,
       typeName: "レジェンドストーリー0",
       mapId: 8,
@@ -16478,7 +16478,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 34009,
-      eventName: "イベント34009",
+      eventName: "異空行路の先に",
       typeId: 34,
       typeName: "レジェンドストーリー0",
       mapId: 9,
@@ -16496,7 +16496,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 34010,
-      eventName: "イベント34010",
+      eventName: "イトコンバレー",
       typeId: 34,
       typeName: "レジェンドストーリー0",
       mapId: 10,
@@ -16514,7 +16514,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 34011,
-      eventName: "イベント34011",
+      eventName: "カルメ桃源郷",
       typeId: 34,
       typeName: "レジェンドストーリー0",
       mapId: 11,
@@ -16532,7 +16532,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 34012,
-      eventName: "イベント34012",
+      eventName: "隠されしモルモ島",
       typeId: 34,
       typeName: "レジェンドストーリー0",
       mapId: 12,
@@ -16550,7 +16550,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 34013,
-      eventName: "イベント34013",
+      eventName: "行楽地デラ・コスパ",
       typeId: 34,
       typeName: "レジェンドストーリー0",
       mapId: 13,
@@ -16568,7 +16568,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 34014,
-      eventName: "イベント34014",
+      eventName: "ゆらぎの禁制区域",
       typeId: 34,
       typeName: "レジェンドストーリー0",
       mapId: 14,
@@ -16586,7 +16586,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 34015,
-      eventName: "イベント34015",
+      eventName: "豪華客船ハイパニック",
       typeId: 34,
       typeName: "レジェンドストーリー0",
       mapId: 15,
@@ -16604,7 +16604,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 34016,
-      eventName: "イベント34016",
+      eventName: "アンガード大魔宮",
       typeId: 34,
       typeName: "レジェンドストーリー0",
       mapId: 16,
@@ -16622,7 +16622,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 34017,
-      eventName: "イベント34017",
+      eventName: "遊園森林ガングール",
       typeId: 34,
       typeName: "レジェンドストーリー0",
       mapId: 17,
@@ -16640,7 +16640,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 34018,
-      eventName: "イベント34018",
+      eventName: "ニュータウン海淵",
       typeId: 34,
       typeName: "レジェンドストーリー0",
       mapId: 18,
@@ -16658,7 +16658,7 @@ export const stageIndexData: StageIndexData = {
     },
     {
       eventId: 34019,
-      eventName: "イベント34019",
+      eventName: "万物誘う真理の大渦",
       typeId: 34,
       typeName: "レジェンドストーリー0",
       mapId: 19,

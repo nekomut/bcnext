@@ -344,10 +344,10 @@ function EnemyTable({ enemies, showDetail, getTraitColor, getTraitIcon, getAbili
               <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">数</th>
               <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-8 whitespace-nowrap">属性</th>
               <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-8 whitespace-nowrap">能力</th>
-              <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">倍率</th>
               <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">体力</th>
               <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">攻撃力</th>
               <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">DPS</th>
+              <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">倍率</th>
               {showDetail && (
                 <>
                   <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">頻度s</th>
@@ -501,9 +501,6 @@ function EnemyRow({ enemy, showDetail, getTraitColor, getTraitIcon, getAbilityIc
           <span className="text-gray-400">-</span>
         )}
       </td>
-      <td className={`px-2 py-1 text-right ${magClass}`}>
-        {enemy.stageStats.magnification}
-      </td>
       <td className="px-2 py-1 text-right font-medium text-gray-500">
         {formatNumber(enemy.stageStats.actualHp)}
       </td>
@@ -512,6 +509,9 @@ function EnemyRow({ enemy, showDetail, getTraitColor, getTraitIcon, getAbilityIc
       </td>
       <td className="px-2 py-1 text-right font-bold text-red-600">
         {formatNumber(Math.round(enemy.stageStats.actualDps))}
+      </td>
+      <td className={`px-2 py-1 text-right ${magClass}`}>
+        {enemy.stageStats.magnification}
       </td>
       {showDetail && (
         <>

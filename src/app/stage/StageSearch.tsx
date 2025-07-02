@@ -12,8 +12,8 @@ interface StageSearchProps {
 export function StageSearch({ onSearch, initialParams, loading }: StageSearchProps) {
   const [eventId, setEventId] = useState<string>('');
   const [stageName, setStageName] = useState<string>('');
-  const [typeId, setTypeId] = useState<string>('');
-  const [sortBy, setSortBy] = useState<'id' | 'type' | 'name' | 'stages'>('id');
+  const [typeId, setTypeId] = useState<string>('34');
+  const [sortBy, setSortBy] = useState<'id-desc' | 'id-asc'>('id-desc');
 
   // 初期パラメータを設定
   useEffect(() => {
@@ -49,9 +49,9 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
   const handleClear = () => {
     setEventId('');
     setStageName('');
-    setTypeId('');
-    setSortBy('id');
-    onSearch({ sortBy: 'id' });
+    setTypeId('34');
+    setSortBy('id-desc');
+    onSearch({ typeId: 34, sortBy: 'id-desc' });
   };
 
   return (
@@ -96,24 +96,24 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
             className="w-full px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
           >
             <option value="">すべてのタイプ</option>
+            <option value="34">レジェンドストーリー0</option>
+            <option value="13">真レジェンドストーリー</option>
             <option value="0">レジェンドストーリー</option>
             <option value="1">イベントステージ</option>
-            <option value="2">コラボステージ</option>
-            <option value="3">メインステージ</option>
-            <option value="4">EXステージ</option>
-            <option value="6">ランキング道場</option>
-            <option value="7">にゃんこ塔</option>
-            <option value="11">ランキング道場</option>
-            <option value="12">チャレンジバトル</option>
-            <option value="13">真レジェンドストーリー</option>
-            <option value="14">ネコビタン</option>
-            <option value="16">レジェンドクエスト</option>
             <option value="24">強襲ステージ</option>
-            <option value="25">発掘ステージ</option>
+            <option value="11">ランキング道場</option>
+            <option value="7">にゃんこ塔</option>
+            <option value="2">コラボステージ</option>
             <option value="27">コラボ強襲ステージ</option>
+            <option value="25">発掘ステージ</option>
             <option value="31">超獣討伐</option>
-            <option value="33">地底迷宮</option>
-            <option value="34">レジェンドストーリー0</option>
+            <option value="3">メインステージ</option>
+            <option value="14">ネコビタン</option>
+            <option value="4">EXステージ</option>
+            <option value="12">チャレンジバトル</option>
+            <option value="6">ネコ道場</option>
+            {/*<option value="16">レジェンドクエスト</option>*/}
+            {/* <option value="33">グランドアビス</option> */}
           </select>
         </div>
         
@@ -122,13 +122,11 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
           <select
             id="stage-sort"
             value={sortBy}
-            onChange={(e) => setSortBy(e.target.value as 'id' | 'type' | 'name' | 'stages')}
+            onChange={(e) => setSortBy(e.target.value as 'id-desc' | 'id-asc')}
             className="w-full px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
           >
-            <option value="id">ID順</option>
-            <option value="type">タイプ順</option>
-            <option value="name">名前順</option>
-            <option value="stages">ステージ数順</option>
+            <option value="id-desc">ID降順</option>
+            <option value="id-asc">ID昇順</option>
           </select>
         </div>
       </div>

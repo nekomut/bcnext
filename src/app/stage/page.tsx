@@ -56,18 +56,16 @@ function StagePageContent() {
       // ソート
       if (params.sortBy) {
         switch (params.sortBy) {
-          case 'type':
-            results.sort((a: EventInfo, b: EventInfo) => a.typeId - b.typeId || a.eventId - b.eventId);
-            break;
-          case 'name':
-            results.sort((a: EventInfo, b: EventInfo) => a.eventName.localeCompare(b.eventName));
-            break;
-          case 'stages':
-            results.sort((a: EventInfo, b: EventInfo) => b.stageCount - a.stageCount || a.eventId - b.eventId);
-            break;
-          default:
+          case 'id-asc':
             results.sort((a: EventInfo, b: EventInfo) => a.eventId - b.eventId);
+            break;
+          case 'id-desc':
+          default:
+            results.sort((a: EventInfo, b: EventInfo) => b.eventId - a.eventId);
         }
+      } else {
+        // デフォルトはID降順
+        results.sort((a: EventInfo, b: EventInfo) => b.eventId - a.eventId);
       }
       
       return results;
@@ -132,9 +130,12 @@ function StagePageContent() {
     
     setSearchParams(params);
     
-    // 初期検索実行
+    // 初期検索実行（パラメータがない場合はデフォルト検索）
     if (params.eventId !== undefined && params.eventId !== null || params.stageName || params.typeId !== undefined && params.typeId !== null) {
       handleSearch(params);
+    } else {
+      // デフォルト検索：レジェンドストーリー0をID降順で表示
+      handleSearch({ typeId: 34, sortBy: 'id-desc' });
     }
   }, [urlSearchParams, handleSearch]);
 

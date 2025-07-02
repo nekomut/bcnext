@@ -113,7 +113,7 @@ export interface StageSearchParams {
   eventId?: number;
   stageName?: string;
   typeId?: number;
-  sortBy?: 'id' | 'type' | 'name' | 'stages';
+  sortBy?: 'id-desc' | 'id-asc';
 }
 
 export interface StageDisplayMode {

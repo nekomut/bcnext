@@ -358,12 +358,12 @@ function EnemyTable({ enemies, showDetail, getTraitColor, getTraitIcon, getAbili
               <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-8 whitespace-nowrap">範囲</th>
               <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">速度</th>
               <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">KB</th>
-              <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">お金</th>
-              <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">城連動</th>
               <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">出現s</th>
               {showDetail && <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">出現f</th>}
               <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">間隔s</th>
               {showDetail && <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">間隔f</th>}
+              <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">お金</th>
+              <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">城連動</th>
             </tr>
           </thead>
           <tbody>
@@ -555,12 +555,6 @@ function EnemyRow({ enemy, showDetail, getTraitColor, getTraitIcon, getAbilityIc
       <td className="px-2 py-1 text-right text-gray-500">
         {enemy.baseStats.kbLevel > 0 ? enemy.baseStats.kbLevel : <span className="text-gray-400">-</span>}
       </td>
-      <td className="px-2 py-1 text-right font-medium text-yellow-600">
-        {formatNumber(enemy.baseStats.money)}
-      </td>
-      <td className="px-2 py-1 text-right text-gray-500">
-        {enemy.stageStats.baseHpRatio}
-      </td>
       <td className="px-2 py-1 text-right text-gray-500">
         {enemy.stageStats.spawnTime}
       </td>
@@ -577,6 +571,12 @@ function EnemyRow({ enemy, showDetail, getTraitColor, getTraitIcon, getAbilityIc
           {enemy.stageStats.delayFrames}
         </td>
       )}
+      <td className="px-2 py-1 text-right font-medium text-yellow-600">
+        {formatNumber(enemy.baseStats.money)}
+      </td>
+      <td className="px-2 py-1 text-right text-gray-500">
+        {enemy.stageStats.baseHpRatio}
+      </td>
     </tr>
   );
 }

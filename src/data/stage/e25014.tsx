@@ -126,7 +126,8 @@ export const e25014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "123",
@@ -159,6 +160,12 @@ export const e25014Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "wave-attack": {
+                chance: 100,
+                level: 1
+            }
           }
         },
         {
@@ -192,7 +199,8 @@ export const e25014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "272",
@@ -225,7 +233,8 @@ export const e25014Data: StageData = {
             delayFrames: "1,100-1,200f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "272",
@@ -258,7 +267,8 @@ export const e25014Data: StageData = {
             delayFrames: "700-800f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "272",
@@ -291,7 +301,8 @@ export const e25014Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "498",
@@ -324,6 +335,16 @@ export const e25014Data: StageData = {
             delayFrames: "600-700f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 420,
+                omni_range: [-320, 420]
+            },
+            "toxic": {
+                chance: 100,
+                damage: 35
+            }
           }
         },
         {
@@ -357,7 +378,8 @@ export const e25014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     }
   ]

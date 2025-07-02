@@ -70,6 +70,35 @@ export const e2146Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [2000, 2000, 2000],
+                timings: [27, 34, 41]
+            },
+            "omni-strike": {
+                standing_range: 425,
+                omni_range: [-700, 425]
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            },
+            "toxic": {
+                chance: 100,
+                damage: 20
+            }
           }
         },
         {
@@ -103,7 +132,8 @@ export const e2146Data: StageData = {
             delayFrames: "100-300f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "015",
@@ -136,7 +166,8 @@ export const e2146Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -169,7 +200,8 @@ export const e2146Data: StageData = {
             delayFrames: "600-1,200f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "046",
@@ -202,7 +234,8 @@ export const e2146Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "046",
@@ -235,7 +268,8 @@ export const e2146Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "010",
@@ -268,7 +302,8 @@ export const e2146Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     }
   ]

@@ -72,6 +72,7 @@ export interface EnemyStageInfo {
     baseHpRatio: string;
     isBoss: boolean;
   };
+  abilities: Record<string, unknown>;
 }
 
 export interface EnemyData {

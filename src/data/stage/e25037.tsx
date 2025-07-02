@@ -134,7 +134,8 @@ export const e25037Data: StageData = {
             delayFrames: "20-20f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "037",
@@ -167,7 +168,8 @@ export const e25037Data: StageData = {
             delayFrames: "1,100-1,200f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "049",
@@ -200,7 +202,8 @@ export const e25037Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "022",
@@ -233,7 +236,8 @@ export const e25037Data: StageData = {
             delayFrames: "1,600-1,700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "211",
@@ -266,6 +270,12 @@ export const e25037Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "wave-attack": {
+                chance: 5,
+                level: 1
+            }
           }
         }]
     }

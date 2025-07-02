@@ -70,7 +70,8 @@ export const e2192Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "017",
@@ -103,7 +104,8 @@ export const e2192Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "018",
@@ -136,7 +138,8 @@ export const e2192Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "623",
@@ -169,6 +172,16 @@ export const e2192Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 400,
+                omni_range: [-400, 400]
+            },
+            "savage-blow": {
+                chance: 100,
+                power: 1.2
+            }
           }
         }]
     }

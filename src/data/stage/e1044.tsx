@@ -62,7 +62,8 @@ export const e1044Data: StageData = {
             delayFrames: "200-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "007",
@@ -95,7 +96,8 @@ export const e1044Data: StageData = {
             delayFrames: "50-60f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "007",
@@ -128,7 +130,8 @@ export const e1044Data: StageData = {
             delayFrames: "50-60f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "007",
@@ -161,7 +164,8 @@ export const e1044Data: StageData = {
             delayFrames: "40-60f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "007",
@@ -194,7 +198,8 @@ export const e1044Data: StageData = {
             delayFrames: "180-540f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "126",
@@ -227,6 +232,31 @@ export const e1044Data: StageData = {
             delayFrames: "2-20f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "freeze": {
+                chance: 100,
+                duration_f: 60,
+                duration_s: 2.0
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            },
+            "immune-surge": {
+                enabled: true
+            }
           }
         }]
     }

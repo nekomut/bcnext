@@ -70,6 +70,14 @@ export const e34000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "50%",
             isBoss: true
+          },
+          abilities: {
+            "immune-freeze": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -103,6 +111,14 @@ export const e34000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "25%",
             isBoss: false
+          },
+          abilities: {
+            "immune-freeze": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -136,6 +152,30 @@ export const e34000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 300,
+                ld_range: [300, 4300]
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            },
+            "immune-surge": {
+                enabled: true
+            }
           }
         },
         {
@@ -169,6 +209,14 @@ export const e34000Data: StageData = {
             delayFrames: "400-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "immune-freeze": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -202,6 +250,39 @@ export const e34000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [10000, 10000, 15000],
+                timings: [10, 21, 32]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 251]
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "curse": {
+                chance: 100,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "surge": {
+                chance: 50,
+                distance_start: 150,
+                distance_end: 750,
+                level: 2
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -235,6 +316,25 @@ export const e34000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 250,
+                omni_range: [-50, 250]
+            },
+            "wave-attack": {
+                chance: 10,
+                level: 2
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -268,6 +368,14 @@ export const e34000Data: StageData = {
             delayFrames: "400-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "immune-freeze": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -301,6 +409,21 @@ export const e34000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 33,
+                power: 150
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -334,6 +457,14 @@ export const e34000Data: StageData = {
             delayFrames: "400-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "immune-freeze": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -367,6 +498,32 @@ export const e34000Data: StageData = {
             delayFrames: "300-300f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [6500, 6500, 6500],
+                timings: [10, 21, 32]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 251]
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "savage-blow": {
+                chance: 100,
+                power: 1.05
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -400,6 +557,14 @@ export const e34000Data: StageData = {
             delayFrames: "400-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "immune-freeze": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         }]
     }

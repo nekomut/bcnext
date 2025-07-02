@@ -37,7 +37,7 @@ export function StageDisplay({ stageData }: StageDisplayProps) {
       'エ': 'traitAlien',
       'ゾ': 'traitZombie',
       '古': 'traitRelic',
-      '悪': 'traitEvil'
+      '悪': 'traitAku'
     };
     const iconKey = traitIconMap[trait];
     return iconKey && icons[iconKey as keyof typeof icons] ? icons[iconKey as keyof typeof icons] : null;
@@ -57,6 +57,51 @@ export function StageDisplay({ stageData }: StageDisplayProps) {
       '悪': 'text-purple-500'
     };
     return colors[trait] || 'text-gray-600';
+  };
+
+  const getAbilityIcon = (abilityName: string): string | null => {
+    const abilityIconMap: Record<string, string> = {
+      'knockback': 'abilityKnockback',
+      'freeze': 'abilityFreeze',
+      'slow': 'abilitySlow',
+      'weaken': 'abilityWeaken',
+      'curse': 'abilityCurse',
+      'toxic': 'abilityToxic',
+      'surge': 'abilitySurge',
+      'wave-attack': 'abilityWave',
+      'mini-wave': 'abilityMiniWave',
+      'savage-blow': 'abilityBerserk',
+      'critical': 'abilityCritical',
+      'barrier-breaker': 'abilityBarrierBreaker',
+      'shield-piercer': 'abilityShieldPiercer',
+      'warp': 'abilityWarp',
+      'strengthen': 'abilityStrengthen',
+      'survive': 'abilitySurvive',
+      'long-distance': 'abilityLongDistance',
+      'omni-strike': 'abilityOmniStrike',
+      'multi-hit': 'abilityMultiHit',
+      'burrow': 'abilityBurrow',
+      'revive': 'abilityRevive',
+      'barrier': 'abilityBarrier',
+      'aku-shield': 'abilityShield',
+      'death-surge': 'abilityDeathSurge',
+      'immune-surge': 'abilityImmuneSurge',
+      'immune-knockback': 'abilityImmuneKnockback',
+      'immune-slow': 'abilityImmuneSlow',
+      'immune-freeze': 'abilityImmuneFreeze',
+      'immune-waves': 'abilityImmuneWave',
+      'immune-weaken': 'abilityImmuneWeaken',
+      'immune-curse': 'abilityImmuneCurse',
+      'counter-surge': 'abilityCounterSurge',
+      'immune-attacks': 'abilityDodgeAttack',
+      'base-destroyer': 'abilityBaseDestroyer',
+      'explosion': 'abilityExplosion',
+      'behemoth': 'abilityBehemoth',
+      'colossus': 'abilityColossus',
+      'sage': 'abilitySage',
+    };
+    const iconKey = abilityIconMap[abilityName];
+    return iconKey && icons[iconKey as keyof typeof icons] ? icons[iconKey as keyof typeof icons] : null;
   };
 
   return (
@@ -133,6 +178,7 @@ export function StageDisplay({ stageData }: StageDisplayProps) {
           showDetail={showDetail}
           getTraitColor={getTraitColor}
           getTraitIcon={getTraitIcon}
+          getAbilityIcon={getAbilityIcon}
           formatNumber={formatNumber}
         />
 
@@ -260,10 +306,11 @@ interface EnemyTableProps {
   showDetail: boolean;
   getTraitColor: (trait: string) => string;
   getTraitIcon: (trait: string) => string | null;
+  getAbilityIcon: (abilityName: string) => string | null;
   formatNumber: (value: number | string) => string;
 }
 
-function EnemyTable({ enemies, showDetail, getTraitColor, getTraitIcon, formatNumber }: EnemyTableProps) {
+function EnemyTable({ enemies, showDetail, getTraitColor, getTraitIcon, getAbilityIcon, formatNumber }: EnemyTableProps) {
   if (enemies.length === 0) {
     return (
       <div>
@@ -295,6 +342,7 @@ function EnemyTable({ enemies, showDetail, getTraitColor, getTraitIcon, formatNu
               <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">ID</th>
               <th className="px-0.5 py-1 text-left font-bold text-gray-500 tracking-wider min-w-12 whitespace-nowrap">敵名</th>
               <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-8 whitespace-nowrap">属性</th>
+              <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-8 whitespace-nowrap">能力・効果</th>
               <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">倍率</th>
               <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">体力</th>
               <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">攻撃力</th>
@@ -326,6 +374,7 @@ function EnemyTable({ enemies, showDetail, getTraitColor, getTraitIcon, formatNu
                 showDetail={showDetail}
                 getTraitColor={getTraitColor}
                 getTraitIcon={getTraitIcon}
+                getAbilityIcon={getAbilityIcon}
                 formatNumber={formatNumber}
               />
             ))}
@@ -341,10 +390,11 @@ interface EnemyRowProps {
   showDetail: boolean;
   getTraitColor: (trait: string) => string;
   getTraitIcon: (trait: string) => string | null;
+  getAbilityIcon: (abilityName: string) => string | null;
   formatNumber: (value: number | string) => string;
 }
 
-function EnemyRow({ enemy, showDetail, getTraitColor, getTraitIcon, formatNumber }: EnemyRowProps) {
+function EnemyRow({ enemy, showDetail, getTraitColor, getTraitIcon, getAbilityIcon, formatNumber }: EnemyRowProps) {
   const isBoss = enemy.stageStats.isBoss;
   const nameClass = isBoss ? 'text-red-500 font-bold' : 'text-gray-500';
   const displayName = isBoss ? `${enemy.enemyName}*` : enemy.enemyName;
@@ -372,13 +422,13 @@ function EnemyRow({ enemy, showDetail, getTraitColor, getTraitIcon, formatNumber
         </div>
       </td>
       <td className="px-2 py-1 text-center w-16 min-w-16">
-        {enemy.traits.length > 0 ? (
+        {(enemy.traits.length > 0 || Object.keys(enemy.abilities).some(ability => ['behemoth', 'colossus', 'sage'].includes(ability))) ? (
           <div className="flex flex-wrap gap-0.5 justify-center">
             {enemy.traits.map((trait, index) => {
               const iconData = getTraitIcon(trait);
               return iconData ? (
                 <Image
-                  key={index}
+                  key={`trait-${index}`}
                   src={`data:image/png;base64,${iconData}`}
                   alt={trait}
                   className="w-4 h-4 flex-shrink-0"
@@ -387,11 +437,59 @@ function EnemyRow({ enemy, showDetail, getTraitColor, getTraitIcon, formatNumber
                   title={trait}
                 />
               ) : (
-                <span key={index} className={`${getTraitColor(trait)} inline-flex items-center px-1 py-0.5 rounded font-medium`}>
+                <span key={`trait-${index}`} className={`${getTraitColor(trait)} inline-flex items-center px-1 py-0.5 rounded font-medium`}>
                   {trait}
                 </span>
               );
             })}
+            {Object.keys(enemy.abilities)
+              .filter(abilityName => ['behemoth', 'colossus', 'sage'].includes(abilityName))
+              .map((abilityName, index) => {
+                const iconData = getAbilityIcon(abilityName);
+                return iconData ? (
+                  <Image
+                    key={`ability-${index}`}
+                    src={`data:image/png;base64,${iconData}`}
+                    alt={abilityName}
+                    className="w-4 h-4 flex-shrink-0"
+                    width={16}
+                    height={16}
+                    title={abilityName}
+                  />
+                ) : (
+                  <span key={`ability-${index}`} className="inline-flex items-center px-1 py-0.5 rounded text-xs font-medium bg-purple-100 text-purple-800">
+                    {abilityName}
+                  </span>
+                );
+              })}
+          </div>
+        ) : (
+          <span className="text-gray-400">-</span>
+        )}
+      </td>
+      <td className="px-2 py-1 text-center w-16 min-w-16">
+        {Object.keys(enemy.abilities).filter(abilityName => abilityName !== 'multi-hit' && abilityName !== 'burrow' && abilityName !== 'revive' && abilityName !== 'behemoth' && abilityName !== 'colossus' && abilityName !== 'sage').length > 0 ? (
+          <div className="flex flex-wrap gap-0.5 justify-center">
+            {Object.keys(enemy.abilities)
+              .filter(abilityName => abilityName !== 'multi-hit' && abilityName !== 'burrow' && abilityName !== 'revive' && abilityName !== 'behemoth' && abilityName !== 'colossus' && abilityName !== 'sage')
+              .map((abilityName, index) => {
+                const iconData = getAbilityIcon(abilityName);
+                return iconData ? (
+                  <Image
+                    key={index}
+                    src={`data:image/png;base64,${iconData}`}
+                    alt={abilityName}
+                    className="w-4 h-4 flex-shrink-0"
+                    width={16}
+                    height={16}
+                    title={abilityName}
+                  />
+                ) : (
+                  <span key={index} className="inline-flex items-center px-1 py-0.5 rounded text-xs font-medium bg-purple-100 text-purple-800">
+                    {abilityName}
+                  </span>
+                );
+              })}
           </div>
         ) : (
           <span className="text-gray-400">-</span>

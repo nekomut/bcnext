@@ -134,6 +134,18 @@ export const e25047Data: StageData = {
             delayFrames: "400-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "burrow": {
+                times: 1,
+                distance: 500
+            },
+            "revive": {
+                times: 1,
+                duration_f: 240,
+                duration_s: 8.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -167,6 +179,18 @@ export const e25047Data: StageData = {
             delayFrames: "600-700f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "burrow": {
+                times: 1,
+                distance: 1125
+            },
+            "revive": {
+                times: 1,
+                duration_f: 180,
+                duration_s: 6.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -200,6 +224,18 @@ export const e25047Data: StageData = {
             delayFrames: "50-150f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "burrow": {
+                times: 1,
+                distance: 500
+            },
+            "revive": {
+                times: 1,
+                duration_f: 240,
+                duration_s: 8.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -233,6 +269,18 @@ export const e25047Data: StageData = {
             delayFrames: "320-640f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "burrow": {
+                times: 2,
+                distance: 500
+            },
+            "revive": {
+                times: 1,
+                duration_f: 240,
+                duration_s: 8.0,
+                hp_ratio: 100
+            }
           }
         },
         {
@@ -266,6 +314,18 @@ export const e25047Data: StageData = {
             delayFrames: "160-320f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "burrow": {
+                times: 2,
+                distance: 500
+            },
+            "revive": {
+                times: 1,
+                duration_f: 240,
+                duration_s: 8.0,
+                hp_ratio: 100
+            }
           }
         },
         {
@@ -299,6 +359,18 @@ export const e25047Data: StageData = {
             delayFrames: "80-160f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "burrow": {
+                times: 2,
+                distance: 500
+            },
+            "revive": {
+                times: 1,
+                duration_f: 240,
+                duration_s: 8.0,
+                hp_ratio: 100
+            }
           }
         },
         {
@@ -332,6 +404,22 @@ export const e25047Data: StageData = {
             delayFrames: "240-480f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [8500, 8500],
+                timings: [4, 13]
+            },
+            "burrow": {
+                times: 1,
+                distance: 875
+            },
+            "revive": {
+                times: 1,
+                duration_f: 600,
+                duration_s: 20.0,
+                hp_ratio: 100
+            }
           }
         },
         {
@@ -365,6 +453,22 @@ export const e25047Data: StageData = {
             delayFrames: "120-240f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [8500, 8500],
+                timings: [4, 13]
+            },
+            "burrow": {
+                times: 1,
+                distance: 875
+            },
+            "revive": {
+                times: 1,
+                duration_f: 600,
+                duration_s: 20.0,
+                hp_ratio: 100
+            }
           }
         },
         {
@@ -398,6 +502,18 @@ export const e25047Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "burrow": {
+                times: -1,
+                distance: 500
+            },
+            "revive": {
+                times: 1,
+                duration_f: 240,
+                duration_s: 8.0,
+                hp_ratio: 100
+            }
           }
         },
         {
@@ -431,6 +547,17 @@ export const e25047Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "knockback": {
+                chance: 100
+            },
+            "revive": {
+                times: 1,
+                duration_f: 120,
+                duration_s: 4.0,
+                hp_ratio: 100
+            }
           }
         }]
     }

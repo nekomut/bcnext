@@ -62,6 +62,12 @@ export const e1394Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 75,
+                power: 100
+            }
           }
         },
         {
@@ -95,6 +101,11 @@ export const e1394Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "barrier": {
+                hp: 266000
+            }
           }
         },
         {
@@ -128,6 +139,13 @@ export const e1394Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 90,
+                duration_s: 3.0
+            }
           }
         },
         {
@@ -161,6 +179,17 @@ export const e1394Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "freeze": {
+                chance: 75,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "strengthen": {
+                trigger_hp: 50,
+                power: 100
+            }
           }
         },
         {
@@ -194,6 +223,11 @@ export const e1394Data: StageData = {
             delayFrames: "2,000-2,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "barrier": {
+                hp: 6000
+            }
           }
         },
         {
@@ -227,6 +261,11 @@ export const e1394Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "barrier": {
+                hp: 6000
+            }
           }
         }]
     }

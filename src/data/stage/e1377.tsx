@@ -62,6 +62,18 @@ export const e1377Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 800,
+                omni_range: [-200, 800]
+            },
+            "knockback": {
+                chance: 100
+            },
+            "immune-freeze": {
+                enabled: true
+            }
           }
         },
         {
@@ -95,7 +107,8 @@ export const e1377Data: StageData = {
             delayFrames: "880-960f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "051",
@@ -128,7 +141,8 @@ export const e1377Data: StageData = {
             delayFrames: "1,760-1,800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "118",
@@ -161,7 +175,8 @@ export const e1377Data: StageData = {
             delayFrames: "160-240f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "046",
@@ -194,7 +209,8 @@ export const e1377Data: StageData = {
             delayFrames: "60-120f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "118",
@@ -227,7 +243,8 @@ export const e1377Data: StageData = {
             delayFrames: "30-100f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "046",
@@ -260,7 +277,8 @@ export const e1377Data: StageData = {
             delayFrames: "100-180f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "118",
@@ -293,7 +311,8 @@ export const e1377Data: StageData = {
             delayFrames: "200-280f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     }
   ]

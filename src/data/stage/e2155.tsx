@@ -70,6 +70,28 @@ export const e2155Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [4000, 4000],
+                timings: [3, 18]
+            },
+            "omni-strike": {
+                standing_range: 260,
+                omni_range: [-780, 260]
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            }
           }
         },
         {
@@ -103,7 +125,8 @@ export const e2155Data: StageData = {
             delayFrames: "900-900f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     }
   ]

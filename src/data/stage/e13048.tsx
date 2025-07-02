@@ -62,6 +62,26 @@ export const e13048Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "immune-waves": {
+                enabled: true
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            },
+            "immune-surge": {
+                enabled: true
+            }
           }
         },
         {
@@ -95,6 +115,34 @@ export const e13048Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [80000, 80000],
+                timings: [60, 67]
+            },
+            "omni-strike": {
+                standing_range: 450,
+                omni_range: [-450, 450]
+            },
+            "strengthen": {
+                trigger_hp: 33,
+                power: 100
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "curse": {
+                chance: 100,
+                duration_f: 999,
+                duration_s: 33.3
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -128,7 +176,8 @@ export const e13048Data: StageData = {
             delayFrames: "60-120f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "412",
@@ -161,6 +210,13 @@ export const e13048Data: StageData = {
             delayFrames: "120-180f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "curse": {
+                chance: 100,
+                duration_f: 150,
+                duration_s: 5.0
+            }
           }
         },
         {
@@ -194,6 +250,13 @@ export const e13048Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "curse": {
+                chance: 35,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -227,6 +290,17 @@ export const e13048Data: StageData = {
             delayFrames: "1,300-1,500f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -260,6 +334,13 @@ export const e13048Data: StageData = {
             delayFrames: "2,300-2,300f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "curse": {
+                chance: 100,
+                duration_f: 150,
+                duration_s: 5.0
+            }
           }
         },
         {
@@ -293,6 +374,13 @@ export const e13048Data: StageData = {
             delayFrames: "2,300-2,300f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "curse": {
+                chance: 100,
+                duration_f: 150,
+                duration_s: 5.0
+            }
           }
         },
         {
@@ -326,6 +414,12 @@ export const e13048Data: StageData = {
             delayFrames: "2,300-2,500f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "mini-wave": {
+                chance: 100,
+                level: 5
+            }
           }
         },
         {
@@ -359,6 +453,13 @@ export const e13048Data: StageData = {
             delayFrames: "2,300-2,300f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "curse": {
+                chance: 100,
+                duration_f: 150,
+                duration_s: 5.0
+            }
           }
         },
         {
@@ -392,7 +493,8 @@ export const e13048Data: StageData = {
             delayFrames: "20-30f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "042",
@@ -425,7 +527,8 @@ export const e13048Data: StageData = {
             delayFrames: "20-30f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "042",
@@ -458,7 +561,8 @@ export const e13048Data: StageData = {
             delayFrames: "20-30f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "042",
@@ -491,7 +595,8 @@ export const e13048Data: StageData = {
             delayFrames: "20-30f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "042",
@@ -524,7 +629,8 @@ export const e13048Data: StageData = {
             delayFrames: "2,000-2,200f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "412",
@@ -557,6 +663,13 @@ export const e13048Data: StageData = {
             delayFrames: "60-120f",
             baseHpRatio: "75%",
             isBoss: false
+          },
+          abilities: {
+            "curse": {
+                chance: 100,
+                duration_f: 150,
+                duration_s: 5.0
+            }
           }
         }]
     }

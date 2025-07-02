@@ -62,6 +62,16 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -95,7 +105,8 @@ export const e24027Data: StageData = {
             delayFrames: "360-560f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "048",
@@ -128,7 +139,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,760-1,840f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "040",
@@ -161,7 +173,8 @@ export const e24027Data: StageData = {
             delayFrames: "2,600-2,600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -216,6 +229,16 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -249,7 +272,8 @@ export const e24027Data: StageData = {
             delayFrames: "360-560f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "048",
@@ -282,7 +306,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,760-1,840f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "040",
@@ -315,7 +340,8 @@ export const e24027Data: StageData = {
             delayFrames: "2,600-2,600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -370,6 +396,16 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -403,7 +439,8 @@ export const e24027Data: StageData = {
             delayFrames: "360-560f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "048",
@@ -436,7 +473,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,760-1,840f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "040",
@@ -469,7 +507,8 @@ export const e24027Data: StageData = {
             delayFrames: "2,600-2,600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -524,6 +563,16 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -557,7 +606,8 @@ export const e24027Data: StageData = {
             delayFrames: "360-560f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "048",
@@ -590,7 +640,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,760-1,840f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "040",
@@ -623,7 +674,8 @@ export const e24027Data: StageData = {
             delayFrames: "2,600-2,600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -678,6 +730,16 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -711,7 +773,8 @@ export const e24027Data: StageData = {
             delayFrames: "360-560f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "048",
@@ -744,7 +807,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,760-1,840f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "040",
@@ -777,7 +841,8 @@ export const e24027Data: StageData = {
             delayFrames: "2,600-2,600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -832,6 +897,16 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -865,7 +940,8 @@ export const e24027Data: StageData = {
             delayFrames: "360-560f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "048",
@@ -898,7 +974,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,760-1,840f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "040",
@@ -931,7 +1008,8 @@ export const e24027Data: StageData = {
             delayFrames: "2,600-2,600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -986,6 +1064,16 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -1019,7 +1107,8 @@ export const e24027Data: StageData = {
             delayFrames: "360-560f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "048",
@@ -1052,7 +1141,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,760-1,840f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "040",
@@ -1085,7 +1175,8 @@ export const e24027Data: StageData = {
             delayFrames: "2,600-2,600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -1140,6 +1231,16 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -1173,7 +1274,8 @@ export const e24027Data: StageData = {
             delayFrames: "360-560f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "048",
@@ -1206,7 +1308,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,760-1,840f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "040",
@@ -1239,7 +1342,8 @@ export const e24027Data: StageData = {
             delayFrames: "2,600-2,600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -1294,6 +1398,16 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -1327,7 +1441,8 @@ export const e24027Data: StageData = {
             delayFrames: "360-560f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "048",
@@ -1360,7 +1475,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,760-1,840f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "040",
@@ -1393,7 +1509,8 @@ export const e24027Data: StageData = {
             delayFrames: "2,600-2,600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -1448,6 +1565,16 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -1481,7 +1608,8 @@ export const e24027Data: StageData = {
             delayFrames: "360-560f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "048",
@@ -1514,7 +1642,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,760-1,840f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "040",
@@ -1547,7 +1676,8 @@ export const e24027Data: StageData = {
             delayFrames: "2,600-2,600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -1602,6 +1732,11 @@ export const e24027Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -1635,6 +1770,16 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -1668,7 +1813,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,160-1,360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "043",
@@ -1701,7 +1847,8 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "468",
@@ -1734,6 +1881,22 @@ export const e24027Data: StageData = {
             delayFrames: "1,360-1,480f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [8500, 8500],
+                timings: [4, 13]
+            },
+            "burrow": {
+                times: 1,
+                distance: 875
+            },
+            "revive": {
+                times: 1,
+                duration_f: 600,
+                duration_s: 20.0,
+                hp_ratio: 100
+            }
           }
         },
         {
@@ -1767,7 +1930,8 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "037",
@@ -1800,7 +1964,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,160-1,360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "468",
@@ -1833,6 +1998,22 @@ export const e24027Data: StageData = {
             delayFrames: "1,360-1,480f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [8500, 8500],
+                timings: [4, 13]
+            },
+            "burrow": {
+                times: 1,
+                distance: 875
+            },
+            "revive": {
+                times: 1,
+                duration_f: 600,
+                duration_s: 20.0,
+                hp_ratio: 100
+            }
           }
         }]
     },
@@ -1888,6 +2069,11 @@ export const e24027Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -1921,6 +2107,16 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -1954,7 +2150,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,160-1,360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "043",
@@ -1987,7 +2184,8 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "468",
@@ -2020,6 +2218,22 @@ export const e24027Data: StageData = {
             delayFrames: "1,360-1,480f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [8500, 8500],
+                timings: [4, 13]
+            },
+            "burrow": {
+                times: 1,
+                distance: 875
+            },
+            "revive": {
+                times: 1,
+                duration_f: 600,
+                duration_s: 20.0,
+                hp_ratio: 100
+            }
           }
         },
         {
@@ -2053,7 +2267,8 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "037",
@@ -2086,7 +2301,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,160-1,360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "468",
@@ -2119,6 +2335,22 @@ export const e24027Data: StageData = {
             delayFrames: "1,360-1,480f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [8500, 8500],
+                timings: [4, 13]
+            },
+            "burrow": {
+                times: 1,
+                distance: 875
+            },
+            "revive": {
+                times: 1,
+                duration_f: 600,
+                duration_s: 20.0,
+                hp_ratio: 100
+            }
           }
         }]
     },
@@ -2174,6 +2406,11 @@ export const e24027Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -2207,6 +2444,16 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -2240,7 +2487,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,160-1,360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "043",
@@ -2273,7 +2521,8 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "468",
@@ -2306,6 +2555,22 @@ export const e24027Data: StageData = {
             delayFrames: "1,360-1,480f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [8500, 8500],
+                timings: [4, 13]
+            },
+            "burrow": {
+                times: 1,
+                distance: 875
+            },
+            "revive": {
+                times: 1,
+                duration_f: 600,
+                duration_s: 20.0,
+                hp_ratio: 100
+            }
           }
         },
         {
@@ -2339,7 +2604,8 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "037",
@@ -2372,7 +2638,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,160-1,360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "468",
@@ -2405,6 +2672,22 @@ export const e24027Data: StageData = {
             delayFrames: "1,360-1,480f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [8500, 8500],
+                timings: [4, 13]
+            },
+            "burrow": {
+                times: 1,
+                distance: 875
+            },
+            "revive": {
+                times: 1,
+                duration_f: 600,
+                duration_s: 20.0,
+                hp_ratio: 100
+            }
           }
         }]
     },
@@ -2460,6 +2743,11 @@ export const e24027Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -2493,6 +2781,16 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -2526,7 +2824,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,160-1,360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "043",
@@ -2559,7 +2858,8 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "468",
@@ -2592,6 +2892,22 @@ export const e24027Data: StageData = {
             delayFrames: "1,360-1,480f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [8500, 8500],
+                timings: [4, 13]
+            },
+            "burrow": {
+                times: 1,
+                distance: 875
+            },
+            "revive": {
+                times: 1,
+                duration_f: 600,
+                duration_s: 20.0,
+                hp_ratio: 100
+            }
           }
         },
         {
@@ -2625,7 +2941,8 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "037",
@@ -2658,7 +2975,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,160-1,360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "468",
@@ -2691,6 +3009,22 @@ export const e24027Data: StageData = {
             delayFrames: "1,360-1,480f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [8500, 8500],
+                timings: [4, 13]
+            },
+            "burrow": {
+                times: 1,
+                distance: 875
+            },
+            "revive": {
+                times: 1,
+                duration_f: 600,
+                duration_s: 20.0,
+                hp_ratio: 100
+            }
           }
         }]
     },
@@ -2746,6 +3080,11 @@ export const e24027Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -2779,6 +3118,16 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -2812,7 +3161,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,160-1,360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "043",
@@ -2845,7 +3195,8 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "468",
@@ -2878,6 +3229,22 @@ export const e24027Data: StageData = {
             delayFrames: "1,360-1,480f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [8500, 8500],
+                timings: [4, 13]
+            },
+            "burrow": {
+                times: 1,
+                distance: 875
+            },
+            "revive": {
+                times: 1,
+                duration_f: 600,
+                duration_s: 20.0,
+                hp_ratio: 100
+            }
           }
         },
         {
@@ -2911,7 +3278,8 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "037",
@@ -2944,7 +3312,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,160-1,360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "468",
@@ -2977,6 +3346,22 @@ export const e24027Data: StageData = {
             delayFrames: "1,360-1,480f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [8500, 8500],
+                timings: [4, 13]
+            },
+            "burrow": {
+                times: 1,
+                distance: 875
+            },
+            "revive": {
+                times: 1,
+                duration_f: 600,
+                duration_s: 20.0,
+                hp_ratio: 100
+            }
           }
         }]
     },
@@ -3032,6 +3417,11 @@ export const e24027Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -3065,6 +3455,16 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -3098,7 +3498,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,160-1,360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "043",
@@ -3131,7 +3532,8 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "468",
@@ -3164,6 +3566,22 @@ export const e24027Data: StageData = {
             delayFrames: "1,360-1,480f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [8500, 8500],
+                timings: [4, 13]
+            },
+            "burrow": {
+                times: 1,
+                distance: 875
+            },
+            "revive": {
+                times: 1,
+                duration_f: 600,
+                duration_s: 20.0,
+                hp_ratio: 100
+            }
           }
         },
         {
@@ -3197,7 +3615,8 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "037",
@@ -3230,7 +3649,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,160-1,360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "468",
@@ -3263,6 +3683,22 @@ export const e24027Data: StageData = {
             delayFrames: "1,360-1,480f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [8500, 8500],
+                timings: [4, 13]
+            },
+            "burrow": {
+                times: 1,
+                distance: 875
+            },
+            "revive": {
+                times: 1,
+                duration_f: 600,
+                duration_s: 20.0,
+                hp_ratio: 100
+            }
           }
         }]
     },
@@ -3318,6 +3754,11 @@ export const e24027Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -3351,6 +3792,16 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -3384,7 +3835,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,160-1,360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "043",
@@ -3417,7 +3869,8 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "468",
@@ -3450,6 +3903,22 @@ export const e24027Data: StageData = {
             delayFrames: "1,360-1,480f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [8500, 8500],
+                timings: [4, 13]
+            },
+            "burrow": {
+                times: 1,
+                distance: 875
+            },
+            "revive": {
+                times: 1,
+                duration_f: 600,
+                duration_s: 20.0,
+                hp_ratio: 100
+            }
           }
         },
         {
@@ -3483,7 +3952,8 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "037",
@@ -3516,7 +3986,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,160-1,360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "468",
@@ -3549,6 +4020,22 @@ export const e24027Data: StageData = {
             delayFrames: "1,360-1,480f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [8500, 8500],
+                timings: [4, 13]
+            },
+            "burrow": {
+                times: 1,
+                distance: 875
+            },
+            "revive": {
+                times: 1,
+                duration_f: 600,
+                duration_s: 20.0,
+                hp_ratio: 100
+            }
           }
         }]
     },
@@ -3604,6 +4091,11 @@ export const e24027Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -3637,6 +4129,16 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -3670,7 +4172,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,160-1,360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "043",
@@ -3703,7 +4206,8 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "468",
@@ -3736,6 +4240,22 @@ export const e24027Data: StageData = {
             delayFrames: "1,360-1,480f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [8500, 8500],
+                timings: [4, 13]
+            },
+            "burrow": {
+                times: 1,
+                distance: 875
+            },
+            "revive": {
+                times: 1,
+                duration_f: 600,
+                duration_s: 20.0,
+                hp_ratio: 100
+            }
           }
         },
         {
@@ -3769,7 +4289,8 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "037",
@@ -3802,7 +4323,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,160-1,360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "468",
@@ -3835,6 +4357,22 @@ export const e24027Data: StageData = {
             delayFrames: "1,360-1,480f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [8500, 8500],
+                timings: [4, 13]
+            },
+            "burrow": {
+                times: 1,
+                distance: 875
+            },
+            "revive": {
+                times: 1,
+                duration_f: 600,
+                duration_s: 20.0,
+                hp_ratio: 100
+            }
           }
         }]
     },
@@ -3890,6 +4428,11 @@ export const e24027Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -3923,6 +4466,16 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -3956,7 +4509,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,160-1,360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "043",
@@ -3989,7 +4543,8 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "468",
@@ -4022,6 +4577,22 @@ export const e24027Data: StageData = {
             delayFrames: "1,360-1,480f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [8500, 8500],
+                timings: [4, 13]
+            },
+            "burrow": {
+                times: 1,
+                distance: 875
+            },
+            "revive": {
+                times: 1,
+                duration_f: 600,
+                duration_s: 20.0,
+                hp_ratio: 100
+            }
           }
         },
         {
@@ -4055,7 +4626,8 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "037",
@@ -4088,7 +4660,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,160-1,360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "468",
@@ -4121,6 +4694,22 @@ export const e24027Data: StageData = {
             delayFrames: "1,360-1,480f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [8500, 8500],
+                timings: [4, 13]
+            },
+            "burrow": {
+                times: 1,
+                distance: 875
+            },
+            "revive": {
+                times: 1,
+                duration_f: 600,
+                duration_s: 20.0,
+                hp_ratio: 100
+            }
           }
         }]
     },
@@ -4176,6 +4765,11 @@ export const e24027Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -4209,6 +4803,16 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -4242,7 +4846,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,160-1,360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "043",
@@ -4275,7 +4880,8 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "468",
@@ -4308,6 +4914,22 @@ export const e24027Data: StageData = {
             delayFrames: "1,360-1,480f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [8500, 8500],
+                timings: [4, 13]
+            },
+            "burrow": {
+                times: 1,
+                distance: 875
+            },
+            "revive": {
+                times: 1,
+                duration_f: 600,
+                duration_s: 20.0,
+                hp_ratio: 100
+            }
           }
         },
         {
@@ -4341,7 +4963,8 @@ export const e24027Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "037",
@@ -4374,7 +4997,8 @@ export const e24027Data: StageData = {
             delayFrames: "1,160-1,360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "468",
@@ -4407,6 +5031,22 @@ export const e24027Data: StageData = {
             delayFrames: "1,360-1,480f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [8500, 8500],
+                timings: [4, 13]
+            },
+            "burrow": {
+                times: 1,
+                distance: 875
+            },
+            "revive": {
+                times: 1,
+                duration_f: 600,
+                duration_s: 20.0,
+                hp_ratio: 100
+            }
           }
         }]
     }

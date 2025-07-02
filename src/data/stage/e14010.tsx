@@ -78,7 +78,8 @@ export const e14010Data: StageData = {
             delayFrames: "60-300f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "051",
@@ -111,7 +112,8 @@ export const e14010Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "90%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "051",
@@ -144,7 +146,8 @@ export const e14010Data: StageData = {
             delayFrames: "20-40f",
             baseHpRatio: "90%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "046",
@@ -177,7 +180,8 @@ export const e14010Data: StageData = {
             delayFrames: "60-240f",
             baseHpRatio: "90%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "046",
@@ -210,7 +214,8 @@ export const e14010Data: StageData = {
             delayFrames: "2-10f",
             baseHpRatio: "90%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "149",
@@ -243,7 +248,8 @@ export const e14010Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "90%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "046",
@@ -276,7 +282,8 @@ export const e14010Data: StageData = {
             delayFrames: "20-60f",
             baseHpRatio: "90%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "050",
@@ -309,7 +316,8 @@ export const e14010Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "90%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "050",
@@ -342,7 +350,8 @@ export const e14010Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "90%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "124",
@@ -375,7 +384,8 @@ export const e14010Data: StageData = {
             delayFrames: "1,600-2,400f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "053",
@@ -408,7 +418,8 @@ export const e14010Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "100%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "052",
@@ -441,7 +452,8 @@ export const e14010Data: StageData = {
             delayFrames: "20-60f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "046",
@@ -474,7 +486,8 @@ export const e14010Data: StageData = {
             delayFrames: "360-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "046",
@@ -507,7 +520,8 @@ export const e14010Data: StageData = {
             delayFrames: "20-60f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "124",
@@ -540,7 +554,8 @@ export const e14010Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "021",
@@ -573,7 +588,8 @@ export const e14010Data: StageData = {
             delayFrames: "27,000-27,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     }
   ]

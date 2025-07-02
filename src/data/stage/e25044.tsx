@@ -134,6 +134,14 @@ export const e25044Data: StageData = {
             delayFrames: "700-900f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            }
           }
         },
         {
@@ -167,7 +175,8 @@ export const e25044Data: StageData = {
             delayFrames: "30-30f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "254",
@@ -200,6 +209,14 @@ export const e25044Data: StageData = {
             delayFrames: "30-30f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            }
           }
         },
         {
@@ -233,6 +250,14 @@ export const e25044Data: StageData = {
             delayFrames: "30-30f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            }
           }
         },
         {
@@ -266,7 +291,8 @@ export const e25044Data: StageData = {
             delayFrames: "900-1,100f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "113",
@@ -299,7 +325,8 @@ export const e25044Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "160",
@@ -332,6 +359,13 @@ export const e25044Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 25,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -365,6 +399,18 @@ export const e25044Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 340,
+                omni_range: [-340, 340]
+            },
+            "weaken": {
+                chance: 100,
+                power: 150,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -398,6 +444,13 @@ export const e25044Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 90,
+                duration_s: 3.0
+            }
           }
         }]
     }

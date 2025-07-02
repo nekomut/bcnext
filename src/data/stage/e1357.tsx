@@ -62,7 +62,8 @@ export const e1357Data: StageData = {
             delayFrames: "1,400-1,600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "654",
@@ -95,6 +96,22 @@ export const e1357Data: StageData = {
             delayFrames: "1,200-1,400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [13000, 13000, 13000],
+                timings: [12, 16, 20]
+            },
+            "omni-strike": {
+                standing_range: 230,
+                omni_range: [-70, 230]
+            },
+            "counter-surge": {
+                enabled: true
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -128,6 +145,14 @@ export const e1357Data: StageData = {
             delayFrames: "800-1,100f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 70000
+            },
+            "counter-surge": {
+                enabled: true
+            }
           }
         },
         {
@@ -161,7 +186,8 @@ export const e1357Data: StageData = {
             delayFrames: "1,600-1,800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "654",
@@ -194,6 +220,22 @@ export const e1357Data: StageData = {
             delayFrames: "1,000-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [13000, 13000, 13000],
+                timings: [12, 16, 20]
+            },
+            "omni-strike": {
+                standing_range: 230,
+                omni_range: [-70, 230]
+            },
+            "counter-surge": {
+                enabled: true
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -227,7 +269,8 @@ export const e1357Data: StageData = {
             delayFrames: "800-1,100f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "667",
@@ -260,6 +303,14 @@ export const e1357Data: StageData = {
             delayFrames: "800-1,100f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 70000
+            },
+            "counter-surge": {
+                enabled: true
+            }
           }
         },
         {
@@ -293,6 +344,22 @@ export const e1357Data: StageData = {
             delayFrames: "1,000-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [13000, 13000, 13000],
+                timings: [12, 16, 20]
+            },
+            "omni-strike": {
+                standing_range: 230,
+                omni_range: [-70, 230]
+            },
+            "counter-surge": {
+                enabled: true
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -326,7 +393,8 @@ export const e1357Data: StageData = {
             delayFrames: "800-1,100f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "667",
@@ -359,6 +427,14 @@ export const e1357Data: StageData = {
             delayFrames: "800-1,100f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 70000
+            },
+            "counter-surge": {
+                enabled: true
+            }
           }
         },
         {
@@ -392,6 +468,22 @@ export const e1357Data: StageData = {
             delayFrames: "800-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [13000, 13000, 13000],
+                timings: [12, 16, 20]
+            },
+            "omni-strike": {
+                standing_range: 230,
+                omni_range: [-70, 230]
+            },
+            "counter-surge": {
+                enabled: true
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -425,7 +517,8 @@ export const e1357Data: StageData = {
             delayFrames: "800-1,100f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "654",
@@ -458,6 +551,22 @@ export const e1357Data: StageData = {
             delayFrames: "60-70f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [13000, 13000, 13000],
+                timings: [12, 16, 20]
+            },
+            "omni-strike": {
+                standing_range: 230,
+                omni_range: [-70, 230]
+            },
+            "counter-surge": {
+                enabled: true
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -491,7 +600,8 @@ export const e1357Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "75%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "654",
@@ -524,6 +634,22 @@ export const e1357Data: StageData = {
             delayFrames: "60-70f",
             baseHpRatio: "50%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [13000, 13000, 13000],
+                timings: [12, 16, 20]
+            },
+            "omni-strike": {
+                standing_range: 230,
+                omni_range: [-70, 230]
+            },
+            "counter-surge": {
+                enabled: true
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         }]
     }

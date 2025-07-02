@@ -62,6 +62,13 @@ export const e1246Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "curse": {
+                chance: 100,
+                duration_f: 150,
+                duration_s: 5.0
+            }
           }
         },
         {
@@ -95,7 +102,8 @@ export const e1246Data: StageData = {
             delayFrames: "600-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "205",
@@ -128,6 +136,11 @@ export const e1246Data: StageData = {
             delayFrames: "1,600-1,600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "critical": {
+                chance: 15
+            }
           }
         },
         {
@@ -161,6 +174,28 @@ export const e1246Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 620,
+                omni_range: [-630, 620]
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 45,
+                duration_s: 1.5
+            },
+            "curse": {
+                chance: 100,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "surge": {
+                chance: 100,
+                distance_start: 600,
+                distance_end: 900,
+                level: 3
+            }
           }
         },
         {
@@ -194,7 +229,8 @@ export const e1246Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "412",
@@ -227,6 +263,13 @@ export const e1246Data: StageData = {
             delayFrames: "600-660f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "curse": {
+                chance: 100,
+                duration_f: 150,
+                duration_s: 5.0
+            }
           }
         },
         {
@@ -260,6 +303,13 @@ export const e1246Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "curse": {
+                chance: 100,
+                duration_f: 300,
+                duration_s: 10.0
+            }
           }
         },
         {
@@ -293,7 +343,8 @@ export const e1246Data: StageData = {
             delayFrames: "700-800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "412",
@@ -326,6 +377,13 @@ export const e1246Data: StageData = {
             delayFrames: "900-960f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "curse": {
+                chance: 100,
+                duration_f: 150,
+                duration_s: 5.0
+            }
           }
         },
         {
@@ -359,6 +417,13 @@ export const e1246Data: StageData = {
             delayFrames: "20-30f",
             baseHpRatio: "75%",
             isBoss: false
+          },
+          abilities: {
+            "curse": {
+                chance: 100,
+                duration_f: 150,
+                duration_s: 5.0
+            }
           }
         }]
     }

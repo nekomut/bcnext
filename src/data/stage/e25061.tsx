@@ -78,6 +78,14 @@ export const e25061Data: StageData = {
             delayFrames: "700-900f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "death-surge": {
+                chance: 50,
+                distance_start: 350,
+                distance_end: 750,
+                level: 1
+            }
           }
         },
         {
@@ -111,6 +119,13 @@ export const e25061Data: StageData = {
             delayFrames: "600-800f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -144,6 +159,32 @@ export const e25061Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [6500, 6500, 6500],
+                timings: [10, 21, 32]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 251]
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "savage-blow": {
+                chance: 100,
+                power: 1.05
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -177,6 +218,17 @@ export const e25061Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -210,6 +262,19 @@ export const e25061Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 50,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "death-surge": {
+                chance: 100,
+                distance_start: 450,
+                distance_end: 950,
+                level: 3
+            }
           }
         },
         {
@@ -243,6 +308,17 @@ export const e25061Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -276,7 +352,8 @@ export const e25061Data: StageData = {
             delayFrames: "27,000-27,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -347,6 +424,17 @@ export const e25061Data: StageData = {
             delayFrames: "60-120f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -380,6 +468,32 @@ export const e25061Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [6500, 6500, 6500],
+                timings: [10, 21, 32]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 251]
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "savage-blow": {
+                chance: 100,
+                power: 1.05
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -413,6 +527,17 @@ export const e25061Data: StageData = {
             delayFrames: "900-1,100f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -446,6 +571,17 @@ export const e25061Data: StageData = {
             delayFrames: "120-180f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -479,6 +615,17 @@ export const e25061Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -512,6 +659,17 @@ export const e25061Data: StageData = {
             delayFrames: "600-700f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -545,7 +703,8 @@ export const e25061Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "021",
@@ -578,7 +737,8 @@ export const e25061Data: StageData = {
             delayFrames: "27,000-27,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -641,6 +801,14 @@ export const e25061Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -674,6 +842,17 @@ export const e25061Data: StageData = {
             delayFrames: "600-700f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -707,6 +886,14 @@ export const e25061Data: StageData = {
             delayFrames: "700-800f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -740,6 +927,11 @@ export const e25061Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "barrier": {
+                hp: 6000
+            }
           }
         },
         {
@@ -773,6 +965,17 @@ export const e25061Data: StageData = {
             delayFrames: "300-500f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -806,6 +1009,17 @@ export const e25061Data: StageData = {
             delayFrames: "900-1,100f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -839,6 +1053,11 @@ export const e25061Data: StageData = {
             delayFrames: "1,500-1,600f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "barrier": {
+                hp: 6000
+            }
           }
         },
         {
@@ -872,6 +1091,14 @@ export const e25061Data: StageData = {
             delayFrames: "1,000-1,200f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -905,6 +1132,27 @@ export const e25061Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [16000, 21000],
+                timings: [17, 42]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 401]
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -938,7 +1186,8 @@ export const e25061Data: StageData = {
             delayFrames: "27,000-27,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -1001,7 +1250,8 @@ export const e25061Data: StageData = {
             delayFrames: "600-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "002",
@@ -1034,7 +1284,8 @@ export const e25061Data: StageData = {
             delayFrames: "300-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "184",
@@ -1067,6 +1318,12 @@ export const e25061Data: StageData = {
             delayFrames: "900-1,100f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 75,
+                power: 100
+            }
           }
         },
         {
@@ -1100,6 +1357,32 @@ export const e25061Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [6500, 6500, 6500],
+                timings: [10, 21, 32]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 251]
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "savage-blow": {
+                chance: 100,
+                power: 1.05
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -1133,6 +1416,17 @@ export const e25061Data: StageData = {
             delayFrames: "1,200-1,300f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -1166,6 +1460,27 @@ export const e25061Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [16000, 21000],
+                timings: [17, 42]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 401]
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -1199,6 +1514,17 @@ export const e25061Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -1232,6 +1558,17 @@ export const e25061Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -1265,7 +1602,8 @@ export const e25061Data: StageData = {
             delayFrames: "27,000-27,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     }
   ]

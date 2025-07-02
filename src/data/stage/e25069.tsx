@@ -134,6 +134,13 @@ export const e25069Data: StageData = {
             delayFrames: "400-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "curse": {
+                chance: 35,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -167,6 +174,13 @@ export const e25069Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "curse": {
+                chance: 100,
+                duration_f: 300,
+                duration_s: 10.0
+            }
           }
         },
         {
@@ -200,6 +214,13 @@ export const e25069Data: StageData = {
             delayFrames: "700-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "curse": {
+                chance: 100,
+                duration_f: 150,
+                duration_s: 5.0
+            }
           }
         },
         {
@@ -233,6 +254,21 @@ export const e25069Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 100
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 150,
+                duration_s: 5.0
+            },
+            "curse": {
+                chance: 100,
+                duration_f: 150,
+                duration_s: 5.0
+            }
           }
         },
         {
@@ -266,6 +302,36 @@ export const e25069Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 20
+            },
+            "freeze": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            },
+            "slow": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            },
+            "mini-wave": {
+                chance: 100,
+                level: 4
+            },
+            "weaken": {
+                chance: 20,
+                power: 60,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "curse": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -299,7 +365,8 @@ export const e25069Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     }
   ]

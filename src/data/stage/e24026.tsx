@@ -62,6 +62,23 @@ export const e24026Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -95,6 +112,11 @@ export const e24026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -128,6 +150,13 @@ export const e24026Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -161,6 +190,23 @@ export const e24026Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -194,6 +240,11 @@ export const e24026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -227,6 +278,13 @@ export const e24026Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -260,6 +318,12 @@ export const e24026Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "savage-blow": {
+                chance: 100,
+                power: 1.1
+            }
           }
         },
         {
@@ -293,6 +357,22 @@ export const e24026Data: StageData = {
             delayFrames: "500-600f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 400,
+                ld_range: [400, 700]
+            },
+            "burrow": {
+                times: 1,
+                distance: 750
+            },
+            "revive": {
+                times: 1,
+                duration_f: 240,
+                duration_s: 8.0,
+                hp_ratio: 100
+            }
           }
         }]
     },
@@ -348,6 +428,23 @@ export const e24026Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -381,6 +478,11 @@ export const e24026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -414,6 +516,13 @@ export const e24026Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -447,6 +556,23 @@ export const e24026Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -480,6 +606,11 @@ export const e24026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -513,6 +644,13 @@ export const e24026Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -546,6 +684,12 @@ export const e24026Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "savage-blow": {
+                chance: 100,
+                power: 1.1
+            }
           }
         },
         {
@@ -579,6 +723,22 @@ export const e24026Data: StageData = {
             delayFrames: "500-600f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 400,
+                ld_range: [400, 700]
+            },
+            "burrow": {
+                times: 1,
+                distance: 750
+            },
+            "revive": {
+                times: 1,
+                duration_f: 240,
+                duration_s: 8.0,
+                hp_ratio: 100
+            }
           }
         }]
     },
@@ -634,6 +794,23 @@ export const e24026Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -667,6 +844,11 @@ export const e24026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -700,6 +882,13 @@ export const e24026Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -733,6 +922,23 @@ export const e24026Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -766,6 +972,11 @@ export const e24026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -799,6 +1010,13 @@ export const e24026Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -832,6 +1050,12 @@ export const e24026Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "savage-blow": {
+                chance: 100,
+                power: 1.1
+            }
           }
         },
         {
@@ -865,6 +1089,22 @@ export const e24026Data: StageData = {
             delayFrames: "500-600f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 400,
+                ld_range: [400, 700]
+            },
+            "burrow": {
+                times: 1,
+                distance: 750
+            },
+            "revive": {
+                times: 1,
+                duration_f: 240,
+                duration_s: 8.0,
+                hp_ratio: 100
+            }
           }
         }]
     },
@@ -920,6 +1160,23 @@ export const e24026Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -953,6 +1210,11 @@ export const e24026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -986,6 +1248,13 @@ export const e24026Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -1019,6 +1288,23 @@ export const e24026Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -1052,6 +1338,11 @@ export const e24026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -1085,6 +1376,13 @@ export const e24026Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -1118,6 +1416,12 @@ export const e24026Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "savage-blow": {
+                chance: 100,
+                power: 1.1
+            }
           }
         },
         {
@@ -1151,6 +1455,22 @@ export const e24026Data: StageData = {
             delayFrames: "500-600f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 400,
+                ld_range: [400, 700]
+            },
+            "burrow": {
+                times: 1,
+                distance: 750
+            },
+            "revive": {
+                times: 1,
+                duration_f: 240,
+                duration_s: 8.0,
+                hp_ratio: 100
+            }
           }
         }]
     },
@@ -1206,6 +1526,23 @@ export const e24026Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -1239,6 +1576,11 @@ export const e24026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -1272,6 +1614,13 @@ export const e24026Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -1305,6 +1654,23 @@ export const e24026Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -1338,6 +1704,11 @@ export const e24026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -1371,6 +1742,13 @@ export const e24026Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -1404,6 +1782,12 @@ export const e24026Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "savage-blow": {
+                chance: 100,
+                power: 1.1
+            }
           }
         },
         {
@@ -1437,6 +1821,22 @@ export const e24026Data: StageData = {
             delayFrames: "500-600f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 400,
+                ld_range: [400, 700]
+            },
+            "burrow": {
+                times: 1,
+                distance: 750
+            },
+            "revive": {
+                times: 1,
+                duration_f: 240,
+                duration_s: 8.0,
+                hp_ratio: 100
+            }
           }
         }]
     },
@@ -1492,6 +1892,23 @@ export const e24026Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -1525,6 +1942,11 @@ export const e24026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -1558,6 +1980,13 @@ export const e24026Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -1591,6 +2020,23 @@ export const e24026Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -1624,6 +2070,11 @@ export const e24026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -1657,6 +2108,13 @@ export const e24026Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -1690,6 +2148,12 @@ export const e24026Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "savage-blow": {
+                chance: 100,
+                power: 1.1
+            }
           }
         },
         {
@@ -1723,6 +2187,22 @@ export const e24026Data: StageData = {
             delayFrames: "500-600f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 400,
+                ld_range: [400, 700]
+            },
+            "burrow": {
+                times: 1,
+                distance: 750
+            },
+            "revive": {
+                times: 1,
+                duration_f: 240,
+                duration_s: 8.0,
+                hp_ratio: 100
+            }
           }
         }]
     },
@@ -1778,6 +2258,23 @@ export const e24026Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -1811,6 +2308,11 @@ export const e24026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -1844,6 +2346,13 @@ export const e24026Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -1877,6 +2386,23 @@ export const e24026Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -1910,6 +2436,11 @@ export const e24026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -1943,6 +2474,13 @@ export const e24026Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -1976,6 +2514,12 @@ export const e24026Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "savage-blow": {
+                chance: 100,
+                power: 1.1
+            }
           }
         },
         {
@@ -2009,6 +2553,22 @@ export const e24026Data: StageData = {
             delayFrames: "500-600f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 400,
+                ld_range: [400, 700]
+            },
+            "burrow": {
+                times: 1,
+                distance: 750
+            },
+            "revive": {
+                times: 1,
+                duration_f: 240,
+                duration_s: 8.0,
+                hp_ratio: 100
+            }
           }
         }]
     },
@@ -2064,6 +2624,23 @@ export const e24026Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -2097,6 +2674,11 @@ export const e24026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -2130,6 +2712,13 @@ export const e24026Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -2163,6 +2752,23 @@ export const e24026Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -2196,6 +2802,11 @@ export const e24026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -2229,6 +2840,13 @@ export const e24026Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -2262,6 +2880,12 @@ export const e24026Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "savage-blow": {
+                chance: 100,
+                power: 1.1
+            }
           }
         },
         {
@@ -2295,6 +2919,22 @@ export const e24026Data: StageData = {
             delayFrames: "500-600f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 400,
+                ld_range: [400, 700]
+            },
+            "burrow": {
+                times: 1,
+                distance: 750
+            },
+            "revive": {
+                times: 1,
+                duration_f: 240,
+                duration_s: 8.0,
+                hp_ratio: 100
+            }
           }
         }]
     },
@@ -2350,6 +2990,23 @@ export const e24026Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -2383,6 +3040,11 @@ export const e24026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -2416,6 +3078,13 @@ export const e24026Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -2449,6 +3118,23 @@ export const e24026Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -2482,6 +3168,11 @@ export const e24026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -2515,6 +3206,13 @@ export const e24026Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -2548,6 +3246,12 @@ export const e24026Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "savage-blow": {
+                chance: 100,
+                power: 1.1
+            }
           }
         },
         {
@@ -2581,6 +3285,22 @@ export const e24026Data: StageData = {
             delayFrames: "500-600f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 400,
+                ld_range: [400, 700]
+            },
+            "burrow": {
+                times: 1,
+                distance: 750
+            },
+            "revive": {
+                times: 1,
+                duration_f: 240,
+                duration_s: 8.0,
+                hp_ratio: 100
+            }
           }
         }]
     },
@@ -2636,6 +3356,23 @@ export const e24026Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -2669,6 +3406,11 @@ export const e24026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -2702,6 +3444,13 @@ export const e24026Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -2735,6 +3484,23 @@ export const e24026Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -2768,6 +3534,11 @@ export const e24026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -2801,6 +3572,13 @@ export const e24026Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -2834,6 +3612,12 @@ export const e24026Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "savage-blow": {
+                chance: 100,
+                power: 1.1
+            }
           }
         },
         {
@@ -2867,6 +3651,22 @@ export const e24026Data: StageData = {
             delayFrames: "500-600f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 400,
+                ld_range: [400, 700]
+            },
+            "burrow": {
+                times: 1,
+                distance: 750
+            },
+            "revive": {
+                times: 1,
+                duration_f: 240,
+                duration_s: 8.0,
+                hp_ratio: 100
+            }
           }
         }]
     }

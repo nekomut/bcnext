@@ -62,7 +62,8 @@ export const e1395Data: StageData = {
             delayFrames: "20-20f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "360",
@@ -95,6 +96,14 @@ export const e1395Data: StageData = {
             delayFrames: "1,400-1,400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -128,6 +137,16 @@ export const e1395Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [60000, 222, 222],
+                timings: [5, 10, 20]
+            },
+            "explosion": {
+                chance: 100,
+                range: 300
+            }
           }
         }]
     }

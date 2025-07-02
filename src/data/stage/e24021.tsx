@@ -62,6 +62,24 @@ export const e24021Data: StageData = {
             delayFrames: "150-300f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "burrow": {
+                times: 1,
+                distance: 375
+            },
+            "revive": {
+                times: 1,
+                duration_f: 480,
+                duration_s: 16.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -95,6 +113,23 @@ export const e24021Data: StageData = {
             delayFrames: "400-800f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -128,7 +163,8 @@ export const e24021Data: StageData = {
             delayFrames: "120-360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "104",
@@ -161,7 +197,8 @@ export const e24021Data: StageData = {
             delayFrames: "240-480f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "105",
@@ -194,7 +231,8 @@ export const e24021Data: StageData = {
             delayFrames: "360-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "102",
@@ -227,7 +265,8 @@ export const e24021Data: StageData = {
             delayFrames: "1,200-1,260f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "101",
@@ -260,7 +299,8 @@ export const e24021Data: StageData = {
             delayFrames: "2-20f",
             baseHpRatio: "100%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -315,6 +355,24 @@ export const e24021Data: StageData = {
             delayFrames: "150-300f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "burrow": {
+                times: 1,
+                distance: 375
+            },
+            "revive": {
+                times: 1,
+                duration_f: 480,
+                duration_s: 16.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -348,6 +406,23 @@ export const e24021Data: StageData = {
             delayFrames: "400-800f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -381,7 +456,8 @@ export const e24021Data: StageData = {
             delayFrames: "120-360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "104",
@@ -414,7 +490,8 @@ export const e24021Data: StageData = {
             delayFrames: "240-480f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "105",
@@ -447,7 +524,8 @@ export const e24021Data: StageData = {
             delayFrames: "360-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "102",
@@ -480,7 +558,8 @@ export const e24021Data: StageData = {
             delayFrames: "1,200-1,260f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "101",
@@ -513,7 +592,8 @@ export const e24021Data: StageData = {
             delayFrames: "2-20f",
             baseHpRatio: "100%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -568,6 +648,24 @@ export const e24021Data: StageData = {
             delayFrames: "150-300f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "burrow": {
+                times: 1,
+                distance: 375
+            },
+            "revive": {
+                times: 1,
+                duration_f: 480,
+                duration_s: 16.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -601,6 +699,23 @@ export const e24021Data: StageData = {
             delayFrames: "400-800f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -634,7 +749,8 @@ export const e24021Data: StageData = {
             delayFrames: "120-360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "104",
@@ -667,7 +783,8 @@ export const e24021Data: StageData = {
             delayFrames: "240-480f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "105",
@@ -700,7 +817,8 @@ export const e24021Data: StageData = {
             delayFrames: "360-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "102",
@@ -733,7 +851,8 @@ export const e24021Data: StageData = {
             delayFrames: "1,200-1,260f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "101",
@@ -766,7 +885,8 @@ export const e24021Data: StageData = {
             delayFrames: "2-20f",
             baseHpRatio: "100%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -821,6 +941,24 @@ export const e24021Data: StageData = {
             delayFrames: "150-300f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "burrow": {
+                times: 1,
+                distance: 375
+            },
+            "revive": {
+                times: 1,
+                duration_f: 480,
+                duration_s: 16.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -854,6 +992,23 @@ export const e24021Data: StageData = {
             delayFrames: "400-800f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -887,7 +1042,8 @@ export const e24021Data: StageData = {
             delayFrames: "120-360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "104",
@@ -920,7 +1076,8 @@ export const e24021Data: StageData = {
             delayFrames: "240-480f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "105",
@@ -953,7 +1110,8 @@ export const e24021Data: StageData = {
             delayFrames: "360-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "102",
@@ -986,7 +1144,8 @@ export const e24021Data: StageData = {
             delayFrames: "1,200-1,260f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "101",
@@ -1019,7 +1178,8 @@ export const e24021Data: StageData = {
             delayFrames: "2-20f",
             baseHpRatio: "100%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -1074,6 +1234,24 @@ export const e24021Data: StageData = {
             delayFrames: "150-300f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "burrow": {
+                times: 1,
+                distance: 375
+            },
+            "revive": {
+                times: 1,
+                duration_f: 480,
+                duration_s: 16.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -1107,6 +1285,23 @@ export const e24021Data: StageData = {
             delayFrames: "400-800f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -1140,7 +1335,8 @@ export const e24021Data: StageData = {
             delayFrames: "120-360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "104",
@@ -1173,7 +1369,8 @@ export const e24021Data: StageData = {
             delayFrames: "240-480f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "105",
@@ -1206,7 +1403,8 @@ export const e24021Data: StageData = {
             delayFrames: "360-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "102",
@@ -1239,7 +1437,8 @@ export const e24021Data: StageData = {
             delayFrames: "1,200-1,260f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "101",
@@ -1272,7 +1471,8 @@ export const e24021Data: StageData = {
             delayFrames: "2-20f",
             baseHpRatio: "100%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -1327,6 +1527,24 @@ export const e24021Data: StageData = {
             delayFrames: "150-300f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "burrow": {
+                times: 1,
+                distance: 375
+            },
+            "revive": {
+                times: 1,
+                duration_f: 480,
+                duration_s: 16.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -1360,6 +1578,23 @@ export const e24021Data: StageData = {
             delayFrames: "400-800f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -1393,7 +1628,8 @@ export const e24021Data: StageData = {
             delayFrames: "120-360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "104",
@@ -1426,7 +1662,8 @@ export const e24021Data: StageData = {
             delayFrames: "240-480f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "105",
@@ -1459,7 +1696,8 @@ export const e24021Data: StageData = {
             delayFrames: "360-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "102",
@@ -1492,7 +1730,8 @@ export const e24021Data: StageData = {
             delayFrames: "1,200-1,260f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "101",
@@ -1525,7 +1764,8 @@ export const e24021Data: StageData = {
             delayFrames: "2-20f",
             baseHpRatio: "100%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -1580,6 +1820,24 @@ export const e24021Data: StageData = {
             delayFrames: "150-300f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "burrow": {
+                times: 1,
+                distance: 375
+            },
+            "revive": {
+                times: 1,
+                duration_f: 480,
+                duration_s: 16.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -1613,6 +1871,23 @@ export const e24021Data: StageData = {
             delayFrames: "400-800f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -1646,7 +1921,8 @@ export const e24021Data: StageData = {
             delayFrames: "120-360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "104",
@@ -1679,7 +1955,8 @@ export const e24021Data: StageData = {
             delayFrames: "240-480f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "105",
@@ -1712,7 +1989,8 @@ export const e24021Data: StageData = {
             delayFrames: "360-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "102",
@@ -1745,7 +2023,8 @@ export const e24021Data: StageData = {
             delayFrames: "1,200-1,260f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "101",
@@ -1778,7 +2057,8 @@ export const e24021Data: StageData = {
             delayFrames: "2-20f",
             baseHpRatio: "100%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -1833,6 +2113,24 @@ export const e24021Data: StageData = {
             delayFrames: "150-300f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "burrow": {
+                times: 1,
+                distance: 375
+            },
+            "revive": {
+                times: 1,
+                duration_f: 480,
+                duration_s: 16.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -1866,6 +2164,23 @@ export const e24021Data: StageData = {
             delayFrames: "400-800f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -1899,7 +2214,8 @@ export const e24021Data: StageData = {
             delayFrames: "120-360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "104",
@@ -1932,7 +2248,8 @@ export const e24021Data: StageData = {
             delayFrames: "240-480f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "105",
@@ -1965,7 +2282,8 @@ export const e24021Data: StageData = {
             delayFrames: "360-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "102",
@@ -1998,7 +2316,8 @@ export const e24021Data: StageData = {
             delayFrames: "1,200-1,260f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "101",
@@ -2031,7 +2350,8 @@ export const e24021Data: StageData = {
             delayFrames: "2-20f",
             baseHpRatio: "100%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -2086,6 +2406,24 @@ export const e24021Data: StageData = {
             delayFrames: "150-300f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "burrow": {
+                times: 1,
+                distance: 375
+            },
+            "revive": {
+                times: 1,
+                duration_f: 480,
+                duration_s: 16.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -2119,6 +2457,23 @@ export const e24021Data: StageData = {
             delayFrames: "400-800f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -2152,7 +2507,8 @@ export const e24021Data: StageData = {
             delayFrames: "120-360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "104",
@@ -2185,7 +2541,8 @@ export const e24021Data: StageData = {
             delayFrames: "240-480f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "105",
@@ -2218,7 +2575,8 @@ export const e24021Data: StageData = {
             delayFrames: "360-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "102",
@@ -2251,7 +2609,8 @@ export const e24021Data: StageData = {
             delayFrames: "1,200-1,260f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "101",
@@ -2284,7 +2643,8 @@ export const e24021Data: StageData = {
             delayFrames: "2-20f",
             baseHpRatio: "100%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -2339,6 +2699,24 @@ export const e24021Data: StageData = {
             delayFrames: "150-300f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "burrow": {
+                times: 1,
+                distance: 375
+            },
+            "revive": {
+                times: 1,
+                duration_f: 480,
+                duration_s: 16.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -2372,6 +2750,23 @@ export const e24021Data: StageData = {
             delayFrames: "400-800f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -2405,7 +2800,8 @@ export const e24021Data: StageData = {
             delayFrames: "120-360f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "104",
@@ -2438,7 +2834,8 @@ export const e24021Data: StageData = {
             delayFrames: "240-480f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "105",
@@ -2471,7 +2868,8 @@ export const e24021Data: StageData = {
             delayFrames: "360-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "102",
@@ -2504,7 +2902,8 @@ export const e24021Data: StageData = {
             delayFrames: "1,200-1,260f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "101",
@@ -2537,7 +2936,8 @@ export const e24021Data: StageData = {
             delayFrames: "2-20f",
             baseHpRatio: "100%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     }
   ]

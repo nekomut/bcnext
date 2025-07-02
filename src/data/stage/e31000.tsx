@@ -86,7 +86,8 @@ export const e31000Data: StageData = {
             delayFrames: "240-400f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "013",
@@ -119,7 +120,8 @@ export const e31000Data: StageData = {
             delayFrames: "400-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "015",
@@ -152,7 +154,8 @@ export const e31000Data: StageData = {
             delayFrames: "400-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "022",
@@ -185,7 +188,8 @@ export const e31000Data: StageData = {
             delayFrames: "400-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "603",
@@ -218,6 +222,17 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -251,7 +266,8 @@ export const e31000Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "013",
@@ -284,7 +300,8 @@ export const e31000Data: StageData = {
             delayFrames: "400-600f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "022",
@@ -317,7 +334,8 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "603",
@@ -350,6 +368,17 @@ export const e31000Data: StageData = {
             delayFrames: "500-500f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         }]
     },
@@ -429,7 +458,8 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "010",
@@ -462,7 +492,8 @@ export const e31000Data: StageData = {
             delayFrames: "400-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "015",
@@ -495,7 +526,8 @@ export const e31000Data: StageData = {
             delayFrames: "20-30f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "015",
@@ -528,7 +560,8 @@ export const e31000Data: StageData = {
             delayFrames: "40-100f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "003",
@@ -561,7 +594,8 @@ export const e31000Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "603",
@@ -594,6 +628,17 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -627,6 +672,17 @@ export const e31000Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -660,6 +716,17 @@ export const e31000Data: StageData = {
             delayFrames: "400-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -693,7 +760,8 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -772,7 +840,8 @@ export const e31000Data: StageData = {
             delayFrames: "500-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "603",
@@ -805,6 +874,17 @@ export const e31000Data: StageData = {
             delayFrames: "600-700f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -838,7 +918,8 @@ export const e31000Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "603",
@@ -871,6 +952,17 @@ export const e31000Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -904,6 +996,17 @@ export const e31000Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -937,7 +1040,8 @@ export const e31000Data: StageData = {
             delayFrames: "600-800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "047",
@@ -970,7 +1074,8 @@ export const e31000Data: StageData = {
             delayFrames: "500-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "603",
@@ -1003,6 +1108,17 @@ export const e31000Data: StageData = {
             delayFrames: "560-660f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -1036,7 +1152,8 @@ export const e31000Data: StageData = {
             delayFrames: "27,000-27,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -1115,6 +1232,17 @@ export const e31000Data: StageData = {
             delayFrames: "600-800f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -1148,7 +1276,8 @@ export const e31000Data: StageData = {
             delayFrames: "600-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "014",
@@ -1181,7 +1310,8 @@ export const e31000Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "604",
@@ -1214,6 +1344,32 @@ export const e31000Data: StageData = {
             delayFrames: "2-20f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [6500, 6500, 6500],
+                timings: [10, 21, 32]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 251]
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "savage-blow": {
+                chance: 100,
+                power: 1.05
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -1247,7 +1403,8 @@ export const e31000Data: StageData = {
             delayFrames: "1,300-1,500f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "603",
@@ -1280,6 +1437,17 @@ export const e31000Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -1313,7 +1481,8 @@ export const e31000Data: StageData = {
             delayFrames: "300-500f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "113",
@@ -1346,7 +1515,8 @@ export const e31000Data: StageData = {
             delayFrames: "1,100-1,200f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "021",
@@ -1379,7 +1549,8 @@ export const e31000Data: StageData = {
             delayFrames: "27,000-27,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -1458,7 +1629,8 @@ export const e31000Data: StageData = {
             delayFrames: "20-400f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "014",
@@ -1491,7 +1663,8 @@ export const e31000Data: StageData = {
             delayFrames: "100-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "004",
@@ -1524,7 +1697,8 @@ export const e31000Data: StageData = {
             delayFrames: "500-900f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "603",
@@ -1557,6 +1731,17 @@ export const e31000Data: StageData = {
             delayFrames: "900-1,100f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -1590,6 +1775,17 @@ export const e31000Data: StageData = {
             delayFrames: "700-900f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -1623,6 +1819,30 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [17000, 17000, 17000],
+                timings: [35, 37, 39]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 501]
+            },
+            "freeze": {
+                chance: 40,
+                duration_f: 100,
+                duration_s: 3.33
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "aku-shield": {
+                hp: 50000
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -1656,6 +1876,17 @@ export const e31000Data: StageData = {
             delayFrames: "500-700f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -1689,6 +1920,17 @@ export const e31000Data: StageData = {
             delayFrames: "500-700f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -1722,7 +1964,8 @@ export const e31000Data: StageData = {
             delayFrames: "200-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "118",
@@ -1755,7 +1998,8 @@ export const e31000Data: StageData = {
             delayFrames: "600-900f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "603",
@@ -1788,6 +2032,17 @@ export const e31000Data: StageData = {
             delayFrames: "1,500-1,700f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -1821,7 +2076,8 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -1900,7 +2156,8 @@ export const e31000Data: StageData = {
             delayFrames: "300-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "014",
@@ -1933,7 +2190,8 @@ export const e31000Data: StageData = {
             delayFrames: "700-1,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "048",
@@ -1966,7 +2224,8 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "008",
@@ -1999,7 +2258,8 @@ export const e31000Data: StageData = {
             delayFrames: "400-800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "603",
@@ -2032,6 +2292,17 @@ export const e31000Data: StageData = {
             delayFrames: "700-900f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -2065,7 +2336,8 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "603",
@@ -2098,6 +2370,17 @@ export const e31000Data: StageData = {
             delayFrames: "300-300f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -2131,7 +2414,8 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "604",
@@ -2164,6 +2448,32 @@ export const e31000Data: StageData = {
             delayFrames: "1,600-1,700f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [6500, 6500, 6500],
+                timings: [10, 21, 32]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 251]
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "savage-blow": {
+                chance: 100,
+                power: 1.05
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -2197,7 +2507,8 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "048",
@@ -2230,7 +2541,8 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -2309,7 +2621,8 @@ export const e31000Data: StageData = {
             delayFrames: "300-300f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "603",
@@ -2342,6 +2655,17 @@ export const e31000Data: StageData = {
             delayFrames: "600-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -2375,6 +2699,22 @@ export const e31000Data: StageData = {
             delayFrames: "700-700f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [4500, 4500],
+                timings: [12, 14]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 151]
+            },
+            "knockback": {
+                chance: 30
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -2408,7 +2748,8 @@ export const e31000Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "603",
@@ -2441,6 +2782,17 @@ export const e31000Data: StageData = {
             delayFrames: "700-900f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -2474,6 +2826,22 @@ export const e31000Data: StageData = {
             delayFrames: "600-800f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [4500, 4500],
+                timings: [12, 14]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 151]
+            },
+            "knockback": {
+                chance: 30
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -2507,6 +2875,22 @@ export const e31000Data: StageData = {
             delayFrames: "1,300-1,500f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [4500, 4500],
+                timings: [12, 14]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 151]
+            },
+            "knockback": {
+                chance: 30
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -2540,6 +2924,30 @@ export const e31000Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [17000, 17000, 17000],
+                timings: [35, 37, 39]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 501]
+            },
+            "freeze": {
+                chance: 40,
+                duration_f: 100,
+                duration_s: 3.33
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "aku-shield": {
+                hp: 50000
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         }]
     },
@@ -2619,7 +3027,8 @@ export const e31000Data: StageData = {
             delayFrames: "30-90f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "015",
@@ -2652,7 +3061,8 @@ export const e31000Data: StageData = {
             delayFrames: "30-80f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "013",
@@ -2685,7 +3095,8 @@ export const e31000Data: StageData = {
             delayFrames: "30-70f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "006",
@@ -2718,7 +3129,8 @@ export const e31000Data: StageData = {
             delayFrames: "100-240f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "010",
@@ -2751,7 +3163,8 @@ export const e31000Data: StageData = {
             delayFrames: "300-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "603",
@@ -2784,6 +3197,17 @@ export const e31000Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -2817,6 +3241,32 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [6500, 6500, 6500],
+                timings: [10, 21, 32]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 251]
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "savage-blow": {
+                chance: 100,
+                power: 1.05
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -2850,7 +3300,8 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -2929,7 +3380,8 @@ export const e31000Data: StageData = {
             delayFrames: "250-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "603",
@@ -2962,6 +3414,17 @@ export const e31000Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -2995,6 +3458,17 @@ export const e31000Data: StageData = {
             delayFrames: "600-800f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -3028,6 +3502,11 @@ export const e31000Data: StageData = {
             delayFrames: "700-900f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -3061,6 +3540,30 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [17000, 17000, 17000],
+                timings: [35, 37, 39]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 501]
+            },
+            "freeze": {
+                chance: 40,
+                duration_f: 100,
+                duration_s: 3.33
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "aku-shield": {
+                hp: 50000
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -3094,6 +3597,32 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [6500, 6500, 6500],
+                timings: [10, 21, 32]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 251]
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "savage-blow": {
+                chance: 100,
+                power: 1.05
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -3127,7 +3656,8 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -3206,7 +3736,8 @@ export const e31000Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "610",
@@ -3239,6 +3770,30 @@ export const e31000Data: StageData = {
             delayFrames: "800-800f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [17000, 17000, 17000],
+                timings: [35, 37, 39]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 501]
+            },
+            "freeze": {
+                chance: 40,
+                duration_f: 100,
+                duration_s: 3.33
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "aku-shield": {
+                hp: 50000
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -3272,6 +3827,17 @@ export const e31000Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -3305,6 +3871,14 @@ export const e31000Data: StageData = {
             delayFrames: "900-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "immune-freeze": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -3338,6 +3912,17 @@ export const e31000Data: StageData = {
             delayFrames: "1,000-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -3371,6 +3956,14 @@ export const e31000Data: StageData = {
             delayFrames: "600-700f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "immune-freeze": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -3404,6 +3997,14 @@ export const e31000Data: StageData = {
             delayFrames: "600-700f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "immune-freeze": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -3437,7 +4038,8 @@ export const e31000Data: StageData = {
             delayFrames: "800-800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -3532,7 +4134,8 @@ export const e31000Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "118",
@@ -3565,7 +4168,8 @@ export const e31000Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "036",
@@ -3598,7 +4202,8 @@ export const e31000Data: StageData = {
             delayFrames: "700-800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "118",
@@ -3631,7 +4236,8 @@ export const e31000Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "603",
@@ -3664,6 +4270,17 @@ export const e31000Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -3697,6 +4314,32 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [6500, 6500, 6500],
+                timings: [10, 21, 32]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 251]
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "savage-blow": {
+                chance: 100,
+                power: 1.05
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -3730,6 +4373,19 @@ export const e31000Data: StageData = {
             delayFrames: "900-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 50,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "death-surge": {
+                chance: 100,
+                distance_start: 450,
+                distance_end: 950,
+                level: 3
+            }
           }
         },
         {
@@ -3763,6 +4419,30 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [17000, 17000, 17000],
+                timings: [35, 37, 39]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 501]
+            },
+            "freeze": {
+                chance: 40,
+                duration_f: 100,
+                duration_s: 3.33
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "aku-shield": {
+                hp: 50000
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -3796,6 +4476,13 @@ export const e31000Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -3829,6 +4516,13 @@ export const e31000Data: StageData = {
             delayFrames: "600-700f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -3862,7 +4556,8 @@ export const e31000Data: StageData = {
             delayFrames: "800-800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -3957,6 +4652,11 @@ export const e31000Data: StageData = {
             delayFrames: "500-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -3990,7 +4690,8 @@ export const e31000Data: StageData = {
             delayFrames: "160-260f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "168",
@@ -4023,7 +4724,8 @@ export const e31000Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "603",
@@ -4056,6 +4758,17 @@ export const e31000Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -4089,6 +4802,14 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 20,
+                distance: 500,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -4122,7 +4843,8 @@ export const e31000Data: StageData = {
             delayFrames: "600-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "171",
@@ -4155,6 +4877,13 @@ export const e31000Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -4188,6 +4917,13 @@ export const e31000Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -4221,6 +4957,13 @@ export const e31000Data: StageData = {
             delayFrames: "600-700f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -4254,6 +4997,14 @@ export const e31000Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "death-surge": {
+                chance: 50,
+                distance_start: 350,
+                distance_end: 750,
+                level: 1
+            }
           }
         },
         {
@@ -4287,6 +5038,11 @@ export const e31000Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -4320,6 +5076,28 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [22000, 6000],
+                timings: [14, 15]
+            },
+            "omni-strike": {
+                standing_range: 350,
+                omni_range: [-300, 350]
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "aku-shield": {
+                hp: 400000
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -4353,6 +5131,11 @@ export const e31000Data: StageData = {
             delayFrames: "600-700f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -4386,6 +5169,30 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [17000, 17000, 17000],
+                timings: [35, 37, 39]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 501]
+            },
+            "freeze": {
+                chance: 40,
+                duration_f: 100,
+                duration_s: 3.33
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "aku-shield": {
+                hp: 50000
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -4419,7 +5226,8 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -4514,6 +5322,17 @@ export const e31000Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -4547,7 +5366,8 @@ export const e31000Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "046",
@@ -4580,7 +5400,8 @@ export const e31000Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "046",
@@ -4613,7 +5434,8 @@ export const e31000Data: StageData = {
             delayFrames: "500-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "051",
@@ -4646,7 +5468,8 @@ export const e31000Data: StageData = {
             delayFrames: "700-800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "549",
@@ -4679,6 +5502,14 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "immune-freeze": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -4712,7 +5543,8 @@ export const e31000Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "256",
@@ -4745,6 +5577,12 @@ export const e31000Data: StageData = {
             delayFrames: "600-700f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 600,
+                ld_range: [600, 850]
+            }
           }
         },
         {
@@ -4778,6 +5616,28 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [22000, 6000],
+                timings: [14, 15]
+            },
+            "omni-strike": {
+                standing_range: 350,
+                omni_range: [-300, 350]
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "aku-shield": {
+                hp: 400000
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -4811,7 +5671,8 @@ export const e31000Data: StageData = {
             delayFrames: "60-90f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "015",
@@ -4844,7 +5705,8 @@ export const e31000Data: StageData = {
             delayFrames: "30-60f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "123",
@@ -4877,6 +5739,12 @@ export const e31000Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "wave-attack": {
+                chance: 100,
+                level: 1
+            }
           }
         },
         {
@@ -4910,6 +5778,12 @@ export const e31000Data: StageData = {
             delayFrames: "500-600f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "wave-attack": {
+                chance: 100,
+                level: 1
+            }
           }
         },
         {
@@ -4943,7 +5817,8 @@ export const e31000Data: StageData = {
             delayFrames: "500-600f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "178",
@@ -4976,6 +5851,12 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "wave-attack": {
+                chance: 100,
+                level: 3
+            }
           }
         },
         {
@@ -5009,7 +5890,8 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -5104,6 +5986,17 @@ export const e31000Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -5137,7 +6030,8 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "498",
@@ -5170,6 +6064,16 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 420,
+                omni_range: [-320, 420]
+            },
+            "toxic": {
+                chance: 100,
+                damage: 35
+            }
           }
         },
         {
@@ -5203,7 +6107,8 @@ export const e31000Data: StageData = {
             delayFrames: "400-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "603",
@@ -5236,6 +6141,17 @@ export const e31000Data: StageData = {
             delayFrames: "500-700f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -5269,6 +6185,17 @@ export const e31000Data: StageData = {
             delayFrames: "40-40f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -5302,7 +6229,8 @@ export const e31000Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "611",
@@ -5335,6 +6263,32 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [9300, 9300, 9300],
+                timings: [10, 21, 32]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 251]
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "toxic": {
+                chance: 5,
+                damage: 50
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -5368,7 +6322,8 @@ export const e31000Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "124",
@@ -5401,7 +6356,8 @@ export const e31000Data: StageData = {
             delayFrames: "600-600f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "498",
@@ -5434,6 +6390,16 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 420,
+                omni_range: [-320, 420]
+            },
+            "toxic": {
+                chance: 100,
+                damage: 35
+            }
           }
         },
         {
@@ -5467,7 +6433,8 @@ export const e31000Data: StageData = {
             delayFrames: "27,000-27,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -5562,6 +6529,13 @@ export const e31000Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -5595,7 +6569,8 @@ export const e31000Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "113",
@@ -5628,7 +6603,8 @@ export const e31000Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "160",
@@ -5661,6 +6637,13 @@ export const e31000Data: StageData = {
             delayFrames: "400-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 25,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -5694,6 +6677,13 @@ export const e31000Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -5727,6 +6717,28 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [22000, 6000],
+                timings: [14, 15]
+            },
+            "omni-strike": {
+                standing_range: 350,
+                omni_range: [-300, 350]
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "aku-shield": {
+                hp: 400000
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -5760,7 +6772,8 @@ export const e31000Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "113",
@@ -5793,7 +6806,8 @@ export const e31000Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "160",
@@ -5826,6 +6840,13 @@ export const e31000Data: StageData = {
             delayFrames: "1,200-1,300f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 25,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -5859,6 +6880,13 @@ export const e31000Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -5892,6 +6920,13 @@ export const e31000Data: StageData = {
             delayFrames: "500-700f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -5925,7 +6960,8 @@ export const e31000Data: StageData = {
             delayFrames: "27,000-27,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -6020,6 +7056,17 @@ export const e31000Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -6053,6 +7100,38 @@ export const e31000Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [45000, 45000, 45000],
+                timings: [160, 162, 164]
+            },
+            "omni-strike": {
+                standing_range: 130,
+                omni_range: [-130, 130]
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            },
+            "burrow": {
+                times: 1,
+                distance: 500
+            },
+            "revive": {
+                times: 1,
+                duration_f: 720,
+                duration_s: 24.0,
+                hp_ratio: 100
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -6086,6 +7165,38 @@ export const e31000Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [45000, 45000, 45000],
+                timings: [160, 162, 164]
+            },
+            "omni-strike": {
+                standing_range: 130,
+                omni_range: [-130, 130]
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            },
+            "burrow": {
+                times: 1,
+                distance: 500
+            },
+            "revive": {
+                times: 1,
+                duration_f: 720,
+                duration_s: 24.0,
+                hp_ratio: 100
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -6119,6 +7230,17 @@ export const e31000Data: StageData = {
             delayFrames: "596-596f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -6152,6 +7274,38 @@ export const e31000Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [45000, 45000, 45000],
+                timings: [160, 162, 164]
+            },
+            "omni-strike": {
+                standing_range: 130,
+                omni_range: [-130, 130]
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            },
+            "burrow": {
+                times: 1,
+                distance: 500
+            },
+            "revive": {
+                times: 1,
+                duration_f: 720,
+                duration_s: 24.0,
+                hp_ratio: 100
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -6185,6 +7339,11 @@ export const e31000Data: StageData = {
             delayFrames: "600-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -6218,6 +7377,22 @@ export const e31000Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -6251,6 +7426,11 @@ export const e31000Data: StageData = {
             delayFrames: "604-604f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -6284,6 +7464,11 @@ export const e31000Data: StageData = {
             delayFrames: "608-608f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -6317,6 +7502,11 @@ export const e31000Data: StageData = {
             delayFrames: "612-612f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -6350,6 +7540,11 @@ export const e31000Data: StageData = {
             delayFrames: "616-616f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -6383,6 +7578,11 @@ export const e31000Data: StageData = {
             delayFrames: "620-620f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -6416,6 +7616,30 @@ export const e31000Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [17000, 17000, 17000],
+                timings: [35, 37, 39]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 501]
+            },
+            "freeze": {
+                chance: 40,
+                duration_f: 100,
+                duration_s: 3.33
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "aku-shield": {
+                hp: 50000
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -6449,7 +7673,8 @@ export const e31000Data: StageData = {
             delayFrames: "800-800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "021",
@@ -6482,7 +7707,8 @@ export const e31000Data: StageData = {
             delayFrames: "27,000-27,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -6577,6 +7803,14 @@ export const e31000Data: StageData = {
             delayFrames: "600-700f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            }
           }
         },
         {
@@ -6610,7 +7844,8 @@ export const e31000Data: StageData = {
             delayFrames: "1,400-1,500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "604",
@@ -6643,6 +7878,32 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [6500, 6500, 6500],
+                timings: [10, 21, 32]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 251]
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "savage-blow": {
+                chance: 100,
+                power: 1.05
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -6676,6 +7937,28 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "revive": {
+                times: 1,
+                duration_f: 180,
+                duration_s: 6.0,
+                hp_ratio: 50
+            },
+            "surge": {
+                chance: 75,
+                distance_start: 280,
+                distance_end: 980,
+                level: 1
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -6709,6 +7992,32 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [9300, 9300, 9300],
+                timings: [10, 21, 32]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 251]
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "toxic": {
+                chance: 5,
+                damage: 50
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -6742,7 +8051,8 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "379",
@@ -6775,6 +8085,18 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 340,
+                omni_range: [-340, 340]
+            },
+            "weaken": {
+                chance: 100,
+                power: 150,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -6808,6 +8130,28 @@ export const e31000Data: StageData = {
             delayFrames: "2,200-2,300f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "revive": {
+                times: 1,
+                duration_f: 180,
+                duration_s: 6.0,
+                hp_ratio: 50
+            },
+            "surge": {
+                chance: 75,
+                distance_start: 280,
+                distance_end: 980,
+                level: 1
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -6841,7 +8185,8 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -6936,7 +8281,8 @@ export const e31000Data: StageData = {
             delayFrames: "1,700-1,800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "000",
@@ -6969,7 +8315,8 @@ export const e31000Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "610",
@@ -7002,6 +8349,30 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [17000, 17000, 17000],
+                timings: [35, 37, 39]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 501]
+            },
+            "freeze": {
+                chance: 40,
+                duration_f: 100,
+                duration_s: 3.33
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "aku-shield": {
+                hp: 50000
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -7035,6 +8406,14 @@ export const e31000Data: StageData = {
             delayFrames: "1,800-1,900f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "immune-freeze": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -7068,6 +8447,22 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -7101,6 +8496,32 @@ export const e31000Data: StageData = {
             delayFrames: "1,300-1,400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [6500, 6500, 6500],
+                timings: [10, 21, 32]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 251]
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "savage-blow": {
+                chance: 100,
+                power: 1.05
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -7134,7 +8555,8 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -7229,6 +8651,24 @@ export const e31000Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "burrow": {
+                times: 1,
+                distance: 375
+            },
+            "revive": {
+                times: 1,
+                duration_f: 480,
+                duration_s: 16.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -7262,7 +8702,8 @@ export const e31000Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "167",
@@ -7295,7 +8736,8 @@ export const e31000Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "603",
@@ -7328,6 +8770,17 @@ export const e31000Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -7361,6 +8814,22 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -7394,6 +8863,18 @@ export const e31000Data: StageData = {
             delayFrames: "600-700f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 100
+            }
           }
         },
         {
@@ -7427,6 +8908,21 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 33,
+                power: 150
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -7460,6 +8956,22 @@ export const e31000Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -7493,6 +9005,38 @@ export const e31000Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [45000, 45000, 45000],
+                timings: [160, 162, 164]
+            },
+            "omni-strike": {
+                standing_range: 130,
+                omni_range: [-130, 130]
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            },
+            "burrow": {
+                times: 1,
+                distance: 500
+            },
+            "revive": {
+                times: 1,
+                duration_f: 720,
+                duration_s: 24.0,
+                hp_ratio: 100
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -7526,6 +9070,24 @@ export const e31000Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "burrow": {
+                times: 1,
+                distance: 375
+            },
+            "revive": {
+                times: 1,
+                duration_f: 480,
+                duration_s: 16.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -7559,6 +9121,17 @@ export const e31000Data: StageData = {
             delayFrames: "700-800f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -7592,7 +9165,8 @@ export const e31000Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "289",
@@ -7625,6 +9199,18 @@ export const e31000Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 100
+            }
           }
         },
         {
@@ -7658,6 +9244,28 @@ export const e31000Data: StageData = {
             delayFrames: "1,200-1,300f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "revive": {
+                times: 1,
+                duration_f: 180,
+                duration_s: 6.0,
+                hp_ratio: 50
+            },
+            "surge": {
+                chance: 75,
+                distance_start: 280,
+                distance_end: 980,
+                level: 1
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -7691,6 +9299,11 @@ export const e31000Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 20
+            }
           }
         },
         {
@@ -7724,7 +9337,8 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -7779,7 +9393,8 @@ export const e31000Data: StageData = {
             delayFrames: "160-260f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "552",
@@ -7812,6 +9427,11 @@ export const e31000Data: StageData = {
             delayFrames: "1,200-1,300f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -7845,6 +9465,14 @@ export const e31000Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "death-surge": {
+                chance: 100,
+                distance_start: 200,
+                distance_end: 800,
+                level: 1
+            }
           }
         },
         {
@@ -7878,6 +9506,33 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 550,
+                omni_range: [-250, 550]
+            },
+            "weaken": {
+                chance: 100,
+                power: 60,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -7911,7 +9566,8 @@ export const e31000Data: StageData = {
             delayFrames: "1,100-1,100f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "015",
@@ -7944,7 +9600,8 @@ export const e31000Data: StageData = {
             delayFrames: "1,100-1,100f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "015",
@@ -7977,7 +9634,8 @@ export const e31000Data: StageData = {
             delayFrames: "1,100-1,100f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "015",
@@ -8010,7 +9668,8 @@ export const e31000Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "412",
@@ -8043,6 +9702,13 @@ export const e31000Data: StageData = {
             delayFrames: "5,000-6,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "curse": {
+                chance: 100,
+                duration_f: 150,
+                duration_s: 5.0
+            }
           }
         },
         {
@@ -8076,6 +9742,12 @@ export const e31000Data: StageData = {
             delayFrames: "1,700-1,800f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "savage-blow": {
+                chance: 100,
+                power: 1.1
+            }
           }
         },
         {
@@ -8109,6 +9781,11 @@ export const e31000Data: StageData = {
             delayFrames: "1,600-1,700f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -8142,6 +9819,36 @@ export const e31000Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 20
+            },
+            "freeze": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            },
+            "slow": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            },
+            "mini-wave": {
+                chance: 100,
+                level: 4
+            },
+            "weaken": {
+                chance: 20,
+                power: 60,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "curse": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -8175,6 +9882,12 @@ export const e31000Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "75%",
             isBoss: false
+          },
+          abilities: {
+            "savage-blow": {
+                chance: 100,
+                power: 1.1
+            }
           }
         },
         {
@@ -8208,6 +9921,11 @@ export const e31000Data: StageData = {
             delayFrames: "300-1,700f",
             baseHpRatio: "75%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -8241,7 +9959,8 @@ export const e31000Data: StageData = {
             delayFrames: "60-180f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     }
   ]

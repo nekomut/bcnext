@@ -62,7 +62,8 @@ export const e1266Data: StageData = {
             delayFrames: "500-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "563",
@@ -95,6 +96,15 @@ export const e1266Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 34,
+                power: 100
+            },
+            "aku-shield": {
+                hp: 200000
+            }
           }
         },
         {
@@ -128,6 +138,11 @@ export const e1266Data: StageData = {
             delayFrames: "900-1,100f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -161,6 +176,12 @@ export const e1266Data: StageData = {
             delayFrames: "2,100-2,300f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "savage-blow": {
+                chance: 100,
+                power: 1.1
+            }
           }
         },
         {
@@ -194,7 +215,8 @@ export const e1266Data: StageData = {
             delayFrames: "900-1,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -249,7 +271,8 @@ export const e1266Data: StageData = {
             delayFrames: "1,700-1,800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "554",
@@ -282,6 +305,13 @@ export const e1266Data: StageData = {
             delayFrames: "700-800f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -315,6 +345,15 @@ export const e1266Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 34,
+                power: 100
+            },
+            "aku-shield": {
+                hp: 200000
+            }
           }
         },
         {
@@ -348,6 +387,11 @@ export const e1266Data: StageData = {
             delayFrames: "1,600-1,700f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -381,7 +425,8 @@ export const e1266Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     }
   ]

@@ -62,7 +62,8 @@ export const e2126Data: StageData = {
             delayFrames: "100-150f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "503",
@@ -95,6 +96,11 @@ export const e2126Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "immune-attacks": {
+                enabled: true
+            }
           }
         },
         {
@@ -128,6 +134,11 @@ export const e2126Data: StageData = {
             delayFrames: "400-600f",
             baseHpRatio: "90%",
             isBoss: false
+          },
+          abilities: {
+            "immune-attacks": {
+                enabled: true
+            }
           }
         },
         {
@@ -161,7 +172,8 @@ export const e2126Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "90%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "500",
@@ -194,6 +206,14 @@ export const e2126Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "90%",
             isBoss: true
+          },
+          abilities: {
+            "weaken": {
+                chance: 100,
+                power: 90,
+                duration_f: 25,
+                duration_s: 0.83
+            }
           }
         }]
     },
@@ -249,7 +269,8 @@ export const e2126Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "011",
@@ -282,7 +303,8 @@ export const e2126Data: StageData = {
             delayFrames: "400-600f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "504",
@@ -315,6 +337,11 @@ export const e2126Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -348,6 +375,14 @@ export const e2126Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "weaken": {
+                chance: 100,
+                power: 90,
+                duration_f: 25,
+                duration_s: 0.83
+            }
           }
         }]
     },
@@ -403,7 +438,8 @@ export const e2126Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "500",
@@ -436,6 +472,14 @@ export const e2126Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "weaken": {
+                chance: 100,
+                power: 90,
+                duration_f: 25,
+                duration_s: 0.83
+            }
           }
         },
         {
@@ -469,7 +513,8 @@ export const e2126Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -502,7 +547,8 @@ export const e2126Data: StageData = {
             delayFrames: "500-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "505",
@@ -535,7 +581,8 @@ export const e2126Data: StageData = {
             delayFrames: "1,200-1,200f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     }
   ]

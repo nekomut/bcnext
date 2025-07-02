@@ -86,6 +86,12 @@ export const e1318Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 50,
+                power: 100
+            }
           }
         },
         {
@@ -119,6 +125,29 @@ export const e1318Data: StageData = {
             delayFrames: "280-280f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 30
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            },
+            "immune-surge": {
+                enabled: true
+            }
           }
         },
         {
@@ -152,6 +181,11 @@ export const e1318Data: StageData = {
             delayFrames: "260-260f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "immune-attacks": {
+                enabled: true
+            }
           }
         },
         {
@@ -185,6 +219,29 @@ export const e1318Data: StageData = {
             delayFrames: "220-220f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 30
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            },
+            "immune-surge": {
+                enabled: true
+            }
           }
         },
         {
@@ -218,6 +275,11 @@ export const e1318Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "immune-attacks": {
+                enabled: true
+            }
           }
         }]
     }

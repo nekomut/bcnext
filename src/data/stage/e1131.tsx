@@ -62,7 +62,8 @@ export const e1131Data: StageData = {
             delayFrames: "4,800-4,800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "041",
@@ -95,7 +96,8 @@ export const e1131Data: StageData = {
             delayFrames: "4,800-4,800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "037",
@@ -128,7 +130,8 @@ export const e1131Data: StageData = {
             delayFrames: "4,800-4,800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "051",
@@ -161,7 +164,8 @@ export const e1131Data: StageData = {
             delayFrames: "9,600-9,600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "041",
@@ -194,7 +198,8 @@ export const e1131Data: StageData = {
             delayFrames: "9,600-9,600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "037",
@@ -227,7 +232,8 @@ export const e1131Data: StageData = {
             delayFrames: "9,600-9,600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "015",
@@ -260,7 +266,8 @@ export const e1131Data: StageData = {
             delayFrames: "100-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "323",
@@ -293,7 +300,8 @@ export const e1131Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     }
   ]

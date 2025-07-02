@@ -62,7 +62,8 @@ export const e1335Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "114",
@@ -95,7 +96,8 @@ export const e1335Data: StageData = {
             delayFrames: "600-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "160",
@@ -128,6 +130,13 @@ export const e1335Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 25,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -161,7 +170,8 @@ export const e1335Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "634",
@@ -194,6 +204,28 @@ export const e1335Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [22000, 6000],
+                timings: [14, 15]
+            },
+            "omni-strike": {
+                standing_range: 350,
+                omni_range: [-300, 350]
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "aku-shield": {
+                hp: 400000
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -227,6 +259,19 @@ export const e1335Data: StageData = {
             delayFrames: "600-700f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 50,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "death-surge": {
+                chance: 100,
+                distance_start: 450,
+                distance_end: 950,
+                level: 3
+            }
           }
         },
         {
@@ -260,6 +305,18 @@ export const e1335Data: StageData = {
             delayFrames: "600-700f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "burrow": {
+                times: 1,
+                distance: 500
+            },
+            "revive": {
+                times: 1,
+                duration_f: 240,
+                duration_s: 8.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -293,6 +350,28 @@ export const e1335Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [22000, 6000],
+                timings: [14, 15]
+            },
+            "omni-strike": {
+                standing_range: 350,
+                omni_range: [-300, 350]
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "aku-shield": {
+                hp: 400000
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -326,6 +405,18 @@ export const e1335Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "burrow": {
+                times: 1,
+                distance: 500
+            },
+            "revive": {
+                times: 1,
+                duration_f: 240,
+                duration_s: 8.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -359,6 +450,21 @@ export const e1335Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 30
+            },
+            "burrow": {
+                times: 1,
+                distance: 750
+            },
+            "revive": {
+                times: 1,
+                duration_f: 480,
+                duration_s: 16.0,
+                hp_ratio: 100
+            }
           }
         },
         {
@@ -392,6 +498,17 @@ export const e1335Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 250000
+            },
+            "death-surge": {
+                chance: 100,
+                distance_start: 450,
+                distance_end: 1050,
+                level: 1
+            }
           }
         },
         {
@@ -425,7 +542,8 @@ export const e1335Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     }
   ]

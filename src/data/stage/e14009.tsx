@@ -78,6 +78,46 @@ export const e14009Data: StageData = {
             delayFrames: "60-300f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {}
+        },
+        {
+          enemyId: "256",
+          enemyName: "タッちゃん",
+          icon: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAA3NCSVQICAjb4U/gAAAAwFBMVEUAAAAAAAAAAAAAAAABAQEBAQECAgICAgIDAwMDAwMDAwMDAwMDAwMDAwMEBAQEBAQEBAQEBAQEBAQFBQUFBQUFBQUFBQUFBQQGBgYGBgYGBgYGBgYGBgYHBwcICAgICAgICAgJCQkMDAwqAAQQEBASEhIUFBQWFhYXFxcYGBgZGRkZGRkZGRkbGxsbGxsdHR0fHx9tAAkiIiIjIyMlJSUlJSUnJycoKCgoKCgtLS0wMDAxMTGkAQ03NzdCQkLpARSFG5znAAAAQHRSTlMAAwoPef+1+iIplbzv9R0wOEJRFajR3v9iaHDG6UtZhY2e//93//SC5f+Us8qh1Lz+//vzxd7q0P/6/+///v7/k4+qoQAABD9JREFUWIWll2l7sjoQhkVEQDYpSkBwi8Y24pLi0ojF/v9/dSYu3d6jNe1cfvBqzc3MZOaZoVL5ZlW3+v1PcmbE3t8AzVZH/RPAT5KHPwXhzyZW9y+E5ppOrL/4YGYcO0kUKL85XHUDRR3smKaHfa+qgEkC1IeOWe1tSqwhu97xfb/pBVUZiOInLd/LDgVFmm63Z7NkOR83VQmEYU2SuL89MKyBYYQx264fzfsJwXRCwsQGBy6GSLGfNz8RlJsOVeMtQzocx/gdgfl+br7/Qn0YezcIir8oKUYaYUT7RNiOL9Wtxounx1ul7g7LA9VwUVJyCgNpCOHd8txgSnfG+PJ6t1WDIN6WRKMlw1gAEBqNRhpksncqTXe+wnTTuwowa3EvgYcyBnEcPRi9vr0CYTU1Tg4sMCar8fUA+u16G4IuGToH8Pz29vaMEE26AZjRdyA/+fx6CL1wogsAP2dgJAAQBEqz6XQ+z57gcnCeXQUo3kyUAGaQAnwmvD6PhCs4z3NGRIEhtrwKgELaMyDQkiByQqDRORhhmBwBs+sA6KQDxeIaOSMf5fhRliKEWwBQgwOHXxJO/z0ORslPALWzL/H/HT0XJfyP5LcAFS8r2b8HHdvW9fN3cuMWRBaiTUG++2AP41orCdMjA+fDW4CKO9hy/JXg1JtV1TX9qC4IZNK/CVDM4Yp98cG5yLzSDcEBkkY3AUAYbHLyflxPh/5F5D1L16Cs/duAiuJGWXpuJtDnwYeABH1HQ3oj+AEAmTQ7i0sUthW5FwKIro7C3j0SGTxuyUkSwIdG8xKDGiXh0L3jPLTVekepqHz42Nn7sFT93i1J/OLCSjSF6EpEJkPjA33X8wPP7W4oPJwyTHmR3+f2p8ePl9NonYOgsrIEddEtua0Fmnq3ms0gCZTyozilsdS8N7MdI2QCmkAvN1GXGG8VpfcEUwFix2cJAUtrP1fPRwSPK6HKtBBnKRVSRtmseT9A7a84PJiVHCqBFZwXRbnLzJ8PvnvQmUDsIM0EAIRzIY9pRyKLit/mLH+C8QZqjk9pTGOZRUXtLBatdQlDFmbSqbHDSGpdMmqd6KVglGBS0OM1Jl0pgBIYj3soBUpIyWHR0ZyGZC0r5vpARAoIKcSgTHuSm2c13pSiCiEI0Q55IrvBB40Vh+HECnEFaPUylqjDo7nzHTwbFwcOCUgbXckMgH6/HAccZmVB7KFMI50BnT0X2xUgdqvWnRr22dRpSaEICQiqVfd/sbe7y53oZ6S3I6/5mxcgYw1VBG0sKUSfAaVY9HTLVL1u8xcQN4NbxNgZGJEVJj35INTpDhoB27WHdhg6ifw7mCKWdgyATmo1Qqdl/Hzkm3kWBw/0etwa1EJNuhOEqj1xUGbHajQs5zceVIz+Ioda0mG5Qm3ZXoa3GsP0+4sJFRMe2S3flHyjr/qDlpW0wzS1wcKkPoyv98N/ClqG9m7EDjgAAAAASUVORK5CYII=",
+          traits: ["黒"],
+          baseStats: {
+            hp: 128000,
+            ap: 9000,
+            dps: 2231.4,
+            speed: 6,
+            range: 400,
+            rangeType: "範囲",
+            kbLevel: 2,
+            money: 600,
+            freq: 121,
+            foreswing: 32,
+            backswing: 19,
+            tba: 45
+          },
+          stageStats: {
+            actualHp: 128000,
+            actualAp: 9000,
+            actualDps: 2231.4,
+            magnification: "100%",
+            count: "0",
+            spawnTime: "266.7s",
+            spawnTimeFrames: "8,000f",
+            delay: "23.3-30.0s",
+            delayFrames: "700-900f",
+            baseHpRatio: "100%",
+            isBoss: false
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 600,
+                ld_range: [600, 850]
+            }
           }
         },
         {
@@ -111,39 +151,12 @@ export const e14009Data: StageData = {
             delayFrames: "700-900f",
             baseHpRatio: "100%",
             isBoss: false
-          }
-        },
-        {
-          enemyId: "256",
-          enemyName: "タッちゃん",
-          icon: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAA3NCSVQICAjb4U/gAAAAwFBMVEUAAAAAAAAAAAAAAAABAQEBAQECAgICAgIDAwMDAwMDAwMDAwMDAwMDAwMEBAQEBAQEBAQEBAQEBAQFBQUFBQUFBQUFBQUFBQQGBgYGBgYGBgYGBgYGBgYHBwcICAgICAgICAgJCQkMDAwqAAQQEBASEhIUFBQWFhYXFxcYGBgZGRkZGRkZGRkbGxsbGxsdHR0fHx9tAAkiIiIjIyMlJSUlJSUnJycoKCgoKCgtLS0wMDAxMTGkAQ03NzdCQkLpARSFG5znAAAAQHRSTlMAAwoPef+1+iIplbzv9R0wOEJRFajR3v9iaHDG6UtZhY2e//93//SC5f+Us8qh1Lz+//vzxd7q0P/6/+///v7/k4+qoQAABD9JREFUWIWll2l7sjoQhkVEQDYpSkBwi8Y24pLi0ojF/v9/dSYu3d6jNe1cfvBqzc3MZOaZoVL5ZlW3+v1PcmbE3t8AzVZH/RPAT5KHPwXhzyZW9y+E5ppOrL/4YGYcO0kUKL85XHUDRR3smKaHfa+qgEkC1IeOWe1tSqwhu97xfb/pBVUZiOInLd/LDgVFmm63Z7NkOR83VQmEYU2SuL89MKyBYYQx264fzfsJwXRCwsQGBy6GSLGfNz8RlJsOVeMtQzocx/gdgfl+br7/Qn0YezcIir8oKUYaYUT7RNiOL9Wtxounx1ul7g7LA9VwUVJyCgNpCOHd8txgSnfG+PJ6t1WDIN6WRKMlw1gAEBqNRhpksncqTXe+wnTTuwowa3EvgYcyBnEcPRi9vr0CYTU1Tg4sMCar8fUA+u16G4IuGToH8Pz29vaMEE26AZjRdyA/+fx6CL1wogsAP2dgJAAQBEqz6XQ+z57gcnCeXQUo3kyUAGaQAnwmvD6PhCs4z3NGRIEhtrwKgELaMyDQkiByQqDRORhhmBwBs+sA6KQDxeIaOSMf5fhRliKEWwBQgwOHXxJO/z0ORslPALWzL/H/HT0XJfyP5LcAFS8r2b8HHdvW9fN3cuMWRBaiTUG++2AP41orCdMjA+fDW4CKO9hy/JXg1JtV1TX9qC4IZNK/CVDM4Yp98cG5yLzSDcEBkkY3AUAYbHLyflxPh/5F5D1L16Cs/duAiuJGWXpuJtDnwYeABH1HQ3oj+AEAmTQ7i0sUthW5FwKIro7C3j0SGTxuyUkSwIdG8xKDGiXh0L3jPLTVekepqHz42Nn7sFT93i1J/OLCSjSF6EpEJkPjA33X8wPP7W4oPJwyTHmR3+f2p8ePl9NonYOgsrIEddEtua0Fmnq3ms0gCZTyozilsdS8N7MdI2QCmkAvN1GXGG8VpfcEUwFix2cJAUtrP1fPRwSPK6HKtBBnKRVSRtmseT9A7a84PJiVHCqBFZwXRbnLzJ8PvnvQmUDsIM0EAIRzIY9pRyKLit/mLH+C8QZqjk9pTGOZRUXtLBatdQlDFmbSqbHDSGpdMmqd6KVglGBS0OM1Jl0pgBIYj3soBUpIyWHR0ZyGZC0r5vpARAoIKcSgTHuSm2c13pSiCiEI0Q55IrvBB40Vh+HECnEFaPUylqjDo7nzHTwbFwcOCUgbXckMgH6/HAccZmVB7KFMI50BnT0X2xUgdqvWnRr22dRpSaEICQiqVfd/sbe7y53oZ6S3I6/5mxcgYw1VBG0sKUSfAaVY9HTLVL1u8xcQN4NbxNgZGJEVJj35INTpDhoB27WHdhg6ifw7mCKWdgyATmo1Qqdl/Hzkm3kWBw/0etwa1EJNuhOEqj1xUGbHajQs5zceVIz+Ioda0mG5Qm3ZXoa3GsP0+4sJFRMe2S3flHyjr/qDlpW0wzS1wcKkPoyv98N/ClqG9m7EDjgAAAAASUVORK5CYII=",
-          traits: ["黒"],
-          baseStats: {
-            hp: 128000,
-            ap: 9000,
-            dps: 2231.4,
-            speed: 6,
-            range: 400,
-            rangeType: "範囲",
-            kbLevel: 2,
-            money: 600,
-            freq: 121,
-            foreswing: 32,
-            backswing: 19,
-            tba: 45
           },
-          stageStats: {
-            actualHp: 128000,
-            actualAp: 9000,
-            actualDps: 2231.4,
-            magnification: "100%",
-            count: "0",
-            spawnTime: "266.7s",
-            spawnTimeFrames: "8,000f",
-            delay: "23.3-30.0s",
-            delayFrames: "700-900f",
-            baseHpRatio: "100%",
-            isBoss: false
+          abilities: {
+            "long-distance": {
+                standing_range: 600,
+                ld_range: [600, 850]
+            }
           }
         },
         {
@@ -177,6 +190,12 @@ export const e14009Data: StageData = {
             delayFrames: "60-100f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 600,
+                ld_range: [600, 850]
+            }
           }
         },
         {
@@ -210,7 +229,8 @@ export const e14009Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "046",
@@ -243,7 +263,8 @@ export const e14009Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "050",
@@ -276,7 +297,8 @@ export const e14009Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "050",
@@ -309,7 +331,8 @@ export const e14009Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "050",
@@ -342,7 +365,8 @@ export const e14009Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "053",
@@ -375,7 +399,8 @@ export const e14009Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "100%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "046",
@@ -408,7 +433,8 @@ export const e14009Data: StageData = {
             delayFrames: "60-100f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "046",
@@ -441,7 +467,8 @@ export const e14009Data: StageData = {
             delayFrames: "2-10f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "021",
@@ -474,7 +501,8 @@ export const e14009Data: StageData = {
             delayFrames: "27,000-27,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     }
   ]

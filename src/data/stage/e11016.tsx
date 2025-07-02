@@ -62,6 +62,23 @@ export const e11016Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "0%",
             isBoss: true
+          },
+          abilities: {
+            "immune-waves": {
+                enabled: true
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            }
           }
         },
         {
@@ -95,6 +112,11 @@ export const e11016Data: StageData = {
             delayFrames: "600-600f",
             baseHpRatio: "2780000%",
             isBoss: false
+          },
+          abilities: {
+            "immune-attacks": {
+                enabled: true
+            }
           }
         },
         {
@@ -128,6 +150,11 @@ export const e11016Data: StageData = {
             delayFrames: "500-500f",
             baseHpRatio: "2780000%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -161,6 +188,14 @@ export const e11016Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "2780000%",
             isBoss: true
+          },
+          abilities: {
+            "weaken": {
+                chance: 100,
+                power: 90,
+                duration_f: 25,
+                duration_s: 0.83
+            }
           }
         },
         {
@@ -194,6 +229,29 @@ export const e11016Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "2780000%",
             isBoss: true
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 450,
+                ld_range: [450, 800]
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 100,
+                duration_s: 3.33
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            }
           }
         },
         {
@@ -227,6 +285,11 @@ export const e11016Data: StageData = {
             delayFrames: "100-100f",
             baseHpRatio: "2005000%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -260,6 +323,11 @@ export const e11016Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "2005000%",
             isBoss: true
+          },
+          abilities: {
+            "immune-attacks": {
+                enabled: true
+            }
           }
         },
         {
@@ -293,7 +361,8 @@ export const e11016Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "1525000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "503",
@@ -326,6 +395,11 @@ export const e11016Data: StageData = {
             delayFrames: "600-600f",
             baseHpRatio: "1525000%",
             isBoss: false
+          },
+          abilities: {
+            "immune-attacks": {
+                enabled: true
+            }
           }
         },
         {
@@ -359,6 +433,14 @@ export const e11016Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "1525000%",
             isBoss: true
+          },
+          abilities: {
+            "weaken": {
+                chance: 100,
+                power: 90,
+                duration_f: 25,
+                duration_s: 0.83
+            }
           }
         },
         {
@@ -392,6 +474,20 @@ export const e11016Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "1525000%",
             isBoss: true
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 390,
+                ld_range: [390, 640]
+            },
+            "knockback": {
+                chance: 100
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -425,6 +521,11 @@ export const e11016Data: StageData = {
             delayFrames: "600-600f",
             baseHpRatio: "1080000%",
             isBoss: false
+          },
+          abilities: {
+            "immune-attacks": {
+                enabled: true
+            }
           }
         },
         {
@@ -458,6 +559,11 @@ export const e11016Data: StageData = {
             delayFrames: "500-500f",
             baseHpRatio: "1080000%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -491,6 +597,14 @@ export const e11016Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "1080000%",
             isBoss: true
+          },
+          abilities: {
+            "weaken": {
+                chance: 100,
+                power: 90,
+                duration_f: 25,
+                duration_s: 0.83
+            }
           }
         },
         {
@@ -524,6 +638,29 @@ export const e11016Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "1080000%",
             isBoss: true
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 450,
+                ld_range: [450, 800]
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 100,
+                duration_s: 3.33
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            }
           }
         },
         {
@@ -557,6 +694,11 @@ export const e11016Data: StageData = {
             delayFrames: "100-100f",
             baseHpRatio: "755000%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -590,6 +732,11 @@ export const e11016Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "755000%",
             isBoss: true
+          },
+          abilities: {
+            "immune-attacks": {
+                enabled: true
+            }
           }
         },
         {
@@ -623,7 +770,8 @@ export const e11016Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "525000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "503",
@@ -656,6 +804,11 @@ export const e11016Data: StageData = {
             delayFrames: "600-600f",
             baseHpRatio: "525000%",
             isBoss: false
+          },
+          abilities: {
+            "immune-attacks": {
+                enabled: true
+            }
           }
         },
         {
@@ -689,6 +842,14 @@ export const e11016Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "525000%",
             isBoss: true
+          },
+          abilities: {
+            "weaken": {
+                chance: 100,
+                power: 90,
+                duration_f: 25,
+                duration_s: 0.83
+            }
           }
         },
         {
@@ -722,6 +883,20 @@ export const e11016Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "525000%",
             isBoss: true
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 390,
+                ld_range: [390, 640]
+            },
+            "knockback": {
+                chance: 100
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -755,6 +930,11 @@ export const e11016Data: StageData = {
             delayFrames: "600-600f",
             baseHpRatio: "360000%",
             isBoss: false
+          },
+          abilities: {
+            "immune-attacks": {
+                enabled: true
+            }
           }
         },
         {
@@ -788,6 +968,11 @@ export const e11016Data: StageData = {
             delayFrames: "500-500f",
             baseHpRatio: "360000%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -821,6 +1006,14 @@ export const e11016Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "360000%",
             isBoss: true
+          },
+          abilities: {
+            "weaken": {
+                chance: 100,
+                power: 90,
+                duration_f: 25,
+                duration_s: 0.83
+            }
           }
         },
         {
@@ -854,6 +1047,29 @@ export const e11016Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "360000%",
             isBoss: true
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 450,
+                ld_range: [450, 800]
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 100,
+                duration_s: 3.33
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            }
           }
         },
         {
@@ -887,6 +1103,11 @@ export const e11016Data: StageData = {
             delayFrames: "100-100f",
             baseHpRatio: "255000%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -920,6 +1141,11 @@ export const e11016Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "255000%",
             isBoss: true
+          },
+          abilities: {
+            "immune-attacks": {
+                enabled: true
+            }
           }
         },
         {
@@ -953,7 +1179,8 @@ export const e11016Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "165000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "503",
@@ -986,6 +1213,11 @@ export const e11016Data: StageData = {
             delayFrames: "600-600f",
             baseHpRatio: "165000%",
             isBoss: false
+          },
+          abilities: {
+            "immune-attacks": {
+                enabled: true
+            }
           }
         },
         {
@@ -1019,6 +1251,14 @@ export const e11016Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "165000%",
             isBoss: true
+          },
+          abilities: {
+            "weaken": {
+                chance: 100,
+                power: 90,
+                duration_f: 25,
+                duration_s: 0.83
+            }
           }
         },
         {
@@ -1052,6 +1292,20 @@ export const e11016Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "165000%",
             isBoss: true
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 390,
+                ld_range: [390, 640]
+            },
+            "knockback": {
+                chance: 100
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -1085,6 +1339,11 @@ export const e11016Data: StageData = {
             delayFrames: "600-600f",
             baseHpRatio: "110000%",
             isBoss: false
+          },
+          abilities: {
+            "immune-attacks": {
+                enabled: true
+            }
           }
         },
         {
@@ -1118,6 +1377,11 @@ export const e11016Data: StageData = {
             delayFrames: "500-500f",
             baseHpRatio: "110000%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -1151,6 +1415,14 @@ export const e11016Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "110000%",
             isBoss: true
+          },
+          abilities: {
+            "weaken": {
+                chance: 100,
+                power: 90,
+                duration_f: 25,
+                duration_s: 0.83
+            }
           }
         },
         {
@@ -1184,6 +1456,29 @@ export const e11016Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "110000%",
             isBoss: true
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 450,
+                ld_range: [450, 800]
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 100,
+                duration_s: 3.33
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            }
           }
         },
         {
@@ -1217,6 +1512,11 @@ export const e11016Data: StageData = {
             delayFrames: "100-100f",
             baseHpRatio: "95000%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -1250,6 +1550,11 @@ export const e11016Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "95000%",
             isBoss: true
+          },
+          abilities: {
+            "immune-attacks": {
+                enabled: true
+            }
           }
         },
         {
@@ -1283,7 +1588,8 @@ export const e11016Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "55000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "503",
@@ -1316,6 +1622,11 @@ export const e11016Data: StageData = {
             delayFrames: "600-600f",
             baseHpRatio: "55000%",
             isBoss: false
+          },
+          abilities: {
+            "immune-attacks": {
+                enabled: true
+            }
           }
         },
         {
@@ -1349,6 +1660,14 @@ export const e11016Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "55000%",
             isBoss: true
+          },
+          abilities: {
+            "weaken": {
+                chance: 100,
+                power: 90,
+                duration_f: 25,
+                duration_s: 0.83
+            }
           }
         },
         {
@@ -1382,6 +1701,20 @@ export const e11016Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "55000%",
             isBoss: true
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 390,
+                ld_range: [390, 640]
+            },
+            "knockback": {
+                chance: 100
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -1415,6 +1748,11 @@ export const e11016Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "16000%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -1448,6 +1786,29 @@ export const e11016Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "16000%",
             isBoss: true
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 450,
+                ld_range: [450, 800]
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 100,
+                duration_s: 3.33
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            }
           }
         },
         {
@@ -1481,7 +1842,8 @@ export const e11016Data: StageData = {
             delayFrames: "600-600f",
             baseHpRatio: "7000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "503",
@@ -1514,6 +1876,11 @@ export const e11016Data: StageData = {
             delayFrames: "600-600f",
             baseHpRatio: "7000%",
             isBoss: false
+          },
+          abilities: {
+            "immune-attacks": {
+                enabled: true
+            }
           }
         },
         {
@@ -1547,6 +1914,14 @@ export const e11016Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "7000%",
             isBoss: true
+          },
+          abilities: {
+            "weaken": {
+                chance: 100,
+                power: 90,
+                duration_f: 25,
+                duration_s: 0.83
+            }
           }
         },
         {
@@ -1580,6 +1955,11 @@ export const e11016Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "1000%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -1613,6 +1993,11 @@ export const e11016Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "1000%",
             isBoss: false
+          },
+          abilities: {
+            "immune-attacks": {
+                enabled: true
+            }
           }
         },
         {
@@ -1646,6 +2031,11 @@ export const e11016Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "1000%",
             isBoss: true
+          },
+          abilities: {
+            "immune-attacks": {
+                enabled: true
+            }
           }
         },
         {
@@ -1679,6 +2069,11 @@ export const e11016Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "0%",
             isBoss: false
+          },
+          abilities: {
+            "immune-attacks": {
+                enabled: true
+            }
           }
         },
         {
@@ -1712,6 +2107,11 @@ export const e11016Data: StageData = {
             delayFrames: "800-1,200f",
             baseHpRatio: "0%",
             isBoss: false
+          },
+          abilities: {
+            "immune-attacks": {
+                enabled: true
+            }
           }
         },
         {
@@ -1745,7 +2145,8 @@ export const e11016Data: StageData = {
             delayFrames: "400-600f",
             baseHpRatio: "0%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     }
   ]

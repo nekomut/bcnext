@@ -62,6 +62,45 @@ export const e2102Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 1200,
+                omni_range: [-3600, 1200]
+            },
+            "knockback": {
+                chance: 100
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 150,
+                duration_s: 5.0
+            },
+            "weaken": {
+                chance: 100,
+                power: 750,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "strengthen": {
+                trigger_hp: 50,
+                power: 100
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            }
           }
         },
         {
@@ -95,7 +134,8 @@ export const e2102Data: StageData = {
             delayFrames: "1,000-1,500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "002",
@@ -128,7 +168,8 @@ export const e2102Data: StageData = {
             delayFrames: "1,000-1,500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "002",
@@ -161,7 +202,8 @@ export const e2102Data: StageData = {
             delayFrames: "1,000-1,500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "002",
@@ -194,7 +236,8 @@ export const e2102Data: StageData = {
             delayFrames: "1,000-1,500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -249,6 +292,45 @@ export const e2102Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 1200,
+                omni_range: [-3600, 1200]
+            },
+            "knockback": {
+                chance: 100
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 150,
+                duration_s: 5.0
+            },
+            "weaken": {
+                chance: 100,
+                power: 750,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "strengthen": {
+                trigger_hp: 50,
+                power: 100
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            }
           }
         },
         {
@@ -282,6 +364,11 @@ export const e2102Data: StageData = {
             delayFrames: "600-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -315,7 +402,8 @@ export const e2102Data: StageData = {
             delayFrames: "800-1,600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "167",
@@ -348,7 +436,8 @@ export const e2102Data: StageData = {
             delayFrames: "1,000-2,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "146",
@@ -381,6 +470,11 @@ export const e2102Data: StageData = {
             delayFrames: "800-1,600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -414,7 +508,8 @@ export const e2102Data: StageData = {
             delayFrames: "1,000-2,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "167",
@@ -447,7 +542,8 @@ export const e2102Data: StageData = {
             delayFrames: "1,200-2,400f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "014",
@@ -480,7 +576,8 @@ export const e2102Data: StageData = {
             delayFrames: "2-20f",
             baseHpRatio: "50%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "167",
@@ -513,7 +610,8 @@ export const e2102Data: StageData = {
             delayFrames: "2-20f",
             baseHpRatio: "50%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     }
   ]

@@ -70,7 +70,8 @@ export const e1279Data: StageData = {
             delayFrames: "60-120f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "014",
@@ -103,7 +104,8 @@ export const e1279Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "603",
@@ -136,6 +138,17 @@ export const e1279Data: StageData = {
             delayFrames: "800-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -169,6 +182,13 @@ export const e1279Data: StageData = {
             delayFrames: "800-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "curse": {
+                chance: 100,
+                duration_f: 150,
+                duration_s: 5.0
+            }
           }
         },
         {
@@ -202,6 +222,21 @@ export const e1279Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 33,
+                power: 150
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -235,6 +270,51 @@ export const e1279Data: StageData = {
             delayFrames: "600-800f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {}
+        },
+        {
+          enemyId: "477",
+          enemyName: "フグ太くん",
+          icon: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAA3NCSVQICAjb4U/gAAAAwFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQECAgICAgIDAwMDAwMEBQUNDgsYHxkaHxUiKRwpMh8VPSQxPSY6SypCQkEjWTRCUy9MTEtIWjMscD9YWFhQZThWazpZbz1jY2Nccj9ed0MtjlFvb3BahUl8fHxNnlqJiYlHuGmVlZVG0nihoKGvr7BK64e9vb7IyMjZ2dnl5eXt7e309PT6+vr///////9vm+hTAAAAQHRSTlMAChUfJi8/TFdha3eEkJqx/6S+5PDS/vP////+/////v///////////////////////////////////////wD/wwU9/wAABa9JREFUWIXtVml3qjoUbW2dhzpgBAwUo4BJkZkKCi///1+9E5RWsLe9d71vb93zodW1PDtn2HsnD//8x3j4C/AX4H8C8E20J8vFfPDYHQ9anV77u19+HT1piqZTvJA1eaFiNHv8w/ynlS8jebdRGMUmY0dn8ocAAz9P9rs9sphmMjPmxap1Rf69/Me5IiOkIJWZGrXYueC7+bj39NCZrzq/kd4aLmXVsChTDUZMaoac853u69JcP6eDn/P7C4XYjFKbKoQZAHAEgDjlPHMUJxn9lP70ggyRbdv0AmBZGa8ihX38kN9ZqDYTAQUwrB1ghvQTgBfuovttflfSGLM0VdUsQDBlLCuGcuQ3EaPed/lTjVFDnkLIBgMETdadMC9uEY7o1zW0JWif6CJ/utuY1Gbaht9FLA0Hve7zF/mtJWa2pSclwDGBL1RziuLz/CJP/Y3D3elmt1t9QamJDH2TPY91vEu4q1FKjd35pv5iv4lTzLm+43xzL7AugokTVc3LHyeKbQOR97fFF8mRxw4QAoXH5Z28Hpcas7BGND1M03iHCHAB63EN4HTOsFiqq+r3lO4imxqEUlgiklWiQQdEbw7wtA8LMQv5C3XONZggnEpsAxQMG7SoueFFAyG77NS9B2gjQR3o27IwER9BTWRzbgAU58uEMqnVBBgpzLJKBRhYoNglEzP+i9D7TYClQUwBYFMVBmFesFT9Vge3AH5TVE+SZphlvqnC/kswysgmK0sufCc81yq4W2MXEUuMEDowYBOQL/6q5RaLPIvTUK21c0YNJg4Uu2ygHJ4YJYXzkXo5tihynik1gEJpSGqkwuBEqi1WQWGhBiZpUm0hDfW0MUVpXKtholp2OQMRlq1hakwdnlcFJ2HOGwCOu7p1hhcFbEwUIUpgGjaoaeAmi+oARba4AZipQL5rvs2wGASVk+8A3OPm1mDHmBFNQEAdzFChG++AnW8A8GpW09NQZRopvZjZmvJ2sO3ocK+lz7jbQl+x1MsAVeXVCzwPlGXh2uTO53OWV3Q6NcXQRgSXAObUCwIA8OiW4hr70uTk+tVck+Ul77Ha5eMCa0JBponXwXsUeJG3PeDTbdH7FC7cCqDS82T8sUcZA/uoZkIJ7+9BEEXb6PUWgPsuT9zqi3rhQHu6qDTRR1goGLxEQ1vPgyq2Ub2FXE/TCiBdXEYw3r5WsmzBnQYswKbNiIyU9dsWySWTig8dZ/rVIgu+v1Y+9yL0ch3DWDZNMERTKNI2FWWfnIUSwMI+bClzc6Es2AG63ivLdRCtF8PWZQ9gZQBgXdzkOsDUPxXHug4Az6nqXgZvb9GbvBiKScyQIfywlATQwS8HEDsZD2uzBHN3pepie/Heo+g9MOVlR5gSMAHsRMjalP2yAR67PN7dOsEJKkpXFcBw7UWRFxyoIQFCH6ZgggwpuLISXn4fh7Fes+ZTlp0LZ3gFeF5t3wJ2iA6MLEtNW6ZhmaZlUBvHZVqqbGq7LI4uNJR+WOpkitavZhRYBPU64wVSTUIsQglh9sWCihsjKhGLjexm2Qd9elugbSCuAFVRsUEUhUAJws+wXzT9JBfb8KU+HLSopNRabYN37+BZTBgpUAArQGZMXGd/us0/n7jonefOAq711vOnFJfe2/bAGMbwnqNi/+ClSnpMGscDF7J9Bq+0efNdMVuuD+yA5zNVM4jYv2Vg2cnPaTX6y78sz4td7ErDh2YMXt+9yAZijGWoHc5XlSRLNvElNQNfLxFCn3NnOvvi2T96DaJt+e6Cd7CG/fQoWJOCbGBb+fGUlSUUqezy3Zevs9HaexVvx8fWU2csIdUNj6c8P2X7KcJ7N8x1P/QdXYFXl47Gw0G/23mue9l8LY1bD63JUpp+hKwoqPyA8GbaDGk+vL1W28tRSevWc7vT6w9H4/FkMpu9QMw/4mU2mYxHo2G/1+20n2rn/wt76VH5PhglNAAAAABJRU5ErkJggg==",
+          traits: ["古"],
+          baseStats: {
+            hp: 400000,
+            ap: 30000,
+            dps: 2990.03,
+            speed: 40,
+            range: 150,
+            rangeType: "範囲",
+            kbLevel: 400,
+            money: 900,
+            freq: 301,
+            foreswing: 4,
+            backswing: 297,
+            tba: 0
+          },
+          stageStats: {
+            actualHp: 400000,
+            actualAp: 30000,
+            actualDps: 2990.03,
+            magnification: "100%",
+            count: "1",
+            spawnTime: "0.0s",
+            spawnTimeFrames: "0f",
+            delay: "6.7-6.7s",
+            delayFrames: "200-200f",
+            baseHpRatio: "100%",
+            isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 350,
+                omni_range: [-350, 350]
+            },
+            "curse": {
+                chance: 100,
+                duration_f: 300,
+                duration_s: 10.0
+            }
           }
         },
         {
@@ -268,6 +348,17 @@ export const e1279Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 350,
+                omni_range: [-350, 350]
+            },
+            "curse": {
+                chance: 100,
+                duration_f: 300,
+                duration_s: 10.0
+            }
           }
         },
         {
@@ -301,39 +392,17 @@ export const e1279Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "100%",
             isBoss: false
-          }
-        },
-        {
-          enemyId: "477",
-          enemyName: "フグ太くん",
-          icon: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAA3NCSVQICAjb4U/gAAAAwFBMVEUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQECAgICAgIDAwMDAwMEBQUNDgsYHxkaHxUiKRwpMh8VPSQxPSY6SypCQkEjWTRCUy9MTEtIWjMscD9YWFhQZThWazpZbz1jY2Nccj9ed0MtjlFvb3BahUl8fHxNnlqJiYlHuGmVlZVG0nihoKGvr7BK64e9vb7IyMjZ2dnl5eXt7e309PT6+vr///////9vm+hTAAAAQHRSTlMAChUfJi8/TFdha3eEkJqx/6S+5PDS/vP////+/////v///////////////////////////////////////wD/wwU9/wAABa9JREFUWIXtVml3qjoUbW2dhzpgBAwUo4BJkZkKCi///1+9E5RWsLe9d71vb93zodW1PDtn2HsnD//8x3j4C/AX4H8C8E20J8vFfPDYHQ9anV77u19+HT1piqZTvJA1eaFiNHv8w/ynlS8jebdRGMUmY0dn8ocAAz9P9rs9sphmMjPmxap1Rf69/Me5IiOkIJWZGrXYueC7+bj39NCZrzq/kd4aLmXVsChTDUZMaoac853u69JcP6eDn/P7C4XYjFKbKoQZAHAEgDjlPHMUJxn9lP70ggyRbdv0AmBZGa8ihX38kN9ZqDYTAQUwrB1ghvQTgBfuovttflfSGLM0VdUsQDBlLCuGcuQ3EaPed/lTjVFDnkLIBgMETdadMC9uEY7o1zW0JWif6CJ/utuY1Gbaht9FLA0Hve7zF/mtJWa2pSclwDGBL1RziuLz/CJP/Y3D3elmt1t9QamJDH2TPY91vEu4q1FKjd35pv5iv4lTzLm+43xzL7AugokTVc3LHyeKbQOR97fFF8mRxw4QAoXH5Z28Hpcas7BGND1M03iHCHAB63EN4HTOsFiqq+r3lO4imxqEUlgiklWiQQdEbw7wtA8LMQv5C3XONZggnEpsAxQMG7SoueFFAyG77NS9B2gjQR3o27IwER9BTWRzbgAU58uEMqnVBBgpzLJKBRhYoNglEzP+i9D7TYClQUwBYFMVBmFesFT9Vge3AH5TVE+SZphlvqnC/kswysgmK0sufCc81yq4W2MXEUuMEDowYBOQL/6q5RaLPIvTUK21c0YNJg4Uu2ygHJ4YJYXzkXo5tihynik1gEJpSGqkwuBEqi1WQWGhBiZpUm0hDfW0MUVpXKtholp2OQMRlq1hakwdnlcFJ2HOGwCOu7p1hhcFbEwUIUpgGjaoaeAmi+oARba4AZipQL5rvs2wGASVk+8A3OPm1mDHmBFNQEAdzFChG++AnW8A8GpW09NQZRopvZjZmvJ2sO3ocK+lz7jbQl+x1MsAVeXVCzwPlGXh2uTO53OWV3Q6NcXQRgSXAObUCwIA8OiW4hr70uTk+tVck+Ul77Ha5eMCa0JBponXwXsUeJG3PeDTbdH7FC7cCqDS82T8sUcZA/uoZkIJ7+9BEEXb6PUWgPsuT9zqi3rhQHu6qDTRR1goGLxEQ1vPgyq2Ub2FXE/TCiBdXEYw3r5WsmzBnQYswKbNiIyU9dsWySWTig8dZ/rVIgu+v1Y+9yL0ch3DWDZNMERTKNI2FWWfnIUSwMI+bClzc6Es2AG63ivLdRCtF8PWZQ9gZQBgXdzkOsDUPxXHug4Az6nqXgZvb9GbvBiKScyQIfywlATQwS8HEDsZD2uzBHN3pepie/Heo+g9MOVlR5gSMAHsRMjalP2yAR67PN7dOsEJKkpXFcBw7UWRFxyoIQFCH6ZgggwpuLISXn4fh7Fes+ZTlp0LZ3gFeF5t3wJ2iA6MLEtNW6ZhmaZlUBvHZVqqbGq7LI4uNJR+WOpkitavZhRYBPU64wVSTUIsQglh9sWCihsjKhGLjexm2Qd9elugbSCuAFVRsUEUhUAJws+wXzT9JBfb8KU+HLSopNRabYN37+BZTBgpUAArQGZMXGd/us0/n7jonefOAq711vOnFJfe2/bAGMbwnqNi/+ClSnpMGscDF7J9Bq+0efNdMVuuD+yA5zNVM4jYv2Vg2cnPaTX6y78sz4td7ErDh2YMXt+9yAZijGWoHc5XlSRLNvElNQNfLxFCn3NnOvvi2T96DaJt+e6Cd7CG/fQoWJOCbGBb+fGUlSUUqezy3Zevs9HaexVvx8fWU2csIdUNj6c8P2X7KcJ7N8x1P/QdXYFXl47Gw0G/23mue9l8LY1bD63JUpp+hKwoqPyA8GbaDGk+vL1W28tRSevWc7vT6w9H4/FkMpu9QMw/4mU2mYxHo2G/1+20n2rn/wt76VH5PhglNAAAAABJRU5ErkJggg==",
-          traits: ["古"],
-          baseStats: {
-            hp: 400000,
-            ap: 30000,
-            dps: 2990.03,
-            speed: 40,
-            range: 150,
-            rangeType: "範囲",
-            kbLevel: 400,
-            money: 900,
-            freq: 301,
-            foreswing: 4,
-            backswing: 297,
-            tba: 0
           },
-          stageStats: {
-            actualHp: 400000,
-            actualAp: 30000,
-            actualDps: 2990.03,
-            magnification: "100%",
-            count: "1",
-            spawnTime: "0.0s",
-            spawnTimeFrames: "0f",
-            delay: "6.7-6.7s",
-            delayFrames: "200-200f",
-            baseHpRatio: "100%",
-            isBoss: false
+          abilities: {
+            "omni-strike": {
+                standing_range: 350,
+                omni_range: [-350, 350]
+            },
+            "curse": {
+                chance: 100,
+                duration_f: 300,
+                duration_s: 10.0
+            }
           }
         }]
     },
@@ -397,6 +466,14 @@ export const e1279Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "revive": {
+                times: -1,
+                duration_f: 60,
+                duration_s: 2.0,
+                hp_ratio: 100
+            }
           }
         },
         {
@@ -430,6 +507,18 @@ export const e1279Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "burrow": {
+                times: 2,
+                distance: 500
+            },
+            "revive": {
+                times: 1,
+                duration_f: 240,
+                duration_s: 8.0,
+                hp_ratio: 100
+            }
           }
         },
         {
@@ -463,6 +552,23 @@ export const e1279Data: StageData = {
             delayFrames: "500-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -496,6 +602,18 @@ export const e1279Data: StageData = {
             delayFrames: "700-800f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "burrow": {
+                times: 2,
+                distance: 500
+            },
+            "revive": {
+                times: 1,
+                duration_f: 240,
+                duration_s: 8.0,
+                hp_ratio: 100
+            }
           }
         },
         {
@@ -529,6 +647,14 @@ export const e1279Data: StageData = {
             delayFrames: "500-600f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "revive": {
+                times: -1,
+                duration_f: 60,
+                duration_s: 2.0,
+                hp_ratio: 100
+            }
           }
         },
         {
@@ -562,6 +688,38 @@ export const e1279Data: StageData = {
             delayFrames: "600-700f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [45000, 45000, 45000],
+                timings: [160, 162, 164]
+            },
+            "omni-strike": {
+                standing_range: 130,
+                omni_range: [-130, 130]
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            },
+            "burrow": {
+                times: 1,
+                distance: 500
+            },
+            "revive": {
+                times: 1,
+                duration_f: 720,
+                duration_s: 24.0,
+                hp_ratio: 100
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -595,6 +753,23 @@ export const e1279Data: StageData = {
             delayFrames: "700-800f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -628,6 +803,23 @@ export const e1279Data: StageData = {
             delayFrames: "1,100-1,200f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 20,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 1500
+            },
+            "revive": {
+                times: 1,
+                duration_f: 480,
+                duration_s: 16.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -661,6 +853,21 @@ export const e1279Data: StageData = {
             delayFrames: "60-180f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 33,
+                power: 150
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -694,6 +901,17 @@ export const e1279Data: StageData = {
             delayFrames: "60-180f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "base-destroyer": {
+                enabled: true
+            },
+            "revive": {
+                times: -1,
+                duration_f: 240,
+                duration_s: 8.0,
+                hp_ratio: 100
+            }
           }
         }]
     },
@@ -757,6 +975,11 @@ export const e1279Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 4500
+            }
           }
         },
         {
@@ -790,6 +1013,19 @@ export const e1279Data: StageData = {
             delayFrames: "1,700-1,900f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 50,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "death-surge": {
+                chance: 100,
+                distance_start: 450,
+                distance_end: 950,
+                level: 3
+            }
           }
         },
         {
@@ -823,6 +1059,21 @@ export const e1279Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 33,
+                power: 150
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -856,6 +1107,30 @@ export const e1279Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [17000, 17000, 17000],
+                timings: [35, 37, 39]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 501]
+            },
+            "freeze": {
+                chance: 40,
+                duration_f: 100,
+                duration_s: 3.33
+            },
+            "immune-waves": {
+                enabled: true
+            },
+            "aku-shield": {
+                hp: 50000
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -889,6 +1164,17 @@ export const e1279Data: StageData = {
             delayFrames: "1,300-1,500f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         }]
     },
@@ -952,7 +1238,8 @@ export const e1279Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "046",
@@ -985,7 +1272,8 @@ export const e1279Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "042",
@@ -1018,7 +1306,8 @@ export const e1279Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "603",
@@ -1051,6 +1340,17 @@ export const e1279Data: StageData = {
             delayFrames: "1,500-1,600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 30
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -1084,7 +1384,8 @@ export const e1279Data: StageData = {
             delayFrames: "600-800f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "624",
@@ -1117,6 +1418,21 @@ export const e1279Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 33,
+                power: 150
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -1150,6 +1466,32 @@ export const e1279Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [6500, 6500, 6500],
+                timings: [10, 21, 32]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 251]
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "savage-blow": {
+                chance: 100,
+                power: 1.05
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -1183,6 +1525,32 @@ export const e1279Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [9300, 9300, 9300],
+                timings: [10, 21, 32]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 251]
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "toxic": {
+                chance: 5,
+                damage: 50
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -1216,6 +1584,24 @@ export const e1279Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 330,
+                ld_range: [330, 1060]
+            },
+            "immune-surge": {
+                enabled: true
+            },
+            "surge": {
+                chance: 20,
+                distance_start: 400,
+                distance_end: 1200,
+                level: 1
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         }]
     }

@@ -62,6 +62,14 @@ export const e24002Data: StageData = {
             delayFrames: "920-1,040f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -95,7 +103,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "184",
@@ -128,6 +137,12 @@ export const e24002Data: StageData = {
             delayFrames: "1,080-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 75,
+                power: 100
+            }
           }
         },
         {
@@ -161,6 +176,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,120-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -194,7 +217,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "360",
@@ -227,6 +251,14 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -260,6 +292,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,720-1,800f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -293,6 +333,22 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 30,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -326,6 +382,12 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [36000, 36000, 36000],
+                timings: [15, 28, 41]
+            }
           }
         },
         {
@@ -359,7 +421,8 @@ export const e24002Data: StageData = {
             delayFrames: "640-840f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -392,7 +455,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,640-1,720f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -425,7 +489,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,440-1,520f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -480,6 +545,14 @@ export const e24002Data: StageData = {
             delayFrames: "920-1,040f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -513,7 +586,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "184",
@@ -546,6 +620,12 @@ export const e24002Data: StageData = {
             delayFrames: "1,080-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 75,
+                power: 100
+            }
           }
         },
         {
@@ -579,6 +659,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,120-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -612,7 +700,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "360",
@@ -645,6 +734,14 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -678,6 +775,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,720-1,800f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -711,6 +816,22 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 30,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -744,6 +865,12 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [36000, 36000, 36000],
+                timings: [15, 28, 41]
+            }
           }
         },
         {
@@ -777,7 +904,8 @@ export const e24002Data: StageData = {
             delayFrames: "640-840f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -810,7 +938,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,640-1,720f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -843,7 +972,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,440-1,520f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -898,6 +1028,14 @@ export const e24002Data: StageData = {
             delayFrames: "920-1,040f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -931,7 +1069,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "184",
@@ -964,6 +1103,12 @@ export const e24002Data: StageData = {
             delayFrames: "1,080-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 75,
+                power: 100
+            }
           }
         },
         {
@@ -997,6 +1142,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,120-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -1030,7 +1183,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "360",
@@ -1063,6 +1217,14 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -1096,6 +1258,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,720-1,800f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -1129,6 +1299,22 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 30,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -1162,6 +1348,12 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [36000, 36000, 36000],
+                timings: [15, 28, 41]
+            }
           }
         },
         {
@@ -1195,7 +1387,8 @@ export const e24002Data: StageData = {
             delayFrames: "640-840f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -1228,7 +1421,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,640-1,720f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -1261,7 +1455,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,440-1,520f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -1316,6 +1511,14 @@ export const e24002Data: StageData = {
             delayFrames: "920-1,040f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -1349,7 +1552,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "184",
@@ -1382,6 +1586,12 @@ export const e24002Data: StageData = {
             delayFrames: "1,080-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 75,
+                power: 100
+            }
           }
         },
         {
@@ -1415,6 +1625,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,120-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -1448,7 +1666,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "360",
@@ -1481,6 +1700,14 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -1514,6 +1741,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,720-1,800f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -1547,6 +1782,22 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 30,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -1580,6 +1831,12 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [36000, 36000, 36000],
+                timings: [15, 28, 41]
+            }
           }
         },
         {
@@ -1613,7 +1870,8 @@ export const e24002Data: StageData = {
             delayFrames: "640-840f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -1646,7 +1904,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,640-1,720f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -1679,7 +1938,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,440-1,520f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -1734,6 +1994,14 @@ export const e24002Data: StageData = {
             delayFrames: "920-1,040f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -1767,7 +2035,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "184",
@@ -1800,6 +2069,12 @@ export const e24002Data: StageData = {
             delayFrames: "1,080-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 75,
+                power: 100
+            }
           }
         },
         {
@@ -1833,6 +2108,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,120-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -1866,7 +2149,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "360",
@@ -1899,6 +2183,14 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -1932,6 +2224,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,720-1,800f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -1965,6 +2265,22 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 30,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -1998,6 +2314,12 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [36000, 36000, 36000],
+                timings: [15, 28, 41]
+            }
           }
         },
         {
@@ -2031,7 +2353,8 @@ export const e24002Data: StageData = {
             delayFrames: "640-840f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -2064,7 +2387,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,640-1,720f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -2097,7 +2421,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,440-1,520f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -2152,6 +2477,14 @@ export const e24002Data: StageData = {
             delayFrames: "920-1,040f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -2185,7 +2518,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "184",
@@ -2218,6 +2552,12 @@ export const e24002Data: StageData = {
             delayFrames: "1,080-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 75,
+                power: 100
+            }
           }
         },
         {
@@ -2251,6 +2591,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,120-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -2284,7 +2632,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "360",
@@ -2317,6 +2666,14 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -2350,6 +2707,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,720-1,800f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -2383,6 +2748,22 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 30,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -2416,6 +2797,12 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [36000, 36000, 36000],
+                timings: [15, 28, 41]
+            }
           }
         },
         {
@@ -2449,7 +2836,8 @@ export const e24002Data: StageData = {
             delayFrames: "640-840f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -2482,7 +2870,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,640-1,720f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -2515,7 +2904,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,440-1,520f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -2570,6 +2960,14 @@ export const e24002Data: StageData = {
             delayFrames: "920-1,040f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -2603,7 +3001,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "184",
@@ -2636,6 +3035,12 @@ export const e24002Data: StageData = {
             delayFrames: "1,080-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 75,
+                power: 100
+            }
           }
         },
         {
@@ -2669,6 +3074,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,120-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -2702,7 +3115,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "360",
@@ -2735,6 +3149,14 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -2768,6 +3190,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,720-1,800f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -2801,6 +3231,22 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 30,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -2834,6 +3280,12 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [36000, 36000, 36000],
+                timings: [15, 28, 41]
+            }
           }
         },
         {
@@ -2867,7 +3319,8 @@ export const e24002Data: StageData = {
             delayFrames: "640-840f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -2900,7 +3353,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,640-1,720f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -2933,7 +3387,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,440-1,520f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -2988,6 +3443,14 @@ export const e24002Data: StageData = {
             delayFrames: "920-1,040f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -3021,7 +3484,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "184",
@@ -3054,6 +3518,12 @@ export const e24002Data: StageData = {
             delayFrames: "1,080-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 75,
+                power: 100
+            }
           }
         },
         {
@@ -3087,6 +3557,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,120-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -3120,7 +3598,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "360",
@@ -3153,6 +3632,14 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -3186,6 +3673,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,720-1,800f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -3219,6 +3714,22 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 30,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -3252,6 +3763,12 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [36000, 36000, 36000],
+                timings: [15, 28, 41]
+            }
           }
         },
         {
@@ -3285,7 +3802,8 @@ export const e24002Data: StageData = {
             delayFrames: "640-840f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -3318,7 +3836,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,640-1,720f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -3351,7 +3870,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,440-1,520f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -3406,6 +3926,14 @@ export const e24002Data: StageData = {
             delayFrames: "920-1,040f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -3439,7 +3967,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "184",
@@ -3472,6 +4001,12 @@ export const e24002Data: StageData = {
             delayFrames: "1,080-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 75,
+                power: 100
+            }
           }
         },
         {
@@ -3505,6 +4040,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,120-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -3538,7 +4081,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "360",
@@ -3571,6 +4115,14 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -3604,6 +4156,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,720-1,800f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -3637,6 +4197,22 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 30,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -3670,6 +4246,12 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [36000, 36000, 36000],
+                timings: [15, 28, 41]
+            }
           }
         },
         {
@@ -3703,7 +4285,8 @@ export const e24002Data: StageData = {
             delayFrames: "640-840f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -3736,7 +4319,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,640-1,720f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -3769,7 +4353,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,440-1,520f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -3824,6 +4409,14 @@ export const e24002Data: StageData = {
             delayFrames: "920-1,040f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -3857,7 +4450,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "184",
@@ -3890,6 +4484,12 @@ export const e24002Data: StageData = {
             delayFrames: "1,080-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 75,
+                power: 100
+            }
           }
         },
         {
@@ -3923,6 +4523,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,120-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -3956,7 +4564,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "360",
@@ -3989,6 +4598,14 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -4022,6 +4639,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,720-1,800f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -4055,6 +4680,22 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 30,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -4088,6 +4729,12 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [36000, 36000, 36000],
+                timings: [15, 28, 41]
+            }
           }
         },
         {
@@ -4121,7 +4768,8 @@ export const e24002Data: StageData = {
             delayFrames: "640-840f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -4154,7 +4802,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,640-1,720f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -4187,7 +4836,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,440-1,520f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -4242,6 +4892,14 @@ export const e24002Data: StageData = {
             delayFrames: "920-1,040f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -4275,7 +4933,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "184",
@@ -4308,6 +4967,12 @@ export const e24002Data: StageData = {
             delayFrames: "1,080-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 75,
+                power: 100
+            }
           }
         },
         {
@@ -4341,6 +5006,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,120-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -4374,7 +5047,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "360",
@@ -4407,6 +5081,14 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -4440,6 +5122,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,720-1,800f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -4473,6 +5163,22 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 30,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -4506,6 +5212,12 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [36000, 36000, 36000],
+                timings: [15, 28, 41]
+            }
           }
         },
         {
@@ -4539,7 +5251,8 @@ export const e24002Data: StageData = {
             delayFrames: "640-840f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -4572,7 +5285,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,640-1,720f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -4605,7 +5319,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,440-1,520f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -4660,6 +5375,14 @@ export const e24002Data: StageData = {
             delayFrames: "920-1,040f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -4693,7 +5416,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "184",
@@ -4726,6 +5450,12 @@ export const e24002Data: StageData = {
             delayFrames: "1,080-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 75,
+                power: 100
+            }
           }
         },
         {
@@ -4759,6 +5489,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,120-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -4792,7 +5530,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "360",
@@ -4825,6 +5564,14 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -4858,6 +5605,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,720-1,800f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -4891,6 +5646,22 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 30,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -4924,6 +5695,12 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [36000, 36000, 36000],
+                timings: [15, 28, 41]
+            }
           }
         },
         {
@@ -4957,7 +5734,8 @@ export const e24002Data: StageData = {
             delayFrames: "640-840f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -4990,7 +5768,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,640-1,720f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -5023,7 +5802,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,440-1,520f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -5078,6 +5858,14 @@ export const e24002Data: StageData = {
             delayFrames: "920-1,040f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -5111,7 +5899,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "184",
@@ -5144,6 +5933,12 @@ export const e24002Data: StageData = {
             delayFrames: "1,080-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 75,
+                power: 100
+            }
           }
         },
         {
@@ -5177,6 +5972,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,120-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -5210,7 +6013,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "360",
@@ -5243,6 +6047,14 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -5276,6 +6088,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,720-1,800f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -5309,6 +6129,22 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 30,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -5342,6 +6178,12 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [36000, 36000, 36000],
+                timings: [15, 28, 41]
+            }
           }
         },
         {
@@ -5375,7 +6217,8 @@ export const e24002Data: StageData = {
             delayFrames: "640-840f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -5408,7 +6251,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,640-1,720f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -5441,7 +6285,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,440-1,520f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -5496,6 +6341,14 @@ export const e24002Data: StageData = {
             delayFrames: "920-1,040f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -5529,7 +6382,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "184",
@@ -5562,6 +6416,12 @@ export const e24002Data: StageData = {
             delayFrames: "1,080-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 75,
+                power: 100
+            }
           }
         },
         {
@@ -5595,6 +6455,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,120-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -5628,7 +6496,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "360",
@@ -5661,6 +6530,14 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -5694,6 +6571,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,720-1,800f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -5727,6 +6612,22 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 30,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -5760,6 +6661,12 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [36000, 36000, 36000],
+                timings: [15, 28, 41]
+            }
           }
         },
         {
@@ -5793,7 +6700,8 @@ export const e24002Data: StageData = {
             delayFrames: "640-840f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -5826,7 +6734,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,640-1,720f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -5859,7 +6768,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,440-1,520f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -5914,6 +6824,14 @@ export const e24002Data: StageData = {
             delayFrames: "920-1,040f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -5947,7 +6865,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "184",
@@ -5980,6 +6899,12 @@ export const e24002Data: StageData = {
             delayFrames: "1,080-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 75,
+                power: 100
+            }
           }
         },
         {
@@ -6013,6 +6938,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,120-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -6046,7 +6979,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "360",
@@ -6079,6 +7013,14 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -6112,6 +7054,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,720-1,800f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -6145,6 +7095,22 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 30,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -6178,6 +7144,12 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [36000, 36000, 36000],
+                timings: [15, 28, 41]
+            }
           }
         },
         {
@@ -6211,7 +7183,8 @@ export const e24002Data: StageData = {
             delayFrames: "640-840f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -6244,7 +7217,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,640-1,720f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -6277,7 +7251,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,440-1,520f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -6332,6 +7307,14 @@ export const e24002Data: StageData = {
             delayFrames: "920-1,040f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -6365,7 +7348,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "184",
@@ -6398,6 +7382,12 @@ export const e24002Data: StageData = {
             delayFrames: "1,080-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 75,
+                power: 100
+            }
           }
         },
         {
@@ -6431,6 +7421,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,120-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -6464,7 +7462,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "360",
@@ -6497,6 +7496,14 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -6530,6 +7537,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,720-1,800f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -6563,6 +7578,22 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 30,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -6596,6 +7627,12 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [36000, 36000, 36000],
+                timings: [15, 28, 41]
+            }
           }
         },
         {
@@ -6629,7 +7666,8 @@ export const e24002Data: StageData = {
             delayFrames: "640-840f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -6662,7 +7700,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,640-1,720f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -6695,7 +7734,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,440-1,520f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -6750,6 +7790,14 @@ export const e24002Data: StageData = {
             delayFrames: "920-1,040f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -6783,7 +7831,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "184",
@@ -6816,6 +7865,12 @@ export const e24002Data: StageData = {
             delayFrames: "1,080-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 75,
+                power: 100
+            }
           }
         },
         {
@@ -6849,6 +7904,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,120-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -6882,7 +7945,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "360",
@@ -6915,6 +7979,14 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -6948,6 +8020,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,720-1,800f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -6981,6 +8061,22 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 30,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -7014,6 +8110,12 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [36000, 36000, 36000],
+                timings: [15, 28, 41]
+            }
           }
         },
         {
@@ -7047,7 +8149,8 @@ export const e24002Data: StageData = {
             delayFrames: "640-840f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -7080,7 +8183,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,640-1,720f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -7113,7 +8217,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,440-1,520f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -7168,6 +8273,14 @@ export const e24002Data: StageData = {
             delayFrames: "920-1,040f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -7201,7 +8314,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "184",
@@ -7234,6 +8348,12 @@ export const e24002Data: StageData = {
             delayFrames: "1,080-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 75,
+                power: 100
+            }
           }
         },
         {
@@ -7267,6 +8387,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,120-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -7300,7 +8428,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "360",
@@ -7333,6 +8462,14 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -7366,6 +8503,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,720-1,800f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -7399,6 +8544,22 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 30,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -7432,6 +8593,12 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [36000, 36000, 36000],
+                timings: [15, 28, 41]
+            }
           }
         },
         {
@@ -7465,7 +8632,8 @@ export const e24002Data: StageData = {
             delayFrames: "640-840f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -7498,7 +8666,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,640-1,720f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -7531,7 +8700,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,440-1,520f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -7586,6 +8756,14 @@ export const e24002Data: StageData = {
             delayFrames: "920-1,040f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -7619,7 +8797,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "184",
@@ -7652,6 +8831,12 @@ export const e24002Data: StageData = {
             delayFrames: "1,080-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 75,
+                power: 100
+            }
           }
         },
         {
@@ -7685,6 +8870,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,120-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -7718,7 +8911,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "360",
@@ -7751,6 +8945,14 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -7784,6 +8986,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,720-1,800f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -7817,6 +9027,22 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 30,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -7850,6 +9076,12 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [36000, 36000, 36000],
+                timings: [15, 28, 41]
+            }
           }
         },
         {
@@ -7883,7 +9115,8 @@ export const e24002Data: StageData = {
             delayFrames: "640-840f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -7916,7 +9149,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,640-1,720f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -7949,7 +9183,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,440-1,520f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -8004,6 +9239,14 @@ export const e24002Data: StageData = {
             delayFrames: "920-1,040f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -8037,7 +9280,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "184",
@@ -8070,6 +9314,12 @@ export const e24002Data: StageData = {
             delayFrames: "1,080-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 75,
+                power: 100
+            }
           }
         },
         {
@@ -8103,6 +9353,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,120-1,200f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -8136,7 +9394,8 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "360",
@@ -8169,6 +9428,14 @@ export const e24002Data: StageData = {
             delayFrames: "440-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 35,
+                distance: 750,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -8202,6 +9469,14 @@ export const e24002Data: StageData = {
             delayFrames: "1,720-1,800f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "warp": {
+                chance: 100,
+                distance: 500,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -8235,6 +9510,22 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 30,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -8268,6 +9559,12 @@ export const e24002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [36000, 36000, 36000],
+                timings: [15, 28, 41]
+            }
           }
         },
         {
@@ -8301,7 +9598,8 @@ export const e24002Data: StageData = {
             delayFrames: "640-840f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -8334,7 +9632,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,640-1,720f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "115",
@@ -8367,7 +9666,8 @@ export const e24002Data: StageData = {
             delayFrames: "1,440-1,520f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     }
   ]

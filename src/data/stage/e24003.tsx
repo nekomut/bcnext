@@ -62,7 +62,8 @@ export const e24003Data: StageData = {
             delayFrames: "360-420f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -95,7 +96,8 @@ export const e24003Data: StageData = {
             delayFrames: "640-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "001",
@@ -128,7 +130,8 @@ export const e24003Data: StageData = {
             delayFrames: "300-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "012",
@@ -161,7 +164,8 @@ export const e24003Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -194,7 +198,8 @@ export const e24003Data: StageData = {
             delayFrames: "560-640f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "510",
@@ -227,6 +232,16 @@ export const e24003Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         }]
     },
@@ -282,7 +297,8 @@ export const e24003Data: StageData = {
             delayFrames: "360-420f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -315,7 +331,8 @@ export const e24003Data: StageData = {
             delayFrames: "640-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "001",
@@ -348,7 +365,8 @@ export const e24003Data: StageData = {
             delayFrames: "300-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "012",
@@ -381,7 +399,8 @@ export const e24003Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -414,7 +433,8 @@ export const e24003Data: StageData = {
             delayFrames: "560-640f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "510",
@@ -447,6 +467,16 @@ export const e24003Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         }]
     },
@@ -502,7 +532,8 @@ export const e24003Data: StageData = {
             delayFrames: "360-420f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -535,7 +566,8 @@ export const e24003Data: StageData = {
             delayFrames: "640-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "001",
@@ -568,7 +600,8 @@ export const e24003Data: StageData = {
             delayFrames: "300-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "012",
@@ -601,7 +634,8 @@ export const e24003Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -634,7 +668,8 @@ export const e24003Data: StageData = {
             delayFrames: "560-640f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "510",
@@ -667,6 +702,16 @@ export const e24003Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         }]
     },
@@ -722,7 +767,8 @@ export const e24003Data: StageData = {
             delayFrames: "360-420f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -755,7 +801,8 @@ export const e24003Data: StageData = {
             delayFrames: "640-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "001",
@@ -788,7 +835,8 @@ export const e24003Data: StageData = {
             delayFrames: "300-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "012",
@@ -821,7 +869,8 @@ export const e24003Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -854,7 +903,8 @@ export const e24003Data: StageData = {
             delayFrames: "560-640f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "510",
@@ -887,6 +937,16 @@ export const e24003Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         }]
     },
@@ -942,7 +1002,8 @@ export const e24003Data: StageData = {
             delayFrames: "360-420f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -975,7 +1036,8 @@ export const e24003Data: StageData = {
             delayFrames: "640-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "001",
@@ -1008,7 +1070,8 @@ export const e24003Data: StageData = {
             delayFrames: "300-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "012",
@@ -1041,7 +1104,8 @@ export const e24003Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -1074,7 +1138,8 @@ export const e24003Data: StageData = {
             delayFrames: "560-640f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "510",
@@ -1107,6 +1172,16 @@ export const e24003Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         }]
     },
@@ -1162,7 +1237,8 @@ export const e24003Data: StageData = {
             delayFrames: "360-420f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -1195,7 +1271,8 @@ export const e24003Data: StageData = {
             delayFrames: "640-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "001",
@@ -1228,7 +1305,8 @@ export const e24003Data: StageData = {
             delayFrames: "300-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "012",
@@ -1261,7 +1339,8 @@ export const e24003Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -1294,7 +1373,8 @@ export const e24003Data: StageData = {
             delayFrames: "560-640f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "510",
@@ -1327,6 +1407,16 @@ export const e24003Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         }]
     },
@@ -1382,7 +1472,8 @@ export const e24003Data: StageData = {
             delayFrames: "360-420f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -1415,7 +1506,8 @@ export const e24003Data: StageData = {
             delayFrames: "640-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "001",
@@ -1448,7 +1540,8 @@ export const e24003Data: StageData = {
             delayFrames: "300-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "012",
@@ -1481,7 +1574,8 @@ export const e24003Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -1514,7 +1608,8 @@ export const e24003Data: StageData = {
             delayFrames: "560-640f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "510",
@@ -1547,6 +1642,16 @@ export const e24003Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         }]
     },
@@ -1602,7 +1707,8 @@ export const e24003Data: StageData = {
             delayFrames: "360-420f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -1635,7 +1741,8 @@ export const e24003Data: StageData = {
             delayFrames: "640-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "001",
@@ -1668,7 +1775,8 @@ export const e24003Data: StageData = {
             delayFrames: "300-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "012",
@@ -1701,7 +1809,8 @@ export const e24003Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -1734,7 +1843,8 @@ export const e24003Data: StageData = {
             delayFrames: "560-640f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "510",
@@ -1767,6 +1877,16 @@ export const e24003Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         }]
     },
@@ -1822,7 +1942,8 @@ export const e24003Data: StageData = {
             delayFrames: "360-420f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -1855,7 +1976,8 @@ export const e24003Data: StageData = {
             delayFrames: "640-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "001",
@@ -1888,7 +2010,8 @@ export const e24003Data: StageData = {
             delayFrames: "300-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "012",
@@ -1921,7 +2044,8 @@ export const e24003Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -1954,7 +2078,8 @@ export const e24003Data: StageData = {
             delayFrames: "560-640f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "510",
@@ -1987,6 +2112,16 @@ export const e24003Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         }]
     },
@@ -2042,7 +2177,8 @@ export const e24003Data: StageData = {
             delayFrames: "360-420f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -2075,7 +2211,8 @@ export const e24003Data: StageData = {
             delayFrames: "640-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "001",
@@ -2108,7 +2245,8 @@ export const e24003Data: StageData = {
             delayFrames: "300-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "012",
@@ -2141,7 +2279,8 @@ export const e24003Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -2174,7 +2313,8 @@ export const e24003Data: StageData = {
             delayFrames: "560-640f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "510",
@@ -2207,6 +2347,16 @@ export const e24003Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         }]
     },
@@ -2262,7 +2412,8 @@ export const e24003Data: StageData = {
             delayFrames: "360-420f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -2295,7 +2446,8 @@ export const e24003Data: StageData = {
             delayFrames: "640-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "001",
@@ -2328,7 +2480,8 @@ export const e24003Data: StageData = {
             delayFrames: "300-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "012",
@@ -2361,7 +2514,8 @@ export const e24003Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -2394,7 +2548,8 @@ export const e24003Data: StageData = {
             delayFrames: "560-640f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "510",
@@ -2427,6 +2582,16 @@ export const e24003Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         }]
     },
@@ -2482,7 +2647,8 @@ export const e24003Data: StageData = {
             delayFrames: "360-420f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -2515,7 +2681,8 @@ export const e24003Data: StageData = {
             delayFrames: "640-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "001",
@@ -2548,7 +2715,8 @@ export const e24003Data: StageData = {
             delayFrames: "300-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "012",
@@ -2581,7 +2749,8 @@ export const e24003Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -2614,7 +2783,8 @@ export const e24003Data: StageData = {
             delayFrames: "560-640f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "510",
@@ -2647,6 +2817,16 @@ export const e24003Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         }]
     },
@@ -2702,7 +2882,8 @@ export const e24003Data: StageData = {
             delayFrames: "360-420f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -2735,7 +2916,8 @@ export const e24003Data: StageData = {
             delayFrames: "640-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "001",
@@ -2768,7 +2950,8 @@ export const e24003Data: StageData = {
             delayFrames: "300-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "012",
@@ -2801,7 +2984,8 @@ export const e24003Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -2834,7 +3018,8 @@ export const e24003Data: StageData = {
             delayFrames: "560-640f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "510",
@@ -2867,6 +3052,16 @@ export const e24003Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         }]
     },
@@ -2922,7 +3117,8 @@ export const e24003Data: StageData = {
             delayFrames: "360-420f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -2955,7 +3151,8 @@ export const e24003Data: StageData = {
             delayFrames: "640-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "001",
@@ -2988,7 +3185,8 @@ export const e24003Data: StageData = {
             delayFrames: "300-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "012",
@@ -3021,7 +3219,8 @@ export const e24003Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -3054,7 +3253,8 @@ export const e24003Data: StageData = {
             delayFrames: "560-640f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "510",
@@ -3087,6 +3287,16 @@ export const e24003Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         }]
     },
@@ -3142,7 +3352,8 @@ export const e24003Data: StageData = {
             delayFrames: "360-420f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -3175,7 +3386,8 @@ export const e24003Data: StageData = {
             delayFrames: "640-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "001",
@@ -3208,7 +3420,8 @@ export const e24003Data: StageData = {
             delayFrames: "300-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "012",
@@ -3241,7 +3454,8 @@ export const e24003Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -3274,7 +3488,8 @@ export const e24003Data: StageData = {
             delayFrames: "560-640f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "510",
@@ -3307,6 +3522,16 @@ export const e24003Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         }]
     },
@@ -3362,7 +3587,8 @@ export const e24003Data: StageData = {
             delayFrames: "360-420f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -3395,7 +3621,8 @@ export const e24003Data: StageData = {
             delayFrames: "640-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "001",
@@ -3428,7 +3655,8 @@ export const e24003Data: StageData = {
             delayFrames: "300-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "012",
@@ -3461,7 +3689,8 @@ export const e24003Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -3494,7 +3723,8 @@ export const e24003Data: StageData = {
             delayFrames: "560-640f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "510",
@@ -3527,6 +3757,16 @@ export const e24003Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         }]
     },
@@ -3582,7 +3822,8 @@ export const e24003Data: StageData = {
             delayFrames: "360-420f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -3615,7 +3856,8 @@ export const e24003Data: StageData = {
             delayFrames: "640-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "001",
@@ -3648,7 +3890,8 @@ export const e24003Data: StageData = {
             delayFrames: "300-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "012",
@@ -3681,7 +3924,8 @@ export const e24003Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -3714,7 +3958,8 @@ export const e24003Data: StageData = {
             delayFrames: "560-640f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "510",
@@ -3747,6 +3992,16 @@ export const e24003Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         }]
     },
@@ -3802,7 +4057,8 @@ export const e24003Data: StageData = {
             delayFrames: "360-420f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -3835,7 +4091,8 @@ export const e24003Data: StageData = {
             delayFrames: "640-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "001",
@@ -3868,7 +4125,8 @@ export const e24003Data: StageData = {
             delayFrames: "300-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "012",
@@ -3901,7 +4159,8 @@ export const e24003Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -3934,7 +4193,8 @@ export const e24003Data: StageData = {
             delayFrames: "560-640f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "510",
@@ -3967,6 +4227,16 @@ export const e24003Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         }]
     },
@@ -4022,7 +4292,8 @@ export const e24003Data: StageData = {
             delayFrames: "360-420f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -4055,7 +4326,8 @@ export const e24003Data: StageData = {
             delayFrames: "640-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "001",
@@ -4088,7 +4360,8 @@ export const e24003Data: StageData = {
             delayFrames: "300-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "012",
@@ -4121,7 +4394,8 @@ export const e24003Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -4154,7 +4428,8 @@ export const e24003Data: StageData = {
             delayFrames: "560-640f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "510",
@@ -4187,6 +4462,16 @@ export const e24003Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         }]
     },
@@ -4242,7 +4527,8 @@ export const e24003Data: StageData = {
             delayFrames: "360-420f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -4275,7 +4561,8 @@ export const e24003Data: StageData = {
             delayFrames: "640-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "001",
@@ -4308,7 +4595,8 @@ export const e24003Data: StageData = {
             delayFrames: "300-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "012",
@@ -4341,7 +4629,8 @@ export const e24003Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "005",
@@ -4374,7 +4663,8 @@ export const e24003Data: StageData = {
             delayFrames: "560-640f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "510",
@@ -4407,6 +4697,16 @@ export const e24003Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "slow": {
+                chance: 100,
+                duration_f: 200,
+                duration_s: 6.67
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         }]
     }

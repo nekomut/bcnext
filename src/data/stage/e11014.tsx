@@ -62,6 +62,23 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "0%",
             isBoss: true
+          },
+          abilities: {
+            "immune-waves": {
+                enabled: true
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            }
           }
         },
         {
@@ -95,6 +112,12 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "1740000%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 600,
+                omni_range: [-400, 600]
+            }
           }
         },
         {
@@ -128,6 +151,17 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "1740000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [5250, 5250],
+                timings: [25, 33]
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -161,6 +195,15 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "1740000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [1700, 1700, 1700],
+                timings: [8, 16, 24]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -194,6 +237,28 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "1620000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [4000, 4000],
+                timings: [3, 18]
+            },
+            "omni-strike": {
+                standing_range: 260,
+                omni_range: [-780, 260]
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            }
           }
         },
         {
@@ -227,6 +292,12 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "1620000%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 340,
+                omni_range: [-340, 340]
+            }
           }
         },
         {
@@ -260,6 +331,19 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "1500000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [12000, 12000, 12000],
+                timings: [6, 10, 12]
+            },
+            "omni-strike": {
+                standing_range: 330,
+                omni_range: [-330, 330]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -293,6 +377,18 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "1500000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [4500, 4500, 4500],
+                timings: [8, 15, 22]
+            },
+            "weaken": {
+                chance: 100,
+                power: 100,
+                duration_f: 50,
+                duration_s: 1.67
+            }
           }
         },
         {
@@ -326,6 +422,12 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "1380000%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 600,
+                omni_range: [-400, 600]
+            }
           }
         },
         {
@@ -359,6 +461,17 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "1380000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [5250, 5250],
+                timings: [25, 33]
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -392,6 +505,15 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "1380000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [1700, 1700, 1700],
+                timings: [8, 16, 24]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -425,6 +547,28 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "1270000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [4000, 4000],
+                timings: [3, 18]
+            },
+            "omni-strike": {
+                standing_range: 260,
+                omni_range: [-780, 260]
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            }
           }
         },
         {
@@ -458,6 +602,12 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "1270000%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 340,
+                omni_range: [-340, 340]
+            }
           }
         },
         {
@@ -491,6 +641,19 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "1160000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [12000, 12000, 12000],
+                timings: [6, 10, 12]
+            },
+            "omni-strike": {
+                standing_range: 330,
+                omni_range: [-330, 330]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -524,6 +687,18 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "1160000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [4500, 4500, 4500],
+                timings: [8, 15, 22]
+            },
+            "weaken": {
+                chance: 100,
+                power: 100,
+                duration_f: 50,
+                duration_s: 1.67
+            }
           }
         },
         {
@@ -557,6 +732,12 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "1050000%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 600,
+                omni_range: [-400, 600]
+            }
           }
         },
         {
@@ -590,6 +771,17 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "1050000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [5250, 5250],
+                timings: [25, 33]
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -623,6 +815,15 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "1050000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [1700, 1700, 1700],
+                timings: [8, 16, 24]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -656,6 +857,28 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "950000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [4000, 4000],
+                timings: [3, 18]
+            },
+            "omni-strike": {
+                standing_range: 260,
+                omni_range: [-780, 260]
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            }
           }
         },
         {
@@ -689,6 +912,12 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "950000%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 340,
+                omni_range: [-340, 340]
+            }
           }
         },
         {
@@ -722,6 +951,19 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "850000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [12000, 12000, 12000],
+                timings: [6, 10, 12]
+            },
+            "omni-strike": {
+                standing_range: 330,
+                omni_range: [-330, 330]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -755,6 +997,18 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "850000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [4500, 4500, 4500],
+                timings: [8, 15, 22]
+            },
+            "weaken": {
+                chance: 100,
+                power: 100,
+                duration_f: 50,
+                duration_s: 1.67
+            }
           }
         },
         {
@@ -788,6 +1042,12 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "750000%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 600,
+                omni_range: [-400, 600]
+            }
           }
         },
         {
@@ -821,6 +1081,17 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "750000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [5250, 5250],
+                timings: [25, 33]
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -854,6 +1125,15 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "750000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [1700, 1700, 1700],
+                timings: [8, 16, 24]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -887,6 +1167,28 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "660000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [4000, 4000],
+                timings: [3, 18]
+            },
+            "omni-strike": {
+                standing_range: 260,
+                omni_range: [-780, 260]
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            }
           }
         },
         {
@@ -920,6 +1222,12 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "660000%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 340,
+                omni_range: [-340, 340]
+            }
           }
         },
         {
@@ -953,6 +1261,19 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "570000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [12000, 12000, 12000],
+                timings: [6, 10, 12]
+            },
+            "omni-strike": {
+                standing_range: 330,
+                omni_range: [-330, 330]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -986,6 +1307,18 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "570000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [4500, 4500, 4500],
+                timings: [8, 15, 22]
+            },
+            "weaken": {
+                chance: 100,
+                power: 100,
+                duration_f: 50,
+                duration_s: 1.67
+            }
           }
         },
         {
@@ -1019,6 +1352,12 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "480000%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 600,
+                omni_range: [-400, 600]
+            }
           }
         },
         {
@@ -1052,6 +1391,17 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "480000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [5250, 5250],
+                timings: [25, 33]
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -1085,6 +1435,15 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "480000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [1700, 1700, 1700],
+                timings: [8, 16, 24]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -1118,6 +1477,28 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "400000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [4000, 4000],
+                timings: [3, 18]
+            },
+            "omni-strike": {
+                standing_range: 260,
+                omni_range: [-780, 260]
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            }
           }
         },
         {
@@ -1151,6 +1532,12 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "400000%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 340,
+                omni_range: [-340, 340]
+            }
           }
         },
         {
@@ -1184,6 +1571,19 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "320000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [12000, 12000, 12000],
+                timings: [6, 10, 12]
+            },
+            "omni-strike": {
+                standing_range: 330,
+                omni_range: [-330, 330]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -1217,6 +1617,18 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "320000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [4500, 4500, 4500],
+                timings: [8, 15, 22]
+            },
+            "weaken": {
+                chance: 100,
+                power: 100,
+                duration_f: 50,
+                duration_s: 1.67
+            }
           }
         },
         {
@@ -1250,6 +1662,12 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "240000%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 600,
+                omni_range: [-400, 600]
+            }
           }
         },
         {
@@ -1283,6 +1701,17 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "240000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [5250, 5250],
+                timings: [25, 33]
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -1316,6 +1745,15 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "240000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [1700, 1700, 1700],
+                timings: [8, 16, 24]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -1349,6 +1787,28 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "150000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [4000, 4000],
+                timings: [3, 18]
+            },
+            "omni-strike": {
+                standing_range: 260,
+                omni_range: [-780, 260]
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            }
           }
         },
         {
@@ -1382,6 +1842,12 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "150000%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 340,
+                omni_range: [-340, 340]
+            }
           }
         },
         {
@@ -1415,6 +1881,19 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "90000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [12000, 12000, 12000],
+                timings: [6, 10, 12]
+            },
+            "omni-strike": {
+                standing_range: 330,
+                omni_range: [-330, 330]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -1448,6 +1927,18 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "90000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [4500, 4500, 4500],
+                timings: [8, 15, 22]
+            },
+            "weaken": {
+                chance: 100,
+                power: 100,
+                duration_f: 50,
+                duration_s: 1.67
+            }
           }
         },
         {
@@ -1481,6 +1972,17 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "40000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [5250, 5250],
+                timings: [25, 33]
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 120,
+                duration_s: 4.0
+            }
           }
         },
         {
@@ -1514,6 +2016,12 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "40000%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 340,
+                omni_range: [-340, 340]
+            }
           }
         },
         {
@@ -1547,6 +2055,19 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "10000%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [12000, 12000, 12000],
+                timings: [6, 10, 12]
+            },
+            "omni-strike": {
+                standing_range: 330,
+                omni_range: [-330, 330]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -1580,6 +2101,12 @@ export const e11014Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "500%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 600,
+                omni_range: [-400, 600]
+            }
           }
         }]
     }

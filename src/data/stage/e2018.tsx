@@ -62,7 +62,8 @@ export const e2018Data: StageData = {
             delayFrames: "100-300f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "088",
@@ -95,7 +96,8 @@ export const e2018Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "094",
@@ -128,7 +130,8 @@ export const e2018Data: StageData = {
             delayFrames: "500-800f",
             baseHpRatio: "90%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "164",
@@ -161,7 +164,8 @@ export const e2018Data: StageData = {
             delayFrames: "60-120f",
             baseHpRatio: "90%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "164",
@@ -194,7 +198,8 @@ export const e2018Data: StageData = {
             delayFrames: "1,200-1,400f",
             baseHpRatio: "90%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "092",
@@ -227,7 +232,8 @@ export const e2018Data: StageData = {
             delayFrames: "800-1,200f",
             baseHpRatio: "90%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "092",
@@ -260,7 +266,8 @@ export const e2018Data: StageData = {
             delayFrames: "800-1,200f",
             baseHpRatio: "90%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "092",
@@ -293,7 +300,8 @@ export const e2018Data: StageData = {
             delayFrames: "800-1,200f",
             baseHpRatio: "90%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "166",
@@ -326,6 +334,13 @@ export const e2018Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "90%",
             isBoss: true
+          },
+          abilities: {
+            "freeze": {
+                chance: 50,
+                duration_f: 30,
+                duration_s: 1.0
+            }
           }
         }]
     },
@@ -381,7 +396,8 @@ export const e2018Data: StageData = {
             delayFrames: "200-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "089",
@@ -414,7 +430,8 @@ export const e2018Data: StageData = {
             delayFrames: "300-700f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "095",
@@ -447,7 +464,8 @@ export const e2018Data: StageData = {
             delayFrames: "60-120f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "093",
@@ -480,7 +498,8 @@ export const e2018Data: StageData = {
             delayFrames: "20-40f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "093",
@@ -513,7 +532,8 @@ export const e2018Data: StageData = {
             delayFrames: "400-800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "164",
@@ -546,6 +566,45 @@ export const e2018Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {}
+        },
+        {
+          enemyId: "163",
+          enemyName: "ハルシュト",
+          icon: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAA3NCSVQICAjb4U/gAAAAwFBMVEUAAAAFAQUHBQgIBgkLCg0OChIRDhAXDhMYER8XExwYExgfFRosIC0wJCMoKCgyKCc4LDEzMTVkGj1/AH86NzGDEz1JMUBAOjM+Pj1GPkZRPkRJRUJKRkVKUCpNTUJPT0ZpSkJUT2RWVFRXVldZWVhgWHFhWW5nXFiBWEFnXnRycHx0cXd4b4l+fYCLgI+rf0OOiZmckZyYmJihnqKooayvqbGzrLe7tLvMycvNzc3a1tfb29vj4uHv7u7+/v7/////22UMAAAAQHRSTlMADKg4alGAKP7pzBf+YAi5mT79Aha4/08l4v6NvwdyOv3/pFQr1u3C//6Iaf5I///d/52J/7zt///V/+n//v8ActZp8AAAA/ZJREFUWIWlVot24ioUtfZhVIyaycSI1gYfMVTEolgwTTr//1f3kLicpvauhuleS8HH3uzzANL480M0fixQxXK7t8Bm+Vilu9tT/m6B/HSoKmzfbOiFxOYj3z8WX2rAe6YzmKR5/p7nKQwwvbCyLC9+NzhVElAaUErKVCudKZVmaa6BnYEWjFlukEml8izTpdgXAloIqWCFtFgV/pipPNUyy8BJmhWSQD47yD8KhKdSQEqlFayYgYI2g85gvESQakM+f36rFOFQxAkmjXpuZsW7mVSqk59fgGO1C45WVTQ5XH7qo8Pp7QuUstffn/af+KaUy2s8FwKn7dUPoXvF/wpFe+TH68X+D62b6mfTnzb8KwGoTX7wv6W54a/z7LYqsDy9v33aM19ieTEJAo8fDG/yt02dZB30/rzMbXd73F8o7vG0rcP3j+p1W07vNyd9vMT8dNzWoDcaCynUfruZbZ7CqdDyr0AY1uLfzAWV6lVz9fpCBZPHGlmrwF8xQmHPc66UEFQdLPmNYcy4TFMlKYP1hbQWmDEmgK80o4xyITbfU64EJKyvtKCcc8EnN99zqgKUaYgeTkFGmNLaNgR3yngqFZdQQUKF0ntLgUUMKQC64EJSKqRe19vpJbr+YsUY10xoASMlXMmXp/r8cLKOgQcCcBKbIiRQBfGyqO3BXzzPV7C0MjzFOYt2UAj++tyq7cHfvHDIPSOECKhlFBHKyPypfhoW65iaDsSMqzyXEaSBxA8WneAOpzEEDx0A95fWiWAUD+oHUCjM5oxC+jO4lNIdZ2Q8suEb9CLIAKYCbtFdwqa97w/RTxh4HgoQwpLtdrvx0JYODjzPwxEOaLKTO6s+LNH67XkkSnCAkyhaT7rWAt3fXkBxEASRiKKevQE4y8eUQApAAAd96wyCgwHU3kFBgClGqPcvfEaQ44BAEGHUt+oigDthnGDHAQuURQihjp2CO2OCGgMmBmgGGJpWCqNYwk4s+Rh7gZG6s+CHKykIRQUf4SiJPMexcQAJUKUBYx9FSRI57VsLA8NYwUkcgAEPokc4SRJkE4E752DACBg+pZwagU79ZoYMSNjJZnFIglLMdKTTvreJgJOyBiYD0MnIVKFZ+0QbxpISWnYRdDHUELXbjtOuXYbuGmpIcbvTCQgJHBBo924HD836++GZjcd0POiPCaEEOglFs8fZIpzVfkZZxNM+Bi6A4SAJgvHMHU38ee3LrTudz6fQzHA1rDvIbGa/8ei7o/q343AynU3nq3g1CftmM1mf6I/+aDgPW0N4eB/AsTi2eKy+wA3LlN1BCH37E/UvbtsBGvyAf9PqIOfhxvYBq0Tr7qHZbEIPdmB4uK8t8h+T0w610nR5DgAAAABJRU5ErkJggg==",
+          traits: ["無"],
+          baseStats: {
+            hp: 450000,
+            ap: 15000,
+            dps: 4455.45,
+            speed: 14,
+            range: 600,
+            rangeType: "単体",
+            kbLevel: 5,
+            money: 1500,
+            freq: 101,
+            foreswing: 14,
+            backswing: 49,
+            tba: 44
+          },
+          stageStats: {
+            actualHp: 450000,
+            actualAp: 15000,
+            actualDps: 4455.45,
+            magnification: "100%",
+            count: "1",
+            spawnTime: "0.0s",
+            spawnTimeFrames: "0f",
+            delay: "0.1-0.1s",
+            delayFrames: "2-2f",
+            baseHpRatio: "80%",
+            isBoss: false
+          },
+          abilities: {
+            "critical": {
+                chance: 40
+            }
           }
         },
         {
@@ -579,6 +638,11 @@ export const e2018Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "80%",
             isBoss: false
+          },
+          abilities: {
+            "critical": {
+                chance: 40
+            }
           }
         },
         {
@@ -612,39 +676,11 @@ export const e2018Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "80%",
             isBoss: false
-          }
-        },
-        {
-          enemyId: "163",
-          enemyName: "ハルシュト",
-          icon: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAA3NCSVQICAjb4U/gAAAAwFBMVEUAAAAFAQUHBQgIBgkLCg0OChIRDhAXDhMYER8XExwYExgfFRosIC0wJCMoKCgyKCc4LDEzMTVkGj1/AH86NzGDEz1JMUBAOjM+Pj1GPkZRPkRJRUJKRkVKUCpNTUJPT0ZpSkJUT2RWVFRXVldZWVhgWHFhWW5nXFiBWEFnXnRycHx0cXd4b4l+fYCLgI+rf0OOiZmckZyYmJihnqKooayvqbGzrLe7tLvMycvNzc3a1tfb29vj4uHv7u7+/v7/////22UMAAAAQHRSTlMADKg4alGAKP7pzBf+YAi5mT79Aha4/08l4v6NvwdyOv3/pFQr1u3C//6Iaf5I///d/52J/7zt///V/+n//v8ActZp8AAAA/ZJREFUWIWlVot24ioUtfZhVIyaycSI1gYfMVTEolgwTTr//1f3kLicpvauhuleS8HH3uzzANL480M0fixQxXK7t8Bm+Vilu9tT/m6B/HSoKmzfbOiFxOYj3z8WX2rAe6YzmKR5/p7nKQwwvbCyLC9+NzhVElAaUErKVCudKZVmaa6BnYEWjFlukEml8izTpdgXAloIqWCFtFgV/pipPNUyy8BJmhWSQD47yD8KhKdSQEqlFayYgYI2g85gvESQakM+f36rFOFQxAkmjXpuZsW7mVSqk59fgGO1C45WVTQ5XH7qo8Pp7QuUstffn/af+KaUy2s8FwKn7dUPoXvF/wpFe+TH68X+D62b6mfTnzb8KwGoTX7wv6W54a/z7LYqsDy9v33aM19ieTEJAo8fDG/yt02dZB30/rzMbXd73F8o7vG0rcP3j+p1W07vNyd9vMT8dNzWoDcaCynUfruZbZ7CqdDyr0AY1uLfzAWV6lVz9fpCBZPHGlmrwF8xQmHPc66UEFQdLPmNYcy4TFMlKYP1hbQWmDEmgK80o4xyITbfU64EJKyvtKCcc8EnN99zqgKUaYgeTkFGmNLaNgR3yngqFZdQQUKF0ntLgUUMKQC64EJSKqRe19vpJbr+YsUY10xoASMlXMmXp/r8cLKOgQcCcBKbIiRQBfGyqO3BXzzPV7C0MjzFOYt2UAj++tyq7cHfvHDIPSOECKhlFBHKyPypfhoW65iaDsSMqzyXEaSBxA8WneAOpzEEDx0A95fWiWAUD+oHUCjM5oxC+jO4lNIdZ2Q8suEb9CLIAKYCbtFdwqa97w/RTxh4HgoQwpLtdrvx0JYODjzPwxEOaLKTO6s+LNH67XkkSnCAkyhaT7rWAt3fXkBxEASRiKKevQE4y8eUQApAAAd96wyCgwHU3kFBgClGqPcvfEaQ44BAEGHUt+oigDthnGDHAQuURQihjp2CO2OCGgMmBmgGGJpWCqNYwk4s+Rh7gZG6s+CHKykIRQUf4SiJPMexcQAJUKUBYx9FSRI57VsLA8NYwUkcgAEPokc4SRJkE4E752DACBg+pZwagU79ZoYMSNjJZnFIglLMdKTTvreJgJOyBiYD0MnIVKFZ+0QbxpISWnYRdDHUELXbjtOuXYbuGmpIcbvTCQgJHBBo924HD836++GZjcd0POiPCaEEOglFs8fZIpzVfkZZxNM+Bi6A4SAJgvHMHU38ee3LrTudz6fQzHA1rDvIbGa/8ei7o/q343AynU3nq3g1CftmM1mf6I/+aDgPW0N4eB/AsTi2eKy+wA3LlN1BCH37E/UvbtsBGvyAf9PqIOfhxvYBq0Tr7qHZbEIPdmB4uK8t8h+T0w610nR5DgAAAABJRU5ErkJggg==",
-          traits: ["無"],
-          baseStats: {
-            hp: 450000,
-            ap: 15000,
-            dps: 4455.45,
-            speed: 14,
-            range: 600,
-            rangeType: "単体",
-            kbLevel: 5,
-            money: 1500,
-            freq: 101,
-            foreswing: 14,
-            backswing: 49,
-            tba: 44
           },
-          stageStats: {
-            actualHp: 450000,
-            actualAp: 15000,
-            actualDps: 4455.45,
-            magnification: "100%",
-            count: "1",
-            spawnTime: "0.0s",
-            spawnTimeFrames: "0f",
-            delay: "0.1-0.1s",
-            delayFrames: "2-2f",
-            baseHpRatio: "80%",
-            isBoss: false
+          abilities: {
+            "critical": {
+                chance: 40
+            }
           }
         },
         {
@@ -678,7 +714,8 @@ export const e2018Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "80%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "166",
@@ -711,6 +748,13 @@ export const e2018Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "80%",
             isBoss: true
+          },
+          abilities: {
+            "freeze": {
+                chance: 50,
+                duration_f: 30,
+                duration_s: 1.0
+            }
           }
         },
         {
@@ -744,7 +788,8 @@ export const e2018Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "80%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "093",
@@ -777,7 +822,8 @@ export const e2018Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "80%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     }
   ]

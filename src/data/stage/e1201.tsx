@@ -70,6 +70,17 @@ export const e1201Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 888,
+                ld_range: [888, 1332]
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 222,
+                duration_s: 7.4
+            }
           }
         },
         {
@@ -103,7 +114,8 @@ export const e1201Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "168",
@@ -136,7 +148,8 @@ export const e1201Data: StageData = {
             delayFrames: "222-444f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "207",
@@ -169,7 +182,8 @@ export const e1201Data: StageData = {
             delayFrames: "44-88f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "207",
@@ -202,7 +216,8 @@ export const e1201Data: StageData = {
             delayFrames: "66-132f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "207",
@@ -235,7 +250,8 @@ export const e1201Data: StageData = {
             delayFrames: "88-176f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "207",
@@ -268,7 +284,8 @@ export const e1201Data: StageData = {
             delayFrames: "888-1,110f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "207",
@@ -301,7 +318,8 @@ export const e1201Data: StageData = {
             delayFrames: "888-1,110f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -356,6 +374,17 @@ export const e1201Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 888,
+                ld_range: [888, 1332]
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 222,
+                duration_s: 7.4
+            }
           }
         },
         {
@@ -389,7 +418,8 @@ export const e1201Data: StageData = {
             delayFrames: "800-1,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "183",
@@ -422,7 +452,8 @@ export const e1201Data: StageData = {
             delayFrames: "3,600-3,600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "124",
@@ -455,7 +486,8 @@ export const e1201Data: StageData = {
             delayFrames: "3,600-3,600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     }
   ]

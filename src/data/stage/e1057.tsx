@@ -62,6 +62,11 @@ export const e1057Data: StageData = {
             delayFrames: "20-120f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -95,6 +100,11 @@ export const e1057Data: StageData = {
             delayFrames: "20-120f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -128,6 +138,11 @@ export const e1057Data: StageData = {
             delayFrames: "20-120f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -161,6 +176,11 @@ export const e1057Data: StageData = {
             delayFrames: "360-480f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -194,6 +214,11 @@ export const e1057Data: StageData = {
             delayFrames: "40-80f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -227,6 +252,11 @@ export const e1057Data: StageData = {
             delayFrames: "90-180f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -260,6 +290,11 @@ export const e1057Data: StageData = {
             delayFrames: "420-540f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -293,6 +328,11 @@ export const e1057Data: StageData = {
             delayFrames: "40-80f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -326,6 +366,11 @@ export const e1057Data: StageData = {
             delayFrames: "80-240f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -359,6 +404,11 @@ export const e1057Data: StageData = {
             delayFrames: "40-80f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -392,6 +442,11 @@ export const e1057Data: StageData = {
             delayFrames: "80-240f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -425,6 +480,11 @@ export const e1057Data: StageData = {
             delayFrames: "360-720f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -458,6 +518,11 @@ export const e1057Data: StageData = {
             delayFrames: "120-180f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -491,6 +556,11 @@ export const e1057Data: StageData = {
             delayFrames: "150-240f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -524,6 +594,11 @@ export const e1057Data: StageData = {
             delayFrames: "60-150f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -557,6 +632,11 @@ export const e1057Data: StageData = {
             delayFrames: "360-480f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -590,6 +670,11 @@ export const e1057Data: StageData = {
             delayFrames: "180-360f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -623,6 +708,11 @@ export const e1057Data: StageData = {
             delayFrames: "240-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -656,7 +746,8 @@ export const e1057Data: StageData = {
             delayFrames: "2-20f",
             baseHpRatio: "99%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -711,6 +802,11 @@ export const e1057Data: StageData = {
             delayFrames: "2-20f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -744,6 +840,11 @@ export const e1057Data: StageData = {
             delayFrames: "540-660f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -777,6 +878,11 @@ export const e1057Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -810,6 +916,11 @@ export const e1057Data: StageData = {
             delayFrames: "700-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -843,6 +954,11 @@ export const e1057Data: StageData = {
             delayFrames: "300-600f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -876,6 +992,11 @@ export const e1057Data: StageData = {
             delayFrames: "120-360f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -909,6 +1030,11 @@ export const e1057Data: StageData = {
             delayFrames: "540-840f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -942,6 +1068,11 @@ export const e1057Data: StageData = {
             delayFrames: "640-900f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -975,6 +1106,11 @@ export const e1057Data: StageData = {
             delayFrames: "240-480f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         },
         {
@@ -1008,6 +1144,11 @@ export const e1057Data: StageData = {
             delayFrames: "3,600-3,700f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -1041,7 +1182,8 @@ export const e1057Data: StageData = {
             delayFrames: "1,600-1,700f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "139",
@@ -1074,6 +1216,11 @@ export const e1057Data: StageData = {
             delayFrames: "2-20f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "knockback": {
+                chance: 50
+            }
           }
         }]
     }

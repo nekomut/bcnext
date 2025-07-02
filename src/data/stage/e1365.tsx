@@ -62,7 +62,8 @@ export const e1365Data: StageData = {
             delayFrames: "300-300f",
             baseHpRatio: "100%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -117,7 +118,8 @@ export const e1365Data: StageData = {
             delayFrames: "300-300f",
             baseHpRatio: "100%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -172,7 +174,8 @@ export const e1365Data: StageData = {
             delayFrames: "300-300f",
             baseHpRatio: "100%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -227,7 +230,8 @@ export const e1365Data: StageData = {
             delayFrames: "300-300f",
             baseHpRatio: "100%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -282,7 +286,8 @@ export const e1365Data: StageData = {
             delayFrames: "300-300f",
             baseHpRatio: "100%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -337,7 +342,8 @@ export const e1365Data: StageData = {
             delayFrames: "300-300f",
             baseHpRatio: "100%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     }
   ]

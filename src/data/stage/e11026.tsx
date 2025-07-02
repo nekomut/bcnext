@@ -62,6 +62,23 @@ export const e11026Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "0%",
             isBoss: true
+          },
+          abilities: {
+            "immune-waves": {
+                enabled: true
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            }
           }
         },
         {
@@ -95,7 +112,8 @@ export const e11026Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "3350000%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "556",
@@ -128,6 +146,12 @@ export const e11026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "3350000%",
             isBoss: false
+          },
+          abilities: {
+            "savage-blow": {
+                chance: 100,
+                power: 1.1
+            }
           }
         },
         {
@@ -161,7 +185,8 @@ export const e11026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "3350000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "172",
@@ -194,6 +219,14 @@ export const e11026Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "3350000%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 25,
+                power: 300,
+                duration_f: 20,
+                duration_s: 0.67
+            }
           }
         },
         {
@@ -227,6 +260,11 @@ export const e11026Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "3350000%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 100
+            }
           }
         },
         {
@@ -260,7 +298,8 @@ export const e11026Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "3350000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "038",
@@ -293,7 +332,8 @@ export const e11026Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "3100000%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "556",
@@ -326,6 +366,12 @@ export const e11026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "3100000%",
             isBoss: false
+          },
+          abilities: {
+            "savage-blow": {
+                chance: 100,
+                power: 1.1
+            }
           }
         },
         {
@@ -359,7 +405,8 @@ export const e11026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "3100000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "172",
@@ -392,6 +439,14 @@ export const e11026Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "3100000%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 25,
+                power: 300,
+                duration_f: 20,
+                duration_s: 0.67
+            }
           }
         },
         {
@@ -425,6 +480,11 @@ export const e11026Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "3100000%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 100
+            }
           }
         },
         {
@@ -458,7 +518,8 @@ export const e11026Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "3100000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "038",
@@ -491,7 +552,8 @@ export const e11026Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "2850000%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "556",
@@ -524,6 +586,12 @@ export const e11026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "2850000%",
             isBoss: false
+          },
+          abilities: {
+            "savage-blow": {
+                chance: 100,
+                power: 1.1
+            }
           }
         },
         {
@@ -557,7 +625,8 @@ export const e11026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "2850000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "172",
@@ -590,6 +659,14 @@ export const e11026Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "2850000%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 25,
+                power: 300,
+                duration_f: 20,
+                duration_s: 0.67
+            }
           }
         },
         {
@@ -623,6 +700,11 @@ export const e11026Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "2850000%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 100
+            }
           }
         },
         {
@@ -656,7 +738,8 @@ export const e11026Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "2850000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "038",
@@ -689,7 +772,8 @@ export const e11026Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "2600000%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "556",
@@ -722,6 +806,12 @@ export const e11026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "2600000%",
             isBoss: false
+          },
+          abilities: {
+            "savage-blow": {
+                chance: 100,
+                power: 1.1
+            }
           }
         },
         {
@@ -755,7 +845,8 @@ export const e11026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "2600000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "172",
@@ -788,6 +879,14 @@ export const e11026Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "2600000%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 25,
+                power: 300,
+                duration_f: 20,
+                duration_s: 0.67
+            }
           }
         },
         {
@@ -821,6 +920,11 @@ export const e11026Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "2600000%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 100
+            }
           }
         },
         {
@@ -854,7 +958,8 @@ export const e11026Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "2600000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "038",
@@ -887,7 +992,8 @@ export const e11026Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "2350000%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "556",
@@ -920,6 +1026,12 @@ export const e11026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "2350000%",
             isBoss: false
+          },
+          abilities: {
+            "savage-blow": {
+                chance: 100,
+                power: 1.1
+            }
           }
         },
         {
@@ -953,7 +1065,8 @@ export const e11026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "2350000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "172",
@@ -986,6 +1099,14 @@ export const e11026Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "2350000%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 25,
+                power: 300,
+                duration_f: 20,
+                duration_s: 0.67
+            }
           }
         },
         {
@@ -1019,6 +1140,11 @@ export const e11026Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "2350000%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 100
+            }
           }
         },
         {
@@ -1052,7 +1178,8 @@ export const e11026Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "2350000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "556",
@@ -1085,6 +1212,12 @@ export const e11026Data: StageData = {
             delayFrames: "240-340f",
             baseHpRatio: "2100000%",
             isBoss: true
+          },
+          abilities: {
+            "savage-blow": {
+                chance: 100,
+                power: 1.1
+            }
           }
         },
         {
@@ -1118,7 +1251,8 @@ export const e11026Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "2100000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "114",
@@ -1151,7 +1285,8 @@ export const e11026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "2100000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "172",
@@ -1184,6 +1319,14 @@ export const e11026Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "1850000%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 25,
+                power: 300,
+                duration_f: 20,
+                duration_s: 0.67
+            }
           }
         },
         {
@@ -1217,6 +1360,12 @@ export const e11026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "1850000%",
             isBoss: false
+          },
+          abilities: {
+            "savage-blow": {
+                chance: 100,
+                power: 1.1
+            }
           }
         },
         {
@@ -1250,7 +1399,8 @@ export const e11026Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "1850000%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "114",
@@ -1283,7 +1433,8 @@ export const e11026Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "1850000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "172",
@@ -1316,6 +1467,14 @@ export const e11026Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "1850000%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 25,
+                power: 300,
+                duration_f: 20,
+                duration_s: 0.67
+            }
           }
         },
         {
@@ -1349,7 +1508,8 @@ export const e11026Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "1600000%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "556",
@@ -1382,6 +1542,12 @@ export const e11026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "1600000%",
             isBoss: false
+          },
+          abilities: {
+            "savage-blow": {
+                chance: 100,
+                power: 1.1
+            }
           }
         },
         {
@@ -1415,7 +1581,8 @@ export const e11026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "1600000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "040",
@@ -1448,7 +1615,8 @@ export const e11026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "1600000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "172",
@@ -1481,6 +1649,14 @@ export const e11026Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "1600000%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 25,
+                power: 300,
+                duration_f: 20,
+                duration_s: 0.67
+            }
           }
         },
         {
@@ -1514,6 +1690,12 @@ export const e11026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "1600000%",
             isBoss: false
+          },
+          abilities: {
+            "savage-blow": {
+                chance: 100,
+                power: 1.1
+            }
           }
         },
         {
@@ -1547,7 +1729,8 @@ export const e11026Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "1600000%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "172",
@@ -1580,6 +1763,14 @@ export const e11026Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "1600000%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 25,
+                power: 300,
+                duration_f: 20,
+                duration_s: 0.67
+            }
           }
         },
         {
@@ -1613,6 +1804,11 @@ export const e11026Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "1600000%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 100
+            }
           }
         },
         {
@@ -1646,7 +1842,8 @@ export const e11026Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "1350000%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "556",
@@ -1679,6 +1876,12 @@ export const e11026Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "1350000%",
             isBoss: false
+          },
+          abilities: {
+            "savage-blow": {
+                chance: 100,
+                power: 1.1
+            }
           }
         },
         {
@@ -1712,7 +1915,8 @@ export const e11026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "1350000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "172",
@@ -1745,6 +1949,14 @@ export const e11026Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "1350000%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 25,
+                power: 300,
+                duration_f: 20,
+                duration_s: 0.67
+            }
           }
         },
         {
@@ -1778,7 +1990,8 @@ export const e11026Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "1350000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "014",
@@ -1811,7 +2024,8 @@ export const e11026Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "1350000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "040",
@@ -1844,7 +2058,8 @@ export const e11026Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "1100000%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "556",
@@ -1877,6 +2092,12 @@ export const e11026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "1100000%",
             isBoss: false
+          },
+          abilities: {
+            "savage-blow": {
+                chance: 100,
+                power: 1.1
+            }
           }
         },
         {
@@ -1910,7 +2131,8 @@ export const e11026Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "1100000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "173",
@@ -1943,6 +2165,11 @@ export const e11026Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "1100000%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 100
+            }
           }
         },
         {
@@ -1976,7 +2203,8 @@ export const e11026Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "1100000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "038",
@@ -2009,7 +2237,8 @@ export const e11026Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "850000%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "040",
@@ -2042,7 +2271,8 @@ export const e11026Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "850000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "172",
@@ -2075,6 +2305,14 @@ export const e11026Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "850000%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 25,
+                power: 300,
+                duration_f: 20,
+                duration_s: 0.67
+            }
           }
         },
         {
@@ -2108,6 +2346,11 @@ export const e11026Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "850000%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 100
+            }
           }
         },
         {
@@ -2141,7 +2384,8 @@ export const e11026Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "850000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "556",
@@ -2174,6 +2418,12 @@ export const e11026Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "600000%",
             isBoss: true
+          },
+          abilities: {
+            "savage-blow": {
+                chance: 100,
+                power: 1.1
+            }
           }
         },
         {
@@ -2207,7 +2457,8 @@ export const e11026Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "600000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "114",
@@ -2240,7 +2491,8 @@ export const e11026Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "600000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "173",
@@ -2273,6 +2525,11 @@ export const e11026Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "600000%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 100
+            }
           }
         },
         {
@@ -2306,6 +2563,14 @@ export const e11026Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "600000%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 25,
+                power: 300,
+                duration_f: 20,
+                duration_s: 0.67
+            }
           }
         },
         {
@@ -2339,7 +2604,8 @@ export const e11026Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "400000%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "114",
@@ -2372,7 +2638,8 @@ export const e11026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "400000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "172",
@@ -2405,6 +2672,14 @@ export const e11026Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "400000%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 25,
+                power: 300,
+                duration_f: 20,
+                duration_s: 0.67
+            }
           }
         },
         {
@@ -2438,6 +2713,11 @@ export const e11026Data: StageData = {
             delayFrames: "100-300f",
             baseHpRatio: "400000%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 100
+            }
           }
         },
         {
@@ -2471,7 +2751,8 @@ export const e11026Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "400000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "040",
@@ -2504,7 +2785,8 @@ export const e11026Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "250000%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "114",
@@ -2537,7 +2819,8 @@ export const e11026Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "250000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "172",
@@ -2570,6 +2853,14 @@ export const e11026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "250000%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 25,
+                power: 300,
+                duration_f: 20,
+                duration_s: 0.67
+            }
           }
         },
         {
@@ -2603,6 +2894,11 @@ export const e11026Data: StageData = {
             delayFrames: "400-700f",
             baseHpRatio: "250000%",
             isBoss: false
+          },
+          abilities: {
+            "survive": {
+                chance: 100
+            }
           }
         },
         {
@@ -2636,7 +2932,8 @@ export const e11026Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "250000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "172",
@@ -2669,6 +2966,14 @@ export const e11026Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "150000%",
             isBoss: true
+          },
+          abilities: {
+            "weaken": {
+                chance: 25,
+                power: 300,
+                duration_f: 20,
+                duration_s: 0.67
+            }
           }
         },
         {
@@ -2702,7 +3007,8 @@ export const e11026Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "150000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "014",
@@ -2735,7 +3041,8 @@ export const e11026Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "150000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "013",
@@ -2768,7 +3075,8 @@ export const e11026Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "150000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "173",
@@ -2801,6 +3109,11 @@ export const e11026Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "75000%",
             isBoss: true
+          },
+          abilities: {
+            "survive": {
+                chance: 100
+            }
           }
         },
         {
@@ -2834,7 +3147,8 @@ export const e11026Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "75000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "014",
@@ -2867,7 +3181,8 @@ export const e11026Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "75000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "013",
@@ -2900,7 +3215,8 @@ export const e11026Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "75000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "012",
@@ -2933,7 +3249,8 @@ export const e11026Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "20000%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "014",
@@ -2966,7 +3283,8 @@ export const e11026Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "20000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "013",
@@ -2999,7 +3317,8 @@ export const e11026Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "20000%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "012",
@@ -3032,7 +3351,8 @@ export const e11026Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "1000%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "014",
@@ -3065,7 +3385,8 @@ export const e11026Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "0%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "013",
@@ -3098,7 +3419,8 @@ export const e11026Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "0%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     }
   ]

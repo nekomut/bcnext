@@ -70,7 +70,8 @@ export const e7002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -133,7 +134,8 @@ export const e7002Data: StageData = {
             delayFrames: "1,000-1,100f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "342",
@@ -166,7 +168,8 @@ export const e7002Data: StageData = {
             delayFrames: "100-100f",
             baseHpRatio: "99%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -229,7 +232,8 @@ export const e7002Data: StageData = {
             delayFrames: "600-1,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "539",
@@ -262,6 +266,15 @@ export const e7002Data: StageData = {
             delayFrames: "1,500-1,800f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "mini-wave": {
+                chance: 100,
+                level: 4
+            },
+            "immune-freeze": {
+                enabled: true
+            }
           }
         }]
     },
@@ -325,7 +338,8 @@ export const e7002Data: StageData = {
             delayFrames: "500-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "342",
@@ -358,7 +372,8 @@ export const e7002Data: StageData = {
             delayFrames: "600-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "342",
@@ -391,7 +406,8 @@ export const e7002Data: StageData = {
             delayFrames: "700-800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -454,7 +470,8 @@ export const e7002Data: StageData = {
             delayFrames: "600-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "087",
@@ -487,7 +504,8 @@ export const e7002Data: StageData = {
             delayFrames: "1,500-1,800f",
             baseHpRatio: "99%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "046",
@@ -520,7 +538,8 @@ export const e7002Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -583,7 +602,8 @@ export const e7002Data: StageData = {
             delayFrames: "600-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "051",
@@ -616,7 +636,8 @@ export const e7002Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "051",
@@ -649,7 +670,8 @@ export const e7002Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "437",
@@ -682,7 +704,8 @@ export const e7002Data: StageData = {
             delayFrames: "1,500-1,800f",
             baseHpRatio: "99%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -745,7 +768,8 @@ export const e7002Data: StageData = {
             delayFrames: "600-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "416",
@@ -778,6 +802,16 @@ export const e7002Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 100
+            },
+            "slow": {
+                chance: 40,
+                duration_f: 200,
+                duration_s: 6.67
+            }
           }
         },
         {
@@ -811,6 +845,16 @@ export const e7002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 100
+            },
+            "slow": {
+                chance: 40,
+                duration_f: 200,
+                duration_s: 6.67
+            }
           }
         },
         {
@@ -844,7 +888,8 @@ export const e7002Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -907,7 +952,8 @@ export const e7002Data: StageData = {
             delayFrames: "400-800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "342",
@@ -940,7 +986,8 @@ export const e7002Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "052",
@@ -973,7 +1020,8 @@ export const e7002Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "087",
@@ -1006,7 +1054,8 @@ export const e7002Data: StageData = {
             delayFrames: "800-800f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "149",
@@ -1039,7 +1088,8 @@ export const e7002Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "99%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -1102,7 +1152,8 @@ export const e7002Data: StageData = {
             delayFrames: "400-800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "256",
@@ -1135,6 +1186,12 @@ export const e7002Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 600,
+                ld_range: [600, 850]
+            }
           }
         },
         {
@@ -1168,6 +1225,16 @@ export const e7002Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 100
+            },
+            "slow": {
+                chance: 40,
+                duration_f: 200,
+                duration_s: 6.67
+            }
           }
         },
         {
@@ -1201,6 +1268,15 @@ export const e7002Data: StageData = {
             delayFrames: "1,500-1,800f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "mini-wave": {
+                chance: 100,
+                level: 4
+            },
+            "immune-freeze": {
+                enabled: true
+            }
           }
         }]
     },
@@ -1264,7 +1340,8 @@ export const e7002Data: StageData = {
             delayFrames: "400-800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "342",
@@ -1297,7 +1374,8 @@ export const e7002Data: StageData = {
             delayFrames: "600-1,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "437",
@@ -1330,7 +1408,8 @@ export const e7002Data: StageData = {
             delayFrames: "1,600-1,600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "437",
@@ -1363,7 +1442,8 @@ export const e7002Data: StageData = {
             delayFrames: "800-800f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "087",
@@ -1396,7 +1476,8 @@ export const e7002Data: StageData = {
             delayFrames: "1,500-1,800f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "280",
@@ -1429,6 +1510,12 @@ export const e7002Data: StageData = {
             delayFrames: "1,500-1,800f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 50,
+                power: 50
+            }
           }
         }]
     }

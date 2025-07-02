@@ -86,7 +86,8 @@ export const e1200Data: StageData = {
             delayFrames: "400-800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "457",
@@ -119,7 +120,8 @@ export const e1200Data: StageData = {
             delayFrames: "10-80f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "457",
@@ -152,7 +154,8 @@ export const e1200Data: StageData = {
             delayFrames: "6-120f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     }
   ]

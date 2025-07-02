@@ -70,6 +70,17 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -103,6 +114,17 @@ export const e1267Data: StageData = {
             delayFrames: "400-400f",
             baseHpRatio: "90%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -136,6 +158,17 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "90%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         }]
     },
@@ -199,6 +232,15 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -232,6 +274,15 @@ export const e1267Data: StageData = {
             delayFrames: "600-600f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -265,6 +316,15 @@ export const e1267Data: StageData = {
             delayFrames: "300-350f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -298,6 +358,15 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         }]
     },
@@ -361,6 +430,17 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 75,
+                duration_s: 2.5
+            }
           }
         },
         {
@@ -394,6 +474,17 @@ export const e1267Data: StageData = {
             delayFrames: "500-600f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 75,
+                duration_s: 2.5
+            }
           }
         },
         {
@@ -427,6 +518,17 @@ export const e1267Data: StageData = {
             delayFrames: "300-300f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 75,
+                duration_s: 2.5
+            }
           }
         },
         {
@@ -460,6 +562,17 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 75,
+                duration_s: 2.5
+            }
           }
         }]
     },
@@ -523,6 +636,17 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -556,6 +680,15 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -589,6 +722,17 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -622,6 +766,15 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -655,6 +808,15 @@ export const e1267Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -688,6 +850,17 @@ export const e1267Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -721,6 +894,15 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         }]
     },
@@ -784,6 +966,17 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 75,
+                duration_s: 2.5
+            }
           }
         },
         {
@@ -817,6 +1010,17 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -850,6 +1054,15 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -883,6 +1096,17 @@ export const e1267Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -916,6 +1140,15 @@ export const e1267Data: StageData = {
             delayFrames: "600-700f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -949,6 +1182,17 @@ export const e1267Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 75,
+                duration_s: 2.5
+            }
           }
         },
         {
@@ -982,6 +1226,15 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         }]
     },
@@ -1045,6 +1298,17 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 75,
+                duration_s: 2.5
+            }
           }
         },
         {
@@ -1078,6 +1342,17 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 75,
+                duration_s: 2.5
+            }
           }
         },
         {
@@ -1111,6 +1386,17 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 75,
+                duration_s: 2.5
+            }
           }
         },
         {
@@ -1144,6 +1430,17 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 75,
+                duration_s: 2.5
+            }
           }
         },
         {
@@ -1177,6 +1474,15 @@ export const e1267Data: StageData = {
             delayFrames: "650-700f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -1210,6 +1516,15 @@ export const e1267Data: StageData = {
             delayFrames: "650-700f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -1243,6 +1558,15 @@ export const e1267Data: StageData = {
             delayFrames: "650-700f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -1276,6 +1600,15 @@ export const e1267Data: StageData = {
             delayFrames: "650-700f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -1309,6 +1642,15 @@ export const e1267Data: StageData = {
             delayFrames: "650-700f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         }]
     },
@@ -1372,6 +1714,17 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -1405,6 +1758,17 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -1438,6 +1802,15 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -1471,6 +1844,15 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -1504,6 +1886,15 @@ export const e1267Data: StageData = {
             delayFrames: "500-600f",
             baseHpRatio: "50%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -1537,6 +1928,17 @@ export const e1267Data: StageData = {
             delayFrames: "500-600f",
             baseHpRatio: "50%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -1570,6 +1972,15 @@ export const e1267Data: StageData = {
             delayFrames: "300-300f",
             baseHpRatio: "50%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -1603,6 +2014,17 @@ export const e1267Data: StageData = {
             delayFrames: "300-300f",
             baseHpRatio: "50%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -1636,6 +2058,15 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "50%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -1669,6 +2100,15 @@ export const e1267Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "75%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -1702,6 +2142,15 @@ export const e1267Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "75%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -1735,6 +2184,15 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "75%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -1768,6 +2226,17 @@ export const e1267Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -1801,6 +2270,17 @@ export const e1267Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -1834,6 +2314,17 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         }]
     },
@@ -1897,6 +2388,17 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -1930,6 +2432,15 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -1963,6 +2474,17 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 75,
+                duration_s: 2.5
+            }
           }
         },
         {
@@ -1996,6 +2518,17 @@ export const e1267Data: StageData = {
             delayFrames: "700-800f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "slow": {
+                chance: 100,
+                duration_f: 75,
+                duration_s: 2.5
+            }
           }
         },
         {
@@ -2029,6 +2562,15 @@ export const e1267Data: StageData = {
             delayFrames: "250-350f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "knockback": {
+                chance: 100
+            }
           }
         },
         {
@@ -2062,6 +2604,17 @@ export const e1267Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -2095,6 +2648,17 @@ export const e1267Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-600, 200]
+            },
+            "freeze": {
+                chance: 100,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         }]
     }

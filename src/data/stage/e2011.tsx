@@ -94,7 +94,8 @@ export const e2011Data: StageData = {
             delayFrames: "500-800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "154",
@@ -127,7 +128,8 @@ export const e2011Data: StageData = {
             delayFrames: "800-1,200f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "155",
@@ -160,7 +162,8 @@ export const e2011Data: StageData = {
             delayFrames: "600-1,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "154",
@@ -193,7 +196,8 @@ export const e2011Data: StageData = {
             delayFrames: "1,000-1,500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "155",
@@ -226,7 +230,8 @@ export const e2011Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "90%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "154",
@@ -259,7 +264,8 @@ export const e2011Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "90%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "150",
@@ -292,7 +298,8 @@ export const e2011Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "90%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "154",
@@ -325,7 +332,8 @@ export const e2011Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "80%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "150",
@@ -358,7 +366,8 @@ export const e2011Data: StageData = {
             delayFrames: "300-300f",
             baseHpRatio: "80%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "155",
@@ -391,7 +400,8 @@ export const e2011Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "70%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "154",
@@ -424,7 +434,8 @@ export const e2011Data: StageData = {
             delayFrames: "300-300f",
             baseHpRatio: "70%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "150",
@@ -457,7 +468,8 @@ export const e2011Data: StageData = {
             delayFrames: "400-400f",
             baseHpRatio: "70%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -552,7 +564,8 @@ export const e2011Data: StageData = {
             delayFrames: "400-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "154",
@@ -585,7 +598,8 @@ export const e2011Data: StageData = {
             delayFrames: "600-800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "150",
@@ -618,7 +632,8 @@ export const e2011Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "155",
@@ -651,7 +666,8 @@ export const e2011Data: StageData = {
             delayFrames: "600-800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "154",
@@ -684,7 +700,8 @@ export const e2011Data: StageData = {
             delayFrames: "800-1,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "150",
@@ -717,7 +734,8 @@ export const e2011Data: StageData = {
             delayFrames: "1,000-1,200f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "153",
@@ -750,7 +768,8 @@ export const e2011Data: StageData = {
             delayFrames: "1,600-2,000f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "150",
@@ -783,7 +802,8 @@ export const e2011Data: StageData = {
             delayFrames: "200-200f",
             baseHpRatio: "90%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "153",
@@ -816,7 +836,8 @@ export const e2011Data: StageData = {
             delayFrames: "600-600f",
             baseHpRatio: "90%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "151",
@@ -849,7 +870,8 @@ export const e2011Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "90%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     },
     {
@@ -952,7 +974,8 @@ export const e2011Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "153",
@@ -985,7 +1008,8 @@ export const e2011Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "155",
@@ -1018,7 +1042,8 @@ export const e2011Data: StageData = {
             delayFrames: "300-480f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "154",
@@ -1051,7 +1076,8 @@ export const e2011Data: StageData = {
             delayFrames: "420-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "150",
@@ -1084,7 +1110,8 @@ export const e2011Data: StageData = {
             delayFrames: "600-900f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "150",
@@ -1117,7 +1144,8 @@ export const e2011Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "150",
@@ -1150,7 +1178,8 @@ export const e2011Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "150",
@@ -1183,7 +1212,8 @@ export const e2011Data: StageData = {
             delayFrames: "100-200f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "150",
@@ -1216,7 +1246,8 @@ export const e2011Data: StageData = {
             delayFrames: "50-100f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "150",
@@ -1249,7 +1280,8 @@ export const e2011Data: StageData = {
             delayFrames: "50-100f",
             baseHpRatio: "90%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     }
   ]

@@ -62,7 +62,8 @@ export const e1144Data: StageData = {
             delayFrames: "150-240f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "006",
@@ -95,7 +96,8 @@ export const e1144Data: StageData = {
             delayFrames: "360-420f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "006",
@@ -128,7 +130,8 @@ export const e1144Data: StageData = {
             delayFrames: "450-450f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "006",
@@ -161,7 +164,8 @@ export const e1144Data: StageData = {
             delayFrames: "450-450f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "010",
@@ -194,7 +198,8 @@ export const e1144Data: StageData = {
             delayFrames: "1,290-1,290f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "006",
@@ -227,7 +232,8 @@ export const e1144Data: StageData = {
             delayFrames: "420-420f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "002",
@@ -260,7 +266,8 @@ export const e1144Data: StageData = {
             delayFrames: "180-180f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "345",
@@ -293,6 +300,12 @@ export const e1144Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "wave-attack": {
+                chance: 100,
+                level: 2
+            }
           }
         },
         {
@@ -326,7 +339,8 @@ export const e1144Data: StageData = {
             delayFrames: "27,000-27,000f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         }]
     }
   ]

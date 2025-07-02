@@ -70,6 +70,17 @@ export const e1376Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "counter-surge": {
+                enabled: true
+            },
+            "surge": {
+                chance: 100,
+                distance_start: 150,
+                distance_end: 600,
+                level: 4
+            }
           }
         },
         {
@@ -103,6 +114,17 @@ export const e1376Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "counter-surge": {
+                enabled: true
+            },
+            "death-surge": {
+                chance: 100,
+                distance_start: 250,
+                distance_end: 750,
+                level: 1
+            }
           }
         },
         {
@@ -136,6 +158,14 @@ export const e1376Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 70000
+            },
+            "counter-surge": {
+                enabled: true
+            }
           }
         },
         {
@@ -169,7 +199,8 @@ export const e1376Data: StageData = {
             delayFrames: "600-800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "661",
@@ -202,6 +233,17 @@ export const e1376Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "counter-surge": {
+                enabled: true
+            },
+            "surge": {
+                chance: 100,
+                distance_start: 150,
+                distance_end: 550,
+                level: 2
+            }
           }
         },
         {
@@ -235,7 +277,8 @@ export const e1376Data: StageData = {
             delayFrames: "1,600-1,800f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "666",
@@ -268,6 +311,17 @@ export const e1376Data: StageData = {
             delayFrames: "800-1,100f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "counter-surge": {
+                enabled: true
+            },
+            "death-surge": {
+                chance: 100,
+                distance_start: 250,
+                distance_end: 750,
+                level: 1
+            }
           }
         },
         {
@@ -301,6 +355,17 @@ export const e1376Data: StageData = {
             delayFrames: "800-1,100f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "counter-surge": {
+                enabled: true
+            },
+            "surge": {
+                chance: 100,
+                distance_start: 150,
+                distance_end: 600,
+                level: 4
+            }
           }
         },
         {
@@ -334,6 +399,14 @@ export const e1376Data: StageData = {
             delayFrames: "2,800-2,800f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 70000
+            },
+            "counter-surge": {
+                enabled: true
+            }
           }
         },
         {
@@ -367,6 +440,14 @@ export const e1376Data: StageData = {
             delayFrames: "3,000-3,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "immune-freeze": {
+                enabled: true
+            },
+            "behemoth": {
+                enabled: true
+            }
           }
         },
         {
@@ -400,6 +481,17 @@ export const e1376Data: StageData = {
             delayFrames: "500-700f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "counter-surge": {
+                enabled: true
+            },
+            "death-surge": {
+                chance: 100,
+                distance_start: 250,
+                distance_end: 750,
+                level: 1
+            }
           }
         },
         {
@@ -433,6 +525,17 @@ export const e1376Data: StageData = {
             delayFrames: "700-900f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "counter-surge": {
+                enabled: true
+            },
+            "surge": {
+                chance: 100,
+                distance_start: 150,
+                distance_end: 600,
+                level: 4
+            }
           }
         }]
     },
@@ -496,7 +599,8 @@ export const e1376Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "660",
@@ -529,6 +633,29 @@ export const e1376Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "immune-waves": {
+                enabled: true
+            },
+            "immune-knockback": {
+                enabled: true
+            },
+            "immune-freeze": {
+                enabled: true
+            },
+            "immune-slow": {
+                enabled: true
+            },
+            "immune-weaken": {
+                enabled: true
+            },
+            "aku-shield": {
+                hp: 48000
+            },
+            "counter-surge": {
+                enabled: true
+            }
           }
         },
         {
@@ -562,7 +689,8 @@ export const e1376Data: StageData = {
             delayFrames: "600-1,400f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "664",
@@ -595,6 +723,14 @@ export const e1376Data: StageData = {
             delayFrames: "600-700f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 40000
+            },
+            "counter-surge": {
+                enabled: true
+            }
           }
         },
         {
@@ -628,6 +764,18 @@ export const e1376Data: StageData = {
             delayFrames: "200-300f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "mini-wave": {
+                chance: 50,
+                level: 2
+            },
+            "aku-shield": {
+                hp: 1340000
+            },
+            "counter-surge": {
+                enabled: true
+            }
           }
         },
         {
@@ -661,6 +809,22 @@ export const e1376Data: StageData = {
             delayFrames: "1,300-1,400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [4500, 4500],
+                timings: [12, 14]
+            },
+            "long-distance": {
+                standing_range: 1,
+                ld_range: [1, 151]
+            },
+            "knockback": {
+                chance: 30
+            },
+            "colossus": {
+                enabled: true
+            }
           }
         },
         {
@@ -694,6 +858,23 @@ export const e1376Data: StageData = {
             delayFrames: "600-800f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "strengthen": {
+                trigger_hp: 34,
+                power: 100
+            },
+            "aku-shield": {
+                hp: 700000
+            },
+            "counter-surge": {
+                enabled: true
+            },
+            "curse": {
+                chance: 100,
+                duration_f: 300,
+                duration_s: 10.0
+            }
           }
         },
         {
@@ -727,6 +908,14 @@ export const e1376Data: StageData = {
             delayFrames: "400-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 40000
+            },
+            "counter-surge": {
+                enabled: true
+            }
           }
         },
         {
@@ -760,6 +949,22 @@ export const e1376Data: StageData = {
             delayFrames: "800-800f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 320,
+                omni_range: [-320, 320]
+            },
+            "savage-blow": {
+                chance: 100,
+                power: 1.2
+            },
+            "aku-shield": {
+                hp: 500000
+            },
+            "counter-surge": {
+                enabled: true
+            }
           }
         },
         {
@@ -793,6 +998,14 @@ export const e1376Data: StageData = {
             delayFrames: "400-600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 40000
+            },
+            "counter-surge": {
+                enabled: true
+            }
           }
         },
         {
@@ -826,6 +1039,14 @@ export const e1376Data: StageData = {
             delayFrames: "1,400-1,600f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 40000
+            },
+            "counter-surge": {
+                enabled: true
+            }
           }
         }]
     }

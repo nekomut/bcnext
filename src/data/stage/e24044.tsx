@@ -62,6 +62,13 @@ export const e24044Data: StageData = {
             delayFrames: "800-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -95,6 +102,11 @@ export const e24044Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -128,6 +140,23 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -161,6 +190,14 @@ export const e24044Data: StageData = {
             delayFrames: "800-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            }
           }
         },
         {
@@ -194,6 +231,13 @@ export const e24044Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -227,6 +271,14 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 50,
+                power: 150,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -260,6 +312,13 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 25,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -293,6 +352,37 @@ export const e24044Data: StageData = {
             delayFrames: "900-900f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [400, 400, 400],
+                timings: [15, 30, 60]
+            },
+            "knockback": {
+                chance: 21
+            },
+            "freeze": {
+                chance: 33,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "slow": {
+                chance: 33,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 33,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "warp": {
+                chance: 21,
+                distance: 500,
+                duration_f: 30,
+                duration_s: 1.0
+            }
           }
         }]
     },
@@ -348,6 +438,13 @@ export const e24044Data: StageData = {
             delayFrames: "800-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -381,6 +478,11 @@ export const e24044Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -414,6 +516,23 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -447,6 +566,14 @@ export const e24044Data: StageData = {
             delayFrames: "800-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            }
           }
         },
         {
@@ -480,6 +607,13 @@ export const e24044Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -513,6 +647,14 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 50,
+                power: 150,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -546,6 +688,13 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 25,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -579,6 +728,37 @@ export const e24044Data: StageData = {
             delayFrames: "900-900f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [400, 400, 400],
+                timings: [15, 30, 60]
+            },
+            "knockback": {
+                chance: 21
+            },
+            "freeze": {
+                chance: 33,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "slow": {
+                chance: 33,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 33,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "warp": {
+                chance: 21,
+                distance: 500,
+                duration_f: 30,
+                duration_s: 1.0
+            }
           }
         }]
     },
@@ -634,6 +814,13 @@ export const e24044Data: StageData = {
             delayFrames: "800-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -667,6 +854,11 @@ export const e24044Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -700,6 +892,23 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -733,6 +942,14 @@ export const e24044Data: StageData = {
             delayFrames: "800-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            }
           }
         },
         {
@@ -766,6 +983,13 @@ export const e24044Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -799,6 +1023,14 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 50,
+                power: 150,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -832,6 +1064,13 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 25,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -865,6 +1104,37 @@ export const e24044Data: StageData = {
             delayFrames: "900-900f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [400, 400, 400],
+                timings: [15, 30, 60]
+            },
+            "knockback": {
+                chance: 21
+            },
+            "freeze": {
+                chance: 33,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "slow": {
+                chance: 33,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 33,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "warp": {
+                chance: 21,
+                distance: 500,
+                duration_f: 30,
+                duration_s: 1.0
+            }
           }
         }]
     },
@@ -920,6 +1190,13 @@ export const e24044Data: StageData = {
             delayFrames: "800-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -953,6 +1230,11 @@ export const e24044Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -986,6 +1268,23 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -1019,6 +1318,14 @@ export const e24044Data: StageData = {
             delayFrames: "800-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            }
           }
         },
         {
@@ -1052,6 +1359,13 @@ export const e24044Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -1085,6 +1399,14 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 50,
+                power: 150,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -1118,6 +1440,13 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 25,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -1151,6 +1480,37 @@ export const e24044Data: StageData = {
             delayFrames: "900-900f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [400, 400, 400],
+                timings: [15, 30, 60]
+            },
+            "knockback": {
+                chance: 21
+            },
+            "freeze": {
+                chance: 33,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "slow": {
+                chance: 33,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 33,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "warp": {
+                chance: 21,
+                distance: 500,
+                duration_f: 30,
+                duration_s: 1.0
+            }
           }
         }]
     },
@@ -1206,6 +1566,13 @@ export const e24044Data: StageData = {
             delayFrames: "800-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -1239,6 +1606,11 @@ export const e24044Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -1272,6 +1644,23 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -1305,6 +1694,14 @@ export const e24044Data: StageData = {
             delayFrames: "800-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            }
           }
         },
         {
@@ -1338,6 +1735,13 @@ export const e24044Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -1371,6 +1775,14 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 50,
+                power: 150,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -1404,6 +1816,13 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 25,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -1437,6 +1856,37 @@ export const e24044Data: StageData = {
             delayFrames: "900-900f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [400, 400, 400],
+                timings: [15, 30, 60]
+            },
+            "knockback": {
+                chance: 21
+            },
+            "freeze": {
+                chance: 33,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "slow": {
+                chance: 33,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 33,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "warp": {
+                chance: 21,
+                distance: 500,
+                duration_f: 30,
+                duration_s: 1.0
+            }
           }
         }]
     },
@@ -1492,6 +1942,13 @@ export const e24044Data: StageData = {
             delayFrames: "800-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -1525,6 +1982,11 @@ export const e24044Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -1558,6 +2020,23 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -1591,6 +2070,14 @@ export const e24044Data: StageData = {
             delayFrames: "800-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            }
           }
         },
         {
@@ -1624,6 +2111,13 @@ export const e24044Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -1657,6 +2151,14 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 50,
+                power: 150,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -1690,6 +2192,13 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 25,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -1723,6 +2232,37 @@ export const e24044Data: StageData = {
             delayFrames: "900-900f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [400, 400, 400],
+                timings: [15, 30, 60]
+            },
+            "knockback": {
+                chance: 21
+            },
+            "freeze": {
+                chance: 33,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "slow": {
+                chance: 33,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 33,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "warp": {
+                chance: 21,
+                distance: 500,
+                duration_f: 30,
+                duration_s: 1.0
+            }
           }
         }]
     },
@@ -1778,6 +2318,13 @@ export const e24044Data: StageData = {
             delayFrames: "800-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -1811,6 +2358,11 @@ export const e24044Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -1844,6 +2396,23 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -1877,6 +2446,14 @@ export const e24044Data: StageData = {
             delayFrames: "800-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            }
           }
         },
         {
@@ -1910,6 +2487,13 @@ export const e24044Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -1943,6 +2527,14 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 50,
+                power: 150,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -1976,6 +2568,13 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 25,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -2009,6 +2608,37 @@ export const e24044Data: StageData = {
             delayFrames: "900-900f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [400, 400, 400],
+                timings: [15, 30, 60]
+            },
+            "knockback": {
+                chance: 21
+            },
+            "freeze": {
+                chance: 33,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "slow": {
+                chance: 33,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 33,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "warp": {
+                chance: 21,
+                distance: 500,
+                duration_f: 30,
+                duration_s: 1.0
+            }
           }
         }]
     },
@@ -2064,6 +2694,13 @@ export const e24044Data: StageData = {
             delayFrames: "800-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -2097,6 +2734,11 @@ export const e24044Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -2130,6 +2772,23 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -2163,6 +2822,14 @@ export const e24044Data: StageData = {
             delayFrames: "800-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            }
           }
         },
         {
@@ -2196,6 +2863,13 @@ export const e24044Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -2229,6 +2903,14 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 50,
+                power: 150,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -2262,6 +2944,13 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 25,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -2295,6 +2984,37 @@ export const e24044Data: StageData = {
             delayFrames: "900-900f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [400, 400, 400],
+                timings: [15, 30, 60]
+            },
+            "knockback": {
+                chance: 21
+            },
+            "freeze": {
+                chance: 33,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "slow": {
+                chance: 33,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 33,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "warp": {
+                chance: 21,
+                distance: 500,
+                duration_f: 30,
+                duration_s: 1.0
+            }
           }
         }]
     },
@@ -2350,6 +3070,13 @@ export const e24044Data: StageData = {
             delayFrames: "800-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -2383,6 +3110,11 @@ export const e24044Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -2416,6 +3148,23 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -2449,6 +3198,14 @@ export const e24044Data: StageData = {
             delayFrames: "800-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            }
           }
         },
         {
@@ -2482,6 +3239,13 @@ export const e24044Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -2515,6 +3279,14 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 50,
+                power: 150,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -2548,6 +3320,13 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 25,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -2581,6 +3360,37 @@ export const e24044Data: StageData = {
             delayFrames: "900-900f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [400, 400, 400],
+                timings: [15, 30, 60]
+            },
+            "knockback": {
+                chance: 21
+            },
+            "freeze": {
+                chance: 33,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "slow": {
+                chance: 33,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 33,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "warp": {
+                chance: 21,
+                distance: 500,
+                duration_f: 30,
+                duration_s: 1.0
+            }
           }
         }]
     },
@@ -2636,6 +3446,13 @@ export const e24044Data: StageData = {
             delayFrames: "800-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -2669,6 +3486,11 @@ export const e24044Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "knockback": {
+                chance: 15
+            }
           }
         },
         {
@@ -2702,6 +3524,23 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 30,
+                duration_f: 120,
+                duration_s: 4.0
+            },
+            "burrow": {
+                times: 1,
+                distance: 625
+            },
+            "revive": {
+                times: 1,
+                duration_f: 360,
+                duration_s: 12.0,
+                hp_ratio: 50
+            }
           }
         },
         {
@@ -2735,6 +3574,14 @@ export const e24044Data: StageData = {
             delayFrames: "800-1,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 30,
+                power: 150,
+                duration_f: 50,
+                duration_s: 1.67
+            }
           }
         },
         {
@@ -2768,6 +3615,13 @@ export const e24044Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -2801,6 +3655,14 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "weaken": {
+                chance: 50,
+                power: 150,
+                duration_f: 10,
+                duration_s: 0.33
+            }
           }
         },
         {
@@ -2834,6 +3696,13 @@ export const e24044Data: StageData = {
             delayFrames: "1,000-1,000f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 25,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -2867,6 +3736,37 @@ export const e24044Data: StageData = {
             delayFrames: "900-900f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [400, 400, 400],
+                timings: [15, 30, 60]
+            },
+            "knockback": {
+                chance: 21
+            },
+            "freeze": {
+                chance: 33,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "slow": {
+                chance: 33,
+                duration_f: 90,
+                duration_s: 3.0
+            },
+            "weaken": {
+                chance: 33,
+                power: 90,
+                duration_f: 50,
+                duration_s: 1.67
+            },
+            "warp": {
+                chance: 21,
+                distance: 500,
+                duration_f: 30,
+                duration_s: 1.0
+            }
           }
         }]
     }

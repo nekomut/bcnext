@@ -62,6 +62,13 @@ export const e1220Data: StageData = {
             delayFrames: "4,300-4,400f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "slow": {
+                chance: 20,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -95,7 +102,8 @@ export const e1220Data: StageData = {
             delayFrames: "440-640f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "493",
@@ -128,6 +136,17 @@ export const e1220Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "long-distance": {
+                standing_range: 888,
+                ld_range: [888, 1332]
+            },
+            "curse": {
+                chance: 100,
+                duration_f: 3333,
+                duration_s: 111.1
+            }
           }
         },
         {
@@ -161,7 +180,8 @@ export const e1220Data: StageData = {
             delayFrames: "1,680-1,760f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "407",
@@ -194,6 +214,13 @@ export const e1220Data: StageData = {
             delayFrames: "300-360f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "curse": {
+                chance: 35,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -227,6 +254,13 @@ export const e1220Data: StageData = {
             delayFrames: "300-360f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "curse": {
+                chance: 35,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         },
         {
@@ -260,6 +294,13 @@ export const e1220Data: StageData = {
             delayFrames: "360-480f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "curse": {
+                chance: 35,
+                duration_f: 100,
+                duration_s: 3.33
+            }
           }
         }]
     }

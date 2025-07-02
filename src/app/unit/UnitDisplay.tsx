@@ -2247,7 +2247,7 @@ function TalentsList({
                 ) : talent.id === 63 ? (
                   <>
                     <Image
-                      src={`data:image/png;base64,${icons.abilityCollossus}`}
+                      src={`data:image/png;base64,${icons.abilityColossus}`}
                       alt="超生命体特効"
                       width={16}
                       height={16}

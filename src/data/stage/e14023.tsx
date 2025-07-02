@@ -62,7 +62,8 @@ export const e14023Data: StageData = {
             delayFrames: "160-500f",
             baseHpRatio: "350%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "167",
@@ -95,7 +96,8 @@ export const e14023Data: StageData = {
             delayFrames: "120-480f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "167",
@@ -128,7 +130,8 @@ export const e14023Data: StageData = {
             delayFrames: "120-480f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "167",
@@ -161,7 +164,8 @@ export const e14023Data: StageData = {
             delayFrames: "120-480f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "167",
@@ -194,7 +198,8 @@ export const e14023Data: StageData = {
             delayFrames: "120-480f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "167",
@@ -227,7 +232,8 @@ export const e14023Data: StageData = {
             delayFrames: "120-480f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "167",
@@ -260,7 +266,8 @@ export const e14023Data: StageData = {
             delayFrames: "2-180f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "179",
@@ -293,6 +300,18 @@ export const e14023Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "weaken": {
+                chance: 10,
+                power: 300,
+                duration_f: 10,
+                duration_s: 0.33
+            },
+            "strengthen": {
+                trigger_hp: 30,
+                power: 200
+            }
           }
         }]
     }

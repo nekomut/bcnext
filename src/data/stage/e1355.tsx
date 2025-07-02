@@ -62,6 +62,18 @@ export const e1355Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "mini-wave": {
+                chance: 50,
+                level: 2
+            },
+            "aku-shield": {
+                hp: 1340000
+            },
+            "counter-surge": {
+                enabled: true
+            }
           }
         },
         {
@@ -95,6 +107,11 @@ export const e1355Data: StageData = {
             delayFrames: "2,900-3,100f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 80000
+            }
           }
         },
         {
@@ -128,6 +145,17 @@ export const e1355Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 350,
+                omni_range: [-350, 350]
+            },
+            "curse": {
+                chance: 100,
+                duration_f: 300,
+                duration_s: 10.0
+            }
           }
         },
         {
@@ -161,6 +189,13 @@ export const e1355Data: StageData = {
             delayFrames: "7,000-7,000f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "freeze": {
+                chance: 30,
+                duration_f: 60,
+                duration_s: 2.0
+            }
           }
         },
         {
@@ -194,6 +229,18 @@ export const e1355Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "omni-strike": {
+                standing_range: 200,
+                omni_range: [-300, 200]
+            },
+            "knockback": {
+                chance: 50
+            },
+            "counter-surge": {
+                enabled: true
+            }
           }
         }]
     }

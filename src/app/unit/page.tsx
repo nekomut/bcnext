@@ -238,7 +238,7 @@ function UnitPageContent() {
           <Image src= {`data:image/png;base64,${icons.abilityEvaAngelKiller}`} alt="abilityEvaAngelKiller" width={20} height={0} />
           <Image src= {`data:image/png;base64,${icons.abilityWitch}`} alt="abilityWitch" width={20} height={0} />
           <Image src= {`data:image/png;base64,${icons.abilityEvaAngel}`} alt="abilityEvaAngel" width={20} height={0} />
-          <Image src= {`data:image/png;base64,${icons.abilityCollossus}`} alt="abilityCollossus" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilityColossus}`} alt="abilityColossus" width={20} height={0} />
           <Image src= {`data:image/png;base64,${icons.abilityBehemoth}`} alt="abilityBehemoth" width={20} height={0} />
           <Image src= {`data:image/png;base64,${icons.abilitySage}`} alt="abilitySage" width={20} height={0} />
           <Image src= {`data:image/png;base64,${icons.abilityBarrier}`} alt="abilityBarrier" width={20} height={0} />

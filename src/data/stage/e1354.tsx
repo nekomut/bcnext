@@ -62,6 +62,14 @@ export const e1354Data: StageData = {
             delayFrames: "800-900f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 40000
+            },
+            "counter-surge": {
+                enabled: true
+            }
           }
         },
         {
@@ -95,7 +103,8 @@ export const e1354Data: StageData = {
             delayFrames: "400-460f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "664",
@@ -128,6 +137,14 @@ export const e1354Data: StageData = {
             delayFrames: "200-400f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 40000
+            },
+            "counter-surge": {
+                enabled: true
+            }
           }
         },
         {
@@ -161,6 +178,14 @@ export const e1354Data: StageData = {
             delayFrames: "120-180f",
             baseHpRatio: "99%",
             isBoss: false
+          },
+          abilities: {
+            "aku-shield": {
+                hp: 40000
+            },
+            "counter-surge": {
+                enabled: true
+            }
           }
         },
         {
@@ -194,7 +219,8 @@ export const e1354Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "207",
@@ -227,7 +253,8 @@ export const e1354Data: StageData = {
             delayFrames: "400-500f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "207",
@@ -260,7 +287,8 @@ export const e1354Data: StageData = {
             delayFrames: "100-240f",
             baseHpRatio: "99%",
             isBoss: true
-          }
+          },
+          abilities: {}
         }]
     }
   ]

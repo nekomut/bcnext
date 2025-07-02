@@ -62,7 +62,8 @@ export const e2047Data: StageData = {
             delayFrames: "100-300f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "088",
@@ -95,7 +96,8 @@ export const e2047Data: StageData = {
             delayFrames: "200-600f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "096",
@@ -128,7 +130,8 @@ export const e2047Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "096",
@@ -161,7 +164,8 @@ export const e2047Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "096",
@@ -194,7 +198,8 @@ export const e2047Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "091",
@@ -227,7 +232,8 @@ export const e2047Data: StageData = {
             delayFrames: "600-1,000f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "090",
@@ -260,7 +266,8 @@ export const e2047Data: StageData = {
             delayFrames: "600-1,000f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "094",
@@ -293,7 +300,8 @@ export const e2047Data: StageData = {
             delayFrames: "500-600f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "092",
@@ -326,7 +334,8 @@ export const e2047Data: StageData = {
             delayFrames: "300-400f",
             baseHpRatio: "99%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "347",
@@ -359,6 +368,17 @@ export const e2047Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "99%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [9000, 9000, 9000],
+                timings: [30, 39, 48]
+            },
+            "slow": {
+                chance: 50,
+                duration_f: 210,
+                duration_s: 7.0
+            }
           }
         }]
     },
@@ -414,6 +434,17 @@ export const e2047Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: true
+          },
+          abilities: {
+            "multi-hit": {
+                hits: [9000, 9000, 9000],
+                timings: [30, 39, 48]
+            },
+            "slow": {
+                chance: 50,
+                duration_f: 210,
+                duration_s: 7.0
+            }
           }
         },
         {
@@ -447,7 +478,8 @@ export const e2047Data: StageData = {
             delayFrames: "2-2f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "094",
@@ -480,7 +512,8 @@ export const e2047Data: StageData = {
             delayFrames: "500-500f",
             baseHpRatio: "100%",
             isBoss: false
-          }
+          },
+          abilities: {}
         },
         {
           enemyId: "163",
@@ -513,6 +546,11 @@ export const e2047Data: StageData = {
             delayFrames: "800-800f",
             baseHpRatio: "100%",
             isBoss: false
+          },
+          abilities: {
+            "critical": {
+                chance: 40
+            }
           }
         }]
     }

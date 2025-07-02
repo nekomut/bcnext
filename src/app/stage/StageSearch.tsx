@@ -32,7 +32,8 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
     if (stageName.trim()) {
       params.stageName = stageName.trim();
     }
-    if (typeId && !isNaN(Number(typeId))) {
+    // typeIdが空文字の場合は「すべてのタイプ」なのでパラメータに含めない
+    if (typeId && typeId !== '' && !isNaN(Number(typeId))) {
       params.typeId = Number(typeId);
     }
     params.sortBy = sortBy;
@@ -49,9 +50,9 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
   const handleClear = () => {
     setEventId('');
     setStageName('');
-    setTypeId('34');
+    setTypeId('');
     setSortBy('id-desc');
-    onSearch({ typeId: 34, sortBy: 'id-desc' });
+    onSearch({ sortBy: 'id-desc' });
   };
 
   return (
@@ -102,6 +103,7 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
             <option value="1">イベントステージ</option>
             <option value="24">強襲ステージ</option>
             <option value="11">ランキング道場</option>
+            <option value="36">異次元コロシアム</option>
             <option value="7">にゃんこ塔</option>
             <option value="2">コラボステージ</option>
             <option value="27">コラボ強襲ステージ</option>

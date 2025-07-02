@@ -341,29 +341,29 @@ function EnemyTable({ enemies, showDetail, getTraitColor, getTraitIcon, getAbili
             <tr className="border-b border-gray-500">
               <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">ID</th>
               <th className="px-0.5 py-1 text-left font-bold text-gray-500 tracking-wider min-w-12 whitespace-nowrap">敵名</th>
+              <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">数</th>
               <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-8 whitespace-nowrap">属性</th>
-              <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-8 whitespace-nowrap">能力・効果</th>
-              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">倍率</th>
-              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">体力</th>
-              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">攻撃力</th>
-              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">DPS</th>
+              <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-8 whitespace-nowrap">能力</th>
+              <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">倍率</th>
+              <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">体力</th>
+              <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">攻撃力</th>
+              <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">DPS</th>
               {showDetail && (
                 <>
-                  <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">頻度s</th>
-                  <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">頻度f</th>
+                  <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">頻度s</th>
+                  <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">頻度f</th>
                 </>
               )}
-              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">射程</th>
+              <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">射程</th>
               <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-8 whitespace-nowrap">範囲</th>
-              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">速度</th>
-              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">KB</th>
-              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">お金</th>
-              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">城連動</th>
-              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">出現数</th>
-              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">出現s</th>
-              {showDetail && <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">出現f</th>}
-              <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">間隔s</th>
-              {showDetail && <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">間隔f</th>}
+              <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">速度</th>
+              <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">KB</th>
+              <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">お金</th>
+              <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">城連動</th>
+              <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">出現s</th>
+              {showDetail && <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">出現f</th>}
+              <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">間隔s</th>
+              {showDetail && <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">間隔f</th>}
             </tr>
           </thead>
           <tbody>
@@ -420,6 +420,12 @@ function EnemyRow({ enemy, showDetail, getTraitColor, getTraitIcon, getAbilityIc
             {displayName}
           </div>
         </div>
+      </td>
+      <td className="px-2 py-1 text-right text-gray-500">
+        {enemy.stageStats.count === '0' ? 
+          <span className="text-gray-400">-</span> : 
+          <span className="font-medium">{formatNumber(enemy.stageStats.count)}</span>
+        }
       </td>
       <td className="px-2 py-1 text-center w-16 min-w-16">
         {(enemy.traits.length > 0 || Object.keys(enemy.abilities).some(ability => ['behemoth', 'colossus', 'sage'].includes(ability))) ? (
@@ -554,12 +560,6 @@ function EnemyRow({ enemy, showDetail, getTraitColor, getTraitIcon, getAbilityIc
       </td>
       <td className="px-2 py-1 text-right text-gray-500">
         {enemy.stageStats.baseHpRatio}
-      </td>
-      <td className="px-2 py-1 text-right text-gray-500">
-        {enemy.stageStats.count === '0' ? 
-          <span className="text-gray-400">-</span> : 
-          <span className="font-medium">{formatNumber(enemy.stageStats.count)}</span>
-        }
       </td>
       <td className="px-2 py-1 text-right text-gray-500">
         {enemy.stageStats.spawnTime}

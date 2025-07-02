@@ -130,7 +130,7 @@ function StagePageContent() {
     
     setSearchParams(params);
     
-    // 初期検索実行（パラメータがない場合はデフォルト検索）
+    // 初期検索実行
     if (params.eventId !== undefined && params.eventId !== null || params.stageName || params.typeId !== undefined && params.typeId !== null) {
       handleSearch(params);
     } else {

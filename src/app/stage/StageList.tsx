@@ -39,7 +39,7 @@ export function StageList({ events, searchTerm, onStageSelect }: StageListProps)
       <div className="p-3 border-b border-gray-200">
         <div className="flex items-center gap-2 mb-1">
           <h3 className="text-base font-semibold text-gray-900">
-            検索結果 ({events.length}件のイベント)
+            検索結果 <small>({events.length}件のイベント)</small>
           </h3>
         </div>
         <p className="text-xs text-gray-600">
@@ -52,19 +52,19 @@ export function StageList({ events, searchTerm, onStageSelect }: StageListProps)
           <thead>
             <tr className="bg-gray-50 border-b border-gray-200">
               <th className="px-2 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                イベントID
+                ID
               </th>
               <th className="px-2 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                イベント名
+                イベント
               </th>
               <th className="px-2 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 タイプ
               </th>
-              <th className="px-2 py-2 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                ステージ数
-              </th>
               <th className="px-2 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                ステージ一覧
+                ステージ
+              </th>
+              <th className="px-2 py-2 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+                数
               </th>
             </tr>
           </thead>
@@ -95,11 +95,6 @@ export function StageList({ events, searchTerm, onStageSelect }: StageListProps)
                     <span className="ml-1 text-xs text-gray-900">{event.typeName}</span>
                   </div>
                 </td>
-                <td className="px-2 py-2 text-center">
-                  <span className="inline-flex items-center px-1 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">
-                    {event.stageCount}
-                  </span>
-                </td>
                 <td className="px-2 py-2">
                   <div className="max-h-20 overflow-y-auto space-y-0.5">
                     {event.stageIds.map((stageId) => {
@@ -116,6 +111,11 @@ export function StageList({ events, searchTerm, onStageSelect }: StageListProps)
                       );
                     })}
                   </div>
+                </td>
+                <td className="px-2 py-2 text-center">
+                  <span className="inline-flex items-center px-1 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">
+                    {event.stageCount}
+                  </span>
                 </td>
               </tr>
             ))}

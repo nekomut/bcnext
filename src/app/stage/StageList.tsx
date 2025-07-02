@@ -76,23 +76,21 @@ export function StageList({ events, searchTerm, onStageSelect }: StageListProps)
                     onClick={() => onStageSelect(event.eventId)}
                     className="inline-flex items-right px-0.5 py-0.5 text-xs font-mono font-medium text-blue-600 hover:text-blue-800 hover:bg-blue-50 rounded transition-colors"
                   >
-                    {event.eventId}
+                    <small>{event.eventId}</small>
                   </button>
                 </td>
                 <td className="px-0.5 py-0">
                   <button
                     onClick={() => onStageSelect(event.eventId)}
-                    className="text-left w-full text-xs font-medium text-blue-600 hover:text-blue-800 hover:underline"
+                    className="text-left w-full font-medium text-blue-600 hover:text-blue-800 hover:underline"
                   >
-                    {highlightText(event.eventName, searchTerm)}
+                    <small>{highlightText(event.eventName, searchTerm)}</small>
                   </button>
                 </td>
                 <td className="px-0.5 py-0">
                   <div className="flex items-center">
-                    <span className="inline-flex items-center px-1 py-0.5 rounded text-xs font-medium text-gray-600">
-                      {event.typeId}
-                    </span>
-                    <span className="ml-1 text-xs text-gray-900">{event.typeName}</span>
+                    <span className="hidden">{event.typeId} </span>
+                    <span className="ml-1 text-gray-900"><small>{event.typeName}</small></span>
                   </div>
                 </td>
                 <td className="px-0.5 py-0">
@@ -105,8 +103,10 @@ export function StageList({ events, searchTerm, onStageSelect }: StageListProps)
                         <div key={stageId} className={`text-xs flex items-center gap-1 ${
                           isMatch ? 'text-green-600 font-semibold' : 'text-gray-600'
                         }`}>
-                          <span className="font-mono text-xs bg-gray-100 px-0.5 py-0 rounded">{stageId}</span>
-                          <span className="flex-1">{highlightText(stageName, searchTerm)}</span>
+                          <small>
+                            <span className="font-mono text-right px-1 py-0">{stageId}</span>
+                            <span className="flex-1">{highlightText(stageName, searchTerm)}</span>
+                          </small>
                         </div>
                       );
                     })}
@@ -114,7 +114,7 @@ export function StageList({ events, searchTerm, onStageSelect }: StageListProps)
                 </td>
                 <td className="px-0.5 py-0 text-center">
                   <span className="inline-flex items-center px-1 py-0.5 rounded text-xs font-medium text-gray-600">
-                    {event.stageCount}
+                    <small>{event.stageCount}</small>
                   </span>
                 </td>
               </tr>

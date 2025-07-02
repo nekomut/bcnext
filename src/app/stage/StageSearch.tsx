@@ -32,8 +32,7 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
     if (stageName.trim()) {
       params.stageName = stageName.trim();
     }
-    // typeIdが空文字の場合は「すべてのタイプ」なのでパラメータに含めない
-    if (typeId && typeId !== '' && !isNaN(Number(typeId))) {
+    if (typeId && !isNaN(Number(typeId))) {
       params.typeId = Number(typeId);
     }
     params.sortBy = sortBy;
@@ -50,9 +49,9 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
   const handleClear = () => {
     setEventId('');
     setStageName('');
-    setTypeId('');
+    setTypeId('34');
     setSortBy('id-desc');
-    onSearch({ sortBy: 'id-desc' });
+    onSearch({ typeId: 34, sortBy: 'id-desc' });
   };
 
   return (
@@ -96,7 +95,6 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
             onChange={(e) => setTypeId(e.target.value)}
             className="w-full px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
           >
-            <option value="">すべてのタイプ</option>
             <option value="34">レジェンドストーリー0</option>
             <option value="13">真レジェンドストーリー</option>
             <option value="0">レジェンドストーリー</option>

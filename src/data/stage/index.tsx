@@ -6871,6 +6871,19 @@ export const stageIndexData: StageIndexData = {
       }
     },
     {
+      eventId: 1405,
+      eventName: "破天候予報",
+      typeId: 1,
+      typeName: "イベントステージ",
+      mapId: 405,
+      prefix: "S",
+      stageCount: 1,
+      stageIds: [0],
+      stageInfo: {
+        0: "豪雨発生"
+      }
+    },
+    {
       eventId: 2000,
       eventName: "ふるさと自衛隊",
       typeId: 2,
@@ -10338,6 +10351,48 @@ export const stageIndexData: StageIndexData = {
       }
     },
     {
+      eventId: 2227,
+      eventName: "第９の使徒、襲来",
+      typeId: 2,
+      typeName: "コラボステージ",
+      mapId: 227,
+      prefix: "C",
+      stageCount: 2,
+      stageIds: [0, 1],
+      stageInfo: {
+        0: "アスカが乗ってるんだよ！ 初級",
+        1: "アスカが乗ってるんだよ！ 激ムズ"
+      }
+    },
+    {
+      eventId: 2228,
+      eventName: "第１０の使徒、襲来",
+      typeId: 2,
+      typeName: "コラボステージ",
+      mapId: 228,
+      prefix: "C",
+      stageCount: 2,
+      stageIds: [0, 1],
+      stageInfo: {
+        0: "最強の拒絶タイプ 上級",
+        1: "最強の拒絶タイプ 超極ムズ"
+      }
+    },
+    {
+      eventId: 2229,
+      eventName: "エヴァ第１３号機、襲来",
+      typeId: 2,
+      typeName: "コラボステージ",
+      mapId: 229,
+      prefix: "C",
+      stageCount: 2,
+      stageIds: [0, 1],
+      stageInfo: {
+        0: "君のせいじゃない 超上級",
+        1: "また会えるよ 超極ムズ"
+      }
+    },
+    {
       eventId: 6000,
       eventName: "初心の間",
       typeId: 6,
@@ -11152,6 +11207,32 @@ export const stageIndexData: StageIndexData = {
       stageIds: [0],
       stageInfo: {
         0: "ソニックバトル！"
+      }
+    },
+    {
+      eventId: 11033,
+      eventName: "極ランキングの間（闘争本能大会）",
+      typeId: 11,
+      typeName: "ランキング道場",
+      mapId: 33,
+      prefix: "R",
+      stageCount: 1,
+      stageIds: [0],
+      stageInfo: {
+        0: "闘争本能大会"
+      }
+    },
+    {
+      eventId: 11034,
+      eventName: "超ランキングの間（停止注意大会）",
+      typeId: 11,
+      typeName: "ランキング道場",
+      mapId: 34,
+      prefix: "R",
+      stageCount: 1,
+      stageIds: [0],
+      stageInfo: {
+        0: "停止注意大会"
       }
     },
     {
@@ -14604,6 +14685,60 @@ export const stageIndexData: StageIndexData = {
       }
     },
     {
+      eventId: 24071,
+      eventName: "ねこのなつやすみ　サバイバル",
+      typeId: 24,
+      typeName: "強襲ステージ",
+      mapId: 71,
+      prefix: "A",
+      stageCount: 20,
+      stageIds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19],
+      stageInfo: {
+        0: "目覚めの海岸",
+        1: "立ち込める暗雲",
+        2: "草陰からの視線",
+        3: "洞窟で震える夜",
+        4: "誰にも届かぬSOS",
+        5: "生き残る",
+        6: "住めば都の島暮らし",
+        7: "採り放題、食べ放題",
+        8: "毒キノコで腹下し",
+        9: "大自然と育む友情",
+        10: "夢見る脱出、溢れる食欲",
+        11: "獲物に狙いを定めて",
+        12: "狩ったどー！",
+        13: "空腹は最高の調味料",
+        14: "水平線の先に見た希望",
+        15: "始まるいかだ作り",
+        16: "美しい島の思い出",
+        17: "いざ出航",
+        18: "嵐に飲まれるいかだ",
+        19: "再び目覚めの海岸"
+      }
+    },
+    {
+      eventId: 24072,
+      eventName: "島を守りし者強襲！",
+      typeId: 24,
+      typeName: "強襲ステージ",
+      mapId: 72,
+      prefix: "A",
+      stageCount: 10,
+      stageIds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      stageInfo: {
+        0: "異文化交流 Lv.1",
+        1: "異文化交流 Lv.2",
+        2: "異文化交流 Lv.3",
+        3: "異文化交流 Lv.4",
+        4: "異文化交流 Lv.5",
+        5: "異文化交流 Lv.6",
+        6: "異文化交流 Lv.7",
+        7: "異文化交流 Lv.8",
+        8: "異文化交流 Lv.9",
+        9: "異文化交流 Lv.MAX"
+      }
+    },
+    {
       eventId: 25000,
       eventName: "アテイム古戦場",
       typeId: 25,
@@ -15526,6 +15661,45 @@ export const stageIndexData: StageIndexData = {
       }
     },
     {
+      eventId: 25070,
+      eventName: "再会の地図",
+      typeId: 25,
+      typeName: "発掘ステージ",
+      mapId: 70,
+      prefix: "H",
+      stageCount: 1,
+      stageIds: [0],
+      stageInfo: {
+        0: "紅の獣と白き巨象"
+      }
+    },
+    {
+      eventId: 25071,
+      eventName: "再会の地図",
+      typeId: 25,
+      typeName: "発掘ステージ",
+      mapId: 71,
+      prefix: "H",
+      stageCount: 1,
+      stageIds: [0],
+      stageInfo: {
+        0: "光と影と浮遊教師"
+      }
+    },
+    {
+      eventId: 25072,
+      eventName: "再会の地図",
+      typeId: 25,
+      typeName: "発掘ステージ",
+      mapId: 72,
+      prefix: "H",
+      stageCount: 1,
+      stageIds: [0],
+      stageInfo: {
+        0: "月面に漂う地球外生命"
+      }
+    },
+    {
       eventId: 27000,
       eventName: "メシエ 強襲！",
       typeId: 27,
@@ -16224,6 +16398,27 @@ export const stageIndexData: StageIndexData = {
       }
     },
     {
+      eventId: 27024,
+      eventName: "エヴァ量産機強襲",
+      typeId: 27,
+      typeName: "コラボ強襲ステージ",
+      mapId: 24,
+      prefix: "CA",
+      stageCount: 9,
+      stageIds: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+      stageInfo: {
+        0: "殲滅 Lv.1",
+        1: "殲滅 Lv.2",
+        2: "殲滅 Lv.3",
+        3: "殲滅 Lv.4",
+        4: "殲滅 Lv.5",
+        5: "殲滅 Lv.6",
+        6: "殲滅 Lv.7",
+        7: "殲滅 Lv.8",
+        8: "これでラストー!!"
+      }
+    },
+    {
       eventId: 31000,
       eventName: "ガープラ密林",
       typeId: 31,
@@ -16675,6 +16870,42 @@ export const stageIndexData: StageIndexData = {
       }
     },
     {
+      eventId: 34020,
+      eventName: "新たな時を刻む旅路",
+      typeId: 34,
+      typeName: "レジェンドストーリー0",
+      mapId: 20,
+      prefix: "ND",
+      stageCount: 6,
+      stageIds: [0, 1, 2, 3, 4, 5],
+      stageInfo: {
+        0: "タイマースター塔",
+        1: "22時22分の観測者",
+        2: "チクタク住宅地区",
+        3: "手際の良い時間泥棒",
+        4: "真っ黒クロック牢獄",
+        5: "長針と短針の密会"
+      }
+    },
+    {
+      eventId: 34021,
+      eventName: "甘味自然公園",
+      typeId: 34,
+      typeName: "レジェンドストーリー0",
+      mapId: 21,
+      prefix: "ND",
+      stageCount: 6,
+      stageIds: [0, 1, 2, 3, 4, 5],
+      stageInfo: {
+        0: "ザクザクッキー山脈",
+        1: "極寒クリーム雪原",
+        2: "ティラミス断崖",
+        3: "忘れがたきタピ丘",
+        4: "秘境ナタ・デ古道",
+        5: "ひんやりチョコ霊廟"
+      }
+    },
+    {
       eventId: 36000,
       eventName: "異次元コロシアム",
       typeId: 36,
@@ -16894,10 +17125,27 @@ export const stageIndexData: StageIndexData = {
         3: "Round 4",
         4: "Round 5"
       }
+    },
+    {
+      eventId: 36013,
+      eventName: "異次元コロシアム",
+      typeId: 36,
+      typeName: "異次元コロシアム",
+      mapId: 13,
+      prefix: "SR",
+      stageCount: 5,
+      stageIds: [0, 1, 2, 3, 4],
+      stageInfo: {
+        0: "Round 1",
+        1: "Round 2",
+        2: "Round 3",
+        3: "Round 4",
+        4: "Round 5"
+      }
     }
   ],
-  totalEvents: 1030,
-  totalStages: 4532
+  totalEvents: 1045,
+  totalStages: 4600
 } as const;
 
 export default stageIndexData;

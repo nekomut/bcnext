@@ -1383,8 +1383,8 @@ export const unitNamesData: UnitNameData[] = [
   },
   {
     unitId: "275",
-    displayName: "真夏のホワイトラビット..真夏のブラックキャット",
-    forms: ["真夏のホワイトラビット", "真夏のブラックキャット"]
+    displayName: "真夏のホワイトラビット..ブライトサマーキャット",
+    forms: ["真夏のホワイトラビット", "真夏のブラックキャット", "ブライトサマーキャット"]
   },
   {
     unitId: "276",
@@ -1538,8 +1538,8 @@ export const unitNamesData: UnitNameData[] = [
   },
   {
     unitId: "306",
-    displayName: "飛空襲撃ボンバーズ..超飛行戦艦ボルボンバー",
-    forms: ["飛空襲撃ボンバーズ", "飛行戦艦ボルボンバー", "超飛行戦艦ボルボンバー"]
+    displayName: "飛空襲撃ボンバーズ..極飛行戦艦ボルボンバー",
+    forms: ["飛空襲撃ボンバーズ", "飛行戦艦ボルボンバー", "超飛行戦艦ボルボンバー", "極飛行戦艦ボルボンバー"]
   },
   {
     unitId: "307",
@@ -3498,8 +3498,8 @@ export const unitNamesData: UnitNameData[] = [
   },
   {
     unitId: "698",
-    displayName: "サンダージャック..ブラッディージャック",
-    forms: ["サンダージャック", "ブラッディージャック"]
+    displayName: "サンダージャック..ライトニングジャック",
+    forms: ["サンダージャック", "ブラッディージャック", "ライトニングジャック"]
   },
   {
     unitId: "699",
@@ -4060,6 +4060,36 @@ export const unitNamesData: UnitNameData[] = [
     unitId: "810",
     displayName: "811_1..811_3",
     forms: ["811_1", "811_2", "811_3"]
+  },
+  {
+    unitId: "811",
+    displayName: "韋駄天スカンダ..スカンダゼタ",
+    forms: ["韋駄天スカンダ", "スカンダゼタ"]
+  },
+  {
+    unitId: "812",
+    displayName: "812-1",
+    forms: ["812-1"]
+  },
+  {
+    unitId: "813",
+    displayName: "タスマニアオオガニ..タスマニアオオガニCC",
+    forms: ["タスマニアオオガニ", "タスマニアオオガニCC"]
+  },
+  {
+    unitId: "814",
+    displayName: "エヴァ量産機..エヴァネコ量産機",
+    forms: ["エヴァ量産機", "エヴァネコ量産機"]
+  },
+  {
+    unitId: "815",
+    displayName: "月影の少年カヲル..落月のシ者カヲル",
+    forms: ["月影の少年カヲル", "落月のシ者カヲル"]
+  },
+  {
+    unitId: "816",
+    displayName: "817-1",
+    forms: ["817-1"]
   }
 ];
 

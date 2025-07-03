@@ -104,11 +104,11 @@ export const calcStat = (
 ): number => {
   const mult = 1 + 0.5 * Math.floor(treasure / 100);
   if (level > p) {
-    return Math.round(base * ((m + 4) / 5 + (p - m) / 10 + (level - p) / 20)) * mult;
+    return Math.floor(Math.round(base * ((m + 4) / 5 + (p - m) / 10 + (level - p) / 20)) * mult);
   } else if (level > m) {
-    return Math.round(base * ((m + 4) / 5 + (level - m) / 10)) * mult;
+    return Math.floor(Math.round(base * ((m + 4) / 5 + (level - m) / 10)) * mult);
   }
-  return Math.round(base * (4 + level) / 5) * mult;
+  return Math.floor(Math.round(base * (4 + level) / 5) * mult);
 };
 
 export const frameToSecond = (frames: number, round: boolean = true): number => {
@@ -128,8 +128,9 @@ const getAnimLength = (form: UnitForm): number => {
 };
 
 // Growth rates calculation
-export const getReduction = (levelRates: readonly number[]): [number, number] => {
-  const growth = [...levelRates.slice(0, 8)];
+export const getReduction = (levelRates: readonly number[], totalLevel: number): [number, number] => {
+  const maxSegments = Math.floor(totalLevel / 10);
+  const growth = [...levelRates.slice(0, maxSegments)];
   const redPts: number[] = [];
 
   while (growth.length > 0) {
@@ -139,7 +140,7 @@ export const getReduction = (levelRates: readonly number[]): [number, number] =>
   }
 
   if (redPts.length === 1) {
-    redPts.push(80);
+    redPts.push(totalLevel);
   } else {
     redPts[1] += redPts[0];
   }
@@ -159,7 +160,8 @@ export const calculateUnitStats = (
 
   const stats = form.stats;
   const totalLevel = level + plusLevel;
-  const [m, p] = getReduction(unitData.coreData.levelRates);
+  const maxLevel = unitData.coreData.rarity.maxLevels[0] + unitData.coreData.rarity.maxLevels[1];
+  const [m, p] = getReduction(unitData.coreData.levelRates, maxLevel);
 
   // Basic stats
   const hp = Math.floor(calcStat(stats[0] || 0, m, p, totalLevel));

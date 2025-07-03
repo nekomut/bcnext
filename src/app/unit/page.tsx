@@ -176,7 +176,7 @@ function UnitPageContent() {
           <Image src= {`data:image/png;base64,${icons.abilitySoulStrike}`} alt="abilitySoulStrike" width={20} height={0} />
           <Image src= {`data:image/png;base64,${icons.abilityBarrierBreaker}`} alt="abilityBarrierBreaker" width={20} height={0} />
           <Image src= {`data:image/png;base64,${icons.abilityShieldPiercing}`} alt="abilityShieldPiercing" width={20} height={0} />
-          <Image src= {`data:image/png;base64,${icons.abilityBerserk}`} alt="abilityBerserk" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.abilitySavageBlow}`} alt="abilitySavageBlow" width={20} height={0} />
         </div>
         <div className='flex'>
           <Image src= {`data:image/png;base64,${icons.abilityExtraMoney}`} alt="abilityExtraMoney" width={20} height={0} />
@@ -236,8 +236,8 @@ function UnitPageContent() {
         <div className='flex'>
           <Image src= {`data:image/png;base64,${icons.abilityWitchKiller}`} alt="abilityWitchKiller" width={20} height={0} />
           <Image src= {`data:image/png;base64,${icons.abilityEvaAngelKiller}`} alt="abilityEvaAngelKiller" width={20} height={0} />
-          <Image src= {`data:image/png;base64,${icons.abilityWitch}`} alt="abilityWitch" width={20} height={0} />
-          <Image src= {`data:image/png;base64,${icons.abilityEvaAngel}`} alt="abilityEvaAngel" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.traitWitch}`} alt="traitWitch" width={20} height={0} />
+          <Image src= {`data:image/png;base64,${icons.traitEvaAngel}`} alt="traitEvaAngel" width={20} height={0} />
           <Image src= {`data:image/png;base64,${icons.abilityColossus}`} alt="abilityColossus" width={20} height={0} />
           <Image src= {`data:image/png;base64,${icons.abilityBehemoth}`} alt="abilityBehemoth" width={20} height={0} />
           <Image src= {`data:image/png;base64,${icons.abilitySage}`} alt="abilitySage" width={20} height={0} />

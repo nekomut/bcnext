@@ -1188,10 +1188,10 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier }: {
                       />
                       ワープ無効
                     </>
-                  ) : (typeof ability.name === 'object' && React.isValidElement(ability.name) && ability.iconKeys?.includes('abilityBerserk')) ? (
+                  ) : (typeof ability.name === 'object' && React.isValidElement(ability.name) && ability.iconKeys?.includes('abilitySavageBlow')) ? (
                     <>
                       <Image
-                        src={`data:image/png;base64,${icons.abilityBerserk}`}
+                        src={`data:image/png;base64,${icons.abilitySavageBlow}`}
                         alt="渾身の一撃"
                         width={16}
                         height={16}
@@ -1465,7 +1465,7 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier }: {
                   ) : ability.name === '渾身の一撃' && ability.iconKeys ? (
                     <>
                       <Image
-                        src={`data:image/png;base64,${icons.abilityBerserk}`}
+                        src={`data:image/png;base64,${icons.abilitySavageBlow}`}
                         alt="渾身の一撃"
                         width={16}
                         height={16}
@@ -2308,7 +2308,7 @@ function TalentsList({
                 ) : talent.id === 50 ? (
                   <>
                     <Image
-                      src={`data:image/png;base64,${icons.abilityBerserk}`}
+                      src={`data:image/png;base64,${icons.abilitySavageBlow}`}
                       alt="渾身の一撃"
                       width={16}
                       height={16}
@@ -2991,12 +2991,12 @@ function TalentsList({
                           talent.id === 35 ? 'traitBlack' :
                           talent.id === 36 ? 'traitMetal' :
                           talent.id === 37 ? 'traitAngel' :
-                          talent.id === 38 ? 'traitNone' :
+                          talent.id === 38 ? 'traitTraitless' :
                           talent.id === 39 ? 'traitZombie' :
                           talent.id === 40 ? 'traitRelic' :
-                          talent.id === 41 ? 'traitNone' :
-                          talent.id === 43 ? 'traitNone' :
-                          talent.id === 57 ? 'traitAku' : 'traitNone'
+                          talent.id === 41 ? 'traitTraitless' :
+                          talent.id === 43 ? 'traitTraitless' :
+                          talent.id === 57 ? 'traitAku' : 'traitTraitless'
                         ] as keyof typeof icons}`}
                         alt={talent.name}
                         width={20}

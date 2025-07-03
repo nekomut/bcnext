@@ -18,7 +18,7 @@ import { Set946 } from './set946'; // ウルトラソウルズ
 import { Set947 } from './set947'; // ダークヒーローズ
 import { Set948 } from './set948'; // ギガントゼウス
 // import { Set949 } from './set949'; // アイアンウォーズ
-import { Set950 } from './set950'; // ギャルモン
+// import { Set950 } from './set950'; // ギャルモン
 import { Set951 } from './set951'; // ピクシーズ
 import { Set973 } from './set973'; // 超国王祭
 // import { Set962 } from './set962'; // ルガ族

@@ -32,12 +32,14 @@ export function StageDisplay({ stageData }: StageDisplayProps) {
       '浮': 'traitFloating',
       '黒': 'traitBlack',
       'メ': 'traitMetal',
-      '無': 'traitNone',
+      '無': 'traitTraitless',
       '天': 'traitAngel',
       'エ': 'traitAlien',
       'ゾ': 'traitZombie',
       '古': 'traitRelic',
-      '悪': 'traitAku'
+      '悪': 'traitAku',
+      '使': 'traitEvaAngel',
+      '魔': 'traitWitch',
     };
     const iconKey = traitIconMap[trait];
     return iconKey && icons[iconKey as keyof typeof icons] ? icons[iconKey as keyof typeof icons] : null;
@@ -70,7 +72,7 @@ export function StageDisplay({ stageData }: StageDisplayProps) {
       'surge': 'abilitySurge',
       'wave-attack': 'abilityWave',
       'mini-wave': 'abilityMiniWave',
-      'savage-blow': 'abilityBerserk',
+      'savage-blow': 'abilitySavageBlow',
       'critical': 'abilityCritical',
       'barrier-breaker': 'abilityBarrierBreaker',
       'shield-piercer': 'abilityShieldPiercer',

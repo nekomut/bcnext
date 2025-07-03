@@ -16,7 +16,7 @@ export const e2065Data: StageData = {
       baseHp: 3000,
       width: 3600,
       enemyLimit: 10,
-      requiredCost: 50,
+      requiredCost: 30,
       costLimits: {
         lower: 0,
         upper: 0
@@ -295,9 +295,9 @@ export const e2065Data: StageData = {
         },
         {
           enemyId: "392",
-          enemyName: "ダミー",
+          enemyName: "第４の使徒",
           icon: "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",
-          traits: [],
+          traits: ["使"],
           baseStats: {
             hp: 120000,
             ap: 3000,
@@ -338,7 +338,7 @@ export const e2065Data: StageData = {
       baseHp: 24000,
       width: 3200,
       enemyLimit: 10,
-      requiredCost: 75,
+      requiredCost: 70,
       costLimits: {
         lower: 0,
         upper: 0
@@ -347,7 +347,7 @@ export const e2065Data: StageData = {
         {
           treasureId: "1149",
           treasureName: "ちびシンジ(402)",
-          probability: "10",
+          probability: "15",
           amount: "1",
           times: "-2",
           limitText: "-2"
@@ -617,9 +617,9 @@ export const e2065Data: StageData = {
         },
         {
           enemyId: "392",
-          enemyName: "ダミー",
+          enemyName: "第４の使徒",
           icon: "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",
-          traits: [],
+          traits: ["使"],
           baseStats: {
             hp: 120000,
             ap: 3000,
@@ -701,9 +701,9 @@ export const e2065Data: StageData = {
       enemies: [
         {
           enemyId: "392",
-          enemyName: "ダミー",
+          enemyName: "第４の使徒",
           icon: "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",
-          traits: [],
+          traits: ["使"],
           baseStats: {
             hp: 120000,
             ap: 3000,

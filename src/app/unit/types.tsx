@@ -289,7 +289,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     {name: '浮いてる敵', iconKey: 'traitFloating'},
     {name: '黒い敵', iconKey: 'traitBlack'},
     {name: 'メタルな敵', iconKey: 'traitMetal'},
-    {name: '属性を持たない敵', iconKey: 'traitNone'},
+    {name: '属性を持たない敵', iconKey: 'traitTraitless'},
     {name: '天使', iconKey: 'traitAngel'},
     {name: 'エイリアン', iconKey: 'traitAlien'},
     {name: 'ゾンビ', iconKey: 'traitZombie'},
@@ -552,7 +552,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
           {additionalValues}
         </>
       ),
-      iconKeys: ["abilityBerserk"]
+      iconKeys: ["abilitySavageBlow"]
     });
   }
 

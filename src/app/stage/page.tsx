@@ -41,7 +41,8 @@ function StagePageContent() {
       let results = stageIndexData.events;
       
       // フィルタリング
-      if (params.typeId !== undefined) {
+      // ステージ名検索時はtypeIdフィルタを適用しない（全タイプを検索対象にする）
+      if (params.typeId !== undefined && !params.stageName) {
         results = results.filter((event: EventInfo) => event.typeId === params.typeId);
       }
       
@@ -90,9 +91,14 @@ function StagePageContent() {
     setSelectedStage(null);
     
     try {
-      // イベントIDが指定されている場合は詳細表示
-      if (params.eventId !== undefined && params.eventId !== null) {
-        const stageData = await loadStageData(params.eventId);
+      // ステージ名検索やタイプID検索がある場合は一覧表示を優先
+      // イベントIDのみが指定されている場合のみ詳細表示
+      const hasStageNameOrType = params.stageName || (params.typeId !== undefined && params.typeId !== null);
+      const hasEventIdOnly = (params.eventId !== undefined && params.eventId !== null) && !hasStageNameOrType;
+      
+      if (hasEventIdOnly) {
+        // イベントIDのみが指定されている場合は詳細表示
+        const stageData = await loadStageData(params.eventId!);
         if (stageData) {
           setSelectedStage(stageData);
           setSearchResults([]);
@@ -101,7 +107,7 @@ function StagePageContent() {
           setSearchResults([]);
         }
       } else {
-        // 検索条件による一覧表示
+        // 検索条件による一覧表示（ステージ名、タイプID、または条件なしの場合）
         const results = await searchStages(params);
         setSearchResults(results);
         setSelectedStage(null);
@@ -117,9 +123,69 @@ function StagePageContent() {
     }
   }, [updateURL]);
 
+  const handleStageSelect = useCallback(async (eventId: number) => {
+    // 詳細表示専用：イベントIDのみでステージデータを直接読み込み
+    setLoading(true);
+    setError('');
+    
+    try {
+      const stageData = await loadStageData(eventId);
+      if (stageData) {
+        setSelectedStage(stageData);
+        setSearchResults([]);
+        
+        // URLを更新（イベントIDのみ）
+        const searchParams = new URLSearchParams();
+        searchParams.set('event', eventId.toString());
+        const url = `/stage?${searchParams.toString()}`;
+        router.push(url);
+      } else {
+        setError(`イベント ${eventId} のデータが見つかりません`);
+      }
+    } catch {
+      setError('ステージデータの読み込みでエラーが発生しました');
+    } finally {
+      setLoading(false);
+    }
+  }, [router]);
+
+  const handleSpecificStageSelect = useCallback(async (eventId: number, stageId: number) => {
+    // 特定のステージを指定して詳細表示
+    setLoading(true);
+    setError('');
+    
+    try {
+      const stageData = await loadStageData(eventId);
+      if (stageData) {
+        // ステージIDからインデックスを取得
+        const stageIndex = stageData.stages.findIndex(stage => stage.stageId === stageId);
+        if (stageIndex >= 0) {
+          setSelectedStage({ ...stageData, selectedStageIndex: stageIndex });
+        } else {
+          setSelectedStage(stageData);
+        }
+        setSearchResults([]);
+        
+        // URLを更新（イベントIDとステージIDの両方）
+        const searchParams = new URLSearchParams();
+        searchParams.set('event', eventId.toString());
+        searchParams.set('stage', stageId.toString());
+        const url = `/stage?${searchParams.toString()}`;
+        router.push(url);
+      } else {
+        setError(`イベント ${eventId} のデータが見つかりません`);
+      }
+    } catch {
+      setError('ステージデータの読み込みでエラーが発生しました');
+    } finally {
+      setLoading(false);
+    }
+  }, [router]);
+
   // URL パラメータの初期化
   useEffect(() => {
     const eventIdParam = urlSearchParams.get('event');
+    const stageIdParam = urlSearchParams.get('stage');
     const stageNameParam = urlSearchParams.get('name');
     const typeIdParam = urlSearchParams.get('type');
     
@@ -130,19 +196,29 @@ function StagePageContent() {
     
     setSearchParams(params);
     
-    // 初期検索実行
-    if (params.eventId !== undefined && params.eventId !== null || params.stageName || params.typeId !== undefined && params.typeId !== null) {
+    // 特定のステージIDが指定されている場合
+    if (eventIdParam && stageIdParam) {
+      handleSpecificStageSelect(parseInt(eventIdParam), parseInt(stageIdParam));
+    } else if (eventIdParam && !stageIdParam) {
+      // イベントIDのみが指定されている場合は詳細表示
+      handleStageSelect(parseInt(eventIdParam));
+    } else if (params.stageName || (params.typeId !== undefined && params.typeId !== null)) {
+      // ステージ名またはタイプIDでの検索
       handleSearch(params);
     } else {
       // デフォルト検索：レジェンドストーリー0をID降順で表示
       handleSearch({ typeId: 34, sortBy: 'id-desc' });
     }
-  }, [urlSearchParams, handleSearch]);
+  }, [urlSearchParams, handleSearch, handleSpecificStageSelect, handleStageSelect]);
 
-  const handleStageSelect = async (eventId: number) => {
-    const params = { ...searchParams, eventId };
-    await handleSearch(params);
-  };
+  const handleBackToSearch = useCallback(() => {
+    // イベントIDをクリアして検索結果表示に戻る
+    const params = { ...searchParams };
+    delete params.eventId;
+    setSelectedStage(null);
+    setSearchParams(params);
+    handleSearch(params);
+  }, [searchParams, handleSearch]);
 
   return (
     <div>
@@ -171,12 +247,14 @@ function StagePageContent() {
             events={searchResults}
             searchTerm={searchParams.stageName}
             onStageSelect={handleStageSelect}
+            onSpecificStageSelect={handleSpecificStageSelect}
           />
         )}
 
         {selectedStage && (
           <StageDisplay 
             stageData={selectedStage}
+            onBackToSearch={handleBackToSearch}
           />
         )}
       </div>

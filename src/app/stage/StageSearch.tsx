@@ -31,8 +31,9 @@ export function StageSearch({ onSearch, initialParams, loading }: StageSearchPro
     }
     if (stageName.trim()) {
       params.stageName = stageName.trim();
-    }
-    if (typeId && !isNaN(Number(typeId))) {
+      // ステージ名で検索する場合はtypeIdを無視して全タイプを検索対象にする
+    } else if (typeId && !isNaN(Number(typeId))) {
+      // ステージ名が空の場合のみtypeIdを適用
       params.typeId = Number(typeId);
     }
     params.sortBy = sortBy;

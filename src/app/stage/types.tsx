@@ -14,6 +14,7 @@ export interface StageData {
     contentsType: number;
   } | null;
   stages: StageInfo[];
+  selectedStageIndex?: number; // 特定のステージを選択する場合のインデックス
 }
 
 export interface StageInfo {

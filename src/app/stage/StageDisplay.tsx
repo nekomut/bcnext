@@ -1,17 +1,23 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import type { StageData, StageInfo, EnemyStageInfo, TreasureInfo } from './types';
 import { icons } from '../../data/icons';
 
 interface StageDisplayProps {
   stageData: StageData;
+  onBackToSearch?: () => void;
 }
 
-export function StageDisplay({ stageData }: StageDisplayProps) {
-  const [selectedStageId, setSelectedStageId] = useState<number>(0);
+export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
+  const [selectedStageId, setSelectedStageId] = useState<number>(stageData.selectedStageIndex ?? 0);
   const [showDetail, setShowDetail] = useState<boolean>(false);
+
+  // stageDataが変更された時に選択されたステージを更新
+  useEffect(() => {
+    setSelectedStageId(stageData.selectedStageIndex ?? 0);
+  }, [stageData.selectedStageIndex]);
 
   const selectedStage = stageData.stages[selectedStageId];
 
@@ -108,6 +114,21 @@ export function StageDisplay({ stageData }: StageDisplayProps) {
 
   return (
     <div className="mt-1">
+      {/* 検索に戻るボタン */}
+      {onBackToSearch && (
+        <div className="mb-1">
+          <button
+            onClick={onBackToSearch}
+            className="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium text-gray-700 bg-white border border-gray-300 rounded hover:bg-gray-50 hover:border-gray-400 transition-colors"
+          >
+            <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+            </svg>
+            検索に戻る
+          </button>
+        </div>
+      )}
+      
       {/* イベント情報 */}
       <div className="bg-white rounded-lg shadow-sm border mb-1">
         <div className="p-1 border-b border-gray-200">

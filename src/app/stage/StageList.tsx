@@ -7,9 +7,10 @@ interface StageListProps {
   events: EventInfo[];
   searchTerm?: string;
   onStageSelect: (eventId: number) => void;
+  onSpecificStageSelect?: (eventId: number, stageId: number) => void;
 }
 
-export function StageList({ events, searchTerm, onStageSelect }: StageListProps) {
+export function StageList({ events, searchTerm, onStageSelect, onSpecificStageSelect }: StageListProps) {
   if (events.length === 0) {
     return (
       <div className="bg-white rounded-lg shadow-sm border p-4 text-center">
@@ -100,12 +101,23 @@ export function StageList({ events, searchTerm, onStageSelect }: StageListProps)
                       const isMatch = searchTerm && stageName.toLowerCase().includes(searchTerm.toLowerCase());
                       
                       return (
-                        <div key={stageId} className={`text-xs flex items-center gap-1 ${
-                          isMatch ? 'text-green-600 font-semibold' : 'text-gray-600'
-                        }`}>
+                        <div key={stageId} className="text-xs flex items-center gap-1">
                           <small>
-                            <span className="font-mono text-right px-1 py-0">{stageId}</span>
-                            <span className="flex-1">{highlightText(stageName, searchTerm)}</span>
+                            <span className="font-mono text-right px-1 py-0 text-gray-500">{stageId}</span>
+                            <button
+                              onClick={() => {
+                                if (onSpecificStageSelect) {
+                                  onSpecificStageSelect(event.eventId, stageId);
+                                } else {
+                                  onStageSelect(event.eventId);
+                                }
+                              }}
+                              className={`flex-1 text-left hover:underline transition-colors ${
+                                isMatch ? 'text-green-600 font-semibold hover:text-green-800' : 'text-blue-600 hover:text-blue-800'
+                              }`}
+                            >
+                              {highlightText(stageName, searchTerm)}
+                            </button>
                           </small>
                         </div>
                       );

@@ -49,10 +49,6 @@ import { Set999 } from './set999'; // エヴァ新劇場版
 
 export const RareGatyaSetList = [
 
-    Set981, // 超ネコ祭
-    Set986, // ルガ族 
-    Set951, // ピクシーズ
-
     Set696, // レッドバスターズ
     Set452, // エアバスターズ
     Set906, // メタルバスターズ
@@ -68,6 +64,7 @@ export const RareGatyaSetList = [
 
     Set984, // レジェチケ
     Set983, // プラチケ
+    Set981, // 超ネコ祭
     Set982, // 極ネコ祭
     
     Set998, // エヴァ新世紀
@@ -81,6 +78,8 @@ export const RareGatyaSetList = [
     Set947, // ダークヒーローズ
     Set942, // ダイナマイツ
     Set944, // ギャルズ
+    Set986, // ルガ族 
+    Set951, // ピクシーズ
 
     // Set950, // ギャルモン
 

@@ -1,11 +1,11 @@
-import { Set452 } from './set452'; // エアバスターズ
+// import { Set452 } from './set452'; // エアバスターズ
 import { Set523 } from './set523'; // 波動バスターズ
-import { Set696 } from './set696'; // レッドバスターズ
+// import { Set696 } from './set696'; // レッドバスターズ
 import { Set772 } from './set772'; // 超生命体バスターズ
 // import { Set785 } from './set785'; // バレンタイン
 import { Set861 } from './set861'; // 女王祭
 // import { Set875 } from './set875'; // イースター
-import { Set906 } from './set906'; // メタルバスターズ
+// import { Set906 } from './set906'; // メタルバスターズ
 // import { Set936 } from './set936'; // ウルトラ4
 // import { Set937 } from './set937'; // ミラクル4
 // import { Set938 } from './set938'; // エクセレント4
@@ -49,26 +49,21 @@ import { Set999 } from './set999'; // エヴァ新劇場版
 
 export const RareGatyaSetList = [
 
-    Set696, // レッドバスターズ
-    Set452, // エアバスターズ
-    Set906, // メタルバスターズ
-
     Set973, // 超国王祭
     Set523, // 波動バスターズ
     Set772, // 超生命体バスターズ
 
     Set861, // 女王祭
-
     Set979, // アイアンウォーズ
     Set946, // ウルトラソウルズ
 
+    Set998, // エヴァ新世紀
+    Set999, // エヴァ新劇場版    
+    
     Set984, // レジェチケ
     Set983, // プラチケ
     Set981, // 超ネコ祭
     Set982, // 極ネコ祭
-    
-    Set998, // エヴァ新世紀
-    Set999, // エヴァ新劇場版    
     
     Set997, // サマガ青
 
@@ -86,6 +81,10 @@ export const RareGatyaSetList = [
     // Set972, // 超極ネコ祭 
 
     // Set939, // バスターズ祭
+    // Set696, // レッドバスターズ
+    // Set452, // エアバスターズ
+    // Set906, // メタルバスターズ
+
 
     // Set975, // 超選抜祭
     // Set976, // 極選抜祭

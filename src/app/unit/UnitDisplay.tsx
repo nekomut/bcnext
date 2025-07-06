@@ -285,12 +285,12 @@ export function UnitDisplay({
   const abilities = getAbilities(unitData, actualCurrentForm, level, plusLevel, totalAttackMultiplier, baseHpUpMultiplier, talentCriticalBonus, talentFreezeBonus, talentWeakenBonus, talentSlowBonus, talentKnockbackBonus, talentBarrierBreakerBonus);
   const enhancedStats = {
     ...stats,
-    hp: Math.floor(stats.hp * baseHpUpMultiplier),
-    ap: Math.floor(stats.ap * totalAttackMultiplier),
-    atk1: stats.atk1 ? Math.floor(stats.atk1 * totalAttackMultiplier) : stats.atk1,
-    atk2: stats.atk2 ? Math.floor(stats.atk2 * totalAttackMultiplier) : stats.atk2,
-    atk3: stats.atk3 ? Math.floor(stats.atk3 * totalAttackMultiplier) : stats.atk3,
-    dps: stats.freq > 0 ? Math.round(Math.floor(stats.ap * totalAttackMultiplier) / stats.freq * 30 * 100) / 100 : 0,
+    hp: Math.round(stats.hp * baseHpUpMultiplier),
+    ap: Math.round(stats.ap * totalAttackMultiplier),
+    atk1: stats.atk1 ? Math.round(stats.atk1 * totalAttackMultiplier) : stats.atk1,
+    atk2: stats.atk2 ? Math.round(stats.atk2 * totalAttackMultiplier) : stats.atk2,
+    atk3: stats.atk3 ? Math.round(stats.atk3 * totalAttackMultiplier) : stats.atk3,
+    dps: stats.freq > 0 ? Math.round(Math.round(stats.ap * totalAttackMultiplier) / stats.freq * 30 * 100) / 100 : 0,
     cost: discountedCost,
     speed: enhancedSpeed,
     recharge: enhancedRecharge
@@ -661,16 +661,16 @@ function DynamicSuperDamage({ ability, attackUpMultiplier }: { ability: UnitAbil
   const calculateDamage = (mult: number) => {
     const stats = ability.calculatedStats!;
     if (stats.multihit) {
-      const hit1 = stats.atk1 ? Math.floor(stats.atk1 * attackUpMultiplier * mult) : 0;
-      const hit2 = stats.atk2 ? Math.floor(stats.atk2 * attackUpMultiplier * mult) : 0;
-      const hit3 = stats.atk3 ? Math.floor(stats.atk3 * attackUpMultiplier * mult) : 0;
+      const hit1 = stats.atk1 ? Math.round(stats.atk1 * attackUpMultiplier * mult) : 0;
+      const hit2 = stats.atk2 ? Math.round(stats.atk2 * attackUpMultiplier * mult) : 0;
+      const hit3 = stats.atk3 ? Math.round(stats.atk3 * attackUpMultiplier * mult) : 0;
       
       const isEnhanced = attackUpMultiplier > 1;
       const colorClass = isEnhanced ? 'color: red;' : '';
       const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => `<span style="${colorClass}">${v.toLocaleString()}</span>`);
       return values.join(' / ');
     } else {
-      const damage = Math.floor(stats.ap * attackUpMultiplier * mult);
+      const damage = Math.round(stats.ap * attackUpMultiplier * mult);
       const isEnhanced = attackUpMultiplier > 1;
       return `<span ${isEnhanced ? 'style="color: red;"' : ''}>${damage.toLocaleString()}</span>`;
     }
@@ -721,16 +721,16 @@ function DynamicExtremeDamage({ ability, attackUpMultiplier }: { ability: UnitAb
   const calculateDamage = (mult: number) => {
     const stats = ability.calculatedStats!;
     if (stats.multihit) {
-      const hit1 = stats.atk1 ? Math.floor(stats.atk1 * attackUpMultiplier * mult) : 0;
-      const hit2 = stats.atk2 ? Math.floor(stats.atk2 * attackUpMultiplier * mult) : 0;
-      const hit3 = stats.atk3 ? Math.floor(stats.atk3 * attackUpMultiplier * mult) : 0;
+      const hit1 = stats.atk1 ? Math.round(stats.atk1 * attackUpMultiplier * mult) : 0;
+      const hit2 = stats.atk2 ? Math.round(stats.atk2 * attackUpMultiplier * mult) : 0;
+      const hit3 = stats.atk3 ? Math.round(stats.atk3 * attackUpMultiplier * mult) : 0;
       
       const isEnhanced = attackUpMultiplier > 1;
       const colorClass = isEnhanced ? 'color: red;' : '';
       const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => `<span style="${colorClass}">${v.toLocaleString()}</span>`);
       return values.join(' / ');
     } else {
-      const damage = Math.floor(stats.ap * attackUpMultiplier * mult);
+      const damage = Math.round(stats.ap * attackUpMultiplier * mult);
       const isEnhanced = attackUpMultiplier > 1;
       return `<span ${isEnhanced ? 'style="color: red;"' : ''}>${damage.toLocaleString()}</span>`;
     }
@@ -880,9 +880,9 @@ function DynamicMighty({ ability, attackUpMultiplier, hpUpMultiplier }: { abilit
   const calculateDamage = (apMult: number, dmgMult: number) => {
     const stats = ability.calculatedStats!;
     if (stats.multihit) {
-      const hit1 = stats.atk1 ? Math.floor(stats.atk1 * attackUpMultiplier * apMult) : 0;
-      const hit2 = stats.atk2 ? Math.floor(stats.atk2 * attackUpMultiplier * apMult) : 0;
-      const hit3 = stats.atk3 ? Math.floor(stats.atk3 * attackUpMultiplier * apMult) : 0;
+      const hit1 = stats.atk1 ? Math.round(stats.atk1 * attackUpMultiplier * apMult) : 0;
+      const hit2 = stats.atk2 ? Math.round(stats.atk2 * attackUpMultiplier * apMult) : 0;
+      const hit3 = stats.atk3 ? Math.round(stats.atk3 * attackUpMultiplier * apMult) : 0;
       
       const isEnhanced = attackUpMultiplier > 1;
       const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
@@ -901,7 +901,7 @@ function DynamicMighty({ ability, attackUpMultiplier, hpUpMultiplier }: { abilit
         </>
       );
     } else {
-      const damage = Math.floor(stats.ap * attackUpMultiplier * apMult);
+      const damage = Math.round(stats.ap * attackUpMultiplier * apMult);
       const hpMultiplier = 1 / dmgMult;
       const equivalentHP = Math.floor(stats.hp * hpMultiplier);
       const isEnhanced = attackUpMultiplier > 1;

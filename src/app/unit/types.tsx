@@ -464,9 +464,9 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     const hasAdditionalDamage = (stats[30] && stats[30] > 0) || (stats[81] && stats[81] > 0);
     
     if (calculatedStats.multihit) {
-      const hit1_3x = calculatedStats.atk1 ? Math.floor(calculatedStats.atk1 * attackUpMultiplier * 3) : 0;
-      const hit2_3x = calculatedStats.atk2 ? Math.floor(calculatedStats.atk2 * attackUpMultiplier * 3) : 0;
-      const hit3_3x = calculatedStats.atk3 ? Math.floor(calculatedStats.atk3 * attackUpMultiplier * 3) : 0;
+      const hit1_3x = calculatedStats.atk1 ? Math.round(calculatedStats.atk1 * attackUpMultiplier * 3) : 0;
+      const hit2_3x = calculatedStats.atk2 ? Math.round(calculatedStats.atk2 * attackUpMultiplier * 3) : 0;
+      const hit3_3x = calculatedStats.atk3 ? Math.round(calculatedStats.atk3 * attackUpMultiplier * 3) : 0;
       
       const isEnhanced = attackUpMultiplier > 1;
       const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
@@ -474,7 +474,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
       const tilde = hasAdditionalDamage ? ' ~' : '';
       savageValues = <span dangerouslySetInnerHTML={{ __html: `${values.join(' / ')}${tilde}` }} />;
     } else {
-      const savageAP = Math.floor(calculatedStats.ap * attackUpMultiplier * 3);
+      const savageAP = Math.round(calculatedStats.ap * attackUpMultiplier * 3);
       const isEnhanced = attackUpMultiplier > 1;
       const tilde = hasAdditionalDamage ? ' ~' : '';
       savageValues = (
@@ -491,9 +491,9 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     // 超ダメージがある場合（3倍~4倍の4倍 * 3 = 12倍）
     if (stats[30] && stats[30] > 0) {
       if (calculatedStats.multihit) {
-        const hit1_12x = calculatedStats.atk1 ? Math.floor(calculatedStats.atk1 * attackUpMultiplier * 12) : 0;
-        const hit2_12x = calculatedStats.atk2 ? Math.floor(calculatedStats.atk2 * attackUpMultiplier * 12) : 0;
-        const hit3_12x = calculatedStats.atk3 ? Math.floor(calculatedStats.atk3 * attackUpMultiplier * 12) : 0;
+        const hit1_12x = calculatedStats.atk1 ? Math.round(calculatedStats.atk1 * attackUpMultiplier * 12) : 0;
+        const hit2_12x = calculatedStats.atk2 ? Math.round(calculatedStats.atk2 * attackUpMultiplier * 12) : 0;
+        const hit3_12x = calculatedStats.atk3 ? Math.round(calculatedStats.atk3 * attackUpMultiplier * 12) : 0;
         
         const isEnhanced = attackUpMultiplier > 1;
         const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
@@ -505,7 +505,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
           </>
         );
       } else {
-        const superAP = Math.floor(calculatedStats.ap * attackUpMultiplier * 12);
+        const superAP = Math.round(calculatedStats.ap * attackUpMultiplier * 12);
         const isEnhanced = attackUpMultiplier > 1;
         additionalValues = (
           <>
@@ -519,9 +519,9 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     // 極ダメージがある場合（5倍~6倍の6倍 * 3 = 18倍）
     if (stats[81] && stats[81] > 0) {
       if (calculatedStats.multihit) {
-        const hit1_18x = calculatedStats.atk1 ? Math.floor(calculatedStats.atk1 * attackUpMultiplier * 18) : 0;
-        const hit2_18x = calculatedStats.atk2 ? Math.floor(calculatedStats.atk2 * attackUpMultiplier * 18) : 0;
-        const hit3_18x = calculatedStats.atk3 ? Math.floor(calculatedStats.atk3 * attackUpMultiplier * 18) : 0;
+        const hit1_18x = calculatedStats.atk1 ? Math.round(calculatedStats.atk1 * attackUpMultiplier * 18) : 0;
+        const hit2_18x = calculatedStats.atk2 ? Math.round(calculatedStats.atk2 * attackUpMultiplier * 18) : 0;
+        const hit3_18x = calculatedStats.atk3 ? Math.round(calculatedStats.atk3 * attackUpMultiplier * 18) : 0;
         
         const isEnhanced = attackUpMultiplier > 1;
         const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
@@ -533,7 +533,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
           </>
         );
       } else {
-        const extremeAP = Math.floor(calculatedStats.ap * attackUpMultiplier * 18);
+        const extremeAP = Math.round(calculatedStats.ap * attackUpMultiplier * 18);
         const isEnhanced = attackUpMultiplier > 1;
         additionalValues = (
           <>

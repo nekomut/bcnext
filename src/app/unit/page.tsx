@@ -138,7 +138,8 @@ function UnitPageContent() {
   };
 
   return (
-    <div>
+    <>
+      <meta name="format-detection" content="telephone=no, address=no, email=no" />
       <Link href="/" className="font-bold hover:text-green-600 px-1">bcnext</Link>|
       <Link href="/normal" className="hover:text-green-600 px-1">Normal</Link>|
       <Link href="/rare" className="hover:text-green-600 px-1">Rare</Link>|
@@ -407,7 +408,7 @@ function UnitPageContent() {
           />
         )}
       </div>
-    </div>
+    </>
   );
 }
 

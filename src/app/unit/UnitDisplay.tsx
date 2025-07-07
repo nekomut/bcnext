@@ -424,6 +424,45 @@ export function UnitDisplay({
             >
               Max
             </button>
+            <button
+              onClick={() => { 
+                const targetLevel = Math.min(30, maxLevel);
+                setLevel(targetLevel); 
+                setPlusLevel(0);
+                setLevelInput(targetLevel.toString());
+                setPlusLevelInput('0');
+                onParamsChange?.({ level: targetLevel, plusLevel: 0, formId: actualCurrentForm });
+              }}
+              className="bg-blue-500 hover:bg-blue-600 text-white px-1.5 py-1 rounded text-xs sm:text-sm"
+            >
+              Lv30
+            </button>
+            <button
+              onClick={() => { 
+                const targetLevel = Math.min(50, maxLevel);
+                setLevel(targetLevel); 
+                setPlusLevel(0);
+                setLevelInput(targetLevel.toString());
+                setPlusLevelInput('0');
+                onParamsChange?.({ level: targetLevel, plusLevel: 0, formId: actualCurrentForm });
+              }}
+              className="bg-blue-500 hover:bg-blue-600 text-white px-1.5 py-1 rounded text-xs sm:text-sm"
+            >
+              Lv50
+            </button>
+            <button
+              onClick={() => { 
+                const targetLevel = Math.min(60, maxLevel);
+                setLevel(targetLevel); 
+                setPlusLevel(0);
+                setLevelInput(targetLevel.toString());
+                setPlusLevelInput('0');
+                onParamsChange?.({ level: targetLevel, plusLevel: 0, formId: actualCurrentForm });
+              }}
+              className="bg-blue-500 hover:bg-blue-600 text-white px-1.5 py-1 rounded text-xs sm:text-sm"
+            >
+              Lv60
+            </button>
           </div>
         </div>
       </div>

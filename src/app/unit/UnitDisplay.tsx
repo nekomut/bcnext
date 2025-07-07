@@ -1084,7 +1084,11 @@ function DynamicEvaAngelKiller({ ability, attackUpMultiplier, hpUpMultiplier }: 
             value={apMultiplier}
             onChange={(e) => {
               const value = Number(e.target.value);
-              if (value >= 5 && value <= 25) {
+              if (value > 25) {
+                setApMultiplier(25);
+              } else if (value < 5) {
+                setApMultiplier(5);
+              } else {
                 setApMultiplier(value);
               }
             }}
@@ -1101,7 +1105,11 @@ function DynamicEvaAngelKiller({ ability, attackUpMultiplier, hpUpMultiplier }: 
             value={dmgMultiplier}
             onChange={(e) => {
               const value = Number(e.target.value);
-              if (value >= 0.04 && value <= 0.2) {
+              if (value > 0.2) {
+                setDmgMultiplier(0.2);
+              } else if (value < 0.04) {
+                setDmgMultiplier(0.04);
+              } else {
                 setDmgMultiplier(value);
               }
             }}

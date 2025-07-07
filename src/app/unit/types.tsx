@@ -881,6 +881,17 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     });
   }
 
+  // 使徒キラー（動的）
+  if (stats[77] && stats[77] > 0) {
+    abilities.push({
+      name: "使徒キラー",
+      value: "",
+      isDynamic: true,
+      baseAP: calculatedStats.ap,
+      calculatedStats: enhancedStats
+    });
+  }
+
   // 各種無効・耐性
   const immunities = [
     { index: 46, name: "波動ダメージ無効", iconKey: "abilityImmuneWave" },
@@ -893,7 +904,6 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     { index: 53, name: "魔女キラー", iconKey: "abilityWitchKiller" },
     { index: 56, name: "衝撃波無効" },
     { index: 75, name: "ワープ無効", iconKey: "abilityImmuneWarp" },
-    { index: 77, name: "使徒キラー", iconKey: "abilityEvaAngelKiller" },
     { index: 79, name: "古代の呪い無効", iconKey: "abilityImmuneCurse" }
   ];
 

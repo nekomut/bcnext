@@ -172,9 +172,11 @@ export function UnitDisplay({
     const newTalentBarrierBreakerTalent = talentList.find(talent => talent.id === 15);
     const newHasTalentBarrierBreaker = talentList.some(talent => talent.id === 15);
     
+    
     setBaseAttackUpEnabled(newHasBaseAttackUp);
     setBaseHpUpEnabled(newHasBaseHpUp);
     setTalentAttackUpValue(newAttackUpTalent?.data[5] || 200);
+    setTalentAttackUpEnabled(false); // 本能の攻撃力アップ(10)をリセット
     setAttackIntervalReductionValue(newAttackIntervalReductionTalent?.data[3] || 74);
     setAttackIntervalReductionEnabled(newHasAttackIntervalReduction);
     setCostReductionValue(newCostReductionTalent ? Math.floor(newCostReductionTalent.data[3] * 1.5) : 500);
@@ -201,7 +203,10 @@ export function UnitDisplay({
     setTalentToughnessValue(0.2);
     setTalentMightyApValue(1.8);
     setTalentMightyDmgValue(0.4);
-  }, [unitData.unitId, unitData.auxiliaryData.talents.talentList]);
+    
+    // 能力・効果の攻撃力アップをリセット
+    setAttackUpEnabled(false);
+  }, [unitData.unitId, unitData.auxiliaryData.talents.talentList, unitData.coreData.forms]);
 
   const validFormCount = getValidFormCount(unitData);
   const actualCurrentForm = Math.min(currentForm, validFormCount - 1);

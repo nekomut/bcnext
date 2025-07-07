@@ -32,7 +32,7 @@ export function UnitDisplay({
   const [plusLevelInput, setPlusLevelInput] = useState(initialPlusLevel.toString());
   
   // 攻撃力アップの状態
-  const [attackUpEnabled] = useState(false);
+  const [attackUpEnabled, setAttackUpEnabled] = useState(false);
   
   // ユニットが基本攻撃力アップ(31)、基本体力アップ(32)を持っているかチェック
   const hasBaseAttackUp = unitData.auxiliaryData.talents.talentList.some(talent => talent.id === 31);
@@ -450,19 +450,21 @@ export function UnitDisplay({
             >
               Lv50
             </button>
-            <button
-              onClick={() => { 
-                const targetLevel = Math.min(60, maxLevel);
-                setLevel(targetLevel); 
-                setPlusLevel(0);
-                setLevelInput(targetLevel.toString());
-                setPlusLevelInput('0');
-                onParamsChange?.({ level: targetLevel, plusLevel: 0, formId: actualCurrentForm });
-              }}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-1.5 py-1 rounded text-xs sm:text-sm"
-            >
-              Lv60
-            </button>
+            {maxLevel >= 60 && (
+              <button
+                onClick={() => { 
+                  const targetLevel = Math.min(60, maxLevel);
+                  setLevel(targetLevel); 
+                  setPlusLevel(0);
+                  setLevelInput(targetLevel.toString());
+                  setPlusLevelInput('0');
+                  onParamsChange?.({ level: targetLevel, plusLevel: 0, formId: actualCurrentForm });
+                }}
+                className="bg-blue-500 hover:bg-blue-600 text-white px-1.5 py-1 rounded text-xs sm:text-sm"
+              >
+                Lv60
+              </button>
+            )}
           </div>
         </div>
       </div>
@@ -504,7 +506,7 @@ export function UnitDisplay({
       <StatsTable stats={enhancedStats} attackUpEnabled={totalAttackMultiplier > 1} hpUpEnabled={baseHpUpMultiplier > 1} attackIntervalReductionEnabled={attackIntervalReductionEnabled && actualCurrentForm >= 2} costReductionEnabled={costReductionEnabled && actualCurrentForm >= 2} moveSpeedUpEnabled={moveSpeedUpEnabled && actualCurrentForm >= 2} rechargeSpeedUpEnabled={rechargeSpeedUpEnabled && actualCurrentForm >= 2} />
 
       {/* Abilities */}
-      {abilities.length > 0 && <AbilitiesList abilities={abilities} attackUpMultiplier={totalAttackMultiplier} hpUpMultiplier={baseHpUpMultiplier} />}
+      {abilities.length > 0 && <AbilitiesList abilities={abilities} attackUpMultiplier={totalAttackMultiplier} hpUpMultiplier={baseHpUpMultiplier} attackUpEnabled={attackUpEnabled} setAttackUpEnabled={setAttackUpEnabled} />}
 
       {/* Talents */}
       {unitData.auxiliaryData.talents.hasTalents && actualCurrentForm >= 2 && (
@@ -1015,10 +1017,12 @@ function DynamicMighty({ ability, attackUpMultiplier, hpUpMultiplier }: { abilit
   );
 }
 
-function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier }: { 
+function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUpEnabled, setAttackUpEnabled }: { 
   abilities: UnitAbility[], 
   attackUpMultiplier: number,
-  hpUpMultiplier: number
+  hpUpMultiplier: number,
+  attackUpEnabled: boolean,
+  setAttackUpEnabled: (enabled: boolean) => void
 }) {
   return (
     <div className="mb-2.5">
@@ -1246,6 +1250,12 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier }: {
                         width={16}
                         height={16}
                         className="inline mr-1 align-top"
+                      />
+                      <input
+                        type="checkbox"
+                        checked={attackUpEnabled}
+                        onChange={(e) => setAttackUpEnabled(e.target.checked)}
+                        className="mr-1 align-middle"
                       />
                       攻撃力アップ
                     </>

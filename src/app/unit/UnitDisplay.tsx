@@ -1131,6 +1131,115 @@ function DynamicEvaAngelKiller({ ability, attackUpMultiplier, hpUpMultiplier }: 
   );
 }
 
+function DynamicWitchKiller({ ability, attackUpMultiplier, hpUpMultiplier }: { ability: UnitAbility, attackUpMultiplier: number, hpUpMultiplier: number }) {
+  const [apMultiplier, setApMultiplier] = useState(5);
+  const [dmgMultiplier, setDmgMultiplier] = useState(0.2);
+  
+  if (!ability.calculatedStats || !ability.isDynamic) return null;
+  
+  const calculateDamage = (apMult: number, dmgMult: number) => {
+    const stats = ability.calculatedStats!;
+    if (stats.multihit) {
+      const hit1 = stats.atk1 ? Math.round(stats.atk1 * attackUpMultiplier * apMult) : 0;
+      const hit2 = stats.atk2 ? Math.round(stats.atk2 * attackUpMultiplier * apMult) : 0;
+      const hit3 = stats.atk3 ? Math.round(stats.atk3 * attackUpMultiplier * apMult) : 0;
+      
+      const isEnhanced = attackUpMultiplier > 1;
+      const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
+      const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => `<span style="${colorClass}">${v.toLocaleString()}</span>`);
+      const apDisplay = values.join(' ');
+      
+      // HP相当計算（statsは既にhpUpMultiplierが適用済みのenhancedStats）
+      const hpMultiplier = 1 / dmgMult;
+      const equivalentHP = Math.floor(stats.hp * hpMultiplier);
+      
+      return (
+        <>
+          <span className="text-red-500"><small>攻撃力</small></span> <span dangerouslySetInnerHTML={{ __html: apDisplay }}></span>
+          <br />
+          <span className="text-blue-500"><small><b>体力(換算値)</b></small></span> <span className={hpUpMultiplier > 1 ? "text-blue-500" : "text-gray-500"}>{equivalentHP.toLocaleString()}</span>
+        </>
+      );
+    } else {
+      const damage = Math.round(stats.ap * attackUpMultiplier * apMult);
+      const hpMultiplier = 1 / dmgMult;
+      const equivalentHP = Math.floor(stats.hp * hpMultiplier);
+      const isEnhanced = attackUpMultiplier > 1;
+      
+      return (
+        <>
+          <span className="text-red-500"><small>攻撃力</small></span> <span className={isEnhanced ? "text-red-500" : "text-gray-500"}>{damage.toLocaleString()}</span>
+          <br />
+          <span className="text-blue-500"><small><b>体力(換算値)</b></small></span> <span className={hpUpMultiplier > 1 ? "text-blue-500" : "text-gray-500"}>{equivalentHP.toLocaleString()}</span>
+        </>
+      );
+    }
+  };
+  
+  return (
+    <div className="bg-gray-50 p-2 rounded">
+      <div className="flex justify-between items-center gap-2">
+        <div className="font-bold text-xs text-gray-600">
+          <Image
+            src={`data:image/png;base64,${icons.abilityWitchKiller}`}
+            alt="魔女キラー"
+            width={16}
+            height={16}
+            className="inline mr-1 align-top"
+          />
+          魔女キラー<br /> <span className="text-red-500 ml-5"><small>攻撃力
+          <input
+            type="number"
+            value={apMultiplier}
+            onChange={(e) => {
+              const value = Number(e.target.value);
+              if (value > 25) {
+                setApMultiplier(25);
+              } else if (value < 5) {
+                setApMultiplier(5);
+              } else {
+                setApMultiplier(value);
+              }
+            }}
+            className="w-8 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
+            min="5"
+            max="25"
+            step="20"
+          />
+          倍 </small></span><small>(5~25)</small>
+          <br />
+          <span className="text-blue-500 ml-5"><small>被ダメ
+          <input
+            type="number"
+            value={dmgMultiplier}
+            onChange={(e) => {
+              const value = Number(e.target.value);
+              if (value > 0.2) {
+                setDmgMultiplier(0.2);
+              } else if (value < 0.04) {
+                setDmgMultiplier(0.04);
+              } else {
+                setDmgMultiplier(value);
+              }
+            }}
+            className="w-10 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
+            min="0.04"
+            max="0.2"
+            step="0.16"
+          />
+          倍 </small></span><small>(0.2~0.04)</small>
+        </div>
+        <div className="text-right flex-shrink-0 max-w-[50%]">
+          <div className="text-gray-600 font-medium break-words">
+            <br />
+            <b>{calculateDamage(apMultiplier, dmgMultiplier)}</b>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUpEnabled, setAttackUpEnabled }: { 
   abilities: UnitAbility[], 
   attackUpMultiplier: number,
@@ -1155,6 +1264,8 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUp
             <DynamicMighty key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} hpUpMultiplier={hpUpMultiplier} />
           ) : ability.isDynamic && ability.name === "使徒キラー" ? (
             <DynamicEvaAngelKiller key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} hpUpMultiplier={hpUpMultiplier} />
+          ) : ability.isDynamic && ability.name === "魔女キラー" ? (
+            <DynamicWitchKiller key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} hpUpMultiplier={hpUpMultiplier} />
           ) : (
             <div key={index} className="bg-gray-50 p-1.5 rounded">
               <div className="flex justify-between items-center gap-2">

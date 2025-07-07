@@ -892,6 +892,17 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     });
   }
 
+  // 魔女キラー（動的）
+  if (stats[53] && stats[53] > 0) {
+    abilities.push({
+      name: "魔女キラー",
+      value: "",
+      isDynamic: true,
+      baseAP: calculatedStats.ap,
+      calculatedStats: enhancedStats
+    });
+  }
+
   // 各種無効・耐性
   const immunities = [
     { index: 46, name: "波動ダメージ無効", iconKey: "abilityImmuneWave" },
@@ -901,7 +912,6 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     { index: 50, name: "動きを遅くする無効", iconKey: "abilityImmuneSlow" },
     { index: 51, name: "攻撃力ダウン無効", iconKey: "abilityImmuneWeaken" },
     { index: 52, name: "ゾンビキラー", iconKey: "abilityZombieKiller" },
-    { index: 53, name: "魔女キラー", iconKey: "abilityWitchKiller" },
     { index: 56, name: "衝撃波無効" },
     { index: 75, name: "ワープ無効", iconKey: "abilityImmuneWarp" },
     { index: 79, name: "古代の呪い無効", iconKey: "abilityImmuneCurse" }

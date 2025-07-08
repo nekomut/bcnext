@@ -2782,7 +2782,7 @@ function TalentsList({
                               setAttackIntervalReductionValue(value);
                             }
                           }}
-                          className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                          className="w-9 px-1 text-center border border-gray-300 rounded text-xs"
                           min={talent.data[2]}
                           max={talent.data[3]}
                           step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
@@ -2807,7 +2807,7 @@ function TalentsList({
                               setCostReductionValue(value);
                             }
                           }}
-                          className="w-10 px-1 text-center border border-gray-300 rounded text-xs"
+                          className="w-9 px-1 text-center border border-gray-300 rounded text-xs"
                           min={Math.floor(talent.data[2] * 1.5)}
                           max={Math.floor(talent.data[3] * 1.5)}
                           step={Math.floor((talent.data[3] - talent.data[2]) * 1.5 / (talent.data[1] - 1))}
@@ -2831,7 +2831,7 @@ function TalentsList({
                               setRechargeSpeedUpValue(value);
                             }
                           }}
-                          className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                          className="w-9 px-1 text-center border border-gray-300 rounded text-xs"
                           min={talent.data[2]}
                           max={talent.data[3]}
                           step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
@@ -2856,7 +2856,7 @@ function TalentsList({
                               setMoveSpeedUpValue(value);
                             }
                           }}
-                          className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                          className="w-9 px-1 text-center border border-gray-300 rounded text-xs"
                           min={talent.data[2]}
                           max={talent.data[3]}
                           step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
@@ -3018,7 +3018,7 @@ function TalentsList({
                                 setTalentSlowChance(value);
                               }
                             }}
-                            className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                            className="w-9 px-1 text-center border border-gray-300 rounded text-xs"
                             min={talent.data[2]}
                             max={talent.data[3]}
                             step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
@@ -3048,7 +3048,7 @@ function TalentsList({
                                     setTalentSlowDuration(value);
                                   }
                                 }}
-                                className="w-6 px-1 text-center border border-gray-300 rounded text-xs text-gray-400"
+                                className="w-9 px-1 text-center border border-gray-300 rounded text-xs text-gray-400"
                                 min={talent.data[4]}
                                 max={talent.data[5]}
                                 step={Math.ceil((talent.data[5]-talent.data[4])/(talent.data[1]-1))}
@@ -3080,7 +3080,7 @@ function TalentsList({
                                   setTalentKnockbackChance(value);
                                 }
                               }}
-                              className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                              className="w-9 px-1 text-center border border-gray-300 rounded text-xs"
                               min={talent.data[2]}
                               max={talent.data[3]}
                               step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
@@ -3117,7 +3117,7 @@ function TalentsList({
                               setTalentCriticalValue(value);
                             }
                           }}
-                          className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                          className="w-9 px-1 text-center border border-gray-300 rounded text-xs"
                           min={talent.data[2]}
                           max={talent.data[3]}
                           step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}

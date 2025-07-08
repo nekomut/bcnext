@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { buildEnemyDatabase, searchStagesByEnemies, sortEnemyStageResults, getEnemyList, searchEnemiesByName } from './enemyUtils';
-import type { EnemyDatabaseEntry, EnemyStageResult } from './enemyUtils';
+import type { EnemyDatabaseEntry, EnemyStageResult, ProgressInfo } from './enemyUtils';
 
 interface EnemySearchProps {
   onStageSelect: (eventId: number, stageId: number) => void;
@@ -18,19 +18,24 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
   const [loading, setLoading] = useState(true);
   const [searching, setSearching] = useState(false);
   const [showResults, setShowResults] = useState(false);
+  const [progress, setProgress] = useState<ProgressInfo | null>(null);
 
   // 敵データベースを初期化
   useEffect(() => {
     const initializeDatabase = async () => {
       setLoading(true);
+      setProgress(null);
       try {
-        const database = await buildEnemyDatabase();
+        const database = await buildEnemyDatabase((progressInfo) => {
+          setProgress(progressInfo);
+        });
         setEnemyDatabase(database);
         setFilteredEnemies(getEnemyList(database));
       } catch (error) {
         console.error('Failed to initialize enemy database:', error);
       } finally {
         setLoading(false);
+        setProgress(null);
       }
     };
 
@@ -112,7 +117,20 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
   if (loading) {
     return (
       <div className="p-4 text-center">
-        <div className="text-gray-600">敵データベースを読み込み中...</div>
+        <div className="text-gray-600 mb-2">敵データベースを読み込み中...</div>
+        {progress && (
+          <div className="mt-2">
+            <div className="text-sm text-gray-500 mb-1">
+              {progress.current}/{progress.total} ({progress.percentage}%)
+            </div>
+            <div className="w-full bg-gray-200 rounded-full h-2">
+              <div 
+                className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+                style={{ width: `${progress.percentage}%` }}
+              ></div>
+            </div>
+          </div>
+        )}
       </div>
     );
   }
@@ -129,7 +147,7 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
             placeholder="敵名で検索..."
             value={searchTerm}
             onChange={(e) => handleSearch(e.target.value)}
-            className="w-full px-2 py-1 text-xs border border-gray-300 rounded focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+            className="w-full px-2 py-1 text-xs text-gray-500 border border-gray-300 rounded focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
           />
         </div>
 
@@ -275,34 +293,39 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
                         <div className="flex items-center justify-between">
                           <div className="flex-1 min-w-0">
                             <div className="text-xs text-gray-900 truncate">
-                              {result.eventId}: <span className="font-bold">{result.eventName}</span> - ステージ{result.stageId + 1}: <span className="font-bold">{result.stageName}</span> (統率力: {result.requiredCost.toLocaleString()})
+                              {result.eventId}: <span className="font-bold">{result.eventName}</span> - {result.stageId + 1}: <span className="font-bold">{result.stageName}</span>
+                            </div>
+                            <div className="text-xs text-gray-600">
+                              (統率力: {result.requiredCost.toLocaleString()})
                             </div>
                           </div>
                           <div className="text-right">
-                            <div className="flex items-center gap-1 justify-end text-xs">
-                              {sameStageResults.map((enemy, enemyIndex) => {
-                                const enemyData = enemyDatabase.get(enemy.enemyId);
-                                return (
-                                  <div
-                                    key={enemyIndex}
-                                    className="flex items-center gap-1 text-gray-600"
-                                  >
-                                    {enemyData?.icon && (
-                                      <Image
-                                        src={`data:image/png;base64,${enemyData.icon}`}
-                                        alt={enemy.enemyName}
-                                        className="w-4 h-4 flex-shrink-0"
-                                        width={16}
-                                        height={16}
-                                      />
-                                    )}
-                                    <span>{enemy.enemyName}</span>
-                                  </div>
-                                );
-                              })}
-                              <span className="text-blue-600 font-medium ml-1">
+                            <div className="text-xs">
+                              <div className="text-blue-600 font-medium mb-1">
                                 {sameStageResults.length}体出現
-                              </span>
+                              </div>
+                              <div className="flex flex-wrap gap-1 justify-end">
+                                {sameStageResults.map((enemy, enemyIndex) => {
+                                  const enemyData = enemyDatabase.get(enemy.enemyId);
+                                  return (
+                                    <div
+                                      key={enemyIndex}
+                                      className="flex items-center gap-1 text-gray-600"
+                                    >
+                                      {enemyData?.icon && (
+                                        <Image
+                                          src={`data:image/png;base64,${enemyData.icon}`}
+                                          alt={enemy.enemyName}
+                                          className="w-4 h-4 flex-shrink-0"
+                                          width={16}
+                                          height={16}
+                                        />
+                                      )}
+                                      <span>{enemy.enemyName}</span>
+                                    </div>
+                                  );
+                                })}
+                              </div>
                             </div>
                           </div>
                         </div>

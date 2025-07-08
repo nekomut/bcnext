@@ -35,18 +35,38 @@ export interface EnemyStageResult {
   appearances: number; // 同じステージ内での出現回数
 }
 
+export interface ProgressInfo {
+  current: number;        // 処理済みイベント数
+  total: number;          // 総イベント数
+  percentage: number;     // 進捗率
+}
+
 /**
  * 全ステージファイルから敵データベースを構築する
  */
-export async function buildEnemyDatabase(): Promise<Map<string, EnemyDatabaseEntry>> {
+export async function buildEnemyDatabase(
+  onProgress?: (progress: ProgressInfo) => void
+): Promise<Map<string, EnemyDatabaseEntry>> {
   const enemyMap = new Map<string, EnemyDatabaseEntry>();
   
   try {
     // ステージインデックスデータを読み込み
     const { stageIndexData } = await import('../../data/stage/index');
+    const totalEvents = stageIndexData.events.length;
     
     // 各イベントのステージデータを処理
-    for (const event of stageIndexData.events) {
+    for (let i = 0; i < stageIndexData.events.length; i++) {
+      const event = stageIndexData.events[i];
+      
+      // 進捗を報告
+      const current = i + 1;
+      const percentage = Math.round((current / totalEvents) * 100);
+      onProgress?.({
+        current,
+        total: totalEvents,
+        percentage
+      });
+      
       try {
         // 動的にステージデータを読み込み
         const stageModule = await import(`../../data/stage/e${event.eventId}`);

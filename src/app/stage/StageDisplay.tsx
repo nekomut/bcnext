@@ -142,7 +142,6 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
     );
   }
 
-  const currentMagnification = getEffectiveMagnification(selectedCrown, selectedStage);
   const displayStage = getStageDisplayInfo(selectedStage, selectedCrown);
 
   const formatNumber = (value: number | string): string => {
@@ -249,11 +248,14 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
       
       {/* イベント情報 */}
       <div className="bg-white rounded-lg shadow-sm border mb-1">
-        <div className="p-1 border-b border-gray-200">
+        <div className="p-1">
           <div className="flex items-center gap-2 mb-1">
             <div>
-              <h2 className="text-sm font-bold text-gray-900">
+              <h2 className="text-sm font-bold text-gray-900 flex items-center gap-2">
                 #{stageData.eventId} {stageData.eventName}
+                <span className="inline-flex items-center px-1 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">
+                  {stageData.stages.length}ステージ
+                </span>
                 {stageData.specialRule && stageData.specialRule !== null && (
                   <div className="text-xs text-yellow-600 mt-0 whitespace-pre-line">
                     {stageData.specialRule.explanation}
@@ -265,18 +267,14 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
               </p>
             </div>
           </div>
-          <div className="flex items-center gap-2">
-            <span className="inline-flex items-center px-1 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">
-              {stageData.stages.length}ステージ
-            </span>
-          </div>
         </div>
 
         {/* ステージ選択 */}
         {stageData.stages.length > 1 && (
-          <div className="p-1">
-            <label className="block text-xs font-medium text-gray-700 mb-2">ステージ選択:</label>
-            <div className="flex flex-wrap gap-1">
+          <div className="px-1 pb-1">
+            <div className="flex items-center gap-2">
+              <label className="text-xs font-medium text-gray-700">ステージ選択:</label>
+              <div className="flex flex-wrap gap-1">
               {stageData.stages.map((stage, index) => (
                 <button
                   key={index}
@@ -290,17 +288,16 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
                   <span className="font-mono">{index + 1}</span>: {stage.stageName}
                 </button>
               ))}
+              </div>
             </div>
           </div>
         )}
 
-
-
         {/* 星倍率選択 */}
         {(stageData.crownData || selectedStage.crownData) && (
-          <div className="p-1">
-            <label className="block text-xs font-medium text-gray-700 mb-2">難易度:</label>
+          <div className="px-1 pb-1">
             <div className="flex items-center gap-2">
+              <label className="text-xs font-medium text-gray-700">難易度:</label>
               <select 
                 value={selectedCrown} 
                 onChange={(e) => {
@@ -331,13 +328,6 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
                   ));
                 })()}
               </select>
-              {selectedCrown > 0 && (
-                <div className="flex items-center gap-1">
-                  <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
-                    {'★'.repeat(selectedCrown)} {currentMagnification}% 適用中
-                  </span>
-                </div>
-              )}
             </div>
           </div>
         )}
@@ -531,7 +521,7 @@ function EnemyTable({ enemies, showDetail, getTraitColor, getTraitIcon, getAbili
           <thead>
             <tr className="border-b border-gray-500">
               <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">ID</th>
-              <th className="px-0.5 py-1 text-left font-bold text-gray-500 tracking-wider min-w-12 whitespace-nowrap">敵名</th>
+              <th className="px-0.5 py-1 text-left font-bold text-gray-500 tracking-wider min-w-12">敵名</th>
               <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">数</th>
               <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-8 whitespace-nowrap">属性</th>
               <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-8 whitespace-nowrap">能力</th>
@@ -607,7 +597,7 @@ function EnemyRow({ enemy, showDetail, getTraitColor, getTraitIcon, getAbilityIc
               height={16}
             />
           )}
-          <div className="max-w-28 truncate font-medium" title={displayName}>
+          <div className="max-w-28 font-medium whitespace-normal break-words" title={displayName}>
             {displayName}
           </div>
         </div>

@@ -2953,7 +2953,7 @@ function TalentsList({
                                     setTalentWeakenChance(value);
                                   }
                                 }}
-                                className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                                className="w-9 px-1 text-center border border-gray-300 rounded text-xs"
                                 min={talent.data[2]}
                                 max={talent.data[3]}
                                 step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
@@ -2981,7 +2981,7 @@ function TalentsList({
                                       setTalentWeakenDuration(value);
                                     }
                                   }}
-                                  className="w-6 px-1 text-center border border-gray-300 rounded text-xs text-gray-400"
+                                  className="w-9 px-1 text-center border border-gray-300 rounded text-xs text-gray-400"
                                   min={talent.data[4]}
                                   max={talent.data[5]}
                                   step={Math.ceil((talent.data[5]-talent.data[4])/(talent.data[1]-1))}
@@ -3205,7 +3205,7 @@ function TalentsList({
                                   setTalentBarrierBreakerChance(value);
                                 }
                               }}
-                              className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                              className="w-9 px-1 text-center border border-gray-300 rounded text-xs"
                               min={talent.data[2]}
                               max={talent.data[3]}
                               step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}

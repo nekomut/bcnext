@@ -6,6 +6,7 @@ import { useSearchParams, useRouter } from 'next/navigation';
 import { StageSearch } from './StageSearch';
 import { StageDisplay } from './StageDisplay';
 import { StageList } from './StageList';
+import { EnemySearch } from './EnemySearch';
 import type { StageData, EventInfo, StageSearchParams } from './types';
 
 function StagePageContent() {
@@ -237,6 +238,8 @@ function StagePageContent() {
           initialParams={searchParams}
           loading={loading}
         />
+
+        <EnemySearch onStageSelect={handleSpecificStageSelect} />
 
         {error && (
           <div className="text-red-500 mb-2 text-xs">{error}</div>

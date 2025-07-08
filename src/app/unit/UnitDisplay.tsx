@@ -413,34 +413,22 @@ export function UnitDisplay({
                     onParamsChange?.({ level, plusLevel: 0, formId: actualCurrentForm });
                   }
                 }}
-                className="border rounded px-1 sm:px-2 py-1 w-6 sm:w-16 text-right text-xs sm:text-sm text-gray-900"
+                className="border rounded px-0.5 sm:px-1 py-1 w-6 sm:w-16 text-right text-xs sm:text-sm text-gray-900"
               />
             </div>
             <span className="text-xs text-gray-500">/ <small><b>{maxLevel} + {maxPlusLevel}</b></small></span>
             <button
               onClick={() => { 
-                setLevel(maxLevel); 
-                setPlusLevel(maxPlusLevel);
-                setLevelInput(maxLevel.toString());
-                setPlusLevelInput(maxPlusLevel.toString());
-                onParamsChange?.({ level: maxLevel, plusLevel: maxPlusLevel, formId: actualCurrentForm });
-              }}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-1.5 py-1 rounded text-xs sm:text-sm"
-            >
-              Max
-            </button>
-            <button
-              onClick={() => { 
-                const targetLevel = Math.min(30, maxLevel);
+                const targetLevel = Math.min(45, maxLevel);
                 setLevel(targetLevel); 
                 setPlusLevel(0);
                 setLevelInput(targetLevel.toString());
                 setPlusLevelInput('0');
                 onParamsChange?.({ level: targetLevel, plusLevel: 0, formId: actualCurrentForm });
               }}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-1.5 py-1 rounded text-xs sm:text-sm"
+              className="bg-blue-500 hover:bg-blue-600 text-white px-1 py-1 rounded text-xs sm:text-sm"
             >
-              Lv30
+              Lv45
             </button>
             <button
               onClick={() => { 
@@ -451,9 +439,22 @@ export function UnitDisplay({
                 setPlusLevelInput('0');
                 onParamsChange?.({ level: targetLevel, plusLevel: 0, formId: actualCurrentForm });
               }}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-1.5 py-1 rounded text-xs sm:text-sm"
+              className="bg-blue-500 hover:bg-blue-600 text-white px-1 py-1 rounded text-xs sm:text-sm"
             >
               Lv50
+            </button>
+            <button
+              onClick={() => { 
+                const targetLevel = Math.min(55, maxLevel);
+                setLevel(targetLevel); 
+                setPlusLevel(0);
+                setLevelInput(targetLevel.toString());
+                setPlusLevelInput('0');
+                onParamsChange?.({ level: targetLevel, plusLevel: 0, formId: actualCurrentForm });
+              }}
+              className="bg-blue-500 hover:bg-blue-600 text-white px-1 py-1 rounded text-xs sm:text-sm"
+            >
+              Lv55
             </button>
             {maxLevel >= 60 && (
               <button
@@ -465,11 +466,23 @@ export function UnitDisplay({
                   setPlusLevelInput('0');
                   onParamsChange?.({ level: targetLevel, plusLevel: 0, formId: actualCurrentForm });
                 }}
-                className="bg-blue-500 hover:bg-blue-600 text-white px-1.5 py-1 rounded text-xs sm:text-sm"
+                className="bg-blue-500 hover:bg-blue-600 text-white px-1 py-1 rounded text-xs sm:text-sm"
               >
                 Lv60
               </button>
             )}
+            <button
+              onClick={() => { 
+                setLevel(maxLevel); 
+                setPlusLevel(maxPlusLevel);
+                setLevelInput(maxLevel.toString());
+                setPlusLevelInput(maxPlusLevel.toString());
+                onParamsChange?.({ level: maxLevel, plusLevel: maxPlusLevel, formId: actualCurrentForm });
+              }}
+              className="bg-blue-500 hover:bg-blue-600 text-white px-1 py-1 rounded text-xs sm:text-sm"
+            >
+              Max
+            </button>
           </div>
         </div>
       </div>

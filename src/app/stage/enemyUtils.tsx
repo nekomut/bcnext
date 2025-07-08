@@ -42,7 +42,8 @@ export interface ProgressInfo {
 }
 
 /**
- * 全ステージファイルから敵データベースを構築する
+ * レジェンドストーリーのステージファイルから敵データベースを構築する
+ * （敵検索機能専用 - レジェンドストーリーのみに絞って軽量化）
  */
 export async function buildEnemyDatabase(
   onProgress?: (progress: ProgressInfo) => void
@@ -52,11 +53,14 @@ export async function buildEnemyDatabase(
   try {
     // ステージインデックスデータを読み込み
     const { stageIndexData } = await import('../../data/stage/index');
-    const totalEvents = stageIndexData.events.length;
     
-    // 各イベントのステージデータを処理
-    for (let i = 0; i < stageIndexData.events.length; i++) {
-      const event = stageIndexData.events[i];
+    // レジェンドストーリー（タイプID 0）のみに絞り込み
+    const legendEvents = stageIndexData.events.filter(event => event.typeId === 0);
+    const totalEvents = legendEvents.length;
+    
+    // レジェンドストーリーの各イベントのステージデータを処理
+    for (let i = 0; i < legendEvents.length; i++) {
+      const event = legendEvents[i];
       
       // 進捗を報告
       const current = i + 1;

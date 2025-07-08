@@ -523,7 +523,7 @@ function EnemyTable({ enemies, showDetail, getTraitColor, getTraitIcon, getAbili
           <thead>
             <tr className="border-b border-gray-500">
               <th className="px-0.5 py-1 text-right font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">ID</th>
-              <th className="px-0.5 py-1 text-left font-bold text-gray-500 tracking-wider min-w-12">敵名</th>
+              <th className="px-0.5 py-1 text-left font-bold text-gray-500 tracking-wider min-w-32">敵名</th>
               <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-3 whitespace-nowrap">数</th>
               <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-8 whitespace-nowrap">属性</th>
               <th className="px-0.5 py-1 text-center font-bold text-gray-500 tracking-wider min-w-8 whitespace-nowrap">能力</th>

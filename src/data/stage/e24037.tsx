@@ -9,6 +9,11 @@ export const e24037Data: StageData = {
   prefix: "A",
   mapId: 37,
   specialRule: null,
+  crownData: {
+    crownCount: 1,
+    magnifications: [100],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e24037Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -138,7 +148,7 @@ export const e24037Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -176,7 +186,7 @@ export const e24037Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -388,6 +398,11 @@ export const e24037Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "85",
@@ -505,7 +520,7 @@ export const e24037Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -543,7 +558,7 @@ export const e24037Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -755,6 +770,11 @@ export const e24037Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "6",
@@ -872,7 +892,7 @@ export const e24037Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -910,7 +930,7 @@ export const e24037Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -1122,6 +1142,11 @@ export const e24037Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "87",
@@ -1239,7 +1264,7 @@ export const e24037Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -1277,7 +1302,7 @@ export const e24037Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -1489,6 +1514,11 @@ export const e24037Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "11",
@@ -1606,7 +1636,7 @@ export const e24037Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -1644,7 +1674,7 @@ export const e24037Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -1856,6 +1886,11 @@ export const e24037Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "56",
@@ -1973,7 +2008,7 @@ export const e24037Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -2011,7 +2046,7 @@ export const e24037Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -2223,6 +2258,11 @@ export const e24037Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "86",
@@ -2340,7 +2380,7 @@ export const e24037Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -2378,7 +2418,7 @@ export const e24037Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -2590,6 +2630,11 @@ export const e24037Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "6",
@@ -2707,7 +2752,7 @@ export const e24037Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -2745,7 +2790,7 @@ export const e24037Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -2957,6 +3002,11 @@ export const e24037Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "90",
@@ -3074,7 +3124,7 @@ export const e24037Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -3112,7 +3162,7 @@ export const e24037Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -3324,6 +3374,11 @@ export const e24037Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "11",
@@ -3441,7 +3496,7 @@ export const e24037Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -3479,7 +3534,7 @@ export const e24037Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -3690,6 +3745,11 @@ export const e24037Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -4058,6 +4118,11 @@ export const e24037Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "91",
@@ -4424,6 +4489,11 @@ export const e24037Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -4792,6 +4862,11 @@ export const e24037Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "88",
@@ -5158,6 +5233,11 @@ export const e24037Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -5526,6 +5606,11 @@ export const e24037Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "140",
@@ -5892,6 +5977,11 @@ export const e24037Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -6260,6 +6350,11 @@ export const e24037Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "43",
@@ -6627,6 +6722,11 @@ export const e24037Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "12",
@@ -6993,6 +7093,11 @@ export const e24037Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {

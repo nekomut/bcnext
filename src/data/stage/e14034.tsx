@@ -9,6 +9,11 @@ export const e14034Data: StageData = {
   prefix: "B",
   mapId: 34,
   specialRule: null,
+  crownData: {
+    crownCount: 1,
+    magnifications: [100],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e14034Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -657,7 +667,7 @@ export const e14034Data: StageData = {
             "critical": {
                 chance: 50
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 5
             }
@@ -674,6 +684,11 @@ export const e14034Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1221,7 +1236,7 @@ export const e14034Data: StageData = {
             "critical": {
                 chance: 50
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 5
             }
@@ -1238,6 +1253,11 @@ export const e14034Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {

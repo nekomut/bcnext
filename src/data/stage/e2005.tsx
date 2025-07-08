@@ -9,6 +9,11 @@ export const e2005Data: StageData = {
   prefix: "C",
   mapId: 5,
   specialRule: null,
+  crownData: {
+    crownCount: 2,
+    magnifications: [100, 150],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e2005Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 150],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -314,6 +324,11 @@ export const e2005Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 150],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -642,6 +657,11 @@ export const e2005Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 150],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1072,6 +1092,11 @@ export const e2005Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 150],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1537,6 +1562,11 @@ export const e2005Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 150],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "4",
@@ -1728,6 +1758,11 @@ export const e2005Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 150],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -2022,6 +2057,11 @@ export const e2005Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 150],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -2520,6 +2560,11 @@ export const e2005Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 150],
+        baseDifficulty: 1
       },
       treasures: [
         {

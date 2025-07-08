@@ -18,6 +18,11 @@ export const e36006Data: StageData = {
     },
     contentsType: 0
   },
+  crownData: {
+    crownCount: 2,
+    magnifications: [100, 120],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -29,6 +34,11 @@ export const e36006Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 120],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -641,6 +651,11 @@ export const e36006Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 120],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "1",
@@ -964,6 +979,11 @@ export const e36006Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 120],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1339,6 +1359,11 @@ export const e36006Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 120],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "1",
@@ -1612,6 +1637,11 @@ export const e36006Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 120],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "1",
@@ -1785,7 +1815,7 @@ export const e36006Data: StageData = {
             "immune-waves": {
                 enabled: true
             },
-            "aku-shield": {
+            "shield": {
                 hp: 50000
             },
             "behemoth": {
@@ -1830,7 +1860,7 @@ export const e36006Data: StageData = {
                 standing_range: 250,
                 omni_range: [-50, 250]
             },
-            "wave-attack": {
+            "wave": {
                 chance: 10,
                 level: 2
             },

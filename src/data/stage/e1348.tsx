@@ -9,6 +9,11 @@ export const e1348Data: StageData = {
   prefix: "S",
   mapId: 348,
   specialRule: null,
+  crownData: {
+    crownCount: 1,
+    magnifications: [100],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e1348Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -149,7 +159,7 @@ export const e1348Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -221,7 +231,7 @@ export const e1348Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 250000
             },
             "death-surge": {
@@ -356,7 +366,7 @@ export const e1348Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -465,6 +475,11 @@ export const e1348Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -816,6 +831,11 @@ export const e1348Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1272,6 +1292,11 @@ export const e1348Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {

@@ -9,6 +9,11 @@ export const e13035Data: StageData = {
   prefix: "NA",
   mapId: 35,
   specialRule: null,
+  crownData: {
+    crownCount: 4,
+    magnifications: [100, 130, 170, 100],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e13035Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 130, 170, 100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -263,7 +273,7 @@ export const e13035Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 2
             }
@@ -280,6 +290,11 @@ export const e13035Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 130, 170, 100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -578,6 +593,11 @@ export const e13035Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 130, 170, 100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -970,6 +990,11 @@ export const e13035Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 130, 170, 100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "0",
@@ -1330,6 +1355,11 @@ export const e13035Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 130, 170, 100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1815,6 +1845,11 @@ export const e13035Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 130, 170, 100],
+        baseDifficulty: 1
       },
       treasures: [
         {

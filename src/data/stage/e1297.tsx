@@ -9,6 +9,11 @@ export const e1297Data: StageData = {
   prefix: "S",
   mapId: 297,
   specialRule: null,
+  crownData: {
+    crownCount: 4,
+    magnifications: [100, 150, 200, 300],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e1297Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 150, 200, 300],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -210,6 +220,11 @@ export const e1297Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 150, 200, 300],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -681,6 +696,11 @@ export const e1297Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 150, 200, 300],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "1018",
@@ -1036,7 +1056,7 @@ export const e1297Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 1
             }
@@ -1075,7 +1095,7 @@ export const e1297Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 1
             }

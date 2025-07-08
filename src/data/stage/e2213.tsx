@@ -9,6 +9,11 @@ export const e2213Data: StageData = {
   prefix: "C",
   mapId: 213,
   specialRule: null,
+  crownData: {
+    crownCount: 1,
+    magnifications: [100],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e2213Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -471,6 +481,11 @@ export const e2213Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "11",
@@ -864,7 +879,7 @@ export const e2213Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -999,6 +1014,11 @@ export const e2213Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1153,7 +1173,7 @@ export const e2213Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "immune-attacks": {
+            "dodge-attack": {
                 enabled: true
             }
           }
@@ -1229,7 +1249,7 @@ export const e2213Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "immune-attacks": {
+            "dodge-attack": {
                 enabled: true
             }
           }

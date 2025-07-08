@@ -9,6 +9,11 @@ export const e25066Data: StageData = {
   prefix: "H",
   mapId: 66,
   specialRule: null,
+  crownData: {
+    crownCount: 1,
+    magnifications: [100],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e25066Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -597,6 +607,11 @@ export const e25066Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1198,6 +1213,11 @@ export const e25066Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "168",
@@ -1331,7 +1351,7 @@ export const e25066Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -1383,7 +1403,7 @@ export const e25066Data: StageData = {
             "immune-knockback": {
                 enabled: true
             },
-            "aku-shield": {
+            "shield": {
                 hp: 400000
             },
             "behemoth": {
@@ -1492,7 +1512,7 @@ export const e25066Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -1664,6 +1684,11 @@ export const e25066Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1924,7 +1949,7 @@ export const e25066Data: StageData = {
                 standing_range: 250,
                 omni_range: [-50, 250]
             },
-            "wave-attack": {
+            "wave": {
                 chance: 10,
                 level: 2
             },
@@ -2278,6 +2303,11 @@ export const e25066Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {

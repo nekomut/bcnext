@@ -9,6 +9,7 @@ export const e3014Data: StageData = {
   prefix: "main",
   mapId: 14,
   specialRule: null,
+  crownData: null,
   stages: [
     {
       stageId: 0,
@@ -21,6 +22,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -69,6 +71,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -117,6 +120,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -165,6 +169,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -247,6 +252,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -329,6 +335,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -411,6 +418,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -561,6 +569,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -677,6 +686,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -827,6 +837,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -977,6 +988,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -1161,6 +1173,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -1345,6 +1358,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -1563,6 +1577,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -1747,6 +1762,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -1999,6 +2015,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -2183,6 +2200,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -2469,6 +2487,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -2789,6 +2808,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -3007,6 +3027,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -3225,6 +3246,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -3477,6 +3499,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -3729,6 +3752,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -3845,6 +3869,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -4097,6 +4122,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -4281,6 +4307,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -4533,6 +4560,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -4751,6 +4779,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -5037,6 +5066,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -5255,6 +5285,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -5541,6 +5572,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -5691,6 +5723,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -5909,6 +5942,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -6263,6 +6297,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -6719,6 +6754,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -6903,6 +6939,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -7223,6 +7260,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -7543,6 +7581,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -7897,6 +7936,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -8217,6 +8257,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -8571,6 +8612,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -8721,6 +8763,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -9109,6 +9152,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -9463,6 +9507,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -9613,6 +9658,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -9865,6 +9911,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -10083,6 +10130,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {
@@ -10369,6 +10417,7 @@ export const e3014Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: null,
       treasures: [],
       enemies: [
         {

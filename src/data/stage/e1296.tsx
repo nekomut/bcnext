@@ -9,6 +9,11 @@ export const e1296Data: StageData = {
   prefix: "S",
   mapId: 296,
   specialRule: null,
+  crownData: {
+    crownCount: 1,
+    magnifications: [100],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e1296Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -334,6 +344,11 @@ export const e1296Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "10522",
@@ -428,7 +443,7 @@ export const e1296Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -472,7 +487,7 @@ export const e1296Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -516,7 +531,7 @@ export const e1296Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -560,7 +575,7 @@ export const e1296Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -604,7 +619,7 @@ export const e1296Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -648,7 +663,7 @@ export const e1296Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -692,7 +707,7 @@ export const e1296Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -736,7 +751,7 @@ export const e1296Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -780,7 +795,7 @@ export const e1296Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -824,7 +839,7 @@ export const e1296Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -868,7 +883,7 @@ export const e1296Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -912,7 +927,7 @@ export const e1296Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -956,7 +971,7 @@ export const e1296Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -1000,7 +1015,7 @@ export const e1296Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }

@@ -9,6 +9,11 @@ export const e1146Data: StageData = {
   prefix: "S",
   mapId: 146,
   specialRule: null,
+  crownData: {
+    crownCount: 3,
+    magnifications: [100, 150, 200],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e1146Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 3,
+        magnifications: [100, 150, 200],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -309,7 +319,7 @@ export const e1146Data: StageData = {
             isBoss: true
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 3
             }

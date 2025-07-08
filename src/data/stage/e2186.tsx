@@ -9,6 +9,11 @@ export const e2186Data: StageData = {
   prefix: "C",
   mapId: 186,
   specialRule: null,
+  crownData: {
+    crownCount: 4,
+    magnifications: [100, 150, 200, 300],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e2186Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 150, 200, 300],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -228,7 +238,7 @@ export const e2186Data: StageData = {
                 standing_range: 150,
                 omni_range: [-300, 150]
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 3
             },
@@ -263,6 +273,11 @@ export const e2186Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 150, 200, 300],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -607,7 +622,7 @@ export const e2186Data: StageData = {
                 standing_range: 150,
                 omni_range: [-300, 150]
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 3
             },
@@ -676,6 +691,11 @@ export const e2186Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 150, 200, 300],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -850,7 +870,7 @@ export const e2186Data: StageData = {
                 standing_range: 150,
                 omni_range: [-300, 150]
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 3
             },
@@ -919,6 +939,11 @@ export const e2186Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 150, 200, 300],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1331,7 +1356,7 @@ export const e2186Data: StageData = {
                 standing_range: 150,
                 omni_range: [-300, 150]
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 3
             },
@@ -1366,6 +1391,11 @@ export const e2186Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 150, 200, 300],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1710,7 +1740,7 @@ export const e2186Data: StageData = {
                 standing_range: 150,
                 omni_range: [-300, 150]
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 3
             },

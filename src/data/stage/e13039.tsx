@@ -9,6 +9,11 @@ export const e13039Data: StageData = {
   prefix: "NA",
   mapId: 39,
   specialRule: null,
+  crownData: {
+    crownCount: 4,
+    magnifications: [100, 130, 150, 100],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e13039Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 130, 150, 100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -70,7 +80,7 @@ export const e13039Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -114,7 +124,7 @@ export const e13039Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -158,7 +168,7 @@ export const e13039Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -250,7 +260,7 @@ export const e13039Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -294,7 +304,7 @@ export const e13039Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -338,7 +348,7 @@ export const e13039Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -380,7 +390,7 @@ export const e13039Data: StageData = {
                 standing_range: 410,
                 omni_range: [-100, 410]
             },
-            "aku-shield": {
+            "shield": {
                 hp: 800000
             }
           }
@@ -396,6 +406,11 @@ export const e13039Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 130, 150, 100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -729,6 +744,11 @@ export const e13039Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 130, 150, 100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1188,6 +1208,11 @@ export const e13039Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 130, 150, 100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "3",
@@ -1339,7 +1364,7 @@ export const e13039Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -1416,7 +1441,7 @@ export const e13039Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 3
             },
@@ -1521,6 +1546,11 @@ export const e13039Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 130, 150, 100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "2",
@@ -1604,7 +1634,7 @@ export const e13039Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -1720,7 +1750,7 @@ export const e13039Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 250000
             },
             "death-surge": {
@@ -1770,7 +1800,7 @@ export const e13039Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -1786,6 +1816,11 @@ export const e13039Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 130, 150, 100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1864,7 +1899,7 @@ export const e13039Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -1941,7 +1976,7 @@ export const e13039Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -1979,7 +2014,7 @@ export const e13039Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -2017,7 +2052,7 @@ export const e13039Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -2146,7 +2181,7 @@ export const e13039Data: StageData = {
                 duration_f: 60,
                 duration_s: 2.0
             },
-            "aku-shield": {
+            "shield": {
                 hp: 450000
             }
           }

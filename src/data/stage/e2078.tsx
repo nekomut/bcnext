@@ -9,6 +9,11 @@ export const e2078Data: StageData = {
   prefix: "C",
   mapId: 78,
   specialRule: null,
+  crownData: {
+    crownCount: 3,
+    magnifications: [100, 115, 130],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e2078Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 3,
+        magnifications: [100, 115, 130],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -191,6 +201,11 @@ export const e2078Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 3,
+        magnifications: [100, 115, 130],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "4",
@@ -357,6 +372,11 @@ export const e2078Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 3,
+        magnifications: [100, 115, 130],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "11",
@@ -488,6 +508,11 @@ export const e2078Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 3,
+        magnifications: [100, 115, 130],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -830,6 +855,11 @@ export const e2078Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 3,
+        magnifications: [100, 115, 130],
+        baseDifficulty: 1
       },
       treasures: [
         {

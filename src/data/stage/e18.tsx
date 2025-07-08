@@ -9,6 +9,11 @@ export const e18Data: StageData = {
   prefix: "N",
   mapId: 18,
   specialRule: null,
+  crownData: {
+    crownCount: 4,
+    magnifications: [100, 150, 170, 140],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e18Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 150, 170, 140],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -485,6 +495,11 @@ export const e18Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 150, 170, 140],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "0",
@@ -710,6 +725,11 @@ export const e18Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 150, 170, 140],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1141,6 +1161,11 @@ export const e18Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 150, 170, 140],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "0",
@@ -1502,6 +1527,11 @@ export const e18Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 150, 170, 140],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1898,6 +1928,11 @@ export const e18Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 150, 170, 140],
+        baseDifficulty: 1
       },
       treasures: [
         {

@@ -9,6 +9,11 @@ export const e1382Data: StageData = {
   prefix: "S",
   mapId: 382,
   specialRule: null,
+  crownData: {
+    crownCount: 3,
+    magnifications: [100, 150, 200],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e1382Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 3,
+        magnifications: [100, 150, 200],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -42,7 +52,7 @@ export const e1382Data: StageData = {
           treasureId: "5700",
           treasureName: "キャラクタードロップ(5700)",
           probability: "50000",
-          amount: "204",
+          amount: "216",
           times: "-1",
           limitText: "-1"
         },
@@ -50,7 +60,7 @@ export const e1382Data: StageData = {
           treasureId: "500",
           treasureName: "アイテム500",
           probability: "1",
-          amount: "204",
+          amount: "216",
           times: "-1",
           limitText: "-1"
         }],
@@ -423,6 +433,11 @@ export const e1382Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 3,
+        magnifications: [100, 150, 200],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "1",
@@ -444,7 +459,7 @@ export const e1382Data: StageData = {
           treasureId: "5600",
           treasureName: "キャラクタードロップ(5600)",
           probability: "1",
-          amount: "204",
+          amount: "216",
           times: "-1",
           limitText: "-1"
         },
@@ -452,7 +467,7 @@ export const e1382Data: StageData = {
           treasureId: "500",
           treasureName: "アイテム500",
           probability: "1",
-          amount: "204",
+          amount: "216",
           times: "-1",
           limitText: "-1"
         }],
@@ -949,6 +964,11 @@ export const e1382Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 3,
+        magnifications: [100, 150, 200],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "1",
@@ -970,7 +990,7 @@ export const e1382Data: StageData = {
           treasureId: "6000",
           treasureName: "キャラクタードロップ(6000)",
           probability: "1",
-          amount: "204",
+          amount: "216",
           times: "-1",
           limitText: "-1"
         },
@@ -978,7 +998,7 @@ export const e1382Data: StageData = {
           treasureId: "500",
           treasureName: "アイテム500",
           probability: "1",
-          amount: "204",
+          amount: "216",
           times: "-1",
           limitText: "-1"
         }],
@@ -1582,6 +1602,11 @@ export const e1382Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 3,
+        magnifications: [100, 150, 200],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "1",
@@ -1603,7 +1628,7 @@ export const e1382Data: StageData = {
           treasureId: "5500",
           treasureName: "キャラクタードロップ(5500)",
           probability: "1",
-          amount: "204",
+          amount: "216",
           times: "-1",
           limitText: "-1"
         },
@@ -1611,7 +1636,7 @@ export const e1382Data: StageData = {
           treasureId: "500",
           treasureName: "アイテム500",
           probability: "1",
-          amount: "204",
+          amount: "216",
           times: "-1",
           limitText: "-1"
         }],

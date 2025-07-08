@@ -9,6 +9,11 @@ export const e13042Data: StageData = {
   prefix: "NA",
   mapId: 42,
   specialRule: null,
+  crownData: {
+    crownCount: 4,
+    magnifications: [100, 130, 150, 100],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e13042Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 130, 150, 100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -150,7 +160,7 @@ export const e13042Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -194,7 +204,7 @@ export const e13042Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -238,7 +248,7 @@ export const e13042Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -282,7 +292,7 @@ export const e13042Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -473,7 +483,7 @@ export const e13042Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -517,7 +527,7 @@ export const e13042Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -561,7 +571,7 @@ export const e13042Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -618,6 +628,11 @@ export const e13042Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 130, 150, 100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "3",
@@ -661,7 +676,7 @@ export const e13042Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -739,7 +754,7 @@ export const e13042Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 250000
             },
             "death-surge": {
@@ -783,7 +798,7 @@ export const e13042Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -910,7 +925,7 @@ export const e13042Data: StageData = {
                 chance: 100,
                 level: 4
             },
-            "aku-shield": {
+            "shield": {
                 hp: 322000
             }
           }
@@ -948,7 +963,7 @@ export const e13042Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -986,7 +1001,7 @@ export const e13042Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 250000
             },
             "death-surge": {
@@ -1048,6 +1063,11 @@ export const e13042Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 130, 150, 100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1382,6 +1402,11 @@ export const e13042Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 130, 150, 100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1761,6 +1786,11 @@ export const e13042Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 130, 150, 100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "2",
@@ -2040,7 +2070,7 @@ export const e13042Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 2
             }
@@ -2159,7 +2189,7 @@ export const e13042Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 3
             },
@@ -2259,6 +2289,11 @@ export const e13042Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 130, 150, 100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -2430,7 +2465,7 @@ export const e13042Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -2502,7 +2537,7 @@ export const e13042Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }

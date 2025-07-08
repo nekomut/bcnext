@@ -9,6 +9,11 @@ export const e2014Data: StageData = {
   prefix: "C",
   mapId: 14,
   specialRule: null,
+  crownData: {
+    crownCount: 3,
+    magnifications: [100, 200, 300],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e2014Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 3,
+        magnifications: [100, 200, 300],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -372,6 +382,11 @@ export const e2014Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 3,
+        magnifications: [100, 200, 300],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -758,6 +773,11 @@ export const e2014Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 3,
+        magnifications: [100, 200, 300],
+        baseDifficulty: 1
       },
       treasures: [
         {

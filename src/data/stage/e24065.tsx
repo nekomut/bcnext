@@ -9,6 +9,11 @@ export const e24065Data: StageData = {
   prefix: "A",
   mapId: 65,
   specialRule: null,
+  crownData: {
+    crownCount: 1,
+    magnifications: [100],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e24065Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -185,7 +195,7 @@ export const e24065Data: StageData = {
                 duration_f: 90,
                 duration_s: 3.0
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 4
             },
@@ -748,6 +758,11 @@ export const e24065Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "85",
@@ -912,7 +927,7 @@ export const e24065Data: StageData = {
                 duration_f: 90,
                 duration_s: 3.0
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 4
             },
@@ -1475,6 +1490,11 @@ export const e24065Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "6",
@@ -1639,7 +1659,7 @@ export const e24065Data: StageData = {
                 duration_f: 90,
                 duration_s: 3.0
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 4
             },
@@ -2202,6 +2222,11 @@ export const e24065Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "86",
@@ -2366,7 +2391,7 @@ export const e24065Data: StageData = {
                 duration_f: 90,
                 duration_s: 3.0
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 4
             },
@@ -2929,6 +2954,11 @@ export const e24065Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "11",
@@ -3093,7 +3123,7 @@ export const e24065Data: StageData = {
                 duration_f: 90,
                 duration_s: 3.0
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 4
             },
@@ -3656,6 +3686,11 @@ export const e24065Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "56",
@@ -3820,7 +3855,7 @@ export const e24065Data: StageData = {
                 duration_f: 90,
                 duration_s: 3.0
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 4
             },
@@ -4383,6 +4418,11 @@ export const e24065Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "87",
@@ -4547,7 +4587,7 @@ export const e24065Data: StageData = {
                 duration_f: 90,
                 duration_s: 3.0
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 4
             },
@@ -5110,6 +5150,11 @@ export const e24065Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "6",
@@ -5274,7 +5319,7 @@ export const e24065Data: StageData = {
                 duration_f: 90,
                 duration_s: 3.0
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 4
             },
@@ -5837,6 +5882,11 @@ export const e24065Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "88",
@@ -6001,7 +6051,7 @@ export const e24065Data: StageData = {
                 duration_f: 90,
                 duration_s: 3.0
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 4
             },
@@ -6564,6 +6614,11 @@ export const e24065Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "11",
@@ -6728,7 +6783,7 @@ export const e24065Data: StageData = {
                 duration_f: 90,
                 duration_s: 3.0
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 4
             },
@@ -7291,6 +7346,11 @@ export const e24065Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "57",
@@ -7347,7 +7407,7 @@ export const e24065Data: StageData = {
                 duration_f: 90,
                 duration_s: 3.0
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 4
             },
@@ -7690,6 +7750,11 @@ export const e24065Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "89",
@@ -7746,7 +7811,7 @@ export const e24065Data: StageData = {
                 duration_f: 90,
                 duration_s: 3.0
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 4
             },
@@ -8089,6 +8154,11 @@ export const e24065Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "6",
@@ -8145,7 +8215,7 @@ export const e24065Data: StageData = {
                 duration_f: 90,
                 duration_s: 3.0
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 4
             },
@@ -8488,6 +8558,11 @@ export const e24065Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "90",
@@ -8544,7 +8619,7 @@ export const e24065Data: StageData = {
                 duration_f: 90,
                 duration_s: 3.0
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 4
             },
@@ -8887,6 +8962,11 @@ export const e24065Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "12",
@@ -8943,7 +9023,7 @@ export const e24065Data: StageData = {
                 duration_f: 90,
                 duration_s: 3.0
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 4
             },
@@ -9286,6 +9366,11 @@ export const e24065Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "91",
@@ -9342,7 +9427,7 @@ export const e24065Data: StageData = {
                 duration_f: 90,
                 duration_s: 3.0
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 4
             },
@@ -9685,6 +9770,11 @@ export const e24065Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "140",
@@ -9741,7 +9831,7 @@ export const e24065Data: StageData = {
                 duration_f: 90,
                 duration_s: 3.0
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 4
             },
@@ -10084,6 +10174,11 @@ export const e24065Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "43",
@@ -10140,7 +10235,7 @@ export const e24065Data: StageData = {
                 duration_f: 90,
                 duration_s: 3.0
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 4
             },
@@ -10483,6 +10578,11 @@ export const e24065Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "12",
@@ -10539,7 +10639,7 @@ export const e24065Data: StageData = {
                 duration_f: 90,
                 duration_s: 3.0
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 4
             },
@@ -10882,6 +10982,11 @@ export const e24065Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "58",
@@ -10938,7 +11043,7 @@ export const e24065Data: StageData = {
                 duration_f: 90,
                 duration_s: 3.0
             },
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 4
             },

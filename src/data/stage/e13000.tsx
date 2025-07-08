@@ -9,6 +9,11 @@ export const e13000Data: StageData = {
   prefix: "NA",
   mapId: 0,
   specialRule: null,
+  crownData: {
+    crownCount: 4,
+    magnifications: [100, 150, 200, 100],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e13000Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 150, 200, 100],
+        baseDifficulty: 1
       },
       treasures: [
         {

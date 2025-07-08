@@ -15,6 +15,11 @@ export interface StageData {
   } | null;
   stages: StageInfo[];
   selectedStageIndex?: number; // 特定のステージを選択する場合のインデックス
+  crownData?: {
+    crownCount: number;        // 利用可能な星の数（1-4）
+    magnifications: number[];  // 各星の倍率 [100, 150, 200, 300]
+    baseDifficulty: number;    // 基本難易度
+  } | null;
 }
 
 export interface StageInfo {
@@ -30,6 +35,11 @@ export interface StageInfo {
   };
   treasures: TreasureInfo[];
   enemies: EnemyStageInfo[];
+  crownData?: {
+    crownCount: number;        // 利用可能な星の数（1-4）
+    magnifications: number[];  // 各星の倍率 [100, 150, 200, 300]
+    baseDifficulty: number;    // 基本難易度
+  } | null;
 }
 
 export interface TreasureInfo {

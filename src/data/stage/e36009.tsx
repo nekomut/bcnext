@@ -18,6 +18,11 @@ export const e36009Data: StageData = {
     },
     contentsType: 0
   },
+  crownData: {
+    crownCount: 2,
+    magnifications: [100, 120],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -29,6 +34,11 @@ export const e36009Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 120],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -211,6 +221,11 @@ export const e36009Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 120],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -469,7 +484,7 @@ export const e36009Data: StageData = {
                 duration_f: 50,
                 duration_s: 1.67
             },
-            "aku-shield": {
+            "shield": {
                 hp: 15000
             }
           }
@@ -574,6 +589,11 @@ export const e36009Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 120],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -953,6 +973,11 @@ export const e36009Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 120],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "1",
@@ -1310,6 +1335,11 @@ export const e36009Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 120],
+        baseDifficulty: 1
       },
       treasures: [
         {

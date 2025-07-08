@@ -11,13 +11,128 @@ interface StageDisplayProps {
 }
 
 export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
+
   const [selectedStageId, setSelectedStageId] = useState<number>(stageData.selectedStageIndex ?? 0);
   const [showDetail, setShowDetail] = useState<boolean>(false);
+
+  // 星の数の状態管理（シンプル化）
+  const [selectedCrown, setSelectedCrown] = useState<number>(1);
 
   // stageDataが変更された時に選択されたステージを更新
   useEffect(() => {
     setSelectedStageId(stageData.selectedStageIndex ?? 0);
   }, [stageData.selectedStageIndex]);
+
+  // URLパラメータの変更を監視（一時的に無効化）
+  /*
+  useEffect(() => {
+    const maxCrown = stageData.crownData?.crownCount || 4;
+    const crownParam = searchParams.get('crown');
+    const crownFromUrl = sanitizeCrownParam(crownParam, maxCrown);
+    
+    // URLから読み取った値が現在の値と異なる場合のみ更新
+    setSelectedCrown(prevCrown => {
+      if (prevCrown !== crownFromUrl) {
+        return crownFromUrl;
+      }
+      return prevCrown;
+    });
+  }, [searchParams, stageData.crownData]);
+  */
+
+  // 星の数から倍率への変換ロジック
+  const getEffectiveMagnification = (crown: number, currentStage: StageInfo): number => {
+    if (crown < 1) return 100; // 最小値チェック
+    
+    // ステージ固有の星倍率データを優先
+    if (currentStage.crownData) {
+      if (crown > currentStage.crownData.crownCount) {
+        // 最大値を超える場合は最大値の倍率を使用
+        return currentStage.crownData.magnifications[currentStage.crownData.crownCount - 1] || 100;
+      }
+      return currentStage.crownData.magnifications[crown - 1] || 100;
+    }
+    
+    // ステージ固有データがない場合はイベント全体の設定を使用
+    if (stageData.crownData) {
+      if (crown > stageData.crownData.crownCount) {
+        // 最大値を超える場合は最大値の倍率を使用
+        return stageData.crownData.magnifications[stageData.crownData.crownCount - 1] || 100;
+      }
+      return stageData.crownData.magnifications[crown - 1] || 100;
+    }
+    
+    // フォールバック：テスト用の倍率計算
+    return 100 + crown * 50;
+  };
+
+  // 正しい倍率適用計算ロジック（ステージ固有倍率 × 星倍率）
+  const applyMagnificationToEnemies = (enemies: EnemyStageInfo[], crownMagnification: number): EnemyStageInfo[] => {
+    try {
+      return enemies.map(enemy => {
+        // ベースステータスの存在確認
+        if (!enemy.baseStats) {
+          console.warn(`Enemy ${enemy.enemyId} has no baseStats`);
+          return enemy;
+        }
+        
+        // ステージ固有倍率を取得（stageStats.magnificationから）
+        const stageMagString = enemy.stageStats.magnification || "100%";
+        const stageMagnification = parseFloat(stageMagString.replace('%', ''));
+        
+        // 最終倍率 = ステージ固有倍率 × 星倍率
+        const stageMult = stageMagnification / 100.0;  // 例: 200% → 2.0
+        const crownMult = crownMagnification / 100.0;   // 例: 150% → 1.5
+        const finalMultiplier = stageMult * crownMult;  // 例: 2.0 × 1.5 = 3.0
+        
+        // battlecatsWikiの実装に基づく正しい計算
+        // 基本ステータスに最終倍率を適用
+        const newHp = Math.round(enemy.baseStats.hp * finalMultiplier);
+        const newAp = Math.round(enemy.baseStats.ap * finalMultiplier);
+        
+        // DPSは新しい攻撃力から再計算（freq > 0の場合のみ）
+        const newDps = enemy.baseStats.freq > 0 
+          ? Math.round(newAp / enemy.baseStats.freq * 30 * 100) / 100  // 小数点2桁
+          : 0;
+        
+        console.log(`Enemy ${enemy.enemyId}: Stage ${stageMagnification}% × Crown ${crownMagnification}% = ${Math.round(finalMultiplier * 100)}%`);
+        console.log(`  HP: ${enemy.baseStats.hp} → ${newHp}, AP: ${enemy.baseStats.ap} → ${newAp}`);
+        
+        return {
+          ...enemy,
+          stageStats: {
+            ...enemy.stageStats,
+            actualHp: newHp,
+            actualAp: newAp,
+            actualDps: newDps,
+            magnification: `${Math.round(finalMultiplier * 100)}%`, // 最終倍率を表示
+            // 他のステータスは元の値を維持（倍率適用なし）
+          }
+        };
+      });
+    } catch (error) {
+      console.error('Error applying magnification to enemies:', error);
+      return enemies; // エラー時は元のデータを返す
+    }
+  };
+
+  const getStageDisplayInfo = (stage: StageInfo, crown: number): StageInfo => {
+    try {
+      const magnification = getEffectiveMagnification(crown, stage);
+      const newBaseHp = Math.round((stage.baseHp || 0) * magnification / 100);
+      
+      return {
+        ...stage,
+        // 城HPも倍率適用
+        baseHp: newBaseHp,
+        // 敵データに倍率適用
+        enemies: applyMagnificationToEnemies(stage.enemies || [], magnification)
+      };
+    } catch (error) {
+      console.error('Error in getStageDisplayInfo:', error);
+      return stage; // エラー時は元のステージデータを返す
+    }
+  };
 
   const selectedStage = stageData.stages[selectedStageId];
 
@@ -26,6 +141,9 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
       <div className="text-red-500">ステージデータが見つかりません</div>
     );
   }
+
+  const currentMagnification = getEffectiveMagnification(selectedCrown, selectedStage);
+  const displayStage = getStageDisplayInfo(selectedStage, selectedCrown);
 
   const formatNumber = (value: number | string): string => {
     const num = typeof value === 'string' ? parseInt(value) : value;
@@ -176,6 +294,72 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
           </div>
         )}
 
+
+        {/* デバッグ表示 */}
+        <div className="p-1 bg-yellow-100 text-xs">
+          現在のselectedCrown: {selectedCrown}
+        </div>
+
+        {/* 星倍率選択 */}
+        {(stageData.crownData || selectedStage.crownData) && (
+          <div className="p-1">
+            <label className="block text-xs font-medium text-gray-700 mb-2">難易度:</label>
+            <div className="flex items-center gap-2">
+              <select 
+                value={selectedCrown} 
+                onChange={(e) => {
+                  const newCrown = parseInt(e.target.value);
+                  console.log('Dropdown onChange - setting crown to:', newCrown);
+                  setSelectedCrown(newCrown);
+                  // 一時的にURL更新を無効化
+                  // updateCrownUrl(newCrown);
+                }}
+                className="text-xs text-gray-500 border border-gray-300 rounded px-2 py-1 bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              >
+                {(() => {
+                  const crownData = selectedStage.crownData || stageData.crownData;
+                  
+                  if (!crownData) {
+                    // crownDataがない場合でもテスト用のオプションを表示（星1から開始）
+                    return [1, 2, 3].map(crown => (
+                      <option key={crown} value={crown}>
+                        {'★'.repeat(crown)} ({100 + crown * 50}%)
+                      </option>
+                    ));
+                  }
+                  
+                  return Array.from({length: crownData.crownCount}, (_, i) => i + 1).map(crown => (
+                    <option key={crown} value={crown}>
+                      {'★'.repeat(crown)} ({crownData.magnifications[crown - 1]}%)
+                    </option>
+                  ));
+                })()}
+              </select>
+              {selectedCrown > 0 && (
+                <div className="flex items-center gap-1">
+                  <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">
+                    {'★'.repeat(selectedCrown)} {currentMagnification}% 適用中
+                  </span>
+                </div>
+              )}
+            </div>
+          </div>
+        )}
+
+        {/* 倍率適用状態の表示 */}
+        {selectedCrown > 0 && (
+          <div className="mx-1 mb-1 p-2 bg-yellow-50 border border-yellow-200 rounded">
+            <div className="flex items-center gap-1">
+              <svg className="w-3 h-3 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+              </svg>
+              <span className="text-xs font-medium text-yellow-800">
+                {'★'.repeat(selectedCrown)} 難易度が適用されています。敵の体力・攻撃力・DPS が {currentMagnification}% に変更されています。
+              </span>
+            </div>
+          </div>
+        )}
+
         {/* 表示オプション */}
         <div className="px-1 pb-1">
           <label className="flex items-center gap-1">
@@ -193,11 +377,11 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
       {/* ステージ詳細情報 */}
       <div className="bg-white rounded-lg shadow-sm border">
         {/* ステージ基本情報 */}
-        <StageBasicInfo stage={selectedStage} />
+        <StageBasicInfo stage={displayStage} />
 
         {/* 敵情報テーブル */}
         <EnemyTable 
-          enemies={selectedStage.enemies} 
+          enemies={displayStage.enemies} 
           showDetail={showDetail}
           getTraitColor={getTraitColor}
           getTraitIcon={getTraitIcon}
@@ -206,8 +390,8 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
         />
 
         {/* ドロップ報酬 */}
-        {selectedStage.treasures.length > 0 && (
-          <TreasureDisplay treasures={selectedStage.treasures} />
+        {displayStage.treasures.length > 0 && (
+          <TreasureDisplay treasures={displayStage.treasures} />
         )}
       </div>
     </div>

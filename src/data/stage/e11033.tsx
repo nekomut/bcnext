@@ -9,6 +9,11 @@ export const e11033Data: StageData = {
   prefix: "R",
   mapId: 33,
   specialRule: null,
+  crownData: {
+    crownCount: 1,
+    magnifications: [100],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e11033Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -128,7 +138,7 @@ export const e11033Data: StageData = {
             "immune-knockback": {
                 enabled: true
             },
-            "aku-shield": {
+            "shield": {
                 hp: 400000
             },
             "behemoth": {
@@ -551,7 +561,7 @@ export const e11033Data: StageData = {
             "immune-knockback": {
                 enabled: true
             },
-            "aku-shield": {
+            "shield": {
                 hp: 400000
             },
             "behemoth": {
@@ -1398,7 +1408,7 @@ export const e11033Data: StageData = {
             "immune-knockback": {
                 enabled: true
             },
-            "aku-shield": {
+            "shield": {
                 hp: 400000
             },
             "behemoth": {

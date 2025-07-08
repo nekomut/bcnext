@@ -9,6 +9,11 @@ export const e31000Data: StageData = {
   prefix: "Q",
   mapId: 0,
   specialRule: null,
+  crownData: {
+    crownCount: 1,
+    magnifications: [100],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e31000Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -392,6 +402,11 @@ export const e31000Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -774,6 +789,11 @@ export const e31000Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1166,6 +1186,11 @@ export const e31000Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1564,6 +1589,11 @@ export const e31000Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "167",
@@ -1837,7 +1867,7 @@ export const e31000Data: StageData = {
             "immune-waves": {
                 enabled: true
             },
-            "aku-shield": {
+            "shield": {
                 hp: 50000
             },
             "behemoth": {
@@ -2090,6 +2120,11 @@ export const e31000Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -2556,6 +2591,11 @@ export const e31000Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "167",
@@ -2942,7 +2982,7 @@ export const e31000Data: StageData = {
             "immune-waves": {
                 enabled: true
             },
-            "aku-shield": {
+            "shield": {
                 hp: 50000
             },
             "behemoth": {
@@ -2961,6 +3001,11 @@ export const e31000Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -3315,6 +3360,11 @@ export const e31000Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "167",
@@ -3504,7 +3554,7 @@ export const e31000Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -3558,7 +3608,7 @@ export const e31000Data: StageData = {
             "immune-waves": {
                 enabled: true
             },
-            "aku-shield": {
+            "shield": {
                 hp: 50000
             },
             "behemoth": {
@@ -3670,6 +3720,11 @@ export const e31000Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -3788,7 +3843,7 @@ export const e31000Data: StageData = {
             "immune-waves": {
                 enabled: true
             },
-            "aku-shield": {
+            "shield": {
                 hp: 50000
             },
             "behemoth": {
@@ -4052,6 +4107,11 @@ export const e31000Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -4437,7 +4497,7 @@ export const e31000Data: StageData = {
             "immune-waves": {
                 enabled: true
             },
-            "aku-shield": {
+            "shield": {
                 hp: 50000
             },
             "behemoth": {
@@ -4571,6 +4631,11 @@ export const e31000Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "167",
@@ -4654,7 +4719,7 @@ export const e31000Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -5040,7 +5105,7 @@ export const e31000Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -5092,7 +5157,7 @@ export const e31000Data: StageData = {
             "immune-knockback": {
                 enabled: true
             },
-            "aku-shield": {
+            "shield": {
                 hp: 400000
             },
             "behemoth": {
@@ -5133,7 +5198,7 @@ export const e31000Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -5187,7 +5252,7 @@ export const e31000Data: StageData = {
             "immune-waves": {
                 enabled: true
             },
-            "aku-shield": {
+            "shield": {
                 hp: 50000
             },
             "behemoth": {
@@ -5240,6 +5305,11 @@ export const e31000Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -5632,7 +5702,7 @@ export const e31000Data: StageData = {
             "immune-knockback": {
                 enabled: true
             },
-            "aku-shield": {
+            "shield": {
                 hp: 400000
             },
             "behemoth": {
@@ -5741,7 +5811,7 @@ export const e31000Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 1
             }
@@ -5780,7 +5850,7 @@ export const e31000Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 1
             }
@@ -5853,7 +5923,7 @@ export const e31000Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 3
             }
@@ -5904,6 +5974,11 @@ export const e31000Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -6448,6 +6523,11 @@ export const e31000Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "167",
@@ -6733,7 +6813,7 @@ export const e31000Data: StageData = {
             "immune-knockback": {
                 enabled: true
             },
-            "aku-shield": {
+            "shield": {
                 hp: 400000
             },
             "behemoth": {
@@ -6974,6 +7054,11 @@ export const e31000Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -7634,7 +7719,7 @@ export const e31000Data: StageData = {
             "immune-waves": {
                 enabled: true
             },
-            "aku-shield": {
+            "shield": {
                 hp: 50000
             },
             "behemoth": {
@@ -7721,6 +7806,11 @@ export const e31000Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -8200,6 +8290,11 @@ export const e31000Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "167",
@@ -8367,7 +8462,7 @@ export const e31000Data: StageData = {
             "immune-waves": {
                 enabled: true
             },
-            "aku-shield": {
+            "shield": {
                 hp: 50000
             },
             "behemoth": {
@@ -8569,6 +8664,11 @@ export const e31000Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -9352,6 +9452,11 @@ export const e31000Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "12",
@@ -9429,7 +9534,7 @@ export const e31000Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -9783,7 +9888,7 @@ export const e31000Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -9923,7 +10028,7 @@ export const e31000Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }

@@ -9,6 +9,11 @@ export const e24019Data: StageData = {
   prefix: "A",
   mapId: 19,
   specialRule: null,
+  crownData: {
+    crownCount: 1,
+    magnifications: [100],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e24019Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -281,6 +291,11 @@ export const e24019Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "203",
@@ -506,6 +521,11 @@ export const e24019Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -869,6 +889,11 @@ export const e24019Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "203",
@@ -1099,6 +1124,11 @@ export const e24019Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1428,6 +1458,11 @@ export const e24019Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "203",
@@ -1706,6 +1741,11 @@ export const e24019Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "203",
@@ -1965,6 +2005,11 @@ export const e24019Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -2265,6 +2310,11 @@ export const e24019Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "203",
@@ -2345,7 +2395,7 @@ export const e24019Data: StageData = {
         },
         {
           enemyId: "153",
-          enemyName: "カニ",
+          enemyName: "タスマニアオオガニ",
           icon: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAA3NCSVQICAjb4U/gAAAAwFBMVEUAAAAAAAAAAAABAQECAQADAAAFAQEJAwAOBAIYCAMmCgJICAU6EwM+GgRFGgWUAAFZJAlvIwd/HwZjLQ59IQeAIQKBJwqMJgpqOBeQKgybKwySMBJ2QBueNhOpMw6tNRCtOBGESyK8OBCWWS7XRRXLShy5UiqaaDvkUh21ZTrtWh/FbUaxeUveaDnxZiq7hlfmdkP2cjT6fTzHkWDgiVn6iUfamWT5lFXbpnL2oXDnsoDtvYr2ypv916v/5MH///++CyS7AAAAQHRSTlMANbVxzRr/9lqi/Q3Hgv4C/7Ik/WkNlT3/sv5R/4S/3bD//v//7f//////z/////////////////////////8A/Bst6gAABGNJREFUWIXtlVl3m0gQhXESW8s4GAnJQrgtmcV0Q5odQbN5/v+/mlugk5NlTl5mHlW2hGj1/epWVWNrf//H0G6AG+AGuAFugBvgBrgB/nfAb7Hf7w8vz2+/xuthT/H7/p/iab/d7o7HsyuS6IcQIkqS97fj8bjbPv0RsD2ez+/CF3mRz9IcoCQv6O1SCCHib4c/EfY71xdJEuVFQUq6Xookh5YITQEfl28vKORfIE/bw+GwO/vYGOUwAAxdL5cGn4smJx8Tof12Oh1ffm0G5Kd313Z9iKKfDFyaHJymgQXcJLCQBUK8n54P279+0EMuIteeihcQ5hOACm9IBGl0tQBO7MOefz4dvtvYH85ocxTYblQkkUgKAkyEvG2bSXpJZguRiIoiiGEqE+fTy0x4ejljTlnseYG4Aq4WUHzTYglGpspwEaLKgiCoZRC47vtMOJz9rKpl6EkZxnkk8lmfzN4bjOFymRzkDWqIlXLsMAyQMQxOWyrg2Y5VEGRxIMsyjkV8KTICtH1BBwinqOkbukRV28ZV35WO7WbDOHZN5r5C/yqDKvDzpoW1VJWyrLIs6/q6Vqn0HOaFslS1GlQcV3XXd6oM3bj5QIzoz9teO6R14PpJO47tJQ5Kpbp+mKLHJ6VKeq+vS1gr0zCoR5KPQ98m76/aIZSYf9UNWOspW9f1PRINI377fuh67Bx7Wu0medxO6QcsNRiFtjNtAGAOhI9BSpnWCtHRbtxxLNBd181y0Yxz/nHoVB35trZxQtuGg5kw1pxPLjpAPE+mMuUen3kS2bN+/Ljq+7osK/+svaEHtluRZsCXQ+rxq4mSex6fosReGYZVNw6zmvQqDgLpHrW3GkbtoFZ1UqBXIwiESEspS+5wvHBFKUFF4jn5gH7UWSR8lx21oydhlghVRCmGQYUOp+rTlFk8dSyPqihn7x9XucqiGHobgA1TKuU4mVUUZRXaPvSSOfCOg8lM5limI7mXXjsHOdqB9sVZJnw7sDbaxqpTXqrUjqMsyTD1njOHgnFuGTp+YAMdHufk3dxfACLf9coJIL0QLXbcIEuaDu1zLIt5jqVbzNAJ4HXIDGt9P09TVaquYt93HS8E4Nm0LF5KzgzT8WNUFzqmCesgUBgWpojWdlcx5HWWkdz2uGWZz9p2Y5qWwx398evX53PWKu5ZhmFajJGceRzPAy9RNY22zurJPOmRwjA3eBy3G+x3mLn6/PnLwnBDZjnkXdfXcO+hFgSTqqTjVUV4XEmO/jumYZBeu1sZ5IGtF4sHhG6Qf6Y/rHXnKqeScLa6qXJBansaj2l8vdM0pF0bhmExc/0whw5HprG2MIlZTS3hdadil8K24c9iqNNYLz7da8tPyKwTwXj4MXTGpuxoBzlhjKcSYsiRyGDwry8WqyVKuL9brlaPumnqi58AlJl6YaIgZsIJkurrNeSLhW4am9Xq89399z/s98vdbrn89OV7LBZrisUaOiIZ5uPj9avVcondf13/LfwDjAMhzDMfbnUAAAAASUVORK5CYII=",
           traits: ["赤"],
           baseStats: {
@@ -2379,7 +2429,7 @@ export const e24019Data: StageData = {
         },
         {
           enemyId: "153",
-          enemyName: "カニ",
+          enemyName: "タスマニアオオガニ",
           icon: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAA3NCSVQICAjb4U/gAAAAwFBMVEUAAAAAAAAAAAABAQECAQADAAAFAQEJAwAOBAIYCAMmCgJICAU6EwM+GgRFGgWUAAFZJAlvIwd/HwZjLQ59IQeAIQKBJwqMJgpqOBeQKgybKwySMBJ2QBueNhOpMw6tNRCtOBGESyK8OBCWWS7XRRXLShy5UiqaaDvkUh21ZTrtWh/FbUaxeUveaDnxZiq7hlfmdkP2cjT6fTzHkWDgiVn6iUfamWT5lFXbpnL2oXDnsoDtvYr2ypv916v/5MH///++CyS7AAAAQHRSTlMANbVxzRr/9lqi/Q3Hgv4C/7Ik/WkNlT3/sv5R/4S/3bD//v//7f//////z/////////////////////////8A/Bst6gAABGNJREFUWIXtlVl3m0gQhXESW8s4GAnJQrgtmcV0Q5odQbN5/v+/mlugk5NlTl5mHlW2hGj1/epWVWNrf//H0G6AG+AGuAFugBvgBrgB/nfAb7Hf7w8vz2+/xuthT/H7/p/iab/d7o7HsyuS6IcQIkqS97fj8bjbPv0RsD2ez+/CF3mRz9IcoCQv6O1SCCHib4c/EfY71xdJEuVFQUq6Xookh5YITQEfl28vKORfIE/bw+GwO/vYGOUwAAxdL5cGn4smJx8Tof12Oh1ffm0G5Kd313Z9iKKfDFyaHJymgQXcJLCQBUK8n54P279+0EMuIteeihcQ5hOACm9IBGl0tQBO7MOefz4dvtvYH85ocxTYblQkkUgKAkyEvG2bSXpJZguRiIoiiGEqE+fTy0x4ejljTlnseYG4Aq4WUHzTYglGpspwEaLKgiCoZRC47vtMOJz9rKpl6EkZxnkk8lmfzN4bjOFymRzkDWqIlXLsMAyQMQxOWyrg2Y5VEGRxIMsyjkV8KTICtH1BBwinqOkbukRV28ZV35WO7WbDOHZN5r5C/yqDKvDzpoW1VJWyrLIs6/q6Vqn0HOaFslS1GlQcV3XXd6oM3bj5QIzoz9teO6R14PpJO47tJQ5Kpbp+mKLHJ6VKeq+vS1gr0zCoR5KPQ98m76/aIZSYf9UNWOspW9f1PRINI377fuh67Bx7Wu0medxO6QcsNRiFtjNtAGAOhI9BSpnWCtHRbtxxLNBd181y0Yxz/nHoVB35trZxQtuGg5kw1pxPLjpAPE+mMuUen3kS2bN+/Ljq+7osK/+svaEHtluRZsCXQ+rxq4mSex6fosReGYZVNw6zmvQqDgLpHrW3GkbtoFZ1UqBXIwiESEspS+5wvHBFKUFF4jn5gH7UWSR8lx21oydhlghVRCmGQYUOp+rTlFk8dSyPqihn7x9XucqiGHobgA1TKuU4mVUUZRXaPvSSOfCOg8lM5limI7mXXjsHOdqB9sVZJnw7sDbaxqpTXqrUjqMsyTD1njOHgnFuGTp+YAMdHufk3dxfACLf9coJIL0QLXbcIEuaDu1zLIt5jqVbzNAJ4HXIDGt9P09TVaquYt93HS8E4Nm0LF5KzgzT8WNUFzqmCesgUBgWpojWdlcx5HWWkdz2uGWZz9p2Y5qWwx398evX53PWKu5ZhmFajJGceRzPAy9RNY22zurJPOmRwjA3eBy3G+x3mLn6/PnLwnBDZjnkXdfXcO+hFgSTqqTjVUV4XEmO/jumYZBeu1sZ5IGtF4sHhG6Qf6Y/rHXnKqeScLa6qXJBansaj2l8vdM0pF0bhmExc/0whw5HprG2MIlZTS3hdadil8K24c9iqNNYLz7da8tPyKwTwXj4MXTGpuxoBzlhjKcSYsiRyGDwry8WqyVKuL9brlaPumnqi58AlJl6YaIgZsIJkurrNeSLhW4am9Xq89399z/s98vdbrn89OV7LBZrisUaOiIZ5uPj9avVcondf13/LfwDjAMhzDMfbnUAAAAASUVORK5CYII=",
           traits: ["赤"],
           baseStats: {
@@ -2413,7 +2463,7 @@ export const e24019Data: StageData = {
         },
         {
           enemyId: "153",
-          enemyName: "カニ",
+          enemyName: "タスマニアオオガニ",
           icon: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAA3NCSVQICAjb4U/gAAAAwFBMVEUAAAAAAAAAAAABAQECAQADAAAFAQEJAwAOBAIYCAMmCgJICAU6EwM+GgRFGgWUAAFZJAlvIwd/HwZjLQ59IQeAIQKBJwqMJgpqOBeQKgybKwySMBJ2QBueNhOpMw6tNRCtOBGESyK8OBCWWS7XRRXLShy5UiqaaDvkUh21ZTrtWh/FbUaxeUveaDnxZiq7hlfmdkP2cjT6fTzHkWDgiVn6iUfamWT5lFXbpnL2oXDnsoDtvYr2ypv916v/5MH///++CyS7AAAAQHRSTlMANbVxzRr/9lqi/Q3Hgv4C/7Ik/WkNlT3/sv5R/4S/3bD//v//7f//////z/////////////////////////8A/Bst6gAABGNJREFUWIXtlVl3m0gQhXESW8s4GAnJQrgtmcV0Q5odQbN5/v+/mlugk5NlTl5mHlW2hGj1/epWVWNrf//H0G6AG+AGuAFugBvgBrgB/nfAb7Hf7w8vz2+/xuthT/H7/p/iab/d7o7HsyuS6IcQIkqS97fj8bjbPv0RsD2ez+/CF3mRz9IcoCQv6O1SCCHib4c/EfY71xdJEuVFQUq6Xookh5YITQEfl28vKORfIE/bw+GwO/vYGOUwAAxdL5cGn4smJx8Tof12Oh1ffm0G5Kd313Z9iKKfDFyaHJymgQXcJLCQBUK8n54P279+0EMuIteeihcQ5hOACm9IBGl0tQBO7MOefz4dvtvYH85ocxTYblQkkUgKAkyEvG2bSXpJZguRiIoiiGEqE+fTy0x4ejljTlnseYG4Aq4WUHzTYglGpspwEaLKgiCoZRC47vtMOJz9rKpl6EkZxnkk8lmfzN4bjOFymRzkDWqIlXLsMAyQMQxOWyrg2Y5VEGRxIMsyjkV8KTICtH1BBwinqOkbukRV28ZV35WO7WbDOHZN5r5C/yqDKvDzpoW1VJWyrLIs6/q6Vqn0HOaFslS1GlQcV3XXd6oM3bj5QIzoz9teO6R14PpJO47tJQ5Kpbp+mKLHJ6VKeq+vS1gr0zCoR5KPQ98m76/aIZSYf9UNWOspW9f1PRINI377fuh67Bx7Wu0medxO6QcsNRiFtjNtAGAOhI9BSpnWCtHRbtxxLNBd181y0Yxz/nHoVB35trZxQtuGg5kw1pxPLjpAPE+mMuUen3kS2bN+/Ljq+7osK/+svaEHtluRZsCXQ+rxq4mSex6fosReGYZVNw6zmvQqDgLpHrW3GkbtoFZ1UqBXIwiESEspS+5wvHBFKUFF4jn5gH7UWSR8lx21oydhlghVRCmGQYUOp+rTlFk8dSyPqihn7x9XucqiGHobgA1TKuU4mVUUZRXaPvSSOfCOg8lM5limI7mXXjsHOdqB9sVZJnw7sDbaxqpTXqrUjqMsyTD1njOHgnFuGTp+YAMdHufk3dxfACLf9coJIL0QLXbcIEuaDu1zLIt5jqVbzNAJ4HXIDGt9P09TVaquYt93HS8E4Nm0LF5KzgzT8WNUFzqmCesgUBgWpojWdlcx5HWWkdz2uGWZz9p2Y5qWwx398evX53PWKu5ZhmFajJGceRzPAy9RNY22zurJPOmRwjA3eBy3G+x3mLn6/PnLwnBDZjnkXdfXcO+hFgSTqqTjVUV4XEmO/jumYZBeu1sZ5IGtF4sHhG6Qf6Y/rHXnKqeScLa6qXJBansaj2l8vdM0pF0bhmExc/0whw5HprG2MIlZTS3hdadil8K24c9iqNNYLz7da8tPyKwTwXj4MXTGpuxoBzlhjKcSYsiRyGDwry8WqyVKuL9brlaPumnqi58AlJl6YaIgZsIJkurrNeSLhW4am9Xq89399z/s98vdbrn89OV7LBZrisUaOiIZ5uPj9avVcondf13/LfwDjAMhzDMfbnUAAAAASUVORK5CYII=",
           traits: ["赤"],
           baseStats: {
@@ -2447,7 +2497,7 @@ export const e24019Data: StageData = {
         },
         {
           enemyId: "153",
-          enemyName: "カニ",
+          enemyName: "タスマニアオオガニ",
           icon: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAA3NCSVQICAjb4U/gAAAAwFBMVEUAAAAAAAAAAAABAQECAQADAAAFAQEJAwAOBAIYCAMmCgJICAU6EwM+GgRFGgWUAAFZJAlvIwd/HwZjLQ59IQeAIQKBJwqMJgpqOBeQKgybKwySMBJ2QBueNhOpMw6tNRCtOBGESyK8OBCWWS7XRRXLShy5UiqaaDvkUh21ZTrtWh/FbUaxeUveaDnxZiq7hlfmdkP2cjT6fTzHkWDgiVn6iUfamWT5lFXbpnL2oXDnsoDtvYr2ypv916v/5MH///++CyS7AAAAQHRSTlMANbVxzRr/9lqi/Q3Hgv4C/7Ik/WkNlT3/sv5R/4S/3bD//v//7f//////z/////////////////////////8A/Bst6gAABGNJREFUWIXtlVl3m0gQhXESW8s4GAnJQrgtmcV0Q5odQbN5/v+/mlugk5NlTl5mHlW2hGj1/epWVWNrf//H0G6AG+AGuAFugBvgBrgB/nfAb7Hf7w8vz2+/xuthT/H7/p/iab/d7o7HsyuS6IcQIkqS97fj8bjbPv0RsD2ez+/CF3mRz9IcoCQv6O1SCCHib4c/EfY71xdJEuVFQUq6Xookh5YITQEfl28vKORfIE/bw+GwO/vYGOUwAAxdL5cGn4smJx8Tof12Oh1ffm0G5Kd313Z9iKKfDFyaHJymgQXcJLCQBUK8n54P279+0EMuIteeihcQ5hOACm9IBGl0tQBO7MOefz4dvtvYH85ocxTYblQkkUgKAkyEvG2bSXpJZguRiIoiiGEqE+fTy0x4ejljTlnseYG4Aq4WUHzTYglGpspwEaLKgiCoZRC47vtMOJz9rKpl6EkZxnkk8lmfzN4bjOFymRzkDWqIlXLsMAyQMQxOWyrg2Y5VEGRxIMsyjkV8KTICtH1BBwinqOkbukRV28ZV35WO7WbDOHZN5r5C/yqDKvDzpoW1VJWyrLIs6/q6Vqn0HOaFslS1GlQcV3XXd6oM3bj5QIzoz9teO6R14PpJO47tJQ5Kpbp+mKLHJ6VKeq+vS1gr0zCoR5KPQ98m76/aIZSYf9UNWOspW9f1PRINI377fuh67Bx7Wu0medxO6QcsNRiFtjNtAGAOhI9BSpnWCtHRbtxxLNBd181y0Yxz/nHoVB35trZxQtuGg5kw1pxPLjpAPE+mMuUen3kS2bN+/Ljq+7osK/+svaEHtluRZsCXQ+rxq4mSex6fosReGYZVNw6zmvQqDgLpHrW3GkbtoFZ1UqBXIwiESEspS+5wvHBFKUFF4jn5gH7UWSR8lx21oydhlghVRCmGQYUOp+rTlFk8dSyPqihn7x9XucqiGHobgA1TKuU4mVUUZRXaPvSSOfCOg8lM5limI7mXXjsHOdqB9sVZJnw7sDbaxqpTXqrUjqMsyTD1njOHgnFuGTp+YAMdHufk3dxfACLf9coJIL0QLXbcIEuaDu1zLIt5jqVbzNAJ4HXIDGt9P09TVaquYt93HS8E4Nm0LF5KzgzT8WNUFzqmCesgUBgWpojWdlcx5HWWkdz2uGWZz9p2Y5qWwx398evX53PWKu5ZhmFajJGceRzPAy9RNY22zurJPOmRwjA3eBy3G+x3mLn6/PnLwnBDZjnkXdfXcO+hFgSTqqTjVUV4XEmO/jumYZBeu1sZ5IGtF4sHhG6Qf6Y/rHXnKqeScLa6qXJBansaj2l8vdM0pF0bhmExc/0whw5HprG2MIlZTS3hdadil8K24c9iqNNYLz7da8tPyKwTwXj4MXTGpuxoBzlhjKcSYsiRyGDwry8WqyVKuL9brlaPumnqi58AlJl6YaIgZsIJkurrNeSLhW4am9Xq89399z/s98vdbrn89OV7LBZrisUaOiIZ5uPj9avVcondf13/LfwDjAMhzDMfbnUAAAAASUVORK5CYII=",
           traits: ["赤"],
           baseStats: {
@@ -2481,7 +2531,7 @@ export const e24019Data: StageData = {
         },
         {
           enemyId: "153",
-          enemyName: "カニ",
+          enemyName: "タスマニアオオガニ",
           icon: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAA3NCSVQICAjb4U/gAAAAwFBMVEUAAAAAAAAAAAABAQECAQADAAAFAQEJAwAOBAIYCAMmCgJICAU6EwM+GgRFGgWUAAFZJAlvIwd/HwZjLQ59IQeAIQKBJwqMJgpqOBeQKgybKwySMBJ2QBueNhOpMw6tNRCtOBGESyK8OBCWWS7XRRXLShy5UiqaaDvkUh21ZTrtWh/FbUaxeUveaDnxZiq7hlfmdkP2cjT6fTzHkWDgiVn6iUfamWT5lFXbpnL2oXDnsoDtvYr2ypv916v/5MH///++CyS7AAAAQHRSTlMANbVxzRr/9lqi/Q3Hgv4C/7Ik/WkNlT3/sv5R/4S/3bD//v//7f//////z/////////////////////////8A/Bst6gAABGNJREFUWIXtlVl3m0gQhXESW8s4GAnJQrgtmcV0Q5odQbN5/v+/mlugk5NlTl5mHlW2hGj1/epWVWNrf//H0G6AG+AGuAFugBvgBrgB/nfAb7Hf7w8vz2+/xuthT/H7/p/iab/d7o7HsyuS6IcQIkqS97fj8bjbPv0RsD2ez+/CF3mRz9IcoCQv6O1SCCHib4c/EfY71xdJEuVFQUq6Xookh5YITQEfl28vKORfIE/bw+GwO/vYGOUwAAxdL5cGn4smJx8Tof12Oh1ffm0G5Kd313Z9iKKfDFyaHJymgQXcJLCQBUK8n54P279+0EMuIteeihcQ5hOACm9IBGl0tQBO7MOefz4dvtvYH85ocxTYblQkkUgKAkyEvG2bSXpJZguRiIoiiGEqE+fTy0x4ejljTlnseYG4Aq4WUHzTYglGpspwEaLKgiCoZRC47vtMOJz9rKpl6EkZxnkk8lmfzN4bjOFymRzkDWqIlXLsMAyQMQxOWyrg2Y5VEGRxIMsyjkV8KTICtH1BBwinqOkbukRV28ZV35WO7WbDOHZN5r5C/yqDKvDzpoW1VJWyrLIs6/q6Vqn0HOaFslS1GlQcV3XXd6oM3bj5QIzoz9teO6R14PpJO47tJQ5Kpbp+mKLHJ6VKeq+vS1gr0zCoR5KPQ98m76/aIZSYf9UNWOspW9f1PRINI377fuh67Bx7Wu0medxO6QcsNRiFtjNtAGAOhI9BSpnWCtHRbtxxLNBd181y0Yxz/nHoVB35trZxQtuGg5kw1pxPLjpAPE+mMuUen3kS2bN+/Ljq+7osK/+svaEHtluRZsCXQ+rxq4mSex6fosReGYZVNw6zmvQqDgLpHrW3GkbtoFZ1UqBXIwiESEspS+5wvHBFKUFF4jn5gH7UWSR8lx21oydhlghVRCmGQYUOp+rTlFk8dSyPqihn7x9XucqiGHobgA1TKuU4mVUUZRXaPvSSOfCOg8lM5limI7mXXjsHOdqB9sVZJnw7sDbaxqpTXqrUjqMsyTD1njOHgnFuGTp+YAMdHufk3dxfACLf9coJIL0QLXbcIEuaDu1zLIt5jqVbzNAJ4HXIDGt9P09TVaquYt93HS8E4Nm0LF5KzgzT8WNUFzqmCesgUBgWpojWdlcx5HWWkdz2uGWZz9p2Y5qWwx398evX53PWKu5ZhmFajJGceRzPAy9RNY22zurJPOmRwjA3eBy3G+x3mLn6/PnLwnBDZjnkXdfXcO+hFgSTqqTjVUV4XEmO/jumYZBeu1sZ5IGtF4sHhG6Qf6Y/rHXnKqeScLa6qXJBansaj2l8vdM0pF0bhmExc/0whw5HprG2MIlZTS3hdadil8K24c9iqNNYLz7da8tPyKwTwXj4MXTGpuxoBzlhjKcSYsiRyGDwry8WqyVKuL9brlaPumnqi58AlJl6YaIgZsIJkurrNeSLhW4am9Xq89399z/s98vdbrn89OV7LBZrisUaOiIZ5uPj9avVcondf13/LfwDjAMhzDMfbnUAAAAASUVORK5CYII=",
           traits: ["赤"],
           baseStats: {
@@ -2626,6 +2676,11 @@ export const e24019Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -2826,6 +2881,11 @@ export const e24019Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -3150,6 +3210,11 @@ export const e24019Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -3500,6 +3565,11 @@ export const e24019Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "203",
@@ -3809,6 +3879,11 @@ export const e24019Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -4137,6 +4212,11 @@ export const e24019Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -4529,6 +4609,11 @@ export const e24019Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "203",
@@ -4878,6 +4963,11 @@ export const e24019Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "203",
@@ -5000,7 +5090,7 @@ export const e24019Data: StageData = {
         },
         {
           enemyId: "153",
-          enemyName: "カニ",
+          enemyName: "タスマニアオオガニ",
           icon: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAA3NCSVQICAjb4U/gAAAAwFBMVEUAAAAAAAAAAAABAQECAQADAAAFAQEJAwAOBAIYCAMmCgJICAU6EwM+GgRFGgWUAAFZJAlvIwd/HwZjLQ59IQeAIQKBJwqMJgpqOBeQKgybKwySMBJ2QBueNhOpMw6tNRCtOBGESyK8OBCWWS7XRRXLShy5UiqaaDvkUh21ZTrtWh/FbUaxeUveaDnxZiq7hlfmdkP2cjT6fTzHkWDgiVn6iUfamWT5lFXbpnL2oXDnsoDtvYr2ypv916v/5MH///++CyS7AAAAQHRSTlMANbVxzRr/9lqi/Q3Hgv4C/7Ik/WkNlT3/sv5R/4S/3bD//v//7f//////z/////////////////////////8A/Bst6gAABGNJREFUWIXtlVl3m0gQhXESW8s4GAnJQrgtmcV0Q5odQbN5/v+/mlugk5NlTl5mHlW2hGj1/epWVWNrf//H0G6AG+AGuAFugBvgBrgB/nfAb7Hf7w8vz2+/xuthT/H7/p/iab/d7o7HsyuS6IcQIkqS97fj8bjbPv0RsD2ez+/CF3mRz9IcoCQv6O1SCCHib4c/EfY71xdJEuVFQUq6Xookh5YITQEfl28vKORfIE/bw+GwO/vYGOUwAAxdL5cGn4smJx8Tof12Oh1ffm0G5Kd313Z9iKKfDFyaHJymgQXcJLCQBUK8n54P279+0EMuIteeihcQ5hOACm9IBGl0tQBO7MOefz4dvtvYH85ocxTYblQkkUgKAkyEvG2bSXpJZguRiIoiiGEqE+fTy0x4ejljTlnseYG4Aq4WUHzTYglGpspwEaLKgiCoZRC47vtMOJz9rKpl6EkZxnkk8lmfzN4bjOFymRzkDWqIlXLsMAyQMQxOWyrg2Y5VEGRxIMsyjkV8KTICtH1BBwinqOkbukRV28ZV35WO7WbDOHZN5r5C/yqDKvDzpoW1VJWyrLIs6/q6Vqn0HOaFslS1GlQcV3XXd6oM3bj5QIzoz9teO6R14PpJO47tJQ5Kpbp+mKLHJ6VKeq+vS1gr0zCoR5KPQ98m76/aIZSYf9UNWOspW9f1PRINI377fuh67Bx7Wu0medxO6QcsNRiFtjNtAGAOhI9BSpnWCtHRbtxxLNBd181y0Yxz/nHoVB35trZxQtuGg5kw1pxPLjpAPE+mMuUen3kS2bN+/Ljq+7osK/+svaEHtluRZsCXQ+rxq4mSex6fosReGYZVNw6zmvQqDgLpHrW3GkbtoFZ1UqBXIwiESEspS+5wvHBFKUFF4jn5gH7UWSR8lx21oydhlghVRCmGQYUOp+rTlFk8dSyPqihn7x9XucqiGHobgA1TKuU4mVUUZRXaPvSSOfCOg8lM5limI7mXXjsHOdqB9sVZJnw7sDbaxqpTXqrUjqMsyTD1njOHgnFuGTp+YAMdHufk3dxfACLf9coJIL0QLXbcIEuaDu1zLIt5jqVbzNAJ4HXIDGt9P09TVaquYt93HS8E4Nm0LF5KzgzT8WNUFzqmCesgUBgWpojWdlcx5HWWkdz2uGWZz9p2Y5qWwx398evX53PWKu5ZhmFajJGceRzPAy9RNY22zurJPOmRwjA3eBy3G+x3mLn6/PnLwnBDZjnkXdfXcO+hFgSTqqTjVUV4XEmO/jumYZBeu1sZ5IGtF4sHhG6Qf6Y/rHXnKqeScLa6qXJBansaj2l8vdM0pF0bhmExc/0whw5HprG2MIlZTS3hdadil8K24c9iqNNYLz7da8tPyKwTwXj4MXTGpuxoBzlhjKcSYsiRyGDwry8WqyVKuL9brlaPumnqi58AlJl6YaIgZsIJkurrNeSLhW4am9Xq89399z/s98vdbrn89OV7LBZrisUaOiIZ5uPj9avVcondf13/LfwDjAMhzDMfbnUAAAAASUVORK5CYII=",
           traits: ["赤"],
           baseStats: {
@@ -5281,6 +5371,11 @@ export const e24019Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -5617,6 +5712,11 @@ export const e24019Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -6153,6 +6253,11 @@ export const e24019Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {

@@ -18,6 +18,11 @@ export const e36010Data: StageData = {
     },
     contentsType: 0
   },
+  crownData: {
+    crownCount: 2,
+    magnifications: [100, 120],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -29,6 +34,11 @@ export const e36010Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 120],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -606,6 +616,11 @@ export const e36010Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 120],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "1",
@@ -683,7 +698,7 @@ export const e36010Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 1
             }
@@ -756,7 +771,7 @@ export const e36010Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 1
             }
@@ -868,7 +883,7 @@ export const e36010Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 2
             }
@@ -1237,6 +1252,11 @@ export const e36010Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 120],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1879,6 +1899,11 @@ export const e36010Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 120],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "1",
@@ -2049,7 +2074,7 @@ export const e36010Data: StageData = {
                 standing_range: 250,
                 omni_range: [-50, 250]
             },
-            "wave-attack": {
+            "wave": {
                 chance: 10,
                 level: 2
             },
@@ -2508,6 +2533,11 @@ export const e36010Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 120],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "1",
@@ -2890,7 +2920,7 @@ export const e36010Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 250000
             },
             "death-surge": {
@@ -3021,7 +3051,7 @@ export const e36010Data: StageData = {
                 duration_f: 60,
                 duration_s: 2.0
             },
-            "aku-shield": {
+            "shield": {
                 hp: 450000
             }
           }
@@ -3098,7 +3128,7 @@ export const e36010Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 250000
             },
             "death-surge": {
@@ -3155,7 +3185,7 @@ export const e36010Data: StageData = {
                 duration_f: 60,
                 duration_s: 2.0
             },
-            "aku-shield": {
+            "shield": {
                 hp: 450000
             }
           }

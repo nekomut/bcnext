@@ -9,6 +9,11 @@ export const e1303Data: StageData = {
   prefix: "S",
   mapId: 303,
   specialRule: null,
+  crownData: {
+    crownCount: 2,
+    magnifications: [100, 200],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e1303Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 200],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -302,6 +312,11 @@ export const e1303Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 200],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -921,6 +936,11 @@ export const e1303Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 200],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "2",
@@ -1422,6 +1442,11 @@ export const e1303Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 200],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -2082,6 +2107,11 @@ export const e1303Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 200],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "5",
@@ -2621,6 +2651,11 @@ export const e1303Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 200],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -3356,6 +3391,11 @@ export const e1303Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 200],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -4126,6 +4166,11 @@ export const e1303Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 200],
+        baseDifficulty: 1
       },
       treasures: [
         {

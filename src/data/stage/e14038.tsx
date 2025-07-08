@@ -9,6 +9,11 @@ export const e14038Data: StageData = {
   prefix: "B",
   mapId: 38,
   specialRule: null,
+  crownData: {
+    crownCount: 1,
+    magnifications: [100],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e14038Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -64,7 +74,7 @@ export const e14038Data: StageData = {
             isBoss: true
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 1666666
             }
           }
@@ -142,7 +152,7 @@ export const e14038Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }

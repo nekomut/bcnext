@@ -9,6 +9,11 @@ export const e13031Data: StageData = {
   prefix: "NA",
   mapId: 31,
   specialRule: null,
+  crownData: {
+    crownCount: 4,
+    magnifications: [100, 130, 170, 100],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e13031Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 130, 170, 100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -308,6 +318,11 @@ export const e13031Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 130, 170, 100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "3",
@@ -560,6 +575,11 @@ export const e13031Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 130, 170, 100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "5",
@@ -658,7 +678,7 @@ export const e13031Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 1
             }
@@ -697,7 +717,7 @@ export const e13031Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 5,
                 level: 1
             }
@@ -780,7 +800,7 @@ export const e13031Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 1
             }
@@ -853,7 +873,7 @@ export const e13031Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 1
             }
@@ -892,7 +912,7 @@ export const e13031Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 1
             }
@@ -943,6 +963,11 @@ export const e13031Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 130, 170, 100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1410,6 +1435,11 @@ export const e13031Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 130, 170, 100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -2194,6 +2224,11 @@ export const e13031Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 130, 170, 100],
+        baseDifficulty: 1
       },
       treasures: [
         {

@@ -18,6 +18,11 @@ export const e36003Data: StageData = {
     },
     contentsType: 0
   },
+  crownData: {
+    crownCount: 2,
+    magnifications: [100, 120],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -29,6 +34,11 @@ export const e36003Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 120],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -82,7 +92,7 @@ export const e36003Data: StageData = {
                 chance: 100,
                 level: 4
             },
-            "aku-shield": {
+            "shield": {
                 hp: 322000
             }
           }
@@ -195,7 +205,7 @@ export const e36003Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 80000
             }
           }
@@ -246,7 +256,7 @@ export const e36003Data: StageData = {
                 duration_f: 60,
                 duration_s: 2.0
             },
-            "aku-shield": {
+            "shield": {
                 hp: 450000
             }
           }
@@ -340,6 +350,11 @@ export const e36003Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 120],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -720,6 +735,11 @@ export const e36003Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 120],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1123,6 +1143,11 @@ export const e36003Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 120],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "1",
@@ -1312,7 +1337,7 @@ export const e36003Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 2
             }
@@ -1431,6 +1456,11 @@ export const e36003Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 2,
+        magnifications: [100, 120],
+        baseDifficulty: 1
       },
       treasures: [
         {

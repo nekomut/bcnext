@@ -9,6 +9,11 @@ export const e1376Data: StageData = {
   prefix: "S",
   mapId: 376,
   specialRule: null,
+  crownData: {
+    crownCount: 1,
+    magnifications: [100],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e1376Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -160,7 +170,7 @@ export const e1376Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 70000
             },
             "counter-surge": {
@@ -401,7 +411,7 @@ export const e1376Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 70000
             },
             "counter-surge": {
@@ -550,6 +560,11 @@ export const e1376Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "12",
@@ -650,7 +665,7 @@ export const e1376Data: StageData = {
             "immune-weaken": {
                 enabled: true
             },
-            "aku-shield": {
+            "shield": {
                 hp: 48000
             },
             "counter-surge": {
@@ -725,7 +740,7 @@ export const e1376Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 40000
             },
             "counter-surge": {
@@ -770,7 +785,7 @@ export const e1376Data: StageData = {
                 chance: 50,
                 level: 2
             },
-            "aku-shield": {
+            "shield": {
                 hp: 1340000
             },
             "counter-surge": {
@@ -864,7 +879,7 @@ export const e1376Data: StageData = {
                 trigger_hp: 34,
                 power: 100
             },
-            "aku-shield": {
+            "shield": {
                 hp: 700000
             },
             "counter-surge": {
@@ -910,7 +925,7 @@ export const e1376Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 40000
             },
             "counter-surge": {
@@ -959,7 +974,7 @@ export const e1376Data: StageData = {
                 chance: 100,
                 power: 1.2
             },
-            "aku-shield": {
+            "shield": {
                 hp: 500000
             },
             "counter-surge": {
@@ -1000,7 +1015,7 @@ export const e1376Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 40000
             },
             "counter-surge": {
@@ -1041,7 +1056,7 @@ export const e1376Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 40000
             },
             "counter-surge": {

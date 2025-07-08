@@ -9,6 +9,11 @@ export const e1355Data: StageData = {
   prefix: "S",
   mapId: 355,
   specialRule: null,
+  crownData: {
+    crownCount: 1,
+    magnifications: [100],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e1355Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -68,7 +78,7 @@ export const e1355Data: StageData = {
                 chance: 50,
                 level: 2
             },
-            "aku-shield": {
+            "shield": {
                 hp: 1340000
             },
             "counter-surge": {
@@ -109,7 +119,7 @@ export const e1355Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 80000
             }
           }

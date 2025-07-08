@@ -9,6 +9,11 @@ export const e34019Data: StageData = {
   prefix: "ND",
   mapId: 19,
   specialRule: null,
+  crownData: {
+    crownCount: 1,
+    magnifications: [100],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e34019Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -343,6 +353,11 @@ export const e34019Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "5",
@@ -449,7 +464,7 @@ export const e34019Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "aku-shield": {
+            "shield": {
                 hp: 4500
             }
           }
@@ -573,7 +588,7 @@ export const e34019Data: StageData = {
             isBoss: true
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 5,
                 level: 1
             }
@@ -678,6 +693,11 @@ export const e34019Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "3",
@@ -721,7 +741,7 @@ export const e34019Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 20
             },
@@ -902,6 +922,11 @@ export const e34019Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "2",
@@ -979,7 +1004,7 @@ export const e34019Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "immune-attacks": {
+            "dodge-attack": {
                 enabled: true
             }
           }
@@ -1244,6 +1269,11 @@ export const e34019Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "4",
@@ -1463,7 +1493,7 @@ export const e34019Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 3
             },
@@ -1738,6 +1768,11 @@ export const e34019Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "1071",
@@ -1785,7 +1820,7 @@ export const e34019Data: StageData = {
         {
           enemyId: "729",
           enemyName: "理の賢者ニュトーン",
-          icon: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA4RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMS1jMDAyIDc5LmI3YzY0Y2NmOSwgMjAyNC8wNy8xNi0xMjozOTowNCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDphMDU0ZWExNC1lYWZjLTRlNGQtODVhOC04NGQwODRiODNmMzAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QkFBNUQyOUVGRjE5MTFFRjhBN0JBN0VBOUU3M0VBMDQiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QkFBNUQyOURGRjE5MTFFRjhBN0JBN0VBOUU3M0VBMDQiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI2LjEgKFdpbmRvd3MpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NWYzYjE2YTYtZThjYi1iOTQ0LTg3ZGEtZGM0MTE5OTlhYjA4IiBzdFJlZjpkb2N1bWVudElEPSJhZG9iZTpkb2NpZDpwaG90b3Nob3A6Y2I0NDBmZWMtMWIzNy04MTQ2LWE4Y2It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",
+          icon: "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAA3NCSVQICAjb4U/gAAAAwFBMVEUAAAAAAAABAQECAgIDAgIEAgIEBAQHBAQNBAINBQIICAgaCQQlCAIvBwAoDwY2DQI3DwAfGBRFCwEeICFKEwNIGAlOFgRjEwEsLCyADAEFGrVpHgV5GwB5IAOhDgCNGQA7OztDPTtqMBawFQCIKgORLQS3IABwQSw/THimMQCFQBxmU06+PQIZXNuWTD1jYmHOQwBiaYDdRQDpSwCRcWf4VAGDg4RVj7+Ylpf7g02rrK68v8DR0dHf39/r6+v8/P0Czk7IAAAAQHRSTlMA/gkfkG7YM0ZZrWyOtf+ihGLU28b9ser9/v/J/+r///+S////4P/Y//3//f3//8n+//////////z//v//////KzZWAQAAA9RJREFUWIWll4uSqjgQhplETFBGvHAdEFCQmWiOxmBYBi+8/1tt2HF362zN1hDtKi1Txf+lu+nuRE372QBGmganrgV7PPyd3sqL0DYNBz+m12C+dJPAC99d9xEERMD1LNuOvAHE846AlCLBjQgh8iwXGa9ziOZAW32yqQLgcKaFAZev4zFJojl4xfDzs1gqAFaiKDCWALtknGILgz3PVAAw3Ew15C3tMReCIBui2SZUyyWQn3A5x9MwtFwTLFUS8A/j3TO9+WzmFZupnSB1AIq8KLJXoWmGUWKDBzwYu6b1bjtzJMviwXqWFGTrj2r/Rjzg/G+GH0jfb3rbnqr5AO75grPVCiOX0lzBBTgOrZC54AtwuF4rWlIFB4BX8CzmfHxfv1/bemL031/Ti5JEUVCE93W4P7fHRf8SQF5BCBckI19RQ1pu6+a26g0weZkTzkhSfLXOWAhBndWhtwvzjJBo4kySwuw0cCMBG0PWcU89eM1oGb1MnCghG2PsbkqhNMY0K+AicZwX6UFJaFmKcqM0Q6BXMBrsHGcSxEUic+lihQLoHjUJK4Kqrut1zEniqjQwcDHuXiLPIl411TrLWKFSP0AOvilCcxl6LvL0mAYxL1TCByFjebOyiyKIBPn49UcaF2ojzOLlqa28LE4ivv34dT5Gr0ojbNYw7t8OVk5ITrbV29txO/5Z9a+h5pZO0ut6KaiZ0+j49vZBlebg7NpW1bUpGcMwZ8HuePwglooDVXu71iciuKlhQoJ9ddwlS4UcrC71yl9zwUMAXJbEp7NfBXSjQJCHBsSGgQEKGU3i+rKrgrwMfxb+16ZM8DxZX67nerujpepxCkPZfuR0as63tmmanBO10wx104NtL/Xp0rb1rnJK4SrtvxRlWZLdPqjatq0C36eCKbQDsLkohVhP4lg60J6C1M+FigsGlQkQxPfjfdsBHAngIu+fBYtJPfdTP2hu7a3dT9J0LSdi/zPN5JyKtQQ41y6EtS9/MkH7AwzGOe9UtZTXJ8dP0wkVm/4zAbNS5FLl7071PojnEjViKkmEVAhrkaYLPZaWmYt0galQaEmwFBwvUh+jOMvi2FikA0iESjHbMuBROtJQksVZgBY+lCerymCeyoB1H2u6BAQJXgw0RBVyKFuBTjU4BNpY3khIjnQgZ4uKA/IuIceo0V0R8nw96rbWbSW9Ztw7Rz/X9V8VbKje7u4BG7dL/dTNEl1vh2f0Gjy3TwKaS/9L1feA6kmAPxk+BdCGg+FzfxAGGOrK7xFAiLGu6wNpo1H3PZArAyPYE4UGw5fvbDj6v3L8E3O6eT3FaKdAAAAAAElFTkSuQmCC",
           traits: ["赤"],
           baseStats: {
             hp: 2000000,

@@ -9,6 +9,11 @@ export const e27016Data: StageData = {
   prefix: "CA",
   mapId: 16,
   specialRule: null,
+  crownData: {
+    crownCount: 1,
+    magnifications: [100],
+    baseDifficulty: 1
+  },
   stages: [
 
   ]

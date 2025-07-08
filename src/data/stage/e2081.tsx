@@ -9,6 +9,11 @@ export const e2081Data: StageData = {
   prefix: "C",
   mapId: 81,
   specialRule: null,
+  crownData: {
+    crownCount: 1,
+    magnifications: [100],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e2081Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -35,7 +45,7 @@ export const e2081Data: StageData = {
           enemyId: "429",
           enemyName: "くるみ割りの魔女",
           icon: "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",
-          traits: [],
+          traits: ["魔"],
           baseStats: {
             hp: 9000000,
             ap: 12000,
@@ -1469,6 +1479,11 @@ export const e2081Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 1,
+        magnifications: [100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "10301",
@@ -1483,7 +1498,7 @@ export const e2081Data: StageData = {
           enemyId: "429",
           enemyName: "くるみ割りの魔女",
           icon: "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",
-          traits: [],
+          traits: ["魔"],
           baseStats: {
             hp: 9000000,
             ap: 12000,
@@ -1850,7 +1865,7 @@ export const e2081Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 1
             }
@@ -1889,7 +1904,7 @@ export const e2081Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 1
             }
@@ -1928,7 +1943,7 @@ export const e2081Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 1
             }
@@ -1967,7 +1982,7 @@ export const e2081Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 1
             }

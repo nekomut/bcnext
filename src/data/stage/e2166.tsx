@@ -9,6 +9,11 @@ export const e2166Data: StageData = {
   prefix: "C",
   mapId: 166,
   specialRule: null,
+  crownData: {
+    crownCount: 3,
+    magnifications: [100, 200, 300],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e2166Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 3,
+        magnifications: [100, 200, 300],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -304,6 +314,11 @@ export const e2166Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 3,
+        magnifications: [100, 200, 300],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -725,6 +740,11 @@ export const e2166Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 3,
+        magnifications: [100, 200, 300],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "1119",
@@ -1145,6 +1165,11 @@ export const e2166Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 3,
+        magnifications: [100, 200, 300],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "1119",
@@ -1496,6 +1521,11 @@ export const e2166Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 3,
+        magnifications: [100, 200, 300],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1883,6 +1913,11 @@ export const e2166Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 3,
+        magnifications: [100, 200, 300],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "1119",
@@ -2269,6 +2304,11 @@ export const e2166Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 3,
+        magnifications: [100, 200, 300],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "1119",
@@ -2608,7 +2648,7 @@ export const e2166Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 1
             }
@@ -2681,7 +2721,7 @@ export const e2166Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "wave-attack": {
+            "wave": {
                 chance: 100,
                 level: 1
             }

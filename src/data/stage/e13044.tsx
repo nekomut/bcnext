@@ -9,6 +9,11 @@ export const e13044Data: StageData = {
   prefix: "NA",
   mapId: 44,
   specialRule: null,
+  crownData: {
+    crownCount: 4,
+    magnifications: [100, 120, 140, 100],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e13044Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 120, 140, 100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -409,6 +419,11 @@ export const e13044Data: StageData = {
         lower: 0,
         upper: 0
       },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 120, 140, 100],
+        baseDifficulty: 1
+      },
       treasures: [
         {
           treasureId: "3",
@@ -492,7 +507,7 @@ export const e13044Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "immune-attacks": {
+            "dodge-attack": {
                 enabled: true
             }
           }
@@ -598,7 +613,7 @@ export const e13044Data: StageData = {
             isBoss: false
           },
           abilities: {
-            "immune-attacks": {
+            "dodge-attack": {
                 enabled: true
             }
           }
@@ -816,6 +831,11 @@ export const e13044Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 120, 140, 100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1182,7 +1202,7 @@ export const e13044Data: StageData = {
                 standing_range: 410,
                 omni_range: [-100, 410]
             },
-            "aku-shield": {
+            "shield": {
                 hp: 800000
             }
           }
@@ -1198,6 +1218,11 @@ export const e13044Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 120, 140, 100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1564,6 +1589,11 @@ export const e13044Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 120, 140, 100],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -1949,6 +1979,11 @@ export const e13044Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 120, 140, 100],
+        baseDifficulty: 1
       },
       treasures: [
         {

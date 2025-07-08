@@ -9,6 +9,11 @@ export const e48Data: StageData = {
   prefix: "N",
   mapId: 48,
   specialRule: null,
+  crownData: {
+    crownCount: 4,
+    magnifications: [100, 120, 130, 100],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e48Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 4,
+        magnifications: [100, 120, 130, 100],
+        baseDifficulty: 1
       },
       treasures: [
         {

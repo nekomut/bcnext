@@ -9,6 +9,11 @@ export const e2207Data: StageData = {
   prefix: "C",
   mapId: 207,
   specialRule: null,
+  crownData: {
+    crownCount: 3,
+    magnifications: [100, 200, 300],
+    baseDifficulty: 1
+  },
   stages: [
     {
       stageId: 0,
@@ -20,6 +25,11 @@ export const e2207Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 3,
+        magnifications: [100, 200, 300],
+        baseDifficulty: 1
       },
       treasures: [
         {
@@ -274,6 +284,11 @@ export const e2207Data: StageData = {
       costLimits: {
         lower: 0,
         upper: 0
+      },
+      crownData: {
+        crownCount: 3,
+        magnifications: [100, 200, 300],
+        baseDifficulty: 1
       },
       treasures: [
         {

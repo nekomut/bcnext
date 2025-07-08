@@ -135,9 +135,12 @@ function StagePageContent() {
         setSelectedStage(stageData);
         setSearchResults([]);
         
-        // URLを更新（イベントIDのみ）
-        const searchParams = new URLSearchParams();
+        // URLを更新（イベントIDのみ、既存パラメータを保持）
+        const currentUrl = new URL(window.location.href);
+        const searchParams = new URLSearchParams(currentUrl.search);
         searchParams.set('event', eventId.toString());
+        // stageパラメータがある場合は削除（イベント全体表示のため）
+        searchParams.delete('stage');
         const url = `/stage?${searchParams.toString()}`;
         router.push(url);
       } else {
@@ -167,8 +170,9 @@ function StagePageContent() {
         }
         setSearchResults([]);
         
-        // URLを更新（イベントIDとステージIDの両方）
-        const searchParams = new URLSearchParams();
+        // URLを更新（イベントIDとステージIDの両方、既存パラメータを保持）
+        const currentUrl = new URL(window.location.href);
+        const searchParams = new URLSearchParams(currentUrl.search);
         searchParams.set('event', eventId.toString());
         searchParams.set('stage', stageId.toString());
         const url = `/stage?${searchParams.toString()}`;
@@ -213,13 +217,15 @@ function StagePageContent() {
   }, [urlSearchParams, handleSearch, handleSpecificStageSelect, handleStageSelect]);
 
   const handleBackToSearch = useCallback(() => {
-    // イベントIDをクリアして検索結果表示に戻る
-    const params = { ...searchParams };
-    delete params.eventId;
+    // 詳細表示から検索結果一覧に戻る
     setSelectedStage(null);
-    setSearchParams(params);
-    handleSearch(params);
-  }, [searchParams, handleSearch]);
+    
+    // URLからeventパラメータを削除
+    const currentUrl = new URL(window.location.href);
+    currentUrl.searchParams.delete('event');
+    const newUrl = currentUrl.pathname + (currentUrl.searchParams.toString() ? `?${currentUrl.searchParams.toString()}` : '');
+    router.replace(newUrl);
+  }, [router]);
 
   return (
     <div>
@@ -235,7 +241,6 @@ function StagePageContent() {
       <div className="p-2">
         <StageSearch 
           onSearch={handleSearch}
-          initialParams={searchParams}
           loading={loading}
         />
 

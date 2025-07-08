@@ -48,8 +48,25 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
     }
   }, [enemyDatabase]);
 
+  // 自動検索の実行
+  const executeAutoSearch = useCallback(async (enemyIds: string[]) => {
+    if (enemyIds.length === 0) return;
+
+    setSearching(true);
+    try {
+      const results = await searchStagesByEnemies(enemyIds);
+      const sortedResults = sortEnemyStageResults(results);
+      setSearchResults(sortedResults);
+      setShowResults(true);
+    } catch (error) {
+      console.error('Failed to search stages:', error);
+    } finally {
+      setSearching(false);
+    }
+  }, []);
+
   // 敵選択の切り替え
-  const toggleEnemySelection = useCallback((enemyId: string) => {
+  const toggleEnemySelection = useCallback(async (enemyId: string) => {
     setSelectedEnemies(prev => {
       const newSet = new Set(prev);
       if (newSet.has(enemyId)) {
@@ -60,9 +77,19 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
         setSearchTerm('');
         setFilteredEnemies(getEnemyList(enemyDatabase));
       }
+      
+      // 敵が選択されている場合は自動的に検索を実行
+      if (newSet.size > 0) {
+        executeAutoSearch(Array.from(newSet));
+      } else {
+        // 敵が全て削除された場合は検索結果をクリア
+        setSearchResults([]);
+        setShowResults(false);
+      }
+      
       return newSet;
     });
-  }, [enemyDatabase]);
+  }, [enemyDatabase, executeAutoSearch]);
 
   // 選択をクリア
   const clearSelection = useCallback(() => {
@@ -71,22 +98,11 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
     setShowResults(false);
   }, []);
 
-  // ステージ検索実行
+  // ステージ検索実行（手動）
   const executeStageSearch = useCallback(async () => {
     if (selectedEnemies.size === 0) return;
-
-    setSearching(true);
-    try {
-      const results = await searchStagesByEnemies(Array.from(selectedEnemies));
-      const sortedResults = sortEnemyStageResults(results);
-      setSearchResults(sortedResults);
-      setShowResults(true);
-    } catch (error) {
-      console.error('Failed to search stages:', error);
-    } finally {
-      setSearching(false);
-    }
-  }, [selectedEnemies]);
+    await executeAutoSearch(Array.from(selectedEnemies));
+  }, [selectedEnemies, executeAutoSearch]);
 
   // ステージ選択時の処理
   const handleStageSelect = useCallback((eventId: number, stageId: number) => {
@@ -104,7 +120,7 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
   return (
     <div className="bg-white rounded-lg shadow-sm border mb-2">
       <div className="p-2">
-        <h3 className="text-sm font-semibold text-gray-900 mb-2">敵からステージ検索</h3>
+        <h3 className="text-sm font-semibold text-gray-900 mb-2">敵から逆引き検索（レジェンドストーリー）</h3>
         
         {/* 検索フィールド */}
         <div className="mb-2">
@@ -117,62 +133,12 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
           />
         </div>
 
-        {/* 選択中の敵表示 */}
-        {selectedEnemies.size > 0 && (
-          <div className="mb-2">
-            <div className="text-xs text-gray-600 mb-1">
-              選択中の敵 ({selectedEnemies.size}体) - レジェンドストーリーから検索
-            </div>
-            <div className="flex flex-wrap gap-1 mb-2">
-              {Array.from(selectedEnemies).map((enemyId) => {
-                const enemy = enemyDatabase.get(enemyId);
-                if (!enemy) return null;
-                return (
-                  <button
-                    key={enemyId}
-                    onClick={() => toggleEnemySelection(enemyId)}
-                    className="flex items-center gap-1 px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded-lg hover:bg-blue-200 group"
-                    title="クリックで選択解除"
-                  >
-                    {enemy.icon && (
-                      <Image
-                        src={`data:image/png;base64,${enemy.icon}`}
-                        alt={enemy.enemyName}
-                        className="w-4 h-4 flex-shrink-0"
-                        width={16}
-                        height={16}
-                      />
-                    )}
-                    <span className="max-w-20 truncate">{enemy.enemyName}</span>
-                    <span className="ml-1 text-blue-600 group-hover:text-blue-800">×</span>
-                  </button>
-                );
-              })}
-            </div>
-            <div className="flex gap-1">
-              <button
-                onClick={clearSelection}
-                className="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded hover:bg-gray-200"
-              >
-                全てクリア
-              </button>
-              <button
-                onClick={executeStageSearch}
-                disabled={searching}
-                className="px-2 py-1 text-xs text-white bg-blue-600 rounded hover:bg-blue-700 disabled:opacity-50"
-              >
-                {searching ? '検索中...' : 'レジェンドストーリー検索'}
-              </button>
-            </div>
-          </div>
-        )}
-
-        {/* 敵リスト */}
-        {!showResults && (
-          <div className="border border-gray-200 rounded max-h-60 overflow-y-auto">
+        {/* 検索候補 */}
+        {searchTerm && (
+          <div className="border border-gray-200 rounded mb-2 max-h-24 overflow-y-auto">
             {filteredEnemies.length === 0 ? (
               <div className="p-2 text-xs text-gray-500 text-center">
-                {searchTerm ? '該当する敵が見つかりません' : '敵データがありません'}
+                該当する敵が見つかりません
               </div>
             ) : (
               <div className="grid grid-cols-1 gap-0">
@@ -226,19 +192,63 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
           </div>
         )}
 
+        {/* 選択中の敵表示 */}
+        {selectedEnemies.size > 0 && (
+          <div className="mb-2">
+            <div className="flex items-center gap-2 mb-2">
+              <span className="text-xs text-gray-600">選択中の敵 ({selectedEnemies.size}体):</span>
+              <div className="flex flex-wrap gap-1">
+                {Array.from(selectedEnemies).map((enemyId) => {
+                  const enemy = enemyDatabase.get(enemyId);
+                  if (!enemy) return null;
+                  return (
+                    <button
+                      key={enemyId}
+                      onClick={() => toggleEnemySelection(enemyId)}
+                      className="flex items-center gap-1 px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded-lg hover:bg-blue-200 group"
+                      title="クリックで選択解除"
+                    >
+                      {enemy.icon && (
+                        <Image
+                          src={`data:image/png;base64,${enemy.icon}`}
+                          alt={enemy.enemyName}
+                          className="w-4 h-4 flex-shrink-0"
+                          width={16}
+                          height={16}
+                        />
+                      )}
+                      <span className="max-w-20 truncate">{enemy.enemyName}</span>
+                      <span className="ml-1 text-blue-600 group-hover:text-blue-800">×</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+            <div className="flex gap-1">
+              <button
+                onClick={clearSelection}
+                className="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded hover:bg-gray-200"
+              >
+                全てクリア
+              </button>
+              <button
+                onClick={executeStageSearch}
+                disabled={searching}
+                className="px-2 py-1 text-xs text-white bg-blue-600 rounded hover:bg-blue-700 disabled:opacity-50"
+              >
+                {searching ? '検索中...' : showResults ? '再検索' : 'レジェンドストーリー検索'}
+              </button>
+            </div>
+          </div>
+        )}
+
         {/* 検索結果 */}
         {showResults && (
-          <div className="border border-gray-200 rounded">
-            <div className="p-2 bg-gray-50 border-b border-gray-200 flex items-center justify-between">
+          <div className="border border-gray-200 rounded mb-2">
+            <div className="p-2 bg-gray-50 border-b border-gray-200">
               <div className="text-xs font-medium text-gray-700">
                 レジェンドストーリー検索結果: {searchResults.length}ステージ
               </div>
-              <button
-                onClick={() => setShowResults(false)}
-                className="text-xs text-blue-600 hover:text-blue-800"
-              >
-                敵リストに戻る
-              </button>
             </div>
             <div className="max-h-60 overflow-y-auto">
               {searchResults.length === 0 ? (

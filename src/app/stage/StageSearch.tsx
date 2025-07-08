@@ -1,27 +1,33 @@
 'use client'
 
 import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
 import type { StageSearchParams } from './types';
 
 interface StageSearchProps {
   onSearch: (params: StageSearchParams) => void;
-  initialParams: StageSearchParams;
   loading: boolean;
 }
 
-export function StageSearch({ onSearch, initialParams, loading }: StageSearchProps) {
+export function StageSearch({ onSearch, loading }: StageSearchProps) {
+  const urlSearchParams = useSearchParams();
   const [eventId, setEventId] = useState<string>('');
   const [stageName, setStageName] = useState<string>('');
   const [typeId, setTypeId] = useState<string>('34');
   const [sortBy, setSortBy] = useState<'id-desc' | 'id-asc'>('id-desc');
 
-  // 初期パラメータを設定
+  // URLパラメータから直接値を読み取り
   useEffect(() => {
-    if (initialParams.eventId) setEventId(initialParams.eventId.toString());
-    if (initialParams.stageName) setStageName(initialParams.stageName);
-    if (initialParams.typeId !== undefined) setTypeId(initialParams.typeId.toString());
-    if (initialParams.sortBy) setSortBy(initialParams.sortBy);
-  }, [initialParams]);
+    const eventParam = urlSearchParams.get('event');
+    const nameParam = urlSearchParams.get('name');
+    const typeParam = urlSearchParams.get('type');
+    const sortParam = urlSearchParams.get('sort');
+
+    setEventId(eventParam || '');
+    setStageName(nameParam || '');
+    setTypeId(typeParam || '34');
+    setSortBy((sortParam as 'id-desc' | 'id-asc') || 'id-desc');
+  }, [urlSearchParams]);
 
   const handleSearch = () => {
     const params: StageSearchParams = {};

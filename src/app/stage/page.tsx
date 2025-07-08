@@ -223,7 +223,8 @@ function StagePageContent() {
     // URLからeventパラメータを削除
     const currentUrl = new URL(window.location.href);
     currentUrl.searchParams.delete('event');
-    const newUrl = currentUrl.pathname + (currentUrl.searchParams.toString() ? `?${currentUrl.searchParams.toString()}` : '');
+    const searchString = currentUrl.searchParams.toString();
+    const newUrl = searchString ? `/stage?${searchString}` : '/stage';
     router.replace(newUrl);
   }, [router]);
 

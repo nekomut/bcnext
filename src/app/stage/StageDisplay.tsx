@@ -295,10 +295,6 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
         )}
 
 
-        {/* デバッグ表示 */}
-        <div className="p-1 bg-yellow-100 text-xs">
-          現在のselectedCrown: {selectedCrown}
-        </div>
 
         {/* 星倍率選択 */}
         {(stageData.crownData || selectedStage.crownData) && (
@@ -347,18 +343,6 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
         )}
 
         {/* 倍率適用状態の表示 */}
-        {selectedCrown > 0 && (
-          <div className="mx-1 mb-1 p-2 bg-yellow-50 border border-yellow-200 rounded">
-            <div className="flex items-center gap-1">
-              <svg className="w-3 h-3 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-              </svg>
-              <span className="text-xs font-medium text-yellow-800">
-                {'★'.repeat(selectedCrown)} 難易度が適用されています。敵の体力・攻撃力・DPS が {currentMagnification}% に変更されています。
-              </span>
-            </div>
-          </div>
-        )}
 
         {/* 表示オプション */}
         <div className="px-1 pb-1">

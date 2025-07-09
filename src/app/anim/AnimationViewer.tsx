@@ -32,6 +32,14 @@ interface SpritePart {
   scaledHeight?: number;
   flipX?: number;
   flipY?: number;
+  matrix?: {
+    m0: number;
+    m1: number;
+    m3: number;
+    m4: number;
+  };
+  scW?: number;
+  scH?: number;
 }
 
 export default function AnimationViewer({
@@ -404,7 +412,7 @@ export default function AnimationViewer({
         
         modelParts.push(part);
       } else {
-        console.log(`Part ${i} skipped: invalid data format, length=${partData?.length}`);
+        console.log(`Part ${i} skipped: invalid data format, length=${Array.isArray(partData) ? partData.length : 'unknown'}`);
       }
     }
     console.log(`Successfully parsed ${modelParts.length} of ${totalPartsCount} parts`);
@@ -525,7 +533,18 @@ export default function AnimationViewer({
     console.log('Processing', modelParts.length, 'parts');
     console.log('Scale/Angle/Alpha units:', { scaleUnit, angleUnit, alphaUnit });
     
-    const coordinateLog: Record<string, unknown>[] = [];
+    const coordinateLog: {
+      partId: unknown;
+      name: unknown;
+      basePos: { x: unknown; y: unknown };
+      animPos: { x: unknown; y: unknown };
+      normalizedPos: { x: unknown; y: unknown };
+      finalPos: { x: unknown; y: unknown };
+      matrix: unknown;
+      scales: { scaleX: unknown; scaleY: unknown };
+      pivot: { x: unknown; y: unknown };
+      parentId: unknown;
+    }[] = [];
     modelParts.forEach(part => {
       // Check tbcml drawing conditions: skip if parent_id < 0 or unit_id < 0
       // BUT: unitId >= 0 is valid (unitId 44 is normal for Unit044)
@@ -665,8 +684,8 @@ export default function AnimationViewer({
     
     // Calculate coordinate spread for comparison
     if (coordinateLog.length > 0) {
-      const xCoords = coordinateLog.map(p => p.finalPos.x);
-      const yCoords = coordinateLog.map(p => p.finalPos.y);
+      const xCoords = coordinateLog.map(p => p.finalPos.x as number);
+      const yCoords = coordinateLog.map(p => p.finalPos.y as number);
       
       const minX = Math.min(...xCoords);
       const maxX = Math.max(...xCoords);
@@ -750,13 +769,13 @@ export default function AnimationViewer({
     <div className="space-y-4">
       <div className="text-center">
         <h3 className="text-lg font-semibold mb-2">
-          {formData?.name || 'Unknown'} - {selectedAnimation}
+          {(formData?.name as string) || 'Unknown'} - {selectedAnimation}
         </h3>
         {debugInfo && (
           <div className="text-sm text-gray-600">
-            フレーム: {debugInfo.frame}/{debugInfo.maxFrame} | パーツ数: {debugInfo.totalParts}
+            フレーム: {debugInfo.frame as number}/{debugInfo.maxFrame as number} | パーツ数: {debugInfo.totalParts as number}
             <br />
-            単位: Scale={debugInfo.scaleUnit} Angle={debugInfo.angleUnit} Alpha={debugInfo.alphaUnit}
+            単位: Scale={debugInfo.scaleUnit as number} Angle={debugInfo.angleUnit as number} Alpha={debugInfo.alphaUnit as number}
             <br />
             表示設定: ズーム {zoom.toFixed(2)} | オフセット ({offsetX}, {offsetY})
           </div>
@@ -876,19 +895,19 @@ export default function AnimationViewer({
         <summary className="cursor-pointer font-medium text-gray-600">デバッグ情報</summary>
         <div className="mt-2 space-y-2 text-gray-600">
           <div>
-            <strong>フォーム:</strong> {selectedForm} ({formData?.name || 'Unknown'})
+            <strong>フォーム:</strong> {selectedForm} ({(formData?.name as string) || 'Unknown'})
           </div>
           <div>
             <strong>アニメーション:</strong> {selectedAnimation}
           </div>
           <div>
-            <strong>スプライト数:</strong> {debugInfo?.spriteRectangles || 0}
+            <strong>スプライト数:</strong> {(debugInfo?.spriteRectangles as number) || 0}
           </div>
           <div>
-            <strong>モデルパーツ数:</strong> {debugInfo?.modelPartsCount || 0}
+            <strong>モデルパーツ数:</strong> {(debugInfo?.modelPartsCount as number) || 0}
           </div>
           <div>
-            <strong>表示中パーツ数:</strong> {debugInfo?.totalParts || 0}
+            <strong>表示中パーツ数:</strong> {(debugInfo?.totalParts as number) || 0}
           </div>
           <div>
             <strong>最大フレーム:</strong> {maxFrame}

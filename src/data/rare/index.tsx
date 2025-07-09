@@ -1,9 +1,9 @@
 // import { Set452 } from './set452'; // エアバスターズ
-import { Set523 } from './set523'; // 波動バスターズ
+// import { Set523 } from './set523'; // 波動バスターズ
 // import { Set696 } from './set696'; // レッドバスターズ
-import { Set772 } from './set772'; // 超生命体バスターズ
+// import { Set772 } from './set772'; // 超生命体バスターズ
 // import { Set785 } from './set785'; // バレンタイン
-import { Set861 } from './set861'; // 女王祭
+// import { Set861 } from './set861'; // 女王祭
 // import { Set875 } from './set875'; // イースター
 // import { Set906 } from './set906'; // メタルバスターズ
 // import { Set936 } from './set936'; // ウルトラ4
@@ -20,7 +20,7 @@ import { Set948 } from './set948'; // ギガントゼウス
 // import { Set949 } from './set949'; // アイアンウォーズ
 // import { Set950 } from './set950'; // ギャルモン
 import { Set951 } from './set951'; // ピクシーズ
-import { Set973 } from './set973'; // 超国王祭
+// import { Set973 } from './set973'; // 超国王祭
 // import { Set962 } from './set962'; // ルガ族
 // import { Set963 } from './set963'; // 超ネコ祭
 // import { Set964 } from './set964'; // 極ネコ祭
@@ -49,34 +49,35 @@ import { Set999 } from './set999'; // エヴァ新劇場版
 
 export const RareGatyaSetList = [
 
-    Set973, // 超国王祭
-    Set523, // 波動バスターズ
-    Set772, // 超生命体バスターズ
-
-    Set861, // 女王祭
-    Set979, // アイアンウォーズ
-    Set946, // ウルトラソウルズ
-
     Set998, // エヴァ新世紀
     Set999, // エヴァ新劇場版    
-    
-    Set984, // レジェチケ
-    Set983, // プラチケ
-    Set981, // 超ネコ祭
-    Set982, // 極ネコ祭
-    
-    Set997, // サマガ青
 
     Set943, // バサラーズ
     Set945, // エンペラーズ
-    Set948, // ギガントゼウス
     Set947, // ダークヒーローズ
+
+    Set982, // 極ネコ祭
+
     Set942, // ダイナマイツ
+
+    Set984, // レジェチケ
+    Set983, // プラチケ
+
+    Set981, // 超ネコ祭
+    
+    Set997, // サマガ青
+
+    Set948, // ギガントゼウス
     Set944, // ギャルズ
     Set986, // ルガ族 
     Set951, // ピクシーズ
+    Set979, // アイアンウォーズ
+    Set946, // ウルトラソウルズ
 
     // Set950, // ギャルモン
+
+    // Set973, // 超国王祭
+    // Set861, // 女王祭
 
     // Set972, // 超極ネコ祭 
 
@@ -84,6 +85,9 @@ export const RareGatyaSetList = [
     // Set696, // レッドバスターズ
     // Set452, // エアバスターズ
     // Set906, // メタルバスターズ
+    // Set523, // 波動バスターズ
+    // Set772, // 超生命体バスターズ
+
 
 
     // Set975, // 超選抜祭

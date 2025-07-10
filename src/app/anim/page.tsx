@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useState, useEffect, useCallback } from 'react';
 import AnimationViewer from './AnimationViewer';
 import { unitNamesData } from '@/data/unit-names';
@@ -150,6 +151,17 @@ export default function AnimationPage() {
   }
 
   return (
+    <div>
+      <Link href="/" className="font-bold hover:text-green-600 px-1">bcnext</Link>|
+      <Link href="/stage" className="hover:text-green-600 px-1">Stage</Link>|
+      <Link href="/unit" className="hover:text-green-600 px-1">Unit</Link>|
+      <Link href="/anim" className="text-green-500 hover:text-green-600 px-1">Anim</Link>|
+      <Link href="/seek" className="hover:text-green-600 px-1">Seek</Link>|
+      <Link href="/rare" className="hover:text-green-600 px-1">Rare</Link>|
+      <Link href="/normal" className="hover:text-green-600 px-1">Normal</Link>|
+      <Link href="/event" className="hover:text-green-600 px-1">Event</Link>|
+      <hr />
+
     <div className="container mx-auto p-2">
       
       {/* Controls */}
@@ -230,6 +242,7 @@ export default function AnimationPage() {
           </div>
         )}
       </div>
+    </div>
     </div>
   );
 }

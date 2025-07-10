@@ -76,11 +76,9 @@ export default function AnimationViewer({
         try {
           const imageBase64 = (formData as Record<string, unknown>)?.image_base64 as string;
           if (imageBase64) {
-            console.log(`[AnimationViewer] Attempting fallback image load for unit ${unitId}, form ${selectedForm}`);
             const img = new Image();
             img.onload = () => {
               if (isMounted) {
-                console.log(`[AnimationViewer] Fallback image loaded successfully for unit ${unitId}`);
                 setSpriteImage(img);
                 setImageLoading(false);
                 resolve(true);
@@ -88,8 +86,7 @@ export default function AnimationViewer({
                 resolve(false);
               }
             };
-            img.onerror = (error) => {
-              console.error(`[AnimationViewer] Fallback image loading failed:`, error);
+            img.onerror = () => {
               if (isMounted) {
                 setImageError(`画像の読み込みに失敗しました（ユニット${unitId}、フォーム${selectedForm}）`);
                 setImageLoading(false);
@@ -98,11 +95,9 @@ export default function AnimationViewer({
             };
             img.src = `data:image/png;base64,${imageBase64}`;
           } else {
-            console.warn(`[AnimationViewer] No fallback image available for unit ${unitId}, form ${selectedForm}`);
             resolve(false);
           }
         } catch (error) {
-          console.error('[AnimationViewer] Fallback image loading failed:', error);
           resolve(false);
         }
       });
@@ -425,7 +420,6 @@ export default function AnimationViewer({
     // Then: Ints definitions
     
     const totalPartsCount = Array.isArray(maModelData[2]) ? (maModelData[2] as number[])[0] : 0;
-    console.log(`Total parts count from data: ${totalPartsCount}, maModelData length: ${maModelData.length}`);
     
     // Get units from mamodel data - they come after the parts
     const unitsRowIndex = 3 + totalPartsCount;
@@ -465,7 +459,6 @@ export default function AnimationViewer({
     const modelParts: Record<string, unknown>[] = [];
     
     // Parse part definitions starting from row 3 - proper tbcml initialization
-    console.log(`Processing ${totalPartsCount} parts from maModelData`);
     for (let i = 0; i < totalPartsCount && (i + 3) < maModelData.length; i++) {
       const partData = maModelData[i + 3];
       
@@ -492,11 +485,8 @@ export default function AnimationViewer({
         };
         
         modelParts.push(part);
-      } else {
-        console.log(`Part ${i} skipped: invalid data format, length=${Array.isArray(partData) ? partData.length : 'unknown'}`);
       }
     }
-    console.log(`Successfully parsed ${modelParts.length} of ${totalPartsCount} parts`);
 
 
     // Create parent lookup
@@ -610,40 +600,21 @@ export default function AnimationViewer({
     }
 
     // Process parts like tbcml draw_frame -> draw_part pattern
-    console.log('=== ANIMATION PROCESSING START ===');
-    console.log('Processing', modelParts.length, 'parts');
-    console.log('Scale/Angle/Alpha units:', { scaleUnit, angleUnit, alphaUnit });
-    
-    const coordinateLog: {
-      partId: unknown;
-      name: unknown;
-      basePos: { x: unknown; y: unknown };
-      animPos: { x: unknown; y: unknown };
-      normalizedPos: { x: unknown; y: unknown };
-      finalPos: { x: unknown; y: unknown };
-      matrix: unknown;
-      scales: { scaleX: unknown; scaleY: unknown };
-      pivot: { x: unknown; y: unknown };
-      parentId: unknown;
-    }[] = [];
     modelParts.forEach(part => {
       // Check tbcml drawing conditions: skip if parent_id < 0 or unit_id < 0
       // BUT: unitId >= 0 is valid (unitId 44 is normal for Unit044)
       if ((part.parentId as number) < 0 && (part.unitId as number) < 0) {
-        if ((part.id as number) < 5) console.log(`Part ${part.id} (${part.name}) skipped: parentId=${part.parentId}, unitId=${part.unitId}`);
         return;
       }
       
       // Also skip if no sprite to render (cutId < 0) - structural parts only
       if ((part.animCutId as number) < 0) {
-        if ((part.id as number) < 5) console.log(`Part ${part.id} (${part.name}) skipped: no sprite (cutId=${part.animCutId})`);
         return;
       }
       
       // Check for valid sprites
       const totalRectangles = Array.isArray(imgCutData[3]) ? (imgCutData[3] as number[])[0] : 0;
       if ((part.animCutId as number) >= 0 && ((part.animCutId as number) >= totalRectangles || ((part.animCutId as number) + 4) >= imgCutData.length)) {
-        if ((part.id as number) < 10) console.log(`Part ${part.id} (${part.name}) skipped: invalid cutId ${part.animCutId}, total=${totalRectangles}`);
         return;
       }
       
@@ -669,11 +640,6 @@ export default function AnimationViewer({
       const baseX = 10.0;
       const baseY = 10.0;
       
-      // Debug logging for first few parts
-      if ((part.id as number) < 3) {
-        console.log(`Processing part ${part.id}: animX=${part.animX}, animY=${part.animY}, scaleUnit=${scaleUnit}`);
-      }
-      
       // Call transform independently for each part like tbcml
       const [matrix, scaleX, scaleY] = transformPart(part, initialMatrix, baseX, baseY, scaleUnit, angleUnit, intsData, modelParts);
       
@@ -698,32 +664,6 @@ export default function AnimationViewer({
       // Final position from matrix (m2, m5)
       const finalX = matrix[2];
       const finalY = matrix[5];
-      
-      // Record coordinates for all visible parts
-      coordinateLog.push({
-        partId: part.id,
-        name: part.name || `Part ${part.id}`,
-        basePos: { x: part.baseX, y: part.baseY },
-        animPos: { x: part.animX, y: part.animY },
-        normalizedPos: { x: (part.animX as number) / scaleUnit, y: (part.animY as number) / scaleUnit },
-        finalPos: { x: finalX, y: finalY },
-        matrix: matrix,
-        scales: { scaleX, scaleY },
-        pivot: { x: part.pivotX, y: part.pivotY },
-        parentId: part.parentId
-      });
-      
-      if ((part.id as number) < 10) {
-        console.log(`Part ${part.id} (${part.name}) transform:`, {
-          basePos: { x: part.baseX, y: part.baseY },
-          animPos: { x: part.animX, y: part.animY },
-          normalizedPos: { x: (part.animX as number) / scaleUnit, y: (part.animY as number) / scaleUnit },
-          finalPos: { x: finalX, y: finalY },
-          matrix: matrix,
-          scales: { scaleX, scaleY },
-          parent: part.parentId
-        });
-      }
       
       // Sprite size calculation like tbcml
       const scW = srcW * scxBx;
@@ -762,29 +702,6 @@ export default function AnimationViewer({
 
     // Sort by render order (z-depth)
     parts.sort((a, b) => a.renderOrder - b.renderOrder);
-    
-    // Calculate coordinate spread for comparison
-    if (coordinateLog.length > 0) {
-      const xCoords = coordinateLog.map(p => p.finalPos.x as number);
-      const yCoords = coordinateLog.map(p => p.finalPos.y as number);
-      
-      const minX = Math.min(...xCoords);
-      const maxX = Math.max(...xCoords);
-      const minY = Math.min(...yCoords);
-      const maxY = Math.max(...yCoords);
-      
-      const spreadX = maxX - minX;
-      const spreadY = maxY - minY;
-      const totalSpread = Math.sqrt(spreadX * spreadX + spreadY * spreadY);
-      
-      console.log('=== COORDINATE ANALYSIS ===');
-      console.log('X range:', { min: minX, max: maxX, spread: spreadX });
-      console.log('Y range:', { min: minY, max: maxY, spread: spreadY });
-      console.log('Total spread:', totalSpread);
-      console.log('Visible parts:', coordinateLog.length);
-      console.log('All coordinates:', coordinateLog);
-      console.log('=== END ANALYSIS ===');
-    }
     
     setSpriteParts(parts);
 

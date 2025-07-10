@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect, useCallback } from 'react';
 import AnimationViewer from './AnimationViewer';
 import { unitNamesData } from '@/data/unit-names';
+import { loadUnitImages } from './imageLoader';
 
 export default function AnimationPage() {
   const [selectedUnit, setSelectedUnit] = useState('731');
@@ -61,11 +62,17 @@ export default function AnimationPage() {
     setLoading(true);
     
     try {
+      // アニメーションデータの読み込み
       const moduleData = await import(`@/data/anim/${unitId}`);
       const animationDataKey = `animationData_${unitId}`;
       
       if (moduleData[animationDataKey]) {
         setAnimationData(moduleData[animationDataKey] as Record<string, unknown>);
+        
+        // 画像データのプリロード（バックグラウンドで実行）
+        loadUnitImages(unitId).catch(error => {
+          console.warn(`Failed to preload images for unit ${unitId}:`, error);
+        });
       } else {
         console.error(`Animation data not found for unit ${unitId}`);
       }
@@ -235,6 +242,7 @@ export default function AnimationPage() {
             selectedAnimation={selectedAnimation}
             isPlaying={isPlaying}
             onStop={() => setIsPlaying(false)}
+            unitId={selectedUnit}
           />
         ) : (
           <div className="flex justify-center items-center h-64">

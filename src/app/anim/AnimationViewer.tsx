@@ -2,14 +2,8 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import AnimationRenderer from './AnimationRenderer';
-
-interface AnimationViewerProps {
-  animationData: Record<string, unknown>;
-  selectedForm: string;
-  selectedAnimation: string;
-  isPlaying: boolean;
-  onStop: () => void;
-}
+import { loadUnitImages, getFormImage } from './imageLoader';
+import { AnimationViewerProps } from './types';
 
 interface SpritePart {
   id: number;
@@ -47,7 +41,8 @@ export default function AnimationViewer({
   selectedForm,
   selectedAnimation,
   isPlaying,
-  onStop
+  onStop,
+  unitId
 }: AnimationViewerProps) {
   const animationFrameRef = useRef<number | undefined>(undefined);
   const startTimeRef = useRef<number | undefined>(undefined);
@@ -59,23 +54,58 @@ export default function AnimationViewer({
   const [zoom, setZoom] = useState(0.6);
   const [offsetX, setOffsetX] = useState(0);
   const [offsetY, setOffsetY] = useState(150);
+  const [imageLoading, setImageLoading] = useState(false);
+  const [imageError, setImageError] = useState<string | null>(null);
 
   const formData = animationData?.[selectedForm] as Record<string, unknown> | undefined;
   const animData = formData?.[selectedAnimation] as unknown[] | undefined;
   const imgCutData = formData?.imgcut as unknown[] | undefined;
   const maModelData = formData?.mamodel as unknown[] | undefined;
-  const imageBase64 = formData?.image_base64 as string | undefined;
 
-  // Load sprite image
+  // Load sprite image from external file
   useEffect(() => {
-    if (!imageBase64) return;
+    if (!unitId) return;
 
-    const img = new Image();
-    img.onload = () => {
-      setSpriteImage(img);
+    let isMounted = true;
+    setImageLoading(true);
+    setImageError(null);
+
+    loadUnitImages(unitId)
+      .then(images => {
+        if (!isMounted) return;
+        
+        const base64Data = getFormImage(images, selectedForm);
+        if (base64Data) {
+          const img = new Image();
+          img.onload = () => {
+            if (isMounted) {
+              setSpriteImage(img);
+              setImageLoading(false);
+            }
+          };
+          img.onerror = () => {
+            if (isMounted) {
+              setImageError('画像の読み込みに失敗しました');
+              setImageLoading(false);
+            }
+          };
+          img.src = `data:image/png;base64,${base64Data}`;
+        } else {
+          setImageError('指定されたフォームの画像が見つかりません');
+          setImageLoading(false);
+        }
+      })
+      .catch(error => {
+        if (isMounted) {
+          setImageError(`画像データの取得に失敗しました: ${error.message}`);
+          setImageLoading(false);
+        }
+      });
+
+    return () => {
+      isMounted = false;
     };
-    img.src = `data:image/png;base64,${imageBase64}`;
-  }, [imageBase64]);
+  }, [unitId, selectedForm]);
 
   // Calculate max frame from metadata
   useEffect(() => {
@@ -765,6 +795,37 @@ export default function AnimationViewer({
     startTimeRef.current = undefined;
   }, [selectedAnimation]);
 
+  // エラー表示やローディング表示
+  if (imageLoading) {
+    return (
+      <div className="space-y-2">
+        <div className="text-center">
+          <h3 className="text-lg font-semibold mb-1 text-blue-500 font-mono">
+            {(formData?.name as string) || 'Unknown'}
+          </h3>
+        </div>
+        <div className="flex justify-center items-center h-64">
+          <div className="text-lg font-mono">画像を読み込み中...</div>
+        </div>
+      </div>
+    );
+  }
+
+  if (imageError) {
+    return (
+      <div className="space-y-2">
+        <div className="text-center">
+          <h3 className="text-lg font-semibold mb-1 text-blue-500 font-mono">
+            {(formData?.name as string) || 'Unknown'}
+          </h3>
+        </div>
+        <div className="flex justify-center items-center h-64">
+          <div className="text-lg font-mono text-red-500">{imageError}</div>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="space-y-2">
       <div className="text-center">
@@ -909,7 +970,7 @@ export default function AnimationViewer({
             <strong>Max Frames</strong> {maxFrame}
           </div>
           <div>
-            <strong>Image Exists?</strong> {imageBase64 ? 'Y' : 'N'}
+            <strong>Image Exists?</strong> {spriteImage ? 'Y' : 'N'}
           </div>
         </div>
       </details>

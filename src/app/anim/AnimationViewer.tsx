@@ -766,18 +766,18 @@ export default function AnimationViewer({
   }, [selectedAnimation]);
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-2">
       <div className="text-center">
-        <h3 className="text-lg font-semibold mb-2">
-          {(formData?.name as string) || 'Unknown'} - {selectedAnimation}
+        <h3 className="text-lg font-semibold mb-1 text-blue-500 font-mono">
+          {(formData?.name as string) || 'Unknown'}
         </h3>
         {debugInfo && (
-          <div className="text-sm text-gray-600">
-            フレーム: {debugInfo.frame as number}/{debugInfo.maxFrame as number} | パーツ数: {debugInfo.totalParts as number}
+          <div className="text-sm text-gray-600 font-mono">
+            Frame={debugInfo.frame as number}/{debugInfo.maxFrame as number} Parts={debugInfo.totalParts as number}
             <br />
-            単位: Scale={debugInfo.scaleUnit as number} Angle={debugInfo.angleUnit as number} Alpha={debugInfo.alphaUnit as number}
+            Scale={debugInfo.scaleUnit as number} Angle={debugInfo.angleUnit as number} Alpha={debugInfo.alphaUnit as number}
             <br />
-            表示設定: ズーム {zoom.toFixed(2)} | オフセット ({offsetX}, {offsetY})
+            Zoom={zoom.toFixed(2)} Offset=({offsetX}, {offsetY})
           </div>
         )}
       </div>
@@ -796,17 +796,17 @@ export default function AnimationViewer({
           />
         ) : (
           <div className="w-[324px] h-[244px] border border-gray-300 bg-gray-100 flex items-center justify-center">
-            <span className="text-gray-600">画像を読み込み中...</span>
+            <span className="text-gray-600 font-mono">画像を読み込み中...</span>
           </div>
         )}
       </div>
 
       {/* View Controls */}
-      <div className="bg-gray-50 p-4 rounded">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="bg-gray-50 p-2 rounded">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
           <div>
-            <label className="block text-sm font-medium text-gray-600 mb-2">
-              ズーム
+            <label className="block text-sm font-medium text-gray-600 mb-1 font-mono">
+              Zoom
             </label>
             <input
               type="number"
@@ -818,13 +818,13 @@ export default function AnimationViewer({
                   setZoom(value);
                 }
               }}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-600"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-600 font-mono"
               placeholder="0.6"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-600 mb-2">
-              X オフセット
+            <label className="block text-sm font-medium text-gray-600 mb-1 font-mono">
+              X Offset
             </label>
             <input
               type="number"
@@ -836,13 +836,13 @@ export default function AnimationViewer({
                   setOffsetX(value);
                 }
               }}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-600"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-600 font-mono"
               placeholder="0"
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-gray-600 mb-2">
-              Y オフセット
+            <label className="block text-sm font-medium text-gray-600 mb-1 font-mono">
+              Y Offset
             </label>
             <input
               type="number"
@@ -854,29 +854,29 @@ export default function AnimationViewer({
                   setOffsetY(value);
                 }
               }}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-600"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-600 font-mono"
               placeholder="150"
             />
           </div>
         </div>
-        <div className="mt-2">
+        <div className="mt-1">
           <button
             onClick={() => {
               setZoom(0.6);
               setOffsetX(0);
               setOffsetY(150);
             }}
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
+            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 font-mono"
           >
-            リセット
+            Reset
           </button>
         </div>
       </div>
 
       {/* Frame Control */}
-      <div className="bg-gray-50 p-4 rounded">
-        <label className="block text-sm font-medium text-gray-600 mb-2">
-          フレーム位置
+      <div className="bg-gray-50 p-2 rounded">
+        <label className="block text-sm font-medium text-gray-600 mb-1 font-mono">
+          Frame {currentFrame} / {maxFrame}
         </label>
         <input
           type="range"
@@ -891,29 +891,29 @@ export default function AnimationViewer({
 
 
       {/* Debug Panel */}
-      <details className="bg-gray-50 p-4 rounded">
-        <summary className="cursor-pointer font-medium text-gray-600">デバッグ情報</summary>
-        <div className="mt-2 space-y-2 text-gray-600">
+      <details className="bg-gray-50 p-2 rounded">
+        <summary className="cursor-pointer font-medium text-gray-600 font-mono">Debug Info</summary>
+        <div className="mt-1 space-y-1 text-gray-600 font-mono">
           <div>
-            <strong>フォーム:</strong> {selectedForm} ({(formData?.name as string) || 'Unknown'})
+            <strong>Form </strong> {selectedForm} ({(formData?.name as string) || 'Unknown'})
           </div>
           <div>
-            <strong>アニメーション:</strong> {selectedAnimation}
+            <strong>Animation </strong> {selectedAnimation}
           </div>
           <div>
-            <strong>スプライト数:</strong> {(debugInfo?.spriteRectangles as number) || 0}
+            <strong>Sprites Count</strong> {(debugInfo?.spriteRectangles as number) || 0}
           </div>
           <div>
-            <strong>モデルパーツ数:</strong> {(debugInfo?.modelPartsCount as number) || 0}
+            <strong>Parts Count</strong> {(debugInfo?.modelPartsCount as number) || 0}
           </div>
           <div>
-            <strong>表示中パーツ数:</strong> {(debugInfo?.totalParts as number) || 0}
+            <strong>Displays Count</strong> {(debugInfo?.totalParts as number) || 0}
           </div>
           <div>
-            <strong>最大フレーム:</strong> {maxFrame}
+            <strong>Max Frames</strong> {maxFrame}
           </div>
           <div>
-            <strong>画像:</strong> {imageBase64 ? 'あり' : 'なし'}
+            <strong>Image Exists?</strong> {imageBase64 ? 'Y' : 'N'}
           </div>
         </div>
       </details>

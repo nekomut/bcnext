@@ -9,7 +9,7 @@ export default function AnimationPage() {
   const [animationData, setAnimationData] = useState<Record<string, unknown> | null>(null);
   const [selectedForm, setSelectedForm] = useState('f');
   const [selectedAnimation, setSelectedAnimation] = useState('maanim00');
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   const [availableUnits, setAvailableUnits] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -36,12 +36,23 @@ export default function AnimationPage() {
     
     // Fallback to default form names
     const defaultFormNames: { [key: string]: string } = {
-      'f': 'ノーマル',
-      'c': '進化',
-      's': '真',
-      'u': 'ウルトラ'
+      'f': '第1形態',
+      'c': '第2形態',
+      's': '第3形態',
+      'u': '第4形態'
     };
     return defaultFormNames[formKey] || formKey.toUpperCase();
+  };
+
+  // Get animation display name
+  const getAnimationDisplayName = (animationKey: string) => {
+    const animationNames: { [key: string]: string } = {
+      'maanim00': '前進',
+      'maanim01': '待機',
+      'maanim02': '攻撃',
+      'maanim03': 'KB'
+    };
+    return animationNames[animationKey] || animationKey;
   };
 
   const handleUnitChange = useCallback(async (unitId: string) => {
@@ -103,11 +114,15 @@ export default function AnimationPage() {
     if (animationData) {
       const forms = Object.keys(animationData);
       if (forms.length > 0) {
-        setSelectedForm(forms[0]);
-        const animations = Object.keys((animationData as Record<string, unknown>)[forms[0]] as Record<string, unknown> || {})
+        // Select the last form (highest evolution)
+        const lastForm = forms[forms.length - 1];
+        setSelectedForm(lastForm);
+        const animations = Object.keys((animationData as Record<string, unknown>)[lastForm] as Record<string, unknown> || {})
           .filter(key => key.startsWith('maanim'));
         if (animations.length > 0) {
-          setSelectedAnimation(animations[0]);
+          // Try to find attack animation (maanim02), otherwise use first available
+          const attackAnimation = animations.find(anim => anim === 'maanim02');
+          setSelectedAnimation(attackAnimation || animations[0]);
         }
       }
     }
@@ -117,7 +132,7 @@ export default function AnimationPage() {
     return (
       <div className="container mx-auto p-4">
         <div className="flex justify-center items-center h-64">
-          <div className="text-lg">アニメーションファイルを読み込み中...</div>
+          <div className="text-lg font-mono">アニメーションファイルを読み込み中...</div>
         </div>
       </div>
     );
@@ -126,7 +141,6 @@ export default function AnimationPage() {
   if (availableUnits.length === 0) {
     return (
       <div className="container mx-auto p-4">
-        <h1 className="text-3xl font-bold mb-6">Battle Cats Animation Viewer</h1>
         <div className="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded">
           <p>利用可能なアニメーションファイルが見つかりません。</p>
           <p>src/data/anim/ ディレクトリにTSXファイルが存在することを確認してください。</p>
@@ -136,21 +150,18 @@ export default function AnimationPage() {
   }
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-6">Battle Cats Animation Viewer</h1>
+    <div className="container mx-auto p-2">
       
       {/* Controls */}
-      <div className="bg-white shadow rounded-lg p-6 mb-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+      <div className="bg-white shadow rounded-lg p-3 mb-3">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-2 mb-2">
           {/* Unit Selector */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              ユニット
-            </label>
+          <div className="flex items-center gap-2">
+            <label className="text-sm font-medium text-gray-700 whitespace-nowrap font-mono"> Unit </label>
             <select 
               value={selectedUnit} 
               onChange={(e) => handleUnitChange(e.target.value)}
-              className="w-full p-2 border border-gray-300 rounded-md text-gray-600"
+              className="flex-1 p-2 border border-gray-300 rounded-md text-gray-600 font-mono"
               disabled={loading}
             >
               {availableUnits.map(unit => (
@@ -160,14 +171,12 @@ export default function AnimationPage() {
           </div>
 
           {/* Form Selector */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              フォーム
-            </label>
+          <div className="flex items-center gap-2">
+            <label className="text-sm font-medium text-gray-700 whitespace-nowrap font-mono"> Form </label>
             <select 
               value={selectedForm} 
               onChange={(e) => setSelectedForm(e.target.value)}
-              className="w-full p-2 border border-gray-300 rounded-md text-gray-600"
+              className="flex-1 p-2 border border-gray-300 rounded-md text-gray-600 font-mono"
             >
               {availableForms.map(form => (
                 <option key={form} value={form}>
@@ -178,29 +187,24 @@ export default function AnimationPage() {
           </div>
 
           {/* Animation Selector */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              アニメーション
-            </label>
+          <div className="flex items-center gap-2">
+            <label className="text-sm font-medium text-gray-700 whitespace-nowrap font-mono"> Anim </label>
             <select 
               value={selectedAnimation} 
               onChange={(e) => setSelectedAnimation(e.target.value)}
-              className="w-full p-2 border border-gray-300 rounded-md text-gray-600"
+              className="flex-1 p-2 border border-gray-300 rounded-md text-gray-600 font-mono"
             >
               {availableAnimations.map(anim => (
-                <option key={anim} value={anim}>{anim}</option>
+                <option key={anim} value={anim}>{getAnimationDisplayName(anim)}</option>
               ))}
             </select>
           </div>
 
           {/* Play Controls */}
-          <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              再生制御
-            </label>
+          <div className="flex items-center gap-2">
             <button
               onClick={() => setIsPlaying(!isPlaying)}
-              className={`w-full p-2 rounded-md text-white font-medium ${
+              className={`flex-1 p-2 rounded-md text-white font-medium font-mono ${
                 isPlaying ? 'bg-red-500 hover:bg-red-600' : 'bg-green-500 hover:bg-green-600'
               }`}
             >
@@ -211,7 +215,7 @@ export default function AnimationPage() {
       </div>
 
       {/* Animation Viewer */}
-      <div className="bg-white shadow rounded-lg p-6">
+      <div className="bg-white shadow rounded-lg p-3">
         {animationData ? (
           <AnimationViewer
             animationData={animationData}

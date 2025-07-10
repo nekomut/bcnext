@@ -76,8 +76,8 @@ export default function AnimationRenderer({
     
     // Draw X=0 vertical line (gray-400) - center line
     ctx.strokeStyle = '#9CA3AF';
-    ctx.lineWidth = 1;
-    ctx.setLineDash([5, 5]);
+    ctx.lineWidth = 0.2;
+    ctx.setLineDash([]);
     ctx.beginPath();
     ctx.moveTo(canvas.width / 2 + offsetX, 0);
     ctx.lineTo(canvas.width / 2 + offsetX, canvas.height);
@@ -85,8 +85,8 @@ export default function AnimationRenderer({
     
     // Draw Y=0 horizontal line (gray-400) - center line
     ctx.strokeStyle = '#9CA3AF';
-    ctx.lineWidth = 1;
-    ctx.setLineDash([5, 5]);
+    ctx.lineWidth = 0.2;
+    ctx.setLineDash([]);
     ctx.beginPath();
     ctx.moveTo(0, canvas.height / 2 + offsetY);
     ctx.lineTo(canvas.width, canvas.height / 2 + offsetY);

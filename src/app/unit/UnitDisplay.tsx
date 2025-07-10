@@ -19,13 +19,17 @@ export function UnitDisplay({
   unitData,
   initialLevel = 50,
   initialPlusLevel = 0,
-  initialFormId = 0,
+  initialFormId,
   className = "",
   onParamsChange
 }: UnitDisplayProps) {
+  // 最終形態を自動選択するロジック
+  const validFormCount = getValidFormCount(unitData);
+  const defaultFormId = initialFormId !== undefined ? initialFormId : Math.max(0, validFormCount - 1);
+  
   const [level, setLevel] = useState(initialLevel);
   const [plusLevel, setPlusLevel] = useState(initialPlusLevel);
-  const [currentForm, setCurrentForm] = useState(initialFormId);
+  const [currentForm, setCurrentForm] = useState(defaultFormId);
   
   // 入力用の文字列state
   const [levelInput, setLevelInput] = useState(initialLevel.toString());
@@ -134,19 +138,24 @@ export function UnitDisplay({
   const talentCriticalTalent = unitData.auxiliaryData.talents.talentList.find(talent => talent.id === 13);
   const [talentCriticalValue, setTalentCriticalValue] = useState(talentCriticalTalent?.data[3] || 20);
 
-  // 打たれ強い(6)の状態
-  const [talentToughnessValue, setTalentToughnessValue] = useState(0.2);
-
   // めっぽう強い(5)の状態
   const [talentMightyApValue, setTalentMightyApValue] = useState(1.8);
   const [talentMightyDmgValue, setTalentMightyDmgValue] = useState(0.4);
-
-
+  
+  // 打たれ強い(6)の状態
+  const [talentToughnessValue, setTalentToughnessValue] = useState(0.2);
+  
   // 超ダメージ(7)の状態
-  const [talentSuperDamageMultiplier, setTalentSuperDamageMultiplier] = useState(4);
+  const [talentMassiveDamageMultiplier, setTalentMassiveDamageMultiplier] = useState(4);
 
   // ユニットが変更されたときにフラグを再初期化
   useEffect(() => {
+    // 新しいユニットに対して最終形態を自動選択
+    const newValidFormCount = getValidFormCount(unitData);
+    const newDefaultFormId = initialFormId !== undefined ? initialFormId : Math.max(0, newValidFormCount - 1);
+    if (initialFormId === undefined) {
+      setCurrentForm(newDefaultFormId);
+    }
     const talentList = unitData.auxiliaryData.talents.talentList;
     const newHasBaseAttackUp = talentList.some(talent => talent.id === 31);
     const newHasBaseHpUp = talentList.some(talent => talent.id === 32);
@@ -200,15 +209,15 @@ export function UnitDisplay({
     setTalentKnockbackEnabled(newHasTalentKnockback);
     setTalentBarrierBreakerChance(newTalentBarrierBreakerTalent?.data[3] || 0);
     setTalentBarrierBreakerEnabled(newHasTalentBarrierBreaker);
-    setTalentToughnessValue(0.2);
     setTalentMightyApValue(1.8);
     setTalentMightyDmgValue(0.4);
+    setTalentToughnessValue(0.2);
+    setTalentMassiveDamageMultiplier(4);
     
     // 能力・効果の攻撃力アップをリセット
     setAttackUpEnabled(false);
-  }, [unitData.unitId, unitData.auxiliaryData.talents.talentList, unitData.coreData.forms]);
+  }, [unitData.unitId, unitData.auxiliaryData.talents.talentList, unitData.coreData.forms, initialFormId, unitData]);
 
-  const validFormCount = getValidFormCount(unitData);
   const actualCurrentForm = Math.min(currentForm, validFormCount - 1);
   
   // 攻撃間隔短縮の倍率を計算（本能を持っている場合かつ第三形態以上のみ適用）
@@ -288,6 +297,149 @@ export function UnitDisplay({
   };
 
   const abilities = getAbilities(unitData, actualCurrentForm, level, plusLevel, totalAttackMultiplier, baseHpUpMultiplier, talentCriticalBonus, talentFreezeBonus, talentWeakenBonus, talentSlowBonus, talentKnockbackBonus, talentBarrierBreakerBonus);
+  
+  // めっぽう強いのターゲット属性が「古のみ」「悪のみ」「古と悪のみ」の場合の判定
+  const getMightyTargets = () => {
+    const mightyAbility = abilities.find(ability => ability.name === 'めっぽう強い');
+    if (mightyAbility) {
+      // valueがstringの場合とReactNodeの場合を両方対応
+      let valueString = '';
+      if (typeof mightyAbility.value === 'string') {
+        valueString = mightyAbility.value;
+      } else if (React.isValidElement(mightyAbility.value)) {
+        // React要素の場合、iconKeysを使用して判定
+        if (mightyAbility.iconKeys) {
+          const hasRelicIcon = mightyAbility.iconKeys.includes('traitRelic');
+          const hasAkuIcon = mightyAbility.iconKeys.includes('traitAku');
+          const hasOtherTraitIcons = mightyAbility.iconKeys.some(iconKey => 
+            iconKey !== 'traitRelic' && iconKey !== 'traitAku' && iconKey !== 'traitBehemoth'
+          );
+          
+          // 古・悪以外の属性が一つでもあれば、テキストボックス表示（false を返す）
+          if (hasOtherTraitIcons) {
+            return false; // テキストボックス表示
+          } else {
+            // 古のみ、悪のみ、または古と悪のみの場合はテキストボックス非表示
+            return (hasRelicIcon && !hasAkuIcon) || (!hasRelicIcon && hasAkuIcon) || (hasRelicIcon && hasAkuIcon);
+          }
+        }
+        return false;
+      }
+      
+      if (valueString) {
+        const hasRelic = valueString.includes('古代種');
+        const hasAku = valueString.includes('悪魔');
+        const hasOtherTraits = valueString.includes('白い敵') || valueString.includes('赤い敵') || 
+                              valueString.includes('黒い敵') || valueString.includes('メタル') || 
+                              valueString.includes('天使') || valueString.includes('エイリアン') || 
+                              valueString.includes('ゾンビ') || 
+                              valueString.includes('浮いてる敵');
+        
+        // 古・悪以外の属性が一つでもあれば、テキストボックス表示（false を返す）
+        if (hasOtherTraits) {
+          return false; // テキストボックス表示
+        } else {
+          // 古のみ、悪のみ、または古と悪のみの場合はテキストボックス非表示
+          return (hasRelic && !hasAku) || (!hasRelic && hasAku) || (hasRelic && hasAku);
+        }
+      }
+      return false;
+    }
+    return false;
+  };
+  const hasOnlyRelicAkuTalent = getMightyTargets();
+  
+  // 打たれ強いのターゲット属性が「古のみ」「悪のみ」「古と悪のみ」の場合の判定
+  const getToughTargets = () => {
+    const toughAbility = abilities.find(ability => ability.name === '打たれ強い' || ability.name === '超打たれ強い');
+    if (toughAbility) {
+      // valueがstringの場合とReactNodeの場合を両方対応
+      let valueString = '';
+      if (typeof toughAbility.value === 'string') {
+        valueString = toughAbility.value;
+      } else if (React.isValidElement(toughAbility.value)) {
+        // React要素の場合、iconKeysを使用して判定
+        if (toughAbility.iconKeys) {
+          const hasRelicIcon = toughAbility.iconKeys.includes('traitRelic');
+          const hasAkuIcon = toughAbility.iconKeys.includes('traitAku');
+          const hasOtherTraitIcons = toughAbility.iconKeys.some(iconKey => 
+            iconKey !== 'traitRelic' && iconKey !== 'traitAku' && iconKey !== 'traitBehemoth'
+          );
+          
+          // 古のみ、悪のみ、または古と悪のみの場合のみtrue
+          if (!hasOtherTraitIcons) {
+            return (hasRelicIcon && !hasAkuIcon) || (!hasRelicIcon && hasAkuIcon) || (hasRelicIcon && hasAkuIcon);
+          }
+        }
+        return false;
+      }
+      
+      if (valueString) {
+        const hasRelic = valueString.includes('古代種');
+        const hasAku = valueString.includes('悪魔');
+        const hasOtherTraits = valueString.includes('白い敵') || valueString.includes('赤い敵') || 
+                              valueString.includes('黒い敵') || valueString.includes('メタル') || 
+                              valueString.includes('天使') || valueString.includes('エイリアン') || 
+                              valueString.includes('ゾンビ') || 
+                              valueString.includes('浮いてる敵');
+        
+        // 古のみ、悪のみ、または古と悪のみの場合のみtrue
+        if (!hasOtherTraits) {
+          return (hasRelic && !hasAku) || (!hasRelic && hasAku) || (hasRelic && hasAku);
+        }
+      }
+      return false;
+    }
+    return false;
+  };
+  const hasOnlyRelicAkuTough = getToughTargets();
+  
+  // 超ダメージのターゲット属性が「古のみ」「悪のみ」「古と悪のみ」の場合の判定
+  const getMassiveDamageTargets = () => {
+    const massiveDamageAbility = abilities.find(ability => ability.name === '超ダメージ');
+    if (massiveDamageAbility) {
+      // valueがstringの場合とReactNodeの場合を両方対応
+      let valueString = '';
+      if (typeof massiveDamageAbility.value === 'string') {
+        valueString = massiveDamageAbility.value;
+      } else if (React.isValidElement(massiveDamageAbility.value)) {
+        // React要素の場合、iconKeysを使用して判定
+        if (massiveDamageAbility.iconKeys) {
+          const hasRelicIcon = massiveDamageAbility.iconKeys.includes('traitRelic');
+          const hasAkuIcon = massiveDamageAbility.iconKeys.includes('traitAku');
+          const hasOtherTraitIcons = massiveDamageAbility.iconKeys.some(iconKey => 
+            iconKey !== 'traitRelic' && iconKey !== 'traitAku' && iconKey !== 'traitBehemoth'
+          );
+          
+          // 古のみ、悪のみ、または古と悪のみの場合のみtrue
+          if (!hasOtherTraitIcons) {
+            return (hasRelicIcon && !hasAkuIcon) || (!hasRelicIcon && hasAkuIcon) || (hasRelicIcon && hasAkuIcon);
+          }
+        }
+        return false;
+      }
+      
+      if (valueString) {
+        const hasRelic = valueString.includes('古代種');
+        const hasAku = valueString.includes('悪魔');
+        const hasOtherTraits = valueString.includes('白い敵') || valueString.includes('赤い敵') || 
+                              valueString.includes('黒い敵') || valueString.includes('メタル') || 
+                              valueString.includes('天使') || valueString.includes('エイリアン') || 
+                              valueString.includes('ゾンビ') || 
+                              valueString.includes('浮いてる敵');
+        
+        // 古のみ、悪のみ、または古と悪のみの場合のみtrue
+        if (!hasOtherTraits) {
+          return (hasRelic && !hasAku) || (!hasRelic && hasAku) || (hasRelic && hasAku);
+        }
+      }
+      return false;
+    }
+    return false;
+  };
+  const hasOnlyRelicAkuMassiveDamage = getMassiveDamageTargets();
+  
+  
   const enhancedStats = {
     ...stats,
     hp: Math.round(stats.hp * baseHpUpMultiplier),
@@ -443,19 +595,21 @@ export function UnitDisplay({
             >
               Lv50
             </button>
-            <button
-              onClick={() => { 
-                const targetLevel = Math.min(55, maxLevel);
-                setLevel(targetLevel); 
-                setPlusLevel(0);
-                setLevelInput(targetLevel.toString());
-                setPlusLevelInput('0');
-                onParamsChange?.({ level: targetLevel, plusLevel: 0, formId: actualCurrentForm });
-              }}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-1 py-1 rounded text-xs sm:text-sm"
-            >
-              Lv55
-            </button>
+            {maxLevel >= 55 && (
+              <button
+                onClick={() => { 
+                  const targetLevel = Math.min(55, maxLevel);
+                  setLevel(targetLevel); 
+                  setPlusLevel(0);
+                  setLevelInput(targetLevel.toString());
+                  setPlusLevelInput('0');
+                  onParamsChange?.({ level: targetLevel, plusLevel: 0, formId: actualCurrentForm });
+                }}
+                className="bg-blue-500 hover:bg-blue-600 text-white px-1 py-1 rounded text-xs sm:text-sm"
+              >
+                Lv55
+              </button>
+            )}
             {maxLevel >= 60 && (
               <button
                 onClick={() => { 
@@ -599,8 +753,11 @@ export function UnitDisplay({
           currentHp={enhancedStats.hp}
           currentAp={enhancedStats.ap}
           totalAttackMultiplier={totalAttackMultiplier}
-          talentSuperDamageMultiplier={talentSuperDamageMultiplier}
-          setTalentSuperDamageMultiplier={setTalentSuperDamageMultiplier}
+          talentMassiveDamageMultiplier={talentMassiveDamageMultiplier}
+          setTalentMassiveDamageMultiplier={setTalentMassiveDamageMultiplier}
+          hasOnlyRelicAkuTalent={hasOnlyRelicAkuTalent}
+          hasOnlyRelicAkuTough={hasOnlyRelicAkuTough}
+          hasOnlyRelicAkuMassiveDamage={hasOnlyRelicAkuMassiveDamage}
         />
       )}
     </div>
@@ -712,8 +869,27 @@ function StatItem({
   );
 }
 
-function DynamicSuperDamage({ ability, attackUpMultiplier }: { ability: UnitAbility, attackUpMultiplier: number }) {
-  const [multiplier, setMultiplier] = useState(4);
+function DynamicMassiveDamage({ ability, attackUpMultiplier }: { ability: UnitAbility, attackUpMultiplier: number }) {
+  // ターゲット属性が「古のみ」「悪のみ」「古と悪のみ」の場合は3倍固定
+  const hasOnlyRelicAku = (() => {
+    if (typeof ability.value === 'string') {
+      const hasRelic = ability.value.includes('古代種');
+      const hasAku = ability.value.includes('悪魔');
+      const hasOtherTraits = ability.value.includes('白い敵') || ability.value.includes('赤い敵') || 
+                            ability.value.includes('黒い敵') || ability.value.includes('メタル') || 
+                            ability.value.includes('天使') || ability.value.includes('エイリアン') || 
+                            ability.value.includes('ゾンビ') || 
+                            ability.value.includes('浮いてる敵');
+      
+      // 古のみ、悪のみ、または古と悪のみの場合のみtrue
+      if (!hasOtherTraits) {
+        return (hasRelic && !hasAku) || (!hasRelic && hasAku) || (hasRelic && hasAku);
+      }
+    }
+    return false;
+  })();
+  
+  const [multiplier, setMultiplier] = useState(hasOnlyRelicAku ? 3 : 4);
   
   if (!ability.calculatedStats || !ability.isDynamic) return null;
   
@@ -747,24 +923,28 @@ function DynamicSuperDamage({ ability, attackUpMultiplier }: { ability: UnitAbil
             className="inline mr-1 align-top"
           />
           超ダメージ <span className="text-red-500"><small>攻撃力
-          <input
-            type="number"
-            value={multiplier}
-            onChange={(e) => {
-              const value = Number(e.target.value);
-              if (value >= 3 && value <= 4) {
-                setMultiplier(value);
-              }
-            }}
-            className="w-7 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
-            min="3"
-            max="4"
-            step="0.1"
-          />倍 </small></span><small className="text-gray-400">(3~4)</small>
+          {hasOnlyRelicAku ? (
+            <span className="w-7 mx-1 px-1 text-center text-xs font-bold">3</span>
+          ) : (
+            <input
+              type="number"
+              value={multiplier}
+              onChange={(e) => {
+                const value = Number(e.target.value);
+                // 下限値未満は3に、上限値超過は4に調整
+                const clampedValue = Math.max(3, Math.min(4, value));
+                setMultiplier(clampedValue);
+              }}
+              className="w-7 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
+              min="3"
+              max="4"
+              step="0.1"
+            />
+          )}倍 </small></span>{hasOnlyRelicAku ? null : <small className="text-gray-400">(3~4)</small>}
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
-            <b className="text-gray-500" dangerouslySetInnerHTML={{ __html: calculateDamage(multiplier) }}></b>
+            <b className="text-gray-500" dangerouslySetInnerHTML={{ __html: calculateDamage(hasOnlyRelicAku ? 3 : multiplier) }}></b>
           </div>
         </div>
       </div>
@@ -773,7 +953,38 @@ function DynamicSuperDamage({ ability, attackUpMultiplier }: { ability: UnitAbil
 }
 
 function DynamicExtremeDamage({ ability, attackUpMultiplier }: { ability: UnitAbility, attackUpMultiplier: number }) {
-  const [multiplier, setMultiplier] = useState(6);
+  // ターゲット属性が「古のみ」「悪のみ」「古と悪のみ」の場合は5倍固定
+  const hasOnlyRelicAku = (() => {
+    if (typeof ability.value === 'string') {
+      const hasRelic = ability.value.includes('古代種');
+      const hasAku = ability.value.includes('悪魔');
+      const hasOtherTraits = ability.value.includes('白い敵') || ability.value.includes('赤い敵') || 
+                            ability.value.includes('黒い敵') || ability.value.includes('メタル') || 
+                            ability.value.includes('天使') || ability.value.includes('エイリアン') || 
+                            ability.value.includes('ゾンビ') || 
+                            ability.value.includes('浮いてる敵')  || ability.value.includes('属性を持たない敵');
+      
+      // 古のみ、悪のみ、または古と悪のみの場合のみtrue
+      if (!hasOtherTraits) {
+        return (hasRelic && !hasAku) || (!hasRelic && hasAku) || (hasRelic && hasAku);
+      }
+    } else if (React.isValidElement(ability.value) && ability.iconKeys) {
+      // React要素の場合、iconKeysを使用して判定
+      const hasRelicIcon = ability.iconKeys.includes('traitRelic');
+      const hasAkuIcon = ability.iconKeys.includes('traitAku');
+      const hasOtherTraitIcons = ability.iconKeys.some(iconKey => 
+        iconKey !== 'traitRelic' && iconKey !== 'traitAku' && iconKey !== 'traitBehemoth'
+      );
+      
+      // 古のみ、悪のみ、または古と悪のみの場合のみtrue
+      if (!hasOtherTraitIcons) {
+        return (hasRelicIcon && !hasAkuIcon) || (!hasRelicIcon && hasAkuIcon) || (hasRelicIcon && hasAkuIcon);
+      }
+    }
+    return false;
+  })();
+  
+  const [multiplier, setMultiplier] = useState(hasOnlyRelicAku ? 5 : 6);
   
   if (!ability.calculatedStats || !ability.isDynamic) return null;
   
@@ -807,24 +1018,28 @@ function DynamicExtremeDamage({ ability, attackUpMultiplier }: { ability: UnitAb
             className="inline mr-1 align-top"
           />
           極ダメージ <span className="text-red-500"><small>攻撃力
-          <input
-            type="number"
-            value={multiplier}
-            onChange={(e) => {
-              const value = Number(e.target.value);
-              if (value >= 5 && value <= 6) {
-                setMultiplier(value);
-              }
-            }}
-            className="w-7 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
-            min="5"
-            max="6"
-            step="0.1"
-          />倍 </small></span><small className="text-gray-400">(5~6)</small>
+          {hasOnlyRelicAku ? (
+            <span className="w-7 mx-1 px-1 text-center text-xs font-bold">5</span>
+          ) : (
+            <input
+              type="number"
+              value={multiplier}
+              onChange={(e) => {
+                const value = Number(e.target.value);
+                if (value >= 5 && value <= 6) {
+                  setMultiplier(value);
+                }
+              }}
+              className="w-7 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
+              min="5"
+              max="6"
+              step="0.1"
+            />
+          )}倍 </small></span>{hasOnlyRelicAku ? null : <small className="text-gray-400">(5~6)</small>}
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
-            <b className="text-gray-500" dangerouslySetInnerHTML={{ __html: calculateDamage(multiplier) }}></b>
+            <b className="text-gray-500" dangerouslySetInnerHTML={{ __html: calculateDamage(hasOnlyRelicAku ? 5 : multiplier) }}></b>
           </div>
         </div>
       </div>
@@ -833,7 +1048,26 @@ function DynamicExtremeDamage({ ability, attackUpMultiplier }: { ability: UnitAb
 }
 
 function DynamicToughness({ ability, hpUpMultiplier }: { ability: UnitAbility, hpUpMultiplier: number }) {
-  const [damageMultiplier, setDamageMultiplier] = useState(0.2);
+  // ターゲット属性が「古のみ」「悪のみ」「古と悪のみ」の場合は0.25倍固定
+  const hasOnlyRelicAku = (() => {
+    if (typeof ability.value === 'string') {
+      const hasRelic = ability.value.includes('古代種');
+      const hasAku = ability.value.includes('悪魔');
+      const hasOtherTraits = ability.value.includes('白い敵') || ability.value.includes('赤い敵') || 
+                            ability.value.includes('黒い敵') || ability.value.includes('メタル') || 
+                            ability.value.includes('天使') || ability.value.includes('エイリアン') || 
+                            ability.value.includes('ゾンビ') || 
+                            ability.value.includes('浮いてる敵');
+      
+      // 古のみ、悪のみ、または古と悪のみの場合のみtrue
+      if (!hasOtherTraits) {
+        return (hasRelic && !hasAku) || (!hasRelic && hasAku) || (hasRelic && hasAku);
+      }
+    }
+    return false;
+  })();
+  
+  const [damageMultiplier, setDamageMultiplier] = useState(hasOnlyRelicAku ? 0.25 : 0.2);
   
   if (!ability.calculatedStats || !ability.isDynamic) return null;
   
@@ -856,24 +1090,28 @@ function DynamicToughness({ ability, hpUpMultiplier }: { ability: UnitAbility, h
             className="inline mr-1 align-top"
           />
           打たれ強い <span className="text-blue-500"><small>被ダメ
-          <input
-            type="number"
-            value={damageMultiplier}
-            onChange={(e) => {
-              const value = Number(e.target.value);
-              if (value >= 0.2 && value <= 0.25) {
-                setDamageMultiplier(value);
-              }
-            }}
-            className="w-9 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
-            min="0.2"
-            max="0.25"
-            step="0.01"
-          />倍 </small></span><small className="text-gray-400">(0.25~0.2)</small>
+          {hasOnlyRelicAku ? (
+            <span className="w-9 mx-1 px-1 text-center text-xs font-bold">0.25</span>
+          ) : (
+            <input
+              type="number"
+              value={damageMultiplier}
+              onChange={(e) => {
+                const value = Number(e.target.value);
+                // 下限値未満は0.2に、上限値超過は0.25に調整
+                const clampedValue = Math.max(0.2, Math.min(0.25, value));
+                setDamageMultiplier(clampedValue);
+              }}
+              className="w-9 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
+              min="0.2"
+              max="0.25"
+              step="0.01"
+            />
+          )}倍 </small></span>{hasOnlyRelicAku ? null : <small className="text-gray-400">(0.25~0.2)</small>}
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
-            <span className='text-blue-500'><small><b>体力(換算値)</b></small></span> <b className={hpUpMultiplier > 1 ? "text-blue-500" : "text-gray-500"}>{calculateEquivalentHP(damageMultiplier)}</b>
+            <span className='text-blue-500'><small><b>体力(換算値)</b></small></span> <b className={hpUpMultiplier > 1 ? "text-blue-500" : "text-gray-500"}>{calculateEquivalentHP(hasOnlyRelicAku ? 0.25 : damageMultiplier)}</b>
           </div>
         </div>
       </div>
@@ -931,8 +1169,39 @@ function DynamicSuperToughness({ ability, hpUpMultiplier }: { ability: UnitAbili
 }
 
 function DynamicMighty({ ability, attackUpMultiplier, hpUpMultiplier }: { ability: UnitAbility, attackUpMultiplier: number, hpUpMultiplier: number }) {
-  const [apMultiplier, setApMultiplier] = useState(1.8);
-  const [dmgMultiplier, setDmgMultiplier] = useState(0.4);
+  // ターゲット属性が「古のみ」「悪のみ」「古と悪のみ」の場合は1.5倍/0.5倍固定
+  const hasOnlyRelicAku = (() => {
+    if (typeof ability.value === 'string') {
+      const hasRelic = ability.value.includes('古代種');
+      const hasAku = ability.value.includes('悪魔');
+      const hasOtherTraits = ability.value.includes('白い敵') || ability.value.includes('赤い敵') || 
+                            ability.value.includes('黒い敵') || ability.value.includes('メタル') || 
+                            ability.value.includes('天使') || ability.value.includes('エイリアン') || 
+                            ability.value.includes('ゾンビ') || 
+                            ability.value.includes('浮いてる敵') || ability.value.includes('属性を持たない敵');
+      
+      // 古のみ、悪のみ、または古と悪のみの場合のみtrue
+      if (!hasOtherTraits) {
+        return (hasRelic && !hasAku) || (!hasRelic && hasAku) || (hasRelic && hasAku);
+      }
+    } else if (React.isValidElement(ability.value) && ability.iconKeys) {
+      // React要素の場合、iconKeysを使用して判定
+      const hasRelicIcon = ability.iconKeys.includes('traitRelic');
+      const hasAkuIcon = ability.iconKeys.includes('traitAku');
+      const hasOtherTraitIcons = ability.iconKeys.some(iconKey => 
+        iconKey !== 'traitRelic' && iconKey !== 'traitAku' && iconKey !== 'traitBehemoth'
+      );
+      
+      // 古のみ、悪のみ、または古と悪のみの場合のみtrue
+      if (!hasOtherTraitIcons) {
+        return (hasRelicIcon && !hasAkuIcon) || (!hasRelicIcon && hasAkuIcon) || (hasRelicIcon && hasAkuIcon);
+      }
+    }
+    return false;
+  })();
+  
+  const [apMultiplier, setApMultiplier] = useState(hasOnlyRelicAku ? 1.5 : 1.8);
+  const [dmgMultiplier, setDmgMultiplier] = useState(hasOnlyRelicAku ? 0.5 : 0.4);
   
   if (!ability.calculatedStats || !ability.isDynamic) return null;
   
@@ -987,42 +1256,44 @@ function DynamicMighty({ ability, attackUpMultiplier, hpUpMultiplier }: { abilit
             className="inline mr-1 align-top"
           />
           めっぽう強い<br /> <span className="text-red-500 ml-5"><small>攻撃力
-          <input
-            type="number"
-            value={apMultiplier}
-            onChange={(e) => {
-              const value = Number(e.target.value);
-              if (value >= 1.5 && value <= 1.8) {
-                setApMultiplier(value);
-                // AP倍率に対応するダメージ倍率を設定 (1.5倍->0.5倍, 1.8倍->0.4倍)
-                const newDmgMult = 1.9 - value;
-                setDmgMultiplier(newDmgMult);
-              }
-            }}
-            className="w-8 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
-            min="1.5"
-            max="1.8"
-            step="0.1"
-          />倍 </small></span><small>(1.5~1.8)</small>
+          {hasOnlyRelicAku ? (
+            <span className="w-8 mx-1 px-1 text-center text-xs font-bold">1.5</span>
+          ) : (
+            <input
+              type="number"
+              value={apMultiplier}
+              onChange={(e) => {
+                const value = Number(e.target.value);
+                // 下限値未満は1.5に、上限値超過は1.8に調整
+                const clampedValue = Math.max(1.5, Math.min(1.8, value));
+                setApMultiplier(clampedValue);
+              }}
+              className="w-8 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
+              min="1.5"
+              max="1.8"
+              step="0.1"
+            />
+          )}倍 </small></span>{hasOnlyRelicAku ? null : <small>(1.5~1.8)</small>}
           <br />
           <span className="text-blue-500 ml-5"><small>被ダメ
-          <input
-            type="number"
-            value={dmgMultiplier}
-            onChange={(e) => {
-              const value = Number(e.target.value);
-              if (value >= 0.4 && value <= 0.5) {
-                setDmgMultiplier(value);
-                // ダメージ倍率に対応するAP倍率を設定
-                const newApMult = 1.9 - value;
-                setApMultiplier(newApMult);
-              }
-            }}
-            className="w-8 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
-            min="0.4"
-            max="0.5"
-            step="0.1"
-          />倍 </small></span><small>(0.5~0.4)</small>
+          {hasOnlyRelicAku ? (
+            <span className="w-8 mx-1 px-1 text-center text-xs font-bold">0.5</span>
+          ) : (
+            <input
+              type="number"
+              value={dmgMultiplier}
+              onChange={(e) => {
+                const value = Number(e.target.value);
+                // 下限値未満は0.4に、上限値超過は0.5に調整
+                const clampedValue = Math.max(0.4, Math.min(0.5, value));
+                setDmgMultiplier(clampedValue);
+              }}
+              className="w-8 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
+              min="0.4"
+              max="0.5"
+              step="0.1"
+            />
+          )}倍 </small></span>{hasOnlyRelicAku ? null : <small>(0.5~0.4)</small>}
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
@@ -1036,8 +1307,8 @@ function DynamicMighty({ ability, attackUpMultiplier, hpUpMultiplier }: { abilit
 }
 
 function DynamicEvaAngelKiller({ ability, attackUpMultiplier, hpUpMultiplier }: { ability: UnitAbility, attackUpMultiplier: number, hpUpMultiplier: number }) {
-  const [apMultiplier, setApMultiplier] = useState(5);
-  const [dmgMultiplier, setDmgMultiplier] = useState(0.2);
+  const [apMultiplier, setApMultiplier] = useState(25);
+  const [dmgMultiplier, setDmgMultiplier] = useState(0.04);
   
   if (!ability.calculatedStats || !ability.isDynamic) return null;
   
@@ -1145,8 +1416,8 @@ function DynamicEvaAngelKiller({ ability, attackUpMultiplier, hpUpMultiplier }: 
 }
 
 function DynamicWitchKiller({ ability, attackUpMultiplier, hpUpMultiplier }: { ability: UnitAbility, attackUpMultiplier: number, hpUpMultiplier: number }) {
-  const [apMultiplier, setApMultiplier] = useState(5);
-  const [dmgMultiplier, setDmgMultiplier] = useState(0.2);
+  const [apMultiplier, setApMultiplier] = useState(25);
+  const [dmgMultiplier, setDmgMultiplier] = useState(0.04);
   
   if (!ability.calculatedStats || !ability.isDynamic) return null;
   
@@ -1266,7 +1537,7 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUp
       <div className="space-y-0.5">
         {abilities.map((ability, index) => (
           ability.isDynamic && ability.name === "超ダメージ" ? (
-            <DynamicSuperDamage key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} />
+            <DynamicMassiveDamage key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} />
           ) : ability.isDynamic && ability.name === "極ダメージ" ? (
             <DynamicExtremeDamage key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} />
           ) : ability.isDynamic && ability.name === "打たれ強い" ? (
@@ -1805,52 +2076,7 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUp
                     </div>
                   ) : ability.value ? (
                     <div className="text-gray-600 font-medium break-words">
-                      {(ability.name === '多段攻撃' || ability.name === '攻撃無効' || ability.name === '動きを遅くする' || ability.name === 'ふっとばす' || ability.name === '撃破時お金アップ' || ability.name === 'バリアブレイカー' || ability.name === 'シールドブレイカー' || ability.name === '遠方攻撃' || ability.name === '全方位攻撃' || ability.name === '波動攻撃' || ability.name === '小波動' || ability.name === '裂波攻撃' || ability.name === '小裂波' || ability.name === '攻撃力アップ' || ability.name === '生き残る' || (typeof ability.value === 'string' && ability.value.includes('s(') && ability.value.includes('f)'))) && typeof ability.value === 'string' ? (
-                        <span dangerouslySetInnerHTML={{
-                          __html: (() => {
-                            let text = ability.value;
-                            // フレーム数を先にプレースホルダーで置換
-                            const frameMatches: string[] = [];
-                            text = text.replace(/\((\d+)f\)~/g, (match, frames) => {
-                              const replacement = `<small class="text-gray-400"> (${frames}f)</small> ~ `;
-                              frameMatches.push(replacement);
-                              return `___FRAME_PLACEHOLDER_${frameMatches.length - 1}___`;
-                            });
-                            text = text.replace(/\((\d+)f\)/g, (match, frames) => {
-                              const replacement = `<small class="text-gray-400"> (${frames}f)</small>`;
-                              frameMatches.push(replacement);
-                              return `___FRAME_PLACEHOLDER_${frameMatches.length - 1}___`;
-                            });
-                            
-                            // 他の数字のスタイリング（プレースホルダーを避ける）
-                            text = text
-                              .replace(/Lv(\d+)/g, '<b>Lv$1</b>')
-                              // 攻撃力アップの場合は体力のみ青字
-                              .replace(/体力≦(\d+)%/g, (match, number) => {
-                                if (ability.name === '攻撃力アップ') {
-                                  return `<small class="text-blue-500"><b>体力</b></small><small><b>≦</b></small><b>${number}</b><small><b>%</b></small>`;
-                                }
-                                return `<small class="text-blue-500"><b>体力≦</b></small><b class="text-blue-500">${number}</b><small class="text-blue-500"><b>%</b></small>`;
-                              })
-                              .replace(/(\d+)%/g, '<b>$1</b><small><b>%</b></small>')
-                              .replace(/(\d+\.?\d*)s/g, '<b>$1s</b>')
-                              .replace(/(\d+)倍/g, '<b>$1</b><small><b>倍</b></small>')
-                              .replace(/(\d+)~(\d+)/g, '<b>$1</b>~<b>$2</b>')
-                              .replace(/(?!___FRAME_PLACEHOLDER_)(?![^<]*>)(\d+\.?\d*)(?!___)/g, '<b>$1</b>')
-                              .replace(/敵攻撃力/g, '<small class="text-red-500"><b>敵攻撃力</b></small>')
-                              .replace(/攻撃力\+/g, '<small class="text-red-500"><b>攻撃力</b></small><b>+</b>');
-                            
-                            // プレースホルダーを元に戻す
-                            frameMatches.forEach((replacement, index) => {
-                              text = text.replace(`___FRAME_PLACEHOLDER_${index}___`, replacement);
-                            });
-                            
-                            return text;
-                          })()
-                        }} />
-                      ) : (
-                        ability.value
-                      )}
+                      {ability.value}
                     </div>
                   ) : null}
                 </div>
@@ -1934,8 +2160,11 @@ function TalentsList({
   currentHp,
   currentAp,
   totalAttackMultiplier,
-  talentSuperDamageMultiplier,
-  setTalentSuperDamageMultiplier
+  talentMassiveDamageMultiplier,
+  setTalentMassiveDamageMultiplier,
+  hasOnlyRelicAkuTalent,
+  hasOnlyRelicAkuTough,
+  hasOnlyRelicAkuMassiveDamage
 }: { 
   talents: readonly UnitTalent[];
   unitData: UnitData;
@@ -2007,8 +2236,11 @@ function TalentsList({
   currentHp: number;
   currentAp: number;
   totalAttackMultiplier: number;
-  talentSuperDamageMultiplier: number;
-  setTalentSuperDamageMultiplier: (value: number) => void;
+  talentMassiveDamageMultiplier: number;
+  setTalentMassiveDamageMultiplier: (value: number) => void;
+  hasOnlyRelicAkuTalent: boolean;
+  hasOnlyRelicAkuTough: boolean;
+  hasOnlyRelicAkuMassiveDamage: boolean;
 }) {
   if (talents.length === 0) return null;
 
@@ -2621,43 +2853,45 @@ function TalentsList({
                       </span>
                     )}<br />
                     <small className="text-red-500 ml-5"><b>攻撃力</b></small>
-                    <input
-                      type="number"
-                      value={talentMightyApValue}
-                      onChange={(e) => {
-                        const value = Number(e.target.value);
-                        if (value >= 1.5 && value <= 1.8) {
-                          setTalentMightyApValue(value);
-                          // AP倍率に対応するダメージ倍率を設定 (1.5倍->0.5倍, 1.8倍->0.4倍)
-                          const newDmgMult = 1.9 - value;
-                          setTalentMightyDmgValue(newDmgMult);
-                        }
-                      }}
-                      className="w-8 mx-1 px-1 text-center text-gray-500 border border-gray-300 rounded text-xs"
-                      min="1.5"
-                      max="1.8"
-                      step="0.1"
-                    />
-                    <small><b className="text-gray-500">倍</b></small> <small className="text-gray-400" style={{fontSize: '10px'}}>(1.5~1.8)</small><br />
+                    {hasOnlyRelicAkuTalent ? (
+                      <span className="w-8 mx-1 px-1 text-center text-xs font-bold">1.5</span>
+                    ) : (
+                      <input
+                        type="number"
+                        value={talentMightyApValue}
+                        onChange={(e) => {
+                          const value = Number(e.target.value);
+                          // 下限値未満は1.5に、上限値超過は1.8に調整
+                          const clampedValue = Math.max(1.5, Math.min(1.8, value));
+                          setTalentMightyApValue(clampedValue);
+                        }}
+                        className="w-8 mx-1 px-1 text-center text-gray-500 border border-gray-300 rounded text-xs"
+                        min="1.5"
+                        max="1.8"
+                        step="0.1"
+                      />
+                    )}
+                    <small><b className="text-gray-500">倍</b></small> {hasOnlyRelicAkuTalent ? null : <small className="text-gray-400" style={{fontSize: '10px'}}>(1.5~1.8)</small>}<br />
                     <small className="text-blue-500 ml-5"><b>被ダメ</b></small>
-                    <input
-                      type="number"
-                      value={talentMightyDmgValue}
-                      onChange={(e) => {
-                        const value = Number(e.target.value);
-                        if (value >= 0.4 && value <= 0.5) {
-                          setTalentMightyDmgValue(value);
-                          // ダメージ倍率に対応するAP倍率を設定
-                          const newApMult = 1.9 - value;
-                          setTalentMightyApValue(newApMult);
-                        }
-                      }}
-                      className="w-8 mx-1 px-1 text-center text-gray-500 border border-gray-300 rounded text-xs"
-                      min="0.4"
-                      max="0.5"
-                      step="0.1"
-                    />
-                    <small><b className="text-gray-500">倍</b></small> <small className="text-gray-400" style={{fontSize: '10px'}}>(0.5~0.4)</small>
+                    {hasOnlyRelicAkuTalent ? (
+                      <span className="w-8 mx-1 px-1 text-center text-xs font-bold">0.5</span>
+                    ) : (
+                      <input
+                        type="number"
+                        value={talentMightyDmgValue}
+                        onChange={(e) => {
+                          const value = Number(e.target.value);
+                          // 下限値未満は0.4に、上限値超過は0.5に調整
+                          const clampedValue = Math.max(0.4, Math.min(0.5, value));
+                          setTalentMightyDmgValue(clampedValue);
+                        }}
+                        className="w-8 mx-1 px-1 text-center text-gray-500 border border-gray-300 rounded text-xs"
+                        min="0.4"
+                        max="0.5"
+                        step="0.1"
+                      />
+                    )}
+                    <small><b className="text-gray-500">倍</b></small> {hasOnlyRelicAkuTalent ? null : <small className="text-gray-400" style={{fontSize: '10px'}}>(0.5~0.4)</small>}
                   </>
                 ) : talent.id === 6 ? (
                   <>
@@ -2669,6 +2903,31 @@ function TalentsList({
                       className="inline mr-1 align-top"
                     />
                     {talent.name} ({talent.id})
+                    {talent.npCost > 0 && (
+                      <span className="text-[10px] text-gray-600 font-medium ml-1">
+                        [{talent.isTotal ? '合計' : ''}{talent.npCost}NP]
+                      </span>
+                    )}<br />
+                    <small className="text-blue-500 ml-5"><b>被ダメ</b></small>
+                    {hasOnlyRelicAkuTough ? (
+                      <span className="w-9 mx-1 px-1 text-center text-xs font-bold">0.25</span>
+                    ) : (
+                      <input
+                        type="number"
+                        value={talentToughnessValue}
+                        onChange={(e) => {
+                          const value = Number(e.target.value);
+                          // 下限値未満は0.2に、上限値超過は0.25に調整
+                          const clampedValue = Math.max(0.2, Math.min(0.25, value));
+                          setTalentToughnessValue(clampedValue);
+                        }}
+                        className="w-9 mx-1 px-1 text-center text-gray-500 border border-gray-300 rounded text-xs"
+                        min="0.2"
+                        max="0.25"
+                        step="0.01"
+                      />
+                    )}
+                    <small><b className="text-gray-500">倍</b></small> {hasOnlyRelicAkuTough ? null : <small className="text-gray-400" style={{fontSize: '10px'}}>(0.25~0.2)</small>}
                   </>
                 ) : talent.id === 16 ? (
                   <>
@@ -2691,6 +2950,31 @@ function TalentsList({
                       className="inline mr-1 align-top"
                     />
                     {talent.name} ({talent.id})
+                    {talent.npCost > 0 && (
+                      <span className="text-[10px] text-gray-600 font-medium ml-1">
+                        [{talent.isTotal ? '合計' : ''}{talent.npCost}NP]
+                      </span>
+                    )}<br />
+                    <small className="text-red-500 ml-5"><b>攻撃力</b></small>
+                    {hasOnlyRelicAkuMassiveDamage ? (
+                      <span className="w-7 mx-1 px-1 text-center text-xs font-bold">3</span>
+                    ) : (
+                      <input
+                        type="number"
+                        value={talentMassiveDamageMultiplier}
+                        onChange={(e) => {
+                          const value = Number(e.target.value);
+                          // 下限値未満は3に、上限値超過は4に調整
+                          const clampedValue = Math.max(3, Math.min(4, value));
+                          setTalentMassiveDamageMultiplier(clampedValue);
+                        }}
+                        className="w-7 mx-1 px-1 text-center text-gray-500 border border-gray-300 rounded text-xs"
+                        min="3"
+                        max="4"
+                        step="0.1"
+                      />
+                    )}
+                    <small><b className="text-gray-500">倍</b></small> {hasOnlyRelicAkuMassiveDamage ? null : <small className="text-gray-400" style={{fontSize: '10px'}}>(3~4)</small>}
                   </>
                 ) : (
                   <>
@@ -2911,31 +3195,34 @@ function TalentsList({
                               <b className="text-gray-500">+{talent.data[2]}%</b>
                             </div>
                           ) : null}
-                          <div className="text-xs mb-1">
-                            <b className="text-gray-500">
-                              +{(talentFreezeDuration/30).toFixed(2)}s{' '}
-                              <small className="text-gray-400">( +
-                                <input
-                                  type="number"
-                                  value={talentFreezeDuration}
-                                  onChange={(e) => {
-                                    const value = Number(e.target.value);
-                                    const minValue = talent.data[4];
-                                    const maxValue = talent.data[5];
-                                    if (value >= minValue && value <= maxValue) {
-                                      setTalentFreezeDuration(value);
-                                    }
-                                  }}
-                                  className="w-6 px-1 text-center border border-gray-300 rounded text-xs text-gray-400"
-                                  min={talent.data[4]}
-                                  max={talent.data[5]}
-                                  step={Math.ceil((talent.data[5]-talent.data[4])/(talent.data[1]-1))}
-                                /> f )
+                          {/* フレーム数が0~0の場合は非表示 */}
+                          {talent.data[4] !== 0 || talent.data[5] !== 0 ? (
+                            <div className="text-xs mb-1">
+                              <b className="text-gray-500">
+                                +{(talentFreezeDuration/30).toFixed(2)}s{' '}
+                                <small className="text-gray-400">( +
+                                  <input
+                                    type="number"
+                                    value={talentFreezeDuration}
+                                    onChange={(e) => {
+                                      const value = Number(e.target.value);
+                                      const minValue = talent.data[4];
+                                      const maxValue = talent.data[5];
+                                      if (value >= minValue && value <= maxValue) {
+                                        setTalentFreezeDuration(value);
+                                      }
+                                    }}
+                                    className="w-6 px-1 text-center border border-gray-300 rounded text-xs text-gray-400"
+                                    min={talent.data[4]}
+                                    max={talent.data[5]}
+                                    step={Math.ceil((talent.data[5]-talent.data[4])/(talent.data[1]-1))}
+                                  /> f )
                               </small>
                             </b>
                             <br />
                             <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[4]}~{talent.data[5]})</b></small>
-                          </div>
+                            </div>
+                          ) : null}
                         </>
                       ) : (
                         /* 能力・効果に動きを止めるがない場合は従来のテキスト表示 */
@@ -3139,30 +3426,12 @@ function TalentsList({
                         <small className="text-gray-400" style={{fontSize: '10px'}}>({talent.data[2]}~{talent.data[3]})</small>
                       </div>
                     </div>
-                  ) : /* 打たれ強い(6)の場合はテキストボックスを表示 */
+                  ) : /* 打たれ強い(6)の場合は計算結果を表示 */
                   talent.id === 6 ? (
                     <div className="text-right">
-                      <div className="text-xs mb-1">
-                        <small className="text-blue-500"><b>被ダメ</b></small>
-                        <input
-                          type="number"
-                          value={talentToughnessValue}
-                          onChange={(e) => {
-                            const value = Number(e.target.value);
-                            if (value >= 0.2 && value <= 0.25) {
-                              setTalentToughnessValue(value);
-                            }
-                          }}
-                          className="w-9 px-1 text-center border border-gray-300 rounded text-xs"
-                          min="0.2"
-                          max="0.25"
-                          step="0.01"
-                        />
-                        <small><b className="text-gray-500">倍</b></small>
-                        <small className="text-gray-400" style={{fontSize: '10px'}}> (0.25~0.2)</small>
-                      </div>
+                      <br />
                       <div className="text-xs">
-                        <small className="text-blue-500"><b>体力(換算値)</b></small> <b className="text-gray-500">{Math.floor(currentHp / talentToughnessValue).toLocaleString()}</b>
+                        <small className="text-blue-500"><b>体力(換算値)</b></small> <b className="text-gray-500">{Math.floor(currentHp / (hasOnlyRelicAkuTough ? 0.25 : talentToughnessValue)).toLocaleString()}</b>
                       </div>
                     </div>
                   ) : /* めっぽう強い(5)の場合は計算結果を表示 */
@@ -3170,10 +3439,10 @@ function TalentsList({
                     <div className="text-right">
                       <br />
                       <div className="text-xs">
-                        <small className="text-red-500"><b>攻撃力</b></small> <b className="text-gray-500">{Math.floor(currentAp * talentMightyApValue).toLocaleString()}</b>
+                        <small className="text-red-500"><b>攻撃力</b></small> <b className="text-gray-500">{Math.floor(currentAp * (hasOnlyRelicAkuTalent ? 1.5 : talentMightyApValue)).toLocaleString()}</b>
                       </div>
                       <div className="text-xs">
-                        <small className="text-blue-500"><b>体力(換算値)</b></small> <b className="text-gray-500">{Math.floor(currentHp / talentMightyDmgValue).toLocaleString()}</b>
+                        <small className="text-blue-500"><b>体力(換算値)</b></small> <b className="text-gray-500">{Math.floor(currentHp / (hasOnlyRelicAkuTalent ? 0.5 : talentMightyDmgValue)).toLocaleString()}</b>
                       </div>
                     </div>
                   ) : /* 渾身の一撃(50)の場合は能力・効果と同じ表示 */
@@ -3246,28 +3515,12 @@ function TalentsList({
                         <b className="text-gray-500">+100%</b>
                       </div>
                     </div>
-                  ) : /* 超ダメージ(7)の場合は能力・効果と同じ表示 */
+                  ) : /* 超ダメージ(7)の場合は計算結果を表示 */
                   talent.id === 7 ? (
                     <div className="text-right">
-                      <div className="text-xs mb-1">
-                        <small className="text-red-500"><b>攻撃力</b></small>
-                        <input
-                          type="number"
-                          value={talentSuperDamageMultiplier}
-                          onChange={(e) => {
-                            const value = Number(e.target.value);
-                            if (value >= 3 && value <= 4) {
-                              setTalentSuperDamageMultiplier(value);
-                            }
-                          }}
-                          className="w-7 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
-                          min="3"
-                          max="4"
-                          step="0.1"
-                        />
-                        <small><b className="text-gray-500">倍</b></small>
-                        <small className="text-gray-400" style={{fontSize: '10px'}}> (3~4)</small>
-                        <b className={totalAttackMultiplier > 1 ? "text-red-500" : "text-gray-500"}> {Math.floor(currentAp * talentSuperDamageMultiplier).toLocaleString()}</b>
+                      <br />
+                      <div className="text-xs">
+                        <small className="text-red-500"><b>攻撃力</b></small> <b className="text-gray-500">{Math.floor(currentAp * (hasOnlyRelicAkuMassiveDamage ? 3 : talentMassiveDamageMultiplier)).toLocaleString()}</b>
                       </div>
                     </div>
                   ) : /* 属性追加の本能の場合はアイコンを表示 */

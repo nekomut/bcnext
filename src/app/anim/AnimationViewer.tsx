@@ -776,8 +776,6 @@ export default function AnimationViewer({
             Frame={String(debugInfo.frame as number).padStart(3, '0')}/{String(debugInfo.maxFrame as number).padStart(3, '0')} Parts={debugInfo.totalParts as number}
             <br />
             Scale={debugInfo.scaleUnit as number} Angle={debugInfo.angleUnit as number} Alpha={debugInfo.alphaUnit as number}
-            <br />
-            Zoom={zoom.toFixed(2)} Offset=({offsetX}, {offsetY})
           </div>
         )}
       </div>

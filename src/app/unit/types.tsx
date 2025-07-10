@@ -424,32 +424,151 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[30] && stats[30] > 0) {
     abilities.push({
       name: "超ダメージ",
-      value: "",
+      value: targets.map(t => t.name).join(' '),
       isDynamic: true,
       baseAP: calculatedStats.ap,
-      calculatedStats: enhancedStats
+      calculatedStats: enhancedStats,
+      iconKeys: targets.map(t => t.iconKey)
     });
   }
 
   // 極ダメージ
   if (stats[81] && stats[81] > 0) {
+    const extremeDamageTargets: Array<{name: string, iconKey: string}> = [];
+    
+    // Check for red targeting (stats[10])
+    if (stats[10] && stats[10] !== 0 && stats[10] !== -1) {
+      extremeDamageTargets.push({name: '赤い敵', iconKey: 'traitRed'});
+    }
+    
+    // Check for floating targeting (stats[16])
+    if (stats[16] && stats[16] !== 0 && stats[16] !== -1) {
+      extremeDamageTargets.push({name: '浮いてる敵', iconKey: 'traitFloating'});
+    }
+    
+    // Check for black targeting (stats[17])
+    if (stats[17] && stats[17] !== 0 && stats[17] !== -1) {
+      extremeDamageTargets.push({name: '黒い敵', iconKey: 'traitBlack'});
+    }
+    
+    // Check for metal targeting (stats[18])
+    if (stats[18] && stats[18] !== 0 && stats[18] !== -1) {
+      extremeDamageTargets.push({name: 'メタル', iconKey: 'traitMetal'});
+    }
+    
+    // Check for angel targeting (stats[19])
+    if (stats[19] && stats[19] !== 0 && stats[19] !== -1) {
+      extremeDamageTargets.push({name: '天使', iconKey: 'traitAngel'});
+    }
+    
+    // Check for alien targeting (stats[20])
+    if (stats[20] && stats[20] !== 0 && stats[20] !== -1) {
+      extremeDamageTargets.push({name: 'エイリアン', iconKey: 'traitAlien'});
+    }
+    
+    // Check for zombie targeting (stats[21])
+    if (stats[21] && stats[21] !== 0 && stats[21] !== -1) {
+      extremeDamageTargets.push({name: 'ゾンビ', iconKey: 'traitZombie'});
+    }
+    
+    // Check for traitless targeting (stats[22])
+    if (stats[22] && stats[22] !== 0 && stats[22] !== -1) {
+      extremeDamageTargets.push({name: '属性を持たない敵', iconKey: 'traitTraitless'});
+    }
+    
+    // Check for relic targeting (stats[78])
+    if (stats[78] && stats[78] !== 0 && stats[78] !== -1) {
+      extremeDamageTargets.push({name: '古代種', iconKey: 'traitRelic'});
+    }
+    
+    // Check for aku targeting (stats[96])
+    if (stats[96] && stats[96] !== 0 && stats[96] !== -1) {
+      extremeDamageTargets.push({name: '悪魔', iconKey: 'traitAku'});
+    }
+    
+    // Check for behemoth targeting (stats[105]) - 超獣は判定対象から除外
+    // if (stats[105] && stats[105] !== 0 && stats[105] !== -1) {
+    //   extremeDamageTargets.push({name: '超獣', iconKey: 'traitBehemoth'});
+    // }
+    
     abilities.push({
       name: "極ダメージ",
-      value: "",
+      value: extremeDamageTargets.map(t => t.name).join(' '),
       isDynamic: true,
       baseAP: calculatedStats.ap,
-      calculatedStats: enhancedStats
+      calculatedStats: enhancedStats,
+      iconKeys: extremeDamageTargets.map(t => t.iconKey)
     });
   }
 
   // めっぽう強い
   if (stats[23] && stats[23] > 0) {
+    
+    const mightyTargets: Array<{name: string, iconKey: string}> = [];
+    
+    // Check for red targeting (stats[10])
+    if (stats[10] && stats[10] !== 0 && stats[10] !== -1) {
+      mightyTargets.push({name: '赤い敵', iconKey: 'traitRed'});
+    }
+    
+    // Check for floating targeting (stats[16])
+    if (stats[16] && stats[16] !== 0 && stats[16] !== -1) {
+      mightyTargets.push({name: '浮いてる敵', iconKey: 'traitFloating'});
+    }
+    
+    // Check for black targeting (stats[17])
+    if (stats[17] && stats[17] !== 0 && stats[17] !== -1) {
+      mightyTargets.push({name: '黒い敵', iconKey: 'traitBlack'});
+    }
+    
+    // Check for metal targeting (stats[18])
+    if (stats[18] && stats[18] !== 0 && stats[18] !== -1) {
+      mightyTargets.push({name: 'メタル', iconKey: 'traitMetal'});
+    }
+    
+    // Check for traitless targeting (stats[19])
+    if (stats[19] && stats[19] !== 0 && stats[19] !== -1) {
+      mightyTargets.push({name: '属性を持たない敵', iconKey: 'traitTraitless'});
+    }
+    
+    // Check for angel targeting (stats[20])
+    if (stats[20] && stats[20] !== 0 && stats[20] !== -1) {
+      mightyTargets.push({name: '天使', iconKey: 'traitAngel'});
+    }
+    
+    // Check for alien targeting (stats[21])
+    if (stats[21] && stats[21] !== 0 && stats[21] !== -1) {
+      mightyTargets.push({name: 'エイリアン', iconKey: 'traitAlien'});
+    }
+    
+    // Check for zombie targeting (stats[22])
+    if (stats[22] && stats[22] !== 0 && stats[22] !== -1) {
+      mightyTargets.push({name: 'ゾンビ', iconKey: 'traitZombie'});
+    }
+    
+    // Check for ancient targeting (stats[78])
+    if (stats[78] && stats[78] !== 0 && stats[78] !== -1) {
+      mightyTargets.push({name: '古代種', iconKey: 'traitRelic'});
+    }
+    
+    // Check for demon targeting (stats[96])
+    if (stats[96] && stats[96] !== 0 && stats[96] !== -1) {
+      mightyTargets.push({name: '悪魔', iconKey: 'traitAku'});
+    }
+    
+    // Check for behemoth targeting (stats[105]) - 超獣は判定対象から除外
+    // if (stats[105] && stats[105] !== 0 && stats[105] !== -1) {
+    //   mightyTargets.push({name: '超獣', iconKey: 'traitBehemoth'});
+    // }
+    
+    
     abilities.push({
       name: "めっぽう強い",
-      value: "",
+      value: mightyTargets.map(t => t.name).join(' '),
       isDynamic: true,
       baseAP: calculatedStats.ap,
-      calculatedStats: enhancedStats
+      calculatedStats: enhancedStats,
+      iconKeys: mightyTargets.map(t => t.iconKey)
     });
   }
 
@@ -560,10 +679,11 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[29] && stats[29] > 0) {
     abilities.push({
       name: "打たれ強い",
-      value: "",
+      value: targets.map(t => t.name).join(' '),
       isDynamic: true,
       baseAP: calculatedStats.ap,
-      calculatedStats: enhancedStats
+      calculatedStats: enhancedStats,
+      iconKeys: targets.map(t => t.iconKey)
     });
   }
 
@@ -571,10 +691,11 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[80] && stats[80] > 0) {
     abilities.push({
       name: "超打たれ強い",
-      value: "",
+      value: targets.map(t => t.name).join(' '),
       isDynamic: true,
       baseAP: calculatedStats.ap,
-      calculatedStats: enhancedStats
+      calculatedStats: enhancedStats,
+      iconKeys: targets.map(t => t.iconKey)
     });
   }
 

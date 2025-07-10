@@ -138,7 +138,7 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
   return (
     <div className="bg-white rounded-lg shadow-sm border mb-2">
       <div className="p-2">
-        <h3 className="text-sm font-semibold text-gray-900 mb-2">敵から逆引き検索（レジェンドストーリー）</h3>
+        <h3 className="text-sm font-semibold text-gray-900 mb-2">逆引き検索（レジェンドストーリー）</h3>
         
         {/* 検索フィールド */}
         <div className="mb-2">

@@ -68,8 +68,8 @@ export function StageSearch({ onSearch, loading }: StageSearchProps) {
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-1 mb-1">
-        <div>
-          <label htmlFor="stage-event-id" className="block text-xs font-medium text-gray-700 mb-1">イベントID</label>
+        <div className="flex items-center gap-2">
+          <label htmlFor="stage-event-id" className="text-xs font-medium text-gray-700 whitespace-nowrap" style={{flexBasis: '38.2%'}}>イベントID</label>
           <input
             id="stage-event-id"
             type="text"
@@ -77,12 +77,13 @@ export function StageSearch({ onSearch, loading }: StageSearchProps) {
             onChange={(e) => setEventId(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder="1173"
-            className="w-full px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
+            className="px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
+            style={{flexBasis: '61.8%'}}
           />
         </div>
         
-        <div>
-          <label htmlFor="stage-name" className="block text-xs font-medium text-gray-700 mb-1">ステージ名</label>
+        <div className="flex items-center gap-2">
+          <label htmlFor="stage-name" className="text-xs font-medium text-gray-700 whitespace-nowrap" style={{flexBasis: '38.2%'}}>ステージ名</label>
           <input
             id="stage-name"
             type="text"
@@ -90,17 +91,19 @@ export function StageSearch({ onSearch, loading }: StageSearchProps) {
             onChange={(e) => setStageName(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder="メタル"
-            className="w-full px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
+            className="px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
+            style={{flexBasis: '61.8%'}}
           />
         </div>
         
-        <div>
-          <label htmlFor="stage-type" className="block text-xs font-medium text-gray-700 mb-1">ステージタイプ</label>
+        <div className="flex items-center gap-2">
+          <label htmlFor="stage-type" className="text-xs font-medium text-gray-700 whitespace-nowrap" style={{flexBasis: '38.2%'}}>ステージタイプ</label>
           <select
             id="stage-type"
             value={typeId}
             onChange={(e) => setTypeId(e.target.value)}
-            className="w-full px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
+            className="px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
+            style={{flexBasis: '61.8%'}}
           >
             <option value="34">レジェンドストーリー0</option>
             <option value="13">真レジェンドストーリー</option>
@@ -124,13 +127,14 @@ export function StageSearch({ onSearch, loading }: StageSearchProps) {
           </select>
         </div>
         
-        <div>
-          <label htmlFor="stage-sort" className="block text-xs font-medium text-gray-700 mb-1">並び順</label>
+        <div className="flex items-center gap-2">
+          <label htmlFor="stage-sort" className="text-xs font-medium text-gray-700 whitespace-nowrap" style={{flexBasis: '38.2%'}}>並び順</label>
           <select
             id="stage-sort"
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as 'id-desc' | 'id-asc')}
-            className="w-full px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
+            className="px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
+            style={{flexBasis: '61.8%'}}
           >
             <option value="id-desc">ID降順</option>
             <option value="id-asc">ID昇順</option>
@@ -138,7 +142,20 @@ export function StageSearch({ onSearch, loading }: StageSearchProps) {
         </div>
       </div>
       
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2 justify-end">
+        <button
+          id="clear-button"
+          onClick={handleClear}
+          disabled={loading}
+          className="inline-flex items-center gap-1 bg-gray-600 hover:bg-gray-700 disabled:bg-gray-400 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-1 focus:ring-gray-500"
+          aria-label="検索条件をクリア"
+        >
+          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+          </svg>
+          クリア
+        </button>
+        
         <button
           id="search-button"
           onClick={handleSearch}
@@ -159,19 +176,6 @@ export function StageSearch({ onSearch, loading }: StageSearchProps) {
               検索
             </>
           )}
-        </button>
-        
-        <button
-          id="clear-button"
-          onClick={handleClear}
-          disabled={loading}
-          className="inline-flex items-center gap-1 bg-gray-600 hover:bg-gray-700 disabled:bg-gray-400 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-1 focus:ring-gray-500"
-          aria-label="検索条件をクリア"
-        >
-          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
-          </svg>
-          クリア
         </button>
       </div>
     </div>

@@ -10,16 +10,16 @@ import { UnitData, getUnitData } from './types';
 import { unitNamesData, UnitNameData } from '@/data/unit-names';
 
 function UnitPageContent() {
-  const [unitId, setUnitId] = useState<string>('');
-  const [level, setLevel] = useState<number>(30);
+  const [unitId, setUnitId] = useState<string>('731');
+  const [level, setLevel] = useState<number>(50);
   const [plusLevel, setPlusLevel] = useState<number>(0);
-  const [formId, setFormId] = useState<number>(0);
+  const [formId, setFormId] = useState<number>(1);
   const [currentUnit, setCurrentUnit] = useState<UnitData | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
   
   // ユニット名プルダウン用のstate
-  const [selectedUnitName, setSelectedUnitName] = useState<string>('');
+  const [selectedUnitName, setSelectedUnitName] = useState<string>('暁光のイザナギ');
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const [nameFilter, setNameFilter] = useState<string>('');
   
@@ -108,6 +108,9 @@ function UnitPageContent() {
     // URLパラメータがある場合は自動で検索
     if (unitParam) {
       handleUnitSearchWithId(parseInt(unitParam));
+    } else {
+      // 初期表示時（URLパラメータがない場合）はUnit 731を自動表示
+      handleUnitSearchWithId(731);
     }
   }, [searchParams]);
 

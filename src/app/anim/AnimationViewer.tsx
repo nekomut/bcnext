@@ -70,8 +70,47 @@ export default function AnimationViewer({
     setImageLoading(true);
     setImageError(null);
 
-    loadUnitImages(unitId)
-      .then(images => {
+    // フォールバック: 元のTSXファイルから画像を取得する関数
+    const tryFallbackImage = (): Promise<boolean> => {
+      return new Promise((resolve) => {
+        try {
+          const imageBase64 = (formData as Record<string, unknown>)?.image_base64 as string;
+          if (imageBase64) {
+            console.log(`[AnimationViewer] Attempting fallback image load for unit ${unitId}, form ${selectedForm}`);
+            const img = new Image();
+            img.onload = () => {
+              if (isMounted) {
+                console.log(`[AnimationViewer] Fallback image loaded successfully for unit ${unitId}`);
+                setSpriteImage(img);
+                setImageLoading(false);
+                resolve(true);
+              } else {
+                resolve(false);
+              }
+            };
+            img.onerror = (error) => {
+              console.error(`[AnimationViewer] Fallback image loading failed:`, error);
+              if (isMounted) {
+                setImageError(`画像の読み込みに失敗しました（ユニット${unitId}、フォーム${selectedForm}）`);
+                setImageLoading(false);
+              }
+              resolve(false);
+            };
+            img.src = `data:image/png;base64,${imageBase64}`;
+          } else {
+            console.warn(`[AnimationViewer] No fallback image available for unit ${unitId}, form ${selectedForm}`);
+            resolve(false);
+          }
+        } catch (error) {
+          console.error('[AnimationViewer] Fallback image loading failed:', error);
+          resolve(false);
+        }
+      });
+    };
+
+    (async () => {
+      try {
+        const images = await loadUnitImages(unitId);
         if (!isMounted) return;
         
         const base64Data = getFormImage(images, selectedForm);
@@ -83,29 +122,41 @@ export default function AnimationViewer({
               setImageLoading(false);
             }
           };
-          img.onerror = () => {
+          img.onerror = async () => {
             if (isMounted) {
-              setImageError('画像の読み込みに失敗しました');
-              setImageLoading(false);
+              // 画像読み込み失敗時のフォールバック
+              const fallbackSuccess = await tryFallbackImage();
+              if (!fallbackSuccess) {
+                setImageError('画像の読み込みに失敗しました');
+                setImageLoading(false);
+              }
             }
           };
           img.src = `data:image/png;base64,${base64Data}`;
         } else {
-          setImageError('指定されたフォームの画像が見つかりません');
-          setImageLoading(false);
+          // 指定フォームの画像が見つからない場合のフォールバック
+          const fallbackSuccess = await tryFallbackImage();
+          if (!fallbackSuccess) {
+            setImageError(`指定されたフォーム（${selectedForm}）の画像が見つかりません`);
+            setImageLoading(false);
+          }
         }
-      })
-      .catch(error => {
+      } catch (error) {
         if (isMounted) {
-          setImageError(`画像データの取得に失敗しました: ${error.message}`);
-          setImageLoading(false);
+          // 外部ファイルの読み込み失敗時のフォールバック
+          const fallbackSuccess = await tryFallbackImage();
+          if (!fallbackSuccess) {
+            setImageError(`画像データの取得に失敗しました: ${(error as Error).message}`);
+            setImageLoading(false);
+          }
         }
-      });
+      }
+    })();
 
     return () => {
       isMounted = false;
     };
-  }, [unitId, selectedForm]);
+  }, [unitId, selectedForm, formData]);
 
   // Calculate max frame from metadata
   useEffect(() => {

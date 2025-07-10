@@ -772,8 +772,8 @@ export default function AnimationViewer({
           {(formData?.name as string) || 'Unknown'}
         </h3>
         {debugInfo && (
-          <div className="text-sm text-gray-600 font-mono">
-            Frame={debugInfo.frame as number}/{debugInfo.maxFrame as number} Parts={debugInfo.totalParts as number}
+          <div className="text-xxs text-gray-600 font-mono">
+            Frame={String(debugInfo.frame as number).padStart(3, '0')}/{String(debugInfo.maxFrame as number).padStart(3, '0')} Parts={debugInfo.totalParts as number}
             <br />
             Scale={debugInfo.scaleUnit as number} Angle={debugInfo.angleUnit as number} Alpha={debugInfo.alphaUnit as number}
             <br />
@@ -803,9 +803,9 @@ export default function AnimationViewer({
 
       {/* View Controls */}
       <div className="bg-gray-50 p-2 rounded">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
-          <div>
-            <label className="block text-sm font-medium text-gray-600 mb-1 font-mono">
+        <div className="flex items-center gap-4">
+          <div className="flex items-center gap-1">
+            <label className="text-sm font-medium text-gray-600 whitespace-nowrap font-mono">
               Zoom
             </label>
             <input
@@ -818,13 +818,13 @@ export default function AnimationViewer({
                   setZoom(value);
                 }
               }}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-600 font-mono"
+              className="w-16 px-2 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-600 font-mono"
               placeholder="0.6"
             />
           </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-600 mb-1 font-mono">
-              X Offset
+          <div className="flex items-center gap-1">
+            <label className="text-sm font-medium text-gray-600 whitespace-nowrap font-mono">
+              X
             </label>
             <input
               type="number"
@@ -836,13 +836,13 @@ export default function AnimationViewer({
                   setOffsetX(value);
                 }
               }}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-600 font-mono"
+              className="w-16 px-2 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-600 font-mono"
               placeholder="0"
             />
           </div>
-          <div>
-            <label className="block text-sm font-medium text-gray-600 mb-1 font-mono">
-              Y Offset
+          <div className="flex items-center gap-1">
+            <label className="text-sm font-medium text-gray-600 whitespace-nowrap font-mono">
+              Y
             </label>
             <input
               type="number"
@@ -854,19 +854,17 @@ export default function AnimationViewer({
                   setOffsetY(value);
                 }
               }}
-              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-600 font-mono"
+              className="w-16 px-2 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-600 font-mono"
               placeholder="150"
             />
           </div>
-        </div>
-        <div className="mt-1">
           <button
             onClick={() => {
               setZoom(0.6);
               setOffsetX(0);
               setOffsetY(150);
             }}
-            className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 font-mono"
+            className="px-3 py-1 bg-blue-500 text-white rounded text-sm hover:bg-blue-600 font-mono"
           >
             Reset
           </button>
@@ -876,7 +874,7 @@ export default function AnimationViewer({
       {/* Frame Control */}
       <div className="bg-gray-50 p-2 rounded">
         <label className="block text-sm font-medium text-gray-600 mb-1 font-mono">
-          Frame {currentFrame} / {maxFrame}
+          Frame {String(currentFrame).padStart(3, '0')} / {String(maxFrame).padStart(3, '0')}
         </label>
         <input
           type="range"

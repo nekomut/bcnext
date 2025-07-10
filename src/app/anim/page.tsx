@@ -5,7 +5,7 @@ import AnimationViewer from './AnimationViewer';
 import { unitNamesData } from '@/data/unit-names';
 
 export default function AnimationPage() {
-  const [selectedUnit, setSelectedUnit] = useState('044');
+  const [selectedUnit, setSelectedUnit] = useState('731');
   const [animationData, setAnimationData] = useState<Record<string, unknown> | null>(null);
   const [selectedForm, setSelectedForm] = useState('f');
   const [selectedAnimation, setSelectedAnimation] = useState('maanim00');
@@ -86,8 +86,8 @@ export default function AnimationPage() {
       
       setAvailableUnits(units);
       
-      // Load the first available unit or default to 044
-      const initialUnit = units.includes('044') ? '044' : units[0];
+      // Load the first available unit or default to 731
+      const initialUnit = units.includes('731') ? '731' : units[0];
       if (initialUnit) {
         await handleUnitChange(initialUnit);
       }
@@ -116,7 +116,6 @@ export default function AnimationPage() {
   if (loading) {
     return (
       <div className="container mx-auto p-4">
-        <h1 className="text-3xl font-bold mb-6">Battle Cats Animation Viewer</h1>
         <div className="flex justify-center items-center h-64">
           <div className="text-lg">アニメーションファイルを読み込み中...</div>
         </div>

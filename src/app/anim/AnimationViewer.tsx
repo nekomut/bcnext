@@ -56,9 +56,9 @@ export default function AnimationViewer({
   const [spriteImage, setSpriteImage] = useState<HTMLImageElement | null>(null);
   const [spriteParts, setSpriteParts] = useState<SpritePart[]>([]);
   const [maxFrame, setMaxFrame] = useState(0);
-  const [zoom, setZoom] = useState(0.2);
+  const [zoom, setZoom] = useState(0.6);
   const [offsetX, setOffsetX] = useState(0);
-  const [offsetY, setOffsetY] = useState(100);
+  const [offsetY, setOffsetY] = useState(150);
 
   const formData = animationData?.[selectedForm] as Record<string, unknown> | undefined;
   const animData = formData?.[selectedAnimation] as unknown[] | undefined;
@@ -787,8 +787,8 @@ export default function AnimationViewer({
           <AnimationRenderer
             spriteImage={spriteImage}
             spriteParts={spriteParts}
-            canvasWidth={380}
-            canvasHeight={300}
+            canvasWidth={390}
+            canvasHeight={480}
             viewScale={1.0}
             zoom={zoom}
             offsetX={offsetX}
@@ -819,7 +819,7 @@ export default function AnimationViewer({
                 }
               }}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-600"
-              placeholder="0.2"
+              placeholder="0.6"
             />
           </div>
           <div>
@@ -855,16 +855,16 @@ export default function AnimationViewer({
                 }
               }}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-600"
-              placeholder="100"
+              placeholder="150"
             />
           </div>
         </div>
         <div className="mt-2">
           <button
             onClick={() => {
-              setZoom(0.2);
+              setZoom(0.6);
               setOffsetX(0);
-              setOffsetY(100);
+              setOffsetY(150);
             }}
             className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600"
           >

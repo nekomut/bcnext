@@ -51,7 +51,7 @@ export default function AnimationViewer({
   const [spriteImage, setSpriteImage] = useState<HTMLImageElement | null>(null);
   const [spriteParts, setSpriteParts] = useState<SpritePart[]>([]);
   const [maxFrame, setMaxFrame] = useState(0);
-  const [zoom, setZoom] = useState(0.6);
+  const [zoom, setZoom] = useState(0.5);
   const [offsetX, setOffsetX] = useState(0);
   const [offsetY, setOffsetY] = useState(150);
   const [imageLoading, setImageLoading] = useState(false);
@@ -768,8 +768,13 @@ export default function AnimationViewer({
     return (
       <div className="space-y-2">
         <div className="text-center">
-          <h3 className="text-lg font-semibold mb-1 text-blue-500 font-mono">
-            {(formData?.name as string) || 'Unknown'}
+          <h3 className="text-lg font-semibold mb-1 font-mono flex items-center justify-center gap-2">
+            <span className="text-xs text-blue-500">
+              {unitId}-{['f', 'c', 's', 'u'].indexOf(selectedForm) + 1}
+            </span>
+            <span className="text-blue-500">
+              {(formData?.name as string) || 'Unknown'}
+            </span>
           </h3>
         </div>
         <div className="flex justify-center items-center h-64">
@@ -783,8 +788,13 @@ export default function AnimationViewer({
     return (
       <div className="space-y-2">
         <div className="text-center">
-          <h3 className="text-lg font-semibold mb-1 text-blue-500 font-mono">
-            {(formData?.name as string) || 'Unknown'}
+          <h3 className="text-lg font-semibold mb-1 font-mono flex items-center justify-center gap-2">
+            <span className="text-xs text-blue-500">
+              {unitId}-{['f', 'c', 's', 'u'].indexOf(selectedForm) + 1}
+            </span>
+            <span className="text-blue-500">
+              {(formData?.name as string) || 'Unknown'}
+            </span>
           </h3>
         </div>
         <div className="flex justify-center items-center h-64">
@@ -797,8 +807,13 @@ export default function AnimationViewer({
   return (
     <div className="space-y-2">
       <div className="text-center">
-        <h3 className="text-lg font-semibold mb-1 text-blue-500 font-mono">
-          {(formData?.name as string) || 'Unknown'}
+        <h3 className="text-lg font-semibold mb-1 font-mono flex items-center justify-center gap-2">
+          <span className="text-xs text-blue-500">
+            {unitId}-{['f', 'c', 's', 'u'].indexOf(selectedForm) + 1}
+          </span>
+          <span className="text-blue-500">
+            {(formData?.name as string) || 'Unknown'}
+          </span>
         </h3>
         {debugInfo && (
           <div className="text-xxs text-gray-600 font-mono">
@@ -814,7 +829,7 @@ export default function AnimationViewer({
           <AnimationRenderer
             spriteImage={spriteImage}
             spriteParts={spriteParts}
-            canvasWidth={390}
+            canvasWidth={420}
             canvasHeight={480}
             viewScale={1.0}
             zoom={zoom}
@@ -846,7 +861,7 @@ export default function AnimationViewer({
                 }
               }}
               className="w-16 px-2 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-600 font-mono"
-              placeholder="0.6"
+              placeholder="0.5"
             />
           </div>
           <div className="flex items-center gap-1">
@@ -887,7 +902,7 @@ export default function AnimationViewer({
           </div>
           <button
             onClick={() => {
-              setZoom(0.6);
+              setZoom(0.5);
               setOffsetX(0);
               setOffsetY(150);
             }}

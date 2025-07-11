@@ -1,23 +1,33 @@
 'use client';
 
 import Link from 'next/link';
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, Suspense } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import AnimationViewer from './AnimationViewer';
 import { unitNamesData } from '@/data/unit-names';
 import { loadUnitImages } from './imageLoader';
 
-export default function AnimationPage() {
-  const [selectedUnit, setSelectedUnit] = useState('731');
+function AnimationPageContent() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  
+  // URLパラメータから初期値を取得（デフォルト：最終形態・攻撃・再生）
+  const initialUnit = searchParams.get('unit') || '731';
+  const initialForm = searchParams.get('form'); // null if not specified
+  const initialAnim = searchParams.get('anim'); // null if not specified  
+  const initialPlaying = searchParams.get('playing') !== 'false'; // デフォルト：再生
+  
+  const [selectedUnit, setSelectedUnit] = useState(initialUnit);
   const [animationData, setAnimationData] = useState<Record<string, unknown> | null>(null);
-  const [selectedForm, setSelectedForm] = useState('f');
-  const [selectedAnimation, setSelectedAnimation] = useState('maanim00');
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [selectedForm, setSelectedForm] = useState(initialForm || 'f');
+  const [selectedAnimation, setSelectedAnimation] = useState(initialAnim || 'maanim02');
+  const [isPlaying, setIsPlaying] = useState(initialPlaying);
   const [availableUnits, setAvailableUnits] = useState<string[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [loadingProgress, setLoadingProgress] = useState({ current: 0, total: 0, message: '' });
   
   // Search UI states
-  const [unitIdInput, setUnitIdInput] = useState('731');
+  const [unitIdInput, setUnitIdInput] = useState(initialUnit);
   const [nameFilter, setNameFilter] = useState('');
   const [isSearching, setIsSearching] = useState(false);
 
@@ -25,6 +35,18 @@ export default function AnimationPage() {
   const availableAnimations = availableForms.length > 0 && animationData ? 
     Object.keys((animationData as Record<string, unknown>)[selectedForm] as Record<string, unknown> || {})
       .filter(key => key.startsWith('maanim')) : [];
+
+  // URLパラメータを更新する関数
+  const updateURL = useCallback((params: { unit?: string; form?: string; anim?: string; playing?: boolean }) => {
+    const newSearchParams = new URLSearchParams(searchParams.toString());
+    
+    if (params.unit !== undefined) newSearchParams.set('unit', params.unit);
+    if (params.form !== undefined) newSearchParams.set('form', params.form);
+    if (params.anim !== undefined) newSearchParams.set('anim', params.anim);
+    if (params.playing !== undefined) newSearchParams.set('playing', params.playing.toString());
+    
+    router.replace(`?${newSearchParams.toString()}`, { scroll: false });
+  }, [router, searchParams]);
 
   // Get unit display name from unit names data
   const getUnitDisplayName = (unitId: string) => {
@@ -81,16 +103,16 @@ export default function AnimationPage() {
   // Handle unit ID input change
   const handleUnitIdSubmit = async (inputUnitId: string) => {
     const formattedId = inputUnitId.padStart(3, '0');
-    if (availableUnits.includes(formattedId)) {
-      setIsSearching(true);
-      await handleUnitChange(formattedId);
-      setIsSearching(false);
-    } else {
+    setIsSearching(true);
+    const success = await handleUnitChange(formattedId);
+    setIsSearching(false);
+    
+    if (!success) {
       alert(`ユニット ${formattedId} のアニメーションデータが見つかりません`);
     }
   };
 
-  const handleUnitChange = useCallback(async (unitId: string) => {
+  const handleUnitChange = useCallback(async (unitId: string): Promise<boolean> => {
     setSelectedUnit(unitId);
     setUnitIdInput(unitId);
     setLoading(true);
@@ -103,7 +125,14 @@ export default function AnimationPage() {
       const animationDataKey = `animationData_${unitId}`;
       
       if (moduleData[animationDataKey]) {
-        setAnimationData(moduleData[animationDataKey] as Record<string, unknown>);
+        const newAnimationData = moduleData[animationDataKey] as Record<string, unknown>;
+        setAnimationData(newAnimationData);
+        
+        // URLパラメータを更新
+        updateURL({ unit: unitId });
+        
+        // 利用可能ユニットリストに追加（重複避け）
+        setAvailableUnits(prev => prev.includes(unitId) ? prev : [...prev, unitId]);
         
         // Step 2: 画像データのプリロード
         setLoadingProgress({ current: 2, total: 3, message: '画像データを読み込み中...' });
@@ -114,58 +143,30 @@ export default function AnimationPage() {
           console.warn(`Failed to preload images for unit ${unitId}:`, error);
           setLoadingProgress({ current: 3, total: 3, message: '画像読み込みエラー（アニメーションは表示可能）' });
         }
+        
+        // 短い遅延で読み込み完了を表示
+        setTimeout(() => {
+          setLoading(false);
+        }, 300);
+        
+        return true;
       } else {
         console.error(`Animation data not found for unit ${unitId}`);
         setLoadingProgress({ current: 0, total: 3, message: 'アニメーションデータが見つかりません' });
+        setLoading(false);
+        return false;
       }
     } catch (error) {
       console.error(`Failed to load animation data for unit ${unitId}:`, error);
       setLoadingProgress({ current: 0, total: 3, message: 'アニメーションデータの読み込みに失敗しました' });
-    }
-    
-    // 短い遅延で読み込み完了を表示
-    setTimeout(() => {
       setLoading(false);
-    }, 300);
-  }, []);
+      return false;
+    }
+  }, [updateURL]);
 
-  // Discover available animation files
+  // Load initial unit on mount
   useEffect(() => {
-    const discoverAnimationFiles = async () => {
-      const units: string[] = [];
-      const totalUnits = unitNamesData.length;
-      
-      setLoadingProgress({ current: 0, total: totalUnits, message: 'アニメーションファイルを検索中...' });
-      
-      // Use unit names data to check for available animation files
-      for (let i = 0; i < unitNamesData.length; i++) {
-        const unitData = unitNamesData[i];
-        const unitId = unitData.unitId;
-        
-        // Update progress
-        setLoadingProgress({ 
-          current: i + 1, 
-          total: totalUnits, 
-          message: `アニメーションファイルを準備中...` 
-        });
-        
-        try {
-          const moduleData = await import(`@/data/anim/${unitId}`);
-          const animationDataKey = `animationData_${unitId}`;
-          if (moduleData[animationDataKey]) {
-            units.push(unitId);
-          }
-        } catch {
-          // File doesn't exist, skip
-          console.log(`Animation file for unit ${unitId} not found`);
-        }
-      }
-      
-      setAvailableUnits(units);
-      setLoadingProgress({ current: totalUnits, total: totalUnits, message: `${units.length}個のアニメーションファイルを発見` });
-      
-      // Load the first available unit or default to 731
-      const initialUnit = units.includes('731') ? '731' : units[0];
+    const loadInitialUnit = async () => {
       if (initialUnit) {
         await handleUnitChange(initialUnit);
       } else {
@@ -173,27 +174,65 @@ export default function AnimationPage() {
       }
     };
     
-    discoverAnimationFiles();
-  }, [handleUnitChange]);
+    loadInitialUnit();
+  }, [handleUnitChange, initialUnit]);
+
+  // URLパラメータの変更を監視
+  useEffect(() => {
+    const currentUnit = searchParams.get('unit') || '731';
+    const currentForm = searchParams.get('form');
+    const currentAnim = searchParams.get('anim');
+    const currentPlaying = searchParams.get('playing') !== 'false';
+
+    // ユニットが変更された場合は新しいユニットを読み込み
+    if (currentUnit !== selectedUnit) {
+      handleUnitChange(currentUnit);
+      return;
+    }
+
+    // フォームやアニメーションの変更を反映
+    if (animationData) {
+      const forms = Object.keys(animationData);
+      if (currentForm && forms.includes(currentForm) && currentForm !== selectedForm) {
+        setSelectedForm(currentForm);
+      }
+      
+      const formData = animationData[selectedForm] as Record<string, unknown> || {};
+      const animations = Object.keys(formData).filter(key => key.startsWith('maanim'));
+      if (currentAnim && animations.includes(currentAnim) && currentAnim !== selectedAnimation) {
+        setSelectedAnimation(currentAnim);
+      }
+    }
+
+    // 再生状態の変更を反映
+    if (currentPlaying !== isPlaying) {
+      setIsPlaying(currentPlaying);
+    }
+  }, [searchParams, selectedUnit, selectedForm, selectedAnimation, isPlaying, animationData, handleUnitChange]);
 
   useEffect(() => {
-    // Reset form and animation when unit changes
+    // アニメーションデータが読み込まれた時の初期設定
     if (animationData) {
       const forms = Object.keys(animationData);
       if (forms.length > 0) {
-        // Select the last form (highest evolution)
-        const lastForm = forms[forms.length - 1];
-        setSelectedForm(lastForm);
-        const animations = Object.keys((animationData as Record<string, unknown>)[lastForm] as Record<string, unknown> || {})
-          .filter(key => key.startsWith('maanim'));
+        const currentForm = searchParams.get('form');
+        const currentAnim = searchParams.get('anim');
+        
+        // URLで指定されたフォーム、または最後のフォーム（最終形態）を選択
+        const targetForm = currentForm && forms.includes(currentForm) ? currentForm : forms[forms.length - 1];
+        setSelectedForm(targetForm);
+        
+        const formData = animationData[targetForm] as Record<string, unknown> || {};
+        const animations = Object.keys(formData).filter(key => key.startsWith('maanim'));
         if (animations.length > 0) {
-          // Try to find attack animation (maanim02), otherwise use first available
-          const attackAnimation = animations.find(anim => anim === 'maanim02');
-          setSelectedAnimation(attackAnimation || animations[0]);
+          // URLで指定されたアニメーション、または攻撃アニメーション（maanim02）を選択
+          const targetAnim = currentAnim && animations.includes(currentAnim) ? currentAnim : 
+                           animations.find(anim => anim === 'maanim02') || animations[0];
+          setSelectedAnimation(targetAnim);
         }
       }
     }
-  }, [animationData]);
+  }, [animationData, searchParams]);
 
   if (loading) {
     const progressPercentage = loadingProgress.total > 0 ? Math.round((loadingProgress.current / loadingProgress.total) * 100) : 0;
@@ -269,7 +308,7 @@ export default function AnimationPage() {
                 }
               }}
               placeholder="ID"
-              className="w-16 p-2 border border-gray-300 rounded-md font-mono text-center text-gray-500"
+              className="w-16 p-1 border border-gray-300 rounded-md font-mono text-center text-gray-500"
               disabled={loading || isSearching}
             />
             <input
@@ -277,13 +316,13 @@ export default function AnimationPage() {
               value={nameFilter}
               onChange={(e) => setNameFilter(e.target.value)}
               placeholder="ユニット名で検索..."
-              className="flex-1 p-2 border border-gray-300 rounded-md text-gray-500"
+              className="flex-1 p-1 border border-gray-300 rounded-md text-gray-500"
               disabled={loading}
             />
             <button
               onClick={() => handleUnitIdSubmit(unitIdInput)}
               disabled={loading || isSearching}
-              className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed font-mono"
+              className="px-4 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed font-mono"
             >
               {isSearching ? '検索中...' : '検索'}
             </button>
@@ -324,8 +363,11 @@ export default function AnimationPage() {
             <label className="text-sm font-medium text-gray-500 whitespace-nowrap font-mono"> Form </label>
             <select 
               value={selectedForm} 
-              onChange={(e) => setSelectedForm(e.target.value)}
-              className="flex-1 p-2 border border-gray-300 rounded-md text-gray-500 font-mono"
+              onChange={(e) => {
+                setSelectedForm(e.target.value);
+                updateURL({ form: e.target.value });
+              }}
+              className="flex-1 p-1 border border-gray-300 rounded-md text-gray-500 font-mono"
             >
               {availableForms.map(form => (
                 <option key={form} value={form}>
@@ -340,8 +382,11 @@ export default function AnimationPage() {
             <label className="text-sm font-medium text-gray-500 whitespace-nowrap font-mono"> Anim </label>
             <select 
               value={selectedAnimation} 
-              onChange={(e) => setSelectedAnimation(e.target.value)}
-              className="flex-1 p-2 border border-gray-300 rounded-md text-gray-500 font-mono"
+              onChange={(e) => {
+                setSelectedAnimation(e.target.value);
+                updateURL({ anim: e.target.value });
+              }}
+              className="flex-1 p-1 border border-gray-300 rounded-md text-gray-500 font-mono"
             >
               {availableAnimations.map(anim => (
                 <option key={anim} value={anim}>{getAnimationDisplayName(anim)}</option>
@@ -352,8 +397,12 @@ export default function AnimationPage() {
           {/* Play Controls */}
           <div className="flex items-center gap-2">
             <button
-              onClick={() => setIsPlaying(!isPlaying)}
-              className={`flex-1 p-2 rounded-md text-white font-medium font-mono ${
+              onClick={() => {
+                const newPlaying = !isPlaying;
+                setIsPlaying(newPlaying);
+                updateURL({ playing: newPlaying });
+              }}
+              className={`flex-1 p-1 rounded-md text-white font-medium font-mono ${
                 isPlaying ? 'bg-red-500 hover:bg-red-600' : 'bg-green-500 hover:bg-green-600'
               }`}
             >
@@ -382,5 +431,24 @@ export default function AnimationPage() {
       </div>
     </div>
     </div>
+  );
+}
+
+export default function AnimationPage() {
+  return (
+    <Suspense fallback={
+      <div className="container mx-auto p-4">
+        <div className="flex flex-col justify-center items-center h-64 space-y-4">
+          <div className="text-lg font-mono">読み込み中...</div>
+          <div className="flex space-x-1">
+            <div className="w-2 h-2 bg-blue-600 rounded-full animate-bounce"></div>
+            <div className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+            <div className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+          </div>
+        </div>
+      </div>
+    }>
+      <AnimationPageContent />
+    </Suspense>
   );
 }

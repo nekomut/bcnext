@@ -9,7 +9,6 @@ export const unit339Data: UnitData = {
       formId: 0,
       name: "340_1",
       stats: [2, 1, 0, 8, 15, 140, 50, 75, 0, 320, 0, 0, 0, 8, 9, 9, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 0, 1, -1, 0, 0, 0, 0, 0, 1, 0, 0, -1, 0, 1, 0, 0, 0, 0, 0, 0, 1],
-      icon: "iVBORw0KGgoAAAANSUhEUgAAAIAAAACABAMAAAAxEHz4AAAAA3NCSVQICAjb4U/gAAAAMFBMVEX///8AAAAWFhYsLCxLS0twcHChoaG3t7fExMTOzs7a2tri4uLp6enx8fH6+vr///85ceOcAAAAEHRSTlMA////////////////////wFCLQwAABNpJREFUaIHtmM1rG0cYxtP/oO9qpZyXNk5KD0F2XHBDGtZt0i9so6YyodQ2osQGQynGRJsegqkJWKI0pR8xlg81BAqVnGJo6cUr4oMDJbVMoA20B0u+xIWSyjrUViTZnum7cnY1sztarUKhLezjMV5r3/npmXdmdmb2yBFfvnz58vXP6il4Ij3tA3jA6NiY1obio6MOgJYwlGypepimOQBaIpnyroQDMHYlOZ/JLBplmS2O30wGS3puJm4HJOYzuq5nWwuj9EwqYQdoyXk9m/OoNT09p9kAV5KL2Vzeo3Jryyk7QEsteq6PhOW5GbuD+Vvr+aKh7ULB/BUKQ/IbetoJyK7ntz0qv/GTEzB7fr2A94gtlpTsBVXMrzkB16SrhW28XWJ+iqKvL2GQCDApncbv40S/fpeWnGriYAJCCKes9tUQdYpQInQwAdL1bcoRyiACYH0hIAbQzzsofQ5BEaAkdhAJqkFbC8IgiwBUnIPI0WlpgSPsQqcQQJo4CO1CP+d0IjDZxEETwL7awYbthUO/BApCC0KAepx+FFhiwh7A8I606d2B2oONHmLCYoGVHakdBycw7Y1+JxXlKG3mQNQLWvhFSiekJWOY1IfDHRhBwJIIIHSgKdgFWzBM6/MFoyJyAds05T0HSj+htfCx6MtdXV3nBsd/VJ4zRsKnnh3ElQF695JirlpSJ5ppy0Echi73Ajxz6lw0Gn2lC0nd4wj4wLsDOIXVBz+8XY+4G39bgcDFijLiuRcuo+3zHzeC/py9AFJUDBA66AV5fJMLe3gJcyF2IAKAfLVkizu4ocDrnh3I1wWBPyjSkPNjsQNhuukNRV7w6EBYn9JJ6HB+KOyFJoC9CDgb0Y4D+rsS3HQ4aAeAjeh7QgclUv9TDTssuDl4+JUVViwcEr4wppVXB9Ve2fy6Wm/3ymML9vXJpRd2rcFLdgAGDi+nYYofpC4OHli16CrA2cOrMpz2nIMGgNxvXEZs64uLg5r67MLjqIoiTVlmpjiAiwPy27dWc6+9al6VlTNeHVjCQXBgLSpEDRHOQYu5QG5Tsn+PrTEd4P5t5WDr2CZd7WFr7PCzvcVcID9jeIzbm1T5+dDKwS70VGyjD5du7w4wZ4EL0Fei3zQ+igXZLLo6MHrxewDcKdQ6Gw3/Tmaz6NoLeWoMJ3jDaLg5qnFYSuwi6eag1rVgOIY+3E4qFsC2xrnloFyfjRGQV+ivDOARu8KId2mmA2PUlnFpfSGuMpWqDKxFLxjb42kYDEM9kdTiMgDxTtW8G5PGZsPyvS+x/juNOvvqWdaBSy9gviUFHyDFmMws1bQYOekxB3RPxXUSvX/GjWUOID5wWLf/eK/+FI6FHABilhZDuQwDJXyMnWABB5GTxHhG1Atp8Twg4eexJcqbLGBffYk/trlOpkjQHFCWako/f+xzBdwMbNKb1hO1rqodoKdcAH/BCC6I3FryCIZtR9+0/ezMRR9fhTMsgGzB+0z1jY1cxnF2ZsMjkiItsAbofemT3Hpu47AYx/+M4/jPAu4AcJ2IaZFvZfU1s+h6Jp1wAdC9t7ptm+xYcNnUovGeRPAKhIuv2o4JRO3IcEolNFeAXRV4zXp/M5dKJVOC10CugB24mOA0o8XbAkwHWr/J+vdfxv3fAb58+fLl6z+ivwFQW0z2/CRW1wAAAABJRU5ErkJggg==",
       animLength: 1
     }
     ],
@@ -26,11 +25,11 @@ export const unit339Data: UnitData = {
       hasTalents: false,
       hasUltra: false,
       talentList: [
-
       ]
     }
   }
 } as const;
 
 export default unit339Data;
+
 

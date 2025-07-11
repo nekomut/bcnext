@@ -9,7 +9,6 @@ export const unit761Data: UnitData = {
       formId: 0,
       name: "762_1",
       stats: [100, 1, 0, 2700, 0, 800, 0, 0, 0, 320, 1, 0, 1, 41, 9, 9, 1, 1, 1, 1, 1, 1, 1, 0, 0, 100, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, -1, 2, 0, 0, 0, 0, 1, 0, 0, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0],
-      icon: "",
       animLength: 86
     }
     ],
@@ -26,11 +25,11 @@ export const unit761Data: UnitData = {
       hasTalents: false,
       hasUltra: false,
       talentList: [
-
       ]
     }
   }
 } as const;
 
 export default unit761Data;
+
 

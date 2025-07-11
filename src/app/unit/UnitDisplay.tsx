@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { UnitData, CalculatedStats, UnitAbility, UnitTalent, calculateUnitStats, getAbilities, frameToSecond, getValidFormCount, calculateTalentEffect } from './types';
 import { icons } from '@/data/icons';
+import IconManager from './IconManager';
 
 interface UnitDisplayProps {
   unitData: UnitData;
@@ -30,6 +31,10 @@ export function UnitDisplay({
   const [level, setLevel] = useState(initialLevel);
   const [plusLevel, setPlusLevel] = useState(initialPlusLevel);
   const [currentForm, setCurrentForm] = useState(defaultFormId);
+  
+  // アイコン管理用の状態
+  const [formIcons, setFormIcons] = useState<string[]>([]);
+  const [iconsLoading, setIconsLoading] = useState(true);
   
   // 入力用の文字列state
   const [levelInput, setLevelInput] = useState(initialLevel.toString());
@@ -217,6 +222,25 @@ export function UnitDisplay({
     // 能力・効果の攻撃力アップをリセット
     setAttackUpEnabled(false);
   }, [unitData.unitId, unitData.auxiliaryData.talents.talentList, unitData.coreData.forms, initialFormId, unitData]);
+
+  // アイコンを読み込むuseEffect
+  useEffect(() => {
+    const loadIcons = async () => {
+      setIconsLoading(true);
+      try {
+        const unitIdStr = IconManager.formatUnitId(unitData.unitId);
+        const icons = await IconManager.loadUnitIcons(unitIdStr);
+        setFormIcons(icons);
+      } catch (error) {
+        console.error('Failed to load unit icons:', error);
+        setFormIcons([]);
+      } finally {
+        setIconsLoading(false);
+      }
+    };
+
+    loadIcons();
+  }, [unitData.unitId]);
 
   const actualCurrentForm = Math.min(currentForm, validFormCount - 1);
   
@@ -465,11 +489,11 @@ export function UnitDisplay({
       {/* Header */}
       <div className="mb-3 flex items-center gap-2 sm:gap-3">
         {/* Unit Icon and Rarity */}
-        {currentFormData.icon && (
+        {!iconsLoading && formIcons[actualCurrentForm] && (
           <div className="flex-shrink-0 flex flex-col items-center gap-1">
             <div className="w-12 h-8 border-0 border-gray-200 overflow-hidden">
               <Image 
-                src={`data:image/png;base64,${currentFormData.icon}`}
+                src={`data:image/png;base64,${formIcons[actualCurrentForm]}`}
                 alt={currentFormData.name || 'Unit Icon'}
                 width={64}
                 height={64}
@@ -659,9 +683,9 @@ export function UnitDisplay({
               }`}
             >
               {/* Form Icon */}
-              {form.icon && (
+              {!iconsLoading && formIcons[index] && (
                 <Image 
-                  src={`data:image/png;base64,${form.icon}`}
+                  src={`data:image/png;base64,${formIcons[index]}`}
                   alt={form.name || 'Form Icon'}
                   width={24}
                   height={24}

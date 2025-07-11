@@ -4,7 +4,6 @@ export interface UnitForm {
   readonly formId: number;
   readonly name: string;
   readonly stats: readonly number[];
-  readonly icon: string;
   readonly animLength?: number;
 }
 

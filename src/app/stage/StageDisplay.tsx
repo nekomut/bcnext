@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import type { StageData, StageInfo, EnemyStageInfo, TreasureInfo } from './types';
 import { icons } from '../../data/icons';
+import { loadEnemyIcon } from './iconLoader';
 
 interface StageDisplayProps {
   stageData: StageData;
@@ -578,10 +579,19 @@ interface EnemyRowProps {
 }
 
 function EnemyRow({ enemy, showDetail, getTraitColor, getTraitIcon, getAbilityIcon, formatNumber }: EnemyRowProps) {
+  const [enemyIcon, setEnemyIcon] = useState<string | null>(null);
   const isBoss = enemy.stageStats.isBoss;
   const nameClass = isBoss ? 'text-red-500 font-bold' : 'text-gray-500';
   const displayName = isBoss ? `${enemy.enemyName}*` : enemy.enemyName;
   const magClass = enemy.stageStats.magnification !== '100%' ? 'text-yellow-600 font-semibold' : 'text-gray-600';
+  
+  useEffect(() => {
+    const loadIcon = async () => {
+      const iconData = await loadEnemyIcon(enemy.enemyId);
+      setEnemyIcon(iconData);
+    };
+    loadIcon();
+  }, [enemy.enemyId]);
   
   return (
     <tr className="hover:bg-gray-50 transition-colors">
@@ -590,9 +600,9 @@ function EnemyRow({ enemy, showDetail, getTraitColor, getTraitIcon, getAbilityIc
       </td>
       <td className={`px-2 py-1 ${nameClass}`}>
         <div className="flex items-center gap-1">
-          {enemy.icon && (
+          {enemyIcon && (
             <Image 
-              src={`data:image/png;base64,${enemy.icon}`} 
+              src={`data:image/png;base64,${enemyIcon}`} 
               alt={enemy.enemyName}
               className="w-4 h-4 flex-shrink-0"
               width={16}

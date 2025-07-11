@@ -44,7 +44,6 @@ export const e1294Data: StageData = {
         {
           enemyId: "021",
           enemyName: "カンバン娘",
-          icon: "",
           traits: ["無"],
           baseStats: {
             hp: 10000,
@@ -105,7 +104,6 @@ export const e1294Data: StageData = {
         {
           enemyId: "021",
           enemyName: "カンバン娘",
-          icon: "",
           traits: ["無"],
           baseStats: {
             hp: 10000,
@@ -166,7 +164,6 @@ export const e1294Data: StageData = {
         {
           enemyId: "021",
           enemyName: "カンバン娘",
-          icon: "",
           traits: ["無"],
           baseStats: {
             hp: 10000,

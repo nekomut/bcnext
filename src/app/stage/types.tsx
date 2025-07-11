@@ -54,7 +54,6 @@ export interface TreasureInfo {
 export interface EnemyStageInfo {
   enemyId: string;
   enemyName: string;
-  icon: string;  // base64エンコードされたアイコン
   traits: string[];
   baseStats: {
     hp: number;

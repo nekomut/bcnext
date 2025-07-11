@@ -1,4 +1,4 @@
-t/**
+/**
  * Unit 686のめっぽう強い能力表示テスト（ブラウザログ確認付き）
  */
 import { test, expect } from '@playwright/test';

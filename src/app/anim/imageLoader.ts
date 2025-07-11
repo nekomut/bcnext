@@ -14,9 +14,6 @@ export async function loadUnitImages(unitId: string): Promise<string[]> {
   }
 
   try {
-    // 静的サイト生成環境では絶対パスを試す
-    let url = `/data/anim/${unitId}`;
-    
     // デプロイ環境で相対パスでの fetch が失敗する場合があるため、複数のパスを試行
     const urlsToTry = [
       `/data/anim/${unitId}`,
@@ -25,17 +22,14 @@ export async function loadUnitImages(unitId: string): Promise<string[]> {
     ].filter(Boolean);
     
     let response: Response | null = null;
-    let lastError: Error | null = null;
     
     for (const tryUrl of urlsToTry) {
       try {
         response = await fetch(tryUrl);
         if (response.ok) {
-          url = tryUrl; // 成功したURLを記録
           break;
         }
-      } catch (fetchError) {
-        lastError = fetchError as Error;
+      } catch {
         continue;
       }
     }
@@ -51,7 +45,7 @@ export async function loadUnitImages(unitId: string): Promise<string[]> {
     // キャッシュに保存
     imageCache[unitId] = images;
     return images;
-  } catch (error) {
+  } catch {
     return [];
   }
 }

@@ -97,7 +97,7 @@ export default function AnimationViewer({
           } else {
             resolve(false);
           }
-        } catch (error) {
+        } catch {
           resolve(false);
         }
       });

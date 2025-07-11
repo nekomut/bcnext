@@ -9,6 +9,9 @@ import IconManager from './IconManager';
 
 interface UnitDisplayProps {
   unitData: UnitData;
+  formId?: number;
+  level?: number;
+  plusLevel?: number;
   initialLevel?: number;
   initialPlusLevel?: number;
   initialFormId?: number;

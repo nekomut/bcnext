@@ -54,6 +54,7 @@ export interface TreasureInfo {
 export interface EnemyStageInfo {
   enemyId: string;
   enemyName: string;
+  icon?: string;
   traits: string[];
   baseStats: {
     hp: number;

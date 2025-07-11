@@ -84,7 +84,7 @@ export async function buildEnemyDatabase(
               enemyMap.set(enemy.enemyId, {
                 enemyId: enemy.enemyId,
                 enemyName: enemy.enemyName,
-                icon: enemy.icon,
+                icon: enemy.icon || '',
                 traits: enemy.traits,
                 baseStats: enemy.baseStats,
                 abilities: enemy.abilities

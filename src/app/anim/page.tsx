@@ -146,7 +146,7 @@ export default function AnimationPage() {
         setLoadingProgress({ 
           current: i + 1, 
           total: totalUnits, 
-          message: `アニメーションファイルを検索中... (${unitId})` 
+          message: `アニメーションファイルを準備中...` 
         });
         
         try {

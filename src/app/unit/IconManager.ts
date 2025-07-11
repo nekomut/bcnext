@@ -52,9 +52,29 @@ export class IconManager {
    */
   private static async fetchUnitIcons(unitId: string): Promise<string[]> {
     try {
-      const response = await fetch(`/data/unit/${unitId}`);
-      if (!response.ok) {
-        console.warn(`Failed to load icons for unit ${unitId}: ${response.status}`);
+      // デプロイ環境で相対パスでの fetch が失敗する場合があるため、複数のパスを試行
+      const urlsToTry = [
+        `/data/unit/${unitId}`,
+        `./data/unit/${unitId}`,
+        `${typeof window !== 'undefined' && window.location.origin || ''}/data/unit/${unitId}`
+      ].filter(Boolean);
+      
+      let response: Response | null = null;
+      
+      for (const tryUrl of urlsToTry) {
+        try {
+          response = await fetch(tryUrl);
+          if (response.ok) {
+            break;
+          }
+        } catch {
+          continue;
+        }
+      }
+      
+      if (!response || !response.ok) {
+        const errorMsg = `All URLs failed to load unit icons ${unitId}. Last status: ${response?.status || 'network error'}`;
+        console.warn(errorMsg);
         return [];
       }
 
@@ -97,6 +117,25 @@ export class IconManager {
   static formatUnitId(unitId: number | string): string {
     return unitId.toString().padStart(3, '0');
   }
+
+  /**
+   * キャッシュ情報を取得する（デバッグ用）
+   */
+  static getCacheInfo(): { unitCount: number, cachedUnits: string[] } {
+    const cachedUnits = Array.from(this.iconCache.keys());
+    return { unitCount: this.iconCache.size, cachedUnits };
+  }
+}
+
+// デバッグ用のコンソール出力（開発環境のみ）
+if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+  (window as Window & { unitIconDebug?: object }).unitIconDebug = {
+    getIconCache: () => IconManager['iconCache'],
+    getCacheInfo: () => IconManager.getCacheInfo(),
+    clearCache: () => IconManager.clearCache(),
+    loadUnit: (unitId: string) => IconManager.loadUnitIcons(unitId),
+    getFormIcon: (unitId: string, formId: number) => IconManager.getFormIcon(unitId, formId)
+  };
 }
 
 export default IconManager;

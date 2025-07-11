@@ -3,38 +3,49 @@
 import Link from 'next/link';
 import { useState, useEffect, useCallback, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import Image from 'next/image';
 import AnimationViewer from './AnimationViewer';
-import { unitNamesData } from '@/data/unit-names';
+import { unitNamesData, UnitNameData } from '@/data/unit-names';
 import { loadUnitImages } from './imageLoader';
+import IconManager from './IconManager';
 
 function AnimationPageContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   
-  // URLパラメータから初期値を取得（デフォルト：最終形態・攻撃・再生）
-  const initialUnit = searchParams.get('unit') || '731';
+  // URLパラメータから初期値を取得（デフォルト：未選択状態）
+  const initialUnit = searchParams.get('unit');
   const initialForm = searchParams.get('form'); // null if not specified
   const initialAnim = searchParams.get('anim'); // null if not specified  
   const initialPlaying = searchParams.get('playing') !== 'false'; // デフォルト：再生
   
-  const [selectedUnit, setSelectedUnit] = useState(initialUnit);
+  const [selectedUnit, setSelectedUnit] = useState(initialUnit || '');
   const [animationData, setAnimationData] = useState<Record<string, unknown> | null>(null);
   const [selectedForm, setSelectedForm] = useState(initialForm || 'f');
   const [selectedAnimation, setSelectedAnimation] = useState(initialAnim || 'maanim02');
   const [isPlaying, setIsPlaying] = useState(initialPlaying);
-  const [availableUnits, setAvailableUnits] = useState<string[]>([]);
   const [loading, setLoading] = useState(false);
   const [loadingProgress, setLoadingProgress] = useState({ current: 0, total: 0, message: '' });
   
-  // Search UI states
-  const [unitIdInput, setUnitIdInput] = useState(initialUnit);
-  const [nameFilter, setNameFilter] = useState('');
-  const [isSearching, setIsSearching] = useState(false);
+  // Unit selection UI states (unitスタイル)
+  const [selectedUnitName, setSelectedUnitName] = useState<string>('');
+  const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
+  const [nameFilter, setNameFilter] = useState<string>('');
+  
+  // Form icons state
+  const [formIcons, setFormIcons] = useState<string[]>([]);
+  const [iconsLoading, setIconsLoading] = useState(true);
 
   const availableForms = animationData ? Object.keys(animationData) : [];
   const availableAnimations = availableForms.length > 0 && animationData ? 
     Object.keys((animationData as Record<string, unknown>)[selectedForm] as Record<string, unknown> || {})
       .filter(key => key.startsWith('maanim')) : [];
+  
+  // フィルタリングされたユニット名リスト
+  const filteredUnits = unitNamesData.filter(unit =>
+    unit.displayName.toLowerCase().includes(nameFilter.toLowerCase()) ||
+    unit.forms.some(form => form.toLowerCase().includes(nameFilter.toLowerCase()))
+  );
 
   // URLパラメータを更新する関数
   const updateURL = useCallback((params: { unit?: string; form?: string; anim?: string; playing?: boolean }) => {
@@ -48,10 +59,25 @@ function AnimationPageContent() {
     router.replace(`?${newSearchParams.toString()}`, { scroll: false });
   }, [router, searchParams]);
 
-  // Get unit display name from unit names data
-  const getUnitDisplayName = (unitId: string) => {
-    const unitData = unitNamesData.find(unit => unit.unitId === unitId);
-    return unitData ? unitData.displayName : `Unit ${unitId}`;
+  
+  // ユニット名選択時の処理（unitスタイル）
+  const handleUnitNameSelect = (unit: UnitNameData) => {
+    setSelectedUnitName(unit.displayName);
+    setNameFilter('');
+    setIsDropdownOpen(false);
+    
+    handleUnitChange(unit.unitId);
+  };
+  
+  // キーボード入力ハンドラ
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      const value = (e.target as HTMLInputElement).value.trim();
+      if (value && !isNaN(Number(value))) {
+        const formattedId = Number(value).toString().padStart(3, '0');
+        handleUnitChange(formattedId);
+      }
+    }
   };
 
   // Get form display name from unit names data
@@ -85,36 +111,21 @@ function AnimationPageContent() {
     return animationNames[animationKey] || animationKey;
   };
 
-  // Filter available units based on search criteria
-  const getFilteredUnits = () => {
-    return availableUnits.filter(unitId => {
-      const unitData = unitNamesData.find(unit => unit.unitId === unitId);
-      if (!unitData) return false;
-      
-      // Filter by name if nameFilter is provided
-      if (nameFilter && !unitData.displayName.toLowerCase().includes(nameFilter.toLowerCase())) {
-        return false;
+  // ユニット検索処理（unitスタイル）
+  const handleUnitSearch = async () => {
+    const value = selectedUnit.trim();
+    if (value && !isNaN(Number(value))) {
+      const formattedId = Number(value).toString().padStart(3, '0');
+      const success = await handleUnitChange(formattedId);
+      if (!success) {
+        alert(`ユニット ${formattedId} のアニメーションデータが見つかりません`);
       }
-      
-      return true;
-    });
-  };
-
-  // Handle unit ID input change
-  const handleUnitIdSubmit = async (inputUnitId: string) => {
-    const formattedId = inputUnitId.padStart(3, '0');
-    setIsSearching(true);
-    const success = await handleUnitChange(formattedId);
-    setIsSearching(false);
-    
-    if (!success) {
-      alert(`ユニット ${formattedId} のアニメーションデータが見つかりません`);
     }
   };
 
   const handleUnitChange = useCallback(async (unitId: string): Promise<boolean> => {
+    console.log(`handleUnitChange called: "${unitId}"`);
     setSelectedUnit(unitId);
-    setUnitIdInput(unitId);
     setLoading(true);
     setLoadingProgress({ current: 0, total: 3, message: 'アニメーションデータを読み込み中...' });
     
@@ -131,8 +142,11 @@ function AnimationPageContent() {
         // URLパラメータを更新
         updateURL({ unit: unitId });
         
-        // 利用可能ユニットリストに追加（重複避け）
-        setAvailableUnits(prev => prev.includes(unitId) ? prev : [...prev, unitId]);
+        // ユニット名を同期
+        const unitData = unitNamesData.find(unit => unit.unitId === unitId);
+        if (unitData) {
+          setSelectedUnitName(unitData.displayName);
+        }
         
         // Step 2: 画像データのプリロード
         setLoadingProgress({ current: 2, total: 3, message: '画像データを読み込み中...' });
@@ -163,6 +177,26 @@ function AnimationPageContent() {
       return false;
     }
   }, [updateURL]);
+  
+  // アイコン読み込み処理
+  useEffect(() => {
+    const loadIcons = async () => {
+      if (!selectedUnit) return;
+      
+      setIconsLoading(true);
+      try {
+        const icons = await IconManager.loadUnitIcons(selectedUnit);
+        setFormIcons(icons);
+      } catch (error) {
+        console.error(`Failed to load icons for unit ${selectedUnit}:`, error);
+        setFormIcons([]);
+      } finally {
+        setIconsLoading(false);
+      }
+    };
+    
+    loadIcons();
+  }, [selectedUnit]);
 
   // Load initial unit on mount
   useEffect(() => {
@@ -175,40 +209,10 @@ function AnimationPageContent() {
     };
     
     loadInitialUnit();
-  }, [handleUnitChange, initialUnit]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  // URLパラメータの変更を監視
-  useEffect(() => {
-    const currentUnit = searchParams.get('unit') || '731';
-    const currentForm = searchParams.get('form');
-    const currentAnim = searchParams.get('anim');
-    const currentPlaying = searchParams.get('playing') !== 'false';
-
-    // ユニットが変更された場合は新しいユニットを読み込み
-    if (currentUnit !== selectedUnit) {
-      handleUnitChange(currentUnit);
-      return;
-    }
-
-    // フォームやアニメーションの変更を反映
-    if (animationData) {
-      const forms = Object.keys(animationData);
-      if (currentForm && forms.includes(currentForm) && currentForm !== selectedForm) {
-        setSelectedForm(currentForm);
-      }
-      
-      const formData = animationData[selectedForm] as Record<string, unknown> || {};
-      const animations = Object.keys(formData).filter(key => key.startsWith('maanim'));
-      if (currentAnim && animations.includes(currentAnim) && currentAnim !== selectedAnimation) {
-        setSelectedAnimation(currentAnim);
-      }
-    }
-
-    // 再生状態の変更を反映
-    if (currentPlaying !== isPlaying) {
-      setIsPlaying(currentPlaying);
-    }
-  }, [searchParams, selectedUnit, selectedForm, selectedAnimation, isPlaying, animationData, handleUnitChange]);
+  // URLパラメータ監視は削除（ボタン処理内でのみURL更新）
 
   useEffect(() => {
     // アニメーションデータが読み込まれた時の初期設定
@@ -267,16 +271,6 @@ function AnimationPageContent() {
     );
   }
 
-  if (availableUnits.length === 0) {
-    return (
-      <div className="container mx-auto p-4">
-        <div className="bg-yellow-100 border border-yellow-400 text-yellow-700 px-4 py-3 rounded">
-          <p>利用可能なアニメーションファイルが見つかりません。</p>
-          <p>src/data/anim/ ディレクトリにTSXファイルが存在することを確認してください。</p>
-        </div>
-      </div>
-    );
-  }
 
   return (
     <div>
@@ -292,101 +286,170 @@ function AnimationPageContent() {
 
     <div className="container mx-auto p-2">
       
-      {/* Controls */}
-      <div className="bg-white shadow rounded-lg p-3 mb-3">
-        {/* Unit Search Section */}
-        <div className="mb-2">
-          <div className="flex items-center gap-2">
-            <label className="text-sm font-medium text-gray-500 font-mono">Unit</label>
+      {/* ユニット検索UI（unitスタイル） */}
+      <div className="p-2">
+        <div className="mb-1 flex gap-1 items-end">
+          {/* 前のIDボタン - 左端 */}
+          {selectedUnit && !isNaN(parseInt(selectedUnit)) && parseInt(selectedUnit) > 1 && (
+            <button
+              onClick={async () => {
+                const currentId = parseInt(selectedUnit);
+                const prevId = Math.max(1, currentId - 1);
+                const formattedId = prevId.toString().padStart(3, '0');
+                
+                console.log(`Previous: ${selectedUnit} (${currentId}) -> ${formattedId} (${prevId})`);
+                await handleUnitChange(formattedId);
+              }}
+              disabled={loading}
+              className="bg-blue-500 hover:bg-blue-600 text-white px-2 py-0.5 rounded text-xs disabled:opacity-50"
+            >
+              ◁
+            </button>
+          )}
+          
+          <div className="flex items-center gap-1">
+            <label className="text-xs text-gray-200">Unit ID</label>
             <input
               type="text"
-              value={unitIdInput}
-              onChange={(e) => setUnitIdInput(e.target.value)}
-              onKeyPress={(e) => {
-                if (e.key === 'Enter') {
-                  handleUnitIdSubmit(unitIdInput);
+              value={selectedUnit}
+              onChange={(e) => setSelectedUnit(e.target.value)}
+              onBlur={(e) => {
+                const value = e.target.value.trim();
+                if (value && !isNaN(Number(value))) {
+                  setSelectedUnit(Number(value).toString());
                 }
               }}
-              placeholder="ID"
-              className="w-16 p-1 border border-gray-300 rounded-md font-mono text-center text-gray-500"
-              disabled={loading || isSearching}
+              onKeyPress={handleKeyPress}
+              className="border rounded px-1 py-0.5 text-xs w-8 sm:w-24 text-gray-900 text-center"
             />
-            <input
-              type="text"
-              value={nameFilter}
-              onChange={(e) => setNameFilter(e.target.value)}
-              placeholder="ユニット名で検索..."
-              className="flex-1 p-1 border border-gray-300 rounded-md text-gray-500"
-              disabled={loading}
-            />
-            <button
-              onClick={() => handleUnitIdSubmit(unitIdInput)}
-              disabled={loading || isSearching}
-              className="px-4 py-1 bg-blue-500 text-white rounded-md hover:bg-blue-600 disabled:opacity-50 disabled:cursor-not-allowed font-mono"
-            >
-              {isSearching ? '検索中...' : '検索'}
-            </button>
           </div>
           
-          {/* Filtered Units List */}
-          {nameFilter && getFilteredUnits().length > 0 && (
-            <div className="mt-4">
-              <div className="text-sm font-medium text-gray-500 mb-2">検索結果:</div>
-              <div className="max-h-32 overflow-y-auto border border-gray-200 rounded">
-                {getFilteredUnits().slice(0, 10).map(unitId => (
-                  <button
-                    key={unitId}
-                    onClick={() => {
-                      setNameFilter('');
-                      handleUnitChange(unitId);
-                    }}
-                    className="w-full text-left px-3 py-2 hover:bg-gray-100 text-sm font-mono border-b border-gray-100 last:border-b-0 text-gray-500"
-                    disabled={loading}
-                  >
-                    {unitId} - {getUnitDisplayName(unitId)}
-                  </button>
-                ))}
-                {getFilteredUnits().length > 10 && (
-                  <div className="px-3 py-2 text-sm text-gray-500 italic">
-                    ...他 {getFilteredUnits().length - 10} 件
-                  </div>
-                )}
-              </div>
+          {/* ユニット名プルダウン */}
+          <div className="relative flex-1">
+            <div className="relative">
+              <input
+                type="text"
+                value={isDropdownOpen ? nameFilter : selectedUnitName}
+                onChange={(e) => {
+                  setNameFilter(e.target.value);
+                  setIsDropdownOpen(true);
+                }}
+                onFocus={() => {
+                  setIsDropdownOpen(true);
+                  setNameFilter('');
+                }}
+                onBlur={() => {
+                  // 少し遅延させてドロップダウンのクリックを可能にする
+                  setTimeout(() => setIsDropdownOpen(false), 200);
+                }}
+                placeholder="ユニット名で選択..."
+                className="border rounded px-1 py-0.5 text-xs w-full text-gray-900"
+              />
+              
+              {isDropdownOpen && (
+                <div className="absolute z-10 w-full max-h-60 overflow-y-auto bg-white border border-gray-300 rounded-md shadow-lg mt-1">
+                  {filteredUnits.slice(0, 50).map((unit) => (
+                    <div
+                      key={unit.unitId}
+                      className="px-2 py-1 hover:bg-gray-100 cursor-pointer text-xs text-gray-900"
+                      onMouseDown={(e) => {
+                        e.preventDefault(); // onBlurより先に実行されるように
+                        handleUnitNameSelect(unit);
+                      }}
+                    >
+                      {unit.displayName}
+                    </div>
+                  ))}
+                  
+                  {filteredUnits.length > 50 && (
+                    <div className="px-2 py-1 text-xs text-gray-500 italic">
+                      検索結果が多すぎます。キーワードを絞ってください。
+                    </div>
+                  )}
+                  
+                  {filteredUnits.length === 0 && nameFilter && (
+                    <div className="px-2 py-1 text-xs text-gray-500 italic">
+                      該当するユニットが見つかりません。
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
+          </div>
+          
+          <button
+            onClick={handleUnitSearch}
+            disabled={loading}
+            className="bg-blue-500 hover:bg-blue-600 text-white px-2 py-0.5 rounded text-xs disabled:opacity-50 w-12"
+          >
+            {loading ? '読込..' : '表示'}
+          </button>
+          
+          {/* 次のIDボタン - 右端 */}
+          {selectedUnit && !isNaN(parseInt(selectedUnit)) && (
+            <button
+              onClick={async () => {
+                const currentId = parseInt(selectedUnit);
+                const nextId = currentId + 1;
+                const formattedId = nextId.toString().padStart(3, '0');
+                
+                console.log(`Next: ${selectedUnit} (${currentId}) -> ${formattedId} (${nextId})`);
+                await handleUnitChange(formattedId);
+              }}
+              disabled={loading}
+              className="bg-blue-500 hover:bg-blue-600 text-white px-2 py-0.5 rounded text-xs disabled:opacity-50"
+            >
+              ▷
+            </button>
           )}
         </div>
+      </div>
+      
+      {/* コントロール */}
+      <div className="bg-white shadow rounded-lg p-3 mb-3">
         
-        <div className="space-y-2">
-
-          {/* Form Selector */}
-          <div className="flex items-center gap-2">
-            <label className="text-sm font-medium text-gray-500 whitespace-nowrap font-mono"> Form </label>
-            <select 
-              value={selectedForm} 
-              onChange={(e) => {
-                setSelectedForm(e.target.value);
-                updateURL({ form: e.target.value });
-              }}
-              className="flex-1 p-1 border border-gray-300 rounded-md text-gray-500 font-mono"
-            >
-              {availableForms.map(form => (
-                <option key={form} value={form}>
-                  {getFormDisplayName(form, selectedUnit)}
-                </option>
-              ))}
-            </select>
+        {/* Form Tabs（unitスタイル） */}
+        {availableForms.length > 1 && (
+          <div className="flex mb-2.5">
+            {availableForms.map((form, index) => (
+              <div key={form} className="w-1/4 px-0.5">
+                <button
+                  onClick={() => {
+                    setSelectedForm(form);
+                    updateURL({ form: form });
+                  }}
+                  className={`w-full flex items-center justify-center p-0.5 rounded transition-colors ${
+                    selectedForm === form
+                      ? 'bg-blue-500'
+                      : 'bg-gray-200 hover:bg-gray-300'
+                  }`}
+              >
+                {/* Form Icon */}
+                {!iconsLoading && formIcons[index] && (
+                  <Image 
+                    src={`data:image/png;base64,${formIcons[index]}`}
+                    alt={getFormDisplayName(form, selectedUnit)}
+                    width={40}
+                    height={40}
+                    className="rounded object-cover"
+                  />
+                )}
+                </button>
+              </div>
+            ))}
           </div>
-
+        )}
+        
+        <div className="flex gap-0">
           {/* Animation Selector */}
-          <div className="flex items-center gap-2">
-            <label className="text-sm font-medium text-gray-500 whitespace-nowrap font-mono"> Anim </label>
+          <div className="w-1/2 px-0.5">
             <select 
               value={selectedAnimation} 
               onChange={(e) => {
                 setSelectedAnimation(e.target.value);
                 updateURL({ anim: e.target.value });
               }}
-              className="flex-1 p-1 border border-gray-300 rounded-md text-gray-500 font-mono"
+              className="w-full p-1 border border-gray-300 rounded-md text-gray-500 font-mono"
             >
               {availableAnimations.map(anim => (
                 <option key={anim} value={anim}>{getAnimationDisplayName(anim)}</option>
@@ -395,14 +458,14 @@ function AnimationPageContent() {
           </div>
 
           {/* Play Controls */}
-          <div className="flex items-center gap-2">
+          <div className="w-1/2 px-0.5">
             <button
               onClick={() => {
                 const newPlaying = !isPlaying;
                 setIsPlaying(newPlaying);
                 updateURL({ playing: newPlaying });
               }}
-              className={`flex-1 p-1 rounded-md text-white font-medium font-mono ${
+              className={`w-full p-1 rounded-md text-white font-medium font-mono ${
                 isPlaying ? 'bg-red-500 hover:bg-red-600' : 'bg-green-500 hover:bg-green-600'
               }`}
             >
@@ -425,7 +488,9 @@ function AnimationPageContent() {
           />
         ) : (
           <div className="flex justify-center items-center h-64">
-            <div className="text-lg text-gray-500">アニメーションデータが読み込まれていません</div>
+            <div className="text-lg text-gray-500">
+              {selectedUnit ? 'アニメーションデータが読み込まれていません' : 'ユニットを選択してください'}
+            </div>
           </div>
         )}
       </div>

@@ -255,7 +255,7 @@ function UnitPageContent() {
 
       {/* ユニット検索UI */}
       <div className="p-2">
-        <div className="mb-1 flex gap-1 items-end flex-wrap">
+        <div className="mb-1 flex gap-1 items-end">
           {/* 前のIDボタン - 左端 */}
           {unitId && !isNaN(parseInt(unitId)) && (
             <button
@@ -299,7 +299,7 @@ function UnitPageContent() {
           </div>
           
           {/* ユニット名プルダウン */}
-          <div className="relative">
+          <div className="relative flex-1">
             <div className="relative">
               <input
                 type="text"
@@ -317,7 +317,7 @@ function UnitPageContent() {
                   setTimeout(() => setIsDropdownOpen(false), 200);
                 }}
                 placeholder="ユニット名で選択..."
-                className="border rounded px-1 py-0.5 text-xs w-52 sm:w-52 text-gray-900"
+                className="border rounded px-1 py-0.5 text-xs w-full text-gray-900"
               />
               
               {isDropdownOpen && (

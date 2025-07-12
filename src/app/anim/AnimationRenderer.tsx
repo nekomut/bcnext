@@ -170,10 +170,10 @@ export default function AnimationRenderer({
         ];
         
         corners.forEach(corner => {
-          const transformedX = part.matrix.m0 * viewScale * zoom * corner.x + 
-                             part.matrix.m1 * viewScale * zoom * corner.y + screenX;
-          const transformedY = part.matrix.m3 * viewScale * zoom * corner.x + 
-                             part.matrix.m4 * viewScale * zoom * corner.y + screenY;
+          const transformedX = part.matrix!.m0 * viewScale * zoom * corner.x + 
+                             part.matrix!.m1 * viewScale * zoom * corner.y + screenX;
+          const transformedY = part.matrix!.m3 * viewScale * zoom * corner.x + 
+                             part.matrix!.m4 * viewScale * zoom * corner.y + screenY;
           
           minX = Math.min(minX, transformedX);
           minY = Math.min(minY, transformedY);

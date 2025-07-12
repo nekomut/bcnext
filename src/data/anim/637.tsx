@@ -3,9 +3,9 @@
 
 export const animationData_637 = {
   "f": {
-    "name": "\u30b7\u30e3\u30aa\u30c1\u30e7\u30f3\uff06\u30cd\u30b3",
+    "name": "シャオチョン＆ネコ",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["637_f.png"],
       [95],
@@ -2352,9 +2352,9 @@ export const animationData_637 = {
     ]
   },
   "c": {
-    "name": "\u30b7\u30e3\u30aa\u30c1\u30e7\u30f3\uff06\u30cd\u30b3CC",
+    "name": "シャオチョン＆ネコCC",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["637_c.png"],
       [98],

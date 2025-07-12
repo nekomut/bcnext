@@ -3,9 +3,9 @@
 
 export const animationData_697 = {
   "s": {
-    "name": "\u30cd\u30b3\u6751\u9577",
+    "name": "ネコ村長",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["697_s.png"],
       [44],

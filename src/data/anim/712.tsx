@@ -3,9 +3,9 @@
 
 export const animationData_712 = {
   "f": {
-    "name": "\u30ab\u30aa\u30eb\u30ac",
+    "name": "カオルガ",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["712_f.png"],
       [18],
@@ -382,9 +382,9 @@ export const animationData_712 = {
     ]
   },
   "c": {
-    "name": "\u30ab\u30aa\u30e9\u30f3\u30d1\u30b5\u30e9\u30f3",
+    "name": "カオランパサラン",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["712_c.png"],
       [42],

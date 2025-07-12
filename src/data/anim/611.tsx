@@ -3,9 +3,9 @@
 
 export const animationData_611 = {
   "f": {
-    "name": "\u30cd\u30b3\u30b4\u30b8\u30e9",
+    "name": "ネコゴジラ",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["611_f.png"],
       [41],
@@ -823,9 +823,9 @@ export const animationData_611 = {
     ]
   },
   "c": {
-    "name": "\u30b7\u30f3\u30fb\u30cd\u30b3\u30b4\u30b8\u30e9",
+    "name": "シン・ネコゴジラ",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["611_c.png"],
       [41],

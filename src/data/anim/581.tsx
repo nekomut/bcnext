@@ -3,9 +3,9 @@
 
 export const animationData_581 = {
   "f": {
-    "name": "\u3054\u308d\u306b\u3083\u3093",
+    "name": "ごろにゃん",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["581_f.png"],
       [27],
@@ -738,9 +738,9 @@ export const animationData_581 = {
     ]
   },
   "c": {
-    "name": "\u3054\u308d\u306b\u3083\u30fc\u3093",
+    "name": "ごろにゃーん",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["581_c.png"],
       [30],

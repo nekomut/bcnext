@@ -3,9 +3,9 @@
 
 export const animationData_721 = {
   "f": {
-    "name": "\u82b1\u5712\u9ad8\u6821\u756a\u9577\u308a\u304d",
+    "name": "花園高校番長りき",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["721_f.png"],
       [13],
@@ -298,9 +298,9 @@ export const animationData_721 = {
     ]
   },
   "c": {
-    "name": "\u30c9\u30c3\u30b8\u30dc\u30fc\u30eb\u90e8\u308a\u304d",
+    "name": "ドッジボール部りき",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["721_c.png"],
       [16],

@@ -3,9 +3,9 @@
 
 export const animationData_606 = {
   "f": {
-    "name": "\u30cd\u30b3\u30d1\u30f3\u30c0",
+    "name": "ネコパンダ",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["606_f.png"],
       [39],
@@ -1737,9 +1737,9 @@ export const animationData_606 = {
     ]
   },
   "c": {
-    "name": "\u30cd\u30b3\u7384\u99ac",
+    "name": "ネコ玄馬",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["606_c.png"],
       [49],

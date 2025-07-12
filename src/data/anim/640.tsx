@@ -3,9 +3,9 @@
 
 export const animationData_640 = {
   "f": {
-    "name": "\u30b8\u30a7\u30a2\u30fc\uff06\u30cd\u30b3",
+    "name": "ジェアー＆ネコ",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["640_f.png"],
       [98],
@@ -3137,9 +3137,9 @@ export const animationData_640 = {
     ]
   },
   "c": {
-    "name": "\u30b8\u30a7\u30a2\u30fc\uff06\u30cd\u30b3CC",
+    "name": "ジェアー＆ネコCC",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["640_c.png"],
       [98],

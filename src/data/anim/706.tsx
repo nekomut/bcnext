@@ -3,9 +3,9 @@
 
 export const animationData_706 = {
   "s": {
-    "name": "\u30cd\u30b3\u30a6\u30a9\u30c3\u30b7\u30e5",
+    "name": "ネコウォッシュ",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["706_s.png"],
       [26],

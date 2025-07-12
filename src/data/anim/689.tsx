@@ -3,9 +3,9 @@
 
 export const animationData_689 = {
   "f": {
-    "name": "\u77f3\u306e\u4e0a\u306b\u308210\u5e74\u30cd\u30b3",
+    "name": "石の上にも10年ネコ",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["689_f.png"],
       [14],
@@ -320,9 +320,9 @@ export const animationData_689 = {
     ]
   },
   "c": {
-    "name": "\u77f3\u306e\u4e0a\u306b\u308210\u5e74\u30cd\u30b3\u50cf",
+    "name": "石の上にも10年ネコ像",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["689_c.png"],
       [14],

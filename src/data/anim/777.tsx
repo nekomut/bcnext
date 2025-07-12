@@ -3,7 +3,7 @@
 
 export const animationData_777 = {
   "f": {
-    "name": "\u51ac\u5c06\u8ecd\u30fb\u6210\u7530\u7532\u6590",
+    "name": "冬将軍・成田甲斐",
     "imgcut": [
       ["[imgcut]"],
       [0],
@@ -4954,7 +4954,7 @@ export const animationData_777 = {
     ]
   },
   "c": {
-    "name": "\u51ac\u5927\u5c06\u8ecd\u30fb\u6210\u7530\u7532\u6590",
+    "name": "冬大将軍・成田甲斐",
     "imgcut": [
       ["[imgcut]"],
       [0],

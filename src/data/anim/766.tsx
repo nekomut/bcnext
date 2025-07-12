@@ -3,9 +3,9 @@
 
 export const animationData_766 = {
   "f": {
-    "name": "\u30a4\u30ef\u30b7",
+    "name": "イワシ",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["766_f.png"],
       [5],
@@ -122,9 +122,9 @@ export const animationData_766 = {
     ]
   },
   "c": {
-    "name": "\u30a4\u30ef\u30b7CC",
+    "name": "イワシCC",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["766_c.png"],
       [5],

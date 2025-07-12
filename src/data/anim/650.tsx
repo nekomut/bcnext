@@ -3,9 +3,9 @@
 
 export const animationData_650 = {
   "f": {
-    "name": "\u5e7c\u99b4\u67d3\u306b\u3083\u3093\u5b50",
+    "name": "幼馴染にゃん子",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["650_f.png"],
       [54],
@@ -1589,9 +1589,9 @@ export const animationData_650 = {
     ]
   },
   "c": {
-    "name": "\u5f7c\u5973\u306b\u3083\u3093\u5b50",
+    "name": "彼女にゃん子",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["650_c.png"],
       [73],

@@ -3,9 +3,9 @@
 
 export const animationData_727 = {
   "f": {
-    "name": "\u30bd\u30eb\u30fb\u30c7\u30fb\u30ed\u30ab",
+    "name": "ソル・デ・ロカ",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["727_f.png"],
       [234],
@@ -2000,9 +2000,9 @@ export const animationData_727 = {
     ]
   },
   "c": {
-    "name": "\u30bd\u30eb\u30fb\u30c7\u30fb\u30ed\u30abCC",
+    "name": "ソル・デ・ロカCC",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["727_c.png"],
       [234],

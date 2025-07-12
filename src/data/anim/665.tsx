@@ -3,9 +3,9 @@
 
 export const animationData_665 = {
   "s": {
-    "name": "\u30cd\u30b3\u30bd\u30b7\u30b9\u30c8",
+    "name": "ネコソシスト",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["665_s.png"],
       [46],

@@ -3,9 +3,9 @@
 
 export const animationData_624 = {
   "f": {
-    "name": "\u71b1\u8840\u786c\u6d3e\u304f\u306b\u304a\u304f\u3093",
+    "name": "熱血硬派くにおくん",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["624_f.png"],
       [10],
@@ -201,9 +201,9 @@ export const animationData_624 = {
     ]
   },
   "c": {
-    "name": "\u30c9\u30c3\u30b8\u30dc\u30fc\u30eb\u90e8\u304f\u306b\u304a\u304f\u3093",
+    "name": "ドッジボール部くにおくん",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["624_c.png"],
       [19],

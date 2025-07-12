@@ -3,7 +3,7 @@
 
 export const animationData_765 = {
   "s": {
-    "name": "\u30cd\u30b3\u30db\u30bf\u30c6",
+    "name": "ネコホタテ",
     "imgcut": [
       ["[imgcut]"],
       [0],

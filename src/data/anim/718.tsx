@@ -3,9 +3,9 @@
 
 export const animationData_718 = {
   "f": {
-    "name": "\u30cd\u30b3\u3082\u308d\u3053\u3057",
+    "name": "ネコもろこし",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["718_f.png"],
       [34],
@@ -1296,9 +1296,9 @@ export const animationData_718 = {
     ]
   },
   "c": {
-    "name": "\u306b\u3083\u3093\u30b3\u30fc\u30f3",
+    "name": "にゃんコーン",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["718_c.png"],
       [46],

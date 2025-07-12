@@ -3,9 +3,9 @@
 
 export const animationData_663 = {
   "s": {
-    "name": "\u30cd\u30b3\u30ac\u30b9\u30de\u30b9\u30af",
+    "name": "ネコガスマスク",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["663_s.png"],
       [24],

@@ -3,9 +3,9 @@
 
 export const animationData_672 = {
   "f": {
-    "name": "\u65e9\u4e59\u5973\u7384\u99ac(\u30d1\u30f3\u30c0)",
+    "name": "早乙女玄馬(パンダ)",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["672_f.png"],
       [63],
@@ -2392,9 +2392,9 @@ export const animationData_672 = {
     ]
   },
   "c": {
-    "name": "\u65e9\u4e59\u5973\u7384\u99ac",
+    "name": "早乙女玄馬",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["997_c.png"],
       [98],

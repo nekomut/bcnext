@@ -3,7 +3,7 @@
 
 export const animationData_786 = {
   "f": {
-    "name": "\u30de\u30b8\u30b7\u30e3\u30f3\u30ad\u30e3\u30c3\u30c8\u30de\u30f3",
+    "name": "マジシャンキャットマン",
     "imgcut": [
       ["[imgcut]"],
       [0],
@@ -242,8 +242,8 @@ export const animationData_786 = {
       [62, 786, 0, 31, 11, 23, 6, 4, 840, 1000, 280, 1000, 0, "105_cloth_plus_shadow.png<color=16>"],
       [1000, 3600, 1000, 1],
       [2],
-      [0, 0, -64, 0, 5, 0, "\u30c0\u30df\u30fc"],
-      [0, 0, 0, 0, 5, 0, "\u30c0\u30df\u30fc"]
+      [0, 0, -64, 0, 5, 0, "ダミー"],
+      [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
       ["[modelanim:animation2]"],
@@ -4944,7 +4944,7 @@ export const animationData_786 = {
     ]
   },
   "c": {
-    "name": "\u30a4\u30ea\u30e5\u30fc\u30b8\u30e7\u30f3\u30ad\u30e3\u30c3\u30c8\u30de\u30f3",
+    "name": "イリュージョンキャットマン",
     "imgcut": [
       ["[imgcut]"],
       [0],
@@ -5190,8 +5190,8 @@ export const animationData_786 = {
       [2, 786, 0, 1, -3, -3, 65, 3, 720, 1400, 0, 1000, 0, "001_shadow.png<color=9>"],
       [1000, 3600, 1000, 1],
       [2],
-      [0, 0, -64, 0, 5, 0, "\u30c0\u30df\u30fc"],
-      [0, 0, 0, 0, 5, 0, "\u30c0\u30df\u30fc"]
+      [0, 0, -64, 0, 5, 0, "ダミー"],
+      [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
       ["[modelanim:animation2]"],

@@ -3,9 +3,9 @@
 
 export const animationData_610 = {
   "f": {
-    "name": "\u91d1\u584a\u30cd\u30b3",
+    "name": "金塊ネコ",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["610_f.png"],
       [18],
@@ -492,9 +492,9 @@ export const animationData_610 = {
     ]
   },
   "c": {
-    "name": "\u30ad\u30f3\u30b0\u30cd\u30b3\u30a4\u30f3\u30b4\u30c3\u30c8",
+    "name": "キングネコインゴット",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["610_c.png"],
       [38],
@@ -1546,9 +1546,9 @@ export const animationData_610 = {
     ]
   },
   "s": {
-    "name": "\u30ad\u30f3\u30b0\u30cd\u30b3\u30ab\u30fc\u30e1\u30f3",
+    "name": "キングネコカーメン",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["610_s.png"],
       [45],

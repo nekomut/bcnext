@@ -3,7 +3,7 @@
 
 export const animationData_768 = {
   "f": {
-    "name": "\u305f\u3044\u3066\u3093\u304d",
+    "name": "たいてんき",
     "imgcut": [
       ["[imgcut]"],
       [0],
@@ -84,7 +84,7 @@ export const animationData_768 = {
       [490, 173, 19, 28, "072_chr_arm_l_move_plus.png"],
       [0, 0, 1, 1],
       [423, 387, 11, 36, "074_chr_arm_item.png"],
-      [308, 293, 26, 51, "075_chr_cloth_\uff4c1.png"],
+      [308, 293, 26, 51, "075_chr_cloth_ｌ1.png"],
       [0, 0, 1, 1],
       [409, 496, 12, 10, "077_chr_cloth_rb.png"],
       [359, 469, 16, 38, "078_chr_cloth_r1.png"],
@@ -6878,7 +6878,7 @@ export const animationData_768 = {
     ]
   },
   "c": {
-    "name": "\u305f\u3044\u3066\u3093\u304dCC",
+    "name": "たいてんきCC",
     "imgcut": [
       ["[imgcut]"],
       [0],
@@ -6959,7 +6959,7 @@ export const animationData_768 = {
       [490, 173, 19, 28, "072_chr_arm_l_move_plus.png"],
       [0, 0, 1, 1],
       [423, 387, 11, 36, "074_chr_arm_item.png"],
-      [308, 293, 26, 51, "075_chr_cloth_\uff4c1.png"],
+      [308, 293, 26, 51, "075_chr_cloth_ｌ1.png"],
       [0, 0, 1, 1],
       [409, 496, 12, 10, "077_chr_cloth_rb.png"],
       [359, 469, 16, 38, "078_chr_cloth_r1.png"],

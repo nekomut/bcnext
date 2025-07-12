@@ -3,9 +3,9 @@
 
 export const animationData_685 = {
   "s": {
-    "name": "\u30cd\u30b3\u30b9\u30fc\u30d1\u30fc\u30ab\u30fc",
+    "name": "ネコスーパーカー",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["685_s.png"],
       [23],

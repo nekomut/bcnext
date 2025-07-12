@@ -3,9 +3,9 @@
 
 export const animationData_724 = {
   "s": {
-    "name": "\u30cd\u30b3\u30bf\u30de\u53f7",
+    "name": "ネコタマ号",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["724_s.png"],
       [27],

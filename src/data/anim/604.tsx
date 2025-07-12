@@ -3,9 +3,9 @@
 
 export const animationData_604 = {
   "f": {
-    "name": "\u30cd\u30b3\u4e71\u99ac(\u7537)",
+    "name": "ネコ乱馬(男)",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["604_f.png"],
       [56],
@@ -1906,9 +1906,9 @@ export const animationData_604 = {
     ]
   },
   "c": {
-    "name": "\u30cd\u30b3\u3089\u3093\u307e(\u5973)",
+    "name": "ネコらんま(女)",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["604_c.png"],
       [56],

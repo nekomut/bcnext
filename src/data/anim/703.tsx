@@ -3,9 +3,9 @@
 
 export const animationData_703 = {
   "f": {
-    "name": "\u30a8\u30f4\u30a1\u30f3\u30b2\u30ea\u30aa\u30f3\u306b\u3083\u3093\u3053",
+    "name": "エヴァンゲリオンにゃんこ",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["703_f.png"],
       [58],
@@ -2632,9 +2632,9 @@ export const animationData_703 = {
     ]
   },
   "c": {
-    "name": "\u30b7\u30f3\u30fb\u30a8\u30f4\u30a1\u30f3\u30b2\u30ea\u30aa\u30f3\u306b\u3083\u3093\u3053",
+    "name": "シン・エヴァンゲリオンにゃんこ",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["703_c.png"],
       [58],

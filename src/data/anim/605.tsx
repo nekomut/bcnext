@@ -3,9 +3,9 @@
 
 export const animationData_605 = {
   "f": {
-    "name": "\u30cd\u30b3\u3042\u304b\u306d",
+    "name": "ネコあかね",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["605_f.png"],
       [45],
@@ -1296,9 +1296,9 @@ export const animationData_605 = {
     ]
   },
   "c": {
-    "name": "\u30cd\u30b3\u3042\u304b\u306d(\u9053\u7740)",
+    "name": "ネコあかね(道着)",
     "imgcut": [
-      ["\ufeff[imgcut]"],
+      ["﻿[imgcut]"],
       [0],
       ["605_c.png"],
       [54],

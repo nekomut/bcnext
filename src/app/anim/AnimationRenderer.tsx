@@ -43,6 +43,7 @@ interface AnimationRendererProps {
   zoom?: number;
   offsetX?: number;
   offsetY?: number;
+  showBoundaries?: boolean;
 }
 
 export default function AnimationRenderer({
@@ -54,7 +55,8 @@ export default function AnimationRenderer({
   viewScale = 1.0,
   zoom = 1.0,
   offsetX = 0,
-  offsetY = 0
+  offsetY = 0,
+  showBoundaries = false
 }: AnimationRendererProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -139,6 +141,67 @@ export default function AnimationRenderer({
     // Parts are already sorted by render order in AnimationViewer
     const sortedParts = spriteParts;
 
+    // Calculate overall bounding box for all visible parts
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+    const visibleParts = sortedParts.filter(part => part.spriteId >= 0 && part.opacity > 0);
+    
+    // Calculate each part's screen coordinates for bounding box
+    visibleParts.forEach((part) => {
+      if (part.matrix) {
+        // Use tbcml-style matrix transformation
+        const baseX = (part.x * viewScale) + (canvas.width / 2);
+        const baseY = (part.y * viewScale) + (canvas.height / 2);
+        const screenX = (baseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX;
+        const screenY = (baseY - canvas.height / 2) * zoom + (canvas.height / 2) + offsetY;
+        
+        const pivotX = (part.pivotX || 0) / viewScale;
+        const pivotY = (part.pivotY || 0) / viewScale;
+        const drawX = -pivotX;
+        const drawY = -pivotY;
+        const drawWidth = part.scW ? Math.abs(part.scW) / viewScale : part.srcW;
+        const drawHeight = part.scH ? Math.abs(part.scH) / viewScale : part.srcH;
+        
+        // Transform corners to screen coordinates
+        const corners = [
+          { x: drawX, y: drawY },
+          { x: drawX + drawWidth, y: drawY },
+          { x: drawX + drawWidth, y: drawY + drawHeight },
+          { x: drawX, y: drawY + drawHeight }
+        ];
+        
+        corners.forEach(corner => {
+          const transformedX = part.matrix.m0 * viewScale * zoom * corner.x + 
+                             part.matrix.m1 * viewScale * zoom * corner.y + screenX;
+          const transformedY = part.matrix.m3 * viewScale * zoom * corner.x + 
+                             part.matrix.m4 * viewScale * zoom * corner.y + screenY;
+          
+          minX = Math.min(minX, transformedX);
+          minY = Math.min(minY, transformedY);
+          maxX = Math.max(maxX, transformedX);
+          maxY = Math.max(maxY, transformedY);
+        });
+      } else {
+        // Use simple transformation
+        const baseX = (part.x * viewScale) + (canvas.width / 2);
+        const baseY = (part.y * viewScale) + (canvas.height / 2);
+        const displayX = (baseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX;
+        const displayY = (baseY - canvas.height / 2) * zoom + (canvas.width / 2) + offsetY;
+        
+        const pivotX = part.pivotX || 0;
+        const pivotY = part.pivotY || 0;
+        
+        const boundaryX = displayX - (pivotX * part.scaleX * viewScale * zoom);
+        const boundaryY = displayY - (pivotY * part.scaleY * viewScale * zoom);
+        const boundaryW = part.srcW * part.scaleX * viewScale * zoom;
+        const boundaryH = part.srcH * part.scaleY * viewScale * zoom;
+        
+        minX = Math.min(minX, boundaryX);
+        minY = Math.min(minY, boundaryY);
+        maxX = Math.max(maxX, boundaryX + boundaryW);
+        maxY = Math.max(maxY, boundaryY + boundaryH);
+      }
+    });
+
     // Render each sprite part using tbcml-style matrix transformation
     sortedParts.forEach((part) => {
       // Skip only completely invalid sprites, but allow structural parts (spriteId -1)
@@ -193,6 +256,24 @@ export default function AnimationRenderer({
             drawX, drawY, drawWidth, drawHeight
           );
         }
+        
+        // Draw sprite boundary outside of transform context
+        if (isVisible && showBoundaries) {
+          ctx.save();
+          ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset to identity matrix
+          ctx.strokeStyle = '#3b82f6';
+          ctx.lineWidth = 0.4;
+          ctx.setLineDash([]);
+          
+          // Calculate boundary rectangle in screen coordinates
+          const boundaryX = screenX + (drawX * part.matrix.m0 * viewScale * zoom);
+          const boundaryY = screenY + (drawY * part.matrix.m4 * viewScale * zoom);
+          const boundaryW = drawWidth * Math.abs(part.matrix.m0) * viewScale * zoom;
+          const boundaryH = drawHeight * Math.abs(part.matrix.m4) * viewScale * zoom;
+          
+          ctx.strokeRect(boundaryX, boundaryY, boundaryW, boundaryH);
+          ctx.restore();
+        }
       } else {
         // Fallback to simple transformation (center origin), then apply zoom
         const baseX = (part.x * viewScale) + (canvas.width / 2);
@@ -214,11 +295,44 @@ export default function AnimationRenderer({
             -pivotX, -pivotY, part.srcW, part.srcH
           );
         }
+        
+        // Draw sprite boundary outside of transform context
+        if (isVisible && showBoundaries) {
+          ctx.save();
+          ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset to identity matrix
+          ctx.strokeStyle = '#3b82f6';
+          ctx.lineWidth = 0.4;
+          ctx.setLineDash([]);
+          
+          // Calculate boundary rectangle in screen coordinates for simple transform
+          const boundaryX = displayX - (pivotX * part.scaleX * viewScale * zoom);
+          const boundaryY = displayY - (pivotY * part.scaleY * viewScale * zoom);
+          const boundaryW = part.srcW * part.scaleX * viewScale * zoom;
+          const boundaryH = part.srcH * part.scaleY * viewScale * zoom;
+          
+          ctx.strokeRect(boundaryX, boundaryY, boundaryW, boundaryH);
+          ctx.restore();
+        }
       }
 
       ctx.restore();
     });
-  }, [spriteImage, spriteParts, canvasWidth, canvasHeight, backgroundColor, viewScale, zoom, offsetX, offsetY]);
+
+    // Draw overall bounding box for all parts (red-500 0.6px)
+    if (showBoundaries && visibleParts.length > 0 && isFinite(minX) && isFinite(minY) && isFinite(maxX) && isFinite(maxY)) {
+      ctx.save();
+      ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset to identity matrix
+      ctx.strokeStyle = '#ef4444'; // red-500
+      ctx.lineWidth = 0.6;
+      ctx.setLineDash([]);
+      
+      const boundingWidth = maxX - minX;
+      const boundingHeight = maxY - minY;
+      
+      ctx.strokeRect(minX, minY, boundingWidth, boundingHeight);
+      ctx.restore();
+    }
+  }, [spriteImage, spriteParts, canvasWidth, canvasHeight, backgroundColor, viewScale, zoom, offsetX, offsetY, showBoundaries]);
 
   return (
     <canvas

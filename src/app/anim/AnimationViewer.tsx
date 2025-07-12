@@ -44,7 +44,9 @@ export default function AnimationViewer({
   selectedAnimation,
   isPlaying,
   onStop,
-  unitId
+  unitId,
+  showBoundaries,
+  onShowBoundariesChange
 }: AnimationViewerProps) {
   const animationFrameRef = useRef<number | undefined>(undefined);
   const startTimeRef = useRef<number | undefined>(undefined);
@@ -938,6 +940,7 @@ export default function AnimationViewer({
             zoom={zoom}
             offsetX={offsetX}
             offsetY={offsetY}
+            showBoundaries={showBoundaries || false}
           />
         ) : (
           <div className="w-[324px] h-[244px] border border-gray-300 bg-gray-100 flex items-center justify-center">
@@ -948,7 +951,7 @@ export default function AnimationViewer({
 
       {/* View Controls */}
       <div className="bg-gray-50 p-2 rounded">
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 mb-2">
           <div className="flex items-center gap-1">
             <label className="text-sm font-medium text-gray-600 whitespace-nowrap font-mono">
               Zoom
@@ -1013,6 +1016,17 @@ export default function AnimationViewer({
           >
             Reset
           </button>
+        </div>
+        <div className="flex items-center">
+          <label className="flex items-center gap-1 text-sm font-medium text-gray-600 font-mono">
+            <input
+              type="checkbox"
+              checked={showBoundaries || false}
+              onChange={(e) => onShowBoundariesChange && onShowBoundariesChange(e.target.checked)}
+              className="w-4 h-4"
+            />
+            Bounds
+          </label>
         </div>
       </div>
 

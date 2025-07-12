@@ -5,6 +5,8 @@ export interface AnimationViewerProps {
   isPlaying: boolean;
   onStop: () => void;
   unitId: string; // 追加されたプロパティ
+  showBoundaries?: boolean; // 境界線表示フラグ
+  onShowBoundariesChange?: (value: boolean) => void; // 境界線表示変更コールバック
 }
 
 export interface ImageLoadError {

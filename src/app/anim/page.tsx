@@ -25,6 +25,7 @@ function AnimationPageContent() {
   const [selectedForm, setSelectedForm] = useState(initialForm || 'f');
   const [selectedAnimation, setSelectedAnimation] = useState(initialAnim || 'maanim02');
   const [isPlaying, setIsPlaying] = useState(initialPlaying);
+  const [showBoundaries, setShowBoundaries] = useState(false);
   const [loading, setLoading] = useState(false);
   const [loadingProgress, setLoadingProgress] = useState({ current: 0, total: 0, message: '' });
   
@@ -483,6 +484,8 @@ function AnimationPageContent() {
             isPlaying={isPlaying}
             onStop={() => setIsPlaying(false)}
             unitId={selectedUnit}
+            showBoundaries={showBoundaries}
+            onShowBoundariesChange={setShowBoundaries}
           />
         ) : (
           <div className="flex justify-center items-center h-64">

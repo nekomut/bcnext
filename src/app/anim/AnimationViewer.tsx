@@ -26,6 +26,8 @@ interface SpritePart {
   scaledHeight?: number;
   flipX?: number;
   flipY?: number;
+  hFlip?: number;  // 水平反転フラグ
+  vFlip?: number;  // 垂直反転フラグ
   matrix?: {
     m0: number;
     m1: number;
@@ -153,11 +155,11 @@ export default function AnimationViewer({
     };
   }, [unitId, selectedForm, formData]);
 
-  // Calculate max frame from metadata
+  // Calculate max frame from metadata (tbcml get_end_frame style)
   useEffect(() => {
     if (!animData || !Array.isArray(animData)) return;
 
-    let maxFrameTime = 20; // Default fallback
+    let maxEndFrame = 0;
     
     // Parse maanim data structure:
     // Row 0: ["[modelanim:animation]"]
@@ -170,6 +172,7 @@ export default function AnimationViewer({
       const row = animData[currentRow];
       if (Array.isArray(row) && row.length >= 6) {
         // This is a keyframe group header: [model_id, modification_type, loop, min_value, max_value, name]
+        const loopValue = row[2] as number;
         currentRow++;
         
         // Next row should be the keyframe count
@@ -177,16 +180,32 @@ export default function AnimationViewer({
           const keyframeCount = (animData[currentRow] as number[])[0] || 0;
           currentRow++;
           
-          // Read keyframes: [frame, change_in_value, ease_mode, ease_power]
+          // Find last keyframe in this group
+          let lastFrameTime = 0;
           for (let i = 0; i < keyframeCount && currentRow < animData.length; i++) {
             const keyframe = animData[currentRow];
             if (Array.isArray(keyframe) && keyframe.length >= 4) {
               const frameTime = (keyframe as number[])[0];
-              if (frameTime > maxFrameTime) {
-                maxFrameTime = frameTime;
+              if (frameTime > lastFrameTime) {
+                lastFrameTime = frameTime;
               }
             }
             currentRow++;
+          }
+          
+          // Apply tbcml get_end_frame logic with correct loop handling
+          let groupEndFrame = lastFrameTime; // Use actual last frame
+          if (loopValue === -1) {
+            // For infinite loop, the cycle ends at lastFrameTime but loops back to start
+            // Total displayable frames = lastFrameTime (0-based, so lastFrameTime is max index)
+            groupEndFrame = lastFrameTime;
+          } else if (loopValue > 0) {
+            // For specified loop count
+            groupEndFrame = lastFrameTime * loopValue;
+          }
+          
+          if (groupEndFrame > maxEndFrame) {
+            maxEndFrame = groupEndFrame;
           }
         }
       } else {
@@ -194,7 +213,8 @@ export default function AnimationViewer({
       }
     }
     
-    setMaxFrame(maxFrameTime);
+    // FIX: Set correct maxFrame for tbcml-style loop (0-based indexing)
+    setMaxFrame(maxEndFrame);
   }, [animData]);
 
   // Animation constants matching tbcml implementation
@@ -202,13 +222,13 @@ export default function AnimationViewer({
   const DEFAULT_ANGLE_UNIT = 360; // 360 degrees (not 3600)
   const DEFAULT_ALPHA_UNIT = 1000;
 
-  // Easing function from tbcml
+  // Easing function from tbcml - exact implementation
   const ease = (mode: number, progress: number): number => {
     switch (mode) {
       case 0: // Linear
         return progress;
-      case 1: // Instant
-        return progress >= 1 ? 1 : 0;
+      case 1: // Instant - returns current keyframe value without interpolation
+        return 1; // Always return 1 to use startValue (current keyframe)
       case 2: // Exponential
         return progress * progress;
       case 3: // Polynomial (simplified)
@@ -218,40 +238,84 @@ export default function AnimationViewer({
     }
   };
 
-  // Get interpolated value for current frame from tbcml
-  const getChangeInValue = useCallback((keyframes: unknown[], currentFrame: number): number => {
-    if (!keyframes || keyframes.length === 0) return 0;
+  // Get interpolated value for current frame - exact tbcml implementation
+  const getChangeInValue = useCallback((keyframes: unknown[], currentFrame: number, loopValue?: number): number | null => {
+    if (!keyframes || keyframes.length === 0) return null;
 
-    // Find surrounding keyframes
-    let prevFrame: unknown = null;
-    let nextFrame: unknown = null;
+    const frameCounter = currentFrame;
+    const startKf = keyframes[0] as number[];
+    const endKf = keyframes[keyframes.length - 1] as number[];
 
-    for (const kf of keyframes) {
-      const frameTime = (kf as number[])[0];
-      if (frameTime <= currentFrame) {
-        prevFrame = kf;
-      } else if (frameTime > currentFrame && !nextFrame) {
-        nextFrame = kf;
-        break;
+    const startChange = startKf[1];
+    const endChange = endKf[1];
+    const startFrame = startKf[0];
+    const endFrame = endKf[0];
+
+    // tbcml early return condition
+    if (frameCounter < startFrame) {
+      return null;
+    }
+
+    const frameProgress = frameCounter - startFrame;
+    const totalFrames = endFrame - startFrame; // FIX: Correct calculation
+
+    let localFrame: number;
+
+    // tbcml exact loop logic
+    if (frameCounter < endFrame || startFrame === endFrame) {
+      localFrame = frameCounter;
+    } else if (loopValue === -1) {
+      // Infinite loop: exact tbcml modulo calculation
+      localFrame = (frameProgress % totalFrames) + startFrame;
+    } else if (loopValue && loopValue >= 1) {
+      // Specified loop count
+      if (frameProgress / totalFrames < loopValue) {
+        localFrame = (frameProgress % totalFrames) + startFrame;
+      } else {
+        localFrame = endFrame;
+      }
+    } else {
+      // No loop: hold at end frame
+      localFrame = endFrame;
+    }
+
+    // tbcml boundary conditions
+    if (startFrame === endFrame) return startChange;
+    if (localFrame === endFrame) return endChange;
+
+    // tbcml keyframe interpolation search
+    for (let i = 0; i < keyframes.length - 1; i++) {
+      const currentKf = keyframes[i] as number[];
+      const nextKf = keyframes[i + 1] as number[];
+
+      const cFrame = currentKf[0];
+      const nFrame = nextKf[0];
+      const cEaseMode = currentKf[2];
+      const cChange = currentKf[1];
+      const nChange = nextKf[1];
+
+      // tbcml range check
+      if (localFrame < cFrame || localFrame >= nFrame) {
+        continue;
+      }
+
+      // tbcml ease calculation
+      if (cEaseMode === 1) {
+        // FIX: Instant mode - always return current value
+        return cChange;
+      } else if (cEaseMode === 0) {
+        // Linear interpolation
+        const lerp = (localFrame - cFrame) / (nFrame - cFrame);
+        return Math.round(cChange + (nChange - cChange) * lerp);
+      } else {
+        // Other ease modes (simplified)
+        const lerp = (localFrame - cFrame) / (nFrame - cFrame);
+        const easedProgress = ease(cEaseMode, Math.max(0, Math.min(1, lerp)));
+        return Math.round(cChange + (nChange - cChange) * easedProgress);
       }
     }
 
-    if (!prevFrame) return 0;
-    if (!nextFrame) return (prevFrame as number[])[1] || 0;
-
-    // Calculate interpolation
-    const startTime = (prevFrame as number[])[0];
-    const endTime = (nextFrame as number[])[0];
-    const startValue = (prevFrame as number[])[1] || 0;
-    const endValue = (nextFrame as number[])[1] || 0;
-    const easingMode = (prevFrame as number[])[2] || 0;
-
-    if (startTime === endTime) return startValue;
-
-    const progress = (currentFrame - startTime) / (endTime - startTime);
-    const easedProgress = ease(easingMode, Math.max(0, Math.min(1, progress)));
-    
-    return startValue + (endValue - startValue) * easedProgress;
+    return null;
   }, []);
 
   // get_base_size function like tbcml - MUST be defined first
@@ -513,7 +577,10 @@ export default function AnimationViewer({
       // CRITICAL FIX: Pre-calculate real scales like tbcml
       part.realScaleX = (part.animScaleX as number) !== 0 ? (part.animScaleX as number) / scaleUnit : 0;
       part.realScaleY = (part.animScaleY as number) !== 0 ? (part.animScaleY as number) / scaleUnit : 0;
-      // Real scale calculation happens during transform
+      
+      // Initialize new animation properties
+      part.hFlip = 1;   // 水平反転フラグ（1=通常、-1=反転）
+      part.vFlip = 1;   // 垂直反転フラグ（1=通常、-1=反転）
       
       // Initialize parent reference
       if ((part.parentId as number) >= 0 && partLookup[part.parentId as number]) {
@@ -529,7 +596,7 @@ export default function AnimationViewer({
       while (currentRow < animData.length) {
         const groupHeader = animData[currentRow];
         if (Array.isArray(groupHeader) && groupHeader.length >= 5) {
-          const [modelId, modificationType] = groupHeader;
+          const [modelId, modificationType, loopValue] = groupHeader;
           currentRow++;
           
           // Get keyframe count
@@ -551,20 +618,47 @@ export default function AnimationViewer({
                 }
               }
               
-              // Get interpolated value for current frame
-              const changeValue = getChangeInValue(keyframes, currentFrame);
+              // Get interpolated value for current frame with loop support
+              const changeValue = getChangeInValue(keyframes, currentFrame, loopValue as number);
               
               // Apply the animation change based on modification type (tbcml apply_change logic)
-              if (changeValue !== null) {
+              if (changeValue !== null && changeValue !== undefined) {
                 switch (modificationType as number) {
+                  case 0: // PARENT - 親パーツ関係の動的変更
+                    // 親パーツIDの動的変更（範囲チェック付き）
+                    if (changeValue >= 0 && changeValue < modelParts.length) {
+                      part.parentId = changeValue;
+                      part.parent = partLookup[changeValue] || null;
+                    }
+                    break;
+                  case 1: // ID - ユニットIDの動的変更
+                    part.unitId = changeValue;
+                    break;
                   case 2: // SPRITE
                     part.animCutId = changeValue;
+                    break;
+                  case 3: // Z_ORDER - 描画順序の動的変更
+                    part.zDepth = changeValue * modelParts.length + (part.id as number);
                     break;
                   case 4: // POS_X
                     part.animX = (part.baseX as number) + changeValue;
                     break;
                   case 5: // POS_Y
                     part.animY = (part.baseY as number) + changeValue;
+                    break;
+                  case 6: // PIVOT_X - X軸ピボット点
+                    part.pivotX = (part.pivotX as number) + changeValue;
+                    break;
+                  case 7: // PIVOT_Y - Y軸ピボット点
+                    part.pivotY = (part.pivotY as number) + changeValue;
+                    break;
+                  case 8: // SCALE_UNIT - 統合スケール（X/Y同時）
+                    const changeScaledUnit = changeValue / scaleUnit;
+                    part.animScaleX = Math.round(changeScaledUnit * (part.baseScaleX as number));
+                    part.animScaleY = Math.round(changeScaledUnit * (part.baseScaleY as number));
+                    // Update real scales after animation change
+                    part.realScaleX = (part.animScaleX as number) !== 0 ? (part.animScaleX as number) / scaleUnit : 0;
+                    part.realScaleY = (part.animScaleY as number) !== 0 ? (part.animScaleY as number) / scaleUnit : 0;
                     break;
                   case 9: // SCALE_X
                     const changeScaledX = changeValue / scaleUnit;
@@ -584,6 +678,16 @@ export default function AnimationViewer({
                   case 12: // OPACITY
                     const changeAlpha = changeValue / alphaUnit;
                     part.animOpacity = Math.round(changeAlpha * (part.baseOpacity as number));
+                    break;
+                  case 13: // H_FLIP - 水平反転
+                    part.hFlip = changeValue !== 0 ? -1 : 1;
+                    break;
+                  case 14: // V_FLIP - 垂直反転
+                    part.vFlip = changeValue !== 0 ? -1 : 1;
+                    break;
+                  default:
+                    // 未知の変更タイプは警告出力
+                    console.warn(`Unknown modification type: ${modificationType}`);
                     break;
                 }
               }
@@ -647,9 +751,9 @@ export default function AnimationViewer({
       const scxBx = scaleX * baseX;
       const scyBy = scaleY * baseY;
       
-      // Flip calculation
-      const flipX = scaleX < 0 ? -1 : 1;
-      const flipY = scaleY < 0 ? -1 : 1;
+      // Flip calculation with animation flip flags
+      const flipX = (scaleX < 0 ? -1 : 1) * (part.hFlip as number);
+      const flipY = (scaleY < 0 ? -1 : 1) * (part.vFlip as number);
       
       // Calculate pivot offset like tbcml
       const tPivX = (part.pivotX as number) * scxBx * flipX;
@@ -694,6 +798,8 @@ export default function AnimationViewer({
         pivotY: tPivY,
         flipX,
         flipY,
+        hFlip: part.hFlip as number,
+        vFlip: part.vFlip as number,
         matrix: { m0, m1, m3, m4 },
         scW,
         scH
@@ -735,17 +841,14 @@ export default function AnimationViewer({
 
       const elapsed = timestamp - startTimeRef.current;
       const frameRate = 30; // 30 FPS
-      const currentAnimFrame = Math.floor(elapsed / (1000 / frameRate));
+      const rawFrame = Math.floor(elapsed / (1000 / frameRate));
       
-      if (currentAnimFrame <= maxFrame) {
-        setCurrentFrame(currentAnimFrame);
-        animationFrameRef.current = requestAnimationFrame(animate);
-      } else {
-        // Animation finished - loop back to beginning
-        startTimeRef.current = timestamp; // Reset start time for seamless loop
-        setCurrentFrame(0);
-        animationFrameRef.current = requestAnimationFrame(animate);
-      }
+      // tbcmlスタイルのモジュロ演算による完璧なループ
+      const totalFrames = maxFrame + 1; // 0からmaxFrameまでの総フレーム数
+      const currentAnimFrame = rawFrame % totalFrames;
+      
+      setCurrentFrame(currentAnimFrame);
+      animationFrameRef.current = requestAnimationFrame(animate);
     };
 
     animationFrameRef.current = requestAnimationFrame(animate);

@@ -20,6 +20,7 @@ function AnimationPageContent() {
   const initialPlaying = searchParams.get('playing') !== 'false'; // デフォルト：再生
   
   const [selectedUnit, setSelectedUnit] = useState(initialUnit || '');
+  const [inputUnit, setInputUnit] = useState(initialUnit || ''); // 入力中の値を管理
   const [animationData, setAnimationData] = useState<Record<string, unknown> | null>(null);
   const [selectedForm, setSelectedForm] = useState(initialForm || 'f');
   const [selectedAnimation, setSelectedAnimation] = useState(initialAnim || 'maanim02');
@@ -72,11 +73,7 @@ function AnimationPageContent() {
   // キーボード入力ハンドラ
   const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
-      const value = (e.target as HTMLInputElement).value.trim();
-      if (value && !isNaN(Number(value))) {
-        const formattedId = Number(value).toString().padStart(3, '0');
-        handleUnitChange(formattedId);
-      }
+      handleUnitSearch();
     }
   };
 
@@ -113,7 +110,7 @@ function AnimationPageContent() {
 
   // ユニット検索処理（unitスタイル）
   const handleUnitSearch = async () => {
-    const value = selectedUnit.trim();
+    const value = inputUnit.trim();
     if (value && !isNaN(Number(value))) {
       const formattedId = Number(value).toString().padStart(3, '0');
       const success = await handleUnitChange(formattedId);
@@ -126,6 +123,7 @@ function AnimationPageContent() {
   const handleUnitChange = useCallback(async (unitId: string): Promise<boolean> => {
     console.log(`handleUnitChange called: "${unitId}"`);
     setSelectedUnit(unitId);
+    setInputUnit(unitId); // 入力フィールドも同期
     setLoading(true);
     setLoadingProgress({ current: 0, total: 3, message: 'アニメーションデータを読み込み中...' });
     
@@ -178,10 +176,10 @@ function AnimationPageContent() {
     }
   }, [updateURL]);
   
-  // アイコン読み込み処理
+  // アイコン読み込み処理（animationDataが変更された時のみ実行）
   useEffect(() => {
     const loadIcons = async () => {
-      if (!selectedUnit) return;
+      if (!selectedUnit || !animationData) return;
       
       setIconsLoading(true);
       try {
@@ -196,7 +194,7 @@ function AnimationPageContent() {
     };
     
     loadIcons();
-  }, [selectedUnit]);
+  }, [animationData]); // selectedUnitではなくanimationDataに依存
 
   // Load initial unit on mount
   useEffect(() => {
@@ -311,12 +309,12 @@ function AnimationPageContent() {
             <label className="text-xs text-gray-200">Unit ID</label>
             <input
               type="text"
-              value={selectedUnit}
-              onChange={(e) => setSelectedUnit(e.target.value)}
+              value={inputUnit}
+              onChange={(e) => setInputUnit(e.target.value)}
               onBlur={(e) => {
                 const value = e.target.value.trim();
                 if (value && !isNaN(Number(value))) {
-                  setSelectedUnit(Number(value).toString());
+                  setInputUnit(Number(value).toString());
                 }
               }}
               onKeyPress={handleKeyPress}

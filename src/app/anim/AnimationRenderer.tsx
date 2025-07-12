@@ -74,22 +74,59 @@ export default function AnimationRenderer({
 
     // Draw coordinate reference lines (center origin)
     
-    // Draw X=0 vertical line (gray-400) - center line
-    ctx.strokeStyle = '#9CA3AF';
+    // Draw auxiliary grid lines (100px interval, gray-500 0.2px)
+    ctx.strokeStyle = '#6B7280';
     ctx.lineWidth = 0.2;
     ctx.setLineDash([]);
+    
+    const centerX = canvas.width / 2 + offsetX;
+    const centerY = canvas.height / 2 + offsetY;
+    const gridSpacing = 100 * zoom;
+    
+    // Draw vertical grid lines
     ctx.beginPath();
-    ctx.moveTo(canvas.width / 2 + offsetX, 0);
-    ctx.lineTo(canvas.width / 2 + offsetX, canvas.height);
+    // Lines to the right of center
+    for (let x = centerX + gridSpacing; x < canvas.width; x += gridSpacing) {
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x, canvas.height);
+    }
+    // Lines to the left of center
+    for (let x = centerX - gridSpacing; x > 0; x -= gridSpacing) {
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x, canvas.height);
+    }
     ctx.stroke();
     
-    // Draw Y=0 horizontal line (gray-400) - center line
-    ctx.strokeStyle = '#9CA3AF';
-    ctx.lineWidth = 0.2;
+    // Draw horizontal grid lines
+    ctx.beginPath();
+    // Lines below center
+    for (let y = centerY + gridSpacing; y < canvas.height; y += gridSpacing) {
+      ctx.moveTo(0, y);
+      ctx.lineTo(canvas.width, y);
+    }
+    // Lines above center
+    for (let y = centerY - gridSpacing; y > 0; y -= gridSpacing) {
+      ctx.moveTo(0, y);
+      ctx.lineTo(canvas.width, y);
+    }
+    ctx.stroke();
+    
+    // Draw X=0 vertical line (gray-500) - center line
+    ctx.strokeStyle = '#6B7280';
+    ctx.lineWidth = 0.4;
     ctx.setLineDash([]);
     ctx.beginPath();
-    ctx.moveTo(0, canvas.height / 2 + offsetY);
-    ctx.lineTo(canvas.width, canvas.height / 2 + offsetY);
+    ctx.moveTo(centerX, 0);
+    ctx.lineTo(centerX, canvas.height);
+    ctx.stroke();
+    
+    // Draw Y=0 horizontal line (gray-500) - center line
+    ctx.strokeStyle = '#6B7280';
+    ctx.lineWidth = 0.4;
+    ctx.setLineDash([]);
+    ctx.beginPath();
+    ctx.moveTo(0, centerY);
+    ctx.lineTo(canvas.width, centerY);
     ctx.stroke();
     
     // Reset line style

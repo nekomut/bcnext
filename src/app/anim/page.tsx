@@ -290,17 +290,17 @@ function AnimationPageContent() {
       <div className="p-2">
         <div className="mb-1 flex gap-1 items-end">
           {/* 前のIDボタン - 左端 */}
-          {selectedUnit && !isNaN(parseInt(selectedUnit)) && parseInt(selectedUnit) > 1 && (
+          {selectedUnit && !isNaN(parseInt(selectedUnit)) && (
             <button
               onClick={async () => {
                 const currentId = parseInt(selectedUnit);
-                const prevId = Math.max(1, currentId - 1);
+                const prevId = Math.max(0, currentId - 1);
                 const formattedId = prevId.toString().padStart(3, '0');
                 
                 console.log(`Previous: ${selectedUnit} (${currentId}) -> ${formattedId} (${prevId})`);
                 await handleUnitChange(formattedId);
               }}
-              disabled={loading}
+              disabled={loading || parseInt(selectedUnit) <= 0}
               className="bg-blue-500 hover:bg-blue-600 text-white px-2 py-0.5 rounded text-xs disabled:opacity-50"
             >
               ◁

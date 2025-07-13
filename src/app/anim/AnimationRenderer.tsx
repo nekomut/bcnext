@@ -85,7 +85,7 @@ export default function AnimationRenderer({
     
     const centerX = canvas.width / 2 + offsetX;
     const centerY = canvas.height / 2 + offsetY;
-    const gridSpacing = 100 * zoom;
+    const gridSpacing = 100; // Fixed 100px spacing regardless of zoom
     
     // Draw vertical grid lines
     ctx.beginPath();

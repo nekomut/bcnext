@@ -5,7 +5,7 @@ export const animationData_000 = {
   "f": {
     "name": "ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["000_f.png"],
       [10],
@@ -21,7 +21,7 @@ export const animationData_000 = {
       [142, 58, 46, 56, "3の影ありパターン"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 0, 0, 179, 179, 0, 255, 0, "ダミー親"],
@@ -33,7 +33,7 @@ export const animationData_000 = {
       [0, 0, 23, 56, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -45,7 +45,7 @@ export const animationData_000 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -53,7 +53,7 @@ export const animationData_000 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -66,7 +66,7 @@ export const animationData_000 = {
       [17, 6, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 2, -1, -1000, 1000, "ノックバック"],
@@ -89,7 +89,7 @@ export const animationData_000 = {
   "c": {
     "name": "ネコビルダー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["000_c.png"],
       [10],
@@ -105,7 +105,7 @@ export const animationData_000 = {
       [208, 1, 4, 4, "ダミー　空っぽの画像"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 0, 0, 179, 179, 0, 255, 0, "ダミー親"],
@@ -117,7 +117,7 @@ export const animationData_000 = {
       [0, 0, 34, 56, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -129,7 +129,7 @@ export const animationData_000 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -137,7 +137,7 @@ export const animationData_000 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -150,7 +150,7 @@ export const animationData_000 = {
       [15, 6, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 2, -1, -1000, 1000, "ノックバック"],
@@ -173,7 +173,7 @@ export const animationData_000 = {
   "s": {
     "name": "ネコモヒカン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["000_s.png"],
       [13],
@@ -212,7 +212,7 @@ export const animationData_000 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [5],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -226,7 +226,7 @@ export const animationData_000 = {
       [0, 0, 34, 64, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 2, -1, 0, 0],
@@ -247,7 +247,7 @@ export const animationData_000 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 2, -1, 0, 0, "ダミー"],
@@ -264,7 +264,7 @@ export const animationData_000 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 12, 1, -1000, 1000],
@@ -289,7 +289,7 @@ export const animationData_000 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 12, -1, 0, 0, "ダミー"],

@@ -53,7 +53,6 @@ export default function AnimationViewer({
   const animationFrameRef = useRef<number | undefined>(undefined);
   const startTimeRef = useRef<number | undefined>(undefined);
   const [currentFrame, setCurrentFrame] = useState(0);
-  const [debugInfo, setDebugInfo] = useState<Record<string, unknown> | null>(null);
   const [spriteImage, setSpriteImage] = useState<HTMLImageElement | null>(null);
   const [spriteParts, setSpriteParts] = useState<SpritePart[]>([]);
   const [maxFrame, setMaxFrame] = useState(0);
@@ -324,16 +323,12 @@ export default function AnimationViewer({
 
   // get_base_size function like tbcml - MUST be defined first
   const getBaseSize = useCallback((part: Record<string, unknown>, parent: boolean, intPartId: number, scaleUnit: number, modelParts: Record<string, unknown>[]): [number, number] => {
-    // エラーハンドリング: パーツが無効な場合
     if (!part) {
-      console.warn('getBaseSize: Part is null or undefined');
       return [0, 0];
     }
     
-    // エラーハンドリング: 必要なプロパティが無い場合
     if (typeof part.animScaleX !== 'number' || typeof part.animScaleY !== 'number' || 
         typeof part.animX !== 'number' || typeof part.animY !== 'number') {
-      console.warn('getBaseSize: Part missing required animation properties', part);
       return [0, 0];
     }
     
@@ -349,14 +344,11 @@ export default function AnimationViewer({
     }
     
     if (intPartId === -1 || intPartId === (part.id as number)) {
-      // CRITICAL FIX: tbcmlスタイルのscale_unit正規化
       return [(part.animX as number) / scaleUnit, (part.animY as number) / scaleUnit];
     }
     
-    // 指定されたpart_idの座標を基準とする
     const part2 = modelParts.find(p => (p.id as number) === intPartId);
     if (!part2) {
-      console.warn(`getBaseSize: Referenced part not found for intPartId=${intPartId}`);
       return [(part.animX as number) / scaleUnit, (part.animY as number) / scaleUnit];
     }
     
@@ -427,13 +419,12 @@ export default function AnimationViewer({
 
     // Apply position transformation exactly like tbcml
     if ((part.id as number) !== 0) {
-      // 通常パーツ: tbcml uses raw coordinates directly: t_pos_x = part.anim.x * siz_x
       const tPosX = (part.animX as number) * sizX;
       const tPosY = (part.animY as number) * sizY;
       m2 += (m0 * tPosX) + (m1 * tPosY);
       m5 += (m3 * tPosX) + (m4 * tPosY);
     } else {
-      // Root part positioning - tbcmlの正確な実装
+      // Root part positioning
       if (intsData.length > 0) {
         const ints = intsData[0];
         if (Array.isArray(ints) && ints.length >= 3) {
@@ -441,65 +432,27 @@ export default function AnimationViewer({
           const intX = ints[1] as number;
           const intY = ints[2] as number;
           
-          // エラーハンドリング: 数値型チェック
-          if (typeof intPartId !== 'number' || typeof intX !== 'number' || typeof intY !== 'number') {
-            console.warn('transformPart: Invalid ints data types', ints);
-          } else {
-            try {
-              // CRITICAL FIX: Unit 000対応 - intY値による地面基準点調整
-              // Unit 000: intPartId=0, intX=0, intY=56 -> 全体をY=56分上にシフト
-              
-              const [p0X, p0Y] = getBaseSize(part, false, intPartId, scaleUnit, modelParts);
-              
-              // Unit 000の特別処理: intY値を地面オフセットとして使用
-              let groundOffsetY = 0;
-              if (intY !== 0) {
-                // intY値を正規化してピクセル単位に変換
-                groundOffsetY = intY * sizerY;
-              }
-              
-              const shiX = intX * p0X;
-              const shiY = intY * p0Y;
-              const p3X = shiX * sizerX;
-              const p3Y = shiY * sizerY;
-              
-              // tbcmlの正確な地面基準点計算
-              const px = (part.pivotX as number) * partScaleX * sizerX;
-              const py = (part.pivotY as number) * partScaleY * sizerY;
-              
-              // 地面オフセットを適用
-              const x = px - p3X;
-              const y = py - p3Y - groundOffsetY;  // Y座標を地面基準に調整
-              
-              // デバッグ情報を出力
-              console.log('Root part ground calculation (FIXED):', {
-                partId: part.id,
-                intPartId, intX, intY,
-                p0X, p0Y,
-                groundOffsetY,
-                shiX, shiY,
-                p3X, p3Y,
-                px, py,
-                x, y,
-                'Y adjustment': -groundOffsetY
-              });
-              
-              // 有限値チェック
-              if (isFinite(x) && isFinite(y)) {
-                m2 += (m0 * x) + (m1 * y);
-                m5 += (m3 * x) + (m4 * y);
-              } else {
-                console.warn('transformPart: Invalid transformation values', { x, y, px, py, p3X, p3Y });
-              }
-            } catch (error) {
-              console.warn('transformPart: Error in ground reference calculation', error);
+          if (typeof intPartId === 'number' && typeof intX === 'number' && typeof intY === 'number') {
+            const [p0X, p0Y] = getBaseSize(part, false, intPartId, scaleUnit, modelParts);
+            
+            const shiX = intX * p0X;
+            const shiY = intY * p0Y;
+            const p3X = shiX * sizerX;
+            const p3Y = shiY * sizerY;
+            
+            const px = (part.pivotX as number) * partScaleX * sizerX;
+            const py = (part.pivotY as number) * partScaleY * sizerY;
+            
+            const x = px - p3X;
+            const y = py - p3Y;
+            
+            if (isFinite(x) && isFinite(y)) {
+              m2 += (m0 * x) + (m1 * y);
+              m5 += (m3 * x) + (m4 * y);
             }
           }
-        } else {
-          console.warn('transformPart: Invalid ints array structure', ints);
         }
       }
-      // intsデータが無効な場合は特別処理をスキップ（tbcmlと同じ動作）
     }
 
     // Apply rotation transformation
@@ -870,17 +823,6 @@ export default function AnimationViewer({
     
     setSpriteParts(parts);
 
-    // Update debug info
-    setDebugInfo({
-      frame: currentFrame,
-      totalParts: parts.length,
-      modelPartsCount: totalPartsCount,
-      spriteRectangles: Array.isArray(imgCutData[3]) ? imgCutData[3][0] : 0,
-      maxFrame,
-      scaleUnit,
-      angleUnit,
-      alphaUnit
-    });
   }, [currentFrame, maModelData, imgCutData, animData, maxFrame, getChangeInValue, transformPart, getBaseSize, getRecursiveScale]);
 
 
@@ -977,13 +919,6 @@ export default function AnimationViewer({
             {(formData?.name as string) || 'Unknown'}
           </span>
         </h3>
-        {debugInfo && (
-          <div className="text-xxs text-gray-600 font-mono">
-            Frame={String(debugInfo.frame as number).padStart(3, '0')}/{String(debugInfo.maxFrame as number).padStart(3, '0')} Parts={debugInfo.totalParts as number}
-            <br />
-            Scale={debugInfo.scaleUnit as number} Angle={debugInfo.angleUnit as number} Alpha={debugInfo.alphaUnit as number}
-          </div>
-        )}
       </div>
 
       <div className="flex justify-center">
@@ -1111,36 +1046,234 @@ export default function AnimationViewer({
           className="w-full"
           disabled={isPlaying}
         />
-      </div>
-
-
-      {/* Debug Panel */}
-      <details className="bg-gray-50 p-2 rounded">
-        <summary className="cursor-pointer font-medium text-gray-600 font-mono">Debug Info</summary>
-        <div className="mt-1 space-y-1 text-gray-600 font-mono">
-          <div>
-            <strong>Form </strong> {selectedForm} ({(formData?.name as string) || 'Unknown'})
-          </div>
-          <div>
-            <strong>Animation </strong> {selectedAnimation}
-          </div>
-          <div>
-            <strong>Sprites Count</strong> {(debugInfo?.spriteRectangles as number) || 0}
-          </div>
-          <div>
-            <strong>Parts Count</strong> {(debugInfo?.modelPartsCount as number) || 0}
-          </div>
-          <div>
-            <strong>Displays Count</strong> {(debugInfo?.totalParts as number) || 0}
-          </div>
-          <div>
-            <strong>Max Frames</strong> {maxFrame}
-          </div>
-          <div>
-            <strong>Image Exists?</strong> {spriteImage ? 'Y' : 'N'}
+        
+        {/* Parts List */}
+        <div className="mt-2">
+          <label className="block text-sm font-medium text-gray-600 mb-1 font-mono">
+            Parts & Sprites
+          </label>
+          <div className="text-xxxs text-gray-600 font-mono max-h-32 overflow-y-auto">
+            {(() => {
+              // すべてのパーツID（0からmodelPartsの最大まで）を取得
+              const totalPartsCount = Array.isArray(maModelData?.[2]) ? maModelData[2][0] : 0;
+              const allPartIds = Array.from({length: totalPartsCount}, (_, i) => i);
+              
+              // mamodelからパーツごとのスプライトIDを取得
+              const getPartSprites = (partId: number) => {
+                const sprites = new Set<number>();
+                
+                // そのパーツに関連するすべてのスプライトを取得
+                // アニメーションデータから過去に使用されたすべてのスプライトを収集
+                if (animData && Array.isArray(animData) && animData.length > 3) {
+                  let currentRow = 3;
+                  
+                  while (currentRow < animData.length) {
+                    const groupHeader = animData[currentRow];
+                    if (Array.isArray(groupHeader) && groupHeader.length >= 5) {
+                      const [modelId, modificationType] = groupHeader;
+                      currentRow++;
+                      
+                      const keyframeCountRow = animData[currentRow];
+                      if (Array.isArray(keyframeCountRow)) {
+                        const keyframeCount = (keyframeCountRow as number[])[0] || 0;
+                        currentRow++;
+                        
+                        // SPRITE modification (type 2) をチェック
+                        if ((modelId as number) === partId && (modificationType as number) === 2) {
+                          for (let i = 0; i < keyframeCount && currentRow + i < animData.length; i++) {
+                            const keyframe = animData[currentRow + i];
+                            if (Array.isArray(keyframe) && keyframe.length >= 4) {
+                              const spriteId = (keyframe as number[])[1];
+                              if (spriteId >= 0) {
+                                sprites.add(spriteId);
+                              }
+                            }
+                          }
+                        }
+                        
+                        currentRow += keyframeCount;
+                      } else {
+                        currentRow++;
+                      }
+                    } else {
+                      currentRow++;
+                    }
+                  }
+                }
+                
+                // 現在表示中のスプライト
+                const displayedSprite = spriteParts.find(sprite => sprite.id === partId);
+                if (displayedSprite && displayedSprite.spriteId >= 0) {
+                  sprites.add(displayedSprite.spriteId);
+                }
+                
+                // mamodelからベーススプライトIDを取得（Part#0は除外）
+                if (partId > 0 && maModelData && Array.isArray(maModelData) && maModelData.length > 3 + partId) {
+                  const partData = maModelData[3 + partId];
+                  if (Array.isArray(partData) && partData.length > 2) {
+                    const baseCutId = partData[2] as number;
+                    if (baseCutId >= 0) {
+                      sprites.add(baseCutId);
+                    }
+                  }
+                }
+                
+                return Array.from(sprites).sort((a, b) => a - b);
+              };
+              
+              return allPartIds.map(partId => {
+                const partSpriteIds = getPartSprites(partId);
+                const displayedSprite = spriteParts.find(sprite => sprite.id === partId);
+                
+                // スプライトがない場合はパーツのみ表示
+                if (partSpriteIds.length === 0) {
+                  return (
+                    <div key={partId} className="py-0 my-0">
+                      <div className="py-0 my-0">Part#{partId}</div>
+                    </div>
+                  );
+                }
+                
+                return (
+                  <div key={partId} className="py-0 my-0">
+                    {/* パーツ（親） */}
+                    <div className="py-0 my-0">Part#{partId}</div>
+                    {/* このパーツに関連するすべてのスプライト */}
+                    {partSpriteIds.map((spriteId, spriteIndex) => {
+                      const isDisplayed = displayedSprite && displayedSprite.spriteId === spriteId;
+                      const isLast = spriteIndex === partSpriteIds.length - 1;
+                      
+                      return (
+                        <div key={spriteIndex} className={`py-0 my-0 ${isDisplayed ? 'text-blue-500' : ''}`}>
+                          <span>{isLast ? '┗' : '┣'} Sprite#{spriteId}{isDisplayed ? ' o' : ''}</span>
+                        </div>
+                      );
+                    })}
+                  </div>
+                );
+              });
+            })()}
           </div>
         </div>
-      </details>
+      </div>
+
+      {/* Debug Section */}
+      <div className="bg-gray-50 p-2 rounded">
+        <label className="block text-sm font-medium text-gray-600 mb-1 font-mono">
+          Debug
+        </label>
+        <div className="text-xxs text-gray-600 font-mono space-y-2">
+          <details>
+            <summary className="cursor-pointer"><strong>imgcut:</strong> {imgCutData ? `${imgCutData.length} items` : 'none'}</summary>
+            <div className="mt-1 p-0">
+              <pre className="whitespace-pre-wrap text-xxxs">{imgCutData ? (() => {
+                // データをクリーンアップしてからJSON化
+                const cleanData = JSON.parse(JSON.stringify(imgCutData, (key, value) => {
+                  if (typeof value === 'string') {
+                    // BOM文字やその他の制御文字を除去
+                    return value.replace(/[\uFEFF\u200B-\u200D\uFFFE\uFFFF]/g, '');
+                  }
+                  return value;
+                }));
+                
+                let jsonStr = JSON.stringify(cleanData, null, 2);
+                
+                // ネストした配列のみ1行にする
+                return jsonStr.replace(/(  )\[\s*\n([\s\S]*?)\n\s*\]/g, (match, indent, content) => {
+                  // インデントが2スペース以上（ネストした配列）の場合のみ処理
+                  const lines = content.split('\n').map(line => line.trim()).filter(line => line);
+                  
+                  // 全ての行がプリミティブ値かチェック
+                  const allPrimitive = lines.every(line => {
+                    const cleanLine = line.replace(/,$/, '');
+                    return /^(-?\d+(\.\d+)?|".*"|true|false|null)$/.test(cleanLine);
+                  });
+                  
+                  if (allPrimitive) {
+                    const items = lines.map(line => line.replace(/,$/, ''));
+                    return `${indent}[${items.join(', ')}]`;
+                  }
+                  
+                  return match;
+                });
+              })() : 'No data'}</pre>
+            </div>
+          </details>
+          <details>
+            <summary className="cursor-pointer"><strong>mamodel:</strong> {maModelData ? `${maModelData.length} items` : 'none'}</summary>
+            <div className="mt-1 p-0">
+              <pre className="whitespace-pre-wrap text-xxxs">{maModelData ? (() => {
+                // データをクリーンアップしてからJSON化
+                const cleanData = JSON.parse(JSON.stringify(maModelData, (key, value) => {
+                  if (typeof value === 'string') {
+                    // BOM文字やその他の制御文字を除去
+                    return value.replace(/[\uFEFF\u200B-\u200D\uFFFE\uFFFF]/g, '');
+                  }
+                  return value;
+                }));
+                
+                let jsonStr = JSON.stringify(cleanData, null, 2);
+                
+                // ネストした配列のみ1行にする
+                return jsonStr.replace(/(  )\[\s*\n([\s\S]*?)\n\s*\]/g, (match, indent, content) => {
+                  // インデントが2スペース以上（ネストした配列）の場合のみ処理
+                  const lines = content.split('\n').map(line => line.trim()).filter(line => line);
+                  
+                  // 全ての行がプリミティブ値かチェック
+                  const allPrimitive = lines.every(line => {
+                    const cleanLine = line.replace(/,$/, '');
+                    return /^(-?\d+(\.\d+)?|".*"|true|false|null)$/.test(cleanLine);
+                  });
+                  
+                  if (allPrimitive) {
+                    const items = lines.map(line => line.replace(/,$/, ''));
+                    return `${indent}[${items.join(', ')}]`;
+                  }
+                  
+                  return match;
+                });
+              })() : 'No data'}</pre>
+            </div>
+          </details>
+          <details>
+            <summary className="cursor-pointer"><strong>maanim:</strong> {animData ? `${animData.length} items` : 'none'}</summary>
+            <div className="mt-1 p-0">
+              <pre className="whitespace-pre-wrap text-xxxs">{animData ? (() => {
+                // データをクリーンアップしてからJSON化
+                const cleanData = JSON.parse(JSON.stringify(animData, (key, value) => {
+                  if (typeof value === 'string') {
+                    // BOM文字やその他の制御文字を除去
+                    return value.replace(/[\uFEFF\u200B-\u200D\uFFFE\uFFFF]/g, '');
+                  }
+                  return value;
+                }));
+                
+                let jsonStr = JSON.stringify(cleanData, null, 2);
+                
+                // ネストした配列のみ1行にする
+                return jsonStr.replace(/(  )\[\s*\n([\s\S]*?)\n\s*\]/g, (match, indent, content) => {
+                  // インデントが2スペース以上（ネストした配列）の場合のみ処理
+                  const lines = content.split('\n').map(line => line.trim()).filter(line => line);
+                  
+                  // 全ての行がプリミティブ値かチェック
+                  const allPrimitive = lines.every(line => {
+                    const cleanLine = line.replace(/,$/, '');
+                    return /^(-?\d+(\.\d+)?|".*"|true|false|null)$/.test(cleanLine);
+                  });
+                  
+                  if (allPrimitive) {
+                    const items = lines.map(line => line.replace(/,$/, ''));
+                    return `${indent}[${items.join(', ')}]`;
+                  }
+                  
+                  return match;
+                });
+              })() : 'No data'}</pre>
+            </div>
+          </details>
+        </div>
+      </div>
+
     </div>
   );
 }

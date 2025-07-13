@@ -45,6 +45,8 @@ interface AnimationRendererProps {
   offsetY?: number;
   showBoundaries?: boolean;
   showRefPoints?: boolean;
+  showPartPoints?: Set<number>;
+  maModelData?: unknown[];
 }
 
 export default function AnimationRenderer({
@@ -58,7 +60,9 @@ export default function AnimationRenderer({
   offsetX = 0,
   offsetY = 0,
   showBoundaries = false,
-  showRefPoints = false
+  showRefPoints = false,
+  showPartPoints = new Set(),
+  maModelData
 }: AnimationRendererProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -335,7 +339,7 @@ export default function AnimationRenderer({
       ctx.restore();
     }
 
-    // Draw reference points for each part (red-500 3px)
+    // Draw reference points for all parts (red-500 3px) - global toggle
     if (showRefPoints) {
       ctx.save();
       ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset to identity matrix
@@ -373,7 +377,77 @@ export default function AnimationRenderer({
       
       ctx.restore();
     }
-  }, [spriteImage, spriteParts, canvasWidth, canvasHeight, backgroundColor, viewScale, zoom, offsetX, offsetY, showBoundaries, showRefPoints]);
+
+    // Draw individual part points (blue-500 4px) - per-part toggle
+    // パーツの表示・非表示に関係なく、チェックが入っていれば表示
+    if (showPartPoints.size > 0) {
+      ctx.save();
+      ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset to identity matrix
+      ctx.fillStyle = '#3b82f6'; // blue-500
+      ctx.font = '10px monospace';
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'top';
+      
+      // すべてのパーツ（表示・非表示問わず）をチェック
+      showPartPoints.forEach((partId) => {
+        // そのパーツIDのspritePartを探す（表示されている場合）
+        const part = sortedParts.find(p => p.id === partId);
+        
+        if (part) {
+          // 表示されているパーツの場合
+          let referenceX, referenceY;
+          
+          if (part.matrix) {
+            // Use tbcml-style matrix transformation
+            const baseX = (part.x * viewScale) + (canvas.width / 2);
+            const baseY = (part.y * viewScale) + (canvas.height / 2);
+            referenceX = (baseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX;
+            referenceY = (baseY - canvas.height / 2) * zoom + (canvas.height / 2) + offsetY;
+          } else {
+            // Use simple transformation
+            const baseX = (part.x * viewScale) + (canvas.width / 2);
+            const baseY = (part.y * viewScale) + (canvas.height / 2);
+            referenceX = (baseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX;
+            referenceY = (baseY - canvas.height / 2) * zoom + (canvas.height / 2) + offsetY;
+          }
+          
+          // Draw 4px part point (slightly larger than global points)
+          ctx.fillRect(referenceX - 2, referenceY - 2, 4, 4);
+          
+          // Draw Part ID and coordinate text
+          const partText = `P${part.id}:(${Math.round(part.x)},${Math.round(part.y)})`;
+          ctx.fillText(partText, referenceX + 3, referenceY + 3);
+        } else {
+          // パーツが非表示の場合でも、maModelDataから基本座標を取得して表示
+          let baseX = 0, baseY = 0;
+          
+          if (maModelData && Array.isArray(maModelData) && maModelData.length > 3 + partId) {
+            const partData = maModelData[3 + partId];
+            if (Array.isArray(partData) && partData.length > 5) {
+              baseX = partData[4] as number;
+              baseY = partData[5] as number;
+            }
+          }
+          
+          const screenBaseX = (baseX * viewScale) + (canvas.width / 2);
+          const screenBaseY = (baseY * viewScale) + (canvas.height / 2);
+          const referenceX = (screenBaseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX;
+          const referenceY = (screenBaseY - canvas.height / 2) * zoom + (canvas.height / 2) + offsetY;
+          
+          // Draw 4px part point (grayed out for hidden parts)
+          ctx.fillStyle = '#9ca3af'; // gray-400 for hidden parts
+          ctx.fillRect(referenceX - 2, referenceY - 2, 4, 4);
+          ctx.fillStyle = '#3b82f6'; // restore blue color
+          
+          // Draw Part ID and coordinate text for hidden part
+          const partText = `P${partId}:(${baseX},${baseY})`;
+          ctx.fillText(partText, referenceX + 3, referenceY + 3);
+        }
+      });
+      
+      ctx.restore();
+    }
+  }, [spriteImage, spriteParts, canvasWidth, canvasHeight, backgroundColor, viewScale, zoom, offsetX, offsetY, showBoundaries, showRefPoints, showPartPoints, maModelData]);
 
   return (
     <canvas

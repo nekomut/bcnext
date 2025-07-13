@@ -63,6 +63,8 @@ export default function AnimationViewer({
   const [imageError, setImageError] = useState<string | null>(null);
   const [hiddenParts, setHiddenParts] = useState<Set<number>>(new Set());
   const [hiddenSprites, setHiddenSprites] = useState<Set<number>>(new Set());
+  const [showPartPoints, setShowPartPoints] = useState<Set<number>>(new Set());
+  const [frameRate, setFrameRate] = useState(30);
 
   const formData = animationData?.[selectedForm] as Record<string, unknown> | undefined;
   const animData = formData?.[selectedAnimation] as unknown[] | undefined;
@@ -853,7 +855,6 @@ export default function AnimationViewer({
       }
 
       const elapsed = timestamp - startTimeRef.current;
-      const frameRate = 30; // 30 FPS
       const rawFrame = Math.floor(elapsed / (1000 / frameRate));
       
       // tbcmlスタイルのモジュロ演算による完璧なループ
@@ -871,7 +872,7 @@ export default function AnimationViewer({
         cancelAnimationFrame(animationFrameRef.current);
       }
     };
-  }, [isPlaying, animData, maxFrame, onStop]);
+  }, [isPlaying, animData, maxFrame, onStop, frameRate]);
 
   // Reset frame when animation changes
   useEffect(() => {
@@ -946,6 +947,8 @@ export default function AnimationViewer({
             offsetY={offsetY}
             showBoundaries={showBoundaries || false}
             showRefPoints={showRefPoints || false}
+            showPartPoints={showPartPoints}
+            maModelData={maModelData}
           />
         ) : (
           <div className="w-[324px] h-[244px] border border-gray-300 bg-gray-100 flex items-center justify-center">
@@ -1039,16 +1042,31 @@ export default function AnimationViewer({
               onChange={(e) => onShowRefPointsChange && onShowRefPointsChange(e.target.checked)}
               className="w-4 h-4"
             />
-            Points
+            All Points
           </label>
         </div>
       </div>
 
       {/* Frame Control */}
       <div className="bg-gray-50 p-2 rounded">
-        <label className="block text-sm font-medium text-gray-600 mb-1 font-mono">
-          Frame {String(currentFrame).padStart(3, '0')} / {String(maxFrame).padStart(3, '0')}
-        </label>
+        <div className="flex items-center justify-between mb-1">
+          <label className="text-sm font-medium text-gray-600 font-mono">
+            Frame {String(currentFrame).padStart(3, '0')} / {String(maxFrame).padStart(3, '0')}
+          </label>
+          <div className="flex items-center gap-1">
+            <label className="text-xs font-medium text-gray-600 font-mono">FPS</label>
+            <select
+              value={frameRate}
+              onChange={(e) => setFrameRate(parseInt(e.target.value))}
+              className="px-1 py-0 border border-gray-300 rounded text-xs focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-600 font-mono"
+            >
+              <option value={15}>15</option>
+              <option value={24}>24</option>
+              <option value={30}>30</option>
+              <option value={60}>60</option>
+            </select>
+          </div>
+        </div>
         <input
           type="range"
           min="0"
@@ -1106,6 +1124,11 @@ export default function AnimationViewer({
               
               // mamodelからパーツごとのスプライトIDを取得
               const getPartSprites = (partId: number) => {
+                // Part#0には絶対にスプライトをぶら下げない
+                if (partId === 0) {
+                  return [];
+                }
+                
                 const sprites = new Set<number>();
                 
                 // そのパーツに関連するすべてのスプライトを取得
@@ -1169,31 +1192,120 @@ export default function AnimationViewer({
               
               const handlePartToggle = (partId: number, checked: boolean) => {
                 const newHiddenParts = new Set(hiddenParts);
+                const newHiddenSprites = new Set(hiddenSprites);
+                
                 if (checked) {
                   // チェックされた場合、非表示リストから削除（表示する）
                   newHiddenParts.delete(partId);
+                  
+                  // 子Spriteが一つだけの場合、自動でチェックを入れる
+                  const partSpriteIds = getPartSprites(partId);
+                  if (partSpriteIds.length === 1) {
+                    const singleSpriteId = partSpriteIds[0];
+                    newHiddenSprites.delete(singleSpriteId);
+                    setHiddenSprites(newHiddenSprites);
+                  }
                 } else {
                   // チェックが外された場合、非表示リストに追加（隠す）
                   newHiddenParts.add(partId);
+                  
+                  // 子Spriteが一つだけの場合、自動でチェックを外す
+                  const partSpriteIds = getPartSprites(partId);
+                  if (partSpriteIds.length === 1) {
+                    const singleSpriteId = partSpriteIds[0];
+                    newHiddenSprites.add(singleSpriteId);
+                    setHiddenSprites(newHiddenSprites);
+                  }
                 }
                 setHiddenParts(newHiddenParts);
               };
 
-              const handleSpriteToggle = (spriteId: number, checked: boolean) => {
+              // 特定のSpriteがどの親Partに属しているかを逆引きする関数
+              const getParentPartsForSprite = (spriteId: number): number[] => {
+                const parentParts: number[] = [];
+                const totalPartsCount = Array.isArray(maModelData?.[2]) ? maModelData[2][0] : 0;
+                
+                for (let partId = 0; partId < totalPartsCount; partId++) {
+                  const partSpriteIds = getPartSprites(partId);
+                  if (partSpriteIds.includes(spriteId)) {
+                    parentParts.push(partId);
+                  }
+                }
+                
+                return parentParts;
+              };
+
+              // eslint-disable-next-line @typescript-eslint/no-unused-vars
+              const handleSpriteToggle = (spriteId: number, checked: boolean, partId: number) => {
                 const newHiddenSprites = new Set(hiddenSprites);
+                const newHiddenParts = new Set(hiddenParts);
+                
                 if (checked) {
                   // チェックされた場合、非表示リストから削除（表示する）
                   newHiddenSprites.delete(spriteId);
+                  
+                  // このSpriteが属するすべての親Partをチェック
+                  const parentParts = getParentPartsForSprite(spriteId);
+                  parentParts.forEach(parentPartId => {
+                    // 親Partが非表示の場合、自動的に表示する
+                    if (hiddenParts.has(parentPartId)) {
+                      newHiddenParts.delete(parentPartId);
+                    }
+                  });
+                  
+                  setHiddenParts(newHiddenParts);
                 } else {
                   // チェックが外された場合、非表示リストに追加（隠す）
                   newHiddenSprites.add(spriteId);
+                  
+                  // このSpriteが属するすべての親Partをチェック
+                  const parentParts = getParentPartsForSprite(spriteId);
+                  parentParts.forEach(parentPartId => {
+                    // 親Partの子Spriteがすべて非表示になったかチェック
+                    const partSpriteIds = getPartSprites(parentPartId);
+                    const allSpritesHidden = partSpriteIds.every(id => newHiddenSprites.has(id));
+                    
+                    // すべての子Spriteが非表示になった場合、親Partも非表示にする
+                    if (allSpritesHidden && partSpriteIds.length > 0) {
+                      newHiddenParts.add(parentPartId);
+                    }
+                  });
+                  
+                  setHiddenParts(newHiddenParts);
                 }
                 setHiddenSprites(newHiddenSprites);
+              };
+
+              const handlePointToggle = (partId: number, checked: boolean) => {
+                const newShowPartPoints = new Set(showPartPoints);
+                if (checked) {
+                  newShowPartPoints.add(partId);
+                } else {
+                  newShowPartPoints.delete(partId);
+                }
+                setShowPartPoints(newShowPartPoints);
               };
 
               return allPartIds.map(partId => {
                 const partSpriteIds = getPartSprites(partId);
                 const displayedSprite = spriteParts.find(sprite => sprite.id === partId);
+                
+                // パーツの座標情報を取得
+                const partCoordinates = (() => {
+                  if (displayedSprite) {
+                    return `(${Math.round(displayedSprite.x)}, ${Math.round(displayedSprite.y)})`;
+                  }
+                  // スプライトが表示されていない場合はmamodelから基本座標を取得
+                  if (maModelData && Array.isArray(maModelData) && maModelData.length > 3 + partId) {
+                    const partData = maModelData[3 + partId];
+                    if (Array.isArray(partData) && partData.length > 5) {
+                      const baseX = partData[4] as number;
+                      const baseY = partData[5] as number;
+                      return `(${baseX}, ${baseY})`;
+                    }
+                  }
+                  return '(?, ?)';
+                })();
                 
                 // スプライトがない場合はパーツのみ表示
                 if (partSpriteIds.length === 0) {
@@ -1206,7 +1318,13 @@ export default function AnimationViewer({
                           checked={!hiddenParts.has(partId)}
                           onChange={(e) => handlePartToggle(partId, e.target.checked)}
                         />
-                        <span>Part#{partId}</span>
+                        <span>Part#{partId} {partCoordinates} </span>
+                        <input
+                          type="checkbox"
+                          className="w-3 h-3"
+                          checked={showPartPoints.has(partId)}
+                          onChange={(e) => handlePointToggle(partId, e.target.checked)}
+                        />
                       </div>
                     </div>
                   );
@@ -1222,7 +1340,13 @@ export default function AnimationViewer({
                         checked={!hiddenParts.has(partId)}
                         onChange={(e) => handlePartToggle(partId, e.target.checked)}
                       />
-                      <span>Part#{partId}</span>
+                      <span>Part#{partId} {partCoordinates} </span>
+                      <input
+                        type="checkbox"
+                        className="w-3 h-3"
+                        checked={showPartPoints.has(partId)}
+                        onChange={(e) => handlePointToggle(partId, e.target.checked)}
+                      />
                     </div>
                     {/* このパーツに関連するすべてのスプライト */}
                     {partSpriteIds.map((spriteId, spriteIndex) => {
@@ -1230,14 +1354,15 @@ export default function AnimationViewer({
                       const isLast = spriteIndex === partSpriteIds.length - 1;
                       
                       return (
-                        <div key={spriteIndex} className={`py-0 my-0 flex items-center gap-1 ${isDisplayed ? 'text-blue-500' : ''}`}>
+                        <div key={spriteIndex} className={`py-0 my-0 flex items-center gap-1 ml-4 ${isDisplayed ? 'text-blue-500' : ''}`}>
+                          <span>{isLast ? '┗' : '┣'} </span>
                           <input
                             type="checkbox"
-                            className="w-3 h-3 ml-4"
+                            className="w-3 h-3"
                             checked={!hiddenSprites.has(spriteId)}
-                            onChange={(e) => handleSpriteToggle(spriteId, e.target.checked)}
+                            onChange={(e) => handleSpriteToggle(spriteId, e.target.checked, partId)}
                           />
-                          <span>{isLast ? '┗' : '┣'} Sprite#{spriteId}{isDisplayed ? ' o' : ' -'}</span>
+                          <span> Sprite#{spriteId}{isDisplayed ? ' o' : ' -'}</span>
                         </div>
                       );
                     })}
@@ -1256,7 +1381,7 @@ export default function AnimationViewer({
         </label>
         <div className="text-xxs text-gray-600 font-mono space-y-2">
           <details>
-            <summary className="cursor-pointer"><strong>imgcut:</strong> {imgCutData ? `${imgCutData.length} items` : 'none'}</summary>
+            <summary className="cursor-pointer"><strong>imgcut</strong></summary>
             <div className="mt-1 p-0">
               <pre className="whitespace-pre-wrap text-xxxs">{imgCutData ? (() => {
                 // データをクリーンアップしてからJSON化
@@ -1292,7 +1417,7 @@ export default function AnimationViewer({
             </div>
           </details>
           <details>
-            <summary className="cursor-pointer"><strong>mamodel:</strong> {maModelData ? `${maModelData.length} items` : 'none'}</summary>
+            <summary className="cursor-pointer"><strong>mamodel</strong></summary>
             <div className="mt-1 p-0">
               <pre className="whitespace-pre-wrap text-xxxs">{maModelData ? (() => {
                 // データをクリーンアップしてからJSON化
@@ -1328,7 +1453,7 @@ export default function AnimationViewer({
             </div>
           </details>
           <details>
-            <summary className="cursor-pointer"><strong>maanim:</strong> {animData ? `${animData.length} items` : 'none'}</summary>
+            <summary className="cursor-pointer"><strong>maanim</strong></summary>
             <div className="mt-1 p-0">
               <pre className="whitespace-pre-wrap text-xxxs">{animData ? (() => {
                 // データをクリーンアップしてからJSON化

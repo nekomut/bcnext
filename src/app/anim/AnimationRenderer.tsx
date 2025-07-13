@@ -44,6 +44,7 @@ interface AnimationRendererProps {
   offsetX?: number;
   offsetY?: number;
   showBoundaries?: boolean;
+  showRefPoints?: boolean;
 }
 
 export default function AnimationRenderer({
@@ -56,7 +57,8 @@ export default function AnimationRenderer({
   zoom = 1.0,
   offsetX = 0,
   offsetY = 0,
-  showBoundaries = false
+  showBoundaries = false,
+  showRefPoints = false
 }: AnimationRendererProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -332,7 +334,46 @@ export default function AnimationRenderer({
       ctx.strokeRect(minX, minY, boundingWidth, boundingHeight);
       ctx.restore();
     }
-  }, [spriteImage, spriteParts, canvasWidth, canvasHeight, backgroundColor, viewScale, zoom, offsetX, offsetY, showBoundaries]);
+
+    // Draw reference points for each part (red-500 3px)
+    if (showRefPoints) {
+      ctx.save();
+      ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset to identity matrix
+      ctx.fillStyle = '#ef4444'; // red-500
+      ctx.font = '10px monospace';
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'top';
+      
+      sortedParts.forEach((part) => {
+        if (part.spriteId >= 0 && part.opacity > 0) {
+          let referenceX, referenceY;
+          
+          if (part.matrix) {
+            // Use tbcml-style matrix transformation
+            const baseX = (part.x * viewScale) + (canvas.width / 2);
+            const baseY = (part.y * viewScale) + (canvas.height / 2);
+            referenceX = (baseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX;
+            referenceY = (baseY - canvas.height / 2) * zoom + (canvas.height / 2) + offsetY;
+          } else {
+            // Use simple transformation
+            const baseX = (part.x * viewScale) + (canvas.width / 2);
+            const baseY = (part.y * viewScale) + (canvas.height / 2);
+            referenceX = (baseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX;
+            referenceY = (baseY - canvas.height / 2) * zoom + (canvas.height / 2) + offsetY;
+          }
+          
+          // Draw 3px reference point
+          ctx.fillRect(referenceX - 1.5, referenceY - 1.5, 3, 3);
+          
+          // Draw coordinate text
+          const coordText = `(${Math.round(part.x)},${Math.round(part.y)})`;
+          ctx.fillText(coordText, referenceX + 2, referenceY + 2);
+        }
+      });
+      
+      ctx.restore();
+    }
+  }, [spriteImage, spriteParts, canvasWidth, canvasHeight, backgroundColor, viewScale, zoom, offsetX, offsetY, showBoundaries, showRefPoints]);
 
   return (
     <canvas

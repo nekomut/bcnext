@@ -26,6 +26,7 @@ function AnimationPageContent() {
   const [selectedAnimation, setSelectedAnimation] = useState(initialAnim || 'maanim02');
   const [isPlaying, setIsPlaying] = useState(initialPlaying);
   const [showBoundaries, setShowBoundaries] = useState(false);
+  const [showRefPoints, setShowRefPoints] = useState(false);
   const [loading, setLoading] = useState(false);
   const [loadingProgress, setLoadingProgress] = useState({ current: 0, total: 0, message: '' });
   
@@ -195,7 +196,7 @@ function AnimationPageContent() {
     };
     
     loadIcons();
-  }, [animationData]); // selectedUnitではなくanimationDataに依存
+  }, [selectedUnit, animationData]); // selectedUnitとanimationDataに依存
 
   // Load initial unit on mount
   useEffect(() => {
@@ -486,6 +487,8 @@ function AnimationPageContent() {
             unitId={selectedUnit}
             showBoundaries={showBoundaries}
             onShowBoundariesChange={setShowBoundaries}
+            showRefPoints={showRefPoints}
+            onShowRefPointsChange={setShowRefPoints}
           />
         ) : (
           <div className="flex justify-center items-center h-64">

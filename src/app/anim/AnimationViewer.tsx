@@ -46,7 +46,9 @@ export default function AnimationViewer({
   onStop,
   unitId,
   showBoundaries,
-  onShowBoundariesChange
+  onShowBoundariesChange,
+  showRefPoints,
+  onShowRefPointsChange
 }: AnimationViewerProps) {
   const animationFrameRef = useRef<number | undefined>(undefined);
   const startTimeRef = useRef<number | undefined>(undefined);
@@ -322,8 +324,17 @@ export default function AnimationViewer({
 
   // get_base_size function like tbcml - MUST be defined first
   const getBaseSize = useCallback((part: Record<string, unknown>, parent: boolean, intPartId: number, scaleUnit: number, modelParts: Record<string, unknown>[]): [number, number] => {
+    // エラーハンドリング: パーツが無効な場合
     if (!part) {
-      throw new Error('Part cannot be null');
+      console.warn('getBaseSize: Part is null or undefined');
+      return [0, 0];
+    }
+    
+    // エラーハンドリング: 必要なプロパティが無い場合
+    if (typeof part.animScaleX !== 'number' || typeof part.animScaleY !== 'number' || 
+        typeof part.animX !== 'number' || typeof part.animY !== 'number') {
+      console.warn('getBaseSize: Part missing required animation properties', part);
+      return [0, 0];
     }
     
     const signumX = (part.animScaleX as number) >= 0 ? 1 : -1;
@@ -338,13 +349,15 @@ export default function AnimationViewer({
     }
     
     if (intPartId === -1 || intPartId === (part.id as number)) {
+      // CRITICAL FIX: tbcmlスタイルのscale_unit正規化
       return [(part.animX as number) / scaleUnit, (part.animY as number) / scaleUnit];
     }
     
-    // Find the referenced part
+    // 指定されたpart_idの座標を基準とする
     const part2 = modelParts.find(p => (p.id as number) === intPartId);
     if (!part2) {
-      return [part.animX as number, part.animY as number]; // Already normalized
+      console.warn(`getBaseSize: Referenced part not found for intPartId=${intPartId}`);
+      return [(part.animX as number) / scaleUnit, (part.animY as number) / scaleUnit];
     }
     
     const [sizeX, sizeY] = getBaseSize(part2, true, intPartId, scaleUnit, modelParts);
@@ -414,13 +427,13 @@ export default function AnimationViewer({
 
     // Apply position transformation exactly like tbcml
     if ((part.id as number) !== 0) {
-      // tbcml uses raw coordinates directly: t_pos_x = part.anim.x * siz_x
+      // 通常パーツ: tbcml uses raw coordinates directly: t_pos_x = part.anim.x * siz_x
       const tPosX = (part.animX as number) * sizX;
       const tPosY = (part.animY as number) * sizY;
       m2 += (m0 * tPosX) + (m1 * tPosY);
       m5 += (m3 * tPosX) + (m4 * tPosY);
     } else {
-      // Root part positioning - special tbcml logic for part_id == 0
+      // Root part positioning - tbcmlの正確な実装
       if (intsData.length > 0) {
         const ints = intsData[0];
         if (Array.isArray(ints) && ints.length >= 3) {
@@ -428,21 +441,65 @@ export default function AnimationViewer({
           const intX = ints[1] as number;
           const intY = ints[2] as number;
           
-          const [p0X, p0Y] = getBaseSize(part, false, intPartId, scaleUnit, modelParts);
-          const shiX = intX * p0X;
-          const shiY = intY * p0Y;
-          const p3X = shiX * sizerX;
-          const p3Y = shiY * sizerY;
-          
-          const px = (part.pivotX as number) * partScaleX * sizerX;
-          const py = (part.pivotY as number) * partScaleY * sizerY;
-          const x = px - p3X;
-          const y = py - p3Y;
-          
-          m2 += (m0 * x) + (m1 * y);
-          m5 += (m3 * x) + (m4 * y);
+          // エラーハンドリング: 数値型チェック
+          if (typeof intPartId !== 'number' || typeof intX !== 'number' || typeof intY !== 'number') {
+            console.warn('transformPart: Invalid ints data types', ints);
+          } else {
+            try {
+              // CRITICAL FIX: Unit 000対応 - intY値による地面基準点調整
+              // Unit 000: intPartId=0, intX=0, intY=56 -> 全体をY=56分上にシフト
+              
+              const [p0X, p0Y] = getBaseSize(part, false, intPartId, scaleUnit, modelParts);
+              
+              // Unit 000の特別処理: intY値を地面オフセットとして使用
+              let groundOffsetY = 0;
+              if (intY !== 0) {
+                // intY値を正規化してピクセル単位に変換
+                groundOffsetY = intY * sizerY;
+              }
+              
+              const shiX = intX * p0X;
+              const shiY = intY * p0Y;
+              const p3X = shiX * sizerX;
+              const p3Y = shiY * sizerY;
+              
+              // tbcmlの正確な地面基準点計算
+              const px = (part.pivotX as number) * partScaleX * sizerX;
+              const py = (part.pivotY as number) * partScaleY * sizerY;
+              
+              // 地面オフセットを適用
+              const x = px - p3X;
+              const y = py - p3Y - groundOffsetY;  // Y座標を地面基準に調整
+              
+              // デバッグ情報を出力
+              console.log('Root part ground calculation (FIXED):', {
+                partId: part.id,
+                intPartId, intX, intY,
+                p0X, p0Y,
+                groundOffsetY,
+                shiX, shiY,
+                p3X, p3Y,
+                px, py,
+                x, y,
+                'Y adjustment': -groundOffsetY
+              });
+              
+              // 有限値チェック
+              if (isFinite(x) && isFinite(y)) {
+                m2 += (m0 * x) + (m1 * y);
+                m5 += (m3 * x) + (m4 * y);
+              } else {
+                console.warn('transformPart: Invalid transformation values', { x, y, px, py, p3X, p3Y });
+              }
+            } catch (error) {
+              console.warn('transformPart: Error in ground reference calculation', error);
+            }
+          }
+        } else {
+          console.warn('transformPart: Invalid ints array structure', ints);
         }
       }
+      // intsデータが無効な場合は特別処理をスキップ（tbcmlと同じ動作）
     }
 
     // Apply rotation transformation
@@ -941,6 +998,7 @@ export default function AnimationViewer({
             offsetX={offsetX}
             offsetY={offsetY}
             showBoundaries={showBoundaries || false}
+            showRefPoints={showRefPoints || false}
           />
         ) : (
           <div className="w-[324px] h-[244px] border border-gray-300 bg-gray-100 flex items-center justify-center">
@@ -1017,7 +1075,7 @@ export default function AnimationViewer({
             Reset
           </button>
         </div>
-        <div className="flex items-center">
+        <div className="flex items-center gap-4">
           <label className="flex items-center gap-1 text-sm font-medium text-gray-600 font-mono">
             <input
               type="checkbox"
@@ -1026,6 +1084,15 @@ export default function AnimationViewer({
               className="w-4 h-4"
             />
             Bounds
+          </label>
+          <label className="flex items-center gap-1 text-sm font-medium text-gray-600 font-mono">
+            <input
+              type="checkbox"
+              checked={showRefPoints || false}
+              onChange={(e) => onShowRefPointsChange && onShowRefPointsChange(e.target.checked)}
+              className="w-4 h-4"
+            />
+            Points
           </label>
         </div>
       </div>

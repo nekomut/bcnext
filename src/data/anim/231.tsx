@@ -5,7 +5,7 @@ export const animationData_231 = {
   "f": {
     "name": "おでん",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["231_f.png"],
       [20],
@@ -31,7 +31,7 @@ export const animationData_231 = {
       [87, 53, 32, 52]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [20],
       [-1, -1, 0, 0, 27, -100, 1, 1, 1250, 1250, 0, 1000, 0, "親ダミー"],
@@ -60,7 +60,7 @@ export const animationData_231 = {
       [0, 0, 1, 95, 5, 0, "二の腕　奥"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [2, 5, -1, 0, 0, "親ダミー"],
@@ -188,7 +188,7 @@ export const animationData_231 = {
       [18, 80, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [2, 5, -1, 0, 0, "頭"],
@@ -251,7 +251,7 @@ export const animationData_231 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [1, 4, 1, 0, 0],
@@ -467,7 +467,7 @@ export const animationData_231 = {
       [20, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [2, 4, 1, 0, 0, "頭"],
@@ -517,7 +517,7 @@ export const animationData_231 = {
   "c": {
     "name": "おでんCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["231_c.png"],
       [20],
@@ -543,7 +543,7 @@ export const animationData_231 = {
       [87, 53, 32, 52]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [20],
       [-1, -1, 0, 0, 27, -100, 1, 1, 1250, 1250, 0, 1000, 0, "親ダミー"],
@@ -572,7 +572,7 @@ export const animationData_231 = {
       [0, 0, 1, 95, 5, 0, "二の腕　奥"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [2, 5, -1, 0, 0, "親ダミー"],
@@ -700,7 +700,7 @@ export const animationData_231 = {
       [18, 80, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [2, 5, -1, 0, 0, "頭"],
@@ -763,7 +763,7 @@ export const animationData_231 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [1, 4, 1, 0, 0],
@@ -979,7 +979,7 @@ export const animationData_231 = {
       [20, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [2, 4, 1, 0, 0, "頭"],

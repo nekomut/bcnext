@@ -5,7 +5,7 @@ export const animationData_261 = {
   "f": {
     "name": "天誅ハヤブサ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["261_f.png"],
       [52],
@@ -63,7 +63,7 @@ export const animationData_261 = {
       [367, 216, 23, 14, 3]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [79],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -151,7 +151,7 @@ export const animationData_261 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [90],
       [2, 4, -1, 0, 0, "影"],
@@ -662,7 +662,7 @@ export const animationData_261 = {
       [20, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [46],
       [4, 5, -1, 0, 0, "腰"],
@@ -915,7 +915,7 @@ export const animationData_261 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [164],
       [2, 4, 1, 0, 0, "影"],
@@ -2569,7 +2569,7 @@ export const animationData_261 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [2, 9, 1, 0, 0, "影"],
@@ -2697,7 +2697,7 @@ export const animationData_261 = {
   "c": {
     "name": "斬魔ハヤブサ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["261_c.png"],
       [56],
@@ -2759,7 +2759,7 @@ export const animationData_261 = {
       [484, 114, 15, 31, "青の炎05"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [110],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -2878,7 +2878,7 @@ export const animationData_261 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [170],
       [2, 4, -1, 0, 0, "影"],
@@ -3818,7 +3818,7 @@ export const animationData_261 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [117],
       [4, 5, -1, 0, 0, "腰"],
@@ -4475,7 +4475,7 @@ export const animationData_261 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [290],
       [2, 4, 1, 0, 0, "影"],
@@ -8021,7 +8021,7 @@ export const animationData_261 = {
       [38, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [53],
       [2, 9, 1, 0, 0, "影"],
@@ -8188,7 +8188,7 @@ export const animationData_261 = {
   "s": {
     "name": "滅殺ハヤブサ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["261_s.png"],
       [82],
@@ -8276,7 +8276,7 @@ export const animationData_261 = {
       [468, 195, 18, 18, "081黒素材.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [172],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -8457,7 +8457,7 @@ export const animationData_261 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [200],
       [2, 4, -1, 0, 0, "影"],
@@ -9496,7 +9496,7 @@ export const animationData_261 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [139],
       [4, 5, -1, 0, 0, "腰"],
@@ -10228,7 +10228,7 @@ export const animationData_261 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [409],
       [2, 4, 1, 0, 0, "影"],
@@ -14713,7 +14713,7 @@ export const animationData_261 = {
       [32, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [75],
       [2, 9, 1, 0, 0, "影"],

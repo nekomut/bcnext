@@ -5,7 +5,7 @@ export const animationData_336 = {
   "f": {
     "name": "ミイラ娘レイカ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["336_f.png"],
       [103],
@@ -114,7 +114,7 @@ export const animationData_336 = {
       [56, 141, 32, 31, "煙ついか"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [128],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー<color=7>"],
@@ -251,7 +251,7 @@ export const animationData_336 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [61],
       [2, 9, -1, 0, 0],
@@ -581,7 +581,7 @@ export const animationData_336 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [50],
       [3, 5, -1, 0, 0, "cダミー<color=7>"],
@@ -857,7 +857,7 @@ export const animationData_336 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [172],
       [2, 9, 1, 0, 0, "影"],
@@ -2397,7 +2397,7 @@ export const animationData_336 = {
       [77, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [3, 5, 1, 0, 0, "cダミー<color=7>"],
@@ -2519,7 +2519,7 @@ export const animationData_336 = {
   "c": {
     "name": "玉座のミイラ姫レイカ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["336_c.png"],
       [135],
@@ -2660,7 +2660,7 @@ export const animationData_336 = {
       [1, 102, 39, 10, "はためき２"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [189],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー<color=7>"],
@@ -2858,7 +2858,7 @@ export const animationData_336 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [90],
       [2, 9, -1, 0, 0, "影"],
@@ -3361,7 +3361,7 @@ export const animationData_336 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [79],
       [2, 9, -1, 0, 0, "影"],
@@ -3814,7 +3814,7 @@ export const animationData_336 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [228],
       [2, 9, 1, 0, 0, "影"],
@@ -5917,7 +5917,7 @@ export const animationData_336 = {
       [95, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [68],
       [3, 5, 1, 0, 0, "cダミー<color=7>"],
@@ -6129,7 +6129,7 @@ export const animationData_336 = {
   "s": {
     "name": "黄金のミイラ姫レイカ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["336_s.png"],
       [136],
@@ -6271,7 +6271,7 @@ export const animationData_336 = {
       [438, 128, 61, 22, "132包帯10　の先.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [205],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー<color=7>"],
@@ -6485,7 +6485,7 @@ export const animationData_336 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [120],
       [2, 9, -1, 0, 0, "影"],
@@ -7189,7 +7189,7 @@ export const animationData_336 = {
       [3, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [115],
       [2, 9, -1, 0, 0, "影"],
@@ -7867,7 +7867,7 @@ export const animationData_336 = {
       [3, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [273],
       [2, 9, 1, 0, 0, "影"],
@@ -10281,7 +10281,7 @@ export const animationData_336 = {
       [120, 0, 3, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [82],
       [3, 5, 1, 0, 0, "cダミー<color=7>"],

@@ -5,7 +5,7 @@ export const animationData_410 = {
   "f": {
     "name": "ちびアスカ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["410_f.png"],
       [133],
@@ -144,7 +144,7 @@ export const animationData_410 = {
       [375, 206, 19, 18, "132移動用　靴.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [104],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -257,7 +257,7 @@ export const animationData_410 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [145],
       [2, 4, -1, 0, 0, "\t"],
@@ -1094,7 +1094,7 @@ export const animationData_410 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [7, 11, -1, 0, 0, "\t"],
@@ -1306,7 +1306,7 @@ export const animationData_410 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [335],
       [2, 4, 1, 0, 0, "\t"],
@@ -3900,7 +3900,7 @@ export const animationData_410 = {
       [62, 200, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [126],
       [2, 4, 1, 0, 0, "\t"],
@@ -4286,7 +4286,7 @@ export const animationData_410 = {
   "c": {
     "name": "プラグスーツのちびアスカ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["410_c.png"],
       [121],
@@ -4413,7 +4413,7 @@ export const animationData_410 = {
       [356, 2, 56, 24, "120攻撃 目追加.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [89],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -4511,7 +4511,7 @@ export const animationData_410 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [144],
       [2, 4, -1, 0, 0, "\t"],
@@ -5431,7 +5431,7 @@ export const animationData_410 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [6, 11, -1, 0, 0, "\t"],
@@ -5607,7 +5607,7 @@ export const animationData_410 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [290],
       [2, 4, 1, 0, 0],
@@ -7905,7 +7905,7 @@ export const animationData_410 = {
       [63, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [112],
       [2, 4, 1, 0, 0],
@@ -8249,7 +8249,7 @@ export const animationData_410 = {
   "s": {
     "name": "眼帯のちびアスカ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["410_s.png"],
       [124],
@@ -8379,7 +8379,7 @@ export const animationData_410 = {
       [434, 218, 12, 24, "123.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [95],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -8483,7 +8483,7 @@ export const animationData_410 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [146],
       [2, 4, -1, 0, 0, "\t"],
@@ -9395,7 +9395,7 @@ export const animationData_410 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [30],
       [6, 11, -1, 0, 0, "\t"],
@@ -9575,7 +9575,7 @@ export const animationData_410 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [301],
       [2, 4, 1, 0, 0],
@@ -11964,7 +11964,7 @@ export const animationData_410 = {
       [92, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [118],
       [2, 4, 1, 0, 0],

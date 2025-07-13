@@ -5,7 +5,7 @@ export const animationData_139 = {
   "f": {
     "name": "ネコンドー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["139_f.png"],
       [35],
@@ -46,7 +46,7 @@ export const animationData_139 = {
       [57, 237, 13, 16, "asi"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [21],
       [-1, -1, 0, 0, 264, -5, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -76,7 +76,7 @@ export const animationData_139 = {
       [0, 0, 0, 2, 5, 0, "攻撃足"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [1, 4, -1, 0, 0],
@@ -298,7 +298,7 @@ export const animationData_139 = {
       [12, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [2, 5, -1, 0, 0],
@@ -487,7 +487,7 @@ export const animationData_139 = {
       [12, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [56],
       [2, 2, 1, 0, 0, "ダミー"],
@@ -877,7 +877,7 @@ export const animationData_139 = {
       [36, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [2, 4, -1, 0, 0],
@@ -936,7 +936,7 @@ export const animationData_139 = {
   "c": {
     "name": "ネコンドーＨＧ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["139_c.png"],
       [36],
@@ -978,7 +978,7 @@ export const animationData_139 = {
       [1, 57, 13, 16]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [21],
       [-1, -1, 0, 0, 264, -5, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1008,7 +1008,7 @@ export const animationData_139 = {
       [0, 0, 0, 2, 5, 0, "攻撃足"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [1, 4, -1, 0, 0],
@@ -1225,7 +1225,7 @@ export const animationData_139 = {
       [12, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [2, 5, -1, 0, 0],
@@ -1414,7 +1414,7 @@ export const animationData_139 = {
       [12, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [59],
       [2, 2, 1, 0, 0, "ダミー"],
@@ -1821,7 +1821,7 @@ export const animationData_139 = {
       [36, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [2, 4, -1, 0, 0],
@@ -1880,7 +1880,7 @@ export const animationData_139 = {
   "s": {
     "name": "ネコンドーＳＰ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["139_s.png"],
       [51],
@@ -1937,7 +1937,7 @@ export const animationData_139 = {
       [91, 179, 88, 41, "ef2"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [29],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー<color=7>"],
@@ -1975,7 +1975,7 @@ export const animationData_139 = {
       [0, 0, 0, 2, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [1, 4, -1, 0, 0, "全体ダミー<color=7>"],
@@ -2198,7 +2198,7 @@ export const animationData_139 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [3, 5, -1, 0, 0],
@@ -2394,7 +2394,7 @@ export const animationData_139 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [67],
       [2, 4, 1, 0, 0, "影"],
@@ -2865,7 +2865,7 @@ export const animationData_139 = {
       [34, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [3, 4, 1, 0, 0],

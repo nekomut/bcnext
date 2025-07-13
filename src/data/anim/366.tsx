@@ -5,7 +5,7 @@ export const animationData_366 = {
   "f": {
     "name": "ランサー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["807_f.png"],
       [61],
@@ -72,7 +72,7 @@ export const animationData_366 = {
       [80, 121, 23, 29, "左手1_指"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [76],
       [-1, -1, 0, 0, 0, 0, 0, 0, 972, 972, 0, 1000, 0, "ダミー"],
@@ -157,7 +157,7 @@ export const animationData_366 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [98],
       [3, 2, -1, 0, 0],
@@ -599,7 +599,7 @@ export const animationData_366 = {
       [0, 1, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [3, 5, -1, 0, 0, "腰<color=3>"],
@@ -784,7 +784,7 @@ export const animationData_366 = {
       [60, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [103],
       [1, 4, 1, 0, 0, "影<color=9>"],
@@ -1594,7 +1594,7 @@ export const animationData_366 = {
       [60, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [3, 4, 1, 0, 0, "腰<color=3>"],
@@ -1716,7 +1716,7 @@ export const animationData_366 = {
   "c": {
     "name": "ランサーCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["807_c.png"],
       [61],
@@ -1783,7 +1783,7 @@ export const animationData_366 = {
       [80, 121, 23, 29, "左手1_指"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [76],
       [-1, -1, 0, 0, 0, 0, 0, 0, 972, 972, 0, 1000, 0, "ダミー"],
@@ -1868,7 +1868,7 @@ export const animationData_366 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [98],
       [3, 2, -1, 0, 0],
@@ -2310,7 +2310,7 @@ export const animationData_366 = {
       [0, 1, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [3, 5, -1, 0, 0, "腰<color=3>"],
@@ -2495,7 +2495,7 @@ export const animationData_366 = {
       [60, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [103],
       [1, 4, 1, 0, 0, "影<color=9>"],
@@ -3305,7 +3305,7 @@ export const animationData_366 = {
       [60, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [3, 4, 1, 0, 0, "腰<color=3>"],

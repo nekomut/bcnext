@@ -5,7 +5,7 @@ export const animationData_491 = {
   "f": {
     "name": "ちびアヤナミレイ(仮称)",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["491_f.png"],
       [65],
@@ -76,7 +76,7 @@ export const animationData_491 = {
       [314, 113, 17, 21, "064レイネコ　手つなぎ.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [58],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "親ダミー"],
@@ -143,7 +143,7 @@ export const animationData_491 = {
       [0, 0, 0, 0, 5, 0, "親ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [59],
       [5, 5, -1, 0, 0, "031レイ　腰.png"],
@@ -520,7 +520,7 @@ export const animationData_491 = {
       [30, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [38],
       [6, 11, -1, 0, 0, "030レイ　胸.png"],
@@ -715,7 +715,7 @@ export const animationData_491 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [115],
       [1, 4, 1, 0, 0, "001レイ　影.png"],
@@ -1867,7 +1867,7 @@ export const animationData_491 = {
       [87, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [47],
       [2, 4, 1, 0, 0, "002ネコ　影.png"],
@@ -2016,7 +2016,7 @@ export const animationData_491 = {
   "c": {
     "name": "目覚めのちびアヤナミ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["704_c.png"],
       [70],
@@ -2092,7 +2092,7 @@ export const animationData_491 = {
       [331, 157, 26, 22, "069ネコ　頭パーツ2.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [63],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "親ダミー"],
@@ -2164,7 +2164,7 @@ export const animationData_491 = {
       [0, 0, 0, 0, 5, 0, "親ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [60],
       [5, 5, -1, 0, 0, "031レイ　腰.png"],
@@ -2546,7 +2546,7 @@ export const animationData_491 = {
       [30, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [43],
       [6, 11, -1, 0, 0, "030レイ　胸.png"],
@@ -2772,7 +2772,7 @@ export const animationData_491 = {
       [80, 1000, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [125],
       [1, 4, 1, 0, 0, "001レイ　影.png"],
@@ -4018,7 +4018,7 @@ export const animationData_491 = {
       [42, 72, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [48],
       [2, 4, 1, 0, 0, "002ネコ　影.png"],

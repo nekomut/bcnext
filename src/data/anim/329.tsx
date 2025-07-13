@@ -5,7 +5,7 @@ export const animationData_329 = {
   "f": {
     "name": "ネコエッグ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["329_f.png"],
       [40],
@@ -51,7 +51,7 @@ export const animationData_329 = {
       [133, 159, 54, 59, "攻撃　エフェクト00"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [7],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -67,7 +67,7 @@ export const animationData_329 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [2, 2, -1, 0, 0, "移動　身体00"],
@@ -174,7 +174,7 @@ export const animationData_329 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [2, 2, 1, 0, 0, "移動　身体00"],
@@ -191,7 +191,7 @@ export const animationData_329 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [2, 2, 1, 0, 0, "移動　身体00"],
@@ -315,7 +315,7 @@ export const animationData_329 = {
       [32, 1, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [2, 2, 1, 0, 0, "移動　身体00"],
@@ -350,7 +350,7 @@ export const animationData_329 = {
   "c": {
     "name": "ネコエッグ２",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["329_c.png"],
       [36],
@@ -392,7 +392,7 @@ export const animationData_329 = {
       [435, 109, 30, 13, "攻撃　足"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [12],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -413,7 +413,7 @@ export const animationData_329 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [4, 12, -1, 0, 0, "モアイ上"],
@@ -529,7 +529,7 @@ export const animationData_329 = {
       [52, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [4, 12, 1, 0, 0, "モアイ上"],
@@ -555,7 +555,7 @@ export const animationData_329 = {
       [0, 28, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [2, 2, 1, 0, 0, "移動　身体00"],
@@ -744,7 +744,7 @@ export const animationData_329 = {
       [28, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [2, 12, 1, 0, 0, "移動　身体00"],

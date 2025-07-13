@@ -5,7 +5,7 @@ export const animationData_268 = {
   "f": {
     "name": "ネコずきんミーニャ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["268_f.png"],
       [87],
@@ -98,7 +98,7 @@ export const animationData_268 = {
       [312, 129, 65, 25, "やられ尾"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [87],
       [-1, -1, 0, 0, 454, 430, 28, 1, 1000, 1000, 0, 1000, 0, "影"],
@@ -194,7 +194,7 @@ export const animationData_268 = {
       [0, 0, 27, 0, 5, 0, "影"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [83],
       [1, 4, -1, 0, 0],
@@ -817,7 +817,7 @@ export const animationData_268 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [46],
       [2, 4, -1, 0, 0],
@@ -1111,7 +1111,7 @@ export const animationData_268 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [195],
       [39, 11, 1, 0, 0],
@@ -2786,7 +2786,7 @@ export const animationData_268 = {
       [73, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [68],
       [2, 4, 1, 0, 0],
@@ -2998,7 +2998,7 @@ export const animationData_268 = {
   "c": {
     "name": "ラブリィずきんミーニャ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["268_c.png"],
       [91],
@@ -3095,7 +3095,7 @@ export const animationData_268 = {
       [294, 136, 14, 14, "右手首"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [95],
       [-1, -1, 0, 0, 454, 431, 28, 1, 1000, 1000, 0, 1000, 0, "影"],
@@ -3199,7 +3199,7 @@ export const animationData_268 = {
       [0, 0, 27, 0, 5, 0, "影"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [85],
       [1, 4, -1, 0, 0],
@@ -3837,7 +3837,7 @@ export const animationData_268 = {
       [50, -100, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [46],
       [2, 4, -1, 0, 0],
@@ -4131,7 +4131,7 @@ export const animationData_268 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [209],
       [1, 4, 1, 0, 0],
@@ -5914,7 +5914,7 @@ export const animationData_268 = {
       [140, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [68],
       [2, 4, 1, 0, 0],
@@ -6126,7 +6126,7 @@ export const animationData_268 = {
   "s": {
     "name": "覚醒ラブずきんミーニャ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["268_s.png"],
       [132],
@@ -6264,7 +6264,7 @@ export const animationData_268 = {
       [387, 191, 18, 18, "131武器出すの手.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [185],
       [-1, -1, 0, 0, 0, 0, 28, 1, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -6458,7 +6458,7 @@ export const animationData_268 = {
       [0, 0, 27, 0, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [250],
       [1, 4, -1, 0, 0, "\t"],
@@ -7992,7 +7992,7 @@ export const animationData_268 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [87],
       [2, 4, -1, 0, 0, "\t"],
@@ -8573,7 +8573,7 @@ export const animationData_268 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [369],
       [1, 4, 1, 0, 0, "\t"],
@@ -11810,7 +11810,7 @@ export const animationData_268 = {
       [90, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [182],
       [1, 9, 1, 0, 0],

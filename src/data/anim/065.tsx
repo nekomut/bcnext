@@ -5,7 +5,7 @@ export const animationData_065 = {
   "f": {
     "name": "ウシ姫",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["065_f.png"],
       [9],
@@ -20,7 +20,7 @@ export const animationData_065 = {
       [376, 107, 123, 104, "攻撃２"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [2],
       [-1, -1, 0, 0, 0, 0, 61, 52, 1000, 1000, 0, 1000, 0, "進行１"],
@@ -31,7 +31,7 @@ export const animationData_065 = {
       [0, 0, 75, 140, 5, 0, "進行１"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, 0, 0, "進行１"],
@@ -43,7 +43,7 @@ export const animationData_065 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000],
@@ -51,7 +51,7 @@ export const animationData_065 = {
       [0, 4, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [1, 2, 1, 0, 0, "進行１"],
@@ -67,7 +67,7 @@ export const animationData_065 = {
       [6, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000],
@@ -78,7 +78,7 @@ export const animationData_065 = {
   "c": {
     "name": "キリン姫",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["065_c.png"],
       [11],
@@ -95,7 +95,7 @@ export const animationData_065 = {
       [456, 117, 1, 1, "d"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 43, 67, 1000, 1000, 0, 1000, 0, "通常１"],
@@ -107,7 +107,7 @@ export const animationData_065 = {
       [0, 0, 50, 185, 5, 0, "通常１"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000],
@@ -119,7 +119,7 @@ export const animationData_065 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000],
@@ -127,7 +127,7 @@ export const animationData_065 = {
       [0, 4, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [1, 2, 1, 0, 0, "通常１"],
@@ -164,7 +164,7 @@ export const animationData_065 = {
       [8, 5, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [2, 2, -1, -1000, 1000],

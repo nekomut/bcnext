@@ -5,7 +5,7 @@ export const animationData_313 = {
   "f": {
     "name": "ちび巨神ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["313_f.png"],
       [16],
@@ -27,7 +27,7 @@ export const animationData_313 = {
       [3, 125, 1, 1, "ダミー"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [5],
       [-1, -1, 0, 0, 0, 0, 0, 0, 179, 179, 0, 255, 0, "ダミー親"],
@@ -41,7 +41,7 @@ export const animationData_313 = {
       [0, 0, 26, 63, 5, 0, "ダミー親"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -67,7 +67,7 @@ export const animationData_313 = {
       [48, -1, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -90,7 +90,7 @@ export const animationData_313 = {
       [0, -2, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [1, 2, 1, -1000, 1000, "移動"],
@@ -140,7 +140,7 @@ export const animationData_313 = {
       [0, 14, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 2, 1, -1000, 1000, "移動"],
@@ -163,7 +163,7 @@ export const animationData_313 = {
   "c": {
     "name": "ちびネコダラボッチ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["313_c.png"],
       [18],
@@ -187,7 +187,7 @@ export const animationData_313 = {
       [34, 134, 1, 1, "ダミー"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [6],
       [-1, -1, 0, 0, 0, 0, 0, 0, 179, 179, 0, 255, 0, "ダミー親"],
@@ -202,7 +202,7 @@ export const animationData_313 = {
       [0, 0, 26, 63, 5, 0, "ダミー親"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -238,7 +238,7 @@ export const animationData_313 = {
       [4, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -271,7 +271,7 @@ export const animationData_313 = {
       [4, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [1, 2, 1, -1000, 1000, "移動"],
@@ -325,7 +325,7 @@ export const animationData_313 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [1, 2, 1, -1000, 1000, "移動"],
@@ -351,7 +351,7 @@ export const animationData_313 = {
   "s": {
     "name": "ちびネコジャラミ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["313_s.png"],
       [19],
@@ -376,7 +376,7 @@ export const animationData_313 = {
       [238, 207, 71, 45, "エフェクト02-3"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [13],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1650, 1650, 0, 1000, 0, "ダミー"],
@@ -398,7 +398,7 @@ export const animationData_313 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [3, 7, -1, 0, 0, "上半身"],
@@ -433,7 +433,7 @@ export const animationData_313 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [4, 2, -1, 0, 0, "下半身"],
@@ -444,7 +444,7 @@ export const animationData_313 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [2, 12, 1, 0, 0],
@@ -533,7 +533,7 @@ export const animationData_313 = {
       [25, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [2, 12, 1, 0, 0],

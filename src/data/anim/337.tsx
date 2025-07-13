@@ -5,7 +5,7 @@ export const animationData_337 = {
   "f": {
     "name": "プリンセスケリ姫号",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["337_f.png"],
       [80],
@@ -91,7 +91,7 @@ export const animationData_337 = {
       [1, 86, 21, 14]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [99],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "全体ダミー"],
@@ -199,7 +199,7 @@ export const animationData_337 = {
       [0, 0, 0, 0, 5, 0, "全体ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [79],
       [1, 9, -1, 0, 0, "影"],
@@ -860,7 +860,7 @@ export const animationData_337 = {
       [54, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [61],
       [1, 9, -1, 0, 0, "影"],
@@ -1275,7 +1275,7 @@ export const animationData_337 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [126],
       [1, 9, 1, 0, 0, "影"],
@@ -2271,7 +2271,7 @@ export const animationData_337 = {
       [64, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [89],
       [2, 11, 1, 0, 0, "船ダミー"],
@@ -2546,7 +2546,7 @@ export const animationData_337 = {
   "c": {
     "name": "プリンセスケリ姫号CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["337_c.png"],
       [80],
@@ -2632,7 +2632,7 @@ export const animationData_337 = {
       [1, 86, 21, 14]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [103],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "全体ダミー"],
@@ -2744,7 +2744,7 @@ export const animationData_337 = {
       [0, 0, 0, 0, 5, 0, "全体ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [81],
       [1, 9, -1, 0, 0, "影"],
@@ -3453,7 +3453,7 @@ export const animationData_337 = {
       [54, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [61],
       [1, 9, -1, 0, 0, "影"],
@@ -3874,7 +3874,7 @@ export const animationData_337 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [132],
       [1, 9, 1, 0, 0, "影"],
@@ -4918,7 +4918,7 @@ export const animationData_337 = {
       [74, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [89],
       [2, 11, 1, 0, 0, "船ダミー"],
@@ -5193,7 +5193,7 @@ export const animationData_337 = {
   "s": {
     "name": "プレミアムケリ姫号CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["337_s.png"],
       [93],
@@ -5292,7 +5292,7 @@ export const animationData_337 = {
       [322, 150, 13, 6]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [135],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "全体ダミー"],
@@ -5436,7 +5436,7 @@ export const animationData_337 = {
       [0, 0, 0, 0, 5, 0, "全体ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [85],
       [1, 9, -1, 0, 0, "影"],
@@ -6025,7 +6025,7 @@ export const animationData_337 = {
       [60, 23, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [74],
       [1, 9, -1, 0, 0, "影"],
@@ -6495,7 +6495,7 @@ export const animationData_337 = {
       [60, 23, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [216],
       [1, 9, 1, 0, 0, "影"],
@@ -8792,7 +8792,7 @@ export const animationData_337 = {
       [72, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [116],
       [2, 11, 1, 0, 0, "船ダミー"],

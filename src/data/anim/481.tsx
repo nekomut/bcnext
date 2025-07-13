@@ -5,7 +5,7 @@ export const animationData_481 = {
   "f": {
     "name": "超越科学者ヘヴン博士",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["481_f.png"],
       [97],
@@ -108,7 +108,7 @@ export const animationData_481 = {
       [197, 65, 55, 55, "096ef_虹フラッシュ通常.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [200],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "<color=7>"],
@@ -317,7 +317,7 @@ export const animationData_481 = {
       [0, 0, 0, 0, 5, 0, "<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [164],
       [1, 4, -1, 0, 0, "001影.png<color=16>"],
@@ -1228,7 +1228,7 @@ export const animationData_481 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [163],
       [1, 9, -1, 0, 0, "001影.png<color=16>"],
@@ -2125,7 +2125,7 @@ export const animationData_481 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [378],
       [1, 4, 1, 0, 0, "001影.png<color=16>\t"],
@@ -7961,7 +7961,7 @@ export const animationData_481 = {
       [150, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [82],
       [2, 11, 1, 0, 0, "キャラ親ダミー<color=7>"],
@@ -8215,7 +8215,7 @@ export const animationData_481 = {
   "c": {
     "name": "時空科学者アビス博士",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["481_c.png"],
       [101],
@@ -8322,7 +8322,7 @@ export const animationData_481 = {
       [245, 267, 20, 15, "100おっぱい左.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [205],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "<color=7>"],
@@ -8536,7 +8536,7 @@ export const animationData_481 = {
       [0, 0, 0, 0, 5, 0, "<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [165],
       [1, 4, -1, 0, 0, "001影.png<color=16>"],
@@ -9452,7 +9452,7 @@ export const animationData_481 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [161],
       [1, 9, -1, 0, 0, "001影.png<color=16>"],
@@ -10345,7 +10345,7 @@ export const animationData_481 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [397],
       [1, 4, 1, 0, 0, "001影.png<color=16>\t"],
@@ -16367,7 +16367,7 @@ export const animationData_481 = {
       [19, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [86],
       [2, 11, 1, 0, 0, "キャラ親ダミー<color=7>"],

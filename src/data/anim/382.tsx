@@ -5,7 +5,7 @@ export const animationData_382 = {
   "f": {
     "name": "ガラスネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["382_f.png"],
       [22],
@@ -33,7 +33,7 @@ export const animationData_382 = {
       [260, 222, 36, 33, "ef"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [40],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー"],
@@ -82,7 +82,7 @@ export const animationData_382 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [2, 2, -1, 0, 0, "ネコ1"],
@@ -121,7 +121,7 @@ export const animationData_382 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [3, 12, 1, 0, 0, "やられ"],
@@ -153,7 +153,7 @@ export const animationData_382 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [90],
       [1, 12, 1, 0, 0, "影"],
@@ -917,7 +917,7 @@ export const animationData_382 = {
       [28, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [2, 12, 1, 0, 0, "ネコ1"],
@@ -952,7 +952,7 @@ export const animationData_382 = {
   "c": {
     "name": "ガラスネコビルダー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["382_c.png"],
       [24],
@@ -982,7 +982,7 @@ export const animationData_382 = {
       [403, 211, 39, 40, "ef"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [40],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー"],
@@ -1031,7 +1031,7 @@ export const animationData_382 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [2, 2, -1, 0, 0, "ネコ1"],
@@ -1070,7 +1070,7 @@ export const animationData_382 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [3, 12, 1, 0, 0, "やられ"],
@@ -1102,7 +1102,7 @@ export const animationData_382 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [90],
       [1, 12, 1, 0, 0, "影"],
@@ -1868,7 +1868,7 @@ export const animationData_382 = {
       [28, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [2, 12, 1, 0, 0, "ネコ1"],
@@ -1903,7 +1903,7 @@ export const animationData_382 = {
   "s": {
     "name": "クリスタルネコビルダー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["382_s.png"],
       [33],
@@ -1942,7 +1942,7 @@ export const animationData_382 = {
       [289, 107, 55, 50, "032ef.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [122],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "000.png"],
@@ -2073,7 +2073,7 @@ export const animationData_382 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [75],
       [2, 2, -1, 0, 0, "020歩き1.png"],
@@ -2460,7 +2460,7 @@ export const animationData_382 = {
       [16, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [16],
       [3, 12, -1, 0, 0, "016やられ.png"],
@@ -2513,7 +2513,7 @@ export const animationData_382 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [129],
       [1, 12, 1, 0, 0, "002影.png"],
@@ -3997,7 +3997,7 @@ export const animationData_382 = {
       [15, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [17],
       [2, 12, 1, 0, 0, "020歩き1.png"],

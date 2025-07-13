@@ -5,7 +5,7 @@ export const animationData_189 = {
   "f": {
     "name": "アロイス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["189_f.png"],
       [53],
@@ -64,7 +64,7 @@ export const animationData_189 = {
       [250, 59, 32, 46]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [40],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー"],
@@ -113,7 +113,7 @@ export const animationData_189 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [2, 4, -1, 0, 0, "頭"],
@@ -398,7 +398,7 @@ export const animationData_189 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [2, 5, -1, 0, 0],
@@ -487,7 +487,7 @@ export const animationData_189 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [112],
       [1, 4, 1, 0, 0, "頭"],
@@ -1365,7 +1365,7 @@ export const animationData_189 = {
       [29, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [1, 9, 1, 0, 0, "ダミー"],
@@ -1472,7 +1472,7 @@ export const animationData_189 = {
   "c": {
     "name": "アロイスCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["189_c.png"],
       [48],
@@ -1526,7 +1526,7 @@ export const animationData_189 = {
       [69, 3, 28, 42, "左足"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [53],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー"],
@@ -1588,7 +1588,7 @@ export const animationData_189 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [48],
       [2, 4, -1, 0, 0, "頭"],
@@ -1919,7 +1919,7 @@ export const animationData_189 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [2, 5, -1, 0, 0],
@@ -2048,7 +2048,7 @@ export const animationData_189 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [127],
       [1, 4, 1, 0, 0, "頭"],
@@ -3040,7 +3040,7 @@ export const animationData_189 = {
       [29, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [1, 9, 1, 0, 0, "ダミー"],

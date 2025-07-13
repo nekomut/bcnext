@@ -5,7 +5,7 @@ export const animationData_265 = {
   "f": {
     "name": "せつ子",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["265_f.png"],
       [15],
@@ -26,7 +26,7 @@ export const animationData_265 = {
       [1, 215, 104, 40, "攻撃ef2半レティナ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [26],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -61,7 +61,7 @@ export const animationData_265 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [2, 5, -1, 0, 0, "cダミー"],
@@ -205,7 +205,7 @@ export const animationData_265 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [4, 11, -1, 0, 0],
@@ -251,7 +251,7 @@ export const animationData_265 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [1, 4, 1, 0, 0, "影"],
@@ -644,7 +644,7 @@ export const animationData_265 = {
       [39, 10, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [2, 5, 1, 0, 0, "cダミー"],
@@ -679,7 +679,7 @@ export const animationData_265 = {
   "c": {
     "name": "せつ子Love鯖",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["265_c.png"],
       [21],
@@ -706,7 +706,7 @@ export const animationData_265 = {
       [1, 215, 104, 40, "攻撃ef2半レティナ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [37],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -752,7 +752,7 @@ export const animationData_265 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [2, 12, -1, 0, 0, "cダミー"],
@@ -845,7 +845,7 @@ export const animationData_265 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [2, 12, -1, 0, 0, "ダミー"],
@@ -893,7 +893,7 @@ export const animationData_265 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [79],
       [1, 4, 1, 0, 0, "影"],
@@ -1518,7 +1518,7 @@ export const animationData_265 = {
       [39, 10, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [2, 12, 1, 0, 0, "ダミー"],

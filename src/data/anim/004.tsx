@@ -5,7 +5,7 @@ export const animationData_004 = {
   "f": {
     "name": "ウシネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["004_f.png"],
       [11],
@@ -40,7 +40,7 @@ export const animationData_004 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 0, 0, 179, 179, 0, 255, 0, "ダミー親"],
@@ -52,7 +52,7 @@ export const animationData_004 = {
       [0, 0, 56, 86, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -64,7 +64,7 @@ export const animationData_004 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -72,7 +72,7 @@ export const animationData_004 = {
       [0, 4, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -91,7 +91,7 @@ export const animationData_004 = {
       [9, 9, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [1, 2, -1, -1000, 1000, "ノックバック"],
@@ -105,7 +105,7 @@ export const animationData_004 = {
   "c": {
     "name": "ネコキリン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["004_c.png"],
       [10],
@@ -138,7 +138,7 @@ export const animationData_004 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 0, 0, 179, 179, 0, 255, 0, "ダミー親"],
@@ -150,7 +150,7 @@ export const animationData_004 = {
       [0, 0, 35, 124, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -162,7 +162,7 @@ export const animationData_004 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -170,7 +170,7 @@ export const animationData_004 = {
       [0, 4, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -189,7 +189,7 @@ export const animationData_004 = {
       [9, 52, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "ノックバック"],
@@ -200,7 +200,7 @@ export const animationData_004 = {
   "s": {
     "name": "ネコライオン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["004_s.png"],
       [13],
@@ -219,7 +219,7 @@ export const animationData_004 = {
       [465, 1, 46, 22, "エフェクト２"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [7],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "親"],
@@ -235,7 +235,7 @@ export const animationData_004 = {
       [0, 0, 80, 170, 1, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [3, 2, -1, 0, 0],
@@ -265,7 +265,7 @@ export const animationData_004 = {
       [16, -2, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [3, 2, -1, 0, 0],
@@ -282,7 +282,7 @@ export const animationData_004 = {
       [16, 2, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [3, 2, 1, 0, 0],
@@ -394,7 +394,7 @@ export const animationData_004 = {
       [9, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [3, 2, -1, 0, 0],

@@ -5,7 +5,7 @@ export const animationData_371 = {
   "f": {
     "name": "ネコ凛",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["371_f.png"],
       [49],
@@ -60,7 +60,7 @@ export const animationData_371 = {
       [195, 195, 60, 60]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [74],
       [-1, -1, 0, 0, 0, 0, 1, 1, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -143,7 +143,7 @@ export const animationData_371 = {
       [0, 0, 1, 1, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [46],
       [2, 5, -1, 0, 0, "頭部"],
@@ -372,7 +372,7 @@ export const animationData_371 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [2, 5, -1, 0, 0, "頭部"],
@@ -558,7 +558,7 @@ export const animationData_371 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [75],
       [2, 4, 1, 0, 0, "頭部"],
@@ -1075,7 +1075,7 @@ export const animationData_371 = {
       [16, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [52],
       [2, 4, 1, 0, 0, "頭部"],
@@ -1239,7 +1239,7 @@ export const animationData_371 = {
   "c": {
     "name": "魔術師ネコ凛",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["812_c.png"],
       [42],
@@ -1287,7 +1287,7 @@ export const animationData_371 = {
       [195, 195, 60, 60, "追加エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [64],
       [-1, -1, 0, 0, 0, 0, 1, 1, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1360,7 +1360,7 @@ export const animationData_371 = {
       [0, 0, 1, 1, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [2, 5, -1, 0, 0, "頭部"],
@@ -1575,7 +1575,7 @@ export const animationData_371 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [2, 5, -1, 0, 0, "頭部"],
@@ -1744,7 +1744,7 @@ export const animationData_371 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [68],
       [2, 4, 1, 0, 0, "頭部"],
@@ -2209,7 +2209,7 @@ export const animationData_371 = {
       [17, 1800, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [53],
       [2, 4, 1, 0, 0, "頭部"],

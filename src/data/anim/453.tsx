@@ -5,7 +5,7 @@ export const animationData_453 = {
   "f": {
     "name": "きたろう",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["453_f.png"],
       [20],
@@ -31,7 +31,7 @@ export const animationData_453 = {
       [177, 167, 49, 47, "019.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [26],
       [-1, -1, 0, 0, 0, 0, 0, 0, 700, 700, 0, 1000, 0, "bone_root<color=7>"],
@@ -66,7 +66,7 @@ export const animationData_453 = {
       [0, 0, 0, 0, 5, 0, "bone_root<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [23],
       [6, 5, -1, 0, 0, "bone_body.translate_y"],
@@ -238,7 +238,7 @@ export const animationData_453 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [8],
       [6, 11, -1, 0, 0, "bone_body.rotate"],
@@ -281,7 +281,7 @@ export const animationData_453 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [34],
       [6, 4, 1, 0, 0, "bone_body.translate_x"],
@@ -669,7 +669,7 @@ export const animationData_453 = {
       [46, 5, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [26],
       [6, 11, 1, 0, 0, "bone_body.rotate"],
@@ -755,7 +755,7 @@ export const animationData_453 = {
   "c": {
     "name": "ゲゲゲの鬼太郎",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["453_c.png"],
       [21],
@@ -782,7 +782,7 @@ export const animationData_453 = {
       [66, 22, 2, 2, "ダミー"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [32],
       [-1, -1, 0, 0, 0, 0, 0, 0, 700, 700, 0, 1000, 0, "親ダミー<color=7>"],
@@ -823,7 +823,7 @@ export const animationData_453 = {
       [0, 0, 0, 0, 5, 0, "親ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [33],
       [5, 5, -1, 0, 0, "bone_body.translate_y"],
@@ -1026,7 +1026,7 @@ export const animationData_453 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [13],
       [5, 11, -1, 0, 0, "bone_body.rotate"],
@@ -1112,7 +1112,7 @@ export const animationData_453 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [43],
       [5, 2, 1, 0, 0, "region_body.region"],
@@ -1428,7 +1428,7 @@ export const animationData_453 = {
       [22, 900, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [27],
       [5, 11, 1, 0, 0, "bone_body.rotate"],

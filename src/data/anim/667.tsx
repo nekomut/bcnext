@@ -5,7 +5,7 @@ export const animationData_667 = {
   "f": {
     "name": "洗脳されしネコノトリ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["999_1_f.png"],
       [12],
@@ -137,7 +137,7 @@ export const animationData_667 = {
   "c": {
     "name": "洗脳されしネコUFO",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["999_2_c.png"],
       [19],
@@ -330,7 +330,7 @@ export const animationData_667 = {
   "s": {
     "name": "洗脳されし天空のネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["667_s.png"],
       [17],

@@ -5,7 +5,7 @@ export const animationData_198 = {
   "f": {
     "name": "ねこ陰陽師",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["198_f.png"],
       [40],
@@ -51,7 +51,7 @@ export const animationData_198 = {
       [303, 1, 106, 106, "エフェクト　炎"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [45],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -105,7 +105,7 @@ export const animationData_198 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [3, 5, -1, 0, 0, "ダミー"],
@@ -224,7 +224,7 @@ export const animationData_198 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [3, 11, -1, 0, 0, "ダミー"],
@@ -269,7 +269,7 @@ export const animationData_198 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [64],
       [2, 11, 1, 0, 0, "ダミー"],
@@ -1108,7 +1108,7 @@ export const animationData_198 = {
       [105, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [1, 4, 1, 0, 0, "ダミー"],
@@ -1191,7 +1191,7 @@ export const animationData_198 = {
   "c": {
     "name": "魔法少女ねこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["198_c.png"],
       [42],
@@ -1239,7 +1239,7 @@ export const animationData_198 = {
       [207, 13, 42, 70, "キラキラ3"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [64],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -1312,7 +1312,7 @@ export const animationData_198 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [1, 9, -1, 0, 0, "ダミー"],
@@ -1519,7 +1519,7 @@ export const animationData_198 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [2, 11, -1, 0, 0],
@@ -1692,7 +1692,7 @@ export const animationData_198 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [116],
       [2, 5, 1, 0, 0, "ダミー"],
@@ -2890,7 +2890,7 @@ export const animationData_198 = {
       [89, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [2, 5, 1, 0, 0, "ダミー"],
@@ -2988,7 +2988,7 @@ export const animationData_198 = {
   "s": {
     "name": "ねこ大魔王",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["198_s.png"],
       [47],
@@ -3041,7 +3041,7 @@ export const animationData_198 = {
       [279, 46, 70, 45, "魔法陣　光：後ろ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [47],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -3097,7 +3097,7 @@ export const animationData_198 = {
       [0, 0, -3, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [29, 12, -1, 0, 0, "■エフェクト用ダミー"],
@@ -3190,7 +3190,7 @@ export const animationData_198 = {
       [40, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [29, 12, -1, 0, 0, "■エフェクト用ダミー"],
@@ -3245,7 +3245,7 @@ export const animationData_198 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [53],
       [5, 5, 1, 0, 0, "■上半身制御"],
@@ -3845,7 +3845,7 @@ export const animationData_198 = {
       [110, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [29, 12, 1, 0, 0, "■エフェクト用ダミー"],

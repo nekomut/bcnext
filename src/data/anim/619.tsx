@@ -13203,7 +13203,7 @@ export const animationData_619 = {
   "s": {
     "name": "大賢女リリンπ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["619_s.png"],
       [173],

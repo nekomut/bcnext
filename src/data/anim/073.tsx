@@ -5,7 +5,7 @@ export const animationData_073 = {
   "f": {
     "name": "織田信長",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["073_f.png"],
       [42],
@@ -53,7 +53,7 @@ export const animationData_073 = {
       [200, 1, 60, 32]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [51],
       [-1, -1, 0, 0, 507, 435, 43, 3, 1000, 1000, 0, 1000, 0, "影"],
@@ -113,7 +113,7 @@ export const animationData_073 = {
       [0, 0, 40, 2, 5, 0, "影"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [5, 5, -1, 0, 0, "影"],
@@ -176,7 +176,7 @@ export const animationData_073 = {
       [100, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [5, 5, -1, 0, 0, "影"],
@@ -239,7 +239,7 @@ export const animationData_073 = {
       [100, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [115],
       [23, 2, 1, 0, 0, "影"],
@@ -1556,7 +1556,7 @@ export const animationData_073 = {
       [15, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [18, 2, -1, 0, 0, "影"],
@@ -1621,7 +1621,7 @@ export const animationData_073 = {
   "c": {
     "name": "武神・織田信長",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["073_c.png"],
       [42],
@@ -1669,7 +1669,7 @@ export const animationData_073 = {
       [200, 1, 60, 32]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [56],
       [-1, -1, 0, 0, 363, -197, 43, 3, 1000, 1000, 0, 1000, 0, "影"],
@@ -1734,7 +1734,7 @@ export const animationData_073 = {
       [0, 0, 40, 2, 5, 0, "影"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [5, 5, -1, 0, 0, "影"],
@@ -1822,7 +1822,7 @@ export const animationData_073 = {
       [100, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [5, 5, -1, 0, 0, "影"],
@@ -1910,7 +1910,7 @@ export const animationData_073 = {
       [100, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [125],
       [23, 2, 1, 0, 0, "影"],
@@ -3298,7 +3298,7 @@ export const animationData_073 = {
       [94, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [18, 2, -1, 0, 0, "影"],
@@ -3366,7 +3366,7 @@ export const animationData_073 = {
   "s": {
     "name": "天魔・織田信長",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["073_s.png"],
       [74],
@@ -3446,7 +3446,7 @@ export const animationData_073 = {
       [382, 202, 28, 16, "紫ドーム半分"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [185],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -3640,7 +3640,7 @@ export const animationData_073 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [306],
       [1, 8, -1, 0, 0, "影"],
@@ -5370,7 +5370,7 @@ export const animationData_073 = {
       [8, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [306],
       [1, 8, -1, 0, 0, "影"],
@@ -7100,7 +7100,7 @@ export const animationData_073 = {
       [7, 800, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [464],
       [1, 4, 1, 0, 0],
@@ -15128,7 +15128,7 @@ export const animationData_073 = {
       [100, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [49],
       [18, 2, 1, 0, 0, "影"],

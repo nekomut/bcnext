@@ -5,7 +5,7 @@ export const animationData_069 = {
   "f": {
     "name": "眠れるケリの美女",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["069_f.png"],
       [41],
@@ -52,7 +52,7 @@ export const animationData_069 = {
       [195, 46, 18, 42, "★追加:手前手"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [38],
       [-1, -1, 0, 0, 371, 429, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー親(Ratina)"],
@@ -99,7 +99,7 @@ export const animationData_069 = {
       [0, 0, 46, 3, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [42],
       [7, 2, -1, 0, 0, "足"],
@@ -404,7 +404,7 @@ export const animationData_069 = {
       [95, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [35, 5, -1, 0, 0],
@@ -525,7 +525,7 @@ export const animationData_069 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [52],
       [35, 5, 1, 0, 0],
@@ -910,7 +910,7 @@ export const animationData_069 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [2, 11, -1, 0, 0, "ダミー親(Ratina)"],
@@ -939,7 +939,7 @@ export const animationData_069 = {
   "c": {
     "name": "眠れるケリの美女Ⅱ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["069_c.png"],
       [45],
@@ -990,7 +990,7 @@ export const animationData_069 = {
       [97, 53, 32, 25, "ネコ：ささえ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [46],
       [-1, -1, 0, 0, 371, 429, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー親(Ratina)"],
@@ -1045,7 +1045,7 @@ export const animationData_069 = {
       [0, 0, 46, 3, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [7, 2, -1, 0, 0, "足"],
@@ -1364,7 +1364,7 @@ export const animationData_069 = {
       [75, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [35, 8, -1, 0, 0],
@@ -1525,7 +1525,7 @@ export const animationData_069 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [62],
       [35, 5, 1, 0, 0],
@@ -1999,7 +1999,7 @@ export const animationData_069 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [2, 11, -1, 0, 0, "ダミー親(Ratina)"],
@@ -2028,7 +2028,7 @@ export const animationData_069 = {
   "s": {
     "name": "ひたすら眠れるケリの美女",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["069_s.png"],
       [45],
@@ -2079,7 +2079,7 @@ export const animationData_069 = {
       [178, 74, 9, 6]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [60],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー(姫：レティナ、巨神：半レティナ)"],
@@ -2148,7 +2148,7 @@ export const animationData_069 = {
       [0, 0, 0, 0, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [2, 4, -1, 0, 0, "キャラ全体"],
@@ -2438,7 +2438,7 @@ export const animationData_069 = {
       [24, -1, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [42],
       [4, 5, -1, 0, 0, "ネコ：上半身"],
@@ -2745,7 +2745,7 @@ export const animationData_069 = {
       [98, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [56],
       [2, 4, 1, 0, 0, "キャラ全体"],
@@ -3170,7 +3170,7 @@ export const animationData_069 = {
       [18, -4, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [15, 12, 1, 0, 0],

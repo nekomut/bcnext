@@ -5,7 +5,7 @@ export const animationData_323 = {
   "f": {
     "name": "宮木武蔵",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["323_f.png"],
       [120],
@@ -131,7 +131,7 @@ export const animationData_323 = {
       [2, 229, 54, 12, "足鎖伸び"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [147],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー<color=7>"],
@@ -287,7 +287,7 @@ export const animationData_323 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [177],
       [2, 9, -1, 0, 0, "影"],
@@ -1544,7 +1544,7 @@ export const animationData_323 = {
       [40, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [113],
       [3, 5, -1, 0, 0, "cダミー(重心)<color=7>"],
@@ -2269,7 +2269,7 @@ export const animationData_323 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [354],
       [1, 5, 1, 0, 0],
@@ -7308,7 +7308,7 @@ export const animationData_323 = {
       [55, 0, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [60],
       [3, 5, 1, 0, 0, "cダミー(重心)<color=7>"],
@@ -7496,7 +7496,7 @@ export const animationData_323 = {
   "c": {
     "name": "主演 宮木武蔵",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["323_c.png"],
       [127],
@@ -7629,7 +7629,7 @@ export const animationData_323 = {
       [396, 126, 18, 9, "襟"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [166],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー<color=7>"],
@@ -7804,7 +7804,7 @@ export const animationData_323 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [181],
       [2, 9, -1, 0, 0, "影"],
@@ -9085,7 +9085,7 @@ export const animationData_323 = {
       [40, -100, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [113],
       [3, 5, -1, 0, 0, "cダミー(重心)<color=7>"],
@@ -9810,7 +9810,7 @@ export const animationData_323 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [401],
       [1, 5, 1, 0, 0],
@@ -15112,7 +15112,7 @@ export const animationData_323 = {
       [50, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [61],
       [3, 5, 1, 0, 0, "cダミー(重心)<color=7>"],
@@ -15303,7 +15303,7 @@ export const animationData_323 = {
   "s": {
     "name": "覚醒 宮木武蔵",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["323_s.png"],
       [129],
@@ -15438,7 +15438,7 @@ export const animationData_323 = {
       [374, 36, 8, 11]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [188],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー<color=7>"],
@@ -15635,7 +15635,7 @@ export const animationData_323 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [195],
       [2, 9, -1, 0, 0, "影"],
@@ -17017,7 +17017,7 @@ export const animationData_323 = {
       [40, 700, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [123],
       [3, 5, -1, 0, 0, "cダミー(重心)<color=7>"],
@@ -17796,7 +17796,7 @@ export const animationData_323 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [428],
       [1, 5, 1, 0, 0],
@@ -23552,7 +23552,7 @@ export const animationData_323 = {
       [115, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [70],
       [3, 5, 1, 0, 0, "cダミー(重心)<color=7>"],

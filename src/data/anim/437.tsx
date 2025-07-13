@@ -5,7 +5,7 @@ export const animationData_437 = {
   "f": {
     "name": "激・神さま",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["437_f.png"],
       [59],
@@ -70,7 +70,7 @@ export const animationData_437 = {
       [280, 26, 17, 24, "伸ばし腕のわき"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [139],
       [-1, -1, 0, 0, 0, 0, 1, 1, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -218,7 +218,7 @@ export const animationData_437 = {
       [0, 0, 1, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [107],
       [1, 4, -1, 0, 0, "影<color=9>"],
@@ -936,7 +936,7 @@ export const animationData_437 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [84],
       [4, 5, -1, 0, 0, "胸<color=3>"],
@@ -1427,7 +1427,7 @@ export const animationData_437 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [265],
       [3, 11, 1, 0, 0, "腰<color=0>"],
@@ -5370,7 +5370,7 @@ export const animationData_437 = {
       [400, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [21],
       [3, 4, 1, 0, 0, "腰<color=0>"],
@@ -5441,7 +5441,7 @@ export const animationData_437 = {
   "c": {
     "name": "超・神さま",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["437_c.png"],
       [60],
@@ -5507,7 +5507,7 @@ export const animationData_437 = {
       [214, 230, 51, 20, "葉っぱ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [141],
       [-1, -1, 0, 0, 0, 0, 1, 1, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -5657,7 +5657,7 @@ export const animationData_437 = {
       [0, 0, 1, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [107],
       [1, 4, -1, 0, 0, "影<color=9>"],
@@ -6375,7 +6375,7 @@ export const animationData_437 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [84],
       [4, 5, -1, 0, 0, "胸<color=3>"],
@@ -6866,7 +6866,7 @@ export const animationData_437 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [273],
       [3, 11, 1, 0, 0, "腰<color=0>"],
@@ -10977,7 +10977,7 @@ export const animationData_437 = {
       [210, -500, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [21],
       [3, 4, 1, 0, 0, "腰<color=0>"],

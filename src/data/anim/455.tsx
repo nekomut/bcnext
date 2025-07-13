@@ -5,7 +5,7 @@ export const animationData_455 = {
   "f": {
     "name": "ワンダー・モモコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["455_f.png"],
       [117],
@@ -128,7 +128,7 @@ export const animationData_455 = {
       [605, 148, 36, 55, "116上半身1_2.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [185],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -322,7 +322,7 @@ export const animationData_455 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [128],
       [3, 5, -1, 0, 0, "腰ダミー<color=11>"],
@@ -1218,7 +1218,7 @@ export const animationData_455 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [14],
       [64, 12, -1, 0, 0, "移動足親ダミー<color=7>"],
@@ -1265,7 +1265,7 @@ export const animationData_455 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [303],
       [1, 9, 1, 0, 0, "001影.png<color=16>"],
@@ -6943,7 +6943,7 @@ export const animationData_455 = {
       [130, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [65],
       [2, 5, 1, 0, 0, "キャラ親ダミー<color=7>"],
@@ -7146,7 +7146,7 @@ export const animationData_455 = {
   "c": {
     "name": "キューティー・モモコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["455_c.png"],
       [130],
@@ -7282,7 +7282,7 @@ export const animationData_455 = {
       [547, 383, 10, 21, "129バイザー反射.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [197],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -7488,7 +7488,7 @@ export const animationData_455 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [140],
       [3, 5, -1, 0, 0, "腰ダミー<color=11>"],
@@ -8462,7 +8462,7 @@ export const animationData_455 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [16],
       [64, 12, -1, 0, 0, "移動足親ダミー<color=7>"],
@@ -8515,7 +8515,7 @@ export const animationData_455 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [326],
       [1, 9, 1, 0, 0, "001影.png<color=16>"],
@@ -14576,7 +14576,7 @@ export const animationData_455 = {
       [183, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [69],
       [2, 5, 1, 0, 0, "キャラ親ダミー<color=7>"],

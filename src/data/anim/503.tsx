@@ -5,7 +5,7 @@ export const animationData_503 = {
   "f": {
     "name": "ネコ２Ｄ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["503_f.png"],
       [11],
@@ -22,7 +22,7 @@ export const animationData_503 = {
       [277, 118, 90, 115, "攻撃04"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 3, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -34,7 +34,7 @@ export const animationData_503 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [1],
       [2, 2, -1, 0, 0, "移動"],
@@ -46,7 +46,7 @@ export const animationData_503 = {
       [16, 2, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [1],
       [2, 2, -1, 0, 0, "攻撃待機"],
@@ -54,7 +54,7 @@ export const animationData_503 = {
       [0, 2, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [2],
       [2, 2, 1, 0, 0, "攻撃"],
@@ -71,7 +71,7 @@ export const animationData_503 = {
       [6, 3, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [3],
       [2, 2, 1, 0, 0, "ネコ"],
@@ -88,7 +88,7 @@ export const animationData_503 = {
   "c": {
     "name": "ネコ３Ｄ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["503_c.png"],
       [13],
@@ -107,7 +107,7 @@ export const animationData_503 = {
       [60, 1, 51, 64, "012ヒットエフェクト.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [6],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1650, 1650, 0, 1000, 0, "000.png<color=7>"],
@@ -122,7 +122,7 @@ export const animationData_503 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [3],
       [3, 2, -1, 0, 0, "002通常　足1.png<color=0>"],
@@ -140,7 +140,7 @@ export const animationData_503 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [3],
       [3, 2, -1, 0, 0, "002通常　足1.png<color=0>"],
@@ -154,7 +154,7 @@ export const animationData_503 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [11],
       [1, 4, 1, 0, 0, "001影.png<color=16>\t"],
@@ -251,7 +251,7 @@ export const animationData_503 = {
       [13, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [5],
       [3, 2, 1, 0, 0, "002通常　足1.png<color=0>"],

@@ -5,7 +5,7 @@ export const animationData_078 = {
   "f": {
     "name": "ネコと宇宙",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["078_f.png"],
       [31],
@@ -42,7 +42,7 @@ export const animationData_078 = {
       [1, 97, 21, 34, "爆発反射"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [32],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -83,7 +83,7 @@ export const animationData_078 = {
       [0, 0, -20, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [2, 11, -1, 0, 0, "ダミーネコ"],
@@ -238,7 +238,7 @@ export const animationData_078 = {
       [80, 1, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [2, 11, -1, 0, 0, "ダミーネコ"],
@@ -387,7 +387,7 @@ export const animationData_078 = {
       [80, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [2, 11, 1, 0, 0, "ダミー"],
@@ -699,7 +699,7 @@ export const animationData_078 = {
       [60, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [2, 11, -1, 0, 0, "ダミーネコ"],
@@ -761,7 +761,7 @@ export const animationData_078 = {
   "c": {
     "name": "ニャア少佐",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["078_c.png"],
       [33],
@@ -800,7 +800,7 @@ export const animationData_078 = {
       [70, 140, 33, 24]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [32],
       [-1, -1, 0, 0, 511, 434, 0, 0, 1000, 1000, 0, 1000, 0],
@@ -841,7 +841,7 @@ export const animationData_078 = {
       [0, 0, -20, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [2, 11, -1, 0, 0, "ダミーネコ"],
@@ -1035,7 +1035,7 @@ export const animationData_078 = {
       [170, 13, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [2, 11, -1, 0, 0, "ダミーネコ"],
@@ -1203,7 +1203,7 @@ export const animationData_078 = {
       [80, 1200, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [2, 11, 1, 0, 0, "ダミーネコ"],
@@ -1576,7 +1576,7 @@ export const animationData_078 = {
       [60, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [2, 11, -1, 0, 0, "ダミーネコ"],
@@ -1644,7 +1644,7 @@ export const animationData_078 = {
   "s": {
     "name": "駆動戦士ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["078_s.png"],
       [74],
@@ -1724,7 +1724,7 @@ export const animationData_078 = {
       [205, 137, 117, 47, "073かす1.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [71],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "000.png"],
@@ -1804,7 +1804,7 @@ export const animationData_078 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [40],
       [1, 4, -1, 0, 0, "影"],
@@ -2051,7 +2051,7 @@ export const animationData_078 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [40],
       [1, 4, -1, 0, 0, "影"],
@@ -2297,7 +2297,7 @@ export const animationData_078 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [66],
       [1, 4, 1, 0, 0, "005影.png"],
@@ -3020,7 +3020,7 @@ export const animationData_078 = {
       [50, 20, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [35],
       [2, 4, 1, 0, 0, "ダミーネコ"],

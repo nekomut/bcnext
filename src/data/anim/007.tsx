@@ -5,7 +5,7 @@ export const animationData_007 = {
   "f": {
     "name": "ネコトカゲ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["007_f.png"],
       [13],
@@ -44,7 +44,7 @@ export const animationData_007 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 0, 0, 179, 179, 0, 255, 0, "ダミー親"],
@@ -56,7 +56,7 @@ export const animationData_007 = {
       [0, 0, 32, 63, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -68,7 +68,7 @@ export const animationData_007 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -76,7 +76,7 @@ export const animationData_007 = {
       [0, 4, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -99,7 +99,7 @@ export const animationData_007 = {
       [13, 98, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 2, -1, -1000, 1000, "ノックバック"],
@@ -122,7 +122,7 @@ export const animationData_007 = {
   "c": {
     "name": "ネコドラゴン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["007_c.png"],
       [17],
@@ -169,7 +169,7 @@ export const animationData_007 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [4],
       [-1, -1, 0, 0, 0, 0, 0, 0, 179, 179, 0, 255, 0, "ダミー親"],
@@ -182,7 +182,7 @@ export const animationData_007 = {
       [0, 0, 36, 139, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -194,7 +194,7 @@ export const animationData_007 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -202,7 +202,7 @@ export const animationData_007 = {
       [0, 4, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -267,7 +267,7 @@ export const animationData_007 = {
       [15, 102, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [1, 2, -1, -1000, 1000, "攻撃"],
@@ -302,7 +302,7 @@ export const animationData_007 = {
   "s": {
     "name": "ネコキングドラゴン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["007_s.png"],
       [35],
@@ -343,7 +343,7 @@ export const animationData_007 = {
       [352, 62, 32, 16, "炎小２"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [17],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -369,7 +369,7 @@ export const animationData_007 = {
       [0, 0, 70, 4, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [7, 2, -1, 0, 0],
@@ -420,7 +420,7 @@ export const animationData_007 = {
       [20, 20, 2, 1]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [7, 2, -1, 0, 0],
@@ -440,7 +440,7 @@ export const animationData_007 = {
       [0, -2, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [1, 9, 1, 0, 0],
@@ -805,7 +805,7 @@ export const animationData_007 = {
       [15, 900, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [6, 2, -1, 0, 0],

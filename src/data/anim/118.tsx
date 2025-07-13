@@ -5,7 +5,7 @@ export const animationData_118 = {
   "f": {
     "name": "レイ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["118_f.png"],
       [19],
@@ -30,7 +30,7 @@ export const animationData_118 = {
       [1, 167, 97, 88, "エフェクト_放射2"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [17],
       [-1, -1, 0, 0, 606, 434, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -56,7 +56,7 @@ export const animationData_118 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [2, 5, -1, 0, 0, "キャラ全体"],
@@ -76,7 +76,7 @@ export const animationData_118 = {
       [42, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [2, 5, -1, 0, 0, "キャラ全体"],
@@ -96,7 +96,7 @@ export const animationData_118 = {
       [62, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [2, 11, 1, 0, 0, "キャラ全体"],
@@ -265,7 +265,7 @@ export const animationData_118 = {
       [30, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [2, 11, -1, 0, 0, "キャラ全体"],
@@ -288,7 +288,7 @@ export const animationData_118 = {
   "c": {
     "name": "レイCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["118_c.png"],
       [19],
@@ -313,7 +313,7 @@ export const animationData_118 = {
       [1, 167, 97, 88, "エフェクト_放射2"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [17],
       [-1, -1, 0, 0, 304, 459, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -339,7 +339,7 @@ export const animationData_118 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [2, 5, -1, 0, 0, "キャラ全体"],
@@ -359,7 +359,7 @@ export const animationData_118 = {
       [42, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [2, 5, -1, 0, 0, "キャラ全体"],
@@ -379,7 +379,7 @@ export const animationData_118 = {
       [62, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [2, 11, 1, 0, 0, "キャラ全体"],
@@ -548,7 +548,7 @@ export const animationData_118 = {
       [30, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [2, 11, -1, 0, 0, "キャラ全体"],

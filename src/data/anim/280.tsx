@@ -5,7 +5,7 @@ export const animationData_280 = {
   "f": {
     "name": "要塞なめこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["280_f.png"],
       [23],
@@ -34,7 +34,7 @@ export const animationData_280 = {
       [290, 1, 77, 72, "土埃"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [20],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -63,7 +63,7 @@ export const animationData_280 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [2, 5, -1, 0, 0, "本体"],
@@ -250,7 +250,7 @@ export const animationData_280 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [7, 12, -1, 0, 0],
@@ -291,7 +291,7 @@ export const animationData_280 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [65],
       [1, 3, 1, 0, 0, "影"],
@@ -791,7 +791,7 @@ export const animationData_280 = {
       [98, 1200, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [2, 4, 1, 0, 0, "本体"],
@@ -892,7 +892,7 @@ export const animationData_280 = {
   "c": {
     "name": "なめこ＆要塞にゃんこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["280_c.png"],
       [23],
@@ -921,7 +921,7 @@ export const animationData_280 = {
       [139, 71, 77, 72, "土埃"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [25],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -955,7 +955,7 @@ export const animationData_280 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [2, 5, -1, 0, 0, "本体"],
@@ -1090,7 +1090,7 @@ export const animationData_280 = {
       [16, -20, 2, 1]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [7, 12, -1, 0, 0],
@@ -1143,7 +1143,7 @@ export const animationData_280 = {
       [16, 7, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [62],
       [1, 4, 1, 0, 0],
@@ -1853,7 +1853,7 @@ export const animationData_280 = {
       [58, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [2, 4, 1, 0, 0, "本体"],

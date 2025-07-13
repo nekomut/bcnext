@@ -5,7 +5,7 @@ export const animationData_536 = {
   "f": {
     "name": "桜ミク",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["536_f.png"],
       [90],
@@ -101,7 +101,7 @@ export const animationData_536 = {
       [394, 189, 25, 10, "089目05.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [114],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "■ダミー"],
@@ -224,7 +224,7 @@ export const animationData_536 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [73],
       [2, 5, -1, 0, 0, "C　DM\t"],
@@ -869,7 +869,7 @@ export const animationData_536 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [73],
       [2, 5, -1, 0, 0, "C　DM\t"],
@@ -1514,7 +1514,7 @@ export const animationData_536 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [250],
       [2, 4, 1, 0, 0, "\t"],
@@ -4034,7 +4034,7 @@ export const animationData_536 = {
       [20, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [90],
       [2, 4, 1, 0, 0, "\t"],
@@ -4312,7 +4312,7 @@ export const animationData_536 = {
   "c": {
     "name": "桜ミクCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["536_c.png"],
       [108],
@@ -4426,7 +4426,7 @@ export const animationData_536 = {
       [260, 153, 27, 50, "107右腕_差分.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [158],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "■ダミー"],
@@ -4593,7 +4593,7 @@ export const animationData_536 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [137],
       [2, 5, -1, 0, 0, "C　DM\t"],
@@ -5551,7 +5551,7 @@ export const animationData_536 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [136],
       [2, 5, -1, 0, 0, "C　DM\t"],
@@ -6489,7 +6489,7 @@ export const animationData_536 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [316],
       [2, 4, 1, 0, 0, "\t"],
@@ -10091,7 +10091,7 @@ export const animationData_536 = {
       [20, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [106],
       [2, 4, 1, 0, 0, "\t"],

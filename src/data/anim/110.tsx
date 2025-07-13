@@ -5,7 +5,7 @@ export const animationData_110 = {
   "f": {
     "name": "セレス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["110_f.png"],
       [24],
@@ -35,7 +35,7 @@ export const animationData_110 = {
       [201, 120, 39, 39, "エフェクト_閃光_加算"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [22],
       [-1, -1, 0, 0, 638, 315, 0, 1, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -66,7 +66,7 @@ export const animationData_110 = {
       [0, 0, 28, 120, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [2, 5, -1, 0, 0, "胴体"],
@@ -101,7 +101,7 @@ export const animationData_110 = {
       [24, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [2, 5, -1, 0, 0, "胴体"],
@@ -136,7 +136,7 @@ export const animationData_110 = {
       [24, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [2, 5, 1, 0, 0, "胴体"],
@@ -332,7 +332,7 @@ export const animationData_110 = {
       [56, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [2, 11, 1, 0, 0, "胴体"],
@@ -361,7 +361,7 @@ export const animationData_110 = {
   "c": {
     "name": "セレスCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["110_c.png"],
       [24],
@@ -391,7 +391,7 @@ export const animationData_110 = {
       [201, 120, 39, 39, "エフェクト_閃光_加算"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [22],
       [-1, -1, 0, 0, 659, 317, 0, 1, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -422,7 +422,7 @@ export const animationData_110 = {
       [0, 0, 28, 120, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [2, 5, -1, 0, 0, "胴体"],
@@ -457,7 +457,7 @@ export const animationData_110 = {
       [24, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [2, 5, -1, 0, 0, "胴体"],
@@ -492,7 +492,7 @@ export const animationData_110 = {
       [24, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [2, 5, 1, 0, 0, "胴体"],
@@ -688,7 +688,7 @@ export const animationData_110 = {
       [56, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [2, 11, 1, 0, 0, "胴体"],

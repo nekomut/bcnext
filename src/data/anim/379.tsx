@@ -5,7 +5,7 @@ export const animationData_379 = {
   "f": {
     "name": "ネコバレー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["379_f.png"],
       [32],
@@ -43,7 +43,7 @@ export const animationData_379 = {
       [240, 236, 15, 19, "追加　顔"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [39],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=9>"],
@@ -91,7 +91,7 @@ export const animationData_379 = {
       [0, 0, 0, 0, 5, 0, "ガチャ　配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [4, 4, -1, 0, 0, "通常　胴　Ｘ"],
@@ -372,7 +372,7 @@ export const animationData_379 = {
       [0, -2, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [4, 4, 1, 0, 0],
@@ -467,7 +467,7 @@ export const animationData_379 = {
       [0, 70, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [63],
       [4, 4, 1, 0, 0, "通常　胴　Ｘ"],
@@ -951,7 +951,7 @@ export const animationData_379 = {
       [43, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [4, 11, 1, 0, 0],
@@ -1013,7 +1013,7 @@ export const animationData_379 = {
   "c": {
     "name": "ネコバレエ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["379_c.png"],
       [37],
@@ -1056,7 +1056,7 @@ export const animationData_379 = {
       [180, 45, 75, 41, "土消え３"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [18],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -1083,7 +1083,7 @@ export const animationData_379 = {
       [0, 0, 0, 0, 5, 0, "ガチャ　配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [4, 11, -1, 0, 0],
@@ -1137,7 +1137,7 @@ export const animationData_379 = {
       [12, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [3, 12, 1, 0, 0, "制御ダミー　透明度"],
@@ -1223,7 +1223,7 @@ export const animationData_379 = {
       [0, 0, 2, 2]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [2, 4, 1, 0, 0],
@@ -1690,7 +1690,7 @@ export const animationData_379 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [3, 12, 1, 0, 0, "制御ダミー　透明度"],
@@ -1779,7 +1779,7 @@ export const animationData_379 = {
   "s": {
     "name": "ネコカレー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["379_s.png"],
       [46],
@@ -1831,7 +1831,7 @@ export const animationData_379 = {
       [41, 108, 11, 11, "045きゅうり.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [66],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "000.png"],
@@ -1906,7 +1906,7 @@ export const animationData_379 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [59],
       [4, 5, -1, 0, 0, "025胴.png"],
@@ -2191,7 +2191,7 @@ export const animationData_379 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [19],
       [4, 5, -1, 0, 0, "025胴.png"],
@@ -2253,7 +2253,7 @@ export const animationData_379 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [177],
       [2, 4, 1, 0, 0, "004影 .png"],
@@ -3968,7 +3968,7 @@ export const animationData_379 = {
       [80, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [75],
       [4, 5, 1, 0, 0, "025胴.png"],

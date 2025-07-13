@@ -5,7 +5,7 @@ export const animationData_347 = {
   "f": {
     "name": "ぐでたまにゃんこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["912_f.png"],
       [24],
@@ -35,7 +35,7 @@ export const animationData_347 = {
       [117, 76, 67, 28]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [25],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1050, 1050, 0, 1000, 0, "DMY"],
@@ -69,7 +69,7 @@ export const animationData_347 = {
       [0, 0, 0, 0, 5, 0, "DMY"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [4, 4, -1, 0, 0],
@@ -195,7 +195,7 @@ export const animationData_347 = {
       [0, -1, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [4, 11, -1, 0, 0],
@@ -316,7 +316,7 @@ export const animationData_347 = {
       [200, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [53],
       [1, 4, 1, 0, 0],
@@ -740,7 +740,7 @@ export const animationData_347 = {
       [30, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [3, 2, 1, 0, 0],
@@ -790,7 +790,7 @@ export const animationData_347 = {
   "c": {
     "name": "ぐでオムにゃんこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["347_c.png"],
       [34],
@@ -830,7 +830,7 @@ export const animationData_347 = {
       [165, 139, 14, 29]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [38],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1050, 1050, 0, 1000, 0, "DMY"],
@@ -877,7 +877,7 @@ export const animationData_347 = {
       [0, 0, 0, 0, 5, 0, "DMY"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [4, 4, -1, 0, 0],
@@ -1003,7 +1003,7 @@ export const animationData_347 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [4, 11, -1, 0, 0],
@@ -1141,7 +1141,7 @@ export const animationData_347 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [78],
       [32, 12, 1, 0, 0],
@@ -1703,7 +1703,7 @@ export const animationData_347 = {
       [34, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [3, 2, 1, 0, 0],
@@ -1786,7 +1786,7 @@ export const animationData_347 = {
   "s": {
     "name": "ぐでベネにゃんこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["347_s.png"],
       [43],
@@ -1835,7 +1835,7 @@ export const animationData_347 = {
       [209, 213, 8, 9, "042ソース　粒02.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [45],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1050, 1050, 0, 1000, 0, "■ダミー<color=7>"],
@@ -1889,7 +1889,7 @@ export const animationData_347 = {
       [0, 0, 0, 0, 5, 0, "DMY"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [24, 12, -1, 0, 0, "024死亡　体.png<color=12>"],
@@ -2035,7 +2035,7 @@ export const animationData_347 = {
       [50, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [5, 11, -1, 0, 0, "003ネコ01　体２[左][右].png<color=10>"],
@@ -2208,7 +2208,7 @@ export const animationData_347 = {
       [60, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [85],
       [3, 4, 1, 0, 0, "001影.png<color=16>"],
@@ -2864,7 +2864,7 @@ export const animationData_347 = {
       [26, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [42],
       [33, 12, 1, 0, 0, "031衝撃EF.png"],

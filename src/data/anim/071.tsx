@@ -5,7 +5,7 @@ export const animationData_071 = {
   "f": {
     "name": "真田幸村",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["071_f.png"],
       [31],
@@ -42,7 +42,7 @@ export const animationData_071 = {
       [221, 180, 48, 17, "羽根に補足"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [38],
       [-1, -1, 0, 0, 506, 431, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -89,7 +89,7 @@ export const animationData_071 = {
       [0, 0, -2, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -377,7 +377,7 @@ export const animationData_071 = {
       [2, 10, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [20, 11, -1, 0, 0, "ダミー"],
@@ -635,7 +635,7 @@ export const animationData_071 = {
       [36, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [77],
       [35, 2, 1, 0, 0, "ダミー"],
@@ -1337,7 +1337,7 @@ export const animationData_071 = {
       [136, -10, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [17, 11, -1, 0, 0],
@@ -1372,7 +1372,7 @@ export const animationData_071 = {
   "c": {
     "name": "武神・真田幸村",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["071_c.png"],
       [33],
@@ -1411,7 +1411,7 @@ export const animationData_071 = {
       [82, 1, 26, 34, "左AB長い"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [38],
       [-1, -1, 0, 0, -247, 429, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1458,7 +1458,7 @@ export const animationData_071 = {
       [0, 0, 0, 2, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -1705,7 +1705,7 @@ export const animationData_071 = {
       [-1, 5, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [20, 11, -1, 0, 0, "ダミー"],
@@ -1841,7 +1841,7 @@ export const animationData_071 = {
       [2, -80, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [77],
       [35, 2, 1, 0, 0, "ダミー"],
@@ -3289,7 +3289,7 @@ export const animationData_071 = {
       [136, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [2, 11, -1, 0, 0, "ダミー"],
@@ -3321,7 +3321,7 @@ export const animationData_071 = {
   "s": {
     "name": "飛翔の武神・真田幸村",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["071_s.png"],
       [73],
@@ -3400,7 +3400,7 @@ export const animationData_071 = {
       [382, 17, 41, 36, "光4"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [111],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -3520,7 +3520,7 @@ export const animationData_071 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [115],
       [1, 8, -1, 0, 0],
@@ -4169,7 +4169,7 @@ export const animationData_071 = {
       [76, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [68],
       [1, 8, -1, 0, 0],
@@ -4510,7 +4510,7 @@ export const animationData_071 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [162],
       [1, 4, 1, 0, 0],
@@ -5543,7 +5543,7 @@ export const animationData_071 = {
       [10, 2160, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [2, 4, -1, 0, 0],

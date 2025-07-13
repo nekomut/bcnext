@@ -5,7 +5,7 @@ export const animationData_663 = {
   "s": {
     "name": "ネコガスマスク",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["663_s.png"],
       [24],

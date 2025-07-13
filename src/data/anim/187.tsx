@@ -5,7 +5,7 @@ export const animationData_187 = {
   "f": {
     "name": "ユーヴェンス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["187_f.png"],
       [61],
@@ -72,7 +72,7 @@ export const animationData_187 = {
       [58, 246, 8, 5, "瓦礫3"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [74],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -155,7 +155,7 @@ export const animationData_187 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [63],
       [3, 4, -1, 0, 0],
@@ -460,7 +460,7 @@ export const animationData_187 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [46],
       [2, 5, -1, 0, 0],
@@ -674,7 +674,7 @@ export const animationData_187 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [148],
       [2, 4, 1, 0, 0],
@@ -1852,7 +1852,7 @@ export const animationData_187 = {
       [33, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [50],
       [2, 4, 1, 0, 0],
@@ -2010,7 +2010,7 @@ export const animationData_187 = {
   "c": {
     "name": "ユーヴェンスCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["187_c.png"],
       [61],
@@ -2077,7 +2077,7 @@ export const animationData_187 = {
       [58, 246, 8, 5, "瓦礫3"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [74],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -2160,7 +2160,7 @@ export const animationData_187 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [63],
       [3, 4, -1, 0, 0],
@@ -2465,7 +2465,7 @@ export const animationData_187 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [46],
       [2, 5, -1, 0, 0],
@@ -2679,7 +2679,7 @@ export const animationData_187 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [148],
       [2, 4, 1, 0, 0],
@@ -3857,7 +3857,7 @@ export const animationData_187 = {
       [33, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [50],
       [2, 4, 1, 0, 0],
@@ -4015,7 +4015,7 @@ export const animationData_187 = {
   "s": {
     "name": "休日の騎士様ユーヴェンスCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["187_s.png"],
       [43],
@@ -4064,7 +4064,7 @@ export const animationData_187 = {
       [484, 149, 13, 12, "042.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [47],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -4120,7 +4120,7 @@ export const animationData_187 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [44],
       [1, 9, -1, 0, 0],
@@ -4385,7 +4385,7 @@ export const animationData_187 = {
       [16, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [32],
       [2, 5, -1, 0, 0],
@@ -4557,7 +4557,7 @@ export const animationData_187 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [102],
       [1, 4, 1, 0, 0, "\t"],
@@ -5649,7 +5649,7 @@ export const animationData_187 = {
       [44, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [25],
       [2, 4, 1, 0, 0],

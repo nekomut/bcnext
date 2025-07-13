@@ -5,7 +5,7 @@ export const animationData_441 = {
   "f": {
     "name": "影傑ダークダルターニャ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["441_f.png"],
       [143],
@@ -154,7 +154,7 @@ export const animationData_441 = {
       [161, 6, 17, 58, "142真っすぐしっぽ.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [280],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -443,7 +443,7 @@ export const animationData_441 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [54],
       [1, 12, -1, 0, 0, "正面親ダミー"],
@@ -815,7 +815,7 @@ export const animationData_441 = {
       [20, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [29],
       [6, 5, -1, 0, 0, "襟元<color=0>"],
@@ -943,7 +943,7 @@ export const animationData_441 = {
       [60, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [256],
       [3, 4, 1, 0, 0, "腰<color=0>"],
@@ -2957,7 +2957,7 @@ export const animationData_441 = {
       [120, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [64],
       [3, 4, 1, 0, 0, "腰<color=0>"],
@@ -3157,7 +3157,7 @@ export const animationData_441 = {
   "c": {
     "name": "黒傑ダークダルターニャ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["441_c.png"],
       [162],
@@ -3325,7 +3325,7 @@ export const animationData_441 = {
       [32, 80, 21, 19, "161_攻撃口明け.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [272],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -3606,7 +3606,7 @@ export const animationData_441 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [86],
       [1, 12, -1, 0, 0, "正面親ダミー"],
@@ -4178,7 +4178,7 @@ export const animationData_441 = {
       [0, 1200, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [46],
       [5, 5, -1, 0, 0, "襟元<color=0>"],
@@ -4423,7 +4423,7 @@ export const animationData_441 = {
       [0, 300, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [260],
       [3, 4, 1, 0, 0, "腰<color=0>"],
@@ -7020,7 +7020,7 @@ export const animationData_441 = {
       [80, -180, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [56],
       [3, 4, 1, 0, 0, "腰<color=0>"],

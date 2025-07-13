@@ -5,7 +5,7 @@ export const animationData_074 = {
   "f": {
     "name": "トナカイフィッシュ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["074_f.png"],
       [20],
@@ -31,7 +31,7 @@ export const animationData_074 = {
       [366, 229, 68, 24, "追加：手綱"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [11],
       [-1, -1, 0, 0, 315, 331, 0, 0, 179, 179, 0, 255, 0, "ダミー親"],
@@ -51,7 +51,7 @@ export const animationData_074 = {
       [0, 0, 76, 74, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [1, 2, -1, -1000, 1000],
@@ -146,7 +146,7 @@ export const animationData_074 = {
       [28, 100, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, 0, 0],
@@ -154,7 +154,7 @@ export const animationData_074 = {
       [0, 7, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -398,7 +398,7 @@ export const animationData_074 = {
       [19, -8, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [1, 2, -1, 0, 0],
@@ -462,7 +462,7 @@ export const animationData_074 = {
   "c": {
     "name": "ネコ魚のお造り",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["074_c.png"],
       [19],
@@ -487,7 +487,7 @@ export const animationData_074 = {
       [183, 59, 13, 40, "ナイフ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [15],
       [-1, -1, 0, 0, 139, 483, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー親"],
@@ -511,7 +511,7 @@ export const animationData_074 = {
       [0, 0, 76, 4, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [2, 2, -1, 0, 0, "にゃんこ"],
@@ -579,7 +579,7 @@ export const animationData_074 = {
       [60, 50, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, 0, 0, "ダミー親"],
@@ -587,7 +587,7 @@ export const animationData_074 = {
       [0, 1, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [2, 2, 1, 0, 0, "ダミー親"],
@@ -703,7 +703,7 @@ export const animationData_074 = {
       [17, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [2, 2, -1, 0, 0, "ダミー親"],
@@ -753,7 +753,7 @@ export const animationData_074 = {
   "s": {
     "name": "フィッシュ・ド・ノエル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["074_s.png"],
       [27],
@@ -786,7 +786,7 @@ export const animationData_074 = {
       [77, 217, 60, 10, "跡2"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [24],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー親"],
@@ -819,7 +819,7 @@ export const animationData_074 = {
       [0, 0, 76, 4, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [2, 2, -1, 0, 0, "にゃんこ"],
@@ -956,7 +956,7 @@ export const animationData_074 = {
       [80, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [20, 12, -1, 0, 0, "ダミー親"],
@@ -967,7 +967,7 @@ export const animationData_074 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [2, 2, 1, 0, 0, "ダミー親"],
@@ -1157,7 +1157,7 @@ export const animationData_074 = {
       [17, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [2, 2, 1, 0, 0, "ダミー親"],

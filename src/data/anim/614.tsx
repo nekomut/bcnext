@@ -552,7 +552,7 @@ export const animationData_614 = {
   "c": {
     "name": "南国衛星サンシャイン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["614_c.png"],
       [100],
@@ -4949,7 +4949,7 @@ export const animationData_614 = {
   "s": {
     "name": "南国衛星スーパーシャイン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["614_s.png"],
       [107],

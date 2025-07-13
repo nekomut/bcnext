@@ -5,7 +5,7 @@ export const animationData_655 = {
   "f": {
     "name": "氷の精霊フリズ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["655_f.png"],
       [68],
@@ -4925,7 +4925,7 @@ export const animationData_655 = {
   "c": {
     "name": "氷結の精霊ブリザーナ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["655_c.png"],
       [76],
@@ -10153,7 +10153,7 @@ export const animationData_655 = {
   "s": {
     "name": "氷結の精霊王ブリザレーナ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["655_s.png"],
       [120],

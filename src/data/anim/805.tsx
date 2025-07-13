@@ -6007,7 +6007,7 @@ export const animationData_805 = {
   "c": {
     "name": "ナックルズ＆ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["805_c.png"],
       [165],

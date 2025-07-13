@@ -5,7 +5,7 @@ export const animationData_493 = {
   "f": {
     "name": "創造神ガイア",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["493_f.png"],
       [145],
@@ -156,7 +156,7 @@ export const animationData_493 = {
       [412, 255, 68, 36, "144スカート右.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [214],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -379,7 +379,7 @@ export const animationData_493 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [217],
       [1, 9, -1, 0, 0, "019台座[左].png"],
@@ -2491,7 +2491,7 @@ export const animationData_493 = {
       [99, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [217],
       [1, 9, -1, 0, 0, "019台座[左].png"],
@@ -4603,7 +4603,7 @@ export const animationData_493 = {
       [99, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [453],
       [1, 4, 1, 0, 0, "000.png"],
@@ -11631,7 +11631,7 @@ export const animationData_493 = {
       [180, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [83],
       [205, 12, -1, 0, 0, "099虹フラッシュ通常.png"],
@@ -11888,7 +11888,7 @@ export const animationData_493 = {
   "c": {
     "name": "ゴッドガイア",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["493_c.png"],
       [152],
@@ -12046,7 +12046,7 @@ export const animationData_493 = {
       [243, 533, 10, 17, "151右腕上.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [220],
       [-1, -1, 0, 0, 212, 1264, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -12275,7 +12275,7 @@ export const animationData_493 = {
       [0, 0, 0, 0, 5, 0, "099虹フラッシュ通常.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [222],
       [1, 9, -1, 0, 0, "019台座[左].png"],
@@ -14423,7 +14423,7 @@ export const animationData_493 = {
       [99, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [222],
       [1, 9, -1, 0, 0, "019台座[左].png"],
@@ -16571,7 +16571,7 @@ export const animationData_493 = {
       [99, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [457],
       [1, 4, 1, 0, 0, "000.png"],
@@ -23652,7 +23652,7 @@ export const animationData_493 = {
       [180, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [84],
       [205, 12, -1, 0, 0, "099虹フラッシュ通常.png"],

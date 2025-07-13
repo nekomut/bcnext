@@ -5,7 +5,7 @@ export const animationData_478 = {
   "f": {
     "name": "幻の精霊ルミナ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["478_f.png"],
       [92],
@@ -103,7 +103,7 @@ export const animationData_478 = {
       [330, 66, 44, 43, "091.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [128],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -240,7 +240,7 @@ export const animationData_478 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [94],
       [1, 12, -1, 0, 0, "efect DMY<color=7>"],
@@ -767,7 +767,7 @@ export const animationData_478 = {
       [40, 0, 3, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [91],
       [1, 12, -1, 0, 0, "efect DMY<color=7>"],
@@ -1258,7 +1258,7 @@ export const animationData_478 = {
       [40, 0, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [358],
       [2, 5, 1, 0, 0, "000.png"],
@@ -4406,7 +4406,7 @@ export const animationData_478 = {
       [75, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [77],
       [1, 12, 1, 0, 0, "000.png"],
@@ -4645,7 +4645,7 @@ export const animationData_478 = {
   "c": {
     "name": "夢幻の精霊ルミナリア",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["478_c.png"],
       [92],
@@ -4743,7 +4743,7 @@ export const animationData_478 = {
       [285, 137, 44, 43, "091.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [165],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -4917,7 +4917,7 @@ export const animationData_478 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [128],
       [1, 12, -1, 0, 0, "efect DMY<color=7>"],
@@ -5642,7 +5642,7 @@ export const animationData_478 = {
       [40, 0, 3, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [125],
       [1, 12, -1, 0, 0, "efect DMY<color=7>"],
@@ -6332,7 +6332,7 @@ export const animationData_478 = {
       [40, 0, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [391],
       [2, 5, 1, 0, 0, "000.png"],
@@ -10038,7 +10038,7 @@ export const animationData_478 = {
       [0, -1, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [87],
       [1, 12, 1, 0, 0, "000.png"],

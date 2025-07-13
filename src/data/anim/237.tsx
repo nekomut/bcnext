@@ -5,7 +5,7 @@ export const animationData_237 = {
   "f": {
     "name": "おかめはちもくネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["237_f.png"],
       [18],
@@ -29,7 +29,7 @@ export const animationData_237 = {
       [63, 157, 60, 32, "そろばん2"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [19],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -57,7 +57,7 @@ export const animationData_237 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -148,7 +148,7 @@ export const animationData_237 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -232,7 +232,7 @@ export const animationData_237 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [2, 11, 1, 0, 0, "ダミー"],
@@ -433,7 +433,7 @@ export const animationData_237 = {
       [37, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [2, 5, 1, 0, 0, "ダミー"],
@@ -489,7 +489,7 @@ export const animationData_237 = {
   "c": {
     "name": "おかめの水博士",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["237_c.png"],
       [18],
@@ -513,7 +513,7 @@ export const animationData_237 = {
       [35, 135, 22, 30, "髪　右"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [20],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -542,7 +542,7 @@ export const animationData_237 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -628,7 +628,7 @@ export const animationData_237 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -719,7 +719,7 @@ export const animationData_237 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [2, 11, 1, 0, 0, "ダミー"],
@@ -940,7 +940,7 @@ export const animationData_237 = {
       [43, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [2, 5, 1, 0, 0, "ダミー"],

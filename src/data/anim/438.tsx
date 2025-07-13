@@ -5,7 +5,7 @@ export const animationData_438 = {
   "f": {
     "name": "灼熱のビーチクウ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["438_f.png"],
       [126],
@@ -137,7 +137,7 @@ export const animationData_438 = {
       [503, 219, 8, 11, "124垂れ水滴.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [168],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー.png<color=7>"],
@@ -314,7 +314,7 @@ export const animationData_438 = {
       [0, 0, 0, 0, 5, 0, "ダミー.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [103],
       [1, 9, -1, 0, 0],
@@ -1014,7 +1014,7 @@ export const animationData_438 = {
       [20, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [123],
       [1, 9, -1, 0, 0],
@@ -1738,7 +1738,7 @@ export const animationData_438 = {
       [20, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [238],
       [1, 4, 1, 0, 0],
@@ -5059,7 +5059,7 @@ export const animationData_438 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [103],
       [3, 11, 1, 0, 0],
@@ -5376,7 +5376,7 @@ export const animationData_438 = {
   "c": {
     "name": "灼熱のビーチクウγ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["438_c.png"],
       [114],
@@ -5496,7 +5496,7 @@ export const animationData_438 = {
       [263, 20, 27, 27]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [157],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー.png<color=7>"],
@@ -5662,7 +5662,7 @@ export const animationData_438 = {
       [0, 0, 0, 0, 5, 0, "ダミー.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [78],
       [1, 9, -1, 0, 0],
@@ -6223,7 +6223,7 @@ export const animationData_438 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [95],
       [1, 9, -1, 0, 0],
@@ -6801,7 +6801,7 @@ export const animationData_438 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [218],
       [1, 4, 1, 0, 0],
@@ -9891,7 +9891,7 @@ export const animationData_438 = {
       [35, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [61],
       [3, 4, 1, 0, 0],

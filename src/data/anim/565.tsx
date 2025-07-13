@@ -209,7 +209,7 @@ export const animationData_565 = {
   "s": {
     "name": "日焼けネコパーマ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["565_s.png"],
       [11],

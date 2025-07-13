@@ -5,7 +5,7 @@ export const animationData_032 = {
   "f": {
     "name": "ネコザイル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["032_f.png"],
       [36],
@@ -47,7 +47,7 @@ export const animationData_032 = {
       [204, 1, 32, 77, "ザッ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [75],
       [-1, -1, 0, 0, 400, 380, 0, 0, 1000, 1000, 0, 1000, 0, "<color=9>"],
@@ -131,7 +131,7 @@ export const animationData_032 = {
       [0, 0, 0, 65, 2, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [1, 12, -1, 0, 0, "<color=9>"],
@@ -248,7 +248,7 @@ export const animationData_032 = {
       [0, 800, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [111],
       [3, 4, -1, 0, 0],
@@ -1230,7 +1230,7 @@ export const animationData_032 = {
       [30, 1000, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [84],
       [2, 12, 1, 0, 0],
@@ -1618,7 +1618,7 @@ export const animationData_032 = {
       [33, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [1, 12, -1, 0, 0],
@@ -1680,7 +1680,7 @@ export const animationData_032 = {
   "c": {
     "name": "ネコ裸踊り",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["032_c.png"],
       [40],
@@ -1726,7 +1726,7 @@ export const animationData_032 = {
       [391, 221, 32, 14, "接地うちわ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [79],
       [-1, -1, 0, 0, 400, 380, 0, 0, 1000, 1000, 0, 1000, 0, "<color=9>"],
@@ -1814,7 +1814,7 @@ export const animationData_032 = {
       [0, 0, 0, 65, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [1, 12, -1, 0, 0, "<color=9>"],
@@ -1944,7 +1944,7 @@ export const animationData_032 = {
       [0, 800, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [116],
       [3, 4, -1, 0, 0],
@@ -2929,7 +2929,7 @@ export const animationData_032 = {
       [60, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [95],
       [7, 12, 1, 0, 0],
@@ -3383,7 +3383,7 @@ export const animationData_032 = {
       [31, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [1, 12, -1, 0, 0],
@@ -3439,7 +3439,7 @@ export const animationData_032 = {
   "s": {
     "name": "ネコカンカン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["032_s.png"],
       [63],
@@ -3508,7 +3508,7 @@ export const animationData_032 = {
       [163, 221, 20, 34, "攻撃②羽根"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [136],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "<color=9>"],
@@ -3653,7 +3653,7 @@ export const animationData_032 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [44],
       [2, 12, -1, 0, 0],
@@ -4042,7 +4042,7 @@ export const animationData_032 = {
       [30, 16, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [143],
       [3, 4, -1, 0, 0, "一体目↓"],
@@ -5202,7 +5202,7 @@ export const animationData_032 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [236],
       [1, 4, 1, 0, 0],
@@ -6112,7 +6112,7 @@ export const animationData_032 = {
       [0, 300, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [2, 12, 1, 0, 0],

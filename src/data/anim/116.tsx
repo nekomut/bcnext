@@ -5,7 +5,7 @@ export const animationData_116 = {
   "f": {
     "name": "フウ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["116_f.png"],
       [35],
@@ -46,7 +46,7 @@ export const animationData_116 = {
       [331, 62, 71, 71, "エフェクト_放射2"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [35],
       [-1, -1, 0, 0, 608, 433, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -90,7 +90,7 @@ export const animationData_116 = {
       [0, 0, 9, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [2, 5, -1, 0, 0, "キャラ全体"],
@@ -190,7 +190,7 @@ export const animationData_116 = {
       [42, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [2, 5, -1, 0, 0, "キャラ全体"],
@@ -294,7 +294,7 @@ export const animationData_116 = {
       [42, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [2, 5, 1, 0, 0, "キャラ全体"],
@@ -579,7 +579,7 @@ export const animationData_116 = {
       [56, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [2, 11, 1, 0, 0, "全体キャラ"],
@@ -638,7 +638,7 @@ export const animationData_116 = {
   "c": {
     "name": "フウCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["116_c.png"],
       [35],
@@ -679,7 +679,7 @@ export const animationData_116 = {
       [331, 62, 71, 71, "エフェクト_放射2"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [35],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -723,7 +723,7 @@ export const animationData_116 = {
       [0, 0, 9, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [2, 5, -1, 0, 0, "キャラ全体"],
@@ -823,7 +823,7 @@ export const animationData_116 = {
       [42, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [2, 5, -1, 0, 0, "キャラ全体"],
@@ -927,7 +927,7 @@ export const animationData_116 = {
       [42, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [2, 5, 1, 0, 0, "キャラ全体"],
@@ -1212,7 +1212,7 @@ export const animationData_116 = {
       [56, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [2, 11, 1, 0, 0, "全体キャラ"],

@@ -5,7 +5,7 @@ export const animationData_210 = {
   "f": {
     "name": "ちびタンクネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["210_f.png"],
       [10],
@@ -21,7 +21,7 @@ export const animationData_210 = {
       [1, 232, 36, 3, "陰"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 0, 0, 125, 125, 0, 255, 0, "ダミー親"],
@@ -33,7 +33,7 @@ export const animationData_210 = {
       [0, 0, -1, -1, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -45,7 +45,7 @@ export const animationData_210 = {
       [16, 1, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -53,7 +53,7 @@ export const animationData_210 = {
       [0, 1, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -66,7 +66,7 @@ export const animationData_210 = {
       [15, 8, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 2, -1, -1000, 1000, "ノックバック"],
@@ -89,7 +89,7 @@ export const animationData_210 = {
   "c": {
     "name": "ちびネコカベ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["210_c.png"],
       [13],
@@ -108,7 +108,7 @@ export const animationData_210 = {
       [107, 83, 39, 64, "やられ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 0, 0, 125, 125, 0, 255, 0, "ダミー親"],
@@ -120,7 +120,7 @@ export const animationData_210 = {
       [0, 0, 2, -2, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -132,7 +132,7 @@ export const animationData_210 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -140,7 +140,7 @@ export const animationData_210 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -155,7 +155,7 @@ export const animationData_210 = {
       [15, 9, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 2, -1, -1000, 1000, "ノックバック"],
@@ -178,7 +178,7 @@ export const animationData_210 = {
   "s": {
     "name": "ちびゴムネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["210_s.png"],
       [16],
@@ -200,7 +200,7 @@ export const animationData_210 = {
       [1, 179, 54, 46, "エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [9],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -218,7 +218,7 @@ export const animationData_210 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [2, 5, -1, 0, 0, "本体01"],
@@ -254,7 +254,7 @@ export const animationData_210 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [3, 2, -1, 0, 0, "足01"],
@@ -265,7 +265,7 @@ export const animationData_210 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [2, 5, 1, 0, 0, "本体01"],
@@ -379,7 +379,7 @@ export const animationData_210 = {
       [15, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [2, 5, 1, 0, 0],

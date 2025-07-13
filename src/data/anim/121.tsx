@@ -5,7 +5,7 @@ export const animationData_121 = {
   "f": {
     "name": "メルク",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["909_f.png"],
       [59],
@@ -70,7 +70,7 @@ export const animationData_121 = {
       [258, 155, 66, 42]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [66],
       [-1, -1, 0, 0, 529, 435, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -145,7 +145,7 @@ export const animationData_121 = {
       [0, 0, 31, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [2, 4, -1, 0, 0],
@@ -353,7 +353,7 @@ export const animationData_121 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [66],
       [2, 5, -1, 0, 0],
@@ -864,7 +864,7 @@ export const animationData_121 = {
       [100, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [146],
       [1, 4, 1, 0, 0],
@@ -2294,7 +2294,7 @@ export const animationData_121 = {
       [40, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [2, 5, -1, 0, 0],
@@ -2431,7 +2431,7 @@ export const animationData_121 = {
   "c": {
     "name": "メルクCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["909_c.png"],
       [62],
@@ -2499,7 +2499,7 @@ export const animationData_121 = {
       [276, 177, 39, 18, "めぱち途中"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [68],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -2576,7 +2576,7 @@ export const animationData_121 = {
       [0, 0, 31, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [2, 4, -1, 0, 0],
@@ -2787,7 +2787,7 @@ export const animationData_121 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [66],
       [2, 11, -1, 0, 0],
@@ -3292,7 +3292,7 @@ export const animationData_121 = {
       [0, 29, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [147],
       [65, 11, 1, 0, 0, "ダミー"],
@@ -4727,7 +4727,7 @@ export const animationData_121 = {
       [40, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [52],
       [2, 5, -1, 0, 0],
@@ -4891,7 +4891,7 @@ export const animationData_121 = {
   "s": {
     "name": "にゃんことメルクCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["121_s.png"],
       [88],
@@ -4985,7 +4985,7 @@ export const animationData_121 = {
       [454, 152, 8, 8, "白"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [145],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -5139,7 +5139,7 @@ export const animationData_121 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [3, 4, -1, 0, 0, "移動回転親ダミー<color=1>"],
@@ -5310,7 +5310,7 @@ export const animationData_121 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [63],
       [2, 12, -1, 0, 0, "移動親ダミー<color=0>"],
@@ -5727,7 +5727,7 @@ export const animationData_121 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [147],
       [1, 4, 1, 0, 0, "影"],
@@ -7213,7 +7213,7 @@ export const animationData_121 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [2, 12, 1, 0, 0, "移動親ダミー<color=0>"],

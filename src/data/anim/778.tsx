@@ -1400,7 +1400,7 @@ export const animationData_778 = {
   "c": {
     "name": "魔法結社にゃんこ☆マギカ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["778_c.png"],
       [166],

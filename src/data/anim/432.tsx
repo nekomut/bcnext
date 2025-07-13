@@ -5,7 +5,7 @@ export const animationData_432 = {
   "f": {
     "name": "433_1",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["432_f.png"],
       [57],
@@ -68,7 +68,7 @@ export const animationData_432 = {
       [1, 1, 97, 6, "056共通_影.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [26],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー親"],
@@ -103,7 +103,7 @@ export const animationData_432 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [26],
       [3, 12, -1, 0, 0, "ダミー親"],
@@ -428,7 +428,7 @@ export const animationData_432 = {
       [42, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [6],
       [3, 12, -1, 0, 0, "ダミー親"],
@@ -455,7 +455,7 @@ export const animationData_432 = {
       [0, -6, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [24],
       [22, 12, 1, 0, 0, "ダミー親"],
@@ -622,7 +622,7 @@ export const animationData_432 = {
       [0, -1, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [14],
       [3, 12, 1, 0, 0, "ダミー親"],
@@ -672,7 +672,7 @@ export const animationData_432 = {
   "c": {
     "name": "433_2",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["432_c.png"],
       [57],
@@ -735,7 +735,7 @@ export const animationData_432 = {
       [180, 74, 97, 6, "056共通_影.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [26],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー親"],
@@ -770,7 +770,7 @@ export const animationData_432 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [26],
       [3, 12, -1, 0, 0, "ダミー親"],
@@ -1092,7 +1092,7 @@ export const animationData_432 = {
       [42, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [6],
       [3, 12, -1, 0, 0, "ダミー親"],
@@ -1119,7 +1119,7 @@ export const animationData_432 = {
       [0, -6, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [26],
       [22, 12, 1, 0, 0, "ダミー親"],
@@ -1296,7 +1296,7 @@ export const animationData_432 = {
       [0, -1, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [14],
       [3, 12, 1, 0, 0, "ダミー親"],

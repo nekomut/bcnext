@@ -5,7 +5,7 @@ export const animationData_226 = {
   "f": {
     "name": "呪術師デスピエロ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["226_f.png"],
       [49],
@@ -60,7 +60,7 @@ export const animationData_226 = {
       [234, 133, 20, 78, "紐伸びる"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [48],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -117,7 +117,7 @@ export const animationData_226 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [3, 4, -1, 0, 0, "怪物影"],
@@ -571,7 +571,7 @@ export const animationData_226 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [6, 11, -1, 0, 0, "少年頭"],
@@ -796,7 +796,7 @@ export const animationData_226 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [91],
       [2, 4, 1, 0, 0, "坊や影"],
@@ -1796,7 +1796,7 @@ export const animationData_226 = {
       [71, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [3, 4, 1, 0, 0, "影"],
@@ -1906,7 +1906,7 @@ export const animationData_226 = {
   "c": {
     "name": "闇商人バビル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["226_c.png"],
       [54],
@@ -1966,7 +1966,7 @@ export const animationData_226 = {
       [220, 68, 119, 63, "残像02"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [53],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -2028,7 +2028,7 @@ export const animationData_226 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [76],
       [3, 4, -1, 0, 0, "怪物影"],
@@ -2763,7 +2763,7 @@ export const animationData_226 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [6, 11, -1, 0, 0, "少年頭"],
@@ -2941,7 +2941,7 @@ export const animationData_226 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [92],
       [2, 4, 1, 0, 0, "坊や影"],
@@ -4120,7 +4120,7 @@ export const animationData_226 = {
       [71, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [3, 4, 1, 0, 0, "影"],
@@ -4236,7 +4236,7 @@ export const animationData_226 = {
   "s": {
     "name": "奇術科学者クレイG",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["226_s.png"],
       [72],
@@ -4314,7 +4314,7 @@ export const animationData_226 = {
       [186, 120, 26, 24, "煙　緑"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [85],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -4408,7 +4408,7 @@ export const animationData_226 = {
       [0, 0, -4, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [80],
       [4, 4, -1, 0, 0],
@@ -4989,7 +4989,7 @@ export const animationData_226 = {
       [75, 5, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [46],
       [6, 11, -1, 0, 0],
@@ -5282,7 +5282,7 @@ export const animationData_226 = {
       [57, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [126],
       [2, 4, 1, 0, 0, "ダミー"],
@@ -6489,7 +6489,7 @@ export const animationData_226 = {
       [79, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [46],
       [1, 5, 1, 0, 0],

@@ -5,7 +5,7 @@ export const animationData_525 = {
   "f": {
     "name": "きんたろう",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["999_f.png"],
       [52],
@@ -63,7 +63,7 @@ export const animationData_525 = {
       [129, 43, 35, 33, "051煙.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [76],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0],
@@ -148,7 +148,7 @@ export const animationData_525 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [68],
       [1, 8, -1, 0, 0],
@@ -604,7 +604,7 @@ export const animationData_525 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [32],
       [13, 11, -1, 0, 0, "009クマ体線２.png<color=6>"],
@@ -778,7 +778,7 @@ export const animationData_525 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [141],
       [1, 4, 1, 0, 0, "026影.png"],
@@ -1920,7 +1920,7 @@ export const animationData_525 = {
       [35, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [23],
       [31, 12, -1, 0, 0, "039攻撃ボディ.png<color=11>"],
@@ -1997,7 +1997,7 @@ export const animationData_525 = {
   "c": {
     "name": "猛銃戦隊キンレンジャー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["525_c.png"],
       [80],
@@ -2083,7 +2083,7 @@ export const animationData_525 = {
       [408, 101, 27, 36, "079土ぼこり煙.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [137],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0],
@@ -2229,7 +2229,7 @@ export const animationData_525 = {
       [0, 0, 0, 0, 5, 0, "054バックファイア.png<color=12>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [76],
       [7, 2, -1, 0, 0, "043アーム付け根.png"],
@@ -2769,7 +2769,7 @@ export const animationData_525 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [47],
       [25, 2, -1, 0, 0, "043アーム付け根.png"],
@@ -3012,7 +3012,7 @@ export const animationData_525 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [278],
       [1, 4, 1, 0, 0, "050影　一つ.png"],
@@ -9581,7 +9581,7 @@ export const animationData_525 = {
       [0, 2, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [74],
       [25, 2, 1, 0, 0, "043アーム付け根.png"],
@@ -9812,7 +9812,7 @@ export const animationData_525 = {
   "s": {
     "name": "超銃戦隊キンレンジャー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["525_s.png"],
       [92],

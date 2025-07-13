@@ -5,7 +5,7 @@ export const animationData_737 = {
   "f": {
     "name": "スプリングカリファ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["737_f.png"],
       [114],
@@ -3355,7 +3355,7 @@ export const animationData_737 = {
   "c": {
     "name": "スプリングXカリファ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["737_c.png"],
       [114],

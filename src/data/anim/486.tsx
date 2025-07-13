@@ -5,7 +5,7 @@ export const animationData_486 = {
   "f": {
     "name": "ひな",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["486_f.png"],
       [71],
@@ -82,7 +82,7 @@ export const animationData_486 = {
       [310, 105, 12, 13, "070開いた手.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [95],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "■ダミー<color=7>"],
@@ -186,7 +186,7 @@ export const animationData_486 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [55],
       [3, 4, -1, 0, 0, "■下半身ダミー<color=7>"],
@@ -506,7 +506,7 @@ export const animationData_486 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [21],
       [11, 11, -1, 0, 0, "045腰装飾右.png<color=9>\t"],
@@ -622,7 +622,7 @@ export const animationData_486 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [89],
       [1, 4, 1, 0, 0, "■キャラダミー<color=7>"],
@@ -1337,7 +1337,7 @@ export const animationData_486 = {
       [61, -14690, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [40],
       [2, 4, 1, 0, 0, "■下半身ダミー<color=7>"],
@@ -1465,7 +1465,7 @@ export const animationData_486 = {
   "c": {
     "name": "剣士ひな",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["486_c.png"],
       [71],
@@ -1542,7 +1542,7 @@ export const animationData_486 = {
       [309, 178, 12, 13, "070開いた手.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [95],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "■ダミー<color=7>"],
@@ -1646,7 +1646,7 @@ export const animationData_486 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [55],
       [3, 4, -1, 0, 0, "■下半身ダミー<color=7>"],
@@ -1966,7 +1966,7 @@ export const animationData_486 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [21],
       [11, 11, -1, 0, 0, "045腰装飾右.png<color=9>\t"],
@@ -2082,7 +2082,7 @@ export const animationData_486 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [89],
       [1, 4, 1, 0, 0, "■キャラダミー<color=7>"],
@@ -2797,7 +2797,7 @@ export const animationData_486 = {
       [61, -14690, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [40],
       [2, 4, 1, 0, 0, "■下半身ダミー<color=7>"],

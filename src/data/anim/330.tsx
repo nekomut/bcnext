@@ -5,7 +5,7 @@ export const animationData_330 = {
   "f": {
     "name": "上杉謙信・春",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["330_f.png"],
       [81],
@@ -92,7 +92,7 @@ export const animationData_330 = {
       [158, 174, 21, 21]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [95],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "dmy"],
@@ -196,7 +196,7 @@ export const animationData_330 = {
       [0, 0, -30, 0, 5, 0, "dmy"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [70],
       [70, 10, -1, 0, 0],
@@ -710,7 +710,7 @@ export const animationData_330 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [70],
       [70, 10, -1, 0, 0],
@@ -1224,7 +1224,7 @@ export const animationData_330 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [172],
       [1, 4, 1, 0, 0],
@@ -2753,7 +2753,7 @@ export const animationData_330 = {
       [31, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [46],
       [2, 4, 1, 0, 0],
@@ -2899,7 +2899,7 @@ export const animationData_330 = {
   "c": {
     "name": "上杉謙信・春爛漫",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["330_c.png"],
       [86],
@@ -3112,7 +3112,7 @@ export const animationData_330 = {
       [0, 0, -30, 0, 5, 0, "dmy"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [72],
       [70, 10, -1, 0, 0],
@@ -3640,7 +3640,7 @@ export const animationData_330 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [72],
       [70, 10, -1, 0, 0],
@@ -4168,7 +4168,7 @@ export const animationData_330 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [206],
       [1, 4, 1, 0, 0],
@@ -5923,7 +5923,7 @@ export const animationData_330 = {
       [57, -50, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [2, 4, 1, 0, 0],
@@ -6072,7 +6072,7 @@ export const animationData_330 = {
   "s": {
     "name": "上杉謙信・春うらら",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["330_s.png"],
       [89],

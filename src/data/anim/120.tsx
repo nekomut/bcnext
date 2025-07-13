@@ -5,7 +5,7 @@ export const animationData_120 = {
   "f": {
     "name": "癒術士",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["120_f.png"],
       [43],
@@ -54,7 +54,7 @@ export const animationData_120 = {
       [170, 169, 27, 17, "トト顔攻撃"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [42],
       [-1, -1, 0, 0, 607, 434, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -105,7 +105,7 @@ export const animationData_120 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [72],
       [4, 11, -1, 0, 0, "体"],
@@ -645,7 +645,7 @@ export const animationData_120 = {
       [30, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [4, 5, -1, 0, 0, "体"],
@@ -820,7 +820,7 @@ export const animationData_120 = {
       [30, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [64],
       [4, 4, 1, 0, 0, "体"],
@@ -1405,7 +1405,7 @@ export const animationData_120 = {
       [35, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [55],
       [3, 11, -1, 0, 0, "キャラダミー"],
@@ -1578,7 +1578,7 @@ export const animationData_120 = {
   "c": {
     "name": "癒術士CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["120_c.png"],
       [39],
@@ -1623,7 +1623,7 @@ export const animationData_120 = {
       [188, 134, 14, 23, "トト右後ろ足"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [40],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1672,7 +1672,7 @@ export const animationData_120 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [72],
       [4, 11, -1, 0, 0, "体"],
@@ -2202,7 +2202,7 @@ export const animationData_120 = {
       [30, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [8, 10, -1, 0, 0, "口"],
@@ -2371,7 +2371,7 @@ export const animationData_120 = {
       [30, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [63],
       [4, 4, 1, 0, 0, "体"],
@@ -2944,7 +2944,7 @@ export const animationData_120 = {
       [35, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [53],
       [3, 11, -1, 0, 0, "キャラダミー"],
@@ -3111,7 +3111,7 @@ export const animationData_120 = {
   "s": {
     "name": "にゃんこ化癒術士ＣＣ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["120_s.png"],
       [39],
@@ -3156,7 +3156,7 @@ export const animationData_120 = {
       [188, 134, 14, 23, "トト右後ろ足"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [40],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -3205,7 +3205,7 @@ export const animationData_120 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [72],
       [4, 5, -1, 0, 0],
@@ -3741,7 +3741,7 @@ export const animationData_120 = {
       [15, 0, 3, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [4, 5, -1, 0, 0, "体"],
@@ -3907,7 +3907,7 @@ export const animationData_120 = {
       [30, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [63],
       [4, 4, 1, 0, 0, "体"],
@@ -4489,7 +4489,7 @@ export const animationData_120 = {
       [30, 0, 3, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [51],
       [3, 11, -1, 0, 0, "キャラダミー"],

@@ -5,7 +5,7 @@ export const animationData_301 = {
   "f": {
     "name": "ネコキュゥべえ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["301_f.png"],
       [22],
@@ -33,7 +33,7 @@ export const animationData_301 = {
       [94, 107, 43, 21]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [14],
       [-1, -1, 0, 0, 0, 0, 1, 1, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -56,7 +56,7 @@ export const animationData_301 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [2, 2, -1, 0, 0, "移動"],
@@ -131,7 +131,7 @@ export const animationData_301 = {
       [64, 90, 3, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 12, -1, 0, 0, "3の影"],
@@ -139,7 +139,7 @@ export const animationData_301 = {
       [0, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [2, 2, 1, 0, 0, "攻撃"],
@@ -278,7 +278,7 @@ export const animationData_301 = {
       [16, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [2, 2, 1, 0, 0, "ノックバック"],
@@ -334,7 +334,7 @@ export const animationData_301 = {
   "c": {
     "name": "タンクキュゥべえ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["301_c.png"],
       [24],
@@ -364,7 +364,7 @@ export const animationData_301 = {
       [133, 127, 41, 28]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [16],
       [-1, -1, 0, 8, 0, 0, 1, 1, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -389,7 +389,7 @@ export const animationData_301 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [2, 2, -1, 0, 0, "移動"],
@@ -463,7 +463,7 @@ export const animationData_301 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [1, 12, -1, 0, 0, "3の影"],
@@ -477,7 +477,7 @@ export const animationData_301 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [2, 2, 1, 0, 0, "攻撃"],
@@ -648,7 +648,7 @@ export const animationData_301 = {
       [10, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [2, 2, 1, 0, 0, "ノックバック"],

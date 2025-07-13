@@ -2272,7 +2272,7 @@ export const animationData_589 = {
   "s": {
     "name": "本命・バレンタインねねこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["589_s.png"],
       [71],

@@ -5,7 +5,7 @@ export const animationData_152 = {
   "f": {
     "name": "ネコスケート",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["152_f.png"],
       [28],
@@ -39,7 +39,7 @@ export const animationData_152 = {
       [43, 237, 12, 14, "キラキラ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [32],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -80,7 +80,7 @@ export const animationData_152 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [1, 9, -1, 0, 0, "♂影"],
@@ -306,7 +306,7 @@ export const animationData_152 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [1, 4, -1, 0, 0, "♂影"],
@@ -389,7 +389,7 @@ export const animationData_152 = {
       [80, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [1, 4, 1, 0, 0, "♂影"],
@@ -673,7 +673,7 @@ export const animationData_152 = {
       [35, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [3, 12, -1, 0, 0, "ダミー"],
@@ -741,7 +741,7 @@ export const animationData_152 = {
   "c": {
     "name": "よいではにゃいか",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["152_c.png"],
       [34],
@@ -781,7 +781,7 @@ export const animationData_152 = {
       [345, 1, 62, 68, "スライド"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [29],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -819,7 +819,7 @@ export const animationData_152 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [2, 5, -1, 0, 0, "町娘制御"],
@@ -957,7 +957,7 @@ export const animationData_152 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [2, 5, -1, 0, 0, "町娘制御"],
@@ -1056,7 +1056,7 @@ export const animationData_152 = {
       [40, -200, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [1, 12, 1, 0, 0, "本体"],
@@ -1352,7 +1352,7 @@ export const animationData_152 = {
       [0, -400, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [1, 12, -1, 0, 0, "ダミー"],
@@ -1399,7 +1399,7 @@ export const animationData_152 = {
   "s": {
     "name": "にゃんでやねん",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["152_s.png"],
       [51],
@@ -1456,7 +1456,7 @@ export const animationData_152 = {
       [1, 137, 11, 11, "050殴られた頬.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [55],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "■ダミー"],
@@ -1520,7 +1520,7 @@ export const animationData_152 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [53],
       [4, 2, -1, 0, 0, "002♂体.png<color=2>"],
@@ -1779,7 +1779,7 @@ export const animationData_152 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [8, 10, -1, 0, 0, "006♂口下[上].png<color=2>"],
@@ -1932,7 +1932,7 @@ export const animationData_152 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [79],
       [3, 4, 1, 0, 0, "001♂影.png<color=2>"],
@@ -2554,7 +2554,7 @@ export const animationData_152 = {
       [49, 37, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [35],
       [4, 12, 1, 0, 0, "002♂体.png<color=2>"],

@@ -5,7 +5,7 @@ export const animationData_424 = {
   "f": {
     "name": "小野ミサ＆ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["424_f.png"],
       [88],
@@ -194,7 +194,7 @@ export const animationData_424 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [75],
       [3, 5, -1, 0, 0, "057中着.png"],
@@ -631,7 +631,7 @@ export const animationData_424 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [51],
       [3, 5, -1, 0, 0, "057中着.png"],
@@ -943,7 +943,7 @@ export const animationData_424 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [106],
       [3, 4, 1, 0, 0, "057中着.png"],
@@ -2030,7 +2030,7 @@ export const animationData_424 = {
       [47, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [67],
       [3, 4, 1, 0, 0, "057中着.png"],
@@ -2239,7 +2239,7 @@ export const animationData_424 = {
   "c": {
     "name": "小野ミサ＆ネコＣＣ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["424_c.png"],
       [88],
@@ -2428,7 +2428,7 @@ export const animationData_424 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [75],
       [3, 5, -1, 0, 0, "057中着.png"],
@@ -2865,7 +2865,7 @@ export const animationData_424 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [51],
       [3, 5, -1, 0, 0, "057中着.png"],
@@ -3177,7 +3177,7 @@ export const animationData_424 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [107],
       [3, 4, 1, 0, 0, "057中着.png"],
@@ -4384,7 +4384,7 @@ export const animationData_424 = {
       [47, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [65],
       [3, 4, 1, 0, 0, "057中着.png"],

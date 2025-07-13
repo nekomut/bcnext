@@ -5,7 +5,7 @@ export const animationData_414 = {
   "f": {
     "name": "エヴァ２号機",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["414_f.png"],
       [68],
@@ -79,7 +79,7 @@ export const animationData_414 = {
       [84, 100, 14, 13, "065 火の粉.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [107],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -195,7 +195,7 @@ export const animationData_414 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [76],
       [3, 9, -1, 0, 0, "001影.png"],
@@ -677,7 +677,7 @@ export const animationData_414 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [4, 5, -1, 0, 0, "020腰.png<color=0>"],
@@ -784,7 +784,7 @@ export const animationData_414 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [147],
       [2, 5, 1, 0, 0, "キャラダミー"],
@@ -2338,7 +2338,7 @@ export const animationData_414 = {
       [87, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [59],
       [4, 4, 1, 0, 0, "020腰.png<color=0>"],
@@ -2523,7 +2523,7 @@ export const animationData_414 = {
   "c": {
     "name": "エヴァ２号機＆ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["414_c.png"],
       [68],
@@ -2597,7 +2597,7 @@ export const animationData_414 = {
       [84, 100, 14, 13, "065 火の粉.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [107],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -2713,7 +2713,7 @@ export const animationData_414 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [76],
       [3, 9, -1, 0, 0, "001影.png"],
@@ -3195,7 +3195,7 @@ export const animationData_414 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [4, 5, -1, 0, 0, "020腰.png<color=0>"],
@@ -3302,7 +3302,7 @@ export const animationData_414 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [147],
       [2, 5, 1, 0, 0, "キャラダミー"],
@@ -4856,7 +4856,7 @@ export const animationData_414 = {
       [87, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [59],
       [4, 4, 1, 0, 0, "020腰.png<color=0>"],
@@ -5041,7 +5041,7 @@ export const animationData_414 = {
   "s": {
     "name": "エヴァ改２号機コード７７７",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["414_s.png"],
       [61],
@@ -5108,7 +5108,7 @@ export const animationData_414 = {
       [186, 68, 15, 12, "060尻尾　発光.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [105],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "000.png<color=7>"],
@@ -5222,7 +5222,7 @@ export const animationData_414 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [68],
       [1, 9, -1, 0, 0, "001影.png<color=16>"],
@@ -5816,7 +5816,7 @@ export const animationData_414 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [40],
       [5, 11, -1, 0, 0, "034腰.png<color=0>\t"],
@@ -6069,7 +6069,7 @@ export const animationData_414 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [130],
       [1, 4, 1, 0, 0, "キャラ中心ダミー<color=7>\t"],
@@ -8149,7 +8149,7 @@ export const animationData_414 = {
       [108, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [38],
       [3, 11, 1, 0, 0, "キャラ親ダミー<color=7>"],

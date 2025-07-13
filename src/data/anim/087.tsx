@@ -5,7 +5,7 @@ export const animationData_087 = {
   "f": {
     "name": "竜戦機ライデン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["905_f.png"],
       [50],
@@ -61,7 +61,7 @@ export const animationData_087 = {
       [46, 229, 16, 16, "汎用ひかり"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [53],
       [-1, -1, 0, 0, 1047, -101, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -123,7 +123,7 @@ export const animationData_087 = {
       [0, 0, 0, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [1, 8, -1, 0, 0],
@@ -274,7 +274,7 @@ export const animationData_087 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [1, 8, -1, 0, 0],
@@ -418,7 +418,7 @@ export const animationData_087 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [82],
       [1, 8, 1, 0, 0],
@@ -2475,7 +2475,7 @@ export const animationData_087 = {
       [80, 100, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [2, 11, -1, 0, 0, "ダミー"],
@@ -2516,7 +2516,7 @@ export const animationData_087 = {
   "c": {
     "name": "竜戦機王ライデン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["905_c.png"],
       [53],
@@ -2575,7 +2575,7 @@ export const animationData_087 = {
       [364, 1, 9, 22, "棘右"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [59],
       [-1, -1, 0, 0, 193, -23, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -2643,7 +2643,7 @@ export const animationData_087 = {
       [0, 0, 0, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [1, 8, -1, 0, 0],
@@ -2835,7 +2835,7 @@ export const animationData_087 = {
       [70, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [1, 8, -1, 0, 0],
@@ -3020,7 +3020,7 @@ export const animationData_087 = {
       [70, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [92],
       [1, 8, 1, 0, 0],
@@ -5239,7 +5239,7 @@ export const animationData_087 = {
       [77, 800, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [2, 11, -1, 0, 0, "ダミー"],
@@ -5280,7 +5280,7 @@ export const animationData_087 = {
   "s": {
     "name": "竜戦機皇帝ライデン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["087_s.png"],
       [76],
@@ -5362,7 +5362,7 @@ export const animationData_087 = {
       [360, 1, 11, 15]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [94],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -5465,7 +5465,7 @@ export const animationData_087 = {
       [0, 0, 0, 1, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [1, 8, -1, 0, 0],
@@ -5811,7 +5811,7 @@ export const animationData_087 = {
       [5, 600, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [52],
       [1, 8, -1, 0, 0],
@@ -6153,7 +6153,7 @@ export const animationData_087 = {
       [5, 600, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [150],
       [1, 8, 1, 0, 0],
@@ -9103,7 +9103,7 @@ export const animationData_087 = {
       [67, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [2, 11, 1, 0, 0],

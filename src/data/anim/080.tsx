@@ -5,7 +5,7 @@ export const animationData_080 = {
   "f": {
     "name": "吾輩は鬼である",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["080_f.png"],
       [20],
@@ -31,7 +31,7 @@ export const animationData_080 = {
       [1, 1, 134, 100, "エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [17],
       [-1, -1, 0, 0, 470, 315, 0, 0, 1000, 1000, 0, 255, 0, "ダミー親"],
@@ -57,7 +57,7 @@ export const animationData_080 = {
       [0, 0, 35, 148, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [2, 2, -1, -1000, 1000, "身体"],
@@ -132,7 +132,7 @@ export const animationData_080 = {
       [48, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [2, 2, -1, -1000, 1000, "身体"],
@@ -163,7 +163,7 @@ export const animationData_080 = {
       [120, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [7, 2, 1, -1000, 1000, "身体01"],
@@ -331,7 +331,7 @@ export const animationData_080 = {
       [31, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [7, 2, -1, -1000, 1000, "身体01"],
@@ -368,7 +368,7 @@ export const animationData_080 = {
   "c": {
     "name": "ネコ紳士",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["080_c.png"],
       [23],
@@ -397,7 +397,7 @@ export const animationData_080 = {
       [199, 95, 86, 70, "やられたとき"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [19],
       [-1, -1, 0, 0, 470, 315, 0, 0, 1000, 1000, 0, 255, 0, "ダミー親"],
@@ -425,7 +425,7 @@ export const animationData_080 = {
       [0, 0, 35, 148, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [2, 2, -1, -1000, 1000, "身体"],
@@ -465,7 +465,7 @@ export const animationData_080 = {
       [48, -30, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [2, 2, -1, -1000, 1000, "身体"],
@@ -495,7 +495,7 @@ export const animationData_080 = {
       [0, 13, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [7, 2, 1, -1000, 1000, "身体01"],
@@ -696,7 +696,7 @@ export const animationData_080 = {
       [45, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [2, 2, -1, -1000, 1000],
@@ -740,7 +740,7 @@ export const animationData_080 = {
   "s": {
     "name": "ネコ紳士同盟",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["080_s.png"],
       [21],
@@ -767,7 +767,7 @@ export const animationData_080 = {
       [179, 59, 33, 46, "上半身奥"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [15],
       [-1, -1, 0, 0, 0, 0, 0, 0, 2000, 2000, 0, 1000, 0, "ダミー<color=7>"],
@@ -791,7 +791,7 @@ export const animationData_080 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [4, 2, -1, 0, 0, "足"],
@@ -880,7 +880,7 @@ export const animationData_080 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [4, 10, -1, 0, 0, "足"],
@@ -932,7 +932,7 @@ export const animationData_080 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [3, 5, 1, 0, 0, "キャラダミー"],
@@ -1004,7 +1004,7 @@ export const animationData_080 = {
       [22, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [4, 12, 1, 0, 0, "足"],

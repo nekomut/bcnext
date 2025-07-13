@@ -9666,7 +9666,7 @@ export const animationData_613 = {
   "s": {
     "name": "覚醒ネコ神面ドロン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["613_s.png"],
       [74],

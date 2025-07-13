@@ -5,7 +5,7 @@ export const animationData_361 = {
   "f": {
     "name": "風の精霊エアル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["361_f.png"],
       [89],
@@ -100,7 +100,7 @@ export const animationData_361 = {
       [1, 49, 95, 27, "追加もふ輪おく"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [93],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー<color=7>"],
@@ -202,7 +202,7 @@ export const animationData_361 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [2, 9, -1, 0, 0, "影"],
@@ -410,7 +410,7 @@ export const animationData_361 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [2, 9, -1, 0, 0, "影"],
@@ -618,7 +618,7 @@ export const animationData_361 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [185],
       [2, 4, 1, 0, 0, "影"],
@@ -2449,7 +2449,7 @@ export const animationData_361 = {
       [67, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [3, 11, 1, 0, 0, "cダミー<color=7>"],
@@ -2508,7 +2508,7 @@ export const animationData_361 = {
   "c": {
     "name": "嵐の精霊エアフワン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["361_c.png"],
       [85],
@@ -2599,7 +2599,7 @@ export const animationData_361 = {
       [257, 2, 38, 59, "土追加"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [127],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー<color=7>"],
@@ -2735,7 +2735,7 @@ export const animationData_361 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [84],
       [2, 9, -1, 0, 0, "影"],
@@ -3291,7 +3291,7 @@ export const animationData_361 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [82],
       [2, 9, -1, 0, 0, "影"],
@@ -3837,7 +3837,7 @@ export const animationData_361 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [252],
       [2, 4, 1, 0, 0, "影"],
@@ -6809,7 +6809,7 @@ export const animationData_361 = {
       [67, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [3, 11, 1, 0, 0, "cダミー<color=7>"],
@@ -6895,7 +6895,7 @@ export const animationData_361 = {
   "s": {
     "name": "嵐の精霊王エアフワンテ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["361_s.png"],
       [114],
@@ -7015,7 +7015,7 @@ export const animationData_361 = {
       [333, 325, 44, 45, "葉っぱ２"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [193],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー<color=7>"],
@@ -7217,7 +7217,7 @@ export const animationData_361 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [127],
       [2, 9, -1, 0, 0, "影"],
@@ -8032,7 +8032,7 @@ export const animationData_361 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [127],
       [2, 9, -1, 0, 0, "影"],
@@ -8883,7 +8883,7 @@ export const animationData_361 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [390],
       [2, 4, 1, 0, 0, "影"],
@@ -13231,7 +13231,7 @@ export const animationData_361 = {
       [77, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [62],
       [3, 5, 1, 0, 0, "cダミー<color=7>"],

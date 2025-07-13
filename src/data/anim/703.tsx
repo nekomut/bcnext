@@ -5,7 +5,7 @@ export const animationData_703 = {
   "f": {
     "name": "エヴァンゲリオンにゃんこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["703_f.png"],
       [58],
@@ -2634,7 +2634,7 @@ export const animationData_703 = {
   "c": {
     "name": "シン・エヴァンゲリオンにゃんこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["703_c.png"],
       [58],

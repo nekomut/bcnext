@@ -5,7 +5,7 @@ export const animationData_592 = {
   "f": {
     "name": "ネコリン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["592_f.png"],
       [44],
@@ -1346,7 +1346,7 @@ export const animationData_592 = {
   "c": {
     "name": "ネコリンCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["592_c.png"],
       [49],

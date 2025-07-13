@@ -5,7 +5,7 @@ export const animationData_070 = {
   "f": {
     "name": "ネコリーマン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["070_f.png"],
       [30],
@@ -41,7 +41,7 @@ export const animationData_070 = {
       [167, 171, 62, 9, "効果２"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [30],
       [-1, -1, 0, 0, 582, 437, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -80,7 +80,7 @@ export const animationData_070 = {
       [0, 0, 0, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [9, 11, -1, 0, 0],
@@ -175,7 +175,7 @@ export const animationData_070 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [7, 11, -1, 0, 0],
@@ -220,7 +220,7 @@ export const animationData_070 = {
       [60, 10, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [55],
       [2, 11, 1, 0, 0, "ダミー"],
@@ -506,7 +506,7 @@ export const animationData_070 = {
       [13, 2000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [15, 12, -1, 0, 0, "ダミー"],
@@ -571,7 +571,7 @@ export const animationData_070 = {
   "c": {
     "name": "ネコ怨み",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["070_c.png"],
       [35],
@@ -612,7 +612,7 @@ export const animationData_070 = {
       [38, 186, 22, 17]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [31],
       [-1, -1, 0, 0, 582, 437, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -652,7 +652,7 @@ export const animationData_070 = {
       [0, 0, 0, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [9, 11, -1, 0, 0],
@@ -752,7 +752,7 @@ export const animationData_070 = {
       [6, 28, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [7, 11, -1, 0, 0],
@@ -802,7 +802,7 @@ export const animationData_070 = {
       [6, 28, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [52],
       [2, 11, 1, 0, 0, "ダミー"],
@@ -1093,7 +1093,7 @@ export const animationData_070 = {
       [13, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [15, 12, -1, 0, 0, "ダミー"],
@@ -1158,7 +1158,7 @@ export const animationData_070 = {
   "s": {
     "name": "ネコ火祭り",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["070_s.png"],
       [49],
@@ -1213,7 +1213,7 @@ export const animationData_070 = {
       [258, 201, 57, 53, "ひのこ加算用"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [70],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -1292,7 +1292,7 @@ export const animationData_070 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [3, 5, -1, 0, 0, "体"],
@@ -1478,7 +1478,7 @@ export const animationData_070 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [3, 11, -1, 0, 0, "体"],
@@ -1622,7 +1622,7 @@ export const animationData_070 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [106],
       [1, 4, 1, 0, 0, "影１"],
@@ -2533,7 +2533,7 @@ export const animationData_070 = {
       [48, 500, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [3, 4, 1, 0, 0, "体"],

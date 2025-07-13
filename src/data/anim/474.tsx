@@ -5,7 +5,7 @@ export const animationData_474 = {
   "f": {
     "name": "十字架天使",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["474_f.png"],
       [61],
@@ -72,7 +72,7 @@ export const animationData_474 = {
       [177, 200, 12, 13, "060口　やられ.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [62],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "■全体ダミー<color=7>"],
@@ -143,7 +143,7 @@ export const animationData_474 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [26],
       [1, 5, -1, 0, 0, "■キャラダミー<color=7>\t"],
@@ -296,7 +296,7 @@ export const animationData_474 = {
       [222, 1000, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [27],
       [1, 5, -1, 0, 0, "■キャラダミー<color=7>\t"],
@@ -452,7 +452,7 @@ export const animationData_474 = {
       [222, 1000, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [89],
       [1, 4, 1, 0, 0, "■キャラダミー<color=7>"],
@@ -1204,7 +1204,7 @@ export const animationData_474 = {
       [43, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [30],
       [1, 4, 1, 0, 0, "■キャラダミー<color=7>"],
@@ -1302,7 +1302,7 @@ export const animationData_474 = {
   "c": {
     "name": "クロスエンジェル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["474_c.png"],
       [72],
@@ -1380,7 +1380,7 @@ export const animationData_474 = {
       [36, 144, 38, 75, "071 ビームはじけ02.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [63],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "■全体ダミー<color=7>"],
@@ -1452,7 +1452,7 @@ export const animationData_474 = {
       [0, 0, 0, 0, 5, 0, "035左眉　通常.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [26],
       [1, 5, -1, 0, 0, "■キャラダミー<color=7>\t"],
@@ -1613,7 +1613,7 @@ export const animationData_474 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [27],
       [1, 5, -1, 0, 0, "■キャラダミー<color=7>\t"],
@@ -1778,7 +1778,7 @@ export const animationData_474 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [100],
       [1, 4, 1, 0, 0, "■キャラダミー<color=7>"],
@@ -2613,7 +2613,7 @@ export const animationData_474 = {
       [45, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [33],
       [1, 4, 1, 0, 0, "■キャラダミー<color=7>"],
@@ -2720,7 +2720,7 @@ export const animationData_474 = {
   "s": {
     "name": "ストライク天使",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["474_s.png"],
       [97],
@@ -2823,7 +2823,7 @@ export const animationData_474 = {
       [228, 194, 18, 15]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [89],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "■全体ダミー<color=7>"],
@@ -2921,7 +2921,7 @@ export const animationData_474 = {
       [0, 0, 0, 0, 5, 0, "035左眉　通常.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [35],
       [1, 5, -1, 0, 0, "■キャラダミー<color=7>\t"],
@@ -3136,7 +3136,7 @@ export const animationData_474 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [36],
       [1, 5, -1, 0, 0, "■キャラダミー<color=7>\t"],
@@ -3354,7 +3354,7 @@ export const animationData_474 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [123],
       [1, 4, 1, 0, 0, "■キャラダミー<color=7>"],
@@ -4551,7 +4551,7 @@ export const animationData_474 = {
       [46, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [40],
       [1, 4, 1, 0, 0, "■キャラダミー<color=7>"],

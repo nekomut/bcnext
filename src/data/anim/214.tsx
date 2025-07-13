@@ -5,7 +5,7 @@ export const animationData_214 = {
   "f": {
     "name": "百太郎",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["214_f.png"],
       [52],
@@ -63,7 +63,7 @@ export const animationData_214 = {
       [29, 199, 26, 18, "波動拳玉小"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [5],
       [-1, -1, 0, 0, 0, 0, 0, 0, 2500, 2500, 0, 1000, 0, "ダミー"],
@@ -77,7 +77,7 @@ export const animationData_214 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [2, 2, -1, 0, 0, "ダミー"],
@@ -109,7 +109,7 @@ export const animationData_214 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [2, 2, -1, 0, 0, "ダミー"],
@@ -134,7 +134,7 @@ export const animationData_214 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [1, 4, 1, 0, 0, "影"],
@@ -219,7 +219,7 @@ export const animationData_214 = {
       [50, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [2, 2, 1, 0, 0, "ダミー"],
@@ -245,7 +245,7 @@ export const animationData_214 = {
   "c": {
     "name": "百太郎CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["214_c.png"],
       [52],
@@ -303,7 +303,7 @@ export const animationData_214 = {
       [29, 199, 26, 18, "波動拳玉小"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [5],
       [-1, -1, 0, 0, 0, 0, 0, 0, 2500, 2500, 0, 1000, 0, "ダミー"],
@@ -317,7 +317,7 @@ export const animationData_214 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [2, 2, -1, 0, 0, "ダミー"],
@@ -349,7 +349,7 @@ export const animationData_214 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [2, 2, -1, 0, 0, "ダミー"],
@@ -374,7 +374,7 @@ export const animationData_214 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [1, 4, 1, 0, 0, "影"],
@@ -459,7 +459,7 @@ export const animationData_214 = {
       [50, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [2, 2, 1, 0, 0, "ダミー"],

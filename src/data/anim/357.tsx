@@ -5,7 +5,7 @@ export const animationData_357 = {
   "f": {
     "name": "狼娘ディル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["357_f.png"],
       [95],
@@ -106,7 +106,7 @@ export const animationData_357 = {
       [83, 202, 33, 53, "分割　右腿"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [158],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -273,7 +273,7 @@ export const animationData_357 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [100],
       [2, 5, -1, 0, 0],
@@ -1616,7 +1616,7 @@ export const animationData_357 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [63],
       [2, 5, -1, 0, 0],
@@ -2046,7 +2046,7 @@ export const animationData_357 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [318],
       [1, 9, 1, 0, 0],
@@ -6268,7 +6268,7 @@ export const animationData_357 = {
       [110, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [132],
       [2, 5, 1, 0, 0],
@@ -6672,7 +6672,7 @@ export const animationData_357 = {
   "c": {
     "name": "虚飾の狼姫ディル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["357_c.png"],
       [152],
@@ -6830,7 +6830,7 @@ export const animationData_357 = {
       [99, 194, 33, 61, "右腿s"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [204],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー   (172"],
@@ -7043,7 +7043,7 @@ export const animationData_357 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [149],
       [2, 5, -1, 0, 0],
@@ -8696,7 +8696,7 @@ export const animationData_357 = {
       [0, 100, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [90],
       [2, 5, -1, 0, 0],
@@ -9249,7 +9249,7 @@ export const animationData_357 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [387],
       [1, 9, 1, 0, 0],
@@ -13888,7 +13888,7 @@ export const animationData_357 = {
       [110, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [199],
       [2, 5, 1, 0, 0],
@@ -14493,7 +14493,7 @@ export const animationData_357 = {
   "s": {
     "name": "道化の狼姫ディル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["357_s.png"],
       [164],
@@ -14663,7 +14663,7 @@ export const animationData_357 = {
       [458, 319, 18, 12, "163じょうわんてまえ1.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [219],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png<color=7>"],
@@ -14891,7 +14891,7 @@ export const animationData_357 = {
       [0, 0, 0, 3, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [184],
       [1, 9, -1, 0, 0, "001影.png<color=9>\t"],
@@ -16634,7 +16634,7 @@ export const animationData_357 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [25],
       [151, 12, -1, 0, 0, "腰 攻撃のみしよう<color=6>"],
@@ -16714,7 +16714,7 @@ export const animationData_357 = {
       [0, -2, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [395],
       [1, 9, 1, 0, 0, "001影.png<color=9>\t"],
@@ -22207,7 +22207,7 @@ export const animationData_357 = {
       [120, 2, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [162],
       [2, 5, 1, 0, 0, "キャラ親ダミー<color=7>\t"],

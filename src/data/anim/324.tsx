@@ -5,7 +5,7 @@ export const animationData_324 = {
   "f": {
     "name": "ネコストーン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["324_f.png"],
       [55],
@@ -66,7 +66,7 @@ export const animationData_324 = {
       [1, 207, 57, 48, "煙"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [12],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -87,7 +87,7 @@ export const animationData_324 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [4, 2, -1, 0, 0, "顔１"],
@@ -192,7 +192,7 @@ export const animationData_324 = {
       [30, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [7, 12, -1, 0, 0, "ダミー"],
@@ -206,7 +206,7 @@ export const animationData_324 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [1, 4, 1, 0, 0, "ダミー"],
@@ -368,7 +368,7 @@ export const animationData_324 = {
       [8000, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [1, 4, 1, 0, 0, "ダミー"],
@@ -409,7 +409,7 @@ export const animationData_324 = {
   "c": {
     "name": "ネコクリーナー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["324_c.png"],
       [32],
@@ -447,7 +447,7 @@ export const animationData_324 = {
       [204, 1, 19, 30, "おしり"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [27],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -483,7 +483,7 @@ export const animationData_324 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [3, 5, -1, 0, 0, "ダミー"],
@@ -686,7 +686,7 @@ export const animationData_324 = {
       [0, 2, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [3, 5, -1, 0, 0, "ダミー"],
@@ -889,7 +889,7 @@ export const animationData_324 = {
       [0, 2, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [68],
       [1, 4, 1, 0, 0, "ダミー"],
@@ -7489,7 +7489,7 @@ export const animationData_324 = {
       [8000, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [3, 5, 1, 0, 0, "本体"],
@@ -7527,7 +7527,7 @@ export const animationData_324 = {
   "s": {
     "name": "ネコカメカー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["324_s.png"],
       [29],
@@ -7562,7 +7562,7 @@ export const animationData_324 = {
       [89, 53, 23, 22, "028煙４.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [45],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "000.png"],
@@ -7616,7 +7616,7 @@ export const animationData_324 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [56],
       [3, 5, -1, 0, 0, "こうら<color=7>"],
@@ -7946,7 +7946,7 @@ export const animationData_324 = {
       [22, 800, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [39],
       [3, 5, -1, 0, 0, "こうら<color=7>"],
@@ -8069,7 +8069,7 @@ export const animationData_324 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [124],
       [1, 4, 1, 0, 0, "全体"],
@@ -15761,7 +15761,7 @@ export const animationData_324 = {
       [7845, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [19],
       [2, 4, 1, 0, 0, "001影.png"],

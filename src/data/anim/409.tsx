@@ -5,7 +5,7 @@ export const animationData_409 = {
   "f": {
     "name": "ちびレイ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["409_f.png"],
       [80],
@@ -91,7 +91,7 @@ export const animationData_409 = {
       [1, 249, 6, 6, "079色補助.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [88],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -188,7 +188,7 @@ export const animationData_409 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [3, 5, -1, 0, 0, "027腰.png<color=0>\t"],
@@ -488,7 +488,7 @@ export const animationData_409 = {
       [0, 34, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [4, 11, -1, 0, 0, "026胸.png<color=3>\t"],
@@ -705,7 +705,7 @@ export const animationData_409 = {
       [0, 6, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [110],
       [3, 5, 1, 0, 0, "027腰.png<color=0>"],
@@ -1578,7 +1578,7 @@ export const animationData_409 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [3, 4, 1, 0, 0, "027腰.png<color=0>\t"],
@@ -1694,7 +1694,7 @@ export const animationData_409 = {
   "c": {
     "name": "プラグスーツのちびレイ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["409_c.png"],
       [68],
@@ -1768,7 +1768,7 @@ export const animationData_409 = {
       [303, 236, 21, 18, "067頭装備横.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [75],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1852,7 +1852,7 @@ export const animationData_409 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [3, 5, -1, 0, 0, "027腰.png<color=0>\t"],
@@ -2128,7 +2128,7 @@ export const animationData_409 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [4, 11, -1, 0, 0, "026胸.png<color=3>\t"],
@@ -2339,7 +2339,7 @@ export const animationData_409 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [105],
       [3, 5, 1, 0, 0, "027腰.png<color=0>"],
@@ -3166,7 +3166,7 @@ export const animationData_409 = {
       [66, 800, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [3, 4, 1, 0, 0, "027腰.png<color=0>\t"],
@@ -3282,7 +3282,7 @@ export const animationData_409 = {
   "s": {
     "name": "再会のちびレイ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["409_s.png"],
       [82],

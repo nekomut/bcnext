@@ -5,7 +5,7 @@ export const animationData_009 = {
   "f": {
     "name": "ネコ女優",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["009_f.png"],
       [5],
@@ -16,7 +16,7 @@ export const animationData_009 = {
       [122, 5, 107, 127, "エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [6],
       [-1, -1, 0, 0, 611, 174, 0, 0, 1790, 1790, 0, 255, 0, "ダミー親"],
@@ -31,7 +31,7 @@ export const animationData_009 = {
       [0, 0, 24, 145, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 5, -1, -1000, 1000, "移動"],
@@ -60,7 +60,7 @@ export const animationData_009 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [1, 4, -1, 0, 0],
@@ -71,7 +71,7 @@ export const animationData_009 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 11, 1, 0, 0],
@@ -104,7 +104,7 @@ export const animationData_009 = {
       [10, 1500, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [5, 12, -1, 0, 0],
@@ -124,7 +124,7 @@ export const animationData_009 = {
   "c": {
     "name": "ネコ聖母",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["009_c.png"],
       [5],
@@ -135,7 +135,7 @@ export const animationData_009 = {
       [143, 5, 107, 127]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [6],
       [-1, -1, 0, 0, 611, 174, 0, 0, 1790, 1790, 0, 255, 0, "ダミー親"],
@@ -150,7 +150,7 @@ export const animationData_009 = {
       [0, 0, 24, 145, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 5, -1, -1000, 1000, "移動"],
@@ -184,7 +184,7 @@ export const animationData_009 = {
       [48, 20, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [5, 12, -1, 0, 0, "ダミー親"],
@@ -192,7 +192,7 @@ export const animationData_009 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 11, 1, 0, 0],
@@ -225,7 +225,7 @@ export const animationData_009 = {
       [10, 1500, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [5, 12, -1, 0, 0],
@@ -245,7 +245,7 @@ export const animationData_009 = {
   "s": {
     "name": "ネコマッチョ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["009_s.png"],
       [14],
@@ -265,7 +265,7 @@ export const animationData_009 = {
       [364, 186, 147, 69]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [11],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -285,7 +285,7 @@ export const animationData_009 = {
       [0, 0, -2, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [3, 11, -1, 0, 0],
@@ -336,7 +336,7 @@ export const animationData_009 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [3, 11, -1, 0, 0],
@@ -387,7 +387,7 @@ export const animationData_009 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [2, 12, 1, 0, 0, "腰"],
@@ -464,7 +464,7 @@ export const animationData_009 = {
       [11, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [2, 4, -1, 0, 0, "ダミー"],

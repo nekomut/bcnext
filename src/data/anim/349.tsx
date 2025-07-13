@@ -5,7 +5,7 @@ export const animationData_349 = {
   "f": {
     "name": "ぐでぐでプリン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["349_f.png"],
       [38],
@@ -49,7 +49,7 @@ export const animationData_349 = {
       [414, 82, 10, 22, "右足"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [44],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -102,7 +102,7 @@ export const animationData_349 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [52],
       [3, 9, -1, 0, 0],
@@ -463,7 +463,7 @@ export const animationData_349 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [4, 11, -1, 0, 0],
@@ -629,7 +629,7 @@ export const animationData_349 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [82],
       [2, 4, 1, 0, 0, "ネコダミー<color=7>"],
@@ -1540,7 +1540,7 @@ export const animationData_349 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [2, 4, 1, 0, 0, "ネコダミー<color=7>"],
@@ -1629,7 +1629,7 @@ export const animationData_349 = {
   "c": {
     "name": "ぐでぐでアラモード",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["349_c.png"],
       [47],
@@ -1682,7 +1682,7 @@ export const animationData_349 = {
       [219, 225, 17, 24, "足追加"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [59],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -1750,7 +1750,7 @@ export const animationData_349 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [46],
       [3, 9, -1, 0, 0, "影　兼用"],
@@ -2057,7 +2057,7 @@ export const animationData_349 = {
       [24, 1050, 2, -1]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [4, 11, -1, 0, 0, "ネコボディ"],
@@ -2458,7 +2458,7 @@ export const animationData_349 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [87],
       [2, 4, 1, 0, 0],
@@ -3276,7 +3276,7 @@ export const animationData_349 = {
       [89, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [4, 4, 1, 0, 0, "ネコボディ"],

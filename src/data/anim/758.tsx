@@ -5,7 +5,7 @@ export const animationData_758 = {
   "f": {
     "name": "謎の傭兵トリクシー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["758_f.png"],
       [109],
@@ -3511,7 +3511,7 @@ export const animationData_758 = {
   "c": {
     "name": "復讐の傭兵トリクシー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["758_c.png"],
       [112],

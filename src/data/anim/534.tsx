@@ -5,7 +5,7 @@ export const animationData_534 = {
   "f": {
     "name": "冥界神ハデス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["534_f.png"],
       [98],
@@ -109,7 +109,7 @@ export const animationData_534 = {
       [406, 497, 14, 11, "097カロン手奥.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [179],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "000.png<color=7>"],
@@ -297,7 +297,7 @@ export const animationData_534 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [74],
       [3, 5, -1, 0, 0, "ハデス親ダミー<color=7>"],
@@ -773,7 +773,7 @@ export const animationData_534 = {
       [60, 500, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [24],
       [1, 9, -1, 0, 0, "ハデス親ダミー<color=7>"],
@@ -850,7 +850,7 @@ export const animationData_534 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [176],
       [1, 9, 1, 0, 0, "ハデス親ダミー<color=7>"],
@@ -3064,7 +3064,7 @@ export const animationData_534 = {
       [60, 500, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [43],
       [3, 5, 1, 0, 0, "ハデス親ダミー<color=7>"],
@@ -3201,7 +3201,7 @@ export const animationData_534 = {
   "c": {
     "name": "デスハーデス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["534_c.png"],
       [113],
@@ -3320,7 +3320,7 @@ export const animationData_534 = {
       [311, 463, 14, 11, "112カロン手奥.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [204],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "000.png<color=7>"],
@@ -3533,7 +3533,7 @@ export const animationData_534 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [91],
       [3, 5, -1, 0, 0, "ハデス親ダミー<color=7>"],
@@ -4064,7 +4064,7 @@ export const animationData_534 = {
       [25, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [37],
       [1, 9, -1, 0, 0, "ハデス親ダミー<color=7>"],
@@ -4180,7 +4180,7 @@ export const animationData_534 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [201],
       [1, 9, 1, 0, 0, "ハデス親ダミー<color=7>"],
@@ -7392,7 +7392,7 @@ export const animationData_534 = {
       [60, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [53],
       [3, 5, 1, 0, 0, "ハデス親ダミー<color=7>"],
@@ -7559,7 +7559,7 @@ export const animationData_534 = {
   "s": {
     "name": "Gデスハーデス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["534_s.png"],
       [145],

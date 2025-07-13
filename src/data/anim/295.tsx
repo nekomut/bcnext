@@ -5,7 +5,7 @@ export const animationData_295 = {
   "f": {
     "name": "ネコほむら",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["295_f.png"],
       [34],
@@ -45,7 +45,7 @@ export const animationData_295 = {
       [56, 233, 16, 21, "腕追加"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [29],
       [-1, -1, 0, 0, 0, 0, 1, 1, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -83,7 +83,7 @@ export const animationData_295 = {
       [0, 0, 0, 0, 5, 0, "カバン１"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -200,7 +200,7 @@ export const animationData_295 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [6, 11, -1, 0, 0],
@@ -275,7 +275,7 @@ export const animationData_295 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [42],
       [2, 4, 1, 0, 0, "ダミー"],
@@ -652,7 +652,7 @@ export const animationData_295 = {
       [47, 600, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [2, 4, 1, 0, 0, "ダミー"],
@@ -768,7 +768,7 @@ export const animationData_295 = {
   "c": {
     "name": "魔法少女ネコほむら",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["295_c.png"],
       [44],
@@ -818,7 +818,7 @@ export const animationData_295 = {
       [226, 43, 20, 42]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [41],
       [-1, -1, 0, 0, 0, 0, 1, 1, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -868,7 +868,7 @@ export const animationData_295 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -1021,7 +1021,7 @@ export const animationData_295 = {
       [40, 10, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [13, 3, -1, 0, 0],
@@ -1122,7 +1122,7 @@ export const animationData_295 = {
       [10, 10, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [63],
       [1, 9, 1, 0, 0],
@@ -1559,7 +1559,7 @@ export const animationData_295 = {
       [35, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [2, 4, 1, 0, 0, "ダミー"],

@@ -1343,7 +1343,7 @@ export const animationData_544 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [43],
       [149, 12, -1, 0, 0, "エフェクト親<color=7>"],
@@ -6407,7 +6407,7 @@ export const animationData_544 = {
       [115, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [48],
       [2, 4, 1, 0, 0, "キャラ親<color=7>"],

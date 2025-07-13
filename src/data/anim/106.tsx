@@ -5,7 +5,7 @@ export const animationData_106 = {
   "f": {
     "name": "召し豚のカイ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["106_f.png"],
       [80],
@@ -91,7 +91,7 @@ export const animationData_106 = {
       [396, 134, 6, 5, "口_攻撃02"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [82],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -182,7 +182,7 @@ export const animationData_106 = {
       [0, 0, 19, 33, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [91],
       [2, 4, -1, 0, 0, "影"],
@@ -828,7 +828,7 @@ export const animationData_106 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [89],
       [2, 8, -1, 0, 0, "影"],
@@ -1451,7 +1451,7 @@ export const animationData_106 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [102],
       [2, 4, 1, 0, 0, "影"],
@@ -2619,7 +2619,7 @@ export const animationData_106 = {
       [150, -50, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [2, 8, -1, 0, 0, "影"],
@@ -2741,7 +2741,7 @@ export const animationData_106 = {
   "c": {
     "name": "召し豚のカイμ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["106_c.png"],
       [87],
@@ -2834,7 +2834,7 @@ export const animationData_106 = {
       [308, 229, 11, 19, "子豚耳右イルミ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [105],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -2948,7 +2948,7 @@ export const animationData_106 = {
       [0, 0, 19, 33, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [107],
       [2, 4, -1, 0, 0, "影"],
@@ -3677,7 +3677,7 @@ export const animationData_106 = {
       [5, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [107],
       [2, 8, -1, 0, 0, "影"],
@@ -4392,7 +4392,7 @@ export const animationData_106 = {
       [5, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [147],
       [2, 4, 1, 0, 0, "影"],
@@ -6205,7 +6205,7 @@ export const animationData_106 = {
       [150, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [2, 8, -1, 0, 0, "影"],
@@ -6375,7 +6375,7 @@ export const animationData_106 = {
   "s": {
     "name": "召し猪のカイμ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["106_s.png"],
       [121],
@@ -6502,7 +6502,7 @@ export const animationData_106 = {
       [406, 73, 21, 10, "娘帽子"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [182],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -6693,7 +6693,7 @@ export const animationData_106 = {
       [0, 0, 19, 33, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [195],
       [2, 8, -1, 0, 0],
@@ -7987,7 +7987,7 @@ export const animationData_106 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [193],
       [3, 4, -1, 0, 0],
@@ -9286,7 +9286,7 @@ export const animationData_106 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [273],
       [2, 4, 1, 0, 0],
@@ -13593,7 +13593,7 @@ export const animationData_106 = {
       [119, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [84],
       [2, 8, 1, 0, 0],

@@ -5,7 +5,7 @@ export const animationData_275 = {
   "f": {
     "name": "真夏のホワイトラビット",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["275_f.png"],
       [89],
@@ -100,7 +100,7 @@ export const animationData_275 = {
       [189, 58, 41, 40]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [95],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0],
@@ -204,7 +204,7 @@ export const animationData_275 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [103],
       [2, 5, -1, 0, 0],
@@ -988,7 +988,7 @@ export const animationData_275 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [94],
       [3, 11, -1, 0, 0],
@@ -1894,7 +1894,7 @@ export const animationData_275 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [265],
       [1, 8, 1, 0, 0, "影"],
@@ -5292,7 +5292,7 @@ export const animationData_275 = {
       [67, 2, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [101],
       [2, 9, 1, 0, 0, "腰"],
@@ -5603,7 +5603,7 @@ export const animationData_275 = {
   "c": {
     "name": "真夏のブラックキャット",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["275_c.png"],
       [98],
@@ -5707,7 +5707,7 @@ export const animationData_275 = {
       [238, 174, 41, 44]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [105],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0],
@@ -5821,7 +5821,7 @@ export const animationData_275 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [126],
       [2, 5, -1, 0, 0],
@@ -6734,7 +6734,7 @@ export const animationData_275 = {
       [0, 38, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [110],
       [3, 11, -1, 0, 0],
@@ -7625,7 +7625,7 @@ export const animationData_275 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [305],
       [1, 8, 1, 0, 0, "影"],
@@ -11482,7 +11482,7 @@ export const animationData_275 = {
       [82, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [136],
       [2, 9, 1, 0, 0, "腰"],
@@ -11898,7 +11898,7 @@ export const animationData_275 = {
   "s": {
     "name": "ブライトサマーキャット",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["275_s.png"],
       [113],

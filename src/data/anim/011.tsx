@@ -5,7 +5,7 @@ export const animationData_011 = {
   "f": {
     "name": "Mr.",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["011_f.png"],
       [27],
@@ -38,7 +38,7 @@ export const animationData_011 = {
       [162, 70, 20, 19]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [18],
       [-1, -1, 0, 0, 648, 361, 0, 0, 1000, 1000, 0, 255, 0, "ダミー親"],
@@ -65,7 +65,7 @@ export const animationData_011 = {
       [0, 0, 26, 76, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [8, 12, -1, 0, 0, "上下運動用"],
@@ -106,7 +106,7 @@ export const animationData_011 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [8, 12, -1, 0, 0, "上下運動用"],
@@ -129,7 +129,7 @@ export const animationData_011 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [8, 12, 7, 0, 0, "上下運動用"],
@@ -214,7 +214,7 @@ export const animationData_011 = {
       [16, -279, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [8, 12, -1, 0, 0, "上下運動用"],
@@ -237,7 +237,7 @@ export const animationData_011 = {
   "c": {
     "name": "Super Mr.",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["011_c.png"],
       [27],
@@ -270,7 +270,7 @@ export const animationData_011 = {
       [162, 70, 20, 19]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [14],
       [-1, -1, 0, 0, 648, 361, 0, 0, 1000, 1000, 0, 255, 0, "ダミー親"],
@@ -293,7 +293,7 @@ export const animationData_011 = {
       [0, 0, 26, 76, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [8, 12, -1, 0, 0, "上下運動用"],
@@ -334,7 +334,7 @@ export const animationData_011 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [8, 12, -1, 0, 0, "上下運動用"],
@@ -357,7 +357,7 @@ export const animationData_011 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [4, 12, 1, 0, 0, "上下運動用"],
@@ -420,7 +420,7 @@ export const animationData_011 = {
       [15, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [8, 12, -1, 0, 0, "上下運動用"],
@@ -446,7 +446,7 @@ export const animationData_011 = {
   "s": {
     "name": "Hyper Mr.",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["011_s.png"],
       [36],
@@ -488,7 +488,7 @@ export const animationData_011 = {
       [104, 145, 104, 38, "残像"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [17],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 255, 0, "ダミー親"],
@@ -514,7 +514,7 @@ export const animationData_011 = {
       [0, 0, 26, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [1, 5, -1, 0, 0, "上下運動用"],
@@ -557,7 +557,7 @@ export const animationData_011 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [5, 12, -1, 0, 0, "足"],
@@ -574,7 +574,7 @@ export const animationData_011 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [1, 4, 1, 0, 0, "やられ"],
@@ -678,7 +678,7 @@ export const animationData_011 = {
       [4, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [3, 12, -1, 0, 0, "腕"],

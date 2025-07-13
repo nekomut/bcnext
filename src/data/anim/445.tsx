@@ -5,7 +5,7 @@ export const animationData_445 = {
   "f": {
     "name": "戦隊チョキンドス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["445_f.png"],
       [63],
@@ -74,7 +74,7 @@ export const animationData_445 = {
       [269, 145, 11, 8, "062兵士_足.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [84],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1300, 1300, 0, 1000, 0, "000.png<color=7>"],
@@ -167,7 +167,7 @@ export const animationData_445 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [49],
       [3, 5, -1, 0, 0, "004ボディ.png<color=0>\t"],
@@ -746,7 +746,7 @@ export const animationData_445 = {
       [113, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [38],
       [3, 5, -1, 0, 0, "004ボディ.png<color=0>\t"],
@@ -1108,7 +1108,7 @@ export const animationData_445 = {
       [113, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [81],
       [2, 4, 1, 0, 0, "キャラ親ダミー<color=7>"],
@@ -1826,7 +1826,7 @@ export const animationData_445 = {
       [120, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [42],
       [57, 12, 1, 0, 0, "移動エフェクト<color=7>"],
@@ -1960,7 +1960,7 @@ export const animationData_445 = {
   "c": {
     "name": "戦隊パワーチョキンドス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["445_c.png"],
       [63],
@@ -2029,7 +2029,7 @@ export const animationData_445 = {
       [269, 145, 11, 8, "062兵士_足.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [84],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1300, 1300, 0, 1000, 0, "000.png<color=7>"],
@@ -2122,7 +2122,7 @@ export const animationData_445 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [50],
       [3, 5, -1, 0, 0, "004ボディ.png<color=0>\t"],
@@ -2706,7 +2706,7 @@ export const animationData_445 = {
       [113, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [38],
       [3, 5, -1, 0, 0, "004ボディ.png<color=0>\t"],
@@ -3068,7 +3068,7 @@ export const animationData_445 = {
       [113, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [81],
       [2, 4, 1, 0, 0, "キャラ親ダミー<color=7>"],
@@ -3786,7 +3786,7 @@ export const animationData_445 = {
       [120, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [42],
       [57, 12, 1, 0, 0, "移動エフェクト<color=7>"],

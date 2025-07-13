@@ -5,7 +5,7 @@ export const animationData_010 = {
   "f": {
     "name": "カンフーにゃんこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["010_f.png"],
       [19],
@@ -30,7 +30,7 @@ export const animationData_010 = {
       [92, 41, 24, 39]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [19],
       [-1, -1, 0, 0, 628, 400, 0, 0, 1790, 1790, 0, 255, 0, "制御用"],
@@ -58,7 +58,7 @@ export const animationData_010 = {
       [0, 0, -40, 23, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [14, 12, -1, 0, 0, "胴体"],
@@ -164,7 +164,7 @@ export const animationData_010 = {
       [27, -10, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [14, 12, -1, 0, 0, "胴体"],
@@ -270,7 +270,7 @@ export const animationData_010 = {
       [27, -10, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [14, 12, 1, 0, 0, "胴体"],
@@ -514,7 +514,7 @@ export const animationData_010 = {
       [40, 2, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [14, 12, -1, 0, 0, "胴体"],
@@ -534,7 +534,7 @@ export const animationData_010 = {
   "c": {
     "name": "酔拳にゃんこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["010_c.png"],
       [29],
@@ -605,7 +605,7 @@ export const animationData_010 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [29],
       [-1, -1, 0, 0, 628, 400, 0, 0, 1790, 1790, 0, 255, 0, "制御用"],
@@ -643,7 +643,7 @@ export const animationData_010 = {
       [0, 0, -44, 23, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [14, 12, -1, 0, 0, "胴体"],
@@ -758,7 +758,7 @@ export const animationData_010 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [14, 12, -1, 0, 0, "胴体"],
@@ -826,7 +826,7 @@ export const animationData_010 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [4, 11, 1, 0, 0, "右腕１"],
@@ -1046,7 +1046,7 @@ export const animationData_010 = {
       [45, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [14, 12, -1, 0, 0, "胴体"],
@@ -1094,7 +1094,7 @@ export const animationData_010 = {
   "s": {
     "name": "ネコダンサー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["010_s.png"],
       [28],
@@ -1128,7 +1128,7 @@ export const animationData_010 = {
       [142, 118, 92, 136, "エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [26],
       [-1, -1, 0, 0, 0, 18, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -1163,7 +1163,7 @@ export const animationData_010 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [3, 4, -1, 0, 0, "キャラダミー"],
@@ -1400,7 +1400,7 @@ export const animationData_010 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [4, 4, -1, 0, 0, "下半身"],
@@ -1704,7 +1704,7 @@ export const animationData_010 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [69],
       [3, 5, 1, 0, 0, "キャラダミー"],
@@ -2169,7 +2169,7 @@ export const animationData_010 = {
       [45, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [3, 4, -1, 0, 0, "キャラダミー"],

@@ -5,7 +5,7 @@ export const animationData_098 = {
   "f": {
     "name": "狂乱のネコトカゲ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["098_f.png"],
       [29],
@@ -40,7 +40,7 @@ export const animationData_098 = {
       [1, 135, 53, 53, "光"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [10],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -59,7 +59,7 @@ export const animationData_098 = {
       [0, 0, 0, 2, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [2, 5, -1, 0, 0, "体"],
@@ -123,7 +123,7 @@ export const animationData_098 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [2, 5, -1, 0, 0, "体"],
@@ -152,7 +152,7 @@ export const animationData_098 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [2, 5, 1, 0, 0, "体"],
@@ -328,7 +328,7 @@ export const animationData_098 = {
       [15, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [2, 5, -1, 0, 0, "体"],
@@ -363,7 +363,7 @@ export const animationData_098 = {
   "c": {
     "name": "狂乱のネコドラゴン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["098_c.png"],
       [46],
@@ -415,7 +415,7 @@ export const animationData_098 = {
       [435, 203, 43, 44, "光"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [14],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -438,7 +438,7 @@ export const animationData_098 = {
       [0, 0, 0, 2, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [2, 5, -1, 0, 0, "体"],
@@ -547,7 +547,7 @@ export const animationData_098 = {
       [32, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [2, 5, -1, 0, 0, "体"],
@@ -582,7 +582,7 @@ export const animationData_098 = {
       [0, -2, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [52],
       [2, 7, 1, 0, 0, "体"],
@@ -954,7 +954,7 @@ export const animationData_098 = {
       [24, -25, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [2, 2, -1, 0, 0, "体"],
@@ -1016,7 +1016,7 @@ export const animationData_098 = {
   "s": {
     "name": "大狂乱のネコキングドラゴン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["098_s.png"],
       [58],
@@ -1080,7 +1080,7 @@ export const animationData_098 = {
       [233, 96, 22, 19, "焦げ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [55],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -1144,7 +1144,7 @@ export const animationData_098 = {
       [0, 0, 0, 2, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [57],
       [3, 5, -1, 0, 0, "身体通常"],
@@ -1515,7 +1515,7 @@ export const animationData_098 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [24, 8, -1, 0, 0],
@@ -1547,7 +1547,7 @@ export const animationData_098 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [146],
       [1, 4, 1, 0, 0, "ダミー"],
@@ -2570,7 +2570,7 @@ export const animationData_098 = {
       [20, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [2, 4, 1, 0, 0, "cダミー"],

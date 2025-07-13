@@ -5,7 +5,7 @@ export const animationData_066 = {
   "f": {
     "name": "KHM48",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["066_f.png"],
       [53],
@@ -64,7 +64,7 @@ export const animationData_066 = {
       [297, 217, 28, 28, "右手3"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [55],
       [-1, -1, 0, 0, 480, 320, 0, 0, 1250, 1250, 0, 1000, 0, "原点"],
@@ -128,7 +128,7 @@ export const animationData_066 = {
       [0, 0, -18, 120, 10, 0, "原点"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [1, 5, -1, 0, 0, "原点"],
@@ -352,7 +352,7 @@ export const animationData_066 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [4, 2, -1, 0, 0, "原点"],
@@ -527,7 +527,7 @@ export const animationData_066 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [67],
       [1, 11, 1, 0, 0, "原点"],
@@ -1066,7 +1066,7 @@ export const animationData_066 = {
       [39, 6, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [69],
       [1, 11, 1, 0, 0, "原点"],
@@ -1281,7 +1281,7 @@ export const animationData_066 = {
   "c": {
     "name": "ダークKHM48",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["066_c.png"],
       [68],
@@ -1355,7 +1355,7 @@ export const animationData_066 = {
       [323, 123, 28, 88, "うねうね7"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [65],
       [-1, -1, 0, 0, 480, 320, 0, 0, 1250, 1250, 0, 1000, 0, "原点"],
@@ -1429,7 +1429,7 @@ export const animationData_066 = {
       [0, 0, -18, 120, 10, 0, "原点"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [55],
       [1, 5, -1, 0, 0, "原点"],
@@ -1769,7 +1769,7 @@ export const animationData_066 = {
       [28, 62, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [53],
       [4, 2, -1, 0, 0, "原点"],
@@ -2129,7 +2129,7 @@ export const animationData_066 = {
       [28, 62, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [86],
       [1, 11, 1, 0, 0, "原点"],
@@ -2888,7 +2888,7 @@ export const animationData_066 = {
       [28, 62, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [73],
       [1, 11, 1, 0, 0, "原点"],
@@ -3115,7 +3115,7 @@ export const animationData_066 = {
   "s": {
     "name": "KHM46",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["066_s.png"],
       [64],
@@ -3185,7 +3185,7 @@ export const animationData_066 = {
       [83, 26, 1, 1]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [76],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー"],
@@ -3270,7 +3270,7 @@ export const animationData_066 = {
       [0, 0, 0, 0, 5, 0, "原点"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [65],
       [1, 5, -1, 0, 0, "原点"],
@@ -3671,7 +3671,7 @@ export const animationData_066 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [4, 2, -1, 0, 0, "原点"],
@@ -3977,7 +3977,7 @@ export const animationData_066 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [111],
       [1, 11, 1, 0, 0],
@@ -4999,7 +4999,7 @@ export const animationData_066 = {
       [31, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [97],
       [1, 4, 1, 0, 0],

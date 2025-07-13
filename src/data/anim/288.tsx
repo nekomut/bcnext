@@ -5,7 +5,7 @@ export const animationData_288 = {
   "f": {
     "name": "鹿目まどか",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["288_f.png"],
       [127],
@@ -138,7 +138,7 @@ export const animationData_288 = {
       [353, 195, 24, 14, "靴頭04"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [162],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -309,7 +309,7 @@ export const animationData_288 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [210],
       [2, 4, -1, 0, 0, "影"],
@@ -1400,7 +1400,7 @@ export const animationData_288 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [67],
       [3, 11, -1, 0, 0, "キャラダミー"],
@@ -1777,7 +1777,7 @@ export const animationData_288 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [316],
       [2, 4, 1, 0, 0, "影"],
@@ -4050,7 +4050,7 @@ export const animationData_288 = {
       [73, -230, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [129],
       [3, 4, 1, 0, 0, "キャラダミー"],
@@ -4445,7 +4445,7 @@ export const animationData_288 = {
   "c": {
     "name": "まどか＆ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["288_c.png"],
       [131],
@@ -4582,7 +4582,7 @@ export const animationData_288 = {
       [426, 132, 9, 10, "ねこ手"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [179],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -4770,7 +4770,7 @@ export const animationData_288 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [222],
       [2, 4, -1, 0, 0, "影"],
@@ -5914,7 +5914,7 @@ export const animationData_288 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [74],
       [3, 11, -1, 0, 0, "キャラダミー"],
@@ -6323,7 +6323,7 @@ export const animationData_288 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [362],
       [2, 4, 1, 0, 0, "影"],
@@ -8943,7 +8943,7 @@ export const animationData_288 = {
       [74, 700, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [157],
       [3, 4, 1, 0, 0, "キャラダミー"],
@@ -9422,7 +9422,7 @@ export const animationData_288 = {
   "s": {
     "name": "アルティメットまどか",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["288_s.png"],
       [195],

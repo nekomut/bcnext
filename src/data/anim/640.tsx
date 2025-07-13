@@ -5,7 +5,7 @@ export const animationData_640 = {
   "f": {
     "name": "ジェアー＆ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["640_f.png"],
       [98],
@@ -3139,7 +3139,7 @@ export const animationData_640 = {
   "c": {
     "name": "ジェアー＆ネコCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["640_c.png"],
       [98],

@@ -5,7 +5,7 @@ export const animationData_114 = {
   "f": {
     "name": "よいち",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["114_f.png"],
       [21],
@@ -32,7 +32,7 @@ export const animationData_114 = {
       [1, 112, 78, 3, "弓糸"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [22],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -63,7 +63,7 @@ export const animationData_114 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [2, 4, -1, 0, 0, "影"],
@@ -151,7 +151,7 @@ export const animationData_114 = {
       [33, -200, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [3, 11, -1, 0, 0],
@@ -213,7 +213,7 @@ export const animationData_114 = {
       [44, 0, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [2, 10, 1, 0, 0, "キャラ全体"],
@@ -386,7 +386,7 @@ export const animationData_114 = {
       [56, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [2, 11, -1, 0, 0, "キャラ全体"],
@@ -424,7 +424,7 @@ export const animationData_114 = {
   "c": {
     "name": "よいちCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["114_c.png"],
       [21],
@@ -451,7 +451,7 @@ export const animationData_114 = {
       [1, 112, 78, 3, "弓糸"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [22],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -482,7 +482,7 @@ export const animationData_114 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [2, 4, -1, 0, 0, "影"],
@@ -570,7 +570,7 @@ export const animationData_114 = {
       [33, -200, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [3, 11, -1, 0, 0, "胸"],
@@ -632,7 +632,7 @@ export const animationData_114 = {
       [44, 0, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [2, 10, 1, 0, 0, "キャラ全体"],
@@ -805,7 +805,7 @@ export const animationData_114 = {
       [56, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [2, 11, -1, 0, 0, "キャラ全体"],

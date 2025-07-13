@@ -16593,7 +16593,7 @@ export const animationData_632 = {
   "s": {
     "name": "超電磁戦機ディア・ボロス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["632_s.png"],
       [150],

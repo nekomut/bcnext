@@ -5,7 +5,7 @@ export const animationData_208 = {
   "f": {
     "name": "キリンネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["208_f.png"],
       [11],
@@ -22,7 +22,7 @@ export const animationData_208 = {
       [226, 78, 73, 75]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0],
@@ -34,7 +34,7 @@ export const animationData_208 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [1, 12, -1, 0, 0, "影"],
@@ -49,7 +49,7 @@ export const animationData_208 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [1, 12, -1, 0, 0],
@@ -60,7 +60,7 @@ export const animationData_208 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [1, 12, 1, 0, 0],
@@ -78,7 +78,7 @@ export const animationData_208 = {
       [17, 10, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [2, 2, 1, 0, 0],
@@ -95,7 +95,7 @@ export const animationData_208 = {
   "c": {
     "name": "キリンネコキリン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["208_c.png"],
       [31],
@@ -132,7 +132,7 @@ export const animationData_208 = {
       [447, 199, 26, 26, "角発光用黒"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [16],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -157,7 +157,7 @@ export const animationData_208 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [1, 2, -1, 0, 0, "ダミー"],
@@ -255,7 +255,7 @@ export const animationData_208 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [1, 2, -1, 0, 0, "ダミー"],
@@ -284,7 +284,7 @@ export const animationData_208 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [1, 2, 1, 0, 0, "ダミー"],
@@ -398,7 +398,7 @@ export const animationData_208 = {
       [9, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [1, 2, 1, 0, 0, "ダミー"],

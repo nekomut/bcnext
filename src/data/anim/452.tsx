@@ -5,7 +5,7 @@ export const animationData_452 = {
   "f": {
     "name": "古代ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["452_f.png"],
       [14],
@@ -25,7 +25,7 @@ export const animationData_452 = {
       [100, 1, 17, 19, "013.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [10],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -44,7 +44,7 @@ export const animationData_452 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [13],
       [2, 5, -1, 0, 0, "000.png"],
@@ -145,7 +145,7 @@ export const animationData_452 = {
       [9, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [1],
       [9, 11, -1, 0, 0, "004尻尾.png"],
@@ -153,7 +153,7 @@ export const animationData_452 = {
       [0, 0, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [9],
       [3, 2, 1, 0, 0, "000.png"],
@@ -203,7 +203,7 @@ export const animationData_452 = {
       [10, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [17],
       [2, 11, 1, 0, 0, "002顔１.png"],
@@ -262,7 +262,7 @@ export const animationData_452 = {
   "c": {
     "name": "現代ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["452_c.png"],
       [15],
@@ -283,7 +283,7 @@ export const animationData_452 = {
       [95, 1, 15, 14, "014奥足補助.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [16],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -308,7 +308,7 @@ export const animationData_452 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [23],
       [2, 12, 1, 0, 0, "002待機・攻撃胴体.png"],
@@ -477,7 +477,7 @@ export const animationData_452 = {
       [20, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [2],
       [3, 11, -1, 0, 0, "004尻尾.png"],
@@ -494,7 +494,7 @@ export const animationData_452 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [9],
       [2, 11, 1, 0, 0, "002待機・攻撃胴体.png"],
@@ -556,7 +556,7 @@ export const animationData_452 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [25],
       [2, 12, 1, 0, 0, "002待機・攻撃胴体.png"],
@@ -639,7 +639,7 @@ export const animationData_452 = {
   "s": {
     "name": "未来ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["452_s.png"],
       [32],
@@ -1007,7 +1007,7 @@ export const animationData_452 = {
       [32, 1000, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [8],
       [3, 5, 1, 0, 0, "親　キャラ"],
@@ -1276,7 +1276,7 @@ export const animationData_452 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [27],
       [3, 4, 1, 0, 0, "親　キャラ"],

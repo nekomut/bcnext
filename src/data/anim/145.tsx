@@ -5,7 +5,7 @@ export const animationData_145 = {
   "f": {
     "name": "ねこガンマン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["145_f.png"],
       [16],
@@ -27,7 +27,7 @@ export const animationData_145 = {
       [105, 78, 21, 20, "足跡"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [28],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -64,7 +64,7 @@ export const animationData_145 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [3, 5, -1, 0, 0, "キャラダミー"],
@@ -204,7 +204,7 @@ export const animationData_145 = {
       [20, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [4, 11, -1, 0, 0, "体"],
@@ -277,7 +277,7 @@ export const animationData_145 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [5, 5, 1, 0, 0, "顔"],
@@ -529,7 +529,7 @@ export const animationData_145 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [4, 4, -1, 0, 0, "体"],
@@ -597,7 +597,7 @@ export const animationData_145 = {
   "c": {
     "name": "ねこウエスタン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["145_c.png"],
       [19],
@@ -622,7 +622,7 @@ export const animationData_145 = {
       [184, 37, 59, 14, "ファイヤ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [32],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -663,7 +663,7 @@ export const animationData_145 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [2, 4, -1, 0, 0, "影"],
@@ -793,7 +793,7 @@ export const animationData_145 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [4, 11, -1, 0, 0, "木馬ダミー"],
@@ -876,7 +876,7 @@ export const animationData_145 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [49],
       [4, 4, 1, 0, 0, "木馬ダミー<color=7>"],
@@ -1210,7 +1210,7 @@ export const animationData_145 = {
       [6, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [4, 4, -1, 0, 0, "体"],
@@ -1281,7 +1281,7 @@ export const animationData_145 = {
   "s": {
     "name": "ねこロデオ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["145_s.png"],
       [32],
@@ -1319,7 +1319,7 @@ export const animationData_145 = {
       [77, 118, 11, 12, "031耳.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [58],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -1386,7 +1386,7 @@ export const animationData_145 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [65],
       [1, 5, -1, 0, 0, "全体ダミー<color=7>"],
@@ -1726,7 +1726,7 @@ export const animationData_145 = {
       [30, 200, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [4, 11, -1, 0, 0, "021棒.png"],
@@ -1963,7 +1963,7 @@ export const animationData_145 = {
       [30, 200, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [69],
       [19, 5, 1, 0, 0, "015牛１.png<color=12>"],
@@ -2615,7 +2615,7 @@ export const animationData_145 = {
       [24, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [4, 4, 1, 0, 0, "ロデオダミー<color=7>"],

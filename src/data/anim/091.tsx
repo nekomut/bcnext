@@ -5,7 +5,7 @@ export const animationData_091 = {
   "f": {
     "name": "狂乱のネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["902_f.png"],
       [9],
@@ -20,7 +20,7 @@ export const animationData_091 = {
       [1, 161, 47, 44, 3]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [5],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -34,7 +34,7 @@ export const animationData_091 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [4, 2, -1, 0, 0, "ダミー"],
@@ -53,7 +53,7 @@ export const animationData_091 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [3, 2, -1, 0, 0, "ダミー"],
@@ -61,7 +61,7 @@ export const animationData_091 = {
       [0, 2, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [3, 2, 1, 0, 0, "ダミー"],
@@ -97,7 +97,7 @@ export const animationData_091 = {
       [17, -20, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [3, 2, -1, 0, 0, "ダミー"],
@@ -123,7 +123,7 @@ export const animationData_091 = {
   "c": {
     "name": "狂乱のネコビルダー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["091_c.png"],
       [17],
@@ -146,7 +146,7 @@ export const animationData_091 = {
       [100, 143, 23, 35, "奥腕４"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [7],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -162,7 +162,7 @@ export const animationData_091 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [4, 2, -1, 0, 0, "ダミー"],
@@ -195,7 +195,7 @@ export const animationData_091 = {
       [16, 13, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [3, 2, -1, 0, 0, "ダミー"],
@@ -203,7 +203,7 @@ export const animationData_091 = {
       [0, 2, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [3, 2, 1, 0, 0, "ダミー"],
@@ -287,7 +287,7 @@ export const animationData_091 = {
       [8, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [3, 2, -1, 0, 0, "ダミー"],
@@ -322,7 +322,7 @@ export const animationData_091 = {
   "s": {
     "name": "大狂乱のネコモヒカン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["091_s.png"],
       [19],
@@ -347,7 +347,7 @@ export const animationData_091 = {
       [19, 84, 17, 18]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [15],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -371,7 +371,7 @@ export const animationData_091 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [3, 5, -1, 0, 0],
@@ -438,7 +438,7 @@ export const animationData_091 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [3, 2, -1, 0, 0, "ダミー"],
@@ -452,7 +452,7 @@ export const animationData_091 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [3, 2, 1, 0, 0, "ダミー"],
@@ -559,7 +559,7 @@ export const animationData_091 = {
       [15, 700, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [2, 4, 1, 0, 0],

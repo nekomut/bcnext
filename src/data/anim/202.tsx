@@ -5,7 +5,7 @@ export const animationData_202 = {
   "f": {
     "name": "ネコ小籠包",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["202_f.png"],
       [10],
@@ -21,7 +21,7 @@ export const animationData_202 = {
       [2, 243, 42, 3, "影"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [5],
       [-1, -1, 0, 0, 0, 0, 0, 1, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -35,7 +35,7 @@ export const animationData_202 = {
       [0, 0, 0, 1, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [3, 5, -1, 0, 0],
@@ -54,7 +54,7 @@ export const animationData_202 = {
       [16, 2, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [0, 2, -1, 0, 0],
@@ -62,7 +62,7 @@ export const animationData_202 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [3, 2, 1, 0, 0, "噛む"],
@@ -95,7 +95,7 @@ export const animationData_202 = {
       [30, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [2, 4, 1, 0, 0],
@@ -121,7 +121,7 @@ export const animationData_202 = {
   "c": {
     "name": "ネコ大籠包",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["202_c.png"],
       [24],
@@ -151,7 +151,7 @@ export const animationData_202 = {
       [298, 194, 127, 29, "エフェクト04"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [10],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -170,7 +170,7 @@ export const animationData_202 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -262,7 +262,7 @@ export const animationData_202 = {
       [25, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [3, 2, -1, 0, 0],
@@ -311,7 +311,7 @@ export const animationData_202 = {
       [25, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [1, 4, 1, 0, 0, "影"],
@@ -522,7 +522,7 @@ export const animationData_202 = {
       [23, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [1, 9, 1, 0, 0],

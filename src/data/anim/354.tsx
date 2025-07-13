@@ -5,7 +5,7 @@ export const animationData_354 = {
   "f": {
     "name": "常夏の果実カイ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["354_f.png"],
       [124],
@@ -135,7 +135,7 @@ export const animationData_354 = {
       [453, 188, 26, 8, "まゆげ追加"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [100],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -244,7 +244,7 @@ export const animationData_354 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [102],
       [2, 4, -1, 0, 0, "影"],
@@ -987,7 +987,7 @@ export const animationData_354 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [98],
       [2, 4, -1, 0, 0, "影"],
@@ -1694,7 +1694,7 @@ export const animationData_354 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [115],
       [2, 9, 1, 0, 0],
@@ -2841,7 +2841,7 @@ export const animationData_354 = {
       [54, 30000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [49],
       [2, 8, 1, 0, 0, "影"],
@@ -2996,7 +2996,7 @@ export const animationData_354 = {
   "c": {
     "name": "常夏の果実カイμ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["354_c.png"],
       [126],
@@ -3128,7 +3128,7 @@ export const animationData_354 = {
       [198, 125, 24, 23]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [139],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -3276,7 +3276,7 @@ export const animationData_354 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [125],
       [2, 4, -1, 0, 0, "影"],
@@ -4138,7 +4138,7 @@ export const animationData_354 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [121],
       [2, 4, -1, 0, 0, "影"],
@@ -4963,7 +4963,7 @@ export const animationData_354 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [176],
       [2, 9, 1, 0, 0],
@@ -6614,7 +6614,7 @@ export const animationData_354 = {
       [70, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [61],
       [2, 8, 1, 0, 0, "影"],

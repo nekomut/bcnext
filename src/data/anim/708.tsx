@@ -5,7 +5,7 @@ export const animationData_708 = {
   "f": {
     "name": "ネコジェット",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["708_f.png"],
       [32],
@@ -3152,7 +3152,7 @@ export const animationData_708 = {
   "c": {
     "name": "ネコ宮金次郎",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["708_c.png"],
       [59],

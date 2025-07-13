@@ -1741,7 +1741,7 @@ export const animationData_600 = {
   "c": {
     "name": "ムース",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["600_c.png"],
       [122],

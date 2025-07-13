@@ -5,7 +5,7 @@ export const animationData_428 = {
   "f": {
     "name": "そうまにゃん",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["428_f.png"],
       [41],
@@ -52,7 +52,7 @@ export const animationData_428 = {
       [1, 87, 76, 80, "040攻撃EF09.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [28],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "■ダミー<color=7>"],
@@ -89,7 +89,7 @@ export const animationData_428 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [4, 5, -1, 0, 0, "002頭.png<color=10>"],
@@ -229,7 +229,7 @@ export const animationData_428 = {
       [60, 2, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [4, 5, -1, 0, 0, "002頭.png<color=10>"],
@@ -369,7 +369,7 @@ export const animationData_428 = {
       [60, 2, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [61],
       [3, 4, 1, 0, 0, "001影.png<color=16>"],
@@ -1239,7 +1239,7 @@ export const animationData_428 = {
       [41, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [4, 4, 1, 0, 0, "002頭.png<color=10>"],
@@ -1343,7 +1343,7 @@ export const animationData_428 = {
   "c": {
     "name": "スマートそうまにゃん",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["428_c.png"],
       [32],
@@ -1381,7 +1381,7 @@ export const animationData_428 = {
       [1, 1, 125, 57, "031攻撃EF11.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [32],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "■ダミー<color=7>"],
@@ -1422,7 +1422,7 @@ export const animationData_428 = {
       [0, 0, 0, 0, 5, 0, "■ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [4, 5, -1, 0, 0, "002頭.png<color=10>"],
@@ -1517,7 +1517,7 @@ export const animationData_428 = {
       [8, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [4, 5, -1, 0, 0, "002頭.png<color=10>"],
@@ -1612,7 +1612,7 @@ export const animationData_428 = {
       [8, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [73],
       [3, 4, 1, 0, 0, "001影.png<color=16>"],
@@ -2354,7 +2354,7 @@ export const animationData_428 = {
       [75, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [4, 4, 1, 0, 0, "002頭.png<color=10>"],

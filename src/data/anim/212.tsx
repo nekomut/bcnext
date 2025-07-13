@@ -5,7 +5,7 @@ export const animationData_212 = {
   "f": {
     "name": "ホワイトラビット",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["212_f.png"],
       [84],
@@ -95,7 +95,7 @@ export const animationData_212 = {
       [140, 32, 6, 6, "笑顔"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [77],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0],
@@ -181,7 +181,7 @@ export const animationData_212 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [86],
       [2, 5, -1, 0, 0],
@@ -832,7 +832,7 @@ export const animationData_212 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [3, 11, -1, 0, 0],
@@ -1548,7 +1548,7 @@ export const animationData_212 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [204],
       [1, 8, 1, 0, 0, "影"],
@@ -4870,7 +4870,7 @@ export const animationData_212 = {
       [61, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [64],
       [2, 9, 1, 0, 0, "腰"],
@@ -5070,7 +5070,7 @@ export const animationData_212 = {
   "c": {
     "name": "ブラックキャット",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["212_c.png"],
       [82],
@@ -5158,7 +5158,7 @@ export const animationData_212 = {
       [315, 133, 35, 74, "tuti4"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [77],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0],
@@ -5244,7 +5244,7 @@ export const animationData_212 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [94],
       [2, 5, -1, 0, 0],
@@ -5899,7 +5899,7 @@ export const animationData_212 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [3, 11, -1, 0, 0],
@@ -6266,7 +6266,7 @@ export const animationData_212 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [198],
       [1, 8, 1, 0, 0, "影"],
@@ -9474,7 +9474,7 @@ export const animationData_212 = {
       [61, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [72],
       [2, 9, 1, 0, 0, "腰"],
@@ -9698,7 +9698,7 @@ export const animationData_212 = {
   "s": {
     "name": "グレーフォックス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["212_s.png"],
       [117],
@@ -9821,7 +9821,7 @@ export const animationData_212 = {
       [255, 238, 19, 16, "115爆発コア.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [156],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000ダミー.png"],
@@ -9986,7 +9986,7 @@ export const animationData_212 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [190],
       [3, 4, -1, 0, 0, "■cダミー<color=7>"],
@@ -11181,7 +11181,7 @@ export const animationData_212 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [90],
       [4, 11, -1, 0, 0, "腰<color=10>"],
@@ -11860,7 +11860,7 @@ export const animationData_212 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [439],
       [2, 8, 1, 0, 0, "001影.png"],
@@ -17245,7 +17245,7 @@ export const animationData_212 = {
       [71, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [168],
       [3, 9, 1, 0, 0, "■cダミー<color=7>"],

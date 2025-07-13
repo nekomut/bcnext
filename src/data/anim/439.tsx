@@ -5,7 +5,7 @@ export const animationData_439 = {
   "f": {
     "name": "時空神クロノス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["439_f.png"],
       [73],
@@ -84,7 +84,7 @@ export const animationData_439 = {
       [379, 237, 27, 17, "072.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [203],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -296,7 +296,7 @@ export const animationData_439 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [51],
       [2, 9, -1, 0, 0, "\t"],
@@ -773,7 +773,7 @@ export const animationData_439 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [51],
       [2, 9, -1, 0, 0, "\t"],
@@ -1250,7 +1250,7 @@ export const animationData_439 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [235],
       [2, 9, 1, 0, 0, "\t"],
@@ -3974,7 +3974,7 @@ export const animationData_439 = {
       [185, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [85],
       [3, 11, 1, 0, 0, "\t"],
@@ -4237,7 +4237,7 @@ export const animationData_439 = {
   "c": {
     "name": "クロノストリガー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["439_c.png"],
       [77],
@@ -4320,7 +4320,7 @@ export const animationData_439 = {
       [441, 215, 31, 9, "076.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [237],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -4566,7 +4566,7 @@ export const animationData_439 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [56],
       [2, 9, -1, 0, 0, "\t"],
@@ -5064,7 +5064,7 @@ export const animationData_439 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [56],
       [2, 9, -1, 0, 0, "\t"],
@@ -5562,7 +5562,7 @@ export const animationData_439 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [276],
       [2, 9, 1, 0, 0, "\t"],
@@ -8684,7 +8684,7 @@ export const animationData_439 = {
       [185, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [97],
       [3, 11, 1, 0, 0, "\t"],
@@ -8983,7 +8983,7 @@ export const animationData_439 = {
   "s": {
     "name": "Gクロノストリガー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["439_s.png"],
       [108],

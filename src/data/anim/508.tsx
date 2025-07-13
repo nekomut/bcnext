@@ -5,7 +5,7 @@ export const animationData_508 = {
   "f": {
     "name": "ネコリュウ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["508_f.png"],
       [43],
@@ -54,7 +54,7 @@ export const animationData_508 = {
       [1, 1, 48, 61, "042着弾3.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [46],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "000.png<color=7>"],
@@ -109,7 +109,7 @@ export const animationData_508 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [27],
       [2, 5, -1, 0, 0, "キャラ親ダミー<color=7>\t"],
@@ -258,7 +258,7 @@ export const animationData_508 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [19],
       [2, 5, -1, 0, 0, "キャラ親ダミー<color=7>\t"],
@@ -348,7 +348,7 @@ export const animationData_508 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [70],
       [1, 4, 1, 0, 0, "001影.png<color=9>\t"],
@@ -932,7 +932,7 @@ export const animationData_508 = {
       [20, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [46],
       [3, 5, 1, 0, 0, "021腰.png<color=0>"],
@@ -1078,7 +1078,7 @@ export const animationData_508 = {
   "c": {
     "name": "ネコリュウCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["508_c.png"],
       [43],
@@ -1127,7 +1127,7 @@ export const animationData_508 = {
       [1, 1, 48, 61, "042着弾3.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [46],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "000.png<color=7>"],
@@ -1182,7 +1182,7 @@ export const animationData_508 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [27],
       [2, 5, -1, 0, 0, "キャラ親ダミー<color=7>\t"],
@@ -1331,7 +1331,7 @@ export const animationData_508 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [19],
       [2, 5, -1, 0, 0, "キャラ親ダミー<color=7>\t"],
@@ -1421,7 +1421,7 @@ export const animationData_508 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [70],
       [1, 4, 1, 0, 0, "001影.png<color=9>\t"],
@@ -2005,7 +2005,7 @@ export const animationData_508 = {
       [20, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [46],
       [3, 5, 1, 0, 0, "021腰.png<color=0>"],

@@ -5,7 +5,7 @@ export const animationData_375 = {
   "f": {
     "name": "記念ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["375_f.png"],
       [19],
@@ -30,7 +30,7 @@ export const animationData_375 = {
       [192, 80, 63, 33, "風圧エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [15],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1400, 1400, 0, 1000, 0, "ダミー"],
@@ -54,7 +54,7 @@ export const animationData_375 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [4, 5, -1, 0, 0, "体01"],
@@ -139,7 +139,7 @@ export const animationData_375 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [12, 12, 1, 0, 0, "キラキラエフェクト"],
@@ -153,7 +153,7 @@ export const animationData_375 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [4, 2, 1, 0, 0, "体01"],
@@ -725,7 +725,7 @@ export const animationData_375 = {
       [10, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [12, 12, 1, 0, 0, "キラキラエフェクト"],
@@ -772,7 +772,7 @@ export const animationData_375 = {
   "c": {
     "name": "記念ネコビルダー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["375_c.png"],
       [21],
@@ -799,7 +799,7 @@ export const animationData_375 = {
       [267, 111, 34, 53, "体01_左腕"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [17],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1400, 1400, 0, 1000, 0, "ダミー"],
@@ -825,7 +825,7 @@ export const animationData_375 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [4, 5, -1, 0, 0],
@@ -938,7 +938,7 @@ export const animationData_375 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [12, 12, 1, 0, 0],
@@ -952,7 +952,7 @@ export const animationData_375 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [3, 9, 1, 0, 0, "影"],
@@ -1554,7 +1554,7 @@ export const animationData_375 = {
       [20, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [12, 12, 1, 0, 0],

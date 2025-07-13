@@ -5,7 +5,7 @@ export const animationData_082 = {
   "f": {
     "name": "ネコ忍者～青～",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["082_f.png"],
       [17],
@@ -52,7 +52,7 @@ export const animationData_082 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [9],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 255, 0, "ダミー親"],
@@ -70,7 +70,7 @@ export const animationData_082 = {
       [0, 0, 48, 114, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -82,7 +82,7 @@ export const animationData_082 = {
       [8, 1, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -90,7 +90,7 @@ export const animationData_082 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -147,7 +147,7 @@ export const animationData_082 = {
       [17, 15, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [1, 2, -1, -1000, 1000, "ノックバック"],
@@ -161,7 +161,7 @@ export const animationData_082 = {
   "c": {
     "name": "ネコ忍者～橙～",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["082_c.png"],
       [17],
@@ -208,7 +208,7 @@ export const animationData_082 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [9],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 255, 0, "ダミー親"],
@@ -226,7 +226,7 @@ export const animationData_082 = {
       [0, 0, 48, 114, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -238,7 +238,7 @@ export const animationData_082 = {
       [8, 1, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -246,7 +246,7 @@ export const animationData_082 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -303,7 +303,7 @@ export const animationData_082 = {
       [17, 15, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [1, 2, -1, -1000, 1000, "ノックバック"],

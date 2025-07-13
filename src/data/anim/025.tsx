@@ -5,7 +5,7 @@ export const animationData_025 = {
   "f": {
     "name": "ネコムート",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["025_f.png"],
       [39],
@@ -50,7 +50,7 @@ export const animationData_025 = {
       [487, 26, 24, 186]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [52],
       [-1, -1, 0, 0, 568, 400, 0, 0, 1430, 1430, 0, 255, 0, "制御用"],
@@ -111,7 +111,7 @@ export const animationData_025 = {
       [0, 0, 0, 23, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [29, 12, -1, 0, 0, "左翼2"],
@@ -400,7 +400,7 @@ export const animationData_025 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [29, 12, -1, 0, 0, "左翼2"],
@@ -689,7 +689,7 @@ export const animationData_025 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [79],
       [29, 12, 1, 0, 0, "左翼2"],
@@ -1691,7 +1691,7 @@ export const animationData_025 = {
       [150, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [33, 12, 1, 0, 0, "左翼はばたき1"],
@@ -1738,7 +1738,7 @@ export const animationData_025 = {
   "c": {
     "name": "狂乱のネコムート",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["025_f.png"],
       [39],
@@ -1783,7 +1783,7 @@ export const animationData_025 = {
       [487, 26, 24, 186]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [62],
       [-1, -1, 0, 0, 718, 400, 0, 0, 1430, 1430, 0, 255, 0, "制御用"],
@@ -1854,7 +1854,7 @@ export const animationData_025 = {
       [0, 0, 0, 23, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [59],
       [29, 12, -1, 0, 0, "左翼2"],
@@ -2237,7 +2237,7 @@ export const animationData_025 = {
       [50, 500, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [59],
       [29, 12, -1, 0, 0, "左翼2"],
@@ -2620,7 +2620,7 @@ export const animationData_025 = {
       [50, 500, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [103],
       [29, 12, 1, 0, 0, "左翼2"],
@@ -4001,7 +4001,7 @@ export const animationData_025 = {
       [150, -150, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [33, 12, 1, 0, 0, "左翼はばたき1"],
@@ -4048,7 +4048,7 @@ export const animationData_025 = {
   "s": {
     "name": "覚醒のネコムート",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["025_s.png"],
       [69],
@@ -4123,7 +4123,7 @@ export const animationData_025 = {
       [130, 42, 17, 28]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [78],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1200, 1200, 0, 1000, 0, "DM"],
@@ -4210,7 +4210,7 @@ export const animationData_025 = {
       [0, 0, -2, 0, 5, 0, "DM"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [97],
       [1, 9, -1, 0, 0],
@@ -4688,7 +4688,7 @@ export const animationData_025 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [97],
       [1, 9, -1, 0, 0],
@@ -5166,7 +5166,7 @@ export const animationData_025 = {
       [3, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [234],
       [1, 4, 1, 0, 0],
@@ -8033,7 +8033,7 @@ export const animationData_025 = {
       [32, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [35],
       [2, 11, 1, 0, 0],

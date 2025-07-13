@@ -5,7 +5,7 @@ export const animationData_521 = {
   "f": {
     "name": "ネコメデューサ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["521_f.png"],
       [112],
@@ -123,7 +123,7 @@ export const animationData_521 = {
       [315, 135, 12, 29]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [120],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "原点"],
@@ -252,7 +252,7 @@ export const animationData_521 = {
       [0, 0, 0, 0, 5, 0, "原点"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [37],
       [3, 5, -1, 0, 0, "ネコ原点\t"],
@@ -478,7 +478,7 @@ export const animationData_521 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [32],
       [43, 12, -1, 0, 0, "魔法陣\t"],
@@ -675,7 +675,7 @@ export const animationData_521 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [146],
       [2, 10, 1, 0, 0, "ネコ原点"],
@@ -1633,7 +1633,7 @@ export const animationData_521 = {
       [8, -5, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [55],
       [3, 12, 1, 0, 0, "ネコ体<color=0>"],
@@ -1806,7 +1806,7 @@ export const animationData_521 = {
   "c": {
     "name": "ネコツインテール",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["999_c.png"],
       [42],
@@ -1854,7 +1854,7 @@ export const animationData_521 = {
       [226, 1, 45, 25, "041蛇追加.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [81],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0],
@@ -1944,7 +1944,7 @@ export const animationData_521 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [55],
       [2, 5, -1, 0, 0, "023普通足.png"],
@@ -2256,7 +2256,7 @@ export const animationData_521 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [52],
       [6, 11, -1, 0, 0, "006蛇A　先.png<color=1>"],
@@ -2543,7 +2543,7 @@ export const animationData_521 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [132],
       [2, 2, 1, 0, 0, "001頭.png"],
@@ -3513,7 +3513,7 @@ export const animationData_521 = {
       [50, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [55],
       [2, 2, 1, 0, 0, "001頭.png"],

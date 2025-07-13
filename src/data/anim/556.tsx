@@ -5,7 +5,7 @@ export const animationData_556 = {
   "f": {
     "name": "騎神アリババ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["556_f.png"],
       [73],
@@ -2058,7 +2058,7 @@ export const animationData_556 = {
   "c": {
     "name": "アリババ神帝",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["556_c.png"],
       [75],

@@ -5,7 +5,7 @@ export const animationData_792 = {
   "f": {
     "name": "愚地克巳",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["792_f.png"],
       [88],
@@ -3468,7 +3468,7 @@ export const animationData_792 = {
   "c": {
     "name": "愚地克巳CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["792_c.png"],
       [88],

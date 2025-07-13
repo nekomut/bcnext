@@ -5,7 +5,7 @@ export const animationData_036 = {
   "f": {
     "name": "ネコスイマー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["036_f.png"],
       [40],
@@ -51,7 +51,7 @@ export const animationData_036 = {
       [95, 104, 82, 89, "しぶき"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [38],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "親データ"],
@@ -98,7 +98,7 @@ export const animationData_036 = {
       [0, 0, -10, 2, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [5, 2, -1, 0, 0],
@@ -199,7 +199,7 @@ export const animationData_036 = {
       [31, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [2, 10, -1, 0, 0],
@@ -228,7 +228,7 @@ export const animationData_036 = {
       [0, 3, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [51],
       [1, 2, 1, 0, 0, "待機　影"],
@@ -595,7 +595,7 @@ export const animationData_036 = {
       [120, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [4, 2, -1, 0, 0],
@@ -606,7 +606,7 @@ export const animationData_036 = {
   "c": {
     "name": "ネコバタフライ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["036_c.png"],
       [46],
@@ -658,7 +658,7 @@ export const animationData_036 = {
       [200, 187, 54, 27, "移動　修正　波01"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [59],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "親データ<color=7>"],
@@ -726,7 +726,7 @@ export const animationData_036 = {
       [0, 0, -10, 2, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [55],
       [5, 9, -1, 0, 0, "移動　親データ"],
@@ -1069,7 +1069,7 @@ export const animationData_036 = {
       [24, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [2, 10, -1, 0, 0],
@@ -1101,7 +1101,7 @@ export const animationData_036 = {
       [32, 3, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [51],
       [1, 2, 1, 0, 0, "待機　影"],
@@ -1470,7 +1470,7 @@ export const animationData_036 = {
       [0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [4, 2, -1, 0, 0],
@@ -1481,7 +1481,7 @@ export const animationData_036 = {
   "s": {
     "name": "ネコ半魚人",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["036_s.png"],
       [62],
@@ -1549,7 +1549,7 @@ export const animationData_036 = {
       [163, 172, 18, 29, "061足1　3.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [81],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -1639,7 +1639,7 @@ export const animationData_036 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [2, 12, -1, 0, 0, "019やられ.png"],
@@ -2011,7 +2011,7 @@ export const animationData_036 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [1, 9, -1, 0, 0],
@@ -2093,7 +2093,7 @@ export const animationData_036 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [80],
       [1, 9, 1, 0, 0],
@@ -2980,7 +2980,7 @@ export const animationData_036 = {
       [72, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [1, 9, 1, 0, 0],

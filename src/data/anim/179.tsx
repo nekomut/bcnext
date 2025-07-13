@@ -5,7 +5,7 @@ export const animationData_179 = {
   "f": {
     "name": "タクヤとユキ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["179_f.png"],
       [29],
@@ -40,7 +40,7 @@ export const animationData_179 = {
       [99, 1, 96, 68, "土"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [27],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -76,7 +76,7 @@ export const animationData_179 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [4, 11, -1, 0, 0, "バイク"],
@@ -167,7 +167,7 @@ export const animationData_179 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [4, 11, -1, 0, 0, "バイク"],
@@ -268,7 +268,7 @@ export const animationData_179 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [42],
       [2, 4, 1, 0, 0, "影"],
@@ -696,7 +696,7 @@ export const animationData_179 = {
       [44, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [3, 5, -1, 0, 0, "キャラダミー<color=7>"],
@@ -764,7 +764,7 @@ export const animationData_179 = {
   "c": {
     "name": "タクヤとユキとネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["179_c.png"],
       [36],
@@ -806,7 +806,7 @@ export const animationData_179 = {
       [155, 191, 8, 11, "にゃんこ足02"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [35],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -850,7 +850,7 @@ export const animationData_179 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [4, 11, -1, 0, 0, "バイク"],
@@ -961,7 +961,7 @@ export const animationData_179 = {
       [4, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [4, 11, -1, 0, 0, "バイク"],
@@ -1079,7 +1079,7 @@ export const animationData_179 = {
       [4, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [68],
       [2, 4, 1, 0, 0, "影"],
@@ -1726,7 +1726,7 @@ export const animationData_179 = {
       [55, 0, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [3, 5, -1, 0, 0, "キャラダミー<color=7>"],
@@ -1830,7 +1830,7 @@ export const animationData_179 = {
   "s": {
     "name": "タクヤとビューティユキ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["179_s.png"],
       [50],
@@ -1886,7 +1886,7 @@ export const animationData_179 = {
       [344, 157, 73, 76, 6]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [42],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -1937,7 +1937,7 @@ export const animationData_179 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [4, 11, -1, 0, 0, "バイク"],
@@ -2093,7 +2093,7 @@ export const animationData_179 = {
       [8, -20, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [4, 11, -1, 0, 0, "バイク"],
@@ -2235,7 +2235,7 @@ export const animationData_179 = {
       [8, 150, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [73],
       [2, 4, 1, 0, 0, "影"],
@@ -2978,7 +2978,7 @@ export const animationData_179 = {
       [60, 150, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [3, 5, 1, 0, 0, "キャラダミー<color=7>"],

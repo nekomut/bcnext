@@ -5,7 +5,7 @@ export const animationData_442 = {
   "f": {
     "name": "子連れにゃんこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["442_f.png"],
       [45],
@@ -56,7 +56,7 @@ export const animationData_442 = {
       [89, 82, 52, 34, "044ヒットエフェクト.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [56],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1280, 1280, 0, 1000, 0, "000.png"],
@@ -121,7 +121,7 @@ export const animationData_442 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [28],
       [4, 5, -1, 0, 0, "010侍ネコ_帯.png<color=0>"],
@@ -271,7 +271,7 @@ export const animationData_442 = {
       [50, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [17],
       [4, 5, -1, 0, 0, "010侍ネコ_帯.png<color=0>"],
@@ -345,7 +345,7 @@ export const animationData_442 = {
       [60, 2, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [48],
       [5, 5, 1, 0, 0, "011侍ネコ_袈裟手前.png<color=3>"],
@@ -671,7 +671,7 @@ export const animationData_442 = {
       [80, 2, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [24],
       [2, 11, 1, 0, 0, "キャラ全体親<color=7>\t"],
@@ -751,7 +751,7 @@ export const animationData_442 = {
   "c": {
     "name": "ネコワゴンサービス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["999_c.png"],
       [64],
@@ -821,7 +821,7 @@ export const animationData_442 = {
       [1, 138, 107, 96, "063湯気3.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [107],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1280, 1280, 0, 1000, 0, "000.png"],
@@ -937,7 +937,7 @@ export const animationData_442 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [33],
       [3, 5, -1, 0, 0, "お姉さん親ダミー<color=7>\t"],
@@ -1213,7 +1213,7 @@ export const animationData_442 = {
       [13, 40, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [9],
       [4, 5, -1, 0, 0, "011お姉さん_スカート.png<color=0>\t"],
@@ -1263,7 +1263,7 @@ export const animationData_442 = {
       [60, 10, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [138],
       [3, 11, 1, 0, 0, "お姉さん親ダミー<color=7>"],
@@ -2315,7 +2315,7 @@ export const animationData_442 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [40],
       [2, 11, 1, 0, 0, "キャラ全体親<color=7>\t"],
@@ -2443,7 +2443,7 @@ export const animationData_442 = {
   "s": {
     "name": "ネコバケーション",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["442_s.png"],
       [62],
@@ -2511,7 +2511,7 @@ export const animationData_442 = {
       [149, 210, 11, 8, "061切れ目隠し.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [78],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1280, 1280, 0, 1000, 0, "■ダミー"],
@@ -2598,7 +2598,7 @@ export const animationData_442 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [39],
       [4, 5, -1, 0, 0, "■父ダミー<color=11>"],
@@ -2900,7 +2900,7 @@ export const animationData_442 = {
       [0, -1, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [11],
       [4, 5, -1, 0, 0, "■父ダミー<color=11>"],
@@ -2963,7 +2963,7 @@ export const animationData_442 = {
       [0, -1, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [114],
       [5, 5, 1, 0, 0, "002父　体.png<color=10>"],
@@ -3951,7 +3951,7 @@ export const animationData_442 = {
       [32, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [57],
       [3, 11, 1, 0, 0, "■キャラダミー<color=7>"],

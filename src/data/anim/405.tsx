@@ -5,7 +5,7 @@ export const animationData_405 = {
   "f": {
     "name": "ちびカヲル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["a.png"],
       [65],
@@ -76,7 +76,7 @@ export const animationData_405 = {
       [99, 238, 19, 15, "064.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [54],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "親ダミー"],
@@ -139,7 +139,7 @@ export const animationData_405 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [84],
       [4, 4, -1, 0, 0, "003上半身.png"],
@@ -574,7 +574,7 @@ export const animationData_405 = {
       [0, 57, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [7, 2, -1, 0, 0, "020目　通常.png"],
@@ -704,7 +704,7 @@ export const animationData_405 = {
       [60, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [111],
       [3, 4, 1, 0, 0, "043ネコ　胴体.png"],
@@ -1689,7 +1689,7 @@ export const animationData_405 = {
       [54, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [53],
       [5, 4, 1, 0, 0, "003上半身.png"],
@@ -1856,7 +1856,7 @@ export const animationData_405 = {
   "c": {
     "name": "プラグスーツのちびカヲル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["405_c.png"],
       [67],
@@ -1929,7 +1929,7 @@ export const animationData_405 = {
       [295, 69, 7, 7]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [65],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "親ダミー"],
@@ -2003,7 +2003,7 @@ export const animationData_405 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [102],
       [5, 4, -1, 0, 0, "003上半身.png"],
@@ -2552,7 +2552,7 @@ export const animationData_405 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [7, 2, -1, 0, 0, "020目　通常.png"],
@@ -2682,7 +2682,7 @@ export const animationData_405 = {
       [60, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [138],
       [3, 4, 1, 0, 0, "043ネコ　胴体.png"],
@@ -3905,7 +3905,7 @@ export const animationData_405 = {
       [83, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [75],
       [5, 4, 1, 0, 0, "003上半身.png"],
@@ -4138,7 +4138,7 @@ export const animationData_405 = {
   "s": {
     "name": "月の少年ちびカヲル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["405_s.png"],
       [78],
@@ -4222,7 +4222,7 @@ export const animationData_405 = {
       [314, 69, 8, 8, "075.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [90],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "親ダミー"],
@@ -4321,7 +4321,7 @@ export const animationData_405 = {
       [0, 0, 0, 0, 5, 0, "親ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [106],
       [3, 9, -1, 0, 0, "001ネコ影.png"],
@@ -4861,7 +4861,7 @@ export const animationData_405 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [42],
       [7, 2, -1, 0, 0, "020目　通常.png"],
@@ -5048,7 +5048,7 @@ export const animationData_405 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [212],
       [2, 4, 1, 0, 0, "001カヲル影.png"],
@@ -7064,7 +7064,7 @@ export const animationData_405 = {
       [97, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [91],
       [5, 4, 1, 0, 0, "003上半身.png"],

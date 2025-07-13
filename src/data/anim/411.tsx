@@ -5,7 +5,7 @@ export const animationData_411 = {
   "f": {
     "name": "ちびマリ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["411_f.png"],
       [81],
@@ -92,7 +92,7 @@ export const animationData_411 = {
       [243, 161, 8, 7, "080肌黒フチ.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [184],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -285,7 +285,7 @@ export const animationData_411 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [111],
       [3, 4, -1, 0, 0, "cダミー<color=7>"],
@@ -876,7 +876,7 @@ export const animationData_411 = {
       [15, -200, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [53, 12, -1, 0, 0, "049移動時ネコ　胴体.png<color=9>"],
@@ -1076,7 +1076,7 @@ export const animationData_411 = {
       [90, 0, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [183],
       [177, 12, 1, 0, 0, "046左太もも.png<color=4>"],
@@ -2268,7 +2268,7 @@ export const animationData_411 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [78],
       [4, 5, 1, 0, 0, "035下半身.png<color=0>"],
@@ -2510,7 +2510,7 @@ export const animationData_411 = {
   "c": {
     "name": "プラグスーツのちびマリ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["411_c.png"],
       [80],
@@ -2596,7 +2596,7 @@ export const animationData_411 = {
       [1, 202, 37, 38, "079移動用上半身.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [169],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -2774,7 +2774,7 @@ export const animationData_411 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [97],
       [3, 4, -1, 0, 0, "cダミー<color=7>"],
@@ -3301,7 +3301,7 @@ export const animationData_411 = {
       [0, 79, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [5, 11, -1, 0, 0, "034上半身.png<color=0>"],
@@ -3451,7 +3451,7 @@ export const animationData_411 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [176],
       [4, 4, 1, 0, 0, "035下半身.png<color=0>"],
@@ -4581,7 +4581,7 @@ export const animationData_411 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [79],
       [4, 5, 1, 0, 0, "035下半身.png<color=0>"],

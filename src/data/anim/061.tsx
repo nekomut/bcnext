@@ -5,7 +5,7 @@ export const animationData_061 = {
   "f": {
     "name": "ねこ寿司",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["061_f.png"],
       [23],
@@ -34,7 +34,7 @@ export const animationData_061 = {
       [1, 101, 74, 6, "影"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [8],
       [-1, -1, 0, 0, 430, 442, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー親"],
@@ -51,7 +51,7 @@ export const animationData_061 = {
       [0, 0, 35, 3, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [3, 2, -1, 0, 0, "回転"],
@@ -107,7 +107,7 @@ export const animationData_061 = {
       [20, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [3, 2, -1, 0, 0, "回転"],
@@ -121,7 +121,7 @@ export const animationData_061 = {
       [0, -12, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [3, 2, 1, 0, 0, "基礎"],
@@ -219,7 +219,7 @@ export const animationData_061 = {
       [20, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [3, 2, -1, 0, 0, "回転"],
@@ -245,7 +245,7 @@ export const animationData_061 = {
   "c": {
     "name": "ねこリーゼント",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["061_c.png"],
       [23],
@@ -274,7 +274,7 @@ export const animationData_061 = {
       [2, 171, 74, 6, "影"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [6],
       [-1, -1, 0, 0, 430, 442, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー親"],
@@ -289,7 +289,7 @@ export const animationData_061 = {
       [0, 0, 35, 3, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [3, 2, -1, 0, 0, "回転"],
@@ -336,7 +336,7 @@ export const animationData_061 = {
       [22, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [3, 2, -1, 0, 0, "回転"],
@@ -347,7 +347,7 @@ export const animationData_061 = {
       [0, 2, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [3, 2, 1, 0, 0, "基礎"],
@@ -415,7 +415,7 @@ export const animationData_061 = {
       [16, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [3, 2, -1, 0, 0, "回転"],
@@ -441,7 +441,7 @@ export const animationData_061 = {
   "s": {
     "name": "ネコ極上",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["061_s.png"],
       [38],
@@ -485,7 +485,7 @@ export const animationData_061 = {
       [404, 134, 42, 42, "加算"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [31],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -525,7 +525,7 @@ export const animationData_061 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [4, 2, -1, 0, 0, "皿１<color=0>"],
@@ -603,7 +603,7 @@ export const animationData_061 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [10, 12, -1, 0, 0, "efダミー<color=7>"],
@@ -611,7 +611,7 @@ export const animationData_061 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [71],
       [5, 5, 1, 0, 0],
@@ -1049,7 +1049,7 @@ export const animationData_061 = {
       [21, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [1, 5, 1, 0, 0, "全体ダミー<color=7>"],

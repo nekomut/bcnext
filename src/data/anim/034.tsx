@@ -5,7 +5,7 @@ export const animationData_034 = {
   "f": {
     "name": "ネコルガ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["034_f.png"],
       [8],
@@ -19,7 +19,7 @@ export const animationData_034 = {
       [37, 20, 37, 42, "頭"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [11],
       [-1, -1, 0, 0, 498, 458, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -39,7 +39,7 @@ export const animationData_034 = {
       [0, 0, 32, 3, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [8, 12, -1, 0, 0],
@@ -123,7 +123,7 @@ export const animationData_034 = {
       [211, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [8, 12, -1, 0, 0],
@@ -136,7 +136,7 @@ export const animationData_034 = {
       [100, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [10, 12, 1, 0, 0, "待機時上半身"],
@@ -205,7 +205,7 @@ export const animationData_034 = {
       [16, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [8, 12, -1, 0, 0],
@@ -229,7 +229,7 @@ export const animationData_034 = {
   "c": {
     "name": "ケサランパサラン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["040_c.png"],
       [23],
@@ -258,7 +258,7 @@ export const animationData_034 = {
       [485, 113, 26, 67, "パーティクル３"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [37],
       [-1, -1, 0, 0, 383, 465, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -304,7 +304,7 @@ export const animationData_034 = {
       [0, 0, 122, 10, 10, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [1, 9, -1, 0, 0, "影"],
@@ -522,7 +522,7 @@ export const animationData_034 = {
       [240, 4, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [3, 5, -1, 0, 0, "全体上下 骨盤_制御NULL<color=7>"],
@@ -704,7 +704,7 @@ export const animationData_034 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [53],
       [1, 8, 1, 0, 0, "影"],
@@ -1085,7 +1085,7 @@ export const animationData_034 = {
       [95, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [2, 11, 1, 0, 0, "足元_制御NULL<color=7>"],
@@ -1174,7 +1174,7 @@ export const animationData_034 = {
   "s": {
     "name": "ウルトラケサラン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["034_s.png"],
       [29],
@@ -1209,7 +1209,7 @@ export const animationData_034 = {
       [183, 193, 87, 62, "けむり"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [44],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -1262,7 +1262,7 @@ export const animationData_034 = {
       [0, 0, 122, 10, 10, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [1, 9, -1, 0, 0, "影"],
@@ -1516,7 +1516,7 @@ export const animationData_034 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [3, 5, -1, 0, 0, "全体上下 骨盤_制御NULL<color=7>"],
@@ -1734,7 +1734,7 @@ export const animationData_034 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [70],
       [1, 8, 1, 0, 0, "影"],
@@ -2205,7 +2205,7 @@ export const animationData_034 = {
       [100, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [2, 5, 1, 0, 0],

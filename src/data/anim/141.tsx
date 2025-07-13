@@ -5,7 +5,7 @@ export const animationData_141 = {
   "f": {
     "name": "神様",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["141_f.png"],
       [41],
@@ -52,7 +52,7 @@ export const animationData_141 = {
       [387, 150, 32, 37]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [28],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -89,7 +89,7 @@ export const animationData_141 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [1, 8, -1, 0, 0],
@@ -202,7 +202,7 @@ export const animationData_141 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [1, 8, -1, 0, 0],
@@ -315,7 +315,7 @@ export const animationData_141 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [73],
       [1, 4, 1, 0, 0, "ダミー"],
@@ -1381,7 +1381,7 @@ export const animationData_141 = {
       [77, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [2, 11, -1, 0, 0],
@@ -1431,7 +1431,7 @@ export const animationData_141 = {
   "c": {
     "name": "シークレット神様",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["141_c.png"],
       [41],
@@ -1478,7 +1478,7 @@ export const animationData_141 = {
       [387, 150, 32, 37]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [35],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1522,7 +1522,7 @@ export const animationData_141 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [1, 8, -1, 0, 0],
@@ -1647,7 +1647,7 @@ export const animationData_141 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [1, 8, -1, 0, 0],
@@ -1772,7 +1772,7 @@ export const animationData_141 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [82],
       [1, 4, 1, 0, 0, "ダミー"],
@@ -2976,7 +2976,7 @@ export const animationData_141 = {
       [50, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [2, 11, -1, 0, 0],

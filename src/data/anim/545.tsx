@@ -5,7 +5,7 @@ export const animationData_545 = {
   "f": {
     "name": "ネコファントム",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["545_f.png"],
       [26],
@@ -70,7 +70,7 @@ export const animationData_545 = {
       [0, 0, 0, 1, 5, 0, "親<color=0>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [12],
       [2, 4, -1, 0, 0],
@@ -234,7 +234,7 @@ export const animationData_545 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [11],
       [2, 4, -1, 0, 0],
@@ -631,7 +631,7 @@ export const animationData_545 = {
       [34, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [6],
       [8, 12, 1, 0, 0],
@@ -731,7 +731,7 @@ export const animationData_545 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [69],
       [1, 4, -1, 0, 0, "023楕円形 1.png"],
@@ -1097,7 +1097,7 @@ export const animationData_545 = {
       [240, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [69],
       [1, 4, -1, 0, 0, "023楕円形 1.png"],
@@ -2276,7 +2276,7 @@ export const animationData_545 = {
       [43, 500, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [34],
       [28, 12, 1, 0, 0, "024攻撃煙.png"],

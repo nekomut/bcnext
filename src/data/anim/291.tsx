@@ -5,7 +5,7 @@ export const animationData_291 = {
   "f": {
     "name": "巴マミ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["291_f.png"],
       [97],
@@ -108,7 +108,7 @@ export const animationData_291 = {
       [366, 164, 86, 62, 2]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [106],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -223,7 +223,7 @@ export const animationData_291 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [144],
       [3, 4, -1, 0, 0, "キャラダミー<color=7>"],
@@ -996,7 +996,7 @@ export const animationData_291 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [3, 11, -1, 0, 0, "キャラダミー"],
@@ -1231,7 +1231,7 @@ export const animationData_291 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [175],
       [2, 4, 1, 0, 0, "影"],
@@ -2822,7 +2822,7 @@ export const animationData_291 = {
       [36, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [98],
       [3, 4, 1, 0, 0, "キャラダミー<color=7>"],
@@ -3123,7 +3123,7 @@ export const animationData_291 = {
   "c": {
     "name": "マミ＆ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["291_c.png"],
       [104],
@@ -3233,7 +3233,7 @@ export const animationData_291 = {
       [310, 64, 57, 53, "火の粉追加加算用"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [118],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -3360,7 +3360,7 @@ export const animationData_291 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [149],
       [3, 4, -1, 0, 0, "キャラダミー<color=7>"],
@@ -4159,7 +4159,7 @@ export const animationData_291 = {
       [40, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [3, 11, -1, 0, 0, "キャラダミー"],
@@ -4417,7 +4417,7 @@ export const animationData_291 = {
       [60, 0, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [207],
       [2, 4, 1, 0, 0, "影"],
@@ -6286,7 +6286,7 @@ export const animationData_291 = {
       [35, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [107],
       [3, 4, 1, 0, 0, "キャラダミー<color=7>"],

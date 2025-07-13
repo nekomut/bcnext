@@ -5,7 +5,7 @@ export const animationData_063 = {
   "f": {
     "name": "ネコ運動会",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["063_f.png"],
       [17],
@@ -28,7 +28,7 @@ export const animationData_063 = {
       [158, 1, 51, 72, "kami3"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [11],
       [-1, -1, 0, 0, 452, 438, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -48,7 +48,7 @@ export const animationData_063 = {
       [0, 0, 0, 3, 1, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [4, 2, -1, 0, 0, "ダミー"],
@@ -92,7 +92,7 @@ export const animationData_063 = {
       [16, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [10, 2, -1, 0, 0],
@@ -103,7 +103,7 @@ export const animationData_063 = {
       [12, 10, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [10, 2, 1, 0, 0],
@@ -175,7 +175,7 @@ export const animationData_063 = {
       [8, 3, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [2, 11, -1, 0, 0, "ダミー"],
@@ -210,7 +210,7 @@ export const animationData_063 = {
   "c": {
     "name": "ネコラッチ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["063_c.png"],
       [22],
@@ -238,7 +238,7 @@ export const animationData_063 = {
       [124, 98, 23, 35, "攻撃腕左"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [16],
       [-1, -1, 0, 0, 452, 438, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -263,7 +263,7 @@ export const animationData_063 = {
       [0, 0, 0, -3, 1, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [4, 2, -1, 0, 0, "ダミー"],
@@ -327,12 +327,12 @@ export const animationData_063 = {
       [15, -1, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [3, 2, 1, 0, 0, "ダミー"],
@@ -439,7 +439,7 @@ export const animationData_063 = {
       [10, 3, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [2, 11, -1, 0, 0, "ダミー"],
@@ -480,7 +480,7 @@ export const animationData_063 = {
   "s": {
     "name": "ネコ棒倒し",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["063_s.png"],
       [40],
@@ -526,7 +526,7 @@ export const animationData_063 = {
       [282, 61, 96, 28, 3]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [33],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -568,7 +568,7 @@ export const animationData_063 = {
       [0, 0, 0, -3, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [4, 2, -1, 0, 0, "ダミー"],
@@ -664,7 +664,7 @@ export const animationData_063 = {
       [32, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [25, 2, -1, 0, 0],
@@ -694,7 +694,7 @@ export const animationData_063 = {
       [30, 28, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [3, 2, 1, 0, 0, "ダミー"],
@@ -941,7 +941,7 @@ export const animationData_063 = {
       [14, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [2, 11, 1, 0, 0, "ダミー"],

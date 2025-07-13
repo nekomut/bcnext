@@ -5,7 +5,7 @@ export const animationData_052 = {
   "f": {
     "name": "ネコシャーマン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["052_f.png"],
       [19],
@@ -30,7 +30,7 @@ export const animationData_052 = {
       [118, 43, 55, 36, "上ぼちゃ３"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [20],
       [-1, -1, 0, 0, 500, 437, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -59,7 +59,7 @@ export const animationData_052 = {
       [0, 0, 12, 2, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [15, 12, -1, 0, 0],
@@ -128,7 +128,7 @@ export const animationData_052 = {
       [30, 100, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [2, 11, -1, 0, 0, "ダミー"],
@@ -160,7 +160,7 @@ export const animationData_052 = {
       [0, 3, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [4, 4, 1, 0, 0, "ダミー"],
@@ -346,7 +346,7 @@ export const animationData_052 = {
       [21, -3, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [15, 12, -1, 0, 0, "ダミー"],
@@ -378,7 +378,7 @@ export const animationData_052 = {
   "c": {
     "name": "ネコラマンサー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["052_c.png"],
       [28],
@@ -412,7 +412,7 @@ export const animationData_052 = {
       [97, 84, 17, 15, "影の人顔しかめ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [23],
       [-1, -1, 0, 0, 514, 431, 1, 1, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -444,7 +444,7 @@ export const animationData_052 = {
       [0, 0, 0, 2, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [15, 12, -1, 0, 0, "ダミー"],
@@ -563,7 +563,7 @@ export const animationData_052 = {
       [12, -20, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [15, 12, -1, 0, 0, "ダミー"],
@@ -682,7 +682,7 @@ export const animationData_052 = {
       [12, -20, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [15, 8, 1, 0, 0, "攻撃影"],
@@ -878,7 +878,7 @@ export const animationData_052 = {
       [44, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [15, 12, -1, 0, 0],
@@ -913,7 +913,7 @@ export const animationData_052 = {
   "s": {
     "name": "ネコオドラマンサー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["052_s.png"],
       [86],
@@ -1005,7 +1005,7 @@ export const animationData_052 = {
       [297, 22, 83, 53, "EF　追加"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [71],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1085,7 +1085,7 @@ export const animationData_052 = {
       [0, 0, 0, 2, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [107],
       [3, 2, -1, 0, 0],
@@ -1944,7 +1944,7 @@ export const animationData_052 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [106],
       [3, 2, -1, 0, 0],
@@ -2764,7 +2764,7 @@ export const animationData_052 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [106],
       [3, 5, 1, 0, 0],
@@ -3702,7 +3702,7 @@ export const animationData_052 = {
       [30, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [69],
       [4, 9, 1, 0, 0],

@@ -5,7 +5,7 @@ export const animationData_333 = {
   "f": {
     "name": "黒獣ガオウ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["333_f.png"],
       [71],
@@ -82,7 +82,7 @@ export const animationData_333 = {
       [458, 194, 19, 12]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [127],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1740, 1740, 0, 1000, 0, "ダミー<color=7>"],
@@ -218,7 +218,7 @@ export const animationData_333 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [86],
       [4, 11, -1, 0, 0, "腰"],
@@ -915,7 +915,7 @@ export const animationData_333 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [4, 11, -1, 0, 0, "腰"],
@@ -1163,7 +1163,7 @@ export const animationData_333 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [242],
       [2, 4, 1, 0, 0, "影"],
@@ -3653,7 +3653,7 @@ export const animationData_333 = {
       [60, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [92],
       [2, 9, 1, 0, 0, "影"],
@@ -3937,7 +3937,7 @@ export const animationData_333 = {
   "c": {
     "name": "皇獣ガオウダーク",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["333_c.png"],
       [71],
@@ -4014,7 +4014,7 @@ export const animationData_333 = {
       [1, 71, 19, 12]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [162],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -4185,7 +4185,7 @@ export const animationData_333 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [103],
       [4, 11, -1, 0, 0, "腰"],
@@ -4953,7 +4953,7 @@ export const animationData_333 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [64],
       [4, 11, -1, 0, 0, "腰"],
@@ -5297,7 +5297,7 @@ export const animationData_333 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [270],
       [2, 4, 1, 0, 0, "影"],
@@ -8017,7 +8017,7 @@ export const animationData_333 = {
       [60, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [105],
       [2, 9, 1, 0, 0, "影"],

@@ -5,7 +5,7 @@ export const animationData_610 = {
   "f": {
     "name": "金塊ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["610_f.png"],
       [18],
@@ -494,7 +494,7 @@ export const animationData_610 = {
   "c": {
     "name": "キングネコインゴット",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["610_c.png"],
       [38],
@@ -1548,7 +1548,7 @@ export const animationData_610 = {
   "s": {
     "name": "キングネコカーメン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["610_s.png"],
       [45],

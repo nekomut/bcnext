@@ -1751,7 +1751,7 @@ export const animationData_564 = {
   "s": {
     "name": "ファビュラスパサラン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["564_s.png"],
       [47],

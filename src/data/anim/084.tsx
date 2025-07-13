@@ -5,7 +5,7 @@ export const animationData_084 = {
   "f": {
     "name": "聖龍メギドラ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["084_f.png"],
       [40],
@@ -51,7 +51,7 @@ export const animationData_084 = {
       [308, 53, 102, 51, "火の玉_加算_下半分"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [59],
       [-1, -1, 0, 0, 131, 212, 45, 4, 1790, 1790, 0, 1000, 0, "原点"],
@@ -119,7 +119,7 @@ export const animationData_084 = {
       [0, 0, 64, 84, 5, 0, "集中2"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [2, 11, -1, 0, 0],
@@ -334,7 +334,7 @@ export const animationData_084 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [2, 5, -1, 0, 0, "原点"],
@@ -538,7 +538,7 @@ export const animationData_084 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [112],
       [35, 4, 1, 0, 0, "■手元_エフェクトロケーター"],
@@ -1359,7 +1359,7 @@ export const animationData_084 = {
       [52, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [35, 12, 1, 0, 0, "集中2"],
@@ -1436,7 +1436,7 @@ export const animationData_084 = {
   "c": {
     "name": "聖龍王メギドラ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["084_c.png"],
       [44],
@@ -1486,7 +1486,7 @@ export const animationData_084 = {
       [30, 234, 90, 20]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [69],
       [-1, -1, 0, 0, 131, 212, 45, 4, 1790, 1790, 0, 1000, 0, "原点"],
@@ -1564,7 +1564,7 @@ export const animationData_084 = {
       [0, 0, 64, 84, 5, 0, "集中2"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [2, 11, -1, 0, 0],
@@ -1833,7 +1833,7 @@ export const animationData_084 = {
       [70, -50, 3, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [2, 5, -1, 0, 0, "原点"],
@@ -2089,7 +2089,7 @@ export const animationData_084 = {
       [70, -50, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [133],
       [35, 4, 1, 0, 0, "■手元_エフェクトロケーター"],
@@ -3175,7 +3175,7 @@ export const animationData_084 = {
       [80, -50, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [35, 12, 1, 0, 0, "集中2"],
@@ -3273,7 +3273,7 @@ export const animationData_084 = {
   "s": {
     "name": "聖龍皇帝メギドラ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["084_s.png"],
       [55],
@@ -3334,7 +3334,7 @@ export const animationData_084 = {
       [307, 161, 92, 48, "黒ドーナツ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [88],
       [-1, -1, 0, 0, 0, 0, 45, 4, 1790, 1790, 0, 1000, 0, "原点"],
@@ -3431,7 +3431,7 @@ export const animationData_084 = {
       [0, 0, 64, 84, 5, 0, "集中2"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [51],
       [1, 8, -1, 0, 0, "原点"],
@@ -3718,7 +3718,7 @@ export const animationData_084 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [1, 8, -1, 0, 0, "原点"],
@@ -3992,7 +3992,7 @@ export const animationData_084 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [159],
       [1, 9, 1, 0, 0, "衝撃2"],
@@ -5440,7 +5440,7 @@ export const animationData_084 = {
       [55, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [2, 4, 1, 0, 0, "集中2"],

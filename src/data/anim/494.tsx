@@ -5,7 +5,7 @@ export const animationData_494 = {
   "f": {
     "name": "潮風のセーラーカッパー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["494_f.png"],
       [115],
@@ -126,7 +126,7 @@ export const animationData_494 = {
       [466, 112, 20, 37, "114.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [94],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0],
@@ -229,7 +229,7 @@ export const animationData_494 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [93],
       [3, 5, -1, 0, 0, "キャラダミー"],
@@ -787,7 +787,7 @@ export const animationData_494 = {
       [60, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [93],
       [3, 5, -1, 0, 0, "キャラダミー"],
@@ -1345,7 +1345,7 @@ export const animationData_494 = {
       [60, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [201],
       [1, 4, 1, 0, 0, "\t"],
@@ -3526,7 +3526,7 @@ export const animationData_494 = {
       [162, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [45],
       [2, 11, 1, 0, 0],
@@ -3669,7 +3669,7 @@ export const animationData_494 = {
   "c": {
     "name": "潮風のセーラーカッパーκ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["494_c.png"],
       [114],
@@ -3789,7 +3789,7 @@ export const animationData_494 = {
       [491, 234, 18, 21, "113船崎.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [110],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0],
@@ -3908,7 +3908,7 @@ export const animationData_494 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [98],
       [3, 5, -1, 0, 0, "キャラダミー"],
@@ -4500,7 +4500,7 @@ export const animationData_494 = {
       [60, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [98],
       [3, 5, -1, 0, 0, "キャラダミー"],
@@ -5092,7 +5092,7 @@ export const animationData_494 = {
       [60, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [220],
       [1, 4, 1, 0, 0, "\t"],
@@ -7956,7 +7956,7 @@ export const animationData_494 = {
       [139, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [42],
       [62, 12, 1, 0, 0, "EF<color=6>"],

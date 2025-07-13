@@ -5,7 +5,7 @@ export const animationData_151 = {
   "f": {
     "name": "ネコバーベル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["151_f.png"],
       [36],
@@ -47,7 +47,7 @@ export const animationData_151 = {
       [372, 149, 139, 25]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [36],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -92,7 +92,7 @@ export const animationData_151 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [1, 4, -1, 0, 0],
@@ -225,7 +225,7 @@ export const animationData_151 = {
       [46, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [2, 11, -1, 0, 0],
@@ -300,7 +300,7 @@ export const animationData_151 = {
       [80, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [98],
       [1, 4, 1, 0, 0],
@@ -962,7 +962,7 @@ export const animationData_151 = {
       [30, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [2, 5, -1, 0, 0, "ぼう１"],
@@ -991,7 +991,7 @@ export const animationData_151 = {
   "c": {
     "name": "ネコRG",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["151_c.png"],
       [25],
@@ -1022,7 +1022,7 @@ export const animationData_151 = {
       [412, 183, 46, 33, "puri"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [15],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1046,7 +1046,7 @@ export const animationData_151 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [2, 11, -1, 0, 0],
@@ -1181,7 +1181,7 @@ export const animationData_151 = {
       [64, -25, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [2, 11, -1, 0, 0],
@@ -1240,7 +1240,7 @@ export const animationData_151 = {
       [12, -18, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [2, 4, 1, 0, 0],
@@ -1573,7 +1573,7 @@ export const animationData_151 = {
       [21, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [2, 4, -1, 0, 0],
@@ -1614,7 +1614,7 @@ export const animationData_151 = {
   "s": {
     "name": "ネコデリバリー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["151_s.png"],
       [60],
@@ -1680,7 +1680,7 @@ export const animationData_151 = {
       [387, 180, 35, 19, "059補助.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [83],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "000.png"],
@@ -1772,7 +1772,7 @@ export const animationData_151 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [64],
       [1, 4, -1, 0, 0, "000.png"],
@@ -2132,7 +2132,7 @@ export const animationData_151 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [53],
       [3, 9, -1, 0, 0, "044おなか.png"],
@@ -2416,7 +2416,7 @@ export const animationData_151 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [169],
       [2, 4, 1, 0, 0, "039下半身.png"],
@@ -4048,7 +4048,7 @@ export const animationData_151 = {
       [120, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [52],
       [2, 5, 1, 0, 0, "ぼう１"],

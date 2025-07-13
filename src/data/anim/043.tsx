@@ -5,7 +5,7 @@ export const animationData_043 = {
   "f": {
     "name": "ネコマシン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["043_f.png"],
       [30],
@@ -41,7 +41,7 @@ export const animationData_043 = {
       [85, 54, 15, 12]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [40],
       [-1, -1, 0, 0, 489, 433, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -90,7 +90,7 @@ export const animationData_043 = {
       [0, 0, 5, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [22, 11, -1, 0, 0, "ダミー"],
@@ -280,7 +280,7 @@ export const animationData_043 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [30, 12, -1, 0, 0],
@@ -319,7 +319,7 @@ export const animationData_043 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [67],
       [3, 11, 1, 0, 0, "ダミー"],
@@ -2220,7 +2220,7 @@ export const animationData_043 = {
       [184, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [3, 11, -1, 0, 0, "ダミー"],
@@ -2267,7 +2267,7 @@ export const animationData_043 = {
   "c": {
     "name": "ネコマシン・破",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["043_c.png"],
       [37],
@@ -2310,7 +2310,7 @@ export const animationData_043 = {
       [172, 227, 72, 16, "左側べろん６０度"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [44],
       [-1, -1, 0, 0, 489, 433, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -2363,7 +2363,7 @@ export const animationData_043 = {
       [0, 0, 5, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [22, 11, -1, 0, 0, "ダミー"],
@@ -2565,7 +2565,7 @@ export const animationData_043 = {
       [40, 100, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [30, 12, -1, 0, 0],
@@ -2626,7 +2626,7 @@ export const animationData_043 = {
       [90, -50, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [73],
       [3, 11, 1, 0, 0, "ダミー"],
@@ -4709,7 +4709,7 @@ export const animationData_043 = {
       [205, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [3, 11, -1, 0, 0, "ダミー"],
@@ -4756,7 +4756,7 @@ export const animationData_043 = {
   "s": {
     "name": "ネコマシン・滅",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["043_s.png"],
       [67],
@@ -4829,7 +4829,7 @@ export const animationData_043 = {
       [332, 2, 18, 35, "半線"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [196],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1450, 1450, 0, 1000, 0, "ダミー<color=7>"],
@@ -5034,7 +5034,7 @@ export const animationData_043 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [172],
       [3, 5, -1, 0, 0, "キャラダミー<color=7>"],
@@ -6138,7 +6138,7 @@ export const animationData_043 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [171],
       [3, 5, -1, 0, 0, "キャラダミー<color=7>"],
@@ -7246,7 +7246,7 @@ export const animationData_043 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [386],
       [2, 4, 1, 0, 0, "影"],
@@ -17270,7 +17270,7 @@ export const animationData_043 = {
       [177, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [3, 4, 1, 0, 0, "キャラダミー<color=7>"],

@@ -5,7 +5,7 @@ export const animationData_024 = {
   "f": {
     "name": "ネコヴァルキリー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["024_f.png"],
       [43],
@@ -167,7 +167,7 @@ export const animationData_024 = {
       [0, 0, -10, 350, 10, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [1, 4, -1, 0, 0, "胸"],
@@ -337,7 +337,7 @@ export const animationData_024 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [1, 5, -1, 0, 0],
@@ -945,7 +945,7 @@ export const animationData_024 = {
       [48, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [1, 4, 1, 0, 0, "胸"],
@@ -1046,7 +1046,7 @@ export const animationData_024 = {
   "c": {
     "name": "ネコヴァルキリー・真",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["024_c.png"],
       [43],
@@ -1095,7 +1095,7 @@ export const animationData_024 = {
       [370, 142, 8, 36, "閃光"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [59],
       [-1, -1, 0, 0, 527, 180, 0, 0, 1000, 1000, 0, 1000, 0],
@@ -1163,7 +1163,7 @@ export const animationData_024 = {
       [0, 0, -10, 350, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [1, 4, -1, 0, 0, "胸"],
@@ -1384,7 +1384,7 @@ export const animationData_024 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [1, 5, -1, 0, 0],
@@ -1597,7 +1597,7 @@ export const animationData_024 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [56],
       [1, 4, 1, 0, 0, "右すね"],
@@ -2149,7 +2149,7 @@ export const animationData_024 = {
       [32, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [1, 4, 1, 0, 0, "胸"],
@@ -2277,7 +2277,7 @@ export const animationData_024 = {
   "s": {
     "name": "ネコヴァルキリー・聖",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["024_s.png"],
       [43],
@@ -2326,7 +2326,7 @@ export const animationData_024 = {
       [300, 142, 8, 36, "閃光"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [68],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0],
@@ -2403,7 +2403,7 @@ export const animationData_024 = {
       [0, 0, -10, 350, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [62],
       [1, 4, -1, 0, 0, "胸"],
@@ -2730,7 +2730,7 @@ export const animationData_024 = {
       [48, 0, 3, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [50],
       [1, 5, -1, 0, 0],
@@ -3010,7 +3010,7 @@ export const animationData_024 = {
       [60, 0, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [111],
       [1, 4, 1, 0, 0, "右すね"],
@@ -3980,7 +3980,7 @@ export const animationData_024 = {
       [48, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [1, 4, 1, 0, 0, "胸"],

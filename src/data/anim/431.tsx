@@ -5,7 +5,7 @@ export const animationData_431 = {
   "f": {
     "name": "亡者探偵ヴィグラー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["431_f.png"],
       [94],
@@ -105,7 +105,7 @@ export const animationData_431 = {
       [441, 205, 29, 25, "093ダメージ顔.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [180],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png<color=7>"],
@@ -294,7 +294,7 @@ export const animationData_431 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [98],
       [1, 9, -1, 0, 0, "001影.png<color=9>"],
@@ -952,7 +952,7 @@ export const animationData_431 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [80],
       [1, 9, -1, 0, 0, "001影.png<color=9>"],
@@ -4549,7 +4549,7 @@ export const animationData_431 = {
       [120, -17, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [62],
       [7, 4, 1, 0, 0, "002腰.png<color=0>"],
@@ -4743,7 +4743,7 @@ export const animationData_431 = {
   "c": {
     "name": "魔界探偵グラヴィー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["431_c.png"],
       [126],
@@ -4875,7 +4875,7 @@ export const animationData_431 = {
       [336, 8, 28, 25, "125雷3.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [220],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png<color=7>"],
@@ -5104,7 +5104,7 @@ export const animationData_431 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [118],
       [1, 9, -1, 0, 0, "001影.png<color=9>"],
@@ -5921,7 +5921,7 @@ export const animationData_431 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [97],
       [1, 9, -1, 0, 0, "001影.png<color=9>"],
@@ -10981,7 +10981,7 @@ export const animationData_431 = {
       [120, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [79],
       [7, 4, 1, 0, 0, "002腰.png<color=0>"],
@@ -11226,7 +11226,7 @@ export const animationData_431 = {
   "s": {
     "name": "魔神探偵グラヴィティー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["431_s.png"],
       [138],
@@ -11370,7 +11370,7 @@ export const animationData_431 = {
       [228, 294, 23, 12, "137展開発光エフェクト4-2.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [229],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png<color=7>"],
@@ -11608,7 +11608,7 @@ export const animationData_431 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [112],
       [1, 9, -1, 0, 0, "001影.png<color=9>"],
@@ -12308,7 +12308,7 @@ export const animationData_431 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [100],
       [1, 9, -1, 0, 0, "001影.png<color=9>"],
@@ -20324,7 +20324,7 @@ export const animationData_431 = {
       [180, 0, 2, -2]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [83],
       [7, 12, 1, 0, 0, "048コア足1.png<color=1>\t"],
@@ -20581,7 +20581,7 @@ export const animationData_431 = {
   "u": {
     "name": "聖魔探偵ゼログラヴィティー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["431_u.png"],
       [188],

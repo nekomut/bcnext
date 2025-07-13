@@ -5,7 +5,7 @@ export const animationData_309 = {
   "f": {
     "name": "ネコ博士",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["309_f.png"],
       [50],
@@ -61,7 +61,7 @@ export const animationData_309 = {
       [9, 139, 26, 20]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [47],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -117,7 +117,7 @@ export const animationData_309 = {
       [0, 0, 0, 0, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [1, 9, -1, 0, 0, "影"],
@@ -420,7 +420,7 @@ export const animationData_309 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [3, 11, -1, 0, 0, "上半身<color=5>"],
@@ -565,7 +565,7 @@ export const animationData_309 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [44],
       [1, 4, 1, 0, 0, "影"],
@@ -902,7 +902,7 @@ export const animationData_309 = {
       [23, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [2, 4, 1, 0, 0, "全体ダミー"],
@@ -970,7 +970,7 @@ export const animationData_309 = {
   "c": {
     "name": "ネコ博士＆ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["309_c.png"],
       [56],
@@ -1032,7 +1032,7 @@ export const animationData_309 = {
       [285, 1, 30, 33, "にゃんこ　顔"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [55],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1096,7 +1096,7 @@ export const animationData_309 = {
       [0, 0, 0, 0, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [48],
       [1, 9, -1, 0, 0, "影"],
@@ -1455,7 +1455,7 @@ export const animationData_309 = {
       [34, -150, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [3, 11, -1, 0, 0, "上半身<color=5>"],
@@ -1624,7 +1624,7 @@ export const animationData_309 = {
       [60, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [63],
       [1, 4, 1, 0, 0, "影"],
@@ -2143,7 +2143,7 @@ export const animationData_309 = {
       [24, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [2, 4, 1, 0, 0, "全体ダミー"],

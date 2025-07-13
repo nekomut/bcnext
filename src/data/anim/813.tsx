@@ -5,7 +5,7 @@ export const animationData_813 = {
   "f": {
     "name": "タスマニアオオガニ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["813_f.png"],
       [6],
@@ -102,7 +102,7 @@ export const animationData_813 = {
   "c": {
     "name": "タスマニアオオガニCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["813_c.png"],
       [6],

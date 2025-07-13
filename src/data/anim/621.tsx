@@ -5,7 +5,7 @@ export const animationData_621 = {
   "f": {
     "name": "悪魔研究家",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["621_f.png"],
       [16],
@@ -221,7 +221,7 @@ export const animationData_621 = {
   "c": {
     "name": "邪悪な悪魔研究家",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["621_c.png"],
       [16],

@@ -5,7 +5,7 @@ export const animationData_447 = {
   "f": {
     "name": "戦隊チャッソ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["447_f.png"],
       [55],
@@ -66,7 +66,7 @@ export const animationData_447 = {
       [253, 39, 14, 13, "054汎用玉.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [61],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1300, 1300, 0, 1000, 0, "000.png<color=7>"],
@@ -136,7 +136,7 @@ export const animationData_447 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [35],
       [3, 5, -1, 0, 0, "004ボディ.png<color=0>\t"],
@@ -602,7 +602,7 @@ export const animationData_447 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [15],
       [40, 12, -1, 0, 0, "047土1.png.png<color=10>\t"],
@@ -670,7 +670,7 @@ export const animationData_447 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [39],
       [3, 11, 1, 0, 0, "002ボディ.png<color=0>"],
@@ -968,7 +968,7 @@ export const animationData_447 = {
       [8, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [22],
       [40, 12, 1, 0, 0, "047土1.png.png<color=10>"],
@@ -1042,7 +1042,7 @@ export const animationData_447 = {
   "c": {
     "name": "戦隊パワーチャッソ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["447_c.png"],
       [55],
@@ -1103,7 +1103,7 @@ export const animationData_447 = {
       [253, 39, 14, 13, "054汎用玉.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [61],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1300, 1300, 0, 1000, 0, "000.png<color=7>"],
@@ -1173,7 +1173,7 @@ export const animationData_447 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [35],
       [3, 5, -1, 0, 0, "004ボディ.png<color=0>\t"],
@@ -1639,7 +1639,7 @@ export const animationData_447 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [15],
       [3, 11, -1, 0, 0, "004ボディ.png<color=0>\t"],
@@ -1707,7 +1707,7 @@ export const animationData_447 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [39],
       [3, 11, 1, 0, 0, "002ボディ.png<color=0>"],
@@ -2005,7 +2005,7 @@ export const animationData_447 = {
       [8, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [22],
       [40, 12, 1, 0, 0, "047土1.png.png<color=10>"],

@@ -5,7 +5,7 @@ export const animationData_725 = {
   "f": {
     "name": "忍者娘トモエ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["725_f.png"],
       [147],
@@ -5817,7 +5817,7 @@ export const animationData_725 = {
   "c": {
     "name": "食道楽忍者トモエ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["725_c.png"],
       [187],

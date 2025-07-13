@@ -613,7 +613,7 @@ export const animationData_567 = {
   "s": {
     "name": "雷電のチビクロプスネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["567_s.png"],
       [17],

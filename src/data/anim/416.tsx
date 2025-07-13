@@ -5,7 +5,7 @@ export const animationData_416 = {
   "f": {
     "name": "ゼロムーンオペレーターズ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["416_f.png"],
       [66],
@@ -77,7 +77,7 @@ export const animationData_416 = {
       [398, 175, 9, 9, "065白かぶせ.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [120],
       [-1, -1, 0, 0, -434, 36, 0, 0, 1600, 1600, 0, 1000, 0, "ダミー<color=7>"],
@@ -206,7 +206,7 @@ export const animationData_416 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [6, 11, -1, 0, 0, "031月　渦巻き.png<color=11>"],
@@ -448,7 +448,7 @@ export const animationData_416 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [6, 11, -1, 0, 0, "031月　渦巻き.png<color=11>"],
@@ -690,7 +690,7 @@ export const animationData_416 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [143],
       [6, 4, 1, 0, 0, "031月　渦巻き.png<color=11>"],
@@ -2000,7 +2000,7 @@ export const animationData_416 = {
       [90, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [56],
       [8, 12, 1, 0, 0, "041メカ下部　赤光.png<color=3>"],
@@ -2176,7 +2176,7 @@ export const animationData_416 = {
   "c": {
     "name": "ファーストムーンネルフ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["416_c.png"],
       [96],
@@ -2278,7 +2278,7 @@ export const animationData_416 = {
       [424, 244, 9, 9, "095白かぶせ.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [148],
       [-1, -1, 0, 0, -434, 36, 0, 0, 1600, 1600, 0, 1000, 0, "ダミー<color=7>"],
@@ -2435,7 +2435,7 @@ export const animationData_416 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [60],
       [7, 11, -1, 0, 0, "054月　渦巻き.png<color=11>"],
@@ -2788,7 +2788,7 @@ export const animationData_416 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [58],
       [7, 11, -1, 0, 0, "054月　渦巻き.png<color=11>"],
@@ -3127,7 +3127,7 @@ export const animationData_416 = {
       [60, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [214],
       [7, 4, 1, 0, 0, "054月　渦巻き.png<color=11>"],
@@ -5182,7 +5182,7 @@ export const animationData_416 = {
       [90, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [82],
       [3, 5, 1, 0, 0, "キャラダミー<color=7>"],

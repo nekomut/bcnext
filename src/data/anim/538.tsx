@@ -5,7 +5,7 @@ export const animationData_538 = {
   "f": {
     "name": "ネコミク",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["538_f.png"],
       [36],
@@ -47,7 +47,7 @@ export const animationData_538 = {
       [266, 33, 23, 27, "035EF.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [35],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "000.png"],
@@ -91,7 +91,7 @@ export const animationData_538 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [26],
       [29, 12, -1, 0, 0, "032ネギ莖.png"],
@@ -247,7 +247,7 @@ export const animationData_538 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [14],
       [29, 12, -1, 0, 0, "032ネギ莖.png"],
@@ -330,7 +330,7 @@ export const animationData_538 = {
       [48, -20, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [55],
       [2, 11, 1, 0, 0, "002本体.png"],
@@ -764,7 +764,7 @@ export const animationData_538 = {
       [27, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [29],
       [2, 4, 1, 0, 0, "002本体.png"],
@@ -859,7 +859,7 @@ export const animationData_538 = {
   "c": {
     "name": "ネコミクCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["538_c.png"],
       [41],
@@ -906,7 +906,7 @@ export const animationData_538 = {
       [340, 31, 39, 27, "040右ツインテ移動下.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [40],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "000.png"],
@@ -955,7 +955,7 @@ export const animationData_538 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [35],
       [29, 12, -1, 0, 0, "032ネギ莖.png"],
@@ -1257,7 +1257,7 @@ export const animationData_538 = {
       [0, 3, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [18],
       [29, 12, -1, 0, 0, "032ネギ莖.png"],
@@ -1380,7 +1380,7 @@ export const animationData_538 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [60],
       [2, 11, 1, 0, 0, "002本体.png"],
@@ -1958,7 +1958,7 @@ export const animationData_538 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [42],
       [2, 4, 1, 0, 0, "002本体.png"],

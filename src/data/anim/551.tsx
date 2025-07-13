@@ -5,7 +5,7 @@ export const animationData_551 = {
   "f": {
     "name": "第９の使徒",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["394_e.png"],
       [57],

@@ -5,7 +5,7 @@ export const animationData_603 = {
   "f": {
     "name": "九能帯刀(道着)",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["603_f.png"],
       [86],
@@ -2910,7 +2910,7 @@ export const animationData_603 = {
   "c": {
     "name": "九能帯刀",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["603_f.png"],
       [66],

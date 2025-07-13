@@ -5,7 +5,7 @@ export const animationData_392 = {
   "f": {
     "name": "六道聖",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["392_f.png"],
       [47],
@@ -58,7 +58,7 @@ export const animationData_392 = {
       [398, 128, 38, 56, "エフェクト２"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [47],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -114,7 +114,7 @@ export const animationData_392 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [75],
       [3, 11, -1, 0, 0, "cダミー<color=7>"],
@@ -610,7 +610,7 @@ export const animationData_392 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [4, 5, -1, 0, 0, "胴体"],
@@ -787,7 +787,7 @@ export const animationData_392 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [59],
       [4, 2, 1, 0, 0, "胴体"],
@@ -1419,7 +1419,7 @@ export const animationData_392 = {
       [40, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [4, 4, 1, 0, 0, "胴体"],
@@ -1589,7 +1589,7 @@ export const animationData_392 = {
   "c": {
     "name": "六道聖CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["392_c.png"],
       [47],
@@ -1642,7 +1642,7 @@ export const animationData_392 = {
       [398, 128, 38, 56, "エフェクト２"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [47],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1698,7 +1698,7 @@ export const animationData_392 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [75],
       [3, 11, -1, 0, 0, "cダミー<color=7>"],
@@ -2194,7 +2194,7 @@ export const animationData_392 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [4, 5, -1, 0, 0, "胴体"],
@@ -2371,7 +2371,7 @@ export const animationData_392 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [59],
       [4, 2, 1, 0, 0, "胴体"],
@@ -3003,7 +3003,7 @@ export const animationData_392 = {
       [40, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [4, 4, 1, 0, 0, "胴体"],
@@ -3173,7 +3173,7 @@ export const animationData_392 = {
   "s": {
     "name": "野球マン３号CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["392_s.png"],
       [57],
@@ -3236,7 +3236,7 @@ export const animationData_392 = {
       [439, 110, 59, 16]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [69],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -3314,7 +3314,7 @@ export const animationData_392 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [80],
       [3, 11, -1, 0, 0, "cダミー<color=7>"],
@@ -3816,7 +3816,7 @@ export const animationData_392 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [4, 5, -1, 0, 0, "胴体"],
@@ -3965,7 +3965,7 @@ export const animationData_392 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [120],
       [2, 4, 1, 0, 0, "影"],
@@ -4945,7 +4945,7 @@ export const animationData_392 = {
       [58, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [55],
       [4, 4, 1, 0, 0, "胴体"],

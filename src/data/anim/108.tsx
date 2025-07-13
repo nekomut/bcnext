@@ -5,7 +5,7 @@ export const animationData_108 = {
   "f": {
     "name": "にゃんこ３兄弟",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["108_f.png"],
       [15],
@@ -26,7 +26,7 @@ export const animationData_108 = {
       [1, 1, 68, 69, "カプセル開封エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [33],
       [-1, -1, 0, 0, 386, 430, 1, 1, 1000, 1000, 0, 1000, 0, "ダミー<color=9>"],
@@ -68,7 +68,7 @@ export const animationData_108 = {
       [0, 0, 35, 3, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [1, 9, -1, 0, 0],
@@ -272,7 +272,7 @@ export const animationData_108 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [2, 11, -1, 0, 0],
@@ -294,7 +294,7 @@ export const animationData_108 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [1, 4, 1, 0, 0],
@@ -776,7 +776,7 @@ export const animationData_108 = {
       [40, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [2, 5, -1, 0, 0, "ダミー<color=9>"],
@@ -832,7 +832,7 @@ export const animationData_108 = {
   "c": {
     "name": "秘密要塞ネコロス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["108_c.png"],
       [18],
@@ -856,7 +856,7 @@ export const animationData_108 = {
       [45, 197, 78, 2, "追加　段ボール線"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [41],
       [-1, -1, 0, 0, 386, 430, 1, 1, 1000, 1000, 0, 1000, 0, "ダミー<color=9>"],
@@ -906,7 +906,7 @@ export const animationData_108 = {
       [0, 0, 35, 3, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [1, 9, -1, 0, 0],
@@ -1112,7 +1112,7 @@ export const animationData_108 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [6, 5, -1, 0, 0],
@@ -1129,7 +1129,7 @@ export const animationData_108 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [58],
       [1, 4, 1, 0, 0],
@@ -1618,7 +1618,7 @@ export const animationData_108 = {
       [45, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [2, 5, -1, 0, 0, "ダミー<color=9>"],

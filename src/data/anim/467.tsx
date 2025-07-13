@@ -5,7 +5,7 @@ export const animationData_467 = {
   "f": {
     "name": "スーパーゼウス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["467_f.png"],
       [87],
@@ -98,7 +98,7 @@ export const animationData_467 = {
       [54, 181, 51, 50, "086EF円.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [121],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png<color=7>"],
@@ -228,7 +228,7 @@ export const animationData_467 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [61],
       [3, 5, -1, 0, 0, "腰ダミー<color=7>\t"],
@@ -555,7 +555,7 @@ export const animationData_467 = {
       [0, -1, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [22],
       [3, 5, -1, 0, 0, "腰ダミー<color=7>"],
@@ -668,7 +668,7 @@ export const animationData_467 = {
       [0, -1, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [157],
       [3, 5, 1, 0, 0, "腰ダミー<color=7>"],
@@ -2566,7 +2566,7 @@ export const animationData_467 = {
       [35, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [26],
       [2, 5, 1, 0, 0, "キャラ親ダミー<color=7>"],
@@ -2652,7 +2652,7 @@ export const animationData_467 = {
   "c": {
     "name": "全能神スーパーゼウス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["467_c.png"],
       [87],
@@ -2745,7 +2745,7 @@ export const animationData_467 = {
       [157, 187, 51, 50, "086EF円.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [121],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png<color=7>"],
@@ -2875,7 +2875,7 @@ export const animationData_467 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [61],
       [3, 5, -1, 0, 0, "腰ダミー<color=7>\t"],
@@ -3203,7 +3203,7 @@ export const animationData_467 = {
       [0, -1, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [22],
       [3, 5, -1, 0, 0, "腰ダミー<color=7>"],
@@ -3316,7 +3316,7 @@ export const animationData_467 = {
       [0, -1, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [157],
       [3, 5, 1, 0, 0, "腰ダミー<color=7>"],
@@ -5212,7 +5212,7 @@ export const animationData_467 = {
       [35, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [26],
       [2, 5, 1, 0, 0, "キャラ親ダミー<color=7>"],

@@ -5,7 +5,7 @@ export const animationData_560 = {
   "f": {
     "name": "巡音ルカ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["560_f.png"],
       [157],
@@ -3265,7 +3265,7 @@ export const animationData_560 = {
   "c": {
     "name": "巡音ルカCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["560_c.png"],
       [157],

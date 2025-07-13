@@ -5,7 +5,7 @@ export const animationData_238 = {
   "f": {
     "name": "ボンボンネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["238_f.png"],
       [23],
@@ -34,7 +34,7 @@ export const animationData_238 = {
       [121, 1, 47, 68, "ef"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [22],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "dmy"],
@@ -65,7 +65,7 @@ export const animationData_238 = {
       [0, 0, -2, 0, 5, 0, "dmy"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [2, 11, -1, 0, 0],
@@ -174,7 +174,7 @@ export const animationData_238 = {
       [20, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [6, 11, -1, 0, 0, "あせ１<color=2>"],
@@ -226,7 +226,7 @@ export const animationData_238 = {
       [75, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [5, 10, 1, 0, 0],
@@ -485,7 +485,7 @@ export const animationData_238 = {
       [48, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [2, 4, 1, 0, 0],
@@ -517,7 +517,7 @@ export const animationData_238 = {
   "c": {
     "name": "ネコボンのパパ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["238_c.png"],
       [30],
@@ -553,7 +553,7 @@ export const animationData_238 = {
       [152, 86, 16, 9, "しぇー足"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [29],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "dmy"],
@@ -591,7 +591,7 @@ export const animationData_238 = {
       [0, 0, 0, 0, 5, 0, "dmy"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [2, 11, -1, 0, 0],
@@ -705,7 +705,7 @@ export const animationData_238 = {
       [40, 26, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [6, 11, -1, 0, 0, "あせ１<color=2>"],
@@ -757,7 +757,7 @@ export const animationData_238 = {
       [75, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [52],
       [2, 5, 1, 0, 0],
@@ -1191,7 +1191,7 @@ export const animationData_238 = {
       [32, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [2, 4, 1, 0, 0],

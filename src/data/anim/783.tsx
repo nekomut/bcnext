@@ -5,7 +5,7 @@ export const animationData_783 = {
   "f": {
     "name": "こねこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["783_f.png"],
       [85],
@@ -1928,7 +1928,7 @@ export const animationData_783 = {
   "c": {
     "name": "超スターこねこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["783_c.png"],
       [139],

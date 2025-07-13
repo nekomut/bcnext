@@ -5,7 +5,7 @@ export const animationData_150 = {
   "f": {
     "name": "窓辺の乙女ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["150_f.png"],
       [29],
@@ -40,7 +40,7 @@ export const animationData_150 = {
       [107, 111, 16, 15]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [20],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -69,7 +69,7 @@ export const animationData_150 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [4, 11, -1, 0, 0],
@@ -138,7 +138,7 @@ export const animationData_150 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [4, 11, -1, 0, 0],
@@ -207,7 +207,7 @@ export const animationData_150 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [46],
       [2, 5, 1, 0, 0],
@@ -491,7 +491,7 @@ export const animationData_150 = {
       [9, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [2, 5, 1, 0, 0],
@@ -562,7 +562,7 @@ export const animationData_150 = {
   "c": {
     "name": "窓辺の姫君ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["150_c.png"],
       [29],
@@ -597,7 +597,7 @@ export const animationData_150 = {
       [252, 27, 1, 1]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [20],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -626,7 +626,7 @@ export const animationData_150 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [4, 11, -1, 0, 0],
@@ -772,7 +772,7 @@ export const animationData_150 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [4, 11, -1, 0, 0],
@@ -916,7 +916,7 @@ export const animationData_150 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [69],
       [2, 5, 1, 0, 0],
@@ -1335,7 +1335,7 @@ export const animationData_150 = {
       [77, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [2, 5, 1, 0, 0],
@@ -1412,7 +1412,7 @@ export const animationData_150 = {
   "s": {
     "name": "窓辺の舞妓にゃん",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["150_s.png"],
       [51],
@@ -1469,7 +1469,7 @@ export const animationData_150 = {
       [507, 187, 1, 1, "羽02用のダミー"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [45],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1523,7 +1523,7 @@ export const animationData_150 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [6, 11, -1, 0, 0, "ネコ　通常"],
@@ -1736,7 +1736,7 @@ export const animationData_150 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [6, 11, -1, 0, 0, "ネコ　通常"],
@@ -1949,7 +1949,7 @@ export const animationData_150 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [103],
       [2, 5, 1, 0, 0, "■枠　アンカー"],
@@ -2569,7 +2569,7 @@ export const animationData_150 = {
       [77, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [2, 5, 1, 0, 0, "■枠　アンカー"],

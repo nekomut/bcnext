@@ -5,7 +5,7 @@ export const animationData_127 = {
   "f": {
     "name": "ネコフラワー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["127_f.png"],
       [27],
@@ -38,7 +38,7 @@ export const animationData_127 = {
       [43, 125, 40, 37, "フラワー--茎5"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [38],
       [-1, -1, 0, 0, 467, 439, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -85,7 +85,7 @@ export const animationData_127 = {
       [0, 0, 20, 2, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [2, 5, -1, 0, 0, "にゃんこフラワーセット上下運動"],
@@ -238,7 +238,7 @@ export const animationData_127 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -311,7 +311,7 @@ export const animationData_127 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [2, 5, 1, 0, 0, "ダミー"],
@@ -736,7 +736,7 @@ export const animationData_127 = {
       [13, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -810,7 +810,7 @@ export const animationData_127 = {
   "c": {
     "name": "にゃんこ扇風",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["127_c.png"],
       [36],
@@ -852,7 +852,7 @@ export const animationData_127 = {
       [111, 182, 7, 9, "口　大"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [47],
       [-1, -1, 0, 0, 467, 439, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -908,7 +908,7 @@ export const animationData_127 = {
       [0, 0, 20, 2, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [2, 5, -1, 0, 0, "にゃんこフラワーセット上下運動"],
@@ -1068,7 +1068,7 @@ export const animationData_127 = {
       [16, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -1111,7 +1111,7 @@ export const animationData_127 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [72],
       [1, 4, 1, 0, 0],
@@ -1818,7 +1818,7 @@ export const animationData_127 = {
       [80, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -1913,7 +1913,7 @@ export const animationData_127 = {
   "s": {
     "name": "ネコボンバー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["127_s.png"],
       [41],
@@ -1960,7 +1960,7 @@ export const animationData_127 = {
       [164, 158, 20, 10, "半光"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [57],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -2026,7 +2026,7 @@ export const animationData_127 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [44],
       [2, 9, -1, 0, 0, "影<color=9>"],
@@ -2336,7 +2336,7 @@ export const animationData_127 = {
       [12, 1000, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [6, 5, -1, 0, 0, "汗<color=0>"],
@@ -2481,7 +2481,7 @@ export const animationData_127 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [130],
       [2, 4, 1, 0, 0, "影<color=9>"],
@@ -3750,7 +3750,7 @@ export const animationData_127 = {
       [82, 500, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [3, 4, 1, 0, 0, "cダミー<color=7>"],

@@ -5,7 +5,7 @@ export const animationData_528 = {
   "f": {
     "name": "ネコサック",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["999_f.png"],
       [22],
@@ -33,7 +33,7 @@ export const animationData_528 = {
       [1, 42, 27, 19, "021スピード線.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [21],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0],
@@ -63,7 +63,7 @@ export const animationData_528 = {
       [0, 0, 0, 1, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [23],
       [11, 2, -1, 0, 0, "017布4.png"],
@@ -206,7 +206,7 @@ export const animationData_528 = {
       [10, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [4],
       [20, 12, -1, 0, 0, "021スピード線.png"],
@@ -223,7 +223,7 @@ export const animationData_528 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [23],
       [11, 2, 1, 0, 0, "017布4.png"],
@@ -376,7 +376,7 @@ export const animationData_528 = {
       [14, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [11],
       [12, 11, 1, 0, 0],
@@ -417,7 +417,7 @@ export const animationData_528 = {
   "c": {
     "name": "ネコウォッカ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["999_c.png"],
       [38],
@@ -461,7 +461,7 @@ export const animationData_528 = {
       [61, 1, 44, 11, "037ベルト.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [33],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0],
@@ -503,7 +503,7 @@ export const animationData_528 = {
       [0, 0, 0, 1, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [31],
       [11, 5, -1, 0, 0, "017布4.png"],
@@ -696,7 +696,7 @@ export const animationData_528 = {
       [8, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [4],
       [20, 12, -1, 0, 0, "021スピード線.png"],
@@ -713,7 +713,7 @@ export const animationData_528 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [31],
       [11, 5, 1, 0, 0, "017布4.png"],
@@ -949,7 +949,7 @@ export const animationData_528 = {
       [19, -40, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [13],
       [12, 11, 1, 0, 0],

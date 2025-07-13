@@ -5,7 +5,7 @@ export const animationData_509 = {
   "f": {
     "name": "ネコ春麗",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["509_f.png"],
       [44],
@@ -55,7 +55,7 @@ export const animationData_509 = {
       [215, 226, 15, 15, "043.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [53],
       [-1, -1, 0, 0, -24, 107, 0, 0, 1000, 1000, 0, 1000, 0],
@@ -117,7 +117,7 @@ export const animationData_509 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [52],
       [21, 12, -1, 0, 0, "010しゃがみ.png<color=3>"],
@@ -373,7 +373,7 @@ export const animationData_509 = {
       [0, 8, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [14],
       [21, 12, -1, 0, 0, "010しゃがみ.png<color=3>"],
@@ -432,7 +432,7 @@ export const animationData_509 = {
       [40, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [56],
       [2, 4, 1, 0, 0, "023パンツ.png<color=7>"],
@@ -937,7 +937,7 @@ export const animationData_509 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [16],
       [21, 12, 1, 0, 0, "010しゃがみ.png<color=3>"],
@@ -993,7 +993,7 @@ export const animationData_509 = {
   "c": {
     "name": "ネコ春麗CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["509_c.png"],
       [44],
@@ -1043,7 +1043,7 @@ export const animationData_509 = {
       [193, 238, 16, 15, "043.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [53],
       [-1, -1, 0, 0, -24, 107, 0, 0, 1000, 1000, 0, 1000, 0],
@@ -1105,7 +1105,7 @@ export const animationData_509 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [52],
       [21, 12, -1, 0, 0, "010しゃがみ.png<color=3>"],
@@ -1361,7 +1361,7 @@ export const animationData_509 = {
       [0, 8, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [14],
       [21, 12, -1, 0, 0, "010しゃがみ.png<color=3>"],
@@ -1420,7 +1420,7 @@ export const animationData_509 = {
       [40, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [56],
       [2, 4, 1, 0, 0, "023パンツ.png<color=7>"],
@@ -1925,7 +1925,7 @@ export const animationData_509 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [16],
       [21, 12, 1, 0, 0, "010しゃがみ.png<color=3>"],

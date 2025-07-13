@@ -5,7 +5,7 @@ export const animationData_135 = {
   "f": {
     "name": "ツルの恩返し",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["135_f.png"],
       [21],
@@ -32,7 +32,7 @@ export const animationData_135 = {
       [66, 45, 6, 4, "siro"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [16],
       [-1, -1, 0, 0, 449, 387, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -57,7 +57,7 @@ export const animationData_135 = {
       [0, 0, 0, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -268,7 +268,7 @@ export const animationData_135 = {
       [15, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [3, 11, -1, 0, 0, "ダミー"],
@@ -317,7 +317,7 @@ export const animationData_135 = {
       [60, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [3, 4, 1, 0, 0, "ダミー"],
@@ -579,7 +579,7 @@ export const animationData_135 = {
       [15, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [2, 11, -1, 0, 0, "ダミー"],
@@ -611,7 +611,7 @@ export const animationData_135 = {
   "c": {
     "name": "銀河戦士コスモ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["135_c.png"],
       [86],
@@ -703,7 +703,7 @@ export const animationData_135 = {
       [21, 137, 28, 24, "影"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [76],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -788,7 +788,7 @@ export const animationData_135 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [139],
       [1, 4, -1, 0, 0],
@@ -1470,7 +1470,7 @@ export const animationData_135 = {
       [32, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [2, 11, -1, 0, 0],
@@ -1646,7 +1646,7 @@ export const animationData_135 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [307],
       [1, 4, 1, 0, 0],
@@ -4719,7 +4719,7 @@ export const animationData_135 = {
       [330, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [87],
       [1, 9, -1, 0, 0, "肩パット手前のクロス"],
@@ -4985,7 +4985,7 @@ export const animationData_135 = {
       [0, 0, 0, 0]
     ],
     "maanim04": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [145],
       [1, 4, -1, 0, 0],
@@ -5699,7 +5699,7 @@ export const animationData_135 = {
   "s": {
     "name": "究極戦士コズミックコスモ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["135_s.png"],
       [103],
@@ -5808,7 +5808,7 @@ export const animationData_135 = {
       [339, 142, 19, 28, "追加ツル座オーラ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [134],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -5951,7 +5951,7 @@ export const animationData_135 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [163],
       [1, 4, -1, 0, 0],
@@ -6752,7 +6752,7 @@ export const animationData_135 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [49],
       [2, 11, -1, 0, 0],
@@ -12343,7 +12343,7 @@ export const animationData_135 = {
       [360, 20, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [122],
       [1, 9, 1, 0, 0, "肩パット手前のクロス"],

@@ -5,7 +5,7 @@ export const animationData_229 = {
   "f": {
     "name": "ウィンディスイート",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["229_f.png"],
       [43],
@@ -54,7 +54,7 @@ export const animationData_229 = {
       [284, 181, 18, 17, "青い光"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [74],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1120, 1120, 0, 1000, 0, "ダミー<color=7>"],
@@ -137,7 +137,7 @@ export const animationData_229 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [1, 8, -1, 0, 0, "影"],
@@ -276,7 +276,7 @@ export const animationData_229 = {
       [160, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [1, 8, -1, 0, 0, "影"],
@@ -415,7 +415,7 @@ export const animationData_229 = {
       [160, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [156],
       [1, 4, 1, 0, 0, "影"],
@@ -1702,7 +1702,7 @@ export const animationData_229 = {
       [56, 750, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [2, 11, 1, 0, 0, "cダミー"],
@@ -1773,7 +1773,7 @@ export const animationData_229 = {
   "c": {
     "name": "ウィンディスイートα",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["229_c.png"],
       [45],
@@ -1824,7 +1824,7 @@ export const animationData_229 = {
       [428, 156, 18, 17, "飴光"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [81],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1120, 1120, 0, 1000, 0, "ダミー<color=7>"],
@@ -1914,7 +1914,7 @@ export const animationData_229 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [1, 8, -1, 0, 0, "影"],
@@ -2101,7 +2101,7 @@ export const animationData_229 = {
       [2, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [1, 8, -1, 0, 0, "影"],
@@ -2288,7 +2288,7 @@ export const animationData_229 = {
       [2, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [193],
       [1, 4, 1, 0, 0, "影"],
@@ -4196,7 +4196,7 @@ export const animationData_229 = {
       [105, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [2, 11, 1, 0, 0, "cダミー"],

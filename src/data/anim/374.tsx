@@ -5,7 +5,7 @@ export const animationData_374 = {
   "f": {
     "name": "ちび桜",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["374_c.png"],
       [61],
@@ -72,7 +72,7 @@ export const animationData_374 = {
       [367, 1, 144, 44, "EFCT"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [47],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "dmy"],
@@ -128,7 +128,7 @@ export const animationData_374 = {
       [0, 0, 0, 0, 5, 0, "dmy"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [35, 11, -1, 0, 0, "足左すね"],
@@ -336,7 +336,7 @@ export const animationData_374 = {
       [6, 0, 3, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [35, 5, 1, 0, 0],
@@ -436,7 +436,7 @@ export const animationData_374 = {
       [10, 0, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [94],
       [1, 4, 1, 0, 0],
@@ -1169,7 +1169,7 @@ export const animationData_374 = {
       [48, 0, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [1, 4, -1, 0, 0],
@@ -1294,7 +1294,7 @@ export const animationData_374 = {
   "c": {
     "name": "ちび桜CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["374_c.png"],
       [61],
@@ -1361,7 +1361,7 @@ export const animationData_374 = {
       [367, 1, 144, 44, "EFCT"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [47],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "dmy"],
@@ -1417,7 +1417,7 @@ export const animationData_374 = {
       [0, 0, 0, 0, 5, 0, "dmy"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [35, 11, -1, 0, 0, "足左すね"],
@@ -1625,7 +1625,7 @@ export const animationData_374 = {
       [6, 0, 3, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [35, 5, 1, 0, 0],
@@ -1725,7 +1725,7 @@ export const animationData_374 = {
       [10, 0, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [94],
       [1, 4, 1, 0, 0],
@@ -2458,7 +2458,7 @@ export const animationData_374 = {
       [48, 0, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [1, 4, -1, 0, 0],

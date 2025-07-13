@@ -5,7 +5,7 @@ export const animationData_672 = {
   "f": {
     "name": "早乙女玄馬(パンダ)",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["672_f.png"],
       [63],
@@ -2394,7 +2394,7 @@ export const animationData_672 = {
   "c": {
     "name": "早乙女玄馬",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["997_c.png"],
       [98],

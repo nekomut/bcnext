@@ -5,7 +5,7 @@ export const animationData_283 = {
   "f": {
     "name": "猫飯拳パイパイ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["283_f.png"],
       [96],
@@ -107,7 +107,7 @@ export const animationData_283 = {
       [355, 1, 50, 36, "efct"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [94],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー"],
@@ -210,7 +210,7 @@ export const animationData_283 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [58],
       [3, 5, -1, 0, 0, "胴"],
@@ -608,7 +608,7 @@ export const animationData_283 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [3, 4, -1, 0, 0, "胴"],
@@ -923,7 +923,7 @@ export const animationData_283 = {
       [24, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [242],
       [1, 4, 1, 0, 0, "影"],
@@ -3239,7 +3239,7 @@ export const animationData_283 = {
       [90, 30, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [57],
       [3, 4, 1, 0, 0, "胴"],
@@ -3418,7 +3418,7 @@ export const animationData_283 = {
   "c": {
     "name": "猫飯拳パイパイZ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["283_c.png"],
       [96],
@@ -3520,7 +3520,7 @@ export const animationData_283 = {
       [355, 169, 26, 14]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [98],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー"],
@@ -3627,7 +3627,7 @@ export const animationData_283 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [65],
       [3, 5, -1, 0, 0, "胴"],
@@ -4029,7 +4029,7 @@ export const animationData_283 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [70],
       [3, 3, -1, 0, 0],
@@ -4398,7 +4398,7 @@ export const animationData_283 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [294],
       [1, 4, 1, 0, 0],
@@ -7240,7 +7240,7 @@ export const animationData_283 = {
       [90, 30, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [71],
       [3, 4, 1, 0, 0, "胴"],

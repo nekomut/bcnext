@@ -5,7 +5,7 @@ export const animationData_612 = {
   "f": {
     "name": "ネコ王女",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["612_f.png"],
       [81],
@@ -3436,7 +3436,7 @@ export const animationData_612 = {
   "c": {
     "name": "ネコ女王",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["612_c.png"],
       [150],

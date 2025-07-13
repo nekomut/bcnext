@@ -5,7 +5,7 @@ export const animationData_691 = {
   "s": {
     "name": "猿人ネコルーザ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["691_s.png"],
       [70],

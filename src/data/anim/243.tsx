@@ -5,7 +5,7 @@ export const animationData_243 = {
   "f": {
     "name": "聖夜のシスターカッパー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["243_f.png"],
       [97],
@@ -108,7 +108,7 @@ export const animationData_243 = {
       [369, 145, 11, 11, "追加　：　光源"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [121],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=9>"],
@@ -238,7 +238,7 @@ export const animationData_243 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [81],
       [4, 5, -1, 0, 0, "武器ダミー"],
@@ -683,7 +683,7 @@ export const animationData_243 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [81],
       [4, 5, -1, 0, 0, "武器ダミー"],
@@ -1128,7 +1128,7 @@ export const animationData_243 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [172],
       [1, 4, 1, 0, 0],
@@ -2868,7 +2868,7 @@ export const animationData_243 = {
       [165, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [52],
       [3, 4, 1, 0, 0, "影以外ダミー"],
@@ -3032,7 +3032,7 @@ export const animationData_243 = {
   "c": {
     "name": "聖夜のシスターカッパーκ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["243_c.png"],
       [97],
@@ -3135,7 +3135,7 @@ export const animationData_243 = {
       [369, 145, 11, 11, "追加　：　光源"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [121],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=9>"],
@@ -3265,7 +3265,7 @@ export const animationData_243 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [81],
       [4, 5, -1, 0, 0, "武器ダミー"],
@@ -3710,7 +3710,7 @@ export const animationData_243 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [81],
       [4, 5, -1, 0, 0, "武器ダミー"],
@@ -4155,7 +4155,7 @@ export const animationData_243 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [172],
       [1, 4, 1, 0, 0],
@@ -5895,7 +5895,7 @@ export const animationData_243 = {
       [165, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [52],
       [3, 4, 1, 0, 0, "影以外ダミー"],

@@ -5,7 +5,7 @@ export const animationData_254 = {
   "f": {
     "name": "プリティキャット",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["254_f.png"],
       [27],
@@ -38,7 +38,7 @@ export const animationData_254 = {
       [1, 1, 66, 151, "エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [24],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -71,7 +71,7 @@ export const animationData_254 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [4, 5, -1, 0, 0, "体"],
@@ -354,7 +354,7 @@ export const animationData_254 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [4, 5, -1, 0, 0, "体"],
@@ -474,7 +474,7 @@ export const animationData_254 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [64],
       [2, 4, 1, 0, 0, "影"],
@@ -1068,7 +1068,7 @@ export const animationData_254 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [2, 8, 1, 0, 0, "影"],
@@ -1154,7 +1154,7 @@ export const animationData_254 = {
   "c": {
     "name": "ラブリープリティキャット",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["254_c.png"],
       [25],
@@ -1185,7 +1185,7 @@ export const animationData_254 = {
       [1, 1, 66, 151, "エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [24],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -1218,7 +1218,7 @@ export const animationData_254 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [4, 5, -1, 0, 0, "体"],
@@ -1496,7 +1496,7 @@ export const animationData_254 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [4, 5, -1, 0, 0, "体"],
@@ -1627,7 +1627,7 @@ export const animationData_254 = {
       [20, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [62],
       [2, 4, 1, 0, 0, "影"],
@@ -2204,7 +2204,7 @@ export const animationData_254 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [2, 8, 1, 0, 0, "影"],
@@ -2290,7 +2290,7 @@ export const animationData_254 = {
   "s": {
     "name": "サイバープリティキャット",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["254_s.png"],
       [23],
@@ -2319,7 +2319,7 @@ export const animationData_254 = {
       [423, 102, 66, 151, "エフェクト02"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [26],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -2354,7 +2354,7 @@ export const animationData_254 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [4, 5, -1, 0, 0, "体"],
@@ -2658,7 +2658,7 @@ export const animationData_254 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [4, 5, -1, 0, 0, "体"],
@@ -2804,7 +2804,7 @@ export const animationData_254 = {
       [20, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [66],
       [2, 4, 1, 0, 0, "影"],
@@ -3444,7 +3444,7 @@ export const animationData_254 = {
       [25, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [2, 8, 1, 0, 0, "影"],

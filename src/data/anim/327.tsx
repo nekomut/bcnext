@@ -5,7 +5,7 @@ export const animationData_327 = {
   "f": {
     "name": "ベリアル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["327_f.png"],
       [97],
@@ -108,7 +108,7 @@ export const animationData_327 = {
       [343, 119, 15, 30, "ナイフ　光"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [170],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -287,7 +287,7 @@ export const animationData_327 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [284],
       [2, 4, -1, 0, 0],
@@ -2126,7 +2126,7 @@ export const animationData_327 = {
       [140, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [266],
       [2, 5, -1, 0, 0, "ダミー<color=7>"],
@@ -3620,7 +3620,7 @@ export const animationData_327 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [347],
       [2, 4, 1, 0, 0],
@@ -12404,7 +12404,7 @@ export const animationData_327 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [71],
       [2, 5, 1, 0, 0, "バイク　ダミー<color=7>"],
@@ -12625,7 +12625,7 @@ export const animationData_327 = {
   "c": {
     "name": "猛進の大逆者ベリアル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["327_c.png"],
       [97],
@@ -12728,7 +12728,7 @@ export const animationData_327 = {
       [343, 119, 15, 30, "ナイフ　光"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [170],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -12907,7 +12907,7 @@ export const animationData_327 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [284],
       [2, 4, -1, 0, 0],
@@ -14746,7 +14746,7 @@ export const animationData_327 = {
       [140, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [266],
       [2, 5, -1, 0, 0, "ダミー<color=7>"],
@@ -16240,7 +16240,7 @@ export const animationData_327 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [347],
       [2, 4, 1, 0, 0],
@@ -24994,7 +24994,7 @@ export const animationData_327 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [71],
       [2, 5, 1, 0, 0, "バイク　ダミー<color=7>"],

@@ -7108,7 +7108,7 @@ export const animationData_568 = {
   "s": {
     "name": "イディ:NX",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["568_s.png"],
       [65],

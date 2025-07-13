@@ -5,7 +5,7 @@ export const animationData_351 = {
   "f": {
     "name": "双掌星のシシル＆コマリ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["351_f.png"],
       [159],
@@ -170,7 +170,7 @@ export const animationData_351 = {
       [303, 132, 33, 16, "青エフェクト追加"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [189],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -368,7 +368,7 @@ export const animationData_351 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [58],
       [2, 9, -1, 0, 0, "影"],
@@ -800,7 +800,7 @@ export const animationData_351 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [2, 9, -1, 0, 0, "影"],
@@ -1203,7 +1203,7 @@ export const animationData_351 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [690],
       [2, 4, 1, 0, 0, "影"],
@@ -7705,7 +7705,7 @@ export const animationData_351 = {
       [85, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [85],
       [3, 11, 1, 0, 0, "cダミー<color=7>"],
@@ -7968,7 +7968,7 @@ export const animationData_351 = {
   "c": {
     "name": "双掌星のシシル＆コマリΦ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["351_c.png"],
       [159],
@@ -8133,7 +8133,7 @@ export const animationData_351 = {
       [303, 132, 33, 16, "青エフェクト追加"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [234],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -8376,7 +8376,7 @@ export const animationData_351 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [84],
       [2, 9, -1, 0, 0, "影"],
@@ -8938,7 +8938,7 @@ export const animationData_351 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [80],
       [2, 9, -1, 0, 0, "影"],
@@ -9471,7 +9471,7 @@ export const animationData_351 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [890],
       [2, 4, 1, 0, 0, "影"],
@@ -17853,7 +17853,7 @@ export const animationData_351 = {
       [85, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [109],
       [3, 11, 1, 0, 0, "cダミー<color=7>"],
@@ -18188,7 +18188,7 @@ export const animationData_351 = {
   "s": {
     "name": "双輝星のシシル＆コマリΦ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["351_s.png"],
       [274],
@@ -18468,7 +18468,7 @@ export const animationData_351 = {
       [221, 489, 22, 22, "追加-黒ぼかし"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [268],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -18745,7 +18745,7 @@ export const animationData_351 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [100],
       [2, 9, -1, 0, 0, "影"],
@@ -19392,7 +19392,7 @@ export const animationData_351 = {
       [67, 300, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [96],
       [2, 9, -1, 0, 0, "影"],
@@ -20010,7 +20010,7 @@ export const animationData_351 = {
       [67, 300, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [1070],
       [2, 4, 1, 0, 0, "影"],
@@ -31200,7 +31200,7 @@ export const animationData_351 = {
       [91, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [134],
       [3, 11, 1, 0, 0, "cダミー<color=7>"],

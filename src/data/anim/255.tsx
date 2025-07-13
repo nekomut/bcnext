@@ -5,7 +5,7 @@ export const animationData_255 = {
   "f": {
     "name": "サイクロプス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["255_f.png"],
       [21],
@@ -32,7 +32,7 @@ export const animationData_255 = {
       [424, 1, 38, 87, "エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [23],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1430, 1430, 0, 1000, 0, "ダミー<color=7>"],
@@ -64,7 +64,7 @@ export const animationData_255 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [2, 4, -1, 0, 0, "影"],
@@ -403,7 +403,7 @@ export const animationData_255 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [4, 5, -1, 0, 0, "下半身"],
@@ -558,7 +558,7 @@ export const animationData_255 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [2, 4, 1, 0, 0, "影"],
@@ -918,7 +918,7 @@ export const animationData_255 = {
       [38, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [2, 4, 1, 0, 0, "影"],
@@ -1031,7 +1031,7 @@ export const animationData_255 = {
   "c": {
     "name": "鋼鉄のサイクロプス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["255_c.png"],
       [22],
@@ -1059,7 +1059,7 @@ export const animationData_255 = {
       [474, 1, 37, 84, "エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [23],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1430, 1430, 0, 1000, 0, "ダミー<color=7>"],
@@ -1091,7 +1091,7 @@ export const animationData_255 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [2, 4, -1, 0, 0, "影"],
@@ -1426,7 +1426,7 @@ export const animationData_255 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [4, 5, -1, 0, 0, "下半身"],
@@ -1581,7 +1581,7 @@ export const animationData_255 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [2, 4, 1, 0, 0, "影"],
@@ -1943,7 +1943,7 @@ export const animationData_255 = {
       [38, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [2, 4, 1, 0, 0, "影"],
@@ -2056,7 +2056,7 @@ export const animationData_255 = {
   "s": {
     "name": "時空のサイクロプス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["255_s.png"],
       [23],
@@ -2085,7 +2085,7 @@ export const animationData_255 = {
       [259, 114, 76, 73, "棒エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [25],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1430, 1430, 0, 1000, 0, "ダミー<color=7>"],
@@ -2119,7 +2119,7 @@ export const animationData_255 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [2, 4, -1, 0, 0, "影"],
@@ -2471,7 +2471,7 @@ export const animationData_255 = {
       [50, -18000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [4, 5, -1, 0, 0, "下半身"],
@@ -2635,7 +2635,7 @@ export const animationData_255 = {
       [40, -14400, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [2, 4, 1, 0, 0, "影"],
@@ -3006,7 +3006,7 @@ export const animationData_255 = {
       [55, -21600, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [2, 4, 1, 0, 0, "影"],

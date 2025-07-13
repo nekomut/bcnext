@@ -5,7 +5,7 @@ export const animationData_194 = {
   "f": {
     "name": "アキラ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["194_f.png"],
       [71],
@@ -82,7 +82,7 @@ export const animationData_194 = {
       [220, 227, 7, 7, "足白"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [55],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -146,7 +146,7 @@ export const animationData_194 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [91],
       [2, 4, -1, 0, 0, "影"],
@@ -703,7 +703,7 @@ export const animationData_194 = {
       [36, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [3, 10, -1, 0, 0, "キャラダミー"],
@@ -882,7 +882,7 @@ export const animationData_194 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [116],
       [1, 4, 1, 0, 0, "全体ダミー<color=7>"],
@@ -1887,7 +1887,7 @@ export const animationData_194 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [2, 8, -1, 0, 0, "影"],
@@ -1991,7 +1991,7 @@ export const animationData_194 = {
   "c": {
     "name": "シャドウ・アキラ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["194_c.png"],
       [69],
@@ -2066,7 +2066,7 @@ export const animationData_194 = {
       [473, 111, 36, 100, "発射炎02"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [65],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -2140,7 +2140,7 @@ export const animationData_194 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [97],
       [2, 4, -1, 0, 0, "影"],
@@ -2719,7 +2719,7 @@ export const animationData_194 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [3, 10, -1, 0, 0, "キャラダミー"],
@@ -2940,7 +2940,7 @@ export const animationData_194 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [133],
       [1, 4, 1, 0, 0, "全体ダミー<color=7>"],
@@ -4198,7 +4198,7 @@ export const animationData_194 = {
       [149, 0, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [2, 8, -1, 0, 0, "影"],
@@ -4329,7 +4329,7 @@ export const animationData_194 = {
   "s": {
     "name": "インフェルノ・アキラ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["194_s.png"],
       [63],
@@ -4398,7 +4398,7 @@ export const animationData_194 = {
       [442, 157, 53, 98, "破片"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [91],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -4498,7 +4498,7 @@ export const animationData_194 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [113],
       [2, 4, -1, 0, 0, "影"],
@@ -5155,7 +5155,7 @@ export const animationData_194 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [60],
       [3, 10, -1, 0, 0, "キャラダミー"],
@@ -5430,7 +5430,7 @@ export const animationData_194 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [190],
       [1, 4, 1, 0, 0, "全体ダミー<color=7>"],
@@ -7556,7 +7556,7 @@ export const animationData_194 = {
       [115, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [50],
       [2, 8, 1, 0, 0, "影"],

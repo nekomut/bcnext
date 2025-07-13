@@ -5,7 +5,7 @@ export const animationData_072 = {
   "f": {
     "name": "前田慶次",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["072_f.png"],
       [42],
@@ -53,7 +53,7 @@ export const animationData_072 = {
       [1, 146, 123, 40, "zI4"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [47],
       [-1, -1, 0, 0, 509, 434, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -109,7 +109,7 @@ export const animationData_072 = {
       [0, 0, 0, 2, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [26, 11, -1, 0, 0, "ふともも<color=0>"],
@@ -251,7 +251,7 @@ export const animationData_072 = {
       [-17, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [30, 2, -1, 0, 0, "ダミー"],
@@ -297,7 +297,7 @@ export const animationData_072 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [2, 12, 1, 0, 0, "ダミー"],
@@ -501,7 +501,7 @@ export const animationData_072 = {
       [35, -30, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [2, 12, -1, 0, 0, "ダミー"],
@@ -536,7 +536,7 @@ export const animationData_072 = {
   "c": {
     "name": "武神・前田慶次",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["072_c.png"],
       [59],
@@ -601,7 +601,7 @@ export const animationData_072 = {
       [1, 202, 211, 53, "zimennono"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [62],
       [-1, -1, 0, 0, -223, 393, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -672,7 +672,7 @@ export const animationData_072 = {
       [0, 0, 0, 2, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [26, 11, -1, 0, 0, "ふともも<color=0>"],
@@ -959,7 +959,7 @@ export const animationData_072 = {
       [10, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [30, 2, -1, 0, 0, "ダミー"],
@@ -1134,7 +1134,7 @@ export const animationData_072 = {
       [10, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [65],
       [2, 12, 1, 0, 0, "ダミー"],
@@ -1553,7 +1553,7 @@ export const animationData_072 = {
       [60, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [2, 12, -1, 0, 0, "ダミー"],
@@ -1618,7 +1618,7 @@ export const animationData_072 = {
   "s": {
     "name": "憤怒の武神・前田慶次",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["072_s.png"],
       [53],
@@ -1677,7 +1677,7 @@ export const animationData_072 = {
       [170, 223, 102, 24, "花の砂"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [85],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -1771,7 +1771,7 @@ export const animationData_072 = {
       [0, 0, 0, 2, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [57],
       [3, 5, -1, 0, 0, "足以外ダミー"],
@@ -2189,7 +2189,7 @@ export const animationData_072 = {
       [55, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [3, 5, -1, 0, 0, "ダミー足以外"],
@@ -2385,7 +2385,7 @@ export const animationData_072 = {
       [43, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [128],
       [2, 12, 1, 0, 0, "キャラダミー"],
@@ -3195,7 +3195,7 @@ export const animationData_072 = {
       [30, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [2, 12, 1, 0, 0, "キャラダミー"],

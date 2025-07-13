@@ -5,7 +5,7 @@ export const animationData_035 = {
   "f": {
     "name": "オタネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["035_f.png"],
       [24],
@@ -35,7 +35,7 @@ export const animationData_035 = {
       [163, 163, 22, 20]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [14],
       [-1, -1, 0, 0, 700, 440, 0, 0, 1790, 1790, 0, 1000, 0, "全体"],
@@ -58,7 +58,7 @@ export const animationData_035 = {
       [0, 0, 0, 0, 5, 0, "全体"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [3, 2, -1, 0, 0, "汗"],
@@ -88,7 +88,7 @@ export const animationData_035 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [4, 11, -1, 0, 0, "汗"],
@@ -101,7 +101,7 @@ export const animationData_035 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [4, 11, 1, 0, 0, "汗"],
@@ -222,7 +222,7 @@ export const animationData_035 = {
       [115, -100, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [6, 12, 1, 0, 0, "全体"],
@@ -248,7 +248,7 @@ export const animationData_035 = {
   "c": {
     "name": "ネコハッカー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["035_c.png"],
       [22],
@@ -276,7 +276,7 @@ export const animationData_035 = {
       [185, 49, 60, 24, "爆発衝撃波"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [21],
       [-1, -1, 0, 0, 0, 0, 32, 2, 1790, 1790, 0, 1000, 0, "原点"],
@@ -306,7 +306,7 @@ export const animationData_035 = {
       [0, 0, 28, 2, 8, 0, "原点"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [5, 11, -1, 0, 0],
@@ -330,7 +330,7 @@ export const animationData_035 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [9, 11, -1, 0, 0],
@@ -346,7 +346,7 @@ export const animationData_035 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [9, 11, 1, 0, 0],
@@ -465,7 +465,7 @@ export const animationData_035 = {
       [87, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [9, 11, -1, 0, 0],
@@ -506,7 +506,7 @@ export const animationData_035 = {
   "s": {
     "name": "ネコスーパーハッカー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["035_s.png"],
       [55],
@@ -567,7 +567,7 @@ export const animationData_035 = {
       [247, 86, 31, 19, "054[全].png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [74],
       [-1, -1, 0, 0, 75, 286, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -650,7 +650,7 @@ export const animationData_035 = {
       [0, 0, 0, 0, 5, 0, "035コア.png<color=9>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [11, 12, -1, 0, 0, "037light.png"],
@@ -735,7 +735,7 @@ export const animationData_035 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [11, 12, -1, 0, 0, "037light.png"],
@@ -820,7 +820,7 @@ export const animationData_035 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [87],
       [1, 4, 1, 0, 0, "026本体.png<color=9>"],
@@ -2099,7 +2099,7 @@ export const animationData_035 = {
       [200, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [43, 12, 1, 0, 0, "000.png<color=3>"],

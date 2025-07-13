@@ -5,7 +5,7 @@ export const animationData_395 = {
   "f": {
     "name": "小山雅",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["395_f.png"],
       [47],
@@ -58,7 +58,7 @@ export const animationData_395 = {
       [457, 213, 38, 42, "当たりエフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [56],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "■ダミー<color=7>"],
@@ -123,7 +123,7 @@ export const animationData_395 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [2, 9, -1, 0, 0, "影"],
@@ -328,7 +328,7 @@ export const animationData_395 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [41, 12, -1, 0, 0, "■エフェクト全体ダミー<color=7>"],
@@ -415,7 +415,7 @@ export const animationData_395 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [86],
       [4, 2, 1, 0, 0, "胴体<color=10>"],
@@ -1277,7 +1277,7 @@ export const animationData_395 = {
       [40, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [42],
       [4, 4, 1, 0, 0, "胴体"],
@@ -1411,7 +1411,7 @@ export const animationData_395 = {
   "c": {
     "name": "小山雅CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["395_c.png"],
       [47],
@@ -1464,7 +1464,7 @@ export const animationData_395 = {
       [457, 213, 38, 42, "当たりエフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [56],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "■ダミー<color=7>"],
@@ -1529,7 +1529,7 @@ export const animationData_395 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [2, 9, -1, 0, 0, "影"],
@@ -1734,7 +1734,7 @@ export const animationData_395 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [41, 12, -1, 0, 0, "■エフェクト全体ダミー<color=7>"],
@@ -1821,7 +1821,7 @@ export const animationData_395 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [86],
       [4, 2, 1, 0, 0, "胴体<color=10>"],
@@ -2683,7 +2683,7 @@ export const animationData_395 = {
       [40, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [42],
       [4, 4, 1, 0, 0, "胴体"],
@@ -2817,7 +2817,7 @@ export const animationData_395 = {
   "s": {
     "name": "野球マン５号CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["395_s.png"],
       [49],
@@ -2872,7 +2872,7 @@ export const animationData_395 = {
       [365, 126, 36, 36, "black"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [75],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "■ダミー<color=7>"],
@@ -2956,7 +2956,7 @@ export const animationData_395 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [2, 9, -1, 0, 0, "影"],
@@ -3163,7 +3163,7 @@ export const animationData_395 = {
       [32, 4, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [4, 5, -1, 0, 0, "胴体"],
@@ -3241,7 +3241,7 @@ export const animationData_395 = {
       [20, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [95],
       [4, 5, 1, 0, 0, "胴体<color=10>\t"],
@@ -3820,7 +3820,7 @@ export const animationData_395 = {
       [27, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [4, 4, 1, 0, 0, "胴体"],

@@ -5,7 +5,7 @@ export const animationData_468 = {
   "f": {
     "name": "聖フェニックス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["468_f.png"],
       [49],
@@ -60,7 +60,7 @@ export const animationData_468 = {
       [74, 44, 69, 33]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [45],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -114,7 +114,7 @@ export const animationData_468 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [35],
       [2, 5, -1, 0, 0, "045こちら向き靴.png"],
@@ -322,7 +322,7 @@ export const animationData_468 = {
       [3, -11, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [10],
       [34, 12, -1, 0, 0, "045こちら向き靴.png"],
@@ -392,7 +392,7 @@ export const animationData_468 = {
       [240, 39, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [45],
       [2, 11, 1, 0, 0, "000.png"],
@@ -1404,7 +1404,7 @@ export const animationData_468 = {
       [32, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [22],
       [35, 12, 1, 0, 0, "000.png"],
@@ -1478,7 +1478,7 @@ export const animationData_468 = {
   "c": {
     "name": "聖戦衣化聖フェニックス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["468_c.png"],
       [56],
@@ -1540,7 +1540,7 @@ export const animationData_468 = {
       [264, 43, 81, 41]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [72],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -1621,7 +1621,7 @@ export const animationData_468 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [38],
       [1, 9, -1, 0, 0, "030しっぽ根本.png"],
@@ -1910,7 +1910,7 @@ export const animationData_468 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [37],
       [1, 9, -1, 0, 0, "030しっぽ根本.png"],
@@ -2184,7 +2184,7 @@ export const animationData_468 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [121],
       [2, 2, 1, 0, 0, "026胴体.png"],
@@ -3611,7 +3611,7 @@ export const animationData_468 = {
       [32, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [52],
       [2, 4, 1, 0, 0, "014二の腕の線.png"],
@@ -3775,7 +3775,7 @@ export const animationData_468 = {
   "s": {
     "name": "ヘッドロココ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["802_s.png"],
       [55],
@@ -3836,7 +3836,7 @@ export const animationData_468 = {
       [259, 200, 24, 24, "054暗い円.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [86],
       [-1, -1, 0, 0, 336, 217, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -3931,7 +3931,7 @@ export const animationData_468 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [60],
       [1, 9, -1, 0, 0, "030しっぽ根本.png"],
@@ -4348,7 +4348,7 @@ export const animationData_468 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [62],
       [1, 9, -1, 0, 0, "030しっぽ根本.png"],
@@ -4779,7 +4779,7 @@ export const animationData_468 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [104],
       [1, 4, 1, 0, 0, "000.png\t"],
@@ -5796,7 +5796,7 @@ export const animationData_468 = {
       [40, 2500, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [27],
       [53, 12, 1, 0, 0, "000.png"],

@@ -5,7 +5,7 @@ export const animationData_413 = {
   "f": {
     "name": "エヴァ初号機",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["413_f.png"],
       [78],
@@ -89,7 +89,7 @@ export const animationData_413 = {
       [172, 50, 14, 14, "076light.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [124],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -222,7 +222,7 @@ export const animationData_413 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [62],
       [3, 4, -1, 0, 0, "キャラ親ダミー<color=7>\t全体横位置調整"],
@@ -669,7 +669,7 @@ export const animationData_413 = {
       [0, 10, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [4, 5, -1, 0, 0, "025腰.png<color=0>"],
@@ -833,7 +833,7 @@ export const animationData_413 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [171],
       [1, 4, 1, 0, 0, "037影.png<color=9>"],
@@ -2090,7 +2090,7 @@ export const animationData_413 = {
       [44, -17, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [3, 11, 1, 0, 0, "キャラ親ダミー<color=7>"],
@@ -2212,7 +2212,7 @@ export const animationData_413 = {
   "c": {
     "name": "エヴァ初号機＆ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["413_c.png"],
       [78],
@@ -2296,7 +2296,7 @@ export const animationData_413 = {
       [172, 50, 14, 14, "076light.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [124],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -2429,7 +2429,7 @@ export const animationData_413 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [62],
       [3, 4, -1, 0, 0, "キャラ親ダミー<color=7>\t全体横位置調整"],
@@ -2876,7 +2876,7 @@ export const animationData_413 = {
       [0, 10, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [4, 5, -1, 0, 0, "025腰.png<color=0>"],
@@ -3040,7 +3040,7 @@ export const animationData_413 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [171],
       [1, 4, 1, 0, 0, "037影.png<color=9>"],
@@ -4297,7 +4297,7 @@ export const animationData_413 = {
       [44, -17, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [3, 11, 1, 0, 0, "キャラ親ダミー<color=7>"],
@@ -4419,7 +4419,7 @@ export const animationData_413 = {
   "s": {
     "name": "決意のエヴァ初号機＆ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["413_s.png"],
       [133],

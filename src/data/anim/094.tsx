@@ -5,7 +5,7 @@ export const animationData_094 = {
   "f": {
     "name": "狂乱のキモネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["903_f.png"],
       [7],
@@ -18,7 +18,7 @@ export const animationData_094 = {
       [1, 210, 46, 45, "攻撃猫"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [14],
       [-1, -1, 0, 0, -221, 653, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -41,7 +41,7 @@ export const animationData_094 = {
       [0, 0, 0, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [4, 11, -1, 0, 0, "ダミー"],
@@ -193,7 +193,7 @@ export const animationData_094 = {
       [36, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [4, 11, -1, 0, 0, "ダミー"],
@@ -294,7 +294,7 @@ export const animationData_094 = {
       [100, 5, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [4, 11, 1, 0, 0, "足１<color=0>"],
@@ -393,7 +393,7 @@ export const animationData_094 = {
       [8, 1, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [4, 11, -1, 0, 0],
@@ -464,7 +464,7 @@ export const animationData_094 = {
   "c": {
     "name": "狂乱の美脚ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["003_c.png"],
       [15],
@@ -507,7 +507,7 @@ export const animationData_094 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 0, 0, 179, 179, 0, 255, 0, "ダミー親"],
@@ -519,7 +519,7 @@ export const animationData_094 = {
       [0, 0, 27, 146, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -542,7 +542,7 @@ export const animationData_094 = {
       [24, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, 0, 0],
@@ -550,7 +550,7 @@ export const animationData_094 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -612,7 +612,7 @@ export const animationData_094 = {
       [11, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 2, -1, 0, 0],
@@ -635,7 +635,7 @@ export const animationData_094 = {
   "s": {
     "name": "大狂乱のムキあしネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["094_s.png"],
       [25],
@@ -666,7 +666,7 @@ export const animationData_094 = {
       [1, 246, 20, 9, "ひげ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [17],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 255, 0],
@@ -692,7 +692,7 @@ export const animationData_094 = {
       [0, 0, 49, 114, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [1, 2, -1, 0, 0],
@@ -787,7 +787,7 @@ export const animationData_094 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [4, 12, 1, 0, 0],
@@ -809,7 +809,7 @@ export const animationData_094 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [1, 2, 1, 0, 0],
@@ -943,7 +943,7 @@ export const animationData_094 = {
       [11, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [1, 12, 1, 0, 0],

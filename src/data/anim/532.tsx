@@ -5,7 +5,7 @@ export const animationData_532 = {
   "f": {
     "name": "フェンリルとウルス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["535_f.png"],
       [107],
@@ -118,7 +118,7 @@ export const animationData_532 = {
       [120, 242, 24, 12, "106赤玉[下].png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [151],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -278,7 +278,7 @@ export const animationData_532 = {
       [0, 0, 6, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [130],
       [4, 5, -1, 0, 0, "ダミー<color=7>"],
@@ -1136,7 +1136,7 @@ export const animationData_532 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [83],
       [4, 11, -1, 0, 0],
@@ -1559,7 +1559,7 @@ export const animationData_532 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [267],
       [4, 4, 1, 0, 0, "Eバチーン"],
@@ -4717,7 +4717,7 @@ export const animationData_532 = {
       [77, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [85],
       [4, 5, 1, 0, 0],
@@ -4980,7 +4980,7 @@ export const animationData_532 = {
   "c": {
     "name": "ミケとウルス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["532_c.png"],
       [108],
@@ -5265,7 +5265,7 @@ export const animationData_532 = {
       [0, 0, 6, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [138],
       [4, 5, -1, 0, 0, "ダミー<color=7>"],
@@ -6184,7 +6184,7 @@ export const animationData_532 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [93],
       [4, 11, -1, 0, 0],
@@ -10053,7 +10053,7 @@ export const animationData_532 = {
       [93, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [90],
       [4, 5, 1, 0, 0],

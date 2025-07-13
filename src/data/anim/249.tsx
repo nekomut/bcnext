@@ -5,7 +5,7 @@ export const animationData_249 = {
   "f": {
     "name": "剣士",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["249_f.png"],
       [13],
@@ -24,7 +24,7 @@ export const animationData_249 = {
       [26, 51, 43, 59, "エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [14],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -47,7 +47,7 @@ export const animationData_249 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [2, 4, -1, 0, 0, "影"],
@@ -134,7 +134,7 @@ export const animationData_249 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [4, 5, -1, 0, 0, "体"],
@@ -194,7 +194,7 @@ export const animationData_249 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [2, 4, 1, 0, 0, "影"],
@@ -389,7 +389,7 @@ export const animationData_249 = {
       [14, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [2, 8, 1, 0, 0, "影"],
@@ -442,7 +442,7 @@ export const animationData_249 = {
   "c": {
     "name": "セーラー服剣士",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["249_c.png"],
       [13],
@@ -461,7 +461,7 @@ export const animationData_249 = {
       [42, 54, 43, 59, "エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [14],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -484,7 +484,7 @@ export const animationData_249 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [2, 4, -1, 0, 0, "影"],
@@ -570,7 +570,7 @@ export const animationData_249 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [4, 5, -1, 0, 0, "体"],
@@ -620,7 +620,7 @@ export const animationData_249 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [2, 4, 1, 0, 0, "影"],
@@ -814,7 +814,7 @@ export const animationData_249 = {
       [14, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [2, 8, 1, 0, 0, "影"],
@@ -867,7 +867,7 @@ export const animationData_249 = {
   "s": {
     "name": "明王の剣士",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["249_s.png"],
       [27],
@@ -900,7 +900,7 @@ export const animationData_249 = {
       [276, 174, 39, 33, "奥手下"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [27],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -936,7 +936,7 @@ export const animationData_249 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [2, 4, -1, 0, 0, "影"],
@@ -1052,7 +1052,7 @@ export const animationData_249 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [4, 5, -1, 0, 0, "体"],
@@ -1155,7 +1155,7 @@ export const animationData_249 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [2, 4, 1, 0, 0, "影"],
@@ -1386,7 +1386,7 @@ export const animationData_249 = {
       [20, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [2, 8, 1, 0, 0, "影"],

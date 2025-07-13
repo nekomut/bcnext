@@ -5,7 +5,7 @@ export const animationData_075 = {
   "f": {
     "name": "風神のウィンディ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["075_f.png"],
       [61],
@@ -72,7 +72,7 @@ export const animationData_075 = {
       [24, 140, 28, 13]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [91],
       [-1, -1, 0, 0, 534, -38, 0, 0, 1120, 1120, 0, 1000, 0, "ダミー"],
@@ -172,7 +172,7 @@ export const animationData_075 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -401,7 +401,7 @@ export const animationData_075 = {
       [160, 700, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -630,7 +630,7 @@ export const animationData_075 = {
       [160, 700, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [182],
       [46, 9, 1, 0, 0, "ダミー"],
@@ -2323,7 +2323,7 @@ export const animationData_075 = {
       [117, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [37, 12, -1, 0, 0, "ダミー"],
@@ -2445,7 +2445,7 @@ export const animationData_075 = {
   "c": {
     "name": "風神のウィンディα",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["075_c.png"],
       [64],
@@ -2515,7 +2515,7 @@ export const animationData_075 = {
       [216, 151, 25, 22, "袋ライト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [101],
       [-1, -1, 0, 0, 658, -177, 0, 0, 1120, 1120, 0, 1000, 0, "ダミー"],
@@ -2625,7 +2625,7 @@ export const animationData_075 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -2890,7 +2890,7 @@ export const animationData_075 = {
       [70, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -3155,7 +3155,7 @@ export const animationData_075 = {
       [70, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [232],
       [1, 8, 1, 0, 0],
@@ -5510,7 +5510,7 @@ export const animationData_075 = {
       [79, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [42],
       [37, 12, -1, 0, 0, "ダミー"],
@@ -5644,7 +5644,7 @@ export const animationData_075 = {
   "s": {
     "name": "疾風神のウィンディα",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["075_s.png"],
       [76],
@@ -5726,7 +5726,7 @@ export const animationData_075 = {
       [282, 153, 18, 18, "バックの黒"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [134],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1120, 1120, 0, 1000, 0, "ダミー"],
@@ -5869,7 +5869,7 @@ export const animationData_075 = {
       [0, 0, -3, 3, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [57],
       [1, 8, -1, 0, 0, "ダミー"],
@@ -6197,7 +6197,7 @@ export const animationData_075 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [57],
       [1, 8, -1, 0, 0, "ダミー"],
@@ -6525,7 +6525,7 @@ export const animationData_075 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [300],
       [1, 4, 1, 0, 0],
@@ -9513,7 +9513,7 @@ export const animationData_075 = {
       [47, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [63],
       [2, 11, 1, 0, 0, "ダミー"],

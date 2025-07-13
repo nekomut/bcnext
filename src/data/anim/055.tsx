@@ -5,7 +5,7 @@ export const animationData_055 = {
   "f": {
     "name": "ネコ魔女",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["055_f.png"],
       [34],
@@ -45,7 +45,7 @@ export const animationData_055 = {
       [241, 1, 78, 86, "爆破５"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [14],
       [-1, -1, 0, 0, 485, 431, 1, 1, 1790, 1790, 0, 1000, 0, "ダミー親"],
@@ -68,7 +68,7 @@ export const animationData_055 = {
       [0, 0, 25, 3, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [2, 5, -1, 0, 0, "上下の揺れ"],
@@ -155,7 +155,7 @@ export const animationData_055 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [2, 5, -1, 0, 0, "上下の揺れ"],
@@ -242,7 +242,7 @@ export const animationData_055 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [10, 2, 1, 0, 0, "帽子後ろの切り替え"],
@@ -502,7 +502,7 @@ export const animationData_055 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [2, 11, -1, 0, 0],
@@ -531,7 +531,7 @@ export const animationData_055 = {
   "c": {
     "name": "ネコマージョ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["055_c.png"],
       [39],
@@ -576,7 +576,7 @@ export const animationData_055 = {
       [167, 209, 56, 16, "攻撃前つば２"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [17],
       [-1, -1, 0, 0, 485, 431, 1, 1, 1790, 1790, 0, 1000, 0, "ダミー親"],
@@ -602,7 +602,7 @@ export const animationData_055 = {
       [0, 0, 25, 3, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [2, 5, -1, 0, 0, "上下の揺れ"],
@@ -675,7 +675,7 @@ export const animationData_055 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [2, 5, -1, 0, 0, "上下の揺れ"],
@@ -748,7 +748,7 @@ export const animationData_055 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [44],
       [10, 2, 1, 0, 0, "帽子後ろの切り替え"],
@@ -1110,7 +1110,7 @@ export const animationData_055 = {
       [26, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [2, 11, -1, 0, 0],
@@ -1136,7 +1136,7 @@ export const animationData_055 = {
   "s": {
     "name": "ネコビマージョ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["055_s.png"],
       [69],
@@ -1211,7 +1211,7 @@ export const animationData_055 = {
       [117, 35, 7, 13, 2]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [52],
       [-1, -1, 0, 0, 0, 0, 1, 1, 1790, 1790, 0, 1000, 0, "ダミー親"],
@@ -1272,7 +1272,7 @@ export const animationData_055 = {
       [0, 0, 25, 3, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [42],
       [2, 5, -1, 0, 0, "上下の揺れ"],
@@ -1538,7 +1538,7 @@ export const animationData_055 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [42],
       [2, 5, -1, 0, 0, "上下の揺れ"],
@@ -1804,7 +1804,7 @@ export const animationData_055 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [100],
       [2, 2, 1, 0, 0, "顔の変換"],
@@ -2578,7 +2578,7 @@ export const animationData_055 = {
       [34, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [53],
       [2, 4, -1, 0, 0],

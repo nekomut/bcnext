@@ -12516,7 +12516,7 @@ export const animationData_607 = {
   "s": {
     "name": "伝説の冒険少女カンナ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["607_s.png"],
       [154],

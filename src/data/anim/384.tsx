@@ -5,7 +5,7 @@ export const animationData_384 = {
   "f": {
     "name": "氷上聡里＆ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["384_f.png"],
       [44],
@@ -55,7 +55,7 @@ export const animationData_384 = {
       [149, 69, 9, 19, "回転ef"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [48],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -112,7 +112,7 @@ export const animationData_384 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [49],
       [2, 4, -1, 0, 0],
@@ -403,7 +403,7 @@ export const animationData_384 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [4, 5, -1, 0, 0],
@@ -591,7 +591,7 @@ export const animationData_384 = {
       [36, 0, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [83],
       [3, 4, 1, 0, 0],
@@ -1158,7 +1158,7 @@ export const animationData_384 = {
       [40, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [57],
       [4, 4, 1, 0, 0, "胴体"],
@@ -1337,7 +1337,7 @@ export const animationData_384 = {
   "c": {
     "name": "氷上聡里＆ネコCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["384_c.png"],
       [44],
@@ -1387,7 +1387,7 @@ export const animationData_384 = {
       [149, 69, 9, 19, "回転ef"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [48],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1444,7 +1444,7 @@ export const animationData_384 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [49],
       [2, 4, -1, 0, 0],
@@ -1735,7 +1735,7 @@ export const animationData_384 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [4, 5, -1, 0, 0],
@@ -1923,7 +1923,7 @@ export const animationData_384 = {
       [36, 0, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [83],
       [3, 4, 1, 0, 0],
@@ -2490,7 +2490,7 @@ export const animationData_384 = {
       [40, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [57],
       [4, 4, 1, 0, 0, "胴体"],

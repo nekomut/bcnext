@@ -5,7 +5,7 @@ export const animationData_808 = {
   "f": {
     "name": "ネコテイルス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["808_f.png"],
       [63],
@@ -1842,7 +1842,7 @@ export const animationData_808 = {
   "c": {
     "name": "ネコテイルスCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["808_c.png"],
       [61],

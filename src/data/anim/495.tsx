@@ -5,7 +5,7 @@ export const animationData_495 = {
   "f": {
     "name": "ネコマタドール",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["495_f.png"],
       [62],
@@ -73,7 +73,7 @@ export const animationData_495 = {
       [371, 115, 57, 53, "061ヒットEF.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [32],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "dm"],
@@ -114,7 +114,7 @@ export const animationData_495 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [51],
       [2, 4, -1, 0, 0, "\t"],
@@ -431,7 +431,7 @@ export const animationData_495 = {
       [4, 0, 3, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [30],
       [3, 5, -1, 0, 0, "\t"],
@@ -609,7 +609,7 @@ export const animationData_495 = {
       [9, 0, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [98],
       [1, 4, 1, 0, 0, "\t"],
@@ -1723,7 +1723,7 @@ export const animationData_495 = {
       [40, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [45],
       [2, 4, 1, 0, 0, "\t"],
@@ -1866,7 +1866,7 @@ export const animationData_495 = {
   "c": {
     "name": "ネコフラメンコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["495_c.png"],
       [76],
@@ -1948,7 +1948,7 @@ export const animationData_495 = {
       [269, 1, 57, 46, "075頭攻撃差分2.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [53],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "dm"],
@@ -2010,7 +2010,7 @@ export const animationData_495 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [73],
       [2, 4, -1, 0, 0, "\t"],
@@ -2401,7 +2401,7 @@ export const animationData_495 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [59],
       [3, 2, -1, 0, 0, "\t"],
@@ -2699,7 +2699,7 @@ export const animationData_495 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [174],
       [1, 4, 1, 0, 0, "\t"],
@@ -4265,7 +4265,7 @@ export const animationData_495 = {
       [76, 100, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [68],
       [2, 4, 1, 0, 0, "\t"],
@@ -4477,7 +4477,7 @@ export const animationData_495 = {
   "s": {
     "name": "ネコエキゾチック",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["495_s.png"],
       [72],

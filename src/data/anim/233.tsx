@@ -5,7 +5,7 @@ export const animationData_233 = {
   "f": {
     "name": "神徒ブリュンヒルデ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["233_f.png"],
       [24],
@@ -35,7 +35,7 @@ export const animationData_233 = {
       [398, 1, 113, 180]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [22],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "dm"],
@@ -66,7 +66,7 @@ export const animationData_233 = {
       [0, 0, 0, 0, 5, 0, "dm"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [2, 5, -1, 0, 0],
@@ -166,7 +166,7 @@ export const animationData_233 = {
       [15, 100, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [2, 5, -1, 0, 0],
@@ -259,7 +259,7 @@ export const animationData_233 = {
       [0, 50, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [1, 4, 1, 0, 0],
@@ -429,7 +429,7 @@ export const animationData_233 = {
       [16, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [2, 5, 1, 0, 0, "dm"],
@@ -467,7 +467,7 @@ export const animationData_233 = {
   "c": {
     "name": "神徒ブリュンヒルデCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["233_c.png"],
       [24],
@@ -497,7 +497,7 @@ export const animationData_233 = {
       [398, 1, 113, 180]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [22],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "dm"],
@@ -528,7 +528,7 @@ export const animationData_233 = {
       [0, 0, 0, 0, 5, 0, "dm"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [2, 5, -1, 0, 0],
@@ -628,7 +628,7 @@ export const animationData_233 = {
       [15, 100, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [2, 5, -1, 0, 0],
@@ -721,7 +721,7 @@ export const animationData_233 = {
       [0, 50, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [1, 4, 1, 0, 0],
@@ -891,7 +891,7 @@ export const animationData_233 = {
       [16, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [2, 5, 1, 0, 0, "dm"],

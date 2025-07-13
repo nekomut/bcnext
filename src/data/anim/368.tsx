@@ -5,7 +5,7 @@ export const animationData_368 = {
   "f": {
     "name": "ギルガメッシュ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["368_f.png"],
       [111],
@@ -122,7 +122,7 @@ export const animationData_368 = {
       [275, 99, 7, 15]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [141],
       [-1, -1, 0, 0, 0, 0, 0, 0, 985, 985, 0, 1000, 0, "ダミー"],
@@ -272,7 +272,7 @@ export const animationData_368 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [80],
       [1, 9, -1, 0, 0, "影"],
@@ -830,7 +830,7 @@ export const animationData_368 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [3, 11, -1, 0, 0],
@@ -1076,7 +1076,7 @@ export const animationData_368 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [234],
       [2, 11, 1, 0, 0],
@@ -3092,7 +3092,7 @@ export const animationData_368 = {
       [61, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [90],
       [2, 4, 1, 0, 0],
@@ -3370,7 +3370,7 @@ export const animationData_368 = {
   "c": {
     "name": "ギルガメッシュCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["368_c.png"],
       [111],
@@ -3487,7 +3487,7 @@ export const animationData_368 = {
       [275, 99, 7, 15]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [141],
       [-1, -1, 0, 0, 0, 0, 0, 0, 985, 985, 0, 1000, 0, "ダミー"],
@@ -3637,7 +3637,7 @@ export const animationData_368 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [80],
       [1, 9, -1, 0, 0, "影"],
@@ -4195,7 +4195,7 @@ export const animationData_368 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [3, 11, -1, 0, 0],
@@ -4441,7 +4441,7 @@ export const animationData_368 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [234],
       [2, 11, 1, 0, 0],
@@ -6457,7 +6457,7 @@ export const animationData_368 = {
       [61, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [90],
       [2, 4, 1, 0, 0],

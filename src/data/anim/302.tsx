@@ -5,7 +5,7 @@ export const animationData_302 = {
   "f": {
     "name": "ネコアイスゴースト",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["302_f.png"],
       [70],
@@ -81,7 +81,7 @@ export const animationData_302 = {
       [363, 167, 24, 43, "ぼわ４"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [66],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -156,7 +156,7 @@ export const animationData_302 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [50],
       [2, 9, -1, 0, 0, "影"],
@@ -428,7 +428,7 @@ export const animationData_302 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [50],
       [2, 9, -1, 0, 0, "影"],
@@ -700,7 +700,7 @@ export const animationData_302 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [135],
       [2, 9, 1, 0, 0, "影"],
@@ -1791,7 +1791,7 @@ export const animationData_302 = {
       [68, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [3, 5, 1, 0, 0, "cダミー"],
@@ -1868,7 +1868,7 @@ export const animationData_302 = {
   "c": {
     "name": "ネコアイスファントム",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["302_c.png"],
       [89],
@@ -1963,7 +1963,7 @@ export const animationData_302 = {
       [456, 113, 24, 43, "ぼわ４"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [96],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -2068,7 +2068,7 @@ export const animationData_302 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [57],
       [2, 9, -1, 0, 0, "影"],
@@ -2375,7 +2375,7 @@ export const animationData_302 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [57],
       [2, 9, -1, 0, 0, "影"],
@@ -2682,7 +2682,7 @@ export const animationData_302 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [193],
       [2, 4, 1, 0, 0, "影"],
@@ -4204,7 +4204,7 @@ export const animationData_302 = {
       [70, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [3, 5, 1, 0, 0, "cダミー"],
@@ -4341,7 +4341,7 @@ export const animationData_302 = {
   "s": {
     "name": "ネコアイスサキュバス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["302_s.png"],
       [93],

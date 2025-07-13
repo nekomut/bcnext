@@ -5,7 +5,7 @@ export const animationData_014 = {
   "f": {
     "name": "ネコの箱詰め",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["014_f.png"],
       [12],
@@ -23,7 +23,7 @@ export const animationData_014 = {
       [172, 84, 43, 12, "奥　ふた"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [13],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 255, 0],
@@ -45,7 +45,7 @@ export const animationData_014 = {
       [0, 0, 43, 60, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [1, 5, -1, 0, 0, "足3"],
@@ -117,7 +117,7 @@ export const animationData_014 = {
       [16, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [5, 12, -1, 0, 0, "振り回しエフェクト"],
@@ -128,7 +128,7 @@ export const animationData_014 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [1, 11, 1, 0, 0, "足3"],
@@ -231,7 +231,7 @@ export const animationData_014 = {
       [16, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [1, 11, 1, 0, 0, "子猫"],
@@ -320,7 +320,7 @@ export const animationData_014 = {
   "c": {
     "name": "ネコギャング",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["014_c.png"],
       [20],
@@ -373,7 +373,7 @@ export const animationData_014 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [35],
       [-1, -1, 0, 0, 270, 360, 0, 0, 1790, 1790, 0, 255, 0],
@@ -417,7 +417,7 @@ export const animationData_014 = {
       [0, 0, 43, 60, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [5, 12, -1, 0, 0],
@@ -574,7 +574,7 @@ export const animationData_014 = {
       [8, 16, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [5, 12, -1, 0, 0],
@@ -646,7 +646,7 @@ export const animationData_014 = {
       [16, 16, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [1, 11, 1, 0, 0, "足3"],
@@ -919,7 +919,7 @@ export const animationData_014 = {
       [100, 17, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [50],
       [1, 11, 1, 0, 0, "子猫"],
@@ -1077,7 +1077,7 @@ export const animationData_014 = {
   "s": {
     "name": "重機C・A・T",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["014_s.png"],
       [22],
@@ -1105,7 +1105,7 @@ export const animationData_014 = {
       [183, 53, 43, 64, "煙"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [33],
       [-1, -1, 0, 0, 0, 0, 0, 1, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -1147,7 +1147,7 @@ export const animationData_014 = {
       [0, 0, 0, 3, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [3, 4, -1, 0, 0, "キャラダミー"],
@@ -1365,7 +1365,7 @@ export const animationData_014 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [25, 12, -1, 0, 0, "焔"],
@@ -1385,7 +1385,7 @@ export const animationData_014 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [4, 4, 1, 0, 0, "腰"],
@@ -1712,7 +1712,7 @@ export const animationData_014 = {
       [50, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [3, 4, -1, 0, 0, "キャラダミー"],

@@ -5,7 +5,7 @@ export const animationData_385 = {
   "f": {
     "name": "矢部明雄",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["385_f.png"],
       [24],
@@ -35,7 +35,7 @@ export const animationData_385 = {
       [164, 177, 52, 59, "体２"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [24],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -68,7 +68,7 @@ export const animationData_385 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [2, 4, -1, 0, 0, "cダミー<color=7>"],
@@ -354,7 +354,7 @@ export const animationData_385 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [4, 5, -1, 0, 0, "胴体"],
@@ -387,7 +387,7 @@ export const animationData_385 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [4, 2, 1, 0, 0, "胴体<color=0>"],
@@ -863,7 +863,7 @@ export const animationData_385 = {
       [57, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [4, 4, 1, 0, 0, "胴体"],
@@ -958,7 +958,7 @@ export const animationData_385 = {
   "c": {
     "name": "矢部明雄CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["385_c.png"],
       [24],
@@ -988,7 +988,7 @@ export const animationData_385 = {
       [164, 177, 52, 59, "体２"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [24],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1021,7 +1021,7 @@ export const animationData_385 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [3, 11, -1, 0, 0, "cダミー<color=7>"],
@@ -1304,7 +1304,7 @@ export const animationData_385 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [4, 5, -1, 0, 0, "胴体"],
@@ -1337,7 +1337,7 @@ export const animationData_385 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [4, 2, 1, 0, 0, "胴体<color=0>"],
@@ -1794,7 +1794,7 @@ export const animationData_385 = {
       [57, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [4, 4, 1, 0, 0, "胴体"],
@@ -1886,7 +1886,7 @@ export const animationData_385 = {
   "s": {
     "name": "矢部＆ガンダーロボCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["385_s.png"],
       [42],
@@ -1934,7 +1934,7 @@ export const animationData_385 = {
       [1, 137, 18, 9]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [68],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -2011,7 +2011,7 @@ export const animationData_385 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [42],
       [3, 11, -1, 0, 0, "cダミー<color=7>"],
@@ -2292,7 +2292,7 @@ export const animationData_385 = {
       [0, 400, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [4, 5, -1, 0, 0, "胴体"],
@@ -2346,7 +2346,7 @@ export const animationData_385 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [90],
       [4, 4, 1, 0, 0],
@@ -2887,7 +2887,7 @@ export const animationData_385 = {
       [70, 2300, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [4, 4, 1, 0, 0, "胴体"],

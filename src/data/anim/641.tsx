@@ -5,7 +5,7 @@ export const animationData_641 = {
   "f": {
     "name": "踊り子イズ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["641_f.png"],
       [126],
@@ -4858,7 +4858,7 @@ export const animationData_641 = {
   "c": {
     "name": "魅惑の舞姫イズ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["641_c.png"],
       [146],

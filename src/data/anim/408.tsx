@@ -5,7 +5,7 @@ export const animationData_408 = {
   "f": {
     "name": "ネコマリ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["408_f.png"],
       [55],
@@ -66,7 +66,7 @@ export const animationData_408 = {
       [2, 234, 79, 19, "054.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [66],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -141,7 +141,7 @@ export const animationData_408 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [32, 4, -1, 0, 0, "020足１.png"],
@@ -284,7 +284,7 @@ export const animationData_408 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [2, 5, -1, 0, 0, "015体.png"],
@@ -377,7 +377,7 @@ export const animationData_408 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [79],
       [1, 4, 1, 0, 0, "ボディダミー"],
@@ -952,7 +952,7 @@ export const animationData_408 = {
       [49, 30, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [2, 4, 1, 0, 0, "015体.png"],
@@ -1035,7 +1035,7 @@ export const animationData_408 = {
   "c": {
     "name": "極秘入国ネコマリ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["408_c.png"],
       [45],
@@ -1086,7 +1086,7 @@ export const animationData_408 = {
       [57, 66, 140, 62, "044.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [56],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -1151,7 +1151,7 @@ export const animationData_408 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [1, 8, -1, 0, 0, "020ベルト.png<color=0>"],
@@ -1329,7 +1329,7 @@ export const animationData_408 = {
       [0, 1, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [1, 8, -1, 0, 0, "020ベルト.png<color=0>"],
@@ -1507,7 +1507,7 @@ export const animationData_408 = {
       [0, 1, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [62],
       [1, 4, 1, 0, 0, "000.png<color=7>"],
@@ -2024,7 +2024,7 @@ export const animationData_408 = {
       [74, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [17, 12, 1, 0, 0, "039よれひも左.png<color=3>"],

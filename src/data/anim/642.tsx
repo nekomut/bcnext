@@ -13129,7 +13129,7 @@ export const animationData_642 = {
   "s": {
     "name": "Gグランドルシファー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["642_s.png"],
       [179],

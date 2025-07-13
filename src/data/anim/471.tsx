@@ -5,7 +5,7 @@ export const animationData_471 = {
   "f": {
     "name": "ヘラクライスト",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["471_f.png"],
       [85],
@@ -96,7 +96,7 @@ export const animationData_471 = {
       [43, 209, 12, 13, "084謎楽器噴き口.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [124],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "000.png"],
@@ -229,7 +229,7 @@ export const animationData_471 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [101],
       [1, 9, -1, 0, 0, "076影.png"],
@@ -887,7 +887,7 @@ export const animationData_471 = {
       [0, 2, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [64],
       [2, 5, -1, 0, 0, "052胸.png"],
@@ -1304,7 +1304,7 @@ export const animationData_471 = {
       [0, 30, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [184],
       [1, 4, 1, 0, 0, "076影.png"],
@@ -3642,7 +3642,7 @@ export const animationData_471 = {
       [0, -1, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [95],
       [1, 9, 1, 0, 0, "076影.png"],
@@ -3935,7 +3935,7 @@ export const animationData_471 = {
   "c": {
     "name": "完璧ヘラクライスト",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["471_c.png"],
       [87],
@@ -4028,7 +4028,7 @@ export const animationData_471 = {
       [133, 81, 11, 76, "086光スジ2.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [123],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "000.png"],
@@ -4160,7 +4160,7 @@ export const animationData_471 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [103],
       [1, 9, -1, 0, 0, "076影.png"],
@@ -4824,7 +4824,7 @@ export const animationData_471 = {
       [0, 1100, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [63],
       [2, 5, -1, 0, 0, "052胸.png"],
@@ -5238,7 +5238,7 @@ export const animationData_471 = {
       [0, 100, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [202],
       [1, 4, 1, 0, 0, "076影.png"],
@@ -8408,7 +8408,7 @@ export const animationData_471 = {
       [132, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [97],
       [1, 9, 1, 0, 0, "076影.png"],

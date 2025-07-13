@@ -5,7 +5,7 @@ export const animationData_338 = {
   "f": {
     "name": "今川義元",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["338_f.png"],
       [104],
@@ -115,7 +115,7 @@ export const animationData_338 = {
       [297, 155, 48, 54, "ＥＦ　扇子線"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [140],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -264,7 +264,7 @@ export const animationData_338 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [94],
       [2, 4, -1, 0, 0],
@@ -885,7 +885,7 @@ export const animationData_338 = {
       [0, 71, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [5, 11, -1, 0, 0],
@@ -1034,7 +1034,7 @@ export const animationData_338 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [272],
       [1, 4, 1, 0, 0],
@@ -4279,7 +4279,7 @@ export const animationData_338 = {
       [131, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [79],
       [2, 5, 1, 0, 0],
@@ -4524,7 +4524,7 @@ export const animationData_338 = {
   "c": {
     "name": "武神・今川義元",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["338_c.png"],
       [113],
@@ -4643,7 +4643,7 @@ export const animationData_338 = {
       [195, 71, 22, 10, "金箔"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [162],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -4814,7 +4814,7 @@ export const animationData_338 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [97],
       [2, 4, -1, 0, 0],
@@ -5429,7 +5429,7 @@ export const animationData_338 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [5, 11, -1, 0, 0],
@@ -5575,7 +5575,7 @@ export const animationData_338 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [320],
       [1, 4, 1, 0, 0],
@@ -9336,7 +9336,7 @@ export const animationData_338 = {
       [150, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [86],
       [2, 5, 1, 0, 0],
@@ -9602,7 +9602,7 @@ export const animationData_338 = {
   "s": {
     "name": "燐火の武神・今川義元",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["338_s.png"],
       [137],
@@ -9745,7 +9745,7 @@ export const animationData_338 = {
       [45, 126, 39, 87, "136扇炎.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [247],
       [-1, -1, 0, 0, 402, 583, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -10001,7 +10001,7 @@ export const animationData_338 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [293],
       [2, 4, -1, 0, 0],
@@ -11991,7 +11991,7 @@ export const animationData_338 = {
       [4, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [216],
       [5, 11, -1, 0, 0],
@@ -13503,7 +13503,7 @@ export const animationData_338 = {
       [6, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [678],
       [1, 4, 1, 0, 0],
@@ -27172,7 +27172,7 @@ export const animationData_338 = {
       [150, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [113],
       [2, 5, 1, 0, 0],

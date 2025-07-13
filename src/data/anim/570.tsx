@@ -5,7 +5,7 @@ export const animationData_570 = {
   "f": {
     "name": "竜騎士スカルバルス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["570_f.png"],
       [59],
@@ -2939,7 +2939,7 @@ export const animationData_570 = {
   "c": {
     "name": "ナイトメアバルス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["570_c.png"],
       [62],
@@ -6358,7 +6358,7 @@ export const animationData_570 = {
   "s": {
     "name": "ハロウィンナイトバルス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["570_s.png"],
       [72],

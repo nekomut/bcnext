@@ -5,7 +5,7 @@ export const animationData_137 = {
   "f": {
     "name": "かさじぞう",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["137_f.png"],
       [19],
@@ -30,7 +30,7 @@ export const animationData_137 = {
       [79, 62, 9, 12, "足03"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [26],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -65,7 +65,7 @@ export const animationData_137 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [3, 5, -1, 0, 0, "キャラダミー"],
@@ -198,7 +198,7 @@ export const animationData_137 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [15, 12, -1, 0, 0, "地蔵右手_銃持ち"],
@@ -212,7 +212,7 @@ export const animationData_137 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [4, 11, 1, 0, 0, "本体"],
@@ -518,7 +518,7 @@ export const animationData_137 = {
       [60, -5, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [3, 5, -1, 0, 0],
@@ -595,7 +595,7 @@ export const animationData_137 = {
   "c": {
     "name": "地蔵要塞カムイ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["137_c.png"],
       [39],
@@ -640,7 +640,7 @@ export const animationData_137 = {
       [381, 110, 44, 44, "光球"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [115],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -764,7 +764,7 @@ export const animationData_137 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [164],
       [4, 4, -1, 0, 0],
@@ -1924,7 +1924,7 @@ export const animationData_137 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [117],
       [4, 5, -1, 0, 0],
@@ -2646,7 +2646,7 @@ export const animationData_137 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [242],
       [4, 4, 1, 0, 0],
@@ -5049,7 +5049,7 @@ export const animationData_137 = {
       [120, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [97],
       [4, 4, 1, 0, 0],
@@ -5348,7 +5348,7 @@ export const animationData_137 = {
   "s": {
     "name": "地蔵要塞ゼロカムイ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["137_s.png"],
       [56],
@@ -5410,7 +5410,7 @@ export const animationData_137 = {
       [144, 50, 71, 38, "055司令台.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [162],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "■ダミー<color=7>"],
@@ -5581,7 +5581,7 @@ export const animationData_137 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [179],
       [4, 4, -1, 0, 0, "壁_下"],
@@ -6830,7 +6830,7 @@ export const animationData_137 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [132],
       [4, 5, -1, 0, 0, "壁_下"],
@@ -7639,7 +7639,7 @@ export const animationData_137 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [346],
       [4, 4, 1, 0, 0, "壁_下"],
@@ -11483,7 +11483,7 @@ export const animationData_137 = {
       [155, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [105],
       [4, 4, 1, 0, 0],

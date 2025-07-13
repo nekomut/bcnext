@@ -5,7 +5,7 @@ export const animationData_527 = {
   "f": {
     "name": "ネコスライム",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["527_f.png"],
       [32],
@@ -43,7 +43,7 @@ export const animationData_527 = {
       [281, 222, 2, 2, 31]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [22],
       [-1, -1, 0, 0, 49, 78, 0, 0, 1790, 1790, 0, 1000, 0, "000.png"],
@@ -74,7 +74,7 @@ export const animationData_527 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [21],
       [19, 12, -1, 0, 0, "0142.png"],
@@ -209,7 +209,7 @@ export const animationData_527 = {
       [120, 1000, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [23],
       [19, 12, -1, 0, 0, "0142.png"],
@@ -382,7 +382,7 @@ export const animationData_527 = {
       [120, 1000, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [34],
       [2, 12, 1, 0, 0, "本体ダミー"],
@@ -598,7 +598,7 @@ export const animationData_527 = {
       [21, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [5],
       [2, 12, 1, 0, 0, "本体ダミー"],
@@ -621,7 +621,7 @@ export const animationData_527 = {
   "c": {
     "name": "ネコゼリーフィッシュ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["527_c.png"],
       [38],
@@ -665,7 +665,7 @@ export const animationData_527 = {
       [273, 75, 24, 44, "037攻撃5しぶき.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [27],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "000.png"],
@@ -701,7 +701,7 @@ export const animationData_527 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [37],
       [4, 2, -1, 0, 0, "003たらこ1.png"],
@@ -962,7 +962,7 @@ export const animationData_527 = {
       [64, 1200, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [37],
       [4, 2, -1, 0, 0, "003たらこ1.png"],
@@ -1223,7 +1223,7 @@ export const animationData_527 = {
       [64, 1200, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [40],
       [19, 12, 1, 0, 0, "036ダメージ.png"],
@@ -1565,7 +1565,7 @@ export const animationData_527 = {
       [24, -108, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [2],
       [2, 12, 1, 0, 0, "本体ダミー"],

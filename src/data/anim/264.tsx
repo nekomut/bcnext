@@ -5,7 +5,7 @@ export const animationData_264 = {
   "f": {
     "name": "クロミ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["264_f.png"],
       [34],
@@ -45,7 +45,7 @@ export const animationData_264 = {
       [1, 1, 38, 123, "ef"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [40],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1100, 1100, 0, 1000, 0, "DM"],
@@ -94,7 +94,7 @@ export const animationData_264 = {
       [0, 0, 0, 0, 5, 0, "DM"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [2, 5, -1, 0, 0, "DM"],
@@ -307,7 +307,7 @@ export const animationData_264 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [2, 5, 1, 0, 0],
@@ -480,7 +480,7 @@ export const animationData_264 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [2, 11, 1, 0, 0, "にのうで<color=1>"],
@@ -672,7 +672,7 @@ export const animationData_264 = {
       [23, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [2, 12, 1, 0, 0],
@@ -704,7 +704,7 @@ export const animationData_264 = {
   "c": {
     "name": "クロミとにゃんこたち",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["264_c.png"],
       [24],
@@ -734,7 +734,7 @@ export const animationData_264 = {
       [114, 64, 44, 4, "shw"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [38],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1100, 1100, 0, 1000, 0, "DM"],
@@ -781,7 +781,7 @@ export const animationData_264 = {
       [0, 0, 0, 0, 5, 0, "DM"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [1, 9, -1, 0, 0],
@@ -934,7 +934,7 @@ export const animationData_264 = {
       [120, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [2, 5, -1, 0, 0, "DM"],
@@ -1041,7 +1041,7 @@ export const animationData_264 = {
       [116, 0, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [2, 5, 1, 0, 0],
@@ -1209,7 +1209,7 @@ export const animationData_264 = {
       [23, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [2, 4, 1, 0, 0, "DM"],

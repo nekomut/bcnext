@@ -5,7 +5,7 @@ export const animationData_262 = {
   "f": {
     "name": "ニャームス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["262_f.png"],
       [43],
@@ -54,7 +54,7 @@ export const animationData_262 = {
       [96, 2, 90, 87, "肉球加算なし"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [58],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -121,7 +121,7 @@ export const animationData_262 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [3, 5, -1, 0, 0, "胴体歩き"],
@@ -423,7 +423,7 @@ export const animationData_262 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [5, 2, -1, 0, 0],
@@ -486,7 +486,7 @@ export const animationData_262 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [147],
       [1, 4, 1, 0, 0, "cダミー"],
@@ -1539,7 +1539,7 @@ export const animationData_262 = {
       [65, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [1, 4, 1, 0, 0, "cダミー"],
@@ -1655,7 +1655,7 @@ export const animationData_262 = {
   "c": {
     "name": "ネコニャームス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["262_c.png"],
       [43],
@@ -1704,7 +1704,7 @@ export const animationData_262 = {
       [96, 2, 90, 87, "肉球加算なし"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [60],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1773,7 +1773,7 @@ export const animationData_262 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [3, 5, -1, 0, 0, "胴体歩き"],
@@ -2075,7 +2075,7 @@ export const animationData_262 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [5, 2, -1, 0, 0],
@@ -2138,7 +2138,7 @@ export const animationData_262 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [153],
       [1, 4, 1, 0, 0, "cダミー"],
@@ -3223,7 +3223,7 @@ export const animationData_262 = {
       [65, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [1, 4, 1, 0, 0, "cダミー"],

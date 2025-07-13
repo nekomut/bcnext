@@ -5,7 +5,7 @@ export const animationData_473 = {
   "f": {
     "name": "ヤマト王子",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["473_f.png"],
       [73],
@@ -84,7 +84,7 @@ export const animationData_473 = {
       [106, 66, 8, 13, "072雫.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [73],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "■全体用ダミー<color=7>"],
@@ -166,7 +166,7 @@ export const animationData_473 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [87],
       [3, 4, -1, 0, 0, "■上半身ダミー<color=12>"],
@@ -632,7 +632,7 @@ export const animationData_473 = {
       [13, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [30],
       [3, 5, -1, 0, 0, "■上半身ダミー<color=12>"],
@@ -819,7 +819,7 @@ export const animationData_473 = {
       [120, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [141],
       [1, 4, 1, 0, 0, "■Cダミー<color=7>\t"],
@@ -2006,7 +2006,7 @@ export const animationData_473 = {
       [0, 72, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [31],
       [47, 12, 1, 0, 0, "■EF攻撃ダミー<color=7>"],
@@ -2107,7 +2107,7 @@ export const animationData_473 = {
   "c": {
     "name": "ヤマト神帝",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["473_c.png"],
       [59],
@@ -2172,7 +2172,7 @@ export const animationData_473 = {
       [407, 199, 9, 53, "058刀加算05.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [68],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "■全体用ダミー<color=7>"],
@@ -2249,7 +2249,7 @@ export const animationData_473 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [93],
       [3, 4, -1, 0, 0, "■上半身ダミー<color=12>"],
@@ -2711,7 +2711,7 @@ export const animationData_473 = {
       [12, 20, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [25],
       [3, 5, -1, 0, 0, "■上半身ダミー<color=12>"],
@@ -2869,7 +2869,7 @@ export const animationData_473 = {
       [30, -20, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [129],
       [1, 4, 1, 0, 0, "■Cダミー<color=7>\t"],
@@ -3904,7 +3904,7 @@ export const animationData_473 = {
       [20, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [37],
       [1, 5, 1, 0, 0, "■Cダミー<color=7>"],
@@ -4023,7 +4023,7 @@ export const animationData_473 = {
   "s": {
     "name": "ヤマト爆神",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["473_s.png"],
       [82],
@@ -4111,7 +4111,7 @@ export const animationData_473 = {
       [269, 199, 25, 38, "081剣バチ_60%.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [95],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "■全体用ダミー<color=7>"],
@@ -4215,7 +4215,7 @@ export const animationData_473 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [122],
       [3, 4, -1, 0, 0, "■上半身ダミー<color=12>"],
@@ -4821,7 +4821,7 @@ export const animationData_473 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [29],
       [3, 5, -1, 0, 0, "■上半身ダミー<color=12>"],
@@ -4963,7 +4963,7 @@ export const animationData_473 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [184],
       [1, 4, 1, 0, 0, "■Cダミー<color=7>\t"],
@@ -6631,7 +6631,7 @@ export const animationData_473 = {
       [17, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [48],
       [81, 12, 1, 0, 0, "■EFダミー<color=7>"],

@@ -5,7 +5,7 @@ export const animationData_086 = {
   "f": {
     "name": "神龍かむくら",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["083_f.png"],
       [58],
@@ -69,7 +69,7 @@ export const animationData_086 = {
       [151, 68, 46, 49, "水粒白大"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [69],
       [-1, -1, 0, 0, 309, -74, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -147,7 +147,7 @@ export const animationData_086 = {
       [0, 0, -35, 2, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [56],
       [1, 8, -1, 0, 0],
@@ -564,7 +564,7 @@ export const animationData_086 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [56],
       [1, 8, -1, 0, 0],
@@ -981,7 +981,7 @@ export const animationData_086 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [122],
       [1, 8, 1, 0, 0],
@@ -2440,7 +2440,7 @@ export const animationData_086 = {
       [71, 20, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [2, 11, 1, 0, 0],
@@ -2517,7 +2517,7 @@ export const animationData_086 = {
   "c": {
     "name": "神龍王かむくら",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["083_c.png"],
       [60],
@@ -2583,7 +2583,7 @@ export const animationData_086 = {
       [253, 55, 16, 16, "light"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [84],
       [-1, -1, 0, 0, 405, -191, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -2676,7 +2676,7 @@ export const animationData_086 = {
       [0, 0, -24, 2, 5, 0, "cダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [63],
       [1, 8, -1, 0, 0],
@@ -3123,7 +3123,7 @@ export const animationData_086 = {
       [100, 300, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [63],
       [1, 8, -1, 0, 0],
@@ -3570,7 +3570,7 @@ export const animationData_086 = {
       [100, 300, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [173],
       [1, 8, 1, 0, 0],
@@ -5461,7 +5461,7 @@ export const animationData_086 = {
       [85, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [2, 11, 1, 0, 0],
@@ -5556,7 +5556,7 @@ export const animationData_086 = {
   "s": {
     "name": "神龍皇帝かむくら",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["086_s.png"],
       [73],
@@ -5635,7 +5635,7 @@ export const animationData_086 = {
       [265, 93, 72, 15]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [103],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -5747,7 +5747,7 @@ export const animationData_086 = {
       [0, 0, 0, 2, 5, 0, "cダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [75],
       [1, 8, -1, 0, 0],
@@ -6260,7 +6260,7 @@ export const animationData_086 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [75],
       [1, 8, -1, 0, 0],
@@ -6773,7 +6773,7 @@ export const animationData_086 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [201],
       [1, 8, 1, 0, 0],
@@ -8935,7 +8935,7 @@ export const animationData_086 = {
       [80, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [2, 4, 1, 0, 0],

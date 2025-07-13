@@ -5,7 +5,7 @@ export const animationData_523 = {
   "f": {
     "name": "ネコ武闘家",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["523_f.png"],
       [31],
@@ -42,7 +42,7 @@ export const animationData_523 = {
       [197, 96, 13, 37, "030.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [53],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0],
@@ -104,7 +104,7 @@ export const animationData_523 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [29],
       [2, 5, -1, 0, 0],
@@ -252,7 +252,7 @@ export const animationData_523 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [21],
       [26, 12, -1, 0, 0, "025なんやこれ.png"],
@@ -350,7 +350,7 @@ export const animationData_523 = {
       [30, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [50],
       [10, 5, 1, 0, 0, "002三節棍.png<color=7>"],
@@ -901,7 +901,7 @@ export const animationData_523 = {
       [15, -1, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [16],
       [2, 12, 1, 0, 0, "025なんやこれ.png"],
@@ -957,7 +957,7 @@ export const animationData_523 = {
   "c": {
     "name": "ネコ師範",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["523_c.png"],
       [35],
@@ -998,7 +998,7 @@ export const animationData_523 = {
       [428, 1, 25, 31, "034短い棒.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [55],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0],
@@ -1062,7 +1062,7 @@ export const animationData_523 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [30],
       [2, 5, -1, 0, 0],
@@ -1215,7 +1215,7 @@ export const animationData_523 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [22],
       [26, 12, -1, 0, 0, "025なんやこれ.png"],
@@ -1318,7 +1318,7 @@ export const animationData_523 = {
       [30, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [53],
       [10, 5, 1, 0, 0, "002三節棍.png<color=7>"],
@@ -1941,7 +1941,7 @@ export const animationData_523 = {
       [46, 2, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [18],
       [2, 12, 1, 0, 0, "025なんやこれ.png"],

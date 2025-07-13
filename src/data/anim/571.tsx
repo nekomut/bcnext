@@ -5,7 +5,7 @@ export const animationData_571 = {
   "f": {
     "name": "エドモンド本田",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["571_f.png"],
       [94],
@@ -2570,7 +2570,7 @@ export const animationData_571 = {
   "c": {
     "name": "エドモンド本田CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["571_c.png"],
       [94],

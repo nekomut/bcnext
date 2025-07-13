@@ -5,7 +5,7 @@ export const animationData_039 = {
   "f": {
     "name": "ネコリンゴ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["039_f.png"],
       [16],
@@ -27,7 +27,7 @@ export const animationData_039 = {
       [40, 173, 18, 33, "衝撃C"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [26],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -62,7 +62,7 @@ export const animationData_039 = {
       [0, 0, 38, 4, 1, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [3, 5, -1, 0, 0],
@@ -147,7 +147,7 @@ export const animationData_039 = {
       [10, 200, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [8, 12, -1, 0, 0],
@@ -167,7 +167,7 @@ export const animationData_039 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [3, 10, 1, 0, 0],
@@ -504,7 +504,7 @@ export const animationData_039 = {
       [95, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [2, 12, -1, 0, 0],
@@ -554,7 +554,7 @@ export const animationData_039 = {
   "c": {
     "name": "カオルくん",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["039_c.png"],
       [21],
@@ -581,7 +581,7 @@ export const animationData_039 = {
       [169, 45, 34, 104, "ひきちぎれ手前３"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [21],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -611,7 +611,7 @@ export const animationData_039 = {
       [0, 0, 60, 3, 1, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [4, 4, -1, 0, 0],
@@ -685,7 +685,7 @@ export const animationData_039 = {
       [10, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [2, 12, -1, 0, 0],
@@ -702,7 +702,7 @@ export const animationData_039 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [2, 12, 1, 0, 0],
@@ -1052,7 +1052,7 @@ export const animationData_039 = {
       [95, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [10, 12, -1, 0, 0],
@@ -1078,7 +1078,7 @@ export const animationData_039 = {
   "s": {
     "name": "ネコアップル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["039_s.png"],
       [16],
@@ -1100,7 +1100,7 @@ export const animationData_039 = {
       [90, 115, 29, 26, "衝撃C"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [29],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1138,7 +1138,7 @@ export const animationData_039 = {
       [0, 0, 38, 4, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [2, 12, 1, 0, 0],
@@ -1241,7 +1241,7 @@ export const animationData_039 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [3, 5, -1, 0, 0],
@@ -1264,7 +1264,7 @@ export const animationData_039 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [3, 5, 1, 0, 0],
@@ -1678,7 +1678,7 @@ export const animationData_039 = {
       [95, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [2, 12, 1, 0, 0],

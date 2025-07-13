@@ -5,7 +5,7 @@ export const animationData_079 = {
   "f": {
     "name": "にゃんこ成人",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["079_f.png"],
       [42],
@@ -53,7 +53,7 @@ export const animationData_079 = {
       [214, 1, 15, 52, "しぶき３"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [34],
       [-1, -1, 0, 0, 268, -6, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -96,7 +96,7 @@ export const animationData_079 = {
       [0, 0, 10, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [1, 4, -1, 0, 0],
@@ -283,7 +283,7 @@ export const animationData_079 = {
       [5, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [1, 4, -1, 0, 0],
@@ -423,7 +423,7 @@ export const animationData_079 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [1, 4, 1, 0, 0],
@@ -696,7 +696,7 @@ export const animationData_079 = {
       [0, 100, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [1, 4, -1, 0, 0],
@@ -770,7 +770,7 @@ export const animationData_079 = {
   "c": {
     "name": "にゃんこ病人",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["079_c.png"],
       [41],
@@ -817,7 +817,7 @@ export const animationData_079 = {
       [1, 144, 19, 7, "nami3"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [37],
       [-1, -1, 0, 0, 92, -107, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -863,7 +863,7 @@ export const animationData_079 = {
       [0, 0, 10, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [1, 4, -1, 0, 0],
@@ -1054,7 +1054,7 @@ export const animationData_079 = {
       [0, 150, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [1, 4, -1, 0, 0],
@@ -1163,7 +1163,7 @@ export const animationData_079 = {
       [99, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [57],
       [1, 4, 1, 0, 0],
@@ -1549,7 +1549,7 @@ export const animationData_079 = {
       [60, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [1, 4, -1, 0, 0],
@@ -1632,7 +1632,7 @@ export const animationData_079 = {
   "s": {
     "name": "にゃんこ囚人",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["079_s.png"],
       [22],
@@ -1660,7 +1660,7 @@ export const animationData_079 = {
       [69, 49, 28, 13]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [28],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -1697,7 +1697,7 @@ export const animationData_079 = {
       [0, 0, 0, 3, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [1, 4, -1, 0, 0],
@@ -1837,7 +1837,7 @@ export const animationData_079 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [1, 4, -1, 0, 0],
@@ -1887,7 +1887,7 @@ export const animationData_079 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [1, 4, 1, 0, 0],
@@ -2167,7 +2167,7 @@ export const animationData_079 = {
       [50, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [1, 4, 1, 0, 0],

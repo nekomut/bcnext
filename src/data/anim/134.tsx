@@ -5,7 +5,7 @@ export const animationData_134 = {
   "f": {
     "name": "うらしまタロウ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["134_f.png"],
       [19],
@@ -30,7 +30,7 @@ export const animationData_134 = {
       [1, 128, 109, 52, "スピード線"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [18],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -57,7 +57,7 @@ export const animationData_134 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [3, 5, -1, 0, 0, "キャラクターダミー"],
@@ -204,7 +204,7 @@ export const animationData_134 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [3, 11, -1, 0, 0, "キャラクターダミー"],
@@ -303,7 +303,7 @@ export const animationData_134 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [3, 5, 1, 0, 0, "キャラクターダミー"],
@@ -536,7 +536,7 @@ export const animationData_134 = {
       [11, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [3, 5, -1, 0, 0, "キャラクターダミー"],
@@ -565,7 +565,7 @@ export const animationData_134 = {
   "c": {
     "name": "竜宮獣ガメレオン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["134_c.png"],
       [50],
@@ -621,7 +621,7 @@ export const animationData_134 = {
       [378, 33, 115, 85, "煙"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [63],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -693,7 +693,7 @@ export const animationData_134 = {
       [0, 0, 0, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [68],
       [2, 4, -1, 0, 0, "影"],
@@ -1157,7 +1157,7 @@ export const animationData_134 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [46],
       [3, 4, -1, 0, 0, "キャラダミー"],
@@ -1421,7 +1421,7 @@ export const animationData_134 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [109],
       [3, 11, 1, 0, 0, "キャラダミー"],
@@ -2442,7 +2442,7 @@ export const animationData_134 = {
       [61, 700, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [3, 4, -1, 0, 0, "キャラダミー"],
@@ -2567,7 +2567,7 @@ export const animationData_134 = {
   "s": {
     "name": "竜宮超獣キングガメレオン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["134_s.png"],
       [65],
@@ -2638,7 +2638,7 @@ export const animationData_134 = {
       [385, 1, 98, 32, "土　黒"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [89],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -2736,7 +2736,7 @@ export const animationData_134 = {
       [0, 0, 0, 1, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [79],
       [2, 4, -1, 0, 0],
@@ -3264,7 +3264,7 @@ export const animationData_134 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [57],
       [3, 4, -1, 0, 0],
@@ -3583,7 +3583,7 @@ export const animationData_134 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [188],
       [3, 4, 1, 0, 0],
@@ -5202,7 +5202,7 @@ export const animationData_134 = {
       [75, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [64],
       [3, 4, 1, 0, 0],

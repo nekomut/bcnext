@@ -5,7 +5,7 @@ export const animationData_068 = {
   "f": {
     "name": "執行者",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["068_f.png"],
       [31],
@@ -42,7 +42,7 @@ export const animationData_068 = {
       [89, 95, 64, 68]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [39],
       [-1, -1, 0, 0, 511, 424, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -90,7 +90,7 @@ export const animationData_068 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [11, 5, -1, 0, 0, "ダミー"],
@@ -183,7 +183,7 @@ export const animationData_068 = {
       [-18, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [15, 2, -1, 0, 0, "右側袖"],
@@ -230,7 +230,7 @@ export const animationData_068 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [70],
       [15, 2, 1, 0, 0],
@@ -581,7 +581,7 @@ export const animationData_068 = {
       [51, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [26, 12, -1, 0, 0],
@@ -655,7 +655,7 @@ export const animationData_068 = {
   "c": {
     "name": "執行者999",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["068_c.png"],
       [30],
@@ -691,7 +691,7 @@ export const animationData_068 = {
       [364, 177, 76, 78]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [42],
       [-1, -1, 0, 0, 511, 424, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -742,7 +742,7 @@ export const animationData_068 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [11, 5, -1, 0, 0, "ダミー"],
@@ -835,7 +835,7 @@ export const animationData_068 = {
       [-18, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [15, 2, -1, 0, 0, "右側袖"],
@@ -882,7 +882,7 @@ export const animationData_068 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [82],
       [15, 2, 1, 0, 0],
@@ -1337,7 +1337,7 @@ export const animationData_068 = {
       [47, -300, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [26, 12, -1, 0, 0],
@@ -1408,7 +1408,7 @@ export const animationData_068 = {
   "s": {
     "name": "ジャッジメント",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["068_s.png"],
       [62],
@@ -1476,7 +1476,7 @@ export const animationData_068 = {
       [1, 1, 125, 114, "061爆発集中線.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [122],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "■ダミー<color=7>"],
@@ -1607,7 +1607,7 @@ export const animationData_068 = {
       [0, 0, 0, 0, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [34],
       [2, 11, -1, 0, 0, "■Cダミー<color=7>"],
@@ -1785,7 +1785,7 @@ export const animationData_068 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [20],
       [3, 5, -1, 0, 0, "■腰ダミー<color=7>"],
@@ -1886,7 +1886,7 @@ export const animationData_068 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [138],
       [2, 4, 1, 0, 0, "■Cダミー<color=7>"],
@@ -2938,7 +2938,7 @@ export const animationData_068 = {
       [0, 58, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [27],
       [2, 4, 1, 0, 0, "■Cダミー<color=7>\t"],

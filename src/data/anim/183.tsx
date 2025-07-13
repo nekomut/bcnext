@@ -5,7 +5,7 @@ export const animationData_183 = {
   "f": {
     "name": "にゃんこカートR",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["183_f.png"],
       [25],
@@ -36,7 +36,7 @@ export const animationData_183 = {
       [119, 1, 86, 124, "エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [30],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -75,7 +75,7 @@ export const animationData_183 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [2, 5, -1, 0, 0, "全体"],
@@ -498,7 +498,7 @@ export const animationData_183 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [2, 5, -1, 0, 0, "全体"],
@@ -621,7 +621,7 @@ export const animationData_183 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [2, 5, 1, 0, 0, "全体"],
@@ -947,7 +947,7 @@ export const animationData_183 = {
       [43, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [3, 5, -1, 0, 0, "カート全体"],
@@ -1054,7 +1054,7 @@ export const animationData_183 = {
   "c": {
     "name": "にゃんこカートG",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["183_c.png"],
       [25],
@@ -1085,7 +1085,7 @@ export const animationData_183 = {
       [119, 1, 86, 124, "エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [30],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -1124,7 +1124,7 @@ export const animationData_183 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [2, 5, -1, 0, 0, "全体"],
@@ -1547,7 +1547,7 @@ export const animationData_183 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [2, 5, -1, 0, 0, "全体"],
@@ -1670,7 +1670,7 @@ export const animationData_183 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [2, 5, 1, 0, 0, "全体"],
@@ -1996,7 +1996,7 @@ export const animationData_183 = {
       [43, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [3, 5, -1, 0, 0, "カート全体"],
@@ -2106,7 +2106,7 @@ export const animationData_183 = {
   "s": {
     "name": "にゃんこカートP",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["183_s.png"],
       [29],
@@ -2141,7 +2141,7 @@ export const animationData_183 = {
       [194, 196, 40, 22, "髪_c"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [36],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -2186,7 +2186,7 @@ export const animationData_183 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [44],
       [2, 5, -1, 0, 0, "全体"],
@@ -2803,7 +2803,7 @@ export const animationData_183 = {
       [200, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [2, 5, -1, 0, 0, "全体"],
@@ -2973,7 +2973,7 @@ export const animationData_183 = {
       [38, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [51],
       [2, 5, 1, 0, 0, "全体"],
@@ -3730,7 +3730,7 @@ export const animationData_183 = {
       [93, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [46],
       [3, 5, 1, 0, 0, "カート全体"],

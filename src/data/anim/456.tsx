@@ -5,7 +5,7 @@ export const animationData_456 = {
   "f": {
     "name": "間桐 桜",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["456_f.png"],
       [99],
@@ -110,7 +110,7 @@ export const animationData_456 = {
       [205, 193, 21, 47, "098）.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [130],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -249,7 +249,7 @@ export const animationData_456 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [82],
       [2, 5, -1, 0, 0, "062歩足すね.png<color=9>"],
@@ -729,7 +729,7 @@ export const animationData_456 = {
       [40, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [45],
       [2, 11, -1, 0, 0, "000.png"],
@@ -967,7 +967,7 @@ export const animationData_456 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [180],
       [1, 4, 1, 0, 0, "070影.png"],
@@ -2314,7 +2314,7 @@ export const animationData_456 = {
       [67, -3, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [61],
       [2, 4, 1, 0, 0, "051上半身.png"],
@@ -2505,7 +2505,7 @@ export const animationData_456 = {
   "c": {
     "name": "間桐 桜CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["456_c.png"],
       [99],
@@ -2610,7 +2610,7 @@ export const animationData_456 = {
       [205, 193, 21, 47, "098）.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [130],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -2749,7 +2749,7 @@ export const animationData_456 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [82],
       [2, 5, -1, 0, 0, "062歩足すね.png<color=9>"],
@@ -3230,7 +3230,7 @@ export const animationData_456 = {
       [40, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [45],
       [2, 11, -1, 0, 0, "000.png"],
@@ -3468,7 +3468,7 @@ export const animationData_456 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [180],
       [1, 4, 1, 0, 0, "070影.png"],
@@ -4815,7 +4815,7 @@ export const animationData_456 = {
       [67, -3, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [61],
       [2, 4, 1, 0, 0, "051上半身.png"],
@@ -5006,7 +5006,7 @@ export const animationData_456 = {
   "s": {
     "name": "黒桜CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["456_s.png"],
       [161],

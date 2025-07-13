@@ -5,7 +5,7 @@ export const animationData_253 = {
   "f": {
     "name": "ドラゴンライダー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["253_f.png"],
       [32],
@@ -43,7 +43,7 @@ export const animationData_253 = {
       [299, 225, 30, 30, "エフェクト光球"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [28],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー<color=7>"],
@@ -80,7 +80,7 @@ export const animationData_253 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [2, 4, -1, 0, 0, "影"],
@@ -405,7 +405,7 @@ export const animationData_253 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [2, 4, -1, 0, 0, "影"],
@@ -727,7 +727,7 @@ export const animationData_253 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [66],
       [2, 8, 1, 0, 0, "影"],
@@ -1244,7 +1244,7 @@ export const animationData_253 = {
       [34, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [4, 4, 1, 0, 0, "ドラゴン体"],
@@ -1318,7 +1318,7 @@ export const animationData_253 = {
   "c": {
     "name": "ボーンドラゴンライダー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["253_c.png"],
       [32],
@@ -1356,7 +1356,7 @@ export const animationData_253 = {
       [477, 83, 13, 13, "●"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [27],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー<color=7>"],
@@ -1392,7 +1392,7 @@ export const animationData_253 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [2, 4, -1, 0, 0, "影"],
@@ -1684,7 +1684,7 @@ export const animationData_253 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [2, 4, -1, 0, 0, "影"],
@@ -1976,7 +1976,7 @@ export const animationData_253 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [65],
       [2, 8, 1, 0, 0, "影"],
@@ -2456,7 +2456,7 @@ export const animationData_253 = {
       [34, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [4, 4, 1, 0, 0, "ドラゴン体"],
@@ -2524,7 +2524,7 @@ export const animationData_253 = {
   "s": {
     "name": "フレイムドラゴンライダー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["253_s.png"],
       [39],
@@ -2569,7 +2569,7 @@ export const animationData_253 = {
       [203, 164, 87, 50, 4]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [32],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1500, 1500, 0, 1000, 0, "ダミー<color=7>"],
@@ -2610,7 +2610,7 @@ export const animationData_253 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [48],
       [2, 4, -1, 0, 0, "影"],
@@ -2995,7 +2995,7 @@ export const animationData_253 = {
       [30, -150, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [48],
       [2, 4, -1, 0, 0, "影"],
@@ -3384,7 +3384,7 @@ export const animationData_253 = {
       [30, -150, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [78],
       [2, 8, 1, 0, 0, "影"],
@@ -3986,7 +3986,7 @@ export const animationData_253 = {
       [30, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [4, 4, 1, 0, 0, "ドラゴン体"],

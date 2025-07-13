@@ -5,7 +5,7 @@ export const animationData_224 = {
   "f": {
     "name": "モーデン元帥",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["224_f.png"],
       [41],
@@ -52,7 +52,7 @@ export const animationData_224 = {
       [1, 166, 35, 34]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [8],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "dm"],
@@ -69,7 +69,7 @@ export const animationData_224 = {
       [0, 0, 0, 3, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [2, 2, -1, 0, 0, "ボディ１"],
@@ -88,7 +88,7 @@ export const animationData_224 = {
       [6, 2, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [3, 2, -1, 0, 0, "dm"],
@@ -129,7 +129,7 @@ export const animationData_224 = {
       [100, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [3, 2, 1, 0, 0],
@@ -261,7 +261,7 @@ export const animationData_224 = {
       [25, -2, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [2, 5, 1, 0, 0, "ボディ１"],
@@ -281,7 +281,7 @@ export const animationData_224 = {
   "c": {
     "name": "モーデン元帥CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["224_c.png"],
       [41],
@@ -328,7 +328,7 @@ export const animationData_224 = {
       [1, 166, 35, 34]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [8],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "dm"],
@@ -345,7 +345,7 @@ export const animationData_224 = {
       [0, 0, 0, 3, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [2, 2, -1, 0, 0, "ボディ１"],
@@ -364,7 +364,7 @@ export const animationData_224 = {
       [6, 2, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [3, 2, -1, 0, 0, "dm"],
@@ -405,7 +405,7 @@ export const animationData_224 = {
       [100, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [3, 2, 1, 0, 0],
@@ -537,7 +537,7 @@ export const animationData_224 = {
       [25, -2, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [2, 5, 1, 0, 0, "ボディ１"],
@@ -557,7 +557,7 @@ export const animationData_224 = {
   "s": {
     "name": "ゴールデンモーデンCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["224_c.png"],
       [41],
@@ -621,7 +621,7 @@ export const animationData_224 = {
       [0, 0, 0, 3, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [2, 2, -1, 0, 0, "ボディ１"],
@@ -640,7 +640,7 @@ export const animationData_224 = {
       [6, 2, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [3, 2, -1, 0, 0, "dm"],
@@ -813,7 +813,7 @@ export const animationData_224 = {
       [25, -2, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [2, 5, 1, 0, 0, "ボディ１"],

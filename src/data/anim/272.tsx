@@ -5,7 +5,7 @@ export const animationData_272 = {
   "f": {
     "name": "繁栄神ガネーシャ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["272_f.png"],
       [60],
@@ -71,7 +71,7 @@ export const animationData_272 = {
       [337, 160, 41, 27]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [130],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -210,7 +210,7 @@ export const animationData_272 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [119],
       [3, 5, -1, 0, 0, "少年ダミー<color=7>"],
@@ -1081,7 +1081,7 @@ export const animationData_272 = {
       [120, 600, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [113],
       [3, 5, -1, 0, 0, "少年ダミー<color=7>"],
@@ -1901,7 +1901,7 @@ export const animationData_272 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [272],
       [2, 4, 1, 0, 0, "影"],
@@ -4180,7 +4180,7 @@ export const animationData_272 = {
       [120, 400, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [2, 4, -1, 0, 0, "影"],
@@ -4293,7 +4293,7 @@ export const animationData_272 = {
   "c": {
     "name": "ガネーシャエクサ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["272_c.png"],
       [76],
@@ -4375,7 +4375,7 @@ export const animationData_272 = {
       [56, 136, 20, 29]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [186],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -4570,7 +4570,7 @@ export const animationData_272 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [164],
       [3, 5, -1, 0, 0, "少年ダミー<color=7>"],
@@ -5674,7 +5674,7 @@ export const animationData_272 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [143],
       [3, 5, -1, 0, 0, "少年ダミー<color=7>"],
@@ -6653,7 +6653,7 @@ export const animationData_272 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [388],
       [2, 4, 1, 0, 0, "影"],
@@ -10253,7 +10253,7 @@ export const animationData_272 = {
       [90, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [52],
       [2, 4, 1, 0, 0, "影"],

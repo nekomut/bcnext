@@ -5,7 +5,7 @@ export const animationData_123 = {
   "f": {
     "name": "マメマメにゃんこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["123_f.png"],
       [30],
@@ -41,7 +41,7 @@ export const animationData_123 = {
       [111, 17, 10, 11, "土煙しょうしょう"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [53],
       [-1, -1, 0, 0, 434, 432, 1, 1, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -103,7 +103,7 @@ export const animationData_123 = {
       [0, 0, 55, 0, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [1, 9, -1, 0, 0, "ダミー"],
@@ -269,7 +269,7 @@ export const animationData_123 = {
       [31, 1200, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [1, 9, -1, 0, 0],
@@ -405,7 +405,7 @@ export const animationData_123 = {
       [50, 1000, 2, 2]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [100],
       [1, 9, 1, 0, 0],
@@ -1131,7 +1131,7 @@ export const animationData_123 = {
       [64, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [2, 5, -1, 0, 0, "高さ"],
@@ -1253,7 +1253,7 @@ export const animationData_123 = {
   "c": {
     "name": "ラブラブにゃんこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["123_c.png"],
       [34],
@@ -1293,7 +1293,7 @@ export const animationData_123 = {
       [55, 118, 10, 11, "土煙極小"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [57],
       [-1, -1, 0, 0, 0, 0, 1, 1, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1359,7 +1359,7 @@ export const animationData_123 = {
       [0, 0, 55, 0, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [1, 9, -1, 0, 0],
@@ -1553,7 +1553,7 @@ export const animationData_123 = {
       [31, 1200, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [1, 9, -1, 0, 0],
@@ -1728,7 +1728,7 @@ export const animationData_123 = {
       [50, -1, 2, 2]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [115],
       [1, 9, 1, 0, 0],
@@ -2533,7 +2533,7 @@ export const animationData_123 = {
       [64, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [31],
       [2, 5, 1, 0, 0, "高さ"],

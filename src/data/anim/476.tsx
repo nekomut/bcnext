@@ -5,7 +5,7 @@ export const animationData_476 = {
   "f": {
     "name": "ネコデビル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["476_f.png"],
       [45],
@@ -56,7 +56,7 @@ export const animationData_476 = {
       [386, 83, 21, 11]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [47],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -112,7 +112,7 @@ export const animationData_476 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [25],
       [9, 2, -1, 0, 0, 9],
@@ -233,7 +233,7 @@ export const animationData_476 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [15],
       [17, 11, -1, 0, 0, "013右手.png<color=0>"],
@@ -319,7 +319,7 @@ export const animationData_476 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [50],
       [2, 4, 1, 0, 0, "000.png"],
@@ -719,7 +719,7 @@ export const animationData_476 = {
       [58, 2000, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [25],
       [22, 12, 1, 0, 0, "000.png"],
@@ -802,7 +802,7 @@ export const animationData_476 = {
   "c": {
     "name": "ネコ邪神",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["476_c.png"],
       [48],
@@ -856,7 +856,7 @@ export const animationData_476 = {
       [227, 206, 21, 11]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [57],
       [-1, -1, 0, 0, 0, -3, 0, 0, 1000, 1000, 0, 1000, 0, "034影 .png"],
@@ -922,7 +922,7 @@ export const animationData_476 = {
       [0, 0, 0, 0, 5, 0, "034影 .png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [21],
       [14, 12, -1, 0, 0, "020右腕　下.png<color=3>"],
@@ -1052,7 +1052,7 @@ export const animationData_476 = {
       [35, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [20],
       [14, 12, -1, 0, 0, "020右腕　下.png<color=3>"],
@@ -1179,7 +1179,7 @@ export const animationData_476 = {
       [35, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [74],
       [1, 4, 1, 0, 0, "034影 .png"],
@@ -1891,7 +1891,7 @@ export const animationData_476 = {
       [58, 2000, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [15],
       [2, 4, 1, 0, 0, "000.png<color=8>"],

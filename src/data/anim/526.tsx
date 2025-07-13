@@ -5,7 +5,7 @@ export const animationData_526 = {
   "f": {
     "name": "冬天使のシシル＆コマリ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["526_f.png"],
       [210],
@@ -221,7 +221,7 @@ export const animationData_526 = {
       [423, 266, 10, 11, "209左肩装飾.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [284],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -1078,7 +1078,7 @@ export const animationData_526 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [72],
       [2, 9, -1, 0, 0, "影"],
@@ -1624,7 +1624,7 @@ export const animationData_526 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [677],
       [2, 4, 1, 0, 0, "影"],
@@ -8326,7 +8326,7 @@ export const animationData_526 = {
       [100, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [133],
       [3, 11, 1, 0, 0, "cダミー<color=7>"],
@@ -8733,7 +8733,7 @@ export const animationData_526 = {
   "c": {
     "name": "冬天使のシシル＆コマリΦ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["526_c.png"],
       [210],
@@ -8949,7 +8949,7 @@ export const animationData_526 = {
       [269, 90, 10, 11, "209左肩装飾.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [284],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -9242,7 +9242,7 @@ export const animationData_526 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [76],
       [2, 9, -1, 0, 0, "影"],
@@ -9824,7 +9824,7 @@ export const animationData_526 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [72],
       [2, 9, -1, 0, 0, "影"],
@@ -10379,7 +10379,7 @@ export const animationData_526 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [678],
       [2, 4, 1, 0, 0, "影"],
@@ -17365,7 +17365,7 @@ export const animationData_526 = {
       [100, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [134],
       [3, 11, 1, 0, 0, "cダミー<color=7>"],

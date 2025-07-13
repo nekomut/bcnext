@@ -5,7 +5,7 @@ export const animationData_712 = {
   "f": {
     "name": "カオルガ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["712_f.png"],
       [18],
@@ -384,7 +384,7 @@ export const animationData_712 = {
   "c": {
     "name": "カオランパサラン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["712_c.png"],
       [42],

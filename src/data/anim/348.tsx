@@ -5,7 +5,7 @@ export const animationData_348 = {
   "f": {
     "name": "ぐでたまプレート",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["348_f.png"],
       [28],
@@ -39,7 +39,7 @@ export const animationData_348 = {
       [144, 223, 111, 32]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [23],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -71,7 +71,7 @@ export const animationData_348 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [1, 9, -1, 0, 0, "影"],
@@ -391,7 +391,7 @@ export const animationData_348 = {
       [20, 1000, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [2, 5, -1, 0, 0],
@@ -504,7 +504,7 @@ export const animationData_348 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [65],
       [2, 5, 1, 0, 0, "ダミー"],
@@ -1052,7 +1052,7 @@ export const animationData_348 = {
       [35, 11, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [2, 4, 1, 0, 0],
@@ -1162,7 +1162,7 @@ export const animationData_348 = {
   "c": {
     "name": "ぐでたまベーコンプレート",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["348_c.png"],
       [44],
@@ -1212,7 +1212,7 @@ export const animationData_348 = {
       [401, 224, 110, 31]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [31],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1252,7 +1252,7 @@ export const animationData_348 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [65],
       [1, 9, -1, 0, 0],
@@ -1752,7 +1752,7 @@ export const animationData_348 = {
       [20, 1000, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [2, 5, -1, 0, 0],
@@ -1893,7 +1893,7 @@ export const animationData_348 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [79],
       [2, 5, 1, 0, 0],
@@ -2545,7 +2545,7 @@ export const animationData_348 = {
       [35, 11, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [53],
       [2, 4, 1, 0, 0],

@@ -10913,7 +10913,7 @@ export const animationData_563 = {
   "s": {
     "name": "アクアブラスター・サキ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["563_s.png"],
       [109],

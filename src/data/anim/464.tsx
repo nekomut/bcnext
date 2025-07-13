@@ -5,7 +5,7 @@ export const animationData_464 = {
   "f": {
     "name": "土偶戦士ドグ丸",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["464_f.png"],
       [52],
@@ -63,7 +63,7 @@ export const animationData_464 = {
       [218, 146, 25, 25, "051青円s.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [68],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, 0],
@@ -140,7 +140,7 @@ export const animationData_464 = {
       [0, 0, 0, 0, 5, 0, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [30],
       [1, 4, -1, 0, 0, "\t"],
@@ -318,7 +318,7 @@ export const animationData_464 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [18],
       [1, 9, -1, 0, 0, "\t"],
@@ -424,7 +424,7 @@ export const animationData_464 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [155],
       [1, 4, 1, 0, 0, "\t"],
@@ -2164,7 +2164,7 @@ export const animationData_464 = {
       [40, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [33],
       [1, 4, 1, 0, 0, "\t"],
@@ -2271,7 +2271,7 @@ export const animationData_464 = {
   "c": {
     "name": "土偶戦士ドグえもん",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["464_c.png"],
       [62],
@@ -2339,7 +2339,7 @@ export const animationData_464 = {
       [438, 221, 20, 19, "061右手差分.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [85],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, 0],
@@ -2433,7 +2433,7 @@ export const animationData_464 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [36],
       [1, 4, -1, 0, 0, "\t"],
@@ -2646,7 +2646,7 @@ export const animationData_464 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [22],
       [1, 9, -1, 0, 0, "\t"],
@@ -2771,7 +2771,7 @@ export const animationData_464 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [193],
       [1, 4, 1, 0, 0, "\t"],
@@ -4772,7 +4772,7 @@ export const animationData_464 = {
       [120, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [38],
       [1, 4, 1, 0, 0, "\t"],
@@ -4894,7 +4894,7 @@ export const animationData_464 = {
   "s": {
     "name": "覚醒戦士ドグえもん",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["464_s.png"],
       [66],

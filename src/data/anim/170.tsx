@@ -5,7 +5,7 @@ export const animationData_170 = {
   "f": {
     "name": "テコルガ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["170_f.png"],
       [9],
@@ -20,7 +20,7 @@ export const animationData_170 = {
       [34, 63, 20, 37, "右垂れ手"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [12],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -41,7 +41,7 @@ export const animationData_170 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [4, 11, -1, 0, 0, "体"],
@@ -155,7 +155,7 @@ export const animationData_170 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [10, 12, -1, 0, 0, "手伸び"],
@@ -166,7 +166,7 @@ export const animationData_170 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [4, 11, 1, 0, 0, "体"],
@@ -300,7 +300,7 @@ export const animationData_170 = {
       [15, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [4, 5, -1, 0, 0],
@@ -326,7 +326,7 @@ export const animationData_170 = {
   "c": {
     "name": "テサランパサラン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["170_c.png"],
       [46],
@@ -378,7 +378,7 @@ export const animationData_170 = {
       [174, 241, 20, 14]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [65],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー　"],
@@ -452,7 +452,7 @@ export const animationData_170 = {
       [0, 0, 0, 0, 5, 0, "腕<color=1>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [71],
       [2, 5, -1, 0, 0, "ダミー　"],
@@ -881,7 +881,7 @@ export const animationData_170 = {
       [-73, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [58],
       [2, 5, -1, 0, 0, "ダミー　"],
@@ -1222,7 +1222,7 @@ export const animationData_170 = {
       [-73, 45, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [153],
       [1, 4, 1, 0, 0, "陰"],
@@ -2657,7 +2657,7 @@ export const animationData_170 = {
       [108, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [2, 4, -1, 0, 0, "腰<color=3>"],
@@ -2785,7 +2785,7 @@ export const animationData_170 = {
   "s": {
     "name": "ムギワラテサラン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["170_s.png"],
       [56],
@@ -2847,7 +2847,7 @@ export const animationData_170 = {
       [246, 45, 26, 29]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [80],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー　"],
@@ -2936,7 +2936,7 @@ export const animationData_170 = {
       [0, 0, 0, 0, 5, 0, "腕<color=1>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [82],
       [2, 5, -1, 0, 0, "ダミー　"],
@@ -3421,7 +3421,7 @@ export const animationData_170 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [69],
       [2, 5, -1, 0, 0, "ダミー　"],
@@ -3818,7 +3818,7 @@ export const animationData_170 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [193],
       [1, 4, 1, 0, 0, "陰"],
@@ -5512,7 +5512,7 @@ export const animationData_170 = {
       [140, 200, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [48],
       [2, 4, 1, 0, 0, "腰<color=3>"],

@@ -6096,7 +6096,7 @@ export const animationData_543 = {
   "c": {
     "name": "漆黒の魔女ダークキャスリィ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["543_c.png"],
       [160],

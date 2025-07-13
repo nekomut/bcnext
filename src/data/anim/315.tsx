@@ -5,7 +5,7 @@ export const animationData_315 = {
   "f": {
     "name": "ピコ太郎",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["315_f.png"],
       [65],
@@ -76,7 +76,7 @@ export const animationData_315 = {
       [266, 143, 50, 81, "ふりむき"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [60],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー<color=7>"],
@@ -145,7 +145,7 @@ export const animationData_315 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [92],
       [2, 4, -1, 0, 0, "からだダミー<color=7>"],
@@ -960,7 +960,7 @@ export const animationData_315 = {
       [52, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [92],
       [2, 4, -1, 0, 0, "からだダミー<color=7>"],
@@ -1775,7 +1775,7 @@ export const animationData_315 = {
       [52, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [119],
       [3, 4, 1, 0, 0, "影"],
@@ -3115,7 +3115,7 @@ export const animationData_315 = {
       [152, 600, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [82],
       [2, 4, 1, 0, 0, "cダミー<color=7>"],
@@ -3369,7 +3369,7 @@ export const animationData_315 = {
   "c": {
     "name": "ネコ太郎",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["315_c.png"],
       [65],
@@ -3440,7 +3440,7 @@ export const animationData_315 = {
       [266, 143, 50, 81, "ふりむき"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [60],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー<color=7>"],
@@ -3509,7 +3509,7 @@ export const animationData_315 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [92],
       [2, 4, -1, 0, 0, "からだダミー<color=7>"],
@@ -4289,7 +4289,7 @@ export const animationData_315 = {
       [52, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [92],
       [2, 4, -1, 0, 0, "からだダミー<color=7>"],
@@ -5069,7 +5069,7 @@ export const animationData_315 = {
       [52, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [119],
       [3, 4, 1, 0, 0, "影"],
@@ -6412,7 +6412,7 @@ export const animationData_315 = {
       [152, 600, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [82],
       [2, 4, 1, 0, 0, "cダミー<color=7>"],

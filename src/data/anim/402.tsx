@@ -5,7 +5,7 @@ export const animationData_402 = {
   "f": {
     "name": "ちびシンジ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["664_f.png"],
       [59],
@@ -70,7 +70,7 @@ export const animationData_402 = {
       [192, 134, 16, 14, "058 腕.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [57],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -136,7 +136,7 @@ export const animationData_402 = {
       [0, 0, -5, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [88],
       [2, 4, -1, 0, 0, "027影.png"],
@@ -698,7 +698,7 @@ export const animationData_402 = {
       [20, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [49],
       [14, 11, -1, 0, 0, "026上半身.png"],
@@ -1026,7 +1026,7 @@ export const animationData_402 = {
       [0, 149, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [86],
       [3, 4, 1, 0, 0, "030ネコ　胴体.png"],
@@ -1913,7 +1913,7 @@ export const animationData_402 = {
       [83, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [43, 12, 1, 0, 0, "000.png<color=16>"],
@@ -2005,7 +2005,7 @@ export const animationData_402 = {
   "c": {
     "name": "プラグスーツのちびシンジ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["664_c.png"],
       [75],
@@ -2086,7 +2086,7 @@ export const animationData_402 = {
       [280, 187, 14, 27, "074.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [68],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -2163,7 +2163,7 @@ export const animationData_402 = {
       [0, 0, -5, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [88],
       [1, 4, -1, 0, 0, "027影.png"],
@@ -2732,7 +2732,7 @@ export const animationData_402 = {
       [0, -7, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [51],
       [14, 11, -1, 0, 0, "026上半身.png"],
@@ -3066,7 +3066,7 @@ export const animationData_402 = {
       [0, 149, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [98],
       [2, 4, 1, 0, 0, "030ネコ　胴体.png"],
@@ -4024,7 +4024,7 @@ export const animationData_402 = {
       [83, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [43, 12, 1, 0, 0, "000.png<color=16>"],
@@ -4131,7 +4131,7 @@ export const animationData_402 = {
   "s": {
     "name": "黒プラグスーツのちびシンジ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["402_s.png"],
       [81],
@@ -4218,7 +4218,7 @@ export const animationData_402 = {
       [129, 2, 15, 49, "080.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [72],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -4299,7 +4299,7 @@ export const animationData_402 = {
       [0, 0, -5, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [105],
       [1, 4, -1, 0, 0, "027影.png"],
@@ -4949,7 +4949,7 @@ export const animationData_402 = {
       [40, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [46],
       [14, 11, -1, 0, 0, "026上半身.png"],
@@ -5253,7 +5253,7 @@ export const animationData_402 = {
       [25, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [134],
       [1, 4, 1, 0, 0, "027影.png"],
@@ -6596,7 +6596,7 @@ export const animationData_402 = {
       [63, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [39],
       [43, 12, 1, 0, 0, "000.png<color=16>"],

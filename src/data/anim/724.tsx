@@ -5,7 +5,7 @@ export const animationData_724 = {
   "s": {
     "name": "ネコタマ号",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["724_s.png"],
       [27],

@@ -5,7 +5,7 @@ export const animationData_093 = {
   "f": {
     "name": "狂乱のバトルネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["093_f.png"],
       [10],
@@ -38,7 +38,7 @@ export const animationData_093 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 0, 0, 179, 179, 0, 255, 0, "ダミー親"],
@@ -50,7 +50,7 @@ export const animationData_093 = {
       [0, 0, 57, 88, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -62,7 +62,7 @@ export const animationData_093 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -70,7 +70,7 @@ export const animationData_093 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -83,7 +83,7 @@ export const animationData_093 = {
       [15, 6, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 2, -1, 0, 0],
@@ -106,7 +106,7 @@ export const animationData_093 = {
   "c": {
     "name": "狂乱の勇者ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["093_c.png"],
       [10],
@@ -139,7 +139,7 @@ export const animationData_093 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 0, 0, 179, 179, 0, 255, 0, "ダミー親"],
@@ -151,7 +151,7 @@ export const animationData_093 = {
       [0, 0, 68, 88, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -163,7 +163,7 @@ export const animationData_093 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -171,7 +171,7 @@ export const animationData_093 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -184,7 +184,7 @@ export const animationData_093 = {
       [15, 6, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 2, -1, -1000, 1000, "ノックバック"],
@@ -207,7 +207,7 @@ export const animationData_093 = {
   "s": {
     "name": "大狂乱の暗黒ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["093_s.png"],
       [35],
@@ -248,7 +248,7 @@ export const animationData_093 = {
       [205, 184, 49, 40, "にょろジャンプ５"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [11],
       [-1, -1, 0, 0, 0, 0, 0, 0, 2000, 2000, 0, 1000, 0, "ダミー"],
@@ -268,7 +268,7 @@ export const animationData_093 = {
       [0, 0, -1, 2, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [2, 5, -1, 0, 0, "cダミー"],
@@ -384,7 +384,7 @@ export const animationData_093 = {
       [70, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [5, 2, -1, 0, 0, "通常にょろ１"],
@@ -451,7 +451,7 @@ export const animationData_093 = {
       [70, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [2, 4, 1, 0, 0, "cダミー"],
@@ -631,7 +631,7 @@ export const animationData_093 = {
       [15, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [2, 4, 1, 0, 0, "cダミー"],

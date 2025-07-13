@@ -5,7 +5,7 @@ export const animationData_128 = {
   "f": {
     "name": "うらめしにゃん",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["128_f.png"],
       [19],
@@ -30,7 +30,7 @@ export const animationData_128 = {
       [252, 34, 18, 22, "-------------------------------------------追加　襟　奥"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [20],
       [-1, -1, 0, 0, 415, 536, 0, 0, 1790, 1790, 0, 255, 0, "ダミー親"],
@@ -59,7 +59,7 @@ export const animationData_128 = {
       [0, 0, 0, 0, 1, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [1, 5, -1, -1000, 1000, "移動"],
@@ -112,7 +112,7 @@ export const animationData_128 = {
       [48, -40, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [1, 5, -1, -1000, 1000, "移動"],
@@ -165,7 +165,7 @@ export const animationData_128 = {
       [48, -40, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [1, 5, 1, 0, 0],
@@ -338,7 +338,7 @@ export const animationData_128 = {
       [88, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [1, 4, -1, 0, 0, "エフェクト"],
@@ -379,7 +379,7 @@ export const animationData_128 = {
   "c": {
     "name": "ハナメガにゃん",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["128_c.png"],
       [43],
@@ -428,7 +428,7 @@ export const animationData_128 = {
       [1, 120, 12, 34, "--追加　糸　たわみ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [49],
       [-1, -1, 0, 0, 593, 482, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー親<color=9>"],
@@ -486,7 +486,7 @@ export const animationData_128 = {
       [0, 0, -4, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [3, 5, -1, 0, 0, "上下運動"],
@@ -593,7 +593,7 @@ export const animationData_128 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [3, 5, -1, 0, 0, "上下運動"],
@@ -700,7 +700,7 @@ export const animationData_128 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [42],
       [5, 9, 1, 0, 0],
@@ -1383,7 +1383,7 @@ export const animationData_128 = {
       [75, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [3, 4, -1, 0, 0, "にゃんこダミー<color=7>"],
@@ -1511,7 +1511,7 @@ export const animationData_128 = {
   "s": {
     "name": "凧にゃん",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["128_s.png"],
       [26],
@@ -1543,7 +1543,7 @@ export const animationData_128 = {
       [127, 1, 43, 120, "スピード線"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [24],
       [-1, 128, 0, 0, -200, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -1576,7 +1576,7 @@ export const animationData_128 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [1, 4, -1, 0, 0, "全体ダミー<color=7>"],
@@ -1750,7 +1750,7 @@ export const animationData_128 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [13, 11, -1, 0, 0, "凧糸中"],
@@ -1832,7 +1832,7 @@ export const animationData_128 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [74],
       [2, 4, 1, 0, 0, "影"],
@@ -2875,7 +2875,7 @@ export const animationData_128 = {
       [56, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [3, 4, -1, 0, 0, "キャラダミー<color=7>"],

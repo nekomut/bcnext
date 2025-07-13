@@ -5,7 +5,7 @@ export const animationData_060 = {
   "f": {
     "name": "ネコブ・ロンズ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["060_f.png"],
       [24],
@@ -35,7 +35,7 @@ export const animationData_060 = {
       [162, 100, 63, 44]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [23],
       [-1, -1, 0, 0, 487, 434, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -67,7 +67,7 @@ export const animationData_060 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [2, 5, 1, 0, 0],
@@ -133,7 +133,7 @@ export const animationData_060 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [14, 12, -1, 0, 0],
@@ -141,7 +141,7 @@ export const animationData_060 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [2, 11, 1, 0, 0, "ダミー"],
@@ -402,7 +402,7 @@ export const animationData_060 = {
       [41, 2, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [14, 12, -1, 0, 0, "ダミー"],
@@ -428,7 +428,7 @@ export const animationData_060 = {
   "c": {
     "name": "芸術のネコスタチュ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["060_c.png"],
       [23],
@@ -457,7 +457,7 @@ export const animationData_060 = {
       [1, 1, 84, 111]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [24],
       [-1, -1, 0, 0, 526, 432, 0, 0, 1500, 1500, 0, 1000, 0, "ダミー"],
@@ -490,7 +490,7 @@ export const animationData_060 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [2, 5, 1, 0, 0],
@@ -581,7 +581,7 @@ export const animationData_060 = {
       [0, 2, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [10, 12, -1, 0, 0],
@@ -604,7 +604,7 @@ export const animationData_060 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [2, 11, 1, 0, 0],
@@ -853,7 +853,7 @@ export const animationData_060 = {
       [42, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [2, 11, -1, 0, 0, "ダミー"],
@@ -885,7 +885,7 @@ export const animationData_060 = {
   "s": {
     "name": "ネコクイズ王",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["060_s.png"],
       [41],
@@ -932,7 +932,7 @@ export const animationData_060 = {
       [225, 210, 11, 25, "036奥腕.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [52],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -993,7 +993,7 @@ export const animationData_060 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [16],
       [2, 5, 1, 0, 0, "キャラ親ダミー<color=7>\t"],
@@ -1069,7 +1069,7 @@ export const animationData_060 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [6],
       [17, 12, -1, 0, 0, "攻撃用素材親ダミー<color=7>"],
@@ -1092,7 +1092,7 @@ export const animationData_060 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [72],
       [2, 5, 1, 0, 0, "キャラ親ダミー<color=7>\t"],
@@ -1715,7 +1715,7 @@ export const animationData_060 = {
       [60, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [13],
       [17, 12, 1, 0, 0, "攻撃用素材親ダミー<color=7>"],

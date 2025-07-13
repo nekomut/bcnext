@@ -5,7 +5,7 @@ export const animationData_115 = {
   "f": {
     "name": "セラム",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["115_f.png"],
       [25],
@@ -36,7 +36,7 @@ export const animationData_115 = {
       [348, 81, 82, 9, "影"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [27],
       [-1, -1, 0, 0, 616, 433, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -72,7 +72,7 @@ export const animationData_115 = {
       [0, 0, 0, 0, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [2, 5, -1, 0, 0, "キャラ全身"],
@@ -192,7 +192,7 @@ export const animationData_115 = {
       [24, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [2, 5, -1, 0, 0, "キャラ全身"],
@@ -258,7 +258,7 @@ export const animationData_115 = {
       [24, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [2, 5, 1, 0, 0, "キャラ全体"],
@@ -647,7 +647,7 @@ export const animationData_115 = {
       [36, -298, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [2, 11, -1, 0, 0, "キャラ全身"],
@@ -709,7 +709,7 @@ export const animationData_115 = {
   "c": {
     "name": "セラムCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["115_c.png"],
       [25],
@@ -740,7 +740,7 @@ export const animationData_115 = {
       [348, 81, 82, 9, "影"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [27],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -776,7 +776,7 @@ export const animationData_115 = {
       [0, 0, 0, 0, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [2, 5, -1, 0, 0, "キャラ全身"],
@@ -896,7 +896,7 @@ export const animationData_115 = {
       [24, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [2, 5, -1, 0, 0, "キャラ全身"],
@@ -962,7 +962,7 @@ export const animationData_115 = {
       [24, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [2, 5, 1, 0, 0, "キャラ全体"],
@@ -1351,7 +1351,7 @@ export const animationData_115 = {
       [36, -298, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [2, 11, -1, 0, 0, "キャラ全身"],

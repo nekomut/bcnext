@@ -5,7 +5,7 @@ export const animationData_332 = {
   "f": {
     "name": "イースターねねこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["332_f.png"],
       [74],
@@ -85,7 +85,7 @@ export const animationData_332 = {
       [345, 36, 35, 63, "攻撃右耳"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [80],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -174,7 +174,7 @@ export const animationData_332 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [1, 5, -1, 0, 0],
@@ -373,7 +373,7 @@ export const animationData_332 = {
       [25, -116, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [4, 11, -1, 0, 0],
@@ -504,7 +504,7 @@ export const animationData_332 = {
       [25, -104, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [101],
       [1, 5, 1, 0, 0],
@@ -1041,7 +1041,7 @@ export const animationData_332 = {
       [12, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [115],
       [1, 4, 1, 0, 0],
@@ -1394,7 +1394,7 @@ export const animationData_332 = {
   "c": {
     "name": "イースターバニーねねこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["332_c.png"],
       [74],
@@ -1474,7 +1474,7 @@ export const animationData_332 = {
       [1, 115, 58, 26]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [89],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1572,7 +1572,7 @@ export const animationData_332 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [1, 5, -1, 0, 0],
@@ -1825,7 +1825,7 @@ export const animationData_332 = {
       [31, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [5, 5, -1, 0, 0],
@@ -1964,7 +1964,7 @@ export const animationData_332 = {
       [60, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [102],
       [1, 5, 1, 0, 0],
@@ -2546,7 +2546,7 @@ export const animationData_332 = {
       [25, 1055, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [90],
       [1, 4, 1, 0, 0],
@@ -2824,7 +2824,7 @@ export const animationData_332 = {
   "s": {
     "name": "開花・イースターバニーねねこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["332_s.png"],
       [74],
@@ -3002,7 +3002,7 @@ export const animationData_332 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [1, 5, -1, 0, 0],
@@ -3255,7 +3255,7 @@ export const animationData_332 = {
       [31, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [5, 5, -1, 0, 0],

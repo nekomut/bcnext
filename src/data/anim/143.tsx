@@ -5,7 +5,7 @@ export const animationData_143 = {
   "f": {
     "name": "ねこナース",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["143_f.png"],
       [59],
@@ -70,7 +70,7 @@ export const animationData_143 = {
       [241, 34, 15, 8, "土"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [61],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -140,7 +140,7 @@ export const animationData_143 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [1, 9, -1, 0, 0, "ダミー"],
@@ -312,7 +312,7 @@ export const animationData_143 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [1, 9, -1, 0, 0],
@@ -484,7 +484,7 @@ export const animationData_143 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [168],
       [1, 4, 1, 0, 0],
@@ -1826,7 +1826,7 @@ export const animationData_143 = {
       [50, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [53],
       [2, 4, -1, 0, 0],
@@ -1993,7 +1993,7 @@ export const animationData_143 = {
   "c": {
     "name": "ハートフルねこナース",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["143_c.png"],
       [63],
@@ -2062,7 +2062,7 @@ export const animationData_143 = {
       [451, 176, 20, 79, "hair2"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [73],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -2144,7 +2144,7 @@ export const animationData_143 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [44],
       [1, 9, -1, 0, 0],
@@ -2436,7 +2436,7 @@ export const animationData_143 = {
       [112, 0, 3, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [44],
       [1, 9, -1, 0, 0],
@@ -2728,7 +2728,7 @@ export const animationData_143 = {
       [112, 0, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [227],
       [1, 4, 1, 0, 0],
@@ -4721,7 +4721,7 @@ export const animationData_143 = {
       [70, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [72],
       [2, 4, -1, 0, 0],
@@ -4945,7 +4945,7 @@ export const animationData_143 = {
   "s": {
     "name": "ジョイフルねこナース",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["143_s.png"],
       [108],
@@ -5059,7 +5059,7 @@ export const animationData_143 = {
       [38, 153, 4, 46]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [183],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -5251,7 +5251,7 @@ export const animationData_143 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [73],
       [1, 9, -1, 0, 0],
@@ -5749,7 +5749,7 @@ export const animationData_143 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [73],
       [1, 9, -1, 0, 0],
@@ -6247,7 +6247,7 @@ export const animationData_143 = {
       [112, 0, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [374],
       [1, 4, 1, 0, 0],
@@ -9666,7 +9666,7 @@ export const animationData_143 = {
       [0, 1200, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [99],
       [2, 4, 1, 0, 0],

@@ -5,7 +5,7 @@ export const animationData_380 = {
   "f": {
     "name": "幼傑ダルターニャ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["380_f.png"],
       [81],
@@ -92,7 +92,7 @@ export const animationData_380 = {
       [472, 72, 39, 24, "攻撃追加バディ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [94],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -195,7 +195,7 @@ export const animationData_380 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [92],
       [1, 4, -1, 0, 0],
@@ -1510,7 +1510,7 @@ export const animationData_380 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [1, 5, -1, 0, 0],
@@ -1660,7 +1660,7 @@ export const animationData_380 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [230],
       [1, 10, 1, 0, 0],
@@ -3711,7 +3711,7 @@ export const animationData_380 = {
       [21, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [150],
       [1, 11, 1, 0, 0],
@@ -4169,7 +4169,7 @@ export const animationData_380 = {
   "c": {
     "name": "英傑ダルターニャ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["380_c.png"],
       [126],
@@ -4301,7 +4301,7 @@ export const animationData_380 = {
       [433, 110, 13, 13]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [239],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -4549,7 +4549,7 @@ export const animationData_380 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [1, 12, -1, 0, 0, "正面親ダミー"],
@@ -4910,7 +4910,7 @@ export const animationData_380 = {
       [20, -5, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [6, 5, -1, 0, 0, "襟元<color=0>"],
@@ -5023,7 +5023,7 @@ export const animationData_380 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [218],
       [3, 4, 1, 0, 0, "腰<color=0>"],
@@ -6765,7 +6765,7 @@ export const animationData_380 = {
       [21, 31, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [62],
       [3, 4, 1, 0, 0, "腰<color=0>"],

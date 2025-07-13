@@ -5,7 +5,7 @@ export const animationData_030 = {
   "f": {
     "name": "ネコぼさつ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["030_f.png"],
       [28],
@@ -39,7 +39,7 @@ export const animationData_030 = {
       [162, 96, 17, 17, "煙右５"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [23],
       [-1, -1, 0, 0, 500, 430, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -71,7 +71,7 @@ export const animationData_030 = {
       [0, 0, 0, 0, 1, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [11, 12, -1, 0, 0],
@@ -88,7 +88,7 @@ export const animationData_030 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [11, 12, -1, 0, 0],
@@ -105,7 +105,7 @@ export const animationData_030 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [5, 11, 1, 0, 0],
@@ -365,7 +365,7 @@ export const animationData_030 = {
       [54, -13, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [2, 11, -1, 0, 0],
@@ -391,7 +391,7 @@ export const animationData_030 = {
   "c": {
     "name": "ネコせんじゅ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["030_c.png"],
       [34],
@@ -431,7 +431,7 @@ export const animationData_030 = {
       [114, 128, 35, 20, "手のエフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [55],
       [-1, -1, 0, 0, 500, 430, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -495,7 +495,7 @@ export const animationData_030 = {
       [0, 0, 0, 2, 1, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [28, 11, -1, 0, 0, "千手左側親"],
@@ -653,7 +653,7 @@ export const animationData_030 = {
       [1, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [28, 11, -1, 0, 0, "千手左側親"],
@@ -811,7 +811,7 @@ export const animationData_030 = {
       [1, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [104],
       [6, 11, 1, 0, 0],
@@ -1745,7 +1745,7 @@ export const animationData_030 = {
       [46, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [18, 12, -1, 0, 0, "ゴッドハンド"],
@@ -1784,7 +1784,7 @@ export const animationData_030 = {
   "s": {
     "name": "ネコにょらい",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["030_s.png"],
       [60],
@@ -1850,7 +1850,7 @@ export const animationData_030 = {
       [28, 78, 17, 41, "足補足"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [71],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -1930,7 +1930,7 @@ export const animationData_030 = {
       [0, 0, 0, 2, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [16, 11, -1, 0, 0, "右手うしろ"],
@@ -2151,7 +2151,7 @@ export const animationData_030 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [16, 11, -1, 0, 0, "右手うしろ"],
@@ -2372,7 +2372,7 @@ export const animationData_030 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [122],
       [1, 4, 1, 0, 0, "影"],
@@ -3332,7 +3332,7 @@ export const animationData_030 = {
       [58, -500, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [2, 4, 1, 0, 0, "台ダミー"],

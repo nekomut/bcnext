@@ -5,7 +5,7 @@ export const animationData_031 = {
   "f": {
     "name": "ネコ番長",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["031_f.png"],
       [47],
@@ -58,7 +58,7 @@ export const animationData_031 = {
       [423, 101, 52, 16, "手2"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [33],
       [-1, -1, 0, 0, 400, 320, 0, 0, 1790, 1790, 0, 1000, 0],
@@ -100,7 +100,7 @@ export const animationData_031 = {
       [0, 0, 32, 67, 8, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [5, 12, 1, 0, 0, "にゃ黒"],
@@ -137,7 +137,7 @@ export const animationData_031 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [5, 12, 1, 0, 0, "にゃ黒"],
@@ -165,7 +165,7 @@ export const animationData_031 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [96],
       [10, 4, 1, 0, 0],
@@ -710,7 +710,7 @@ export const animationData_031 = {
       [46, 27, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [5, 12, 1, 0, 0, "にゃ黒"],
@@ -748,7 +748,7 @@ export const animationData_031 = {
   "c": {
     "name": "怒りのネコ番長",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["031_c.png"],
       [52],
@@ -806,7 +806,7 @@ export const animationData_031 = {
       [460, 142, 21, 7]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [45],
       [-1, -1, 0, 0, 420, 320, 0, 0, 1790, 1790, 0, 1000, 0],
@@ -860,7 +860,7 @@ export const animationData_031 = {
       [0, 0, 36, 76, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [5, 12, 1, 0, 0, "にゃ黒"],
@@ -923,7 +923,7 @@ export const animationData_031 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [5, 12, 1, 0, 0, "にゃ黒"],
@@ -960,7 +960,7 @@ export const animationData_031 = {
       [25, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [125],
       [10, 4, 1, 0, 0],
@@ -1750,7 +1750,7 @@ export const animationData_031 = {
       [50, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [5, 12, 1, 0, 0, "にゃ黒"],
@@ -1794,7 +1794,7 @@ export const animationData_031 = {
   "s": {
     "name": "押忍！ネコ番長",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["031_s.png"],
       [77],
@@ -1877,7 +1877,7 @@ export const animationData_031 = {
       [99, 240, 15, 15, "076灰箱.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [97],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0],
@@ -1983,7 +1983,7 @@ export const animationData_031 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [10],
       [3, 5, -1, 0, 0, "014体.png<color=0>"],
@@ -2053,7 +2053,7 @@ export const animationData_031 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [7],
       [6, 2, -1, 0, 0, "025マント奥1.png<color=0>\t"],
@@ -2099,7 +2099,7 @@ export const animationData_031 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [128],
       [3, 12, 1, 0, 0, "014体.png<color=0>"],
@@ -3323,7 +3323,7 @@ export const animationData_031 = {
       [3, 1100, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [3],
       [14, 12, 1, 0, 0, "スタンド用親<color=7>"],

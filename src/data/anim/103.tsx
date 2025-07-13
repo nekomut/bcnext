@@ -5,7 +5,7 @@ export const animationData_103 = {
   "f": {
     "name": "歌謡にゃんこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["103_f.png"],
       [11],
@@ -22,7 +22,7 @@ export const animationData_103 = {
       [189, 1, 66, 86]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [4],
       [-1, -1, 0, 0, 0, 0, 0, 0, 179, 179, 0, 255, 0, "ダミー親"],
@@ -35,7 +35,7 @@ export const animationData_103 = {
       [0, 0, 23, 56, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -54,7 +54,7 @@ export const animationData_103 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -62,7 +62,7 @@ export const animationData_103 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -99,7 +99,7 @@ export const animationData_103 = {
       [17, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [1, 2, 1, -1000, 1000, "ノックバック"],
@@ -131,7 +131,7 @@ export const animationData_103 = {
   "c": {
     "name": "メガにゃんこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["103_c.png"],
       [40],
@@ -177,7 +177,7 @@ export const animationData_103 = {
       [1, 249, 84, 6, "黒波動？"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [91],
       [-1, -1, 0, 0, 0, 0, 23, 25, 1790, 1790, 0, 1000, 0, "にゃんこ"],
@@ -277,7 +277,7 @@ export const animationData_103 = {
       [0, 0, 23, 35, 6, 0, "にゃんこ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [52],
       [2, 5, -1, 0, 0],
@@ -525,7 +525,7 @@ export const animationData_103 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [70, 12, -1, 0, 0, "おび"],
@@ -593,7 +593,7 @@ export const animationData_103 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [93],
       [3, 5, 1, 0, 0],
@@ -2379,7 +2379,7 @@ export const animationData_103 = {
       [280, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [67],
       [1, 9, 1, 0, 0],
@@ -2588,7 +2588,7 @@ export const animationData_103 = {
   "s": {
     "name": "メガにゃんこEX",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["103_s.png"],
       [52],
@@ -2646,7 +2646,7 @@ export const animationData_103 = {
       [55, 207, 13, 32, "丸飾り"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [133],
       [-1, -1, 0, 0, 0, 0, 23, 25, 1790, 1790, 0, 1000, 0, "にゃんこ"],
@@ -2788,7 +2788,7 @@ export const animationData_103 = {
       [0, 0, 23, 35, 6, 0, "にゃんこ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [68],
       [2, 5, -1, 0, 0],
@@ -3129,7 +3129,7 @@ export const animationData_103 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [64, 12, -1, 0, 0, "おび"],
@@ -3200,7 +3200,7 @@ export const animationData_103 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [139],
       [3, 5, 1, 0, 0],
@@ -6164,7 +6164,7 @@ export const animationData_103 = {
       [118, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [85],
       [1, 9, 1, 0, 0],

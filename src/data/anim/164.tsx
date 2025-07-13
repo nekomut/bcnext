@@ -5,7 +5,7 @@ export const animationData_164 = {
   "f": {
     "name": "西園寺 瞳",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["164_f.png"],
       [40],
@@ -51,7 +51,7 @@ export const animationData_164 = {
       [289, 1, 95, 137]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [40],
       [-1, -1, 0, 0, 0, 0, 43, 3, -1100, 1100, 0, 1000, 0, "陰"],
@@ -100,7 +100,7 @@ export const animationData_164 = {
       [0, 0, 45, 4, 5, 0, "陰"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [67],
       [1, 4, -1, 0, 0],
@@ -934,7 +934,7 @@ export const animationData_164 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [65],
       [3, 4, -1, 0, 0, "ダミーc"],
@@ -1750,7 +1750,7 @@ export const animationData_164 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [87],
       [3, 4, 1, 0, 0],
@@ -2623,7 +2623,7 @@ export const animationData_164 = {
       [2, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [1, 4, -1, 0, 0],
@@ -2727,7 +2727,7 @@ export const animationData_164 = {
   "c": {
     "name": "トミー＆にゃんこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["164_c.png"],
       [40],
@@ -2773,7 +2773,7 @@ export const animationData_164 = {
       [289, 1, 95, 137]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [40],
       [-1, -1, 0, 0, 0, 0, 43, 3, -1100, 1100, 0, 1000, 0, "陰"],
@@ -2822,7 +2822,7 @@ export const animationData_164 = {
       [0, 0, 45, 4, 5, 0, "陰"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [90],
       [1, 4, -1, 0, 0],
@@ -3874,7 +3874,7 @@ export const animationData_164 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [88],
       [3, 4, -1, 0, 0, "ダミーc"],
@@ -4908,7 +4908,7 @@ export const animationData_164 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [103],
       [3, 4, 1, 0, 0],
@@ -5964,7 +5964,7 @@ export const animationData_164 = {
       [2, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [1, 4, -1, 0, 0],

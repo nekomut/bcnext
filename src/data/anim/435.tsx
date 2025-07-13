@@ -5,7 +5,7 @@ export const animationData_435 = {
   "f": {
     "name": "ちびネコヴァルキリー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["435_f.png"],
       [102],
@@ -113,7 +113,7 @@ export const animationData_435 = {
       [374, 101, 46, 16, "101槍先装飾2羽.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [159],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -281,7 +281,7 @@ export const animationData_435 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [77],
       [3, 5, -1, 0, 0, "ちびヴァル親ダミー<color=7>\t"],
@@ -728,7 +728,7 @@ export const animationData_435 = {
       [36, -80, 3, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [73],
       [3, 5, -1, 0, 0, "ちびヴァル親ダミー<color=7>\t"],
@@ -1161,7 +1161,7 @@ export const animationData_435 = {
       [0, 150, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [210],
       [1, 4, 1, 0, 0, "001影.png<color=9>\t"],
@@ -3382,7 +3382,7 @@ export const animationData_435 = {
       [83, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [44],
       [2, 4, 1, 0, 0, "キャラ親ダミー<color=11>"],
@@ -3522,7 +3522,7 @@ export const animationData_435 = {
   "c": {
     "name": "ちびネコヴァルキリー・華",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["435_c.png"],
       [90],
@@ -3618,7 +3618,7 @@ export const animationData_435 = {
       [1, 252, 8, 3, "089天使3 目攻撃.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [139],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -3766,7 +3766,7 @@ export const animationData_435 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [70],
       [3, 5, -1, 0, 0, "ちびヴァル親ダミー<color=7>\t"],
@@ -4159,7 +4159,7 @@ export const animationData_435 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [60],
       [3, 5, -1, 0, 0, "ちびヴァル親ダミー<color=7>\t"],
@@ -4504,7 +4504,7 @@ export const animationData_435 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [192],
       [1, 4, 1, 0, 0, "001影.png<color=9>\t"],
@@ -6518,7 +6518,7 @@ export const animationData_435 = {
       [37, 77, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [39],
       [2, 11, 1, 0, 0, "キャラ親ダミー<color=11>"],

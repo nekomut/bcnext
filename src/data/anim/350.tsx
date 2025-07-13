@@ -5,7 +5,7 @@ export const animationData_350 = {
   "f": {
     "name": "ニセたま軍団",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["350_f.png"],
       [58],
@@ -69,7 +69,7 @@ export const animationData_350 = {
       [310, 136, 23, 24]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [81],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -159,7 +159,7 @@ export const animationData_350 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [71],
       [2, 5, -1, 0, 0],
@@ -1008,7 +1008,7 @@ export const animationData_350 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [3, 11, -1, 0, 0, "たまごの殻カー"],
@@ -1276,7 +1276,7 @@ export const animationData_350 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [106],
       [3, 11, 1, 0, 0, "たまごの殻カー"],
@@ -2342,7 +2342,7 @@ export const animationData_350 = {
       [85, 0, 3, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [60],
       [1, 8, 1, 0, 0, "影"],
@@ -2530,7 +2530,7 @@ export const animationData_350 = {
   "c": {
     "name": "ネコニセたま軍団",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["350_c.png"],
       [62],
@@ -2598,7 +2598,7 @@ export const animationData_350 = {
       [52, 128, 49, 109]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [91],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -2698,7 +2698,7 @@ export const animationData_350 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [99],
       [2, 5, -1, 0, 0],
@@ -3730,7 +3730,7 @@ export const animationData_350 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [3, 11, -1, 0, 0, "たまごの殻カー"],
@@ -3888,7 +3888,7 @@ export const animationData_350 = {
       [40, -42, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [111],
       [3, 11, 1, 0, 0, "たまごの殻カー"],
@@ -4885,7 +4885,7 @@ export const animationData_350 = {
       [60, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [71],
       [1, 8, 1, 0, 0, "影"],

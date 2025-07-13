@@ -5,7 +5,7 @@ export const animationData_311 = {
   "f": {
     "name": "ちびネコフィッシュ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["311_f.png"],
       [15],
@@ -26,7 +26,7 @@ export const animationData_311 = {
       [56, 53, 54, 46, "効果"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [6],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -41,7 +41,7 @@ export const animationData_311 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [3, 12, -1, 0, 0, "ダミー2 "],
@@ -69,7 +69,7 @@ export const animationData_311 = {
       [28, -2, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [2, 12, -1, 0, 0, "歩き"],
@@ -86,7 +86,7 @@ export const animationData_311 = {
       [0, -2, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [4, 2, 1, 0, 0, "ダミー2 "],
@@ -115,7 +115,7 @@ export const animationData_311 = {
       [17, -7, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [2, 12, 1, 0, 0, "歩き"],
@@ -141,7 +141,7 @@ export const animationData_311 = {
   "c": {
     "name": "ちびネコクジラ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["311_c.png"],
       [15],
@@ -162,7 +162,7 @@ export const animationData_311 = {
       [189, 86, 68, 72, "効果"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [6],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "タミー"],
@@ -177,7 +177,7 @@ export const animationData_311 = {
       [0, 0, 0, 2, 5, 0, "タミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [2, 2, -1, 0, 0, "歩き"],
@@ -195,7 +195,7 @@ export const animationData_311 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [2, 12, -1, 0, 0, "歩き"],
@@ -206,7 +206,7 @@ export const animationData_311 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [2, 12, 1, 0, 0, "歩き"],
@@ -236,7 +236,7 @@ export const animationData_311 = {
       [17, 13, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [2, 12, 1, 0, 0, "歩き"],
@@ -256,7 +256,7 @@ export const animationData_311 = {
   "s": {
     "name": "ちびネコ島",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["311_s.png"],
       [30],
@@ -292,7 +292,7 @@ export const animationData_311 = {
       [168, 141, 5, 6, "ちびネコ00 手"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [31],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -332,7 +332,7 @@ export const animationData_311 = {
       [0, 0, -74, 7, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [1, 2, -1, 0, 0, "影"],
@@ -394,7 +394,7 @@ export const animationData_311 = {
       [28, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [1, 2, 1, 0, 0, "影"],
@@ -429,7 +429,7 @@ export const animationData_311 = {
       [0, 29, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [50],
       [1, 2, 1, 0, 0, "影"],
@@ -757,7 +757,7 @@ export const animationData_311 = {
       [28, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [1, 2, 1, 0, 0, "影"],

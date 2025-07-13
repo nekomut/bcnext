@@ -5,7 +5,7 @@ export const animationData_434 = {
   "f": {
     "name": "白にゃんこ剣士",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["434_f.png"],
       [14],
@@ -25,7 +25,7 @@ export const animationData_434 = {
       [27, 123, 37, 42, "013勇者の盾.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [17],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -51,7 +51,7 @@ export const animationData_434 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [16],
       [2, 4, -1, 0, 0, "影"],
@@ -155,7 +155,7 @@ export const animationData_434 = {
       [12, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [10],
       [4, 5, -1, 0, 0, "体"],
@@ -213,7 +213,7 @@ export const animationData_434 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [26],
       [2, 4, 1, 0, 0, "影"],
@@ -425,7 +425,7 @@ export const animationData_434 = {
       [22, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [14],
       [2, 8, 1, 0, 0, "影"],
@@ -475,7 +475,7 @@ export const animationData_434 = {
   "c": {
     "name": "黒にゃんこ剣士",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["434_c.png"],
       [14],
@@ -495,7 +495,7 @@ export const animationData_434 = {
       [27, 123, 37, 42, "013勇者の盾.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [17],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -521,7 +521,7 @@ export const animationData_434 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [16],
       [2, 4, -1, 0, 0, "影"],
@@ -625,7 +625,7 @@ export const animationData_434 = {
       [12, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [10],
       [4, 5, -1, 0, 0, "体"],
@@ -686,7 +686,7 @@ export const animationData_434 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [26],
       [2, 4, 1, 0, 0, "影"],
@@ -898,7 +898,7 @@ export const animationData_434 = {
       [22, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [14],
       [2, 8, 1, 0, 0, "影"],

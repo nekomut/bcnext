@@ -5,7 +5,7 @@ export const animationData_369 = {
   "f": {
     "name": "ネコセイバー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["369_f.png"],
       [40],
@@ -51,7 +51,7 @@ export const animationData_369 = {
       [166, 141, 89, 114, "攻撃エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [83],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -143,7 +143,7 @@ export const animationData_369 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [3, 5, -1, 0, 0, "頭"],
@@ -291,7 +291,7 @@ export const animationData_369 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [30, 12, -1, 0, 0, "右手：歩き用"],
@@ -388,7 +388,7 @@ export const animationData_369 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [71],
       [30, 12, 1, 0, 0, "右手：歩き用"],
@@ -809,7 +809,7 @@ export const animationData_369 = {
       [22, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [32, 12, 1, 0, 0, "■横構えダミー<color=8>"],
@@ -907,7 +907,7 @@ export const animationData_369 = {
   "c": {
     "name": "英霊ネコセイバー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["810_c.png"],
       [43],
@@ -956,7 +956,7 @@ export const animationData_369 = {
       [203, 102, 51, 73, "攻撃エフェクト：加算"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [77],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1042,7 +1042,7 @@ export const animationData_369 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [28, 12, -1, 0, 0, "頭：構え<color=8>"],
@@ -1204,7 +1204,7 @@ export const animationData_369 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [28, 12, -1, 0, 0, "頭：構え<color=8>"],
@@ -1303,7 +1303,7 @@ export const animationData_369 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [71],
       [3, 4, 1, 0, 0, "頭"],
@@ -1731,7 +1731,7 @@ export const animationData_369 = {
       [22, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [28, 12, -1, 0, 0, "頭：構え<color=8>"],
@@ -1835,7 +1835,7 @@ export const animationData_369 = {
   "s": {
     "name": "ネコセイバーオルタ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["369_s.png"],
       [54],
@@ -1895,7 +1895,7 @@ export const animationData_369 = {
       [146, 87, 38, 13]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [97],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -2001,7 +2001,7 @@ export const animationData_369 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [25],
       [28, 12, -1, 0, 0, "頭：構え<color=8>"],
@@ -2143,7 +2143,7 @@ export const animationData_369 = {
       [40, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [28, 12, -1, 0, 0, "頭：構え<color=8>"],
@@ -2242,7 +2242,7 @@ export const animationData_369 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [72],
       [3, 4, 1, 0, 0, "頭"],
@@ -2675,7 +2675,7 @@ export const animationData_369 = {
       [22, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [33],
       [28, 12, 1, 0, 0, "頭：構え<color=8>"],

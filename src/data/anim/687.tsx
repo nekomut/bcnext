@@ -5,7 +5,7 @@ export const animationData_687 = {
   "f": {
     "name": "トナカイ娘テルン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["687_f.png"],
       [179],
@@ -4589,7 +4589,7 @@ export const animationData_687 = {
   "c": {
     "name": "トナカイ娘テルンζ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["687_c.png"],
       [179],

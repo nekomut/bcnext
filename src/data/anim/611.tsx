@@ -5,7 +5,7 @@ export const animationData_611 = {
   "f": {
     "name": "ネコゴジラ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["611_f.png"],
       [41],
@@ -825,7 +825,7 @@ export const animationData_611 = {
   "c": {
     "name": "シン・ネコゴジラ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["611_c.png"],
       [41],

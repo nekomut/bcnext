@@ -5,7 +5,7 @@ export const animationData_111 = {
   "f": {
     "name": "ノノ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["111_f.png"],
       [20],
@@ -31,7 +31,7 @@ export const animationData_111 = {
       [156, 156, 20, 25, "奥上腕"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [24],
       [-1, -1, 0, 0, 597, 435, 1, 1, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -64,7 +64,7 @@ export const animationData_111 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [3, 11, -1, 0, 0, "上半身"],
@@ -216,7 +216,7 @@ export const animationData_111 = {
       [36, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [3, 5, -1, 0, 0, "上半身"],
@@ -275,7 +275,7 @@ export const animationData_111 = {
       [22, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [3, 11, 1, 0, 0, "上半身"],
@@ -646,7 +646,7 @@ export const animationData_111 = {
       [66, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [3, 11, -1, 0, 0, "上半身"],
@@ -708,7 +708,7 @@ export const animationData_111 = {
   "c": {
     "name": "ノノCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["111_c.png"],
       [20],
@@ -734,7 +734,7 @@ export const animationData_111 = {
       [156, 156, 20, 25, "奥上腕"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [24],
       [-1, -1, 0, 0, 568, 432, 1, 1, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -767,7 +767,7 @@ export const animationData_111 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [3, 11, -1, 0, 0, "上半身"],
@@ -919,7 +919,7 @@ export const animationData_111 = {
       [36, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [3, 5, -1, 0, 0, "上半身"],
@@ -978,7 +978,7 @@ export const animationData_111 = {
       [22, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [3, 11, 1, 0, 0, "上半身"],
@@ -1349,7 +1349,7 @@ export const animationData_111 = {
       [66, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [3, 11, -1, 0, 0, "上半身"],
@@ -1411,7 +1411,7 @@ export const animationData_111 = {
   "s": {
     "name": "野跳ねる白猫ノノCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["111_s.png"],
       [103],

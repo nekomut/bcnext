@@ -5,7 +5,7 @@ export const animationData_401 = {
   "f": {
     "name": "雷の精霊ボルト",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["401_f.png"],
       [66],
@@ -77,7 +77,7 @@ export const animationData_401 = {
       [365, 32, 23, 28, "065上半身追加.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [102],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, 0],
@@ -188,7 +188,7 @@ export const animationData_401 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [73],
       [2, 9, -1, 0, 0],
@@ -700,7 +700,7 @@ export const animationData_401 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [55],
       [2, 9, -1, 0, 0],
@@ -1153,7 +1153,7 @@ export const animationData_401 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [279],
       [2, 4, 1, 0, 0],
@@ -4116,7 +4116,7 @@ export const animationData_401 = {
       [89, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [76],
       [3, 4, 1, 0, 0, "\t"],
@@ -4352,7 +4352,7 @@ export const animationData_401 = {
   "c": {
     "name": "天雷の精霊ピカボルト",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["401_c.png"],
       [64],
@@ -4422,7 +4422,7 @@ export const animationData_401 = {
       [486, 181, 22, 44, "063攻撃腕下.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [107],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -4538,7 +4538,7 @@ export const animationData_401 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [68],
       [2, 9, -1, 0, 0],
@@ -5036,7 +5036,7 @@ export const animationData_401 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [53],
       [2, 9, -1, 0, 0],
@@ -5484,7 +5484,7 @@ export const animationData_401 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [295],
       [2, 4, 1, 0, 0],
@@ -8563,7 +8563,7 @@ export const animationData_401 = {
       [81, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [56],
       [3, 4, 1, 0, 0, "\t"],
@@ -8739,7 +8739,7 @@ export const animationData_401 = {
   "s": {
     "name": "天雷の精霊王ギガボルト",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["401_s.png"],
       [88],
@@ -8833,7 +8833,7 @@ export const animationData_401 = {
       [260, 210, 10, 51, "087左ぬの下.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [142],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -8984,7 +8984,7 @@ export const animationData_401 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [74],
       [2, 9, -1, 0, 0],
@@ -9508,7 +9508,7 @@ export const animationData_401 = {
       [5, 100, 3, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [57],
       [2, 9, -1, 0, 0],
@@ -9972,7 +9972,7 @@ export const animationData_401 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [336],
       [2, 4, 1, 0, 0],
@@ -14017,7 +14017,7 @@ export const animationData_401 = {
       [100, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [63],
       [3, 4, 1, 0, 0, "\t"],

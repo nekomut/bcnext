@@ -5,7 +5,7 @@ export const animationData_240 = {
   "f": {
     "name": "トゲルガ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["240_f.png"],
       [10],
@@ -21,7 +21,7 @@ export const animationData_240 = {
       [67, 30, 37, 53, "かみつき2"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [11],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -41,7 +41,7 @@ export const animationData_240 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [4, 11, -1, 0, 0, "身体"],
@@ -122,7 +122,7 @@ export const animationData_240 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [10, 12, -1, 0, 0, "ダミー"],
@@ -130,7 +130,7 @@ export const animationData_240 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [4, 11, 1, 0, 0],
@@ -223,7 +223,7 @@ export const animationData_240 = {
       [16, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [3, 4, 1, 0, 0, "キャラダミー"],
@@ -243,7 +243,7 @@ export const animationData_240 = {
   "c": {
     "name": "トゲランパサラン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["240_c.png"],
       [49],
@@ -298,7 +298,7 @@ export const animationData_240 = {
       [289, 150, 18, 17, "light"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [83],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "dm"],
@@ -390,7 +390,7 @@ export const animationData_240 = {
       [0, 0, 0, 0, 5, 0, "dm"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [81],
       [2, 4, -1, 0, 0, "dm"],
@@ -1003,7 +1003,7 @@ export const animationData_240 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [52],
       [3, 11, -1, 0, 0],
@@ -1258,7 +1258,7 @@ export const animationData_240 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [182],
       [2, 5, 1, 0, 0, "dm"],
@@ -3761,7 +3761,7 @@ export const animationData_240 = {
       [125, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [2, 11, 1, 0, 0],
@@ -3874,7 +3874,7 @@ export const animationData_240 = {
   "s": {
     "name": "デイダラトゲラン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["240_s.png"],
       [55],
@@ -3935,7 +3935,7 @@ export const animationData_240 = {
       [397, 134, 39, 19, "雷黒"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [118],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "dm"],
@@ -4062,7 +4062,7 @@ export const animationData_240 = {
       [0, 0, 0, 0, 5, 0, "dm"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [169],
       [2, 5, -1, 0, 0, "dm"],
@@ -5280,7 +5280,7 @@ export const animationData_240 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [140],
       [3, 11, -1, 0, 0],
@@ -6136,7 +6136,7 @@ export const animationData_240 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [283],
       [2, 5, 1, 0, 0, "dm"],
@@ -9703,7 +9703,7 @@ export const animationData_240 = {
       [110, -1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [2, 11, 1, 0, 0],

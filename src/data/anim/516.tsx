@@ -5,7 +5,7 @@ export const animationData_516 = {
   "f": {
     "name": "ダルシム",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["516_f.png"],
       [94],
@@ -105,7 +105,7 @@ export const animationData_516 = {
       [59, 131, 33, 35, "093.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [162],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0],
@@ -276,7 +276,7 @@ export const animationData_516 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [76],
       [2, 4, -1, 0, 0, "025奥足すね.png"],
@@ -695,7 +695,7 @@ export const animationData_516 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [77],
       [2, 4, -1, 0, 0, "054奥二の腕.png<color=0>"],
@@ -1187,7 +1187,7 @@ export const animationData_516 = {
       [80, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [219],
       [1, 4, 1, 0, 0, "083影.png"],
@@ -3147,7 +3147,7 @@ export const animationData_516 = {
       [33, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [26],
       [2, 4, 1, 0, 0, "022手前もも.png<color=1>"],
@@ -3233,7 +3233,7 @@ export const animationData_516 = {
   "c": {
     "name": "ダルシムCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["516_c.png"],
       [94],
@@ -3333,7 +3333,7 @@ export const animationData_516 = {
       [199, 164, 33, 35, "093.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [162],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0],
@@ -3504,7 +3504,7 @@ export const animationData_516 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [76],
       [2, 4, -1, 0, 0, "025奥足すね.png"],
@@ -3923,7 +3923,7 @@ export const animationData_516 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [77],
       [2, 4, -1, 0, 0, "054奥二の腕.png<color=0>"],
@@ -4415,7 +4415,7 @@ export const animationData_516 = {
       [80, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [219],
       [1, 4, 1, 0, 0, "083影.png"],
@@ -6375,7 +6375,7 @@ export const animationData_516 = {
       [33, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [26],
       [2, 4, 1, 0, 0, "022手前もも.png<color=1>"],

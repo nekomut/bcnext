@@ -5,7 +5,7 @@ export const animationData_018 = {
   "f": {
     "name": "ネコ忍者",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["018_f.png"],
       [17],
@@ -52,7 +52,7 @@ export const animationData_018 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [9],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 255, 0, "ダミー親"],
@@ -70,7 +70,7 @@ export const animationData_018 = {
       [0, 0, 48, 114, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -82,7 +82,7 @@ export const animationData_018 = {
       [8, 1, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -90,7 +90,7 @@ export const animationData_018 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -147,7 +147,7 @@ export const animationData_018 = {
       [17, 15, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [1, 2, -1, -1000, 1000, "ノックバック"],
@@ -161,7 +161,7 @@ export const animationData_018 = {
   "c": {
     "name": "ガマネコ忍者",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["018_c.png"],
       [28],
@@ -230,7 +230,7 @@ export const animationData_018 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [13],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 255, 0, "ダミー親"],
@@ -252,7 +252,7 @@ export const animationData_018 = {
       [0, 0, 48, 114, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [1, 2, -1, -1000, 1000, "下ニンジャ"],
@@ -309,7 +309,7 @@ export const animationData_018 = {
       [8, 2, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -329,7 +329,7 @@ export const animationData_018 = {
       [10, 20, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [0, 2, 1, -1000, 1000, "下ニンジャ"],
@@ -422,7 +422,7 @@ export const animationData_018 = {
       [17, 16, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [1, 2, -1, -1000, 1000, "下ニンジャ"],
@@ -454,7 +454,7 @@ export const animationData_018 = {
   "s": {
     "name": "ムササビネコ忍者",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["018_s.png"],
       [18],
@@ -478,7 +478,7 @@ export const animationData_018 = {
       [344, 1, 82, 95]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [6],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "dm"],
@@ -493,7 +493,7 @@ export const animationData_018 = {
       [0, 0, 32, 4, 5, 0, "dm"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 9, -1, 0, 0],
@@ -528,7 +528,7 @@ export const animationData_018 = {
       [75, 0, 3, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 9, -1, 0, 0],
@@ -563,7 +563,7 @@ export const animationData_018 = {
       [75, 0, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [1, 9, 1, 0, 0],
@@ -638,7 +638,7 @@ export const animationData_018 = {
       [10, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [2, 2, -1, 0, 0, "dm"],

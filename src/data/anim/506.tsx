@@ -5,7 +5,7 @@ export const animationData_506 = {
   "f": {
     "name": "アイウォルツ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["506_c.png"],
       [128],
@@ -139,7 +139,7 @@ export const animationData_506 = {
       [466, 175, 5, 6, "127攻撃開始口.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [170],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1064, 1064, 0, 1000, 0, "000.png"],
@@ -318,7 +318,7 @@ export const animationData_506 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [60],
       [2, 12, -1, 0, 0, "000.png<color=7>"],
@@ -702,7 +702,7 @@ export const animationData_506 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [44],
       [2, 11, -1, 0, 0, "017コート.png"],
@@ -989,7 +989,7 @@ export const animationData_506 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [327],
       [1, 4, 1, 0, 0, "028汗.png"],
@@ -3152,7 +3152,7 @@ export const animationData_506 = {
       [31, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [52],
       [2, 5, 1, 0, 0, "017コート.png"],
@@ -3316,7 +3316,7 @@ export const animationData_506 = {
   "c": {
     "name": "アイウォルツCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["506_c.png"],
       [128],
@@ -3450,7 +3450,7 @@ export const animationData_506 = {
       [466, 175, 5, 6, "127攻撃開始口.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [170],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1064, 1064, 0, 1000, 0, "000.png"],
@@ -3629,7 +3629,7 @@ export const animationData_506 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [60],
       [2, 12, -1, 0, 0, "000.png<color=7>"],
@@ -4013,7 +4013,7 @@ export const animationData_506 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [44],
       [2, 11, -1, 0, 0, "017コート.png"],
@@ -4300,7 +4300,7 @@ export const animationData_506 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [327],
       [1, 4, 1, 0, 0, "028汗.png"],
@@ -6463,7 +6463,7 @@ export const animationData_506 = {
       [31, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [52],
       [2, 5, 1, 0, 0, "017コート.png"],
@@ -6627,7 +6627,7 @@ export const animationData_506 = {
   "s": {
     "name": "無名のアイウォルツCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["506_s.png"],
       [103],

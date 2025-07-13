@@ -5,7 +5,7 @@ export const animationData_365 = {
   "f": {
     "name": "アーチャー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["365_f.png"],
       [99],
@@ -110,7 +110,7 @@ export const animationData_365 = {
       [143, 166, 8, 8, "黒色"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [177],
       [-1, -1, 0, 0, 0, 0, 0, 0, 985, 985, 0, 1000, 0, "ダミー"],
@@ -296,7 +296,7 @@ export const animationData_365 = {
       [0, 0, 2, 2, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [3, 5, -1, 0, 0, "正面_腰ベルト<color=0>"],
@@ -550,7 +550,7 @@ export const animationData_365 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [3, 5, -1, 0, 0, "正面_腰ベルト<color=0>"],
@@ -718,7 +718,7 @@ export const animationData_365 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [155],
       [2, 12, 1, 0, 0, "正面向き親ダミー<color=0>"],
@@ -1931,7 +1931,7 @@ export const animationData_365 = {
       [90, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [2, 5, 1, 0, 0, "正面向き親ダミー<color=7>"],
@@ -2053,7 +2053,7 @@ export const animationData_365 = {
   "c": {
     "name": "アーチャーCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["365_c.png"],
       [99],
@@ -2158,7 +2158,7 @@ export const animationData_365 = {
       [143, 166, 8, 8, "黒色補助"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [177],
       [-1, -1, 0, 0, 0, 0, 0, 0, 985, 985, 0, 1000, 0, "ダミー"],
@@ -2344,7 +2344,7 @@ export const animationData_365 = {
       [0, 0, 2, 2, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [3, 5, -1, 0, 0, "正面_腰ベルト<color=0>"],
@@ -2598,7 +2598,7 @@ export const animationData_365 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [3, 5, -1, 0, 0, "正面_腰ベルト<color=0>"],
@@ -2766,7 +2766,7 @@ export const animationData_365 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [164],
       [2, 12, 1, 0, 0, "正面向き親ダミー<color=0>"],
@@ -4023,7 +4023,7 @@ export const animationData_365 = {
       [90, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [2, 5, 1, 0, 0, "正面向き親ダミー<color=7>"],

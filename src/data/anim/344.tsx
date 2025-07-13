@@ -5,7 +5,7 @@ export const animationData_344 = {
   "f": {
     "name": "オルトス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["344_f.png"],
       [49],
@@ -60,7 +60,7 @@ export const animationData_344 = {
       [296, 43, 48, 80, "ヒットef3"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [53],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -122,7 +122,7 @@ export const animationData_344 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [42],
       [3, 5, -1, 0, 0, "体<color=0>"],
@@ -435,7 +435,7 @@ export const animationData_344 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [3, 5, -1, 0, 0, "体<color=0>"],
@@ -649,7 +649,7 @@ export const animationData_344 = {
       [24, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [60],
       [1, 4, 1, 0, 0, "影"],
@@ -1244,7 +1244,7 @@ export const animationData_344 = {
       [37, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [2, 4, 1, 0, 0, "キャラ親ダミー"],
@@ -1324,7 +1324,7 @@ export const animationData_344 = {
   "c": {
     "name": "オルトスCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["344_c.png"],
       [40],
@@ -1370,7 +1370,7 @@ export const animationData_344 = {
       [296, 43, 48, 80, "ヒットef3"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [47],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1426,7 +1426,7 @@ export const animationData_344 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [3, 5, -1, 0, 0, "体<color=0>"],
@@ -1619,7 +1619,7 @@ export const animationData_344 = {
       [24, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [3, 5, -1, 0, 0, "体<color=0>"],
@@ -1805,7 +1805,7 @@ export const animationData_344 = {
       [24, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [50],
       [1, 4, 1, 0, 0, "影"],
@@ -2231,7 +2231,7 @@ export const animationData_344 = {
       [24, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [44, 12, 1, 0, 0, "攻撃時efダミー<color=0>"],
@@ -2254,7 +2254,7 @@ export const animationData_344 = {
   "s": {
     "name": "彩色のオルトスCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["344_s.png"],
       [76],
@@ -2336,7 +2336,7 @@ export const animationData_344 = {
       [170, 2, 164, 14, "075輪上[全].png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [158],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "000.png"],
@@ -2503,7 +2503,7 @@ export const animationData_344 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [50],
       [2, 5, -1, 0, 0, "008手前翼先.png"],
@@ -2869,7 +2869,7 @@ export const animationData_344 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [49],
       [2, 5, -1, 0, 0, "008手前翼先.png"],
@@ -3257,7 +3257,7 @@ export const animationData_344 = {
       [0, 1, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [247],
       [1, 4, 1, 0, 0, "000.png"],
@@ -4774,7 +4774,7 @@ export const animationData_344 = {
       [38, 5, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [18],
       [2, 4, 1, 0, 0, "009上半身.png"],

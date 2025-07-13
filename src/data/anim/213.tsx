@@ -5,7 +5,7 @@ export const animationData_213 = {
   "f": {
     "name": "にゃんこバーガー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["213_f.png"],
       [17],
@@ -28,7 +28,7 @@ export const animationData_213 = {
       [56, 80, 31, 13, "足３"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [9],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -46,7 +46,7 @@ export const animationData_213 = {
       [0, 0, 0, 1, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [2, 5, -1, 0, 0],
@@ -111,7 +111,7 @@ export const animationData_213 = {
       [16, 14, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [2, 5, -1, 0, 0],
@@ -119,7 +119,7 @@ export const animationData_213 = {
       [0, 6, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [2, 5, 1, 0, 0, "cダミー"],
@@ -263,7 +263,7 @@ export const animationData_213 = {
       [30, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [2, 5, 1, 0, 0, "cダミー"],
@@ -331,7 +331,7 @@ export const animationData_213 = {
   "c": {
     "name": "にゃんこキングバーガー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["213_c.png"],
       [27],
@@ -364,7 +364,7 @@ export const animationData_213 = {
       [1, 230, 114, 20]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [23],
       [-1, -1, 0, 0, 0, 0, 2, 2, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -396,7 +396,7 @@ export const animationData_213 = {
       [0, 0, 4, 10, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [1, 4, -1, 0, 0, 0],
@@ -648,7 +648,7 @@ export const animationData_213 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [3, 2, -1, 0, 0],
@@ -680,7 +680,7 @@ export const animationData_213 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [1, 9, 1, 0, 0],
@@ -918,7 +918,7 @@ export const animationData_213 = {
       [25, 1500, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [2, 11, 1, 0, 0, "ダミー"],
@@ -1001,7 +1001,7 @@ export const animationData_213 = {
   "s": {
     "name": "にゃんこバーガーセット",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["213_s.png"],
       [25],
@@ -1032,7 +1032,7 @@ export const animationData_213 = {
       [156, 1, 44, 27, "追加えｆ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [26],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -1067,7 +1067,7 @@ export const animationData_213 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -1109,7 +1109,7 @@ export const animationData_213 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [3, 2, 1, 0, 0],
@@ -1129,7 +1129,7 @@ export const animationData_213 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [58],
       [1, 4, 1, 0, 0, "はこ　X"],
@@ -1560,7 +1560,7 @@ export const animationData_213 = {
       [21, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [2, 11, 1, 0, 0],

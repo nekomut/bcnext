@@ -5,7 +5,7 @@ export const animationData_602 = {
   "f": {
     "name": "久遠寺右京(男装)",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["602_f.png"],
       [84],
@@ -2185,7 +2185,7 @@ export const animationData_602 = {
   "c": {
     "name": "久遠寺右京",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["602_c.png"],
       [82],

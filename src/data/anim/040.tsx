@@ -5,7 +5,7 @@ export const animationData_040 = {
   "f": {
     "name": "ネコバスたぶ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["040_f.png"],
       [20],
@@ -31,7 +31,7 @@ export const animationData_040 = {
       [83, 47, 74, 29, "背景あわ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [28],
       [-1, -1, 0, 0, 432, 434, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -68,7 +68,7 @@ export const animationData_040 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [18, 11, -1, 0, 0, "ダミー"],
@@ -199,7 +199,7 @@ export const animationData_040 = {
       [8, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [15, 12, -1, 0, 0, "ダミー"],
@@ -270,7 +270,7 @@ export const animationData_040 = {
       [8, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [15, 12, 1, 0, 0, "ダミー"],
@@ -390,7 +390,7 @@ export const animationData_040 = {
       [69, 20, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [17, 12, -1, 0, 0, "ダミー"],
@@ -434,7 +434,7 @@ export const animationData_040 = {
   "c": {
     "name": "セクシーネコバスたぶ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["040_c.png"],
       [25],
@@ -465,7 +465,7 @@ export const animationData_040 = {
       [107, 1, 65, 65, "シャワー２"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [29],
       [-1, -1, 0, 0, 498, 438, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -503,7 +503,7 @@ export const animationData_040 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [18, 11, -1, 0, 0, "ダミー"],
@@ -619,7 +619,7 @@ export const animationData_040 = {
       [50, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [15, 12, -1, 0, 0, "ダミー"],
@@ -675,7 +675,7 @@ export const animationData_040 = {
       [70, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [15, 12, 1, 0, 0, "ダミー"],
@@ -802,7 +802,7 @@ export const animationData_040 = {
       [68, 24, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [17, 12, -1, 0, 0, "ダミー"],
@@ -843,7 +843,7 @@ export const animationData_040 = {
   "s": {
     "name": "ネコバスたぶゴールデン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["040_s.png"],
       [36],
@@ -885,7 +885,7 @@ export const animationData_040 = {
       [242, 205, 79, 50]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [35],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -929,7 +929,7 @@ export const animationData_040 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [4, 5, -1, 0, 0, "ダミー"],
@@ -1065,7 +1065,7 @@ export const animationData_040 = {
       [10, 0, 3, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [15, 12, -1, 0, 0, "ダミー"],
@@ -1121,7 +1121,7 @@ export const animationData_040 = {
       [70, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [9, 5, 1, 0, 0, "ダミー"],
@@ -1307,7 +1307,7 @@ export const animationData_040 = {
       [52, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [17, 12, 1, 0, 0, "ダミー"],

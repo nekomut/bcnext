@@ -5,7 +5,7 @@ export const animationData_326 = {
   "f": {
     "name": "メビウス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["326_f.png"],
       [130],
@@ -141,7 +141,7 @@ export const animationData_326 = {
       [364, 249, 33, 6, "地面"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [282],
       [-1, -1, 0, 0, 0, 0, 0, 0, 550, 550, 0, 1000, 0, "ダミー<color=7>"],
@@ -432,7 +432,7 @@ export const animationData_326 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [489],
       [2, 9, -1, 0, 0, "影"],
@@ -3967,7 +3967,7 @@ export const animationData_326 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [485],
       [2, 9, -1, 0, 0],
@@ -7478,7 +7478,7 @@ export const animationData_326 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [559],
       [2, 9, 1, 0, 0, "影"],
@@ -16162,7 +16162,7 @@ export const animationData_326 = {
       [96, 128, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [140],
       [3, 4, 1, 0, 0, "cダミー重心<color=7>"],
@@ -16590,7 +16590,7 @@ export const animationData_326 = {
   "c": {
     "name": "奇跡の調和メビウス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["326_c.png"],
       [130],
@@ -16726,7 +16726,7 @@ export const animationData_326 = {
       [364, 249, 33, 6, "地面"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [284],
       [-1, -1, 0, 0, 0, 0, 0, 0, 550, 550, 0, 1000, 0, "ダミー<color=7>"],
@@ -17019,7 +17019,7 @@ export const animationData_326 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [490],
       [2, 9, -1, 0, 0, "影"],
@@ -20557,7 +20557,7 @@ export const animationData_326 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [486],
       [2, 9, -1, 0, 0],
@@ -24071,7 +24071,7 @@ export const animationData_326 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [563],
       [2, 9, 1, 0, 0, "影"],
@@ -32782,7 +32782,7 @@ export const animationData_326 = {
       [79, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [140],
       [3, 4, 1, 0, 0, "cダミー重心<color=7>"],

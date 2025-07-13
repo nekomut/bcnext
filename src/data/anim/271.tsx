@@ -5,7 +5,7 @@ export const animationData_271 = {
   "f": {
     "name": "太陽神アマテラス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["271_f.png"],
       [96],
@@ -107,7 +107,7 @@ export const animationData_271 = {
       [25, 107, 23, 5, "頬あからめ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [146],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "dm"],
@@ -262,7 +262,7 @@ export const animationData_271 = {
       [0, 0, 0, 0, 5, 0, "dm"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [135],
       [3, 5, -1, 0, 0],
@@ -1132,7 +1132,7 @@ export const animationData_271 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [135],
       [3, 5, -1, 0, 0],
@@ -2002,7 +2002,7 @@ export const animationData_271 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [277],
       [1, 9, 1, 0, 0, "kage"],
@@ -4763,7 +4763,7 @@ export const animationData_271 = {
       [68, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [108],
       [3, 4, 1, 0, 0],
@@ -5095,7 +5095,7 @@ export const animationData_271 = {
   "c": {
     "name": "テラアマテラス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["271_c.png"],
       [117],
@@ -5218,7 +5218,7 @@ export const animationData_271 = {
       [370, 36, 24, 6, "頬"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [189],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -5416,7 +5416,7 @@ export const animationData_271 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [132],
       [3, 5, -1, 0, 0],
@@ -6292,7 +6292,7 @@ export const animationData_271 = {
       [6, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [132],
       [3, 5, -1, 0, 0],
@@ -7168,7 +7168,7 @@ export const animationData_271 = {
       [6, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [278],
       [1, 9, 1, 0, 0],

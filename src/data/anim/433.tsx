@@ -5,7 +5,7 @@ export const animationData_433 = {
   "f": {
     "name": "434_1",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["433_f.png"],
       [98],
@@ -109,7 +109,7 @@ export const animationData_433 = {
       [1, 242, 97, 6, "097共通_影.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [34],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー親"],
@@ -152,7 +152,7 @@ export const animationData_433 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [17],
       [3, 12, -1, 0, 0, "攻撃ダミー<color=0>"],
@@ -342,7 +342,7 @@ export const animationData_433 = {
       [26, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [3],
       [3, 12, -1, 0, 0, "攻撃ダミー<color=0>"],
@@ -358,7 +358,7 @@ export const animationData_433 = {
       [60, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [55],
       [1, 4, 1, 0, 0, "ダミー親\t"],
@@ -733,7 +733,7 @@ export const animationData_433 = {
       [0, -1, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [3, 12, 1, 0, 0, "攻撃ダミー<color=0>"],
@@ -768,7 +768,7 @@ export const animationData_433 = {
   "c": {
     "name": "434_2",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["433_c.png"],
       [98],
@@ -872,7 +872,7 @@ export const animationData_433 = {
       [1, 242, 97, 6, "097共通_影.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [34],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー親"],
@@ -915,7 +915,7 @@ export const animationData_433 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [17],
       [3, 12, -1, 0, 0, "攻撃ダミー<color=0>"],
@@ -1105,7 +1105,7 @@ export const animationData_433 = {
       [26, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [3],
       [3, 12, -1, 0, 0, "攻撃ダミー<color=0>"],
@@ -1121,7 +1121,7 @@ export const animationData_433 = {
       [60, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [57],
       [1, 4, 1, 0, 0, "ダミー親\t"],
@@ -1515,7 +1515,7 @@ export const animationData_433 = {
       [10, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [9],
       [3, 12, 1, 0, 0, "攻撃ダミー<color=0>"],

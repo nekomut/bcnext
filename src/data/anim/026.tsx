@@ -5,7 +5,7 @@ export const animationData_026 = {
   "f": {
     "name": "ケリ姫",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["026_f.png"],
       [41],
@@ -52,7 +52,7 @@ export const animationData_026 = {
       [473, 31, 26, 18, "右手先ダッシュ用"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [50],
       [-1, -1, 0, 0, 480, 320, 0, 0, 1000, 1000, 0, 1000, 0, "大元"],
@@ -111,7 +111,7 @@ export const animationData_026 = {
       [0, 0, -8, 160, 10, 0, "大元"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [58],
       [1, 4, -1, 0, 0],
@@ -395,7 +395,7 @@ export const animationData_026 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [19, 2, -1, 0, 0, "■顔"],
@@ -470,7 +470,7 @@ export const animationData_026 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [66],
       [42, 12, 1, 0, 0, "大元"],
@@ -804,7 +804,7 @@ export const animationData_026 = {
       [20, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [13, 12, -1, 0, 0, "大元"],
@@ -942,7 +942,7 @@ export const animationData_026 = {
   "c": {
     "name": "フルカラーケリ姫",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["026_c.png"],
       [41],
@@ -989,7 +989,7 @@ export const animationData_026 = {
       [473, 31, 26, 18, "右手先ダッシュ用"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [50],
       [-1, -1, 0, 0, 480, 320, 0, 0, 1000, 1000, 0, 1000, 0, "大元"],
@@ -1048,7 +1048,7 @@ export const animationData_026 = {
       [0, 0, -8, 160, 10, 0, "大元"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [58],
       [1, 4, -1, 0, 0],
@@ -1332,7 +1332,7 @@ export const animationData_026 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [19, 2, -1, 0, 0, "■顔"],
@@ -1407,7 +1407,7 @@ export const animationData_026 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [66],
       [42, 12, 1, 0, 0, "大元"],
@@ -1741,7 +1741,7 @@ export const animationData_026 = {
       [20, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [13, 12, -1, 0, 0, "大元"],
@@ -1879,7 +1879,7 @@ export const animationData_026 = {
   "s": {
     "name": "ウェディングケリ姫",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["026_s.png"],
       [55],
@@ -1940,7 +1940,7 @@ export const animationData_026 = {
       [203, 183, 7, 10, "花7"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [67],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1100, 1100, 0, 1000, 0, "ダミー"],
@@ -2016,7 +2016,7 @@ export const animationData_026 = {
       [0, 0, -3, 161, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [85],
       [1, 4, -1, 0, 0, "■体用アンカー"],
@@ -2435,7 +2435,7 @@ export const animationData_026 = {
       [0, 900, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [3, 11, -1, 0, 0, "■上半身"],
@@ -2543,7 +2543,7 @@ export const animationData_026 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [83],
       [1, 4, 1, 0, 0, "■体用アンカー"],
@@ -3078,7 +3078,7 @@ export const animationData_026 = {
       [4, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [14, 12, 1, 0, 0, "■左足用アンカー"],

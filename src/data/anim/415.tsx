@@ -5,7 +5,7 @@ export const animationData_415 = {
   "f": {
     "name": "ネコシンジ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["415_f.png"],
       [63],
@@ -74,7 +74,7 @@ export const animationData_415 = {
       [229, 125, 23, 8, "062巨神　攻撃右腕02奥下[上].png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [82],
       [-1, -1, 0, 0, -434, 36, 0, 0, 1000, 1000, 0, 1000, 0, "■ダミー<color=7>"],
@@ -165,7 +165,7 @@ export const animationData_415 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [4, 5, -1, 0, 0, "■ネコシンジダミー<color=2>"],
@@ -317,7 +317,7 @@ export const animationData_415 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [38, 12, -1, 0, 0, "■初号機巨神ダミー<color=14>"],
@@ -413,7 +413,7 @@ export const animationData_415 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [132],
       [2, 4, 1, 0, 0, "影"],
@@ -1658,7 +1658,7 @@ export const animationData_415 = {
       [76, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [38, 12, 1, 0, 0, "■初号機巨神ダミー<color=14>"],
@@ -1771,7 +1771,7 @@ export const animationData_415 = {
   "c": {
     "name": "ネコトウジ＆ネコケンスケ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["415_c.png"],
       [65],
@@ -1842,7 +1842,7 @@ export const animationData_415 = {
       [217, 85, 23, 8, "064巨神　攻撃右腕02奥下.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [73],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -1924,7 +1924,7 @@ export const animationData_415 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [6, 5, -1, 0, 0, "018身体.png<color=12>\t"],
@@ -2130,7 +2130,7 @@ export const animationData_415 = {
       [40, -3, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [6, 5, -1, 0, 0, "009トウジ上半身.png<color=16>\t"],
@@ -2186,7 +2186,7 @@ export const animationData_415 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [103],
       [1, 4, 1, 0, 0, "■全体ダミー<color=7>"],
@@ -3012,7 +3012,7 @@ export const animationData_415 = {
       [76, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [5, 4, 1, 0, 0, "■トウジダミー<color=7>\t"],

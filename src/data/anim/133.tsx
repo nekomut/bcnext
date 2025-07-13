@@ -5,7 +5,7 @@ export const animationData_133 = {
   "f": {
     "name": "ヒカキン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["133_f.png"],
       [21],
@@ -32,7 +32,7 @@ export const animationData_133 = {
       [120, 236, 53, 17, "メガネ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [8],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー親"],
@@ -49,7 +49,7 @@ export const animationData_133 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -99,7 +99,7 @@ export const animationData_133 = {
       [24, 1000, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -113,7 +113,7 @@ export const animationData_133 = {
       [0, -2, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -182,7 +182,7 @@ export const animationData_133 = {
       [15, 12, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [1, 2, -1, 0, 0],
@@ -217,7 +217,7 @@ export const animationData_133 = {
   "c": {
     "name": "ビキャキン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["133_c.png"],
       [24],
@@ -247,7 +247,7 @@ export const animationData_133 = {
       [256, 142, 58, 86, "---髪型"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [9],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー親"],
@@ -265,7 +265,7 @@ export const animationData_133 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -315,7 +315,7 @@ export const animationData_133 = {
       [24, 1000, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [1, 2, -1, 0, 0],
@@ -329,7 +329,7 @@ export const animationData_133 = {
       [0, -1, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [1, 2, 1, -1000, 1000],
@@ -450,7 +450,7 @@ export const animationData_133 = {
       [12, 1005, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [1, 2, -1, 0, 0],
@@ -503,7 +503,7 @@ export const animationData_133 = {
   "s": {
     "name": "ムキャキン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["133_s.png"],
       [23],
@@ -532,7 +532,7 @@ export const animationData_133 = {
       [393, 129, 118, 126]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [20],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "あおすじ※欠番"],
@@ -561,7 +561,7 @@ export const animationData_133 = {
       [0, 0, -3, 1, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [2, 2, -1, 0, 0, "あおすじ※欠番"],
@@ -672,7 +672,7 @@ export const animationData_133 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [2, 2, -1, 0, 0, "あおすじ※欠番"],
@@ -763,7 +763,7 @@ export const animationData_133 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [2, 2, 1, 0, 0, "歩き2"],
@@ -881,7 +881,7 @@ export const animationData_133 = {
       [10, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [2, 12, -1, 0, 0],

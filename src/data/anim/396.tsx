@@ -5,7 +5,7 @@ export const animationData_396 = {
   "f": {
     "name": "古龍ガングリオン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["396_f.png"],
       [119],
@@ -130,7 +130,7 @@ export const animationData_396 = {
       [167, 221, 10, 33, "118追加加算用2.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [180],
       [-1, -1, 0, 0, 295, 514, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -319,7 +319,7 @@ export const animationData_396 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [92],
       [1, 9, -1, 0, 0, "影.png<color=9>\t"],
@@ -908,7 +908,7 @@ export const animationData_396 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [92],
       [1, 9, -1, 0, 0, "影.png<color=9>\t"],
@@ -1497,7 +1497,7 @@ export const animationData_396 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [289],
       [1, 4, 1, 0, 0, "影.png<color=9>"],
@@ -4050,7 +4050,7 @@ export const animationData_396 = {
       [135, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [73],
       [3, 4, 1, 0, 0, "キャラ親ダミー<color=0>"],
@@ -4277,7 +4277,7 @@ export const animationData_396 = {
   "c": {
     "name": "古龍王ガングリオン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["396_c.png"],
       [119],
@@ -4402,7 +4402,7 @@ export const animationData_396 = {
       [440, 123, 10, 33, "118追加加算用2.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [189],
       [-1, -1, 0, 0, 295, 514, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -4600,7 +4600,7 @@ export const animationData_396 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [92],
       [1, 9, -1, 0, 0, "影.png<color=9>\t"],
@@ -5189,7 +5189,7 @@ export const animationData_396 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [92],
       [1, 9, -1, 0, 0, "影.png<color=9>\t"],
@@ -5778,7 +5778,7 @@ export const animationData_396 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [286],
       [1, 4, 1, 0, 0, "影.png<color=9>"],
@@ -8290,7 +8290,7 @@ export const animationData_396 = {
       [135, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [72],
       [3, 4, 1, 0, 0, "キャラ親ダミー<color=0>"],
@@ -8514,7 +8514,7 @@ export const animationData_396 = {
   "s": {
     "name": "古龍皇帝ガングリオン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["396_s.png"],
       [118],
@@ -8638,7 +8638,7 @@ export const animationData_396 = {
       [446, 211, 16, 17, "117.吐き息.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [232],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "DM"],
@@ -8879,7 +8879,7 @@ export const animationData_396 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [146],
       [2, 5, -1, 0, 0, "\t"],
@@ -9757,7 +9757,7 @@ export const animationData_396 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [146],
       [2, 5, -1, 0, 0, "\t"],
@@ -10635,7 +10635,7 @@ export const animationData_396 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [382],
       [1, 4, 1, 0, 0, "\t"],
@@ -14231,7 +14231,7 @@ export const animationData_396 = {
       [73, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [107],
       [2, 4, 1, 0, 0, "\t"],

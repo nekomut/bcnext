@@ -5,7 +5,7 @@ export const animationData_462 = {
   "f": {
     "name": "フィリバスターX",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["462_f.png"],
       [122],
@@ -133,7 +133,7 @@ export const animationData_462 = {
       [388, 596, 42, 40, "121ガラス7.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [125],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png<color=7>"],
@@ -267,7 +267,7 @@ export const animationData_462 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [35],
       [1, 8, -1, 0, 0],
@@ -440,7 +440,7 @@ export const animationData_462 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [35],
       [1, 8, -1, 0, 0],
@@ -613,7 +613,7 @@ export const animationData_462 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [258],
       [1, 12, 1, 0, 0, "かげ"],
@@ -8835,7 +8835,7 @@ export const animationData_462 = {
       [445, 2, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [31],
       [2, 4, 1, 0, 0, "全体制御用"],
@@ -8947,7 +8947,7 @@ export const animationData_462 = {
   "c": {
     "name": "フィリバスターY",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["462_c.png"],
       [123],
@@ -9076,7 +9076,7 @@ export const animationData_462 = {
       [14, 536, 42, 40, "122ガラス7.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [125],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png<color=7>"],
@@ -9210,7 +9210,7 @@ export const animationData_462 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [38],
       [1, 8, -1, 0, 0],
@@ -9398,7 +9398,7 @@ export const animationData_462 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [38],
       [1, 8, -1, 0, 0],
@@ -9586,7 +9586,7 @@ export const animationData_462 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [260],
       [1, 12, 1, 0, 0, "かげ"],
@@ -17818,7 +17818,7 @@ export const animationData_462 = {
       [445, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [34],
       [2, 4, 1, 0, 0, "全体制御用"],
@@ -17939,7 +17939,7 @@ export const animationData_462 = {
   "s": {
     "name": "メタフィリバスター",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["462_s.png"],
       [127],

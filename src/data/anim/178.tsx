@@ -5,7 +5,7 @@ export const animationData_178 = {
   "f": {
     "name": "極道にゃんこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["178_f.png"],
       [9],
@@ -20,7 +20,7 @@ export const animationData_178 = {
       [101, 60, 48, 57, 4]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [5],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -34,7 +34,7 @@ export const animationData_178 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [4, 2, -1, 0, 0, "キャラ"],
@@ -46,7 +46,7 @@ export const animationData_178 = {
       [16, 2, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [4, 2, -1, 0, 0, "キャラ"],
@@ -54,7 +54,7 @@ export const animationData_178 = {
       [0, 2, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [4, 2, 1, 0, 0, "キャラ"],
@@ -67,7 +67,7 @@ export const animationData_178 = {
       [17, 8, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [4, 2, -1, 0, 0, "キャラ"],
@@ -84,7 +84,7 @@ export const animationData_178 = {
   "c": {
     "name": "ヤクザヴァンパイア",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["178_c.png"],
       [26],
@@ -116,7 +116,7 @@ export const animationData_178 = {
       [386, 192, 40, 63, "血"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [16],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -141,7 +141,7 @@ export const animationData_178 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [4, 2, -1, 0, 0, "足"],
@@ -203,7 +203,7 @@ export const animationData_178 = {
       [48, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [6, 12, -1, 0, 0, "攻撃01"],
@@ -220,7 +220,7 @@ export const animationData_178 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [4, 12, 1, 0, 0, "普通"],
@@ -348,7 +348,7 @@ export const animationData_178 = {
       [20, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [4, 12, -1, 0, 0, "足"],

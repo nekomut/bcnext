@@ -5,7 +5,7 @@ export const animationData_795 = {
   "f": {
     "name": "ちび刃牙",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["795_f.png"],
       [117],
@@ -1989,7 +1989,7 @@ export const animationData_795 = {
   "c": {
     "name": "ちび刃牙CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["795_c.png"],
       [117],

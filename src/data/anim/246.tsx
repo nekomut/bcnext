@@ -5,7 +5,7 @@ export const animationData_246 = {
   "f": {
     "name": "ちびウシネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["246_f.png"],
       [11],
@@ -22,7 +22,7 @@ export const animationData_246 = {
       [175, 133, 85, 64]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0],
@@ -34,7 +34,7 @@ export const animationData_246 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [2, 2, -1, -1000, 1000, "移動"],
@@ -46,7 +46,7 @@ export const animationData_246 = {
       [16, 2, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [2, 2, -1, -1000, 1000, "攻撃待機"],
@@ -54,7 +54,7 @@ export const animationData_246 = {
       [0, 6, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [2, 2, 1, -1000, 1000],
@@ -71,7 +71,7 @@ export const animationData_246 = {
       [6, 2, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [2, 2, 1, -1000, 1000],
@@ -82,7 +82,7 @@ export const animationData_246 = {
   "c": {
     "name": "ちびネコキリン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["246_c.png"],
       [11],
@@ -99,7 +99,7 @@ export const animationData_246 = {
       [108, 102, 105, 99]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 1, 1, 1250, 1250, 0, 1000, 0],
@@ -111,7 +111,7 @@ export const animationData_246 = {
       [0, 0, 1, 2, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [2, 2, -1, -1000, 1000],
@@ -123,7 +123,7 @@ export const animationData_246 = {
       [16, 2, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [2, 2, -1, -1000, 1000],
@@ -131,7 +131,7 @@ export const animationData_246 = {
       [0, 6, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [2, 2, 1, -1000, 1000],
@@ -150,7 +150,7 @@ export const animationData_246 = {
       [9, 52, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [2, 2, 1, -1000, 1000],
@@ -161,7 +161,7 @@ export const animationData_246 = {
   "s": {
     "name": "ちびネコライオン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["246_s.png"],
       [13],
@@ -180,7 +180,7 @@ export const animationData_246 = {
       [244, 163, 68, 58, "効果"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [5],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -194,7 +194,7 @@ export const animationData_246 = {
       [0, 0, 0, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [2, 2, -1, 0, 0, 1],
@@ -223,7 +223,7 @@ export const animationData_246 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [2, 2, -1, 0, 0, 1],
@@ -240,7 +240,7 @@ export const animationData_246 = {
       [0, -2, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [2, 2, 1, 0, 0, 1],
@@ -283,7 +283,7 @@ export const animationData_246 = {
       [9, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [2, 2, 1, 0, 0, 1],

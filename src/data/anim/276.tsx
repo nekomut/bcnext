@@ -5,7 +5,7 @@ export const animationData_276 = {
   "f": {
     "name": "夏色ねねこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["276_f.png"],
       [51],
@@ -62,7 +62,7 @@ export const animationData_276 = {
       [387, 106, 46, 28, "お尻"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [57],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -128,7 +128,7 @@ export const animationData_276 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [1, 5, -1, 0, 0],
@@ -335,7 +335,7 @@ export const animationData_276 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [6, 8, -1, 0, 0],
@@ -441,7 +441,7 @@ export const animationData_276 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [65],
       [1, 5, 1, 0, 0],
@@ -816,7 +816,7 @@ export const animationData_276 = {
       [20, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [76],
       [1, 4, 1, 0, 0],
@@ -1052,7 +1052,7 @@ export const animationData_276 = {
   "c": {
     "name": "海辺のねねこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["276_c.png"],
       [69],
@@ -1221,7 +1221,7 @@ export const animationData_276 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [1, 5, -1, 0, 0],
@@ -2377,7 +2377,7 @@ export const animationData_276 = {
   "s": {
     "name": "初夏・海辺のねねこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["G:\\共有ドライブ\\にゃんこデザイナー\\★にゃんこキャラ制作\\ver.11.7.0\\276_3【夏色ねねこ第三進化】実装データ\\20220427\\276_s.png"],
       [70],

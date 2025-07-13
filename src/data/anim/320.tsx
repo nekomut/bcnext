@@ -5,7 +5,7 @@ export const animationData_320 = {
   "f": {
     "name": "321_1",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["320_f.png"],
       [48],
@@ -59,7 +59,7 @@ export const animationData_320 = {
       [172, 111, 8, 12, "服しわ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [49],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -117,7 +117,7 @@ export const animationData_320 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [2, 5, -1, 0, 0],
@@ -386,7 +386,7 @@ export const animationData_320 = {
       [0, 47, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -588,7 +588,7 @@ export const animationData_320 = {
       [0, 47, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [76],
       [1, 4, 1, 0, 0],
@@ -1082,7 +1082,7 @@ export const animationData_320 = {
       [60, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [44],
       [2, 5, 1, 0, 0, "ダミー"],
@@ -1222,7 +1222,7 @@ export const animationData_320 = {
   "c": {
     "name": "321_2",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["320_c.png"],
       [64],
@@ -1292,7 +1292,7 @@ export const animationData_320 = {
       [187, 139, 8, 12, "服しわ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [60],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1361,7 +1361,7 @@ export const animationData_320 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [2, 5, -1, 0, 0],
@@ -1681,7 +1681,7 @@ export const animationData_320 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [44],
       [2, 5, -1, 0, 0],
@@ -1902,7 +1902,7 @@ export const animationData_320 = {
       [0, -1, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [93],
       [1, 4, 1, 0, 0],
@@ -2520,7 +2520,7 @@ export const animationData_320 = {
       [53, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [75],
       [2, 5, 1, 0, 0],
@@ -2753,7 +2753,7 @@ export const animationData_320 = {
   "s": {
     "name": "321_3",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["000_s.png"],
       [13],
@@ -2792,7 +2792,7 @@ export const animationData_320 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [5],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -2806,7 +2806,7 @@ export const animationData_320 = {
       [0, 0, 34, 64, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 2, -1, 0, 0],
@@ -2827,7 +2827,7 @@ export const animationData_320 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 2, -1, 0, 0, "ダミー"],
@@ -2844,7 +2844,7 @@ export const animationData_320 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 12, 1, -1000, 1000],
@@ -2869,7 +2869,7 @@ export const animationData_320 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 12, -1, 0, 0, "ダミー"],

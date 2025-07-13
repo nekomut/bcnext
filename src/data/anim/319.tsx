@@ -5,7 +5,7 @@ export const animationData_319 = {
   "f": {
     "name": "殺意のネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["310_f.png"],
       [9],
@@ -20,7 +20,7 @@ export const animationData_319 = {
       [49, 117, 47, 56, 7]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1790, 1790, 0, 1000, 0, "ダミー"],
@@ -32,7 +32,7 @@ export const animationData_319 = {
       [0, 0, 0, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [2, 2, -1, 0, 0, 1],
@@ -44,7 +44,7 @@ export const animationData_319 = {
       [16, 2, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [2, 2, -1, 0, 0, 1],
@@ -52,7 +52,7 @@ export const animationData_319 = {
       [0, 2, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [2, 2, 1, 0, 0, 1],
@@ -69,7 +69,7 @@ export const animationData_319 = {
       [8, -1, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [2, 2, 1, 0, 0, 1],
@@ -89,7 +89,7 @@ export const animationData_319 = {
   "c": {
     "name": "真・殺意のネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["319_c.png"],
       [9],
@@ -104,7 +104,7 @@ export const animationData_319 = {
       [49, 117, 47, 56, 7]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -116,7 +116,7 @@ export const animationData_319 = {
       [0, 0, 0, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [2, 2, -1, 0, 0, 1],
@@ -128,7 +128,7 @@ export const animationData_319 = {
       [16, 2, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [2, 2, -1, 0, 0, 1],
@@ -136,7 +136,7 @@ export const animationData_319 = {
       [0, 2, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [2, 2, 1, 0, 0, 1],
@@ -153,7 +153,7 @@ export const animationData_319 = {
       [8, -1, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [2, 2, 1, 0, 0, 1],

@@ -5,7 +5,7 @@ export const animationData_685 = {
   "s": {
     "name": "ネコスーパーカー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["685_s.png"],
       [23],

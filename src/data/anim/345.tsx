@@ -5,7 +5,7 @@ export const animationData_345 = {
   "f": {
     "name": "ミシェリア",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["345_f.png"],
       [81],
@@ -92,7 +92,7 @@ export const animationData_345 = {
       [504, 3, 6, 31, "リポン"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [275],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -376,7 +376,7 @@ export const animationData_345 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [64],
       [1, 9, -1, 0, 0, "影"],
@@ -723,7 +723,7 @@ export const animationData_345 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [58],
       [1, 9, -1, 0, 0, "影"],
@@ -1029,7 +1029,7 @@ export const animationData_345 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [293],
       [1, 9, 1, 0, 0, "影"],
@@ -3321,7 +3321,7 @@ export const animationData_345 = {
       [65, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [2, 11, 1, 0, 0, "全体ダミー"],
@@ -3389,7 +3389,7 @@ export const animationData_345 = {
   "c": {
     "name": "ミシェリアCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["345_c.png"],
       [104],
@@ -3499,7 +3499,7 @@ export const animationData_345 = {
       [182, 1, 63, 17, "セリフ　ダメージ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [302],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -3810,7 +3810,7 @@ export const animationData_345 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [120],
       [2, 9, -1, 0, 0, "影"],
@@ -4630,7 +4630,7 @@ export const animationData_345 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [111],
       [2, 9, -1, 0, 0, "影"],
@@ -5399,7 +5399,7 @@ export const animationData_345 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [373],
       [2, 9, 1, 0, 0, "影"],
@@ -8586,7 +8586,7 @@ export const animationData_345 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [115],
       [2, 9, 1, 0, 0, "影"],
@@ -8939,7 +8939,7 @@ export const animationData_345 = {
   "s": {
     "name": "午睡のミシェリアCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["345_s.png"],
       [99],
@@ -9044,7 +9044,7 @@ export const animationData_345 = {
       [431, 73, 5, 26, "098 ◇.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [235],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "000.png"],
@@ -9288,7 +9288,7 @@ export const animationData_345 = {
       [0, 0, 1, 0, 5, 0, "■光輪ダミー00<color=2>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [111],
       [1, 9, -1, 0, 0, "096影.png"],
@@ -10062,7 +10062,7 @@ export const animationData_345 = {
       [25, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [111],
       [1, 9, -1, 0, 0, "096影.png"],
@@ -10836,7 +10836,7 @@ export const animationData_345 = {
       [28, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [354],
       [1, 9, 1, 0, 0, "013 下腹.png"],
@@ -14606,7 +14606,7 @@ export const animationData_345 = {
       [48, 2000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [17],
       [2, 11, 1, 0, 0, "000.png"],

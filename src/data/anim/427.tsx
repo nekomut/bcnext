@@ -5,7 +5,7 @@ export const animationData_427 = {
   "f": {
     "name": "ネコクエスト",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["427_f.png"],
       [131],
@@ -142,7 +142,7 @@ export const animationData_427 = {
       [503, 33, 8, 8, "127僧侶_笑顔　口.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [196],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -347,7 +347,7 @@ export const animationData_427 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [117],
       [3, 5, -1, 0, 0, "017勇者_腰.png<color=0>\t"],
@@ -1186,7 +1186,7 @@ export const animationData_427 = {
       [42, -50, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [44],
       [4, 5, -1, 0, 0, "018勇者_胸.png<color=3>"],
@@ -1492,7 +1492,7 @@ export const animationData_427 = {
       [42, -25, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [191],
       [3, 5, 1, 0, 0, "017勇者_腰.png<color=0>"],
@@ -3198,7 +3198,7 @@ export const animationData_427 = {
       [100, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [79],
       [3, 5, 1, 0, 0, "017勇者_腰.png<color=0>"],
@@ -3443,7 +3443,7 @@ export const animationData_427 = {
   "c": {
     "name": "ネコクエストXI",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["427_c.png"],
       [140],
@@ -3589,7 +3589,7 @@ export const animationData_427 = {
       [439, 87, 25, 13]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [232],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -3830,7 +3830,7 @@ export const animationData_427 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [84],
       [3, 5, -1, 0, 0, "017勇者_腰.png<color=0>\t"],
@@ -4408,7 +4408,7 @@ export const animationData_427 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [4, 5, -1, 0, 0, "018勇者_胸.png<color=3>"],
@@ -4698,7 +4698,7 @@ export const animationData_427 = {
       [45, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [285],
       [1, 5, 1, 0, 0, "勇者親<color=7>\t衝撃揺れ"],
@@ -7120,7 +7120,7 @@ export const animationData_427 = {
       [135, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [63],
       [3, 5, 1, 0, 0, "017勇者_腰.png<color=0>"],
@@ -7317,7 +7317,7 @@ export const animationData_427 = {
   "s": {
     "name": "ネコクエストXI-2",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["427_s.png"],
       [151],
@@ -7474,7 +7474,7 @@ export const animationData_427 = {
       [213, 140, 10, 6, "150シャーマン_腕バラ.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [273],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -7756,7 +7756,7 @@ export const animationData_427 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [104],
       [3, 5, -1, 0, 0, "017勇者_腰.png<color=0>\t"],
@@ -8449,7 +8449,7 @@ export const animationData_427 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [10],
       [161, 12, -1, 0, 0, "攻撃エフェクト親<color=7>"],
@@ -8484,7 +8484,7 @@ export const animationData_427 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [375],
       [1, 5, 1, 0, 0, "勇者親<color=7>\t衝撃揺れ"],
@@ -12274,7 +12274,7 @@ export const animationData_427 = {
       [100, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [92],
       [3, 5, 1, 0, 0, "017勇者_腰.png<color=0>"],

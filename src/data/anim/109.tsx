@@ -5,7 +5,7 @@ export const animationData_109 = {
   "f": {
     "name": "マダム・ザ・花嫁",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["109_f.png"],
       [21],
@@ -32,7 +32,7 @@ export const animationData_109 = {
       [278, 1, 20, 27, "はなびら２"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [20],
       [-1, -1, 0, 0, 0, 0, 4, 4, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -61,7 +61,7 @@ export const animationData_109 = {
       [0, 0, 0, 4, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [2, 5, -1, 0, 0, "顔"],
@@ -129,7 +129,7 @@ export const animationData_109 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [9, 12, -1, 0, 0, "腕用　あげダミー"],
@@ -143,7 +143,7 @@ export const animationData_109 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [2, 5, 1, 0, 0, "右腕　あげ"],
@@ -401,7 +401,7 @@ export const animationData_109 = {
       [33, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [2, 11, -1, 0, 0, "顔"],
@@ -439,7 +439,7 @@ export const animationData_109 = {
   "c": {
     "name": "マダム・ザ・王様",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["109_ｃ.png"],
       [15],
@@ -460,7 +460,7 @@ export const animationData_109 = {
       [437, 1, 66, 89, "マント左"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [16],
       [-1, -1, 0, 0, 0, 0, 4, 4, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -485,7 +485,7 @@ export const animationData_109 = {
       [0, 0, 0, 74, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [2, 5, -1, 0, 0],
@@ -559,7 +559,7 @@ export const animationData_109 = {
       [32, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [5, 12, -1, 0, 0, "ダミー"],
@@ -570,7 +570,7 @@ export const animationData_109 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [2, 5, 1, 0, 0],
@@ -760,7 +760,7 @@ export const animationData_109 = {
       [33, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [2, 11, -1, 0, 0],
@@ -789,7 +789,7 @@ export const animationData_109 = {
   "s": {
     "name": "マダム・ザ・サバンナ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["109_s.png"],
       [45],
@@ -840,7 +840,7 @@ export const animationData_109 = {
       [407, 110, 79, 66, "エッフェクトライオン"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [53],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -902,7 +902,7 @@ export const animationData_109 = {
       [0, 0, -4, 74, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [67],
       [2, 5, -1, 0, 0],
@@ -1278,7 +1278,7 @@ export const animationData_109 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [20, 4, -1, 0, 0],
@@ -1331,7 +1331,7 @@ export const animationData_109 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [73],
       [2, 4, 1, 0, 0],
@@ -2065,7 +2065,7 @@ export const animationData_109 = {
       [33, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [46],
       [2, 4, 1, 0, 0],

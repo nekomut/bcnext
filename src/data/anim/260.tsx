@@ -5,7 +5,7 @@ export const animationData_260 = {
   "f": {
     "name": "ネコウェイ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["260_f.png"],
       [20],
@@ -31,7 +31,7 @@ export const animationData_260 = {
       [87, 2, 18, 17, "ef"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [22],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "dm"],
@@ -62,7 +62,7 @@ export const animationData_260 = {
       [0, 0, 0, 0, 5, 0, "dm"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [4, 2, -1, 0, 0],
@@ -132,7 +132,7 @@ export const animationData_260 = {
       [31, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [21, 2, -1, 0, 0],
@@ -140,7 +140,7 @@ export const animationData_260 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [1, 4, 1, 0, 0],
@@ -446,7 +446,7 @@ export const animationData_260 = {
       [53, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [2, 5, 1, 0, 0, "タイヤのみみ"],
@@ -490,7 +490,7 @@ export const animationData_260 = {
   "c": {
     "name": "ネコドローン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["260_c.png"],
       [26],
@@ -522,7 +522,7 @@ export const animationData_260 = {
       [1, 90, 29, 21, "奥のパーツ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [24],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "dm"],
@@ -555,7 +555,7 @@ export const animationData_260 = {
       [0, 0, 0, 0, 5, 0, "dm"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [1, 4, -1, 0, 0],
@@ -762,7 +762,7 @@ export const animationData_260 = {
       [4, 15, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [1, 4, -1, 0, 0],
@@ -969,7 +969,7 @@ export const animationData_260 = {
       [4, 15, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [46],
       [1, 4, 1, 0, 0, "dm"],
@@ -1379,7 +1379,7 @@ export const animationData_260 = {
       [53, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [2, 4, 1, 0, 0, "dm"],
@@ -1426,7 +1426,7 @@ export const animationData_260 = {
   "s": {
     "name": "ネコタイムマシン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["260_s.png"],
       [40],
@@ -1472,7 +1472,7 @@ export const animationData_260 = {
       [251, 79, 23, 66, "039ビビビパープル.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [60],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png<color=7>"],
@@ -1541,7 +1541,7 @@ export const animationData_260 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [18],
       [2, 5, -1, 0, 0, "000.png<color=7>"],
@@ -1640,7 +1640,7 @@ export const animationData_260 = {
       [40, 300, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [17],
       [2, 5, -1, 0, 0, "000.png<color=7>"],
@@ -1733,7 +1733,7 @@ export const animationData_260 = {
       [40, 100, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [69],
       [2, 5, 1, 0, 0, "000.png<color=7>"],
@@ -2533,7 +2533,7 @@ export const animationData_260 = {
       [75, 300, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [34],
       [2, 4, 1, 0, 0, "000.png<color=7>"],

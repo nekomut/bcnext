@@ -5,7 +5,7 @@ export const animationData_461 = {
   "f": {
     "name": "レジェルガ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["461_f.png"],
       [22],
@@ -33,7 +33,7 @@ export const animationData_461 = {
       [74, 174, 23, 9, "021やられ目 .png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [34],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -76,7 +76,7 @@ export const animationData_461 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [53],
       [1, 9, -1, 0, 0, "020影 .png"],
@@ -363,7 +363,7 @@ export const animationData_461 = {
       [4, 500, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [53],
       [1, 9, -1, 0, 0, "020影 .png"],
@@ -650,7 +650,7 @@ export const animationData_461 = {
       [4, 500, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [61],
       [1, 9, 1, 0, 0, "016顔.png"],
@@ -1002,7 +1002,7 @@ export const animationData_461 = {
       [30, 834, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [21],
       [21, 12, 1, 0, 0, "019箱　後ろ.png<color=1>"],
@@ -1073,7 +1073,7 @@ export const animationData_461 = {
   "c": {
     "name": "レジェランパサラン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["461_c.png"],
       [168],
@@ -1247,7 +1247,7 @@ export const animationData_461 = {
       [142, 476, 18, 9, "167.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [150],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -1406,7 +1406,7 @@ export const animationData_461 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [195],
       [3, 5, -1, 0, 0, "090腰.png"],
@@ -2745,7 +2745,7 @@ export const animationData_461 = {
       [25, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [195],
       [3, 5, -1, 0, 0, "090腰.png"],
@@ -4084,7 +4084,7 @@ export const animationData_461 = {
       [25, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [271],
       [2, 4, 1, 0, 0, "126加算円.png<color=2>"],
@@ -7422,7 +7422,7 @@ export const animationData_461 = {
       [104, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [61],
       [104, 12, 1, 0, 0, "000.png"],

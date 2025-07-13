@@ -5,7 +5,7 @@ export const animationData_522 = {
   "f": {
     "name": "泉のネコ女神",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["522_f.png"],
       [68],
@@ -79,7 +79,7 @@ export const animationData_522 = {
       [346, 176, 28, 77, "スピート線"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [63],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -151,7 +151,7 @@ export const animationData_522 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [23],
       [8, 12, -1, 0, 0, "ダミー"],
@@ -228,7 +228,7 @@ export const animationData_522 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [23],
       [8, 12, -1, 0, 0, "ダミー"],
@@ -322,7 +322,7 @@ export const animationData_522 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [160],
       [1, 10, 1, 0, 0, "影"],
@@ -1503,7 +1503,7 @@ export const animationData_522 = {
       [34, -5, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [63],
       [1, 9, 1, 0, 0, "影"],
@@ -1700,7 +1700,7 @@ export const animationData_522 = {
   "c": {
     "name": "ネコメダリスト",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["522_c.png"],
       [89],
@@ -1795,7 +1795,7 @@ export const animationData_522 = {
       [471, 167, 13, 8]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [87],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -1891,7 +1891,7 @@ export const animationData_522 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [18],
       [2, 12, -1, 0, 0, "ABダミー"],
@@ -1965,7 +1965,7 @@ export const animationData_522 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [15],
       [2, 12, -1, 0, 0, "ABダミー"],
@@ -2021,7 +2021,7 @@ export const animationData_522 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [262],
       [1, 4, 1, 0, 0, "影"],
@@ -3965,7 +3965,7 @@ export const animationData_522 = {
       [58, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [83],
       [21, 12, 1, 0, 0, "体２ダミー"],

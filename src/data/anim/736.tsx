@@ -5,7 +5,7 @@ export const animationData_736 = {
   "f": {
     "name": "ネコアイスホワイトスター",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["736_f.png"],
       [77],
@@ -1698,7 +1698,7 @@ export const animationData_736 = {
   "c": {
     "name": "ネコアイストップスター",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["736_c.png"],
       [77],

@@ -5,7 +5,7 @@ export const animationData_184 = {
   "f": {
     "name": "ミスターニンジャ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["184_f.png"],
       [44],
@@ -55,7 +55,7 @@ export const animationData_184 = {
       [1, 134, 26, 14]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [28],
       [-1, -1, 0, 0, 520, 469, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=9>"],
@@ -92,7 +92,7 @@ export const animationData_184 = {
       [0, 0, 0, 0, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [4, 5, -1, 0, 0],
@@ -137,7 +137,7 @@ export const animationData_184 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [3, 4, -1, 0, 0],
@@ -225,7 +225,7 @@ export const animationData_184 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [62],
       [2, 4, 1, 0, 0],
@@ -582,7 +582,7 @@ export const animationData_184 = {
       [21, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [3, 4, -1, 0, 0],
@@ -671,7 +671,7 @@ export const animationData_184 = {
   "c": {
     "name": "タンタン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["184_c.png"],
       [51],
@@ -728,7 +728,7 @@ export const animationData_184 = {
       [34, 201, 58, 50, "追加　髪"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [34],
       [-1, -1, 0, 0, 520, 469, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=9>"],
@@ -771,7 +771,7 @@ export const animationData_184 = {
       [0, 0, 0, 0, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [4, 5, -1, 0, 0],
@@ -846,7 +846,7 @@ export const animationData_184 = {
       [0, 900, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [3, 4, -1, 0, 0],
@@ -931,7 +931,7 @@ export const animationData_184 = {
       [0, 1, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [65],
       [2, 4, 1, 0, 0],
@@ -1316,7 +1316,7 @@ export const animationData_184 = {
       [52, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [3, 4, -1, 0, 0],

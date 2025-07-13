@@ -5,7 +5,7 @@ export const animationData_662 = {
   "f": {
     "name": "洗脳されしウシネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["662_f.png"],
       [11],
@@ -88,7 +88,7 @@ export const animationData_662 = {
   "c": {
     "name": "洗脳されしネコキリン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["662_c.png"],
       [10],
@@ -166,7 +166,7 @@ export const animationData_662 = {
   "s": {
     "name": "洗脳されしネコライオン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["662_s.png"],
       [39],

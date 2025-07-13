@@ -5,7 +5,7 @@ export const animationData_204 = {
   "f": {
     "name": "アイルー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["204_f.png"],
       [26],
@@ -37,7 +37,7 @@ export const animationData_204 = {
       [400, 78, 111, 97]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [26],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "顔"],
@@ -72,7 +72,7 @@ export const animationData_204 = {
       [0, 0, 5, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [2, 5, -1, 0, 0, "顔"],
@@ -251,7 +251,7 @@ export const animationData_204 = {
       [250, 1000, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [2, 5, -1, 0, 0],
@@ -364,7 +364,7 @@ export const animationData_204 = {
       [250, 1000, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [51],
       [1, 4, 1, 0, 0, "陰"],
@@ -757,7 +757,7 @@ export const animationData_204 = {
       [26, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [2, 4, 1, 0, 0, "ボディ"],
@@ -864,7 +864,7 @@ export const animationData_204 = {
       [0, -2, 1, 0]
     ],
     "maanim04": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [2, 8, 1, 0, 0, "影"],
@@ -902,7 +902,7 @@ export const animationData_204 = {
   "c": {
     "name": "アイルー＆メラルー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["204_c.png"],
       [42],
@@ -950,7 +950,7 @@ export const animationData_204 = {
       [306, 197, 18, 25, "口ダメージ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [49],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "顔"],
@@ -1008,7 +1008,7 @@ export const animationData_204 = {
       [0, 0, 1, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [48],
       [2, 5, -1, 0, 0, "顔"],
@@ -1361,7 +1361,7 @@ export const animationData_204 = {
       [235, 1000, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [2, 5, -1, 0, 0],
@@ -1582,7 +1582,7 @@ export const animationData_204 = {
       [235, 1000, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [105],
       [1, 4, 1, 0, 0],
@@ -2376,7 +2376,7 @@ export const animationData_204 = {
       [26, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [66],
       [2, 4, 1, 0, 0, "ボディ"],
@@ -2579,7 +2579,7 @@ export const animationData_204 = {
       [0, -2, 1, 0]
     ],
     "maanim04": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [0, 8, 1, 0, 0, "影"],

@@ -5,7 +5,7 @@ export const animationData_107 = {
   "f": {
     "name": "宝杖のカッパーマイン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["107_f.png"],
       [72],
@@ -83,7 +83,7 @@ export const animationData_107 = {
       [358, 1, 152, 18, "エネルギー環"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [79],
       [-1, -1, 0, 0, 540, 480, 46, 3, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -171,7 +171,7 @@ export const animationData_107 = {
       [0, 0, 46, 3, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [62],
       [4, 5, -1, 0, 0, "武器ダミー"],
@@ -542,7 +542,7 @@ export const animationData_107 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [63],
       [4, 5, -1, 0, 0, "武器ダミー"],
@@ -920,7 +920,7 @@ export const animationData_107 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [147],
       [1, 4, 1, 0, 0, "全体ダミー"],
@@ -2175,7 +2175,7 @@ export const animationData_107 = {
       [100, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [3, 4, -1, 0, 0, "影以外ダミー"],
@@ -2264,7 +2264,7 @@ export const animationData_107 = {
   "c": {
     "name": "宝杖のカッパーκ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["107_c.png"],
       [76],
@@ -2346,7 +2346,7 @@ export const animationData_107 = {
       [373, 119, 21, 26, "左手パンチ裏"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [93],
       [-1, -1, 0, 0, 520, 480, 46, 3, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -2448,7 +2448,7 @@ export const animationData_107 = {
       [0, 0, 46, 3, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [72],
       [4, 5, -1, 0, 0, "武器ダミー"],
@@ -2901,7 +2901,7 @@ export const animationData_107 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [72],
       [4, 5, -1, 0, 0, "武器ダミー"],
@@ -3354,7 +3354,7 @@ export const animationData_107 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [186],
       [1, 4, 1, 0, 0, "全体ダミー"],
@@ -4918,7 +4918,7 @@ export const animationData_107 = {
       [32, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [3, 4, -1, 0, 0, "影以外ダミー"],
@@ -5022,7 +5022,7 @@ export const animationData_107 = {
   "s": {
     "name": "光宝杖のカッパーκ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["107_s.png"],
       [93],
@@ -5121,7 +5121,7 @@ export const animationData_107 = {
       [409, 174, 12, 12, "黒影　●"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [131],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -5261,7 +5261,7 @@ export const animationData_107 = {
       [0, 0, 0, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [98],
       [4, 5, -1, 0, 0, "武器ダミー"],
@@ -5836,7 +5836,7 @@ export const animationData_107 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [98],
       [4, 5, -1, 0, 0, "武器ダミー"],
@@ -6411,7 +6411,7 @@ export const animationData_107 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [260],
       [1, 4, 1, 0, 0, "全体ダミー"],
@@ -9067,7 +9067,7 @@ export const animationData_107 = {
       [120, 0, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [60],
       [3, 4, 1, 0, 0, "影以外ダミー"],

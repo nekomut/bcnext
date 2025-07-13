@@ -5,7 +5,7 @@ export const animationData_512 = {
   "f": {
     "name": "春麗",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["512_f.png"],
       [105],
@@ -116,7 +116,7 @@ export const animationData_512 = {
       [2, 73, 84, 70, "104打撃EF03.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [170],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "■全体ダミー<color=7>"],
@@ -295,7 +295,7 @@ export const animationData_512 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [88],
       [1, 9, -1, 0, 0, "影<color=16>"],
@@ -802,7 +802,7 @@ export const animationData_512 = {
       [15, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [14],
       [2, 12, 1, 0, 0, "■キャラダミー<color=7>"],
@@ -849,7 +849,7 @@ export const animationData_512 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [135],
       [1, 9, 1, 0, 0, "影<color=16>"],
@@ -2056,7 +2056,7 @@ export const animationData_512 = {
       [29, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [75],
       [0, 2, 1, 0, 0, "■全体ダミー<color=7>"],
@@ -2289,7 +2289,7 @@ export const animationData_512 = {
   "c": {
     "name": "春麗CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["512_c.png"],
       [105],
@@ -2400,7 +2400,7 @@ export const animationData_512 = {
       [2, 73, 84, 70, "104打撃EF03.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [170],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "■全体ダミー<color=7>"],
@@ -2579,7 +2579,7 @@ export const animationData_512 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [88],
       [1, 9, -1, 0, 0, "影<color=16>"],
@@ -3086,7 +3086,7 @@ export const animationData_512 = {
       [15, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [14],
       [2, 12, 1, 0, 0, "■キャラダミー<color=7>"],
@@ -3133,7 +3133,7 @@ export const animationData_512 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [135],
       [1, 9, 1, 0, 0, "影<color=16>"],
@@ -4340,7 +4340,7 @@ export const animationData_512 = {
       [29, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [75],
       [0, 2, 1, 0, 0, "■全体ダミー<color=7>"],

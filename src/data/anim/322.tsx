@@ -5,7 +5,7 @@ export const animationData_322 = {
   "f": {
     "name": "さるかに合戦",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["322_f.png"],
       [30],
@@ -41,7 +41,7 @@ export const animationData_322 = {
       [62, 52, 12, 15, "サル　身体"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [26],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0],
@@ -76,7 +76,7 @@ export const animationData_322 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [3, 5, -1, 0, 0],
@@ -151,7 +151,7 @@ export const animationData_322 = {
       [8, 100, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [3, 5, -1, 0, 0],
@@ -178,7 +178,7 @@ export const animationData_322 = {
       [14, 8, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [62],
       [4, 10, 1, 0, 0],
@@ -621,7 +621,7 @@ export const animationData_322 = {
       [18, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [2, 4, 1, 0, 0],
@@ -713,7 +713,7 @@ export const animationData_322 = {
   "c": {
     "name": "爆音楽奏サルカニヘヴン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["322_c.png"],
       [201],
@@ -920,7 +920,7 @@ export const animationData_322 = {
       [298, 80, 12, 37]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [265],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=9>"],
@@ -1194,7 +1194,7 @@ export const animationData_322 = {
       [0, 0, 0, 0, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [152],
       [2, 5, -1, 0, 0],
@@ -2081,7 +2081,7 @@ export const animationData_322 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [137],
       [2, 5, -1, 0, 0],
@@ -2877,7 +2877,7 @@ export const animationData_322 = {
       [0, 10, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [430],
       [2, 4, 1, 0, 0],
@@ -8241,7 +8241,7 @@ export const animationData_322 = {
       [81, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [136],
       [2, 5, 1, 0, 0],
@@ -8657,7 +8657,7 @@ export const animationData_322 = {
   "s": {
     "name": "超音楽奏サルカニフェス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["322_s.png"],
       [220],
@@ -8883,7 +8883,7 @@ export const animationData_322 = {
       [389, 312, 9, 23, "219.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [260],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=9>"],
@@ -9152,7 +9152,7 @@ export const animationData_322 = {
       [0, 0, 0, 0, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [214],
       [2, 5, -1, 0, 0, "\t"],
@@ -10409,7 +10409,7 @@ export const animationData_322 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [202],
       [2, 5, -1, 0, 0, "\t"],
@@ -11598,7 +11598,7 @@ export const animationData_322 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [509],
       [2, 4, 1, 0, 0, "\t"],
@@ -18665,7 +18665,7 @@ export const animationData_322 = {
       [90, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [182],
       [2, 5, 1, 0, 0, "\t"],

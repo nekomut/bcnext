@@ -5,7 +5,7 @@ export const animationData_531 = {
   "f": {
     "name": "ネコックマ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["531_f.png"],
       [20],
@@ -31,7 +31,7 @@ export const animationData_531 = {
       [1, 1, 51, 73, "019 EF .png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [19],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "000.png"],
@@ -59,7 +59,7 @@ export const animationData_531 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [15],
       [17, 12, -1, 0, 0, "019 EF .png"],
@@ -159,7 +159,7 @@ export const animationData_531 = {
       [40, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [6],
       [17, 12, -1, 0, 0, "019 EF .png"],
@@ -192,7 +192,7 @@ export const animationData_531 = {
       [40, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [40],
       [1, 4, 1, 0, 0, "001影.png"],
@@ -415,7 +415,7 @@ export const animationData_531 = {
       [8, -118, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [37],
       [3, 11, 1, 0, 0, "003下半身.png"],
@@ -534,7 +534,7 @@ export const animationData_531 = {
   "c": {
     "name": "ネコブラックマ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["531_c.png"],
       [20],
@@ -560,7 +560,7 @@ export const animationData_531 = {
       [1, 1, 51, 73, "019 EF .png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [19],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "000.png"],
@@ -588,7 +588,7 @@ export const animationData_531 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [14],
       [17, 12, -1, 0, 0, "019 EF .png"],
@@ -677,7 +677,7 @@ export const animationData_531 = {
       [12, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [6],
       [17, 12, -1, 0, 0, "019 EF .png"],
@@ -710,7 +710,7 @@ export const animationData_531 = {
       [40, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [40],
       [1, 4, 1, 0, 0, "001影.png"],
@@ -933,7 +933,7 @@ export const animationData_531 = {
       [8, -118, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [37],
       [3, 11, 1, 0, 0, "003下半身.png"],

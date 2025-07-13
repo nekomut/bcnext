@@ -5,7 +5,7 @@ export const animationData_341 = {
   "f": {
     "name": "失われし世界のユキ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["341_f.png"],
       [79],
@@ -90,7 +90,7 @@ export const animationData_341 = {
       [247, 167, 9, 9, "b"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [89],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -188,7 +188,7 @@ export const animationData_341 = {
       [0, 0, -8, 17, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [1, 9, -1, 0, 0],
@@ -352,7 +352,7 @@ export const animationData_341 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [1, 9, -1, 0, 0],
@@ -516,7 +516,7 @@ export const animationData_341 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [204],
       [1, 4, 1, 0, 0],
@@ -2334,7 +2334,7 @@ export const animationData_341 = {
       [60, 0, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [2, 4, 1, 0, 0, "ダミー"],
@@ -2399,7 +2399,7 @@ export const animationData_341 = {
   "c": {
     "name": "失われし世界のユキ＆ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["341_c.png"],
       [69],
@@ -2474,7 +2474,7 @@ export const animationData_341 = {
       [295, 122, 28, 28, "赤輪"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [92],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -2575,7 +2575,7 @@ export const animationData_341 = {
       [0, 0, 0, 22, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [46],
       [1, 9, -1, 0, 0],
@@ -2802,7 +2802,7 @@ export const animationData_341 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [46],
       [1, 9, -1, 0, 0],
@@ -3029,7 +3029,7 @@ export const animationData_341 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [233],
       [1, 4, 1, 0, 0],
@@ -5244,7 +5244,7 @@ export const animationData_341 = {
       [48, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [2, 4, 1, 0, 0, "ダミー"],
@@ -5387,7 +5387,7 @@ export const animationData_341 = {
   "s": {
     "name": "失われし世界のネコ耳ユキ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["341_s.png"],
       [76],
@@ -5469,7 +5469,7 @@ export const animationData_341 = {
       [298, 153, 13, 12, "〇追加"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [129],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -5607,7 +5607,7 @@ export const animationData_341 = {
       [0, 0, 0, 22, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [55],
       [1, 9, -1, 0, 0, "\t"],
@@ -5875,7 +5875,7 @@ export const animationData_341 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [55],
       [1, 9, -1, 0, 0, "\t"],
@@ -6143,7 +6143,7 @@ export const animationData_341 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [265],
       [1, 4, 1, 0, 0, "\t"],
@@ -8914,7 +8914,7 @@ export const animationData_341 = {
       [70, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [51],
       [2, 4, 1, 0, 0, "\t"],

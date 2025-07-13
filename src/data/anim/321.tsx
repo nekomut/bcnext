@@ -5,7 +5,7 @@ export const animationData_321 = {
   "f": {
     "name": "ナゾウサギ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["321_f.png"],
       [40],
@@ -51,7 +51,7 @@ export const animationData_321 = {
       [423, 196, 88, 52]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [32],
       [-1, -1, 0, 0, 0, 0, 1, 1, 900, 900, 0, 1000, 0, "ダミー"],
@@ -92,7 +92,7 @@ export const animationData_321 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [2, 5, -1, 0, 0, "体　ベース"],
@@ -306,7 +306,7 @@ export const animationData_321 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [2, 5, -1, 0, 0, "体　ベース"],
@@ -399,7 +399,7 @@ export const animationData_321 = {
       [0, 2, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [48],
       [1, 4, 1, 0, 0, "影"],
@@ -796,7 +796,7 @@ export const animationData_321 = {
       [25, 200, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [2, 4, 1, 0, 0, "足手前１<color=2>"],
@@ -909,7 +909,7 @@ export const animationData_321 = {
   "c": {
     "name": "兎宮王道",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["321_c.png"],
       [40],
@@ -955,7 +955,7 @@ export const animationData_321 = {
       [423, 196, 88, 52]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [32],
       [-1, -1, 0, 0, 0, 0, 1, 1, 900, 900, 0, 1000, 0, "ダミー"],
@@ -996,7 +996,7 @@ export const animationData_321 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [2, 5, -1, 0, 0, "体　ベース"],
@@ -1207,7 +1207,7 @@ export const animationData_321 = {
       [5, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [2, 5, -1, 0, 0, "体　ベース"],
@@ -1300,7 +1300,7 @@ export const animationData_321 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [59],
       [1, 4, 1, 0, 0, "影"],
@@ -1798,7 +1798,7 @@ export const animationData_321 = {
       [25, 200, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [2, 4, 1, 0, 0, "足手前１<color=2>"],

@@ -5,7 +5,7 @@ export const animationData_312 = {
   "f": {
     "name": "ちびネコトカゲ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["312_f.png"],
       [16],
@@ -27,7 +27,7 @@ export const animationData_312 = {
       [40, 118, 50, 32, "炎03"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [6],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -42,7 +42,7 @@ export const animationData_312 = {
       [0, 0, 0, 2, 5, 0, "ガチャ配置"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [2, 2, -1, 0, 0, "歩き01"],
@@ -64,7 +64,7 @@ export const animationData_312 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [2, 12, -1, 0, 0, "歩き01"],
@@ -75,7 +75,7 @@ export const animationData_312 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [2, 12, 1, 0, 0, "歩き01"],
@@ -119,7 +119,7 @@ export const animationData_312 = {
       [14, 15, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [2, 2, 1, 0, 0, "歩き01"],
@@ -151,7 +151,7 @@ export const animationData_312 = {
   "c": {
     "name": "ちびネコドラゴン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["312_c.png"],
       [14],
@@ -171,7 +171,7 @@ export const animationData_312 = {
       [47, 214, 29, 37, "炎04"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [6],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -186,7 +186,7 @@ export const animationData_312 = {
       [0, 0, 0, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [2, 2, -1, 0, 0, 1],
@@ -201,7 +201,7 @@ export const animationData_312 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [2, 12, -1, 0, 0, 1],
@@ -212,7 +212,7 @@ export const animationData_312 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [2, 12, 1, 0, 0, 1],
@@ -260,7 +260,7 @@ export const animationData_312 = {
       [0, -16, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [2, 12, 1, 0, 0, 1],
@@ -289,7 +289,7 @@ export const animationData_312 = {
   "s": {
     "name": "ちびネコキングドラゴン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["329_e.png"],
       [33],
@@ -328,7 +328,7 @@ export const animationData_312 = {
       [416, 137, 34, 31]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [18],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -355,7 +355,7 @@ export const animationData_312 = {
       [0, 0, 76, 3, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [7, 2, -1, 0, 0, "手前足"],
@@ -416,7 +416,7 @@ export const animationData_312 = {
       [20, 50, 2, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [7, 2, 1, 0, 0, "手前足"],
@@ -436,7 +436,7 @@ export const animationData_312 = {
       [0, -2, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [1, 9, 1, 0, 0, "影"],
@@ -650,7 +650,7 @@ export const animationData_312 = {
       [0, 32, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [6, 2, 1, 0, 0],

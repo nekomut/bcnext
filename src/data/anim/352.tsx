@@ -5,7 +5,7 @@ export const animationData_352 = {
   "f": {
     "name": "ネコ仙人",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["352_f.png"],
       [54],
@@ -65,7 +65,7 @@ export const animationData_352 = {
       [216, 54, 50, 40, "尻尾全体"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [66],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=9>"],
@@ -140,7 +140,7 @@ export const animationData_352 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [3, 5, -1, 0, 0, "通常　制御　Ｙ"],
@@ -425,7 +425,7 @@ export const animationData_352 = {
       [30, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [14, 10, -1, 0, 0, "尻尾　スケールＹ"],
@@ -478,7 +478,7 @@ export const animationData_352 = {
       [30, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [96],
       [2, 4, 1, 0, 0, "影  X"],
@@ -1196,7 +1196,7 @@ export const animationData_352 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [3, 5, 1, 0, 0, "全体　Ｙ"],
@@ -1276,7 +1276,7 @@ export const animationData_352 = {
   "c": {
     "name": "ネコ老師",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["352_c.png"],
       [54],
@@ -1336,7 +1336,7 @@ export const animationData_352 = {
       [345, 98, 32, 55, "尻尾全体"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [66],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=9>"],
@@ -1411,7 +1411,7 @@ export const animationData_352 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [3, 5, -1, 0, 0, "通常　制御　Ｙ"],
@@ -1699,7 +1699,7 @@ export const animationData_352 = {
       [30, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [14, 10, -1, 0, 0, "尻尾　スケールＹ"],
@@ -1752,7 +1752,7 @@ export const animationData_352 = {
       [30, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [96],
       [2, 4, 1, 0, 0, "影  X"],
@@ -2470,7 +2470,7 @@ export const animationData_352 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [3, 5, 1, 0, 0, "全体　Ｙ"],
@@ -2559,7 +2559,7 @@ export const animationData_352 = {
   "s": {
     "name": "仮面のネコ仙人",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["352_s.png"],
       [65],

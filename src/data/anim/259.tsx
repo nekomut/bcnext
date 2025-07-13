@@ -5,7 +5,7 @@ export const animationData_259 = {
   "f": {
     "name": "美女神アフロディーテ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["259_f.png"],
       [81],
@@ -208,7 +208,7 @@ export const animationData_259 = {
       [0, 0, 0, 4, 5, 0, "影"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [63],
       [3, 5, -1, 0, 0, "むね"],
@@ -484,7 +484,7 @@ export const animationData_259 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [62],
       [8, 11, -1, 0, 0],
@@ -3389,7 +3389,7 @@ export const animationData_259 = {
       [30, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [64],
       [3, 4, 1, 0, 0, "DM"],
@@ -3589,7 +3589,7 @@ export const animationData_259 = {
   "c": {
     "name": "メガロディーテ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["259_c.png"],
       [82],
@@ -3800,7 +3800,7 @@ export const animationData_259 = {
       [0, 0, 0, 4, 5, 0, "影"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [69],
       [3, 5, -1, 0, 0, "むね"],
@@ -4092,7 +4092,7 @@ export const animationData_259 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [61],
       [8, 11, -1, 0, 0],

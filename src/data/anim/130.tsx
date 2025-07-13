@@ -5,7 +5,7 @@ export const animationData_130 = {
   "f": {
     "name": "ウルフとウルルン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["130_f.png"],
       [46],
@@ -57,7 +57,7 @@ export const animationData_130 = {
       [303, 82, 56, 61, "毛２"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [54],
       [-1, -1, 0, 0, 633, 351, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -120,7 +120,7 @@ export const animationData_130 = {
       [0, 0, 6, 13, 5, 0, "後ろ脚腿<color=2>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [64],
       [4, 11, -1, 0, 0],
@@ -589,7 +589,7 @@ export const animationData_130 = {
       [-57, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [4, 11, -1, 0, 0],
@@ -787,7 +787,7 @@ export const animationData_130 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [98],
       [3, 2, 1, 0, 0],
@@ -1984,7 +1984,7 @@ export const animationData_130 = {
       [57, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [4, 5, -1, 0, 0],
@@ -2070,7 +2070,7 @@ export const animationData_130 = {
   "c": {
     "name": "タマとウルルン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["130_c.png"],
       [57],
@@ -2133,7 +2133,7 @@ export const animationData_130 = {
       [334, 62, 39, 11, "yubi"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [60],
       [-1, -1, 0, 0, 770, 478, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -2202,7 +2202,7 @@ export const animationData_130 = {
       [0, 0, 6, 13, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [66],
       [4, 11, -1, 0, 0],
@@ -2700,7 +2700,7 @@ export const animationData_130 = {
       [80, 0, 3, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [4, 11, -1, 0, 0],
@@ -2937,7 +2937,7 @@ export const animationData_130 = {
       [37, 0, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [123],
       [3, 2, 1, 0, 0],
@@ -4417,7 +4417,7 @@ export const animationData_130 = {
       [90, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [4, 5, -1, 0, 0],
@@ -4509,7 +4509,7 @@ export const animationData_130 = {
   "s": {
     "name": "覚醒のタマとウルルン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["130_s.png"],
       [103],
@@ -4618,7 +4618,7 @@ export const animationData_130 = {
       [222, 60, 24, 12]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [152],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -4779,7 +4779,7 @@ export const animationData_130 = {
       [0, 0, 6, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [109],
       [4, 5, -1, 0, 0, "ダミー<color=7>"],
@@ -5504,7 +5504,7 @@ export const animationData_130 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [68],
       [4, 11, -1, 0, 0],
@@ -5863,7 +5863,7 @@ export const animationData_130 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [249],
       [4, 4, 1, 0, 0, "Eバチーン"],
@@ -8779,7 +8779,7 @@ export const animationData_130 = {
       [66, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [88],
       [4, 5, 1, 0, 0],

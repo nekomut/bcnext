@@ -5,7 +5,7 @@ export const animationData_284 = {
   "f": {
     "name": "ネコ特急",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["284_f.png"],
       [13],
@@ -24,7 +24,7 @@ export const animationData_284 = {
       [211, 1, 17, 28, "衝撃小"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [12],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -45,7 +45,7 @@ export const animationData_284 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [3, 5, -1, 0, 0],
@@ -103,7 +103,7 @@ export const animationData_284 = {
       [2, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [3, 5, -1, 0, 0],
@@ -156,7 +156,7 @@ export const animationData_284 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [1, 4, 1, 0, 0],
@@ -559,7 +559,7 @@ export const animationData_284 = {
       [198, 1, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [1, 9, 1, 0, 0],
@@ -606,7 +606,7 @@ export const animationData_284 = {
   "c": {
     "name": "ネコ超特急",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["284_c.png"],
       [17],
@@ -629,7 +629,7 @@ export const animationData_284 = {
       [223, 1, 17, 28, "衝撃小"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [14],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -652,7 +652,7 @@ export const animationData_284 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [1, 9, -1, 0, 0, "ダミー"],
@@ -772,7 +772,7 @@ export const animationData_284 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [1, 9, -1, 0, 0],
@@ -894,7 +894,7 @@ export const animationData_284 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [1, 4, 1, 0, 0],
@@ -1363,7 +1363,7 @@ export const animationData_284 = {
       [6, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [1, 9, 1, 0, 0],
@@ -1425,7 +1425,7 @@ export const animationData_284 = {
   "s": {
     "name": "ネコエクスプレス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["284_s.png"],
       [30],
@@ -1461,7 +1461,7 @@ export const animationData_284 = {
       [162, 1, 87, 61, "029煙.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [37],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "000.png"],
@@ -1507,7 +1507,7 @@ export const animationData_284 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [37],
       [1, 9, -1, 0, 0, "027影.png"],
@@ -1730,7 +1730,7 @@ export const animationData_284 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [36],
       [2, 5, -1, 0, 0, "キャラダミー"],
@@ -1945,7 +1945,7 @@ export const animationData_284 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [42],
       [1, 4, 1, 0, 0, "027影.png"],
@@ -3182,7 +3182,7 @@ export const animationData_284 = {
       [26, 30, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [28],
       [1, 9, 1, 0, 0, "027影.png"],

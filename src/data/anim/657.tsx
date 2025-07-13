@@ -5,7 +5,7 @@ export const animationData_657 = {
   "f": {
     "name": "悲嘆の踊り子イズ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["657_f.png"],
       [144],
@@ -7823,7 +7823,7 @@ export const animationData_657 = {
   "c": {
     "name": "哀悼の舞姫ダークイズ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["657_c.png"],
       [172],

@@ -5,7 +5,7 @@ export const animationData_318 = {
   "f": {
     "name": "巫女姫ミタマ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["318_f.png"],
       [103],
@@ -114,7 +114,7 @@ export const animationData_318 = {
       [277, 87, 13, 6, "にぱぁ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [122],
       [-1, -1, 0, 0, 122, 340, 0, 0, 1000, 1000, 0, 1000, 0, "dmy"],
@@ -245,7 +245,7 @@ export const animationData_318 = {
       [0, 0, 0, 0, 5, 0, "dmy"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [87],
       [1, 4, -1, 0, 0],
@@ -707,7 +707,7 @@ export const animationData_318 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [81],
       [3, 11, 1, 0, 0],
@@ -955,7 +955,7 @@ export const animationData_318 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [324],
       [1, 4, 1, 0, 0, "aaa"],
@@ -4636,7 +4636,7 @@ export const animationData_318 = {
       [20, 0, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [1, 9, 1, 0, 0],
@@ -4746,7 +4746,7 @@ export const animationData_318 = {
   "c": {
     "name": "白無垢のミタマ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["317_c.png"],
       [142],
@@ -4894,7 +4894,7 @@ export const animationData_318 = {
       [483, 226, 28, 14, "敷き黒"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [294],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -5197,7 +5197,7 @@ export const animationData_318 = {
       [0, 0, 38, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [264],
       [2, 4, -1, 0, 0, "ネコ娘ダミー<color=7>"],
@@ -6936,7 +6936,7 @@ export const animationData_318 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [245],
       [2, 11, -1, 0, 0],
@@ -8520,7 +8520,7 @@ export const animationData_318 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [633],
       [2, 5, 1, 0, 0],
@@ -15339,7 +15339,7 @@ export const animationData_318 = {
       [50, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [158],
       [2, 5, 1, 0, 0, "ネコ娘ダミー"],

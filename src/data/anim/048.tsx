@@ -5,7 +5,7 @@ export const animationData_048 = {
   "f": {
     "name": "ねこ海賊",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["048_f.png"],
       [16],
@@ -27,7 +27,7 @@ export const animationData_048 = {
       [168, 64, 16, 15, "やられ顔"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [17],
       [-1, -1, 0, 0, 566, 439, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -53,7 +53,7 @@ export const animationData_048 = {
       [0, 0, -10, -1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [10, 12, -1, 0, 0, "ダミー"],
@@ -99,7 +99,7 @@ export const animationData_048 = {
       [16, 15, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [10, 12, -1, 0, 0],
@@ -116,7 +116,7 @@ export const animationData_048 = {
       [0, 15, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [9, 11, 1, 0, 0, "いかり"],
@@ -301,7 +301,7 @@ export const animationData_048 = {
       [31, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [4, 2, -1, 0, 0, "ダミー"],
@@ -348,7 +348,7 @@ export const animationData_048 = {
   "c": {
     "name": "ニャーコック船長",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["048_c.png"],
       [14],
@@ -368,7 +368,7 @@ export const animationData_048 = {
       [1, 194, 62, 29, "炎"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [15],
       [-1, -1, 0, 0, 554, 498, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -392,7 +392,7 @@ export const animationData_048 = {
       [0, 0, 0, 0, 5, 0, "gatya"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [11, 11, -1, 0, 0],
@@ -418,7 +418,7 @@ export const animationData_048 = {
       [60, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [6, 11, -1, 0, 0, "ダミー"],
@@ -433,7 +433,7 @@ export const animationData_048 = {
       [100, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [1, 4, 1, 0, 0],
@@ -564,7 +564,7 @@ export const animationData_048 = {
       [37, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [2, 11, -1, 0, 0, "ダミー"],
@@ -590,7 +590,7 @@ export const animationData_048 = {
   "s": {
     "name": "ニャック・スパロウ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["048_s.png"],
       [33],
@@ -629,7 +629,7 @@ export const animationData_048 = {
       [219, 117, 115, 114, "爆発５"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [28],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -666,7 +666,7 @@ export const animationData_048 = {
       [0, 0, -2, 2, 5, 0, "gatya"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [2, 11, -1, 0, 0, "ダミー"],
@@ -780,7 +780,7 @@ export const animationData_048 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [2, 11, -1, 0, 0, "ダミー"],
@@ -834,7 +834,7 @@ export const animationData_048 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [2, 4, 1, 0, 0, "ダミー"],
@@ -1008,7 +1008,7 @@ export const animationData_048 = {
       [20, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [2, 4, 1, 0, 0, "ダミー"],

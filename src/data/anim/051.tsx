@@ -5,7 +5,7 @@ export const animationData_051 = {
   "f": {
     "name": "ねこ占い師",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["051_f.png"],
       [18],
@@ -29,7 +29,7 @@ export const animationData_051 = {
       [1, 1, 145, 65, "攻撃水晶"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [12],
       [-1, -1, 0, 0, 543, 433, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -50,7 +50,7 @@ export const animationData_051 = {
       [0, 0, -1, 0, 5, 0, "gatya"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [6, 2, -1, 0, 0, "ダミー"],
@@ -124,7 +124,7 @@ export const animationData_051 = {
       [50, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [10, 11, -1, 0, 0, "ダミー"],
@@ -163,7 +163,7 @@ export const animationData_051 = {
       [0, 4, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [9, 2, 1, 0, 0, "ダミー"],
@@ -322,7 +322,7 @@ export const animationData_051 = {
       [17, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [2, 11, -1, 0, 0, "ダミー"],
@@ -354,7 +354,7 @@ export const animationData_051 = {
   "c": {
     "name": "ねこふんど師",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["051_c.png"],
       [27],
@@ -387,7 +387,7 @@ export const animationData_051 = {
       [203, 1, 31, 63, "落下ふんどし"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [18],
       [-1, -1, 0, 0, 561, 434, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -414,7 +414,7 @@ export const animationData_051 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [3, 11, -1, 0, 0],
@@ -482,7 +482,7 @@ export const animationData_051 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [10, 2, -1, 0, 0, "ダミー"],
@@ -522,7 +522,7 @@ export const animationData_051 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [10, 2, 1, 0, 0],
@@ -703,7 +703,7 @@ export const animationData_051 = {
       [10, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [13, 2, -1, 0, 0],
@@ -750,7 +750,7 @@ export const animationData_051 = {
   "s": {
     "name": "ねこ医師",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["051_s.png"],
       [26],
@@ -782,7 +782,7 @@ export const animationData_051 = {
       [85, 38, 11, 15, "ネクタイ　はんぱ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [26],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -817,7 +817,7 @@ export const animationData_051 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [2, 5, -1, 0, 0],
@@ -944,7 +944,7 @@ export const animationData_051 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [7, 11, -1, 0, 0],
@@ -1020,7 +1020,7 @@ export const animationData_051 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [2, 5, 1, 0, 0, "攻撃時　ウイルス"],
@@ -1365,7 +1365,7 @@ export const animationData_051 = {
       [17, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [2, 4, 1, 0, 0, "本体"],

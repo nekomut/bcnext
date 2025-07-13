@@ -5,7 +5,7 @@ export const animationData_668 = {
   "f": {
     "name": "ネコ天狗",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["668_f.png"],
       [85],
@@ -5186,7 +5186,7 @@ export const animationData_668 = {
   "c": {
     "name": "大妖怪ネコ天狗",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["668_c.png"],
       [86],

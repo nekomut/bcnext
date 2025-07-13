@@ -5,7 +5,7 @@ export const animationData_125 = {
   "f": {
     "name": "武田信玄",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["125_f.png"],
       [41],
@@ -52,7 +52,7 @@ export const animationData_125 = {
       [174, 101, 17, 23, "左手パンチ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [44],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -105,7 +105,7 @@ export const animationData_125 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [2, 4, -1, 0, 0, "影"],
@@ -351,7 +351,7 @@ export const animationData_125 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [4, 11, -1, 0, 0, "下半身"],
@@ -541,7 +541,7 @@ export const animationData_125 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [100],
       [2, 9, 1, 0, 0, "影"],
@@ -1387,7 +1387,7 @@ export const animationData_125 = {
       [130, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [4, 11, -1, 0, 0, "下半身"],
@@ -1524,7 +1524,7 @@ export const animationData_125 = {
   "c": {
     "name": "武神・武田信玄",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["125_c.png"],
       [51],
@@ -1581,7 +1581,7 @@ export const animationData_125 = {
       [274, 129, 17, 23, "左手パンチ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [58],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -1648,7 +1648,7 @@ export const animationData_125 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [2, 4, -1, 0, 0, "影"],
@@ -1954,7 +1954,7 @@ export const animationData_125 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [50],
       [4, 11, -1, 0, 0, "下半身"],
@@ -2196,7 +2196,7 @@ export const animationData_125 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [133],
       [2, 9, 1, 0, 0, "影"],
@@ -3274,7 +3274,7 @@ export const animationData_125 = {
       [80, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [53],
       [4, 11, -1, 0, 0, "下半身"],
@@ -3441,7 +3441,7 @@ export const animationData_125 = {
   "s": {
     "name": "猛牛の武神・武田信玄",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["125_s.png"],
       [71],
@@ -3518,7 +3518,7 @@ export const animationData_125 = {
       [245, 111, 24, 16]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [97],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -3624,7 +3624,7 @@ export const animationData_125 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [149],
       [2, 4, -1, 0, 0, "影"],
@@ -4440,7 +4440,7 @@ export const animationData_125 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [147],
       [4, 4, -1, 0, 0],
@@ -5201,7 +5201,7 @@ export const animationData_125 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [246],
       [2, 4, 1, 0, 0],
@@ -9036,7 +9036,7 @@ export const animationData_125 = {
       [111, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [75],
       [4, 5, 1, 0, 0],

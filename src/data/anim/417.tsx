@@ -5,7 +5,7 @@ export const animationData_417 = {
   "f": {
     "name": "温泉天国テルマエ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["417_f.png"],
       [106],
@@ -117,7 +117,7 @@ export const animationData_417 = {
       [474, 189, 9, 18, "105　ワイン2.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [161],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -287,7 +287,7 @@ export const animationData_417 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [148],
       [2, 11, -1, 0, 0, "DMY"],
@@ -1186,7 +1186,7 @@ export const animationData_417 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [80],
       [9, 11, -1, 0, 0, "036ヒモ.png<color=0>"],
@@ -1602,7 +1602,7 @@ export const animationData_417 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [315],
       [1, 4, 1, 0, 0, "000.png"],
@@ -8948,7 +8948,7 @@ export const animationData_417 = {
       [190, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [44],
       [103, 12, 1, 0, 0, "000.png"],
@@ -9088,7 +9088,7 @@ export const animationData_417 = {
   "c": {
     "name": "地底戦隊グランドン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["417_c.png"],
       [104],
@@ -9198,7 +9198,7 @@ export const animationData_417 = {
       [79, 239, 10, 13, "102数字0.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [218],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "だみー"],
@@ -9425,7 +9425,7 @@ export const animationData_417 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [3, 5, -1, 0, 0, "005体.png<color=0>\t"],
@@ -9554,7 +9554,7 @@ export const animationData_417 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [6, 11, -1, 0, 0, "002手.png<color=3>"],
@@ -9646,7 +9646,7 @@ export const animationData_417 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [204],
       [1, 4, 1, 0, 0, "地上コマンダー親<color=7>\t"],
@@ -13193,7 +13193,7 @@ export const animationData_417 = {
       [141, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [145, 12, 1, 0, 0, "攻撃車両<color=7>"],
@@ -13264,7 +13264,7 @@ export const animationData_417 = {
   "s": {
     "name": "超地底戦隊グランドン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["417_s.png"],
       [121],
@@ -13391,7 +13391,7 @@ export const animationData_417 = {
       [400, 54, 64, 83, "119.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [239],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "だみー"],
@@ -13639,7 +13639,7 @@ export const animationData_417 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [26],
       [3, 5, -1, 0, 0, "005体.png<color=0>\t"],
@@ -13767,7 +13767,7 @@ export const animationData_417 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [6, 11, -1, 0, 0, "002手.png<color=3>"],
@@ -13859,7 +13859,7 @@ export const animationData_417 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [221],
       [1, 4, 1, 0, 0, "地上コマンダー親<color=7>\t"],
@@ -16715,7 +16715,7 @@ export const animationData_417 = {
       [77, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [21],
       [3, 5, 1, 0, 0, "005体.png<color=0>"],

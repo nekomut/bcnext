@@ -172,7 +172,7 @@ export const animationData_711 = {
       [30, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [4, 12, -1, 0, 0, "逆光"],

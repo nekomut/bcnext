@@ -5,7 +5,7 @@ export const animationData_483 = {
   "f": {
     "name": "カノとソウマ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["851_f.png"],
       [55],
@@ -66,7 +66,7 @@ export const animationData_483 = {
       [451, 93, 8, 14, "054棒.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [41],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -116,7 +116,7 @@ export const animationData_483 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [29],
       [28, 11, -1, 0, 0, "バイク\t"],
@@ -244,7 +244,7 @@ export const animationData_483 = {
       [0, 14, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [11],
       [14, 12, -1, 0, 0, "028カ・後ろ髪_1.png<color=3>"],
@@ -292,7 +292,7 @@ export const animationData_483 = {
       [0, 200, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [64],
       [1, 4, 1, 0, 0, "影"],
@@ -928,7 +928,7 @@ export const animationData_483 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [16],
       [30, 12, 1, 0, 0, "028カ・後ろ髪_1.png<color=3>"],
@@ -984,7 +984,7 @@ export const animationData_483 = {
   "c": {
     "name": "カノとソウマとネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["851_c.png"],
       [62],
@@ -1052,7 +1052,7 @@ export const animationData_483 = {
       [134, 126, 26, 29, "061ネコボディ.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [50],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -1111,7 +1111,7 @@ export const animationData_483 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [34],
       [28, 11, -1, 0, 0, "バイク\t"],
@@ -1262,7 +1262,7 @@ export const animationData_483 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [16],
       [14, 12, -1, 0, 0, "028カ・後ろ髪_1.png<color=3>"],
@@ -1333,7 +1333,7 @@ export const animationData_483 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [87],
       [1, 4, 1, 0, 0, "影"],
@@ -2154,7 +2154,7 @@ export const animationData_483 = {
       [37, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [29],
       [30, 12, -1, 0, 0, "028カ・後ろ髪_1.png<color=3>"],

@@ -5,7 +5,7 @@ export const animationData_450 = {
   "f": {
     "name": "天城龍バベル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["450_f.png"],
       [83],
@@ -94,7 +94,7 @@ export const animationData_450 = {
       [368, 240, 54, 55, "082.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [212],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -315,7 +315,7 @@ export const animationData_450 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [230],
       [1, 10, -1, 0, 0, "\t"],
@@ -1597,7 +1597,7 @@ export const animationData_450 = {
       [174, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [230],
       [1, 10, -1, 0, 0, "\t"],
@@ -2879,7 +2879,7 @@ export const animationData_450 = {
       [174, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [424],
       [1, 4, 1, 0, 0, "\t"],
@@ -10383,7 +10383,7 @@ export const animationData_450 = {
       [210, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [72],
       [1, 4, 1, 0, 0, "\t"],
@@ -10607,7 +10607,7 @@ export const animationData_450 = {
   "c": {
     "name": "魔城龍バベル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["450_c.png"],
       [83],
@@ -10696,7 +10696,7 @@ export const animationData_450 = {
       [436, 187, 54, 55, "082.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [216],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -10921,7 +10921,7 @@ export const animationData_450 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [227],
       [1, 10, -1, 0, 0, "\t"],
@@ -12182,7 +12182,7 @@ export const animationData_450 = {
       [174, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [227],
       [1, 10, -1, 0, 0, "\t"],
@@ -13443,7 +13443,7 @@ export const animationData_450 = {
       [174, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [418],
       [1, 4, 1, 0, 0, "\t"],
@@ -20913,7 +20913,7 @@ export const animationData_450 = {
       [210, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [66],
       [1, 4, 1, 0, 0, "\t"],

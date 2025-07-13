@@ -5,7 +5,7 @@ export const animationData_753 = {
   "f": {
     "name": "ネコ薫",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["753_f.png"],
       [42],
@@ -1668,7 +1668,7 @@ export const animationData_753 = {
   "c": {
     "name": "剣術小町ネコ薫",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["753_c.png"],
       [52],

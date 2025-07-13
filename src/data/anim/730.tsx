@@ -5,7 +5,7 @@ export const animationData_730 = {
   "s": {
     "name": "ねこシシマイ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["730_s.png"],
       [40],

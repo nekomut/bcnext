@@ -5,7 +5,7 @@ export const animationData_196 = {
   "f": {
     "name": "キャットマンダディ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["196_f.png"],
       [39],
@@ -50,7 +50,7 @@ export const animationData_196 = {
       [456, 203, 55, 52, "羽"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [45],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -104,7 +104,7 @@ export const animationData_196 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [2, 9, -1, 0, 0, "影"],
@@ -339,7 +339,7 @@ export const animationData_196 = {
       [30, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [3, 5, -1, 0, 0, "腰ダミー"],
@@ -652,7 +652,7 @@ export const animationData_196 = {
       [60, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [143],
       [1, 4, 1, 0, 0, "全体ダミー"],
@@ -1999,7 +1999,7 @@ export const animationData_196 = {
       [145, 200, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [55],
       [2, 4, 1, 0, 0, "影"],
@@ -2172,7 +2172,7 @@ export const animationData_196 = {
   "c": {
     "name": "キャットマンダーク",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["196_c.png"],
       [43],
@@ -2221,7 +2221,7 @@ export const animationData_196 = {
       [205, 244, 106, 9, "地面"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [50],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -2280,7 +2280,7 @@ export const animationData_196 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [75],
       [2, 9, -1, 0, 0, "影"],
@@ -2650,7 +2650,7 @@ export const animationData_196 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [73],
       [3, 5, -1, 0, 0, "腰ダミー"],
@@ -3057,7 +3057,7 @@ export const animationData_196 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [161],
       [1, 4, 1, 0, 0, "全体ダミー"],
@@ -4467,7 +4467,7 @@ export const animationData_196 = {
       [75, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [71],
       [2, 4, 1, 0, 0, "影"],
@@ -4688,7 +4688,7 @@ export const animationData_196 = {
   "s": {
     "name": "キャットマンライジング",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["196_s.png"],
       [69],
@@ -4763,7 +4763,7 @@ export const animationData_196 = {
       [458, 137, 10, 41, "068トゲ.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [154],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "000.png"],
@@ -4926,7 +4926,7 @@ export const animationData_196 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [124],
       [2, 9, -1, 0, 0, "影"],
@@ -5538,7 +5538,7 @@ export const animationData_196 = {
       [40, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [138],
       [3, 5, -1, 0, 0, "腰ダミー"],
@@ -6364,7 +6364,7 @@ export const animationData_196 = {
       [60, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [307],
       [1, 4, 1, 0, 0, "全体ダミー"],
@@ -8723,7 +8723,7 @@ export const animationData_196 = {
       [88, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [89],
       [2, 4, 1, 0, 0, "影"],

@@ -5,7 +5,7 @@ export const animationData_190 = {
   "f": {
     "name": "シトルイユ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["190_f.png"],
       [61],
@@ -72,7 +72,7 @@ export const animationData_190 = {
       [404, 185, 107, 70, "爆発５星ちょっと縮小"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [64],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1300, 1300, 0, 1000, 0, "ダミー"],
@@ -145,7 +145,7 @@ export const animationData_190 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [42],
       [1, 9, -1, 0, 0, "影"],
@@ -349,7 +349,7 @@ export const animationData_190 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [1, 9, -1, 0, 0, "影"],
@@ -510,7 +510,7 @@ export const animationData_190 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [162],
       [1, 9, 1, 0, 0, "影"],
@@ -1687,7 +1687,7 @@ export const animationData_190 = {
       [52, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [2, 4, 1, 0, 0, "身体"],
@@ -1794,7 +1794,7 @@ export const animationData_190 = {
   "c": {
     "name": "シトルイユCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["190_c.png"],
       [61],
@@ -1861,7 +1861,7 @@ export const animationData_190 = {
       [404, 185, 107, 70, "爆発５星ちょっと縮小"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [64],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1300, 1300, 0, 1000, 0, "ダミー"],
@@ -1934,7 +1934,7 @@ export const animationData_190 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [42],
       [1, 9, -1, 0, 0, "影"],
@@ -2138,7 +2138,7 @@ export const animationData_190 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [1, 9, -1, 0, 0, "影"],
@@ -2299,7 +2299,7 @@ export const animationData_190 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [162],
       [1, 9, 1, 0, 0, "影"],
@@ -3475,7 +3475,7 @@ export const animationData_190 = {
       [52, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [2, 4, 1, 0, 0, "身体"],

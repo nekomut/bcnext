@@ -14820,7 +14820,7 @@ export const animationData_594 = {
   "s": {
     "name": "超輸送兵団アトランチス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["594_s.png"],
       [106],

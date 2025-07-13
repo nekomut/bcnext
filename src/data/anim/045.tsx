@@ -5,7 +5,7 @@ export const animationData_045 = {
   "f": {
     "name": "芸者ねこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["045_f.png"],
       [13],
@@ -24,7 +24,7 @@ export const animationData_045 = {
       [228, 11, 9, 8, "飾り③"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [11],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -44,7 +44,7 @@ export const animationData_045 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [4, 2, -1, 0, 0, "ダミー"],
@@ -78,12 +78,12 @@ export const animationData_045 = {
       [16, -10, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [3, 2, 1, 0, 0, "ダミー"],
@@ -137,7 +137,7 @@ export const animationData_045 = {
       [15, -10, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [3, 2, -1, 0, 0, "ダミー"],
@@ -172,7 +172,7 @@ export const animationData_045 = {
   "c": {
     "name": "ネコでありんした",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["C:\\Users\\Nomura\\Desktop\\045_01【ネコ芸者】PSDデータ\\045_c.png"],
       [12],
@@ -190,7 +190,7 @@ export const animationData_045 = {
       [222, 45, 21, 20, 3]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [9],
       [-1, -1, 0, 0, 522, 462, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -208,7 +208,7 @@ export const animationData_045 = {
       [0, 0, 0, 20, 5, 0, "gatya"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [3, 5, -1, -1000, 1000],
@@ -250,7 +250,7 @@ export const animationData_045 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [3, 5, -1, -1000, 1000],
@@ -324,7 +324,7 @@ export const animationData_045 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [4, 2, 1, 0, 0],
@@ -411,7 +411,7 @@ export const animationData_045 = {
       [25, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [3, 11, -1, 0, 0, "ダミー"],

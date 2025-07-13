@@ -5,7 +5,7 @@ export const animationData_381 = {
   "f": {
     "name": "ねこ農家",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["381_f.png"],
       [32],
@@ -43,7 +43,7 @@ export const animationData_381 = {
       [92, 77, 35, 85, "土"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [29],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -81,7 +81,7 @@ export const animationData_381 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [53],
       [1, 4, -1, 0, 0],
@@ -475,7 +475,7 @@ export const animationData_381 = {
       [40, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [3, 11, -1, 0, 0],
@@ -507,7 +507,7 @@ export const animationData_381 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [80],
       [2, 4, 1, 0, 0],
@@ -1128,7 +1128,7 @@ export const animationData_381 = {
       [58, 100, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [3, 5, 1, 0, 0],
@@ -1226,7 +1226,7 @@ export const animationData_381 = {
   "c": {
     "name": "ねこカブ農家",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["381_c.png"],
       [45],
@@ -1277,7 +1277,7 @@ export const animationData_381 = {
       [52, 125, 39, 77, "ef線"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [44],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -1330,7 +1330,7 @@ export const animationData_381 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [104],
       [1, 4, -1, 0, 0],
@@ -2372,7 +2372,7 @@ export const animationData_381 = {
       [124, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [3, 11, -1, 0, 0],
@@ -2504,7 +2504,7 @@ export const animationData_381 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [103],
       [2, 4, 1, 0, 0],
@@ -3304,7 +3304,7 @@ export const animationData_381 = {
       [0, 44, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [62],
       [3, 4, 1, 0, 0],

@@ -5,7 +5,7 @@ export const animationData_166 = {
   "f": {
     "name": "白鳥松竹梅",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["166_f.png"],
       [40],
@@ -51,7 +51,7 @@ export const animationData_166 = {
       [89, 1, 95, 137]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [40],
       [-1, -1, 0, 0, 0, 0, 43, 3, -950, 950, 0, 1000, 0, "陰"],
@@ -100,7 +100,7 @@ export const animationData_166 = {
       [0, 0, 45, 4, 5, 0, "陰"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [90],
       [1, 4, -1, 0, 0],
@@ -1144,7 +1144,7 @@ export const animationData_166 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [88],
       [3, 4, -1, 0, 0, "ダミーc"],
@@ -2170,7 +2170,7 @@ export const animationData_166 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [103],
       [3, 4, 1, 0, 0],
@@ -3223,7 +3223,7 @@ export const animationData_166 = {
       [2, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [1, 4, -1, 0, 0],
@@ -3336,7 +3336,7 @@ export const animationData_166 = {
   "c": {
     "name": "松＆にゃんこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["166_c.png"],
       [40],
@@ -3382,7 +3382,7 @@ export const animationData_166 = {
       [89, 1, 95, 137]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [40],
       [-1, -1, 0, 0, 0, 0, 43, 3, -950, 950, 0, 1000, 0, "陰"],
@@ -3431,7 +3431,7 @@ export const animationData_166 = {
       [0, 0, 45, 4, 5, 0, "陰"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [90],
       [1, 4, -1, 0, 0],
@@ -4475,7 +4475,7 @@ export const animationData_166 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [88],
       [3, 4, -1, 0, 0, "ダミーc"],
@@ -5501,7 +5501,7 @@ export const animationData_166 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [103],
       [3, 4, 1, 0, 0],
@@ -6554,7 +6554,7 @@ export const animationData_166 = {
       [2, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [1, 4, -1, 0, 0],

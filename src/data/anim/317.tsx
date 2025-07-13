@@ -5,7 +5,7 @@ export const animationData_317 = {
   "f": {
     "name": "CPAC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["317_f.png"],
       [15],
@@ -26,7 +26,7 @@ export const animationData_317 = {
       [161, 42, 94, 79, "efff"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [34],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -69,7 +69,7 @@ export const animationData_317 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [50],
       [2, 4, -1, 0, 0, "奥ネコ<color=9>"],
@@ -366,7 +366,7 @@ export const animationData_317 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [2, 11, -1, 0, 0, "奥ネコ<color=9>"],
@@ -481,7 +481,7 @@ export const animationData_317 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [52],
       [2, 4, 1, 0, 0],
@@ -781,7 +781,7 @@ export const animationData_317 = {
       [45, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [2, 5, 1, 0, 0, "奥ネコ<color=9>"],
@@ -858,7 +858,7 @@ export const animationData_317 = {
   "c": {
     "name": "PPAP",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["317_c.png"],
       [15],
@@ -879,7 +879,7 @@ export const animationData_317 = {
       [39, 100, 36, 11, "pen2"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [34],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -922,7 +922,7 @@ export const animationData_317 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [2, 4, -1, 0, 0, "奥ネコ<color=9>"],
@@ -1139,7 +1139,7 @@ export const animationData_317 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [2, 11, -1, 0, 0, "奥ネコ<color=9>"],
@@ -1242,7 +1242,7 @@ export const animationData_317 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [2, 4, 1, 0, 0],
@@ -1529,7 +1529,7 @@ export const animationData_317 = {
       [44, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [2, 5, 1, 0, 0, "奥ネコ<color=9>"],

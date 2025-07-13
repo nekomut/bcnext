@@ -5,7 +5,7 @@ export const animationData_303 = {
   "f": {
     "name": "ネコ屋台",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["303_f.png"],
       [33],
@@ -44,7 +44,7 @@ export const animationData_303 = {
       [45, 41, 40, 29, 3]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [32],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -85,7 +85,7 @@ export const animationData_303 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [3, 5, -1, 0, 0, "cダミー"],
@@ -354,7 +354,7 @@ export const animationData_303 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [3, 5, -1, 0, 0, "全体ダミー<color=7>"],
@@ -489,7 +489,7 @@ export const animationData_303 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [73],
       [3, 5, 1, 0, 0, "cダミー<color=7>"],
@@ -1039,7 +1039,7 @@ export const animationData_303 = {
       [82, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [3, 5, 1, 0, 0],
@@ -1149,7 +1149,7 @@ export const animationData_303 = {
   "c": {
     "name": "ネコの宅配便",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["303_c.png"],
       [30],
@@ -1185,7 +1185,7 @@ export const animationData_303 = {
       [46, 41, 43, 28, "荷物接地用"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [35],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -1229,7 +1229,7 @@ export const animationData_303 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [3, 5, -1, 0, 0, "cダミー"],
@@ -1465,7 +1465,7 @@ export const animationData_303 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [3, 5, -1, 0, 0, "全体ダミー<color=7>"],
@@ -1555,7 +1555,7 @@ export const animationData_303 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [68],
       [3, 5, 1, 0, 0, "cダミー<color=7>"],
@@ -2115,7 +2115,7 @@ export const animationData_303 = {
       [48, 150, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [3, 5, 1, 0, 0],

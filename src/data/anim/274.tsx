@@ -5,7 +5,7 @@ export const animationData_274 = {
   "f": {
     "name": "トロピカルカリファ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["274_f.png"],
       [79],
@@ -90,7 +90,7 @@ export const animationData_274 = {
       [290, 102, 76, 49]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [112],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -211,7 +211,7 @@ export const animationData_274 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [64],
       [1, 8, -1, 0, 0, "ダミー"],
@@ -559,7 +559,7 @@ export const animationData_274 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [64],
       [1, 8, -1, 0, 0, "ダミー"],
@@ -907,7 +907,7 @@ export const animationData_274 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [218],
       [1, 4, 1, 0, 0],
@@ -2738,7 +2738,7 @@ export const animationData_274 = {
       [22, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [2, 4, 1, 0, 0],
@@ -2908,7 +2908,7 @@ export const animationData_274 = {
   "c": {
     "name": "トロピカルXカリファ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["274_c.png"],
       [79],
@@ -2993,7 +2993,7 @@ export const animationData_274 = {
       [290, 102, 76, 49]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [112],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -3114,7 +3114,7 @@ export const animationData_274 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [64],
       [1, 8, -1, 0, 0, "ダミー"],
@@ -3462,7 +3462,7 @@ export const animationData_274 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [64],
       [1, 8, -1, 0, 0, "ダミー"],
@@ -3810,7 +3810,7 @@ export const animationData_274 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [221],
       [1, 4, 1, 0, 0],
@@ -5664,7 +5664,7 @@ export const animationData_274 = {
       [81, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [2, 4, 1, 0, 0],

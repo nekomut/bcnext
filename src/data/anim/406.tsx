@@ -5,7 +5,7 @@ export const animationData_406 = {
   "f": {
     "name": "ネコレイ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["406_f.png"],
       [44],
@@ -55,7 +55,7 @@ export const animationData_406 = {
       [66, 1, 74, 35, "043スカート2.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [58],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -122,7 +122,7 @@ export const animationData_406 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [3, 4, -1, 0, 0, "顔"],
@@ -255,7 +255,7 @@ export const animationData_406 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [3, 5, -1, 0, 0, "顔"],
@@ -347,7 +347,7 @@ export const animationData_406 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [77],
       [2, 4, 1, 0, 0, "キャラダミー"],
@@ -922,7 +922,7 @@ export const animationData_406 = {
       [44, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [3, 4, 1, 0, 0, "顔"],
@@ -1020,7 +1020,7 @@ export const animationData_406 = {
   "c": {
     "name": "ネコアヤナミレイ（仮称）",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["406_c.png"],
       [43],
@@ -1069,7 +1069,7 @@ export const animationData_406 = {
       [208, 166, 17, 14, "042頭のやつ.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [62],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -1140,7 +1140,7 @@ export const animationData_406 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [3, 4, -1, 0, 0, "顔"],
@@ -1251,7 +1251,7 @@ export const animationData_406 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [3, 5, -1, 0, 0, "顔"],
@@ -1329,7 +1329,7 @@ export const animationData_406 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [84],
       [2, 4, 1, 0, 0, "キャラダミー"],
@@ -1940,7 +1940,7 @@ export const animationData_406 = {
       [39, 930, 2, -2]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [3, 4, 1, 0, 0, "顔"],

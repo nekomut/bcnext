@@ -5,7 +5,7 @@ export const animationData_370 = {
   "f": {
     "name": "ネコ桜",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["370_f.png"],
       [36],
@@ -47,7 +47,7 @@ export const animationData_370 = {
       [159, 1, 83, 112, "エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [39],
       [-1, -1, 0, 0, 0, 0, 1, 1, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -95,7 +95,7 @@ export const animationData_370 = {
       [0, 0, 1, 1, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [2, 5, -1, 0, 0, "頭部"],
@@ -264,7 +264,7 @@ export const animationData_370 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [2, 5, -1, 0, 0, "頭部"],
@@ -371,7 +371,7 @@ export const animationData_370 = {
       [40, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [1, 9, 1, 0, 0, "影"],
@@ -713,7 +713,7 @@ export const animationData_370 = {
       [30, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [34, 12, 1, 0, 0, "エフェクト"],
@@ -811,7 +811,7 @@ export const animationData_370 = {
   "c": {
     "name": "エプロンネコ桜",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["370_f.png"],
       [41],
@@ -858,7 +858,7 @@ export const animationData_370 = {
       [133, 166, 17, 24, "エプロンリボン02"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [44],
       [-1, -1, 0, 0, 0, 0, 1, 1, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -911,7 +911,7 @@ export const animationData_370 = {
       [0, 0, 1, 1, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [2, 5, -1, 0, 0, "頭部"],
@@ -1080,7 +1080,7 @@ export const animationData_370 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [2, 5, -1, 0, 0, "頭部"],
@@ -1197,7 +1197,7 @@ export const animationData_370 = {
       [40, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [42],
       [1, 9, 1, 0, 0, "影"],
@@ -1559,7 +1559,7 @@ export const animationData_370 = {
       [30, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [34, 12, 1, 0, 0, "エフェクト"],
@@ -1657,7 +1657,7 @@ export const animationData_370 = {
   "s": {
     "name": "夢見るネコ桜",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["370_s.png"],
       [41],
@@ -1704,7 +1704,7 @@ export const animationData_370 = {
       [1, 1, 1, 1, "エプロンリボン02"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [43],
       [-1, -1, 0, 0, 0, 0, 1, 1, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1756,7 +1756,7 @@ export const animationData_370 = {
       [0, 0, 1, 1, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [31],
       [2, 5, -1, 0, 0, "頭部"],
@@ -1924,7 +1924,7 @@ export const animationData_370 = {
       [38, 0, 3, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [24],
       [2, 5, -1, 0, 0, "頭部"],
@@ -2041,7 +2041,7 @@ export const animationData_370 = {
       [40, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [50],
       [1, 4, 1, 0, 0, "影"],
@@ -2448,7 +2448,7 @@ export const animationData_370 = {
       [31, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [31],
       [2, 4, 1, 0, 0, "頭部"],

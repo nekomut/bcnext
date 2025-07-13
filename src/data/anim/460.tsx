@@ -5,7 +5,7 @@ export const animationData_460 = {
   "f": {
     "name": "ネコ言峰＆ネコギルガメッシュ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["460_f.png"],
       [92],
@@ -103,7 +103,7 @@ export const animationData_460 = {
       [448, 11, 33, 24]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [79],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -191,7 +191,7 @@ export const animationData_460 = {
       [0, 0, 36, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [29],
       [3, 5, -1, 0, 0, "000.png"],
@@ -349,7 +349,7 @@ export const animationData_460 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [21],
       [3, 5, -1, 0, 0, "000.png"],
@@ -441,7 +441,7 @@ export const animationData_460 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [134],
       [2, 4, 1, 0, 0, "038前髪分け目.png"],
@@ -1509,7 +1509,7 @@ export const animationData_460 = {
       [48, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [62],
       [3, 5, 1, 0, 0, "000.png"],
@@ -1703,7 +1703,7 @@ export const animationData_460 = {
   "c": {
     "name": "ネコギルガメッシュ＆ネコ言峰",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["460_c.png"],
       [94],
@@ -1803,7 +1803,7 @@ export const animationData_460 = {
       [288, 102, 39, 20]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [144],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -1956,7 +1956,7 @@ export const animationData_460 = {
       [0, 0, 36, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [30],
       [3, 5, -1, 0, 0, "000.png"],
@@ -2117,7 +2117,7 @@ export const animationData_460 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [22],
       [3, 5, -1, 0, 0, "000.png"],
@@ -2212,7 +2212,7 @@ export const animationData_460 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [155],
       [3, 5, 1, 0, 0, "006正面　顔.png"],
@@ -3475,7 +3475,7 @@ export const animationData_460 = {
       [90, 0, 3, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [59],
       [3, 4, 1, 0, 0, "000.png"],

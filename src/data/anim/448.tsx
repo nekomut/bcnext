@@ -5,7 +5,7 @@ export const animationData_448 = {
   "f": {
     "name": "宮本武蔵",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["448_f.png"],
       [90],
@@ -101,7 +101,7 @@ export const animationData_448 = {
       [240, 168, 63, 102, "089腕新規.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [114],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0],
@@ -224,7 +224,7 @@ export const animationData_448 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [84],
       [1, 8, -1, 0, 0, "charaDMY"],
@@ -685,7 +685,7 @@ export const animationData_448 = {
       [155, 0, 3, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [209],
       [2, 4, -1, 0, 0, "022左手　輪.png<color=13>\t"],
@@ -1317,7 +1317,7 @@ export const animationData_448 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [210],
       [2, 4, 1, 0, 0, "022左手　輪.png<color=13>\t"],
@@ -3104,7 +3104,7 @@ export const animationData_448 = {
       [0, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [42],
       [33, 12, 1, 0, 0, "ふんどし062.png<color=10>"],
@@ -3238,7 +3238,7 @@ export const animationData_448 = {
   "c": {
     "name": "剣神・宮本武蔵",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["448_c.png"],
       [92],
@@ -3336,7 +3336,7 @@ export const animationData_448 = {
       [445, 105, 63, 52, "091首.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [115],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0],
@@ -3460,7 +3460,7 @@ export const animationData_448 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [83],
       [1, 8, -1, 0, 0, "charaDMY"],
@@ -3918,7 +3918,7 @@ export const animationData_448 = {
       [155, 0, 3, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [211],
       [2, 4, -1, 0, 0, "022左手　輪.png<color=13>\t"],
@@ -4556,7 +4556,7 @@ export const animationData_448 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [212],
       [2, 4, 1, 0, 0, "022左手　輪.png<color=13>\t"],
@@ -6334,7 +6334,7 @@ export const animationData_448 = {
       [32, 81, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [41],
       [33, 12, 1, 0, 0, "ふんどし062.png<color=10>"],
@@ -6465,7 +6465,7 @@ export const animationData_448 = {
   "s": {
     "name": "無双の剣神・宮本武蔵",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["448_s.png"],
       [135],

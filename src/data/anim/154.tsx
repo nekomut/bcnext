@@ -5,7 +5,7 @@ export const animationData_154 = {
   "f": {
     "name": "ねこフープ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["154_f.png"],
       [15],
@@ -26,7 +26,7 @@ export const animationData_154 = {
       [1, 214, 73, 17, "エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [18],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -53,7 +53,7 @@ export const animationData_154 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [2, 4, -1, 0, 0, "影"],
@@ -329,7 +329,7 @@ export const animationData_154 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [4, 4, -1, 0, 0, "体"],
@@ -535,7 +535,7 @@ export const animationData_154 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [4, 2, 1, 0, 0, "体"],
@@ -816,7 +816,7 @@ export const animationData_154 = {
       [28, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [3, 5, -1, 0, 0, "キャラダミー<color=7>"],
@@ -908,7 +908,7 @@ export const animationData_154 = {
   "c": {
     "name": "ねこトリプルフープ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["154_c.png"],
       [16],
@@ -930,7 +930,7 @@ export const animationData_154 = {
       [61, 168, 73, 17, "エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [27],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -966,7 +966,7 @@ export const animationData_154 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [2, 4, -1, 0, 0, "影"],
@@ -1306,7 +1306,7 @@ export const animationData_154 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [4, 2, -1, 0, 0, "体"],
@@ -1557,7 +1557,7 @@ export const animationData_154 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [56],
       [4, 2, 1, 0, 0, "体"],
@@ -2200,7 +2200,7 @@ export const animationData_154 = {
       [27, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [3, 4, -1, 0, 0, "キャラダミー"],
@@ -2310,7 +2310,7 @@ export const animationData_154 = {
   "s": {
     "name": "ねこグルグルフープ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["154_s.png"],
       [31],
@@ -2347,7 +2347,7 @@ export const animationData_154 = {
       [53, 220, 45, 20, "攻撃ボディ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [50],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -2406,7 +2406,7 @@ export const animationData_154 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [55],
       [2, 4, -1, 0, 0, "影"],
@@ -2795,7 +2795,7 @@ export const animationData_154 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [44],
       [4, 2, -1, 0, 0, "体"],
@@ -3080,7 +3080,7 @@ export const animationData_154 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [148],
       [4, 2, 1, 0, 0, "体"],
@@ -4725,7 +4725,7 @@ export const animationData_154 = {
       [31, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [46],
       [3, 4, 1, 0, 0, "キャラダミー"],

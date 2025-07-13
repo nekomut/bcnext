@@ -5,7 +5,7 @@ export const animationData_767 = {
   "f": {
     "name": "イカ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["767_f.png"],
       [6],
@@ -129,7 +129,7 @@ export const animationData_767 = {
   "c": {
     "name": "イカCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["767_c.png"],
       [6],

@@ -5,7 +5,7 @@ export const animationData_358 = {
   "f": {
     "name": "ゾンビ娘ヴェルヴェーヌ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["358_f.png"],
       [133],
@@ -144,7 +144,7 @@ export const animationData_358 = {
       [500, 1, 8, 8]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [178],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "DMY"],
@@ -331,7 +331,7 @@ export const animationData_358 = {
       [0, 0, 0, 0, 5, 0, "DMY"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [110],
       [1, 8, -1, 0, 0, "DMY"],
@@ -1009,7 +1009,7 @@ export const animationData_358 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [110],
       [1, 8, -1, 0, 0, "DMY"],
@@ -1687,7 +1687,7 @@ export const animationData_358 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [293],
       [111, 5, 1, 0, 0],
@@ -4702,7 +4702,7 @@ export const animationData_358 = {
       [94, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [60],
       [2, 11, 1, 0, 0],
@@ -4890,7 +4890,7 @@ export const animationData_358 = {
   "c": {
     "name": "死霊の花嫁ヴェルヴェーヌ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["358_c.png"],
       [131],
@@ -5027,7 +5027,7 @@ export const animationData_358 = {
       [368, 212, 58, 43]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [181],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "DMY"],
@@ -5217,7 +5217,7 @@ export const animationData_358 = {
       [0, 0, 0, 0, 5, 0, "DMY"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [108],
       [1, 8, -1, 0, 0, "DMY"],
@@ -5895,7 +5895,7 @@ export const animationData_358 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [108],
       [1, 8, -1, 0, 0, "DMY"],
@@ -6573,7 +6573,7 @@ export const animationData_358 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [314],
       [2, 4, 1, 0, 0],
@@ -9808,7 +9808,7 @@ export const animationData_358 = {
       [86, 130, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [65],
       [2, 11, 1, 0, 0],
@@ -10011,7 +10011,7 @@ export const animationData_358 = {
   "s": {
     "name": "満腹の花嫁ヴェルヴェーヌ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["358_s.png"],
       [195],

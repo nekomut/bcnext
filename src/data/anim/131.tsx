@@ -5,7 +5,7 @@ export const animationData_131 = {
   "f": {
     "name": "ねねこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["131_f.png"],
       [61],
@@ -72,7 +72,7 @@ export const animationData_131 = {
       [478, 193, 33, 39, "手"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [68],
       [-1, -1, 0, 0, 0, 0, 0, 0, 750, 750, 0, 1000, 0, "ダミー"],
@@ -149,7 +149,7 @@ export const animationData_131 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [46],
       [1, 5, -1, 0, 0, "全体ダミー"],
@@ -472,7 +472,7 @@ export const animationData_131 = {
       [42, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [5, 8, -1, 0, 0, "口"],
@@ -628,7 +628,7 @@ export const animationData_131 = {
       [14, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [64],
       [1, 5, 1, 0, 0, "全体ダミー"],
@@ -998,7 +998,7 @@ export const animationData_131 = {
       [5, -200, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [70],
       [1, 4, -1, 0, 0, "全体ダミー"],
@@ -1216,7 +1216,7 @@ export const animationData_131 = {
   "c": {
     "name": "スターねねこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["131_c.png"],
       [56],
@@ -1278,7 +1278,7 @@ export const animationData_131 = {
       [340, 190, 78, 16, "ライト：緑"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [61],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1348,7 +1348,7 @@ export const animationData_131 = {
       [0, 0, 2, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [1, 5, -1, 0, 0, "全体ダミー"],
@@ -1591,7 +1591,7 @@ export const animationData_131 = {
       [42, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [5, 8, -1, 0, 0, "口"],
@@ -1712,7 +1712,7 @@ export const animationData_131 = {
       [14, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [66],
       [1, 5, 1, 0, 0, "全体ダミー"],
@@ -2092,7 +2092,7 @@ export const animationData_131 = {
       [5, -500, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [67],
       [1, 4, -1, 0, 0, "全体ダミー"],

@@ -5,7 +5,7 @@ export const animationData_270 = {
   "f": {
     "name": "狂乱のユキ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["270_f.png"],
       [55],
@@ -66,7 +66,7 @@ export const animationData_270 = {
       [62, 139, 27, 13]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [63],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -138,7 +138,7 @@ export const animationData_270 = {
       [0, 0, -8, 17, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [1, 9, -1, 0, 0],
@@ -330,7 +330,7 @@ export const animationData_270 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [1, 9, -1, 0, 0],
@@ -522,7 +522,7 @@ export const animationData_270 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [121],
       [1, 4, 1, 0, 0],
@@ -1809,7 +1809,7 @@ export const animationData_270 = {
       [60, -3500, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [2, 4, 1, 0, 0, "ダミー"],
@@ -1865,7 +1865,7 @@ export const animationData_270 = {
   "c": {
     "name": "狂乱のユキ＆ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["270_c.png"],
       [62],
@@ -1933,7 +1933,7 @@ export const animationData_270 = {
       [1, 51, 45, 40, "f最初"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [81],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -2023,7 +2023,7 @@ export const animationData_270 = {
       [0, 0, 0, 22, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [53],
       [1, 9, -1, 0, 0],
@@ -2289,7 +2289,7 @@ export const animationData_270 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [53],
       [1, 9, -1, 0, 0],
@@ -2555,7 +2555,7 @@ export const animationData_270 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [173],
       [1, 4, 1, 0, 0],
@@ -4227,7 +4227,7 @@ export const animationData_270 = {
       [60, -3500, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [2, 4, 1, 0, 0, "ダミー"],
@@ -4349,7 +4349,7 @@ export const animationData_270 = {
   "s": {
     "name": "狂乱のネコ耳ユキ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["270_s.png"],
       [73],
@@ -4428,7 +4428,7 @@ export const animationData_270 = {
       [17, 238, 16, 16, "円　紫"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [94],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -4531,7 +4531,7 @@ export const animationData_270 = {
       [0, 0, 0, 22, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [61],
       [1, 9, -1, 0, 0, "\t"],
@@ -4836,7 +4836,7 @@ export const animationData_270 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [61],
       [1, 9, -1, 0, 0, "\t"],
@@ -5140,7 +5140,7 @@ export const animationData_270 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [203],
       [1, 4, 1, 0, 0],
@@ -7307,7 +7307,7 @@ export const animationData_270 = {
       [52, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [2, 4, 1, 0, 0, "\t"],

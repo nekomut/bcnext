@@ -5,7 +5,7 @@ export const animationData_459 = {
   "f": {
     "name": "ネコライダー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["459_f.png"],
       [50],
@@ -61,7 +61,7 @@ export const animationData_459 = {
       [2, 219, 21, 35, "049武器刺さる.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [101],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "■全体用ダミー<color=7>"],
@@ -171,7 +171,7 @@ export const animationData_459 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [46],
       [1, 5, -1, 0, 0, "■キャラ全体ダミー<color=7>"],
@@ -417,7 +417,7 @@ export const animationData_459 = {
       [0, -1, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [22],
       [3, 5, -1, 0, 0, "■上半身ダミー<color=7>"],
@@ -528,7 +528,7 @@ export const animationData_459 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [146],
       [1, 4, 1, 0, 0, "■キャラ全体ダミー<color=7>"],
@@ -1972,7 +1972,7 @@ export const animationData_459 = {
       [35, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [21],
       [63, 12, 1, 0, 0, "■EFダミー<color=7>"],
@@ -2043,7 +2043,7 @@ export const animationData_459 = {
   "c": {
     "name": "英霊ネコライダー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["459_c.png"],
       [67],
@@ -2116,7 +2116,7 @@ export const animationData_459 = {
       [214, 241, 14, 13, "066マスク　横.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [85],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "■全体用ダミー<color=7>"],
@@ -2210,7 +2210,7 @@ export const animationData_459 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [59],
       [1, 5, -1, 0, 0, "■キャラ全体ダミー<color=7>\t"],
@@ -2631,7 +2631,7 @@ export const animationData_459 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [52],
       [1, 5, -1, 0, 0, "■キャラ全体ダミー<color=7>"],
@@ -2970,7 +2970,7 @@ export const animationData_459 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [129],
       [1, 4, 1, 0, 0, "■キャラ全体ダミー<color=7>"],
@@ -3992,7 +3992,7 @@ export const animationData_459 = {
       [52, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [49],
       [53, 12, 1, 0, 0, "■EFダミー<color=7>"],

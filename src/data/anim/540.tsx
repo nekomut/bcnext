@@ -26,7 +26,7 @@ export const animationData_540 = {
       [208, 163, 29, 29, "LightColor"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [9],
       [-1, -1, 0, 0, 0, 0, 1, 1, 1790, 1790, 0, 1000, 0, "Dummy"],
@@ -44,7 +44,7 @@ export const animationData_540 = {
       [0, 0, 0, 0, 5, 0, "コリジョン2"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [1],
       [3, 5, -1, 0, 0, "MainBody"],
@@ -60,7 +60,7 @@ export const animationData_540 = {
       [24, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [1],
       [3, 5, -1, 0, 0, "MainBody"],
@@ -76,7 +76,7 @@ export const animationData_540 = {
       [24, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [36],
       [2, 2, 1, 0, 0, "Weapon<color=12>"],
@@ -319,7 +319,7 @@ export const animationData_540 = {
       [18, 100, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [3],
       [3, 11, 1, 0, 0, "MainBody"],
@@ -357,7 +357,7 @@ export const animationData_540 = {
       [143, 238, 17, 17, "LightColor"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [9],
       [-1, -1, 0, 0, 0, 0, 1, 1, 1790, 1790, 0, 1000, 0, "Dummy"],
@@ -375,7 +375,7 @@ export const animationData_540 = {
       [0, 0, 0, 0, 5, 0, "コリジョン2"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [1],
       [3, 5, -1, 0, 0, "MainBody"],
@@ -391,7 +391,7 @@ export const animationData_540 = {
       [24, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [1],
       [3, 5, -1, 0, 0, "MainBody"],
@@ -407,7 +407,7 @@ export const animationData_540 = {
       [24, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [37],
       [2, 2, 1, 0, 0, "Weapon<color=12>"],
@@ -659,7 +659,7 @@ export const animationData_540 = {
       [18, 100, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [3],
       [3, 11, 1, 0, 0, "MainBody"],

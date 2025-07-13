@@ -5,7 +5,7 @@ export const animationData_548 = {
   "f": {
     "name": "第４の使徒",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["548_f.png"],
       [65],
@@ -1602,7 +1602,7 @@ export const animationData_548 = {
   "c": {
     "name": "第４のネコ使徒",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["548_c.png"],
       [74],
@@ -3539,7 +3539,7 @@ export const animationData_548 = {
       [68, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [52],
       [56, 12, 1, 0, 0, "045奥足のかかと.png<color=2>"],

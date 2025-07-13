@@ -5,7 +5,7 @@ export const animationData_286 = {
   "f": {
     "name": "閃雷機兵レイ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["286_f.png"],
       [73],
@@ -84,7 +84,7 @@ export const animationData_286 = {
       [290, 102, 82, 86, "キックの足"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [108],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -201,7 +201,7 @@ export const animationData_286 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [58],
       [1, 9, -1, 0, 0],
@@ -476,7 +476,7 @@ export const animationData_286 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [57],
       [1, 9, -1, 0, 0],
@@ -788,7 +788,7 @@ export const animationData_286 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [223],
       [1, 9, 1, 0, 0],
@@ -3465,7 +3465,7 @@ export const animationData_286 = {
       [69, 200, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [3, 4, 1, 0, 0, "ダミー"],
@@ -3536,7 +3536,7 @@ export const animationData_286 = {
   "c": {
     "name": "閃雷機兵プラズマレイ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["286_c.png"],
       [85],
@@ -3627,7 +3627,7 @@ export const animationData_286 = {
       [423, 165, 89, 13, "黒い円"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [143],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -3779,7 +3779,7 @@ export const animationData_286 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [71],
       [1, 9, -1, 0, 0],
@@ -4109,7 +4109,7 @@ export const animationData_286 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [65],
       [1, 9, -1, 0, 0],
@@ -8437,7 +8437,7 @@ export const animationData_286 = {
       [100, 1500, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [3, 4, 1, 0, 0, "ダミー"],

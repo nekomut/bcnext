@@ -5,7 +5,7 @@ export const animationData_346 = {
   "f": {
     "name": "とどめき",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["346_f.png"],
       [96],
@@ -107,7 +107,7 @@ export const animationData_346 = {
       [93, 129, 5, 2, "通常"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [128],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー<color=8>"],
@@ -244,7 +244,7 @@ export const animationData_346 = {
       [0, 0, 0, 0, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [104],
       [1, 9, -1, 0, 0, "影　　スケール"],
@@ -1133,7 +1133,7 @@ export const animationData_346 = {
       [22, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [102],
       [1, 9, -1, 0, 0, "影　　スケールＸ"],
@@ -2015,7 +2015,7 @@ export const animationData_346 = {
       [22, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [156],
       [1, 9, 1, 0, 0, "影    スケールＸ"],
@@ -4410,7 +4410,7 @@ export const animationData_346 = {
       [34, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [3, 11, 1, 0, 0, "胴　　角度"],
@@ -4499,7 +4499,7 @@ export const animationData_346 = {
   "c": {
     "name": "とどめきCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["346_c.png"],
       [96],
@@ -4601,7 +4601,7 @@ export const animationData_346 = {
       [93, 129, 5, 2, "通常"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [128],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー<color=8>"],
@@ -4738,7 +4738,7 @@ export const animationData_346 = {
       [0, 0, 0, 0, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [104],
       [1, 9, -1, 0, 0, "影　　スケール"],
@@ -5627,7 +5627,7 @@ export const animationData_346 = {
       [22, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [102],
       [1, 9, -1, 0, 0, "影　　スケールＸ"],
@@ -6509,7 +6509,7 @@ export const animationData_346 = {
       [22, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [156],
       [1, 9, 1, 0, 0, "影    スケールＸ"],
@@ -8904,7 +8904,7 @@ export const animationData_346 = {
       [34, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [3, 11, 1, 0, 0, "胴　　角度"],

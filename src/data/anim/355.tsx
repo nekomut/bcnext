@@ -5,7 +5,7 @@ export const animationData_355 = {
   "f": {
     "name": "観測兵器ガリレオ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["355_f.png"],
       [91],
@@ -102,7 +102,7 @@ export const animationData_355 = {
       [206, 177, 32, 37, "土埃ちゃいろ追加"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [123],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -234,7 +234,7 @@ export const animationData_355 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [128],
       [2, 9, -1, 0, 0, "影"],
@@ -1400,7 +1400,7 @@ export const animationData_355 = {
       [52, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [82],
       [2, 9, -1, 0, 0, "影"],
@@ -2068,7 +2068,7 @@ export const animationData_355 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [176],
       [3, 5, 1, 0, 0, "車輪ダミー<color=7>"],
@@ -4775,7 +4775,7 @@ export const animationData_355 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [67],
       [3, 5, 1, 0, 0, "車輪ダミー<color=7>"],
@@ -4984,7 +4984,7 @@ export const animationData_355 = {
   "c": {
     "name": "時空基地アルマゲドン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["355_c.png"],
       [141],
@@ -5131,7 +5131,7 @@ export const animationData_355 = {
       [295, 191, 19, 17, "端パーツ　0"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [266],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -5406,7 +5406,7 @@ export const animationData_355 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [4, 5, -1, 0, 0],
@@ -5516,7 +5516,7 @@ export const animationData_355 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [12, 12, -1, 0, 0, "ダミー"],
@@ -5563,7 +5563,7 @@ export const animationData_355 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [437],
       [2, 4, 1, 0, 0, "\t"],
@@ -12098,7 +12098,7 @@ export const animationData_355 = {
       [0, 1, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [2, 4, 1, 0, 0],
@@ -12175,7 +12175,7 @@ export const animationData_355 = {
   "s": {
     "name": "超時空基地アルマゲドン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["355_s.png"],
       [158],
@@ -12339,7 +12339,7 @@ export const animationData_355 = {
       [349, 343, 48, 37]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [298],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -12646,7 +12646,7 @@ export const animationData_355 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [18],
       [4, 5, -1, 0, 0],
@@ -12747,7 +12747,7 @@ export const animationData_355 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [8],
       [12, 12, -1, 0, 0, "ダミー"],
@@ -12785,7 +12785,7 @@ export const animationData_355 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [475],
       [2, 4, 1, 0, 0],
@@ -19992,7 +19992,7 @@ export const animationData_355 = {
       [180, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [20],
       [2, 4, 1, 0, 0],

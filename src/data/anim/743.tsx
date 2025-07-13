@@ -5,7 +5,7 @@ export const animationData_743 = {
   "f": {
     "name": "744-1",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["743_f.png"],
       [1],
@@ -20,7 +20,7 @@ export const animationData_743 = {
   "c": {
     "name": "744-2",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["743_c.png"],
       [1],

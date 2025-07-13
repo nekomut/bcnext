@@ -5,7 +5,7 @@ export const animationData_199 = {
   "f": {
     "name": "ネコサーファー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["199_f.png"],
       [67],
@@ -78,7 +78,7 @@ export const animationData_199 = {
       [164, 79, 73, 43]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [36],
       [-1, -1, 0, 0, 0, 0, 42, 3, 1000, 1000, 0, 1000, 0, "d"],
@@ -123,7 +123,7 @@ export const animationData_199 = {
       [0, 0, 41, 4, 5, 0, "d"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [2, 12, -1, 0, 0, "ボディ<color=0>"],
@@ -259,7 +259,7 @@ export const animationData_199 = {
       [20, 100, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [2, 12, -1, 0, 0],
@@ -307,7 +307,7 @@ export const animationData_199 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [67],
       [2, 4, 1, 0, 0],
@@ -710,7 +710,7 @@ export const animationData_199 = {
       [27, -2, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [2, 4, 1, 0, 0],
@@ -772,7 +772,7 @@ export const animationData_199 = {
   "c": {
     "name": "ネコ漂流",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["199_c.png"],
       [63],
@@ -841,7 +841,7 @@ export const animationData_199 = {
       [54, 9, 61, 15]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [40],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -890,7 +890,7 @@ export const animationData_199 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [2, 5, -1, 0, 0],
@@ -1063,7 +1063,7 @@ export const animationData_199 = {
       [32, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [2, 5, -1, 0, 0],
@@ -1220,7 +1220,7 @@ export const animationData_199 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [89],
       [2, 2, 1, 0, 0, "丸太"],
@@ -2002,7 +2002,7 @@ export const animationData_199 = {
       [14, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [2, 5, 1, 0, 0, "丸太"],
@@ -2127,7 +2127,7 @@ export const animationData_199 = {
   "s": {
     "name": "ネコ漂流記",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["199_s.png"],
       [125],
@@ -2258,7 +2258,7 @@ export const animationData_199 = {
       [348, 157, 12, 89, "竿2"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [93],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -2360,7 +2360,7 @@ export const animationData_199 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [60],
       [3, 5, -1, 0, 0, "イカダ親ダミー"],
@@ -2704,7 +2704,7 @@ export const animationData_199 = {
       [50, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [57],
       [3, 5, -1, 0, 0, "イカダ親ダミー"],
@@ -3035,7 +3035,7 @@ export const animationData_199 = {
       [50, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [162],
       [2, 4, 1, 0, 0, "影"],
@@ -4524,7 +4524,7 @@ export const animationData_199 = {
       [41, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [3, 4, 1, 0, 0, "イカダ親ダミー<color=0>"],

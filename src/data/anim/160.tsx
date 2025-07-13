@@ -5,7 +5,7 @@ export const animationData_160 = {
   "f": {
     "name": "ユーリンチー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["160_f.png"],
       [21],
@@ -32,7 +32,7 @@ export const animationData_160 = {
       [308, 122, 103, 94, "hanetaba"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [35],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -76,7 +76,7 @@ export const animationData_160 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [1, 8, -1, 0, 0, "影"],
@@ -277,7 +277,7 @@ export const animationData_160 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [1, 8, -1, 0, 0, "影"],
@@ -478,7 +478,7 @@ export const animationData_160 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [95],
       [1, 4, 1, 0, 0, "影"],
@@ -1106,7 +1106,7 @@ export const animationData_160 = {
       [50, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [1, 8, -1, 0, 0, "影"],
@@ -1138,7 +1138,7 @@ export const animationData_160 = {
   "c": {
     "name": "転生霊鳥ユーリンチー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["160_c.png"],
       [25],
@@ -1169,7 +1169,7 @@ export const animationData_160 = {
       [382, 79, 90, 62, "顔上羽根"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [47],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1225,7 +1225,7 @@ export const animationData_160 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [76],
       [1, 8, -1, 0, 0, "影"],
@@ -1690,7 +1690,7 @@ export const animationData_160 = {
       [36, 1000, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [77],
       [1, 8, -1, 0, 0, "影"],
@@ -2167,7 +2167,7 @@ export const animationData_160 = {
       [36, 1000, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [137],
       [1, 4, 1, 0, 0, "影"],
@@ -3151,7 +3151,7 @@ export const animationData_160 = {
       [64, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [1, 8, -1, 0, 0, "ダミー"],
@@ -3219,7 +3219,7 @@ export const animationData_160 = {
   "s": {
     "name": "ゲキリンチー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["160_s.png"],
       [29],
@@ -3254,7 +3254,7 @@ export const animationData_160 = {
       [238, 222, 30, 28, "輪"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [55],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -3318,7 +3318,7 @@ export const animationData_160 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [76],
       [1, 8, -1, 0, 0, "影"],
@@ -3765,7 +3765,7 @@ export const animationData_160 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [75],
       [1, 8, -1, 0, 0, "影"],
@@ -4213,7 +4213,7 @@ export const animationData_160 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [150],
       [1, 4, 1, 0, 0, "影"],
@@ -5296,7 +5296,7 @@ export const animationData_160 = {
       [53, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [37],
       [1, 8, 1, 0, 0, "ダミー"],

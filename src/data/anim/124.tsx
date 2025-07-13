@@ -5,7 +5,7 @@ export const animationData_124 = {
   "f": {
     "name": "伊達政宗",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["908_f.png"],
       [64],
@@ -75,7 +75,7 @@ export const animationData_124 = {
       [447, 128, 15, 28, "泥３"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [80],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -164,7 +164,7 @@ export const animationData_124 = {
       [0, 0, -6, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [49],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -533,7 +533,7 @@ export const animationData_124 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -803,7 +803,7 @@ export const animationData_124 = {
       [5, 1000, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [145],
       [1, 9, 1, 0, 0],
@@ -2455,7 +2455,7 @@ export const animationData_124 = {
       [20, 8, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [1, 9, 1, 0, 0],
@@ -2583,7 +2583,7 @@ export const animationData_124 = {
   "c": {
     "name": "武神・伊達政宗",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["124_c.png"],
       [64],
@@ -2653,7 +2653,7 @@ export const animationData_124 = {
       [462, 128, 15, 28, "泥３"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [86],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -2748,7 +2748,7 @@ export const animationData_124 = {
       [0, 0, -6, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [68],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -3190,7 +3190,7 @@ export const animationData_124 = {
       [0, 700, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [73],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -3582,7 +3582,7 @@ export const animationData_124 = {
       [0, 700, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [173],
       [1, 9, 1, 0, 0],
@@ -5573,7 +5573,7 @@ export const animationData_124 = {
       [90, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [56],
       [1, 9, 1, 0, 0],
@@ -5749,7 +5749,7 @@ export const animationData_124 = {
   "s": {
     "name": "邪眼竜の武神・伊達政宗",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["124_s.png"],
       [82],
@@ -5837,7 +5837,7 @@ export const animationData_124 = {
       [482, 181, 27, 24]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [184],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -6030,7 +6030,7 @@ export const animationData_124 = {
       [0, 0, -6, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [232],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -7393,7 +7393,7 @@ export const animationData_124 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [166],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -8268,7 +8268,7 @@ export const animationData_124 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [305],
       [1, 9, 1, 0, 0],
@@ -12704,7 +12704,7 @@ export const animationData_124 = {
       [65, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [74],
       [1, 9, 1, 0, 0],

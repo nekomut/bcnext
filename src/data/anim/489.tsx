@@ -5,7 +5,7 @@ export const animationData_489 = {
   "f": {
     "name": "ちびミサト",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["702_f.png"],
       [88],
@@ -99,7 +99,7 @@ export const animationData_489 = {
       [298, 174, 17, 12, "087ネコの顔べた.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [69],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -177,7 +177,7 @@ export const animationData_489 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [61],
       [4, 5, -1, 0, 0, "000.png"],
@@ -559,7 +559,7 @@ export const animationData_489 = {
       [33, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [32],
       [5, 11, -1, 0, 0, "020左腕_おろし.png"],
@@ -763,7 +763,7 @@ export const animationData_489 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [93],
       [2, 4, 1, 0, 0, "051ネコ　胴体.png<color=4>"],
@@ -1531,7 +1531,7 @@ export const animationData_489 = {
       [65, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [57],
       [4, 4, 1, 0, 0, "037手前向きもも.png"],
@@ -1710,7 +1710,7 @@ export const animationData_489 = {
   "c": {
     "name": "ヴンダー艦長のちびミサト",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["702_c.png"],
       [100],
@@ -1816,7 +1816,7 @@ export const animationData_489 = {
       [176, 74, 12, 40, "099髪_右サイド.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [69],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -1894,7 +1894,7 @@ export const animationData_489 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [64],
       [4, 5, -1, 0, 0, "000.png"],
@@ -2304,7 +2304,7 @@ export const animationData_489 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [22],
       [5, 11, -1, 0, 0, "020左腕_おろし.png"],
@@ -2415,7 +2415,7 @@ export const animationData_489 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [93],
       [2, 4, 1, 0, 0, "051ネコ　胴体.png<color=4>"],
@@ -3109,7 +3109,7 @@ export const animationData_489 = {
       [79, -3, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [50],
       [4, 4, 1, 0, 0, "037手前向きもも.png"],

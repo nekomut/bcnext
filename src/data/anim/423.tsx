@@ -5,7 +5,7 @@ export const animationData_423 = {
   "f": {
     "name": "松賀咲＆ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["423_f.png"],
       [83],
@@ -94,7 +94,7 @@ export const animationData_423 = {
       [221, 112, 22, 17, "082手前.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [69],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png<color=16>"],
@@ -172,7 +172,7 @@ export const animationData_423 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=16>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [107],
       [6, 4, -1, 0, 0, "000.png 咲ボディ<color=7>"],
@@ -702,7 +702,7 @@ export const animationData_423 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [6, 11, -1, 0, 0, "000.png 咲ボディ<color=7>"],
@@ -865,7 +865,7 @@ export const animationData_423 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [108],
       [5, 4, 1, 0, 0, "058体.png<color=7>"],
@@ -1879,7 +1879,7 @@ export const animationData_423 = {
       [73, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [52],
       [4, 4, 1, 0, 0, "001影.png 咲<color=16>"],
@@ -2043,7 +2043,7 @@ export const animationData_423 = {
   "c": {
     "name": "松賀咲＆ネコＣＣ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["423_c.png"],
       [83],
@@ -2132,7 +2132,7 @@ export const animationData_423 = {
       [223, 48, 22, 17, "082手前　手2.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [69],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png<color=16>"],
@@ -2210,7 +2210,7 @@ export const animationData_423 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=16>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [105],
       [6, 4, -1, 0, 0, "000.png 咲ボディ<color=7>"],
@@ -2719,7 +2719,7 @@ export const animationData_423 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [6, 11, -1, 0, 0, "000.png 咲ボディ<color=7>"],
@@ -2888,7 +2888,7 @@ export const animationData_423 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [114],
       [5, 4, 1, 0, 0, "058体.png<color=7>"],
@@ -3899,7 +3899,7 @@ export const animationData_423 = {
       [73, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [52],
       [4, 4, 1, 0, 0, "001影.png 咲<color=16>"],

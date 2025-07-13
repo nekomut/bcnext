@@ -5,7 +5,7 @@ export const animationData_339 = {
   "f": {
     "name": "340_1",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["339_f.png"],
       [10],
@@ -21,7 +21,7 @@ export const animationData_339 = {
       [213, 112, 40, 111]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [7],
       [-1, -1, 0, 0, -325, 246, 65, 7, 1000, 1000, 0, 1000, 0, "土"],
@@ -37,7 +37,7 @@ export const animationData_339 = {
       [0, 0, 64, 7, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [2, 12, -1, 0, 0, "土"],
@@ -45,7 +45,7 @@ export const animationData_339 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [2, 12, -1, 0, 0, "土"],
@@ -53,7 +53,7 @@ export const animationData_339 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [2, 12, -1, 0, 0, "土"],
@@ -61,7 +61,7 @@ export const animationData_339 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [2, 12, -1, 0, 0, "土"],

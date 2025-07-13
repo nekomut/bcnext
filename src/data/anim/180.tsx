@@ -5,7 +5,7 @@ export const animationData_180 = {
   "f": {
     "name": "謎の少女ユキ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["180_f.png"],
       [55],
@@ -66,7 +66,7 @@ export const animationData_180 = {
       [218, 95, 27, 13]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [40],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -115,7 +115,7 @@ export const animationData_180 = {
       [0, 0, -8, 17, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [1, 9, -1, 0, 0],
@@ -249,7 +249,7 @@ export const animationData_180 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [1, 9, -1, 0, 0],
@@ -383,7 +383,7 @@ export const animationData_180 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [82],
       [1, 4, 1, 0, 0],
@@ -1425,7 +1425,7 @@ export const animationData_180 = {
       [51, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [2, 4, -1, 0, 0, "ダミー"],
@@ -1469,7 +1469,7 @@ export const animationData_180 = {
   "c": {
     "name": "謎の少女ユキ＆ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["180_c.png"],
       [62],
@@ -1537,7 +1537,7 @@ export const animationData_180 = {
       [123, 167, 28, 22, "f最初"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [53],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1599,7 +1599,7 @@ export const animationData_180 = {
       [0, 0, 0, 22, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [1, 9, -1, 0, 0],
@@ -1787,7 +1787,7 @@ export const animationData_180 = {
       [80, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [1, 9, -1, 0, 0],
@@ -1975,7 +1975,7 @@ export const animationData_180 = {
       [80, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [130],
       [1, 4, 1, 0, 0],
@@ -3383,7 +3383,7 @@ export const animationData_180 = {
       [100, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [2, 4, -1, 0, 0, "ダミー"],
@@ -3487,7 +3487,7 @@ export const animationData_180 = {
   "s": {
     "name": "謎のネコ耳少女ユキ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["180_s.png"],
       [72],
@@ -3565,7 +3565,7 @@ export const animationData_180 = {
       [77, 42, 35, 68, "EF分解2"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [71],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -3645,7 +3645,7 @@ export const animationData_180 = {
       [0, 0, 0, 22, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [46],
       [1, 9, -1, 0, 0, "\t"],
@@ -3887,7 +3887,7 @@ export const animationData_180 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [1, 9, -1, 0, 0, "\t"],
@@ -4125,7 +4125,7 @@ export const animationData_180 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [180],
       [1, 4, 1, 0, 0, "\t"],
@@ -6094,7 +6094,7 @@ export const animationData_180 = {
       [60, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [2, 4, 1, 0, 0, "\t"],

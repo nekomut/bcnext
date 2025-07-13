@@ -5,7 +5,7 @@ export const animationData_085 = {
   "f": {
     "name": "竜騎士バルス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["082_f.png"],
       [41],
@@ -52,7 +52,7 @@ export const animationData_085 = {
       [371, 2, 73, 63, "E3"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [51],
       [-1, -1, 0, 0, 509, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -112,7 +112,7 @@ export const animationData_085 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [51],
       [1, 8, -1, 0, 0],
@@ -512,7 +512,7 @@ export const animationData_085 = {
       [50, 1000, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [51],
       [1, 8, -1, 0, 0],
@@ -912,7 +912,7 @@ export const animationData_085 = {
       [50, 1000, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [77],
       [1, 4, 1, 0, 0],
@@ -1746,7 +1746,7 @@ export const animationData_085 = {
       [0, 40, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [2, 11, -1, 0, 0],
@@ -1820,7 +1820,7 @@ export const animationData_085 = {
   "c": {
     "name": "竜騎士王バルス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["082_c.png"],
       [48],
@@ -1874,7 +1874,7 @@ export const animationData_085 = {
       [289, 123, 86, 63, "光"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [56],
       [-1, -1, 0, 0, 576, -5, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1939,7 +1939,7 @@ export const animationData_085 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [52],
       [1, 8, -1, 0, 0],
@@ -2341,7 +2341,7 @@ export const animationData_085 = {
       [50, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [52],
       [1, 8, -1, 0, 0],
@@ -2743,7 +2743,7 @@ export const animationData_085 = {
       [50, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [90],
       [1, 4, 1, 0, 0],
@@ -3633,7 +3633,7 @@ export const animationData_085 = {
       [52, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [2, 11, -1, 0, 0],
@@ -3710,7 +3710,7 @@ export const animationData_085 = {
   "s": {
     "name": "竜騎士皇帝バルス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["085_s.png"],
       [55],
@@ -3771,7 +3771,7 @@ export const animationData_085 = {
       [179, 183, 26, 67, "刃　発光用"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [74],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -3854,7 +3854,7 @@ export const animationData_085 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [71],
       [1, 8, -1, 0, 0],
@@ -4345,7 +4345,7 @@ export const animationData_085 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [71],
       [1, 8, -1, 0, 0],
@@ -4836,7 +4836,7 @@ export const animationData_085 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [133],
       [1, 4, 1, 0, 0],
@@ -6017,7 +6017,7 @@ export const animationData_085 = {
       [55, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [2, 4, 1, 0, 0],

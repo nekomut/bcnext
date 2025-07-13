@@ -5,7 +5,7 @@ export const animationData_394 = {
   "f": {
     "name": "星井スバル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["394_c.png"],
       [71],
@@ -82,7 +82,7 @@ export const animationData_394 = {
       [457, 203, 15, 15, "追加ef"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [89],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -180,7 +180,7 @@ export const animationData_394 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [55],
       [3, 11, -1, 0, 0, "cダミー<color=7>"],
@@ -563,7 +563,7 @@ export const animationData_394 = {
       [15, 700, 3, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [4, 5, -1, 0, 0, "胴体<color=7>"],
@@ -687,7 +687,7 @@ export const animationData_394 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [113],
       [1, 4, 1, 0, 0, "動画用ダミー(※数値入れない！)<color=9>"],
@@ -1379,7 +1379,7 @@ export const animationData_394 = {
       [50, 25, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [4, 4, 1, 0, 0, "胴体"],
@@ -1510,7 +1510,7 @@ export const animationData_394 = {
   "c": {
     "name": "星井スバルCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["394_c.png"],
       [71],
@@ -1587,7 +1587,7 @@ export const animationData_394 = {
       [457, 203, 15, 15, "追加ef"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [89],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1685,7 +1685,7 @@ export const animationData_394 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [55],
       [3, 11, -1, 0, 0, "cダミー<color=7>"],
@@ -2068,7 +2068,7 @@ export const animationData_394 = {
       [15, 700, 3, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [4, 5, -1, 0, 0, "胴体<color=7>"],
@@ -2192,7 +2192,7 @@ export const animationData_394 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [113],
       [1, 4, 1, 0, 0, "動画用ダミー(※数値入れない！)<color=9>"],
@@ -2884,7 +2884,7 @@ export const animationData_394 = {
       [50, 25, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [4, 4, 1, 0, 0, "胴体"],
@@ -3015,7 +3015,7 @@ export const animationData_394 = {
   "s": {
     "name": "暗黒スバルCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["394_s.png"],
       [67],
@@ -3088,7 +3088,7 @@ export const animationData_394 = {
       [250, 134, 15, 15, "追加エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [84],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -3181,7 +3181,7 @@ export const animationData_394 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [53],
       [3, 11, -1, 0, 0, "cダミー<color=7>"],
@@ -3550,7 +3550,7 @@ export const animationData_394 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [4, 5, -1, 0, 0, "胴体<color=7>"],
@@ -3671,7 +3671,7 @@ export const animationData_394 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [127],
       [1, 4, 1, 0, 0, "動画用ダミー(※数値入れない！)<color=9>"],
@@ -4498,7 +4498,7 @@ export const animationData_394 = {
       [71, 2, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [4, 4, 1, 0, 0, "胴体"],

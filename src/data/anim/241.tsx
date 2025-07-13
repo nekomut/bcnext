@@ -5,7 +5,7 @@ export const animationData_241 = {
   "f": {
     "name": "雪だるまのスノーカイ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["241_f.png"],
       [64],
@@ -75,7 +75,7 @@ export const animationData_241 = {
       [460, 221, 51, 26, "雪だるま手棒奥"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [83],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -167,7 +167,7 @@ export const animationData_241 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [112],
       [2, 4, -1, 0, 0, "影"],
@@ -942,7 +942,7 @@ export const animationData_241 = {
       [30, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [107],
       [2, 8, -1, 0, 0, "影"],
@@ -1691,7 +1691,7 @@ export const animationData_241 = {
       [30, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [104],
       [2, 4, 1, 0, 0, "影"],
@@ -2692,7 +2692,7 @@ export const animationData_241 = {
       [50, 0, 2, -3]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [2, 8, 1, 0, 0, "影"],
@@ -2841,7 +2841,7 @@ export const animationData_241 = {
   "c": {
     "name": "雪だるまのスノーカイμ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["241_c.png"],
       [70],
@@ -2917,7 +2917,7 @@ export const animationData_241 = {
       [423, 180, 88, 64, "アイス"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [108],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -3034,7 +3034,7 @@ export const animationData_241 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [130],
       [2, 4, -1, 0, 0, "影"],
@@ -3892,7 +3892,7 @@ export const animationData_241 = {
       [30, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [125],
       [2, 8, -1, 0, 0, "影"],
@@ -4726,7 +4726,7 @@ export const animationData_241 = {
       [30, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [142],
       [2, 4, 1, 0, 0, "影"],
@@ -6086,7 +6086,7 @@ export const animationData_241 = {
       [65, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [58],
       [2, 8, 1, 0, 0, "影"],

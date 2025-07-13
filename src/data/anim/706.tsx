@@ -5,7 +5,7 @@ export const animationData_706 = {
   "s": {
     "name": "ネコウォッシュ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["706_s.png"],
       [26],

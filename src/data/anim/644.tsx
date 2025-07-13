@@ -5,7 +5,7 @@ export const animationData_644 = {
   "f": {
     "name": "白い恋人メカ子",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["644_f.png"],
       [107],
@@ -4563,7 +4563,7 @@ export const animationData_644 = {
   "c": {
     "name": "ビタースイートメカ子",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["644_c.png"],
       [107],
@@ -8786,7 +8786,7 @@ export const animationData_644 = {
   "s": {
     "name": "LOVEミントメカ子",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["644_s.png"],
       [117],

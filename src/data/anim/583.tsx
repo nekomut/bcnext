@@ -5,7 +5,7 @@ export const animationData_583 = {
   "f": {
     "name": "初音ミク マジカルミライ2020東京",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["999_f.png"],
       [155],
@@ -8140,7 +8140,7 @@ export const animationData_583 = {
   "c": {
     "name": "初音ミクCC マジカルミライ2020東京",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["583_c.png"],
       [155],

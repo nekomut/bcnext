@@ -5,7 +5,7 @@ export const animationData_119 = {
   "f": {
     "name": "ワイバーン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["119_f.png"],
       [28],
@@ -39,7 +39,7 @@ export const animationData_119 = {
       [62, 199, 87, 44, "翼前02-3"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [30],
       [-1, -1, 0, 0, 531, 435, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -78,7 +78,7 @@ export const animationData_119 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [49],
       [2, 9, -1, 0, 0, "影"],
@@ -451,7 +451,7 @@ export const animationData_119 = {
       [42, 500, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [2, 9, -1, 0, 0, "影"],
@@ -807,7 +807,7 @@ export const animationData_119 = {
       [42, 500, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [2, 9, 1, 0, 0, "影"],
@@ -1783,7 +1783,7 @@ export const animationData_119 = {
       [120, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [4, 11, -1, 0, 0, "腰"],
@@ -1836,7 +1836,7 @@ export const animationData_119 = {
   "c": {
     "name": "ニャイバーン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["119_c.png"],
       [31],
@@ -1873,7 +1873,7 @@ export const animationData_119 = {
       [481, 147, 15, 19, "にゃんこ足"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [35],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1917,7 +1917,7 @@ export const animationData_119 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [61],
       [2, 9, -1, 0, 0, "影"],
@@ -2388,7 +2388,7 @@ export const animationData_119 = {
       [42, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [59],
       [2, 9, -1, 0, 0, "影"],
@@ -2842,7 +2842,7 @@ export const animationData_119 = {
       [42, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [66],
       [2, 9, 1, 0, 0, "影"],
@@ -4051,7 +4051,7 @@ export const animationData_119 = {
       [65, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [4, 11, -1, 0, 0, "腰"],
@@ -4125,7 +4125,7 @@ export const animationData_119 = {
   "s": {
     "name": "ニャイバーン＆アレク",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["119_s.png"],
       [53],

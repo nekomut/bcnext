@@ -5,7 +5,7 @@ export const animationData_457 = {
   "f": {
     "name": "ネコ士郎",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["457_f.png"],
       [41],
@@ -52,7 +52,7 @@ export const animationData_457 = {
       [2, 75, 68, 74, "040ヒットエフェクト.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [74],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "■ダミー<color=7>"],
@@ -135,7 +135,7 @@ export const animationData_457 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [15],
       [3, 5, -1, 0, 0, "■キャラダミー<color=7>"],
@@ -228,7 +228,7 @@ export const animationData_457 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [10],
       [3, 5, -1, 0, 0, "■キャラダミー<color=7>"],
@@ -279,7 +279,7 @@ export const animationData_457 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [102],
       [2, 4, 1, 0, 0, "001影.png"],
@@ -924,7 +924,7 @@ export const animationData_457 = {
       [0, 1300, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [21],
       [28, 12, 1, 0, 0, "■攻撃01キャラダミー<color=7>"],
@@ -995,7 +995,7 @@ export const animationData_457 = {
   "c": {
     "name": "魔術師見習いネコ士郎",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["457_c.png"],
       [44],
@@ -1045,7 +1045,7 @@ export const animationData_457 = {
       [51, 221, 47, 20, "043武器　硬化.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [83],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "■ダミー<color=7>"],
@@ -1137,7 +1137,7 @@ export const animationData_457 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [19],
       [3, 5, -1, 0, 0, "■キャラダミー<color=7>"],
@@ -1250,7 +1250,7 @@ export const animationData_457 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [14],
       [3, 5, -1, 0, 0, "■キャラダミー<color=7>"],
@@ -1319,7 +1319,7 @@ export const animationData_457 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [111],
       [2, 4, 1, 0, 0, "001影.png"],
@@ -2025,7 +2025,7 @@ export const animationData_457 = {
       [0, 1300, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [25],
       [3, 5, 1, 0, 0, "■キャラダミー<color=7>"],

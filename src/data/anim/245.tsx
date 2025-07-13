@@ -5,7 +5,7 @@ export const animationData_245 = {
   "f": {
     "name": "ちびキモネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["245_f.png"],
       [12],
@@ -23,7 +23,7 @@ export const animationData_245 = {
       [146, 106, 56, 4]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0],
@@ -35,7 +35,7 @@ export const animationData_245 = {
       [0, 0, 2, 1, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [2, 2, -1, 0, 0, "体"],
@@ -49,7 +49,7 @@ export const animationData_245 = {
       [24, 1, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [0, 12, -1, 0, 0, "ダミー"],
@@ -57,7 +57,7 @@ export const animationData_245 = {
       [0, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [2, 2, 1, 0, 0, "ダミー"],
@@ -83,7 +83,7 @@ export const animationData_245 = {
       [15, 11, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [2, 2, 1, 0, 0, "体"],
@@ -103,7 +103,7 @@ export const animationData_245 = {
   "c": {
     "name": "ちび美脚ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["245_c.png"],
       [13],
@@ -122,7 +122,7 @@ export const animationData_245 = {
       [186, 235, 60, 4]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 1, 1, 1250, 1250, 0, 1000, 0, "ダミー"],
@@ -134,7 +134,7 @@ export const animationData_245 = {
       [0, 0, 0, 2, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [2, 2, -1, 0, 0, "体"],
@@ -148,7 +148,7 @@ export const animationData_245 = {
       [24, 1, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [0, 12, -1, 0, 0, "ダミー"],
@@ -159,7 +159,7 @@ export const animationData_245 = {
       [0, -1, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [2, 2, 1, 0, 0, "ダミー"],
@@ -188,7 +188,7 @@ export const animationData_245 = {
       [11, -9, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [2, 2, 1, 0, 0, "体"],
@@ -208,7 +208,7 @@ export const animationData_245 = {
   "s": {
     "name": "ちびムキあしネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["245_s.png"],
       [24],
@@ -238,7 +238,7 @@ export const animationData_245 = {
       [401, 119, 41, 75, "攻撃3右足2"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [15],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -262,7 +262,7 @@ export const animationData_245 = {
       [0, 0, 0, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [2, 2, -1, 0, 0, "基本：体"],
@@ -319,7 +319,7 @@ export const animationData_245 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [2, 2, -1, 0, 0, "基本：体"],
@@ -339,7 +339,7 @@ export const animationData_245 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [2, 2, 1, 0, 0, "基本：体"],
@@ -418,7 +418,7 @@ export const animationData_245 = {
       [8, -1, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [2, 12, 1, 0, 0, "基本：体"],

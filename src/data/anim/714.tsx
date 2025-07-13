@@ -5006,7 +5006,7 @@ export const animationData_714 = {
   "c": {
     "name": "大海原のダイバーカンナ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["714_c.png"],
       [167],

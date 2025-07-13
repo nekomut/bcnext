@@ -5,7 +5,7 @@ export const animationData_101 = {
   "f": {
     "name": "弱酸性エル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["900_f.png"],
       [36],
@@ -47,7 +47,7 @@ export const animationData_101 = {
       [373, 1, 52, 44, "血１"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [30],
       [-1, -1, 0, 0, 602, -1, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -86,7 +86,7 @@ export const animationData_101 = {
       [0, 0, 0, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [1, 8, -1, 0, 0, "ダミー"],
@@ -326,7 +326,7 @@ export const animationData_101 = {
       [20, 80, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [3, 11, -1, 0, 0, "ダミー"],
@@ -363,7 +363,7 @@ export const animationData_101 = {
       [65, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [1, 4, 1, 0, 0, "ダミー"],
@@ -648,7 +648,7 @@ export const animationData_101 = {
       [39, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [2, 11, -1, 0, 0, "ダミー"],
@@ -725,7 +725,7 @@ export const animationData_101 = {
   "c": {
     "name": "弱酸性エルCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["900_c.png"],
       [36],
@@ -767,7 +767,7 @@ export const animationData_101 = {
       [373, 1, 52, 44, "血１"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [30],
       [-1, -1, 0, 0, 543, 424, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -806,7 +806,7 @@ export const animationData_101 = {
       [0, 0, 0, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [1, 8, -1, 0, 0, "ダミー"],
@@ -1049,7 +1049,7 @@ export const animationData_101 = {
       [0, -1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [3, 11, -1, 0, 0, "ダミー"],
@@ -1089,7 +1089,7 @@ export const animationData_101 = {
       [65, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [1, 4, 1, 0, 0, "ダミー"],
@@ -1441,7 +1441,7 @@ export const animationData_101 = {
       [39, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [2, 11, -1, 0, 0, "ダミー"],

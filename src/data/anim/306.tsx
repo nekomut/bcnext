@@ -5,7 +5,7 @@ export const animationData_306 = {
   "f": {
     "name": "飛空襲撃ボンバーズ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["306_f.png"],
       [60],
@@ -71,7 +71,7 @@ export const animationData_306 = {
       [468, 108, 23, 22, "ハンドルうしろ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [77],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー"],
@@ -157,7 +157,7 @@ export const animationData_306 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [61],
       [2, 4, -1, 0, 0, "影"],
@@ -1041,7 +1041,7 @@ export const animationData_306 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [59],
       [2, 9, -1, 0, 0, "影"],
@@ -1913,7 +1913,7 @@ export const animationData_306 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [125],
       [2, 4, 1, 0, 0, "影"],
@@ -4561,7 +4561,7 @@ export const animationData_306 = {
       [61, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [3, 4, 1, 0, 0, "座席"],
@@ -4704,7 +4704,7 @@ export const animationData_306 = {
   "c": {
     "name": "飛行戦艦ボルボンバー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["306_c.png"],
       [78],
@@ -4788,7 +4788,7 @@ export const animationData_306 = {
       [496, 137, 11, 16, "クイズ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [157],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -4954,7 +4954,7 @@ export const animationData_306 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [76],
       [3, 5, -1, 0, 0, "キャラダミー<color=7>"],
@@ -5455,7 +5455,7 @@ export const animationData_306 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [119],
       [3, 5, -1, 0, 0, "キャラダミー<color=7>"],
@@ -6342,7 +6342,7 @@ export const animationData_306 = {
       [120, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [201],
       [2, 4, 1, 0, 0, "影"],
@@ -8710,7 +8710,7 @@ export const animationData_306 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [72],
       [4, 4, 1, 0, 0, "機体01"],
@@ -8934,7 +8934,7 @@ export const animationData_306 = {
   "s": {
     "name": "超飛行戦艦ボルボンバー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["306_s.png"],
       [96],
@@ -9036,7 +9036,7 @@ export const animationData_306 = {
       [414, 58, 49, 163]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [153],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -9198,7 +9198,7 @@ export const animationData_306 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [93],
       [3, 5, -1, 0, 0, "キャラダミー<color=7>"],
@@ -9857,7 +9857,7 @@ export const animationData_306 = {
       [14, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [130],
       [3, 5, -1, 0, 0, "キャラダミー<color=7>"],
@@ -13450,7 +13450,7 @@ export const animationData_306 = {
       [120, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [82],
       [4, 4, 1, 0, 0, "機体01"],

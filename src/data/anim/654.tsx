@@ -450,7 +450,7 @@ export const animationData_654 = {
       [30, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [4, 12, 1, 0, 0],

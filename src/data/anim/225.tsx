@@ -5,7 +5,7 @@ export const animationData_225 = {
   "f": {
     "name": "ハイ・ドゥ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["225_f.png"],
       [69],
@@ -80,7 +80,7 @@ export const animationData_225 = {
       [121, 183, 39, 22, "sm5"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [27],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "dm"],
@@ -116,7 +116,7 @@ export const animationData_225 = {
       [0, 0, 0, 1, 5, 0, "dm"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [4, 2, -1, 0, 0, "dm"],
@@ -141,7 +141,7 @@ export const animationData_225 = {
       [7, 11, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [4, 2, -1, 0, 0, "dm"],
@@ -166,7 +166,7 @@ export const animationData_225 = {
       [7, 11, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [70],
       [4, 2, 1, 0, 0, "dm"],
@@ -1697,7 +1697,7 @@ export const animationData_225 = {
       [46, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [2, 11, 1, 0, 0, "ヘリ本体"],
@@ -1714,7 +1714,7 @@ export const animationData_225 = {
   "c": {
     "name": "ハイ・ドゥCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["225_c.png"],
       [69],
@@ -1789,7 +1789,7 @@ export const animationData_225 = {
       [121, 183, 39, 22, "sm5"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [27],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "dm"],
@@ -1825,7 +1825,7 @@ export const animationData_225 = {
       [0, 0, 0, 1, 5, 0, "dm"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [4, 2, -1, 0, 0, "dm"],
@@ -1850,7 +1850,7 @@ export const animationData_225 = {
       [7, 11, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [4, 2, -1, 0, 0, "dm"],
@@ -1875,7 +1875,7 @@ export const animationData_225 = {
       [7, 11, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [70],
       [4, 2, 1, 0, 0],
@@ -3406,7 +3406,7 @@ export const animationData_225 = {
       [46, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [2, 11, 1, 0, 0, "ヘリ本体"],
@@ -3423,7 +3423,7 @@ export const animationData_225 = {
   "s": {
     "name": "ハイ・ドゥ MK III CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["225_s.png"],
       [69],
@@ -3534,7 +3534,7 @@ export const animationData_225 = {
       [0, 0, 0, 1, 5, 0, "dm"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [4, 2, -1, 0, 0, "dm"],
@@ -3559,7 +3559,7 @@ export const animationData_225 = {
       [7, 11, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [4, 2, -1, 0, 0, "dm"],
@@ -5109,7 +5109,7 @@ export const animationData_225 = {
       [46, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [2, 11, 1, 0, 0, "ヘリ本体"],

@@ -5,7 +5,7 @@ export const animationData_624 = {
   "f": {
     "name": "熱血硬派くにおくん",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["624_f.png"],
       [10],
@@ -203,7 +203,7 @@ export const animationData_624 = {
   "c": {
     "name": "ドッジボール部くにおくん",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["624_c.png"],
       [19],

@@ -5,7 +5,7 @@ export const animationData_148 = {
   "f": {
     "name": "ねこロッカー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["148_f.png"],
       [18],
@@ -29,7 +29,7 @@ export const animationData_148 = {
       [213, 217, 36, 26, "歩行8"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [8],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -46,7 +46,7 @@ export const animationData_148 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [1, 9, -1, 0, 0, "影"],
@@ -124,7 +124,7 @@ export const animationData_148 = {
       [20, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [2, 12, -1, 0, 0, "身体"],
@@ -138,7 +138,7 @@ export const animationData_148 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [2, 12, 1, 0, 0, "身体"],
@@ -156,7 +156,7 @@ export const animationData_148 = {
       [0, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [2, 12, -1, 0, 0, "身体"],
@@ -179,7 +179,7 @@ export const animationData_148 = {
   "c": {
     "name": "ねこアーティスト",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["148_c.png"],
       [26],
@@ -211,7 +211,7 @@ export const animationData_148 = {
       [267, 209, 36, 26, "歩行8"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [12],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -232,7 +232,7 @@ export const animationData_148 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [1, 9, -1, 0, 0, "影"],
@@ -341,7 +341,7 @@ export const animationData_148 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [2, 12, -1, 0, 0, "身体"],
@@ -361,7 +361,7 @@ export const animationData_148 = {
       [0, 14, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [2, 12, 1, 0, 0, "身体"],
@@ -385,7 +385,7 @@ export const animationData_148 = {
       [9, 17, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [2, 12, -1, 0, 0, "身体"],
@@ -414,7 +414,7 @@ export const animationData_148 = {
   "s": {
     "name": "ねこラーメン道",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["148_s.png"],
       [40],
@@ -460,7 +460,7 @@ export const animationData_148 = {
       [422, 189, 28, 42]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [27],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -496,7 +496,7 @@ export const animationData_148 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [1, 9, -1, 0, 0],
@@ -657,7 +657,7 @@ export const animationData_148 = {
       [20, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [2, 2, 1, 0, 0, "ダミー"],
@@ -755,7 +755,7 @@ export const animationData_148 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [2, 2, 1, 0, 0, "ダミー"],
@@ -988,7 +988,7 @@ export const animationData_148 = {
       [9, 39, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [42],
       [2, 2, 1, 0, 0],

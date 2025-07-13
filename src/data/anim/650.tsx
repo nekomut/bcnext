@@ -5,7 +5,7 @@ export const animationData_650 = {
   "f": {
     "name": "幼馴染にゃん子",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["650_f.png"],
       [54],
@@ -1591,7 +1591,7 @@ export const animationData_650 = {
   "c": {
     "name": "彼女にゃん子",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["650_c.png"],
       [73],

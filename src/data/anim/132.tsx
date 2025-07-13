@@ -5,7 +5,7 @@ export const animationData_132 = {
   "f": {
     "name": "カンフーにゃんこＧ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["132_f.png"],
       [22],
@@ -33,7 +33,7 @@ export const animationData_132 = {
       [73, 101, 8, 7]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [21],
       [-1, -1, 0, 0, 200, -40, 0, 0, 1790, 1790, 0, 255, 0, "制御用"],
@@ -63,7 +63,7 @@ export const animationData_132 = {
       [0, 0, -36, 23, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [1, 5, -1, 0, 0, "下半身"],
@@ -185,7 +185,7 @@ export const animationData_132 = {
       [27, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [1, 5, -1, 0, 0, "下半身"],
@@ -307,7 +307,7 @@ export const animationData_132 = {
       [27, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [1, 4, 1, 0, 0, "右腕１"],
@@ -627,7 +627,7 @@ export const animationData_132 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 4, -1, 0, 0, "胴体"],
@@ -650,7 +650,7 @@ export const animationData_132 = {
   "c": {
     "name": "酔拳にゃんこＧ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["132_c.png"],
       [32],
@@ -688,7 +688,7 @@ export const animationData_132 = {
       [305, 1, 103, 96, "Eラスト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [31],
       [-1, -1, 0, 0, 200, -40, 0, 0, 1790, 1790, 0, 255, 0, "制御用"],
@@ -728,7 +728,7 @@ export const animationData_132 = {
       [0, 0, -36, 23, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [1, 5, -1, 0, 0],
@@ -917,7 +917,7 @@ export const animationData_132 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [1, 5, -1, 0, 0, "胴体"],
@@ -1011,7 +1011,7 @@ export const animationData_132 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [55],
       [1, 4, 1, 0, 0, "右腕１"],
@@ -1453,7 +1453,7 @@ export const animationData_132 = {
       [35, 255, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [1, 4, -1, 0, 0, "胴体"],
@@ -1503,7 +1503,7 @@ export const animationData_132 = {
   "s": {
     "name": "剛拳にゃんこＧ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["132_s.png"],
       [47],
@@ -1556,7 +1556,7 @@ export const animationData_132 = {
       [286, 1, 139, 124, "攻撃ポーズラスト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [51],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 255, 0, "制御用"],
@@ -1616,7 +1616,7 @@ export const animationData_132 = {
       [0, 0, -27, 23, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [1, 5, -1, 0, 0, "下半身"],
@@ -1779,7 +1779,7 @@ export const animationData_132 = {
       [27, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [1, 5, -1, 0, 0, "下半身"],
@@ -1942,7 +1942,7 @@ export const animationData_132 = {
       [27, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [79],
       [1, 4, 1, 0, 0, "胴体"],
@@ -2509,7 +2509,7 @@ export const animationData_132 = {
       [50, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [1, 4, 1, 0, 0, "胴体"],

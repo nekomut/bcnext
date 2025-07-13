@@ -5,7 +5,7 @@ export const animationData_076 = {
   "f": {
     "name": "雷神のサンディア",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["076_f.png"],
       [64],
@@ -75,7 +75,7 @@ export const animationData_076 = {
       [223, 119, 79, 27, "●波動地面"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [101],
       [-1, -1, 0, 0, 493, 478, 0, 0, 1120, 1120, 0, 1000, 0, "ダミー"],
@@ -185,7 +185,7 @@ export const animationData_076 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [59],
       [1, 5, -1, 0, 0, "機体　浮遊"],
@@ -707,7 +707,7 @@ export const animationData_076 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [59],
       [1, 5, -1, 0, 0, "機体　浮遊"],
@@ -1229,7 +1229,7 @@ export const animationData_076 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [167],
       [58, 10, 1, 0, 0, "羽衣１"],
@@ -2851,7 +2851,7 @@ export const animationData_076 = {
       [90, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [33, 4, -1, 0, 0],
@@ -2937,7 +2937,7 @@ export const animationData_076 = {
   "c": {
     "name": "雷神のサンディアβ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["076_c.png"],
       [64],
@@ -3007,7 +3007,7 @@ export const animationData_076 = {
       [223, 119, 79, 27, "●波動地面"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [104],
       [-1, -1, 0, 0, 493, 468, 0, 0, 1120, 1120, 0, 1000, 0, "ダミー"],
@@ -3120,7 +3120,7 @@ export const animationData_076 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [61],
       [1, 5, -1, 0, 0, "機体　浮遊"],
@@ -3682,7 +3682,7 @@ export const animationData_076 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [61],
       [1, 5, -1, 0, 0, "機体　浮遊"],
@@ -4244,7 +4244,7 @@ export const animationData_076 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [194],
       [58, 10, 1, 0, 0, "羽衣１"],
@@ -6271,7 +6271,7 @@ export const animationData_076 = {
       [116, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [33, 4, -1, 0, 0],
@@ -6357,7 +6357,7 @@ export const animationData_076 = {
   "s": {
     "name": "迅雷神のサンディアβ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["076_s.png"],
       [72],
@@ -6576,7 +6576,7 @@ export const animationData_076 = {
       [0, 0, -1, 1, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [71],
       [1, 5, -1, 0, 0, "機体　浮遊"],
@@ -7232,7 +7232,7 @@ export const animationData_076 = {
       [100, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [75],
       [1, 5, -1, 0, 0, "機体　浮遊"],
@@ -7901,7 +7901,7 @@ export const animationData_076 = {
       [100, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [264],
       [1, 4, 1, 0, 0, "オブジェクトの大きな動き"],
@@ -10553,7 +10553,7 @@ export const animationData_076 = {
       [104, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [1, 4, 1, 0, 0],

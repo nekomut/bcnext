@@ -5,7 +5,7 @@ export const animationData_230 = {
   "f": {
     "name": "デビルサンディア",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["230_f.png"],
       [67],
@@ -78,7 +78,7 @@ export const animationData_230 = {
       [80, 169, 20, 38, "もみあげ　奥"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [108],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1120, 1120, 0, 1000, 0, "ダミー"],
@@ -195,7 +195,7 @@ export const animationData_230 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [87],
       [1, 5, -1, 0, 0, "機体　浮遊"],
@@ -912,7 +912,7 @@ export const animationData_230 = {
       [80, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [81],
       [1, 5, -1, 0, 0, "機体　浮遊"],
@@ -1600,7 +1600,7 @@ export const animationData_230 = {
       [80, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [191],
       [0, 0, 1, 0, 0, "ダミー"],
@@ -4321,7 +4321,7 @@ export const animationData_230 = {
       [128, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [1, 4, 1, 0, 0],
@@ -4428,7 +4428,7 @@ export const animationData_230 = {
   "c": {
     "name": "デビルサンディアβ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["230_c.png"],
       [67],
@@ -4501,7 +4501,7 @@ export const animationData_230 = {
       [80, 169, 20, 38, "もみあげ　奥"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [108],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1120, 1120, 0, 1000, 0, "ダミー"],
@@ -4618,7 +4618,7 @@ export const animationData_230 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [88],
       [1, 5, -1, 0, 0, "機体　浮遊"],
@@ -5355,7 +5355,7 @@ export const animationData_230 = {
       [80, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [82],
       [1, 5, -1, 0, 0, "機体　浮遊"],
@@ -6063,7 +6063,7 @@ export const animationData_230 = {
       [80, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [192],
       [0, 0, 1, 0, 0, "ダミー"],
@@ -8801,7 +8801,7 @@ export const animationData_230 = {
       [128, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [1, 4, 1, 0, 0],

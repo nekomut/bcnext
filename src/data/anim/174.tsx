@@ -5,7 +5,7 @@ export const animationData_174 = {
   "f": {
     "name": "マンボ王",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["174_f.png"],
       [13],
@@ -24,7 +24,7 @@ export const animationData_174 = {
       [480, 78, 31, 71]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [17],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1500, 1500, 0, 1000, 0, "dami"],
@@ -50,7 +50,7 @@ export const animationData_174 = {
       [0, 0, -6, 0, 5, 0, "dami"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 9, -1, 0, 0, "dami"],
@@ -77,7 +77,7 @@ export const animationData_174 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 9, -1, 0, 0, "dami"],
@@ -115,7 +115,7 @@ export const animationData_174 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [1, 9, 1, 0, 0],
@@ -392,7 +392,7 @@ export const animationData_174 = {
       [19, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [2, 10, -1, 0, 0, "マンボウ１"],
@@ -412,7 +412,7 @@ export const animationData_174 = {
   "c": {
     "name": "生ける伝説",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["174_c.png"],
       [14],
@@ -432,7 +432,7 @@ export const animationData_174 = {
       [450, 2, 60, 60, "en"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [19],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1500, 1500, 0, 1000, 0, "dami"],
@@ -460,7 +460,7 @@ export const animationData_174 = {
       [0, 0, -6, 0, 5, 0, "dami"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 9, -1, 0, 0, "dami"],
@@ -487,7 +487,7 @@ export const animationData_174 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 9, -1, 0, 0, "dami"],
@@ -525,7 +525,7 @@ export const animationData_174 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [1, 9, 1, 0, 0],
@@ -822,7 +822,7 @@ export const animationData_174 = {
       [20, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [2, 10, -1, 0, 0, "マンボウ１"],
@@ -842,7 +842,7 @@ export const animationData_174 = {
   "s": {
     "name": "太平洋の主",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["174_s.png"],
       [18],
@@ -866,7 +866,7 @@ export const animationData_174 = {
       [135, 120, 26, 25, "017.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [25],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1500, 1500, 0, 1000, 0, "dami"],
@@ -900,7 +900,7 @@ export const animationData_174 = {
       [0, 0, 0, 0, 5, 0, "dami"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [15],
       [1, 9, -1, 0, 0, "dami"],
@@ -980,7 +980,7 @@ export const animationData_174 = {
       [77, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [16],
       [1, 9, -1, 0, 0, "dami"],
@@ -1071,7 +1071,7 @@ export const animationData_174 = {
       [77, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [57],
       [1, 9, 1, 0, 0],
@@ -1476,7 +1476,7 @@ export const animationData_174 = {
       [90, 15, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [8],
       [2, 10, -1, 0, 0, "マンボウ１"],

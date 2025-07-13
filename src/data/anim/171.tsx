@@ -5,7 +5,7 @@ export const animationData_171 = {
   "f": {
     "name": "バララガ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["171_f.png"],
       [8],
@@ -19,7 +19,7 @@ export const animationData_171 = {
       [1, 45, 21, 21, "ビリビリ光"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [14],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -42,7 +42,7 @@ export const animationData_171 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [4, 12, -1, 0, 0, "逆光"],
@@ -116,7 +116,7 @@ export const animationData_171 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [4, 12, -1, 0, 0, "逆光"],
@@ -130,7 +130,7 @@ export const animationData_171 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [4, 12, 1, 0, 0, "逆光"],
@@ -199,7 +199,7 @@ export const animationData_171 = {
       [25, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [4, 12, -1, 0, 0, "逆光"],
@@ -222,7 +222,7 @@ export const animationData_171 = {
   "c": {
     "name": "バラランパサラン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["171_c.png"],
       [30],
@@ -258,7 +258,7 @@ export const animationData_171 = {
       [308, 53, 32, 32, "光球青"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [51],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1780, 1780, 0, 1000, 0, "ダミー<color=7>"],
@@ -318,7 +318,7 @@ export const animationData_171 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [62],
       [4, 4, -1, 0, 0, "腰ダミー"],
@@ -651,7 +651,7 @@ export const animationData_171 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [5, 5, -1, 0, 0, "腰玉"],
@@ -948,7 +948,7 @@ export const animationData_171 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [156],
       [2, 4, 1, 0, 0, "影"],
@@ -2579,7 +2579,7 @@ export const animationData_171 = {
       [152, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [4, 4, -1, 0, 0, "腰玉"],
@@ -2692,7 +2692,7 @@ export const animationData_171 = {
   "s": {
     "name": "ピカランバララン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["171_s.png"],
       [43],
@@ -2741,7 +2741,7 @@ export const animationData_171 = {
       [61, 163, 22, 50, "肩パッド　追加隠す用"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [74],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1780, 1780, 0, 1000, 0, "ダミー<color=7>"],
@@ -2824,7 +2824,7 @@ export const animationData_171 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [99],
       [4, 4, -1, 0, 0, "腰ダミー"],
@@ -3373,7 +3373,7 @@ export const animationData_171 = {
       [120, 53, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [51],
       [5, 5, -1, 0, 0],
@@ -3698,7 +3698,7 @@ export const animationData_171 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [190],
       [2, 4, 1, 0, 0, "影"],
@@ -5569,7 +5569,7 @@ export const animationData_171 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [53],
       [4, 4, 1, 0, 0],

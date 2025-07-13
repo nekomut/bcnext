@@ -5,7 +5,7 @@ export const animationData_623 = {
   "f": {
     "name": "ネコハーメルン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["623_f.png"],
       [55],
@@ -2029,7 +2029,7 @@ export const animationData_623 = {
   "c": {
     "name": "虚無僧ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["623_c.png"],
       [36],

@@ -5,7 +5,7 @@ export const animationData_665 = {
   "s": {
     "name": "ネコソシスト",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["665_s.png"],
       [46],

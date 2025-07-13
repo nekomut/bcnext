@@ -5,7 +5,7 @@ export const animationData_287 = {
   "f": {
     "name": "ネコ球児",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["287_f.png"],
       [35],
@@ -46,7 +46,7 @@ export const animationData_287 = {
       [185, 112, 21, 21, "背番号"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [42],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー<color=7>"],
@@ -97,7 +97,7 @@ export const animationData_287 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [4, 5, -1, 0, 0, "本体1"],
@@ -178,7 +178,7 @@ export const animationData_287 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [4, 11, -1, 0, 0, "本体1"],
@@ -223,7 +223,7 @@ export const animationData_287 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [94],
       [3, 11, 1, 0, 0, "ｃダミー1<color=3>"],
@@ -774,7 +774,7 @@ export const animationData_287 = {
       [46, -4, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [4, 5, 1, 0, 0, "本体1"],
@@ -845,7 +845,7 @@ export const animationData_287 = {
   "c": {
     "name": "ネコリーガー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["287_c.png"],
       [61],
@@ -912,7 +912,7 @@ export const animationData_287 = {
       [374, 32, 31, 21, "左足８"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [52],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -973,7 +973,7 @@ export const animationData_287 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [4, 5, -1, 0, 0, "本体1"],
@@ -1062,7 +1062,7 @@ export const animationData_287 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [4, 11, -1, 0, 0, "本体1"],
@@ -1145,7 +1145,7 @@ export const animationData_287 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [121],
       [3, 11, 1, 0, 0, "ｃダミー1<color=3>"],
@@ -1885,7 +1885,7 @@ export const animationData_287 = {
       [27, -500, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [4, 5, 1, 0, 0, "本体1"],
@@ -1959,7 +1959,7 @@ export const animationData_287 = {
   "s": {
     "name": "ネコゴルファー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["287_s.png"],
       [59],
@@ -2024,7 +2024,7 @@ export const animationData_287 = {
       [190, 94, 15, 16, "058顔.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [49],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -2082,7 +2082,7 @@ export const animationData_287 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [17],
       [4, 5, -1, 0, 0, "002胴体.png"],
@@ -2205,7 +2205,7 @@ export const animationData_287 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [16],
       [15, 12, -1, 0, 0, "cダミー2<color=4>"],
@@ -2288,7 +2288,7 @@ export const animationData_287 = {
       [60, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [106],
       [3, 11, 1, 0, 0, "cダミー1<color=3>"],
@@ -2983,7 +2983,7 @@ export const animationData_287 = {
       [47, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [24],
       [15, 12, 1, 0, 0, "cダミー2<color=4>"],

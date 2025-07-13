@@ -5,7 +5,7 @@ export const animationData_440 = {
   "f": {
     "name": "ベベ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["440_f.png"],
       [52],
@@ -63,7 +63,7 @@ export const animationData_440 = {
       [392, 162, 119, 93]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [36],
       [-1, -1, 0, 0, 0, 0, 1, 1, -1250, 1250, 0, 1000, 0, "全体ダミー"],
@@ -108,7 +108,7 @@ export const animationData_440 = {
       [0, 0, 0, 0, 5, 0, "全体ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [26],
       [2, 5, -1, 0, 0, "全体ダミー"],
@@ -253,7 +253,7 @@ export const animationData_440 = {
       [120, 48, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [25],
       [2, 11, -1, 0, 0, "体"],
@@ -363,7 +363,7 @@ export const animationData_440 = {
       [80, 103, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [46],
       [2, 10, 1, 0, 0, "ダミー<color=0>"],
@@ -801,7 +801,7 @@ export const animationData_440 = {
       [36, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [8],
       [1, 8, 1, 0, 0, "全体ダミー"],
@@ -833,7 +833,7 @@ export const animationData_440 = {
   "c": {
     "name": "なぎさ＆ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["440_c.png"],
       [103],
@@ -942,7 +942,7 @@ export const animationData_440 = {
       [484, 160, 19, 20, "102おれんじ.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [148],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -1099,7 +1099,7 @@ export const animationData_440 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [168],
       [2, 4, -1, 0, 0, "000.png"],
@@ -1963,7 +1963,7 @@ export const animationData_440 = {
       [38, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [65],
       [3, 11, -1, 0, 0, "059腹.png<color=7>"],
@@ -2339,7 +2339,7 @@ export const animationData_440 = {
       [0, 6, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [274],
       [1, 4, 1, 0, 0, "000.png"],
@@ -4908,7 +4908,7 @@ export const animationData_440 = {
       [116, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [45],
       [87, 12, 1, 0, 0, "077攻撃ポン１.png<color=4>"],

@@ -5,7 +5,7 @@ export const animationData_399 = {
   "f": {
     "name": "めんトリ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["399_f.png"],
       [34],
@@ -45,7 +45,7 @@ export const animationData_399 = {
       [459, 162, 38, 39, "033奥足追加.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [98],
       [-1, -1, 0, 0, 0, 0, 0, 0, 800, 800, 0, 1000, 0, "ダミー<color=0>"],
@@ -152,7 +152,7 @@ export const animationData_399 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [3, 12, -1, 0, 0, "ダミー<color=0>\t"],
@@ -410,7 +410,7 @@ export const animationData_399 = {
       [40, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [3, 12, -1, 0, 0, "ふきだしA<color=1>"],
@@ -433,7 +433,7 @@ export const animationData_399 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [3, 12, 1, 0, 0, "待機制御ダミー<color=1>"],
@@ -477,7 +477,7 @@ export const animationData_399 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [3, 12, 1, 0, 0, "待機制御ダミー<color=1>"],
@@ -494,7 +494,7 @@ export const animationData_399 = {
   "c": {
     "name": "めんトリCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["399_c.png"],
       [34],
@@ -534,7 +534,7 @@ export const animationData_399 = {
       [395, 153, 38, 39, "033奥足追加.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [98],
       [-1, -1, 0, 0, 0, 0, 0, 0, 800, 800, 0, 1000, 0, "ダミー<color=0>"],
@@ -641,7 +641,7 @@ export const animationData_399 = {
       [0, 0, 0, 0, 5, 0, "攻撃用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [3, 12, -1, 0, 0, "ダミー<color=0>\t"],
@@ -899,7 +899,7 @@ export const animationData_399 = {
       [40, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [15, 12, -1, 0, 0, "待機制御ダミー<color=1>"],
@@ -922,7 +922,7 @@ export const animationData_399 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [3, 12, 1, 0, 0, "待機制御ダミー<color=1>"],
@@ -966,7 +966,7 @@ export const animationData_399 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [3, 12, 1, 0, 0, "待機制御ダミー<color=1>"],

@@ -5,7 +5,7 @@ export const animationData_360 = {
   "f": {
     "name": "水の精霊ミズリィ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["360_f.png"],
       [90],
@@ -101,7 +101,7 @@ export const animationData_360 = {
       [266, 173, 55, 30, "上半身"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [129],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー"],
@@ -239,7 +239,7 @@ export const animationData_360 = {
       [0, 0, 0, 0, 5, 0, "EFswirl１<color=4>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [73],
       [2, 9, -1, 0, 0],
@@ -624,7 +624,7 @@ export const animationData_360 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [53],
       [3, 4, -1, 0, 0],
@@ -918,7 +918,7 @@ export const animationData_360 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [309],
       [2, 4, 1, 0, 0],
@@ -4357,7 +4357,7 @@ export const animationData_360 = {
       [84, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [63],
       [3, 4, 1, 0, 0],
@@ -4554,7 +4554,7 @@ export const animationData_360 = {
   "c": {
     "name": "流水の精霊ミズマリン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["360_c.png"],
       [104],
@@ -4664,7 +4664,7 @@ export const animationData_360 = {
       [162, 82, 8, 5, "腹　追加"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [142],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー"],
@@ -4815,7 +4815,7 @@ export const animationData_360 = {
       [0, 0, 0, 0, 5, 0, "EFswirl１<color=4>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [124],
       [2, 9, -1, 0, 0],
@@ -5497,7 +5497,7 @@ export const animationData_360 = {
       [31, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [72],
       [2, 9, -1, 0, 0],
@@ -5976,7 +5976,7 @@ export const animationData_360 = {
       [41, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [326],
       [2, 4, 1, 0, 0],
@@ -9913,7 +9913,7 @@ export const animationData_360 = {
       [84, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [91],
       [3, 4, 1, 0, 0],
@@ -10194,7 +10194,7 @@ export const animationData_360 = {
   "s": {
     "name": "流水の精霊王ミズマリリン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["360_s.png"],
       [126],
@@ -10326,7 +10326,7 @@ export const animationData_360 = {
       [320, 292, 29, 40, "杖の紋章"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [183],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー"],
@@ -10518,7 +10518,7 @@ export const animationData_360 = {
       [0, 0, 0, 0, 5, 0, "EFswirl１<color=4>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [141],
       [2, 9, -1, 0, 0],
@@ -11270,7 +11270,7 @@ export const animationData_360 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [80],
       [2, 9, -1, 0, 0],
@@ -11777,7 +11777,7 @@ export const animationData_360 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [417],
       [2, 4, 1, 0, 0],
@@ -16680,7 +16680,7 @@ export const animationData_360 = {
       [130, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [100],
       [3, 4, 1, 0, 0],

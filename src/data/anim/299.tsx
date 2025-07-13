@@ -5,7 +5,7 @@ export const animationData_299 = {
   "f": {
     "name": "ちびまどか",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["299_f.png"],
       [61],
@@ -72,7 +72,7 @@ export const animationData_299 = {
       [178, 79, 13, 4]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [54],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -135,7 +135,7 @@ export const animationData_299 = {
       [0, 0, 0, 1, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [2, 5, -1, 0, 0],
@@ -460,7 +460,7 @@ export const animationData_299 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [3, 5, -1, 0, 0],
@@ -715,7 +715,7 @@ export const animationData_299 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [86],
       [2, 4, 1, 0, 0],
@@ -1430,7 +1430,7 @@ export const animationData_299 = {
       [46, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [2, 4, 1, 0, 0],
@@ -1555,7 +1555,7 @@ export const animationData_299 = {
   "c": {
     "name": "ちび魔法少女まどか",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["299_c.png"],
       [110],
@@ -1671,7 +1671,7 @@ export const animationData_299 = {
       [450, 141, 61, 56, "攻撃　エッフェクト3　-③"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [91],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1771,7 +1771,7 @@ export const animationData_299 = {
       [0, 0, 0, 3, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [2, 5, -1, 0, 0],
@@ -2096,7 +2096,7 @@ export const animationData_299 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [44],
       [3, 5, -1, 0, 0],
@@ -2353,7 +2353,7 @@ export const animationData_299 = {
       [5, -1, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [165],
       [1, 4, 1, 0, 0],
@@ -3778,7 +3778,7 @@ export const animationData_299 = {
       [80, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [55],
       [2, 4, 1, 0, 0],
@@ -3951,7 +3951,7 @@ export const animationData_299 = {
   "s": {
     "name": "ちびアルティメットまどか",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["299_s.png"],
       [117],
@@ -4074,7 +4074,7 @@ export const animationData_299 = {
       [314, 85, 16, 15, "エフェクト　点②"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [124],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -4207,7 +4207,7 @@ export const animationData_299 = {
       [0, 0, 0, 1, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [55],
       [1, 9, -1, 0, 0],
@@ -4523,7 +4523,7 @@ export const animationData_299 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [56],
       [1, 9, -1, 0, 0],
@@ -4844,7 +4844,7 @@ export const animationData_299 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [243],
       [1, 4, 1, 0, 0],
@@ -6738,7 +6738,7 @@ export const animationData_299 = {
       [61, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [2, 4, 1, 0, 0],

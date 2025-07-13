@@ -5,7 +5,7 @@ export const animationData_660 = {
   "f": {
     "name": "海龍ダライアサン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["660_f.png"],
       [89],
@@ -4710,7 +4710,7 @@ export const animationData_660 = {
   "c": {
     "name": "海龍王ダライアサン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["660_c.png"],
       [90],

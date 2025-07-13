@@ -5,7 +5,7 @@ export const animationData_201 = {
   "f": {
     "name": "ドラムメニャー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["201_f.png"],
       [27],
@@ -38,7 +38,7 @@ export const animationData_201 = {
       [152, 92, 13, 6, "足接地"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [12],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -59,7 +59,7 @@ export const animationData_201 = {
       [0, 0, 0, 2, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [1, 4, -1, 0, 0, "ダミー"],
@@ -198,7 +198,7 @@ export const animationData_201 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [3, 5, -1, 0, 0, "メジャー本体"],
@@ -234,7 +234,7 @@ export const animationData_201 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [2, 4, 1, 0, 0],
@@ -475,7 +475,7 @@ export const animationData_201 = {
       [21, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [2, 9, 1, 0, 0, "影(メジャー)"],
@@ -567,7 +567,7 @@ export const animationData_201 = {
   "c": {
     "name": "プラカードにゃん",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["201_c.png"],
       [30],
@@ -603,7 +603,7 @@ export const animationData_201 = {
       [301, 1, 80, 105, "やられ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [14],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -626,7 +626,7 @@ export const animationData_201 = {
       [0, 0, 0, 2, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [1, 4, -1, 0, 0],
@@ -769,7 +769,7 @@ export const animationData_201 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [3, 5, -1, 0, 0, "メジャー本体"],
@@ -822,7 +822,7 @@ export const animationData_201 = {
       [16, 25, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [2, 4, 1, 0, 0],
@@ -1091,7 +1091,7 @@ export const animationData_201 = {
       [0, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [2, 9, 1, 0, 0, "影(メジャー)"],
@@ -1144,7 +1144,7 @@ export const animationData_201 = {
   "s": {
     "name": "ネコぺったん",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["201_s.png"],
       [34],
@@ -1184,7 +1184,7 @@ export const animationData_201 = {
       [105, 249, 12, 15, "033手前足4.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [41],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "000.png"],
@@ -1234,7 +1234,7 @@ export const animationData_201 = {
       [0, 0, 0, 2, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [45],
       [1, 4, -1, 0, 0, "001影.png\t"],
@@ -1569,7 +1569,7 @@ export const animationData_201 = {
       [16, 0, 3, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [25],
       [3, 5, -1, 0, 0, "019体.png"],
@@ -1717,7 +1717,7 @@ export const animationData_201 = {
       [16, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [71],
       [1, 4, 1, 0, 0],
@@ -2498,7 +2498,7 @@ export const animationData_201 = {
       [46, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [5],
       [2, 12, 1, 0, 0, "通常ダミ"],

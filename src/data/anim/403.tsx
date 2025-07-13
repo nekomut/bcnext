@@ -5,7 +5,7 @@ export const animationData_403 = {
   "f": {
     "name": "ネコゲンドウ＆ネコ冬月",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["403_f.png"],
       [27],
@@ -38,7 +38,7 @@ export const animationData_403 = {
       [1, 101, 94, 126, "026冬月5.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [39],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -86,7 +86,7 @@ export const animationData_403 = {
       [0, 0, 1, 1, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [6, 5, -1, 0, 0, "018身体.png<color=12>"],
@@ -277,7 +277,7 @@ export const animationData_403 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [6, 5, -1, 0, 0, "冬月ダミー<color=7>\t"],
@@ -330,7 +330,7 @@ export const animationData_403 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [1, 4, 1, 0, 0, "冬月影.png\t"],
@@ -535,7 +535,7 @@ export const animationData_403 = {
       [36, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [4, 4, 1, 0, 0, "頭部"],
@@ -615,7 +615,7 @@ export const animationData_403 = {
   "c": {
     "name": "月のネコゲンドウ＆ネコ冬月",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["403_c.png"],
       [27],
@@ -648,7 +648,7 @@ export const animationData_403 = {
       [118, 1, 95, 126, "026ネコ冬月5.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [39],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -696,7 +696,7 @@ export const animationData_403 = {
       [0, 0, 1, 1, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [6, 5, -1, 0, 0, "018身体.png<color=12>"],
@@ -903,7 +903,7 @@ export const animationData_403 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [6, 5, -1, 0, 0, "冬月ダミー<color=7>\t"],
@@ -956,7 +956,7 @@ export const animationData_403 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [1, 4, 1, 0, 0, "冬月影.png\t"],
@@ -1166,7 +1166,7 @@ export const animationData_403 = {
       [36, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [4, 4, 1, 0, 0, "冬月ダミー<color=7>\t"],

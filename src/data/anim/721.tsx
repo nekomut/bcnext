@@ -5,7 +5,7 @@ export const animationData_721 = {
   "f": {
     "name": "花園高校番長りき",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["721_f.png"],
       [13],
@@ -300,7 +300,7 @@ export const animationData_721 = {
   "c": {
     "name": "ドッジボール部りき",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["721_c.png"],
       [16],

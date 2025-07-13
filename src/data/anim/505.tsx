@@ -5,7 +5,7 @@ export const animationData_505 = {
   "f": {
     "name": "角龍グラディオス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["505_f.png"],
       [75],
@@ -86,7 +86,7 @@ export const animationData_505 = {
       [322, 171, 16, 52, "074照り返し_羽左.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [123],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "000.png<color=7>"],
@@ -218,7 +218,7 @@ export const animationData_505 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [70],
       [3, 5, -1, 0, 0, "024腰.png<color=0>\tキャラ上下動"],
@@ -747,7 +747,7 @@ export const animationData_505 = {
       [108, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [53],
       [3, 11, -1, 0, 0, "018腰回り.png<color=0>"],
@@ -1025,7 +1025,7 @@ export const animationData_505 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [204],
       [1, 4, 1, 0, 0, "001影.png<color=9>\t"],
@@ -4658,7 +4658,7 @@ export const animationData_505 = {
       [142, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [49],
       [3, 5, 1, 0, 0, "018腰回り.png<color=0>"],
@@ -4813,7 +4813,7 @@ export const animationData_505 = {
   "c": {
     "name": "角龍王グラディオス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["505_c.png"],
       [82],
@@ -4901,7 +4901,7 @@ export const animationData_505 = {
       [73, 141, 72, 62, "081火の粉.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [134],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "000.png<color=7>"],
@@ -5044,7 +5044,7 @@ export const animationData_505 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [71],
       [3, 5, -1, 0, 0, "024腰.png<color=0>\tキャラ上下動"],
@@ -5573,7 +5573,7 @@ export const animationData_505 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [55],
       [3, 11, -1, 0, 0, "018腰回り.png<color=0>"],
@@ -5857,7 +5857,7 @@ export const animationData_505 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [234],
       [1, 4, 1, 0, 0, "001影.png<color=9>\t"],
@@ -10011,7 +10011,7 @@ export const animationData_505 = {
       [142, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [51],
       [3, 5, 1, 0, 0, "018腰回り.png<color=0>"],

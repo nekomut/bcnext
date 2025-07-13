@@ -5,7 +5,7 @@ export const animationData_117 = {
   "f": {
     "name": "アウラ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["117_f.png"],
       [30],
@@ -41,7 +41,7 @@ export const animationData_117 = {
       [256, 81, 28, 42, "奥毛先"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [32],
       [-1, -1, 0, 0, 608, 433, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -82,7 +82,7 @@ export const animationData_117 = {
       [0, 0, 0, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [2, 5, -1, 0, 0, "スカート"],
@@ -225,7 +225,7 @@ export const animationData_117 = {
       [15, 120, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -368,7 +368,7 @@ export const animationData_117 = {
       [30, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [1, 4, 1, 0, 0],
@@ -896,7 +896,7 @@ export const animationData_117 = {
       [30, -10, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [3, 11, -1, 0, 0, "胸"],
@@ -946,7 +946,7 @@ export const animationData_117 = {
   "c": {
     "name": "アウラCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["117_c.png"],
       [30],
@@ -982,7 +982,7 @@ export const animationData_117 = {
       [256, 81, 28, 42, "奥毛先"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [32],
       [-1, -1, 0, 0, 146, -6, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1023,7 +1023,7 @@ export const animationData_117 = {
       [0, 0, 0, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [2, 5, -1, 0, 0, "スカート"],
@@ -1166,7 +1166,7 @@ export const animationData_117 = {
       [15, 120, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -1309,7 +1309,7 @@ export const animationData_117 = {
       [30, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [1, 4, 1, 0, 0],
@@ -1837,7 +1837,7 @@ export const animationData_117 = {
       [30, -10, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [3, 11, -1, 0, 0, "胸"],

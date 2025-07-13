@@ -5,7 +5,7 @@ export const animationData_096 = {
   "f": {
     "name": "狂乱のネコノトリ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["005_f.png"],
       [12],
@@ -42,7 +42,7 @@ export const animationData_096 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 0, 0, 179, 179, 0, 255, 0, "ダミー親"],
@@ -54,7 +54,7 @@ export const animationData_096 = {
       [0, 0, 46, 105, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -76,7 +76,7 @@ export const animationData_096 = {
       [0, 10, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -98,7 +98,7 @@ export const animationData_096 = {
       [0, 10, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -133,7 +133,7 @@ export const animationData_096 = {
       [0, 10, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 2, -1, -1000, 1000, "ノックバック"],
@@ -156,7 +156,7 @@ export const animationData_096 = {
   "c": {
     "name": "狂乱のネコUFO",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["096_c.png"],
       [83],
@@ -245,7 +245,7 @@ export const animationData_096 = {
       [41, 218, 41, 7, "下10"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [31],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -285,7 +285,7 @@ export const animationData_096 = {
       [0, 0, 0, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [2, 7, -1, -1000, 1000, "本体移動"],
@@ -361,7 +361,7 @@ export const animationData_096 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [2, 7, -1, -1000, 1000, "本体移動"],
@@ -437,7 +437,7 @@ export const animationData_096 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [91],
       [1, 4, 1, 0, 0, "影"],
@@ -1070,7 +1070,7 @@ export const animationData_096 = {
       [34, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [2, 11, -1, 0, 0, "本体"],
@@ -1147,7 +1147,7 @@ export const animationData_096 = {
   "s": {
     "name": "大狂乱の天空のネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["096_s.png"],
       [39],
@@ -1192,7 +1192,7 @@ export const animationData_096 = {
       [297, 109, 30, 22, "攻撃灰"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [47],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -1248,7 +1248,7 @@ export const animationData_096 = {
       [0, 0, 0, 1, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [2, 5, -1, 0, 0],
@@ -1346,7 +1346,7 @@ export const animationData_096 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [2, 5, -1, 0, 0],
@@ -1443,7 +1443,7 @@ export const animationData_096 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [87],
       [1, 4, 1, 0, 0],
@@ -1977,7 +1977,7 @@ export const animationData_096 = {
       [40, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [2, 11, 1, 0, 0],

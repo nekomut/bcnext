@@ -5,7 +5,7 @@ export const animationData_058 = {
   "f": {
     "name": "ネコ魔剣士",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["058_f.png"],
       [20],
@@ -31,7 +31,7 @@ export const animationData_058 = {
       [422, 56, 40, 46, "追加２．５５"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [7],
       [-1, -1, 0, 0, 539, 431, 1, 1, 1790, 1790, 0, 1000, 0, "親ダミー"],
@@ -47,7 +47,7 @@ export const animationData_058 = {
       [0, 0, 20, 3, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [2, 2, -1, 0, 0, "体の画像"],
@@ -94,12 +94,12 @@ export const animationData_058 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [2, 2, 1, 0, 0],
@@ -249,7 +249,7 @@ export const animationData_058 = {
       [17, -18, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [2, 2, -1, 0, 0, "体の画像"],
@@ -278,7 +278,7 @@ export const animationData_058 = {
   "c": {
     "name": "双剣ネコ魔剣士",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["058_c.png"],
       [24],
@@ -308,7 +308,7 @@ export const animationData_058 = {
       [455, 122, 38, 54, "追加２：炎６．５"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [8],
       [-1, -1, 0, 0, 539, 431, 1, 1, 1790, 1790, 0, 1000, 0, "親ダミー"],
@@ -325,7 +325,7 @@ export const animationData_058 = {
       [0, 0, 20, 3, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [2, 2, -1, 0, 0, "体の画像"],
@@ -372,12 +372,12 @@ export const animationData_058 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [2, 2, 1, 0, 0],
@@ -528,7 +528,7 @@ export const animationData_058 = {
       [31, 4, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [2, 2, -1, 0, 0, "体の画像"],
@@ -557,7 +557,7 @@ export const animationData_058 = {
   "s": {
     "name": "双炎舞ネコ魔剣士",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["058_s.png"],
       [54],
@@ -617,7 +617,7 @@ export const animationData_058 = {
       [378, 133, 5, 9]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [33],
       [-1, -1, 0, 0, 0, 0, 1, 1, 1790, 1790, 0, 1000, 0, "親ダミー"],
@@ -659,7 +659,7 @@ export const animationData_058 = {
       [0, 0, 0, 1, 5, 0, "親ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [2, 5, -1, 0, 0, "本体"],
@@ -860,7 +860,7 @@ export const animationData_058 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [3, 2, -1, 0, 0, "足１"],
@@ -1007,7 +1007,7 @@ export const animationData_058 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [52],
       [2, 5, 1, 0, 0],
@@ -1390,7 +1390,7 @@ export const animationData_058 = {
       [25, -2, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [2, 4, -1, 0, 0, "親ダミー"],

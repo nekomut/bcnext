@@ -5,7 +5,7 @@ export const animationData_252 = {
   "f": {
     "name": "バトルバルーン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["252_f.png"],
       [23],
@@ -34,7 +34,7 @@ export const animationData_252 = {
       [335, 211, 44, 44, "爆発"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [36],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1125, 1125, 0, 1000, 0, "ダミー<color=7>"],
@@ -79,7 +79,7 @@ export const animationData_252 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [2, 4, -1, 0, 0, "影"],
@@ -141,7 +141,7 @@ export const animationData_252 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [2, 8, -1, 0, 0, "影"],
@@ -201,7 +201,7 @@ export const animationData_252 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [2, 8, 1, 0, 0, "影"],
@@ -476,7 +476,7 @@ export const animationData_252 = {
       [25, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [4, 4, 1, 0, 0, "体"],
@@ -502,7 +502,7 @@ export const animationData_252 = {
   "c": {
     "name": "海賊バトルバルーン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["252_c.png"],
       [23],
@@ -531,7 +531,7 @@ export const animationData_252 = {
       [470, 83, 40, 40, "爆発光"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [24],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1500, 1500, 0, 1000, 0, "ダミー<color=7>"],
@@ -564,7 +564,7 @@ export const animationData_252 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [2, 4, -1, 0, 0, "影"],
@@ -623,7 +623,7 @@ export const animationData_252 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [2, 8, -1, 0, 0, "影"],
@@ -680,7 +680,7 @@ export const animationData_252 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [2, 8, 1, 0, 0, "影"],
@@ -917,7 +917,7 @@ export const animationData_252 = {
       [20, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [4, 4, 1, 0, 0, "体"],
@@ -958,7 +958,7 @@ export const animationData_252 = {
   "s": {
     "name": "バトルバルーンUFO",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["252_s.png"],
       [24],
@@ -988,7 +988,7 @@ export const animationData_252 = {
       [488, 219, 12, 25, "パーツ01"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [28],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1430, 1430, 0, 1000, 0, "ダミー<color=7>"],
@@ -1025,7 +1025,7 @@ export const animationData_252 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [2, 4, -1, 0, 0, "影"],
@@ -1090,7 +1090,7 @@ export const animationData_252 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [2, 8, -1, 0, 0, "影"],
@@ -1153,7 +1153,7 @@ export const animationData_252 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [48],
       [2, 8, 1, 0, 0, "影"],
@@ -1453,7 +1453,7 @@ export const animationData_252 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [4, 4, 1, 0, 0, "体"],

@@ -5,7 +5,7 @@ export const animationData_466 = {
   "f": {
     "name": "ブラックゼウス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["466_f.png"],
       [89],
@@ -2896,7 +2896,7 @@ export const animationData_466 = {
       [164, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [26],
       [1, 9, 1, 0, 0, "001影.png<color=16>"],
@@ -2982,7 +2982,7 @@ export const animationData_466 = {
   "c": {
     "name": "闇次神子ブラックゼウス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["466_c.png"],
       [89],
@@ -3077,7 +3077,7 @@ export const animationData_466 = {
       [414, 176, 23, 23, "088雷2.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [106],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png<color=7>"],
@@ -3192,7 +3192,7 @@ export const animationData_466 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [74],
       [1, 9, -1, 0, 0, "001影.png<color=16>"],
@@ -3456,7 +3456,7 @@ export const animationData_466 = {
       [0, 800, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [37],
       [1, 9, -1, 0, 0, "001影.png<color=16>"],
@@ -3674,7 +3674,7 @@ export const animationData_466 = {
       [0, 300, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [139],
       [1, 4, 1, 0, 0, "腰ダミー<color=7>\t"],
@@ -5871,7 +5871,7 @@ export const animationData_466 = {
       [164, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [26],
       [1, 9, 1, 0, 0, "001影.png<color=16>"],

@@ -5,7 +5,7 @@ export const animationData_300 = {
   "f": {
     "name": "ちびほむら",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["300_f.png"],
       [43],
@@ -54,7 +54,7 @@ export const animationData_300 = {
       [61, 222, 33, 33, "ef2"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [38],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "dmy"],
@@ -101,7 +101,7 @@ export const animationData_300 = {
       [0, 0, 0, 0, 5, 0, "dmy"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [2, 5, -1, 0, 0],
@@ -379,7 +379,7 @@ export const animationData_300 = {
       [30, 0, 3, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [3, 5, -1, 0, 0],
@@ -539,7 +539,7 @@ export const animationData_300 = {
       [10, 0, 2, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [2, 4, 1, 0, 0, "dmy"],
@@ -726,7 +726,7 @@ export const animationData_300 = {
       [30, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [2, 11, 1, 0, 0, "ボディ"],
@@ -824,7 +824,7 @@ export const animationData_300 = {
   "c": {
     "name": "ちび魔法少女ほむら",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["300_c.png"],
       [53],
@@ -883,7 +883,7 @@ export const animationData_300 = {
       [116, 225, 96, 30, "けむり筋"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [47],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "dmy"],
@@ -939,7 +939,7 @@ export const animationData_300 = {
       [0, 0, 0, 0, 5, 0, "dmy"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [2, 5, -1, 0, 0],
@@ -1240,7 +1240,7 @@ export const animationData_300 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [3, 5, -1, 0, 0],
@@ -1434,7 +1434,7 @@ export const animationData_300 = {
       [40, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [55],
       [1, 4, 1, 0, 0],
@@ -1792,7 +1792,7 @@ export const animationData_300 = {
       [35, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [2, 4, 1, 0, 0],
@@ -1920,7 +1920,7 @@ export const animationData_300 = {
   "s": {
     "name": "ちび悪魔ほむら",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["300_s.png"],
       [86],
@@ -2012,7 +2012,7 @@ export const animationData_300 = {
       [2, 2, 96, 97, "085E光線.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [97],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1500, 1500, 0, 1000, 0, "■全体用ダミー<color=7>"],
@@ -2118,7 +2118,7 @@ export const animationData_300 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [54],
       [1, 5, -1, 0, 0, "■キャラダミー<color=7>"],
@@ -2451,7 +2451,7 @@ export const animationData_300 = {
       [66, -5, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [54],
       [1, 5, -1, 0, 0, "■キャラダミー<color=7>"],
@@ -2784,7 +2784,7 @@ export const animationData_300 = {
       [66, -5, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [144],
       [1, 4, 1, 0, 0, "■キャラダミー<color=7>\t"],
@@ -3990,7 +3990,7 @@ export const animationData_300 = {
       [67, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [51],
       [49, 12, 1, 0, 0, "■EFダミー<color=14>"],

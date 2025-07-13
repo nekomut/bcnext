@@ -5,7 +5,7 @@ export const animationData_244 = {
   "f": {
     "name": "ネコのプレゼント",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["244_f.png"],
       [22],
@@ -33,7 +33,7 @@ export const animationData_244 = {
       [141, 189, 50, 37, "奥ふた開く途中１"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [21],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 255, 0],
@@ -63,7 +63,7 @@ export const animationData_244 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [1, 5, -1, 0, 0, "足3"],
@@ -118,7 +118,7 @@ export const animationData_244 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [1, 10, 1, 0, 0, "箱"],
@@ -272,7 +272,7 @@ export const animationData_244 = {
       [12, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [1, 5, 1, 0, 0],
@@ -557,7 +557,7 @@ export const animationData_244 = {
       [30, 255, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [1, 5, 1, 0, 0, "ぶち"],
@@ -664,7 +664,7 @@ export const animationData_244 = {
   "c": {
     "name": "ネコプレゼント",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["244_c.png"],
       [17],
@@ -687,7 +687,7 @@ export const animationData_244 = {
       [320, 2, 143, 137, "efハート加算用"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [32],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -728,7 +728,7 @@ export const animationData_244 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [1, 12, 1, 0, 0, "通常ダミー"],
@@ -825,7 +825,7 @@ export const animationData_244 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [7, 12, -1, 0, 0, "歩きダミー<color=1>"],
@@ -842,7 +842,7 @@ export const animationData_244 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [50],
       [1, 5, 1, 0, 0, "ダミー"],
@@ -1326,7 +1326,7 @@ export const animationData_244 = {
       [25, 2000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [1, 12, 1, 0, 0, "通常ダミー<color=0>"],

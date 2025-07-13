@@ -5,7 +5,7 @@ export const animationData_062 = {
   "f": {
     "name": "ネコポン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["062_f.png"],
       [14],
@@ -25,7 +25,7 @@ export const animationData_062 = {
       [163, 109, 51, 28, "E"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [10],
       [-1, -1, 0, 0, 553, 435, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -44,7 +44,7 @@ export const animationData_062 = {
       [0, 0, 0, 0, 5, 0, "gatya"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [5, 2, -1, 0, 0, "ダミー"],
@@ -63,12 +63,12 @@ export const animationData_062 = {
       [16, -1, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [6, 2, 1, 0, 0, "ダミー"],
@@ -115,7 +115,7 @@ export const animationData_062 = {
       [22, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [2, 11, -1, 0, 0, "ダミー"],
@@ -132,7 +132,7 @@ export const animationData_062 = {
   "c": {
     "name": "ネコポニョン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["062_c.png"],
       [15],
@@ -153,7 +153,7 @@ export const animationData_062 = {
       [184, 65, 27, 26, "カプセルネコ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [12],
       [-1, -1, 0, 0, 518, 433, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -174,7 +174,7 @@ export const animationData_062 = {
       [0, 0, 0, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [8, 2, -1, 0, 0],
@@ -210,7 +210,7 @@ export const animationData_062 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [10, 12, -1, 0, 0],
@@ -218,7 +218,7 @@ export const animationData_062 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [2, 11, 1, 0, 0, "ダミー"],
@@ -293,7 +293,7 @@ export const animationData_062 = {
       [15, 5, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [10, 12, -1, 0, 0, "ダミー"],

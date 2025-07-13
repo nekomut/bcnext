@@ -5,7 +5,7 @@ export const animationData_304 = {
   "f": {
     "name": "帝国陸軍カタパルズ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["304_f.png"],
       [68],
@@ -79,7 +79,7 @@ export const animationData_304 = {
       [414, 63, 97, 81, "投げるブレ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [79],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー"],
@@ -167,7 +167,7 @@ export const animationData_304 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [59],
       [3, 5, -1, 0, 0, "キャラダミー"],
@@ -691,7 +691,7 @@ export const animationData_304 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [23, 11, -1, 0, 0, "隊長本体<color=1>"],
@@ -874,7 +874,7 @@ export const animationData_304 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [137],
       [3, 5, 1, 0, 0, "のりものダミー<color=0>"],
@@ -2272,7 +2272,7 @@ export const animationData_304 = {
       [99, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [50],
       [3, 5, 1, 0, 0, "のりものダミー<color=0>"],
@@ -2430,7 +2430,7 @@ export const animationData_304 = {
   "c": {
     "name": "撃滅戦車ギガパルド",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["304_c.png"],
       [85],
@@ -2521,7 +2521,7 @@ export const animationData_304 = {
       [404, 208, 46, 39, "土"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [260],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -2790,7 +2790,7 @@ export const animationData_304 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [276],
       [4, 5, -1, 0, 0, "機関車本体01"],
@@ -4587,7 +4587,7 @@ export const animationData_304 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [185],
       [4, 5, -1, 0, 0, "機関車本体01"],
@@ -6064,7 +6064,7 @@ export const animationData_304 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [378],
       [4, 4, 1, 0, 0, "機関車本体01"],
@@ -11993,7 +11993,7 @@ export const animationData_304 = {
       [110, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [146],
       [3, 4, 1, 0, 0, "キャラダミー<color=7>"],
@@ -12439,7 +12439,7 @@ export const animationData_304 = {
   "s": {
     "name": "超撃滅戦車ギガパルド",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["304_s.png"],
       [101],
@@ -12546,7 +12546,7 @@ export const animationData_304 = {
       [419, 276, 60, 85, 7]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [268],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -12823,7 +12823,7 @@ export const animationData_304 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [288],
       [4, 5, -1, 0, 0, "機関車本体01"],
@@ -14731,7 +14731,7 @@ export const animationData_304 = {
       [14, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [196],
       [4, 5, -1, 0, 0, "機関車本体01"],
@@ -16316,7 +16316,7 @@ export const animationData_304 = {
       [21, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [407],
       [4, 4, 1, 0, 0, "機関車本体01"],
@@ -22794,7 +22794,7 @@ export const animationData_304 = {
       [112, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [160],
       [3, 4, 1, 0, 0, "キャラダミー<color=7>"],

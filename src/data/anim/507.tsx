@@ -5,7 +5,7 @@ export const animationData_507 = {
   "f": {
     "name": "スーパーにゃん",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["507_f.png"],
       [41],
@@ -52,7 +52,7 @@ export const animationData_507 = {
       [211, 143, 33, 30, "040ヒットエフェクト4.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [53],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "親ダミー"],
@@ -114,7 +114,7 @@ export const animationData_507 = {
       [0, 0, 0, 0, 5, 0, "親ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [13],
       [3, 12, -1, 0, 0, "親　立ちポーズ<color=5>"],
@@ -168,7 +168,7 @@ export const animationData_507 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [9],
       [3, 12, -1, 0, 0, "親　立ちポーズ<color=5>"],
@@ -200,7 +200,7 @@ export const animationData_507 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [77],
       [1, 4, 1, 0, 0, "キャラ全体ダミー"],
@@ -638,7 +638,7 @@ export const animationData_507 = {
       [141, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [11],
       [3, 12, 1, 0, 0, "親　立ちポーズ<color=5>"],
@@ -679,7 +679,7 @@ export const animationData_507 = {
   "c": {
     "name": "ジャイにゃん",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["507_c.png"],
       [48],
@@ -733,7 +733,7 @@ export const animationData_507 = {
       [75, 205, 25, 25, "047腕_手前_1.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [56],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "親ダミー"],
@@ -798,7 +798,7 @@ export const animationData_507 = {
       [0, 0, 0, 0, 5, 0, "親ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [12],
       [3, 12, -1, 0, 0, "親　立ちポーズ<color=5>"],
@@ -849,7 +849,7 @@ export const animationData_507 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [8],
       [3, 12, -1, 0, 0, "親　立ちポーズ<color=5>"],
@@ -878,7 +878,7 @@ export const animationData_507 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [89],
       [1, 4, 1, 0, 0, "キャラ全体ダミー"],
@@ -1402,7 +1402,7 @@ export const animationData_507 = {
       [141, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [11],
       [3, 12, 1, 0, 0, "親　立ちポーズ<color=5>"],

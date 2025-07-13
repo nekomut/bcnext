@@ -5,7 +5,7 @@ export const animationData_159 = {
   "f": {
     "name": "冥界のカリファ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["159_f.png"],
       [50],
@@ -61,7 +61,7 @@ export const animationData_159 = {
       [359, 109, 18, 17]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [68],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -138,7 +138,7 @@ export const animationData_159 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [44],
       [2, 5, -1, 0, 0],
@@ -399,7 +399,7 @@ export const animationData_159 = {
       [100, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [44],
       [2, 5, -1, 0, 0],
@@ -660,7 +660,7 @@ export const animationData_159 = {
       [100, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [143],
       [1, 4, 1, 0, 0],
@@ -2051,7 +2051,7 @@ export const animationData_159 = {
       [25, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [3, 11, -1, 0, 0],
@@ -2149,7 +2149,7 @@ export const animationData_159 = {
   "c": {
     "name": "冥界のＸカリファ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["159_c.png"],
       [56],
@@ -2211,7 +2211,7 @@ export const animationData_159 = {
       [172, 86, 18, 17, "midori"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [81],
       [-1, -1, 0, 0, 173, -18, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -2301,7 +2301,7 @@ export const animationData_159 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [46],
       [1, 8, -1, 0, 0, "ダミー"],
@@ -2569,7 +2569,7 @@ export const animationData_159 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [46],
       [2, 5, -1, 0, 0],
@@ -2836,7 +2836,7 @@ export const animationData_159 = {
       [100, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [174],
       [1, 4, 1, 0, 0],
@@ -4393,7 +4393,7 @@ export const animationData_159 = {
       [150, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [2, 4, -1, 0, 0],
@@ -4494,7 +4494,7 @@ export const animationData_159 = {
   "s": {
     "name": "冥界のＸＸカリファ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["159_s.png"],
       [95],
@@ -4595,7 +4595,7 @@ export const animationData_159 = {
       [387, 58, 100, 14, "ピンクの輪"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [179],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -4783,7 +4783,7 @@ export const animationData_159 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [116],
       [1, 8, -1, 0, 0, "ダミー"],
@@ -5475,7 +5475,7 @@ export const animationData_159 = {
       [0, 0, 3, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [116],
       [1, 8, -1, 0, 0, "ダミー"],
@@ -6167,7 +6167,7 @@ export const animationData_159 = {
       [100, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [325],
       [1, 4, 1, 0, 0],
@@ -9897,7 +9897,7 @@ export const animationData_159 = {
       [150, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [61],
       [2, 4, 1, 0, 0],

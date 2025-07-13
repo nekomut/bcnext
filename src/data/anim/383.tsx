@@ -5,7 +5,7 @@ export const animationData_383 = {
   "f": {
     "name": "謎仮面のウララー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["383_f.png"],
       [59],
@@ -70,7 +70,7 @@ export const animationData_383 = {
       [106, 69, 59, 22]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [82],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1250, 1250, 0, 1000, 0, "DMY"],
@@ -161,7 +161,7 @@ export const animationData_383 = {
       [0, 0, 0, 0, 5, 0, "DMY"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [79],
       [1, 4, -1, 0, 0, "DMY"],
@@ -791,7 +791,7 @@ export const animationData_383 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [31, 12, 1, 0, 0],
@@ -847,7 +847,7 @@ export const animationData_383 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [169],
       [1, 4, 1, 0, 0, "仮面<color=2>"],
@@ -2277,7 +2277,7 @@ export const animationData_383 = {
       [15, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [31, 12, 1, 0, 0],
@@ -2378,7 +2378,7 @@ export const animationData_383 = {
   "c": {
     "name": "ネコ仮面のウララー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["383_c.png"],
       [60],
@@ -2444,7 +2444,7 @@ export const animationData_383 = {
       [106, 69, 59, 22]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [87],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1250, 1250, 0, 1000, 0, "DMY"],
@@ -2540,7 +2540,7 @@ export const animationData_383 = {
       [0, 0, 0, 0, 5, 0, "DMY"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [79],
       [1, 4, -1, 0, 0, "DMY"],
@@ -3170,7 +3170,7 @@ export const animationData_383 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [31, 12, 1, 0, 0],
@@ -3226,7 +3226,7 @@ export const animationData_383 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [181],
       [1, 4, 1, 0, 0, "仮面<color=2>"],
@@ -4774,7 +4774,7 @@ export const animationData_383 = {
       [56, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [31, 12, 1, 0, 0],
@@ -4875,7 +4875,7 @@ export const animationData_383 = {
   "s": {
     "name": "ネコ神面のウララー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["383_s.png"],
       [66],

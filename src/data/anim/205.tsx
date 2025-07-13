@@ -5,7 +5,7 @@ export const animationData_205 = {
   "f": {
     "name": "シェリア【キリン】",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["205_f.png"],
       [41],
@@ -52,7 +52,7 @@ export const animationData_205 = {
       [243, 124, 19, 12, "me2"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [53],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー"],
@@ -114,7 +114,7 @@ export const animationData_205 = {
       [0, 0, 0, 0, 5, 0, "後ろ上半身<color=1>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [2, 5, -1, 0, 0, "全体ダミー"],
@@ -261,7 +261,7 @@ export const animationData_205 = {
       [60, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [3, 4, -1, 0, 0, "前上半身"],
@@ -386,7 +386,7 @@ export const animationData_205 = {
       [200, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [78],
       [1, 4, 1, 0, 0, "影"],
@@ -1024,7 +1024,7 @@ export const animationData_205 = {
       [130, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [2, 4, 1, 0, 0, "全体ダミー"],
@@ -1098,7 +1098,7 @@ export const animationData_205 = {
       [0, 35, 1, 0]
     ],
     "maanim04": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [1, 8, 1, 0, 0],
@@ -1134,7 +1134,7 @@ export const animationData_205 = {
   "c": {
     "name": "シェリア【キリンX】",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["205_c.png"],
       [46],
@@ -1186,7 +1186,7 @@ export const animationData_205 = {
       [275, 87, 17, 12]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [64],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー"],
@@ -1259,7 +1259,7 @@ export const animationData_205 = {
       [0, 0, 0, 0, 5, 0, "後ろ上半身<color=1>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [2, 5, -1, 0, 0],
@@ -1409,7 +1409,7 @@ export const animationData_205 = {
       [60, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [3, 4, -1, 0, 0],
@@ -1537,7 +1537,7 @@ export const animationData_205 = {
       [200, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [98],
       [1, 4, 1, 0, 0, "影"],
@@ -2282,7 +2282,7 @@ export const animationData_205 = {
       [114, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [2, 4, 1, 0, 0],
@@ -2359,7 +2359,7 @@ export const animationData_205 = {
       [0, 0, 0, 0]
     ],
     "maanim04": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [1, 8, 1, 0, 0],

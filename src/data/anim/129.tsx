@@ -5,7 +5,7 @@ export const animationData_129 = {
   "f": {
     "name": "金ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["129_f.png"],
       [10],
@@ -21,7 +21,7 @@ export const animationData_129 = {
       [144, 58, 43, 56]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 0, 0, 179, 179, 0, 255, 0, "ダミー親"],
@@ -33,7 +33,7 @@ export const animationData_129 = {
       [0, 0, 23, 56, 1, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -51,7 +51,7 @@ export const animationData_129 = {
       [0, -1, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -65,7 +65,7 @@ export const animationData_129 = {
       [0, -1, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -94,7 +94,7 @@ export const animationData_129 = {
       [17, -2, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [1, 2, -1, -1000, 1000, "ノックバック"],
@@ -120,7 +120,7 @@ export const animationData_129 = {
   "c": {
     "name": "金ネコビルダー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["000_c.png"],
       [10],
@@ -136,7 +136,7 @@ export const animationData_129 = {
       [208, 1, 4, 4, "ダミー　空っぽの画像"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 0, 0, 179, 179, 0, 255, 0, "ダミー親"],
@@ -148,7 +148,7 @@ export const animationData_129 = {
       [0, 0, 35, 55, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -160,7 +160,7 @@ export const animationData_129 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -168,7 +168,7 @@ export const animationData_129 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -181,7 +181,7 @@ export const animationData_129 = {
       [15, 6, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 2, -1, -1000, 1000, "ノックバック"],
@@ -204,7 +204,7 @@ export const animationData_129 = {
   "s": {
     "name": "金ピカネコビルダー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["129_s.png"],
       [14],

@@ -5,7 +5,7 @@ export const animationData_541 = {
   "f": {
     "name": "ネコヤキソバン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["541_f.png"],
       [24],
@@ -111,7 +111,7 @@ export const animationData_541 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [4],
       [4, 12, -1, 0, 0, "攻撃ダミー"],
@@ -128,7 +128,7 @@ export const animationData_541 = {
       [0, 2, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [17],
       [2, 12, 1, 0, 0, "停止下半身"],
@@ -232,7 +232,7 @@ export const animationData_541 = {
       [18, -12, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [6],
       [3, 12, 1, 0, 0, "上半身"],
@@ -258,7 +258,7 @@ export const animationData_541 = {
   "c": {
     "name": "うまい!太い!大きい!ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["541_c.png"],
       [24],
@@ -356,7 +356,7 @@ export const animationData_541 = {
       [48, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [2],
       [4, 12, -1, 0, 0, "攻撃ダミー"],
@@ -367,7 +367,7 @@ export const animationData_541 = {
       [0, 1, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [26],
       [2, 12, 1, 0, 0, "停止下半身"],
@@ -539,7 +539,7 @@ export const animationData_541 = {
       [21, 1250, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [10],
       [3, 12, 1, 0, 0, "上半身"],

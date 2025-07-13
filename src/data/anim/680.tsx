@@ -5,7 +5,7 @@ export const animationData_680 = {
   "f": {
     "name": "さくら",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["680_f.png"],
       [180],
@@ -6646,7 +6646,7 @@ export const animationData_680 = {
   "c": {
     "name": "さくらCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["680_c.png"],
       [193],

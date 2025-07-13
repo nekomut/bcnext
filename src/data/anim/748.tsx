@@ -5,7 +5,7 @@ export const animationData_748 = {
   "f": {
     "name": "四乃森蒼紫",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["748_f.png"],
       [166],
@@ -5455,7 +5455,7 @@ export const animationData_748 = {
   "c": {
     "name": "四乃森蒼紫CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["748_c.png"],
       [166],

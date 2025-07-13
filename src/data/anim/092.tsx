@@ -5,7 +5,7 @@ export const animationData_092 = {
   "f": {
     "name": "狂乱のタンクネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["906_f.png"],
       [12],
@@ -23,7 +23,7 @@ export const animationData_092 = {
       [239, 135, 15, 32, "r"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [5],
       [-1, -1, 0, 0, -90, -149, 0, 0, 179, 179, 0, 255, 0, "ダミー親"],
@@ -37,7 +37,7 @@ export const animationData_092 = {
       [0, 0, 24, 85, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -56,7 +56,7 @@ export const animationData_092 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -64,7 +64,7 @@ export const animationData_092 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -111,7 +111,7 @@ export const animationData_092 = {
       [10, 11, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 2, -1, -1000, 1000, "ノックバック"],
@@ -134,7 +134,7 @@ export const animationData_092 = {
   "c": {
     "name": "狂乱のネコカベ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["092_c.png"],
       [13],
@@ -153,7 +153,7 @@ export const animationData_092 = {
       [103, 89, 4, 4, "ダミー　空っぽの画像"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 0, 0, 179, 179, 0, 255, 0, "ダミー親"],
@@ -165,7 +165,7 @@ export const animationData_092 = {
       [0, 0, 26, 84, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -177,7 +177,7 @@ export const animationData_092 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -185,7 +185,7 @@ export const animationData_092 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -220,7 +220,7 @@ export const animationData_092 = {
       [15, 39, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 2, -1, -1000, 1000, "ノックバック"],
@@ -243,7 +243,7 @@ export const animationData_092 = {
   "s": {
     "name": "大狂乱のゴムネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["092_s.png"],
       [13],
@@ -262,7 +262,7 @@ export const animationData_092 = {
       [103, 89, 4, 4, "ダミー　空っぽの画像"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 0, 0, 179, 179, 0, 255, 0, "ダミー親"],
@@ -274,7 +274,7 @@ export const animationData_092 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -286,7 +286,7 @@ export const animationData_092 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -294,7 +294,7 @@ export const animationData_092 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -329,7 +329,7 @@ export const animationData_092 = {
       [15, -51, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 2, 1, -1000, 1000, "ノックバック"],

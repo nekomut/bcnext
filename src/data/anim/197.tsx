@@ -5,7 +5,7 @@ export const animationData_197 = {
   "f": {
     "name": "サイキックネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["197_f.png"],
       [33],
@@ -44,7 +44,7 @@ export const animationData_197 = {
       [92, 70, 18, 16, "目"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [28],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -81,7 +81,7 @@ export const animationData_197 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [2, 5, -1, 0, 0, "キャラ全体"],
@@ -268,7 +268,7 @@ export const animationData_197 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [2, 11, -1, 0, 0, "キャラ全体"],
@@ -419,7 +419,7 @@ export const animationData_197 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [56],
       [2, 5, 1, 0, 0, "キャラ全体"],
@@ -1290,7 +1290,7 @@ export const animationData_197 = {
       [54, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [2, 5, -1, 0, 0, "キャラ全体"],
@@ -1379,7 +1379,7 @@ export const animationData_197 = {
   "c": {
     "name": "ネオサイキックネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["197_c.png"],
       [37],
@@ -1422,7 +1422,7 @@ export const animationData_197 = {
       [234, 156, 74, 62, "発光"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [46],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -1477,7 +1477,7 @@ export const animationData_197 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [46],
       [2, 5, -1, 0, 0, "キャラ全体"],
@@ -1702,7 +1702,7 @@ export const animationData_197 = {
       [200, 3600, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [2, 11, -1, 0, 0, "キャラ全体"],
@@ -1896,7 +1896,7 @@ export const animationData_197 = {
       [200, 3600, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [95],
       [2, 5, 1, 0, 0, "キャラ全体"],
@@ -3241,7 +3241,7 @@ export const animationData_197 = {
       [100, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [2, 5, -1, 0, 0, "キャラ全体"],
@@ -3354,7 +3354,7 @@ export const animationData_197 = {
   "s": {
     "name": "デビルサイキックネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["197_s.png"],
       [69],
@@ -3429,7 +3429,7 @@ export const animationData_197 = {
       [486, 231, 20, 20]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [92],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -3530,7 +3530,7 @@ export const animationData_197 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [3, 5, -1, 0, 0, "体<color=0>"],
@@ -3770,7 +3770,7 @@ export const animationData_197 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [3, 5, -1, 0, 0, "体<color=0>"],
@@ -4010,7 +4010,7 @@ export const animationData_197 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [101],
       [2, 4, 1, 0, 0, "影<color=9>"],
@@ -5323,7 +5323,7 @@ export const animationData_197 = {
       [25, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [52, 12, 1, 0, 0, "攻撃エフェクト親ダミー<color=7>"],

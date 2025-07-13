@@ -5,7 +5,7 @@ export const animationData_542 = {
   "f": {
     "name": "ネコ少年",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["542_f.png"],
       [23],
@@ -67,7 +67,7 @@ export const animationData_542 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [15],
       [2, 5, -1, 0, 0, "キャラ親ダミー<color=7>"],
@@ -157,7 +157,7 @@ export const animationData_542 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [8],
       [3, 11, -1, 0, 0, "009体.png<color=0>"],
@@ -721,7 +721,7 @@ export const animationData_542 = {
       [57, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [27],
       [2, 5, 1, 0, 0, "キャラ親ダミー<color=7>"],
@@ -810,7 +810,7 @@ export const animationData_542 = {
   "c": {
     "name": "ネコ学生",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["542_c.png"],
       [32],
@@ -887,7 +887,7 @@ export const animationData_542 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [29],
       [2, 5, -1, 0, 0, "キャラ親ダミー<color=7>"],
@@ -1024,7 +1024,7 @@ export const animationData_542 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [22],
       [3, 11, -1, 0, 0, "009体.png<color=0>"],
@@ -1829,7 +1829,7 @@ export const animationData_542 = {
       [57, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [41],
       [2, 5, 1, 0, 0, "キャラ親ダミー<color=7>"],

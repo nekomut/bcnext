@@ -5,7 +5,7 @@ export const animationData_480 = {
   "f": {
     "name": "ねこ娘",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["480_f.png"],
       [15],
@@ -26,7 +26,7 @@ export const animationData_480 = {
       [108, 102, 10, 19, "014奥足.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [18],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -53,7 +53,7 @@ export const animationData_480 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [16],
       [3, 5, -1, 0, 0, "008胴体.png"],
@@ -132,7 +132,7 @@ export const animationData_480 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [10],
       [2, 5, -1, 0, 0, "キャラダミー"],
@@ -183,7 +183,7 @@ export const animationData_480 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [29],
       [2, 10, 1, 0, 0, "キャラダミー"],
@@ -401,7 +401,7 @@ export const animationData_480 = {
       [19, -500, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [16],
       [3, 4, 1, 0, 0, "008胴体.png"],
@@ -457,7 +457,7 @@ export const animationData_480 = {
   "c": {
     "name": "ネコねこ娘",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["480_c.png"],
       [30],
@@ -493,7 +493,7 @@ export const animationData_480 = {
       [229, 22, 37, 86, "029大猫しっぽ.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [33],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -535,7 +535,7 @@ export const animationData_480 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [42],
       [2, 5, -1, 0, 0, "キャラダミー"],
@@ -779,7 +779,7 @@ export const animationData_480 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [25],
       [3, 5, -1, 0, 0, "025大猫胴体.png<color=16>"],
@@ -926,7 +926,7 @@ export const animationData_480 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [41],
       [2, 4, 1, 0, 0, "キャラダミー"],
@@ -1200,7 +1200,7 @@ export const animationData_480 = {
       [20, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [23],
       [2, 11, 1, 0, 0, "キャラダミー"],

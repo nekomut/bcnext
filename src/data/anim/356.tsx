@@ -5,7 +5,7 @@ export const animationData_356 = {
   "f": {
     "name": "ノラ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["356_f.png"],
       [47],
@@ -58,7 +58,7 @@ export const animationData_356 = {
       [406, 61, 51, 62, "攻撃05-2：手"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [71],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー"],
@@ -138,7 +138,7 @@ export const animationData_356 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [60, 12, -1, 0, 0],
@@ -327,7 +327,7 @@ export const animationData_356 = {
       [18, -100, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [60, 12, -1, 0, 0],
@@ -347,7 +347,7 @@ export const animationData_356 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [63],
       [3, 5, 1, 0, 0],
@@ -705,7 +705,7 @@ export const animationData_356 = {
       [33, 100, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [61, 12, 1, 0, 0],
@@ -735,7 +735,7 @@ export const animationData_356 = {
   "c": {
     "name": "覚醒ノラ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["356_c.png"],
       [42],
@@ -783,7 +783,7 @@ export const animationData_356 = {
       [113, 35, 45, 77, "黒もや"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [58],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー"],
@@ -850,7 +850,7 @@ export const animationData_356 = {
       [0, 0, -13, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [2, 12, -1, 0, 0, "■攻撃用ダミー<color=5>"],
@@ -1033,7 +1033,7 @@ export const animationData_356 = {
       [18, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [2, 12, -1, 0, 0, "■攻撃用ダミー<color=5>"],
@@ -1073,7 +1073,7 @@ export const animationData_356 = {
       [0, -30, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [48],
       [3, 4, 1, 0, 0, "影"],
@@ -1364,7 +1364,7 @@ export const animationData_356 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [2, 12, 1, 0, 0, "■攻撃用ダミー<color=5>"],

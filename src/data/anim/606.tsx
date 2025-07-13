@@ -5,7 +5,7 @@ export const animationData_606 = {
   "f": {
     "name": "ネコパンダ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["606_f.png"],
       [39],
@@ -1739,7 +1739,7 @@ export const animationData_606 = {
   "c": {
     "name": "ネコ玄馬",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["606_c.png"],
       [49],

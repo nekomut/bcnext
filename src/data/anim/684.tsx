@@ -5,7 +5,7 @@ export const animationData_684 = {
   "f": {
     "name": "洗脳されしネコフィッシュ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["684_f.png"],
       [14],
@@ -119,7 +119,7 @@ export const animationData_684 = {
   "c": {
     "name": "洗脳されしネコクジラ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["684_c.png"],
       [20],

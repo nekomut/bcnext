@@ -5,7 +5,7 @@ export const animationData_388 = {
   "f": {
     "name": "片桐恋",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["388_f.png"],
       [40],
@@ -51,7 +51,7 @@ export const animationData_388 = {
       [335, 92, 66, 30, "風圧エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [38],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "■ダミー<color=7>"],
@@ -98,7 +98,7 @@ export const animationData_388 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [34, 12, -1, 0, 0, "ハート<color=9>"],
@@ -345,7 +345,7 @@ export const animationData_388 = {
       [2, -1, 2, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [4, 5, -1, 0, 0],
@@ -559,7 +559,7 @@ export const animationData_388 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [48],
       [2, 9, 1, 0, 0, "影<color=7>"],
@@ -1003,7 +1003,7 @@ export const animationData_388 = {
       [22, 177, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [4, 4, 1, 0, 0],
@@ -1113,7 +1113,7 @@ export const animationData_388 = {
   "c": {
     "name": "片桐恋CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["388_c.png"],
       [40],
@@ -1159,7 +1159,7 @@ export const animationData_388 = {
       [335, 92, 66, 30, "風圧エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [38],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "■ダミー<color=7>"],
@@ -1206,7 +1206,7 @@ export const animationData_388 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [34, 12, -1, 0, 0, "ハート<color=9>"],
@@ -1453,7 +1453,7 @@ export const animationData_388 = {
       [2, -1, 2, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [4, 5, -1, 0, 0],
@@ -1667,7 +1667,7 @@ export const animationData_388 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [48],
       [2, 9, 1, 0, 0, "影<color=7>"],
@@ -2111,7 +2111,7 @@ export const animationData_388 = {
       [22, 177, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [4, 4, 1, 0, 0],

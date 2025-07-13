@@ -5,7 +5,7 @@ export const animationData_419 = {
   "f": {
     "name": "ポコタ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["419_f.png"],
       [36],
@@ -47,7 +47,7 @@ export const animationData_419 = {
       [1, 1, 125, 66, "035エフェクト　にんじん.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [38],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1350, 1350, 0, 1000, 0, "000.png"],
@@ -94,7 +94,7 @@ export const animationData_419 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [2, 5, -1, 0, 0, "020体.png"],
@@ -259,7 +259,7 @@ export const animationData_419 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [2, 5, -1, 0, 0, "020体.png"],
@@ -377,7 +377,7 @@ export const animationData_419 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [76],
       [2, 4, 1, 0, 0, "020体.png"],
@@ -1025,7 +1025,7 @@ export const animationData_419 = {
       [61, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [2, 4, 1, 0, 0, "020体.png"],
@@ -1147,7 +1147,7 @@ export const animationData_419 = {
   "c": {
     "name": "ポコタＣＣ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["419_c.png"],
       [36],
@@ -1189,7 +1189,7 @@ export const animationData_419 = {
       [1, 1, 125, 66, "035エフェクト　にんじん.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [38],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1350, 1350, 0, 1000, 0, "000.png"],
@@ -1236,7 +1236,7 @@ export const animationData_419 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [2, 5, -1, 0, 0, "020体.png"],
@@ -1396,7 +1396,7 @@ export const animationData_419 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [2, 5, -1, 0, 0, "020体.png"],
@@ -1514,7 +1514,7 @@ export const animationData_419 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [76],
       [2, 4, 1, 0, 0, "020体.png"],
@@ -2162,7 +2162,7 @@ export const animationData_419 = {
       [61, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [2, 4, 1, 0, 0, "020体.png"],

@@ -5,7 +5,7 @@ export const animationData_539 = {
   "f": {
     "name": "ラガーにゃん",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["539_f.png"],
       [48],
@@ -59,7 +59,7 @@ export const animationData_539 = {
       [208, 126, 36, 29, "047追加下半身.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [37],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "000.png"],
@@ -105,7 +105,7 @@ export const animationData_539 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [47],
       [1, 9, -1, 0, 0, "001影.png"],
@@ -322,7 +322,7 @@ export const animationData_539 = {
       [12, 19, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [14],
       [31, 12, -1, 0, 0, "地面ダミー"],
@@ -369,7 +369,7 @@ export const animationData_539 = {
       [0, 9, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [106],
       [1, 4, 1, 0, 0, "001影.png"],
@@ -2257,7 +2257,7 @@ export const animationData_539 = {
       [97, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [55],
       [2, 4, 1, 0, 0],
@@ -2430,7 +2430,7 @@ export const animationData_539 = {
   "c": {
     "name": "ニャメフト",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["539_c.png"],
       [48],
@@ -2484,7 +2484,7 @@ export const animationData_539 = {
       [93, 157, 17, 15, "047数字.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [39],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "000.png"],
@@ -2532,7 +2532,7 @@ export const animationData_539 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [48],
       [1, 9, -1, 0, 0, "001影.png"],
@@ -2730,7 +2730,7 @@ export const animationData_539 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [3],
       [26, 12, -1, 0, 0, "煙ダミー<color=9>"],
@@ -2744,7 +2744,7 @@ export const animationData_539 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [112],
       [1, 4, 1, 0, 0, "001影.png"],
@@ -4629,7 +4629,7 @@ export const animationData_539 = {
       [63, 12, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [64],
       [2, 4, 1, 0, 0],
@@ -4829,7 +4829,7 @@ export const animationData_539 = {
   "s": {
     "name": "ニャッハー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["539_s.png"],
       [56],

@@ -5,7 +5,7 @@ export const animationData_177 = {
   "f": {
     "name": "覇龍ディオラムス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["177_f.png"],
       [38],
@@ -49,7 +49,7 @@ export const animationData_177 = {
       [500, 36, 9, 33, "ビーム"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [57],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1800, 1800, 0, 1000, 0, "ダミー<color=7>"],
@@ -115,7 +115,7 @@ export const animationData_177 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [50],
       [4, 5, -1, 0, 0, "腰"],
@@ -526,7 +526,7 @@ export const animationData_177 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [5, 11, -1, 0, 0, "上半身"],
@@ -710,7 +710,7 @@ export const animationData_177 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [84],
       [4, 4, 1, 0, 0, "腰"],
@@ -1352,7 +1352,7 @@ export const animationData_177 = {
       [120, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [2, 4, -1, 0, 0, "影"],
@@ -1468,7 +1468,7 @@ export const animationData_177 = {
   "c": {
     "name": "覇龍王ディオラムス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["177_c.png"],
       [50],
@@ -1524,7 +1524,7 @@ export const animationData_177 = {
       [252, 237, 35, 16, "しっぽ05光"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [77],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1800, 1800, 0, 1000, 0, "ダミー<color=7>"],
@@ -1610,7 +1610,7 @@ export const animationData_177 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [68],
       [4, 5, -1, 0, 0, "腰"],
@@ -2069,7 +2069,7 @@ export const animationData_177 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [5, 11, -1, 0, 0, "上半身"],
@@ -2303,7 +2303,7 @@ export const animationData_177 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [102],
       [4, 4, 1, 0, 0, "腰"],
@@ -3189,7 +3189,7 @@ export const animationData_177 = {
       [130, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [2, 4, -1, 0, 0, "影"],
@@ -3359,7 +3359,7 @@ export const animationData_177 = {
   "s": {
     "name": "覇龍皇帝ディオラムス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["177_s.png"],
       [66],
@@ -3551,7 +3551,7 @@ export const animationData_177 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [88],
       [4, 5, -1, 0, 0, "腰"],
@@ -6347,7 +6347,7 @@ export const animationData_177 = {
       [0, -2, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [74],
       [2, 4, 1, 0, 0, "影"],

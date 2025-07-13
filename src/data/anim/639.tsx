@@ -2110,7 +2110,7 @@ export const animationData_639 = {
   "c": {
     "name": "エミリア＆ネコCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["639_c.png"],
       [99],

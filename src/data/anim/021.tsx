@@ -5,7 +5,7 @@ export const animationData_021 = {
   "f": {
     "name": "スモウネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["021_f.png"],
       [14],
@@ -25,7 +25,7 @@ export const animationData_021 = {
       [177, 168, 46, 61, "左腕03"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [8],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 255, 0, "ダミー親"],
@@ -42,7 +42,7 @@ export const animationData_021 = {
       [0, 0, 80, 206, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [2, 7, -1, -1000, 1000, "身体　Ｙ座標"],
@@ -104,7 +104,7 @@ export const animationData_021 = {
       [32, 11, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [2, 7, -1, -1000, 1000, "身体　Ｙ座標"],
@@ -130,7 +130,7 @@ export const animationData_021 = {
       [0, 5, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [2, 7, 1, -1000, 1000, "身体　Ｙ座標"],
@@ -279,7 +279,7 @@ export const animationData_021 = {
       [33, 11, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [2, 7, -1, -1000, 1000, "身体　Ｙ座標"],
@@ -332,7 +332,7 @@ export const animationData_021 = {
   "c": {
     "name": "マダム・ザ・スモウ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["021_c.png"],
       [20],
@@ -385,7 +385,7 @@ export const animationData_021 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [10],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 255, 0, "ダミー親"],
@@ -404,7 +404,7 @@ export const animationData_021 = {
       [0, 0, 70, 221, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [2, 7, -1, -1000, 1000, "身体　Ｙ座標"],
@@ -487,7 +487,7 @@ export const animationData_021 = {
       [32, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [2, 7, -1, -1000, 1000, "身体　Ｙ座標"],
@@ -516,7 +516,7 @@ export const animationData_021 = {
       [0, 17, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [2, 7, 1, -1000, 1000, "身体　Ｙ座標"],
@@ -745,7 +745,7 @@ export const animationData_021 = {
       [33, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [2, 7, -1, -1000, 1000, "身体　Ｙ座標"],
@@ -822,7 +822,7 @@ export const animationData_021 = {
   "s": {
     "name": "ネコにぎり",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["021_s.png"],
       [19],
@@ -847,7 +847,7 @@ export const animationData_021 = {
       [249, 117, 56, 38, "桶"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [16],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 255, 0, "ダミー親"],
@@ -872,7 +872,7 @@ export const animationData_021 = {
       [0, 0, -2, 4, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [2, 7, -1, 0, 0, "身体　Ｙ座標"],
@@ -937,7 +937,7 @@ export const animationData_021 = {
       [32, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [5, 5, -1, 0, 0, "右腕"],
@@ -961,7 +961,7 @@ export const animationData_021 = {
       [20, 50, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [2, 6, 1, 0, 0, "身体　Ｘ座標"],
@@ -1283,7 +1283,7 @@ export const animationData_021 = {
       [33, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [2, 6, -1, 0, 0, "身体　Ｘ座標"],

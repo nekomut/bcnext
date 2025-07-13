@@ -5,7 +5,7 @@ export const animationData_250 = {
   "f": {
     "name": "騎馬兵",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["250_f.png"],
       [16],
@@ -27,7 +27,7 @@ export const animationData_250 = {
       [41, 135, 54, 109, "攻撃えレクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [17],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -53,7 +53,7 @@ export const animationData_250 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [4, 4, -1, 0, 0, "馬身"],
@@ -237,7 +237,7 @@ export const animationData_250 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [4, 5, -1, 0, 0, "馬身"],
@@ -310,7 +310,7 @@ export const animationData_250 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [2, 4, 1, 0, 0, "影"],
@@ -542,7 +542,7 @@ export const animationData_250 = {
       [22, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [4, 5, 1, 0, 0, "馬身"],
@@ -592,7 +592,7 @@ export const animationData_250 = {
   "c": {
     "name": "森の騎馬兵",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["250_c.png"],
       [15],
@@ -613,7 +613,7 @@ export const animationData_250 = {
       [1, 1, 42, 198, "武器"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [17],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -639,7 +639,7 @@ export const animationData_250 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [4, 4, -1, 0, 0, "馬身"],
@@ -842,7 +842,7 @@ export const animationData_250 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [4, 5, -1, 0, 0, "馬身"],
@@ -910,7 +910,7 @@ export const animationData_250 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [2, 4, 1, 0, 0, "影"],
@@ -1131,7 +1131,7 @@ export const animationData_250 = {
       [22, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [4, 5, 1, 0, 0, "馬身"],
@@ -1181,7 +1181,7 @@ export const animationData_250 = {
   "s": {
     "name": "迅雷の黒騎馬兵",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["250_s.png"],
       [18],
@@ -1205,7 +1205,7 @@ export const animationData_250 = {
       [169, 122, 54, 97, 3]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [19],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -1233,7 +1233,7 @@ export const animationData_250 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [4, 4, -1, 0, 0, "馬身"],
@@ -1477,7 +1477,7 @@ export const animationData_250 = {
       [20, 300, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [4, 5, -1, 0, 0, "馬身"],
@@ -1571,7 +1571,7 @@ export const animationData_250 = {
       [14, 300, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [2, 4, 1, 0, 0, "影"],
@@ -1848,7 +1848,7 @@ export const animationData_250 = {
       [31, 300, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [4, 5, 1, 0, 0, "馬身"],

@@ -5,7 +5,7 @@ export const animationData_475 = {
   "f": {
     "name": "ネコ若神子",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["810_f.png"],
       [42],
@@ -53,7 +53,7 @@ export const animationData_475 = {
       [1, 62, 57, 75, "041剣攻撃エフェクト　.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [44],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "親ダミー"],
@@ -106,7 +106,7 @@ export const animationData_475 = {
       [0, 0, 0, 0, 5, 0, "親ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [43],
       [1, 9, -1, 0, 0, "001影.png"],
@@ -268,7 +268,7 @@ export const animationData_475 = {
       [0, 107, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [15],
       [1, 9, -1, 0, 0, "001影.png"],
@@ -342,7 +342,7 @@ export const animationData_475 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [52],
       [1, 4, 1, 0, 0, "001影.png"],
@@ -703,7 +703,7 @@ export const animationData_475 = {
       [42, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [32],
       [2, 4, 1, 0, 0, "キャラ親ダミー"],
@@ -807,7 +807,7 @@ export const animationData_475 = {
   "c": {
     "name": "ネコ神帝",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["810_c.png"],
       [36],
@@ -849,7 +849,7 @@ export const animationData_475 = {
       [175, 216, 26, 22, "035刃　反射.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [47],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "親ダミー"],
@@ -905,7 +905,7 @@ export const animationData_475 = {
       [0, 0, 0, 0, 5, 0, "親ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [38],
       [2, 5, -1, 0, 0, "キャラ親ダミー"],
@@ -1086,7 +1086,7 @@ export const animationData_475 = {
       [0, 1, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [20],
       [3, 5, -1, 0, 0, "キャラ　頭<color=0>"],
@@ -1167,7 +1167,7 @@ export const animationData_475 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [56],
       [2, 5, 1, 0, 0, "キャラ親ダミー"],
@@ -1598,7 +1598,7 @@ export const animationData_475 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [32],
       [2, 4, 1, 0, 0, "キャラ親ダミー"],

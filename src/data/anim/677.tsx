@@ -5,7 +5,7 @@ export const animationData_677 = {
   "f": {
     "name": "三雲修＆ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["677_f.png"],
       [117],
@@ -2806,7 +2806,7 @@ export const animationData_677 = {
   "c": {
     "name": "三雲修＆ネコCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["677_c.png"],
       [117],

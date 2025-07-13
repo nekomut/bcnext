@@ -5,7 +5,7 @@ export const animationData_140 = {
   "f": {
     "name": "ふにゅふにゅネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["140_f.png"],
       [9],
@@ -20,7 +20,7 @@ export const animationData_140 = {
       [79, 1, 38, 72]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [18],
       [-1, -1, 0, 0, 0, 0, 20, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -47,7 +47,7 @@ export const animationData_140 = {
       [0, 0, 21, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 9, -1, 0, 0],
@@ -102,7 +102,7 @@ export const animationData_140 = {
       [24, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [1, 4, -1, 0, 0],
@@ -178,7 +178,7 @@ export const animationData_140 = {
       [48, 600, 2, 1]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [1, 4, 1, 0, 0],
@@ -396,7 +396,7 @@ export const animationData_140 = {
       [42, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [2, 4, -1, 0, 0],
@@ -464,7 +464,7 @@ export const animationData_140 = {
   "c": {
     "name": "むきゅむきゅネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["140_c.png"],
       [33],
@@ -503,7 +503,7 @@ export const animationData_140 = {
       [6, 122, 16, 16, "力が抜けた手"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [43],
       [-1, -1, 0, 0, 0, 0, 20, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=9>"],
@@ -555,7 +555,7 @@ export const animationData_140 = {
       [0, 0, 21, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [1, 9, -1, 0, 0],
@@ -622,7 +622,7 @@ export const animationData_140 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [1, 4, -1, 0, 0],
@@ -710,7 +710,7 @@ export const animationData_140 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [44],
       [1, 9, 1, 0, 0],
@@ -1087,7 +1087,7 @@ export const animationData_140 = {
       [99, -1200, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [2, 4, -1, 0, 0],

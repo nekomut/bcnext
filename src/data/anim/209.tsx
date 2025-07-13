@@ -5,7 +5,7 @@ export const animationData_209 = {
   "f": {
     "name": "ちびネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["209_f.png"],
       [8],
@@ -19,7 +19,7 @@ export const animationData_209 = {
       [1, 74, 25, 10, "あし３"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [4],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -32,7 +32,7 @@ export const animationData_209 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [3, 2, -1, 0, 0],
@@ -58,7 +58,7 @@ export const animationData_209 = {
       [16, 1, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -66,7 +66,7 @@ export const animationData_209 = {
       [0, 1, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [2, 2, 1, 0, 0],
@@ -95,7 +95,7 @@ export const animationData_209 = {
       [17, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [2, 2, 1, 0, 0, "顔"],
@@ -115,7 +115,7 @@ export const animationData_209 = {
   "c": {
     "name": "ちびネコビルダー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["209_c.png"],
       [11],
@@ -132,7 +132,7 @@ export const animationData_209 = {
       [63, 61, 16, 23]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [6],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -147,7 +147,7 @@ export const animationData_209 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [3, 2, -1, 0, 0],
@@ -187,7 +187,7 @@ export const animationData_209 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -195,7 +195,7 @@ export const animationData_209 = {
       [0, 1, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [2, 2, 1, 0, 0],
@@ -259,7 +259,7 @@ export const animationData_209 = {
       [8, 400, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [2, 2, 1, 0, 0, "顔"],
@@ -294,7 +294,7 @@ export const animationData_209 = {
   "s": {
     "name": "ちびネコモヒカン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["209_s.png"],
       [11],
@@ -311,7 +311,7 @@ export const animationData_209 = {
       [79, 69, 19, 30, "右腕02"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [6],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -326,7 +326,7 @@ export const animationData_209 = {
       [0, 0, 0, 0, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [3, 2, -1, 0, 0, "足"],
@@ -366,7 +366,7 @@ export const animationData_209 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -374,7 +374,7 @@ export const animationData_209 = {
       [0, 2, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [2, 2, 1, 0, 0, "身体01"],
@@ -439,7 +439,7 @@ export const animationData_209 = {
       [6, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [2, 2, 1, 0, 0, "ダミー"],

@@ -5,7 +5,7 @@ export const animationData_195 = {
   "f": {
     "name": "西園寺メカ子",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["195_f.png"],
       [66],
@@ -77,7 +77,7 @@ export const animationData_195 = {
       [139, 204, 51, 38, "リアル煙"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [92],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1600, 1600, 0, 1000, 0, "ダミー<color=7>"],
@@ -178,7 +178,7 @@ export const animationData_195 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [55],
       [3, 5, -1, 0, 0, "キャラダミー"],
@@ -558,7 +558,7 @@ export const animationData_195 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [3, 8, -1, 0, 0, "キャラダミー"],
@@ -749,7 +749,7 @@ export const animationData_195 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [174],
       [2, 4, 1, 0, 0, "影"],
@@ -2166,7 +2166,7 @@ export const animationData_195 = {
       [77, 1000, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [4, 4, 1, 0, 0, "マシン体"],
@@ -2315,7 +2315,7 @@ export const animationData_195 = {
   "c": {
     "name": "ドクトルDr.メカ子",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["195_c.png"],
       [61],
@@ -2382,7 +2382,7 @@ export const animationData_195 = {
       [405, 205, 49, 38, "風04"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [82],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1600, 1600, 0, 1000, 0, "ダミー<color=7>"],
@@ -2473,7 +2473,7 @@ export const animationData_195 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [64],
       [3, 5, -1, 0, 0, "キャラダミー"],
@@ -2895,7 +2895,7 @@ export const animationData_195 = {
       [9, 600, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [11, 5, -1, 0, 0, "マシン左肩<color=0>"],
@@ -3119,7 +3119,7 @@ export const animationData_195 = {
       [6, 600, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [195],
       [2, 4, 1, 0, 0, "影"],
@@ -4881,7 +4881,7 @@ export const animationData_195 = {
       [100, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [53],
       [4, 4, 1, 0, 0, "マシン体"],
@@ -5048,7 +5048,7 @@ export const animationData_195 = {
   "s": {
     "name": "アストロDr.メカ子",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["195_s.png"],
       [77],
@@ -5131,7 +5131,7 @@ export const animationData_195 = {
       [491, 71, 20, 18, "右手04"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [157],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1600, 1600, 0, 1000, 0, "ダミー<color=7>"],
@@ -5297,7 +5297,7 @@ export const animationData_195 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [78],
       [3, 5, -1, 0, 0, "キャラダミー"],
@@ -5894,7 +5894,7 @@ export const animationData_195 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [30, 11, -1, 0, 0, "肩左<color=0>"],
@@ -6326,7 +6326,7 @@ export const animationData_195 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [225],
       [2, 4, 1, 0, 0, "影"],
@@ -7887,7 +7887,7 @@ export const animationData_195 = {
       [68, 3000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [83],
       [4, 4, 1, 0, 0, "マシン体"],

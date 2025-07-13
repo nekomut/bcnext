@@ -5,7 +5,7 @@ export const animationData_038 = {
   "f": {
     "name": "ネコ車輪",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["038_f.png"],
       [23],
@@ -64,7 +64,7 @@ export const animationData_038 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [33],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー親"],
@@ -106,7 +106,7 @@ export const animationData_038 = {
       [0, 0, 41, 143, 5, 0, "ダミー親"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [4, 12, -1, 0, 0],
@@ -192,7 +192,7 @@ export const animationData_038 = {
       [120, 3600, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [4, 12, -1, 0, 0],
@@ -278,7 +278,7 @@ export const animationData_038 = {
       [120, 3600, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [49],
       [3, 12, 1, 0, 0],
@@ -601,7 +601,7 @@ export const animationData_038 = {
       [40, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [3, 12, 1, 0, 0],
@@ -654,7 +654,7 @@ export const animationData_038 = {
   "c": {
     "name": "ネコ太陽",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["038_c.png"],
       [31],
@@ -691,7 +691,7 @@ export const animationData_038 = {
       [106, 155, 98, 98, "星"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [42],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー親"],
@@ -742,7 +742,7 @@ export const animationData_038 = {
       [0, 0, 41, 143, 5, 0, "ダミー親"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [21, 11, -1, 0, 0],
@@ -831,7 +831,7 @@ export const animationData_038 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [21, 11, -1, 0, 0],
@@ -920,7 +920,7 @@ export const animationData_038 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [3, 12, 1, 0, 0],
@@ -1252,7 +1252,7 @@ export const animationData_038 = {
       [40, 900, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [16, 12, -1, 0, 0],
@@ -1299,7 +1299,7 @@ export const animationData_038 = {
   "s": {
     "name": "ネコクール",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["038_s.png"],
       [29],
@@ -1334,7 +1334,7 @@ export const animationData_038 = {
       [194, 1, 61, 93]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [66],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -1409,7 +1409,7 @@ export const animationData_038 = {
       [0, 0, 0, 143, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [57],
       [2, 5, -1, 0, 0],
@@ -1665,7 +1665,7 @@ export const animationData_038 = {
       [100, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [57],
       [2, 5, -1, 0, 0],
@@ -1921,7 +1921,7 @@ export const animationData_038 = {
       [100, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [144],
       [1, 4, 1, 0, 0],
@@ -2770,7 +2770,7 @@ export const animationData_038 = {
       [39, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [2, 4, 1, 0, 0],

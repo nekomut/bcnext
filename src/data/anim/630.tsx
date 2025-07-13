@@ -5,7 +5,7 @@ export const animationData_630 = {
   "f": {
     "name": "ネコ書道",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["630_f.png"],
       [53],
@@ -1477,7 +1477,7 @@ export const animationData_630 = {
   "c": {
     "name": "ネコ茶道",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["630_c.png"],
       [51],

@@ -5,7 +5,7 @@ export const animationData_620 = {
   "f": {
     "name": "邪龍ヘヴィジャーク",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["620_f.png"],
       [102],
@@ -7825,7 +7825,7 @@ export const animationData_620 = {
   "c": {
     "name": "邪龍王ヘヴィジャーク",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["620_c.png"],
       [99],

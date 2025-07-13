@@ -5,7 +5,7 @@ export const animationData_161 = {
   "f": {
     "name": "狂乱のケリ姫",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["161_f.png"],
       [43],
@@ -54,7 +54,7 @@ export const animationData_161 = {
       [464, 170, 47, 85]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [57],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "大元"],
@@ -120,7 +120,7 @@ export const animationData_161 = {
       [0, 0, -8, 160, 10, 0, "大元"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [58],
       [1, 4, -1, 0, 0],
@@ -404,7 +404,7 @@ export const animationData_161 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [7, 11, -1, 0, 0, "大元"],
@@ -475,7 +475,7 @@ export const animationData_161 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [86],
       [1, 4, 1, 0, 0, "上半身ケリ"],
@@ -954,7 +954,7 @@ export const animationData_161 = {
       [12, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [13, 12, -1, 0, 0, "大元"],
@@ -1089,7 +1089,7 @@ export const animationData_161 = {
   "c": {
     "name": "狂乱のケリ姫CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["161_c.png"],
       [44],
@@ -1139,7 +1139,7 @@ export const animationData_161 = {
       [467, 128, 44, 35]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [58],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "大元"],
@@ -1206,7 +1206,7 @@ export const animationData_161 = {
       [0, 0, -8, 160, 10, 0, "大元"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [58],
       [1, 4, -1, 0, 0],
@@ -1490,7 +1490,7 @@ export const animationData_161 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [7, 11, -1, 0, 0, "大元"],
@@ -1561,7 +1561,7 @@ export const animationData_161 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [85],
       [1, 4, 1, 0, 0, "上半身ケリ"],
@@ -2059,7 +2059,7 @@ export const animationData_161 = {
       [8, 57, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [13, 12, -1, 0, 0, "大元"],
@@ -2194,7 +2194,7 @@ export const animationData_161 = {
   "s": {
     "name": "大狂乱のケリ姫",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["161_s.png"],
       [54],
@@ -2254,7 +2254,7 @@ export const animationData_161 = {
       [427, 171, 21, 20, "ネコエフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [98],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "大元"],
@@ -2361,7 +2361,7 @@ export const animationData_161 = {
       [0, 0, 0, 0, 5, 0, "大元"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [97],
       [1, 4, -1, 0, 0],
@@ -2820,7 +2820,7 @@ export const animationData_161 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [3, 11, -1, 0, 0, "大元"],
@@ -3008,7 +3008,7 @@ export const animationData_161 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [142],
       [1, 4, 1, 0, 0, "上半身ケリ"],
@@ -3932,7 +3932,7 @@ export const animationData_161 = {
       [10, 2000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [61],
       [13, 12, 1, 0, 0, "大元"],

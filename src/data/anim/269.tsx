@@ -5,7 +5,7 @@ export const animationData_269 = {
   "f": {
     "name": "幼獣ガオ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["269_f.png"],
       [44],
@@ -55,7 +55,7 @@ export const animationData_269 = {
       [127, 190, 133, 64]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [45],
       [-1, -1, 0, 0, 44, 84, 0, 0, 1100, 1100, 0, 1000, 0, 0],
@@ -109,7 +109,7 @@ export const animationData_269 = {
       [0, 0, 0, 2, 5, 0, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [2, 5, -1, 0, 0],
@@ -339,7 +339,7 @@ export const animationData_269 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [2, 11, -1, 0, 0],
@@ -512,7 +512,7 @@ export const animationData_269 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [72],
       [1, 4, 1, 0, 0],
@@ -1168,7 +1168,7 @@ export const animationData_269 = {
       [35, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [2, 5, 1, 0, 0, "腹"],
@@ -1251,7 +1251,7 @@ export const animationData_269 = {
   "c": {
     "name": "皇獣ガオウ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["269_c.png"],
       [66],
@@ -1323,7 +1323,7 @@ export const animationData_269 = {
       [397, 141, 9, 12, "飛び炎"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [122],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -1454,7 +1454,7 @@ export const animationData_269 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [97],
       [4, 11, -1, 0, 0, "腰"],
@@ -2197,7 +2197,7 @@ export const animationData_269 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [49],
       [4, 11, -1, 0, 0, "腰"],
@@ -2472,7 +2472,7 @@ export const animationData_269 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [215],
       [2, 4, 1, 0, 0, "影"],
@@ -4658,7 +4658,7 @@ export const animationData_269 = {
       [42, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [82],
       [2, 9, 1, 0, 0, "影"],

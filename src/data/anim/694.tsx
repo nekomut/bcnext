@@ -211,7 +211,7 @@ export const animationData_694 = {
   "c": {
     "name": "洗脳されしネコダラボッチ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["694_c.png"],
       [19],

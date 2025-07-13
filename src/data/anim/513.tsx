@@ -5,7 +5,7 @@ export const animationData_513 = {
   "f": {
     "name": "ガイル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["513_f.png"],
       [59],
@@ -70,7 +70,7 @@ export const animationData_513 = {
       [132, 2, 86, 103, "058加算EF.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [66],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0],
@@ -145,7 +145,7 @@ export const animationData_513 = {
       [0, 0, 0, 0, 5, 0, "001影.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [40],
       [2, 4, -1, 0, 0],
@@ -438,7 +438,7 @@ export const animationData_513 = {
       [19, -2, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [27],
       [2, 5, -1, 0, 0],
@@ -575,7 +575,7 @@ export const animationData_513 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [123],
       [1, 4, 1, 0, 0, "025腰.png"],
@@ -1529,7 +1529,7 @@ export const animationData_513 = {
       [65, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [47],
       [2, 4, -1, 0, 0],
@@ -1678,7 +1678,7 @@ export const animationData_513 = {
   "c": {
     "name": "ガイルCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["513_c.png"],
       [73],
@@ -1757,7 +1757,7 @@ export const animationData_513 = {
       [319, 86, 39, 45, "072.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [81],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0],
@@ -1847,7 +1847,7 @@ export const animationData_513 = {
       [0, 0, 0, 0, 5, 0, "001影.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [52],
       [1, 9, -1, 0, 0, "001影.png"],
@@ -2230,7 +2230,7 @@ export const animationData_513 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [30],
       [2, 5, -1, 0, 0],
@@ -2390,7 +2390,7 @@ export const animationData_513 = {
       [100, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [144],
       [1, 4, 1, 0, 0, "025腰.png"],
@@ -3503,7 +3503,7 @@ export const animationData_513 = {
       [33, 40, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [49],
       [2, 4, -1, 0, 0],

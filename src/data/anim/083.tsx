@@ -5,7 +5,7 @@ export const animationData_083 = {
   "f": {
     "name": "地龍ソドム",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["080_f.png"],
       [36],
@@ -47,7 +47,7 @@ export const animationData_083 = {
       [244, 111, 120, 60, "E3"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [46],
       [-1, -1, 0, 0, 510, -78, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -102,7 +102,7 @@ export const animationData_083 = {
       [0, 0, 0, 3, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [3, 5, -1, 0, 0, "胸"],
@@ -350,7 +350,7 @@ export const animationData_083 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [3, 5, -1, 0, 0, "ダミー"],
@@ -411,7 +411,7 @@ export const animationData_083 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [92],
       [2, 5, 1, 0, 0, "ダミーc"],
@@ -1103,7 +1103,7 @@ export const animationData_083 = {
       [74, 500, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [2, 11, -1, 0, 0],
@@ -1159,7 +1159,7 @@ export const animationData_083 = {
   "c": {
     "name": "地龍王ソドム",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["080_c.png"],
       [41],
@@ -1206,7 +1206,7 @@ export const animationData_083 = {
       [207, 64, 48, 21, "デブ岩出る前"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [50],
       [-1, -1, 0, 0, 315, -8, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1265,7 +1265,7 @@ export const animationData_083 = {
       [0, 0, 0, 3, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [3, 5, -1, 0, 0, "胸"],
@@ -1513,7 +1513,7 @@ export const animationData_083 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [3, 5, -1, 0, 0, "ダミー"],
@@ -1580,7 +1580,7 @@ export const animationData_083 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [106],
       [2, 5, 1, 0, 0, "ダミーc"],
@@ -2356,7 +2356,7 @@ export const animationData_083 = {
       [67, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [2, 11, -1, 0, 0],
@@ -2412,7 +2412,7 @@ export const animationData_083 = {
   "s": {
     "name": "地龍皇帝ソドム",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["083_s.png"],
       [61],
@@ -2479,7 +2479,7 @@ export const animationData_083 = {
       [319, 173, 17, 19, "溶岩"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [105],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -2593,7 +2593,7 @@ export const animationData_083 = {
       [0, 0, 0, 3, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [48],
       [3, 5, -1, 0, 0],
@@ -2939,7 +2939,7 @@ export const animationData_083 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [3, 5, -1, 0, 0],
@@ -3083,7 +3083,7 @@ export const animationData_083 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [234],
       [2, 5, 1, 0, 0],
@@ -4608,7 +4608,7 @@ export const animationData_083 = {
       [97, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [2, 5, 1, 0, 0],

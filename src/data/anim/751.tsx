@@ -5,7 +5,7 @@ export const animationData_751 = {
   "f": {
     "name": "ちび弥彦",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["751_f.png"],
       [103],
@@ -2149,7 +2149,7 @@ export const animationData_751 = {
   "c": {
     "name": "ちび弥彦CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["751_c.png"],
       [103],

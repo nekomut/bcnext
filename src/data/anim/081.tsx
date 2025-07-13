@@ -5,7 +5,7 @@ export const animationData_081 = {
   "f": {
     "name": "ひなにゃんこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["081_f.png"],
       [31],
@@ -42,7 +42,7 @@ export const animationData_081 = {
       [158, 200, 64, 50, "攻撃　レーザー２"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [41],
       [-1, -1, 0, 0, 0, 0, 1, 1, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -92,7 +92,7 @@ export const animationData_081 = {
       [0, 0, -2, 1, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [9, 12, -1, 0, 0, "ネコ　座り用ハミ肉<color=0>"],
@@ -271,7 +271,7 @@ export const animationData_081 = {
       [64, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [12, 12, -1, 0, 0],
@@ -324,7 +324,7 @@ export const animationData_081 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [12, 12, 1, 0, 0, "タンク　足<color=1>"],
@@ -599,7 +599,7 @@ export const animationData_081 = {
       [64, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [12, 12, -1, 0, 0],
@@ -694,7 +694,7 @@ export const animationData_081 = {
   "c": {
     "name": "超号珍ニャジンガー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["081_c.png"],
       [31],
@@ -731,7 +731,7 @@ export const animationData_081 = {
       [210, 1, 25, 26, "攻撃　黄色の光"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [43],
       [-1, -1, 0, 0, 0, 0, 1, 1, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -783,7 +783,7 @@ export const animationData_081 = {
       [0, 0, -2, 1, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [5, 12, -1, 0, 0, "ネコ　座り用ハミ肉<color=0>"],
@@ -950,7 +950,7 @@ export const animationData_081 = {
       [0, -2, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [8, 12, -1, 0, 0],
@@ -1009,7 +1009,7 @@ export const animationData_081 = {
       [0, 1, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [8, 12, 1, 0, 0, "タンク　足<color=1>"],
@@ -1245,7 +1245,7 @@ export const animationData_081 = {
       [18, -2000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [8, 12, -1, 0, 0],
@@ -1355,7 +1355,7 @@ export const animationData_081 = {
   "s": {
     "name": "ニャラジン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["081_s.png"],
       [31],
@@ -1392,7 +1392,7 @@ export const animationData_081 = {
       [142, 68, 15, 18, "音符３"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [41],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -1442,7 +1442,7 @@ export const animationData_081 = {
       [0, 0, 0, 3, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [1, 9, -1, 0, 0, "影"],
@@ -1677,7 +1677,7 @@ export const animationData_081 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [1, 9, -1, 0, 0],
@@ -1829,7 +1829,7 @@ export const animationData_081 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [70],
       [2, 5, 1, 0, 0, "絨毯"],
@@ -2357,7 +2357,7 @@ export const animationData_081 = {
       [64, 0, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [2, 5, 1, 0, 0, "全体ダミー"],

@@ -5,7 +5,7 @@ export const animationData_046 = {
   "f": {
     "name": "ねこジュラ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["046_f.png"],
       [12],
@@ -23,7 +23,7 @@ export const animationData_046 = {
       [85, 1, 26, 16, "ネコ耳"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [12],
       [-1, -1, 0, 0, 571, 436, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -44,7 +44,7 @@ export const animationData_046 = {
       [0, 0, 0, 0, 5, 0, "gatya"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [8, 2, -1, 0, 0, "ダミー"],
@@ -73,7 +73,7 @@ export const animationData_046 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [10, 12, 1, 0, 0],
@@ -81,7 +81,7 @@ export const animationData_046 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [9, 10, 1, 0, 0, "ダミー"],
@@ -248,7 +248,7 @@ export const animationData_046 = {
       [30, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [10, 12, -1, 0, 0, "ダミー"],
@@ -277,7 +277,7 @@ export const animationData_046 = {
   "c": {
     "name": "ねこジュラシッター",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["046_c.png"],
       [20],
@@ -303,7 +303,7 @@ export const animationData_046 = {
       [105, 82, 17, 15]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [19],
       [-1, -1, 0, 0, 571, 436, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -331,7 +331,7 @@ export const animationData_046 = {
       [0, 0, 0, 0, 5, 0, "gatya"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [8, 2, -1, 0, 0, "ダミー"],
@@ -487,7 +487,7 @@ export const animationData_046 = {
       [16, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [10, 12, 1, 0, 0],
@@ -642,7 +642,7 @@ export const animationData_046 = {
       [120, 30, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [9, 10, 1, 0, 0, "ダミー"],
@@ -868,7 +868,7 @@ export const animationData_046 = {
       [25, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [10, 12, -1, 0, 0, "ダミー"],
@@ -921,7 +921,7 @@ export const animationData_046 = {
   "s": {
     "name": "ねこジュラザウルス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["046_s.png"],
       [28],
@@ -955,7 +955,7 @@ export const animationData_046 = {
       [112, 152, 13, 14, "手握り"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [27],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -991,7 +991,7 @@ export const animationData_046 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [2, 4, -1, 0, 0, "影"],
@@ -1208,7 +1208,7 @@ export const animationData_046 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [4, 4, -1, 0, 0, "恐竜体"],
@@ -1492,7 +1492,7 @@ export const animationData_046 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [52],
       [2, 4, 1, 0, 0, "影"],
@@ -1895,7 +1895,7 @@ export const animationData_046 = {
       [19, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [4, 4, 1, 0, 0, "恐竜体"],

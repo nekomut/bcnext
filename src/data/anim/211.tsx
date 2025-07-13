@@ -5,7 +5,7 @@ export const animationData_211 = {
   "f": {
     "name": "ちびバトルネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["211_f.png"],
       [10],
@@ -21,7 +21,7 @@ export const animationData_211 = {
       [101, 127, 29, 3, "陰"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 0, 0, 125, 125, 0, 255, 0, "ダミー親"],
@@ -33,7 +33,7 @@ export const animationData_211 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -45,7 +45,7 @@ export const animationData_211 = {
       [16, 1, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -53,7 +53,7 @@ export const animationData_211 = {
       [0, 1, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -66,7 +66,7 @@ export const animationData_211 = {
       [15, 7, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 2, -1, 0, 0],
@@ -89,7 +89,7 @@ export const animationData_211 = {
   "c": {
     "name": "ちび勇者ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["211_c.png"],
       [10],
@@ -105,7 +105,7 @@ export const animationData_211 = {
       [73, 127, 1, 1, "ダミー"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 0, 0, 125, 125, 0, 255, 0, "ダミー親"],
@@ -117,7 +117,7 @@ export const animationData_211 = {
       [0, 0, 3, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -129,7 +129,7 @@ export const animationData_211 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -137,7 +137,7 @@ export const animationData_211 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -150,7 +150,7 @@ export const animationData_211 = {
       [15, 6, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 2, -1, -1000, 1000, "ノックバック"],
@@ -173,7 +173,7 @@ export const animationData_211 = {
   "s": {
     "name": "ちび暗黒ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["211_s.png"],
       [15],
@@ -194,7 +194,7 @@ export const animationData_211 = {
       [50, 64, 20, 20, "盾"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [8],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -211,7 +211,7 @@ export const animationData_211 = {
       [0, 0, 1, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [3, 2, -1, 0, 0, "キャラ"],
@@ -258,7 +258,7 @@ export const animationData_211 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [3, 2, -1, 0, 0, "キャラ"],
@@ -272,7 +272,7 @@ export const animationData_211 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [3, 2, 1, 0, 0, "身体"],
@@ -377,7 +377,7 @@ export const animationData_211 = {
       [8, -10, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [3, 2, 1, 0, 0, "ダミー"],

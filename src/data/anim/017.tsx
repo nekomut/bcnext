@@ -5,7 +5,7 @@ export const animationData_017 = {
   "f": {
     "name": "ネコリンリン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["017_f.png"],
       [20],
@@ -31,7 +31,7 @@ export const animationData_017 = {
       [1, 221, 32, 32, "かざぐるま"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [32],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 255, 0],
@@ -72,7 +72,7 @@ export const animationData_017 = {
       [0, 0, 24, 36, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [3, 11, -1, 0, 0],
@@ -178,7 +178,7 @@ export const animationData_017 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [3, 12, -1, 0, 0, "右すね"],
@@ -216,7 +216,7 @@ export const animationData_017 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [1, 11, 1, 0, 0],
@@ -403,7 +403,7 @@ export const animationData_017 = {
       [32, 120, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [1, 2, -1, 0, 0, "にゃんこ"],
@@ -468,7 +468,7 @@ export const animationData_017 = {
   "c": {
     "name": "ネコワイルド",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["017_c.png"],
       [20],
@@ -494,7 +494,7 @@ export const animationData_017 = {
       [188, 61, 25, 125]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [31],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 255, 0],
@@ -534,7 +534,7 @@ export const animationData_017 = {
       [0, 0, 56, 13, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [2, 11, -1, 0, 0],
@@ -656,7 +656,7 @@ export const animationData_017 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [6, 12, -1, 0, 0],
@@ -700,7 +700,7 @@ export const animationData_017 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [1, 11, 1, 0, 0],
@@ -1005,7 +1005,7 @@ export const animationData_017 = {
       [40, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [1, 11, -1, 0, 0],
@@ -1073,7 +1073,7 @@ export const animationData_017 = {
   "s": {
     "name": "イチリンリン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["017_s.png"],
       [33],
@@ -1112,7 +1112,7 @@ export const animationData_017 = {
       [73, 143, 8, 8, "とめぐ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [49],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=9>"],
@@ -1170,7 +1170,7 @@ export const animationData_017 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [2, 11, -1, 0, 0],
@@ -1395,7 +1395,7 @@ export const animationData_017 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [2, 4, -1, 0, 0],
@@ -1595,7 +1595,7 @@ export const animationData_017 = {
       [0, -1, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [78],
       [1, 4, 1, 0, 0],
@@ -2280,7 +2280,7 @@ export const animationData_017 = {
       [0, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [2, 4, -1, 0, 0],

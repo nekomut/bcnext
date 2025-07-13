@@ -5,7 +5,7 @@ export const animationData_412 = {
   "f": {
     "name": "エヴァ零号機",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["412_f.png"],
       [51],
@@ -62,7 +62,7 @@ export const animationData_412 = {
       [361, 196, 45, 43, "049煙2.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [92],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -163,7 +163,7 @@ export const animationData_412 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [50],
       [4, 4, -1, 0, 0, "020腰.png<color=0>\t"],
@@ -533,7 +533,7 @@ export const animationData_412 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [4, 5, -1, 0, 0, "020腰.png<color=0>"],
@@ -662,7 +662,7 @@ export const animationData_412 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [119],
       [1, 9, 1, 0, 0, "029影.png<color=9>"],
@@ -1623,7 +1623,7 @@ export const animationData_412 = {
       [15, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [4, 4, 1, 0, 0, "020腰.png<color=0>"],
@@ -1730,7 +1730,7 @@ export const animationData_412 = {
   "c": {
     "name": "エヴァ零号機＆ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["412_c.png"],
       [51],
@@ -1787,7 +1787,7 @@ export const animationData_412 = {
       [361, 196, 45, 43, "049煙2.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [92],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1888,7 +1888,7 @@ export const animationData_412 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [50],
       [4, 4, -1, 0, 0, "020腰.png<color=0>\t"],
@@ -2258,7 +2258,7 @@ export const animationData_412 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [4, 5, -1, 0, 0, "020腰.png<color=0>"],
@@ -2387,7 +2387,7 @@ export const animationData_412 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [119],
       [1, 9, 1, 0, 0, "029影.png<color=9>"],
@@ -3348,7 +3348,7 @@ export const animationData_412 = {
       [15, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [4, 4, 1, 0, 0, "020腰.png<color=0>"],

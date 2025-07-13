@@ -5,7 +5,7 @@ export const animationData_653 = {
   "f": {
     "name": "古獣ナーラ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["653_f.png"],
       [84],
@@ -4553,7 +4553,7 @@ export const animationData_653 = {
   "c": {
     "name": "雷古獣ナーラ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["653_c.png"],
       [83],

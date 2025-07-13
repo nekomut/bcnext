@@ -5,7 +5,7 @@ export const animationData_308 = {
   "f": {
     "name": "ネコバサミ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["308_f.png"],
       [35],
@@ -46,7 +46,7 @@ export const animationData_308 = {
       [133, 69, 63, 71, "攻撃　葉"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [33],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -88,7 +88,7 @@ export const animationData_308 = {
       [0, 0, 0, 1, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [3, 5, -1, 0, 0],
@@ -246,7 +246,7 @@ export const animationData_308 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [4, 5, -1, 0, 0],
@@ -339,7 +339,7 @@ export const animationData_308 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [4, 4, 1, 0, 0],
@@ -557,7 +557,7 @@ export const animationData_308 = {
       [8, -5, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [3, 5, 1, 0, 0, "ダミー"],
@@ -619,7 +619,7 @@ export const animationData_308 = {
   "c": {
     "name": "ネコチェーンソー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["308_c.png"],
       [33],
@@ -658,7 +658,7 @@ export const animationData_308 = {
       [189, 75, 66, 35, "攻撃　屑⑥"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [25],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -692,7 +692,7 @@ export const animationData_308 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [3, 5, -1, 0, 0],
@@ -770,7 +770,7 @@ export const animationData_308 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [5, 5, -1, 0, 0],
@@ -827,7 +827,7 @@ export const animationData_308 = {
       [40, 0, 2, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [4, 4, 1, 0, 0],
@@ -1089,7 +1089,7 @@ export const animationData_308 = {
       [8, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [3, 5, 1, 0, 0],
@@ -1136,7 +1136,7 @@ export const animationData_308 = {
   "s": {
     "name": "草刈りネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["308_s.png"],
       [25],
@@ -1167,7 +1167,7 @@ export const animationData_308 = {
       [123, 95, 35, 16, "024細かい草.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [27],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -1203,7 +1203,7 @@ export const animationData_308 = {
       [0, 0, 0, 38, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [13],
       [7, 4, -1, 0, 0],
@@ -1285,7 +1285,7 @@ export const animationData_308 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [9],
       [2, 5, -1, 0, 0],
@@ -1348,7 +1348,7 @@ export const animationData_308 = {
       [0, -30, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [40],
       [2, 4, 1, 0, 0, "アルファ"],
@@ -1571,7 +1571,7 @@ export const animationData_308 = {
       [8, 500, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [24],
       [2, 11, 1, 0, 0, "000.png"],

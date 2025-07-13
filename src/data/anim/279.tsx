@@ -5,7 +5,7 @@ export const animationData_279 = {
   "f": {
     "name": "白ネコなめこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["279_f.png"],
       [23],
@@ -34,7 +34,7 @@ export const animationData_279 = {
       [460, 250, 50, 4]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [14],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -57,7 +57,7 @@ export const animationData_279 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [2, 5, -1, 0, 0, "本体"],
@@ -168,7 +168,7 @@ export const animationData_279 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [7, 12, -1, 0, 0],
@@ -182,7 +182,7 @@ export const animationData_279 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [42],
       [1, 9, 1, 0, 0, "影"],
@@ -520,7 +520,7 @@ export const animationData_279 = {
       [105, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [2, 4, 1, 0, 0, "本体"],
@@ -555,7 +555,7 @@ export const animationData_279 = {
   "c": {
     "name": "キモ白ネコなめこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["279_c.png"],
       [46],
@@ -607,7 +607,7 @@ export const animationData_279 = {
       [482, 87, 12, 113, "やられ足"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [18],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -634,7 +634,7 @@ export const animationData_279 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [4, 4, -1, 0, 0, "体"],
@@ -785,7 +785,7 @@ export const animationData_279 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [16, 12, -1, 0, 0, "エフェクト"],
@@ -796,7 +796,7 @@ export const animationData_279 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [50],
       [4, 11, 1, 0, 0, "体"],
@@ -1212,7 +1212,7 @@ export const animationData_279 = {
       [52, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [3, 4, -1, 0, 0, "キャラダミー<color=7>"],

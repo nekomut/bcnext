@@ -5,7 +5,7 @@ export const animationData_273 = {
   "f": {
     "name": "チアにゃんこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["273_f.png"],
       [26],
@@ -37,7 +37,7 @@ export const animationData_273 = {
       [75, 197, 140, 58, "移動ブレ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [22],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -68,7 +68,7 @@ export const animationData_273 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [2, 9, -1, 0, 0, "影"],
@@ -182,7 +182,7 @@ export const animationData_273 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [3, 5, -1, 0, 0, "本体"],
@@ -389,7 +389,7 @@ export const animationData_273 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [60],
       [1, 4, 1, 0, 0, "ダミー"],
@@ -1526,7 +1526,7 @@ export const animationData_273 = {
       [137, 2000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [2, 9, 1, 0, 0, "影"],
@@ -1651,7 +1651,7 @@ export const animationData_273 = {
   "c": {
     "name": "ネコウエイトレス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["273_c.png"],
       [47],
@@ -1704,7 +1704,7 @@ export const animationData_273 = {
       [152, 176, 48, 8, "鎖短い"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [39],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -1752,7 +1752,7 @@ export const animationData_273 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [2, 9, -1, 0, 0, "影"],
@@ -1953,7 +1953,7 @@ export const animationData_273 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [55],
       [1, 4, -1, 0, 0, "全体ダミー"],
@@ -2298,7 +2298,7 @@ export const animationData_273 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [115],
       [1, 4, 1, 0, 0, "ダミー"],
@@ -4041,7 +4041,7 @@ export const animationData_273 = {
       [137, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [70],
       [2, 9, 1, 0, 0, "影"],
@@ -4259,7 +4259,7 @@ export const animationData_273 = {
   "s": {
     "name": "にゃんこそば",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["273_s.png"],
       [45],
@@ -4310,7 +4310,7 @@ export const animationData_273 = {
       [238, 23, 13, 18, "044ジャンプそば.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [78],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "■ダミー<color=7>"],
@@ -4397,7 +4397,7 @@ export const animationData_273 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [58],
       [2, 9, -1, 0, 0, "影"],
@@ -4750,7 +4750,7 @@ export const animationData_273 = {
       [0, 40, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [81],
       [1, 4, -1, 0, 0, "全体ダミー"],
@@ -5275,7 +5275,7 @@ export const animationData_273 = {
       [20, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [213],
       [1, 4, 1, 0, 0, "■ダミー<color=7>\t"],
@@ -8214,7 +8214,7 @@ export const animationData_273 = {
       [129, 26, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [88],
       [2, 9, 1, 0, 0, "影"],

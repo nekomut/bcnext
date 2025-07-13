@@ -5,7 +5,7 @@ export const animationData_293 = {
   "f": {
     "name": "キュゥべえ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["293_f.png"],
       [45],
@@ -56,7 +56,7 @@ export const animationData_293 = {
       [192, 198, 73, 57, "６先"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [38],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -103,7 +103,7 @@ export const animationData_293 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [57],
       [3, 5, -1, 0, 0, "首～胸"],
@@ -530,7 +530,7 @@ export const animationData_293 = {
       [32, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [9, 11, -1, 0, 0, "右耳"],
@@ -735,7 +735,7 @@ export const animationData_293 = {
       [48, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [79],
       [3, 2, 1, 0, 0],
@@ -1493,7 +1493,7 @@ export const animationData_293 = {
       [50, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [3, 2, 1, 0, 0, "首～胸"],
@@ -1561,7 +1561,7 @@ export const animationData_293 = {
   "c": {
     "name": "キュゥべえ＆ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["293_c.png"],
       [70],
@@ -1637,7 +1637,7 @@ export const animationData_293 = {
       [381, 141, 59, 18, "ネコあたままるい"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [60],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1706,7 +1706,7 @@ export const animationData_293 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [66],
       [3, 5, -1, 0, 0, "首～胸"],
@@ -2171,7 +2171,7 @@ export const animationData_293 = {
       [16, 1050, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [42],
       [9, 11, -1, 0, 0, "右耳"],
@@ -2578,7 +2578,7 @@ export const animationData_293 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [170],
       [3, 2, 1, 0, 0],
@@ -3988,7 +3988,7 @@ export const animationData_293 = {
       [42, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [3, 2, 1, 0, 0, "首～胸"],

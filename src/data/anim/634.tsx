@@ -9906,7 +9906,7 @@ export const animationData_634 = {
   "s": {
     "name": "神魔騎士キュクロプス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["634_s.png"],
       [146],

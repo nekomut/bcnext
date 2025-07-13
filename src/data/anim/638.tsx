@@ -3251,7 +3251,7 @@ export const animationData_638 = {
   "c": {
     "name": "ナナ＆ネコCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["999_c.png"],
       [136],

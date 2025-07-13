@@ -5,7 +5,7 @@ export const animationData_429 = {
   "f": {
     "name": "オタネコギーク",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["429_f.png"],
       [47],
@@ -58,7 +58,7 @@ export const animationData_429 = {
       [436, 70, 35, 11, "046メガネの中.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [35],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "000.png"],
@@ -102,7 +102,7 @@ export const animationData_429 = {
       [0, 0, -26, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [4, 5, -1, 0, 0, "002　ボディ　.png"],
@@ -233,7 +233,7 @@ export const animationData_429 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [15, 11, -1, 0, 0, "腕\t"],
@@ -263,7 +263,7 @@ export const animationData_429 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [9, 2, 1, 0, 0, "007めがね.png<color=2>"],
@@ -581,7 +581,7 @@ export const animationData_429 = {
       [115, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [4, 4, 1, 0, 0, "002　ボディ　.png"],
@@ -661,7 +661,7 @@ export const animationData_429 = {
   "c": {
     "name": "ギークネコハッカー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["429_c.png"],
       [48],
@@ -715,7 +715,7 @@ export const animationData_429 = {
       [149, 63, 35, 11, "047メガネの中.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [47],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "000.png"],
@@ -771,7 +771,7 @@ export const animationData_429 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [3, 12, -1, 0, 0, "攻撃ダミー.png<color=11>"],
@@ -888,7 +888,7 @@ export const animationData_429 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [3, 12, -1, 0, 0, "攻撃ダミー.png<color=11>"],
@@ -915,7 +915,7 @@ export const animationData_429 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [34],
       [14, 2, 1, 0, 0, "007めがね.png<color=2>"],
@@ -1346,7 +1346,7 @@ export const animationData_429 = {
       [12, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [3, 12, 1, 0, 0, "攻撃ダミー.png<color=11>"],

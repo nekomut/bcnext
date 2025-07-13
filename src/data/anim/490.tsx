@@ -5,7 +5,7 @@ export const animationData_490 = {
   "f": {
     "name": "ちびリツコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["490_f.png"],
       [83],
@@ -94,7 +94,7 @@ export const animationData_490 = {
       [257, 80, 18, 36, "082移動足.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [95],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "■全体ダミー<color=7>"],
@@ -198,7 +198,7 @@ export const animationData_490 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [93],
       [2, 4, -1, 0, 0, "リツコ影<color=16>"],
@@ -705,7 +705,7 @@ export const animationData_490 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [49],
       [4, 11, -1, 0, 0, "通常上半身<color=13>\t"],
@@ -979,7 +979,7 @@ export const animationData_490 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [136],
       [4, 11, 1, 0, 0, "通常上半身<color=13>"],
@@ -2021,7 +2021,7 @@ export const animationData_490 = {
       [103, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [57],
       [3, 4, 1, 0, 0, "■リツコ腰ダミー<color=7>"],
@@ -2200,7 +2200,7 @@ export const animationData_490 = {
   "c": {
     "name": "ヴンダー副長のちびリツコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["490_c.png"],
       [82],
@@ -2288,7 +2288,7 @@ export const animationData_490 = {
       [140, 60, 32, 33, "081湯気.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [119],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "■全体ダミー<color=7>"],
@@ -2416,7 +2416,7 @@ export const animationData_490 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [72],
       [2, 4, -1, 0, 0, "リツコ影<color=16>"],
@@ -2825,7 +2825,7 @@ export const animationData_490 = {
       [40, -49, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [42],
       [4, 11, -1, 0, 0, "通常上半身<color=13>\t"],
@@ -3076,7 +3076,7 @@ export const animationData_490 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [128],
       [4, 11, 1, 0, 0, "通常上半身<color=13>"],
@@ -4081,7 +4081,7 @@ export const animationData_490 = {
       [102, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [52],
       [3, 4, 1, 0, 0, "■リツコ腰ダミー<color=7>"],

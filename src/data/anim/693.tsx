@@ -5,7 +5,7 @@ export const animationData_693 = {
   "f": {
     "name": "白執事探偵ヴィグラー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["693_f.png"],
       [146],
@@ -7335,7 +7335,7 @@ export const animationData_693 = {
   "c": {
     "name": "黒執事探偵グラヴィー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["693_c.png"],
       [168],

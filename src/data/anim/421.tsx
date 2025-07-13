@@ -5,7 +5,7 @@ export const animationData_421 = {
   "f": {
     "name": "ココ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["421_f.png"],
       [31],
@@ -42,7 +42,7 @@ export const animationData_421 = {
       [110, 125, 6, 9, "030爪.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [55],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1350, 1350, 0, 1000, 0, "ダミー<color=7>"],
@@ -106,7 +106,7 @@ export const animationData_421 = {
       [0, 0, 0, 0, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [3, 5, -1, 0, 0, "身体.png<color=0>\t"],
@@ -196,7 +196,7 @@ export const animationData_421 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [3, 5, -1, 0, 0, "身体.png<color=0>\t"],
@@ -253,7 +253,7 @@ export const animationData_421 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [107],
       [3, 4, 1, 0, 0, "身体.png<color=0>"],
@@ -986,7 +986,7 @@ export const animationData_421 = {
       [69, 14, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [3, 4, 1, 0, 0, "身体.png<color=0>\t"],
@@ -1054,7 +1054,7 @@ export const animationData_421 = {
   "c": {
     "name": "ココＣＣ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["421_c.png"],
       [31],
@@ -1091,7 +1091,7 @@ export const animationData_421 = {
       [110, 125, 6, 9, "030爪.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [55],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1350, 1350, 0, 1000, 0, "ダミー<color=7>"],
@@ -1155,7 +1155,7 @@ export const animationData_421 = {
       [0, 0, 0, 0, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [3, 5, -1, 0, 0, "身体.png<color=0>\t"],
@@ -1245,7 +1245,7 @@ export const animationData_421 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [3, 5, -1, 0, 0, "身体.png<color=0>\t"],
@@ -1302,7 +1302,7 @@ export const animationData_421 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [107],
       [3, 4, 1, 0, 0, "身体.png<color=0>"],
@@ -2035,7 +2035,7 @@ export const animationData_421 = {
       [69, 14, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [3, 4, 1, 0, 0, "身体.png<color=0>\t"],

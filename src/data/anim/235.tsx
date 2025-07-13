@@ -5,7 +5,7 @@ export const animationData_235 = {
   "f": {
     "name": "豊穣の女神フレイヤ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["235_f.png"],
       [84],
@@ -95,7 +95,7 @@ export const animationData_235 = {
       [199, 106, 28, 28, "効果：青面"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [88],
       [-1, -1, 0, 0, 0, 0, 1, 1, 1250, 1250, 0, 1000, 0, "ダミー"],
@@ -192,7 +192,7 @@ export const animationData_235 = {
       [0, 0, 11, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [75],
       [2, 4, -1, 0, 0],
@@ -602,7 +602,7 @@ export const animationData_235 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [2, 5, -1, 0, 0],
@@ -859,7 +859,7 @@ export const animationData_235 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [113],
       [2, 5, 1, 0, 0, "頭用：ダミー"],
@@ -1610,7 +1610,7 @@ export const animationData_235 = {
       [60, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [68],
       [2, 4, 1, 0, 0],
@@ -1822,7 +1822,7 @@ export const animationData_235 = {
   "c": {
     "name": "豊穣の女神フレイヤCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["235_c.png"],
       [84],
@@ -1912,7 +1912,7 @@ export const animationData_235 = {
       [199, 106, 28, 28, "効果：青面"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [88],
       [-1, -1, 0, 0, 0, 0, 1, 1, 1250, 1250, 0, 1000, 0, "ダミー"],
@@ -2009,7 +2009,7 @@ export const animationData_235 = {
       [0, 0, 11, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [75],
       [2, 4, -1, 0, 0],
@@ -2419,7 +2419,7 @@ export const animationData_235 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [2, 5, -1, 0, 0],
@@ -2676,7 +2676,7 @@ export const animationData_235 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [113],
       [2, 5, 1, 0, 0, "頭用：ダミー"],
@@ -3427,7 +3427,7 @@ export const animationData_235 = {
       [60, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [68],
       [2, 4, 1, 0, 0],

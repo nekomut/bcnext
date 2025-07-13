@@ -5,7 +5,7 @@ export const animationData_222 = {
   "f": {
     "name": "ヒュージハーミット",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["222_f.png"],
       [37],
@@ -48,7 +48,7 @@ export const animationData_222 = {
       [1, 199, 86, 53]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [37],
       [-1, -1, 0, 0, 0, 0, 70, 41, -1000, 1000, 0, 1000, 0, 1],
@@ -94,7 +94,7 @@ export const animationData_222 = {
       [0, 0, 2, -5, 5, 0, "０１<color=0>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [1, 12, -1, 0, 0],
@@ -195,7 +195,7 @@ export const animationData_222 = {
       [18, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [1, 12, 1, 0, 0],
@@ -221,7 +221,7 @@ export const animationData_222 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [1, 12, 1, 0, 0],
@@ -323,7 +323,7 @@ export const animationData_222 = {
       [9, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [1, 12, 1, 0, 0],
@@ -373,7 +373,7 @@ export const animationData_222 = {
   "c": {
     "name": "ヒュージハーミットCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["222_c.png"],
       [37],
@@ -416,7 +416,7 @@ export const animationData_222 = {
       [1, 199, 86, 53]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [37],
       [-1, -1, 0, 0, 0, 0, 70, 41, -1000, 1000, 0, 1000, 0, 1],
@@ -462,7 +462,7 @@ export const animationData_222 = {
       [0, 0, 2, -5, 5, 0, "０１<color=0>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [1, 12, -1, 0, 0],
@@ -563,7 +563,7 @@ export const animationData_222 = {
       [18, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [1, 12, 1, 0, 0],
@@ -589,7 +589,7 @@ export const animationData_222 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [1, 12, 1, 0, 0],
@@ -691,7 +691,7 @@ export const animationData_222 = {
       [9, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [1, 12, 1, 0, 0],
@@ -741,7 +741,7 @@ export const animationData_222 = {
   "s": {
     "name": "ゴールデンヒュージハーミットCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["222_s.png"],
       [37],
@@ -784,7 +784,7 @@ export const animationData_222 = {
       [1, 199, 86, 53]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [37],
       [-1, -1, 0, 0, 0, 0, 70, 41, -1000, 1000, 0, 1000, 0, 1],
@@ -830,7 +830,7 @@ export const animationData_222 = {
       [0, 0, 2, -5, 5, 0, "０１<color=0>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [1, 12, -1, 0, 0],
@@ -931,7 +931,7 @@ export const animationData_222 = {
       [18, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [1, 12, 1, 0, 0],
@@ -957,7 +957,7 @@ export const animationData_222 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [1, 12, 1, 0, 0],

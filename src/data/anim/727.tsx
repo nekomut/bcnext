@@ -5,7 +5,7 @@ export const animationData_727 = {
   "f": {
     "name": "ソル・デ・ロカ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["727_f.png"],
       [234],
@@ -2002,7 +2002,7 @@ export const animationData_727 = {
   "c": {
     "name": "ソル・デ・ロカCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["727_c.png"],
       [234],

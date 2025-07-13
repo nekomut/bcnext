@@ -5,7 +5,7 @@ export const animationData_256 = {
   "f": {
     "name": "ゴーレム",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["256_f.png"],
       [12],
@@ -23,7 +23,7 @@ export const animationData_256 = {
       [1, 172, 102, 83, "爆発"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [18],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -50,7 +50,7 @@ export const animationData_256 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [2, 4, -1, 0, 0, "影"],
@@ -303,7 +303,7 @@ export const animationData_256 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [4, 5, -1, 0, 0, "体"],
@@ -379,7 +379,7 @@ export const animationData_256 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [42],
       [2, 4, 1, 0, 0, "影"],
@@ -698,7 +698,7 @@ export const animationData_256 = {
       [21, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [3, 5, 1, 0, 0, "キャラダミー"],
@@ -769,7 +769,7 @@ export const animationData_256 = {
   "c": {
     "name": "うさぎゴーレム",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["256_c.png"],
       [10],
@@ -785,7 +785,7 @@ export const animationData_256 = {
       [325, 94, 102, 83, "爆発"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [17],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -811,7 +811,7 @@ export const animationData_256 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [2, 4, -1, 0, 0, "影"],
@@ -1033,7 +1033,7 @@ export const animationData_256 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [4, 5, -1, 0, 0, "体"],
@@ -1100,7 +1100,7 @@ export const animationData_256 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [2, 4, 1, 0, 0, "影"],
@@ -1387,7 +1387,7 @@ export const animationData_256 = {
       [25, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [3, 5, 1, 0, 0, "キャラダミー"],
@@ -1446,7 +1446,7 @@ export const animationData_256 = {
   "s": {
     "name": "ボルケーノゴーレム",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["256_s.png"],
       [20],
@@ -1472,7 +1472,7 @@ export const animationData_256 = {
       [277, 125, 65, 71, 3]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [24],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1300, 1300, 0, 1000, 0, "ダミー<color=7>"],
@@ -1505,7 +1505,7 @@ export const animationData_256 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [2, 4, -1, 0, 0, "影"],
@@ -1783,7 +1783,7 @@ export const animationData_256 = {
       [6, 17, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [4, 5, -1, 0, 0, "体"],
@@ -1883,7 +1883,7 @@ export const animationData_256 = {
       [6, 17, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [48],
       [2, 4, 1, 0, 0, "影"],
@@ -2261,7 +2261,7 @@ export const animationData_256 = {
       [31, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [3, 5, 1, 0, 0, "キャラダミー"],

@@ -5,7 +5,7 @@ export const animationData_554 = {
   "f": {
     "name": "達人ウリル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["554_f.png"],
       [63],
@@ -2312,7 +2312,7 @@ export const animationData_554 = {
   "c": {
     "name": "ネコ仮面のウリル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["554_c.png"],
       [63],
@@ -4619,7 +4619,7 @@ export const animationData_554 = {
   "s": {
     "name": "ネコ神面のウリル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["554_s.png"],
       [65],

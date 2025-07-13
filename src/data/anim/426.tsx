@@ -5,7 +5,7 @@ export const animationData_426 = {
   "f": {
     "name": "ぶんぶんネコライダー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["426_f.png"],
       [42],
@@ -53,7 +53,7 @@ export const animationData_426 = {
       [358, 146, 46, 37, "041煙1_4.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [54],
       [-1, -1, 0, 0, 0, 0, 0, 0, 2000, 2000, 0, 1000, 0, "000.png"],
@@ -116,7 +116,7 @@ export const animationData_426 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [1, 9, -1, 0, 0, "影"],
@@ -359,7 +359,7 @@ export const animationData_426 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [1, 9, -1, 0, 0, "影"],
@@ -482,7 +482,7 @@ export const animationData_426 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [77],
       [2, 4, 1, 0, 0, "017胴.png<color=7>\t"],
@@ -1002,7 +1002,7 @@ export const animationData_426 = {
       [30, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [2, 4, 1, 0, 0, "017胴.png<color=7>\t"],
@@ -1088,7 +1088,7 @@ export const animationData_426 = {
   "c": {
     "name": "ぶんぶんロボライダー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["426_c.png"],
       [65],
@@ -1159,7 +1159,7 @@ export const animationData_426 = {
       [398, 228, 5, 9, "064にゃんこ右手.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [106],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1780, 1780, 0, 1000, 0, "000.png"],
@@ -1274,7 +1274,7 @@ export const animationData_426 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [1, 9, -1, 0, 0, "胴体"],
@@ -1496,7 +1496,7 @@ export const animationData_426 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [1, 9, -1, 0, 0, "胴体"],
@@ -1605,7 +1605,7 @@ export const animationData_426 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [82],
       [3, 4, 1, 0, 0, "上あご"],
@@ -2235,7 +2235,7 @@ export const animationData_426 = {
       [30, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [32, 12, 1, 0, 0, "054.png<color=7>"],
@@ -2318,7 +2318,7 @@ export const animationData_426 = {
   "s": {
     "name": "ぶんぶんネコライダーL",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["426_s.png"],
       [67],
@@ -2391,7 +2391,7 @@ export const animationData_426 = {
       [445, 206, 16, 17]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [132],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1780, 1780, 0, 1000, 0, "000.png"],
@@ -2532,7 +2532,7 @@ export const animationData_426 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [48],
       [1, 10, -1, 0, 0, "胴体"],
@@ -2813,7 +2813,7 @@ export const animationData_426 = {
       [6, 48, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [1, 10, -1, 0, 0, "胴体"],
@@ -2971,7 +2971,7 @@ export const animationData_426 = {
       [0, 1, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [130],
       [2, 5, 1, 0, 0, "上あご"],
@@ -3973,7 +3973,7 @@ export const animationData_426 = {
       [29, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [3, 5, 1, 0, 0, "影"],

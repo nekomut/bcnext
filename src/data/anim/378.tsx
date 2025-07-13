@@ -5,7 +5,7 @@ export const animationData_378 = {
   "f": {
     "name": "黒無垢のミタマ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["378_f.png"],
       [147],
@@ -158,7 +158,7 @@ export const animationData_378 = {
       [322, 1, 83, 33]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [202],
       [-1, -1, 0, 0, 0, 0, 19, 16, 1000, 1000, 0, 1000, 0, "ネコベース"],
@@ -369,7 +369,7 @@ export const animationData_378 = {
       [0, 0, -22, 6, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [215],
       [2, 4, -1, 0, 0],
@@ -1784,7 +1784,7 @@ export const animationData_378 = {
       [60, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [215],
       [2, 4, -1, 0, 0],
@@ -3199,7 +3199,7 @@ export const animationData_378 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [463],
       [2, 5, 1, 0, 0],
@@ -7733,7 +7733,7 @@ export const animationData_378 = {
       [25, 100, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [3, 11, 1, 0, 0],
@@ -7870,7 +7870,7 @@ export const animationData_378 = {
   "c": {
     "name": "黒蝶のミタマダーク",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["378_c.png"],
       [173],
@@ -8049,7 +8049,7 @@ export const animationData_378 = {
       [434, 56, 21, 14, "棺"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [295],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ネコベース"],
@@ -8353,7 +8353,7 @@ export const animationData_378 = {
       [0, 0, -3, -4, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [276],
       [2, 4, -1, 0, 0],
@@ -10064,7 +10064,7 @@ export const animationData_378 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [276],
       [2, 4, -1, 0, 0],
@@ -11779,7 +11779,7 @@ export const animationData_378 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [735],
       [2, 5, 1, 0, 0],
@@ -18685,7 +18685,7 @@ export const animationData_378 = {
       [55, -50, 2, 3]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [106],
       [3, 11, 1, 0, 0],

@@ -5,7 +5,7 @@ export const animationData_377 = {
   "f": {
     "name": "ネコフェンシング",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["377_f.png"],
       [48],
@@ -59,7 +59,7 @@ export const animationData_377 = {
       [191, 134, 45, 98, "ef移動線"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [48],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -116,7 +116,7 @@ export const animationData_377 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [2, 4, -1, 0, 0, "影"],
@@ -336,7 +336,7 @@ export const animationData_377 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [3, 5, -1, 0, 0, "体１<color=7>"],
@@ -415,7 +415,7 @@ export const animationData_377 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [53],
       [2, 4, 1, 0, 0, "影<color=7>"],
@@ -963,7 +963,7 @@ export const animationData_377 = {
       [60, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [3, 2, 1, 0, 0, "体１<color=7>"],
@@ -1088,7 +1088,7 @@ export const animationData_377 = {
   "c": {
     "name": "ネコ剣道",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["377_c.png"],
       [62],
@@ -1156,7 +1156,7 @@ export const animationData_377 = {
       [205, 127, 45, 98, "ef移動線"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [66],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -1231,7 +1231,7 @@ export const animationData_377 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [2, 4, -1, 0, 0, "影<color=0>"],
@@ -1460,7 +1460,7 @@ export const animationData_377 = {
       [37, -1, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [3, 5, -1, 0, 0, "体１<color=0>"],
@@ -1549,7 +1549,7 @@ export const animationData_377 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [70],
       [2, 4, 1, 0, 0, "影<color=0>"],
@@ -2306,7 +2306,7 @@ export const animationData_377 = {
       [60, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [44],
       [3, 2, 1, 0, 0, "体１<color=0>"],
@@ -2446,7 +2446,7 @@ export const animationData_377 = {
   "s": {
     "name": "自由のネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["377_s.png"],
       [51],
@@ -2503,7 +2503,7 @@ export const animationData_377 = {
       [90, 1, 45, 98, "050効果線.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [52],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -2564,7 +2564,7 @@ export const animationData_377 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [37],
       [2, 4, -1, 0, 0, "影"],
@@ -2887,7 +2887,7 @@ export const animationData_377 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [19],
       [3, 5, -1, 0, 0, "体１<color=7>"],
@@ -2992,7 +2992,7 @@ export const animationData_377 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [113],
       [2, 4, 1, 0, 0, "影<color=7>"],
@@ -3846,7 +3846,7 @@ export const animationData_377 = {
       [0, 46, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [38],
       [3, 2, 1, 0, 0, "体１<color=7>"],

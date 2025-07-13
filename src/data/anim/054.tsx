@@ -5,7 +5,7 @@ export const animationData_054 = {
   "f": {
     "name": "10式戦車",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["054_f.png"],
       [14],
@@ -25,7 +25,7 @@ export const animationData_054 = {
       [340, 115, 81, 104, "E4"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [26],
       [-1, -1, 0, 0, 388, 436, 0, 0, -1000, 1000, 0, 1000, 0, "，ダミー"],
@@ -60,7 +60,7 @@ export const animationData_054 = {
       [0, 0, 0, 0, 5, 0, "gatya"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [7, 11, -1, 0, 0, "，ダミー"],
@@ -132,7 +132,7 @@ export const animationData_054 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [2, 11, -1, 0, 0, "，ダミー"],
@@ -151,7 +151,7 @@ export const animationData_054 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [4, 4, 1, 0, 0, "，ダミー"],
@@ -315,7 +315,7 @@ export const animationData_054 = {
       [30, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [2, 11, -1, 0, 0, "，ダミー"],
@@ -338,7 +338,7 @@ export const animationData_054 = {
   "c": {
     "name": "ネコ搭乗10式戦車",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["054_c.png"],
       [23],
@@ -367,7 +367,7 @@ export const animationData_054 = {
       [413, 231, 48, 24, "ゴミ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [40],
       [-1, -1, 0, 0, 388, 436, 0, 0, -1500, 1500, 0, 1000, 0, "，ダミー"],
@@ -416,7 +416,7 @@ export const animationData_054 = {
       [0, 0, 0, 0, 5, 0, "gatya"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [5, 2, -1, 0, 0, "，ダミー"],
@@ -627,7 +627,7 @@ export const animationData_054 = {
       [9, 22, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [31, 11, -1, 0, 0],
@@ -649,7 +649,7 @@ export const animationData_054 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [46],
       [31, 11, 1, 0, 0],
@@ -990,7 +990,7 @@ export const animationData_054 = {
       [30, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [2, 11, -1, 0, 0, "，ダミー"],

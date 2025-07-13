@@ -5,7 +5,7 @@ export const animationData_335 = {
   "f": {
     "name": "人魚娘ルリィ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["335_f.png"],
       [87],
@@ -98,7 +98,7 @@ export const animationData_335 = {
       [301, 180, 91, 75, "魚ちっちゃいのよう"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [103],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー<color=7>"],
@@ -210,7 +210,7 @@ export const animationData_335 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [58],
       [2, 9, -1, 0, 0, "影"],
@@ -565,7 +565,7 @@ export const animationData_335 = {
       [147, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [51],
       [2, 9, -1, 0, 0],
@@ -895,7 +895,7 @@ export const animationData_335 = {
       [294, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [222],
       [2, 4, 1, 0, 0, "影"],
@@ -2782,7 +2782,7 @@ export const animationData_335 = {
       [70, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [51],
       [3, 5, 1, 0, 0, "cダミー<color=7>"],
@@ -2943,7 +2943,7 @@ export const animationData_335 = {
   "c": {
     "name": "宝玉の人魚姫ルリィ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["335_c.png"],
       [143],
@@ -3092,7 +3092,7 @@ export const animationData_335 = {
       [416, 173, 8, 10, "追加修正目"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [158],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー<color=7>"],
@@ -3259,7 +3259,7 @@ export const animationData_335 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [133],
       [2, 9, -1, 0, 0, "影"],
@@ -4073,7 +4073,7 @@ export const animationData_335 = {
       [0, -1, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [121],
       [2, 9, -1, 0, 0, "影"],
@@ -4826,7 +4826,7 @@ export const animationData_335 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [281],
       [2, 4, 1, 0, 0, "影"],
@@ -7403,7 +7403,7 @@ export const animationData_335 = {
       [0, -1, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [62],
       [3, 5, 1, 0, 0, "cダミー<color=7>"],
@@ -7597,7 +7597,7 @@ export const animationData_335 = {
   "s": {
     "name": "竜宮の人魚姫ルリィ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["335_s.png"],
       [176],
@@ -7779,7 +7779,7 @@ export const animationData_335 = {
       [378, 365, 12, 6]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [231],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー<color=7>"],
@@ -8019,7 +8019,7 @@ export const animationData_335 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [197],
       [2, 9, -1, 0, 0, "影"],
@@ -9283,7 +9283,7 @@ export const animationData_335 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [177],
       [2, 9, -1, 0, 0, "影"],
@@ -10407,7 +10407,7 @@ export const animationData_335 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [390],
       [2, 4, 1, 0, 0, "影"],
@@ -14892,7 +14892,7 @@ export const animationData_335 = {
       [87, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [78],
       [3, 5, 1, 0, 0, "cダミー<color=7>"],

@@ -5,7 +5,7 @@ export const animationData_207 = {
   "f": {
     "name": "リオレイア",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["207_f.png"],
       [38],
@@ -49,7 +49,7 @@ export const animationData_207 = {
       [377, 60, 24, 33, "左足02"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [40],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -98,7 +98,7 @@ export const animationData_207 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [93],
       [2, 8, -1, 0, 0, "影"],
@@ -810,7 +810,7 @@ export const animationData_207 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [91],
       [2, 8, -1, 0, 0, "影"],
@@ -1511,7 +1511,7 @@ export const animationData_207 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [112],
       [2, 8, 1, 0, 0, "影"],
@@ -3105,7 +3105,7 @@ export const animationData_207 = {
       [52, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [4, 11, 1, 0, 0, "体"],
@@ -3182,7 +3182,7 @@ export const animationData_207 = {
       [0, 0, 0, 0]
     ],
     "maanim04": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [2, 8, 1, 0, 0, "影"],
@@ -3221,7 +3221,7 @@ export const animationData_207 = {
   "c": {
     "name": "リオレイア＆にゃんこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["207_c.png"],
       [40],
@@ -3267,7 +3267,7 @@ export const animationData_207 = {
       [215, 208, 45, 36, "にゃんこ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [43],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -3319,7 +3319,7 @@ export const animationData_207 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [96],
       [2, 8, -1, 0, 0, "影"],
@@ -4051,7 +4051,7 @@ export const animationData_207 = {
       [60, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [96],
       [2, 8, -1, 0, 0, "影"],
@@ -4786,7 +4786,7 @@ export const animationData_207 = {
       [60, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [117],
       [2, 8, 1, 0, 0, "影"],
@@ -6437,7 +6437,7 @@ export const animationData_207 = {
       [100, 1000, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [4, 11, 1, 0, 0, "体"],
@@ -6532,7 +6532,7 @@ export const animationData_207 = {
       [0, 900, 0, 0]
     ],
     "maanim04": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [2, 8, 1, 0, 0, "影"],

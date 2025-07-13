@@ -5,7 +5,7 @@ export const animationData_710 = {
   "f": {
     "name": "エヴァ第１３号機",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["710_f.png"],
       [81],
@@ -2862,7 +2862,7 @@ export const animationData_710 = {
   "c": {
     "name": "エヴァ第１３号機＆ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["710_c.png"],
       [92],

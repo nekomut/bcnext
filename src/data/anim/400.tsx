@@ -5,7 +5,7 @@ export const animationData_400 = {
   "f": {
     "name": "イモウト",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["400_f.png"],
       [33],
@@ -44,7 +44,7 @@ export const animationData_400 = {
       [285, 152, 36, 38, "032奥足追加B.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [124],
       [-1, -1, 0, 0, 0, 0, 0, 0, 800, 800, 0, 1000, 0, "ダミー<color=0>"],
@@ -177,7 +177,7 @@ export const animationData_400 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [46],
       [3, 12, -1, 0, 0, "ダミー<color=0>\t"],
@@ -513,7 +513,7 @@ export const animationData_400 = {
       [40, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [15, 12, -1, 0, 0, "待機制御ダミー<color=1>"],
@@ -545,7 +545,7 @@ export const animationData_400 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [3, 12, 1, 0, 0, "待機制御ダミー<color=1>"],
@@ -709,7 +709,7 @@ export const animationData_400 = {
       [30, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [3, 12, 1, 0, 0, "待機制御ダミー<color=1>"],
@@ -726,7 +726,7 @@ export const animationData_400 = {
   "c": {
     "name": "イモウトCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["400_c.png"],
       [33],
@@ -765,7 +765,7 @@ export const animationData_400 = {
       [389, 137, 36, 38, "032奥足追加B.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [124],
       [-1, -1, 0, 0, 0, 0, 0, 0, 800, 800, 0, 1000, 0, "ダミー<color=0>"],
@@ -898,7 +898,7 @@ export const animationData_400 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [46],
       [3, 12, -1, 0, 0, "ダミー<color=0>\t"],
@@ -1234,7 +1234,7 @@ export const animationData_400 = {
       [40, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [15, 12, -1, 0, 0, "待機制御ダミー<color=1>"],
@@ -1266,7 +1266,7 @@ export const animationData_400 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [3, 12, 1, 0, 0, "待機制御ダミー<color=1>"],
@@ -1430,7 +1430,7 @@ export const animationData_400 = {
       [30, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [3, 12, 1, 0, 0, "待機制御ダミー<color=1>"],

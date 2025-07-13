@@ -5,7 +5,7 @@ export const animationData_248 = {
   "f": {
     "name": "死にたてにゃんこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["248_f.png"],
       [34],
@@ -45,7 +45,7 @@ export const animationData_248 = {
       [172, 72, 55, 56, "衝突"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [35],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1100, 1100, 0, 1000, 0, "DM"],
@@ -89,7 +89,7 @@ export const animationData_248 = {
       [0, 0, 0, 0, 5, 0, "DM"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [2, 5, 1, 0, 0],
@@ -186,7 +186,7 @@ export const animationData_248 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [22, 12, -1, 0, 0],
@@ -209,7 +209,7 @@ export const animationData_248 = {
       [0, -10, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [1, 4, 1, 0, 0],
@@ -530,7 +530,7 @@ export const animationData_248 = {
       [3, -500, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [19, 4, 1, 0, 0],
@@ -562,7 +562,7 @@ export const animationData_248 = {
   "c": {
     "name": "化けにゃんこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["248_c.png"],
       [27],
@@ -595,7 +595,7 @@ export const animationData_248 = {
       [283, 1, 115, 152]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [24],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1100, 1100, 0, 1000, 0, "ダミー"],
@@ -628,7 +628,7 @@ export const animationData_248 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [1, 9, -1, 0, 0],
@@ -743,7 +743,7 @@ export const animationData_248 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [1, 9, -1, 0, 0],
@@ -858,7 +858,7 @@ export const animationData_248 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [44],
       [1, 9, 1, 0, 0],
@@ -1192,7 +1192,7 @@ export const animationData_248 = {
       [31, 500, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [2, 5, 1, 0, 0, "しっぽA<color=0>"],
@@ -1233,7 +1233,7 @@ export const animationData_248 = {
   "s": {
     "name": "復活にゃんこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["248_s.png"],
       [33],

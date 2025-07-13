@@ -5,7 +5,7 @@ export const animationData_050 = {
   "f": {
     "name": "ねこ僧侶",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["050_f.png"],
       [21],
@@ -32,7 +32,7 @@ export const animationData_050 = {
       [1, 1, 56, 63, "エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [24],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 255, 0, "ダミー親"],
@@ -65,7 +65,7 @@ export const animationData_050 = {
       [0, 0, 25, 57, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [2, 2, -1, -1000, 1000, "ネコ本体"],
@@ -113,7 +113,7 @@ export const animationData_050 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [2, 2, -1, -1000, 1000, "ネコ本体"],
@@ -130,7 +130,7 @@ export const animationData_050 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [2, 2, 1, -1000, 1000, "ネコ本体"],
@@ -217,7 +217,7 @@ export const animationData_050 = {
       [15, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [2, 2, -1, -1000, 1000, "ネコ本体"],
@@ -261,7 +261,7 @@ export const animationData_050 = {
   "c": {
     "name": "ねこ坊主",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["050_c.png"],
       [18],
@@ -285,7 +285,7 @@ export const animationData_050 = {
       [218, 54, 18, 25, "袈裟01-01"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [16],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 255, 0, "ダミー親"],
@@ -310,7 +310,7 @@ export const animationData_050 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [2, 2, -1, -1000, 1000, "ネコ本体"],
@@ -366,7 +366,7 @@ export const animationData_050 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [2, 2, -1, -1000, 1000, "ネコ本体"],
@@ -383,7 +383,7 @@ export const animationData_050 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [2, 2, 1, -1000, 1000, "ネコ本体"],
@@ -482,7 +482,7 @@ export const animationData_050 = {
       [15, 40, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [2, 2, -1, -1000, 1000, "ネコ本体"],
@@ -532,7 +532,7 @@ export const animationData_050 = {
   "s": {
     "name": "ねこ法師",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["050_s.png"],
       [37],
@@ -575,7 +575,7 @@ export const animationData_050 = {
       [257, 124, 131, 131]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [34],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -618,7 +618,7 @@ export const animationData_050 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [1, 9, -1, 0, 0],
@@ -753,7 +753,7 @@ export const animationData_050 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [1, 9, -1, 0, 0],
@@ -858,7 +858,7 @@ export const animationData_050 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [2, 5, 1, 0, 0, "ダミーc"],
@@ -1085,7 +1085,7 @@ export const animationData_050 = {
       [14, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [3, 11, 1, 0, 0, "雲"],

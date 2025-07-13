@@ -5,7 +5,7 @@ export const animationData_643 = {
   "f": {
     "name": "ネコ超人",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["643_f.png"],
       [37],
@@ -523,7 +523,7 @@ export const animationData_643 = {
   "c": {
     "name": "ネコ超人Ⅱ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["643_c.png"],
       [39],

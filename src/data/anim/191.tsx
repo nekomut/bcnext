@@ -5,7 +5,7 @@ export const animationData_191 = {
   "f": {
     "name": "ティティ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["191_f.png"],
       [70],
@@ -81,7 +81,7 @@ export const animationData_191 = {
       [351, 172, 41, 83, 1]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [50],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -140,7 +140,7 @@ export const animationData_191 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [80],
       [2, 4, -1, 0, 0, "ダミー"],
@@ -765,7 +765,7 @@ export const animationData_191 = {
       [40, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [44],
       [2, 11, -1, 0, 0],
@@ -1106,7 +1106,7 @@ export const animationData_191 = {
       [40, 0, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [105],
       [2, 4, 1, 0, 0, "ダミー"],
@@ -1869,7 +1869,7 @@ export const animationData_191 = {
       [65, 1000, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [2, 11, 1, 0, 0, "ダミー"],
@@ -1970,7 +1970,7 @@ export const animationData_191 = {
   "c": {
     "name": "ティティCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["191_c.png"],
       [72],
@@ -2048,7 +2048,7 @@ export const animationData_191 = {
       [199, 233, 9, 13]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [52],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -2109,7 +2109,7 @@ export const animationData_191 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [90],
       [2, 4, -1, 0, 0, "ダミー"],
@@ -2820,7 +2820,7 @@ export const animationData_191 = {
       [40, 71, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [44],
       [2, 11, -1, 0, 0],
@@ -3161,7 +3161,7 @@ export const animationData_191 = {
       [40, 0, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [105],
       [2, 4, 1, 0, 0, "ダミー"],
@@ -3924,7 +3924,7 @@ export const animationData_191 = {
       [65, 1000, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [2, 11, 1, 0, 0, "ダミー"],
@@ -4025,7 +4025,7 @@ export const animationData_191 = {
   "s": {
     "name": "ネコティティCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["191_s.png"],
       [83],
@@ -4114,7 +4114,7 @@ export const animationData_191 = {
       [274, 229, 41, 26]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [78],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -4201,7 +4201,7 @@ export const animationData_191 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [100],
       [2, 4, -1, 0, 0],
@@ -5006,7 +5006,7 @@ export const animationData_191 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [52],
       [2, 11, -1, 0, 0],
@@ -5393,7 +5393,7 @@ export const animationData_191 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [156],
       [2, 4, 1, 0, 0],
@@ -7260,7 +7260,7 @@ export const animationData_191 = {
       [62, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [66],
       [2, 11, 1, 0, 0],

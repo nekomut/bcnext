@@ -5,7 +5,7 @@ export const animationData_436 = {
   "f": {
     "name": "ノビルガ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["436_f.png"],
       [14],
@@ -25,7 +25,7 @@ export const animationData_436 = {
       [47, 1, 17, 71, "013残像エフェクト.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [14],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "000.png"],
@@ -48,7 +48,7 @@ export const animationData_436 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [12],
       [3, 11, -1, 0, 0, "012尻.png<color=0>\t"],
@@ -150,7 +150,7 @@ export const animationData_436 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [2],
       [12, 12, -1, 0, 0, "013残像エフェクト.png"],
@@ -161,7 +161,7 @@ export const animationData_436 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [13],
       [3, 5, 1, 0, 0, "012尻.png<color=0>\t"],
@@ -263,7 +263,7 @@ export const animationData_436 = {
       [17, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [4],
       [2, 11, 1, 0, 0],
@@ -285,7 +285,7 @@ export const animationData_436 = {
   "c": {
     "name": "ノビランパサラン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["436_c.png"],
       [64],
@@ -355,7 +355,7 @@ export const animationData_436 = {
       [479, 231, 32, 17, "063口元2.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [112],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -476,7 +476,7 @@ export const animationData_436 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [29],
       [3, 5, -1, 0, 0, "037骨盤.png<color=0>"],
@@ -772,7 +772,7 @@ export const animationData_436 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [27],
       [3, 5, -1, 0, 0, "037骨盤.png<color=0>"],
@@ -951,7 +951,7 @@ export const animationData_436 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [186],
       [1, 4, 1, 0, 0, "001影.png<color=9>"],
@@ -2563,7 +2563,7 @@ export const animationData_436 = {
       [240, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [18],
       [2, 4, 1, 0, 0, "キャラ親ダミー<color=7>"],
@@ -2625,7 +2625,7 @@ export const animationData_436 = {
   "s": {
     "name": "ノビランターバン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["436_c.png"],
       [87],
@@ -2718,7 +2718,7 @@ export const animationData_436 = {
       [364, 129, 51, 23, "086左下布.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [136],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -2863,7 +2863,7 @@ export const animationData_436 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [46],
       [3, 5, -1, 0, 0, "037骨盤.png<color=0>"],
@@ -3276,7 +3276,7 @@ export const animationData_436 = {
       [200, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [44],
       [3, 5, -1, 0, 0, "037骨盤.png<color=0>"],
@@ -3572,7 +3572,7 @@ export const animationData_436 = {
       [200, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [248],
       [1, 4, 1, 0, 0, "001影.png<color=9>"],
@@ -5974,7 +5974,7 @@ export const animationData_436 = {
       [207, 2650, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [25],
       [2, 4, 1, 0, 0, "キャラ親ダミー<color=7>"],

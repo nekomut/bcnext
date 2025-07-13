@@ -5,7 +5,7 @@ export const animationData_391 = {
   "f": {
     "name": "橘みずき",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["391_c.png"],
       [39],
@@ -50,7 +50,7 @@ export const animationData_391 = {
       [217, 191, 68, 64]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [36],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -95,7 +95,7 @@ export const animationData_391 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [48],
       [2, 4, -1, 0, 0, "影"],
@@ -456,7 +456,7 @@ export const animationData_391 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [4, 5, -1, 0, 0],
@@ -547,7 +547,7 @@ export const animationData_391 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [51],
       [4, 5, 1, 0, 0, "胴体<color=7>"],
@@ -1002,7 +1002,7 @@ export const animationData_391 = {
       [27, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [4, 4, 1, 0, 0, "胴体"],
@@ -1106,7 +1106,7 @@ export const animationData_391 = {
   "c": {
     "name": "橘みずきCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["391_c.png"],
       [39],
@@ -1151,7 +1151,7 @@ export const animationData_391 = {
       [217, 191, 68, 64]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [36],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1196,7 +1196,7 @@ export const animationData_391 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [48],
       [2, 4, -1, 0, 0, "影"],
@@ -1557,7 +1557,7 @@ export const animationData_391 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [4, 5, -1, 0, 0],
@@ -1648,7 +1648,7 @@ export const animationData_391 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [51],
       [4, 5, 1, 0, 0, "胴体<color=7>"],
@@ -2103,7 +2103,7 @@ export const animationData_391 = {
       [27, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [4, 4, 1, 0, 0, "胴体"],
@@ -2207,7 +2207,7 @@ export const animationData_391 = {
   "s": {
     "name": "野球マン２号CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["391_s.png"],
       [68],
@@ -2281,7 +2281,7 @@ export const animationData_391 = {
       [126, 84, 37, 32]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [72],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -2362,7 +2362,7 @@ export const animationData_391 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [56],
       [2, 4, -1, 0, 0, "影"],
@@ -2756,7 +2756,7 @@ export const animationData_391 = {
       [16, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [4, 5, -1, 0, 0],
@@ -2858,7 +2858,7 @@ export const animationData_391 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [154],
       [4, 2, 1, 0, 0, "胴体<color=7>\t"],
@@ -3819,7 +3819,7 @@ export const animationData_391 = {
       [35, 0, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [4, 4, 1, 0, 0, "胴体"],

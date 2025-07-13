@@ -5,7 +5,7 @@ export const animationData_328 = {
   "f": {
     "name": "ハッピー100",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["328_c.png"],
       [97],
@@ -108,7 +108,7 @@ export const animationData_328 = {
       [127, 130, 52, 23]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [93],
       [-1, -1, 0, 0, 0, 0, 0, 0, 800, 800, 0, 1000, 0, "ダミー"],
@@ -210,7 +210,7 @@ export const animationData_328 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [89],
       [2, 5, -1, 0, 0, "体　ダミー"],
@@ -765,7 +765,7 @@ export const animationData_328 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [88],
       [2, 5, -1, 0, 0, "体　ダミー"],
@@ -1314,7 +1314,7 @@ export const animationData_328 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [129],
       [2, 4, 1, 0, 0],
@@ -2633,7 +2633,7 @@ export const animationData_328 = {
       [44, 0, 3, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [66],
       [2, 4, 1, 0, 0, "ダミー"],
@@ -2839,7 +2839,7 @@ export const animationData_328 = {
   "c": {
     "name": "幸せ連鎖子ハッピー100",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["328_c.png"],
       [97],
@@ -2942,7 +2942,7 @@ export const animationData_328 = {
       [127, 130, 52, 23]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [93],
       [-1, -1, 0, 40, 0, 0, 0, 0, 800, 800, 0, 1000, 0, "ダミー"],
@@ -3044,7 +3044,7 @@ export const animationData_328 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [89],
       [2, 5, -1, 0, 0, "体　ダミー"],
@@ -3599,7 +3599,7 @@ export const animationData_328 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [88],
       [2, 5, -1, 0, 0, "体　ダミー"],
@@ -4148,7 +4148,7 @@ export const animationData_328 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [129],
       [2, 4, 1, 0, 0],
@@ -5476,7 +5476,7 @@ export const animationData_328 = {
       [44, 0, 3, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [66],
       [2, 4, 1, 0, 0, "ダミー"],

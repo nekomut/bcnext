@@ -5,7 +5,7 @@ export const animationData_176 = {
   "f": {
     "name": "マシュマロにゃん",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["176_f.png"],
       [12],
@@ -23,7 +23,7 @@ export const animationData_176 = {
       [121, 1, 92, 136, "エフェクト2"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [18],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1500, 1500, 0, 1000, 0, "ダミー"],
@@ -50,7 +50,7 @@ export const animationData_176 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [1, 9, -1, 0, 0, "影"],
@@ -203,7 +203,7 @@ export const animationData_176 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [1, 9, -1, 0, 0, "影"],
@@ -307,7 +307,7 @@ export const animationData_176 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [1, 4, 1, 0, 0, "影"],
@@ -521,7 +521,7 @@ export const animationData_176 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [1, 4, -1, 0, 0, "影"],
@@ -559,7 +559,7 @@ export const animationData_176 = {
   "c": {
     "name": "キモマロにゃん",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["176_c.png"],
       [14],
@@ -579,7 +579,7 @@ export const animationData_176 = {
       [97, 151, 6, 62, "足2-2"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [17],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1500, 1500, 0, 1000, 0, "ダミー"],
@@ -605,7 +605,7 @@ export const animationData_176 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [1, 9, -1, 0, 0, "影"],
@@ -805,7 +805,7 @@ export const animationData_176 = {
       [60, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [1, 9, -1, 0, 0, "影"],
@@ -1073,7 +1073,7 @@ export const animationData_176 = {
       [105, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [1, 4, 1, 0, 0, "ダミー"],
@@ -1476,7 +1476,7 @@ export const animationData_176 = {
       [42, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [1, 4, -1, 0, 0, "影"],

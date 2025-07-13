@@ -5,7 +5,7 @@ export const animationData_122 = {
   "f": {
     "name": "女王様の休日",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["122_f.png"],
       [46],
@@ -57,7 +57,7 @@ export const animationData_122 = {
       [1, 123, 122, 59, "追加---サメ　ばくん2"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [45],
       [-1, -1, 0, 0, 442, 455, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -111,7 +111,7 @@ export const animationData_122 = {
       [0, 0, 57, 0, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [2, 5, -1, 0, 0, "にゃんこ＋浮輪ダミー"],
@@ -167,7 +167,7 @@ export const animationData_122 = {
       [30, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [2, 5, -1, 0, 0, "にゃんこ＋浮輪ダミー"],
@@ -217,7 +217,7 @@ export const animationData_122 = {
       [30, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [64],
       [2, 5, 1, 0, 0],
@@ -693,7 +693,7 @@ export const animationData_122 = {
       [80, 800, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [8, 11, -1, 0, 0, "ダミー"],
@@ -773,7 +773,7 @@ export const animationData_122 = {
   "c": {
     "name": "いつものＯＬ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["122_c.png"],
       [27],
@@ -806,7 +806,7 @@ export const animationData_122 = {
       [1, 1, 77, 89, "E"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [20],
       [-1, -1, 0, 0, 490, 223, 0, 0, 1000, 1000, 0, 255, 0, "制御用"],
@@ -835,7 +835,7 @@ export const animationData_122 = {
       [0, 0, 24, 41, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [2, 5, -1, 0, 0, "下半身"],
@@ -1013,7 +1013,7 @@ export const animationData_122 = {
       [17, 200, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [4, 11, -1, 0, 0],
@@ -1081,7 +1081,7 @@ export const animationData_122 = {
       [0, -1, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [2, 11, 1, 0, 0],
@@ -1410,7 +1410,7 @@ export const animationData_122 = {
       [105, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [2, 5, -1, 0, 0],
@@ -1472,7 +1472,7 @@ export const animationData_122 = {
   "s": {
     "name": "コールセンターのＯＬ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["122_s.png"],
       [60],
@@ -1538,7 +1538,7 @@ export const animationData_122 = {
       [179, 102, 2, 3, "着信グレー"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [66],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -1613,7 +1613,7 @@ export const animationData_122 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [55],
       [2, 12, -1, 0, 0, "通常ダミー"],
@@ -2047,7 +2047,7 @@ export const animationData_122 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [8, 11, -1, 0, 0, "上半身<color=0>"],
@@ -2138,7 +2138,7 @@ export const animationData_122 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [85],
       [2, 5, 1, 0, 0, "通常ダミー<color=0>"],
@@ -2874,7 +2874,7 @@ export const animationData_122 = {
       [98, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [2, 5, 1, 0, 0, "通常ダミー<color=0>"],

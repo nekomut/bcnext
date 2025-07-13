@@ -5,7 +5,7 @@ export const animationData_044 = {
   "f": {
     "name": "鬼にゃんま",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["044_f.png"],
       [26],
@@ -37,7 +37,7 @@ export const animationData_044 = {
       [97, 117, 209, 138, "エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [29],
       [-1, -1, 0, 0, 545, 434, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -75,7 +75,7 @@ export const animationData_044 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [20, 11, -1, 0, 0, "ダミー"],
@@ -241,7 +241,7 @@ export const animationData_044 = {
       [10, 18, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [24, 11, -1, 0, 0, "太もも<color=1>"],
@@ -306,7 +306,7 @@ export const animationData_044 = {
       [100, 50, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [17, 11, 1, 0, 0, "ダミー"],
@@ -567,7 +567,7 @@ export const animationData_044 = {
       [37, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [17, 11, 1, 0, 0, "ダミー"],
@@ -644,7 +644,7 @@ export const animationData_044 = {
   "c": {
     "name": "鬼神にゃんま",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["044_c.png"],
       [30],
@@ -680,7 +680,7 @@ export const animationData_044 = {
       [82, 168, 13, 37, "飾り"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [33],
       [-1, -1, 0, 0, 545, 434, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -722,7 +722,7 @@ export const animationData_044 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [20, 11, -1, 0, 0, "ダミー"],
@@ -896,7 +896,7 @@ export const animationData_044 = {
       [14, -50, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [24, 11, -1, 0, 0, "太もも<color=1>"],
@@ -966,7 +966,7 @@ export const animationData_044 = {
       [100, -50, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [17, 11, 1, 0, 0, "ダミー"],
@@ -1245,7 +1245,7 @@ export const animationData_044 = {
       [65, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [17, 11, 1, 0, 0, "ダミー"],
@@ -1328,7 +1328,7 @@ export const animationData_044 = {
   "s": {
     "name": "獄炎鬼にゃんま",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["044_s.png"],
       [60],
@@ -1394,7 +1394,7 @@ export const animationData_044 = {
       [172, 243, 15, 7, "炎ef６"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [108],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -1511,7 +1511,7 @@ export const animationData_044 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [241],
       [1, 4, -1, 0, 0, "cダミー"],
@@ -2973,7 +2973,7 @@ export const animationData_044 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [218],
       [3, 11, -1, 0, 0, "おなか"],
@@ -4243,7 +4243,7 @@ export const animationData_044 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [270],
       [1, 5, 1, 0, 0, "cダミー"],
@@ -6564,7 +6564,7 @@ export const animationData_044 = {
       [33, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [49],
       [1, 5, 1, 0, 0, "cダミー"],

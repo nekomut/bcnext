@@ -5,7 +5,7 @@ export const animationData_407 = {
   "f": {
     "name": "ネコアスカ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["407_f.png"],
       [56],
@@ -67,7 +67,7 @@ export const animationData_407 = {
       [41, 178, 4, 13, "055[全].png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [73],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -149,7 +149,7 @@ export const animationData_407 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [33, 12, -1, 0, 0, "038弁当.png"],
@@ -357,7 +357,7 @@ export const animationData_407 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [33, 12, -1, 0, 0, "038弁当.png"],
@@ -516,7 +516,7 @@ export const animationData_407 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [143],
       [2, 4, 1, 0, 0, "015体.png"],
@@ -1669,7 +1669,7 @@ export const animationData_407 = {
       [64, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [33, 12, 1, 0, 0, "038弁当.png"],
@@ -1818,7 +1818,7 @@ export const animationData_407 = {
   "c": {
     "name": "エプロンネコアスカ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["407_c.png"],
       [59],
@@ -1883,7 +1883,7 @@ export const animationData_407 = {
       [29, 138, 4, 13, "058[全].png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [81],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -1973,7 +1973,7 @@ export const animationData_407 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [67],
       [2, 5, -1, 0, 0, "008エプロン１.png"],
@@ -2245,7 +2245,7 @@ export const animationData_407 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [57],
       [2, 5, -1, 0, 0, "008エプロン１.png"],
@@ -2458,7 +2458,7 @@ export const animationData_407 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [108],
       [2, 4, 1, 0, 0, "015体.png\t"],
@@ -3328,7 +3328,7 @@ export const animationData_407 = {
       [102, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [74],
       [2, 4, 1, 0, 0, "008エプロン１.png"],

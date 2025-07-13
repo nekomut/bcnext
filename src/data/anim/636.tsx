@@ -5,7 +5,7 @@ export const animationData_636 = {
   "f": {
     "name": "洗脳されしタンクネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["999_f.png"],
       [12],
@@ -64,7 +64,7 @@ export const animationData_636 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -139,7 +139,7 @@ export const animationData_636 = {
   "c": {
     "name": "洗脳されしネコカベ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["999_c.png"],
       [13],
@@ -259,7 +259,7 @@ export const animationData_636 = {
   "s": {
     "name": "洗脳されしゴムネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["636_s.png"],
       [15],

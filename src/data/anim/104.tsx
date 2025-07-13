@@ -5,7 +5,7 @@ export const animationData_104 = {
   "f": {
     "name": "マジでコイしてる",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["104_f.png"],
       [23],
@@ -34,7 +34,7 @@ export const animationData_104 = {
       [1, 49, 39, 50, "コイ顔"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [16],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "初期"],
@@ -59,7 +59,7 @@ export const animationData_104 = {
       [0, 0, 0, 0, 5, 0, "初期"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [3, 4, -1, 0, 0, "体"],
@@ -237,7 +237,7 @@ export const animationData_104 = {
       [24, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [4, 2, -1, 0, 0, "コイ尾（アニメ）"],
@@ -266,7 +266,7 @@ export const animationData_104 = {
       [0, -4, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [3, 11, 1, 0, 0, "コイ体"],
@@ -347,7 +347,7 @@ export const animationData_104 = {
       [18, -100, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [3, 5, -1, 0, 0, "体"],
@@ -409,7 +409,7 @@ export const animationData_104 = {
   "c": {
     "name": "コイ・the・Night",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["104_c.png"],
       [34],
@@ -449,7 +449,7 @@ export const animationData_104 = {
       [145, 164, 17, 16, "矢球3"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [27],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "初期"],
@@ -485,7 +485,7 @@ export const animationData_104 = {
       [0, 0, 0, 0, 5, 0, "初期"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [4, 9, -1, 0, 0, "尾"],
@@ -704,7 +704,7 @@ export const animationData_104 = {
       [0, -1000, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [4, 9, -1, 0, 0, "尾"],
@@ -763,7 +763,7 @@ export const animationData_104 = {
       [0, 240, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [3, 11, 1, 0, 0, "コイ体"],
@@ -943,7 +943,7 @@ export const animationData_104 = {
       [12, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [3, 11, -1, 0, 0, "コイ体<color=0>"],
@@ -1041,7 +1041,7 @@ export const animationData_104 = {
   "s": {
     "name": "キスヨリ・ス・ゴイ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["104_s.png"],
       [48],
@@ -1095,7 +1095,7 @@ export const animationData_104 = {
       [333, 225, 27, 11, "しり３"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [32],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "初期"],
@@ -1136,7 +1136,7 @@ export const animationData_104 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [1, 5, -1, 0, 0, "移動（テスト）"],
@@ -1415,7 +1415,7 @@ export const animationData_104 = {
       [108, -50, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [1, 5, -1, 0, 0],
@@ -1573,7 +1573,7 @@ export const animationData_104 = {
       [108, -50, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [3, 5, 1, 0, 0],
@@ -1809,7 +1809,7 @@ export const animationData_104 = {
       [0, 40, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [3, 4, 1, 0, 0, "コイ体<color=0>"],

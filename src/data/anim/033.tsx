@@ -5,7 +5,7 @@ export const animationData_033 = {
   "f": {
     "name": "ねこタツ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["033_f.png"],
       [28],
@@ -39,7 +39,7 @@ export const animationData_033 = {
       [61, 137, 13, 26, "手前　肩有り　二の腕"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [30],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー親"],
@@ -78,7 +78,7 @@ export const animationData_033 = {
       [0, 0, 85, -19, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [21, 2, -1, 0, 0, "白布団【パラパラ4枚】<color=0>"],
@@ -315,7 +315,7 @@ export const animationData_033 = {
       [0, 800, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [13, 12, -1, 0, 0],
@@ -359,7 +359,7 @@ export const animationData_033 = {
       [0, 6, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [5, 12, 1, 0, 0, "顔　奥にある方　ぱらぱら用"],
@@ -604,7 +604,7 @@ export const animationData_033 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [4, 12, -1, 0, 0, "ダミー親"],
@@ -692,7 +692,7 @@ export const animationData_033 = {
   "c": {
     "name": "ねこＴＶ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["033_c.png"],
       [30],
@@ -728,7 +728,7 @@ export const animationData_033 = {
       [102, 148, 20, 28, "前髪　攻撃時　後ろ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [31],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー親"],
@@ -768,7 +768,7 @@ export const animationData_033 = {
       [0, 0, 90, -19, 5, 0, "ダミー親"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [7, 11, -1, 0, 0, "手前　二の腕"],
@@ -1001,7 +1001,7 @@ export const animationData_033 = {
       [60, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [7, 12, -1, 0, 0, "手前の腕　表示"],
@@ -1081,7 +1081,7 @@ export const animationData_033 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [4, 12, 1, 0, 0, "顔　奥にある方　パラパラ"],
@@ -1354,7 +1354,7 @@ export const animationData_033 = {
       [44, 3, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [12, 12, -1, 0, 0],
@@ -1457,7 +1457,7 @@ export const animationData_033 = {
   "s": {
     "name": "ねこタコつぼ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["033_s.png"],
       [40],
@@ -1503,7 +1503,7 @@ export const animationData_033 = {
       [1, 224, 80, 24, "水Ｋ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [44],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー親"],
@@ -1556,7 +1556,7 @@ export const animationData_033 = {
       [0, 0, 85, -19, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [1, 4, -1, 0, 0, "ダミー親"],
@@ -1780,7 +1780,7 @@ export const animationData_033 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [4, 12, -1, 0, 0],
@@ -1857,7 +1857,7 @@ export const animationData_033 = {
       [0, -4, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [68],
       [3, 3, 1, 0, 0],
@@ -2332,7 +2332,7 @@ export const animationData_033 = {
       [54, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [3, 4, 1, 0, 0, "ダミー親"],

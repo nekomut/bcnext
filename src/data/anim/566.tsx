@@ -5,7 +5,7 @@ export const animationData_566 = {
   "f": {
     "name": "救命にゃんこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["566_f.png"],
       [36],
@@ -1963,7 +1963,7 @@ export const animationData_566 = {
   "c": {
     "name": "ダンゴにゃん兄弟",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["566_c.png"],
       [16],
@@ -2763,7 +2763,7 @@ export const animationData_566 = {
   "s": {
     "name": "ネコジェラート",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["566_s.png"],
       [48],

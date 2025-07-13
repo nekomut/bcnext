@@ -5,7 +5,7 @@ export const animationData_314 = {
   "f": {
     "name": "大掃除ねねこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["314_f.png"],
       [78],
@@ -89,7 +89,7 @@ export const animationData_314 = {
       [276, 121, 26, 50, "攻撃お手　腰曲げ用"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [87],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -185,7 +185,7 @@ export const animationData_314 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [1, 5, -1, 0, 0],
@@ -455,7 +455,7 @@ export const animationData_314 = {
       [0, 200, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [6, 5, -1, 0, 0],
@@ -591,7 +591,7 @@ export const animationData_314 = {
       [0, 200, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [99],
       [1, 5, 1, 0, 0],
@@ -1186,7 +1186,7 @@ export const animationData_314 = {
       [23, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [99],
       [1, 4, 1, 0, 0],
@@ -1491,7 +1491,7 @@ export const animationData_314 = {
   "c": {
     "name": "初詣ねねこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["314_c.png"],
       [101],
@@ -1598,7 +1598,7 @@ export const animationData_314 = {
       [69, 87, 30, 74, "攻撃エフェクト2"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [137],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1744,7 +1744,7 @@ export const animationData_314 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [63],
       [1, 5, -1, 0, 0],
@@ -2217,7 +2217,7 @@ export const animationData_314 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [7, 2, -1, 0, 0],
@@ -2460,7 +2460,7 @@ export const animationData_314 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [138],
       [1, 5, 1, 0, 0],
@@ -3337,7 +3337,7 @@ export const animationData_314 = {
       [28, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [116],
       [1, 4, 1, 0, 0],
@@ -3693,7 +3693,7 @@ export const animationData_314 = {
   "s": {
     "name": "新春・初詣ねねこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["314_s.png"],
       [103],
@@ -3948,7 +3948,7 @@ export const animationData_314 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [63],
       [1, 5, -1, 0, 0],
@@ -4421,7 +4421,7 @@ export const animationData_314 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [7, 2, -1, 0, 0],

@@ -5,7 +5,7 @@ export const animationData_325 = {
   "f": {
     "name": "ネコボクサー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["325_f.png"],
       [13],
@@ -24,7 +24,7 @@ export const animationData_325 = {
       [459, 92, 36, 63, "攻撃エフェクト00"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [7],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -40,7 +40,7 @@ export const animationData_325 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [4, 12, -1, 0, 0, "攻撃01"],
@@ -67,7 +67,7 @@ export const animationData_325 = {
       [12, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [4, 12, 1, 0, 0, "攻撃01"],
@@ -78,7 +78,7 @@ export const animationData_325 = {
       [0, 2, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [3, 12, 1, 0, 0, "移動01"],
@@ -127,7 +127,7 @@ export const animationData_325 = {
       [8, -30, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [3, 12, 1, 0, 0, "移動01"],
@@ -156,7 +156,7 @@ export const animationData_325 = {
   "c": {
     "name": "ネコチャンピオン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["325_c.png"],
       [14],
@@ -176,7 +176,7 @@ export const animationData_325 = {
       [459, 96, 51, 41, "攻撃エフェクト02"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [8],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -193,7 +193,7 @@ export const animationData_325 = {
       [0, 0, 3, 0, 5, 0, "移動01"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [4, 12, -1, 0, 0, "攻撃01"],
@@ -220,7 +220,7 @@ export const animationData_325 = {
       [12, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [4, 12, 1, 0, 0, "攻撃01"],
@@ -231,7 +231,7 @@ export const animationData_325 = {
       [0, 2, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [2, 4, 1, 0, 0, "影"],
@@ -293,7 +293,7 @@ export const animationData_325 = {
       [8, -30, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [3, 12, 1, 0, 0, "移動01"],
@@ -325,7 +325,7 @@ export const animationData_325 = {
   "s": {
     "name": "ネコリベンジ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["325_s.png"],
       [50],
@@ -381,7 +381,7 @@ export const animationData_325 = {
       [79, 79, 13, 12, "049加算光.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [18],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "■全体用ダミー<color=7>"],
@@ -408,7 +408,7 @@ export const animationData_325 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [23],
       [4, 12, -1, 0, 0, "攻撃01"],
@@ -561,7 +561,7 @@ export const animationData_325 = {
       [12, 1000, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [19],
       [4, 12, -1, 0, 0, "攻撃01"],
@@ -682,7 +682,7 @@ export const animationData_325 = {
       [12, 1000, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [49],
       [2, 4, 1, 0, 0, "影"],
@@ -1105,7 +1105,7 @@ export const animationData_325 = {
       [23, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [22],
       [3, 12, 1, 0, 0, "移動01"],

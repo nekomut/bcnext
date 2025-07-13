@@ -5,7 +5,7 @@ export const animationData_239 = {
   "f": {
     "name": "見習いスニャイパー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["239_f.png"],
       [16],
@@ -27,7 +27,7 @@ export const animationData_239 = {
       [71, 1, 42, 51, "発砲光"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [16],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -52,7 +52,7 @@ export const animationData_239 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [4, 5, -1, 0, 0, "機体"],
@@ -121,7 +121,7 @@ export const animationData_239 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [4, 5, -1, 0, 0, "機体"],
@@ -188,7 +188,7 @@ export const animationData_239 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [4, 11, 1, 0, 0, "機体"],
@@ -336,7 +336,7 @@ export const animationData_239 = {
       [23, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [4, 5, 1, 0, 0, "機体"],
@@ -359,7 +359,7 @@ export const animationData_239 = {
   "c": {
     "name": "ネゴルゴ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["239_c.png"],
       [18],
@@ -383,7 +383,7 @@ export const animationData_239 = {
       [32, 153, 20, 21, "煙02"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [22],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -414,7 +414,7 @@ export const animationData_239 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [4, 5, -1, 0, 0, "機体"],
@@ -492,7 +492,7 @@ export const animationData_239 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [4, 5, -1, 0, 0, "機体"],
@@ -568,7 +568,7 @@ export const animationData_239 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [4, 11, 1, 0, 0, "機体"],
@@ -785,7 +785,7 @@ export const animationData_239 = {
       [26, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [4, 5, 1, 0, 0, "機体"],

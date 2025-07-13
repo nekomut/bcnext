@@ -5,7 +5,7 @@ export const animationData_267 = {
   "f": {
     "name": "ネコタイフーン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["267_f.png"],
       [24],
@@ -35,7 +35,7 @@ export const animationData_267 = {
       [494, 69, 9, 16]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [22],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "dm"],
@@ -66,7 +66,7 @@ export const animationData_267 = {
       [0, 0, 0, 0, 5, 0, "dm"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [58],
       [3, 2, -1, 0, 0],
@@ -426,7 +426,7 @@ export const animationData_267 = {
       [16, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [58],
       [3, 2, -1, 0, 0],
@@ -786,7 +786,7 @@ export const animationData_267 = {
       [16, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [61],
       [3, 2, 1, 0, 0],
@@ -1133,7 +1133,7 @@ export const animationData_267 = {
       [5, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [2, 4, 1, 0, 0],
@@ -1195,7 +1195,7 @@ export const animationData_267 = {
   "c": {
     "name": "ネコハリケーン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["267_c.png"],
       [41],
@@ -1242,7 +1242,7 @@ export const animationData_267 = {
       [344, 1, 8, 33, "もくざい長"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [33],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "dm"],
@@ -1284,7 +1284,7 @@ export const animationData_267 = {
       [0, 0, 0, 0, 5, 0, "dm"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [93],
       [3, 2, -1, 0, 0],
@@ -1870,7 +1870,7 @@ export const animationData_267 = {
       [100, 3600, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [93],
       [3, 2, -1, 0, 0],
@@ -2456,7 +2456,7 @@ export const animationData_267 = {
       [12, 62, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [90],
       [3, 2, 1, 0, 0],
@@ -2973,7 +2973,7 @@ export const animationData_267 = {
       [0, 24, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [2, 4, 1, 0, 0],
@@ -3032,7 +3032,7 @@ export const animationData_267 = {
   "s": {
     "name": "ネコあらし",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["267_s.png"],
       [68],
@@ -3106,7 +3106,7 @@ export const animationData_267 = {
       [368, 234, 58, 18, "067こまEF3.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [46],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "■ダミー<color=7>"],
@@ -3161,7 +3161,7 @@ export const animationData_267 = {
       [0, 0, 0, 0, 5, 0, "dm"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [117],
       [3, 2, -1, 0, 0, "本たつまき\t"],
@@ -3868,7 +3868,7 @@ export const animationData_267 = {
       [16, 1000, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [117],
       [3, 2, -1, 0, 0, "本たつまき\t"],
@@ -4575,7 +4575,7 @@ export const animationData_267 = {
       [16, 1000, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [123],
       [3, 2, 1, 0, 0, "本たつまき\t"],
@@ -5266,7 +5266,7 @@ export const animationData_267 = {
       [4, 900, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [26],
       [2, 4, 1, 0, 0, "■全体ダミー\t"],

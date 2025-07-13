@@ -1895,7 +1895,7 @@ export const animationData_599 = {
   "c": {
     "name": "シャンプー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["599_c.png"],
       [124],

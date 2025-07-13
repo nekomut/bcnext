@@ -5902,7 +5902,7 @@ export const animationData_588 = {
   "c": {
     "name": "初恋令嬢メルシュξ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["588_c.png"],
       [161],

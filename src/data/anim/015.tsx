@@ -5,7 +5,7 @@ export const animationData_015 = {
   "f": {
     "name": "ネコパンツ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["015_f.png"],
       [16],
@@ -50,7 +50,7 @@ export const animationData_015 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [5],
       [-1, -1, 0, 0, 0, 0, 0, 0, 179, 179, 0, 255, 0, "ダミー親"],
@@ -64,7 +64,7 @@ export const animationData_015 = {
       [0, 0, 24, 145, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -141,7 +141,7 @@ export const animationData_015 = {
       [24, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, 0, 0],
@@ -149,7 +149,7 @@ export const animationData_015 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -253,7 +253,7 @@ export const animationData_015 = {
       [10, 11, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [1, 2, -1, 0, 0],
@@ -294,7 +294,7 @@ export const animationData_015 = {
   "c": {
     "name": "ネコ葉っぱ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["015_c.png"],
       [16],
@@ -339,7 +339,7 @@ export const animationData_015 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [4],
       [-1, -1, 0, 0, 0, 0, 0, 0, 179, 179, 0, 255, 0, "ダミー親"],
@@ -352,7 +352,7 @@ export const animationData_015 = {
       [0, 0, 24, 145, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -393,7 +393,7 @@ export const animationData_015 = {
       [24, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [1, 2, -1, 0, 0],
@@ -404,7 +404,7 @@ export const animationData_015 = {
       [0, 255, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -506,7 +506,7 @@ export const animationData_015 = {
       [12, 50, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [1, 2, -1, 0, 0],
@@ -541,7 +541,7 @@ export const animationData_015 = {
   "s": {
     "name": "ネコぺろきゃん",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["015_s.png"],
       [33],
@@ -580,7 +580,7 @@ export const animationData_015 = {
       [443, 31, 14, 14, "口あける"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [22],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー親"],
@@ -611,7 +611,7 @@ export const animationData_015 = {
       [0, 0, 0, -3, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [1, 2, -1, 0, 0, "移動"],
@@ -803,7 +803,7 @@ export const animationData_015 = {
       [216, -1, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [1, 2, -1, 0, 1000],
@@ -844,7 +844,7 @@ export const animationData_015 = {
       [4, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [4, 4, 1, 0, 0],
@@ -1060,7 +1060,7 @@ export const animationData_015 = {
       [8, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [1, 2, -1, 0, 0],

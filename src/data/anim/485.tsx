@@ -5,7 +5,7 @@ export const animationData_485 = {
   "f": {
     "name": "カレット",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["485_f.png"],
       [97],
@@ -108,7 +108,7 @@ export const animationData_485 = {
       [444, 68, 39, 36, "096攻撃右手.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [120],
       [-1, -1, 0, 0, 0, 0, 0, 0, 700, 700, 0, 1000, 0, "■ダミー<color=7>"],
@@ -237,7 +237,7 @@ export const animationData_485 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [99],
       [2, 4, -1, 0, 0, "■キャラダミー<color=7>"],
@@ -706,7 +706,7 @@ export const animationData_485 = {
       [0, -1, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [62],
       [2, 4, -1, 0, 0, "■キャラダミー<color=7>"],
@@ -1036,7 +1036,7 @@ export const animationData_485 = {
       [0, -1, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [205],
       [2, 4, 1, 0, 0, "■キャラダミー<color=7>"],
@@ -3163,7 +3163,7 @@ export const animationData_485 = {
       [0, -1, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [81],
       [2, 4, 1, 0, 0, "■キャラダミー<color=7>"],
@@ -3414,7 +3414,7 @@ export const animationData_485 = {
   "c": {
     "name": "カレットCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["485_c.png"],
       [97],
@@ -3517,7 +3517,7 @@ export const animationData_485 = {
       [296, 214, 38, 37, "096攻撃右手.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [120],
       [-1, -1, 0, 0, 0, 0, 0, 0, 700, 700, 0, 1000, 0, "■ダミー<color=7>"],
@@ -3646,7 +3646,7 @@ export const animationData_485 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [99],
       [2, 4, -1, 0, 0, "■キャラダミー<color=7>"],
@@ -4115,7 +4115,7 @@ export const animationData_485 = {
       [0, -1, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [62],
       [2, 4, -1, 0, 0, "■キャラダミー<color=7>"],
@@ -4445,7 +4445,7 @@ export const animationData_485 = {
       [0, -1, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [205],
       [2, 4, 1, 0, 0, "■キャラダミー<color=7>"],
@@ -6575,7 +6575,7 @@ export const animationData_485 = {
       [0, -1, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [81],
       [2, 4, 1, 0, 0, "■キャラダミー<color=7>"],

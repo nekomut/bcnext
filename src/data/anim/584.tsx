@@ -4473,7 +4473,7 @@ export const animationData_584 = {
   "s": {
     "name": "前田クリス慶次DX",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["584_s.png"],
       [111],

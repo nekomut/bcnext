@@ -5,7 +5,7 @@ export const animationData_479 = {
   "f": {
     "name": "グミネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["479_f.png"],
       [24],
@@ -35,7 +35,7 @@ export const animationData_479 = {
       [324, 107, 22, 22, "023光.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [7],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "親ダミー"],
@@ -51,7 +51,7 @@ export const animationData_479 = {
       [0, 0, 0, 0, 5, 0, "親ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [11],
       [3, 2, -1, 0, 0, "002ネコ0.png"],
@@ -113,7 +113,7 @@ export const animationData_479 = {
       [0, 500, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [5],
       [2, 10, -1, 0, 0, "キャラ親"],
@@ -135,7 +135,7 @@ export const animationData_479 = {
       [0, 500, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [10],
       [2, 4, 1, 0, 0, "キャラ親"],
@@ -207,7 +207,7 @@ export const animationData_479 = {
       [8, 100, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [11],
       [2, 4, 1, 0, 0, "キャラ親"],
@@ -248,7 +248,7 @@ export const animationData_479 = {
   "c": {
     "name": "ラッキーネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["479_c.png"],
       [24],
@@ -278,7 +278,7 @@ export const animationData_479 = {
       [237, 140, 22, 22, "023光.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [7],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "親ダミー"],
@@ -294,7 +294,7 @@ export const animationData_479 = {
       [0, 0, 0, 0, 5, 0, "親ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [11],
       [3, 2, -1, 0, 0, "002ネコ0.png"],
@@ -356,7 +356,7 @@ export const animationData_479 = {
       [0, 500, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [5],
       [2, 10, -1, 0, 0, "キャラ親"],
@@ -378,7 +378,7 @@ export const animationData_479 = {
       [0, 500, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [10],
       [2, 4, 1, 0, 0, "キャラ親"],
@@ -450,7 +450,7 @@ export const animationData_479 = {
       [8, 100, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [11],
       [2, 4, 1, 0, 0, "キャラ親"],
@@ -491,7 +491,7 @@ export const animationData_479 = {
   "s": {
     "name": "グミネコソーダ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["479_s.png"],
       [24],

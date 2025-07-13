@@ -5,7 +5,7 @@ export const animationData_697 = {
   "s": {
     "name": "ネコ村長",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["697_s.png"],
       [44],

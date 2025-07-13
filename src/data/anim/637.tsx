@@ -5,7 +5,7 @@ export const animationData_637 = {
   "f": {
     "name": "シャオチョン＆ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["637_f.png"],
       [95],
@@ -2354,7 +2354,7 @@ export const animationData_637 = {
   "c": {
     "name": "シャオチョン＆ネコCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["637_c.png"],
       [98],

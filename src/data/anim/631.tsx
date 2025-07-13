@@ -5,7 +5,7 @@ export const animationData_631 = {
   "f": {
     "name": "闇の精霊ヤミィ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["999_f.png"],
       [55],
@@ -4222,7 +4222,7 @@ export const animationData_631 = {
   "c": {
     "name": "暗黒の精霊ヤミノワール",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["631_c.png"],
       [60],
@@ -9226,7 +9226,7 @@ export const animationData_631 = {
   "s": {
     "name": "暗黒の精霊王ヤミノワールド",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["631_s.png"],
       [102],

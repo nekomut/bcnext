@@ -5,7 +5,7 @@ export const animationData_376 = {
   "f": {
     "name": "ネコ探査機",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["376_f.png"],
       [30],
@@ -41,7 +41,7 @@ export const animationData_376 = {
       [57, 93, 21, 20]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [23],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -73,7 +73,7 @@ export const animationData_376 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [2, 5, -1, 0, 0, "ガタガタ"],
@@ -170,7 +170,7 @@ export const animationData_376 = {
       [15, 22, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [2, 5, -1, 0, 0, "ガタガタ"],
@@ -228,7 +228,7 @@ export const animationData_376 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [2, 4, 1, 0, 0, "体"],
@@ -424,7 +424,7 @@ export const animationData_376 = {
       [25, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [2, 4, 1, 0, 0, "体"],
@@ -489,7 +489,7 @@ export const animationData_376 = {
   "c": {
     "name": "ネコサーチMkⅡ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["376_c.png"],
       [23],
@@ -518,7 +518,7 @@ export const animationData_376 = {
       [369, 42, 44, 44, "回転9"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [14],
       [-1, -1, 0, 0, 0, 0, 1, 1, 1600, 1600, 0, 1000, 0, "ダミー"],
@@ -541,7 +541,7 @@ export const animationData_376 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [2, 2, -1, 0, 0, "体1"],
@@ -622,7 +622,7 @@ export const animationData_376 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [2, 11, -1, 0, 0],
@@ -657,7 +657,7 @@ export const animationData_376 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [2, 4, 1, 0, 0, "体1"],
@@ -780,7 +780,7 @@ export const animationData_376 = {
       [26, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [2, 11, 1, 0, 0, "体1"],
@@ -821,7 +821,7 @@ export const animationData_376 = {
   "s": {
     "name": "ネコサテライト",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["376_s.png"],
       [32],
@@ -859,7 +859,7 @@ export const animationData_376 = {
       [1, 29, 82, 77, "031爆発３.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [49],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png<color=7>"],
@@ -917,7 +917,7 @@ export const animationData_376 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [11],
       [3, 5, -1, 0, 0, "002下半身.png"],
@@ -973,7 +973,7 @@ export const animationData_376 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [10],
       [3, 5, -1, 0, 0, "002下半身.png"],
@@ -1022,7 +1022,7 @@ export const animationData_376 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [60],
       [3, 5, 1, 0, 0, "002下半身.png"],
@@ -1398,7 +1398,7 @@ export const animationData_376 = {
       [26, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [17],
       [3, 4, 1, 0, 0, "002下半身.png"],

@@ -5,7 +5,7 @@ export const animationData_022 = {
   "f": {
     "name": "ネコフィーバー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["022_f.png"],
       [23],
@@ -64,7 +64,7 @@ export const animationData_022 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [8],
       [-1, -1, 0, 0, 323, 387, 0, 0, 600, 600, 0, 255, 0, "ダミー親"],
@@ -81,7 +81,7 @@ export const animationData_022 = {
       [0, 0, 48, 123, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -123,7 +123,7 @@ export const animationData_022 = {
       [32, 16, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -144,7 +144,7 @@ export const animationData_022 = {
       [16, 16, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -331,7 +331,7 @@ export const animationData_022 = {
       [31, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -356,7 +356,7 @@ export const animationData_022 = {
   "c": {
     "name": "ネコカーニバル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["022_c.png"],
       [25],
@@ -419,7 +419,7 @@ export const animationData_022 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [10],
       [-1, -1, 0, 0, 304, 374, 0, 0, 700, 700, 0, 255, 0, "ダミー親"],
@@ -438,7 +438,7 @@ export const animationData_022 = {
       [0, 0, 48, 123, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -506,7 +506,7 @@ export const animationData_022 = {
       [32, -27, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -539,7 +539,7 @@ export const animationData_022 = {
       [16, -27, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -804,7 +804,7 @@ export const animationData_022 = {
       [31, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -839,7 +839,7 @@ export const animationData_022 = {
   "s": {
     "name": "ネコアミーゴ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["022_s.png"],
       [25],
@@ -870,7 +870,7 @@ export const animationData_022 = {
       [303, 188, 74, 67, "頭飾り03"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [8],
       [-1, -1, 0, 0, 0, 0, 0, 0, 700, 700, 0, 255, 0, "ダミー親"],
@@ -887,7 +887,7 @@ export const animationData_022 = {
       [0, 0, 57, 117, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -933,7 +933,7 @@ export const animationData_022 = {
       [32, 23, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -950,7 +950,7 @@ export const animationData_022 = {
       [16, 23, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -1121,7 +1121,7 @@ export const animationData_022 = {
       [0, 23, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [1, 2, -1, -1000, 1000, "攻撃待機"],

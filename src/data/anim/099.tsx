@@ -5,7 +5,7 @@ export const animationData_099 = {
   "f": {
     "name": "狂乱の巨神ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["099_f.png"],
       [59],
@@ -70,7 +70,7 @@ export const animationData_099 = {
       [273, 101, 55, 5, "地面４"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [65],
       [-1, -1, 0, 0, 307, -1, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -144,7 +144,7 @@ export const animationData_099 = {
       [0, 0, 0, 3, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [1, 2, -1, 0, 0, "停止"],
@@ -250,7 +250,7 @@ export const animationData_099 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [3, 11, -1, 0, 0, "ダミー"],
@@ -332,7 +332,7 @@ export const animationData_099 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [109],
       [2, 12, 1, 0, 0, "ダミー"],
@@ -1224,7 +1224,7 @@ export const animationData_099 = {
       [80, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [2, 12, -1, 0, 0, "ダミー"],
@@ -1316,7 +1316,7 @@ export const animationData_099 = {
   "c": {
     "name": "狂乱のネコダラボッチ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["099_c.png"],
       [64],
@@ -1386,7 +1386,7 @@ export const animationData_099 = {
       [331, 63, 13, 10, "腹筋"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [73],
       [-1, -1, 0, 0, 199, 878, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1468,7 +1468,7 @@ export const animationData_099 = {
       [0, 0, 0, 3, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [1, 2, -1, 0, 0, "停止"],
@@ -1628,7 +1628,7 @@ export const animationData_099 = {
       [4, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [3, 11, -1, 0, 0, "ダミー"],
@@ -1758,7 +1758,7 @@ export const animationData_099 = {
       [0, 35, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [117],
       [2, 12, 1, 0, 0, "ダミー"],
@@ -2685,7 +2685,7 @@ export const animationData_099 = {
       [0, 62, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [2, 12, -1, 0, 0, "ダミー"],
@@ -2780,7 +2780,7 @@ export const animationData_099 = {
   "s": {
     "name": "大狂乱のネコジャラミ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["099_s.png"],
       [57],
@@ -2843,7 +2843,7 @@ export const animationData_099 = {
       [256, 79, 27, 48, "土追加"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [65],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -2917,7 +2917,7 @@ export const animationData_099 = {
       [0, 0, 1, 2, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [3, 4, -1, 0, 0, "通常はら<color=0>"],
@@ -3017,7 +3017,7 @@ export const animationData_099 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [3, 11, -1, 0, 0, "通常はら<color=0>"],
@@ -3046,7 +3046,7 @@ export const animationData_099 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [112],
       [2, 12, 1, 0, 0, "c通常ダミー<color=0>"],
@@ -3813,7 +3813,7 @@ export const animationData_099 = {
       [73, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [2, 12, 1, 0, 0, "c通常ダミー<color=0>"],

@@ -5,7 +5,7 @@ export const animationData_443 = {
   "f": {
     "name": "戦隊ドリラ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["443_f.png"],
       [65],
@@ -76,7 +76,7 @@ export const animationData_443 = {
       [169, 132, 73, 57, "062ドリルA3.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [88],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1300, 1300, 0, 1000, 0, "000.png<color=7>"],
@@ -173,7 +173,7 @@ export const animationData_443 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [25],
       [3, 5, -1, 0, 0, "004ボディ.png<color=0>"],
@@ -356,7 +356,7 @@ export const animationData_443 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [15],
       [3, 5, -1, 0, 0, "004ボディ.png<color=0>"],
@@ -482,7 +482,7 @@ export const animationData_443 = {
       [36, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [100],
       [2, 4, 1, 0, 0, "6号機親ダミー<color=7>"],
@@ -1406,7 +1406,7 @@ export const animationData_443 = {
       [55, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [15],
       [2, 11, 1, 0, 0, "6号機親ダミー<color=7>"],
@@ -1459,7 +1459,7 @@ export const animationData_443 = {
   "c": {
     "name": "戦隊パワードリラ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["443_c.png"],
       [65],
@@ -1530,7 +1530,7 @@ export const animationData_443 = {
       [169, 132, 73, 57, "062ドリルA3.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [88],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1300, 1300, 0, 1000, 0, "000.png<color=7>"],
@@ -1627,7 +1627,7 @@ export const animationData_443 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [25],
       [3, 5, -1, 0, 0, "004ボディ.png<color=0>"],
@@ -1801,7 +1801,7 @@ export const animationData_443 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [15],
       [3, 5, -1, 0, 0, "004ボディ.png<color=0>"],
@@ -1918,7 +1918,7 @@ export const animationData_443 = {
       [36, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [99],
       [2, 4, 1, 0, 0, "6号機親ダミー<color=7>"],
@@ -2834,7 +2834,7 @@ export const animationData_443 = {
       [58, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [15],
       [2, 11, 1, 0, 0, "6号機親ダミー<color=7>"],

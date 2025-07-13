@@ -5,7 +5,7 @@ export const animationData_042 = {
   "f": {
     "name": "ネコアイス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["042_f.png"],
       [37],
@@ -48,7 +48,7 @@ export const animationData_042 = {
       [98, 70, 42, 51, "衝撃左側"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [38],
       [-1, -1, 0, 0, 576, 437, 39, 39, 1000, 1000, 0, 1000, 0, "氷結ねこ"],
@@ -95,7 +95,7 @@ export const animationData_042 = {
       [0, 0, 38, 40, 5, 0, "氷結ねこ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [19, 2, -1, 0, 0, "手の氷１"],
@@ -164,7 +164,7 @@ export const animationData_042 = {
       [24, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [19, 2, -1, 0, 0, "手の氷１"],
@@ -233,7 +233,7 @@ export const animationData_042 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [72],
       [18, 2, 1, 0, 0],
@@ -777,7 +777,7 @@ export const animationData_042 = {
       [70, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [2, 11, -1, 0, 0, "氷結ねこ"],
@@ -812,7 +812,7 @@ export const animationData_042 = {
   "c": {
     "name": "ネコアイスクイーン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["042_c.png"],
       [40],
@@ -858,7 +858,7 @@ export const animationData_042 = {
       [148, 1, 22, 93, "氷剣斜め２"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [42],
       [-1, -1, 0, 0, 538, 436, 39, 39, 1000, 1000, 0, 1000, 0, "氷結ねこ"],
@@ -909,7 +909,7 @@ export const animationData_042 = {
       [0, 0, 38, 40, 5, 0, "氷結ねこ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [19, 2, -1, 0, 0, "手の氷１"],
@@ -1025,7 +1025,7 @@ export const animationData_042 = {
       [96, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [19, 2, -1, 0, 0, "手の氷１"],
@@ -1141,7 +1141,7 @@ export const animationData_042 = {
       [96, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [91],
       [18, 2, 1, 0, 0],
@@ -1851,7 +1851,7 @@ export const animationData_042 = {
       [55, 8, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [2, 11, -1, 0, 0, "氷結ねこ"],
@@ -1889,7 +1889,7 @@ export const animationData_042 = {
   "s": {
     "name": "ネコアイスクリスタル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["042_s.png"],
       [60],
@@ -1955,7 +1955,7 @@ export const animationData_042 = {
       [166, 2, 31, 31, "yen"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [92],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "dm"],
@@ -2056,7 +2056,7 @@ export const animationData_042 = {
       [0, 0, -9, 0, 5, 0, "dm"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [1, 9, -1, 0, 0],
@@ -2293,7 +2293,7 @@ export const animationData_042 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [1, 9, -1, 0, 0],
@@ -2530,7 +2530,7 @@ export const animationData_042 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [169],
       [1, 9, 1, 0, 0],
@@ -3995,7 +3995,7 @@ export const animationData_042 = {
       [70, 0, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [2, 4, 1, 0, 0, "dm"],

@@ -5,7 +5,7 @@ export const animationData_535 = {
   "f": {
     "name": "初音ミク",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["535_f.png"],
       [109],
@@ -120,7 +120,7 @@ export const animationData_535 = {
       [341, 204, 10, 17, "108髪の毛補足.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [148],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "■ダミー"],
@@ -277,7 +277,7 @@ export const animationData_535 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [77],
       [2, 5, -1, 0, 0, "■キャラダミー<color=7>\t"],
@@ -790,7 +790,7 @@ export const animationData_535 = {
       [84, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [77],
       [2, 5, -1, 0, 0, "■キャラダミー<color=7>\t"],
@@ -1294,7 +1294,7 @@ export const animationData_535 = {
       [84, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [288],
       [2, 4, 1, 0, 0, "■キャラダミー<color=7>\t"],
@@ -4100,7 +4100,7 @@ export const animationData_535 = {
       [93, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [62],
       [2, 4, 1, 0, 0, "■キャラダミー<color=7>"],
@@ -4294,7 +4294,7 @@ export const animationData_535 = {
   "c": {
     "name": "初音ミクCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["535_c.png"],
       [127],
@@ -4427,7 +4427,7 @@ export const animationData_535 = {
       [365, 132, 9, 18, "126髪の毛補足.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [200],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "■ダミー"],
@@ -4636,7 +4636,7 @@ export const animationData_535 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [116],
       [2, 5, -1, 0, 0, "■キャラダミー<color=7>\t"],
@@ -5346,7 +5346,7 @@ export const animationData_535 = {
       [0, -2, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [116],
       [2, 5, -1, 0, 0, "■キャラダミー<color=7>\t"],
@@ -6047,7 +6047,7 @@ export const animationData_535 = {
       [0, -2, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [373],
       [2, 4, 1, 0, 0, "■キャラダミー<color=7>\t"],
@@ -9949,7 +9949,7 @@ export const animationData_535 = {
       [93, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [89],
       [2, 4, 1, 0, 0, "■キャラダミー<color=7>"],

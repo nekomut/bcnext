@@ -5,7 +5,7 @@ export const animationData_331 = {
   "f": {
     "name": "道化師エッグダック",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["331_f.png"],
       [60],
@@ -71,7 +71,7 @@ export const animationData_331 = {
       [392, 125, 119, 63, "残像02"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [60],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー<color=7>"],
@@ -140,7 +140,7 @@ export const animationData_331 = {
       [0, 0, 43, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [68],
       [3, 4, -1, 0, 0],
@@ -703,7 +703,7 @@ export const animationData_331 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [53],
       [5, 11, -1, 0, 0],
@@ -1036,7 +1036,7 @@ export const animationData_331 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [121],
       [2, 4, 1, 0, 0],
@@ -2296,7 +2296,7 @@ export const animationData_331 = {
       [71, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [57],
       [2, 4, 1, 0, 0],
@@ -2475,7 +2475,7 @@ export const animationData_331 = {
   "c": {
     "name": "闇道化サイコダック",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["331_c.png"],
       [73],
@@ -2554,7 +2554,7 @@ export const animationData_331 = {
       [456, 137, 26, 11, "kuro "]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [75],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "ダミー<color=7>"],
@@ -2638,7 +2638,7 @@ export const animationData_331 = {
       [0, 0, 43, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [71],
       [3, 4, -1, 0, 0],
@@ -3210,7 +3210,7 @@ export const animationData_331 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [57],
       [5, 11, -1, 0, 0],
@@ -3581,7 +3581,7 @@ export const animationData_331 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [148],
       [2, 4, 1, 0, 0],
@@ -5168,7 +5168,7 @@ export const animationData_331 = {
       [113, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [61],
       [2, 4, 1, 0, 0],
@@ -5359,7 +5359,7 @@ export const animationData_331 = {
   "s": {
     "name": "極悪道化マッドダック",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["331_s.png"],
       [77],

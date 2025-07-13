@@ -5,7 +5,7 @@ export const animationData_372 = {
   "f": {
     "name": "ネコイリヤ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["372_f.png"],
       [49],
@@ -60,7 +60,7 @@ export const animationData_372 = {
       [69, 166, 13, 13, "トリ：顔02"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [53],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -122,7 +122,7 @@ export const animationData_372 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [36, 12, -1, 0, 0, "■エフェクトダミー<color=5>"],
@@ -334,7 +334,7 @@ export const animationData_372 = {
       [40, -2, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [36, 12, -1, 0, 0, "■エフェクトダミー<color=5>"],
@@ -478,7 +478,7 @@ export const animationData_372 = {
       [8, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [70],
       [3, 4, 1, 0, 0, "頭"],
@@ -1103,7 +1103,7 @@ export const animationData_372 = {
       [45, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [3, 4, 1, 0, 0, "頭"],
@@ -1210,7 +1210,7 @@ export const animationData_372 = {
   "c": {
     "name": "雪の妖精ネコイリヤ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["372_c.png"],
       [50],
@@ -1266,7 +1266,7 @@ export const animationData_372 = {
       [190, 218, 13, 30, "ef：光線00"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [71],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1346,7 +1346,7 @@ export const animationData_372 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [48],
       [3, 5, -1, 0, 0, "頭"],
@@ -1614,7 +1614,7 @@ export const animationData_372 = {
       [40, 10, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [3, 5, -1, 0, 0],
@@ -1819,7 +1819,7 @@ export const animationData_372 = {
       [40, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [104],
       [3, 4, 1, 0, 0],
@@ -2665,7 +2665,7 @@ export const animationData_372 = {
       [22, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [42],
       [41, 12, 1, 0, 0, "■右トリ_エフェクトダミー<color=5>"],

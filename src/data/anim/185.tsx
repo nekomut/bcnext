@@ -5,7 +5,7 @@ export const animationData_185 = {
   "f": {
     "name": "ハルシュト",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["185_f.png"],
       [80],
@@ -91,7 +91,7 @@ export const animationData_185 = {
       [66, 217, 27, 38, "背面マント下"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [108],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -208,7 +208,7 @@ export const animationData_185 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [63],
       [3, 4, -1, 0, 0, "胴"],
@@ -598,7 +598,7 @@ export const animationData_185 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [42],
       [3, 5, -1, 0, 0, "胴"],
@@ -813,7 +813,7 @@ export const animationData_185 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [141],
       [1, 4, 1, 0, 0],
@@ -1811,7 +1811,7 @@ export const animationData_185 = {
       [0, 500, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [41],
       [2, 5, 1, 0, 0, "ダミー"],
@@ -1942,7 +1942,7 @@ export const animationData_185 = {
   "c": {
     "name": "ハルシュトCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["185_c.png"],
       [80],
@@ -2028,7 +2028,7 @@ export const animationData_185 = {
       [66, 217, 27, 38, "背面マント下"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [108],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -2145,7 +2145,7 @@ export const animationData_185 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [62],
       [3, 4, -1, 0, 0, "胴"],
@@ -2537,7 +2537,7 @@ export const animationData_185 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [42],
       [3, 5, -1, 0, 0, "胴"],
@@ -2752,7 +2752,7 @@ export const animationData_185 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [141],
       [1, 4, 1, 0, 0],
@@ -3755,7 +3755,7 @@ export const animationData_185 = {
       [0, 500, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [41],
       [2, 5, 1, 0, 0, "ダミー"],
@@ -3886,7 +3886,7 @@ export const animationData_185 = {
   "s": {
     "name": "革命のハルシュトCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["185_s.png"],
       [80],
@@ -3972,7 +3972,7 @@ export const animationData_185 = {
       [489, 184, 13, 17, "079花びら３.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [197],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー.png"],
@@ -4178,7 +4178,7 @@ export const animationData_185 = {
       [0, 0, 0, 0, 5, 0, "ダミー.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [94],
       [4, 5, -1, 0, 0, "002体.png"],
@@ -4807,7 +4807,7 @@ export const animationData_185 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [71],
       [4, 5, -1, 0, 0, "002体.png"],
@@ -5232,7 +5232,7 @@ export const animationData_185 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [294],
       [1, 4, 1, 0, 0, "002体.png"],
@@ -7547,7 +7547,7 @@ export const animationData_185 = {
       [27, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [70],
       [3, 4, 1, 0, 0, "044ロング　根本　４.png<color=2>"],

@@ -5,7 +5,7 @@ export const animationData_573 = {
   "f": {
     "name": "バルログ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["573_f.png"],
       [106],
@@ -3330,7 +3330,7 @@ export const animationData_573 = {
   "c": {
     "name": "バルログCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["573_f.png"],
       [106],

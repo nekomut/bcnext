@@ -5,7 +5,7 @@ export const animationData_518 = {
   "f": {
     "name": "ゴウキリン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["518_f.png"],
       [60],
@@ -71,7 +71,7 @@ export const animationData_518 = {
       [197, 80, 30, 39, "059あし.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [44],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0],
@@ -124,7 +124,7 @@ export const animationData_518 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [45],
       [3, 2, -1, 0, 0],
@@ -390,7 +390,7 @@ export const animationData_518 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [49],
       [3, 2, 1, 0, 0, "034紫大.png<color=14>"],
@@ -556,7 +556,7 @@ export const animationData_518 = {
       [4, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [64],
       [1, 9, 1, 0, 0, "013影.png"],
@@ -1201,7 +1201,7 @@ export const animationData_518 = {
       [46, 41, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [21],
       [3, 2, 1, 0, 0, "030首.png"],
@@ -1272,7 +1272,7 @@ export const animationData_518 = {
   "c": {
     "name": "ゴウキライオン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["518_c.png"],
       [71],
@@ -1349,7 +1349,7 @@ export const animationData_518 = {
       [426, 150, 18, 16, "070.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [47],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0],
@@ -1405,7 +1405,7 @@ export const animationData_518 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [50],
       [3, 2, -1, 0, 0],
@@ -1696,7 +1696,7 @@ export const animationData_518 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [54],
       [3, 2, 1, 0, 0, "034紫大.png<color=14>"],
@@ -1887,7 +1887,7 @@ export const animationData_518 = {
       [4, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [75],
       [1, 10, 1, 0, 0, "013影.png"],
@@ -2630,7 +2630,7 @@ export const animationData_518 = {
       [46, 75, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [22],
       [3, 2, 1, 0, 0, "030首.png"],

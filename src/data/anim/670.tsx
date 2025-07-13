@@ -5,7 +5,7 @@ export const animationData_670 = {
   "s": {
     "name": "アーマードホタルネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["670_s.png"],
       [54],

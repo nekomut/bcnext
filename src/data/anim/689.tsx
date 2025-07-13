@@ -5,7 +5,7 @@ export const animationData_689 = {
   "f": {
     "name": "石の上にも10年ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["689_f.png"],
       [14],
@@ -322,7 +322,7 @@ export const animationData_689 = {
   "c": {
     "name": "石の上にも10年ネコ像",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["689_c.png"],
       [14],

@@ -5,7 +5,7 @@ export const animationData_482 = {
   "f": {
     "name": "幸せを願った少年ソウマ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["482_f.png"],
       [82],
@@ -93,7 +93,7 @@ export const animationData_482 = {
       [227, 164, 45, 45, "081コアエフェクト赤.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [95],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png<color=7>"],
@@ -197,7 +197,7 @@ export const animationData_482 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [23],
       [1, 9, -1, 0, 0, "001影.png<color=16>\t"],
@@ -313,7 +313,7 @@ export const animationData_482 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [23],
       [1, 9, -1, 0, 0, "001影.png<color=16>\t"],
@@ -429,7 +429,7 @@ export const animationData_482 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [182],
       [1, 4, 1, 0, 0, "001影.png<color=16>\t"],
@@ -2447,7 +2447,7 @@ export const animationData_482 = {
       [38, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [16],
       [2, 4, 1, 0, 0, "ダミー"],
@@ -2503,7 +2503,7 @@ export const animationData_482 = {
   "c": {
     "name": "幸せを願った少年ソウマ＆ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["850_c.png"],
       [123],
@@ -2722,7 +2722,7 @@ export const animationData_482 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [35],
       [1, 9, -1, 0, 0, "001影.png<color=16>\t"],
@@ -2907,7 +2907,7 @@ export const animationData_482 = {
       [80, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [35],
       [1, 9, -1, 0, 0, "001影.png<color=16>\t"],
@@ -4660,7 +4660,7 @@ export const animationData_482 = {
       [39, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [35],
       [2, 4, 1, 0, 0, "ダミー"],
@@ -4773,7 +4773,7 @@ export const animationData_482 = {
   "s": {
     "name": "幸せを願ったネコ耳ソウマ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["482_s.png"],
       [136],

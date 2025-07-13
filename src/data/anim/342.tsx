@@ -5,7 +5,7 @@ export const animationData_342 = {
   "f": {
     "name": "ネコまねき",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["342_f.png"],
       [22],
@@ -33,7 +33,7 @@ export const animationData_342 = {
       [1, 130, 71, 62, "EFバクダン"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [31],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -73,7 +73,7 @@ export const animationData_342 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [3, 5, -1, 0, 0],
@@ -207,7 +207,7 @@ export const animationData_342 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [9, 4, -1, 0, 0, "首ヒモ奥①"],
@@ -242,7 +242,7 @@ export const animationData_342 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [8, 11, 1, 0, 0],
@@ -545,7 +545,7 @@ export const animationData_342 = {
       [47, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [3, 5, 1, 0, 0],
@@ -592,7 +592,7 @@ export const animationData_342 = {
   "c": {
     "name": "ネコまねき・寿",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["342_c.png"],
       [26],
@@ -624,7 +624,7 @@ export const animationData_342 = {
       [42, 155, 38, 36, "EF寿司１"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [37],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -670,7 +670,7 @@ export const animationData_342 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [3, 5, -1, 0, 0],
@@ -813,7 +813,7 @@ export const animationData_342 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [12, 11, -1, 0, 0, "右手 米俵"],
@@ -830,7 +830,7 @@ export const animationData_342 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [9, 11, 1, 0, 0],
@@ -1131,7 +1131,7 @@ export const animationData_342 = {
       [47, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [3, 5, 1, 0, 0],

@@ -5,7 +5,7 @@ export const animationData_105 = {
   "f": {
     "name": "猿帝のクウ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["903_f.png"],
       [67],
@@ -78,7 +78,7 @@ export const animationData_105 = {
       [207, 79, 57, 21, "スカーフ３"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [86],
       [-1, -1, 0, 0, 829, 958, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -173,7 +173,7 @@ export const animationData_105 = {
       [0, 0, 0, 2, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [115],
       [1, 9, -1, 0, 0],
@@ -883,7 +883,7 @@ export const animationData_105 = {
       [24, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [115],
       [1, 9, -1, 0, 0],
@@ -1593,7 +1593,7 @@ export const animationData_105 = {
       [24, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [184],
       [1, 9, 1, 0, 0],
@@ -4064,7 +4064,7 @@ export const animationData_105 = {
       [130, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [60],
       [3, 11, -1, 0, 0],
@@ -4252,7 +4252,7 @@ export const animationData_105 = {
   "c": {
     "name": "猿帝のクウγ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["903_c.png"],
       [68],
@@ -4326,7 +4326,7 @@ export const animationData_105 = {
       [295, 196, 94, 10, "wa"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [94],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -4429,7 +4429,7 @@ export const animationData_105 = {
       [0, 0, 0, 2, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [126],
       [1, 9, -1, 0, 0],
@@ -5214,7 +5214,7 @@ export const animationData_105 = {
       [80, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [126],
       [1, 9, -1, 0, 0],
@@ -5999,7 +5999,7 @@ export const animationData_105 = {
       [80, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [188],
       [1, 9, 1, 0, 0],
@@ -8808,7 +8808,7 @@ export const animationData_105 = {
       [40, 0, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [65],
       [3, 11, -1, 0, 0],
@@ -9011,7 +9011,7 @@ export const animationData_105 = {
   "s": {
     "name": "金猿帝のクウγ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["105_s.png"],
       [88],
@@ -9105,7 +9105,7 @@ export const animationData_105 = {
       [284, 57, 48, 7, "grd"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [142],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -9256,7 +9256,7 @@ export const animationData_105 = {
       [0, 0, 0, 2, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [148],
       [1, 9, -1, 0, 0],
@@ -10182,7 +10182,7 @@ export const animationData_105 = {
       [100, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [148],
       [1, 9, -1, 0, 0],
@@ -11108,7 +11108,7 @@ export const animationData_105 = {
       [100, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [288],
       [1, 4, 1, 0, 0],
@@ -15294,7 +15294,7 @@ export const animationData_105 = {
       [70, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [89],
       [3, 11, 1, 0, 0],

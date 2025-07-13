@@ -5,7 +5,7 @@ export const animationData_425 = {
   "f": {
     "name": "太秦麗＆ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["425_f.png"],
       [117],
@@ -128,7 +128,7 @@ export const animationData_425 = {
       [161, 182, 35, 39, "116ヒットエフェクト.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [133],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000ダミー.png"],
@@ -270,7 +270,7 @@ export const animationData_425 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [49],
       [3, 4, -1, 0, 0, "■cダミー<color=7>"],
@@ -567,7 +567,7 @@ export const animationData_425 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [6, 11, -1, 0, 0, "035シャツ　中.png<color=10>"],
@@ -786,7 +786,7 @@ export const animationData_425 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [220],
       [2, 4, 1, 0, 0, "001影.png"],
@@ -2626,7 +2626,7 @@ export const animationData_425 = {
       [0, 100, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [56],
       [68, 12, 1, 0, 0, "080ネコ　体.png<color=6>"],
@@ -2802,7 +2802,7 @@ export const animationData_425 = {
   "c": {
     "name": "太秦麗＆ネコＣＣ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["425_c.png"],
       [117],
@@ -2925,7 +2925,7 @@ export const animationData_425 = {
       [216, 1, 34, 40, "116ヒットエフェクト.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [133],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000ダミー.png"],
@@ -3067,7 +3067,7 @@ export const animationData_425 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [50],
       [3, 4, -1, 0, 0, "■cダミー<color=7>"],
@@ -3369,7 +3369,7 @@ export const animationData_425 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [6, 11, -1, 0, 0, "035シャツ　中.png<color=10>"],
@@ -3588,7 +3588,7 @@ export const animationData_425 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [219],
       [2, 4, 1, 0, 0, "001影.png"],
@@ -5423,7 +5423,7 @@ export const animationData_425 = {
       [72, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [58],
       [68, 12, 1, 0, 0, "080ネコ　体.png<color=6>"],

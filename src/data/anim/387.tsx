@@ -5,7 +5,7 @@ export const animationData_387 = {
   "f": {
     "name": "紺野美崎",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["387_f.png"],
       [35],
@@ -46,7 +46,7 @@ export const animationData_387 = {
       [406, 1, 35, 20, "ef3"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [32],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -87,7 +87,7 @@ export const animationData_387 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [2, 9, -1, 0, 0, "影"],
@@ -350,7 +350,7 @@ export const animationData_387 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [4, 5, -1, 0, 0, "胴体"],
@@ -456,7 +456,7 @@ export const animationData_387 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [3, 5, 1, 0, 0, "cダミー<color=7>"],
@@ -962,7 +962,7 @@ export const animationData_387 = {
       [60, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [44],
       [4, 4, 1, 0, 0, "胴体"],
@@ -1102,7 +1102,7 @@ export const animationData_387 = {
   "c": {
     "name": "紺野美崎CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["387_c.png"],
       [35],
@@ -1143,7 +1143,7 @@ export const animationData_387 = {
       [406, 1, 35, 20, "ef3"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [32],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1184,7 +1184,7 @@ export const animationData_387 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [2, 9, -1, 0, 0, "影"],
@@ -1447,7 +1447,7 @@ export const animationData_387 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [4, 5, -1, 0, 0, "胴体"],
@@ -1553,7 +1553,7 @@ export const animationData_387 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [3, 5, 1, 0, 0, "cダミー<color=7>"],
@@ -2059,7 +2059,7 @@ export const animationData_387 = {
       [60, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [44],
       [4, 4, 1, 0, 0, "胴体"],

@@ -5,7 +5,7 @@ export const animationData_488 = {
   "f": {
     "name": "空中艦艇ネコヴンダー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["488_f.png"],
       [89],
@@ -100,7 +100,7 @@ export const animationData_488 = {
       [36, 216, 33, 51, "088パラボラアンテナ先端.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [147],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1750, 1750, 0, 1000, 0, "000.png<color=7>"],
@@ -256,7 +256,7 @@ export const animationData_488 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [84],
       [1, 9, -1, 0, 0, "001影.png<color=16>"],
@@ -681,7 +681,7 @@ export const animationData_488 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [89],
       [1, 9, -1, 0, 0, "001影.png<color=16>"],
@@ -1182,7 +1182,7 @@ export const animationData_488 = {
       [120, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [162],
       [1, 4, 1, 0, 0, "001影.png<color=16>\t"],
@@ -3960,7 +3960,7 @@ export const animationData_488 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [101],
       [2, 11, 1, 0, 0, "キャラ親ダミー<color=7>"],
@@ -4271,7 +4271,7 @@ export const animationData_488 = {
   "c": {
     "name": "希望の船NNNネコヴンダー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["488_c.png"],
       [88],
@@ -4365,7 +4365,7 @@ export const animationData_488 = {
       [209, 306, 33, 51, "087パラボラアンテナ先端.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [145],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1750, 1750, 0, 1000, 0, "000.png<color=7>"],
@@ -4519,7 +4519,7 @@ export const animationData_488 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [84],
       [1, 9, -1, 0, 0, "001影.png<color=16>"],
@@ -4951,7 +4951,7 @@ export const animationData_488 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [84],
       [1, 9, -1, 0, 0, "001影.png<color=16>"],
@@ -5383,7 +5383,7 @@ export const animationData_488 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [161],
       [1, 4, 1, 0, 0, "001影.png<color=16>\t"],
@@ -8158,7 +8158,7 @@ export const animationData_488 = {
       [130, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [91],
       [2, 11, 1, 0, 0, "キャラ親ダミー<color=7>"],

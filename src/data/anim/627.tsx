@@ -5,7 +5,7 @@ export const animationData_627 = {
   "f": {
     "name": "ネコノトリッキー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["627_f.png"],
       [20],
@@ -417,7 +417,7 @@ export const animationData_627 = {
   "c": {
     "name": "天馬ネコノトリッキー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["627_c.png"],
       [20],

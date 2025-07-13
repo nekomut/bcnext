@@ -5,7 +5,7 @@ export const animationData_305 = {
   "f": {
     "name": "古代軍船ガレーズ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["305_f.png"],
       [90],
@@ -101,7 +101,7 @@ export const animationData_305 = {
       [256, 200, 10, 18, "攻撃発生点　ボール"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [109],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -219,7 +219,7 @@ export const animationData_305 = {
       [0, 0, -2, 2, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [73],
       [4, 2, -1, 0, 0],
@@ -769,7 +769,7 @@ export const animationData_305 = {
       [0, 1000, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [44],
       [4, 2, -1, 0, 0],
@@ -1008,7 +1008,7 @@ export const animationData_305 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [166],
       [4, 2, 1, 0, 0],
@@ -3398,7 +3398,7 @@ export const animationData_305 = {
       [176, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [67],
       [5, 5, 1, 0, 0, "ダミー"],
@@ -3607,7 +3607,7 @@ export const animationData_305 = {
   "c": {
     "name": "無敵艦隊シーガレオン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["305_c.png"],
       [95],
@@ -3708,7 +3708,7 @@ export const animationData_305 = {
       [159, 246, 9, 9, "ネコ白"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [255],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -3972,7 +3972,7 @@ export const animationData_305 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [126],
       [2, 6, -1, 0, 0, "影"],
@@ -4826,7 +4826,7 @@ export const animationData_305 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [151],
       [4, 11, -1, 0, 0, "船デッキ01<color=0>"],
@@ -6008,7 +6008,7 @@ export const animationData_305 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [322],
       [3, 4, 1, 0, 0, "キャラダミー<color=7>"],
@@ -11680,7 +11680,7 @@ export const animationData_305 = {
       [130, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [83],
       [6, 11, 1, 0, 0, "船デッキ02"],
@@ -11937,7 +11937,7 @@ export const animationData_305 = {
   "s": {
     "name": "超無敵艦隊シーガレオン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["305_s.png"],
       [112],
@@ -12055,7 +12055,7 @@ export const animationData_305 = {
       [406, 322, 60, 85]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [226],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -12290,7 +12290,7 @@ export const animationData_305 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [141],
       [2, 6, -1, 0, 0, "影"],
@@ -13296,7 +13296,7 @@ export const animationData_305 = {
       [14, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [160],
       [4, 11, -1, 0, 0, "船デッキ01<color=0>"],
@@ -14575,7 +14575,7 @@ export const animationData_305 = {
       [21, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [332],
       [3, 4, 1, 0, 0, "キャラダミー<color=7>"],

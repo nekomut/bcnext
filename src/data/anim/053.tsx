@@ -5,7 +5,7 @@ export const animationData_053 = {
   "f": {
     "name": "エヴァンジェリスト",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["053_f.png"],
       [28],
@@ -39,7 +39,7 @@ export const animationData_053 = {
       [346, 2, 140, 140]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [47],
       [-1, -1, 0, 0, 467, 434, 0, 0, 100, 100, 0, 1000, 0, "ダミー"],
@@ -95,7 +95,7 @@ export const animationData_053 = {
       [0, 0, 0, 0, 50, 0, "gatya"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [18, 11, -1, 0, 0, 1],
@@ -242,7 +242,7 @@ export const animationData_053 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [18, 11, -1, 0, 0, 1],
@@ -389,7 +389,7 @@ export const animationData_053 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [56],
       [28, 12, 1, 0, 0, "かげ"],
@@ -2049,7 +2049,7 @@ export const animationData_053 = {
       [348, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [2, 11, -1, 0, 0, "胸"],
@@ -2135,7 +2135,7 @@ export const animationData_053 = {
   "c": {
     "name": "フィリバスター",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["053_c.png"],
       [28],
@@ -2169,7 +2169,7 @@ export const animationData_053 = {
       [346, 2, 140, 140]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [47],
       [-1, -1, 0, 0, 467, 434, 0, 0, 100, 100, 0, 1000, 0, "ダミー"],
@@ -2225,7 +2225,7 @@ export const animationData_053 = {
       [0, 0, 0, 0, 50, 0, "gatya"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [18, 11, -1, 0, 0, 1],
@@ -2372,7 +2372,7 @@ export const animationData_053 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [18, 11, -1, 0, 0, 1],
@@ -2519,7 +2519,7 @@ export const animationData_053 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [56],
       [28, 12, 1, 0, 0, "かげ"],
@@ -4179,7 +4179,7 @@ export const animationData_053 = {
       [348, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [2, 11, -1, 0, 0, "胸"],

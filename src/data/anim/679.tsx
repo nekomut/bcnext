@@ -5,7 +5,7 @@ export const animationData_679 = {
   "f": {
     "name": "雨取千佳＆ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["679_f.png"],
       [106],
@@ -3272,7 +3272,7 @@ export const animationData_679 = {
   "c": {
     "name": "雨取千佳＆ネコCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["679_c.png"],
       [107],

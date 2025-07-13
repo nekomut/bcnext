@@ -5,7 +5,7 @@ export const animationData_088 = {
   "f": {
     "name": "ネコなわとび",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["088_f.png"],
       [22],
@@ -33,7 +33,7 @@ export const animationData_088 = {
       [84, 117, 76, 39, "縄06"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [13],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -55,7 +55,7 @@ export const animationData_088 = {
       [0, 0, -40, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [1, 4, -1, 0, 0, "影"],
@@ -407,7 +407,7 @@ export const animationData_088 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [2, 5, -1, 0, 0, "体"],
@@ -626,7 +626,7 @@ export const animationData_088 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [1, 4, 1, 0, 0, "影"],
@@ -962,7 +962,7 @@ export const animationData_088 = {
       [30, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [29],
       [2, 5, -1, 0, 0, "体"],
@@ -1057,7 +1057,7 @@ export const animationData_088 = {
   "c": {
     "name": "ネコネコなわとび",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["088_c.png"],
       [25],
@@ -1088,7 +1088,7 @@ export const animationData_088 = {
       [239, 97, 9, 17, "腕02前"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [20],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1117,7 +1117,7 @@ export const animationData_088 = {
       [0, 0, -58, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [48],
       [1, 4, -1, 0, 0, "影"],
@@ -1604,7 +1604,7 @@ export const animationData_088 = {
       [30, 300, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [52],
       [2, 5, -1, 0, 0, "体"],
@@ -1924,7 +1924,7 @@ export const animationData_088 = {
       [14, 0, 2, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [61],
       [1, 4, 1, 0, 0, "影"],
@@ -2413,7 +2413,7 @@ export const animationData_088 = {
       [30, -2, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [2, 5, -1, 0, 0, "体"],
@@ -2562,7 +2562,7 @@ export const animationData_088 = {
   "s": {
     "name": "ネコ蕎麦屋",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["088_s.png"],
       [46],
@@ -2614,7 +2614,7 @@ export const animationData_088 = {
       [157, 88, 19, 34, "なわ6てまえ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [48],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -2671,7 +2671,7 @@ export const animationData_088 = {
       [0, 0, -58, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [61],
       [1, 4, -1, 0, 0, "影"],
@@ -3305,7 +3305,7 @@ export const animationData_088 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [64],
       [2, 5, -1, 0, 0, "体<color=0>\t"],
@@ -3854,7 +3854,7 @@ export const animationData_088 = {
       [17, 500, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [76],
       [1, 4, 1, 0, 0, "影"],
@@ -4515,7 +4515,7 @@ export const animationData_088 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [63],
       [2, 5, 1, 0, 0, "体<color=0>\t"],

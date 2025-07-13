@@ -5,7 +5,7 @@ export const animationData_167 = {
   "f": {
     "name": "ネコヤンキー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["167_f.png"],
       [34],
@@ -45,7 +45,7 @@ export const animationData_167 = {
       [1, 103, 76, 30, "攻撃4　服"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [22],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -76,7 +76,7 @@ export const animationData_167 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [2, 5, -1, 0, 0, "本体"],
@@ -210,7 +210,7 @@ export const animationData_167 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [2, 5, -1, 0, 0, "本体"],
@@ -227,7 +227,7 @@ export const animationData_167 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [2, 12, 1, 0, 0, "本体"],
@@ -292,7 +292,7 @@ export const animationData_167 = {
       [17, 33, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [2, 12, -1, 0, 0, "本体"],
@@ -330,7 +330,7 @@ export const animationData_167 = {
   "c": {
     "name": "ネコスケバン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["167_c.png"],
       [22],
@@ -358,7 +358,7 @@ export const animationData_167 = {
       [271, 1, 72, 122, "やられ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [18],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -385,7 +385,7 @@ export const animationData_167 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [2, 5, -1, 0, 0, "本体"],
@@ -483,7 +483,7 @@ export const animationData_167 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [16, 12, -1, 0, 0, "攻撃　非表示"],
@@ -494,7 +494,7 @@ export const animationData_167 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [2, 12, 1, 0, 0, "本体　非表示"],
@@ -516,7 +516,7 @@ export const animationData_167 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 4, -1, 0, 0, "影"],

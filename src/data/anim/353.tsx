@@ -5,7 +5,7 @@ export const animationData_353 = {
   "f": {
     "name": "チョコレート",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["353_f.png"],
       [52],
@@ -63,7 +63,7 @@ export const animationData_353 = {
       [431, 1, 70, 154, "ef2"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [49],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -121,7 +121,7 @@ export const animationData_353 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [3, 5, -1, 0, 0, "ネコ体<color=7>"],
@@ -323,7 +323,7 @@ export const animationData_353 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [3, 5, -1, 0, 0, "ネコ体<color=7>"],
@@ -424,7 +424,7 @@ export const animationData_353 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [55],
       [1, 4, 1, 0, 0, "影<color=9>"],
@@ -804,7 +804,7 @@ export const animationData_353 = {
       [10, -8, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [2, 4, 1, 0, 0, "ネコ親ダミー"],
@@ -902,7 +902,7 @@ export const animationData_353 = {
   "c": {
     "name": "チョコレート進化",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["353_c.png"],
       [52],
@@ -960,7 +960,7 @@ export const animationData_353 = {
       [431, 1, 70, 154, "ef2"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [54],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1023,7 +1023,7 @@ export const animationData_353 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [3, 5, -1, 0, 0, "ネコ体<color=7>"],
@@ -1225,7 +1225,7 @@ export const animationData_353 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [3, 5, -1, 0, 0, "ネコ体<color=7>"],
@@ -1326,7 +1326,7 @@ export const animationData_353 = {
       [0, -1, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [55],
       [1, 4, 1, 0, 0, "影<color=9>"],
@@ -1706,7 +1706,7 @@ export const animationData_353 = {
       [10, -8, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [2, 4, 1, 0, 0, "ネコ親ダミー"],
@@ -1810,7 +1810,7 @@ export const animationData_353 = {
   "s": {
     "name": "354_3",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["353_f.png"],
       [52],
@@ -1868,7 +1868,7 @@ export const animationData_353 = {
       [431, 1, 70, 154, "ef2"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [49],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1926,7 +1926,7 @@ export const animationData_353 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [3, 5, -1, 0, 0, "ネコ体<color=7>"],
@@ -2128,7 +2128,7 @@ export const animationData_353 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [3, 5, -1, 0, 0, "ネコ体<color=7>"],
@@ -2229,7 +2229,7 @@ export const animationData_353 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [55],
       [1, 4, 1, 0, 0, "影<color=9>"],
@@ -2609,7 +2609,7 @@ export const animationData_353 = {
       [10, -8, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [2, 4, 1, 0, 0, "ネコ親ダミー"],

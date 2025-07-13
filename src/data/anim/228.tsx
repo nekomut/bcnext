@@ -5,7 +5,7 @@ export const animationData_228 = {
   "f": {
     "name": "ハロウィンねねこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["228_f.png"],
       [60],
@@ -71,7 +71,7 @@ export const animationData_228 = {
       [430, 128, 53, 42, "やられケープうしろ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [70],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -150,7 +150,7 @@ export const animationData_228 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [1, 5, -1, 0, 0],
@@ -378,7 +378,7 @@ export const animationData_228 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [5, 8, -1, 0, 0, "口"],
@@ -498,7 +498,7 @@ export const animationData_228 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [68],
       [1, 5, 1, 0, 0],
@@ -891,7 +891,7 @@ export const animationData_228 = {
       [20, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [89],
       [1, 4, 1, 0, 0],
@@ -1166,7 +1166,7 @@ export const animationData_228 = {
   "c": {
     "name": "ハロウィン魔女ねねこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["228_c.png"],
       [61],
@@ -1233,7 +1233,7 @@ export const animationData_228 = {
       [239, 93, 47, 58, "黒猫やられ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [71],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1313,7 +1313,7 @@ export const animationData_228 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [1, 5, -1, 0, 0],
@@ -1526,7 +1526,7 @@ export const animationData_228 = {
       [36, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [5, 5, -1, 0, 0],
@@ -1640,7 +1640,7 @@ export const animationData_228 = {
       [50, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [74],
       [1, 5, 1, 0, 0],
@@ -2078,7 +2078,7 @@ export const animationData_228 = {
       [8, 4, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [85],
       [1, 4, 1, 0, 0],
@@ -2341,7 +2341,7 @@ export const animationData_228 = {
   "s": {
     "name": "仮装・ハロウィンねねこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["ハロウィンねねこ配置縮小.png"],
       [61],

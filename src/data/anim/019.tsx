@@ -5,7 +5,7 @@ export const animationData_019 = {
   "f": {
     "name": "ネコゾンビ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["019_f.png"],
       [24],
@@ -66,7 +66,7 @@ export const animationData_019 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [18],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 255, 0, "ダミー親"],
@@ -93,7 +93,7 @@ export const animationData_019 = {
       [0, 0, 28, 145, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [2, 2, -1, -1000, 1000, "身体"],
@@ -168,7 +168,7 @@ export const animationData_019 = {
       [48, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [2, 2, -1, -1000, 1000, "身体"],
@@ -199,7 +199,7 @@ export const animationData_019 = {
       [120, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [7, 2, 1, -1000, 1000, "身体01"],
@@ -365,7 +365,7 @@ export const animationData_019 = {
       [31, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [7, 2, -1, -1000, 1000, "身体01"],
@@ -397,7 +397,7 @@ export const animationData_019 = {
   "c": {
     "name": "デビルネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["019_c.png"],
       [33],
@@ -476,7 +476,7 @@ export const animationData_019 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [26],
       [-1, -1, 0, 0, 320, 280, 0, 0, 1000, 1000, 0, 255, 0, "ダミー親"],
@@ -511,7 +511,7 @@ export const animationData_019 = {
       [0, 0, 28, 145, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [2, 2, -1, -1000, 1000, "身体"],
@@ -674,7 +674,7 @@ export const animationData_019 = {
       [96, 60, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [2, 2, -1, -1000, 1000, "身体"],
@@ -721,7 +721,7 @@ export const animationData_019 = {
       [120, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [7, 2, 1, -1000, 1000, "身体01"],
@@ -986,7 +986,7 @@ export const animationData_019 = {
       [31, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [7, 2, -1, -1000, 1000, "身体01"],
@@ -1062,7 +1062,7 @@ export const animationData_019 = {
   "s": {
     "name": "ネコボーン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["019_s.png"],
       [25],
@@ -1093,7 +1093,7 @@ export const animationData_019 = {
       [201, 1, 130, 98, "エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [20],
       [-1, -1, 0, 0, 320, 280, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1122,7 +1122,7 @@ export const animationData_019 = {
       [0, 0, 31, 147, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [2, 2, -1, -1000, 1000, "身体"],
@@ -1236,7 +1236,7 @@ export const animationData_019 = {
       [96, 60, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [2, 2, -1, -1000, 1000, "身体00"],
@@ -1276,7 +1276,7 @@ export const animationData_019 = {
       [120, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [1, 4, 1, -1000, 1000, "影"],
@@ -1499,7 +1499,7 @@ export const animationData_019 = {
       [31, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [7, 11, -1, -3600, 3600, "回転"],

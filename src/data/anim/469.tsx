@@ -5,7 +5,7 @@ export const animationData_469 = {
   "f": {
     "name": "スーパーデビル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["469_f.png"],
       [82],
@@ -93,7 +93,7 @@ export const animationData_469 = {
       [400, 191, 27, 31, "081煙２.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [81],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "000.png<color=7>"],
@@ -183,7 +183,7 @@ export const animationData_469 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [44],
       [3, 5, -1, 0, 0, "002背中.png<color=10>"],
@@ -393,7 +393,7 @@ export const animationData_469 = {
       [10, -22, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [22],
       [3, 5, -1, 0, 0, "002背中.png<color=10>"],
@@ -505,7 +505,7 @@ export const animationData_469 = {
       [22, 12, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [91],
       [3, 5, 1, 0, 0, "002背中.png<color=10>"],
@@ -1540,7 +1540,7 @@ export const animationData_469 = {
       [95, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [57],
       [1, 8, 1, 0, 0, "001影.png"],
@@ -1719,7 +1719,7 @@ export const animationData_469 = {
   "c": {
     "name": "偽神スーパーデビル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["469_c.png"],
       [71],
@@ -1796,7 +1796,7 @@ export const animationData_469 = {
       [387, 157, 27, 31, "070煙２.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [82],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "000.png<color=7>"],
@@ -1887,7 +1887,7 @@ export const animationData_469 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [51],
       [3, 5, -1, 0, 0, "002背中.png<color=10>"],
@@ -2108,7 +2108,7 @@ export const animationData_469 = {
       [0, 920, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [29],
       [3, 5, -1, 0, 0, "002背中.png<color=10>"],
@@ -2249,7 +2249,7 @@ export const animationData_469 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [107],
       [3, 5, 1, 0, 0, "002背中.png<color=10>"],
@@ -3516,7 +3516,7 @@ export const animationData_469 = {
       [95, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [62],
       [1, 8, 1, 0, 0, "001影.png"],

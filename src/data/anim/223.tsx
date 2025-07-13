@@ -5,7 +5,7 @@ export const animationData_223 = {
   "f": {
     "name": "ジュピターキング",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["223_f.png"],
       [35],
@@ -46,7 +46,7 @@ export const animationData_223 = {
       [356, 119, 89, 53, 3]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [32],
       [-1, -1, 0, 0, 0, 0, 0, 0, 2500, 2500, 0, 1000, 0, "ダミー<color=7>"],
@@ -87,7 +87,7 @@ export const animationData_223 = {
       [0, 0, 1, 2, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [4, 2, -1, 0, 0, "足"],
@@ -149,7 +149,7 @@ export const animationData_223 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [4, 2, -1, 0, 0, "足"],
@@ -189,7 +189,7 @@ export const animationData_223 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [59],
       [12, 2, 1, 0, 0, "頭"],
@@ -636,7 +636,7 @@ export const animationData_223 = {
       [44, 15, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [4, 4, 1, 0, 0, "足"],
@@ -668,7 +668,7 @@ export const animationData_223 = {
   "c": {
     "name": "ジュピターキングCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["223_c.png"],
       [35],
@@ -709,7 +709,7 @@ export const animationData_223 = {
       [356, 119, 89, 53, 3]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [32],
       [-1, -1, 0, 0, 0, 0, 0, 0, 2500, 2500, 0, 1000, 0, "ダミー<color=7>"],
@@ -750,7 +750,7 @@ export const animationData_223 = {
       [0, 0, 1, 2, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [4, 2, -1, 0, 0, "足"],
@@ -812,7 +812,7 @@ export const animationData_223 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [4, 2, -1, 0, 0, "足"],
@@ -852,7 +852,7 @@ export const animationData_223 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [59],
       [12, 2, 1, 0, 0, "頭"],
@@ -1299,7 +1299,7 @@ export const animationData_223 = {
       [44, 15, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [4, 4, 1, 0, 0, "足"],
@@ -1331,7 +1331,7 @@ export const animationData_223 = {
   "s": {
     "name": "ゴールデンジュピターCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["223_c.png"],
       [35],
@@ -1372,7 +1372,7 @@ export const animationData_223 = {
       [356, 119, 89, 53, 3]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [32],
       [-1, -1, 0, 0, 0, 0, 0, 0, 2500, 2500, 0, 1000, 0, "ダミー<color=7>"],
@@ -1413,7 +1413,7 @@ export const animationData_223 = {
       [0, 0, 1, 2, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [4, 2, -1, 0, 0, "足"],
@@ -1475,7 +1475,7 @@ export const animationData_223 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [4, 2, -1, 0, 0, "足"],
@@ -1515,7 +1515,7 @@ export const animationData_223 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [59],
       [12, 2, 1, 0, 0, "頭"],
@@ -1962,7 +1962,7 @@ export const animationData_223 = {
       [44, 15, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [4, 4, 1, 0, 0, "足"],

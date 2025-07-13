@@ -5,7 +5,7 @@ export const animationData_451 = {
   "f": {
     "name": "うしわか丸",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["451_f.png"],
       [40],
@@ -51,7 +51,7 @@ export const animationData_451 = {
       [204, 90, 41, 31, "039胸紐　右.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [59],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png<color=7>"],
@@ -119,7 +119,7 @@ export const animationData_451 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置位置"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [77],
       [3, 5, -1, 0, 0],
@@ -583,7 +583,7 @@ export const animationData_451 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [66],
       [3, 5, -1, 0, 0, "012体.png<color=0>"],
@@ -958,7 +958,7 @@ export const animationData_451 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [104],
       [1, 4, 1, 0, 0, "012体.png<color=0>"],
@@ -1923,7 +1923,7 @@ export const animationData_451 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [28],
       [2, 5, 1, 0, 0, "キャラ親ダミー<color=7>"],
@@ -2015,7 +2015,7 @@ export const animationData_451 = {
   "c": {
     "name": "巨大神兵ベンケイ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["451_c.png"],
       [117],
@@ -2138,7 +2138,7 @@ export const animationData_451 = {
       [625, 78, 12, 23, "116ハンマー　ひも左.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [158],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png<color=7>"],
@@ -2305,7 +2305,7 @@ export const animationData_451 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [141],
       [1, 9, -1, 0, 0, "001影.png<color=9>"],
@@ -3262,7 +3262,7 @@ export const animationData_451 = {
       [118, 300, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [80],
       [102, 12, -1, 0, 0, "074歩行時の煙.png<color=12>"],
@@ -3731,7 +3731,7 @@ export const animationData_451 = {
       [0, 300, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [256],
       [1, 4, 1, 0, 0, "010ベルト　前.png<color=0>"],
@@ -6880,7 +6880,7 @@ export const animationData_451 = {
       [135, 300, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [51],
       [2, 11, 1, 0, 0, "キャラ親ダミー<color=7>"],

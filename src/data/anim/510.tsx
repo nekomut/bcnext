@@ -5,7 +5,7 @@ export const animationData_510 = {
   "f": {
     "name": "豪鬼",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["510_f.png"],
       [88],
@@ -99,7 +99,7 @@ export const animationData_510 = {
       [216, 221, 34, 55, "087右ふくらはぎ正面.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [136],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "000.png<color=7>"],
@@ -244,7 +244,7 @@ export const animationData_510 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [74],
       [1, 9, -1, 0, 0, "001影.png<color=16>"],
@@ -695,7 +695,7 @@ export const animationData_510 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [27],
       [47, 12, -1, 0, 0, "046右かかと.png<color=1>"],
@@ -861,7 +861,7 @@ export const animationData_510 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [245],
       [1, 4, 1, 0, 0, "001影.png<color=16>\t"],
@@ -2563,7 +2563,7 @@ export const animationData_510 = {
       [50, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [56],
       [1, 9, 1, 0, 0, "001影.png<color=16>"],
@@ -2739,7 +2739,7 @@ export const animationData_510 = {
   "c": {
     "name": "豪鬼CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["510_c.png"],
       [88],
@@ -2833,7 +2833,7 @@ export const animationData_510 = {
       [462, 1, 34, 56, "087右ふくらはぎ正面.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [136],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "000.png<color=7>"],
@@ -2978,7 +2978,7 @@ export const animationData_510 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [74],
       [1, 9, -1, 0, 0, "001影.png<color=16>"],
@@ -3429,7 +3429,7 @@ export const animationData_510 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [27],
       [47, 12, -1, 0, 0, "046右かかと.png<color=1>"],
@@ -3595,7 +3595,7 @@ export const animationData_510 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [245],
       [1, 4, 1, 0, 0, "001影.png<color=16>\t"],
@@ -5297,7 +5297,7 @@ export const animationData_510 = {
       [50, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [56],
       [1, 9, 1, 0, 0, "001影.png<color=16>"],

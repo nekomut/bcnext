@@ -5,7 +5,7 @@ export const animationData_477 = {
   "f": {
     "name": "ネコの助",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["477_f.png"],
       [39],
@@ -50,7 +50,7 @@ export const animationData_477 = {
       [158, 161, 37, 14, "038ほじょef.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [44],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "000.png"],
@@ -103,7 +103,7 @@ export const animationData_477 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [54],
       [2, 5, -1, 0, 0, "025下半身.png"],
@@ -418,7 +418,7 @@ export const animationData_477 = {
       [40, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [15],
       [2, 5, -1, 0, 0, "025下半身.png"],
@@ -484,7 +484,7 @@ export const animationData_477 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [61],
       [2, 4, 1, 0, 0, "025下半身.png"],
@@ -1087,7 +1087,7 @@ export const animationData_477 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [37],
       [2, 5, 1, 0, 0, "025下半身.png"],
@@ -1206,7 +1206,7 @@ export const animationData_477 = {
   "c": {
     "name": "ネコ老守",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["477_c.png"],
       [55],
@@ -1267,7 +1267,7 @@ export const animationData_477 = {
       [125, 158, 24, 51, "054竿5ef.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [56],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "000.png"],
@@ -1332,7 +1332,7 @@ export const animationData_477 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [62],
       [2, 5, -1, 0, 0, "036下半身.png"],
@@ -1706,7 +1706,7 @@ export const animationData_477 = {
       [144, 0, 2, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [37],
       [2, 5, -1, 0, 0, "036下半身.png"],
@@ -1931,7 +1931,7 @@ export const animationData_477 = {
       [144, 0, 2, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [95],
       [2, 4, 1, 0, 0, "036下半身.png"],
@@ -3383,7 +3383,7 @@ export const animationData_477 = {
       [91, -1, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [59],
       [2, 5, 1, 0, 0, "036下半身.png"],

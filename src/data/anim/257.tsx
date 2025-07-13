@@ -5,7 +5,7 @@ export const animationData_257 = {
   "f": {
     "name": "天空神ゼウス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["257_f.png"],
       [37],
@@ -48,7 +48,7 @@ export const animationData_257 = {
       [414, 125, 32, 64, "剣光"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [73],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -130,7 +130,7 @@ export const animationData_257 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [2, 9, -1, 0, 0, "影"],
@@ -226,7 +226,7 @@ export const animationData_257 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [2, 9, -1, 0, 0, "影"],
@@ -338,7 +338,7 @@ export const animationData_257 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [89],
       [2, 9, 1, 0, 0, "影"],
@@ -1049,7 +1049,7 @@ export const animationData_257 = {
       [100, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [3, 5, 1, 0, 0, "マスコット"],
@@ -1093,7 +1093,7 @@ export const animationData_257 = {
   "c": {
     "name": "ギガントゼウス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["257_c.png"],
       [44],
@@ -1143,7 +1143,7 @@ export const animationData_257 = {
       [272, 225, 12, 12, "敷き黒"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [91],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -1243,7 +1243,7 @@ export const animationData_257 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [2, 9, -1, 0, 0, "影"],
@@ -1435,7 +1435,7 @@ export const animationData_257 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [2, 9, -1, 0, 0, "影"],
@@ -1643,7 +1643,7 @@ export const animationData_257 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [113],
       [2, 9, 1, 0, 0, "影"],
@@ -2600,7 +2600,7 @@ export const animationData_257 = {
       [108, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [4, 5, 1, 0, 0, "マスコット"],
@@ -2668,7 +2668,7 @@ export const animationData_257 = {
   "s": {
     "name": "Gギガントゼウス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["257_s.png"],
       [77],

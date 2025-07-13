@@ -5,7 +5,7 @@ export const animationData_013 = {
   "f": {
     "name": "女王猫",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["013_f.png"],
       [28],
@@ -39,7 +39,7 @@ export const animationData_013 = {
       [79, 160, 39, 18]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [11],
       [-1, -1, 0, 0, 628, 400, 0, 0, 1000, 1000, 0, 255, 0, "制御用"],
@@ -59,7 +59,7 @@ export const animationData_013 = {
       [0, 0, 24, 41, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [2, 2, -1, 0, 0, "下半身"],
@@ -115,7 +115,7 @@ export const animationData_013 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [7, 12, -1, 0, 0, "下半身"],
@@ -132,7 +132,7 @@ export const animationData_013 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [5, 12, 4, 0, 0, "下半身"],
@@ -197,7 +197,7 @@ export const animationData_013 = {
       [11, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [7, 12, -1, 0, 0, "下半身"],
@@ -232,7 +232,7 @@ export const animationData_013 = {
   "c": {
     "name": "処刑人",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["013_c.png"],
       [26],
@@ -264,7 +264,7 @@ export const animationData_013 = {
       [65, 207, 39, 18]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [11],
       [-1, -1, 0, 0, 474, 396, 0, 0, 1000, 1000, 0, 255, 0, "制御用"],
@@ -284,7 +284,7 @@ export const animationData_013 = {
       [0, 0, 24, 41, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [2, 2, -1, 0, 0, "下半身"],
@@ -345,7 +345,7 @@ export const animationData_013 = {
       [34, -10, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [7, 12, -1, 0, 0, "下半身"],
@@ -372,7 +372,7 @@ export const animationData_013 = {
       [40, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [5, 12, 4, 0, 0, "下半身"],
@@ -433,7 +433,7 @@ export const animationData_013 = {
       [11, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [7, 12, -1, 0, 0, "下半身"],
@@ -468,7 +468,7 @@ export const animationData_013 = {
   "s": {
     "name": "暗黒嬢",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["013_s.png"],
       [28],
@@ -502,7 +502,7 @@ export const animationData_013 = {
       [226, 52, 14, 13, "マント右"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [12],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "制御用"],
@@ -523,7 +523,7 @@ export const animationData_013 = {
       [0, 0, 24, 41, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [2, 2, -1, 0, 0, "下半身"],
@@ -586,7 +586,7 @@ export const animationData_013 = {
       [34, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 4, -1, 0, 0, "影"],
@@ -594,7 +594,7 @@ export const animationData_013 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [2, 11, 1, 0, 0, "下半身"],
@@ -660,7 +660,7 @@ export const animationData_013 = {
       [11, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [10],
       [2, 5, -1, 0, 0, "下半身"],

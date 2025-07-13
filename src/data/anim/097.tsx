@@ -5,7 +5,7 @@ export const animationData_097 = {
   "f": {
     "name": "狂乱のネコフィッシュ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["006_f.png"],
       [14],
@@ -46,7 +46,7 @@ export const animationData_097 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [3],
       [-1, -1, 0, 0, 0, 0, 0, 0, 179, 179, 0, 255, 0, "ダミー親"],
@@ -58,7 +58,7 @@ export const animationData_097 = {
       [0, 0, 46, 74, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -73,7 +73,7 @@ export const animationData_097 = {
       [28, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, 0, 0],
@@ -81,7 +81,7 @@ export const animationData_097 = {
       [0, 7, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -122,7 +122,7 @@ export const animationData_097 = {
       [17, 10, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 2, -1, 0, 0],
@@ -145,7 +145,7 @@ export const animationData_097 = {
   "c": {
     "name": "狂乱のネコクジラ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["006_c.png"],
       [20],
@@ -198,7 +198,7 @@ export const animationData_097 = {
       ["};"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [5],
       [-1, -1, 0, 0, 0, 0, 0, 0, 179, 179, 0, 255, 0, "ダミー親"],
@@ -212,7 +212,7 @@ export const animationData_097 = {
       [0, 0, 46, 81, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [1],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -227,7 +227,7 @@ export const animationData_097 = {
       [28, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [1, 2, -1, 0, 0],
@@ -241,7 +241,7 @@ export const animationData_097 = {
       [0, -78, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -333,7 +333,7 @@ export const animationData_097 = {
       [17, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [1, 2, 1, -1000, 1000, "ノックバック"],
@@ -362,7 +362,7 @@ export const animationData_097 = {
   "s": {
     "name": "大狂乱のネコ島",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["097_s.png"],
       [43],
@@ -411,7 +411,7 @@ export const animationData_097 = {
       [253, 120, 143, 9, "黒補足"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [25],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -445,7 +445,7 @@ export const animationData_097 = {
       [0, 0, 0, -4, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [1, 2, -1, 0, 0, "影移動１"],
@@ -747,7 +747,7 @@ export const animationData_097 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [5, 2, -1, 0, 0, "上ねこ下半身なし１"],
@@ -992,7 +992,7 @@ export const animationData_097 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [61],
       [1, 2, 1, 0, 0, "ダミー"],
@@ -1361,7 +1361,7 @@ export const animationData_097 = {
       [12, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [1, 2, 1, 0, 0, "影移動１"],

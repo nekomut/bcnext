@@ -5,7 +5,7 @@ export const animationData_625 = {
   "f": {
     "name": "オコルガ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["625_f.png"],
       [17],

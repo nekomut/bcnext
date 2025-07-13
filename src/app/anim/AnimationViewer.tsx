@@ -61,6 +61,8 @@ export default function AnimationViewer({
   const [offsetY, setOffsetY] = useState(150);
   const [imageLoading, setImageLoading] = useState(false);
   const [imageError, setImageError] = useState<string | null>(null);
+  const [hiddenParts, setHiddenParts] = useState<Set<number>>(new Set());
+  const [hiddenSprites, setHiddenSprites] = useState<Set<number>>(new Set());
 
   const formData = animationData?.[selectedForm] as Record<string, unknown> | undefined;
   const animData = formData?.[selectedAnimation] as unknown[] | undefined;
@@ -727,6 +729,16 @@ export default function AnimationViewer({
       if ((part.animCutId as number) < 0) {
         return;
       }
+
+      // Skip if part is hidden by user
+      if (hiddenParts.has(part.id as number)) {
+        return;
+      }
+
+      // Skip if sprite is hidden by user
+      if (hiddenSprites.has(part.animCutId as number)) {
+        return;
+      }
       
       // Check for valid sprites
       const totalRectangles = Array.isArray(imgCutData[3]) ? (imgCutData[3] as number[])[0] : 0;
@@ -823,7 +835,7 @@ export default function AnimationViewer({
     
     setSpriteParts(parts);
 
-  }, [currentFrame, maModelData, imgCutData, animData, maxFrame, getChangeInValue, transformPart, getBaseSize, getRecursiveScale]);
+  }, [currentFrame, maModelData, imgCutData, animData, maxFrame, getChangeInValue, transformPart, getBaseSize, getRecursiveScale, hiddenParts, hiddenSprites]);
 
 
   // Animation playback
@@ -1049,10 +1061,44 @@ export default function AnimationViewer({
         
         {/* Parts List */}
         <div className="mt-2">
-          <label className="block text-sm font-medium text-gray-600 mb-1 font-mono">
-            Parts & Sprites
-          </label>
-          <div className="text-xxxs text-gray-600 font-mono max-h-32 overflow-y-auto">
+          <div className="flex items-center gap-2 mb-1">
+            <label className="text-sm font-medium text-gray-600 font-mono">
+              Parts & Sprites
+            </label>
+            <div className="flex gap-1">
+              <button
+                onClick={() => {
+                  setHiddenParts(new Set());
+                  setHiddenSprites(new Set());
+                }}
+                className="px-2 py-0 bg-gray-200 text-gray-700 rounded text-xxs hover:bg-gray-300 font-mono"
+              >
+                全選択
+              </button>
+              <button
+                onClick={() => {
+                  const totalPartsCount = Array.isArray(maModelData?.[2]) ? maModelData[2][0] : 0;
+                  const allPartIds = Array.from({length: totalPartsCount}, (_, i) => i);
+                  const allSpriteIds = new Set<number>();
+                  
+                  // 全スプライトIDを収集
+                  if (imgCutData && Array.isArray(imgCutData) && imgCutData.length > 3) {
+                    const totalRectangles = Array.isArray(imgCutData[3]) ? imgCutData[3][0] : 0;
+                    for (let i = 0; i < totalRectangles; i++) {
+                      allSpriteIds.add(i);
+                    }
+                  }
+                  
+                  setHiddenParts(new Set(allPartIds));
+                  setHiddenSprites(allSpriteIds);
+                }}
+                className="px-2 py-0 bg-gray-200 text-gray-700 rounded text-xxs hover:bg-gray-300 font-mono"
+              >
+                全解除
+              </button>
+            </div>
+          </div>
+          <div className="text-xxxs text-gray-600 font-mono">
             {(() => {
               // すべてのパーツID（0からmodelPartsの最大まで）を取得
               const totalPartsCount = Array.isArray(maModelData?.[2]) ? maModelData[2][0] : 0;
@@ -1121,6 +1167,30 @@ export default function AnimationViewer({
                 return Array.from(sprites).sort((a, b) => a - b);
               };
               
+              const handlePartToggle = (partId: number, checked: boolean) => {
+                const newHiddenParts = new Set(hiddenParts);
+                if (checked) {
+                  // チェックされた場合、非表示リストから削除（表示する）
+                  newHiddenParts.delete(partId);
+                } else {
+                  // チェックが外された場合、非表示リストに追加（隠す）
+                  newHiddenParts.add(partId);
+                }
+                setHiddenParts(newHiddenParts);
+              };
+
+              const handleSpriteToggle = (spriteId: number, checked: boolean) => {
+                const newHiddenSprites = new Set(hiddenSprites);
+                if (checked) {
+                  // チェックされた場合、非表示リストから削除（表示する）
+                  newHiddenSprites.delete(spriteId);
+                } else {
+                  // チェックが外された場合、非表示リストに追加（隠す）
+                  newHiddenSprites.add(spriteId);
+                }
+                setHiddenSprites(newHiddenSprites);
+              };
+
               return allPartIds.map(partId => {
                 const partSpriteIds = getPartSprites(partId);
                 const displayedSprite = spriteParts.find(sprite => sprite.id === partId);
@@ -1129,7 +1199,15 @@ export default function AnimationViewer({
                 if (partSpriteIds.length === 0) {
                   return (
                     <div key={partId} className="py-0 my-0">
-                      <div className="py-0 my-0">Part#{partId}</div>
+                      <div className="py-0 my-0 flex items-center gap-1">
+                        <input
+                          type="checkbox"
+                          className="w-3 h-3"
+                          checked={!hiddenParts.has(partId)}
+                          onChange={(e) => handlePartToggle(partId, e.target.checked)}
+                        />
+                        <span>Part#{partId}</span>
+                      </div>
                     </div>
                   );
                 }
@@ -1137,15 +1215,29 @@ export default function AnimationViewer({
                 return (
                   <div key={partId} className="py-0 my-0">
                     {/* パーツ（親） */}
-                    <div className="py-0 my-0">Part#{partId}</div>
+                    <div className="py-0 my-0 flex items-center gap-1">
+                      <input
+                        type="checkbox"
+                        className="w-3 h-3"
+                        checked={!hiddenParts.has(partId)}
+                        onChange={(e) => handlePartToggle(partId, e.target.checked)}
+                      />
+                      <span>Part#{partId}</span>
+                    </div>
                     {/* このパーツに関連するすべてのスプライト */}
                     {partSpriteIds.map((spriteId, spriteIndex) => {
                       const isDisplayed = displayedSprite && displayedSprite.spriteId === spriteId;
                       const isLast = spriteIndex === partSpriteIds.length - 1;
                       
                       return (
-                        <div key={spriteIndex} className={`py-0 my-0 ${isDisplayed ? 'text-blue-500' : ''}`}>
-                          <span>{isLast ? '┗' : '┣'} Sprite#{spriteId}{isDisplayed ? ' o' : ''}</span>
+                        <div key={spriteIndex} className={`py-0 my-0 flex items-center gap-1 ${isDisplayed ? 'text-blue-500' : ''}`}>
+                          <input
+                            type="checkbox"
+                            className="w-3 h-3 ml-4"
+                            checked={!hiddenSprites.has(spriteId)}
+                            onChange={(e) => handleSpriteToggle(spriteId, e.target.checked)}
+                          />
+                          <span>{isLast ? '┗' : '┣'} Sprite#{spriteId}{isDisplayed ? ' o' : ' -'}</span>
                         </div>
                       );
                     })}
@@ -1176,21 +1268,21 @@ export default function AnimationViewer({
                   return value;
                 }));
                 
-                let jsonStr = JSON.stringify(cleanData, null, 2);
+                const jsonStr = JSON.stringify(cleanData, null, 2);
                 
                 // ネストした配列のみ1行にする
                 return jsonStr.replace(/(  )\[\s*\n([\s\S]*?)\n\s*\]/g, (match, indent, content) => {
                   // インデントが2スペース以上（ネストした配列）の場合のみ処理
-                  const lines = content.split('\n').map(line => line.trim()).filter(line => line);
+                  const lines = content.split('\n').map((line: string) => line.trim()).filter((line: string) => line);
                   
                   // 全ての行がプリミティブ値かチェック
-                  const allPrimitive = lines.every(line => {
+                  const allPrimitive = lines.every((line: string) => {
                     const cleanLine = line.replace(/,$/, '');
                     return /^(-?\d+(\.\d+)?|".*"|true|false|null)$/.test(cleanLine);
                   });
                   
                   if (allPrimitive) {
-                    const items = lines.map(line => line.replace(/,$/, ''));
+                    const items = lines.map((line: string) => line.replace(/,$/, ''));
                     return `${indent}[${items.join(', ')}]`;
                   }
                   
@@ -1212,21 +1304,21 @@ export default function AnimationViewer({
                   return value;
                 }));
                 
-                let jsonStr = JSON.stringify(cleanData, null, 2);
+                const jsonStr = JSON.stringify(cleanData, null, 2);
                 
                 // ネストした配列のみ1行にする
                 return jsonStr.replace(/(  )\[\s*\n([\s\S]*?)\n\s*\]/g, (match, indent, content) => {
                   // インデントが2スペース以上（ネストした配列）の場合のみ処理
-                  const lines = content.split('\n').map(line => line.trim()).filter(line => line);
+                  const lines = content.split('\n').map((line: string) => line.trim()).filter((line: string) => line);
                   
                   // 全ての行がプリミティブ値かチェック
-                  const allPrimitive = lines.every(line => {
+                  const allPrimitive = lines.every((line: string) => {
                     const cleanLine = line.replace(/,$/, '');
                     return /^(-?\d+(\.\d+)?|".*"|true|false|null)$/.test(cleanLine);
                   });
                   
                   if (allPrimitive) {
-                    const items = lines.map(line => line.replace(/,$/, ''));
+                    const items = lines.map((line: string) => line.replace(/,$/, ''));
                     return `${indent}[${items.join(', ')}]`;
                   }
                   
@@ -1248,21 +1340,21 @@ export default function AnimationViewer({
                   return value;
                 }));
                 
-                let jsonStr = JSON.stringify(cleanData, null, 2);
+                const jsonStr = JSON.stringify(cleanData, null, 2);
                 
                 // ネストした配列のみ1行にする
                 return jsonStr.replace(/(  )\[\s*\n([\s\S]*?)\n\s*\]/g, (match, indent, content) => {
                   // インデントが2スペース以上（ネストした配列）の場合のみ処理
-                  const lines = content.split('\n').map(line => line.trim()).filter(line => line);
+                  const lines = content.split('\n').map((line: string) => line.trim()).filter((line: string) => line);
                   
                   // 全ての行がプリミティブ値かチェック
-                  const allPrimitive = lines.every(line => {
+                  const allPrimitive = lines.every((line: string) => {
                     const cleanLine = line.replace(/,$/, '');
                     return /^(-?\d+(\.\d+)?|".*"|true|false|null)$/.test(cleanLine);
                   });
                   
                   if (allPrimitive) {
-                    const items = lines.map(line => line.replace(/,$/, ''));
+                    const items = lines.map((line: string) => line.replace(/,$/, ''));
                     return `${indent}[${items.join(', ')}]`;
                   }
                   

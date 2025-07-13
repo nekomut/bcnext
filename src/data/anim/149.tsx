@@ -5,7 +5,7 @@ export const animationData_149 = {
   "f": {
     "name": "ねこ人魚",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["149_f.png"],
       [26],
@@ -37,7 +37,7 @@ export const animationData_149 = {
       [1, 1, 46, 76, "エフェクト　回転"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [36],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=9>"],
@@ -82,7 +82,7 @@ export const animationData_149 = {
       [0, 0, 0, 0, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [3, 9, -1, 0, 0],
@@ -233,7 +233,7 @@ export const animationData_149 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [3, 11, -1, 0, 0],
@@ -346,7 +346,7 @@ export const animationData_149 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [44],
       [2, 9, 1, 0, 0],
@@ -603,7 +603,7 @@ export const animationData_149 = {
       [31, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [2, 12, -1, 0, 0],
@@ -689,7 +689,7 @@ export const animationData_149 = {
   "c": {
     "name": "ねこソルジャー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["149_c.png"],
       [24],
@@ -719,7 +719,7 @@ export const animationData_149 = {
       [49, 1, 72, 58, "エフェクト　波動"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [39],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=9>"],
@@ -767,7 +767,7 @@ export const animationData_149 = {
       [0, 0, 0, 0, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [3, 4, -1, 0, 0],
@@ -943,7 +943,7 @@ export const animationData_149 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [2, 4, -1, 0, 0],
@@ -984,7 +984,7 @@ export const animationData_149 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [61],
       [2, 4, 1, 0, 0],
@@ -1372,7 +1372,7 @@ export const animationData_149 = {
       [33, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [2, 12, -1, 0, 0],
@@ -1425,7 +1425,7 @@ export const animationData_149 = {
   "s": {
     "name": "ネコカメラマン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["149_s.png"],
       [36],
@@ -1467,7 +1467,7 @@ export const animationData_149 = {
       [49, 1, 12, 19, "攻撃　もも"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [44],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=9>"],
@@ -1520,7 +1520,7 @@ export const animationData_149 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [36],
       [3, 4, -1, 0, 0],
@@ -1748,7 +1748,7 @@ export const animationData_149 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [2, 4, 1, 0, 0],
@@ -1771,7 +1771,7 @@ export const animationData_149 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [70],
       [2, 4, 1, 0, 0],
@@ -2232,7 +2232,7 @@ export const animationData_149 = {
       [34, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [2, 12, 1, 0, 0],

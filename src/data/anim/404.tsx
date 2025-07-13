@@ -5,7 +5,7 @@ export const animationData_404 = {
   "f": {
     "name": "ネコキリン初号機",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["004_c.png"],
       [13],
@@ -24,7 +24,7 @@ export const animationData_404 = {
       [1, 158, 74, 93]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [5],
       [-1, -1, 0, 0, -30, 3, 0, 0, 179, 179, 0, 255, 0, "ダミー親"],
@@ -38,7 +38,7 @@ export const animationData_404 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -71,7 +71,7 @@ export const animationData_404 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [1, 4, -1, 0, 0],
@@ -82,7 +82,7 @@ export const animationData_404 = {
       [0, 4, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -134,7 +134,7 @@ export const animationData_404 = {
       [8, 9, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 2, 1, -1000, 1000, "ノックバック"],
@@ -154,7 +154,7 @@ export const animationData_404 = {
   "c": {
     "name": "ネコキリン２号機",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["404_c.png"],
       [13],
@@ -173,7 +173,7 @@ export const animationData_404 = {
       [1, 158, 74, 93]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [5],
       [-1, -1, 0, 0, 0, 0, 0, 0, 179, 179, 0, 255, 0, "ダミー親"],
@@ -187,7 +187,7 @@ export const animationData_404 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 2, -1, -1000, 1000, "移動"],
@@ -220,7 +220,7 @@ export const animationData_404 = {
       [16, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [1, 2, -1, -1000, 1000, "攻撃待機"],
@@ -231,7 +231,7 @@ export const animationData_404 = {
       [0, -1, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [1, 2, 1, -1000, 1000, "攻撃"],
@@ -283,7 +283,7 @@ export const animationData_404 = {
       [8, 9, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 2, 1, -1000, 1000, "ノックバック"],

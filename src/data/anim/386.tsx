@@ -5,7 +5,7 @@ export const animationData_386 = {
   "f": {
     "name": "虹谷彩理",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["386_f.png"],
       [42],
@@ -53,7 +53,7 @@ export const animationData_386 = {
       [81, 188, 7, 8]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [49],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -111,7 +111,7 @@ export const animationData_386 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [2, 4, -1, 0, 0, "目<color=1>"],
@@ -353,7 +353,7 @@ export const animationData_386 = {
       [16, -30, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [4, 2, -1, 0, 0, "胴体"],
@@ -484,7 +484,7 @@ export const animationData_386 = {
       [32, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [135],
       [2, 4, 1, 0, 0, "影"],
@@ -1588,7 +1588,7 @@ export const animationData_386 = {
       [0, 41, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [4, 4, 1, 0, 0, "胴体"],
@@ -1713,7 +1713,7 @@ export const animationData_386 = {
   "c": {
     "name": "虹谷彩理CC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["386_c.png"],
       [42],
@@ -1761,7 +1761,7 @@ export const animationData_386 = {
       [81, 188, 7, 8]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [49],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1819,7 +1819,7 @@ export const animationData_386 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [2, 9, -1, 0, 0, "影"],
@@ -2061,7 +2061,7 @@ export const animationData_386 = {
       [0, 5, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [4, 2, -1, 0, 0, "胴体"],
@@ -2192,7 +2192,7 @@ export const animationData_386 = {
       [32, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [135],
       [2, 4, 1, 0, 0, "影"],
@@ -3297,7 +3297,7 @@ export const animationData_386 = {
       [0, 41, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [4, 4, 1, 0, 0, "胴体"],

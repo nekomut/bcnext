@@ -5,7 +5,7 @@ export const animationData_193 = {
   "f": {
     "name": "中村奏絵",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["193_f.png"],
       [57],
@@ -68,7 +68,7 @@ export const animationData_193 = {
       [1, 1, 98, 160, "攻撃ef"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [55],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -132,7 +132,7 @@ export const animationData_193 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [1, 5, -1, 0, 0, "全体ダミー"],
@@ -401,7 +401,7 @@ export const animationData_193 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [5, 2, -1, 0, 0, "通常顔"],
@@ -481,7 +481,7 @@ export const animationData_193 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [57],
       [1, 5, 1, 0, 0, "全体ダミー"],
@@ -851,7 +851,7 @@ export const animationData_193 = {
       [56, 50, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [66],
       [1, 4, 1, 0, 0, "全体ダミー"],
@@ -1057,7 +1057,7 @@ export const animationData_193 = {
   "c": {
     "name": "クイーンかにー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["193_c.png"],
       [57],
@@ -1120,7 +1120,7 @@ export const animationData_193 = {
       [1, 1, 98, 160, "攻撃ef"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [55],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1184,7 +1184,7 @@ export const animationData_193 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [1, 5, -1, 0, 0, "全体ダミー"],
@@ -1453,7 +1453,7 @@ export const animationData_193 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [5, 2, -1, 0, 0, "通常顔"],
@@ -1533,7 +1533,7 @@ export const animationData_193 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [56],
       [1, 5, 1, 0, 0, "全体ダミー"],
@@ -1898,7 +1898,7 @@ export const animationData_193 = {
       [56, 50, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [65],
       [1, 4, 1, 0, 0, "全体ダミー"],

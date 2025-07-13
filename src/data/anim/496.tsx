@@ -5,7 +5,7 @@ export const animationData_496 = {
   "f": {
     "name": "成田甲斐",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["496_f.png"],
       [83],
@@ -94,7 +94,7 @@ export const animationData_496 = {
       [436, 159, 19, 32, "082リボン 裏.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [147],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1750, 1750, 0, 1000, 0, "000.png<color=7>"],
@@ -250,7 +250,7 @@ export const animationData_496 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [79],
       [2, 5, -1, 0, 0, "キャラ親ダミー<color=7>\t地揺れ"],
@@ -977,7 +977,7 @@ export const animationData_496 = {
       [75, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [32],
       [3, 5, -1, 0, 0, "下半身中心親ダミー<color=7>"],
@@ -1155,7 +1155,7 @@ export const animationData_496 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [202],
       [1, 4, 1, 0, 0, "001影.png<color=16>"],
@@ -3505,7 +3505,7 @@ export const animationData_496 = {
       [17, 115, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [28],
       [77, 12, 1, 0, 0, "地面砂煙親ダミー<color=7>"],
@@ -3597,7 +3597,7 @@ export const animationData_496 = {
   "c": {
     "name": "武神・成田甲斐",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["496_c.png"],
       [97],
@@ -3700,7 +3700,7 @@ export const animationData_496 = {
       [383, 280, 12, 4, "096隙間埋め.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [178],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1750, 1750, 0, 1000, 0, "000.png<color=7>"],
@@ -3887,7 +3887,7 @@ export const animationData_496 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [83],
       [2, 5, -1, 0, 0, "キャラ親ダミー<color=7>\t地揺れ"],
@@ -4670,7 +4670,7 @@ export const animationData_496 = {
       [75, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [32],
       [3, 5, -1, 0, 0, "下半身中心親ダミー<color=7>"],
@@ -4848,7 +4848,7 @@ export const animationData_496 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [242],
       [1, 4, 1, 0, 0, "001影.png<color=16>"],
@@ -7562,7 +7562,7 @@ export const animationData_496 = {
       [54, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [29],
       [77, 12, 1, 0, 0, "地面砂煙親ダミー<color=7>"],

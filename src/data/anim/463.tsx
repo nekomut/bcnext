@@ -5,7 +5,7 @@ export const animationData_463 = {
   "f": {
     "name": "終末兵器ムー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["463_f.png"],
       [143],
@@ -154,7 +154,7 @@ export const animationData_463 = {
       [146, 329, 48, 32, "142奴隷ボディ.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [171],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -334,7 +334,7 @@ export const animationData_463 = {
       [0, 0, 0, 2, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [206],
       [1, 4, -1, 0, 0, "000.png"],
@@ -1844,7 +1844,7 @@ export const animationData_463 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [100],
       [23, 11, -1, 0, 0, "056土台手前奥.png<color=9>"],
@@ -2473,7 +2473,7 @@ export const animationData_463 = {
       [30, 109, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [350],
       [1, 5, 1, 0, 0, "000.png"],
@@ -7468,7 +7468,7 @@ export const animationData_463 = {
       [79, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [59],
       [2, 11, 1, 0, 0, "cdmy"],
@@ -7653,7 +7653,7 @@ export const animationData_463 = {
   "c": {
     "name": "極秘研究機関パンドラ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["463_c.png"],
       [162],
@@ -7821,7 +7821,7 @@ export const animationData_463 = {
       [369, 426, 15, 47, "161煙.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [292],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png<color=7>"],
@@ -8122,7 +8122,7 @@ export const animationData_463 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [185],
       [1, 4, -1, 0, 0, "000.png"],
@@ -9522,7 +9522,7 @@ export const animationData_463 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [163],
       [2, 11, -1, 0, 0, "基地パーツ親ダミー\t"],
@@ -10809,7 +10809,7 @@ export const animationData_463 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [385],
       [1, 5, 1, 0, 0, "キャラ親ダミー\t"],
@@ -15693,7 +15693,7 @@ export const animationData_463 = {
       [76, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [193],
       [1, 11, 1, 0, 0, "キャラ親ダミー\t"],

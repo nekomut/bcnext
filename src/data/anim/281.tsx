@@ -5,7 +5,7 @@ export const animationData_281 = {
   "f": {
     "name": "ふてニャン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["281_f.png"],
       [16],
@@ -27,7 +27,7 @@ export const animationData_281 = {
       [85, 94, 46, 19, "顔目閉じ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [20],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -56,7 +56,7 @@ export const animationData_281 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [3, 5, -1, 0, 0, "胴"],
@@ -175,7 +175,7 @@ export const animationData_281 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [7, 11, -1, 0, 0, "耳"],
@@ -213,7 +213,7 @@ export const animationData_281 = {
       [0, 2, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [3, 11, 1, 0, 0, "胴"],
@@ -532,7 +532,7 @@ export const animationData_281 = {
       [41, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [3, 4, 1, 0, 0, "胴"],
@@ -594,7 +594,7 @@ export const animationData_281 = {
   "c": {
     "name": "モミモミふてニャン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["281_c.png"],
       [26],
@@ -626,7 +626,7 @@ export const animationData_281 = {
       [215, 113, 39, 13, "ef攻撃"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [34],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -669,7 +669,7 @@ export const animationData_281 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [3, 5, -1, 0, 0, "台"],
@@ -923,7 +923,7 @@ export const animationData_281 = {
       [60, 0, 3, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [9, 10, -1, 0, 0],
@@ -1089,7 +1089,7 @@ export const animationData_281 = {
       [30, 0, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [33],
       [3, 11, 1, 0, 0, "台"],
@@ -1381,7 +1381,7 @@ export const animationData_281 = {
       [41, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [3, 4, 1, 0, 0, "台"],

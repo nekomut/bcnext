@@ -5,7 +5,7 @@ export const animationData_077 = {
   "f": {
     "name": "ドロイド",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["077_f.png"],
       [15],
@@ -26,7 +26,7 @@ export const animationData_077 = {
       [110, 138, 57, 57, "ネコ胴体"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [39],
       [-1, -1, 0, 0, 400, 462, 0, 0, 1000, 1000, 0, 1000, 0, "メインNULL"],
@@ -74,7 +74,7 @@ export const animationData_077 = {
       [0, 0, 0, 5, 2, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [5, 11, -1, 0, 0, "NULL上半身コントロール用"],
@@ -770,7 +770,7 @@ export const animationData_077 = {
       [208, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [5, 11, -1, 0, 0, "NULL上半身コントロール用"],
@@ -828,7 +828,7 @@ export const animationData_077 = {
       [0, 200, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [55],
       [5, 11, 1, 0, 0, "NULL上半身コントロール用"],
@@ -1474,7 +1474,7 @@ export const animationData_077 = {
       [250, 3600, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [26],
       [13, 11, -1, 0, 0, "アンテナ右"],
@@ -1560,7 +1560,7 @@ export const animationData_077 = {
   "c": {
     "name": "ニャンドロイド",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["077_c.png"],
       [17],
@@ -1583,7 +1583,7 @@ export const animationData_077 = {
       [228, 160, 20, 35, "口左"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [42],
       [-1, -1, 0, 0, 400, 462, 0, 0, 1000, 1000, 0, 1000, 0, "メインNULL"],
@@ -1634,7 +1634,7 @@ export const animationData_077 = {
       [0, 0, 0, 5, 2, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [48],
       [5, 11, -1, 0, 0, "NULL上半身コントロール用"],
@@ -2385,7 +2385,7 @@ export const animationData_077 = {
       [208, 1000, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [5, 11, -1, 0, 0, "NULL上半身コントロール用"],
@@ -2443,7 +2443,7 @@ export const animationData_077 = {
       [0, 200, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [58],
       [5, 11, 1, 0, 0, "NULL上半身コントロール用"],
@@ -3139,7 +3139,7 @@ export const animationData_077 = {
       [250, 1000, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [13, 11, -1, 0, 0, "アンテナ右"],
@@ -3228,7 +3228,7 @@ export const animationData_077 = {
   "s": {
     "name": "ハルドロイド",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["077_s.png"],
       [18],
@@ -3252,7 +3252,7 @@ export const animationData_077 = {
       [3, 154, 46, 32, "花びら"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [49],
       [-1, -1, 0, 0, 400, 462, 0, 0, 1000, 1000, 0, 1000, 0, "メインNULL"],
@@ -3310,7 +3310,7 @@ export const animationData_077 = {
       [0, 0, 0, 5, 2, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [51],
       [2, 4, -1, 0, 0, "メインNULL"],
@@ -4098,7 +4098,7 @@ export const animationData_077 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [5, 11, -1, 0, 0, "NULL上半身コントロール用"],
@@ -4159,7 +4159,7 @@ export const animationData_077 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [85],
       [2, 10, 1, 0, 0, "メインNULL"],
@@ -5049,7 +5049,7 @@ export const animationData_077 = {
       [50, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [13, 11, -1, 0, 0, "アンテナ右"],

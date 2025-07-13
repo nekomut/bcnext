@@ -5,7 +5,7 @@ export const animationData_310 = {
   "f": {
     "name": "ネコナースキャンドル",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["310_f.png"],
       [98],
@@ -109,7 +109,7 @@ export const animationData_310 = {
       [48, 186, 18, 25, "蝋燭effect"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [129],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -247,7 +247,7 @@ export const animationData_310 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [1, 9, -1, 0, 0],
@@ -534,7 +534,7 @@ export const animationData_310 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [1, 9, -1, 0, 0],
@@ -821,7 +821,7 @@ export const animationData_310 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [238],
       [1, 4, 1, 0, 0],
@@ -2874,7 +2874,7 @@ export const animationData_310 = {
       [130, 91, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [97],
       [2, 4, 1, 0, 0],
@@ -3173,7 +3173,7 @@ export const animationData_310 = {
   "c": {
     "name": "ネコナースマリア",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["310_c.png"],
       [99],
@@ -3435,7 +3435,7 @@ export const animationData_310 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [51],
       [1, 9, -1, 0, 0],
@@ -3746,7 +3746,7 @@ export const animationData_310 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [51],
       [1, 9, -1, 0, 0],
@@ -4057,7 +4057,7 @@ export const animationData_310 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [312],
       [1, 4, 1, 0, 0],
@@ -6790,7 +6790,7 @@ export const animationData_310 = {
       [0, 84, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [109],
       [2, 4, 1, 0, 0],
@@ -7125,7 +7125,7 @@ export const animationData_310 = {
   "s": {
     "name": "ネコナースサンタマリア",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["310_s.png"],
       [103],

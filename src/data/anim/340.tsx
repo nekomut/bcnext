@@ -5,7 +5,7 @@ export const animationData_340 = {
   "f": {
     "name": "赤髪のゆきにゃん",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["340_f.png"],
       [39],
@@ -50,7 +50,7 @@ export const animationData_340 = {
       [350, 81, 77, 77]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [24],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -83,7 +83,7 @@ export const animationData_340 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [24],
       [4, 5, -1, 0, 0, "頭"],
@@ -217,7 +217,7 @@ export const animationData_340 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [4, 5, -1, 0, 0, "頭"],
@@ -379,7 +379,7 @@ export const animationData_340 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [2, 4, 1, 0, 0, "影"],
@@ -932,7 +932,7 @@ export const animationData_340 = {
       [41, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [4, 4, 1, 0, 0, "頭"],
@@ -988,7 +988,7 @@ export const animationData_340 = {
   "c": {
     "name": "赤髪のビューティゆきにゃん",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["340_c.png"],
       [56],
@@ -1050,7 +1050,7 @@ export const animationData_340 = {
       [161, 153, 41, 26]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [41],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -1100,7 +1100,7 @@ export const animationData_340 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [38],
       [4, 5, -1, 0, 0, "体"],
@@ -1296,7 +1296,7 @@ export const animationData_340 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [39],
       [4, 5, -1, 0, 0, "体"],
@@ -1520,7 +1520,7 @@ export const animationData_340 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [96],
       [2, 4, 1, 0, 0, "影"],
@@ -2514,7 +2514,7 @@ export const animationData_340 = {
       [57, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [44],
       [4, 4, 1, 0, 0, "体"],
@@ -2654,7 +2654,7 @@ export const animationData_340 = {
   "s": {
     "name": "赤髪のビューティムキにゃん",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["340_s.png"],
       [67],

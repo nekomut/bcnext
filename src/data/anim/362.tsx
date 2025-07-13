@@ -5,7 +5,7 @@ export const animationData_362 = {
   "f": {
     "name": "セイバー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["362_f.png"],
       [111],
@@ -122,7 +122,7 @@ export const animationData_362 = {
       [278, 229, 14, 14]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [163],
       [-1, -1, 0, 0, 0, 0, 1, 1, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -294,7 +294,7 @@ export const animationData_362 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [213],
       [2, 4, -1, 0, 0],
@@ -1429,7 +1429,7 @@ export const animationData_362 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [100],
       [2, 4, -1, 0, 0],
@@ -1953,7 +1953,7 @@ export const animationData_362 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [222],
       [1, 4, 1, 0, 0],
@@ -4304,7 +4304,7 @@ export const animationData_362 = {
       [65, 0, 3, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [139],
       [1, 9, 1, 0, 0, "影"],
@@ -4729,7 +4729,7 @@ export const animationData_362 = {
   "c": {
     "name": "セイバーCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["362_c.png"],
       [111],
@@ -4846,7 +4846,7 @@ export const animationData_362 = {
       [278, 229, 14, 14]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [163],
       [-1, -1, 0, 0, 0, 0, 1, 1, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -5018,7 +5018,7 @@ export const animationData_362 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [213],
       [2, 4, -1, 0, 0],
@@ -6153,7 +6153,7 @@ export const animationData_362 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [100],
       [2, 4, -1, 0, 0],
@@ -6677,7 +6677,7 @@ export const animationData_362 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [222],
       [1, 4, 1, 0, 0],
@@ -9028,7 +9028,7 @@ export const animationData_362 = {
       [65, 0, 3, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [139],
       [1, 9, 1, 0, 0, "影"],
@@ -9453,7 +9453,7 @@ export const animationData_362 = {
   "s": {
     "name": "セイバーオルタCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["362_s.png"],
       [111],
@@ -9570,7 +9570,7 @@ export const animationData_362 = {
       [321, 165, 23, 33]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [170],
       [-1, -1, 0, 0, 0, 0, 1, 1, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -9749,7 +9749,7 @@ export const animationData_362 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [177],
       [2, 4, -1, 0, 0],
@@ -10776,7 +10776,7 @@ export const animationData_362 = {
       [10, -1, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [94],
       [2, 4, -1, 0, 0],
@@ -11275,7 +11275,7 @@ export const animationData_362 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [242],
       [1, 4, 1, 0, 0, "影"],
@@ -14010,7 +14010,7 @@ export const animationData_362 = {
       [22, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [165],
       [2, 4, 1, 0, 0, "キャラダミー<color=9>"],

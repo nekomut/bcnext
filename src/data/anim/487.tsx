@@ -5,7 +5,7 @@ export const animationData_487 = {
   "f": {
     "name": "エヴァ８号機",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["487_f.png"],
       [79],
@@ -90,7 +90,7 @@ export const animationData_487 = {
       [450, 138, 25, 29, "078反射_銃.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [114],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1750, 1750, 0, 1000, 0, "000.png<color=7>"],
@@ -213,7 +213,7 @@ export const animationData_487 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [60],
       [1, 4, -1, 0, 0, "001影.png<color=16>"],
@@ -550,7 +550,7 @@ export const animationData_487 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [43],
       [3, 5, -1, 0, 0, "024腰.png<color=0>\t"],
@@ -728,7 +728,7 @@ export const animationData_487 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [181],
       [1, 4, 1, 0, 0, "024腰.png<color=0>"],
@@ -2319,7 +2319,7 @@ export const animationData_487 = {
       [103, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [52],
       [27, 12, 1, 0, 0, "025右脚　もも.png<color=1>"],
@@ -2483,7 +2483,7 @@ export const animationData_487 = {
   "c": {
     "name": "エヴァ８号機＆ネコ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["487_c.png"],
       [79],
@@ -2568,7 +2568,7 @@ export const animationData_487 = {
       [450, 138, 25, 29, "078反射_銃.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [114],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1750, 1750, 0, 1000, 0, "000.png<color=7>"],
@@ -2691,7 +2691,7 @@ export const animationData_487 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [66],
       [1, 4, -1, 0, 0, "001影.png<color=16>"],
@@ -3088,7 +3088,7 @@ export const animationData_487 = {
       [180, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [43],
       [3, 5, -1, 0, 0, "024腰.png<color=0>\t"],
@@ -3266,7 +3266,7 @@ export const animationData_487 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [192],
       [1, 4, 1, 0, 0, "024腰.png<color=0>"],
@@ -4958,7 +4958,7 @@ export const animationData_487 = {
       [103, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [69],
       [27, 12, 1, 0, 0, "025右脚　もも.png<color=1>"],

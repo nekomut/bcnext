@@ -5,7 +5,7 @@ export const animationData_334 = {
   "f": {
     "name": "狐娘ヒメユリ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["334_f.png"],
       [71],
@@ -82,7 +82,7 @@ export const animationData_334 = {
       [436, 183, 40, 71, "かさんぼやけ"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [124],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "dmy"],
@@ -215,7 +215,7 @@ export const animationData_334 = {
       [0, 0, 0, 0, 5, 0, "dmy"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [70],
       [1, 9, -1, 0, 0],
@@ -621,7 +621,7 @@ export const animationData_334 = {
       [100, 600, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [70],
       [1, 9, -1, 0, 0],
@@ -1027,7 +1027,7 @@ export const animationData_334 = {
       [100, 600, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [251],
       [1, 8, 1, 0, 0],
@@ -5666,7 +5666,7 @@ export const animationData_334 = {
       [129, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [87, 12, 1, 0, 0],
@@ -5758,7 +5758,7 @@ export const animationData_334 = {
   "c": {
     "name": "九尾の狐姫ヒメユリ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["334_c.png"],
       [86],
@@ -5850,7 +5850,7 @@ export const animationData_334 = {
       [468, 167, 12, 13]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [146],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "dmy"],
@@ -6005,7 +6005,7 @@ export const animationData_334 = {
       [0, 0, 0, 2, 5, 0, "dmy"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [83],
       [1, 9, -1, 0, 0],
@@ -6515,7 +6515,7 @@ export const animationData_334 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [83],
       [1, 9, -1, 0, 0],
@@ -7025,7 +7025,7 @@ export const animationData_334 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [316],
       [1, 8, 1, 0, 0],
@@ -12576,7 +12576,7 @@ export const animationData_334 = {
       [130, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [63],
       [2, 4, 1, 0, 0],
@@ -12773,7 +12773,7 @@ export const animationData_334 = {
   "s": {
     "name": "豊穣の狐姫ヒメユリ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["334_s.png"],
       [131],
@@ -12910,7 +12910,7 @@ export const animationData_334 = {
       [436, 53, 11, 11]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [193],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png<color=7>"],
@@ -13112,7 +13112,7 @@ export const animationData_334 = {
       [0, 0, 0, 2, 5, 0, "dmy"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [103],
       [1, 9, -1, 0, 0],
@@ -13724,7 +13724,7 @@ export const animationData_334 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [103],
       [1, 9, -1, 0, 0],
@@ -14336,7 +14336,7 @@ export const animationData_334 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [395],
       [1, 8, 1, 0, 0],
@@ -20711,7 +20711,7 @@ export const animationData_334 = {
       [140, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [104],
       [2, 4, 1, 0, 0],

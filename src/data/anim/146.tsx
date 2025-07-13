@@ -5,7 +5,7 @@ export const animationData_146 = {
   "f": {
     "name": "たけうまねこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["146_f.png"],
       [18],
@@ -29,7 +29,7 @@ export const animationData_146 = {
       [129, 195, 84, 42, "土エフェクト4"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [19],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -57,7 +57,7 @@ export const animationData_146 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [2, 11, -1, 0, 0, "本体制御"],
@@ -181,7 +181,7 @@ export const animationData_146 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [2, 11, -1, 0, 0, "本体制御"],
@@ -237,7 +237,7 @@ export const animationData_146 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [20],
       [1, 9, 1, 0, 0, "影"],
@@ -394,7 +394,7 @@ export const animationData_146 = {
       [26, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [8],
       [2, 5, -1, 0, 0, "本体"],
@@ -426,7 +426,7 @@ export const animationData_146 = {
   "c": {
     "name": "トーテムねこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["146_c.png"],
       [27],
@@ -459,7 +459,7 @@ export const animationData_146 = {
       [166, 181, 40, 70, "攻撃エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [26],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -494,7 +494,7 @@ export const animationData_146 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [2, 5, -1, 0, 0, "全体"],
@@ -585,7 +585,7 @@ export const animationData_146 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [2, 10, -1, 0, 0, "全体"],
@@ -620,7 +620,7 @@ export const animationData_146 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [31],
       [1, 9, 1, 0, 0, "影"],
@@ -862,7 +862,7 @@ export const animationData_146 = {
       [19, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [22],
       [2, 5, -1, 0, 0, "全体"],
@@ -936,7 +936,7 @@ export const animationData_146 = {
   "s": {
     "name": "ねこ雑技団",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["146_s.png"],
       [34],
@@ -976,7 +976,7 @@ export const animationData_146 = {
       [2, 172, 40, 69, "033レイヤー 1.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [68],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -1053,7 +1053,7 @@ export const animationData_146 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [3, 5, -1, 0, 0, "000.png"],
@@ -1192,7 +1192,7 @@ export const animationData_146 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [3, 11, -1, 0, 0, "000.png"],
@@ -1293,7 +1293,7 @@ export const animationData_146 = {
       [30, 1000, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [76],
       [3, 5, 1, 0, 0, "全体"],
@@ -1817,7 +1817,7 @@ export const animationData_146 = {
       [16, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [28, 12, 1, 0, 0, "008椅子C.png<color=1>"],

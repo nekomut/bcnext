@@ -5,7 +5,7 @@ export const animationData_549 = {
   "f": {
     "name": "第６の使徒",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["549_f.png"],
       [52],
@@ -5523,7 +5523,7 @@ export const animationData_549 = {
   "c": {
     "name": "第６のネコ使徒",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["549_c.png"],
       [76],

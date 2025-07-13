@@ -5,7 +5,7 @@ export const animationData_037 = {
   "f": {
     "name": "ネコホッピング",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["037_f.png"],
       [19],
@@ -30,7 +30,7 @@ export const animationData_037 = {
       [1, 207, 108, 30]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [15],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 255, 0, "原点"],
@@ -54,7 +54,7 @@ export const animationData_037 = {
       [0, 0, 0, 0, 10, 0, "原点"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [1, 5, -1, 0, 0],
@@ -160,7 +160,7 @@ export const animationData_037 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [1, 5, -1, 0, 0],
@@ -266,7 +266,7 @@ export const animationData_037 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [1, 5, 1, 0, 0, "攻撃判定：16フレーム"],
@@ -510,7 +510,7 @@ export const animationData_037 = {
       [48, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [1, 11, 1, 0, 0],
@@ -572,7 +572,7 @@ export const animationData_037 = {
   "c": {
     "name": "ネコマサイ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["037_c.png"],
       [20],
@@ -598,7 +598,7 @@ export const animationData_037 = {
       [97, 39, 16, 8]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [22],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "原点"],
@@ -629,7 +629,7 @@ export const animationData_037 = {
       [0, 0, -2, 20, 8, 0, "原点"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [1, 5, -1, 0, 0],
@@ -703,7 +703,7 @@ export const animationData_037 = {
       [16, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [1, 5, -1, 0, 0],
@@ -777,7 +777,7 @@ export const animationData_037 = {
       [16, 1000, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [1, 5, 1, 0, 0],
@@ -1041,7 +1041,7 @@ export const animationData_037 = {
       [48, 1000, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [2, 2, 1, 0, 0],
@@ -1091,7 +1091,7 @@ export const animationData_037 = {
   "s": {
     "name": "ネコキョンシー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["037_s.png"],
       [34],
@@ -1131,7 +1131,7 @@ export const animationData_037 = {
       [207, 160, 48, 21, "掛け物3"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [20],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 255, 0, "ダミー"],
@@ -1160,7 +1160,7 @@ export const animationData_037 = {
       [0, 0, 0, 0, 5, 0, "ガチャ用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [1, 8, -1, 0, 0],
@@ -1383,7 +1383,7 @@ export const animationData_037 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [1, 8, -1, 0, 0],
@@ -1606,7 +1606,7 @@ export const animationData_037 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [34],
       [1, 4, 1, 0, 0],
@@ -1961,7 +1961,7 @@ export const animationData_037 = {
       [24, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [40],
       [2, 4, -1, 0, 0],

@@ -8123,7 +8123,7 @@ export const animationData_633 = {
   "s": {
     "name": "大妖怪結社チュンチュン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["633_s.png"],
       [115],

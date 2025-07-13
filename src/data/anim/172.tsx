@@ -5,7 +5,7 @@ export const animationData_172 = {
   "f": {
     "name": "コニャンダム",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["172_f.png"],
       [43],
@@ -54,7 +54,7 @@ export const animationData_172 = {
       [120, 10, 169, 72]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [37],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -100,7 +100,7 @@ export const animationData_172 = {
       [0, 0, 13, 0, 5, 0, "右手<color=2>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [57],
       [1, 9, -1, 0, 0],
@@ -442,7 +442,7 @@ export const animationData_172 = {
       [80, 1000, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [1, 9, -1, 0, 0],
@@ -566,7 +566,7 @@ export const animationData_172 = {
       [25, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [69],
       [2, 4, 1, 0, 0],
@@ -1315,7 +1315,7 @@ export const animationData_172 = {
       [98, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [2, 5, -1, 0, 0, "左肩<color=0>"],
@@ -1380,7 +1380,7 @@ export const animationData_172 = {
   "c": {
     "name": "ネコニャンダム",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["172_c.png"],
       [51],
@@ -1437,7 +1437,7 @@ export const animationData_172 = {
       [440, 1, 20, 120]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [50],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -1496,7 +1496,7 @@ export const animationData_172 = {
       [0, 0, 13, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [67],
       [1, 9, -1, 0, 0],
@@ -1894,7 +1894,7 @@ export const animationData_172 = {
       [20, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [1, 9, -1, 0, 0],
@@ -2052,7 +2052,7 @@ export const animationData_172 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [107],
       [2, 4, 1, 0, 0],
@@ -3093,7 +3093,7 @@ export const animationData_172 = {
       [88, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [2, 5, -1, 0, 0, "左肩<color=0>"],
@@ -3176,7 +3176,7 @@ export const animationData_172 = {
   "s": {
     "name": "覚醒のネコニャンダム",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["172_s.png"],
       [94],
@@ -3276,7 +3276,7 @@ export const animationData_172 = {
       [321, 83, 20, 117, "093.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [100],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー<color=7>"],
@@ -3385,7 +3385,7 @@ export const animationData_172 = {
       [0, 0, 13, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [2, 5, -1, 0, 0, "\t"],
@@ -3675,7 +3675,7 @@ export const animationData_172 = {
       [0, 1, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [14, 11, -1, 0, 0],
@@ -3857,7 +3857,7 @@ export const animationData_172 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [178],
       [39, 4, 1, 0, 0, "\t"],
@@ -5634,7 +5634,7 @@ export const animationData_172 = {
       [99, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [78],
       [2, 5, 1, 0, 0, "\t"],

@@ -5,7 +5,7 @@ export const animationData_138 = {
   "f": {
     "name": "かぐやひめ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["138_f.png"],
       [13],
@@ -24,7 +24,7 @@ export const animationData_138 = {
       [99, 21, 11, 56, "竹残像"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [15],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -48,7 +48,7 @@ export const animationData_138 = {
       [0, 0, 0, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [4, 5, -1, 0, 0, "体"],
@@ -146,7 +146,7 @@ export const animationData_138 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [3],
       [12, 12, -1, 0, 0, "竹残像上"],
@@ -160,7 +160,7 @@ export const animationData_138 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [23],
       [1, 4, 1, 0, 0, "全体ダミー"],
@@ -387,7 +387,7 @@ export const animationData_138 = {
       [29, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [3, 5, -1, 0, 0, "キャラダミー"],
@@ -443,7 +443,7 @@ export const animationData_138 = {
   "c": {
     "name": "破壊衛星デスムーン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["138_c.png"],
       [38],
@@ -487,7 +487,7 @@ export const animationData_138 = {
       [423, 141, 6, 10, "もみ上げ右"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [67],
       [-1, -1, 0, 0, -434, 36, 0, 0, 1600, 1600, 0, 1000, 0, "ダミー<color=7>"],
@@ -563,7 +563,7 @@ export const animationData_138 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [6, 11, -1, 0, 0, "発射口"],
@@ -786,7 +786,7 @@ export const animationData_138 = {
       [60, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [41],
       [6, 11, -1, 0, 0, "発射口"],
@@ -1009,7 +1009,7 @@ export const animationData_138 = {
       [60, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [179],
       [6, 11, 1, 0, 0, "発射口"],
@@ -2510,7 +2510,7 @@ export const animationData_138 = {
       [150, 1000, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [32],
       [3, 11, -1, 0, 0, "キャラダミー<color=7>"],
@@ -2614,7 +2614,7 @@ export const animationData_138 = {
   "s": {
     "name": "破壊衛星カオスムーン",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["138_s.png"],
       [68],
@@ -2688,7 +2688,7 @@ export const animationData_138 = {
       [247, 13, 11, 9, "月欠ける部分補足"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [144],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1600, 1600, 0, 1000, 0, "ダミー<color=7>"],
@@ -2841,7 +2841,7 @@ export const animationData_138 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [80],
       [12, 12, -1, 0, 0],
@@ -3275,7 +3275,7 @@ export const animationData_138 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [80],
       [12, 12, -1, 0, 0],
@@ -3709,7 +3709,7 @@ export const animationData_138 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [328],
       [7, 4, 1, 0, 0, "月面①"],
@@ -7103,7 +7103,7 @@ export const animationData_138 = {
       [159, 0, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [60],
       [4, 5, 1, 0, 0],

@@ -5,7 +5,7 @@ export const animationData_041 = {
   "f": {
     "name": "ネコエステ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["041_f.png"],
       [5],
@@ -16,7 +16,7 @@ export const animationData_041 = {
       [59, 1, 107, 127, "エフェクト"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [6],
       [-1, -1, 0, 0, 611, 174, 0, 0, 1790, 1790, 0, 255, 0, "ダミー親"],
@@ -31,7 +31,7 @@ export const animationData_041 = {
       [0, 0, 28, 145, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 5, -1, -1000, 1000, "移動"],
@@ -60,7 +60,7 @@ export const animationData_041 = {
       [0, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [2],
       [1, 4, -1, 0, 0],
@@ -71,7 +71,7 @@ export const animationData_041 = {
       [0, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 11, 1, 0, 0],
@@ -104,7 +104,7 @@ export const animationData_041 = {
       [10, 1500, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [5, 12, -1, 0, 0],
@@ -124,7 +124,7 @@ export const animationData_041 = {
   "c": {
     "name": "ネコジェンヌ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["041_c.png"],
       [14],
@@ -144,7 +144,7 @@ export const animationData_041 = {
       [160, 130, 1, 1, "ダミー"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [10],
       [-1, -1, 0, 0, 611, 174, 0, 0, 1790, 1790, 0, 255, 0, "ダミー親"],
@@ -163,7 +163,7 @@ export const animationData_041 = {
       [0, 0, 28, 145, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 5, -1, -1000, 1000, "移動"],
@@ -199,7 +199,7 @@ export const animationData_041 = {
       [16, 8, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [1, 4, -1, 0, 0],
@@ -224,7 +224,7 @@ export const animationData_041 = {
       [16, 8, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [1, 11, 1, 0, 0],
@@ -274,7 +274,7 @@ export const animationData_041 = {
       [7, 9, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [4],
       [5, 12, -1, 0, 0],
@@ -294,7 +294,7 @@ export const animationData_041 = {
   "s": {
     "name": "ネコパーフェクト",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["041_s.png"],
       [27],
@@ -327,7 +327,7 @@ export const animationData_041 = {
       [154, 240, 13, 13, "026黒バック.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [44],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -380,7 +380,7 @@ export const animationData_041 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [2, 5, -1, 0, 0, "胴体"],
@@ -467,7 +467,7 @@ export const animationData_041 = {
       [24, -10, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [10, 11, -1, 0, 0, "手前横髪"],
@@ -533,7 +533,7 @@ export const animationData_041 = {
       [48, -5, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [48],
       [2, 11, 1, 0, 0, "胴体"],
@@ -915,7 +915,7 @@ export const animationData_041 = {
       [20, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [21],
       [2, 4, 1, 0, 0, "胴体"],

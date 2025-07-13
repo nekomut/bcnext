@@ -5,7 +5,7 @@ export const animationData_529 = {
   "f": {
     "name": "厄災の子キャスリィ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["529_f.png"],
       [95],
@@ -106,7 +106,7 @@ export const animationData_529 = {
       [150, 144, 21, 79, "094横向き杖.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [199],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0],
@@ -314,7 +314,7 @@ export const animationData_529 = {
       [0, 0, 0, 0, 5, 0]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [72],
       [2, 4, -1, 0, 0],
@@ -728,7 +728,7 @@ export const animationData_529 = {
       [0, -1, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [45],
       [3, 5, -1, 0, 0],
@@ -983,7 +983,7 @@ export const animationData_529 = {
       [0, -1, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [450],
       [1, 4, 1, 0, 0, "攻撃モデル<color=14>"],
@@ -14753,7 +14753,7 @@ export const animationData_529 = {
       [175, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [86],
       [2, 5, 1, 0, 0, "026頭.png"],
@@ -15019,7 +15019,7 @@ export const animationData_529 = {
   "c": {
     "name": "祝祭の聖女キャスリィ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["529_c.png"],
       [133],
@@ -15158,7 +15158,7 @@ export const animationData_529 = {
       [407, 1, 82, 58, "132噴射2.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model2]"],
+      ["[modelanim:model2]"],
       [4],
       [200],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1250, 1250, 0, 1000, 0, "000.png<color=7>"],
@@ -15367,7 +15367,7 @@ export const animationData_529 = {
       [0, 0, 0, 0, 5, 0, "000.png<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [99],
       [1, 9, -1, 0, 0, "001影.png<color=16>"],
@@ -16018,7 +16018,7 @@ export const animationData_529 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [62],
       [4, 11, -1, 0, 0, "066腹.png<color=3>\t"],
@@ -16459,7 +16459,7 @@ export const animationData_529 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation2]"],
+      ["[modelanim:animation2]"],
       [2],
       [306],
       [1, 9, 1, 0, 0, "001影.png<color=16>\t"],

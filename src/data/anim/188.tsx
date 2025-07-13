@@ -5,7 +5,7 @@ export const animationData_188 = {
   "f": {
     "name": "ミスティカ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["188_f.png"],
       [60],
@@ -71,7 +71,7 @@ export const animationData_188 = {
       [21, 161, 2, 3, "噴射もや"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [72],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -152,7 +152,7 @@ export const animationData_188 = {
       [0, 0, 0, 0, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [1, 10, -1, 0, 0, "影"],
@@ -454,7 +454,7 @@ export const animationData_188 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [1, 10, -1, 0, 0, "影"],
@@ -674,7 +674,7 @@ export const animationData_188 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [183],
       [1, 4, 1, 0, 0],
@@ -2813,7 +2813,7 @@ export const animationData_188 = {
       [83, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [1, 10, 1, 0, 0, "影"],
@@ -2905,7 +2905,7 @@ export const animationData_188 = {
   "c": {
     "name": "ミスティカCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["188_f.png"],
       [60],
@@ -2971,7 +2971,7 @@ export const animationData_188 = {
       [21, 161, 2, 3, "噴射もや"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [72],
       [-1, -1, 0, 0, 0, 0, 0, 0, -1000, 1000, 0, 1000, 0, "ダミー"],
@@ -3052,7 +3052,7 @@ export const animationData_188 = {
       [0, 0, 0, 0, 5, 0, "ガチャ"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [47],
       [1, 10, -1, 0, 0, "影"],
@@ -3354,7 +3354,7 @@ export const animationData_188 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [1, 10, -1, 0, 0, "影"],
@@ -3574,7 +3574,7 @@ export const animationData_188 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [183],
       [1, 4, 1, 0, 0],
@@ -5713,7 +5713,7 @@ export const animationData_188 = {
       [83, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [1, 10, 1, 0, 0, "影"],
@@ -5805,7 +5805,7 @@ export const animationData_188 = {
   "s": {
     "name": "寂救のミスティカCC",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["188_s.png"],
       [141],

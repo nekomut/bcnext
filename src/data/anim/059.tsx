@@ -5,7 +5,7 @@ export const animationData_059 = {
   "f": {
     "name": "ねこベビー",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["054_f.png"],
       [32],
@@ -43,7 +43,7 @@ export const animationData_059 = {
       [180, 204, 51, 51, "あかちゃん座り"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [21],
       [-1, -1, 0, 0, 533, 433, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -73,7 +73,7 @@ export const animationData_059 = {
       [0, 0, 0, 2, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [2, 11, -1, 0, 0, "ダミー"],
@@ -144,7 +144,7 @@ export const animationData_059 = {
       [0, 19, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [19],
       [7, 2, 1, 0, 0, "ダミー"],
@@ -246,7 +246,7 @@ export const animationData_059 = {
       [50, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [44],
       [7, 3, 1, 0, 0],
@@ -593,7 +593,7 @@ export const animationData_059 = {
       [80, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [9],
       [2, 11, -1, 0, 0, "ダミー"],
@@ -628,7 +628,7 @@ export const animationData_059 = {
   "c": {
     "name": "ねこベビーズ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["054_c.png"],
       [39],
@@ -673,7 +673,7 @@ export const animationData_059 = {
       [374, 189, 47, 32, "妹４"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [24],
       [-1, -1, 0, 0, 477, 437, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -706,7 +706,7 @@ export const animationData_059 = {
       [0, 0, 40, 2, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [18],
       [2, 11, -1, 0, 0, "ダミー"],
@@ -820,7 +820,7 @@ export const animationData_059 = {
       [30, -200, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [1, 10, 1, 0, 0],
@@ -956,7 +956,7 @@ export const animationData_059 = {
       [25, 4, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [55],
       [7, 3, 1, 0, 0],
@@ -1420,7 +1420,7 @@ export const animationData_059 = {
       [80, 800, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [12],
       [2, 11, -1, 0, 0, "ダミー"],
@@ -1464,7 +1464,7 @@ export const animationData_059 = {
   "s": {
     "name": "ネコベビーカーズ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["059_s.png"],
       [84],
@@ -1554,7 +1554,7 @@ export const animationData_059 = {
       [29, 196, 35, 14, "ベビー縦長おやつef"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [86],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー"],
@@ -1649,7 +1649,7 @@ export const animationData_059 = {
       [0, 0, 0, 0, 5, 0, "ガチャ配置用"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [76],
       [1, 5, -1, 0, 0, "全体ダミー"],
@@ -2417,7 +2417,7 @@ export const animationData_059 = {
       [150, 0, 1, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [65],
       [16, 10, -1, 0, 0, "ベビーカー布団"],
@@ -3076,7 +3076,7 @@ export const animationData_059 = {
       [150, 0, 1, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [117],
       [1, 5, 1, 0, 0, "全体ダミー"],
@@ -4018,7 +4018,7 @@ export const animationData_059 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [52],
       [1, 4, 1, 0, 0, "全体ダミー"],
@@ -4182,7 +4182,7 @@ export const animationData_059 = {
   "u": {
     "name": "ネコベビーワールド",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["059_u.png"],
       [127],

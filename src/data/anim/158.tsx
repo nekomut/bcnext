@@ -5,7 +5,7 @@ export const animationData_158 = {
   "f": {
     "name": "上杉謙信",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["158_f.png"],
       [54],
@@ -65,7 +65,7 @@ export const animationData_158 = {
       [408, 1, 53, 52, "煙"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [61],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -135,7 +135,7 @@ export const animationData_158 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [64],
       [4, 5, -1, 0, 0, "バイク中落ち"],
@@ -530,7 +530,7 @@ export const animationData_158 = {
       [87, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [57],
       [4, 5, -1, 0, 0, "バイク中落ち"],
@@ -906,7 +906,7 @@ export const animationData_158 = {
       [87, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [123],
       [3, 11, 1, 0, 0, "キャラダミー<color=7>"],
@@ -1894,7 +1894,7 @@ export const animationData_158 = {
       [87, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [45],
       [3, 4, -1, 0, 0, "キャラダミー<color=7>"],
@@ -2037,7 +2037,7 @@ export const animationData_158 = {
   "c": {
     "name": "武神・上杉謙信",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["158_c.png"],
       [63],
@@ -2106,7 +2106,7 @@ export const animationData_158 = {
       [372, 174, 68, 25, "髪03-4"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [68],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1790, 1790, 0, 1000, 0, "ダミー<color=7>"],
@@ -2183,7 +2183,7 @@ export const animationData_158 = {
       [0, 0, 0, 0, 5, 0, "ダミー<color=7>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [64],
       [4, 5, -1, 0, 0, "バイク中落ち"],
@@ -2584,7 +2584,7 @@ export const animationData_158 = {
       [60, 0, 2, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [69],
       [4, 5, -1, 0, 0, "バイク中落ち"],
@@ -3056,7 +3056,7 @@ export const animationData_158 = {
       [60, 0, 2, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [144],
       [3, 11, 1, 0, 0, "キャラダミー<color=7>"],
@@ -4191,7 +4191,7 @@ export const animationData_158 = {
       [73, 0, 2, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [50],
       [3, 4, -1, 0, 0, "キャラダミー<color=7>"],
@@ -4349,7 +4349,7 @@ export const animationData_158 = {
   "s": {
     "name": "暴威の武神・上杉謙信",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["158_s.png"],
       [89],
@@ -4444,7 +4444,7 @@ export const animationData_158 = {
       [85, 238, 14, 16, "088 髪.png"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [161],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "000.png"],
@@ -4614,7 +4614,7 @@ export const animationData_158 = {
       [0, 0, 0, 0, 5, 0, "000.png"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [156],
       [2, 5, -1, 0, 0, "バイク中落ち"],
@@ -5542,7 +5542,7 @@ export const animationData_158 = {
       [60, 0, 2, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [158],
       [2, 5, -1, 0, 0, "バイク中落ち"],
@@ -6493,7 +6493,7 @@ export const animationData_158 = {
       [60, 0, 2, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [313],
       [2, 4, 1, 0, 0, "バイク中落ち"],
@@ -10553,7 +10553,7 @@ export const animationData_158 = {
       [49, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [35],
       [62, 12, 1, 0, 0, "070 炎１.png<color=13>"],
@@ -10666,7 +10666,7 @@ export const animationData_158 = {
   "u": {
     "name": "毘沙門軍神・上杉謙信",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["158_u.png"],
       [166],

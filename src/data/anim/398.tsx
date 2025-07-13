@@ -5,7 +5,7 @@ export const animationData_398 = {
   "f": {
     "name": "ハニトンくん",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["398_f.png"],
       [32],
@@ -43,7 +43,7 @@ export const animationData_398 = {
       [187, 1, 76, 64, "＋足"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [22],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1500, 1500, 0, 1000, 0, "ダミー"],
@@ -74,7 +74,7 @@ export const animationData_398 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [2, 5, -1, 0, 0, "体1"],
@@ -236,7 +236,7 @@ export const animationData_398 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [16],
       [2, 10, -1, 0, 0, "体1"],
@@ -295,7 +295,7 @@ export const animationData_398 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [56],
       [1, 6, 1, 0, 0, "体1"],
@@ -876,7 +876,7 @@ export const animationData_398 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [28],
       [2, 2, 1, 0, 0, "体1"],
@@ -968,7 +968,7 @@ export const animationData_398 = {
   "c": {
     "name": "ハニトンくん＆にゃんこ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["398_c.png"],
       [32],
@@ -1006,7 +1006,7 @@ export const animationData_398 = {
       [187, 1, 76, 64, "＋足"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [22],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1500, 1500, 0, 1000, 0, "ダミー"],
@@ -1037,7 +1037,7 @@ export const animationData_398 = {
       [0, 0, 0, 0, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [25],
       [2, 5, -1, 0, 0, "体1"],
@@ -1193,7 +1193,7 @@ export const animationData_398 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [14],
       [2, 10, -1, 0, 0, "体1"],
@@ -1246,7 +1246,7 @@ export const animationData_398 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [54],
       [1, 6, 1, 0, 0, "体1"],
@@ -1821,7 +1821,7 @@ export const animationData_398 = {
       [0, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [27],
       [2, 2, 1, 0, 0, "体1"],

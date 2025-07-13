@@ -5,7 +5,7 @@ export const animationData_012 = {
   "f": {
     "name": "猫縛り",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["012_f.png"],
       [24],
@@ -569,7 +569,7 @@ export const animationData_012 = {
   "c": {
     "name": "猫縛りNEO",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["012_c.png"],
       [26],
@@ -1253,7 +1253,7 @@ export const animationData_012 = {
   "s": {
     "name": "猫縛り極上",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["012_s.png"],
       [25],
@@ -1284,7 +1284,7 @@ export const animationData_012 = {
       [450, 150, 61, 105]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [14],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "dm"],
@@ -1307,7 +1307,7 @@ export const animationData_012 = {
       [0, 0, 0, -18, 5, 0, "dm"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [1, 2, -1, 0, 0, 1],
@@ -1365,7 +1365,7 @@ export const animationData_012 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [11],
       [2, 12, -1, 0, 0],
@@ -1423,7 +1423,7 @@ export const animationData_012 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [17],
       [1, 2, 1, 0, 0, "dm"],
@@ -1651,7 +1651,7 @@ export const animationData_012 = {
       [41, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [5],
       [1, 2, -1, 0, 0, "dm"],

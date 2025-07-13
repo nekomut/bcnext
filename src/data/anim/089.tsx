@@ -5,7 +5,7 @@ export const animationData_089 = {
   "f": {
     "name": "ニムエ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["089_f.png"],
       [62],
@@ -73,7 +73,7 @@ export const animationData_089 = {
       [433, 151, 52, 104, "黒い爆発けむり"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [76],
       [-1, -1, 0, 0, 600, 290, 39, 3, 1000, 1000, 0, 1000, 0, "原点"],
@@ -158,7 +158,7 @@ export const animationData_089 = {
       [0, 0, 52, 173, 6, 0, "ホース<color=6>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [55],
       [1, 8, -1, 0, 0],
@@ -443,7 +443,7 @@ export const animationData_089 = {
       [0, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [55],
       [1, 8, -1, 0, 0],
@@ -728,7 +728,7 @@ export const animationData_089 = {
       [0, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [117],
       [1, 4, 1, 0, 0],
@@ -2272,7 +2272,7 @@ export const animationData_089 = {
       [90, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [52],
       [2, 4, -1, 0, 0],
@@ -2436,7 +2436,7 @@ export const animationData_089 = {
   "c": {
     "name": "帰化型ニムエ",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["089_c.png"],
       [64],
@@ -2506,7 +2506,7 @@ export const animationData_089 = {
       [487, 87, 24, 22, "左おっぱい"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [78],
       [-1, -1, 0, 0, 600, 290, 39, 3, 1000, 1000, 0, 1000, 0, "原点"],
@@ -2593,7 +2593,7 @@ export const animationData_089 = {
       [0, 0, 52, 173, 6, 0, "ホース<color=6>"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [61],
       [1, 8, -1, 0, 0],
@@ -2916,7 +2916,7 @@ export const animationData_089 = {
       [100, 1000, 3, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [61],
       [1, 8, -1, 0, 0],
@@ -3239,7 +3239,7 @@ export const animationData_089 = {
       [100, 1000, 3, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [126],
       [1, 4, 1, 0, 0],
@@ -4972,7 +4972,7 @@ export const animationData_089 = {
       [112, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [60],
       [2, 4, -1, 0, 0],

@@ -5,7 +5,7 @@ export const animationData_136 = {
   "f": {
     "name": "ももたろう",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["136_f.png"],
       [31],
@@ -42,7 +42,7 @@ export const animationData_136 = {
       [50, 113, 12, 11, "剣しまい"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [32],
       [-1, -1, 0, 0, 444, 182, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -83,7 +83,7 @@ export const animationData_136 = {
       [0, 0, 0, 1, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [15],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -220,7 +220,7 @@ export const animationData_136 = {
       [37, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [2, 5, -1, 0, 0],
@@ -324,7 +324,7 @@ export const animationData_136 = {
       [10, 1100, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [49],
       [2, 5, 1, 0, 0, "ダミー"],
@@ -670,7 +670,7 @@ export const animationData_136 = {
       [24, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [6],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -696,7 +696,7 @@ export const animationData_136 = {
   "c": {
     "name": "爆走兄弟ピーチスター",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["136_c.png"],
       [79],
@@ -781,7 +781,7 @@ export const animationData_136 = {
       [205, 187, 57, 26, "ミサイル掴み付き"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [64],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -854,7 +854,7 @@ export const animationData_136 = {
       [0, 0, 0, 2, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [48],
       [2, 5, -1, 0, 0],
@@ -1343,7 +1343,7 @@ export const animationData_136 = {
       [40, 0, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [30],
       [3, 11, -1, 0, 0],
@@ -1499,7 +1499,7 @@ export const animationData_136 = {
       [40, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [167],
       [1, 4, 1, 0, 0],
@@ -5026,7 +5026,7 @@ export const animationData_136 = {
       [40, 0, 1, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [7],
       [2, 5, -1, 0, 0, "ダミー"],
@@ -5055,7 +5055,7 @@ export const animationData_136 = {
   "s": {
     "name": "爆走兄弟ピーチジャスティス",
     "imgcut": [
-      ["﻿[imgcut]"],
+      ["[imgcut]"],
       [0],
       ["136_s.png"],
       [81],
@@ -5142,7 +5142,7 @@ export const animationData_136 = {
       [222, 1, 16, 13, "うまれたねこ身体"]
     ],
     "mamodel": [
-      ["﻿[modelanim:model]"],
+      ["[modelanim:model]"],
       [3],
       [65],
       [-1, -1, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 1000, 0, "ダミー"],
@@ -5216,7 +5216,7 @@ export const animationData_136 = {
       [0, 0, 0, 2, 5, 0, "ダミー"]
     ],
     "maanim00": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [43],
       [2, 5, -1, 0, 0],
@@ -5672,7 +5672,7 @@ export const animationData_136 = {
       [30, 2, 0, 0]
     ],
     "maanim01": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [37],
       [3, 11, -1, 0, 0],
@@ -5855,7 +5855,7 @@ export const animationData_136 = {
       [3, 0, 0, 0]
     ],
     "maanim02": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [174],
       [1, 4, 1, 0, 0],
@@ -9347,7 +9347,7 @@ export const animationData_136 = {
       [45, 0, 0, 0]
     ],
     "maanim03": [
-      ["﻿[modelanim:animation]"],
+      ["[modelanim:animation]"],
       [1],
       [13],
       [2, 5, 1, 0, 0, "ダミー"],

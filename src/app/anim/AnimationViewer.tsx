@@ -46,9 +46,7 @@ export default function AnimationViewer({
   onStop,
   unitId,
   showBoundaries,
-  onShowBoundariesChange,
-  showRefPoints,
-  onShowRefPointsChange
+  onShowBoundariesChange
 }: AnimationViewerProps) {
   const animationFrameRef = useRef<number | undefined>(undefined);
   const startTimeRef = useRef<number | undefined>(undefined);
@@ -58,7 +56,7 @@ export default function AnimationViewer({
   const [maxFrame, setMaxFrame] = useState(0);
   const [zoom, setZoom] = useState(0.5);
   const [offsetX, setOffsetX] = useState(0);
-  const [offsetY, setOffsetY] = useState(150);
+  const [offsetY, setOffsetY] = useState(0);
   const [imageLoading, setImageLoading] = useState(false);
   const [imageError, setImageError] = useState<string | null>(null);
   const [hiddenParts, setHiddenParts] = useState<Set<number>>(new Set());
@@ -939,14 +937,14 @@ export default function AnimationViewer({
           <AnimationRenderer
             spriteImage={spriteImage}
             spriteParts={spriteParts}
-            canvasWidth={420}
-            canvasHeight={480}
+            canvasWidth={440}
+            canvasHeight={500}
+            backgroundColor="#22d3ee"
             viewScale={1.0}
             zoom={zoom}
             offsetX={offsetX}
             offsetY={offsetY}
             showBoundaries={showBoundaries || false}
-            showRefPoints={showRefPoints || false}
             showPartPoints={showPartPoints}
             maModelData={maModelData}
           />
@@ -1011,14 +1009,14 @@ export default function AnimationViewer({
                 }
               }}
               className="w-16 px-2 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-600 font-mono"
-              placeholder="150"
+              placeholder="0"
             />
           </div>
           <button
             onClick={() => {
               setZoom(0.5);
               setOffsetX(0);
-              setOffsetY(150);
+              setOffsetY(0);
             }}
             className="px-3 py-1 bg-blue-500 text-white rounded text-sm hover:bg-blue-600 font-mono"
           >
@@ -1034,15 +1032,6 @@ export default function AnimationViewer({
               className="w-4 h-4"
             />
             Bounds
-          </label>
-          <label className="flex items-center gap-1 text-sm font-medium text-gray-600 font-mono">
-            <input
-              type="checkbox"
-              checked={showRefPoints || false}
-              onChange={(e) => onShowRefPointsChange && onShowRefPointsChange(e.target.checked)}
-              className="w-4 h-4"
-            />
-            All Points
           </label>
         </div>
       </div>
@@ -1081,7 +1070,18 @@ export default function AnimationViewer({
         <div className="mt-2">
           <div className="flex items-center gap-2 mb-1">
             <label className="text-sm font-medium text-gray-600 font-mono">
-              Parts & Sprites
+              Parts({(() => {
+                const totalPartsCount = Array.isArray(maModelData?.[2]) ? maModelData[2][0] : 0;
+                return totalPartsCount;
+              })()}) | Sprites({(() => {
+                const totalSpritesCount = (() => {
+                  if (imgCutData && Array.isArray(imgCutData) && imgCutData.length > 3) {
+                    return Array.isArray(imgCutData[3]) ? imgCutData[3][0] : 0;
+                  }
+                  return 0;
+                })();
+                return totalSpritesCount;
+              })()})
             </label>
             <div className="flex gap-1">
               <button

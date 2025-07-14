@@ -44,7 +44,6 @@ interface AnimationRendererProps {
   offsetX?: number;
   offsetY?: number;
   showBoundaries?: boolean;
-  showRefPoints?: boolean;
   showPartPoints?: Set<number>;
   maModelData?: unknown[];
 }
@@ -60,7 +59,6 @@ export default function AnimationRenderer({
   offsetX = 0,
   offsetY = 0,
   showBoundaries = false,
-  showRefPoints = false,
   showPartPoints = new Set(),
   maModelData
 }: AnimationRendererProps) {
@@ -82,14 +80,14 @@ export default function AnimationRenderer({
 
     // Draw coordinate reference lines (center origin)
     
-    // Draw auxiliary grid lines (100px interval, gray-500 0.2px)
-    ctx.strokeStyle = '#6B7280';
+    // Draw auxiliary grid lines (25px interval, cyan-50 0.2px)
+    ctx.strokeStyle = '#ecfeff';
     ctx.lineWidth = 0.2;
     ctx.setLineDash([]);
     
     const centerX = canvas.width / 2 + offsetX;
     const centerY = canvas.height / 2 + offsetY;
-    const gridSpacing = 100; // Fixed 100px spacing regardless of zoom
+    const gridSpacing = 25; // Fixed 25px spacing regardless of zoom
     
     // Draw vertical grid lines
     ctx.beginPath();
@@ -119,18 +117,18 @@ export default function AnimationRenderer({
     }
     ctx.stroke();
     
-    // Draw X=0 vertical line (gray-500) - center line
-    ctx.strokeStyle = '#6B7280';
-    ctx.lineWidth = 0.4;
+    // Draw X=0 vertical line (cyan-50) - center line
+    ctx.strokeStyle = '#ecfeff';
+    ctx.lineWidth = 0.5;
     ctx.setLineDash([]);
     ctx.beginPath();
     ctx.moveTo(centerX, 0);
     ctx.lineTo(centerX, canvas.height);
     ctx.stroke();
     
-    // Draw Y=0 horizontal line (gray-500) - center line
-    ctx.strokeStyle = '#6B7280';
-    ctx.lineWidth = 0.4;
+    // Draw Y=0 horizontal line (cyan-50) - center line
+    ctx.strokeStyle = '#ecfeff';
+    ctx.lineWidth = 0.5;
     ctx.setLineDash([]);
     ctx.beginPath();
     ctx.moveTo(0, centerY);
@@ -339,51 +337,13 @@ export default function AnimationRenderer({
       ctx.restore();
     }
 
-    // Draw reference points for all parts (red-500 3px) - global toggle
-    if (showRefPoints) {
-      ctx.save();
-      ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset to identity matrix
-      ctx.fillStyle = '#ef4444'; // red-500
-      ctx.font = '10px monospace';
-      ctx.textAlign = 'left';
-      ctx.textBaseline = 'top';
-      
-      sortedParts.forEach((part) => {
-        if (part.spriteId >= 0 && part.opacity > 0) {
-          let referenceX, referenceY;
-          
-          if (part.matrix) {
-            // Use tbcml-style matrix transformation
-            const baseX = (part.x * viewScale) + (canvas.width / 2);
-            const baseY = (part.y * viewScale) + (canvas.height / 2);
-            referenceX = (baseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX;
-            referenceY = (baseY - canvas.height / 2) * zoom + (canvas.height / 2) + offsetY;
-          } else {
-            // Use simple transformation
-            const baseX = (part.x * viewScale) + (canvas.width / 2);
-            const baseY = (part.y * viewScale) + (canvas.height / 2);
-            referenceX = (baseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX;
-            referenceY = (baseY - canvas.height / 2) * zoom + (canvas.height / 2) + offsetY;
-          }
-          
-          // Draw 3px reference point
-          ctx.fillRect(referenceX - 1.5, referenceY - 1.5, 3, 3);
-          
-          // Draw coordinate text
-          const coordText = `(${Math.round(part.x)},${Math.round(part.y)})`;
-          ctx.fillText(coordText, referenceX + 2, referenceY + 2);
-        }
-      });
-      
-      ctx.restore();
-    }
 
     // Draw individual part points (blue-500 4px) - per-part toggle
     // パーツの表示・非表示に関係なく、チェックが入っていれば表示
     if (showPartPoints.size > 0) {
       ctx.save();
       ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset to identity matrix
-      ctx.fillStyle = '#3b82f6'; // blue-500
+      ctx.fillStyle = '#ef4444'; // red-500
       ctx.font = '10px monospace';
       ctx.textAlign = 'left';
       ctx.textBaseline = 'top';
@@ -437,7 +397,7 @@ export default function AnimationRenderer({
           // Draw 4px part point (grayed out for hidden parts)
           ctx.fillStyle = '#9ca3af'; // gray-400 for hidden parts
           ctx.fillRect(referenceX - 2, referenceY - 2, 4, 4);
-          ctx.fillStyle = '#3b82f6'; // restore blue color
+          ctx.fillStyle = '#ef4444'; // restore red color
           
           // Draw Part ID and coordinate text for hidden part
           const partText = `P${partId}:(${baseX},${baseY})`;
@@ -447,7 +407,7 @@ export default function AnimationRenderer({
       
       ctx.restore();
     }
-  }, [spriteImage, spriteParts, canvasWidth, canvasHeight, backgroundColor, viewScale, zoom, offsetX, offsetY, showBoundaries, showRefPoints, showPartPoints, maModelData]);
+  }, [spriteImage, spriteParts, canvasWidth, canvasHeight, backgroundColor, viewScale, zoom, offsetX, offsetY, showBoundaries, showPartPoints, maModelData]);
 
   return (
     <canvas

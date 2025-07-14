@@ -31,6 +31,7 @@ interface SpritePart {
   };
   scW?: number;
   scH?: number;
+  glowEffect?: boolean; // tbcml glow処理（黒い部分透明化）
 }
 
 interface AnimationRendererProps {
@@ -216,6 +217,13 @@ export default function AnimationRenderer({
 
       // Apply opacity
       ctx.globalAlpha = Math.max(0, Math.min(1, part.opacity));
+      
+      // Apply glow effect (screen blend mode for tbcml glow processing)
+      if (part.glowEffect) {
+        ctx.globalCompositeOperation = 'screen';
+      } else {
+        ctx.globalCompositeOperation = 'source-over';
+      }
       
       // Skip drawing invisible parts (spriteId -1) but still process for coordinate calculations
       const isVisible = part.spriteId >= 0 && part.opacity > 0;

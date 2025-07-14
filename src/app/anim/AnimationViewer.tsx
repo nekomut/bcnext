@@ -35,6 +35,7 @@ interface SpritePart {
   };
   scW?: number;
   scH?: number;
+  glowEffect?: boolean; // tbcml glow処理（黒い部分透明化）
 }
 
 export default function AnimationViewer({
@@ -1027,7 +1028,8 @@ export default function AnimationViewer({
         vFlip: part.vFlip as number,
         matrix: { m0, m1, m3, m4 },
         scW,
-        scH
+        scH,
+        glowEffect: (part.glow as number) === 1 // tbcml glow処理（黒い部分透明化）
       });
     });
 

@@ -1633,19 +1633,27 @@ export default function AnimationViewer({
                 
                 // パーツの座標情報を取得
                 const partCoordinates = (() => {
+                  const formatCoordinate = (value: number): string => {
+                    const num = Math.round(value);
+                    const str = num.toString();
+                    return str.padStart(4, ' ');
+                  };
+                  
                   if (displayedSprite) {
-                    return `(${Math.round(displayedSprite.x)}, ${Math.round(displayedSprite.y)})`;
+                    const x = formatCoordinate(displayedSprite.x);
+                    const y = formatCoordinate(displayedSprite.y);
+                    return `(${x}, ${y})`;
                   }
                   // スプライトが表示されていない場合はmamodelから基本座標を取得
                   if (maModelData && Array.isArray(maModelData) && maModelData.length > 3 + partId) {
                     const partData = maModelData[3 + partId];
                     if (Array.isArray(partData) && partData.length > 5) {
-                      const baseX = partData[4] as number;
-                      const baseY = partData[5] as number;
+                      const baseX = formatCoordinate(partData[4] as number);
+                      const baseY = formatCoordinate(partData[5] as number);
                       return `(${baseX}, ${baseY})`;
                     }
                   }
-                  return '(?, ?)';
+                  return '(   ?,    ?)';
                 })();
                 
                 // Get parent info for hierarchy display
@@ -1665,7 +1673,7 @@ export default function AnimationViewer({
                 const { parentName } = getParentInfo();
                 
                 // Create indentation for hierarchy
-                const indentStyle = { marginLeft: `${depth * 20}px` };
+                const indentStyle = { marginLeft: `${depth * 12}px` };
                 
                 // Determine if this is the last child of its parent
                 const isLastChild = (() => {
@@ -1706,7 +1714,7 @@ export default function AnimationViewer({
                         disabled={!isPartActive}
                       />
                       <span className="font-mono text-xs">
-                        Part#{partId} {partCoordinates} {parentName && `"${parentName}"`} {!isPartActive ? '(非表示)' : ''}
+                        Part#{partId.toString().padStart(3, '0')} <span className="font-mono text-[10px] text-gray-500">{partCoordinates}</span> {parentName && `"${parentName}"`}
                       </span>
                       <input
                         type="checkbox"
@@ -1738,7 +1746,7 @@ export default function AnimationViewer({
                       return (
                         <div key={`sprite-${partId}-${spriteIndex}`} 
                              className={`py-0 my-0 flex items-center gap-1 ${isDisplayed ? 'text-blue-500' : ''} ${!isSpriteUsed ? 'opacity-30' : ''}`} 
-                             style={{ marginLeft: `${(depth * 20) + 24}px` }}>
+                             style={{ marginLeft: `${(depth * 12) + 16}px` }}>
                           <span className="text-gray-400 font-mono text-xs">{isLast ? '└─ ' : '├─ '}</span>
                           <input
                             type="checkbox"
@@ -1747,7 +1755,7 @@ export default function AnimationViewer({
                             onChange={(e) => handleSpriteToggle(spriteId, e.target.checked, partId)}
                             disabled={!isSpriteUsed}
                           />
-                          <span className="font-mono text-xs">Sprite#{spriteId}{isDisplayed ? ' ●' : ' ○'}{!isSpriteUsed ? ' (非表示)' : ''}</span>
+                          <span className="font-mono text-xs">Sprite#{spriteId.toString().padStart(3, '0')}{isDisplayed ? ' ●' : ' ○'}</span>
                         </div>
                       );
                     })}

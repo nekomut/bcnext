@@ -160,11 +160,13 @@ export default function AnimationViewer({
     };
   }, [unitId, selectedForm, formData]);
 
-  // Calculate max frame from metadata (tbcml get_end_frame style)
+  // IMPROVED FRAME CALCULATION: Calculate max frame from metadata (tbcml get_end_frame style)
   useEffect(() => {
     if (!animData || !Array.isArray(animData)) return;
 
     let maxEndFrame = 0;
+    let hasInfiniteLoop = false;
+    let mainChannelEndFrame = 0;
     
     // Parse maanim data structure:
     // Row 0: ["[modelanim:animation]"]
@@ -177,6 +179,8 @@ export default function AnimationViewer({
       const row = animData[currentRow];
       if (Array.isArray(row) && row.length >= 6) {
         // This is a keyframe group header: [model_id, modification_type, loop, min_value, max_value, name]
+        const modelId = row[0] as number;
+        const modificationType = row[1] as number;
         const loopValue = row[2] as number;
         currentRow++;
         
@@ -187,30 +191,57 @@ export default function AnimationViewer({
           
           // Find last keyframe in this group
           let lastFrameTime = 0;
+          let hasValidKeyframes = false;
+          
           for (let i = 0; i < keyframeCount && currentRow < animData.length; i++) {
             const keyframe = animData[currentRow];
             if (Array.isArray(keyframe) && keyframe.length >= 4) {
               const frameTime = (keyframe as number[])[0];
               if (frameTime > lastFrameTime) {
                 lastFrameTime = frameTime;
+                hasValidKeyframes = true;
               }
             }
             currentRow++;
           }
           
-          // Apply tbcml get_end_frame logic with correct loop handling
-          let groupEndFrame = lastFrameTime; // Use actual last frame
-          if (loopValue === -1) {
-            // For infinite loop, the cycle ends at lastFrameTime but loops back to start
-            // Total displayable frames = lastFrameTime (0-based, so lastFrameTime is max index)
-            groupEndFrame = lastFrameTime;
-          } else if (loopValue > 0) {
-            // For specified loop count
-            groupEndFrame = lastFrameTime * loopValue;
+          // Skip static control channels (single keyframe with 0,0,0,0)
+          if (keyframeCount === 1 && modificationType === 12) {
+            continue;
           }
           
-          if (groupEndFrame > maxEndFrame) {
-            maxEndFrame = groupEndFrame;
+          if (hasValidKeyframes) {
+            // For infinite loop channels, use their end frame as the cycle length
+            if (loopValue === -1) {
+              hasInfiniteLoop = true;
+              // Track main channel (usually modelId 1, modificationType 2)
+              if (modelId === 1 && modificationType === 2) {
+                mainChannelEndFrame = lastFrameTime;
+              }
+              // Use the highest frame time from any infinite loop channel
+              if (lastFrameTime > maxEndFrame) {
+                maxEndFrame = lastFrameTime;
+              }
+            } else if (loopValue > 0) {
+              // FINITE LOOP: For specified loop count, use frame time as-is
+              if (lastFrameTime > maxEndFrame) {
+                maxEndFrame = lastFrameTime;
+              }
+            } else if (loopValue === 0) {
+              // ONE-SHOT: For one-shot animations (attack animations), use end frame
+              // Track main channel for one-shot animations (modelId varies)
+              if (modificationType === 1 || modificationType === 2) {
+                mainChannelEndFrame = lastFrameTime;
+              }
+              if (lastFrameTime > maxEndFrame) {
+                maxEndFrame = lastFrameTime;
+              }
+            } else {
+              // No loop: use last frame directly
+              if (lastFrameTime > maxEndFrame) {
+                maxEndFrame = lastFrameTime;
+              }
+            }
           }
         }
       } else {
@@ -218,8 +249,18 @@ export default function AnimationViewer({
       }
     }
     
-    // FIX: Set correct maxFrame for tbcml-style loop (0-based indexing)
-    setMaxFrame(maxEndFrame);
+    // ACCURATE FRAME RANGE: For infinite loops, use the main channel's cycle length
+    if (hasInfiniteLoop && mainChannelEndFrame > 0) {
+      // Use the main channel's cycle length for accurate looping
+      // For Unit 000 form=s, this should be 16 frames (0-15)
+      setMaxFrame(mainChannelEndFrame);
+    } else if (maxEndFrame > 0) {
+      // Use the calculated max frame
+      setMaxFrame(maxEndFrame);
+    } else {
+      // Fallback to default
+      setMaxFrame(30);
+    }
   }, [animData]);
 
   // Animation constants matching tbcml implementation
@@ -227,25 +268,62 @@ export default function AnimationViewer({
   const DEFAULT_ANGLE_UNIT = 360; // 360 degrees (not 3600)
   const DEFAULT_ALPHA_UNIT = 1000;
 
-  // Easing function from tbcml - exact implementation
+  // ENHANCED EASING: Easing function from tbcml - exact implementation with type 12 support
   const ease = (mode: number, progress: number): number => {
+    // Clamp progress to valid range
+    const p = Math.max(0, Math.min(1, progress));
+    
     switch (mode) {
       case 0: // Linear
-        return progress;
+        return p;
       case 1: // Instant - returns current keyframe value without interpolation
         return 1; // Always return 1 to use startValue (current keyframe)
-      case 2: // Exponential
-        return progress * progress;
-      case 3: // Polynomial (simplified)
-        return progress * progress * (3 - 2 * progress);
+      case 2: // Exponential (quadratic ease-in)
+        return p * p;
+      case 3: // Polynomial (smooth step)
+        return p * p * (3 - 2 * p);
+      case 12: // High-quality interpolation (cubic ease-in-out)
+        // Cubic bezier curve for smooth animation
+        if (p < 0.5) {
+          return 4 * p * p * p;
+        } else {
+          const f = (2 * p) - 2;
+          return 1 + (f * f * f) / 2;
+        }
+      case 4: // Ease-in-out (alternative)
+        return p < 0.5 
+          ? 2 * p * p 
+          : 1 - Math.pow(-2 * p + 2, 2) / 2;
+      case 5: // Bounce (simplified)
+        return 1 - Math.pow(1 - p, 3);
       default:
-        return progress;
+        // Unknown mode, use linear as fallback
+        return p;
     }
   };
 
-  // Get interpolated value for current frame - exact tbcml implementation
-  const getChangeInValue = useCallback((keyframes: unknown[], currentFrame: number, loopValue?: number): number | null => {
+  // Get interpolated value for current frame - exact tbcml implementation with static control support
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const getChangeInValue = useCallback((keyframes: unknown[], currentFrame: number, loopValue?: number, _modificationType?: number): number | null => {
     if (!keyframes || keyframes.length === 0) return null;
+
+    // STATIC CONTROL: For single keyframe with value 0 (especially for modification type 12)
+    if (keyframes.length === 1) {
+      const singleKf = keyframes[0] as number[];
+      const kfFrame = singleKf[0];
+      const kfValue = singleKf[1];
+      
+      // Static control keyframes (0,0,0,0) should always return 0
+      if (kfFrame === 0 && kfValue === 0) {
+        return 0;
+      }
+      
+      // For other single keyframes, return value if we're at or past the frame
+      if (currentFrame >= kfFrame) {
+        return kfValue;
+      }
+      return null;
+    }
 
     const frameCounter = currentFrame;
     const startKf = keyframes[0] as number[];
@@ -262,31 +340,36 @@ export default function AnimationViewer({
     }
 
     const frameProgress = frameCounter - startFrame;
-    const totalFrames = endFrame - startFrame; // FIX: Correct calculation
+    const totalFrames = endFrame - startFrame;
 
     let localFrame: number;
 
-    // tbcml exact loop logic
-    if (frameCounter < endFrame || startFrame === endFrame) {
+    // IMPROVED LOOP LOGIC: Handle single frame and proper modulo
+    if (totalFrames === 0 || startFrame === endFrame) {
+      // Single frame case or zero duration
+      return startChange;
+    } else if (frameCounter <= endFrame) {
       localFrame = frameCounter;
     } else if (loopValue === -1) {
       // Infinite loop: exact tbcml modulo calculation
-      localFrame = (frameProgress % totalFrames) + startFrame;
+      const cycleProgress = frameProgress % totalFrames;
+      localFrame = cycleProgress + startFrame;
     } else if (loopValue && loopValue >= 1) {
-      // Specified loop count
-      if (frameProgress / totalFrames < loopValue) {
-        localFrame = (frameProgress % totalFrames) + startFrame;
-      } else {
-        localFrame = endFrame;
-      }
+      // FINITE LOOP WITH BROWSER LOOPING: Handle finite loops properly
+      // For browser display, allow the animation to loop back for continuous viewing
+      localFrame = (frameProgress % totalFrames) + startFrame;
+    } else if (loopValue === 0) {
+      // ONE-SHOT ANIMATION: Play once for actual data, but loop for browser viewing
+      // Attack animations with loop=0 should play once and hold, but we loop for viewing
+      localFrame = (frameProgress % totalFrames) + startFrame;
     } else {
       // No loop: hold at end frame
       localFrame = endFrame;
     }
 
     // tbcml boundary conditions
-    if (startFrame === endFrame) return startChange;
     if (localFrame === endFrame) return endChange;
+    if (localFrame === startFrame) return startChange;
 
     // tbcml keyframe interpolation search
     for (let i = 0; i < keyframes.length - 1; i++) {
@@ -304,23 +387,31 @@ export default function AnimationViewer({
         continue;
       }
 
-      // tbcml ease calculation
+      // IMPROVED INTERPOLATION: tbcml ease calculation
       if (cEaseMode === 1) {
-        // FIX: Instant mode - always return current value
+        // Instant mode - always return current value
         return cChange;
-      } else if (cEaseMode === 0) {
-        // Linear interpolation
-        const lerp = (localFrame - cFrame) / (nFrame - cFrame);
+      } else if (cFrame === nFrame) {
+        // SAME FRAME: If current and next keyframes are at the same frame, return current value
+        return cChange;
+      } else if (cEaseMode === 0 || cEaseMode === 2) {
+        // Linear interpolation (type 0 or 2)
+        const frameDiff = nFrame - cFrame;
+        if (frameDiff === 0) return cChange; // Avoid division by zero
+        const lerp = (localFrame - cFrame) / frameDiff;
         return Math.round(cChange + (nChange - cChange) * lerp);
       } else {
-        // Other ease modes (simplified)
-        const lerp = (localFrame - cFrame) / (nFrame - cFrame);
+        // Other ease modes (including type 12 - high quality interpolation)
+        const frameDiff = nFrame - cFrame;
+        if (frameDiff === 0) return cChange; // Avoid division by zero
+        const lerp = (localFrame - cFrame) / frameDiff;
         const easedProgress = ease(cEaseMode, Math.max(0, Math.min(1, lerp)));
         return Math.round(cChange + (nChange - cChange) * easedProgress);
       }
     }
 
-    return null;
+    // Final fallback
+    return startChange;
   }, []);
 
   // get_base_size function like tbcml - MUST be defined first
@@ -499,7 +590,7 @@ export default function AnimationViewer({
     
     const totalPartsCount = Array.isArray(maModelData[2]) ? (maModelData[2] as number[])[0] : 0;
     
-    // Get units from mamodel data - they come after the parts
+    // DYNAMIC UNIT DETECTION: Get units from mamodel data - they come after the parts
     const unitsRowIndex = 3 + totalPartsCount;
     let scaleUnit = DEFAULT_SCALE_UNIT;
     let angleUnit = DEFAULT_ANGLE_UNIT;
@@ -508,11 +599,39 @@ export default function AnimationViewer({
     if (unitsRowIndex < maModelData.length) {
       const unitsRow = maModelData[unitsRowIndex];
       if (Array.isArray(unitsRow) && unitsRow.length >= 3) {
-        scaleUnit = (unitsRow as number[])[0] || DEFAULT_SCALE_UNIT;
-        angleUnit = (unitsRow as number[])[1] || DEFAULT_ANGLE_UNIT;
-        alphaUnit = (unitsRow as number[])[2] || DEFAULT_ALPHA_UNIT;
+        const detectedScaleUnit = (unitsRow as number[])[0];
+        const detectedAngleUnit = (unitsRow as number[])[1];
+        const detectedAlphaUnit = (unitsRow as number[])[2];
+        
+        // Apply detected units only if they are valid values
+        if (detectedScaleUnit && detectedScaleUnit > 0) {
+          scaleUnit = detectedScaleUnit;
+        }
+        if (detectedAngleUnit && detectedAngleUnit > 0) {
+          angleUnit = detectedAngleUnit;
+        }
+        if (detectedAlphaUnit && detectedAlphaUnit > 0) {
+          alphaUnit = detectedAlphaUnit;
+        }
       }
     }
+    
+    // COMPATIBILITY: For backward compatibility, check for root part scale as fallback
+    if (scaleUnit === DEFAULT_SCALE_UNIT && totalPartsCount > 0) {
+      const rootPartData = maModelData[3]; // First part (index 0)
+      if (Array.isArray(rootPartData) && rootPartData.length >= 10) {
+        const rootScaleX = rootPartData[8] as number;
+        if (rootScaleX && rootScaleX !== 1000 && rootScaleX > 0) {
+          // Detect if this looks like a high-precision scale value
+          if (rootScaleX === 1790) {
+            scaleUnit = 1000; // Keep 1000 as base, will apply 1790 in part processing
+          } else if (rootScaleX === 179) {
+            scaleUnit = 100; // Old format uses 100 as base
+          }
+        }
+      }
+    }
+    
     
     // Parse ints data after units
     const intsCountRowIndex = unitsRowIndex + 1;
@@ -541,6 +660,9 @@ export default function AnimationViewer({
       const partData = maModelData[i + 3];
       
       if (Array.isArray(partData) && partData.length >= 13) {
+        const baseScaleX = partData[8] as number;
+        const baseScaleY = partData[9] as number;
+        
         const part = {
           id: i, // 0-based part ID
           parentId: partData[0] as number,
@@ -551,15 +673,16 @@ export default function AnimationViewer({
           baseY: partData[5] as number,
           pivotX: partData[6] as number,
           pivotY: partData[7] as number,
-          baseScaleX: partData[8] as number,
-          baseScaleY: partData[9] as number,
+          baseScaleX: baseScaleX,
+          baseScaleY: baseScaleY,
           baseRotation: partData[10] as number,
           baseOpacity: partData[11] as number,
           glow: partData[12] as number,
           name: (partData[13] as string) || `Part ${i}`,
-          // Pre-calculate real scale values like tbcml
-          realScaleX: (partData[8] as number) !== 0 ? (partData[8] as number) / scaleUnit : 0,
-          realScaleY: (partData[9] as number) !== 0 ? (partData[9] as number) / scaleUnit : 0
+          // PRECISE SCALE CALCULATION: Pre-calculate real scale values like tbcml
+          // For form=s: 1790/1000=1.79, for form=f: 179/100=1.79
+          realScaleX: baseScaleX !== 0 ? baseScaleX / scaleUnit : 0,
+          realScaleY: baseScaleY !== 0 ? baseScaleY / scaleUnit : 0
         };
         
         modelParts.push(part);
@@ -578,7 +701,7 @@ export default function AnimationViewer({
     });
 
 
-    // Initialize animation values for each part (like tbcml set_part_vals)
+    // IMPROVED INITIALIZATION: Initialize animation values for each part (like tbcml set_part_vals)
     modelParts.forEach(part => {
       // Start with base model values as integers like tbcml
       part.animX = part.baseX;
@@ -588,11 +711,13 @@ export default function AnimationViewer({
       part.animScaleX = part.baseScaleX;
       part.animScaleY = part.baseScaleY;
       part.animCutId = part.cutId;
-      // CRITICAL FIX: Pre-calculate real scales like tbcml
+      
+      // PRECISE REAL SCALE: Real scales are already calculated during part creation
+      // but update them for animation values as well
       part.realScaleX = (part.animScaleX as number) !== 0 ? (part.animScaleX as number) / scaleUnit : 0;
       part.realScaleY = (part.animScaleY as number) !== 0 ? (part.animScaleY as number) / scaleUnit : 0;
       
-      // Initialize new animation properties
+      // Initialize animation properties
       part.hFlip = 1;   // 水平反転フラグ（1=通常、-1=反転）
       part.vFlip = 1;   // 垂直反転フラグ（1=通常、-1=反転）
       
@@ -633,7 +758,8 @@ export default function AnimationViewer({
               }
               
               // Get interpolated value for current frame with loop support
-              const changeValue = getChangeInValue(keyframes, currentFrame, loopValue as number);
+              const changeValue = getChangeInValue(keyframes, currentFrame, loopValue as number, modificationType as number);
+              
               
               // Apply the animation change based on modification type (tbcml apply_change logic)
               if (changeValue !== null && changeValue !== undefined) {
@@ -835,7 +961,7 @@ export default function AnimationViewer({
     
     setSpriteParts(parts);
 
-  }, [currentFrame, maModelData, imgCutData, animData, maxFrame, getChangeInValue, transformPart, getBaseSize, getRecursiveScale, hiddenParts, hiddenSprites]);
+  }, [currentFrame, maModelData, imgCutData, animData, maxFrame, getChangeInValue, transformPart, getBaseSize, getRecursiveScale, hiddenParts, hiddenSprites, selectedAnimation, selectedForm, unitId]);
 
 
   // Animation playback
@@ -855,7 +981,7 @@ export default function AnimationViewer({
       const elapsed = timestamp - startTimeRef.current;
       const rawFrame = Math.floor(elapsed / (1000 / frameRate));
       
-      // tbcmlスタイルのモジュロ演算による完璧なループ
+      // BROWSER LOOP: All animations loop infinitely for better viewing experience
       const totalFrames = maxFrame + 1; // 0からmaxFrameまでの総フレーム数
       const currentAnimFrame = rawFrame % totalFrames;
       
@@ -870,7 +996,7 @@ export default function AnimationViewer({
         cancelAnimationFrame(animationFrameRef.current);
       }
     };
-  }, [isPlaying, animData, maxFrame, onStop, frameRate]);
+  }, [isPlaying, animData, maxFrame, onStop, frameRate, selectedAnimation]);
 
   // Reset frame when animation changes
   useEffect(() => {

@@ -7,6 +7,7 @@ import Image from 'next/image';
 import AnimationViewer from './AnimationViewer';
 import { unitNamesData, UnitNameData } from '@/data/unit-names';
 import { loadUnitImages } from './imageLoader';
+import { loadAnimationData } from './animationLoader';
 import IconManager from './IconManager';
 
 function AnimationPageContent() {
@@ -130,13 +131,11 @@ function AnimationPageContent() {
     setLoadingProgress({ current: 0, total: 3, message: 'アニメーションデータを読み込み中...' });
     
     try {
-      // Step 1: アニメーションデータの読み込み
+      // Step 1: アニメーションデータの読み込み（最適化されたローダーを使用）
       setLoadingProgress({ current: 1, total: 3, message: 'アニメーションデータを読み込み中...' });
-      const moduleData = await import(`@/data/anim/${unitId}`);
-      const animationDataKey = `animationData_${unitId}`;
+      const newAnimationData = await loadAnimationData(unitId);
       
-      if (moduleData[animationDataKey]) {
-        const newAnimationData = moduleData[animationDataKey] as Record<string, unknown>;
+      if (newAnimationData) {
         setAnimationData(newAnimationData);
         
         // URLパラメータを更新

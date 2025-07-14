@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "NODE_OPTIONS=--max_old_space_size=16384 next build",
+    "build": "NODE_OPTIONS=--max_old_space_size=20480 next build",
     "start": "next start",
     "lint": "NODE_OPTIONS=--max_old_space_size=16384 next lint",
     "test": "jest"

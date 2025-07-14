@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef, useCallback } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import AnimationRenderer from './AnimationRenderer';
 import { loadUnitImages, getFormImage } from './imageLoader';
 import { AnimationViewerProps } from './types';
@@ -55,7 +55,7 @@ export default function AnimationViewer({
   const [maxFrame, setMaxFrame] = useState(0);
   const [zoom, setZoom] = useState(0.5);
   const [offsetX, setOffsetX] = useState(0);
-  const [offsetY, setOffsetY] = useState(0);
+  const [offsetY, setOffsetY] = useState(150);
   const [imageLoading, setImageLoading] = useState(false);
   const [imageError, setImageError] = useState<string | null>(null);
   const [hiddenParts, setHiddenParts] = useState<Set<number>>(new Set());
@@ -160,6 +160,7 @@ export default function AnimationViewer({
   }, [unitId, selectedForm, formData]);
 
   // IMPROVED FRAME CALCULATION: Calculate max frame from metadata (tbcml get_end_frame style)
+  // Enhanced for Unit 003 complex animation patterns
   useEffect(() => {
     if (!animData || !Array.isArray(animData)) return;
 
@@ -204,10 +205,8 @@ export default function AnimationViewer({
             currentRow++;
           }
           
-          // Skip static control channels (single keyframe with 0,0,0,0)
-          if (keyframeCount === 1 && modificationType === 12) {
-            continue;
-          }
+          // Keep all modification type 12 (opacity control) for processing
+          // Static control channels are important for part visibility control
           
           if (hasValidKeyframes) {
             // For infinite loop channels, use their end frame as the cycle length
@@ -251,13 +250,12 @@ export default function AnimationViewer({
     // ACCURATE FRAME RANGE: For infinite loops, use the main channel's cycle length
     if (hasInfiniteLoop && mainChannelEndFrame > 0) {
       // Use the main channel's cycle length for accurate looping
-      // For Unit 000 form=s, this should be 16 frames (0-15)
       setMaxFrame(mainChannelEndFrame);
     } else if (maxEndFrame > 0) {
       // Use the calculated max frame
       setMaxFrame(maxEndFrame);
     } else {
-      // Fallback to default
+      // Default fallback
       setMaxFrame(30);
     }
   }, [animData]);
@@ -302,17 +300,25 @@ export default function AnimationViewer({
   };
 
   // Get interpolated value for current frame - exact tbcml implementation with static control support
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const getChangeInValue = useCallback((keyframes: unknown[], currentFrame: number, loopValue?: number, _modificationType?: number): number | null => {
+  const getChangeInValue = useCallback((keyframes: unknown[], currentFrame: number, loopValue?: number, modificationType?: number): number | null => {
     if (!keyframes || keyframes.length === 0) return null;
 
-    // STATIC CONTROL: For single keyframe with value 0 (especially for modification type 12)
+    // STATIC CONTROL: Enhanced handling for modification type 12 (opacity control)
     if (keyframes.length === 1) {
       const singleKf = keyframes[0] as number[];
       const kfFrame = singleKf[0];
       const kfValue = singleKf[1];
       
-      // Static control keyframes (0,0,0,0) should always return 0
+      // Special handling for modification type 12 (opacity control)
+      if (modificationType === 12) {
+        // Static opacity control: apply value immediately when at or past keyframe
+        if (currentFrame >= kfFrame) {
+          return kfValue;
+        }
+        return null; // Before keyframe start
+      }
+      
+      // Standard static control keyframes (0,0,0,0) should always return 0
       if (kfFrame === 0 && kfValue === 0) {
         return 0;
       }
@@ -621,11 +627,11 @@ export default function AnimationViewer({
       if (Array.isArray(rootPartData) && rootPartData.length >= 10) {
         const rootScaleX = rootPartData[8] as number;
         if (rootScaleX && rootScaleX !== 1000 && rootScaleX > 0) {
-          // Detect if this looks like a high-precision scale value
-          if (rootScaleX === 1790) {
-            scaleUnit = 1000; // Keep 1000 as base, will apply 1790 in part processing
-          } else if (rootScaleX === 179) {
-            scaleUnit = 100; // Old format uses 100 as base
+          // Detect scale unit based on root part scale values
+          if (rootScaleX >= 1000) {
+            scaleUnit = 1000; // High precision scale (1000-based)
+          } else if (rootScaleX >= 100) {
+            scaleUnit = 100; // Standard scale (100-based)
           }
         }
       }
@@ -747,6 +753,9 @@ export default function AnimationViewer({
             if ((modelId as number) >= 0 && (modelId as number) < modelParts.length) {
               const part = modelParts[modelId as number];
               
+              // Skip animation processing for parts not referenced in current animation
+              // This optimization improves performance by only processing parts that have animation data
+              
               // Collect all keyframes for this group
               const keyframes: unknown[] = [];
               for (let i = 0; i < keyframeCount && currentRow + i < animData.length; i++) {
@@ -815,6 +824,7 @@ export default function AnimationViewer({
                     part.animRotation = (part.baseRotation as number) + changeValue;
                     break;
                   case 12: // OPACITY
+                    // Apply opacity change based on animation value
                     const changeAlpha = changeValue / alphaUnit;
                     part.animOpacity = Math.round(changeAlpha * (part.baseOpacity as number));
                     break;
@@ -843,6 +853,7 @@ export default function AnimationViewer({
     }
 
     // Process parts like tbcml draw_frame -> draw_part pattern
+    // Enhanced for Unit 003 dual structure (normal/attack parts)
     modelParts.forEach(part => {
       // Check tbcml drawing conditions: skip if parent_id < 0 or unit_id < 0
       // BUT: unitId >= 0 is valid (unitId 44 is normal for Unit044)
@@ -854,6 +865,29 @@ export default function AnimationViewer({
       if ((part.animCutId as number) < 0) {
         return;
       }
+      
+      // Apply maanim visibility rules: parts with opacity = 0 should not be rendered
+      if ((part.animOpacity as number) <= 0) {
+        return; // Skip rendering of transparent parts
+      }
+      
+      // Check parent opacity inheritance: if any parent is transparent, child should not be visible
+      const isParentTransparent = (() => {
+        let currentPart = part.parent as Record<string, unknown> | null;
+        while (currentPart) {
+          if ((currentPart.animOpacity as number) <= 0) {
+            return true; // Parent is transparent
+          }
+          currentPart = currentPart.parent as Record<string, unknown> | null;
+        }
+        return false; // No transparent parents
+      })();
+      
+      if (isParentTransparent) {
+        return; // Skip rendering if any parent is transparent
+      }
+      
+      // All part visibility is controlled by maanim opacity and default mamodel rules
 
       // Skip if part is hidden by user
       if (hiddenParts.has(part.id as number)) {
@@ -863,6 +897,89 @@ export default function AnimationViewer({
       // Skip if sprite is hidden by user
       if (hiddenSprites.has(part.animCutId as number)) {
         return;
+      }
+      
+      // Debug log for sprite duplication issue  
+      if ((part.animCutId as number) === 0 && selectedAnimation === 'maanim03') {
+        const parentOpacity = part.parent ? (part.parent as Record<string, unknown>).animOpacity : 'no parent';
+        console.log(`Sprite#0 found: Unit ${unitId}, Part ${part.id}, cutId=${part.animCutId}, unitId=${part.unitId}, name="${part.name || 'unnamed'}", parentId=${part.parentId}, parentOpacity=${parentOpacity}, selfOpacity=${part.animOpacity}`);
+      }
+      
+      // Check if part should be rendered based on maanim rules
+      const shouldRenderPart = (() => {
+        // Check if part has animation control
+        const hasAnimationControl = (() => {
+          if (!animData || !Array.isArray(animData) || animData.length <= 3) return false;
+          
+          let currentRow = 3;
+          while (currentRow < animData.length) {
+            const groupHeader = animData[currentRow];
+            if (Array.isArray(groupHeader) && groupHeader.length >= 2) {
+              const [modelId] = groupHeader;
+              if ((modelId as number) === (part.id as number)) {
+                return true; // This part has animation control
+              }
+              currentRow++;
+              
+              // Skip keyframe data
+              const keyframeCountRow = animData[currentRow];
+              if (Array.isArray(keyframeCountRow)) {
+                const keyframeCount = (keyframeCountRow as number[])[0] || 0;
+                currentRow += 1 + keyframeCount;
+              } else {
+                currentRow++;
+              }
+            } else {
+              currentRow++;
+            }
+          }
+          return false;
+        })();
+        
+        // Debug log for problematic parts
+        if ((selectedAnimation === 'maanim03' && [2, 6, 7].includes(part.id as number)) || 
+            (unitId === '000' && part.id === 2)) { // Unit 000の影パーツもログ出力
+          console.log(`Unit ${unitId} Part ${part.id}: hasAnimationControl=${hasAnimationControl}, opacity=${part.animOpacity}, cutId=${part.animCutId}, unitId=${part.unitId}`);
+        }
+        
+        // If part has animation control, check if it's made transparent
+        if (hasAnimationControl) {
+          // Already handled by opacity check above
+          return true;
+        }
+        
+        // If no animation control, apply mamodel default visibility rules
+        const shouldShowByDefault = (() => {
+          // mamodel rule: Parts with valid cutId and unitId should be visible by default
+          // unless explicitly hidden by maanim
+          
+          // Check if part has valid sprite and unit definitions in mamodel
+          const hasValidSprite = (part.animCutId as number) >= 0;
+          const hasValidUnit = (part.unitId as number) >= 0;
+          
+          // Basic structural parts (defined in mamodel) should be visible
+          if (hasValidSprite && hasValidUnit) {
+            return true; // Show parts that are properly defined in mamodel
+          }
+          
+          // Structural-only parts (parent nodes without sprites) are not visible
+          if ((part.animCutId as number) < 0) {
+            return false; // Hide structural parts without sprites
+          }
+          
+          return false; // Default: hide undefined parts
+        })();
+        
+        if ((selectedAnimation === 'maanim03' && [2, 6, 7].includes(part.id as number)) ||
+            (unitId === '000' && part.id === 2)) {
+          console.log(`Unit ${unitId} Part ${part.id}: shouldShowByDefault=${shouldShowByDefault}, hasValidSprite=${(part.animCutId as number) >= 0}, hasValidUnit=${(part.unitId as number) >= 0}, final shouldRenderPart=${shouldShowByDefault}`);
+        }
+        
+        return shouldShowByDefault;
+      })();
+      
+      if (!shouldRenderPart) {
+        return; // Skip rendering parts that shouldn't be visible
       }
       
       // Check for valid sprites
@@ -1134,14 +1251,14 @@ export default function AnimationViewer({
                 }
               }}
               className="w-16 px-2 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-600 font-mono"
-              placeholder="0"
+              placeholder="150"
             />
           </div>
           <button
             onClick={() => {
               setZoom(0.5);
               setOffsetX(0);
-              setOffsetY(0);
+              setOffsetY(150);
             }}
             className="px-3 py-1 bg-blue-500 text-white rounded text-sm hover:bg-blue-600 font-mono"
           >
@@ -1411,9 +1528,149 @@ export default function AnimationViewer({
                 setShowPartPoints(newShowPartPoints);
               };
 
-              return allPartIds.map(partId => {
+              // Build hierarchical structure
+              const buildPartHierarchy = () => {
+                const rootParts: number[] = [];
+                const childrenMap: { [parentId: number]: number[] } = {};
+                
+                // Build parent-child mapping
+                allPartIds.forEach(partId => {
+                  if (maModelData && Array.isArray(maModelData) && maModelData.length > 3 + partId) {
+                    const partData = maModelData[3 + partId];
+                    if (Array.isArray(partData) && partData.length > 0) {
+                      const parentId = partData[0] as number;
+                      if (parentId < 0) {
+                        rootParts.push(partId);
+                      } else {
+                        if (!childrenMap[parentId]) {
+                          childrenMap[parentId] = [];
+                        }
+                        childrenMap[parentId].push(partId);
+                      }
+                    }
+                  }
+                });
+                
+                return { rootParts, childrenMap };
+              };
+              
+              const { rootParts, childrenMap } = buildPartHierarchy();
+              
+              // Render parts recursively with hierarchy
+              const renderPartWithChildren = (partId: number, depth: number): React.ReactElement[] => {
                 const partSpriteIds = getPartSprites(partId);
                 const displayedSprite = spriteParts.find(sprite => sprite.id === partId);
+                
+                // Check if part is active (visible) based on rendering logic
+                const isPartActive = (() => {
+                  // Check if part meets basic rendering requirements
+                  if (!maModelData || !Array.isArray(maModelData) || maModelData.length <= 3 + partId) {
+                    return false;
+                  }
+                  
+                  const partData = maModelData[3 + partId];
+                  if (!Array.isArray(partData) || partData.length < 3) {
+                    return false;
+                  }
+                  
+                  const parentId = partData[0] as number;
+                  const unitId = partData[1] as number;
+                  const cutId = partData[2] as number;
+                  
+                  // Skip if parent_id < 0 and unit_id < 0 (tbcml rule)
+                  if (parentId < 0 && unitId < 0) {
+                    return false;
+                  }
+                  
+                  // Skip if no sprite to render (cutId < 0) - structural parts only
+                  if (cutId < 0) {
+                    return false;
+                  }
+                  
+                  // Check if this part or any parent is transparent
+                  const isEffectivelyTransparent = (() => {
+                    // Check transparency up the parent chain
+                    let currentPartId = partId;
+                    while (currentPartId >= 0) {
+                      // Check if current part is made transparent by animation
+                      const isCurrentTransparent = (() => {
+                        if (!animData || !Array.isArray(animData) || animData.length <= 3) return false;
+                        
+                        let currentRow = 3;
+                        while (currentRow < animData.length) {
+                          const groupHeader = animData[currentRow];
+                          if (Array.isArray(groupHeader) && groupHeader.length >= 2) {
+                            const [modelId, modificationType] = groupHeader;
+                            if ((modelId as number) === currentPartId && (modificationType as number) === 12) {
+                              // This part has opacity control, check if it's set to 0
+                              currentRow++;
+                              const keyframeCountRow = animData[currentRow];
+                              if (Array.isArray(keyframeCountRow)) {
+                                const keyframeCount = (keyframeCountRow as number[])[0] || 0;
+                                currentRow++;
+                                
+                                // Check keyframes for opacity 0
+                                for (let i = 0; i < keyframeCount && currentRow + i < animData.length; i++) {
+                                  const keyframe = animData[currentRow + i];
+                                  if (Array.isArray(keyframe) && keyframe.length >= 2) {
+                                    const opacityValue = (keyframe as number[])[1];
+                                    if (opacityValue === 0) {
+                                      return true; // Made transparent
+                                    }
+                                  }
+                                }
+                                return false;
+                              }
+                            }
+                            currentRow++;
+                            
+                            // Skip keyframe data
+                            const keyframeCountRow = animData[currentRow];
+                            if (Array.isArray(keyframeCountRow)) {
+                              const keyframeCount = (keyframeCountRow as number[])[0] || 0;
+                              currentRow += 1 + keyframeCount;
+                            } else {
+                              currentRow++;
+                            }
+                          } else {
+                            currentRow++;
+                          }
+                        }
+                        return false;
+                      })();
+                      
+                      if (isCurrentTransparent) {
+                        return true;
+                      }
+                      
+                      // Move to parent
+                      if (currentPartId >= 0 && (3 + currentPartId) < maModelData.length) {
+                        const currentPartData = maModelData[3 + currentPartId];
+                        if (Array.isArray(currentPartData) && currentPartData.length > 0) {
+                          const nextParentId = currentPartData[0] as number;
+                          currentPartId = nextParentId >= 0 ? nextParentId : -1;
+                        } else {
+                          break;
+                        }
+                      } else {
+                        break;
+                      }
+                    }
+                    return false;
+                  })();
+                  
+                  // Part is not active if it's effectively transparent
+                  if (isEffectivelyTransparent) {
+                    return false;
+                  }
+                  
+                  // Check if it has valid sprite and unit for rendering
+                  if (cutId >= 0 && unitId >= 0) {
+                    return true;
+                  }
+                  
+                  return false;
+                })();
                 
                 // パーツの座標情報を取得
                 const partCoordinates = (() => {
@@ -1432,68 +1689,125 @@ export default function AnimationViewer({
                   return '(?, ?)';
                 })();
                 
-                // スプライトがない場合はパーツのみ表示
-                if (partSpriteIds.length === 0) {
-                  return (
-                    <div key={partId} className="py-0 my-0">
-                      <div className="py-0 my-0 flex items-center gap-1">
-                        <input
-                          type="checkbox"
-                          className="w-3 h-3"
-                          checked={!hiddenParts.has(partId)}
-                          onChange={(e) => handlePartToggle(partId, e.target.checked)}
-                        />
-                        <span>Part#{partId} {partCoordinates} </span>
-                        <input
-                          type="checkbox"
-                          className="w-3 h-3"
-                          checked={showPartPoints.has(partId)}
-                          onChange={(e) => handlePointToggle(partId, e.target.checked)}
-                        />
-                      </div>
-                    </div>
-                  );
-                }
+                // Get parent info for hierarchy display
+                const getParentInfo = () => {
+                  if (!maModelData || !Array.isArray(maModelData) || maModelData.length <= 3 + partId) {
+                    return { parentId: -1, parentName: '' };
+                  }
+                  const partData = maModelData[3 + partId];
+                  if (!Array.isArray(partData) || partData.length < 14) {
+                    return { parentId: -1, parentName: '' };
+                  }
+                  const parentId = partData[0] as number;
+                  const partName = (partData[13] as string) || '';
+                  return { parentId, parentName: partName };
+                };
                 
-                return (
-                  <div key={partId} className="py-0 my-0">
+                const { parentName } = getParentInfo();
+                
+                // Create indentation for hierarchy
+                const indentStyle = { marginLeft: `${depth * 20}px` };
+                
+                // Determine if this is the last child of its parent
+                const isLastChild = (() => {
+                  if (depth === 0) return false; // Root parts don't have siblings in this context
+                  
+                  // Find this part's parent and check if it's the last child
+                  if (!maModelData || !Array.isArray(maModelData) || maModelData.length <= 3 + partId) {
+                    return false;
+                  }
+                  
+                  const partData = maModelData[3 + partId];
+                  if (!Array.isArray(partData) || partData.length < 1) {
+                    return false;
+                  }
+                  
+                  const currentParentId = partData[0] as number;
+                  if (currentParentId < 0) return false;
+                  
+                  const siblings = childrenMap[currentParentId] || [];
+                  return siblings.length > 0 && siblings[siblings.length - 1] === partId;
+                })();
+                
+                const hierarchySymbol = depth > 0 ? (isLastChild ? '┗─ ' : '├─ ') : '';
+                
+                const results: React.ReactElement[] = [];
+                
+                // Render current part
+                const currentPartElement = (
+                  <div key={`part-${partId}`} className={`py-0 my-0 ${!isPartActive ? 'opacity-50' : ''}`} style={indentStyle}>
                     {/* パーツ（親） */}
                     <div className="py-0 my-0 flex items-center gap-1">
+                      <span className="text-gray-400 font-mono text-xs">{hierarchySymbol}</span>
                       <input
                         type="checkbox"
                         className="w-3 h-3"
                         checked={!hiddenParts.has(partId)}
                         onChange={(e) => handlePartToggle(partId, e.target.checked)}
+                        disabled={!isPartActive}
                       />
-                      <span>Part#{partId} {partCoordinates} </span>
+                      <span className="font-mono text-xs">
+                        Part#{partId} {partCoordinates} {parentName && `"${parentName}"`} {!isPartActive ? '(非表示)' : ''}
+                      </span>
                       <input
                         type="checkbox"
                         className="w-3 h-3"
                         checked={showPartPoints.has(partId)}
                         onChange={(e) => handlePointToggle(partId, e.target.checked)}
+                        disabled={!isPartActive}
                       />
                     </div>
+                    
                     {/* このパーツに関連するすべてのスプライト */}
-                    {partSpriteIds.map((spriteId, spriteIndex) => {
+                    {partSpriteIds.length > 0 && partSpriteIds.map((spriteId, spriteIndex) => {
                       const isDisplayed = displayedSprite && displayedSprite.spriteId === spriteId;
                       const isLast = spriteIndex === partSpriteIds.length - 1;
                       
+                      // Simplified sprite usage check
+                      const isSpriteUsed = isPartActive && (isDisplayed || (() => {
+                        // Check if this is the base sprite defined in mamodel
+                        if (maModelData && Array.isArray(maModelData) && maModelData.length > 3 + partId) {
+                          const partData = maModelData[3 + partId];
+                          if (Array.isArray(partData) && partData.length > 2) {
+                            const baseCutId = partData[2] as number;
+                            return baseCutId === spriteId;
+                          }
+                        }
+                        return false;
+                      })());
+                      
                       return (
-                        <div key={spriteIndex} className={`py-0 my-0 flex items-center gap-1 ml-4 ${isDisplayed ? 'text-blue-500' : ''}`}>
-                          <span>{isLast ? '┗' : '┣'} </span>
+                        <div key={`sprite-${partId}-${spriteIndex}`} 
+                             className={`py-0 my-0 flex items-center gap-1 ${isDisplayed ? 'text-blue-500' : ''} ${!isSpriteUsed ? 'opacity-30' : ''}`} 
+                             style={{ marginLeft: `${(depth * 20) + 24}px` }}>
+                          <span className="text-gray-400 font-mono text-xs">{isLast ? '└─ ' : '├─ '}</span>
                           <input
                             type="checkbox"
                             className="w-3 h-3"
                             checked={!hiddenSprites.has(spriteId)}
                             onChange={(e) => handleSpriteToggle(spriteId, e.target.checked, partId)}
+                            disabled={!isSpriteUsed}
                           />
-                          <span> Sprite#{spriteId}{isDisplayed ? ' o' : ' -'}</span>
+                          <span className="font-mono text-xs">Sprite#{spriteId}{isDisplayed ? ' ●' : ' ○'}{!isSpriteUsed ? ' (非表示)' : ''}</span>
                         </div>
                       );
                     })}
                   </div>
                 );
-              });
+                
+                results.push(currentPartElement);
+                
+                // Render children recursively
+                const children = childrenMap[partId] || [];
+                children.forEach(childId => {
+                  results.push(...renderPartWithChildren(childId, depth + 1));
+                });
+                
+                return results;
+              };
+              
+              // Render all root parts and their children
+              return rootParts.flatMap(rootPartId => renderPartWithChildren(rootPartId, 0));
             })()}
           </div>
         </div>

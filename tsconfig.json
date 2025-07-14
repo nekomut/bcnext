@@ -25,5 +25,5 @@
     "noUnusedParameters": false
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
-  "exclude": ["node_modules", "**/*.test.ts", "**/*.test.tsx", "__test__/**/*"]
+  "exclude": ["node_modules", "**/*.test.ts", "**/*.test.tsx", "__test__/**/*", "src/data/anim"]
 }

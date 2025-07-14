@@ -76,80 +76,43 @@ export default function AnimationViewer({
     setImageLoading(true);
     setImageError(null);
 
-    // フォールバック: 元のTSXファイルから画像を取得する関数
-    const tryFallbackImage = (): Promise<boolean> => {
-      return new Promise((resolve) => {
-        try {
-          const imageBase64 = (formData as Record<string, unknown>)?.image_base64 as string;
-          if (imageBase64) {
-            const img = new Image();
-            img.onload = () => {
-              if (isMounted) {
-                setSpriteImage(img);
-                setImageLoading(false);
-                resolve(true);
-              } else {
-                resolve(false);
-              }
-            };
-            img.onerror = () => {
-              if (isMounted) {
-                setImageError(`画像の読み込みに失敗しました（ユニット${unitId}、フォーム${selectedForm}）`);
-                setImageLoading(false);
-              }
-              resolve(false);
-            };
-            img.src = `data:image/png;base64,${imageBase64}`;
-          } else {
-            resolve(false);
-          }
-        } catch {
-          resolve(false);
-        }
-      });
-    };
-
     (async () => {
       try {
+        // JSON専用のimageLoader使用
         const images = await loadUnitImages(unitId);
         if (!isMounted) return;
         
         const base64Data = getFormImage(images, selectedForm);
-        if (base64Data) {
-          const img = new Image();
-          img.onload = () => {
-            if (isMounted) {
-              setSpriteImage(img);
-              setImageLoading(false);
-            }
-          };
-          img.onerror = async () => {
-            if (isMounted) {
-              // 画像読み込み失敗時のフォールバック
-              const fallbackSuccess = await tryFallbackImage();
-              if (!fallbackSuccess) {
-                setImageError('画像の読み込みに失敗しました');
-                setImageLoading(false);
-              }
-            }
-          };
-          img.src = `data:image/png;base64,${base64Data}`;
-        } else {
-          // 指定フォームの画像が見つからない場合のフォールバック
-          const fallbackSuccess = await tryFallbackImage();
-          if (!fallbackSuccess) {
-            setImageError(`指定されたフォーム（${selectedForm}）の画像が見つかりません`);
+        if (!base64Data) {
+          setImageError(`指定されたフォーム（${selectedForm}）の画像が見つかりません`);
+          setImageLoading(false);
+          return;
+        }
+
+        const img = new Image();
+        img.onload = () => {
+          if (isMounted) {
+            setSpriteImage(img);
             setImageLoading(false);
           }
-        }
+        };
+        
+        img.onerror = () => {
+          if (isMounted) {
+            setImageError(`画像の読み込みに失敗しました（ユニット${unitId}、フォーム${selectedForm}）`);
+            setImageLoading(false);
+          }
+        };
+        
+        img.src = base64Data.startsWith('data:') ? base64Data : `data:image/png;base64,${base64Data}`;
+        
       } catch (error) {
         if (isMounted) {
-          // 外部ファイルの読み込み失敗時のフォールバック
-          const fallbackSuccess = await tryFallbackImage();
-          if (!fallbackSuccess) {
-            setImageError(`画像データの取得に失敗しました: ${(error as Error).message}`);
-            setImageLoading(false);
-          }
+          const errorMessage = error instanceof Error
+            ? `画像データの取得に失敗しました: ${error.message}`
+            : `予期しないエラーが発生しました: ${String(error)}`;
+          setImageError(errorMessage);
+          setImageLoading(false);
         }
       }
     })();
@@ -157,7 +120,7 @@ export default function AnimationViewer({
     return () => {
       isMounted = false;
     };
-  }, [unitId, selectedForm, formData]);
+  }, [unitId, selectedForm]);
 
   // IMPROVED FRAME CALCULATION: Calculate max frame from metadata (tbcml get_end_frame style)
   // Enhanced for Unit 003 complex animation patterns
@@ -836,7 +799,6 @@ export default function AnimationViewer({
                     break;
                   default:
                     // 未知の変更タイプは警告出力
-                    console.warn(`Unknown modification type: ${modificationType}`);
                     break;
                 }
               }
@@ -901,8 +863,7 @@ export default function AnimationViewer({
       
       // Debug log for sprite duplication issue  
       if ((part.animCutId as number) === 0 && selectedAnimation === 'maanim03') {
-        const parentOpacity = part.parent ? (part.parent as Record<string, unknown>).animOpacity : 'no parent';
-        console.log(`Sprite#0 found: Unit ${unitId}, Part ${part.id}, cutId=${part.animCutId}, unitId=${part.unitId}, name="${part.name || 'unnamed'}", parentId=${part.parentId}, parentOpacity=${parentOpacity}, selfOpacity=${part.animOpacity}`);
+        // デバッグ用チェックのみ
       }
       
       // Check if part should be rendered based on maanim rules
@@ -939,7 +900,6 @@ export default function AnimationViewer({
         // Debug log for problematic parts
         if ((selectedAnimation === 'maanim03' && [2, 6, 7].includes(part.id as number)) || 
             (unitId === '000' && part.id === 2)) { // Unit 000の影パーツもログ出力
-          console.log(`Unit ${unitId} Part ${part.id}: hasAnimationControl=${hasAnimationControl}, opacity=${part.animOpacity}, cutId=${part.animCutId}, unitId=${part.unitId}`);
         }
         
         // If part has animation control, check if it's made transparent
@@ -972,7 +932,6 @@ export default function AnimationViewer({
         
         if ((selectedAnimation === 'maanim03' && [2, 6, 7].includes(part.id as number)) ||
             (unitId === '000' && part.id === 2)) {
-          console.log(`Unit ${unitId} Part ${part.id}: shouldShowByDefault=${shouldShowByDefault}, hasValidSprite=${(part.animCutId as number) >= 0}, hasValidUnit=${(part.unitId as number) >= 0}, final shouldRenderPart=${shouldShowByDefault}`);
         }
         
         return shouldShowByDefault;

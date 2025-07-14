@@ -4,10 +4,9 @@ export interface AnimationDataCache {
   [unitId: string]: unknown;
 }
 
-// グローバルキャッシュ（メモリ効率のため）
+// グローバルキャッシュ
 const animationCache: AnimationDataCache = {};
 
-// Load animation data for a specific unit with memory optimization
 export const loadAnimationData = async (unitId: string) => {
   // キャッシュチェック
   if (animationCache[unitId]) {
@@ -15,34 +14,78 @@ export const loadAnimationData = async (unitId: string) => {
   }
 
   try {
-    // Try to load JSON first (more memory efficient) - 将来の最適化用
-    // これは現在利用できませんが、将来的にJSONファイルに変換する際に使用
-    try {
-      const response = await fetch(`/data/anim/${unitId}.json`);
-      if (response.ok) {
-        const data = await response.json();
-        animationCache[unitId] = data;
-        return data;
+    // JSON専用読み込み（複数URLフォールバック）
+    const urlsToTry = [
+      `/data/anim/${unitId}.json`,
+      `./data/anim/${unitId}.json`,
+      `${typeof window !== 'undefined' && window.location.origin || ''}/data/anim/${unitId}.json`
+    ].filter(Boolean);
+    
+    let response: Response | null = null;
+    let lastError: Error | null = null;
+    
+    for (const tryUrl of urlsToTry) {
+      try {
+        response = await fetch(tryUrl);
+        if (response.ok) {
+          break;
+        } else {
+          lastError = new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+      } catch (error) {
+        lastError = error as Error;
+        continue;
       }
-    } catch {
-      // Fallback to TSX import if JSON not available
     }
     
-    // 動的インポートでアニメーションデータを読み込む（メモリ効率のため）
-    const animationModule = await import(`../../data/anim/${unitId}.tsx`);
-    const data = animationModule[`animationData_${unitId}`] || animationModule.default;
+    if (!response || !response.ok) {
+      throw new AnimationLoadError(
+        `All URLs failed to load animation data for unit ${unitId}. Last error: ${lastError?.message || 'unknown'}`,
+        unitId,
+        lastError || undefined
+      );
+    }
+    
+    const data = await response.json();
+    
+    // データ検証
+    if (!data || typeof data !== 'object') {
+      throw new AnimationLoadError(
+        `Invalid animation data format for unit ${unitId}`,
+        unitId
+      );
+    }
     
     // キャッシュに保存
-    if (data) {
-      animationCache[unitId] = data;
+    animationCache[unitId] = data;
+    return data;
+    
+  } catch (error) {
+    if (error instanceof AnimationLoadError) {
+      throw error;
     }
     
-    return data;
-  } catch (error) {
-    console.warn(`Failed to load animation data for unit ${unitId}:`, error);
-    return null;
+    const loadError = new AnimationLoadError(
+      `Failed to load animation data for unit ${unitId}: ${(error as Error).message}`,
+      unitId,
+      error as Error
+    );
+    
+    console.error(loadError.message, loadError);
+    throw loadError;
   }
 };
+
+export class AnimationLoadError extends Error {
+  constructor(
+    message: string,
+    public unitId: string,
+    public cause?: Error
+  ) {
+    super(message);
+    this.name = 'AnimationLoadError';
+  }
+}
 
 // メモリ管理のためのキャッシュクリア機能
 export const clearAnimationCache = (unitId?: string): void => {

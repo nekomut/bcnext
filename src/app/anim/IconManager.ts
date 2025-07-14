@@ -73,8 +73,6 @@ export class IconManager {
       }
       
       if (!response || !response.ok) {
-        const errorMsg = `All URLs failed to load unit icons ${unitId}. Last status: ${response?.status || 'network error'}`;
-        console.warn(errorMsg);
         return [];
       }
 
@@ -88,8 +86,7 @@ export class IconManager {
       }
 
       return lines;
-    } catch (error) {
-      console.error(`Error loading icons for unit ${unitId}:`, error);
+    } catch {
       return [];
     }
   }

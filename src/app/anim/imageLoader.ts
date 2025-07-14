@@ -8,13 +8,11 @@ export interface UnitImageCache {
 const imageCache: UnitImageCache = {};
 
 export async function loadUnitImages(unitId: string): Promise<string[]> {
-  // キャッシュチェック
   if (imageCache[unitId]) {
     return imageCache[unitId];
   }
 
   try {
-    // デプロイ環境で相対パスでの fetch が失敗する場合があるため、複数のパスを試行
     const urlsToTry = [
       `/data/anim/${unitId}`,
       `./data/anim/${unitId}`,
@@ -22,39 +20,87 @@ export async function loadUnitImages(unitId: string): Promise<string[]> {
     ].filter(Boolean);
     
     let response: Response | null = null;
+    let lastError: Error | null = null;
     
     for (const tryUrl of urlsToTry) {
       try {
         response = await fetch(tryUrl);
         if (response.ok) {
           break;
+        } else {
+          lastError = new Error(`HTTP ${response.status}: ${response.statusText}`);
         }
-      } catch {
+      } catch (error) {
+        lastError = error as Error;
         continue;
       }
     }
     
     if (!response || !response.ok) {
-      const errorMsg = `All URLs failed to load. Last status: ${response?.status || 'network error'}`;
-      throw new Error(errorMsg);
+      throw new ImageLoadError(
+        `All URLs failed to load images for unit ${unitId}. Last error: ${lastError?.message || 'unknown'}`,
+        unitId,
+        lastError || undefined
+      );
     }
     
     const text = await response.text();
-    const images = text.trim().split('\n').filter(line => line.length > 0);
     
-    // キャッシュに保存
+    if (!text || text.trim().length === 0) {
+      throw new ImageLoadError(
+        `Empty image data for unit ${unitId}`,
+        unitId
+      );
+    }
+    
+    const images = text.trim().split('\n').filter(line => {
+      return line.length > 0 && (line.startsWith('data:image/') || line.length > 100);
+    });
+    
+    if (images.length === 0) {
+      throw new ImageLoadError(
+        `No valid image data found for unit ${unitId}`,
+        unitId
+      );
+    }
+    
     imageCache[unitId] = images;
     return images;
-  } catch {
-    return [];
+    
+  } catch (error) {
+    if (error instanceof ImageLoadError) {
+      throw error;
+    }
+    
+    const loadError = new ImageLoadError(
+      `Failed to load images for unit ${unitId}: ${(error as Error).message}`,
+      unitId,
+      error as Error
+    );
+    
+    console.error(loadError.message, loadError);
+    throw loadError;
   }
 }
 
 export function getFormImage(images: string[], formKey: string): string | null {
   const formIndex = ['f', 'c', 's', 'u'].indexOf(formKey);
-  const result = formIndex >= 0 && formIndex < images.length ? images[formIndex] : null;
   
-  return result;
+  if (formIndex < 0) {
+    return null;
+  }
+  
+  if (formIndex >= images.length) {
+    return null;
+  }
+  
+  const imageData = images[formIndex];
+  
+  if (!imageData || (!imageData.startsWith('data:image/') && imageData.length < 100)) {
+    return null;
+  }
+  
+  return imageData;
 }
 
 export function clearImageCache(unitId?: string): void {

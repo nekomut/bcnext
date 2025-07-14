@@ -124,7 +124,6 @@ function AnimationPageContent() {
   };
 
   const handleUnitChange = useCallback(async (unitId: string): Promise<boolean> => {
-    console.log(`handleUnitChange called: "${unitId}"`);
     setSelectedUnit(unitId);
     setInputUnit(unitId); // 入力フィールドも同期
     setLoading(true);
@@ -152,8 +151,7 @@ function AnimationPageContent() {
         try {
           await loadUnitImages(unitId);
           setLoadingProgress({ current: 3, total: 3, message: '読み込み完了' });
-        } catch (error) {
-          console.warn(`Failed to preload images for unit ${unitId}:`, error);
+        } catch {
           setLoadingProgress({ current: 3, total: 3, message: '画像読み込みエラー（アニメーションは表示可能）' });
         }
         
@@ -164,13 +162,11 @@ function AnimationPageContent() {
         
         return true;
       } else {
-        console.error(`Animation data not found for unit ${unitId}`);
         setLoadingProgress({ current: 0, total: 3, message: 'アニメーションデータが見つかりません' });
         setLoading(false);
         return false;
       }
-    } catch (error) {
-      console.error(`Failed to load animation data for unit ${unitId}:`, error);
+    } catch {
       setLoadingProgress({ current: 0, total: 3, message: 'アニメーションデータの読み込みに失敗しました' });
       setLoading(false);
       return false;
@@ -186,8 +182,7 @@ function AnimationPageContent() {
       try {
         const icons = await IconManager.loadUnitIcons(selectedUnit);
         setFormIcons(icons);
-      } catch (error) {
-        console.error(`Failed to load icons for unit ${selectedUnit}:`, error);
+      } catch {
         setFormIcons([]);
       } finally {
         setIconsLoading(false);
@@ -296,7 +291,6 @@ function AnimationPageContent() {
                 const prevId = Math.max(0, currentId - 1);
                 const formattedId = prevId.toString().padStart(3, '0');
                 
-                console.log(`Previous: ${selectedUnit} (${currentId}) -> ${formattedId} (${prevId})`);
                 await handleUnitChange(formattedId);
               }}
               disabled={loading || parseInt(selectedUnit) <= 0}
@@ -392,7 +386,6 @@ function AnimationPageContent() {
                 const nextId = currentId + 1;
                 const formattedId = nextId.toString().padStart(3, '0');
                 
-                console.log(`Next: ${selectedUnit} (${currentId}) -> ${formattedId} (${nextId})`);
                 await handleUnitChange(formattedId);
               }}
               disabled={loading}

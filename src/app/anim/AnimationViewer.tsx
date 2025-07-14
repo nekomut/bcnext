@@ -19,15 +19,14 @@ interface SpritePart {
   srcY: number;
   srcW: number;
   srcH: number;
-  // Additional tbcml-style rendering data
   pivotX?: number;
   pivotY?: number;
   scaledWidth?: number;
   scaledHeight?: number;
   flipX?: number;
   flipY?: number;
-  hFlip?: number;  // 水平反転フラグ
-  vFlip?: number;  // 垂直反転フラグ
+  hFlip?: number;
+  vFlip?: number;
   matrix?: {
     m0: number;
     m1: number;

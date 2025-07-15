@@ -426,7 +426,8 @@ export default function AnimationViewer({
   const getRecursiveScale: (part: Record<string, unknown>, currentScale: [number, number]) => [number, number] = useCallback((part, currentScale) => {
     if (!part) return currentScale;
     
-    // FIX: Use pre-calculated real scales to avoid double normalization
+    // CRITICAL FIX: realScaleX/Y are already normalized by scale_unit in tbcml
+    // So we use them directly without further division
     const scaleX = currentScale[0] * (part.realScaleX as number);
     const scaleY = currentScale[1] * (part.realScaleY as number);
     
@@ -586,18 +587,41 @@ export default function AnimationViewer({
       }
     }
     
-    // COMPATIBILITY: For backward compatibility, check for root part scale as fallback
+    // COMPATIBILITY: For backward compatibility, check actual parts scale as fallback
     if (scaleUnit === DEFAULT_SCALE_UNIT && totalPartsCount > 0) {
-      const rootPartData = maModelData[3]; // First part (index 0)
-      if (Array.isArray(rootPartData) && rootPartData.length >= 10) {
-        const rootScaleX = rootPartData[8] as number;
-        if (rootScaleX && rootScaleX !== 1000 && rootScaleX > 0) {
-          // Detect scale unit based on root part scale values
-          if (rootScaleX >= 1000) {
-            scaleUnit = 1000; // High precision scale (1000-based)
-          } else if (rootScaleX >= 100) {
-            scaleUnit = 100; // Standard scale (100-based)
+      // Scan through actual parts (skip dummy parent at index 3)
+      // Look for the most common scale values to determine scaleUnit
+      const scaleValues: number[] = [];
+      
+      for (let i = 0; i < totalPartsCount; i++) {
+        const partIndex = 3 + i;
+        if (partIndex < maModelData.length) {
+          const partData = maModelData[partIndex];
+          if (Array.isArray(partData) && partData.length >= 10) {
+            const partScaleX = partData[8] as number;
+            const partScaleY = partData[9] as number;
+            
+            if (partScaleX && partScaleX > 0) {
+              scaleValues.push(partScaleX);
+            }
+            if (partScaleY && partScaleY > 0 && partScaleY !== partScaleX) {
+              scaleValues.push(partScaleY);
+            }
           }
+        }
+      }
+      
+      // Analyze scale values to determine appropriate scaleUnit
+      if (scaleValues.length > 0) {
+        const maxScale = Math.max(...scaleValues);
+        const avgScale = scaleValues.reduce((a, b) => a + b, 0) / scaleValues.length;
+        
+        // TBCML COMPATIBILITY: Most units use 1000-based scaling
+        // Only use 100-based for very small scale values
+        if (maxScale >= 1000 || avgScale >= 500) {
+          scaleUnit = 1000; // High precision scale (1000-based) - tbcml default
+        } else if (maxScale >= 100 || avgScale >= 50) {
+          scaleUnit = 100; // Standard scale (100-based)
         }
       }
     }
@@ -766,24 +790,28 @@ export default function AnimationViewer({
                     part.pivotY = (part.pivotY as number) + changeValue;
                     break;
                   case 8: // SCALE_UNIT - 統合スケール（X/Y同時）
+                    // TBCML EXACT: change_scaled = change / self.scale_unit
+                    // part.anim.scale_x = int((part.scale_x or 0) * change_scaled)
                     const changeScaledUnit = changeValue / scaleUnit;
-                    part.animScaleX = Math.round(changeScaledUnit * (part.baseScaleX as number));
-                    part.animScaleY = Math.round(changeScaledUnit * (part.baseScaleY as number));
-                    // Update real scales after animation change
-                    part.realScaleX = (part.animScaleX as number) !== 0 ? (part.animScaleX as number) / scaleUnit : 0;
-                    part.realScaleY = (part.animScaleY as number) !== 0 ? (part.animScaleY as number) / scaleUnit : 0;
+                    part.animScaleX = Math.round((part.baseScaleX as number) * changeScaledUnit);
+                    part.animScaleY = Math.round((part.baseScaleY as number) * changeScaledUnit);
+                    
+                    part.realScaleX = (part.animScaleX as number) / scaleUnit;
+                    part.realScaleY = (part.animScaleY as number) / scaleUnit;
                     break;
                   case 9: // SCALE_X
+                    // TBCML EXACT: change_scaled = change / self.scale_unit
+                    // part.anim.scale_x = int(change_scaled * (part.scale_x or 0))
                     const changeScaledX = changeValue / scaleUnit;
                     part.animScaleX = Math.round(changeScaledX * (part.baseScaleX as number));
-                    // Update real scale after animation change
-                    part.realScaleX = (part.animScaleX as number) !== 0 ? (part.animScaleX as number) / scaleUnit : 0;
+                    part.realScaleX = (part.animScaleX as number) / scaleUnit;
                     break;
                   case 10: // SCALE_Y
+                    // TBCML EXACT: change_scaled = change / self.scale_unit
+                    // part.anim.scale_y = int(change_scaled * (part.scale_y or 0))
                     const changeScaledY = changeValue / scaleUnit;
                     part.animScaleY = Math.round(changeScaledY * (part.baseScaleY as number));
-                    // Update real scale after animation change
-                    part.realScaleY = (part.animScaleY as number) !== 0 ? (part.animScaleY as number) / scaleUnit : 0;
+                    part.realScaleY = (part.animScaleY as number) / scaleUnit;
                     break;
                   case 11: // ANGLE
                     part.animRotation = (part.baseRotation as number) + changeValue;
@@ -1675,7 +1703,9 @@ export default function AnimationViewer({
                     return { parentId: -1, parentName: '' };
                   }
                   const parentId = partData[0] as number;
-                  const partName = (partData[13] as string) || '';
+                  // TYPE SAFETY: Ensure partName is always a string
+                  const partNameRaw = partData[13];
+                  const partName = typeof partNameRaw === 'string' ? partNameRaw : '';
                   return { parentId, parentName: partName };
                 };
                 
@@ -1723,7 +1753,7 @@ export default function AnimationViewer({
                         disabled={!isPartActive}
                       />
                       <span className="font-mono text-xs">
-                        Part#{partId.toString().padStart(3, '0')} {parentName && !parentName.startsWith('"') && parentName}
+                        Part#{partId.toString().padStart(3, '0')} {parentName && typeof parentName === 'string' && !parentName.startsWith('"') && parentName}
                       </span>
                       <input
                         type="checkbox"

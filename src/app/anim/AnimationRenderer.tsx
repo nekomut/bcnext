@@ -46,6 +46,7 @@ interface AnimationRendererProps {
   offsetY?: number;
   showBoundaries?: boolean;
   showPartPoints?: Set<number>;
+  showSpritePoints?: Set<number>;
   maModelData?: unknown[];
 }
 
@@ -61,6 +62,7 @@ export default function AnimationRenderer({
   offsetY = 0,
   showBoundaries = false,
   showPartPoints = new Set(),
+  showSpritePoints = new Set(),
   maModelData
 }: AnimationRendererProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -346,8 +348,7 @@ export default function AnimationRenderer({
     }
 
 
-    // Draw individual part points (blue-500 4px) - per-part toggle
-    // パーツの表示・非表示に関係なく、チェックが入っていれば表示
+    // Draw individual part points (red-500 4px) - per-part toggle
     if (showPartPoints.size > 0) {
       ctx.save();
       ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset to identity matrix
@@ -356,35 +357,35 @@ export default function AnimationRenderer({
       ctx.textAlign = 'left';
       ctx.textBaseline = 'top';
       
-      // すべてのパーツ（表示・非表示問わず）をチェック
       showPartPoints.forEach((partId) => {
-        // そのパーツIDのspritePartを探す（表示されている場合）
         const part = sortedParts.find(p => p.id === partId);
         
         if (part) {
-          // 表示されているパーツの場合
-          let referenceX, referenceY;
+          // 表示されているパーツのPart座標
+          let baseX = 0, baseY = 0;
           
-          if (part.matrix) {
-            // Use tbcml-style matrix transformation
-            const baseX = (part.x * viewScale) + (canvas.width / 2);
-            const baseY = (part.y * viewScale) + (canvas.height / 2);
-            referenceX = (baseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX;
-            referenceY = (baseY - canvas.height / 2) * zoom + (canvas.height / 2) + offsetY;
-          } else {
-            // Use simple transformation
-            const baseX = (part.x * viewScale) + (canvas.width / 2);
-            const baseY = (part.y * viewScale) + (canvas.height / 2);
-            referenceX = (baseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX;
-            referenceY = (baseY - canvas.height / 2) * zoom + (canvas.height / 2) + offsetY;
+          if (maModelData && Array.isArray(maModelData) && maModelData.length > 3 + part.id) {
+            const partData = maModelData[3 + part.id];
+            if (Array.isArray(partData) && partData.length > 5) {
+              baseX = partData[4] as number;
+              baseY = partData[5] as number;
+            }
           }
           
-          // Draw 4px part point (slightly larger than global points)
-          ctx.fillRect(referenceX - 2, referenceY - 2, 4, 4);
+          // Part座標（maModel基本座標）
+          const screenBaseX = (baseX * viewScale) + (canvas.width / 2);
+          const screenBaseY = (baseY * viewScale) + (canvas.height / 2);
+          const partReferenceX = (screenBaseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX;
+          const partReferenceY = (screenBaseY - canvas.height / 2) * zoom + (canvas.height / 2) + offsetY;
           
-          // Draw Part ID and coordinate text
-          const partText = `P${part.id}:(${Math.round(part.x)},${Math.round(part.y)})`;
-          ctx.fillText(partText, referenceX + 3, referenceY + 3);
+          // Draw 4px part point (red)
+          ctx.fillStyle = '#ef4444'; // red-500
+          ctx.fillRect(partReferenceX - 2, partReferenceY - 2, 4, 4);
+          
+          // Draw Part ID and coordinate text (red)
+          ctx.fillStyle = '#ef4444'; // red-500
+          const partText = `P${part.id}:(${baseX},${baseY})`;
+          ctx.fillText(partText, partReferenceX + 3, partReferenceY + 3);
         } else {
           // パーツが非表示の場合でも、maModelDataから基本座標を取得して表示
           let baseX = 0, baseY = 0;
@@ -405,9 +406,9 @@ export default function AnimationRenderer({
           // Draw 4px part point (grayed out for hidden parts)
           ctx.fillStyle = '#9ca3af'; // gray-400 for hidden parts
           ctx.fillRect(referenceX - 2, referenceY - 2, 4, 4);
-          ctx.fillStyle = '#ef4444'; // restore red color
           
           // Draw Part ID and coordinate text for hidden part
+          ctx.fillStyle = '#9ca3af'; // gray-400 for hidden parts
           const partText = `P${partId}:(${baseX},${baseY})`;
           ctx.fillText(partText, referenceX + 3, referenceY + 3);
         }
@@ -415,7 +416,50 @@ export default function AnimationRenderer({
       
       ctx.restore();
     }
-  }, [spriteImage, spriteParts, canvasWidth, canvasHeight, backgroundColor, viewScale, zoom, offsetX, offsetY, showBoundaries, showPartPoints, maModelData]);
+
+    // Draw sprite points (amber-500 4px) - per-sprite toggle
+    if (showSpritePoints.size > 0) {
+      ctx.save();
+      ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset to identity matrix
+      ctx.fillStyle = '#f59e0b'; // amber-500
+      ctx.font = '10px monospace';
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'top';
+      
+      showSpritePoints.forEach((partId) => {
+        const part = sortedParts.find(p => p.id === partId);
+        
+        if (part) {
+          // Sprite座標（アニメーション適用後座標）
+          let spriteReferenceX, spriteReferenceY;
+          if (part.matrix) {
+            // Use tbcml-style matrix transformation
+            const spriteBaseX = (part.x * viewScale) + (canvas.width / 2);
+            const spriteBaseY = (part.y * viewScale) + (canvas.height / 2);
+            spriteReferenceX = (spriteBaseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX;
+            spriteReferenceY = (spriteBaseY - canvas.height / 2) * zoom + (canvas.height / 2) + offsetY;
+          } else {
+            // Use simple transformation
+            const spriteBaseX = (part.x * viewScale) + (canvas.width / 2);
+            const spriteBaseY = (part.y * viewScale) + (canvas.height / 2);
+            spriteReferenceX = (spriteBaseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX;
+            spriteReferenceY = (spriteBaseY - canvas.height / 2) * zoom + (canvas.height / 2) + offsetY;
+          }
+          
+          // Draw 4px sprite point (amber)
+          ctx.fillStyle = '#f59e0b'; // amber-500
+          ctx.fillRect(spriteReferenceX - 2, spriteReferenceY - 2, 4, 4);
+          
+          // Draw Sprite coordinate text (amber)
+          ctx.fillStyle = '#f59e0b'; // amber-500
+          const spriteText = `S${part.id}:(${Math.round(part.x)},${Math.round(part.y)})`;
+          ctx.fillText(spriteText, spriteReferenceX + 3, spriteReferenceY + 3);
+        }
+      });
+      
+      ctx.restore();
+    }
+  }, [spriteImage, spriteParts, canvasWidth, canvasHeight, backgroundColor, viewScale, zoom, offsetX, offsetY, showBoundaries, showPartPoints, showSpritePoints, maModelData]);
 
   return (
     <canvas

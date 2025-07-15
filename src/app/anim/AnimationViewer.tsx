@@ -62,6 +62,7 @@ export default function AnimationViewer({
   const [hiddenParts, setHiddenParts] = useState<Set<number>>(new Set());
   const [hiddenSprites, setHiddenSprites] = useState<Set<number>>(new Set());
   const [showPartPoints, setShowPartPoints] = useState<Set<number>>(new Set());
+  const [showSpritePoints, setShowSpritePoints] = useState<Set<number>>(new Set());
   const [frameRate, setFrameRate] = useState(30);
 
   const formData = animationData?.[selectedForm] as Record<string, unknown> | undefined;
@@ -1149,6 +1150,7 @@ export default function AnimationViewer({
             offsetY={offsetY}
             showBoundaries={showBoundaries || false}
             showPartPoints={showPartPoints}
+            showSpritePoints={showSpritePoints}
             maModelData={maModelData}
           />
         ) : (
@@ -1489,6 +1491,16 @@ export default function AnimationViewer({
                 setShowPartPoints(newShowPartPoints);
               };
 
+              const handleSpritePointToggle = (partId: number, checked: boolean) => {
+                const newShowSpritePoints = new Set(showSpritePoints);
+                if (checked) {
+                  newShowSpritePoints.add(partId);
+                } else {
+                  newShowSpritePoints.delete(partId);
+                }
+                setShowSpritePoints(newShowSpritePoints);
+              };
+
               // Build hierarchical structure
               const buildPartHierarchy = () => {
                 const rootParts: number[] = [];
@@ -1633,7 +1645,7 @@ export default function AnimationViewer({
                   return false;
                 })();
                 
-                // パーツの座標情報を取得
+                // パーツの座標情報を取得（mamodelで定義された座標）
                 const partCoordinates = (() => {
                   const formatCoordinate = (value: number): string => {
                     const num = Math.round(value);
@@ -1641,12 +1653,7 @@ export default function AnimationViewer({
                     return str.padStart(4, ' ');
                   };
                   
-                  if (displayedSprite) {
-                    const x = formatCoordinate(displayedSprite.x);
-                    const y = formatCoordinate(displayedSprite.y);
-                    return `(${x}, ${y})`;
-                  }
-                  // スプライトが表示されていない場合はmamodelから基本座標を取得
+                  // 常にmamodelから基本座標を取得
                   if (maModelData && Array.isArray(maModelData) && maModelData.length > 3 + partId) {
                     const partData = maModelData[3 + partId];
                     if (Array.isArray(partData) && partData.length > 5) {
@@ -1716,15 +1723,16 @@ export default function AnimationViewer({
                         disabled={!isPartActive}
                       />
                       <span className="font-mono text-xs">
-                        Part#{partId.toString().padStart(3, '0')} <span className="font-mono text-[10px] text-gray-500">{partCoordinates}</span> {parentName && `"${parentName}"`}
+                        Part#{partId.toString().padStart(3, '0')} {parentName && !parentName.startsWith('"') && parentName}
                       </span>
                       <input
                         type="checkbox"
-                        className="w-3 h-3"
+                        className="w-2 h-2"
                         checked={showPartPoints.has(partId)}
                         onChange={(e) => handlePointToggle(partId, e.target.checked)}
                         disabled={!isPartActive}
                       />
+                      <span className="font-mono text-[10px] text-red-500">{partCoordinates}</span>
                     </div>
                     
                     {/* このパーツに関連するすべてのスプライト */}
@@ -1758,6 +1766,18 @@ export default function AnimationViewer({
                             disabled={!isSpriteUsed}
                           />
                           <span className="font-mono text-xs">Sprite#{spriteId.toString().padStart(3, '0')}{isDisplayed ? ' ●' : ' ○'}</span>
+                          <input
+                            type="checkbox"
+                            className="w-2 h-2"
+                            checked={showSpritePoints.has(partId)}
+                            onChange={(e) => handleSpritePointToggle(partId, e.target.checked)}
+                            disabled={!isSpriteUsed || !isDisplayed}
+                          />
+                          {isDisplayed && displayedSprite && (
+                            <span className="font-mono text-[10px] text-amber-500">
+                              ({Math.round(displayedSprite.x)}, {Math.round(displayedSprite.y)})
+                            </span>
+                          )}
                         </div>
                       );
                     })}

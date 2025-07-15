@@ -57,6 +57,7 @@ export default function AnimationViewer({
   const [zoom, setZoom] = useState(0.5);
   const [offsetX, setOffsetX] = useState(0);
   const [offsetY, setOffsetY] = useState(150);
+  const [shadowOffset, setShadowOffset] = useState({ x: 0, y: 0 });
   const [imageLoading, setImageLoading] = useState(false);
   const [imageError, setImageError] = useState<string | null>(null);
   const [hiddenParts, setHiddenParts] = useState<Set<number>>(new Set());
@@ -123,6 +124,52 @@ export default function AnimationViewer({
       isMounted = false;
     };
   }, [unitId, selectedForm]);
+
+  // Calculate shadow offset for centering automatically
+  useEffect(() => {
+    if (!maModelData || !Array.isArray(maModelData)) {
+      setShadowOffset({ x: 0, y: 0 });
+      return;
+    }
+
+    // Find shadow parts in mamodel data
+    const shadowParts: { baseX: number, baseY: number }[] = [];
+    
+    for (let i = 3; i < maModelData.length; i++) {
+      const row = maModelData[i];
+      
+      if (Array.isArray(row) && row.length >= 14) {
+        const partName = (row[13] as string) || '';
+        if (typeof partName === 'string' && partName.includes('影')) {
+          const baseX = row[4] as number;
+          const baseY = row[5] as number;
+          shadowParts.push({ baseX, baseY });
+        }
+      } else if (Array.isArray(row) && row.length === 3) {
+        break; // Units row
+      }
+    }
+
+    if (shadowParts.length === 0) {
+      setShadowOffset({ x: 0, y: 0 });
+      return;
+    }
+
+    // Calculate average position of all shadow parts
+    let totalX = 0;
+    let totalY = 0;
+    
+    shadowParts.forEach(shadow => {
+      totalX += shadow.baseX;
+      totalY += shadow.baseY;
+    });
+    
+    const avgX = totalX / shadowParts.length;
+    const avgY = totalY / shadowParts.length;
+    
+    // Set offset to center shadows at origin
+    setShadowOffset({ x: -avgX, y: -avgY });
+  }, [maModelData]);
 
   // IMPROVED FRAME CALCULATION: Calculate max frame from metadata (tbcml get_end_frame style)
   // Enhanced for Unit 003 complex animation patterns
@@ -383,6 +430,7 @@ export default function AnimationViewer({
     // Final fallback
     return startChange;
   }, []);
+
 
   // get_base_size function like tbcml - MUST be defined first
   const getBaseSize = useCallback((part: Record<string, unknown>, parent: boolean, intPartId: number, scaleUnit: number, modelParts: Record<string, unknown>[]): [number, number] => {
@@ -1176,6 +1224,8 @@ export default function AnimationViewer({
             zoom={zoom}
             offsetX={offsetX}
             offsetY={offsetY}
+            unitOffsetX={shadowOffset.x}
+            unitOffsetY={shadowOffset.y}
             showBoundaries={showBoundaries || false}
             showPartPoints={showPartPoints}
             showSpritePoints={showSpritePoints}

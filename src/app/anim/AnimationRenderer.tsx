@@ -44,6 +44,8 @@ interface AnimationRendererProps {
   zoom?: number;
   offsetX?: number;
   offsetY?: number;
+  unitOffsetX?: number; // Additional offset for unit positioning (shadow adjustment)
+  unitOffsetY?: number; // Additional offset for unit positioning (shadow adjustment)
   showBoundaries?: boolean;
   showPartPoints?: Set<number>;
   showSpritePoints?: Set<number>;
@@ -60,6 +62,8 @@ export default function AnimationRenderer({
   zoom = 1.0,
   offsetX = 0,
   offsetY = 0,
+  unitOffsetX = 0,
+  unitOffsetY = 0,
   showBoundaries = false,
   showPartPoints = new Set(),
   showSpritePoints = new Set(),
@@ -237,8 +241,8 @@ export default function AnimationRenderer({
         // Convert position to screen coordinates (center origin), then apply zoom
         const baseX = (part.x * viewScale) + (canvas.width / 2);
         const baseY = (part.y * viewScale) + (canvas.height / 2);
-        const screenX = (baseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX;
-        const screenY = (baseY - canvas.height / 2) * zoom + (canvas.height / 2) + offsetY;
+        const screenX = (baseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX + unitOffsetX;
+        const screenY = (baseY - canvas.height / 2) * zoom + (canvas.height / 2) + offsetY + unitOffsetY;
         
         // Apply the transform matrix with view scaling and zoom
         ctx.setTransform(
@@ -292,8 +296,8 @@ export default function AnimationRenderer({
         // Fallback to simple transformation (center origin), then apply zoom
         const baseX = (part.x * viewScale) + (canvas.width / 2);
         const baseY = (part.y * viewScale) + (canvas.height / 2);
-        const displayX = (baseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX;
-        const displayY = (baseY - canvas.height / 2) * zoom + (canvas.height / 2) + offsetY;
+        const displayX = (baseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX + unitOffsetX;
+        const displayY = (baseY - canvas.height / 2) * zoom + (canvas.height / 2) + offsetY + unitOffsetY;
         
         ctx.translate(displayX, displayY);
         ctx.scale(part.scaleX * viewScale * zoom, part.scaleY * viewScale * zoom);
@@ -459,7 +463,7 @@ export default function AnimationRenderer({
       
       ctx.restore();
     }
-  }, [spriteImage, spriteParts, canvasWidth, canvasHeight, backgroundColor, viewScale, zoom, offsetX, offsetY, showBoundaries, showPartPoints, showSpritePoints, maModelData]);
+  }, [spriteImage, spriteParts, canvasWidth, canvasHeight, backgroundColor, viewScale, zoom, offsetX, offsetY, unitOffsetX, unitOffsetY, showBoundaries, showPartPoints, showSpritePoints, maModelData]);
 
   return (
     <canvas

@@ -1078,14 +1078,148 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   return abilities;
 };
 
-// Helper function to get unit data by ID
-export const getUnitData = async (unitId: number): Promise<UnitData | null> => {
+// LRU Cache implementation for unit data
+class LRUCache<K, V> {
+  private cache = new Map<K, V>();
+  private readonly maxSize: number;
+
+  constructor(maxSize: number = 100) {
+    this.maxSize = maxSize;
+  }
+
+  get(key: K): V | undefined {
+    const value = this.cache.get(key);
+    if (value !== undefined) {
+      // LRU: Move accessed item to end (most recently used)
+      this.cache.delete(key);
+      this.cache.set(key, value);
+    }
+    return value;
+  }
+
+  set(key: K, value: V): void {
+    if (this.cache.has(key)) {
+      this.cache.delete(key);
+    } else if (this.cache.size >= this.maxSize) {
+      // Remove least recently used item (first item)
+      const firstKey = this.cache.keys().next().value;
+      this.cache.delete(firstKey);
+    }
+    this.cache.set(key, value);
+  }
+
+  has(key: K): boolean {
+    return this.cache.has(key);
+  }
+
+  clear(): void {
+    this.cache.clear();
+  }
+}
+
+// Cache instance for unit data
+const unitDataCache = new LRUCache<number, UnitData>(100);
+
+// Fetch with retry functionality
+async function fetchWithRetry(url: string, maxRetries: number = 3): Promise<Response> {
+  let lastError: Error;
+  
+  for (let i = 0; i < maxRetries; i++) {
+    try {
+      const response = await fetch(url);
+      
+      // Return successful response
+      if (response.ok) {
+        return response;
+      }
+      
+      // Don't retry for 404 errors
+      if (response.status === 404) {
+        throw new Error(`Unit data not found: ${url}`);
+      }
+      
+      // Don't retry on the last attempt
+      if (i === maxRetries - 1) {
+        throw new Error(`Failed to fetch after ${maxRetries} retries: ${response.status} ${response.statusText}`);
+      }
+      
+      lastError = new Error(`HTTP ${response.status}: ${response.statusText}`);
+    } catch (error) {
+      lastError = error instanceof Error ? error : new Error(String(error));
+      
+      // Don't retry on the last attempt
+      if (i === maxRetries - 1) {
+        throw lastError;
+      }
+      
+      // Exponential backoff: wait 1s, 2s, 4s
+      await new Promise(resolve => setTimeout(resolve, Math.pow(2, i) * 1000));
+    }
+  }
+  
+  throw lastError!;
+}
+
+// Basic validation for unit data structure
+function validateUnitData(data: unknown): data is UnitData {
+  if (typeof data !== 'object' || data === null) {
+    return false;
+  }
+  
+  const obj = data as Record<string, unknown>;
+  
+  return (
+    typeof obj.unitId === 'number' &&
+    obj.coreData &&
+    typeof obj.coreData === 'object' &&
+    obj.coreData !== null &&
+    Array.isArray((obj.coreData as Record<string, unknown>).forms) &&
+    (obj.coreData as Record<string, unknown>).rarity &&
+    typeof (obj.coreData as Record<string, unknown>).rarity === 'object' &&
+    Array.isArray((obj.coreData as Record<string, unknown>).levelRates) &&
+    obj.auxiliaryData &&
+    typeof obj.auxiliaryData === 'object' &&
+    obj.auxiliaryData !== null &&
+    Array.isArray((obj.auxiliaryData as Record<string, unknown>).names) &&
+    (obj.auxiliaryData as Record<string, unknown>).talents &&
+    typeof (obj.auxiliaryData as Record<string, unknown>).talents === 'object'
+  );
+}
+
+// TSXファイルが削除されたため、常にJSONモードで動作
+
+// New JSON-based unit data loader
+async function getUnitDataFromJSON(unitId: number): Promise<UnitData | null> {
   try {
-    const unitModule = await import(`../../data/unit/unit${unitId.toString().padStart(3, '0')}`);
-    return unitModule.default;
-  } catch {
+    // Check cache first
+    const cached = unitDataCache.get(unitId);
+    if (cached) {
+      return cached;
+    }
+
+    // Fetch JSON data with retry
+    const response = await fetchWithRetry(`/data/unit/${unitId.toString().padStart(3, '0')}.json`);
+    const jsonData = await response.json();
+
+    // Basic validation
+    if (!validateUnitData(jsonData)) {
+      throw new Error(`Invalid unit data format for unit ${unitId}`);
+    }
+
+    // Cache the data
+    unitDataCache.set(unitId, jsonData);
+    
+    return jsonData;
+  } catch (error) {
+    console.error(`Error loading unit ${unitId} from JSON:`, error);
     return null;
   }
+}
+
+// Main helper function to get unit data by ID
+export const getUnitData = async (unitId: number): Promise<UnitData | null> => {
+  // TSXファイルが削除されたため、常にJSONから読み込み
+  return getUnitDataFromJSON(unitId);
 };
 
 // 本能・超本能の効果を計算する関数

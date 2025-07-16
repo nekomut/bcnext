@@ -1120,45 +1120,7 @@ class LRUCache<K, V> {
 // Cache instance for unit data
 const unitDataCache = new LRUCache<number, UnitData>(100);
 
-// Fetch with retry functionality
-async function fetchWithRetry(url: string, maxRetries: number = 3): Promise<Response> {
-  let lastError: Error;
-  
-  for (let i = 0; i < maxRetries; i++) {
-    try {
-      const response = await fetch(url);
-      
-      // Return successful response
-      if (response.ok) {
-        return response;
-      }
-      
-      // Don't retry for 404 errors
-      if (response.status === 404) {
-        throw new Error(`Unit data not found: ${url}`);
-      }
-      
-      // Don't retry on the last attempt
-      if (i === maxRetries - 1) {
-        throw new Error(`Failed to fetch after ${maxRetries} retries: ${response.status} ${response.statusText}`);
-      }
-      
-      lastError = new Error(`HTTP ${response.status}: ${response.statusText}`);
-    } catch (error) {
-      lastError = error instanceof Error ? error : new Error(String(error));
-      
-      // Don't retry on the last attempt
-      if (i === maxRetries - 1) {
-        throw lastError;
-      }
-      
-      // Exponential backoff: wait 1s, 2s, 4s
-      await new Promise(resolve => setTimeout(resolve, Math.pow(2, i) * 1000));
-    }
-  }
-  
-  throw lastError!;
-}
+// フォールバック用のURL試行機能（Animの実装を参考にしたデプロイ環境対応）
 
 // Basic validation for unit data structure
 function validateUnitData(data: unknown): data is UnitData {
@@ -1197,8 +1159,38 @@ async function getUnitDataFromJSON(unitId: number): Promise<UnitData | null> {
       return cached;
     }
 
-    // Fetch JSON data with retry
-    const response = await fetchWithRetry(`/data/unit/${unitId.toString().padStart(3, '0')}.json`);
+    const unitIdStr = unitId.toString().padStart(3, '0');
+    
+    // デプロイ環境対応：複数のURLパスを試行（Animの実装を参考）
+    const urlsToTry = [
+      `/data/unit/${unitIdStr}.json`,
+      `./data/unit/${unitIdStr}.json`,
+      `${typeof window !== 'undefined' && window.location.origin || ''}/data/unit/${unitIdStr}.json`
+    ].filter(Boolean);
+    
+    let response: Response | null = null;
+    let lastError: Error | null = null;
+    
+    for (const tryUrl of urlsToTry) {
+      try {
+        response = await fetch(tryUrl);
+        if (response.ok) {
+          break;
+        } else {
+          lastError = new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+      } catch (error) {
+        lastError = error as Error;
+        continue;
+      }
+    }
+    
+    if (!response || !response.ok) {
+      throw new Error(
+        `All URLs failed to load unit data for unit ${unitId}. Last error: ${lastError?.message || 'unknown'}`
+      );
+    }
+
     const jsonData = await response.json();
 
     // Basic validation

@@ -261,7 +261,7 @@ function UnitPageContent() {
             <button
               onClick={() => {
                 const currentId = parseInt(unitId);
-                const prevId = Math.max(1, currentId - 1);
+                const prevId = Math.max(0, currentId - 1);
                 setUnitId(prevId.toString());
                 
                 // ユニット名も同期
@@ -274,7 +274,7 @@ function UnitPageContent() {
                 router.push(`/unit?unit=${prevId}`);
                 handleUnitSearchWithId(prevId);
               }}
-              disabled={loading || parseInt(unitId) <= 1}
+              disabled={loading || parseInt(unitId) <= 0}
               className="bg-blue-500 hover:bg-blue-600 text-white px-2 py-0.5 rounded text-xs disabled:opacity-50"
             >
               ◁

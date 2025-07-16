@@ -780,6 +780,7 @@ export function UnitDisplay({
           currentHp={enhancedStats.hp}
           currentAp={enhancedStats.ap}
           totalAttackMultiplier={totalAttackMultiplier}
+          totalHpMultiplier={baseHpUpMultiplier}
           talentMassiveDamageMultiplier={talentMassiveDamageMultiplier}
           setTalentMassiveDamageMultiplier={setTalentMassiveDamageMultiplier}
           hasOnlyRelicAkuTalent={hasOnlyRelicAkuTalent}
@@ -1333,6 +1334,204 @@ function DynamicMighty({ ability, attackUpMultiplier, hpUpMultiplier }: { abilit
   );
 }
 
+function DynamicColossusSlayer({ ability, attackUpMultiplier, hpUpMultiplier }: { ability: UnitAbility, attackUpMultiplier: number, hpUpMultiplier: number }) {
+  if (!ability.calculatedStats || !ability.isDynamic) return null;
+  
+  const calculateDamage = () => {
+    const stats = ability.calculatedStats!;
+    const apMultiplier = 1.6;
+    const dmgMultiplier = 0.7;
+    
+    if (stats.multihit) {
+      const hit1 = stats.atk1 ? Math.round(stats.atk1 * attackUpMultiplier * apMultiplier) : 0;
+      const hit2 = stats.atk2 ? Math.round(stats.atk2 * attackUpMultiplier * apMultiplier) : 0;
+      const hit3 = stats.atk3 ? Math.round(stats.atk3 * attackUpMultiplier * apMultiplier) : 0;
+      
+      const isEnhanced = attackUpMultiplier > 1;
+      const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
+      const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
+      const apDisplay = values.join(' / ');
+      
+      // HP相当計算（1.43倍体力相当）
+      const hpMultiplier = 1 / dmgMultiplier; // 1.43倍
+      const hpEquivalent = Math.round(stats.hp * hpMultiplier);
+      
+      return apDisplay + '<br /><b>' + hpEquivalent.toLocaleString() + '</b>';
+    } else {
+      const ap = Math.round(stats.ap * attackUpMultiplier * apMultiplier);
+      const isEnhanced = attackUpMultiplier > 1;
+      const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
+      
+      // HP相当計算（1.43倍体力相当）
+      const hpMultiplier = 1 / dmgMultiplier; // 1.43倍  
+      const hpEquivalent = Math.round(stats.hp * hpMultiplier);
+      
+      return `<b style="${colorClass}">${ap.toLocaleString()}</b><br /><b>${hpEquivalent.toLocaleString()}</b>`;
+    }
+  };
+  
+  return (
+    <div className="bg-gray-50 p-1.5 rounded">
+      <div className="flex justify-between items-center gap-2">
+        <div className="font-bold text-xs text-gray-600">
+          <Image
+            src={`data:image/png;base64,${icons.abilityColossusSlayer}`}
+            alt="超生命体特効"
+            width={16}
+            height={16}
+            className="inline mr-1 align-top"
+          />
+          超生命体特効<br /> <span className="text-red-500 ml-5"><small>攻撃力
+          <span className="w-8 mx-1 px-1 text-center text-xs font-bold">1.6</span>倍 </small></span>
+          <br />
+          <span className="text-blue-500 ml-5"><small>被ダメ
+          <span className="w-8 mx-1 px-1 text-center text-xs font-bold">0.7</span>倍 </small></span>
+        </div>
+        <div className="text-right flex-shrink-0 max-w-[50%]">
+          <div className="text-gray-600 font-medium break-words">
+            <br />
+            <span className="text-red-500"><small><b>攻撃力</b></small></span> <span dangerouslySetInnerHTML={{ __html: calculateDamage().split('<br />')[0] }}></span>
+            <br />
+            <span className="text-blue-500"><small><b>体力(換算値)</b></small></span> <span className={hpUpMultiplier > 1 ? "text-blue-500" : "text-gray-500"} dangerouslySetInnerHTML={{ __html: calculateDamage().split('<br />')[1] }}></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function DynamicBehemothSlayer({ ability, attackUpMultiplier, hpUpMultiplier }: { ability: UnitAbility, attackUpMultiplier: number, hpUpMultiplier: number }) {
+  if (!ability.calculatedStats || !ability.isDynamic) return null;
+  
+  const calculateDamage = () => {
+    const stats = ability.calculatedStats!;
+    const apMultiplier = 2.5;
+    const dmgMultiplier = 0.6;
+    
+    if (stats.multihit) {
+      const hit1 = stats.atk1 ? Math.round(stats.atk1 * attackUpMultiplier * apMultiplier) : 0;
+      const hit2 = stats.atk2 ? Math.round(stats.atk2 * attackUpMultiplier * apMultiplier) : 0;
+      const hit3 = stats.atk3 ? Math.round(stats.atk3 * attackUpMultiplier * apMultiplier) : 0;
+      
+      const isEnhanced = attackUpMultiplier > 1;
+      const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
+      const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
+      const apDisplay = values.join(' / ');
+      
+      // HP相当計算（1.67倍体力相当）
+      const hpMultiplier = 1 / dmgMultiplier; // 1.67倍
+      const hpEquivalent = Math.round(stats.hp * hpMultiplier);
+      
+      return apDisplay + '<br /><b>' + hpEquivalent.toLocaleString() + '</b>';
+    } else {
+      const ap = Math.round(stats.ap * attackUpMultiplier * apMultiplier);
+      const isEnhanced = attackUpMultiplier > 1;
+      const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
+      
+      // HP相当計算（1.67倍体力相当）
+      const hpMultiplier = 1 / dmgMultiplier; // 1.67倍  
+      const hpEquivalent = Math.round(stats.hp * hpMultiplier);
+      
+      return `<b style="${colorClass}">${ap.toLocaleString()}</b><br /><b>${hpEquivalent.toLocaleString()}</b>`;
+    }
+  };
+  
+  return (
+    <div className="bg-gray-50 p-1.5 rounded">
+      <div className="flex justify-between items-center gap-2">
+        <div className="font-bold text-xs text-gray-600">
+          <Image
+            src={`data:image/png;base64,${icons.abilityBehemothSlayer}`}
+            alt="超獣特効"
+            width={16}
+            height={16}
+            className="inline mr-1 align-top"
+          />
+          超獣特効<br /> <span className="text-red-500 ml-5"><small>攻撃力
+          <span className="w-8 mx-1 px-1 text-center text-xs font-bold">2.5</span>倍 </small></span>
+          <br />
+          <span className="text-blue-500 ml-5"><small>被ダメ
+          <span className="w-8 mx-1 px-1 text-center text-xs font-bold">0.6</span>倍 </small></span>
+        </div>
+        <div className="text-right flex-shrink-0 max-w-[50%]">
+          <div className="text-gray-600 font-medium break-words">
+            <br />
+            <span className="text-red-500"><small><b>攻撃力</b></small></span> <span dangerouslySetInnerHTML={{ __html: calculateDamage().split('<br />')[0] }}></span>
+            <br />
+            <span className="text-blue-500"><small><b>体力(換算値)</b></small></span> <span className={hpUpMultiplier > 1 ? "text-blue-500" : "text-gray-500"} dangerouslySetInnerHTML={{ __html: calculateDamage().split('<br />')[1] }}></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function DynamicSageSlayer({ ability, attackUpMultiplier, hpUpMultiplier }: { ability: UnitAbility, attackUpMultiplier: number, hpUpMultiplier: number }) {
+  if (!ability.calculatedStats || !ability.isDynamic) return null;
+  
+  const calculateDamage = () => {
+    const stats = ability.calculatedStats!;
+    const apMultiplier = 1.2;
+    const dmgMultiplier = 0.5;
+    
+    if (stats.multihit) {
+      const hit1 = stats.atk1 ? Math.round(stats.atk1 * attackUpMultiplier * apMultiplier) : 0;
+      const hit2 = stats.atk2 ? Math.round(stats.atk2 * attackUpMultiplier * apMultiplier) : 0;
+      const hit3 = stats.atk3 ? Math.round(stats.atk3 * attackUpMultiplier * apMultiplier) : 0;
+      
+      const isEnhanced = attackUpMultiplier > 1;
+      const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
+      const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
+      const apDisplay = values.join(' / ');
+      
+      // HP相当計算（2倍体力相当）
+      const hpMultiplier = 1 / dmgMultiplier; // 2倍
+      const hpEquivalent = Math.round(stats.hp * hpMultiplier);
+      
+      return apDisplay + '<br /><b>' + hpEquivalent.toLocaleString() + '</b>';
+    } else {
+      const ap = Math.round(stats.ap * attackUpMultiplier * apMultiplier);
+      const isEnhanced = attackUpMultiplier > 1;
+      const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
+      
+      // HP相当計算（2倍体力相当）
+      const hpMultiplier = 1 / dmgMultiplier; // 2倍  
+      const hpEquivalent = Math.round(stats.hp * hpMultiplier);
+      
+      return `<b style="${colorClass}">${ap.toLocaleString()}</b><br /><b>${hpEquivalent.toLocaleString()}</b>`;
+    }
+  };
+  
+  return (
+    <div className="bg-gray-50 p-1.5 rounded">
+      <div className="flex justify-between items-center gap-2">
+        <div className="font-bold text-xs text-gray-600">
+          <Image
+            src={`data:image/png;base64,${icons.abilitySageSlayer}`}
+            alt="超賢者特効"
+            width={16}
+            height={16}
+            className="inline mr-1 align-top"
+          />
+          超賢者特効<br /> <span className="text-red-500 ml-5"><small>攻撃力
+          <span className="w-8 mx-1 px-1 text-center text-xs font-bold">1.2</span>倍 </small></span>
+          <br />
+          <span className="text-blue-500 ml-5"><small>被ダメ
+          <span className="w-8 mx-1 px-1 text-center text-xs font-bold">0.5</span>倍 </small></span>
+        </div>
+        <div className="text-right flex-shrink-0 max-w-[50%]">
+          <div className="text-gray-600 font-medium break-words">
+            <br />
+            <span className="text-red-500"><small><b>攻撃力</b></small></span> <span dangerouslySetInnerHTML={{ __html: calculateDamage().split('<br />')[0] }}></span>
+            <br />
+            <span className="text-blue-500"><small><b>体力(換算値)</b></small></span> <span className={hpUpMultiplier > 1 ? "text-blue-500" : "text-gray-500"} dangerouslySetInnerHTML={{ __html: calculateDamage().split('<br />')[1] }}></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function DynamicEvaAngelKiller({ ability, attackUpMultiplier, hpUpMultiplier }: { ability: UnitAbility, attackUpMultiplier: number, hpUpMultiplier: number }) {
   const [apMultiplier, setApMultiplier] = useState(25);
   const [dmgMultiplier, setDmgMultiplier] = useState(0.04);
@@ -1577,6 +1776,12 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUp
             <DynamicEvaAngelKiller key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} hpUpMultiplier={hpUpMultiplier} />
           ) : ability.isDynamic && ability.name === "魔女キラー" ? (
             <DynamicWitchKiller key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} hpUpMultiplier={hpUpMultiplier} />
+          ) : ability.isDynamic && ability.name === "超生命体特効" ? (
+            <DynamicColossusSlayer key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} hpUpMultiplier={hpUpMultiplier} />
+          ) : ability.isDynamic && ability.name === "超獣特効" ? (
+            <DynamicBehemothSlayer key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} hpUpMultiplier={hpUpMultiplier} />
+          ) : ability.isDynamic && ability.name === "超賢者特効" ? (
+            <DynamicSageSlayer key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} hpUpMultiplier={hpUpMultiplier} />
           ) : (
             <div key={index} className="bg-gray-50 p-1.5 rounded">
               <div className="flex justify-between items-center gap-2">
@@ -2038,6 +2243,39 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUp
                       />
                       攻撃無効
                     </>
+                  ) : ability.name === '超生命体特効' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityColossusSlayer}`}
+                        alt="超生命体特効"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      超生命体特効
+                    </>
+                  ) : ability.name === '超獣特効' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityBehemothSlayer}`}
+                        alt="超獣特効"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      超獣特効
+                    </>
+                  ) : ability.name === '超賢者特効' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilitySageSlayer}`}
+                        alt="超賢者特効"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      超賢者特効
+                    </>
                   ) : ability.name === '遠方攻撃' && ability.iconKeys ? (
                     <>
                       <Image
@@ -2187,6 +2425,7 @@ function TalentsList({
   currentHp,
   currentAp,
   totalAttackMultiplier,
+  totalHpMultiplier,
   talentMassiveDamageMultiplier,
   setTalentMassiveDamageMultiplier,
   hasOnlyRelicAkuTalent,
@@ -2263,6 +2502,7 @@ function TalentsList({
   currentHp: number;
   currentAp: number;
   totalAttackMultiplier: number;
+  totalHpMultiplier: number;
   talentMassiveDamageMultiplier: number;
   setTalentMassiveDamageMultiplier: (value: number) => void;
   hasOnlyRelicAkuTalent: boolean;
@@ -2569,6 +2809,17 @@ function TalentsList({
                       className="inline mr-1 align-top"
                     />
                     {talent.name} ({talent.id})
+                    {talent.npCost > 0 && (
+                      <span className="text-[10px] text-gray-600 font-medium ml-1">
+                        [{talent.isTotal ? '合計' : ''}{talent.npCost}NP]
+                      </span>
+                    )}
+                    <br />
+                    <span className="text-red-500 ml-5"><small>攻撃力
+                    <span className="w-8 mx-1 px-1 text-center text-xs font-bold">1.2</span>倍 </small></span>
+                    <br />
+                    <span className="text-blue-500 ml-5"><small>被ダメ
+                    <span className="w-8 mx-1 px-1 text-center text-xs font-bold">0.5</span>倍 </small></span>
                   </>
                 ) : talent.id === 65 ? (
                   <>
@@ -2802,6 +3053,12 @@ function TalentsList({
                       className="inline mr-1 align-top"
                     />
                     {talent.name} ({talent.id})
+                    <br />
+                    <span className="text-red-500 ml-5"><small>攻撃力
+                    <span className="w-8 mx-1 px-1 text-center text-xs font-bold">1.6</span>倍 </small></span>
+                    <br />
+                    <span className="text-blue-500 ml-5"><small>被ダメ
+                    <span className="w-8 mx-1 px-1 text-center text-xs font-bold">0.7</span>倍 </small></span>
                   </>
                 ) : talent.id === 58 ? (
                   <>
@@ -2835,6 +3092,17 @@ function TalentsList({
                       className="inline mr-1 align-top"
                     />
                     {talent.name} ({talent.id})
+                    {talent.npCost > 0 && (
+                      <span className="text-[10px] text-gray-600 font-medium ml-1">
+                        [{talent.isTotal ? '合計' : ''}{talent.npCost}NP]
+                      </span>
+                    )}
+                    <br />
+                    <span className="text-red-500 ml-5"><small>攻撃力
+                    <span className="w-8 mx-1 px-1 text-center text-xs font-bold">2.5</span>倍 </small></span>
+                    <br />
+                    <span className="text-blue-500 ml-5"><small>被ダメ
+                    <span className="w-8 mx-1 px-1 text-center text-xs font-bold">0.6</span>倍 </small></span>
                   </>
                 ) : talent.id === 61 ? (
                   <>
@@ -3008,7 +3276,7 @@ function TalentsList({
                     {talent.name} ({talent.id})
                   </>
                 )}
-                {talent.npCost > 0 && talent.id !== 5 && (
+                {talent.npCost > 0 && talent.id !== 5 && talent.id !== 6 && talent.id !== 64 && talent.id !== 66 && (
                   <span className="text-[10px] text-gray-600 font-medium ml-1">
                     [{talent.isTotal ? '合計' : ''}{talent.npCost}NP]
                   </span>
@@ -3458,7 +3726,7 @@ function TalentsList({
                     <div className="text-right">
                       <br />
                       <div className="text-xs">
-                        <small className="text-blue-500"><b>体力(換算値)</b></small> <b className="text-gray-500">{Math.floor(currentHp / (hasOnlyRelicAkuTough ? 0.25 : talentToughnessValue)).toLocaleString()}</b>
+                        <small className="text-blue-500"><b>体力(換算値)</b></small> <b className={totalHpMultiplier > 1 ? "text-blue-500" : "text-gray-500"}>{Math.floor(currentHp / (hasOnlyRelicAkuTough ? 0.25 : talentToughnessValue)).toLocaleString()}</b>
                       </div>
                     </div>
                   ) : /* めっぽう強い(5)の場合は計算結果を表示 */
@@ -3548,6 +3816,39 @@ function TalentsList({
                       <br />
                       <div className="text-xs">
                         <small className="text-red-500"><b>攻撃力</b></small> <b className="text-gray-500">{Math.floor(currentAp * (hasOnlyRelicAkuMassiveDamage ? 3 : talentMassiveDamageMultiplier)).toLocaleString()}</b>
+                      </div>
+                    </div>
+                  ) : /* 超生命体特効(63)の場合は計算結果を表示 */
+                  talent.id === 63 ? (
+                    <div className="text-right">
+                      <br />
+                      <div className="text-xs">
+                        <small className="text-red-500"><b>攻撃力</b></small> <b className={totalAttackMultiplier > 1 ? "text-red-500" : "text-gray-500"}>{Math.floor(currentAp * 1.6).toLocaleString()}</b>
+                      </div>
+                      <div className="text-xs">
+                        <small className="text-blue-500"><b>体力(換算値)</b></small> <b className={totalHpMultiplier > 1 ? "text-blue-500" : "text-gray-500"}>{Math.floor(currentHp / 0.7).toLocaleString()}</b>
+                      </div>
+                    </div>
+                  ) : /* 超獣特効(64)の場合は計算結果を表示 */
+                  talent.id === 64 ? (
+                    <div className="text-right">
+                      <br />
+                      <div className="text-xs">
+                        <small className="text-red-500"><b>攻撃力</b></small> <b className={totalAttackMultiplier > 1 ? "text-red-500" : "text-gray-500"}>{Math.floor(currentAp * 2.5).toLocaleString()}</b>
+                      </div>
+                      <div className="text-xs">
+                        <small className="text-blue-500"><b>体力(換算値)</b></small> <b className={totalHpMultiplier > 1 ? "text-blue-500" : "text-gray-500"}>{Math.floor(currentHp / 0.6).toLocaleString()}</b>
+                      </div>
+                    </div>
+                  ) : /* 超賢者特効(66)の場合は計算結果を表示 */
+                  talent.id === 66 ? (
+                    <div className="text-right">
+                      <br />
+                      <div className="text-xs">
+                        <small className="text-red-500"><b>攻撃力</b></small> <b className={totalAttackMultiplier > 1 ? "text-red-500" : "text-gray-500"}>{Math.floor(currentAp * 1.2).toLocaleString()}</b>
+                      </div>
+                      <div className="text-xs">
+                        <small className="text-blue-500"><b>体力(換算値)</b></small> <b className={totalHpMultiplier > 1 ? "text-blue-500" : "text-gray-500"}>{Math.floor(currentHp / 0.5).toLocaleString()}</b>
                       </div>
                     </div>
                   ) : /* 属性追加の本能の場合はアイコンを表示 */

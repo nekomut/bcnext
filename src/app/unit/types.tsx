@@ -1065,6 +1065,42 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     });
   }
 
+  // 超生命体特効
+  if (stats[97] && stats[97] > 0) {
+    abilities.push({
+      name: "超生命体特効",
+      value: "",
+      isDynamic: true,
+      baseAP: calculatedStats.ap,
+      calculatedStats: enhancedStats,
+      iconKeys: ["abilityColossusSlayer"]
+    });
+  }
+
+  // 超獣特効
+  if (stats[105] && stats[105] > 0) {
+    abilities.push({
+      name: "超獣特効",
+      value: "",
+      isDynamic: true,
+      baseAP: calculatedStats.ap,
+      calculatedStats: enhancedStats,
+      iconKeys: ["abilityBehemothSlayer"]
+    });
+  }
+
+  // 超賢者特効
+  if (stats[111] && stats[111] > 0) {
+    abilities.push({
+      name: "超賢者特効",
+      value: "",
+      isDynamic: true,
+      baseAP: calculatedStats.ap,
+      calculatedStats: enhancedStats,
+      iconKeys: ["abilitySageSlayer"]
+    });
+  }
+
   // 召喚
   if (stats[110] && stats[110] > 0) {
     const summonedUnitId = stats[110];

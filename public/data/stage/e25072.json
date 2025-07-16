@@ -1,0 +1,511 @@
+{
+  "eventId": 25072,
+  "eventName": "再会の地図",
+  "typeId": 25,
+  "typeName": "発掘ステージ",
+  "prefix": "H",
+  "mapId": 72,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "月面に漂う地球外生命",
+      "baseHp": "1200000",
+      "width": "6000",
+      "enemyLimit": "10",
+      "requiredCost": "10",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "12",
+          "treasureName": "レアチケット",
+          "probability": "100",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "167",
+          "enemyName": "エイリワン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 900,
+            "ap": 150,
+            "dps": 109.76,
+            "speed": 8,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 90,
+            "freq": 41,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 17
+          },
+          "stageStats": {
+            "actualHp": 9000,
+            "actualAp": 1500,
+            "actualDps": 1097.6,
+            "magnification": "1000%",
+            "count": "0",
+            "spawnTime": "133.3s",
+            "spawnTimeFrames": "4,000f",
+            "delay": "106.7-106.7s",
+            "delayFrames": "3,200-3,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "167",
+          "enemyName": "エイリワン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 900,
+            "ap": 150,
+            "dps": 109.76,
+            "speed": 8,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 90,
+            "freq": 41,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 17
+          },
+          "stageStats": {
+            "actualHp": 9000,
+            "actualAp": 1500,
+            "actualDps": 1097.6,
+            "magnification": "1000%",
+            "count": "0",
+            "spawnTime": "134.0s",
+            "spawnTimeFrames": "4,020f",
+            "delay": "106.7-106.7s",
+            "delayFrames": "3,200-3,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "167",
+          "enemyName": "エイリワン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 900,
+            "ap": 150,
+            "dps": 109.76,
+            "speed": 8,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 90,
+            "freq": 41,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 17
+          },
+          "stageStats": {
+            "actualHp": 9000,
+            "actualAp": 1500,
+            "actualDps": 1097.6,
+            "magnification": "1000%",
+            "count": "0",
+            "spawnTime": "134.7s",
+            "spawnTimeFrames": "4,040f",
+            "delay": "106.7-106.7s",
+            "delayFrames": "3,200-3,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "167",
+          "enemyName": "エイリワン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 900,
+            "ap": 150,
+            "dps": 109.76,
+            "speed": 8,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 90,
+            "freq": 41,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 17
+          },
+          "stageStats": {
+            "actualHp": 9000,
+            "actualAp": 1500,
+            "actualDps": 1097.6,
+            "magnification": "1000%",
+            "count": "0",
+            "spawnTime": "135.3s",
+            "spawnTimeFrames": "4,060f",
+            "delay": "106.7-106.7s",
+            "delayFrames": "3,200-3,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "167",
+          "enemyName": "エイリワン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 900,
+            "ap": 150,
+            "dps": 109.76,
+            "speed": 8,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 90,
+            "freq": 41,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 17
+          },
+          "stageStats": {
+            "actualHp": 9000,
+            "actualAp": 1500,
+            "actualDps": 1097.6,
+            "magnification": "1000%",
+            "count": "0",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "33.3-40.0s",
+            "delayFrames": "1,000-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "167",
+          "enemyName": "エイリワン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 900,
+            "ap": 150,
+            "dps": 109.76,
+            "speed": 8,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 90,
+            "freq": 41,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 17
+          },
+          "stageStats": {
+            "actualHp": 9000,
+            "actualAp": 1500,
+            "actualDps": 1097.6,
+            "magnification": "1000%",
+            "count": "3",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "1.0-2.0s",
+            "delayFrames": "30-60f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "168",
+          "enemyName": "ワーニック",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 3000,
+            "ap": 900,
+            "dps": 870.97,
+            "speed": 8,
+            "range": 130,
+            "rangeType": "単体",
+            "kbLevel": 4,
+            "money": 130,
+            "freq": 31,
+            "foreswing": 6,
+            "backswing": 12,
+            "tba": 13
+          },
+          "stageStats": {
+            "actualHp": 30000,
+            "actualAp": 9000,
+            "actualDps": 8709.7,
+            "magnification": "1000%",
+            "count": "0",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "36.7-53.3s",
+            "delayFrames": "1,100-1,600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "183",
+          "enemyName": "サイバーX",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 120000,
+            "ap": 2200,
+            "dps": 4125.0,
+            "speed": 4,
+            "range": 60,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 800,
+            "freq": 16,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 720000,
+            "actualAp": 13200,
+            "actualDps": 24750.0,
+            "magnification": "600%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "106.7-106.7s",
+            "delayFrames": "3,200-3,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "173",
+          "enemyName": "ヤドカリー",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 300,
+            "dps": 183.67,
+            "speed": 6,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 170,
+            "freq": 49,
+            "foreswing": 6,
+            "backswing": 6,
+            "tba": 22
+          },
+          "stageStats": {
+            "actualHp": 90000,
+            "actualAp": 3000,
+            "actualDps": 1836.7,
+            "magnification": "1000%",
+            "count": "8",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "63.3-70.0s",
+            "delayFrames": "1,900-2,100f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "survive": {
+              "raw_columns": 34,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "182",
+          "enemyName": "ハサミーマン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 24000,
+            "ap": 2800,
+            "dps": 1647.06,
+            "speed": 24,
+            "range": 199,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 700,
+            "freq": 51,
+            "foreswing": 12,
+            "backswing": 39,
+            "tba": 1
+          },
+          "stageStats": {
+            "actualHp": 144000,
+            "actualAp": 16800,
+            "actualDps": 9882.36,
+            "magnification": "600%",
+            "count": "4",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "86.7-93.3s",
+            "delayFrames": "2,600-2,800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 20
+            }
+          }
+        },
+        {
+          "enemyId": "171",
+          "enemyName": "レディ・ガ",
+          "traits": [
+            "浮",
+            "エ"
+          ],
+          "baseStats": {
+            "hp": 17777,
+            "ap": 777,
+            "dps": 264.89,
+            "speed": 15,
+            "range": 370,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1555,
+            "freq": 88,
+            "foreswing": 34,
+            "backswing": 54,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 177770,
+            "actualAp": 7770,
+            "actualDps": 2648.9,
+            "magnification": "1000%",
+            "count": "1",
+            "spawnTime": "133.3s",
+            "spawnTimeFrames": "4,000f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 60,
+              "duration_s": 2.0
+            }
+          }
+        },
+        {
+          "enemyId": "175",
+          "enemyName": "クマンチュー",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 30000,
+            "ap": 1000,
+            "dps": 447.76,
+            "speed": 8,
+            "range": 350,
+            "rangeType": "範囲",
+            "kbLevel": 6,
+            "money": 1500,
+            "freq": 67,
+            "foreswing": 4,
+            "backswing": 5,
+            "tba": 32
+          },
+          "stageStats": {
+            "actualHp": 180000,
+            "actualAp": 6000,
+            "actualDps": 2686.56,
+            "magnification": "600%",
+            "count": "0",
+            "spawnTime": "200.0s",
+            "spawnTimeFrames": "6,000f",
+            "delay": "466.7-466.7s",
+            "delayFrames": "14,000-14,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "strengthen": {
+              "raw_columns": [32, 33],
+              "trigger_hp": 50,
+              "power": 100
+            }
+          }
+        },
+        {
+          "enemyId": "176",
+          "enemyName": "破壊生物クオリネン",
+          "traits": [
+            "浮",
+            "エ"
+          ],
+          "baseStats": {
+            "hp": 120000,
+            "ap": 1400,
+            "dps": 135.48,
+            "speed": 3,
+            "range": 760,
+            "rangeType": "範囲",
+            "kbLevel": 8,
+            "money": 5000,
+            "freq": 310,
+            "foreswing": 71,
+            "backswing": 74,
+            "tba": 120
+          },
+          "stageStats": {
+            "actualHp": 840000,
+            "actualAp": 9800,
+            "actualDps": 948.36,
+            "magnification": "700%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 20,
+              "power": 300,
+              "duration_f": 10,
+              "duration_s": 0.33
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

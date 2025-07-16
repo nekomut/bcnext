@@ -1,0 +1,210 @@
+{
+  "eventId": 1007,
+  "eventName": "逆襲のカバちゃん",
+  "typeId": 1,
+  "typeName": "イベントステージ",
+  "prefix": "S",
+  "mapId": 7,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "超メタル降臨 激ムズ",
+      "baseHp": "999999",
+      "width": "4900",
+      "enemyLimit": "8",
+      "requiredCost": "400",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "11",
+          "treasureName": "にゃんこチケット",
+          "probability": "100",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "002",
+          "enemyName": "例のヤツ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 200,
+            "ap": 20,
+            "dps": 20.0,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 75,
+            "freq": 30,
+            "foreswing": 10,
+            "backswing": 20,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 1600,
+            "actualAp": 160,
+            "actualDps": 160.0,
+            "magnification": "800%",
+            "count": "0",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "2.0-6.0s",
+            "delayFrames": "60-180f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "013",
+          "enemyName": "ワニック",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 70,
+            "ap": 30,
+            "dps": 50.0,
+            "speed": 14,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 50,
+            "freq": 18,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 560,
+            "actualAp": 240,
+            "actualDps": 400.0,
+            "magnification": "800%",
+            "count": "0",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "2.0-20.0s",
+            "delayFrames": "60-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "003",
+          "enemyName": "カバちゃん",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1000,
+            "ap": 100,
+            "dps": 44.78,
+            "speed": 4,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 400,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 1000,
+            "actualAp": 100,
+            "actualDps": 44.78,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "90%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "047",
+          "enemyName": "メタルカバちゃん",
+          "traits": ["メ"],
+          "baseStats": {
+            "hp": 80,
+            "ap": 200,
+            "dps": 333.33,
+            "speed": 4,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 400,
+            "freq": 18,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 80,
+            "actualAp": 200,
+            "actualDps": 333.33,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "20.0-20.0s",
+            "delayFrames": "600-600f",
+            "baseHpRatio": "90%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "054",
+          "enemyName": "超メタルカバちゃん",
+          "traits": ["メ"],
+          "baseStats": {
+            "hp": 8000,
+            "ap": 3000,
+            "dps": 1914.89,
+            "speed": 18,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 16,
+            "money": 999,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 8000,
+            "actualAp": 3000,
+            "actualDps": 1914.89,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.7-2.0s",
+            "delayFrames": "20-60f",
+            "baseHpRatio": "90%",
+            "isBoss": true
+          },
+          "abilities": {}
+        }
+      ]
+    }
+  ]
+}

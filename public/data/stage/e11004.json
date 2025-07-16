@@ -1,0 +1,3994 @@
+{
+  "eventId": 11004,
+  "eventName": "ランキングの間（無気力修行）",
+  "typeId": 11,
+  "typeName": "ランキング道場",
+  "prefix": "R",
+  "mapId": 4,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "無気力修行",
+      "baseHp": "9999999",
+      "width": "4200",
+      "enemyLimit": "12",
+      "requiredCost": "30",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "283",
+          "enemyName": "ダミー",
+          "traits": [],
+          "baseStats": {
+            "hp": 100,
+            "ap": 999999,
+            "dps": 49261.03,
+            "speed": 0,
+            "range": 300,
+            "rangeType": "範囲",
+            "kbLevel": 0,
+            "money": 0,
+            "freq": 609,
+            "foreswing": 10,
+            "backswing": 27,
+            "tba": 300
+          },
+          "stageStats": {
+            "actualHp": 100,
+            "actualAp": 999999,
+            "actualDps": 49261.03,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "0%",
+            "isBoss": true
+          },
+          "abilities": {
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "097",
+          "enemyName": "ワイバーン",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 380000,
+            "ap": 6555,
+            "dps": 525.8,
+            "speed": 5,
+            "range": 600,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 2000,
+            "freq": 374,
+            "foreswing": 55,
+            "backswing": 66,
+            "tba": 160
+          },
+          "stageStats": {
+            "actualHp": 2470000,
+            "actualAp": 42607,
+            "actualDps": 3417.7,
+            "magnification": "650%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "3020000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 165000,
+            "actualAp": 66000,
+            "actualDps": 48292.53,
+            "magnification": "3300%",
+            "count": "15",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "5.0-5.0s",
+            "delayFrames": "150-150f",
+            "baseHpRatio": "3020000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 2310000,
+            "actualAp": 33000,
+            "actualDps": 45000.12,
+            "magnification": "6600%",
+            "count": "2",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-16.7s",
+            "delayFrames": "500-500f",
+            "baseHpRatio": "3020000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "098",
+          "enemyName": "癒術士",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 299999,
+            "ap": 3250,
+            "dps": 2119.57,
+            "speed": 23,
+            "range": 310,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1400,
+            "freq": 46,
+            "foreswing": 20,
+            "backswing": 26,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1949993,
+            "actualAp": 21125,
+            "actualDps": 13777.2,
+            "magnification": "650%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "2920000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "093",
+          "enemyName": "セラム",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 9200,
+            "ap": 600,
+            "dps": 367.35,
+            "speed": 30,
+            "range": 240,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 720,
+            "freq": 49,
+            "foreswing": 17,
+            "backswing": 32,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 257600,
+            "actualAp": 16800,
+            "actualDps": 10285.8,
+            "magnification": "2800%",
+            "count": "5",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "13.3-13.3s",
+            "delayFrames": "400-400f",
+            "baseHpRatio": "2920000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "350",
+          "enemyName": "とどめき",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 320000,
+            "ap": 8000,
+            "dps": 2242.99,
+            "speed": 11,
+            "range": 370,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1250,
+            "freq": 107,
+            "foreswing": 22,
+            "backswing": 45,
+            "tba": 43
+          },
+          "stageStats": {
+            "actualHp": 2080000,
+            "actualAp": 52000,
+            "actualDps": 14579.43,
+            "magnification": "650%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "2820000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 50,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "124",
+          "enemyName": "ブラッコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 175000,
+            "ap": 6497,
+            "dps": 8474.35,
+            "speed": 9,
+            "range": 190,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 250,
+            "freq": 23,
+            "foreswing": 14,
+            "backswing": 9,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1050000,
+            "actualAp": 38982,
+            "actualDps": 50846.1,
+            "magnification": "600%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "2820000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 165000,
+            "actualAp": 66000,
+            "actualDps": 48292.53,
+            "magnification": "3300%",
+            "count": "10",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "3.3-3.3s",
+            "delayFrames": "100-100f",
+            "baseHpRatio": "2820000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "097",
+          "enemyName": "ワイバーン",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 380000,
+            "ap": 6555,
+            "dps": 525.8,
+            "speed": 5,
+            "range": 600,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 2000,
+            "freq": 374,
+            "foreswing": 55,
+            "backswing": 66,
+            "tba": 160
+          },
+          "stageStats": {
+            "actualHp": 2280000,
+            "actualAp": 39330,
+            "actualDps": 3154.8,
+            "magnification": "600%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "2720000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 150000,
+            "actualAp": 60000,
+            "actualDps": 43902.3,
+            "magnification": "3000%",
+            "count": "15",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "5.0-5.0s",
+            "delayFrames": "150-150f",
+            "baseHpRatio": "2720000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 2100000,
+            "actualAp": 30000,
+            "actualDps": 40909.2,
+            "magnification": "6000%",
+            "count": "2",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-16.7s",
+            "delayFrames": "500-500f",
+            "baseHpRatio": "2720000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "098",
+          "enemyName": "癒術士",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 299999,
+            "ap": 3250,
+            "dps": 2119.57,
+            "speed": 23,
+            "range": 310,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1400,
+            "freq": 46,
+            "foreswing": 20,
+            "backswing": 26,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1799994,
+            "actualAp": 19500,
+            "actualDps": 12717.42,
+            "magnification": "600%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "2620000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "093",
+          "enemyName": "セラム",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 9200,
+            "ap": 600,
+            "dps": 367.35,
+            "speed": 30,
+            "range": 240,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 720,
+            "freq": 49,
+            "foreswing": 17,
+            "backswing": 32,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 239200,
+            "actualAp": 15600,
+            "actualDps": 9551.1,
+            "magnification": "2600%",
+            "count": "5",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "13.3-13.3s",
+            "delayFrames": "400-400f",
+            "baseHpRatio": "2620000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "350",
+          "enemyName": "とどめき",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 320000,
+            "ap": 8000,
+            "dps": 2242.99,
+            "speed": 11,
+            "range": 370,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1250,
+            "freq": 107,
+            "foreswing": 22,
+            "backswing": 45,
+            "tba": 43
+          },
+          "stageStats": {
+            "actualHp": 1920000,
+            "actualAp": 48000,
+            "actualDps": 13457.94,
+            "magnification": "600%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "2520000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 50,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "124",
+          "enemyName": "ブラッコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 175000,
+            "ap": 6497,
+            "dps": 8474.35,
+            "speed": 9,
+            "range": 190,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 250,
+            "freq": 23,
+            "foreswing": 14,
+            "backswing": 9,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 962500,
+            "actualAp": 35733,
+            "actualDps": 46608.93,
+            "magnification": "550%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "2520000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 150000,
+            "actualAp": 60000,
+            "actualDps": 43902.3,
+            "magnification": "3000%",
+            "count": "10",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "3.3-3.3s",
+            "delayFrames": "100-100f",
+            "baseHpRatio": "2520000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "097",
+          "enemyName": "ワイバーン",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 380000,
+            "ap": 6555,
+            "dps": 525.8,
+            "speed": 5,
+            "range": 600,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 2000,
+            "freq": 374,
+            "foreswing": 55,
+            "backswing": 66,
+            "tba": 160
+          },
+          "stageStats": {
+            "actualHp": 2090000,
+            "actualAp": 36052,
+            "actualDps": 2891.9,
+            "magnification": "550%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "2420000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 135000,
+            "actualAp": 54000,
+            "actualDps": 39512.07,
+            "magnification": "2700%",
+            "count": "15",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "5.0-5.0s",
+            "delayFrames": "150-150f",
+            "baseHpRatio": "2420000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1890000,
+            "actualAp": 27000,
+            "actualDps": 36818.28,
+            "magnification": "5400%",
+            "count": "2",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-16.7s",
+            "delayFrames": "500-500f",
+            "baseHpRatio": "2420000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "098",
+          "enemyName": "癒術士",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 299999,
+            "ap": 3250,
+            "dps": 2119.57,
+            "speed": 23,
+            "range": 310,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1400,
+            "freq": 46,
+            "foreswing": 20,
+            "backswing": 26,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1649994,
+            "actualAp": 17875,
+            "actualDps": 11657.64,
+            "magnification": "550%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "2320000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "093",
+          "enemyName": "セラム",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 9200,
+            "ap": 600,
+            "dps": 367.35,
+            "speed": 30,
+            "range": 240,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 720,
+            "freq": 49,
+            "foreswing": 17,
+            "backswing": 32,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 220800,
+            "actualAp": 14400,
+            "actualDps": 8816.4,
+            "magnification": "2400%",
+            "count": "5",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "13.3-13.3s",
+            "delayFrames": "400-400f",
+            "baseHpRatio": "2320000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "350",
+          "enemyName": "とどめき",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 320000,
+            "ap": 8000,
+            "dps": 2242.99,
+            "speed": 11,
+            "range": 370,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1250,
+            "freq": 107,
+            "foreswing": 22,
+            "backswing": 45,
+            "tba": 43
+          },
+          "stageStats": {
+            "actualHp": 1760000,
+            "actualAp": 44000,
+            "actualDps": 12336.44,
+            "magnification": "550%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "2220000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 50,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "124",
+          "enemyName": "ブラッコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 175000,
+            "ap": 6497,
+            "dps": 8474.35,
+            "speed": 9,
+            "range": 190,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 250,
+            "freq": 23,
+            "foreswing": 14,
+            "backswing": 9,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 875000,
+            "actualAp": 32485,
+            "actualDps": 42371.75,
+            "magnification": "500%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "2220000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 135000,
+            "actualAp": 54000,
+            "actualDps": 39512.07,
+            "magnification": "2700%",
+            "count": "10",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "3.3-3.3s",
+            "delayFrames": "100-100f",
+            "baseHpRatio": "2220000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "097",
+          "enemyName": "ワイバーン",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 380000,
+            "ap": 6555,
+            "dps": 525.8,
+            "speed": 5,
+            "range": 600,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 2000,
+            "freq": 374,
+            "foreswing": 55,
+            "backswing": 66,
+            "tba": 160
+          },
+          "stageStats": {
+            "actualHp": 1900000,
+            "actualAp": 32775,
+            "actualDps": 2629.0,
+            "magnification": "500%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "2120000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 120000,
+            "actualAp": 48000,
+            "actualDps": 35121.84,
+            "magnification": "2400%",
+            "count": "15",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "5.0-5.0s",
+            "delayFrames": "150-150f",
+            "baseHpRatio": "2120000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1680000,
+            "actualAp": 24000,
+            "actualDps": 32727.36,
+            "magnification": "4800%",
+            "count": "2",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-16.7s",
+            "delayFrames": "500-500f",
+            "baseHpRatio": "2120000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "098",
+          "enemyName": "癒術士",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 299999,
+            "ap": 3250,
+            "dps": 2119.57,
+            "speed": 23,
+            "range": 310,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1400,
+            "freq": 46,
+            "foreswing": 20,
+            "backswing": 26,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1499995,
+            "actualAp": 16250,
+            "actualDps": 10597.85,
+            "magnification": "500%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "2020000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "093",
+          "enemyName": "セラム",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 9200,
+            "ap": 600,
+            "dps": 367.35,
+            "speed": 30,
+            "range": 240,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 720,
+            "freq": 49,
+            "foreswing": 17,
+            "backswing": 32,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 202400,
+            "actualAp": 13200,
+            "actualDps": 8081.7,
+            "magnification": "2200%",
+            "count": "5",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "13.3-13.3s",
+            "delayFrames": "400-400f",
+            "baseHpRatio": "2020000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "350",
+          "enemyName": "とどめき",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 320000,
+            "ap": 8000,
+            "dps": 2242.99,
+            "speed": 11,
+            "range": 370,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1250,
+            "freq": 107,
+            "foreswing": 22,
+            "backswing": 45,
+            "tba": 43
+          },
+          "stageStats": {
+            "actualHp": 1600000,
+            "actualAp": 40000,
+            "actualDps": 11214.95,
+            "magnification": "500%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "1920000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 50,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "124",
+          "enemyName": "ブラッコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 175000,
+            "ap": 6497,
+            "dps": 8474.35,
+            "speed": 9,
+            "range": 190,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 250,
+            "freq": 23,
+            "foreswing": 14,
+            "backswing": 9,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 787500,
+            "actualAp": 29236,
+            "actualDps": 38134.57,
+            "magnification": "450%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "1920000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 120000,
+            "actualAp": 48000,
+            "actualDps": 35121.84,
+            "magnification": "2400%",
+            "count": "10",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "3.3-3.3s",
+            "delayFrames": "100-100f",
+            "baseHpRatio": "1920000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "097",
+          "enemyName": "ワイバーン",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 380000,
+            "ap": 6555,
+            "dps": 525.8,
+            "speed": 5,
+            "range": 600,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 2000,
+            "freq": 374,
+            "foreswing": 55,
+            "backswing": 66,
+            "tba": 160
+          },
+          "stageStats": {
+            "actualHp": 1710000,
+            "actualAp": 29497,
+            "actualDps": 2366.1,
+            "magnification": "450%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "1820000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 105000,
+            "actualAp": 42000,
+            "actualDps": 30731.61,
+            "magnification": "2100%",
+            "count": "15",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "5.0-5.0s",
+            "delayFrames": "150-150f",
+            "baseHpRatio": "1820000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1470000,
+            "actualAp": 21000,
+            "actualDps": 28636.44,
+            "magnification": "4200%",
+            "count": "2",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-16.7s",
+            "delayFrames": "500-500f",
+            "baseHpRatio": "1820000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "098",
+          "enemyName": "癒術士",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 299999,
+            "ap": 3250,
+            "dps": 2119.57,
+            "speed": 23,
+            "range": 310,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1400,
+            "freq": 46,
+            "foreswing": 20,
+            "backswing": 26,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1349995,
+            "actualAp": 14625,
+            "actualDps": 9538.07,
+            "magnification": "450%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "1720000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "093",
+          "enemyName": "セラム",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 9200,
+            "ap": 600,
+            "dps": 367.35,
+            "speed": 30,
+            "range": 240,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 720,
+            "freq": 49,
+            "foreswing": 17,
+            "backswing": 32,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 184000,
+            "actualAp": 12000,
+            "actualDps": 7347.0,
+            "magnification": "2000%",
+            "count": "5",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "13.3-13.3s",
+            "delayFrames": "400-400f",
+            "baseHpRatio": "1720000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "350",
+          "enemyName": "とどめき",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 320000,
+            "ap": 8000,
+            "dps": 2242.99,
+            "speed": 11,
+            "range": 370,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1250,
+            "freq": 107,
+            "foreswing": 22,
+            "backswing": 45,
+            "tba": 43
+          },
+          "stageStats": {
+            "actualHp": 1440000,
+            "actualAp": 36000,
+            "actualDps": 10093.45,
+            "magnification": "450%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "1620000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 50,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "124",
+          "enemyName": "ブラッコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 175000,
+            "ap": 6497,
+            "dps": 8474.35,
+            "speed": 9,
+            "range": 190,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 250,
+            "freq": 23,
+            "foreswing": 14,
+            "backswing": 9,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 700000,
+            "actualAp": 25988,
+            "actualDps": 33897.4,
+            "magnification": "400%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "1620000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 105000,
+            "actualAp": 42000,
+            "actualDps": 30731.61,
+            "magnification": "2100%",
+            "count": "10",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "3.3-3.3s",
+            "delayFrames": "100-100f",
+            "baseHpRatio": "1620000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "097",
+          "enemyName": "ワイバーン",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 380000,
+            "ap": 6555,
+            "dps": 525.8,
+            "speed": 5,
+            "range": 600,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 2000,
+            "freq": 374,
+            "foreswing": 55,
+            "backswing": 66,
+            "tba": 160
+          },
+          "stageStats": {
+            "actualHp": 1520000,
+            "actualAp": 26220,
+            "actualDps": 2103.2,
+            "magnification": "400%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "1520000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 90000,
+            "actualAp": 36000,
+            "actualDps": 26341.38,
+            "magnification": "1800%",
+            "count": "15",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "5.0-5.0s",
+            "delayFrames": "150-150f",
+            "baseHpRatio": "1520000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1260000,
+            "actualAp": 18000,
+            "actualDps": 24545.52,
+            "magnification": "3600%",
+            "count": "2",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-16.7s",
+            "delayFrames": "500-500f",
+            "baseHpRatio": "1520000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "098",
+          "enemyName": "癒術士",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 299999,
+            "ap": 3250,
+            "dps": 2119.57,
+            "speed": 23,
+            "range": 310,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1400,
+            "freq": 46,
+            "foreswing": 20,
+            "backswing": 26,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1199996,
+            "actualAp": 13000,
+            "actualDps": 8478.28,
+            "magnification": "400%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "1420000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "093",
+          "enemyName": "セラム",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 9200,
+            "ap": 600,
+            "dps": 367.35,
+            "speed": 30,
+            "range": 240,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 720,
+            "freq": 49,
+            "foreswing": 17,
+            "backswing": 32,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 165600,
+            "actualAp": 10800,
+            "actualDps": 6612.3,
+            "magnification": "1800%",
+            "count": "5",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "13.3-13.3s",
+            "delayFrames": "400-400f",
+            "baseHpRatio": "1420000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "350",
+          "enemyName": "とどめき",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 320000,
+            "ap": 8000,
+            "dps": 2242.99,
+            "speed": 11,
+            "range": 370,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1250,
+            "freq": 107,
+            "foreswing": 22,
+            "backswing": 45,
+            "tba": 43
+          },
+          "stageStats": {
+            "actualHp": 1280000,
+            "actualAp": 32000,
+            "actualDps": 8971.96,
+            "magnification": "400%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "1320000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 50,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "124",
+          "enemyName": "ブラッコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 175000,
+            "ap": 6497,
+            "dps": 8474.35,
+            "speed": 9,
+            "range": 190,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 250,
+            "freq": 23,
+            "foreswing": 14,
+            "backswing": 9,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 612500,
+            "actualAp": 22739,
+            "actualDps": 29660.22,
+            "magnification": "350%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "1320000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 90000,
+            "actualAp": 36000,
+            "actualDps": 26341.38,
+            "magnification": "1800%",
+            "count": "10",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "3.3-3.3s",
+            "delayFrames": "100-100f",
+            "baseHpRatio": "1320000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "097",
+          "enemyName": "ワイバーン",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 380000,
+            "ap": 6555,
+            "dps": 525.8,
+            "speed": 5,
+            "range": 600,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 2000,
+            "freq": 374,
+            "foreswing": 55,
+            "backswing": 66,
+            "tba": 160
+          },
+          "stageStats": {
+            "actualHp": 1330000,
+            "actualAp": 22942,
+            "actualDps": 1840.3,
+            "magnification": "350%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "1220000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 75000,
+            "actualAp": 30000,
+            "actualDps": 21951.15,
+            "magnification": "1500%",
+            "count": "15",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "5.0-5.0s",
+            "delayFrames": "150-150f",
+            "baseHpRatio": "1220000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1050000,
+            "actualAp": 15000,
+            "actualDps": 20454.6,
+            "magnification": "3000%",
+            "count": "2",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-16.7s",
+            "delayFrames": "500-500f",
+            "baseHpRatio": "1220000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "098",
+          "enemyName": "癒術士",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 299999,
+            "ap": 3250,
+            "dps": 2119.57,
+            "speed": 23,
+            "range": 310,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1400,
+            "freq": 46,
+            "foreswing": 20,
+            "backswing": 26,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1049996,
+            "actualAp": 11375,
+            "actualDps": 7418.49,
+            "magnification": "350%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "1120000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "093",
+          "enemyName": "セラム",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 9200,
+            "ap": 600,
+            "dps": 367.35,
+            "speed": 30,
+            "range": 240,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 720,
+            "freq": 49,
+            "foreswing": 17,
+            "backswing": 32,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 147200,
+            "actualAp": 9600,
+            "actualDps": 5877.6,
+            "magnification": "1600%",
+            "count": "5",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "13.3-13.3s",
+            "delayFrames": "400-400f",
+            "baseHpRatio": "1120000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "350",
+          "enemyName": "とどめき",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 320000,
+            "ap": 8000,
+            "dps": 2242.99,
+            "speed": 11,
+            "range": 370,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1250,
+            "freq": 107,
+            "foreswing": 22,
+            "backswing": 45,
+            "tba": 43
+          },
+          "stageStats": {
+            "actualHp": 1120000,
+            "actualAp": 28000,
+            "actualDps": 7850.46,
+            "magnification": "350%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "1020000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 50,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "124",
+          "enemyName": "ブラッコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 175000,
+            "ap": 6497,
+            "dps": 8474.35,
+            "speed": 9,
+            "range": 190,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 250,
+            "freq": 23,
+            "foreswing": 14,
+            "backswing": 9,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 525000,
+            "actualAp": 19491,
+            "actualDps": 25423.05,
+            "magnification": "300%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "1020000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 75000,
+            "actualAp": 30000,
+            "actualDps": 21951.15,
+            "magnification": "1500%",
+            "count": "10",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "3.3-3.3s",
+            "delayFrames": "100-100f",
+            "baseHpRatio": "1020000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "097",
+          "enemyName": "ワイバーン",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 380000,
+            "ap": 6555,
+            "dps": 525.8,
+            "speed": 5,
+            "range": 600,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 2000,
+            "freq": 374,
+            "foreswing": 55,
+            "backswing": 66,
+            "tba": 160
+          },
+          "stageStats": {
+            "actualHp": 1140000,
+            "actualAp": 19665,
+            "actualDps": 1577.4,
+            "magnification": "300%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "920000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 60000,
+            "actualAp": 24000,
+            "actualDps": 17560.92,
+            "magnification": "1200%",
+            "count": "15",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "5.0-5.0s",
+            "delayFrames": "150-150f",
+            "baseHpRatio": "920000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 840000,
+            "actualAp": 12000,
+            "actualDps": 16363.68,
+            "magnification": "2400%",
+            "count": "2",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-16.7s",
+            "delayFrames": "500-500f",
+            "baseHpRatio": "920000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "098",
+          "enemyName": "癒術士",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 299999,
+            "ap": 3250,
+            "dps": 2119.57,
+            "speed": 23,
+            "range": 310,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1400,
+            "freq": 46,
+            "foreswing": 20,
+            "backswing": 26,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 899997,
+            "actualAp": 9750,
+            "actualDps": 6358.71,
+            "magnification": "300%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "820000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "093",
+          "enemyName": "セラム",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 9200,
+            "ap": 600,
+            "dps": 367.35,
+            "speed": 30,
+            "range": 240,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 720,
+            "freq": 49,
+            "foreswing": 17,
+            "backswing": 32,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 128800,
+            "actualAp": 8400,
+            "actualDps": 5142.9,
+            "magnification": "1400%",
+            "count": "5",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "13.3-13.3s",
+            "delayFrames": "400-400f",
+            "baseHpRatio": "820000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "350",
+          "enemyName": "とどめき",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 320000,
+            "ap": 8000,
+            "dps": 2242.99,
+            "speed": 11,
+            "range": 370,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1250,
+            "freq": 107,
+            "foreswing": 22,
+            "backswing": 45,
+            "tba": 43
+          },
+          "stageStats": {
+            "actualHp": 960000,
+            "actualAp": 24000,
+            "actualDps": 6728.97,
+            "magnification": "300%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "720000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 50,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "124",
+          "enemyName": "ブラッコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 175000,
+            "ap": 6497,
+            "dps": 8474.35,
+            "speed": 9,
+            "range": 190,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 250,
+            "freq": 23,
+            "foreswing": 14,
+            "backswing": 9,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 437500,
+            "actualAp": 16242,
+            "actualDps": 21185.88,
+            "magnification": "250%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "720000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 60000,
+            "actualAp": 24000,
+            "actualDps": 17560.92,
+            "magnification": "1200%",
+            "count": "10",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "3.3-3.3s",
+            "delayFrames": "100-100f",
+            "baseHpRatio": "720000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "097",
+          "enemyName": "ワイバーン",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 380000,
+            "ap": 6555,
+            "dps": 525.8,
+            "speed": 5,
+            "range": 600,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 2000,
+            "freq": 374,
+            "foreswing": 55,
+            "backswing": 66,
+            "tba": 160
+          },
+          "stageStats": {
+            "actualHp": 950000,
+            "actualAp": 16387,
+            "actualDps": 1314.5,
+            "magnification": "250%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "620000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 45000,
+            "actualAp": 18000,
+            "actualDps": 13170.69,
+            "magnification": "900%",
+            "count": "15",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "5.0-5.0s",
+            "delayFrames": "150-150f",
+            "baseHpRatio": "620000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 630000,
+            "actualAp": 9000,
+            "actualDps": 12272.76,
+            "magnification": "1800%",
+            "count": "2",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-16.7s",
+            "delayFrames": "500-500f",
+            "baseHpRatio": "620000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "098",
+          "enemyName": "癒術士",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 299999,
+            "ap": 3250,
+            "dps": 2119.57,
+            "speed": 23,
+            "range": 310,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1400,
+            "freq": 46,
+            "foreswing": 20,
+            "backswing": 26,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 749997,
+            "actualAp": 8125,
+            "actualDps": 5298.93,
+            "magnification": "250%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "570000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "093",
+          "enemyName": "セラム",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 9200,
+            "ap": 600,
+            "dps": 367.35,
+            "speed": 30,
+            "range": 240,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 720,
+            "freq": 49,
+            "foreswing": 17,
+            "backswing": 32,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 110400,
+            "actualAp": 7200,
+            "actualDps": 4408.2,
+            "magnification": "1200%",
+            "count": "5",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "13.3-13.3s",
+            "delayFrames": "400-400f",
+            "baseHpRatio": "570000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "350",
+          "enemyName": "とどめき",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 320000,
+            "ap": 8000,
+            "dps": 2242.99,
+            "speed": 11,
+            "range": 370,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1250,
+            "freq": 107,
+            "foreswing": 22,
+            "backswing": 45,
+            "tba": 43
+          },
+          "stageStats": {
+            "actualHp": 800000,
+            "actualAp": 20000,
+            "actualDps": 5607.48,
+            "magnification": "250%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "520000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 50,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "124",
+          "enemyName": "ブラッコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 175000,
+            "ap": 6497,
+            "dps": 8474.35,
+            "speed": 9,
+            "range": 190,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 250,
+            "freq": 23,
+            "foreswing": 14,
+            "backswing": 9,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 350000,
+            "actualAp": 12994,
+            "actualDps": 16948.7,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "520000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 45000,
+            "actualAp": 18000,
+            "actualDps": 13170.69,
+            "magnification": "900%",
+            "count": "10",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "3.3-3.3s",
+            "delayFrames": "100-100f",
+            "baseHpRatio": "520000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "097",
+          "enemyName": "ワイバーン",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 380000,
+            "ap": 6555,
+            "dps": 525.8,
+            "speed": 5,
+            "range": 600,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 2000,
+            "freq": 374,
+            "foreswing": 55,
+            "backswing": 66,
+            "tba": 160
+          },
+          "stageStats": {
+            "actualHp": 760000,
+            "actualAp": 13110,
+            "actualDps": 1051.6,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "470000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 30000,
+            "actualAp": 12000,
+            "actualDps": 8780.46,
+            "magnification": "600%",
+            "count": "15",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "5.0-5.0s",
+            "delayFrames": "150-150f",
+            "baseHpRatio": "470000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 420000,
+            "actualAp": 6000,
+            "actualDps": 8181.84,
+            "magnification": "1200%",
+            "count": "2",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-16.7s",
+            "delayFrames": "500-500f",
+            "baseHpRatio": "470000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "098",
+          "enemyName": "癒術士",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 299999,
+            "ap": 3250,
+            "dps": 2119.57,
+            "speed": 23,
+            "range": 310,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1400,
+            "freq": 46,
+            "foreswing": 20,
+            "backswing": 26,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 599998,
+            "actualAp": 6500,
+            "actualDps": 4239.14,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "420000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "093",
+          "enemyName": "セラム",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 9200,
+            "ap": 600,
+            "dps": 367.35,
+            "speed": 30,
+            "range": 240,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 720,
+            "freq": 49,
+            "foreswing": 17,
+            "backswing": 32,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 92000,
+            "actualAp": 6000,
+            "actualDps": 3673.5,
+            "magnification": "1000%",
+            "count": "5",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "13.3-13.3s",
+            "delayFrames": "400-400f",
+            "baseHpRatio": "420000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "350",
+          "enemyName": "とどめき",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 320000,
+            "ap": 8000,
+            "dps": 2242.99,
+            "speed": 11,
+            "range": 370,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1250,
+            "freq": 107,
+            "foreswing": 22,
+            "backswing": 45,
+            "tba": 43
+          },
+          "stageStats": {
+            "actualHp": 640000,
+            "actualAp": 16000,
+            "actualDps": 4485.98,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "370000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 50,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "124",
+          "enemyName": "ブラッコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 175000,
+            "ap": 6497,
+            "dps": 8474.35,
+            "speed": 9,
+            "range": 190,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 250,
+            "freq": 23,
+            "foreswing": 14,
+            "backswing": 9,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 350000,
+            "actualAp": 12994,
+            "actualDps": 16948.7,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "370000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 30000,
+            "actualAp": 12000,
+            "actualDps": 8780.46,
+            "magnification": "600%",
+            "count": "10",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "3.3-3.3s",
+            "delayFrames": "100-100f",
+            "baseHpRatio": "370000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "097",
+          "enemyName": "ワイバーン",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 380000,
+            "ap": 6555,
+            "dps": 525.8,
+            "speed": 5,
+            "range": 600,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 2000,
+            "freq": 374,
+            "foreswing": 55,
+            "backswing": 66,
+            "tba": 160
+          },
+          "stageStats": {
+            "actualHp": 570000,
+            "actualAp": 9832,
+            "actualDps": 788.7,
+            "magnification": "150%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "320000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 20000,
+            "actualAp": 8000,
+            "actualDps": 5853.64,
+            "magnification": "400%",
+            "count": "15",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "5.0-5.0s",
+            "delayFrames": "150-150f",
+            "baseHpRatio": "320000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 210000,
+            "actualAp": 3000,
+            "actualDps": 4090.92,
+            "magnification": "600%",
+            "count": "2",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-16.7s",
+            "delayFrames": "500-500f",
+            "baseHpRatio": "320000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "098",
+          "enemyName": "癒術士",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 299999,
+            "ap": 3250,
+            "dps": 2119.57,
+            "speed": 23,
+            "range": 310,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1400,
+            "freq": 46,
+            "foreswing": 20,
+            "backswing": 26,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 449998,
+            "actualAp": 4875,
+            "actualDps": 3179.36,
+            "magnification": "150%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "270000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "093",
+          "enemyName": "セラム",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 9200,
+            "ap": 600,
+            "dps": 367.35,
+            "speed": 30,
+            "range": 240,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 720,
+            "freq": 49,
+            "foreswing": 17,
+            "backswing": 32,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 73600,
+            "actualAp": 4800,
+            "actualDps": 2938.8,
+            "magnification": "800%",
+            "count": "5",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "13.3-13.3s",
+            "delayFrames": "400-400f",
+            "baseHpRatio": "270000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "350",
+          "enemyName": "とどめき",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 320000,
+            "ap": 8000,
+            "dps": 2242.99,
+            "speed": 11,
+            "range": 370,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1250,
+            "freq": 107,
+            "foreswing": 22,
+            "backswing": 45,
+            "tba": 43
+          },
+          "stageStats": {
+            "actualHp": 480000,
+            "actualAp": 12000,
+            "actualDps": 3364.48,
+            "magnification": "150%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "220000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 50,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "124",
+          "enemyName": "ブラッコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 175000,
+            "ap": 6497,
+            "dps": 8474.35,
+            "speed": 9,
+            "range": 190,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 250,
+            "freq": 23,
+            "foreswing": 14,
+            "backswing": 9,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 175000,
+            "actualAp": 6497,
+            "actualDps": 8474.35,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "220000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 20000,
+            "actualAp": 8000,
+            "actualDps": 5853.64,
+            "magnification": "400%",
+            "count": "10",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "3.3-3.3s",
+            "delayFrames": "100-100f",
+            "baseHpRatio": "220000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "097",
+          "enemyName": "ワイバーン",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 380000,
+            "ap": 6555,
+            "dps": 525.8,
+            "speed": 5,
+            "range": 600,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 2000,
+            "freq": 374,
+            "foreswing": 55,
+            "backswing": 66,
+            "tba": 160
+          },
+          "stageStats": {
+            "actualHp": 380000,
+            "actualAp": 6555,
+            "actualDps": 525.8,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "170000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 12500,
+            "actualAp": 5000,
+            "actualDps": 3658.53,
+            "magnification": "250%",
+            "count": "15",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "5.0-5.0s",
+            "delayFrames": "150-150f",
+            "baseHpRatio": "170000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 175000,
+            "actualAp": 2500,
+            "actualDps": 3409.1,
+            "magnification": "500%",
+            "count": "2",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-16.7s",
+            "delayFrames": "500-500f",
+            "baseHpRatio": "170000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "098",
+          "enemyName": "癒術士",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 299999,
+            "ap": 3250,
+            "dps": 2119.57,
+            "speed": 23,
+            "range": 310,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1400,
+            "freq": 46,
+            "foreswing": 20,
+            "backswing": 26,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 299999,
+            "actualAp": 3250,
+            "actualDps": 2119.57,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "120000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "093",
+          "enemyName": "セラム",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 9200,
+            "ap": 600,
+            "dps": 367.35,
+            "speed": 30,
+            "range": 240,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 720,
+            "freq": 49,
+            "foreswing": 17,
+            "backswing": 32,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 46000,
+            "actualAp": 3000,
+            "actualDps": 1836.75,
+            "magnification": "500%",
+            "count": "5",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "13.3-13.3s",
+            "delayFrames": "400-400f",
+            "baseHpRatio": "120000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "350",
+          "enemyName": "とどめき",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 320000,
+            "ap": 8000,
+            "dps": 2242.99,
+            "speed": 11,
+            "range": 370,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1250,
+            "freq": 107,
+            "foreswing": 22,
+            "backswing": 45,
+            "tba": 43
+          },
+          "stageStats": {
+            "actualHp": 320000,
+            "actualAp": 8000,
+            "actualDps": 2242.99,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "80000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 50,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "124",
+          "enemyName": "ブラッコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 175000,
+            "ap": 6497,
+            "dps": 8474.35,
+            "speed": 9,
+            "range": 190,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 250,
+            "freq": 23,
+            "foreswing": 14,
+            "backswing": 9,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 175000,
+            "actualAp": 6497,
+            "actualDps": 8474.35,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "80000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 12500,
+            "actualAp": 5000,
+            "actualDps": 3658.53,
+            "magnification": "250%",
+            "count": "10",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "3.3-3.3s",
+            "delayFrames": "100-100f",
+            "baseHpRatio": "80000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "097",
+          "enemyName": "ワイバーン",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 380000,
+            "ap": 6555,
+            "dps": 525.8,
+            "speed": 5,
+            "range": 600,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 2000,
+            "freq": 374,
+            "foreswing": 55,
+            "backswing": 66,
+            "tba": 160
+          },
+          "stageStats": {
+            "actualHp": 228000,
+            "actualAp": 3933,
+            "actualDps": 315.48,
+            "magnification": "60%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "50000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 7500,
+            "actualAp": 3000,
+            "actualDps": 2195.11,
+            "magnification": "150%",
+            "count": "8",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "5.0-5.0s",
+            "delayFrames": "150-150f",
+            "baseHpRatio": "50000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 140000,
+            "actualAp": 2000,
+            "actualDps": 2727.28,
+            "magnification": "400%",
+            "count": "2",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-16.7s",
+            "delayFrames": "500-500f",
+            "baseHpRatio": "50000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "098",
+          "enemyName": "癒術士",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 299999,
+            "ap": 3250,
+            "dps": 2119.57,
+            "speed": 23,
+            "range": 310,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1400,
+            "freq": 46,
+            "foreswing": 20,
+            "backswing": 26,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 149999,
+            "actualAp": 1625,
+            "actualDps": 1059.79,
+            "magnification": "50%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "34000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "093",
+          "enemyName": "セラム",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 9200,
+            "ap": 600,
+            "dps": 367.35,
+            "speed": 30,
+            "range": 240,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 720,
+            "freq": 49,
+            "foreswing": 17,
+            "backswing": 32,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 27600,
+            "actualAp": 1800,
+            "actualDps": 1102.05,
+            "magnification": "300%",
+            "count": "5",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "34000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "350",
+          "enemyName": "とどめき",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 320000,
+            "ap": 8000,
+            "dps": 2242.99,
+            "speed": 11,
+            "range": 370,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1250,
+            "freq": 107,
+            "foreswing": 22,
+            "backswing": 45,
+            "tba": 43
+          },
+          "stageStats": {
+            "actualHp": 160000,
+            "actualAp": 4000,
+            "actualDps": 1121.49,
+            "magnification": "50%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "22000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 50,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "124",
+          "enemyName": "ブラッコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 175000,
+            "ap": 6497,
+            "dps": 8474.35,
+            "speed": 9,
+            "range": 190,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 250,
+            "freq": 23,
+            "foreswing": 14,
+            "backswing": 9,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 175000,
+            "actualAp": 6497,
+            "actualDps": 8474.35,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "22000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 7500,
+            "actualAp": 3000,
+            "actualDps": 2195.11,
+            "magnification": "150%",
+            "count": "3",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "3.3-3.3s",
+            "delayFrames": "100-100f",
+            "baseHpRatio": "22000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "095",
+          "enemyName": "アウラ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 77000,
+            "ap": 3555,
+            "dps": 960.81,
+            "speed": 3,
+            "range": 350,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 800,
+            "freq": 111,
+            "foreswing": 46,
+            "backswing": 65,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 38500,
+            "actualAp": 1777,
+            "actualDps": 480.4,
+            "magnification": "50%",
+            "count": "2",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "13000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 500,
+            "actualAp": 200,
+            "actualDps": 146.34,
+            "magnification": "10%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "3.0-3.0s",
+            "delayFrames": "90-90f",
+            "baseHpRatio": "13000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 2000,
+            "actualDps": 1463.41,
+            "magnification": "100%",
+            "count": "5",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "3.0-3.0s",
+            "delayFrames": "90-90f",
+            "baseHpRatio": "13000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 2000,
+            "actualDps": 1463.41,
+            "magnification": "100%",
+            "count": "10",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "5.0-5.0s",
+            "delayFrames": "150-150f",
+            "baseHpRatio": "13000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 35000,
+            "actualAp": 500,
+            "actualDps": 681.82,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-16.7s",
+            "delayFrames": "500-500f",
+            "baseHpRatio": "6000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "093",
+          "enemyName": "セラム",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 9200,
+            "ap": 600,
+            "dps": 367.35,
+            "speed": 30,
+            "range": 240,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 720,
+            "freq": 49,
+            "foreswing": 17,
+            "backswing": 32,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 9200,
+            "actualAp": 600,
+            "actualDps": 367.35,
+            "magnification": "100%",
+            "count": "2",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-16.7s",
+            "delayFrames": "500-500f",
+            "baseHpRatio": "6000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "093",
+          "enemyName": "セラム",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 9200,
+            "ap": 600,
+            "dps": 367.35,
+            "speed": 30,
+            "range": 240,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 720,
+            "freq": 49,
+            "foreswing": 17,
+            "backswing": 32,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 4600,
+            "actualAp": 300,
+            "actualDps": 183.68,
+            "magnification": "50%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-16.7s",
+            "delayFrames": "500-500f",
+            "baseHpRatio": "1000%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "089",
+          "enemyName": "ノノ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 650,
+            "ap": 150,
+            "dps": 67.16,
+            "speed": 8,
+            "range": 180,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 400,
+            "freq": 67,
+            "foreswing": 22,
+            "backswing": 45,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 650,
+            "actualAp": 150,
+            "actualDps": 67.16,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "1.7-3.3s",
+            "delayFrames": "50-100f",
+            "baseHpRatio": "1000%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "089",
+          "enemyName": "ノノ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 650,
+            "ap": 150,
+            "dps": 67.16,
+            "speed": 8,
+            "range": 180,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 400,
+            "freq": 67,
+            "foreswing": 22,
+            "backswing": 45,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 650,
+            "actualAp": 150,
+            "actualDps": 67.16,
+            "magnification": "100%",
+            "count": "2",
+            "spawnTime": "1.7s",
+            "spawnTimeFrames": "50f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "0%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "089",
+          "enemyName": "ノノ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 650,
+            "ap": 150,
+            "dps": 67.16,
+            "speed": 8,
+            "range": 180,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 400,
+            "freq": 67,
+            "foreswing": 22,
+            "backswing": 45,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 650,
+            "actualAp": 150,
+            "actualDps": 67.16,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "66.7s",
+            "spawnTimeFrames": "2,000f",
+            "delay": "26.7-40.0s",
+            "delayFrames": "800-1,200f",
+            "baseHpRatio": "0%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    }
+  ]
+}

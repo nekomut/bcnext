@@ -22,14 +22,18 @@ function StagePageContent() {
   const loadStageData = async (eventId: number): Promise<StageData | null> => {
     try {
       console.log(`Loading stage data for eventId: ${eventId}`);
-      const importPath = `../../data/stage/e${eventId}`;
-      console.log(`Import path: ${importPath}`);
+      const jsonPath = `/data/stage/e${eventId}.json`;
+      console.log(`JSON path: ${jsonPath}`);
       
-      const stageModule = await import(`../../data/stage/e${eventId}`);
-      console.log('Stage module loaded:', stageModule);
-      console.log('Stage module default:', stageModule.default);
+      const response = await fetch(jsonPath);
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
       
-      return stageModule.default;
+      const stageData = await response.json();
+      console.log('Stage data loaded:', stageData);
+      
+      return stageData;
     } catch (error) {
       console.error(`Failed to load stage data for eventId ${eventId}:`, error);
       return null;
@@ -38,7 +42,12 @@ function StagePageContent() {
 
   const searchStages = async (params: StageSearchParams): Promise<EventInfo[]> => {
     try {
-      const { stageIndexData } = await import('../../data/stage/index');
+      const response = await fetch('/data/stage/index.json');
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      }
+      
+      const stageIndexData = await response.json();
       let results = stageIndexData.events;
       
       // フィルタリング

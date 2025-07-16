@@ -1,0 +1,107 @@
+{
+  "eventId": 2209,
+  "eventName": "さらば、全てのにゃんこ。",
+  "typeId": 2,
+  "typeName": "コラボステージ",
+  "prefix": "C",
+  "mapId": 209,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "終劇",
+      "baseHp": "1000",
+      "width": "4500",
+      "enemyLimit": "20",
+      "requiredCost": "30",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "12",
+          "treasureName": "レアチケット",
+          "probability": "100",
+          "amount": "1",
+          "times": "1",
+          "limitText": "1"
+        },
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "651",
+          "enemyName": "ダミー",
+          "traits": ["メ"],
+          "baseStats": {
+            "hp": 50,
+            "ap": 1,
+            "dps": 0.03,
+            "speed": 0,
+            "range": 50,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 0,
+            "freq": 1000,
+            "foreswing": 1,
+            "backswing": 0,
+            "tba": 500
+          },
+          "stageStats": {
+            "actualHp": 50,
+            "actualAp": 1,
+            "actualDps": 0.03,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

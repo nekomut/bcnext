@@ -1,0 +1,552 @@
+{
+  "eventId": 1136,
+  "eventName": "開眼のちびネコフィッシュ襲来！",
+  "typeId": 1,
+  "typeName": "イベントステージ",
+  "prefix": "S",
+  "mapId": 136,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "ちびネコフィッシュ進化への道 極ムズ",
+      "baseHp": "999999",
+      "width": "4400",
+      "enemyLimit": "20",
+      "requiredCost": "200",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "10312",
+          "treasureName": "ちびネコ島への進化権(ちびネコフィッシュの第3形態)",
+          "probability": "100",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "013",
+          "enemyName": "ワニック",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 70,
+            "ap": 30,
+            "dps": 50.0,
+            "speed": 14,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 50,
+            "freq": 18,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 2100,
+            "actualAp": 900,
+            "actualDps": 1500.0,
+            "magnification": "3000%",
+            "count": "0",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "3.3-10.0s",
+            "delayFrames": "100-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "013",
+          "enemyName": "ワニック",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 70,
+            "ap": 30,
+            "dps": 50.0,
+            "speed": 14,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 50,
+            "freq": 18,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 2100,
+            "actualAp": 900,
+            "actualDps": 1500.0,
+            "magnification": "3000%",
+            "count": "10",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.7-3.3s",
+            "delayFrames": "20-100f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "328",
+          "enemyName": "ちびネコ島",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 247000,
+            "ap": 8400,
+            "dps": 8689.66,
+            "speed": 8,
+            "range": 260,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 320,
+            "freq": 29,
+            "foreswing": 10,
+            "backswing": 19,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 247000,
+            "actualAp": 8400,
+            "actualDps": 8689.66,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "critical": {
+              "raw_columns": 25,
+              "chance": 5
+            }
+          }
+        },
+        {
+          "enemyId": "328",
+          "enemyName": "ちびネコ島",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 247000,
+            "ap": 8400,
+            "dps": 8689.66,
+            "speed": 8,
+            "range": 260,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 320,
+            "freq": 29,
+            "foreswing": 10,
+            "backswing": 19,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 247000,
+            "actualAp": 8400,
+            "actualDps": 8689.66,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "critical": {
+              "raw_columns": 25,
+              "chance": 5
+            }
+          }
+        },
+        {
+          "enemyId": "328",
+          "enemyName": "ちびネコ島",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 247000,
+            "ap": 8400,
+            "dps": 8689.66,
+            "speed": 8,
+            "range": 260,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 320,
+            "freq": 29,
+            "foreswing": 10,
+            "backswing": 19,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 247000,
+            "actualAp": 8400,
+            "actualDps": 8689.66,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "34.0s",
+            "spawnTimeFrames": "1,020f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "critical": {
+              "raw_columns": 25,
+              "chance": 5
+            }
+          }
+        },
+        {
+          "enemyId": "328",
+          "enemyName": "ちびネコ島",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 247000,
+            "ap": 8400,
+            "dps": 8689.66,
+            "speed": 8,
+            "range": 260,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 320,
+            "freq": 29,
+            "foreswing": 10,
+            "backswing": 19,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 247000,
+            "actualAp": 8400,
+            "actualDps": 8689.66,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "34.7s",
+            "spawnTimeFrames": "1,040f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "critical": {
+              "raw_columns": 25,
+              "chance": 5
+            }
+          }
+        },
+        {
+          "enemyId": "328",
+          "enemyName": "ちびネコ島",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 247000,
+            "ap": 8400,
+            "dps": 8689.66,
+            "speed": 8,
+            "range": 260,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 320,
+            "freq": 29,
+            "foreswing": 10,
+            "backswing": 19,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 247000,
+            "actualAp": 8400,
+            "actualDps": 8689.66,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "133.3s",
+            "spawnTimeFrames": "4,000f",
+            "delay": "80.0-80.0s",
+            "delayFrames": "2,400-2,400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "critical": {
+              "raw_columns": 25,
+              "chance": 5
+            }
+          }
+        },
+        {
+          "enemyId": "328",
+          "enemyName": "ちびネコ島",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 247000,
+            "ap": 8400,
+            "dps": 8689.66,
+            "speed": 8,
+            "range": 260,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 320,
+            "freq": 29,
+            "foreswing": 10,
+            "backswing": 19,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 247000,
+            "actualAp": 8400,
+            "actualDps": 8689.66,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "134.3s",
+            "spawnTimeFrames": "4,030f",
+            "delay": "80.0-80.0s",
+            "delayFrames": "2,400-2,400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "critical": {
+              "raw_columns": 25,
+              "chance": 5
+            }
+          }
+        },
+        {
+          "enemyId": "328",
+          "enemyName": "ちびネコ島",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 247000,
+            "ap": 8400,
+            "dps": 8689.66,
+            "speed": 8,
+            "range": 260,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 320,
+            "freq": 29,
+            "foreswing": 10,
+            "backswing": 19,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 247000,
+            "actualAp": 8400,
+            "actualDps": 8689.66,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "135.0s",
+            "spawnTimeFrames": "4,050f",
+            "delay": "80.0-80.0s",
+            "delayFrames": "2,400-2,400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "critical": {
+              "raw_columns": 25,
+              "chance": 5
+            }
+          }
+        },
+        {
+          "enemyId": "328",
+          "enemyName": "ちびネコ島",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 247000,
+            "ap": 8400,
+            "dps": 8689.66,
+            "speed": 8,
+            "range": 260,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 320,
+            "freq": 29,
+            "foreswing": 10,
+            "backswing": 19,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 247000,
+            "actualAp": 8400,
+            "actualDps": 8689.66,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "135.7s",
+            "spawnTimeFrames": "4,070f",
+            "delay": "80.0-80.0s",
+            "delayFrames": "2,400-2,400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "critical": {
+              "raw_columns": 25,
+              "chance": 5
+            }
+          }
+        },
+        {
+          "enemyId": "328",
+          "enemyName": "ちびネコ島",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 247000,
+            "ap": 8400,
+            "dps": 8689.66,
+            "speed": 8,
+            "range": 260,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 320,
+            "freq": 29,
+            "foreswing": 10,
+            "backswing": 19,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 247000,
+            "actualAp": 8400,
+            "actualDps": 8689.66,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.7-1.3s",
+            "delayFrames": "20-40f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "critical": {
+              "raw_columns": 25,
+              "chance": 5
+            }
+          }
+        },
+        {
+          "enemyId": "054",
+          "enemyName": "超メタルカバちゃん",
+          "traits": ["メ"],
+          "baseStats": {
+            "hp": 8000,
+            "ap": 3000,
+            "dps": 1914.89,
+            "speed": 18,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 16,
+            "money": 999,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 24000,
+            "actualAp": 9000,
+            "actualDps": 5744.67,
+            "magnification": "300%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "013",
+          "enemyName": "ワニック",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 70,
+            "ap": 30,
+            "dps": 50.0,
+            "speed": 14,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 50,
+            "freq": 18,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 70,
+            "actualAp": 30,
+            "actualDps": 50.0,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "021",
+          "enemyName": "カンバン娘",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 10000,
+            "ap": 1,
+            "dps": 0.05,
+            "speed": 4,
+            "range": 800,
+            "rangeType": "単体",
+            "kbLevel": 10000,
+            "money": 1,
+            "freq": 607,
+            "foreswing": 8,
+            "backswing": 6,
+            "tba": 300
+          },
+          "stageStats": {
+            "actualHp": 10000,
+            "actualAp": 1,
+            "actualDps": 0.05,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "900.0s",
+            "spawnTimeFrames": "27,000f",
+            "delay": "900.0-900.0s",
+            "delayFrames": "27,000-27,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    }
+  ]
+}

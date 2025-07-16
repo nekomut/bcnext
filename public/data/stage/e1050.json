@@ -1,0 +1,635 @@
+{
+  "eventId": 1050,
+  "eventName": "開眼の箱詰め襲来！",
+  "typeId": 1,
+  "typeName": "イベントステージ",
+  "prefix": "S",
+  "mapId": 50,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "箱詰め進化への道 激ムズ",
+      "baseHp": "600000",
+      "width": "4400",
+      "enemyLimit": "15",
+      "requiredCost": "150",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "10015",
+          "treasureName": "重機C・A・Tへの進化権(ネコの箱詰めの第3形態)",
+          "probability": "5",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "013",
+          "enemyName": "ワニック",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 70,
+            "ap": 30,
+            "dps": 50.0,
+            "speed": 14,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 50,
+            "freq": 18,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1050,
+            "actualAp": 450,
+            "actualDps": 750.0,
+            "magnification": "1500%",
+            "count": "0",
+            "spawnTime": "4.0s",
+            "spawnTimeFrames": "120f",
+            "delay": "1.0-5.0s",
+            "delayFrames": "30-150f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "013",
+          "enemyName": "ワニック",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 70,
+            "ap": 30,
+            "dps": 50.0,
+            "speed": 14,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 50,
+            "freq": 18,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1050,
+            "actualAp": 450,
+            "actualDps": 750.0,
+            "magnification": "1500%",
+            "count": "0",
+            "spawnTime": "6.0s",
+            "spawnTimeFrames": "180f",
+            "delay": "3.0-7.0s",
+            "delayFrames": "90-210f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "013",
+          "enemyName": "ワニック",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 70,
+            "ap": 30,
+            "dps": 50.0,
+            "speed": 14,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 50,
+            "freq": 18,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1050,
+            "actualAp": 450,
+            "actualDps": 750.0,
+            "magnification": "1500%",
+            "count": "0",
+            "spawnTime": "8.0s",
+            "spawnTimeFrames": "240f",
+            "delay": "2.0-9.0s",
+            "delayFrames": "60-270f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "051",
+          "enemyName": "ブラッゴリ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 3123,
+            "dps": 5855.62,
+            "speed": 30,
+            "range": 155,
+            "rangeType": "範囲",
+            "kbLevel": 8,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 40000,
+            "actualAp": 3123,
+            "actualDps": 5855.62,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "12.0s",
+            "spawnTimeFrames": "360f",
+            "delay": "45.0-50.0s",
+            "delayFrames": "1,350-1,500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "051",
+          "enemyName": "ブラッゴリ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 3123,
+            "dps": 5855.62,
+            "speed": 30,
+            "range": 155,
+            "rangeType": "範囲",
+            "kbLevel": 8,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 40000,
+            "actualAp": 3123,
+            "actualDps": 5855.62,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "35.0-40.0s",
+            "delayFrames": "1,050-1,200f",
+            "baseHpRatio": "85%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "124",
+          "enemyName": "ブラッコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 175000,
+            "ap": 6497,
+            "dps": 8474.35,
+            "speed": 9,
+            "range": 190,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 250,
+            "freq": 23,
+            "foreswing": 14,
+            "backswing": 9,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 175000,
+            "actualAp": 6497,
+            "actualDps": 8474.35,
+            "magnification": "100%",
+            "count": "8",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "76.7-76.7s",
+            "delayFrames": "2,300-2,300f",
+            "baseHpRatio": "70%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "132",
+          "enemyName": "重機C・A・T",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1500000,
+            "ap": 16000,
+            "dps": 2874.25,
+            "speed": 20,
+            "range": 400,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1950,
+            "freq": 167,
+            "foreswing": 8,
+            "backswing": 93,
+            "tba": 80
+          },
+          "stageStats": {
+            "actualHp": 1500000,
+            "actualAp": 16000,
+            "actualDps": 2874.25,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "70%",
+            "isBoss": true
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 1,
+      "stageName": "箱詰め進化への道 超激ムズ",
+      "baseHp": "990000",
+      "width": "4400",
+      "enemyLimit": "15",
+      "requiredCost": "150",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "10015",
+          "treasureName": "重機C・A・Tへの進化権(ネコの箱詰めの第3形態)",
+          "probability": "100",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "013",
+          "enemyName": "ワニック",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 70,
+            "ap": 30,
+            "dps": 50.0,
+            "speed": 14,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 50,
+            "freq": 18,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1750,
+            "actualAp": 750,
+            "actualDps": 1250.0,
+            "magnification": "2500%",
+            "count": "0",
+            "spawnTime": "4.0s",
+            "spawnTimeFrames": "120f",
+            "delay": "3.0-8.0s",
+            "delayFrames": "90-240f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "013",
+          "enemyName": "ワニック",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 70,
+            "ap": 30,
+            "dps": 50.0,
+            "speed": 14,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 50,
+            "freq": 18,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1750,
+            "actualAp": 750,
+            "actualDps": 1250.0,
+            "magnification": "2500%",
+            "count": "0",
+            "spawnTime": "6.0s",
+            "spawnTimeFrames": "180f",
+            "delay": "4.0-10.0s",
+            "delayFrames": "120-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "013",
+          "enemyName": "ワニック",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 70,
+            "ap": 30,
+            "dps": 50.0,
+            "speed": 14,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 50,
+            "freq": 18,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1750,
+            "actualAp": 750,
+            "actualDps": 1250.0,
+            "magnification": "2500%",
+            "count": "0",
+            "spawnTime": "8.0s",
+            "spawnTimeFrames": "240f",
+            "delay": "5.0-12.0s",
+            "delayFrames": "150-360f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "051",
+          "enemyName": "ブラッゴリ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 3123,
+            "dps": 5855.62,
+            "speed": 30,
+            "range": 155,
+            "rangeType": "範囲",
+            "kbLevel": 8,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 60000,
+            "actualAp": 4684,
+            "actualDps": 8783.43,
+            "magnification": "150%",
+            "count": "0",
+            "spawnTime": "12.0s",
+            "spawnTimeFrames": "360f",
+            "delay": "40.0-45.0s",
+            "delayFrames": "1,200-1,350f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "051",
+          "enemyName": "ブラッゴリ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 3123,
+            "dps": 5855.62,
+            "speed": 30,
+            "range": 155,
+            "rangeType": "範囲",
+            "kbLevel": 8,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 60000,
+            "actualAp": 4684,
+            "actualDps": 8783.43,
+            "magnification": "150%",
+            "count": "0",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "40.0-45.0s",
+            "delayFrames": "1,200-1,350f",
+            "baseHpRatio": "85%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "052",
+          "enemyName": "シャドウボクサー",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 80000,
+            "ap": 4997,
+            "dps": 9369.38,
+            "speed": 22,
+            "range": 158,
+            "rangeType": "範囲",
+            "kbLevel": 10,
+            "money": 600,
+            "freq": 16,
+            "foreswing": 2,
+            "backswing": 8,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 120000,
+            "actualAp": 7495,
+            "actualDps": 14054.07,
+            "magnification": "150%",
+            "count": "0",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "53.3-60.0s",
+            "delayFrames": "1,600-1,800f",
+            "baseHpRatio": "70%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "124",
+          "enemyName": "ブラッコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 175000,
+            "ap": 6497,
+            "dps": 8474.35,
+            "speed": 9,
+            "range": 190,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 250,
+            "freq": 23,
+            "foreswing": 14,
+            "backswing": 9,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 175000,
+            "actualAp": 6497,
+            "actualDps": 8474.35,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "75.0-75.0s",
+            "delayFrames": "2,250-2,250f",
+            "baseHpRatio": "70%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "132",
+          "enemyName": "重機C・A・T",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1500000,
+            "ap": 16000,
+            "dps": 2874.25,
+            "speed": 20,
+            "range": 400,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1950,
+            "freq": 167,
+            "foreswing": 8,
+            "backswing": 93,
+            "tba": 80
+          },
+          "stageStats": {
+            "actualHp": 2250000,
+            "actualAp": 24000,
+            "actualDps": 4311.38,
+            "magnification": "150%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "70%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "132",
+          "enemyName": "重機C・A・T",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1500000,
+            "ap": 16000,
+            "dps": 2874.25,
+            "speed": 20,
+            "range": 400,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1950,
+            "freq": 167,
+            "foreswing": 8,
+            "backswing": 93,
+            "tba": 80
+          },
+          "stageStats": {
+            "actualHp": 2250000,
+            "actualAp": 24000,
+            "actualDps": 4311.38,
+            "magnification": "150%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "70%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "013",
+          "enemyName": "ワニック",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 70,
+            "ap": 30,
+            "dps": 50.0,
+            "speed": 14,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 50,
+            "freq": 18,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1750,
+            "actualAp": 750,
+            "actualDps": 1250.0,
+            "magnification": "2500%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "70%",
+            "isBoss": true
+          },
+          "abilities": {}
+        }
+      ]
+    }
+  ]
+}

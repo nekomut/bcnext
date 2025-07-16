@@ -1,0 +1,2959 @@
+{
+  "eventId": 1320,
+  "eventName": "#02 お菓子争奪戦",
+  "typeId": 1,
+  "typeName": "イベントステージ",
+  "prefix": "S",
+  "mapId": 320,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 4,
+    "magnifications": [100, 150, 200, 200],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "よどみ原色ケーキ",
+      "baseHp": "6000",
+      "width": "4800",
+      "enemyLimit": "8",
+      "requiredCost": "30",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 4,
+        "magnifications": [100, 150, 200, 200],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1022",
+          "treasureName": "にゃんぷきん(227)",
+          "probability": "1",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "7000",
+          "treasureName": "キャラクタードロップ(7000)",
+          "probability": "1",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "4000",
+          "treasureName": "キャラクタードロップ(4000)",
+          "probability": "50000",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "10000",
+          "amount": "3",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "197",
+          "enemyName": "わんぷきん",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 540,
+            "ap": 24,
+            "dps": 13.33,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 90,
+            "freq": 54,
+            "foreswing": 15,
+            "backswing": 11,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 540,
+            "actualAp": 24,
+            "actualDps": 13.33,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "103",
+          "enemyName": "ゴーストわんこ",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 180,
+            "ap": 16,
+            "dps": 10.67,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 30,
+            "freq": 45,
+            "foreswing": 6,
+            "backswing": 13,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 180,
+            "actualAp": 16,
+            "actualDps": 10.67,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "22.0-24.0s",
+            "delayFrames": "660-720f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "103",
+          "enemyName": "ゴーストわんこ",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 180,
+            "ap": 16,
+            "dps": 10.67,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 30,
+            "freq": 45,
+            "foreswing": 6,
+            "backswing": 13,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 180,
+            "actualAp": 16,
+            "actualDps": 10.67,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "23.3s",
+            "spawnTimeFrames": "700f",
+            "delay": "22.0-24.0s",
+            "delayFrames": "660-720f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "104",
+          "enemyName": "ゴーストにょろ",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 200,
+            "ap": 30,
+            "dps": 23.08,
+            "speed": 8,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 60,
+            "freq": 39,
+            "foreswing": 10,
+            "backswing": 6,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 200,
+            "actualAp": 30,
+            "actualDps": 23.08,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "22.0-24.0s",
+            "delayFrames": "660-720f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "003",
+          "enemyName": "カバちゃん",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1000,
+            "ap": 100,
+            "dps": 44.78,
+            "speed": 4,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 400,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 1000,
+            "actualAp": 100,
+            "actualDps": 44.78,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "50.0s",
+            "spawnTimeFrames": "1,500f",
+            "delay": "26.7-40.0s",
+            "delayFrames": "800-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "197",
+          "enemyName": "わんぷきん",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 540,
+            "ap": 24,
+            "dps": 13.33,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 90,
+            "freq": 54,
+            "foreswing": 15,
+            "backswing": 11,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 540,
+            "actualAp": 24,
+            "actualDps": 13.33,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "80.0s",
+            "spawnTimeFrames": "2,400f",
+            "delay": "30.0-33.3s",
+            "delayFrames": "900-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "197",
+          "enemyName": "わんぷきん",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 540,
+            "ap": 24,
+            "dps": 13.33,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 90,
+            "freq": 54,
+            "foreswing": 15,
+            "backswing": 11,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 540,
+            "actualAp": 24,
+            "actualDps": 13.33,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "83.3s",
+            "spawnTimeFrames": "2,500f",
+            "delay": "30.0-33.3s",
+            "delayFrames": "900-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "103",
+          "enemyName": "ゴーストわんこ",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 180,
+            "ap": 16,
+            "dps": 10.67,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 30,
+            "freq": 45,
+            "foreswing": 6,
+            "backswing": 13,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 180,
+            "actualAp": 16,
+            "actualDps": 10.67,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "96.7s",
+            "spawnTimeFrames": "2,900f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "104",
+          "enemyName": "ゴーストにょろ",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 200,
+            "ap": 30,
+            "dps": 23.08,
+            "speed": 8,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 60,
+            "freq": 39,
+            "foreswing": 10,
+            "backswing": 6,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 200,
+            "actualAp": 30,
+            "actualDps": 23.08,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "197",
+          "enemyName": "わんぷきん",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 540,
+            "ap": 24,
+            "dps": 13.33,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 90,
+            "freq": 54,
+            "foreswing": 15,
+            "backswing": 11,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 540,
+            "actualAp": 24,
+            "actualDps": 13.33,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "13.3-20.0s",
+            "delayFrames": "400-600f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "197",
+          "enemyName": "わんぷきん",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 540,
+            "ap": 24,
+            "dps": 13.33,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 90,
+            "freq": 54,
+            "foreswing": 15,
+            "backswing": 11,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 540,
+            "actualAp": 24,
+            "actualDps": 13.33,
+            "magnification": "100%",
+            "count": "9",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "1.0-2.0s",
+            "delayFrames": "30-60f",
+            "baseHpRatio": "90%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "197",
+          "enemyName": "わんぷきん",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 540,
+            "ap": 24,
+            "dps": 13.33,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 90,
+            "freq": 54,
+            "foreswing": 15,
+            "backswing": 11,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 540,
+            "actualAp": 24,
+            "actualDps": 13.33,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "90%",
+            "isBoss": true
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 1,
+      "stageName": "カカオ0％チョコ",
+      "baseHp": "30000",
+      "width": "4500",
+      "enemyLimit": "10",
+      "requiredCost": "45",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 4,
+        "magnifications": [100, 150, 200, 200],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1022",
+          "treasureName": "にゃんぷきん(227)",
+          "probability": "2",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "8000",
+          "treasureName": "キャラクタードロップ(8000)",
+          "probability": "1",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "4000",
+          "treasureName": "キャラクタードロップ(4000)",
+          "probability": "100000",
+          "amount": "2",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "1",
+          "amount": "0",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "103",
+          "enemyName": "ゴーストわんこ",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 180,
+            "ap": 16,
+            "dps": 10.67,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 30,
+            "freq": 45,
+            "foreswing": 6,
+            "backswing": 13,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 180,
+            "actualAp": 16,
+            "actualDps": 10.67,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "13.3-20.0s",
+            "delayFrames": "400-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "104",
+          "enemyName": "ゴーストにょろ",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 200,
+            "ap": 30,
+            "dps": 23.08,
+            "speed": 8,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 60,
+            "freq": 39,
+            "foreswing": 10,
+            "backswing": 6,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 200,
+            "actualAp": 30,
+            "actualDps": 23.08,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "6.0s",
+            "spawnTimeFrames": "180f",
+            "delay": "8.0-12.0s",
+            "delayFrames": "240-360f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "105",
+          "enemyName": "ゴーストメェメェ",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 1000,
+            "ap": 100,
+            "dps": 58.82,
+            "speed": 7,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 300,
+            "freq": 51,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 1000,
+            "actualAp": 100,
+            "actualDps": 58.82,
+            "magnification": "100%",
+            "count": "2",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "8.3-8.3s",
+            "delayFrames": "250-250f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "197",
+          "enemyName": "わんぷきん",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 540,
+            "ap": 24,
+            "dps": 13.33,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 90,
+            "freq": 54,
+            "foreswing": 15,
+            "backswing": 11,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 540,
+            "actualAp": 24,
+            "actualDps": 13.33,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "16.0-24.0s",
+            "delayFrames": "480-720f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "197",
+          "enemyName": "わんぷきん",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 540,
+            "ap": 24,
+            "dps": 13.33,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 90,
+            "freq": 54,
+            "foreswing": 15,
+            "backswing": 11,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 540,
+            "actualAp": 24,
+            "actualDps": 13.33,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "16.0-24.0s",
+            "delayFrames": "480-720f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "004",
+          "enemyName": "ブタヤロウ",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 1500,
+            "ap": 120,
+            "dps": 49.32,
+            "speed": 5,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 400,
+            "freq": 73,
+            "foreswing": 14,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 1500,
+            "actualAp": 120,
+            "actualDps": 49.32,
+            "magnification": "100%",
+            "count": "5",
+            "spawnTime": "50.0s",
+            "spawnTimeFrames": "1,500f",
+            "delay": "13.3-20.0s",
+            "delayFrames": "400-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 2500,
+            "actualAp": 150,
+            "actualDps": 195.65,
+            "magnification": "100%",
+            "count": "5",
+            "spawnTime": "60.0s",
+            "spawnTimeFrames": "1,800f",
+            "delay": "16.7-16.7s",
+            "delayFrames": "500-500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "022",
+          "enemyName": "ガガガガ",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 350,
+            "dps": 119.32,
+            "speed": 20,
+            "range": 340,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1800,
+            "freq": 88,
+            "foreswing": 34,
+            "backswing": 54,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 350,
+            "actualDps": 119.32,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "120.0s",
+            "spawnTimeFrames": "3,600f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "012",
+          "enemyName": "クマ先生",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 3000,
+            "ap": 1000,
+            "dps": 280.37,
+            "speed": 4,
+            "range": 350,
+            "rangeType": "範囲",
+            "kbLevel": 10,
+            "money": 2000,
+            "freq": 107,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 50
+          },
+          "stageStats": {
+            "actualHp": 3000,
+            "actualAp": 1000,
+            "actualDps": 280.37,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "133.3s",
+            "spawnTimeFrames": "4,000f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "012",
+          "enemyName": "クマ先生",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 3000,
+            "ap": 1000,
+            "dps": 280.37,
+            "speed": 4,
+            "range": 350,
+            "rangeType": "範囲",
+            "kbLevel": 10,
+            "money": 2000,
+            "freq": 107,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 50
+          },
+          "stageStats": {
+            "actualHp": 3000,
+            "actualAp": 1000,
+            "actualDps": 280.37,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "143.3s",
+            "spawnTimeFrames": "4,300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "105",
+          "enemyName": "ゴーストメェメェ",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 1000,
+            "ap": 100,
+            "dps": 58.82,
+            "speed": 7,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 300,
+            "freq": 51,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 1000,
+            "actualAp": 100,
+            "actualDps": 58.82,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "160.0s",
+            "spawnTimeFrames": "4,800f",
+            "delay": "16.0-24.0s",
+            "delayFrames": "480-720f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "104",
+          "enemyName": "ゴーストにょろ",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 200,
+            "ap": 30,
+            "dps": 23.08,
+            "speed": 8,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 60,
+            "freq": 39,
+            "foreswing": 10,
+            "backswing": 6,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 200,
+            "actualAp": 30,
+            "actualDps": 23.08,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "162.7s",
+            "spawnTimeFrames": "4,880f",
+            "delay": "10.7-16.0s",
+            "delayFrames": "320-480f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "103",
+          "enemyName": "ゴーストわんこ",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 180,
+            "ap": 16,
+            "dps": 10.67,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 30,
+            "freq": 45,
+            "foreswing": 6,
+            "backswing": 13,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 180,
+            "actualAp": 16,
+            "actualDps": 10.67,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "166.7s",
+            "spawnTimeFrames": "5,000f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 2,
+      "stageName": "加重グミ",
+      "baseHp": "50000",
+      "width": "5200",
+      "enemyLimit": "10",
+      "requiredCost": "60",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 4,
+        "magnifications": [100, 150, 200, 200],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1022",
+          "treasureName": "にゃんぷきん(227)",
+          "probability": "3",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "7500",
+          "treasureName": "キャラクタードロップ(7500)",
+          "probability": "1",
+          "amount": "11",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "4000",
+          "treasureName": "キャラクタードロップ(4000)",
+          "probability": "1",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "50000",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "197",
+          "enemyName": "わんぷきん",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 540,
+            "ap": 24,
+            "dps": 13.33,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 90,
+            "freq": 54,
+            "foreswing": 15,
+            "backswing": 11,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 540,
+            "actualAp": 24,
+            "actualDps": 13.33,
+            "magnification": "100%",
+            "count": "5",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "13.3-20.0s",
+            "delayFrames": "400-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "002",
+          "enemyName": "例のヤツ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 200,
+            "ap": 20,
+            "dps": 20.0,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 75,
+            "freq": 30,
+            "foreswing": 10,
+            "backswing": 20,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 200,
+            "actualAp": 20,
+            "actualDps": 20.0,
+            "magnification": "100%",
+            "count": "10",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "10.0-16.7s",
+            "delayFrames": "300-500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "011",
+          "enemyName": "一角くん",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 15000,
+            "ap": 500,
+            "dps": 937.5,
+            "speed": 3,
+            "range": 40,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 2500,
+            "freq": 16,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 15000,
+            "actualAp": 500,
+            "actualDps": 937.5,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 500,
+            "actualAp": 50,
+            "actualDps": 36.59,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "16.7-33.3s",
+            "delayFrames": "500-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "103",
+          "enemyName": "ゴーストわんこ",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 180,
+            "ap": 16,
+            "dps": 10.67,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 30,
+            "freq": 45,
+            "foreswing": 6,
+            "backswing": 13,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 180,
+            "actualAp": 16,
+            "actualDps": 10.67,
+            "magnification": "100%",
+            "count": "5",
+            "spawnTime": "56.7s",
+            "spawnTimeFrames": "1,700f",
+            "delay": "8.0-12.0s",
+            "delayFrames": "240-360f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "103",
+          "enemyName": "ゴーストわんこ",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 180,
+            "ap": 16,
+            "dps": 10.67,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 30,
+            "freq": 45,
+            "foreswing": 6,
+            "backswing": 13,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 180,
+            "actualAp": 16,
+            "actualDps": 10.67,
+            "magnification": "100%",
+            "count": "5",
+            "spawnTime": "61.7s",
+            "spawnTimeFrames": "1,850f",
+            "delay": "8.0-12.0s",
+            "delayFrames": "240-360f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "104",
+          "enemyName": "ゴーストにょろ",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 200,
+            "ap": 30,
+            "dps": 23.08,
+            "speed": 8,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 60,
+            "freq": 39,
+            "foreswing": 10,
+            "backswing": 6,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 200,
+            "actualAp": 30,
+            "actualDps": 23.08,
+            "magnification": "100%",
+            "count": "5",
+            "spawnTime": "66.7s",
+            "spawnTimeFrames": "2,000f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "197",
+          "enemyName": "わんぷきん",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 540,
+            "ap": 24,
+            "dps": 13.33,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 90,
+            "freq": 54,
+            "foreswing": 15,
+            "backswing": 11,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 540,
+            "actualAp": 24,
+            "actualDps": 13.33,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 2500,
+            "actualAp": 150,
+            "actualDps": 195.65,
+            "magnification": "100%",
+            "count": "5",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-33.3s",
+            "delayFrames": "500-1,000f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "199",
+          "enemyName": "ドバット",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 6300,
+            "ap": 800,
+            "dps": 545.45,
+            "speed": 16,
+            "range": 200,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 150,
+            "freq": 44,
+            "foreswing": 5,
+            "backswing": 6,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 6300,
+            "actualAp": 800,
+            "actualDps": 545.45,
+            "magnification": "100%",
+            "count": "4",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "20.0-20.0s",
+            "delayFrames": "600-600f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "199",
+          "enemyName": "ドバット",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 6300,
+            "ap": 800,
+            "dps": 545.45,
+            "speed": 16,
+            "range": 200,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 150,
+            "freq": 44,
+            "foreswing": 5,
+            "backswing": 6,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 6300,
+            "actualAp": 800,
+            "actualDps": 545.45,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 3,
+      "stageName": "銀歯キャラメル",
+      "baseHp": "100000",
+      "width": "4800",
+      "enemyLimit": "9",
+      "requiredCost": "70",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 4,
+        "magnifications": [100, 150, 200, 200],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1022",
+          "treasureName": "にゃんぷきん(227)",
+          "probability": "4",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "6000",
+          "treasureName": "キャラクタードロップ(6000)",
+          "probability": "1",
+          "amount": "5",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "4000",
+          "treasureName": "キャラクタードロップ(4000)",
+          "probability": "1",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "80000",
+          "amount": "3",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 2000,
+            "actualDps": 1463.41,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "103",
+          "enemyName": "ゴーストわんこ",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 180,
+            "ap": 16,
+            "dps": 10.67,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 30,
+            "freq": 45,
+            "foreswing": 6,
+            "backswing": 13,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 360,
+            "actualAp": 32,
+            "actualDps": 21.34,
+            "magnification": "200%",
+            "count": "0",
+            "spawnTime": "21.3s",
+            "spawnTimeFrames": "640f",
+            "delay": "13.3-20.0s",
+            "delayFrames": "400-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "105",
+          "enemyName": "ゴーストメェメェ",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 1000,
+            "ap": 100,
+            "dps": 58.82,
+            "speed": 7,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 300,
+            "freq": 51,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 2000,
+            "actualAp": 200,
+            "actualDps": 117.64,
+            "magnification": "200%",
+            "count": "5",
+            "spawnTime": "24.0s",
+            "spawnTimeFrames": "720f",
+            "delay": "20.0-40.0s",
+            "delayFrames": "600-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "197",
+          "enemyName": "わんぷきん",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 540,
+            "ap": 24,
+            "dps": 13.33,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 90,
+            "freq": 54,
+            "foreswing": 15,
+            "backswing": 11,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 1080,
+            "actualAp": 48,
+            "actualDps": 26.66,
+            "magnification": "200%",
+            "count": "0",
+            "spawnTime": "26.0s",
+            "spawnTimeFrames": "780f",
+            "delay": "16.0-32.0s",
+            "delayFrames": "480-960f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 2000,
+            "actualDps": 1463.41,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "36.7s",
+            "spawnTimeFrames": "1,100f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 2000,
+            "actualDps": 1463.41,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "44.0s",
+            "spawnTimeFrames": "1,320f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "199",
+          "enemyName": "ドバット",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 6300,
+            "ap": 800,
+            "dps": 545.45,
+            "speed": 16,
+            "range": 200,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 150,
+            "freq": 44,
+            "foreswing": 5,
+            "backswing": 6,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 6300,
+            "actualAp": 800,
+            "actualDps": 545.45,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "50.0s",
+            "spawnTimeFrames": "1,500f",
+            "delay": "26.7-53.3s",
+            "delayFrames": "800-1,600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "104",
+          "enemyName": "ゴーストにょろ",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 200,
+            "ap": 30,
+            "dps": 23.08,
+            "speed": 8,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 60,
+            "freq": 39,
+            "foreswing": 10,
+            "backswing": 6,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 400,
+            "actualAp": 60,
+            "actualDps": 46.16,
+            "magnification": "200%",
+            "count": "5",
+            "spawnTime": "61.7s",
+            "spawnTimeFrames": "1,850f",
+            "delay": "13.3-26.7s",
+            "delayFrames": "400-800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "104",
+          "enemyName": "ゴーストにょろ",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 200,
+            "ap": 30,
+            "dps": 23.08,
+            "speed": 8,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 60,
+            "freq": 39,
+            "foreswing": 10,
+            "backswing": 6,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 400,
+            "actualAp": 60,
+            "actualDps": 46.16,
+            "magnification": "200%",
+            "count": "5",
+            "spawnTime": "66.7s",
+            "spawnTimeFrames": "2,000f",
+            "delay": "13.3-26.7s",
+            "delayFrames": "400-800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "199",
+          "enemyName": "ドバット",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 6300,
+            "ap": 800,
+            "dps": 545.45,
+            "speed": 16,
+            "range": 200,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 150,
+            "freq": 44,
+            "foreswing": 5,
+            "backswing": 6,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 6300,
+            "actualAp": 800,
+            "actualDps": 545.45,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "26.7-26.7s",
+            "delayFrames": "800-800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "199",
+          "enemyName": "ドバット",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 6300,
+            "ap": 800,
+            "dps": 545.45,
+            "speed": 16,
+            "range": 200,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 150,
+            "freq": 44,
+            "foreswing": 5,
+            "backswing": 6,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 6300,
+            "actualAp": 800,
+            "actualDps": 545.45,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "103.0s",
+            "spawnTimeFrames": "3,090f",
+            "delay": "26.7-26.7s",
+            "delayFrames": "800-800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "199",
+          "enemyName": "ドバット",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 6300,
+            "ap": 800,
+            "dps": 545.45,
+            "speed": 16,
+            "range": 200,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 150,
+            "freq": 44,
+            "foreswing": 5,
+            "backswing": 6,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 6300,
+            "actualAp": 800,
+            "actualDps": 545.45,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "106.0s",
+            "spawnTimeFrames": "3,180f",
+            "delay": "26.7-26.7s",
+            "delayFrames": "800-800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "197",
+          "enemyName": "わんぷきん",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 540,
+            "ap": 24,
+            "dps": 13.33,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 90,
+            "freq": 54,
+            "foreswing": 15,
+            "backswing": 11,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 1080,
+            "actualAp": 48,
+            "actualDps": 26.66,
+            "magnification": "200%",
+            "count": "5",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "2.7-4.0s",
+            "delayFrames": "80-120f",
+            "baseHpRatio": "90%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 2000,
+            "actualDps": 1463.41,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "26.7-40.0s",
+            "delayFrames": "800-1,200f",
+            "baseHpRatio": "90%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "198",
+          "enemyName": "まゆげ伯爵",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 166000,
+            "ap": 6600,
+            "dps": 1706.9,
+            "speed": 12,
+            "range": 370,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1600,
+            "freq": 116,
+            "foreswing": 44,
+            "backswing": 72,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 166000,
+            "actualAp": 6600,
+            "actualDps": 1706.9,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "90%",
+            "isBoss": true
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 50
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 50,
+              "duration_f": 90,
+              "duration_s": 3.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 4,
+      "stageName": "リアル人形焼",
+      "baseHp": "300000",
+      "width": "5600",
+      "enemyLimit": "10",
+      "requiredCost": "80",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 4,
+        "magnifications": [100, 150, 200, 200],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1022",
+          "treasureName": "にゃんぷきん(227)",
+          "probability": "5",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "6000",
+          "treasureName": "キャラクタードロップ(6000)",
+          "probability": "1",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "3000",
+          "treasureName": "キャラクタードロップ(3000)",
+          "probability": "400000",
+          "amount": "4",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "1",
+          "amount": "2",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "002",
+          "enemyName": "例のヤツ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 200,
+            "ap": 20,
+            "dps": 20.0,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 75,
+            "freq": 30,
+            "foreswing": 10,
+            "backswing": 20,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 800,
+            "actualAp": 80,
+            "actualDps": 80.0,
+            "magnification": "400%",
+            "count": "5",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "4.0-6.0s",
+            "delayFrames": "120-180f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "197",
+          "enemyName": "わんぷきん",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 540,
+            "ap": 24,
+            "dps": 13.33,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 90,
+            "freq": 54,
+            "foreswing": 15,
+            "backswing": 11,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 2160,
+            "actualAp": 96,
+            "actualDps": 53.32,
+            "magnification": "400%",
+            "count": "5",
+            "spawnTime": "8.0s",
+            "spawnTimeFrames": "240f",
+            "delay": "10.0-16.7s",
+            "delayFrames": "300-500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "042",
+          "enemyName": "セレブ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 5000,
+            "dps": 3658.54,
+            "speed": 20,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 700,
+            "freq": 41,
+            "foreswing": 17,
+            "backswing": 24,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 9000,
+            "actualAp": 5000,
+            "actualDps": 3658.54,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "33.3-50.0s",
+            "delayFrames": "1,000-1,500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "198",
+          "enemyName": "まゆげ伯爵",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 166000,
+            "ap": 6600,
+            "dps": 1706.9,
+            "speed": 12,
+            "range": 370,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1600,
+            "freq": 116,
+            "foreswing": 44,
+            "backswing": 72,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 332000,
+            "actualAp": 13200,
+            "actualDps": 3413.8,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 50
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 50,
+              "duration_f": 90,
+              "duration_s": 3.0
+            }
+          }
+        },
+        {
+          "enemyId": "004",
+          "enemyName": "ブタヤロウ",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 1500,
+            "ap": 120,
+            "dps": 49.32,
+            "speed": 5,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 400,
+            "freq": 73,
+            "foreswing": 14,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 6000,
+            "actualAp": 480,
+            "actualDps": 197.28,
+            "magnification": "400%",
+            "count": "1",
+            "spawnTime": "36.7s",
+            "spawnTimeFrames": "1,100f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "004",
+          "enemyName": "ブタヤロウ",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 1500,
+            "ap": 120,
+            "dps": 49.32,
+            "speed": 5,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 400,
+            "freq": 73,
+            "foreswing": 14,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 6000,
+            "actualAp": 480,
+            "actualDps": 197.28,
+            "magnification": "400%",
+            "count": "1",
+            "spawnTime": "44.0s",
+            "spawnTimeFrames": "1,320f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "167",
+          "enemyName": "エイリワン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 900,
+            "ap": 150,
+            "dps": 109.76,
+            "speed": 8,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 90,
+            "freq": 41,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 17
+          },
+          "stageStats": {
+            "actualHp": 900,
+            "actualAp": 150,
+            "actualDps": 109.76,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "50.0s",
+            "spawnTimeFrames": "1,500f",
+            "delay": "6.0-8.0s",
+            "delayFrames": "180-240f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "171",
+          "enemyName": "レディ・ガ",
+          "traits": [
+            "浮",
+            "エ"
+          ],
+          "baseStats": {
+            "hp": 17777,
+            "ap": 777,
+            "dps": 264.89,
+            "speed": 15,
+            "range": 370,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1555,
+            "freq": 88,
+            "foreswing": 34,
+            "backswing": 54,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 17777,
+            "actualAp": 777,
+            "actualDps": 264.89,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "66.7s",
+            "spawnTimeFrames": "2,000f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 60,
+              "duration_s": 2.0
+            }
+          }
+        },
+        {
+          "enemyId": "167",
+          "enemyName": "エイリワン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 900,
+            "ap": 150,
+            "dps": 109.76,
+            "speed": 8,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 90,
+            "freq": 41,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 17
+          },
+          "stageStats": {
+            "actualHp": 900,
+            "actualAp": 150,
+            "actualDps": 109.76,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "80.0s",
+            "spawnTimeFrames": "2,400f",
+            "delay": "13.3-26.7s",
+            "delayFrames": "400-800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "199",
+          "enemyName": "ドバット",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 6300,
+            "ap": 800,
+            "dps": 545.45,
+            "speed": 16,
+            "range": 200,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 150,
+            "freq": 44,
+            "foreswing": 5,
+            "backswing": 6,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 12600,
+            "actualAp": 1600,
+            "actualDps": 1090.9,
+            "magnification": "200%",
+            "count": "0",
+            "spawnTime": "83.3s",
+            "spawnTimeFrames": "2,500f",
+            "delay": "16.0-24.0s",
+            "delayFrames": "480-720f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "197",
+          "enemyName": "わんぷきん",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 540,
+            "ap": 24,
+            "dps": 13.33,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 90,
+            "freq": 54,
+            "foreswing": 15,
+            "backswing": 11,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 2160,
+            "actualAp": 96,
+            "actualDps": 53.32,
+            "magnification": "400%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "13.3-26.7s",
+            "delayFrames": "400-800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "048",
+          "enemyName": "エリザベス2世",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 400,
+            "dps": 545.45,
+            "speed": 8,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 600,
+            "freq": 22,
+            "foreswing": 14,
+            "backswing": 8,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 80000,
+            "actualAp": 800,
+            "actualDps": 1090.9,
+            "magnification": "200%",
+            "count": "0",
+            "spawnTime": "103.3s",
+            "spawnTimeFrames": "3,100f",
+            "delay": "106.7-106.7s",
+            "delayFrames": "3,200-3,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "048",
+          "enemyName": "エリザベス2世",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 400,
+            "dps": 545.45,
+            "speed": 8,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 600,
+            "freq": 22,
+            "foreswing": 14,
+            "backswing": 8,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 80000,
+            "actualAp": 800,
+            "actualDps": 1090.9,
+            "magnification": "200%",
+            "count": "0",
+            "spawnTime": "106.7s",
+            "spawnTimeFrames": "3,200f",
+            "delay": "106.7-106.7s",
+            "delayFrames": "3,200-3,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 5,
+      "stageName": "築10年お菓子の家",
+      "baseHp": "600000",
+      "width": "5000",
+      "enemyLimit": "10",
+      "requiredCost": "90",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 4,
+        "magnifications": [100, 150, 200, 200],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1022",
+          "treasureName": "にゃんぷきん(227)",
+          "probability": "10",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "4500",
+          "treasureName": "キャラクタードロップ(4500)",
+          "probability": "1",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "3500",
+          "treasureName": "キャラクタードロップ(3500)",
+          "probability": "1",
+          "amount": "0",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "2000",
+          "treasureName": "キャラクタードロップ(2000)",
+          "probability": "1",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "200000",
+          "amount": "12",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "199",
+          "enemyName": "ドバット",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 6300,
+            "ap": 800,
+            "dps": 545.45,
+            "speed": 16,
+            "range": 200,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 150,
+            "freq": 44,
+            "foreswing": 5,
+            "backswing": 6,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 31500,
+            "actualAp": 4000,
+            "actualDps": 2727.25,
+            "magnification": "500%",
+            "count": "1",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "199",
+          "enemyName": "ドバット",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 6300,
+            "ap": 800,
+            "dps": 545.45,
+            "speed": 16,
+            "range": 200,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 150,
+            "freq": 44,
+            "foreswing": 5,
+            "backswing": 6,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 31500,
+            "actualAp": 4000,
+            "actualDps": 2727.25,
+            "magnification": "500%",
+            "count": "3",
+            "spawnTime": "14.7s",
+            "spawnTimeFrames": "440f",
+            "delay": "5.0-10.0s",
+            "delayFrames": "150-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "199",
+          "enemyName": "ドバット",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 6300,
+            "ap": 800,
+            "dps": 545.45,
+            "speed": 16,
+            "range": 200,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 150,
+            "freq": 44,
+            "foreswing": 5,
+            "backswing": 6,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 31500,
+            "actualAp": 4000,
+            "actualDps": 2727.25,
+            "magnification": "500%",
+            "count": "6",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "199",
+          "enemyName": "ドバット",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 6300,
+            "ap": 800,
+            "dps": 545.45,
+            "speed": 16,
+            "range": 200,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 150,
+            "freq": 44,
+            "foreswing": 5,
+            "backswing": 6,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 31500,
+            "actualAp": 4000,
+            "actualDps": 2727.25,
+            "magnification": "500%",
+            "count": "10",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "1.7-3.3s",
+            "delayFrames": "50-100f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "103",
+          "enemyName": "ゴーストわんこ",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 180,
+            "ap": 16,
+            "dps": 10.67,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 30,
+            "freq": 45,
+            "foreswing": 6,
+            "backswing": 13,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 1800,
+            "actualAp": 160,
+            "actualDps": 106.7,
+            "magnification": "1000%",
+            "count": "0",
+            "spawnTime": "133.3s",
+            "spawnTimeFrames": "4,000f",
+            "delay": "16.7-33.3s",
+            "delayFrames": "500-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "104",
+          "enemyName": "ゴーストにょろ",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 200,
+            "ap": 30,
+            "dps": 23.08,
+            "speed": 8,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 60,
+            "freq": 39,
+            "foreswing": 10,
+            "backswing": 6,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 2000,
+            "actualAp": 300,
+            "actualDps": 230.8,
+            "magnification": "1000%",
+            "count": "0",
+            "spawnTime": "166.7s",
+            "spawnTimeFrames": "5,000f",
+            "delay": "20.0-40.0s",
+            "delayFrames": "600-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "199",
+          "enemyName": "ドバット",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 6300,
+            "ap": 800,
+            "dps": 545.45,
+            "speed": 16,
+            "range": 200,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 150,
+            "freq": 44,
+            "foreswing": 5,
+            "backswing": 6,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 31500,
+            "actualAp": 4000,
+            "actualDps": 2727.25,
+            "magnification": "500%",
+            "count": "0",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "20.0-40.0s",
+            "delayFrames": "600-1,200f",
+            "baseHpRatio": "75%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "199",
+          "enemyName": "ドバット",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 6300,
+            "ap": 800,
+            "dps": 545.45,
+            "speed": 16,
+            "range": 200,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 150,
+            "freq": 44,
+            "foreswing": 5,
+            "backswing": 6,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 31500,
+            "actualAp": 4000,
+            "actualDps": 2727.25,
+            "magnification": "500%",
+            "count": "0",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "30.0-60.0s",
+            "delayFrames": "900-1,800f",
+            "baseHpRatio": "75%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "197",
+          "enemyName": "わんぷきん",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 540,
+            "ap": 24,
+            "dps": 13.33,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 90,
+            "freq": 54,
+            "foreswing": 15,
+            "backswing": 11,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 5400,
+            "actualAp": 240,
+            "actualDps": 133.3,
+            "magnification": "1000%",
+            "count": "0",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "13.3-26.7s",
+            "delayFrames": "400-800f",
+            "baseHpRatio": "75%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 20000,
+            "actualAp": 8000,
+            "actualDps": 5853.64,
+            "magnification": "400%",
+            "count": "0",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "26.7-53.3s",
+            "delayFrames": "800-1,600f",
+            "baseHpRatio": "75%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "051",
+          "enemyName": "ブラッゴリ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 3123,
+            "dps": 5855.62,
+            "speed": 30,
+            "range": 155,
+            "rangeType": "範囲",
+            "kbLevel": 8,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 80000,
+            "actualAp": 6246,
+            "actualDps": 11711.24,
+            "magnification": "200%",
+            "count": "0",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "40.0-60.0s",
+            "delayFrames": "1,200-1,800f",
+            "baseHpRatio": "75%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "124",
+          "enemyName": "ブラッコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 175000,
+            "ap": 6497,
+            "dps": 8474.35,
+            "speed": 9,
+            "range": 190,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 250,
+            "freq": 23,
+            "foreswing": 14,
+            "backswing": 9,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 175000,
+            "actualAp": 6497,
+            "actualDps": 8474.35,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "83.3-83.3s",
+            "delayFrames": "2,500-2,500f",
+            "baseHpRatio": "75%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "124",
+          "enemyName": "ブラッコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 175000,
+            "ap": 6497,
+            "dps": 8474.35,
+            "speed": 9,
+            "range": 190,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 250,
+            "freq": 23,
+            "foreswing": 14,
+            "backswing": 9,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 175000,
+            "actualAp": 6497,
+            "actualDps": 8474.35,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "83.3-83.3s",
+            "delayFrames": "2,500-2,500f",
+            "baseHpRatio": "75%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "198",
+          "enemyName": "まゆげ伯爵",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 166000,
+            "ap": 6600,
+            "dps": 1706.9,
+            "speed": 12,
+            "range": 370,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1600,
+            "freq": 116,
+            "foreswing": 44,
+            "backswing": 72,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 664000,
+            "actualAp": 26400,
+            "actualDps": 6827.6,
+            "magnification": "400%",
+            "count": "3",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "75%",
+            "isBoss": true
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 50
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 50,
+              "duration_f": 90,
+              "duration_s": 3.0
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

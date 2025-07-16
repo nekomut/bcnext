@@ -1,0 +1,294 @@
+{
+  "eventId": 1232,
+  "eventName": "はじめてのお遣い",
+  "typeId": 1,
+  "typeName": "イベントステージ",
+  "prefix": "S",
+  "mapId": 232,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "ベビーフェイク 超極ムズ",
+      "baseHp": "1550000",
+      "width": "5000",
+      "enemyLimit": "10",
+      "requiredCost": "200",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1052",
+          "treasureName": "ネコベーカリー(553)",
+          "probability": "30",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "254",
+          "enemyName": "ミスターエンジェル",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 13500,
+            "ap": 1600,
+            "dps": 1714.29,
+            "speed": 45,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 8,
+            "money": 75,
+            "freq": 28,
+            "foreswing": 9,
+            "backswing": 10,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 33750,
+            "actualAp": 4000,
+            "actualDps": 4285.73,
+            "magnification": "250%",
+            "count": "5",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "13.3-20.0s",
+            "delayFrames": "400-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 30,
+              "power": 150,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "209",
+          "enemyName": "アルパッカ",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 175000,
+            "ap": 1750,
+            "dps": 583.33,
+            "speed": 6,
+            "range": 550,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1200,
+            "freq": 90,
+            "foreswing": 11,
+            "backswing": 36,
+            "tba": 40
+          },
+          "stageStats": {
+            "actualHp": 700000,
+            "actualAp": 7000,
+            "actualDps": 2333.32,
+            "magnification": "400%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "base-destroyer": {
+              "raw_columns": 26,
+              "enabled": true
+            },
+            "strengthen": {
+              "raw_columns": [32, 33],
+              "trigger_hp": 1,
+              "power": 900
+            },
+            "survive": {
+              "raw_columns": 34,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "514",
+          "enemyName": "ドレミちゃん",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1800000,
+            "ap": 28000,
+            "dps": 10500.0,
+            "speed": 14,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 20,
+            "money": 1500,
+            "freq": 80,
+            "foreswing": 40,
+            "backswing": 40,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1800000,
+            "actualAp": 28000,
+            "actualDps": 10500.0,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 50,
+              "ld_range": [50, 1850]
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 180,
+              "duration_s": 6.0
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "254",
+          "enemyName": "ミスターエンジェル",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 13500,
+            "ap": 1600,
+            "dps": 1714.29,
+            "speed": 45,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 8,
+            "money": 75,
+            "freq": 28,
+            "foreswing": 9,
+            "backswing": 10,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 33750,
+            "actualAp": 4000,
+            "actualDps": 4285.73,
+            "magnification": "250%",
+            "count": "5",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "16.7-23.3s",
+            "delayFrames": "500-700f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 30,
+              "power": 150,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "146",
+          "enemyName": "はぐれたヤツ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 200,
+            "dps": 400.0,
+            "speed": 20,
+            "range": 220,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 75,
+            "freq": 15,
+            "foreswing": 10,
+            "backswing": 5,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1250,
+            "actualAp": 500,
+            "actualDps": 1000.0,
+            "magnification": "250%",
+            "count": "0",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "6.7-20.0s",
+            "delayFrames": "200-600f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 15
+            }
+          }
+        },
+        {
+          "enemyId": "053",
+          "enemyName": "クロサワ監督",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 200000,
+            "ap": 18763,
+            "dps": 1432.29,
+            "speed": 2,
+            "range": 700,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 1000,
+            "freq": 393,
+            "foreswing": 104,
+            "backswing": 29,
+            "tba": 145
+          },
+          "stageStats": {
+            "actualHp": 800000,
+            "actualAp": 75052,
+            "actualDps": 5729.16,
+            "magnification": "400%",
+            "count": "1",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    }
+  ]
+}

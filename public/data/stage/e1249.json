@@ -1,0 +1,2874 @@
+{
+  "eventId": 1249,
+  "eventName": "ネコウエハース降臨",
+  "typeId": 1,
+  "typeName": "イベントステージ",
+  "prefix": "S",
+  "mapId": 249,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "バニラ味 1枚目",
+      "baseHp": "1000",
+      "width": "4000",
+      "enemyLimit": "15",
+      "requiredCost": "50",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "6",
+          "treasureName": "ＸＰ",
+          "probability": "100",
+          "amount": "25000",
+          "times": "1",
+          "limitText": "1"
+        },
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "001",
+          "enemyName": "にょろ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 100,
+            "ap": 15,
+            "dps": 12.16,
+            "speed": 8,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 30,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 100,
+            "actualAp": 15,
+            "actualDps": 12.16,
+            "magnification": "100%",
+            "count": "10",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "3.3-10.0s",
+            "delayFrames": "100-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "10",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "5",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "003",
+          "enemyName": "カバちゃん",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1000,
+            "ap": 100,
+            "dps": 44.78,
+            "speed": 4,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 400,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 1000,
+            "actualAp": 100,
+            "actualDps": 44.78,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 1,
+      "stageName": "バニラ味 2枚目",
+      "baseHp": "15000",
+      "width": "5500",
+      "enemyLimit": "15",
+      "requiredCost": "100",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "6",
+          "treasureName": "ＸＰ",
+          "probability": "100",
+          "amount": "100000",
+          "times": "1",
+          "limitText": "1"
+        },
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "011",
+          "enemyName": "一角くん",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 15000,
+            "ap": 500,
+            "dps": 937.5,
+            "speed": 3,
+            "range": 40,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 2500,
+            "freq": 16,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 15000,
+            "actualAp": 500,
+            "actualDps": 937.5,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "6",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "6",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "9.3-18.7s",
+            "delayFrames": "280-560f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "6",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "8.7-17.3s",
+            "delayFrames": "260-520f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "6",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "8.0-16.0s",
+            "delayFrames": "240-480f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "6",
+            "spawnTime": "50.0s",
+            "spawnTimeFrames": "1,500f",
+            "delay": "7.3-14.7s",
+            "delayFrames": "220-440f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "66.7s",
+            "spawnTimeFrames": "2,000f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 2,
+      "stageName": "バニラ味 3枚目",
+      "baseHp": "150000",
+      "width": "5000",
+      "enemyLimit": "20",
+      "requiredCost": "150",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "6",
+          "treasureName": "ＸＰ",
+          "probability": "100",
+          "amount": "300000",
+          "times": "1",
+          "limitText": "1"
+        },
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "041",
+          "enemyName": "だっふんど",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 60000,
+            "ap": 3000,
+            "dps": 1800.0,
+            "speed": 10,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 700,
+            "freq": 50,
+            "foreswing": 13,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 120000,
+            "actualAp": 6000,
+            "actualDps": 3600.0,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "7",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "8.0-16.0s",
+            "delayFrames": "240-480f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "7",
+            "spawnTime": "26.7s",
+            "spawnTimeFrames": "800f",
+            "delay": "7.3-14.7s",
+            "delayFrames": "220-440f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "7",
+            "spawnTime": "36.7s",
+            "spawnTimeFrames": "1,100f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "7",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "6.0-12.0s",
+            "delayFrames": "180-360f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "7",
+            "spawnTime": "56.7s",
+            "spawnTimeFrames": "1,700f",
+            "delay": "5.3-10.7s",
+            "delayFrames": "160-320f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "66.7s",
+            "spawnTimeFrames": "2,000f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 3,
+      "stageName": "バニラ味 4枚目",
+      "baseHp": "300000",
+      "width": "4000",
+      "enemyLimit": "30",
+      "requiredCost": "200",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "6",
+          "treasureName": "ＸＰ",
+          "probability": "100",
+          "amount": "500000",
+          "times": "1",
+          "limitText": "1"
+        },
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "149",
+          "enemyName": "松 黒蔵",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 460000,
+            "ap": 16000,
+            "dps": 2566.84,
+            "speed": 3,
+            "range": 410,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1200,
+            "freq": 187,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 90
+          },
+          "stageStats": {
+            "actualHp": 460000,
+            "actualAp": 16000,
+            "actualDps": 2566.84,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "5.0s",
+            "spawnTimeFrames": "150f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "10",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "10",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "6.0-12.0s",
+            "delayFrames": "180-360f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "10",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "5.3-10.7s",
+            "delayFrames": "160-320f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "10",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "4.7-9.3s",
+            "delayFrames": "140-280f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "10",
+            "spawnTime": "50.0s",
+            "spawnTimeFrames": "1,500f",
+            "delay": "4.0-8.0s",
+            "delayFrames": "120-240f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "60.0s",
+            "spawnTimeFrames": "1,800f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "10",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 4,
+      "stageName": "バニラ味 ラスト",
+      "baseHp": "600000",
+      "width": "5000",
+      "enemyLimit": "50",
+      "requiredCost": "300",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "6",
+          "treasureName": "ＸＰ",
+          "probability": "100",
+          "amount": "800000",
+          "times": "1",
+          "limitText": "1"
+        },
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "010",
+          "enemyName": "カ・ンガリュ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 4000,
+            "ap": 250,
+            "dps": 208.33,
+            "speed": 20,
+            "range": 160,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 1400,
+            "freq": 36,
+            "foreswing": 2,
+            "backswing": 20,
+            "tba": 1
+          },
+          "stageStats": {
+            "actualHp": 4000,
+            "actualAp": 250,
+            "actualDps": 208.33,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "010",
+          "enemyName": "カ・ンガリュ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 4000,
+            "ap": 250,
+            "dps": 208.33,
+            "speed": 20,
+            "range": 160,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 1400,
+            "freq": 36,
+            "foreswing": 2,
+            "backswing": 20,
+            "tba": 1
+          },
+          "stageStats": {
+            "actualHp": 4000,
+            "actualAp": 250,
+            "actualDps": 208.33,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "4.0s",
+            "spawnTimeFrames": "120f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "010",
+          "enemyName": "カ・ンガリュ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 4000,
+            "ap": 250,
+            "dps": 208.33,
+            "speed": 20,
+            "range": 160,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 1400,
+            "freq": 36,
+            "foreswing": 2,
+            "backswing": 20,
+            "tba": 1
+          },
+          "stageStats": {
+            "actualHp": 4000,
+            "actualAp": 250,
+            "actualDps": 208.33,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "6.0s",
+            "spawnTimeFrames": "180f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "032",
+          "enemyName": "ダチョウ同好会",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 340000,
+            "ap": 7200,
+            "dps": 12705.88,
+            "speed": 16,
+            "range": 260,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1080,
+            "freq": 17,
+            "foreswing": 4,
+            "backswing": 13,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 680000,
+            "actualAp": 14400,
+            "actualDps": 25411.76,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "24.0s",
+            "spawnTimeFrames": "720f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "12",
+            "spawnTime": "28.0s",
+            "spawnTimeFrames": "840f",
+            "delay": "5.3-10.7s",
+            "delayFrames": "160-320f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "12",
+            "spawnTime": "32.0s",
+            "spawnTimeFrames": "960f",
+            "delay": "4.7-9.3s",
+            "delayFrames": "140-280f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "12",
+            "spawnTime": "36.0s",
+            "spawnTimeFrames": "1,080f",
+            "delay": "4.0-8.0s",
+            "delayFrames": "120-240f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "12",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "12",
+            "spawnTime": "44.0s",
+            "spawnTimeFrames": "1,320f",
+            "delay": "2.7-5.3s",
+            "delayFrames": "80-160f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "48.0s",
+            "spawnTimeFrames": "1,440f",
+            "delay": "5.3-10.7s",
+            "delayFrames": "160-320f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "2.7-5.3s",
+            "delayFrames": "80-160f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "548",
+          "enemyName": "ネコウエハースBIG",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 999999,
+            "ap": 1,
+            "dps": 0.45,
+            "speed": 20,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 67,
+            "foreswing": 12,
+            "backswing": 55,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 999999,
+            "actualAp": 1,
+            "actualDps": 0.45,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "5.3-10.7s",
+            "delayFrames": "160-320f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 125,
+              "omni_range": [
+                -375,
+                125
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

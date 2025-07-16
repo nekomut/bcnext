@@ -1,0 +1,1573 @@
+{
+  "eventId": 7002,
+  "eventName": "にゃんこ別塔【黒】",
+  "typeId": 7,
+  "typeName": "にゃんこ塔",
+  "prefix": "V",
+  "mapId": 2,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "1階",
+      "baseHp": "30000",
+      "width": "3800",
+      "enemyLimit": "6",
+      "requiredCost": "80",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "2",
+          "treasureName": "ネコボン",
+          "probability": "100",
+          "amount": "1",
+          "times": "1",
+          "limitText": "1"
+        },
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 2000,
+            "actualDps": 1463.41,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 1,
+      "stageName": "2階",
+      "baseHp": "60000",
+      "width": "6000",
+      "enemyLimit": "30",
+      "requiredCost": "80",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "6",
+          "treasureName": "ＸＰ",
+          "probability": "100",
+          "amount": "100000",
+          "times": "1",
+          "limitText": "1"
+        },
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 2000,
+            "actualDps": 1463.41,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "33.3-36.7s",
+            "delayFrames": "1,000-1,100f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "342",
+          "enemyName": "なめ（黒）",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 30000,
+            "ap": 1250,
+            "dps": 815.22,
+            "speed": 15,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 46,
+            "foreswing": 27,
+            "backswing": 11,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 30000,
+            "actualAp": 1250,
+            "actualDps": 815.22,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "3.3-3.3s",
+            "delayFrames": "100-100f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 2,
+      "stageName": "3階",
+      "baseHp": "60000",
+      "width": "5000",
+      "enemyLimit": "6",
+      "requiredCost": "80",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "5",
+          "treasureName": "スニャイパー",
+          "probability": "100",
+          "amount": "1",
+          "times": "1",
+          "limitText": "1"
+        },
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 2000,
+            "actualDps": 1463.41,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "20.0-33.3s",
+            "delayFrames": "600-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "539",
+          "enemyName": "チョコわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 214000,
+            "ap": 1420,
+            "dps": 635.82,
+            "speed": 4,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 314,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 107000,
+            "actualAp": 710,
+            "actualDps": 317.91,
+            "magnification": "50%",
+            "count": "1",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "50.0-60.0s",
+            "delayFrames": "1,500-1,800f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "mini-wave": {
+              "raw_columns": [27, 28, 86],
+              "chance": 100,
+              "level": 4
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 3,
+      "stageName": "4階",
+      "baseHp": "100000",
+      "width": "5000",
+      "enemyLimit": "6",
+      "requiredCost": "120",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "6",
+          "treasureName": "ＸＰ",
+          "probability": "100",
+          "amount": "250000",
+          "times": "1",
+          "limitText": "1"
+        },
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "342",
+          "enemyName": "なめ（黒）",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 30000,
+            "ap": 1250,
+            "dps": 815.22,
+            "speed": 15,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 46,
+            "foreswing": 27,
+            "backswing": 11,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 30000,
+            "actualAp": 1250,
+            "actualDps": 815.22,
+            "magnification": "100%",
+            "count": "5",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "16.7-16.7s",
+            "delayFrames": "500-500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "342",
+          "enemyName": "なめ（黒）",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 30000,
+            "ap": 1250,
+            "dps": 815.22,
+            "speed": 15,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 46,
+            "foreswing": 27,
+            "backswing": 11,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 30000,
+            "actualAp": 1250,
+            "actualDps": 815.22,
+            "magnification": "100%",
+            "count": "4",
+            "spawnTime": "86.7s",
+            "spawnTimeFrames": "2,600f",
+            "delay": "20.0-20.0s",
+            "delayFrames": "600-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "342",
+          "enemyName": "なめ（黒）",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 30000,
+            "ap": 1250,
+            "dps": 815.22,
+            "speed": 15,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 46,
+            "foreswing": 27,
+            "backswing": 11,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 30000,
+            "actualAp": 1250,
+            "actualDps": 815.22,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "170.0s",
+            "spawnTimeFrames": "5,100f",
+            "delay": "23.3-26.7s",
+            "delayFrames": "700-800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 4,
+      "stageName": "5階",
+      "baseHp": "150000",
+      "width": "4600",
+      "enemyLimit": "30",
+      "requiredCost": "120",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "11",
+          "treasureName": "にゃんこチケット",
+          "probability": "100",
+          "amount": "2",
+          "times": "1",
+          "limitText": "1"
+        },
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 2000,
+            "actualDps": 1463.41,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "20.0-20.0s",
+            "delayFrames": "600-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "087",
+          "enemyName": "ゴリ婿",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 170000,
+            "ap": 2525,
+            "dps": 4734.38,
+            "speed": 10,
+            "range": 175,
+            "rangeType": "範囲",
+            "kbLevel": 7,
+            "money": 1789,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 170000,
+            "actualAp": 2525,
+            "actualDps": 4734.38,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "50.0-60.0s",
+            "delayFrames": "1,500-1,800f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 2000,
+            "actualDps": 1463.41,
+            "magnification": "100%",
+            "count": "5",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 5,
+      "stageName": "6階",
+      "baseHp": "200000",
+      "width": "5400",
+      "enemyLimit": "30",
+      "requiredCost": "120",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "6",
+          "treasureName": "ＸＰ",
+          "probability": "100",
+          "amount": "400000",
+          "times": "1",
+          "limitText": "1"
+        },
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 2000,
+            "actualDps": 1463.41,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "20.0-20.0s",
+            "delayFrames": "600-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "051",
+          "enemyName": "ブラッゴリ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 3123,
+            "dps": 5855.62,
+            "speed": 30,
+            "range": 155,
+            "rangeType": "範囲",
+            "kbLevel": 8,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 40000,
+            "actualAp": 3123,
+            "actualDps": 5855.62,
+            "magnification": "100%",
+            "count": "2",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "051",
+          "enemyName": "ブラッゴリ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 3123,
+            "dps": 5855.62,
+            "speed": 30,
+            "range": 155,
+            "rangeType": "範囲",
+            "kbLevel": 8,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 40000,
+            "actualAp": 3123,
+            "actualDps": 5855.62,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "437",
+          "enemyName": "幸福の犬",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 100000,
+            "ap": 24000,
+            "dps": 14400.0,
+            "speed": 14,
+            "range": 380,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 300,
+            "freq": 50,
+            "foreswing": 13,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 100000,
+            "actualAp": 24000,
+            "actualDps": 14400.0,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "60.0s",
+            "spawnTimeFrames": "1,800f",
+            "delay": "50.0-60.0s",
+            "delayFrames": "1,500-1,800f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 6,
+      "stageName": "7階",
+      "baseHp": "300000",
+      "width": "5000",
+      "enemyLimit": "6",
+      "requiredCost": "160",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "4",
+          "treasureName": "おかめはちもく",
+          "probability": "100",
+          "amount": "1",
+          "times": "1",
+          "limitText": "1"
+        },
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 10000,
+            "actualAp": 4000,
+            "actualDps": 2926.82,
+            "magnification": "200%",
+            "count": "0",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "20.0-20.0s",
+            "delayFrames": "600-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "416",
+          "enemyName": "ナミエちゃん",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 400000,
+            "ap": 9000,
+            "dps": 6585.37,
+            "speed": 15,
+            "range": 270,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 1800,
+            "freq": 41,
+            "foreswing": 17,
+            "backswing": 24,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 400000,
+            "actualAp": 9000,
+            "actualDps": 6585.37,
+            "magnification": "100%",
+            "count": "4",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 40,
+              "duration_f": 200,
+              "duration_s": 6.67
+            }
+          }
+        },
+        {
+          "enemyId": "416",
+          "enemyName": "ナミエちゃん",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 400000,
+            "ap": 9000,
+            "dps": 6585.37,
+            "speed": 15,
+            "range": 270,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 1800,
+            "freq": 41,
+            "foreswing": 17,
+            "backswing": 24,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 400000,
+            "actualAp": 9000,
+            "actualDps": 6585.37,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 40,
+              "duration_f": 200,
+              "duration_s": 6.67
+            }
+          }
+        },
+        {
+          "enemyId": "053",
+          "enemyName": "クロサワ監督",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 200000,
+            "ap": 18763,
+            "dps": 1432.29,
+            "speed": 2,
+            "range": 700,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 1000,
+            "freq": 393,
+            "foreswing": 104,
+            "backswing": 29,
+            "tba": 145
+          },
+          "stageStats": {
+            "actualHp": 300000,
+            "actualAp": 28144,
+            "actualDps": 2148.43,
+            "magnification": "150%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 7,
+      "stageName": "8階",
+      "baseHp": "350000",
+      "width": "5200",
+      "enemyLimit": "8",
+      "requiredCost": "160",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "6",
+          "treasureName": "ＸＰ",
+          "probability": "100",
+          "amount": "750000",
+          "times": "1",
+          "limitText": "1"
+        },
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 10000,
+            "actualAp": 4000,
+            "actualDps": 2926.82,
+            "magnification": "200%",
+            "count": "0",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "13.3-26.7s",
+            "delayFrames": "400-800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "342",
+          "enemyName": "なめ（黒）",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 30000,
+            "ap": 1250,
+            "dps": 815.22,
+            "speed": 15,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 46,
+            "foreswing": 27,
+            "backswing": 11,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 90000,
+            "actualAp": 3750,
+            "actualDps": 2445.66,
+            "magnification": "300%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "052",
+          "enemyName": "シャドウボクサー",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 80000,
+            "ap": 4997,
+            "dps": 9369.38,
+            "speed": 22,
+            "range": 158,
+            "rangeType": "範囲",
+            "kbLevel": 10,
+            "money": 600,
+            "freq": 16,
+            "foreswing": 2,
+            "backswing": 8,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 120000,
+            "actualAp": 7495,
+            "actualDps": 14054.07,
+            "magnification": "150%",
+            "count": "3",
+            "spawnTime": "26.7s",
+            "spawnTimeFrames": "800f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "087",
+          "enemyName": "ゴリ婿",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 170000,
+            "ap": 2525,
+            "dps": 4734.38,
+            "speed": 10,
+            "range": 175,
+            "rangeType": "範囲",
+            "kbLevel": 7,
+            "money": 1789,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 255000,
+            "actualAp": 3787,
+            "actualDps": 7101.57,
+            "magnification": "150%",
+            "count": "2",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "26.7-26.7s",
+            "delayFrames": "800-800f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "149",
+          "enemyName": "松 黒蔵",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 460000,
+            "ap": 16000,
+            "dps": 2566.84,
+            "speed": 3,
+            "range": 410,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1200,
+            "freq": 187,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 90
+          },
+          "stageStats": {
+            "actualHp": 460000,
+            "actualAp": 16000,
+            "actualDps": 2566.84,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 8,
+      "stageName": "9階",
+      "baseHp": "600000",
+      "width": "5800",
+      "enemyLimit": "30",
+      "requiredCost": "200",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "100",
+          "amount": "1",
+          "times": "1",
+          "limitText": "1"
+        },
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 30000,
+            "actualAp": 12000,
+            "actualDps": 8780.46,
+            "magnification": "600%",
+            "count": "0",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "13.3-26.7s",
+            "delayFrames": "400-800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "256",
+          "enemyName": "タッちゃん",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 128000,
+            "ap": 9000,
+            "dps": 2231.4,
+            "speed": 6,
+            "range": 400,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 600,
+            "freq": 121,
+            "foreswing": 32,
+            "backswing": 19,
+            "tba": 45
+          },
+          "stageStats": {
+            "actualHp": 128000,
+            "actualAp": 9000,
+            "actualDps": 2231.4,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 600,
+              "ld_range": [600, 850]
+            }
+          }
+        },
+        {
+          "enemyId": "416",
+          "enemyName": "ナミエちゃん",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 400000,
+            "ap": 9000,
+            "dps": 6585.37,
+            "speed": 15,
+            "range": 270,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 1800,
+            "freq": 41,
+            "foreswing": 17,
+            "backswing": 24,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 800000,
+            "actualAp": 18000,
+            "actualDps": 13170.74,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 40,
+              "duration_f": 200,
+              "duration_s": 6.67
+            }
+          }
+        },
+        {
+          "enemyId": "539",
+          "enemyName": "チョコわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 214000,
+            "ap": 1420,
+            "dps": 635.82,
+            "speed": 4,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 314,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 1027200,
+            "actualAp": 6816,
+            "actualDps": 3051.94,
+            "magnification": "480%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "50.0-60.0s",
+            "delayFrames": "1,500-1,800f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "mini-wave": {
+              "raw_columns": [27, 28, 86],
+              "chance": 100,
+              "level": 4
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 9,
+      "stageName": "最上階",
+      "baseHp": "825000",
+      "width": "5800",
+      "enemyLimit": "30",
+      "requiredCost": "200",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "12",
+          "treasureName": "レアチケット",
+          "probability": "100",
+          "amount": "1",
+          "times": "1",
+          "limitText": "1"
+        },
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 40000,
+            "actualAp": 16000,
+            "actualDps": 11707.28,
+            "magnification": "800%",
+            "count": "0",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "13.3-26.7s",
+            "delayFrames": "400-800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "342",
+          "enemyName": "なめ（黒）",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 30000,
+            "ap": 1250,
+            "dps": 815.22,
+            "speed": 15,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 46,
+            "foreswing": 27,
+            "backswing": 11,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 180000,
+            "actualAp": 7500,
+            "actualDps": 4891.32,
+            "magnification": "600%",
+            "count": "0",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "20.0-33.3s",
+            "delayFrames": "600-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "437",
+          "enemyName": "幸福の犬",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 100000,
+            "ap": 24000,
+            "dps": 14400.0,
+            "speed": 14,
+            "range": 380,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 300,
+            "freq": 50,
+            "foreswing": 13,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 600000,
+            "actualAp": 144000,
+            "actualDps": 86400.0,
+            "magnification": "600%",
+            "count": "1",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "53.3-53.3s",
+            "delayFrames": "1,600-1,600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "437",
+          "enemyName": "幸福の犬",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 100000,
+            "ap": 24000,
+            "dps": 14400.0,
+            "speed": 14,
+            "range": 380,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 300,
+            "freq": 50,
+            "foreswing": 13,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 600000,
+            "actualAp": 144000,
+            "actualDps": 86400.0,
+            "magnification": "600%",
+            "count": "2",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "26.7-26.7s",
+            "delayFrames": "800-800f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "087",
+          "enemyName": "ゴリ婿",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 170000,
+            "ap": 2525,
+            "dps": 4734.38,
+            "speed": 10,
+            "range": 175,
+            "rangeType": "範囲",
+            "kbLevel": 7,
+            "money": 1789,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1360000,
+            "actualAp": 20200,
+            "actualDps": 37875.04,
+            "magnification": "800%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "50.0-60.0s",
+            "delayFrames": "1,500-1,800f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "280",
+          "enemyName": "イノワール",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 1150000,
+            "ap": 20000,
+            "dps": 46153.85,
+            "speed": 36,
+            "range": 145,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 2000,
+            "freq": 13,
+            "foreswing": 8,
+            "backswing": 3,
+            "tba": 3
+          },
+          "stageStats": {
+            "actualHp": 1150000,
+            "actualAp": 20000,
+            "actualDps": 46153.85,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "50.0-60.0s",
+            "delayFrames": "1,500-1,800f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "strengthen": {
+              "raw_columns": [32, 33],
+              "trigger_hp": 50,
+              "power": 50
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,2636 @@
+{
+  "eventId": 24033,
+  "eventName": "続・1月強襲！",
+  "typeId": 24,
+  "typeName": "強襲ステージ",
+  "prefix": "A",
+  "mapId": 33,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "あけてました Lv.11",
+      "baseHp": "275000",
+      "width": "6000",
+      "enemyLimit": "15",
+      "requiredCost": "110",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "0",
+          "treasureName": "スピードアップ",
+          "probability": "1",
+          "amount": "2",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 9000,
+            "actualAp": 4400,
+            "actualDps": 3567.56,
+            "magnification": "200%",
+            "count": "0",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 85000,
+            "actualAp": 6868,
+            "actualDps": 12877.5,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 85000,
+            "actualAp": 6868,
+            "actualDps": 12877.5,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 9000,
+            "actualAp": 4400,
+            "actualDps": 3567.56,
+            "magnification": "200%",
+            "count": "10",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "177",
+          "enemyName": "イノヴァルカン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 1799,
+            "dps": 3174.71,
+            "speed": 9,
+            "range": 125,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1800,
+            "freq": 17,
+            "foreswing": 8,
+            "backswing": 3,
+            "tba": 5
+          },
+          "stageStats": {
+            "actualHp": 400000,
+            "actualAp": 4497,
+            "actualDps": 7936.77,
+            "magnification": "250%",
+            "count": "1",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "60.0-60.0s",
+            "delayFrames": "1,800-1,800f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 50
+            }
+          }
+        },
+        {
+          "enemyId": "434",
+          "enemyName": "獅子姉妹",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 140000,
+            "ap": 8000,
+            "dps": 2727.27,
+            "speed": 10,
+            "range": 375,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1500,
+            "freq": 88,
+            "foreswing": 34,
+            "backswing": 54,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 280000,
+            "actualAp": 16000,
+            "actualDps": 5454.54,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "66.7s",
+            "spawnTimeFrames": "2,000f",
+            "delay": "6.0-13.3s",
+            "delayFrames": "180-400f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 200,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 1,
+      "stageName": "あけてました Lv.12",
+      "baseHp": "300000",
+      "width": "6000",
+      "enemyLimit": "15",
+      "requiredCost": "110",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "55",
+          "treasureName": "ネコビタンA",
+          "probability": "1",
+          "amount": "2",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 9990,
+            "actualAp": 4884,
+            "actualDps": 3959.99,
+            "magnification": "222%",
+            "count": "0",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 94350,
+            "actualAp": 7623,
+            "actualDps": 14294.02,
+            "magnification": "111%",
+            "count": "1",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 94350,
+            "actualAp": 7623,
+            "actualDps": 14294.02,
+            "magnification": "111%",
+            "count": "1",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 9990,
+            "actualAp": 4884,
+            "actualDps": 3959.99,
+            "magnification": "222%",
+            "count": "10",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "177",
+          "enemyName": "イノヴァルカン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 1799,
+            "dps": 3174.71,
+            "speed": 9,
+            "range": 125,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1800,
+            "freq": 17,
+            "foreswing": 8,
+            "backswing": 3,
+            "tba": 5
+          },
+          "stageStats": {
+            "actualHp": 532800,
+            "actualAp": 5990,
+            "actualDps": 10571.78,
+            "magnification": "333%",
+            "count": "1",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "60.0-60.0s",
+            "delayFrames": "1,800-1,800f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 50
+            }
+          }
+        },
+        {
+          "enemyId": "434",
+          "enemyName": "獅子姉妹",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 140000,
+            "ap": 8000,
+            "dps": 2727.27,
+            "speed": 10,
+            "range": 375,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1500,
+            "freq": 88,
+            "foreswing": 34,
+            "backswing": 54,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 310800,
+            "actualAp": 17760,
+            "actualDps": 6054.54,
+            "magnification": "222%",
+            "count": "1",
+            "spawnTime": "66.7s",
+            "spawnTimeFrames": "2,000f",
+            "delay": "6.0-13.3s",
+            "delayFrames": "180-400f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 200,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 2,
+      "stageName": "あけてました Lv.13",
+      "baseHp": "325000",
+      "width": "6000",
+      "enemyLimit": "15",
+      "requiredCost": "120",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "3",
+          "treasureName": "ニャンピュータ",
+          "probability": "1",
+          "amount": "2",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 10980,
+            "actualAp": 5368,
+            "actualDps": 4352.42,
+            "magnification": "244%",
+            "count": "0",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 103700,
+            "actualAp": 8378,
+            "actualDps": 15710.55,
+            "magnification": "122%",
+            "count": "1",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 103700,
+            "actualAp": 8378,
+            "actualDps": 15710.55,
+            "magnification": "122%",
+            "count": "1",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 10980,
+            "actualAp": 5368,
+            "actualDps": 4352.42,
+            "magnification": "244%",
+            "count": "10",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "177",
+          "enemyName": "イノヴァルカン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 1799,
+            "dps": 3174.71,
+            "speed": 9,
+            "range": 125,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1800,
+            "freq": 17,
+            "foreswing": 8,
+            "backswing": 3,
+            "tba": 5
+          },
+          "stageStats": {
+            "actualHp": 665600,
+            "actualAp": 7483,
+            "actualDps": 13206.79,
+            "magnification": "416%",
+            "count": "1",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "60.0-60.0s",
+            "delayFrames": "1,800-1,800f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 50
+            }
+          }
+        },
+        {
+          "enemyId": "434",
+          "enemyName": "獅子姉妹",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 140000,
+            "ap": 8000,
+            "dps": 2727.27,
+            "speed": 10,
+            "range": 375,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1500,
+            "freq": 88,
+            "foreswing": 34,
+            "backswing": 54,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 341600,
+            "actualAp": 19520,
+            "actualDps": 6654.54,
+            "magnification": "244%",
+            "count": "1",
+            "spawnTime": "66.7s",
+            "spawnTimeFrames": "2,000f",
+            "delay": "6.0-13.3s",
+            "delayFrames": "180-400f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 200,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 3,
+      "stageName": "あけてました Lv.14",
+      "baseHp": "350000",
+      "width": "6000",
+      "enemyLimit": "15",
+      "requiredCost": "120",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "2",
+          "treasureName": "ネコボン",
+          "probability": "1",
+          "amount": "2",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 11970,
+            "actualAp": 5852,
+            "actualDps": 4744.85,
+            "magnification": "266%",
+            "count": "0",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 113050,
+            "actualAp": 9134,
+            "actualDps": 17127.08,
+            "magnification": "133%",
+            "count": "1",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 113050,
+            "actualAp": 9134,
+            "actualDps": 17127.08,
+            "magnification": "133%",
+            "count": "1",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 11970,
+            "actualAp": 5852,
+            "actualDps": 4744.85,
+            "magnification": "266%",
+            "count": "10",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "177",
+          "enemyName": "イノヴァルカン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 1799,
+            "dps": 3174.71,
+            "speed": 9,
+            "range": 125,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1800,
+            "freq": 17,
+            "foreswing": 8,
+            "backswing": 3,
+            "tba": 5
+          },
+          "stageStats": {
+            "actualHp": 798400,
+            "actualAp": 8977,
+            "actualDps": 15841.8,
+            "magnification": "499%",
+            "count": "1",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "60.0-60.0s",
+            "delayFrames": "1,800-1,800f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 50
+            }
+          }
+        },
+        {
+          "enemyId": "434",
+          "enemyName": "獅子姉妹",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 140000,
+            "ap": 8000,
+            "dps": 2727.27,
+            "speed": 10,
+            "range": 375,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1500,
+            "freq": 88,
+            "foreswing": 34,
+            "backswing": 54,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 372400,
+            "actualAp": 21280,
+            "actualDps": 7254.54,
+            "magnification": "266%",
+            "count": "1",
+            "spawnTime": "66.7s",
+            "spawnTimeFrames": "2,000f",
+            "delay": "6.0-13.3s",
+            "delayFrames": "180-400f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 200,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 4,
+      "stageName": "あけてました Lv.15",
+      "baseHp": "375000",
+      "width": "6000",
+      "enemyLimit": "15",
+      "requiredCost": "130",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "157",
+          "treasureName": "プラチナチケットの欠片",
+          "probability": "1",
+          "amount": "1",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 12960,
+            "actualAp": 6336,
+            "actualDps": 5137.29,
+            "magnification": "288%",
+            "count": "0",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 122400,
+            "actualAp": 9889,
+            "actualDps": 18543.6,
+            "magnification": "144%",
+            "count": "1",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 122400,
+            "actualAp": 9889,
+            "actualDps": 18543.6,
+            "magnification": "144%",
+            "count": "1",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 12960,
+            "actualAp": 6336,
+            "actualDps": 5137.29,
+            "magnification": "288%",
+            "count": "10",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "177",
+          "enemyName": "イノヴァルカン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 1799,
+            "dps": 3174.71,
+            "speed": 9,
+            "range": 125,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1800,
+            "freq": 17,
+            "foreswing": 8,
+            "backswing": 3,
+            "tba": 5
+          },
+          "stageStats": {
+            "actualHp": 931200,
+            "actualAp": 10470,
+            "actualDps": 18476.81,
+            "magnification": "582%",
+            "count": "1",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "60.0-60.0s",
+            "delayFrames": "1,800-1,800f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 50
+            }
+          }
+        },
+        {
+          "enemyId": "434",
+          "enemyName": "獅子姉妹",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 140000,
+            "ap": 8000,
+            "dps": 2727.27,
+            "speed": 10,
+            "range": 375,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1500,
+            "freq": 88,
+            "foreswing": 34,
+            "backswing": 54,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 403200,
+            "actualAp": 23040,
+            "actualDps": 7854.54,
+            "magnification": "288%",
+            "count": "1",
+            "spawnTime": "66.7s",
+            "spawnTimeFrames": "2,000f",
+            "delay": "6.0-13.3s",
+            "delayFrames": "180-400f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 200,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 5,
+      "stageName": "あけてました Lv.16",
+      "baseHp": "400000",
+      "width": "6000",
+      "enemyLimit": "15",
+      "requiredCost": "130",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "56",
+          "treasureName": "ネコビタンB",
+          "probability": "1",
+          "amount": "2",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 13950,
+            "actualAp": 6820,
+            "actualDps": 5529.72,
+            "magnification": "310%",
+            "count": "0",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 131750,
+            "actualAp": 10645,
+            "actualDps": 19960.12,
+            "magnification": "155%",
+            "count": "1",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 131750,
+            "actualAp": 10645,
+            "actualDps": 19960.12,
+            "magnification": "155%",
+            "count": "1",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 13950,
+            "actualAp": 6820,
+            "actualDps": 5529.72,
+            "magnification": "310%",
+            "count": "10",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "177",
+          "enemyName": "イノヴァルカン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 1799,
+            "dps": 3174.71,
+            "speed": 9,
+            "range": 125,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1800,
+            "freq": 17,
+            "foreswing": 8,
+            "backswing": 3,
+            "tba": 5
+          },
+          "stageStats": {
+            "actualHp": 1064000,
+            "actualAp": 11963,
+            "actualDps": 21111.82,
+            "magnification": "665%",
+            "count": "1",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "60.0-60.0s",
+            "delayFrames": "1,800-1,800f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 50
+            }
+          }
+        },
+        {
+          "enemyId": "434",
+          "enemyName": "獅子姉妹",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 140000,
+            "ap": 8000,
+            "dps": 2727.27,
+            "speed": 10,
+            "range": 375,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1500,
+            "freq": 88,
+            "foreswing": 34,
+            "backswing": 54,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 434000,
+            "actualAp": 24800,
+            "actualDps": 8454.54,
+            "magnification": "310%",
+            "count": "1",
+            "spawnTime": "66.7s",
+            "spawnTimeFrames": "2,000f",
+            "delay": "6.0-13.3s",
+            "delayFrames": "180-400f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 200,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 6,
+      "stageName": "あけてました Lv.17",
+      "baseHp": "425000",
+      "width": "6000",
+      "enemyLimit": "15",
+      "requiredCost": "140",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "5",
+          "treasureName": "スニャイパー",
+          "probability": "1",
+          "amount": "2",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 14940,
+            "actualAp": 7304,
+            "actualDps": 5922.15,
+            "magnification": "332%",
+            "count": "0",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 141100,
+            "actualAp": 11400,
+            "actualDps": 21376.65,
+            "magnification": "166%",
+            "count": "1",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 141100,
+            "actualAp": 11400,
+            "actualDps": 21376.65,
+            "magnification": "166%",
+            "count": "1",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 14940,
+            "actualAp": 7304,
+            "actualDps": 5922.15,
+            "magnification": "332%",
+            "count": "10",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "177",
+          "enemyName": "イノヴァルカン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 1799,
+            "dps": 3174.71,
+            "speed": 9,
+            "range": 125,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1800,
+            "freq": 17,
+            "foreswing": 8,
+            "backswing": 3,
+            "tba": 5
+          },
+          "stageStats": {
+            "actualHp": 1196800,
+            "actualAp": 13456,
+            "actualDps": 23746.83,
+            "magnification": "748%",
+            "count": "1",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "60.0-60.0s",
+            "delayFrames": "1,800-1,800f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 50
+            }
+          }
+        },
+        {
+          "enemyId": "434",
+          "enemyName": "獅子姉妹",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 140000,
+            "ap": 8000,
+            "dps": 2727.27,
+            "speed": 10,
+            "range": 375,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1500,
+            "freq": 88,
+            "foreswing": 34,
+            "backswing": 54,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 464800,
+            "actualAp": 26560,
+            "actualDps": 9054.54,
+            "magnification": "332%",
+            "count": "1",
+            "spawnTime": "66.7s",
+            "spawnTimeFrames": "2,000f",
+            "delay": "6.0-13.3s",
+            "delayFrames": "180-400f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 200,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 7,
+      "stageName": "あけてました Lv.18",
+      "baseHp": "450000",
+      "width": "6000",
+      "enemyLimit": "15",
+      "requiredCost": "140",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "57",
+          "treasureName": "ネコビタンC",
+          "probability": "1",
+          "amount": "2",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 15930,
+            "actualAp": 7788,
+            "actualDps": 6314.58,
+            "magnification": "354%",
+            "count": "0",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 150450,
+            "actualAp": 12156,
+            "actualDps": 22793.17,
+            "magnification": "177%",
+            "count": "1",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 150450,
+            "actualAp": 12156,
+            "actualDps": 22793.17,
+            "magnification": "177%",
+            "count": "1",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 15930,
+            "actualAp": 7788,
+            "actualDps": 6314.58,
+            "magnification": "354%",
+            "count": "10",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "177",
+          "enemyName": "イノヴァルカン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 1799,
+            "dps": 3174.71,
+            "speed": 9,
+            "range": 125,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1800,
+            "freq": 17,
+            "foreswing": 8,
+            "backswing": 3,
+            "tba": 5
+          },
+          "stageStats": {
+            "actualHp": 1329600,
+            "actualAp": 14949,
+            "actualDps": 26381.84,
+            "magnification": "831%",
+            "count": "1",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "60.0-60.0s",
+            "delayFrames": "1,800-1,800f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 50
+            }
+          }
+        },
+        {
+          "enemyId": "434",
+          "enemyName": "獅子姉妹",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 140000,
+            "ap": 8000,
+            "dps": 2727.27,
+            "speed": 10,
+            "range": 375,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1500,
+            "freq": 88,
+            "foreswing": 34,
+            "backswing": 54,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 495600,
+            "actualAp": 28320,
+            "actualDps": 9654.54,
+            "magnification": "354%",
+            "count": "1",
+            "spawnTime": "66.7s",
+            "spawnTimeFrames": "2,000f",
+            "delay": "6.0-13.3s",
+            "delayFrames": "180-400f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 200,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 8,
+      "stageName": "あけてました Lv.19",
+      "baseHp": "480000",
+      "width": "6000",
+      "enemyLimit": "15",
+      "requiredCost": "150",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "160",
+          "treasureName": "悪マタタビの種",
+          "probability": "1",
+          "amount": "1",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 16920,
+            "actualAp": 8272,
+            "actualDps": 6707.01,
+            "magnification": "376%",
+            "count": "0",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 159800,
+            "actualAp": 12911,
+            "actualDps": 24209.7,
+            "magnification": "188%",
+            "count": "1",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 159800,
+            "actualAp": 12911,
+            "actualDps": 24209.7,
+            "magnification": "188%",
+            "count": "1",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 16920,
+            "actualAp": 8272,
+            "actualDps": 6707.01,
+            "magnification": "376%",
+            "count": "10",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "177",
+          "enemyName": "イノヴァルカン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 1799,
+            "dps": 3174.71,
+            "speed": 9,
+            "range": 125,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1800,
+            "freq": 17,
+            "foreswing": 8,
+            "backswing": 3,
+            "tba": 5
+          },
+          "stageStats": {
+            "actualHp": 1462400,
+            "actualAp": 16442,
+            "actualDps": 29016.85,
+            "magnification": "914%",
+            "count": "1",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "60.0-60.0s",
+            "delayFrames": "1,800-1,800f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 50
+            }
+          }
+        },
+        {
+          "enemyId": "434",
+          "enemyName": "獅子姉妹",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 140000,
+            "ap": 8000,
+            "dps": 2727.27,
+            "speed": 10,
+            "range": 375,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1500,
+            "freq": 88,
+            "foreswing": 34,
+            "backswing": 54,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 526400,
+            "actualAp": 30080,
+            "actualDps": 10254.54,
+            "magnification": "376%",
+            "count": "1",
+            "spawnTime": "66.7s",
+            "spawnTimeFrames": "2,000f",
+            "delay": "6.0-13.3s",
+            "delayFrames": "180-400f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 200,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 9,
+      "stageName": "あけてました Lv.MAX",
+      "baseHp": "500000",
+      "width": "6000",
+      "enemyLimit": "15",
+      "requiredCost": "150",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "12",
+          "treasureName": "レアチケット",
+          "probability": "1",
+          "amount": "1",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 18000,
+            "actualAp": 8800,
+            "actualDps": 7135.12,
+            "magnification": "400%",
+            "count": "0",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 170000,
+            "actualAp": 13736,
+            "actualDps": 25755.0,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 170000,
+            "actualAp": 13736,
+            "actualDps": 25755.0,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 18000,
+            "actualAp": 8800,
+            "actualDps": 7135.12,
+            "magnification": "400%",
+            "count": "10",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "177",
+          "enemyName": "イノヴァルカン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 1799,
+            "dps": 3174.71,
+            "speed": 9,
+            "range": 125,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1800,
+            "freq": 17,
+            "foreswing": 8,
+            "backswing": 3,
+            "tba": 5
+          },
+          "stageStats": {
+            "actualHp": 1600000,
+            "actualAp": 17990,
+            "actualDps": 31747.1,
+            "magnification": "1000%",
+            "count": "1",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "60.0-60.0s",
+            "delayFrames": "1,800-1,800f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 50
+            }
+          }
+        },
+        {
+          "enemyId": "434",
+          "enemyName": "獅子姉妹",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 140000,
+            "ap": 8000,
+            "dps": 2727.27,
+            "speed": 10,
+            "range": 375,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1500,
+            "freq": 88,
+            "foreswing": 34,
+            "backswing": 54,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 560000,
+            "actualAp": 32000,
+            "actualDps": 10909.08,
+            "magnification": "400%",
+            "count": "1",
+            "spawnTime": "66.7s",
+            "spawnTimeFrames": "2,000f",
+            "delay": "6.0-13.3s",
+            "delayFrames": "180-400f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 200,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

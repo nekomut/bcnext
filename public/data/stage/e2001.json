@@ -1,0 +1,1852 @@
+{
+  "eventId": 2001,
+  "eventName": "魅惑のプリンセス",
+  "typeId": 2,
+  "typeName": "コラボステージ",
+  "prefix": "C",
+  "mapId": 1,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 4,
+    "magnifications": [100, 150, 200, 300],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "油淋鶏の読み方",
+      "baseHp": "10000",
+      "width": "3800",
+      "enemyLimit": "6",
+      "requiredCost": "18",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 4,
+        "magnifications": [100, 150, 200, 300],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1122",
+          "treasureName": "眠れるケリの美女(69)",
+          "probability": "5",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "7600",
+          "treasureName": "キャラクタードロップ(7600)",
+          "probability": "1",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "2900",
+          "treasureName": "キャラクタードロップ(2900)",
+          "probability": "25000",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "15000",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "025",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 100,
+            "ap": 10,
+            "dps": 2.83,
+            "speed": 4,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 800,
+            "freq": 106,
+            "foreswing": 27,
+            "backswing": 29,
+            "tba": 40
+          },
+          "stageStats": {
+            "actualHp": 100,
+            "actualAp": 10,
+            "actualDps": 2.83,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "2.0-14.0s",
+            "delayFrames": "60-420f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "001",
+          "enemyName": "にょろ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 100,
+            "ap": 15,
+            "dps": 12.16,
+            "speed": 8,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 30,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 100,
+            "actualAp": 15,
+            "actualDps": 12.16,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "2.7-13.3s",
+            "delayFrames": "80-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "002",
+          "enemyName": "例のヤツ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 200,
+            "ap": 20,
+            "dps": 20.0,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 75,
+            "freq": 30,
+            "foreswing": 10,
+            "backswing": 20,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 200,
+            "actualAp": 20,
+            "actualDps": 20.0,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "3.3-20.0s",
+            "delayFrames": "100-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "001",
+          "enemyName": "にょろ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 100,
+            "ap": 15,
+            "dps": 12.16,
+            "speed": 8,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 30,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 100,
+            "actualAp": 15,
+            "actualDps": 12.16,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.7-20.0s",
+            "delayFrames": "20-600f",
+            "baseHpRatio": "90%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "025",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 100,
+            "ap": 10,
+            "dps": 2.83,
+            "speed": 4,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 800,
+            "freq": 106,
+            "foreswing": 27,
+            "backswing": 29,
+            "tba": 40
+          },
+          "stageStats": {
+            "actualHp": 100,
+            "actualAp": 10,
+            "actualDps": 2.83,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "90%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "025",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 100,
+            "ap": 10,
+            "dps": 2.83,
+            "speed": 4,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 800,
+            "freq": 106,
+            "foreswing": 27,
+            "backswing": 29,
+            "tba": 40
+          },
+          "stageStats": {
+            "actualHp": 100,
+            "actualAp": 10,
+            "actualDps": 2.83,
+            "magnification": "100%",
+            "count": "5",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-4f",
+            "baseHpRatio": "90%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "060",
+          "enemyName": "ダミー",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 2000,
+            "ap": 180,
+            "dps": 79.41,
+            "speed": 6,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 550,
+            "freq": 68,
+            "foreswing": 33,
+            "backswing": 35,
+            "tba": 1
+          },
+          "stageStats": {
+            "actualHp": 2000,
+            "actualAp": 180,
+            "actualDps": 79.41,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "3.0-20.0s",
+            "delayFrames": "90-600f",
+            "baseHpRatio": "90%",
+            "isBoss": true
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 1,
+      "stageName": "Youリンチ！",
+      "baseHp": "30000",
+      "width": "4400",
+      "enemyLimit": "6",
+      "requiredCost": "65",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 4,
+        "magnifications": [100, 150, 200, 300],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1122",
+          "treasureName": "眠れるケリの美女(69)",
+          "probability": "10",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "7800",
+          "treasureName": "キャラクタードロップ(7800)",
+          "probability": "1",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "5400",
+          "treasureName": "キャラクタードロップ(5400)",
+          "probability": "35000",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "25000",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "000",
+          "enemyName": "わんこ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 90,
+            "ap": 8,
+            "dps": 5.11,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 15,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 90,
+            "actualAp": 8,
+            "actualDps": 5.11,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "2.0-6.7s",
+            "delayFrames": "60-200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "001",
+          "enemyName": "にょろ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 100,
+            "ap": 15,
+            "dps": 12.16,
+            "speed": 8,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 30,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 100,
+            "actualAp": 15,
+            "actualDps": 12.16,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "2.7-13.3s",
+            "delayFrames": "80-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "002",
+          "enemyName": "例のヤツ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 200,
+            "ap": 20,
+            "dps": 20.0,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 75,
+            "freq": 30,
+            "foreswing": 10,
+            "backswing": 20,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 200,
+            "actualAp": 20,
+            "actualDps": 20.0,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "3.3-20.0s",
+            "delayFrames": "100-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "003",
+          "enemyName": "カバちゃん",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1000,
+            "ap": 100,
+            "dps": 44.78,
+            "speed": 4,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 400,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 1000,
+            "actualAp": 100,
+            "actualDps": 44.78,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "3.3-20.0s",
+            "delayFrames": "100-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "000",
+          "enemyName": "わんこ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 90,
+            "ap": 8,
+            "dps": 5.11,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 15,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 90,
+            "actualAp": 8,
+            "actualDps": 5.11,
+            "magnification": "100%",
+            "count": "20",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.7-4.0s",
+            "delayFrames": "20-120f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "001",
+          "enemyName": "にょろ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 100,
+            "ap": 15,
+            "dps": 12.16,
+            "speed": 8,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 30,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 100,
+            "actualAp": 15,
+            "actualDps": 12.16,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.7-20.0s",
+            "delayFrames": "20-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "002",
+          "enemyName": "例のヤツ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 200,
+            "ap": 20,
+            "dps": 20.0,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 75,
+            "freq": 30,
+            "foreswing": 10,
+            "backswing": 20,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 200,
+            "actualAp": 20,
+            "actualDps": 20.0,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.7-20.0s",
+            "delayFrames": "20-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "002",
+          "enemyName": "例のヤツ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 200,
+            "ap": 20,
+            "dps": 20.0,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 75,
+            "freq": 30,
+            "foreswing": 10,
+            "backswing": 20,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 200,
+            "actualAp": 20,
+            "actualDps": 20.0,
+            "magnification": "100%",
+            "count": "5",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-4f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "060",
+          "enemyName": "ダミー",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 2000,
+            "ap": 180,
+            "dps": 79.41,
+            "speed": 6,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 550,
+            "freq": 68,
+            "foreswing": 33,
+            "backswing": 35,
+            "tba": 1
+          },
+          "stageStats": {
+            "actualHp": 2000,
+            "actualAp": 180,
+            "actualDps": 79.41,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.7-4.0s",
+            "delayFrames": "20-120f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 2,
+      "stageName": "ハイヒールとカモミール",
+      "baseHp": "80000",
+      "width": "4200",
+      "enemyLimit": "6",
+      "requiredCost": "80",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 4,
+        "magnifications": [100, 150, 200, 300],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1122",
+          "treasureName": "眠れるケリの美女(69)",
+          "probability": "15",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "7200",
+          "treasureName": "キャラクタードロップ(7200)",
+          "probability": "1",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "3900",
+          "treasureName": "キャラクタードロップ(3900)",
+          "probability": "45000",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "30000",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "000",
+          "enemyName": "わんこ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 90,
+            "ap": 8,
+            "dps": 5.11,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 15,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 360,
+            "actualAp": 32,
+            "actualDps": 20.44,
+            "magnification": "400%",
+            "count": "0",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "2.0-6.7s",
+            "delayFrames": "60-200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "001",
+          "enemyName": "にょろ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 100,
+            "ap": 15,
+            "dps": 12.16,
+            "speed": 8,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 30,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 400,
+            "actualAp": 60,
+            "actualDps": 48.64,
+            "magnification": "400%",
+            "count": "0",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "2.7-13.3s",
+            "delayFrames": "80-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "002",
+          "enemyName": "例のヤツ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 200,
+            "ap": 20,
+            "dps": 20.0,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 75,
+            "freq": 30,
+            "foreswing": 10,
+            "backswing": 20,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 800,
+            "actualAp": 80,
+            "actualDps": 80.0,
+            "magnification": "400%",
+            "count": "0",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "3.3-20.0s",
+            "delayFrames": "100-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "028",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 100,
+            "ap": 1000,
+            "dps": 535.71,
+            "speed": 4,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 800,
+            "freq": 56,
+            "foreswing": 27,
+            "backswing": 29,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 400,
+            "actualAp": 4000,
+            "actualDps": 2142.84,
+            "magnification": "400%",
+            "count": "0",
+            "spawnTime": "2.0s",
+            "spawnTimeFrames": "60f",
+            "delay": "3.3-20.0s",
+            "delayFrames": "100-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "028",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 100,
+            "ap": 1000,
+            "dps": 535.71,
+            "speed": 4,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 800,
+            "freq": 56,
+            "foreswing": 27,
+            "backswing": 29,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 400,
+            "actualAp": 4000,
+            "actualDps": 2142.84,
+            "magnification": "400%",
+            "count": "5",
+            "spawnTime": "2.0s",
+            "spawnTimeFrames": "60f",
+            "delay": "0.7-4.0s",
+            "delayFrames": "20-120f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 2000,
+            "actualDps": 1463.41,
+            "magnification": "100%",
+            "count": "4",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-4f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 2000,
+            "actualDps": 1463.41,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "4.0-20.0s",
+            "delayFrames": "120-600f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "029",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 80000,
+            "ap": 3000,
+            "dps": 803.57,
+            "speed": 6,
+            "range": 130,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 1200,
+            "freq": 112,
+            "foreswing": 56,
+            "backswing": 56,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 320000,
+            "actualAp": 12000,
+            "actualDps": 3214.28,
+            "magnification": "400%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.7-0.7s",
+            "delayFrames": "20-20f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 3,
+      "stageName": "まごにもいしょう",
+      "baseHp": "160000",
+      "width": "5500",
+      "enemyLimit": "10",
+      "requiredCost": "95",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 4,
+        "magnifications": [100, 150, 200, 300],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1122",
+          "treasureName": "眠れるケリの美女(69)",
+          "probability": "20",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "6700",
+          "treasureName": "キャラクタードロップ(6700)",
+          "probability": "1",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "3700",
+          "treasureName": "キャラクタードロップ(3700)",
+          "probability": "50000",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "30000",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "000",
+          "enemyName": "わんこ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 90,
+            "ap": 8,
+            "dps": 5.11,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 15,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 360,
+            "actualAp": 32,
+            "actualDps": 20.44,
+            "magnification": "400%",
+            "count": "0",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "2.0-6.7s",
+            "delayFrames": "60-200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "001",
+          "enemyName": "にょろ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 100,
+            "ap": 15,
+            "dps": 12.16,
+            "speed": 8,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 30,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 400,
+            "actualAp": 60,
+            "actualDps": 48.64,
+            "magnification": "400%",
+            "count": "0",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "2.7-13.3s",
+            "delayFrames": "80-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "002",
+          "enemyName": "例のヤツ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 200,
+            "ap": 20,
+            "dps": 20.0,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 75,
+            "freq": 30,
+            "foreswing": 10,
+            "backswing": 20,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 800,
+            "actualAp": 80,
+            "actualDps": 80.0,
+            "magnification": "400%",
+            "count": "0",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "3.3-20.0s",
+            "delayFrames": "100-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "028",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 100,
+            "ap": 1000,
+            "dps": 535.71,
+            "speed": 4,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 800,
+            "freq": 56,
+            "foreswing": 27,
+            "backswing": 29,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 400,
+            "actualAp": 4000,
+            "actualDps": 2142.84,
+            "magnification": "400%",
+            "count": "0",
+            "spawnTime": "2.0s",
+            "spawnTimeFrames": "60f",
+            "delay": "3.3-20.0s",
+            "delayFrames": "100-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "028",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 100,
+            "ap": 1000,
+            "dps": 535.71,
+            "speed": 4,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 800,
+            "freq": 56,
+            "foreswing": 27,
+            "backswing": 29,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 400,
+            "actualAp": 4000,
+            "actualDps": 2142.84,
+            "magnification": "400%",
+            "count": "0",
+            "spawnTime": "2.0s",
+            "spawnTimeFrames": "60f",
+            "delay": "2.0-10.0s",
+            "delayFrames": "60-300f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 2000,
+            "actualDps": 1463.41,
+            "magnification": "100%",
+            "count": "10",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-4f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 2000,
+            "actualDps": 1463.41,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-6.7s",
+            "delayFrames": "2-200f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "061",
+          "enemyName": "ダミー",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 50000,
+            "ap": 2400,
+            "dps": 2482.76,
+            "speed": 10,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 4000,
+            "freq": 29,
+            "foreswing": 17,
+            "backswing": 12,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 50000,
+            "actualAp": 2400,
+            "actualDps": 2482.76,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.7-0.7s",
+            "delayFrames": "20-20f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 4,
+      "stageName": "姫様の秘め事",
+      "baseHp": "180000",
+      "width": "5800",
+      "enemyLimit": "5",
+      "requiredCost": "105",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 4,
+        "magnifications": [100, 150, 200, 300],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1122",
+          "treasureName": "眠れるケリの美女(69)",
+          "probability": "25",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "6000",
+          "treasureName": "キャラクタードロップ(6000)",
+          "probability": "1",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "5200",
+          "treasureName": "キャラクタードロップ(5200)",
+          "probability": "75000",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "50000",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "025",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 100,
+            "ap": 10,
+            "dps": 2.83,
+            "speed": 4,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 800,
+            "freq": 106,
+            "foreswing": 27,
+            "backswing": 29,
+            "tba": 40
+          },
+          "stageStats": {
+            "actualHp": 400,
+            "actualAp": 40,
+            "actualDps": 11.32,
+            "magnification": "400%",
+            "count": "0",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "2.0-6.7s",
+            "delayFrames": "60-200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "001",
+          "enemyName": "にょろ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 100,
+            "ap": 15,
+            "dps": 12.16,
+            "speed": 8,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 30,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 400,
+            "actualAp": 60,
+            "actualDps": 48.64,
+            "magnification": "400%",
+            "count": "0",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "2.7-13.3s",
+            "delayFrames": "80-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "002",
+          "enemyName": "例のヤツ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 200,
+            "ap": 20,
+            "dps": 20.0,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 75,
+            "freq": 30,
+            "foreswing": 10,
+            "backswing": 20,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 800,
+            "actualAp": 80,
+            "actualDps": 80.0,
+            "magnification": "400%",
+            "count": "0",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "3.3-20.0s",
+            "delayFrames": "100-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "025",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 100,
+            "ap": 10,
+            "dps": 2.83,
+            "speed": 4,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 800,
+            "freq": 106,
+            "foreswing": 27,
+            "backswing": 29,
+            "tba": 40
+          },
+          "stageStats": {
+            "actualHp": 400,
+            "actualAp": 40,
+            "actualDps": 11.32,
+            "magnification": "400%",
+            "count": "0",
+            "spawnTime": "2.0s",
+            "spawnTimeFrames": "60f",
+            "delay": "6.0-6.0s",
+            "delayFrames": "180-180f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "060",
+          "enemyName": "ダミー",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 2000,
+            "ap": 180,
+            "dps": 79.41,
+            "speed": 6,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 550,
+            "freq": 68,
+            "foreswing": 33,
+            "backswing": 35,
+            "tba": 1
+          },
+          "stageStats": {
+            "actualHp": 100000,
+            "actualAp": 9000,
+            "actualDps": 3970.5,
+            "magnification": "5000%",
+            "count": "3",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "030",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 6000,
+            "ap": 4200,
+            "dps": 893.62,
+            "speed": 35,
+            "range": 1300,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1500,
+            "freq": 141,
+            "foreswing": 4,
+            "backswing": 137,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 12000,
+            "actualAp": 8400,
+            "actualDps": 1787.24,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.7-0.7s",
+            "delayFrames": "20-20f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 5,
+      "stageName": "プリンセス争奪戦",
+      "baseHp": "200000",
+      "width": "4800",
+      "enemyLimit": "6",
+      "requiredCost": "120",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 4,
+        "magnifications": [100, 150, 200, 300],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1122",
+          "treasureName": "眠れるケリの美女(69)",
+          "probability": "30",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "6500",
+          "treasureName": "キャラクタードロップ(6500)",
+          "probability": "1",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "5100",
+          "treasureName": "キャラクタードロップ(5100)",
+          "probability": "100000",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "70000",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 2000,
+            "actualDps": 1463.41,
+            "magnification": "100%",
+            "count": "15",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "3.0-12.7s",
+            "delayFrames": "90-380f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "051",
+          "enemyName": "ブラッゴリ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 3123,
+            "dps": 5855.62,
+            "speed": 30,
+            "range": 155,
+            "rangeType": "範囲",
+            "kbLevel": 8,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 40000,
+            "actualAp": 3123,
+            "actualDps": 5855.62,
+            "magnification": "100%",
+            "count": "5",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "22.0-33.3s",
+            "delayFrames": "660-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 2000,
+            "actualDps": 1463.41,
+            "magnification": "100%",
+            "count": "10",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "2.0-30.0s",
+            "delayFrames": "60-900f",
+            "baseHpRatio": "90%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "051",
+          "enemyName": "ブラッゴリ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 3123,
+            "dps": 5855.62,
+            "speed": 30,
+            "range": 155,
+            "rangeType": "範囲",
+            "kbLevel": 8,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 40000,
+            "actualAp": 3123,
+            "actualDps": 5855.62,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-10.0s",
+            "delayFrames": "2-300f",
+            "baseHpRatio": "90%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "052",
+          "enemyName": "シャドウボクサー",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 80000,
+            "ap": 4997,
+            "dps": 9369.38,
+            "speed": 22,
+            "range": 158,
+            "rangeType": "範囲",
+            "kbLevel": 10,
+            "money": 600,
+            "freq": 16,
+            "foreswing": 2,
+            "backswing": 8,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 80000,
+            "actualAp": 4997,
+            "actualDps": 9369.38,
+            "magnification": "100%",
+            "count": "2",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "90%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "060",
+          "enemyName": "ダミー",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 2000,
+            "ap": 180,
+            "dps": 79.41,
+            "speed": 6,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 550,
+            "freq": 68,
+            "foreswing": 33,
+            "backswing": 35,
+            "tba": 1
+          },
+          "stageStats": {
+            "actualHp": 100000,
+            "actualAp": 9000,
+            "actualDps": 3970.5,
+            "magnification": "5000%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "3.0-20.0s",
+            "delayFrames": "90-600f",
+            "baseHpRatio": "90%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "061",
+          "enemyName": "ダミー",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 50000,
+            "ap": 2400,
+            "dps": 2482.76,
+            "speed": 10,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 4000,
+            "freq": 29,
+            "foreswing": 17,
+            "backswing": 12,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 50000,
+            "actualAp": 2400,
+            "actualDps": 2482.76,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "3.0-20.0s",
+            "delayFrames": "90-600f",
+            "baseHpRatio": "90%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "030",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 6000,
+            "ap": 4200,
+            "dps": 893.62,
+            "speed": 35,
+            "range": 1300,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1500,
+            "freq": 141,
+            "foreswing": 4,
+            "backswing": 137,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 12000,
+            "actualAp": 8400,
+            "actualDps": 1787.24,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "3.0-20.0s",
+            "delayFrames": "90-600f",
+            "baseHpRatio": "90%",
+            "isBoss": true
+          },
+          "abilities": {}
+        }
+      ]
+    }
+  ]
+}

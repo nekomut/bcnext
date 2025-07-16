@@ -1,0 +1,323 @@
+{
+  "eventId": 2146,
+  "eventName": "New Challenger",
+  "typeId": 2,
+  "typeName": "コラボステージ",
+  "prefix": "C",
+  "mapId": 146,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "VSベガ 中級",
+      "baseHp": "50000",
+      "width": "6000",
+      "enemyLimit": "10",
+      "requiredCost": "100",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "6",
+          "treasureName": "ＸＰ",
+          "probability": "100",
+          "amount": "150000",
+          "times": "1",
+          "limitText": "1"
+        },
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "532",
+          "enemyName": "ダミー",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 320000,
+            "ap": 6000,
+            "dps": 865.38,
+            "speed": 8,
+            "range": 400,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 1000,
+            "freq": 208,
+            "foreswing": 27,
+            "backswing": 78,
+            "tba": 84
+          },
+          "stageStats": {
+            "actualHp": 32000,
+            "actualAp": 600,
+            "actualDps": 86.54,
+            "magnification": "10%",
+            "count": "1",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [2000, 2000, 2000],
+              "timings": [27, 34, 41]
+            },
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 425,
+              "omni_range": [
+                -700,
+                425
+              ]
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            },
+            "toxic": {
+              "raw_columns": [79, 80],
+              "chance": 100,
+              "damage": 20
+            }
+          }
+        },
+        {
+          "enemyId": "015",
+          "enemyName": "リッスントゥミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 80,
+            "ap": 30,
+            "dps": 56.25,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 16,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 320,
+            "actualAp": 120,
+            "actualDps": 225.0,
+            "magnification": "400%",
+            "count": "15",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "3.3-10.0s",
+            "delayFrames": "100-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "015",
+          "enemyName": "リッスントゥミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 80,
+            "ap": 30,
+            "dps": 56.25,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 16,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 320,
+            "actualAp": 120,
+            "actualDps": 225.0,
+            "magnification": "400%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "005",
+          "enemyName": "ジャッキー・ペン",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1300,
+            "ap": 80,
+            "dps": 100.0,
+            "speed": 11,
+            "range": 150,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 450,
+            "freq": 24,
+            "foreswing": 8,
+            "backswing": 16,
+            "tba": 5
+          },
+          "stageStats": {
+            "actualHp": 5200,
+            "actualAp": 320,
+            "actualDps": 400.0,
+            "magnification": "400%",
+            "count": "0",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "20.0-40.0s",
+            "delayFrames": "600-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 2000,
+            "actualDps": 1463.41,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 2000,
+            "actualDps": 1463.41,
+            "magnification": "100%",
+            "count": "2",
+            "spawnTime": "73.3s",
+            "spawnTimeFrames": "2,200f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "010",
+          "enemyName": "カ・ンガリュ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 4000,
+            "ap": 250,
+            "dps": 208.33,
+            "speed": 20,
+            "range": 160,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 1400,
+            "freq": 36,
+            "foreswing": 2,
+            "backswing": 20,
+            "tba": 1
+          },
+          "stageStats": {
+            "actualHp": 16000,
+            "actualAp": 1000,
+            "actualDps": 833.32,
+            "magnification": "400%",
+            "count": "1",
+            "spawnTime": "60.0s",
+            "spawnTimeFrames": "1,800f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    }
+  ]
+}

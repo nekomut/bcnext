@@ -1,0 +1,1979 @@
+{
+  "eventId": 13034,
+  "eventName": "DNA果樹園",
+  "typeId": 13,
+  "typeName": "真レジェンドストーリー",
+  "prefix": "NA",
+  "mapId": 34,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 4,
+    "magnifications": [100, 130, 170, 100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "ゲノムバナナ狩り",
+      "baseHp": "990000",
+      "width": "5600",
+      "enemyLimit": "9",
+      "requiredCost": "180",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 4,
+        "magnifications": [100, 130, 170, 100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "3",
+          "treasureName": "ニャンピュータ",
+          "probability": "1",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "184",
+          "enemyName": "プドール夫人",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 3750,
+            "dps": 2743.9,
+            "speed": 15,
+            "range": 160,
+            "rangeType": "単体",
+            "kbLevel": 4,
+            "money": 1000,
+            "freq": 41,
+            "foreswing": 17,
+            "backswing": 24,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 54000,
+            "actualAp": 45000,
+            "actualDps": 32926.8,
+            "magnification": "1200%",
+            "count": "3",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "20.0-23.3s",
+            "delayFrames": "600-700f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "strengthen": {
+              "raw_columns": [32, 33],
+              "trigger_hp": 75,
+              "power": 100
+            }
+          }
+        },
+        {
+          "enemyId": "375",
+          "enemyName": "大夢くん",
+          "traits": [
+            "天",
+            "エ"
+          ],
+          "baseStats": {
+            "hp": 50000,
+            "ap": 3333,
+            "dps": 552.43,
+            "speed": 12,
+            "range": 240,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 1250,
+            "freq": 181,
+            "foreswing": 32,
+            "backswing": 44,
+            "tba": 75
+          },
+          "stageStats": {
+            "actualHp": 600000,
+            "actualAp": 39996,
+            "actualDps": 6629.16,
+            "magnification": "1200%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "wave": {
+              "raw_columns": [27, 28],
+              "chance": 100,
+              "level": 3
+            },
+            "barrier": {
+              "raw_columns": 64,
+              "hp": 266000
+            }
+          }
+        },
+        {
+          "enemyId": "125",
+          "enemyName": "天使スレイプニール",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 363000,
+            "ap": 2247,
+            "dps": 4494.0,
+            "speed": 5,
+            "range": 372,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 905,
+            "freq": 15,
+            "foreswing": 9,
+            "backswing": 6,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 907500,
+            "actualAp": 5617,
+            "actualDps": 11235.0,
+            "magnification": "250%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 15
+            }
+          }
+        },
+        {
+          "enemyId": "114",
+          "enemyName": "天使ガブリエル",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 13000,
+            "ap": 1550,
+            "dps": 1134.15,
+            "speed": 50,
+            "range": 80,
+            "rangeType": "範囲",
+            "kbLevel": 10,
+            "money": 250,
+            "freq": 41,
+            "foreswing": 3,
+            "backswing": 38,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 65000,
+            "actualAp": 7750,
+            "actualDps": 5670.75,
+            "magnification": "500%",
+            "count": "0",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "26.7-30.0s",
+            "delayFrames": "800-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "375",
+          "enemyName": "大夢くん",
+          "traits": [
+            "天",
+            "エ"
+          ],
+          "baseStats": {
+            "hp": 50000,
+            "ap": 3333,
+            "dps": 552.43,
+            "speed": 12,
+            "range": 240,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 1250,
+            "freq": 181,
+            "foreswing": 32,
+            "backswing": 44,
+            "tba": 75
+          },
+          "stageStats": {
+            "actualHp": 600000,
+            "actualAp": 39996,
+            "actualDps": 6629.16,
+            "magnification": "1200%",
+            "count": "2",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "1.0-1.0s",
+            "delayFrames": "30-30f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "wave": {
+              "raw_columns": [27, 28],
+              "chance": 100,
+              "level": 3
+            },
+            "barrier": {
+              "raw_columns": 64,
+              "hp": 266000
+            }
+          }
+        },
+        {
+          "enemyId": "184",
+          "enemyName": "プドール夫人",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 3750,
+            "dps": 2743.9,
+            "speed": 15,
+            "range": 160,
+            "rangeType": "単体",
+            "kbLevel": 4,
+            "money": 1000,
+            "freq": 41,
+            "foreswing": 17,
+            "backswing": 24,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 54000,
+            "actualAp": 45000,
+            "actualDps": 32926.8,
+            "magnification": "1200%",
+            "count": "2",
+            "spawnTime": "53.3s",
+            "spawnTimeFrames": "1,600f",
+            "delay": "20.0-23.3s",
+            "delayFrames": "600-700f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "strengthen": {
+              "raw_columns": [32, 33],
+              "trigger_hp": 75,
+              "power": 100
+            }
+          }
+        },
+        {
+          "enemyId": "375",
+          "enemyName": "大夢くん",
+          "traits": [
+            "天",
+            "エ"
+          ],
+          "baseStats": {
+            "hp": 50000,
+            "ap": 3333,
+            "dps": 552.43,
+            "speed": 12,
+            "range": 240,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 1250,
+            "freq": 181,
+            "foreswing": 32,
+            "backswing": 44,
+            "tba": 75
+          },
+          "stageStats": {
+            "actualHp": 600000,
+            "actualAp": 39996,
+            "actualDps": 6629.16,
+            "magnification": "1200%",
+            "count": "3",
+            "spawnTime": "93.3s",
+            "spawnTimeFrames": "2,800f",
+            "delay": "1.0-1.0s",
+            "delayFrames": "30-30f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "wave": {
+              "raw_columns": [27, 28],
+              "chance": 100,
+              "level": 3
+            },
+            "barrier": {
+              "raw_columns": 64,
+              "hp": 266000
+            }
+          }
+        },
+        {
+          "enemyId": "184",
+          "enemyName": "プドール夫人",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 3750,
+            "dps": 2743.9,
+            "speed": 15,
+            "range": 160,
+            "rangeType": "単体",
+            "kbLevel": 4,
+            "money": 1000,
+            "freq": 41,
+            "foreswing": 17,
+            "backswing": 24,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 54000,
+            "actualAp": 45000,
+            "actualDps": 32926.8,
+            "magnification": "1200%",
+            "count": "2",
+            "spawnTime": "106.7s",
+            "spawnTimeFrames": "3,200f",
+            "delay": "20.0-23.3s",
+            "delayFrames": "600-700f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "strengthen": {
+              "raw_columns": [32, 33],
+              "trigger_hp": 75,
+              "power": 100
+            }
+          }
+        },
+        {
+          "enemyId": "375",
+          "enemyName": "大夢くん",
+          "traits": [
+            "天",
+            "エ"
+          ],
+          "baseStats": {
+            "hp": 50000,
+            "ap": 3333,
+            "dps": 552.43,
+            "speed": 12,
+            "range": 240,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 1250,
+            "freq": 181,
+            "foreswing": 32,
+            "backswing": 44,
+            "tba": 75
+          },
+          "stageStats": {
+            "actualHp": 600000,
+            "actualAp": 39996,
+            "actualDps": 6629.16,
+            "magnification": "1200%",
+            "count": "3",
+            "spawnTime": "120.0s",
+            "spawnTimeFrames": "3,600f",
+            "delay": "1.0-1.0s",
+            "delayFrames": "30-30f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "wave": {
+              "raw_columns": [27, 28],
+              "chance": 100,
+              "level": 3
+            },
+            "barrier": {
+              "raw_columns": 64,
+              "hp": 266000
+            }
+          }
+        },
+        {
+          "enemyId": "184",
+          "enemyName": "プドール夫人",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 3750,
+            "dps": 2743.9,
+            "speed": 15,
+            "range": 160,
+            "rangeType": "単体",
+            "kbLevel": 4,
+            "money": 1000,
+            "freq": 41,
+            "foreswing": 17,
+            "backswing": 24,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 54000,
+            "actualAp": 45000,
+            "actualDps": 32926.8,
+            "magnification": "1200%",
+            "count": "2",
+            "spawnTime": "146.7s",
+            "spawnTimeFrames": "4,400f",
+            "delay": "20.0-23.3s",
+            "delayFrames": "600-700f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "strengthen": {
+              "raw_columns": [32, 33],
+              "trigger_hp": 75,
+              "power": 100
+            }
+          }
+        },
+        {
+          "enemyId": "375",
+          "enemyName": "大夢くん",
+          "traits": [
+            "天",
+            "エ"
+          ],
+          "baseStats": {
+            "hp": 50000,
+            "ap": 3333,
+            "dps": 552.43,
+            "speed": 12,
+            "range": 240,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 1250,
+            "freq": 181,
+            "foreswing": 32,
+            "backswing": 44,
+            "tba": 75
+          },
+          "stageStats": {
+            "actualHp": 600000,
+            "actualAp": 39996,
+            "actualDps": 6629.16,
+            "magnification": "1200%",
+            "count": "5",
+            "spawnTime": "200.0s",
+            "spawnTimeFrames": "6,000f",
+            "delay": "53.3-56.7s",
+            "delayFrames": "1,600-1,700f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "wave": {
+              "raw_columns": [27, 28],
+              "chance": 100,
+              "level": 3
+            },
+            "barrier": {
+              "raw_columns": 64,
+              "hp": 266000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 1,
+      "stageName": "偽いちごハウス",
+      "baseHp": "1050000",
+      "width": "6000",
+      "enemyLimit": "9",
+      "requiredCost": "190",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 4,
+        "magnifications": [100, 130, 170, 100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "0",
+          "treasureName": "スピードアップ",
+          "probability": "1",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "512",
+          "enemyName": "ミニアンデッドサイクロン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 333333,
+            "ap": 333,
+            "dps": 1998.0,
+            "speed": 14,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 300,
+            "freq": 5,
+            "foreswing": 1,
+            "backswing": 4,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 333333,
+            "actualAp": 333,
+            "actualDps": 1998.0,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 1250
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 120,
+              "duration_s": 4.0,
+              "hp_ratio": 100
+            }
+          }
+        },
+        {
+          "enemyId": "443",
+          "enemyName": "ミニスターサイクロン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 44444,
+            "ap": 666,
+            "dps": 3996.0,
+            "speed": 14,
+            "range": 50,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 333,
+            "freq": 5,
+            "foreswing": 1,
+            "backswing": 4,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 533328,
+            "actualAp": 7992,
+            "actualDps": 47952.0,
+            "magnification": "1200%",
+            "count": "2",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "20.0-23.3s",
+            "delayFrames": "600-700f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "warp": {
+              "raw_columns": [65, 66, 67],
+              "chance": 100,
+              "distance": 150,
+              "duration_f": 100,
+              "duration_s": 3.33
+            }
+          }
+        },
+        {
+          "enemyId": "180",
+          "enemyName": "ギャラクシーニャンダム",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 144444,
+            "ap": 4444,
+            "dps": 471.1,
+            "speed": 2,
+            "range": 600,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 3000,
+            "freq": 283,
+            "foreswing": 104,
+            "backswing": 29,
+            "tba": 90
+          },
+          "stageStats": {
+            "actualHp": 1733328,
+            "actualAp": 53328,
+            "actualDps": 5653.2,
+            "magnification": "1200%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 50,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "443",
+          "enemyName": "ミニスターサイクロン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 44444,
+            "ap": 666,
+            "dps": 3996.0,
+            "speed": 14,
+            "range": 50,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 333,
+            "freq": 5,
+            "foreswing": 1,
+            "backswing": 4,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 533328,
+            "actualAp": 7992,
+            "actualDps": 47952.0,
+            "magnification": "1200%",
+            "count": "8",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "warp": {
+              "raw_columns": [65, 66, 67],
+              "chance": 100,
+              "distance": 150,
+              "duration_f": 100,
+              "duration_s": 3.33
+            }
+          }
+        },
+        {
+          "enemyId": "443",
+          "enemyName": "ミニスターサイクロン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 44444,
+            "ap": 666,
+            "dps": 3996.0,
+            "speed": 14,
+            "range": 50,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 333,
+            "freq": 5,
+            "foreswing": 1,
+            "backswing": 4,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 533328,
+            "actualAp": 7992,
+            "actualDps": 47952.0,
+            "magnification": "1200%",
+            "count": "5",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "20.0-26.7s",
+            "delayFrames": "600-800f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "warp": {
+              "raw_columns": [65, 66, 67],
+              "chance": 100,
+              "distance": 150,
+              "duration_f": 100,
+              "duration_s": 3.33
+            }
+          }
+        },
+        {
+          "enemyId": "512",
+          "enemyName": "ミニアンデッドサイクロン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 333333,
+            "ap": 333,
+            "dps": 1998.0,
+            "speed": 14,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 300,
+            "freq": 5,
+            "foreswing": 1,
+            "backswing": 4,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 333333,
+            "actualAp": 333,
+            "actualDps": 1998.0,
+            "magnification": "100%",
+            "count": "5",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "20.0-23.3s",
+            "delayFrames": "600-700f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 1250
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 120,
+              "duration_s": 4.0,
+              "hp_ratio": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 2,
+      "stageName": "無農薬で造った染色体",
+      "baseHp": "770000",
+      "width": "4000",
+      "enemyLimit": "12",
+      "requiredCost": "190",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 4,
+        "magnifications": [100, 130, 170, 100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "5",
+          "treasureName": "スニャイパー",
+          "probability": "1",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "521",
+          "enemyName": "ジョン・レオン",
+          "traits": [
+            "赤",
+            "エ",
+            "ゾ"
+          ],
+          "baseStats": {
+            "hp": 3000000,
+            "ap": 3500,
+            "dps": 1693.55,
+            "speed": 10,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1800,
+            "freq": 62,
+            "foreswing": 17,
+            "backswing": 17,
+            "tba": 23
+          },
+          "stageStats": {
+            "actualHp": 3000000,
+            "actualAp": 3500,
+            "actualDps": 1693.55,
+            "magnification": "100%",
+            "count": "5",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 400,
+              "ld_range": [400, 600]
+            }
+          }
+        },
+        {
+          "enemyId": "541",
+          "enemyName": "ごん兵衛",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 98000,
+            "ap": 9800,
+            "dps": 1283.84,
+            "speed": 4,
+            "range": 1700,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 600,
+            "freq": 229,
+            "foreswing": 90,
+            "backswing": 44,
+            "tba": 70
+          },
+          "stageStats": {
+            "actualHp": 98000,
+            "actualAp": 9800,
+            "actualDps": 1283.84,
+            "magnification": "100%",
+            "count": "2",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "53.3-56.7s",
+            "delayFrames": "1,600-1,700f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 300,
+              "ld_range": [300, 1700]
+            },
+            "surge": {
+              "raw_columns": [81, 82, 83, 84],
+              "chance": 100,
+              "distance_start": 150,
+              "distance_end": 1900,
+              "level": 3
+            }
+          }
+        },
+        {
+          "enemyId": "114",
+          "enemyName": "天使ガブリエル",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 13000,
+            "ap": 1550,
+            "dps": 1134.15,
+            "speed": 50,
+            "range": 80,
+            "rangeType": "範囲",
+            "kbLevel": 10,
+            "money": 250,
+            "freq": 41,
+            "foreswing": 3,
+            "backswing": 38,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 65000,
+            "actualAp": 7750,
+            "actualDps": 5670.75,
+            "magnification": "500%",
+            "count": "15",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "20.0-23.3s",
+            "delayFrames": "600-700f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "284",
+          "enemyName": "ゾンビワン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 15000,
+            "ap": 1800,
+            "dps": 1148.94,
+            "speed": 8,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 45,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 7,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 45000,
+            "actualAp": 5400,
+            "actualDps": 3446.82,
+            "magnification": "300%",
+            "count": "8",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "26.7-33.3s",
+            "delayFrames": "800-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 500
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 240,
+              "duration_s": 8.0,
+              "hp_ratio": 50
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 3,
+      "stageName": "食べごろナノぶどう",
+      "baseHp": "1110000",
+      "width": "5300",
+      "enemyLimit": "12",
+      "requiredCost": "180",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 4,
+        "magnifications": [100, 130, 170, 100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "3",
+          "treasureName": "ニャンピュータ",
+          "probability": "1",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "497",
+          "enemyName": "ワーニネーター",
+          "traits": ["メ"],
+          "baseStats": {
+            "hp": 5,
+            "ap": 800,
+            "dps": 510.64,
+            "speed": 12,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 150,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 5,
+            "actualAp": 800,
+            "actualDps": 510.64,
+            "magnification": "100%",
+            "count": "5",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "285",
+          "enemyName": "にょろろん",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 16000,
+            "ap": 2000,
+            "dps": 1621.62,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 60,
+            "freq": 37,
+            "foreswing": 10,
+            "backswing": 7,
+            "tba": 14
+          },
+          "stageStats": {
+            "actualHp": 48000,
+            "actualAp": 6000,
+            "actualDps": 4864.86,
+            "magnification": "300%",
+            "count": "0",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "20.0-26.7s",
+            "delayFrames": "600-800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 1500
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 180,
+              "duration_s": 6.0,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "113",
+          "enemyName": "天使カバちゃん",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 55000,
+            "ap": 1800,
+            "dps": 2000.0,
+            "speed": 9,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 450,
+            "freq": 27,
+            "foreswing": 8,
+            "backswing": 3,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 220000,
+            "actualAp": 7200,
+            "actualDps": 8000.0,
+            "magnification": "400%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "497",
+          "enemyName": "ワーニネーター",
+          "traits": ["メ"],
+          "baseStats": {
+            "hp": 5,
+            "ap": 800,
+            "dps": 510.64,
+            "speed": 12,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 150,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 5,
+            "actualAp": 800,
+            "actualDps": 510.64,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "497",
+          "enemyName": "ワーニネーター",
+          "traits": ["メ"],
+          "baseStats": {
+            "hp": 5,
+            "ap": 800,
+            "dps": 510.64,
+            "speed": 12,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 150,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 5,
+            "actualAp": 800,
+            "actualDps": 510.64,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "20.0-26.7s",
+            "delayFrames": "600-800f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "497",
+          "enemyName": "ワーニネーター",
+          "traits": ["メ"],
+          "baseStats": {
+            "hp": 5,
+            "ap": 800,
+            "dps": 510.64,
+            "speed": 12,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 150,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 5,
+            "actualAp": 800,
+            "actualDps": 510.64,
+            "magnification": "100%",
+            "count": "10",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-16.7s",
+            "delayFrames": "300-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "113",
+          "enemyName": "天使カバちゃん",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 55000,
+            "ap": 1800,
+            "dps": 2000.0,
+            "speed": 9,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 450,
+            "freq": 27,
+            "foreswing": 8,
+            "backswing": 3,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 220000,
+            "actualAp": 7200,
+            "actualDps": 8000.0,
+            "magnification": "400%",
+            "count": "3",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "36.7-40.0s",
+            "delayFrames": "1,100-1,200f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "427",
+          "enemyName": "クマンケン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 120000,
+            "ap": 5000,
+            "dps": 7894.74,
+            "speed": 10,
+            "range": 360,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 1000,
+            "freq": 19,
+            "foreswing": 6,
+            "backswing": 3,
+            "tba": 7
+          },
+          "stageStats": {
+            "actualHp": 360000,
+            "actualAp": 15000,
+            "actualDps": 23684.22,
+            "magnification": "300%",
+            "count": "5",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "20.0-23.3s",
+            "delayFrames": "600-700f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 1125
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 360,
+              "duration_s": 12.0,
+              "hp_ratio": 100
+            }
+          }
+        },
+        {
+          "enemyId": "427",
+          "enemyName": "クマンケン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 120000,
+            "ap": 5000,
+            "dps": 7894.74,
+            "speed": 10,
+            "range": 360,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 1000,
+            "freq": 19,
+            "foreswing": 6,
+            "backswing": 3,
+            "tba": 7
+          },
+          "stageStats": {
+            "actualHp": 360000,
+            "actualAp": 15000,
+            "actualDps": 23684.22,
+            "magnification": "300%",
+            "count": "3",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 1125
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 360,
+              "duration_s": 12.0,
+              "hp_ratio": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 4,
+      "stageName": "クローン農夫",
+      "baseHp": "1080000",
+      "width": "4800",
+      "enemyLimit": "10",
+      "requiredCost": "210",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 4,
+        "magnifications": [100, 130, 170, 100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "4",
+          "treasureName": "おかめはちもく",
+          "probability": "1",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "547",
+          "enemyName": "マーさん",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1250000,
+            "ap": 16000,
+            "dps": 6233.77,
+            "speed": 4,
+            "range": 260,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1000,
+            "freq": 77,
+            "foreswing": 6,
+            "backswing": 11,
+            "tba": 36
+          },
+          "stageStats": {
+            "actualHp": 1250000,
+            "actualAp": 16000,
+            "actualDps": 6233.77,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "mini-wave": {
+              "raw_columns": [27, 28, 86],
+              "chance": 100,
+              "level": 3
+            }
+          }
+        },
+        {
+          "enemyId": "042",
+          "enemyName": "セレブ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 5000,
+            "dps": 3658.54,
+            "speed": 20,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 700,
+            "freq": 41,
+            "foreswing": 17,
+            "backswing": 24,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 90000,
+            "actualAp": 50000,
+            "actualDps": 36585.4,
+            "magnification": "1000%",
+            "count": "4",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "547",
+          "enemyName": "マーさん",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1250000,
+            "ap": 16000,
+            "dps": 6233.77,
+            "speed": 4,
+            "range": 260,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1000,
+            "freq": 77,
+            "foreswing": 6,
+            "backswing": 11,
+            "tba": 36
+          },
+          "stageStats": {
+            "actualHp": 1250000,
+            "actualAp": 16000,
+            "actualDps": 6233.77,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "26.7-26.7s",
+            "delayFrames": "800-800f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "mini-wave": {
+              "raw_columns": [27, 28, 86],
+              "chance": 100,
+              "level": 3
+            }
+          }
+        },
+        {
+          "enemyId": "547",
+          "enemyName": "マーさん",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1250000,
+            "ap": 16000,
+            "dps": 6233.77,
+            "speed": 4,
+            "range": 260,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1000,
+            "freq": 77,
+            "foreswing": 6,
+            "backswing": 11,
+            "tba": 36
+          },
+          "stageStats": {
+            "actualHp": 1250000,
+            "actualAp": 16000,
+            "actualDps": 6233.77,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "26.7-26.7s",
+            "delayFrames": "800-800f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "mini-wave": {
+              "raw_columns": [27, 28, 86],
+              "chance": 100,
+              "level": 3
+            }
+          }
+        },
+        {
+          "enemyId": "032",
+          "enemyName": "ダチョウ同好会",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 340000,
+            "ap": 7200,
+            "dps": 12705.88,
+            "speed": 16,
+            "range": 260,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 1080,
+            "freq": 17,
+            "foreswing": 4,
+            "backswing": 13,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1020000,
+            "actualAp": 21600,
+            "actualDps": 38117.64,
+            "magnification": "300%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "266",
+          "enemyName": "ヒカル",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1000000,
+            "ap": 2500,
+            "dps": 375.0,
+            "speed": 4,
+            "range": 450,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 1800,
+            "freq": 200,
+            "foreswing": 27,
+            "backswing": 66,
+            "tba": 87
+          },
+          "stageStats": {
+            "actualHp": 1500000,
+            "actualAp": 3750,
+            "actualDps": 562.5,
+            "magnification": "150%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 650,
+              "ld_range": [650, 1300]
+            },
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 100,
+              "duration_f": 200,
+              "duration_s": 6.67
+            }
+          }
+        },
+        {
+          "enemyId": "042",
+          "enemyName": "セレブ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 5000,
+            "dps": 3658.54,
+            "speed": 20,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 700,
+            "freq": 41,
+            "foreswing": 17,
+            "backswing": 24,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 90000,
+            "actualAp": 50000,
+            "actualDps": 36585.4,
+            "magnification": "1000%",
+            "count": "6",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 5,
+      "stageName": "遺伝子情報直売所",
+      "baseHp": "1250000",
+      "width": "5000",
+      "enemyLimit": "12",
+      "requiredCost": "260",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 4,
+        "magnifications": [100, 130, 170, 100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "2",
+          "treasureName": "ネコボン",
+          "probability": "1",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "549",
+          "enemyName": "怒りのブラッゴリ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 321234,
+            "ap": 11234,
+            "dps": 21063.75,
+            "speed": 30,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 8,
+            "money": 555,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 321234,
+            "actualAp": 11234,
+            "actualDps": 21063.75,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "behemoth": {
+              "raw_columns": 101,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 60000,
+            "actualAp": 24000,
+            "actualDps": 17560.92,
+            "magnification": "1200%",
+            "count": "0",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "20.0-23.3s",
+            "delayFrames": "600-700f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "387",
+          "enemyName": "ヒウマ",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 248000,
+            "ap": 54000,
+            "dps": 5294.12,
+            "speed": 6,
+            "range": 800,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 900,
+            "freq": 306,
+            "foreswing": 39,
+            "backswing": 27,
+            "tba": 134
+          },
+          "stageStats": {
+            "actualHp": 496000,
+            "actualAp": 108000,
+            "actualDps": 10588.24,
+            "magnification": "200%",
+            "count": "6",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "20.0-23.3s",
+            "delayFrames": "600-700f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 1200,
+              "ld_range": [1200, 1500]
+            }
+          }
+        },
+        {
+          "enemyId": "549",
+          "enemyName": "怒りのブラッゴリ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 321234,
+            "ap": 11234,
+            "dps": 21063.75,
+            "speed": 30,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 8,
+            "money": 555,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 321234,
+            "actualAp": 11234,
+            "actualDps": 21063.75,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "33.3-36.7s",
+            "delayFrames": "1,000-1,100f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "behemoth": {
+              "raw_columns": 101,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "527",
+          "enemyName": "テバムラサキホネツバメ",
+          "traits": [
+            "浮",
+            "ゾ"
+          ],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 10000,
+            "dps": 2189.78,
+            "speed": 55,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 50,
+            "freq": 137,
+            "foreswing": 1,
+            "backswing": 136,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 4500,
+            "actualAp": 10000,
+            "actualDps": 2189.78,
+            "magnification": "100%",
+            "count": "4",
+            "spawnTime": "53.3s",
+            "spawnTimeFrames": "1,600f",
+            "delay": "33.3-36.7s",
+            "delayFrames": "1,000-1,100f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 222,
+              "omni_range": [
+                -200,
+                222
+              ]
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 200,
+              "duration_s": 6.67,
+              "hp_ratio": 100
+            },
+            "toxic": {
+              "raw_columns": [79, 80],
+              "chance": 100,
+              "damage": 80
+            }
+          }
+        },
+        {
+          "enemyId": "549",
+          "enemyName": "怒りのブラッゴリ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 321234,
+            "ap": 11234,
+            "dps": 21063.75,
+            "speed": 30,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 8,
+            "money": 555,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 321234,
+            "actualAp": 11234,
+            "actualDps": 21063.75,
+            "magnification": "100%",
+            "count": "2",
+            "spawnTime": "113.3s",
+            "spawnTimeFrames": "3,400f",
+            "delay": "33.3-36.7s",
+            "delayFrames": "1,000-1,100f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "behemoth": {
+              "raw_columns": 101,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "527",
+          "enemyName": "テバムラサキホネツバメ",
+          "traits": [
+            "浮",
+            "ゾ"
+          ],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 10000,
+            "dps": 2189.78,
+            "speed": 55,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 50,
+            "freq": 137,
+            "foreswing": 1,
+            "backswing": 136,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 4500,
+            "actualAp": 10000,
+            "actualDps": 2189.78,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "75%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 222,
+              "omni_range": [
+                -200,
+                222
+              ]
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 200,
+              "duration_s": 6.67,
+              "hp_ratio": 100
+            },
+            "toxic": {
+              "raw_columns": [79, 80],
+              "chance": 100,
+              "damage": 80
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

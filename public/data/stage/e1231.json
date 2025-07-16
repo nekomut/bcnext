@@ -1,0 +1,734 @@
+{
+  "eventId": 1231,
+  "eventName": "死霊妖精クオリネム降臨",
+  "typeId": 1,
+  "typeName": "イベントステージ",
+  "prefix": "S",
+  "mapId": 231,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "最後の死者 超極ムズ",
+      "baseHp": "1400000",
+      "width": "6200",
+      "enemyLimit": "20",
+      "requiredCost": "200",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1051",
+          "treasureName": "ネコファントム(545)",
+          "probability": "30",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "511",
+          "enemyName": "死霊妖精クオリネム",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 1000000,
+            "ap": 30000,
+            "dps": 6206.9,
+            "speed": 4,
+            "range": 666,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 1111,
+            "freq": 145,
+            "foreswing": 71,
+            "backswing": 74,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1000000,
+            "actualAp": 30000,
+            "actualDps": 6206.9,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 450,
+              "ld_range": [450, 1300]
+            },
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 100,
+              "duration_f": 30,
+              "duration_s": 1.0
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": -1,
+              "duration_f": 15,
+              "duration_s": 0.5,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "284",
+          "enemyName": "ゾンビワン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 15000,
+            "ap": 1800,
+            "dps": 1148.94,
+            "speed": 8,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 45,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 7,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 1500,
+            "actualAp": 180,
+            "actualDps": 114.89,
+            "magnification": "10%",
+            "count": "1",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 500
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 240,
+              "duration_s": 8.0,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "284",
+          "enemyName": "ゾンビワン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 15000,
+            "ap": 1800,
+            "dps": 1148.94,
+            "speed": 8,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 45,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 7,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 45000,
+            "actualAp": 5400,
+            "actualDps": 3446.82,
+            "magnification": "300%",
+            "count": "0",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "26.7-40.0s",
+            "delayFrames": "800-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 500
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 240,
+              "duration_s": 8.0,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "468",
+          "enemyName": "チキランラン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 17500,
+            "ap": 17000,
+            "dps": 19615.38,
+            "speed": 30,
+            "range": 120,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 26,
+            "foreswing": 4,
+            "backswing": 13,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 35000,
+            "actualAp": 34000,
+            "actualDps": 39230.76,
+            "magnification": "200%",
+            "count": "8",
+            "spawnTime": "26.7s",
+            "spawnTimeFrames": "800f",
+            "delay": "46.7-56.7s",
+            "delayFrames": "1,400-1,700f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [8500, 8500],
+              "timings": [4, 13]
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 875
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 600,
+              "duration_s": 20.0,
+              "hp_ratio": 100
+            }
+          }
+        },
+        {
+          "enemyId": "361",
+          "enemyName": "スター・ペン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 14000,
+            "ap": 750,
+            "dps": 937.5,
+            "speed": 14,
+            "range": 150,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 450,
+            "freq": 24,
+            "foreswing": 8,
+            "backswing": 16,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 350000,
+            "actualAp": 18750,
+            "actualDps": 23437.5,
+            "magnification": "2500%",
+            "count": "3",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "50.0-53.3s",
+            "delayFrames": "1,500-1,600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "warp": {
+              "raw_columns": [65, 66, 67],
+              "chance": 100,
+              "distance": 500,
+              "duration_f": 100,
+              "duration_s": 3.33
+            }
+          }
+        },
+        {
+          "enemyId": "360",
+          "enemyName": "エリートエイリワン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 7000,
+            "ap": 500,
+            "dps": 405.41,
+            "speed": 12,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 175000,
+            "actualAp": 12500,
+            "actualDps": 10135.25,
+            "magnification": "2500%",
+            "count": "0",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "40.0-46.7s",
+            "delayFrames": "1,200-1,400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "warp": {
+              "raw_columns": [65, 66, 67],
+              "chance": 35,
+              "distance": 750,
+              "duration_f": 10,
+              "duration_s": 0.33
+            }
+          }
+        },
+        {
+          "enemyId": "511",
+          "enemyName": "死霊妖精クオリネム",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 1000000,
+            "ap": 30000,
+            "dps": 6206.9,
+            "speed": 4,
+            "range": 666,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 1111,
+            "freq": 145,
+            "foreswing": 71,
+            "backswing": 74,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1000000,
+            "actualAp": 30000,
+            "actualDps": 6206.9,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "53.3s",
+            "spawnTimeFrames": "1,600f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 450,
+              "ld_range": [450, 1300]
+            },
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 100,
+              "duration_f": 30,
+              "duration_s": 1.0
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": -1,
+              "duration_f": 15,
+              "duration_s": 0.5,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "468",
+          "enemyName": "チキランラン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 17500,
+            "ap": 17000,
+            "dps": 19615.38,
+            "speed": 30,
+            "range": 120,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 26,
+            "foreswing": 4,
+            "backswing": 13,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 35000,
+            "actualAp": 34000,
+            "actualDps": 39230.76,
+            "magnification": "200%",
+            "count": "2",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "10.0-16.7s",
+            "delayFrames": "300-500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [8500, 8500],
+              "timings": [4, 13]
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 875
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 600,
+              "duration_s": 20.0,
+              "hp_ratio": 100
+            }
+          }
+        },
+        {
+          "enemyId": "362",
+          "enemyName": "グレゴリー将軍",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 15000,
+            "ap": 567,
+            "dps": 1063.12,
+            "speed": 15,
+            "range": 165,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 375000,
+            "actualAp": 14175,
+            "actualDps": 26578.0,
+            "magnification": "2500%",
+            "count": "2",
+            "spawnTime": "180.0s",
+            "spawnTimeFrames": "5,400f",
+            "delay": "60.0-70.0s",
+            "delayFrames": "1,800-2,100f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "barrier": {
+              "raw_columns": 64,
+              "hp": 6000
+            }
+          }
+        },
+        {
+          "enemyId": "361",
+          "enemyName": "スター・ペン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 14000,
+            "ap": 750,
+            "dps": 937.5,
+            "speed": 14,
+            "range": 150,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 450,
+            "freq": 24,
+            "foreswing": 8,
+            "backswing": 16,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 350000,
+            "actualAp": 18750,
+            "actualDps": 23437.5,
+            "magnification": "2500%",
+            "count": "3",
+            "spawnTime": "226.7s",
+            "spawnTimeFrames": "6,800f",
+            "delay": "50.0-53.3s",
+            "delayFrames": "1,500-1,600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "warp": {
+              "raw_columns": [65, 66, 67],
+              "chance": 100,
+              "distance": 500,
+              "duration_f": 100,
+              "duration_s": 3.33
+            }
+          }
+        },
+        {
+          "enemyId": "468",
+          "enemyName": "チキランラン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 17500,
+            "ap": 17000,
+            "dps": 19615.38,
+            "speed": 30,
+            "range": 120,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 26,
+            "foreswing": 4,
+            "backswing": 13,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 35000,
+            "actualAp": 34000,
+            "actualDps": 39230.76,
+            "magnification": "200%",
+            "count": "2",
+            "spawnTime": "253.3s",
+            "spawnTimeFrames": "7,600f",
+            "delay": "10.0-16.7s",
+            "delayFrames": "300-500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [8500, 8500],
+              "timings": [4, 13]
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 875
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 600,
+              "duration_s": 20.0,
+              "hp_ratio": 100
+            }
+          }
+        },
+        {
+          "enemyId": "284",
+          "enemyName": "ゾンビワン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 15000,
+            "ap": 1800,
+            "dps": 1148.94,
+            "speed": 8,
+            "range": 100,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 45,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 7,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 45000,
+            "actualAp": 5400,
+            "actualDps": 3446.82,
+            "magnification": "300%",
+            "count": "0",
+            "spawnTime": "353.3s",
+            "spawnTimeFrames": "10,600f",
+            "delay": "53.3-66.7s",
+            "delayFrames": "1,600-2,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 500
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 240,
+              "duration_s": 8.0,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "361",
+          "enemyName": "スター・ペン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 14000,
+            "ap": 750,
+            "dps": 937.5,
+            "speed": 14,
+            "range": 150,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 450,
+            "freq": 24,
+            "foreswing": 8,
+            "backswing": 16,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 350000,
+            "actualAp": 18750,
+            "actualDps": 23437.5,
+            "magnification": "2500%",
+            "count": "0",
+            "spawnTime": "366.7s",
+            "spawnTimeFrames": "11,000f",
+            "delay": "53.3-66.7s",
+            "delayFrames": "1,600-2,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "warp": {
+              "raw_columns": [65, 66, 67],
+              "chance": 100,
+              "distance": 500,
+              "duration_f": 100,
+              "duration_s": 3.33
+            }
+          }
+        },
+        {
+          "enemyId": "468",
+          "enemyName": "チキランラン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 17500,
+            "ap": 17000,
+            "dps": 19615.38,
+            "speed": 30,
+            "range": 120,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 26,
+            "foreswing": 4,
+            "backswing": 13,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 35000,
+            "actualAp": 34000,
+            "actualDps": 39230.76,
+            "magnification": "200%",
+            "count": "0",
+            "spawnTime": "366.7s",
+            "spawnTimeFrames": "11,000f",
+            "delay": "40.0-53.3s",
+            "delayFrames": "1,200-1,600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [8500, 8500],
+              "timings": [4, 13]
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 875
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 600,
+              "duration_s": 20.0,
+              "hp_ratio": 100
+            }
+          }
+        },
+        {
+          "enemyId": "361",
+          "enemyName": "スター・ペン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 14000,
+            "ap": 750,
+            "dps": 937.5,
+            "speed": 14,
+            "range": 150,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 450,
+            "freq": 24,
+            "foreswing": 8,
+            "backswing": 16,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 350000,
+            "actualAp": 18750,
+            "actualDps": 23437.5,
+            "magnification": "2500%",
+            "count": "2",
+            "spawnTime": "366.7s",
+            "spawnTimeFrames": "11,000f",
+            "delay": "53.3-66.7s",
+            "delayFrames": "1,600-2,000f",
+            "baseHpRatio": "75%",
+            "isBoss": false
+          },
+          "abilities": {
+            "warp": {
+              "raw_columns": [65, 66, 67],
+              "chance": 100,
+              "distance": 500,
+              "duration_f": 100,
+              "duration_s": 3.33
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

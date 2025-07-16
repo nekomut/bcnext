@@ -1,0 +1,857 @@
+{
+  "eventId": 2179,
+  "eventName": "秋華賞（ＧⅠ）",
+  "typeId": 2,
+  "typeName": "コラボステージ",
+  "prefix": "C",
+  "mapId": 179,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "牝馬三冠レースの最終戦",
+      "baseHp": "10",
+      "width": "5000",
+      "enemyLimit": "10",
+      "requiredCost": "50",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "9000",
+          "treasureName": "キャラクタードロップ(9000)",
+          "probability": "1",
+          "amount": "2",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "7500",
+          "treasureName": "キャラクタードロップ(7500)",
+          "probability": "1",
+          "amount": "0",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "1",
+          "amount": "11",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "580",
+          "enemyName": "風（白）",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 100,
+            "dps": 230.77,
+            "speed": 5,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 250,
+            "freq": 13,
+            "foreswing": 2,
+            "backswing": 11,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 500,
+            "actualAp": 10,
+            "actualDps": 23.08,
+            "magnification": "10%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 30
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            },
+            "immune-surge": {
+              "raw_columns": 85,
+              "enabled": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 1,
+      "stageName": "3歳牝馬限定の競走",
+      "baseHp": "10",
+      "width": "5000",
+      "enemyLimit": "10",
+      "requiredCost": "75",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "8500",
+          "treasureName": "キャラクタードロップ(8500)",
+          "probability": "1",
+          "amount": "2",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "7000",
+          "treasureName": "キャラクタードロップ(7000)",
+          "probability": "1",
+          "amount": "0",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "1",
+          "amount": "11",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "580",
+          "enemyName": "風（白）",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 100,
+            "dps": 230.77,
+            "speed": 5,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 250,
+            "freq": 13,
+            "foreswing": 2,
+            "backswing": 11,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 750,
+            "actualAp": 15,
+            "actualDps": 34.62,
+            "magnification": "15%",
+            "count": "1",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 30
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            },
+            "immune-surge": {
+              "raw_columns": 85,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "580",
+          "enemyName": "風（白）",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 100,
+            "dps": 230.77,
+            "speed": 5,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 250,
+            "freq": 13,
+            "foreswing": 2,
+            "backswing": 11,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 750,
+            "actualAp": 15,
+            "actualDps": 34.62,
+            "magnification": "15%",
+            "count": "1",
+            "spawnTime": "50.0s",
+            "spawnTimeFrames": "1,500f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 30
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            },
+            "immune-surge": {
+              "raw_columns": 85,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "580",
+          "enemyName": "風（白）",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 100,
+            "dps": 230.77,
+            "speed": 5,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 250,
+            "freq": 13,
+            "foreswing": 2,
+            "backswing": 11,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 750,
+            "actualAp": 15,
+            "actualDps": 34.62,
+            "magnification": "15%",
+            "count": "3",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 30
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            },
+            "immune-surge": {
+              "raw_columns": 85,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "580",
+          "enemyName": "風（白）",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 100,
+            "dps": 230.77,
+            "speed": 5,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 250,
+            "freq": 13,
+            "foreswing": 2,
+            "backswing": 11,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 50,
+            "actualAp": 1,
+            "actualDps": 2.31,
+            "magnification": "1%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 30
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            },
+            "immune-surge": {
+              "raw_columns": 85,
+              "enabled": true
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 2,
+      "stageName": "早い時計の勝負",
+      "baseHp": "10",
+      "width": "5000",
+      "enemyLimit": "15",
+      "requiredCost": "100",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "8500",
+          "treasureName": "キャラクタードロップ(8500)",
+          "probability": "1",
+          "amount": "2",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "5500",
+          "treasureName": "キャラクタードロップ(5500)",
+          "probability": "1",
+          "amount": "0",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "1",
+          "amount": "12",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "580",
+          "enemyName": "風（白）",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 100,
+            "dps": 230.77,
+            "speed": 5,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 250,
+            "freq": 13,
+            "foreswing": 2,
+            "backswing": 11,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1250,
+            "actualAp": 25,
+            "actualDps": 57.69,
+            "magnification": "25%",
+            "count": "1",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 30
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            },
+            "immune-surge": {
+              "raw_columns": 85,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "580",
+          "enemyName": "風（白）",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 100,
+            "dps": 230.77,
+            "speed": 5,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 250,
+            "freq": 13,
+            "foreswing": 2,
+            "backswing": 11,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1250,
+            "actualAp": 25,
+            "actualDps": 57.69,
+            "magnification": "25%",
+            "count": "1",
+            "spawnTime": "26.7s",
+            "spawnTimeFrames": "800f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 30
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            },
+            "immune-surge": {
+              "raw_columns": 85,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "580",
+          "enemyName": "風（白）",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 100,
+            "dps": 230.77,
+            "speed": 5,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 250,
+            "freq": 13,
+            "foreswing": 2,
+            "backswing": 11,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1250,
+            "actualAp": 25,
+            "actualDps": 57.69,
+            "magnification": "25%",
+            "count": "1",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 30
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            },
+            "immune-surge": {
+              "raw_columns": 85,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "580",
+          "enemyName": "風（白）",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 100,
+            "dps": 230.77,
+            "speed": 5,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 250,
+            "freq": 13,
+            "foreswing": 2,
+            "backswing": 11,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1250,
+            "actualAp": 25,
+            "actualDps": 57.69,
+            "magnification": "25%",
+            "count": "3",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 30
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            },
+            "immune-surge": {
+              "raw_columns": 85,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "580",
+          "enemyName": "風（白）",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 100,
+            "dps": 230.77,
+            "speed": 5,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 250,
+            "freq": 13,
+            "foreswing": 2,
+            "backswing": 11,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1250,
+            "actualAp": 25,
+            "actualDps": 57.69,
+            "magnification": "25%",
+            "count": "4",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "8.3-10.0s",
+            "delayFrames": "250-300f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 30
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            },
+            "immune-surge": {
+              "raw_columns": 85,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "580",
+          "enemyName": "風（白）",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 100,
+            "dps": 230.77,
+            "speed": 5,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 250,
+            "freq": 13,
+            "foreswing": 2,
+            "backswing": 11,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 50,
+            "actualAp": 1,
+            "actualDps": 2.31,
+            "magnification": "1%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 30
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            },
+            "immune-surge": {
+              "raw_columns": 85,
+              "enabled": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

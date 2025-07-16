@@ -1,0 +1,6476 @@
+{
+  "eventId": 27003,
+  "eventName": "天使軍 強襲！",
+  "typeId": 27,
+  "typeName": "コラボ強襲ステージ",
+  "prefix": "CA",
+  "mapId": 3,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "天聖界 Lv.1",
+      "baseHp": "250000",
+      "width": "5000",
+      "enemyLimit": "12",
+      "requiredCost": "70",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "205",
+          "treasureName": "ビックリマンチョコ",
+          "probability": "1",
+          "amount": "2",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "518",
+          "enemyName": "スーパーゼウス",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 225000,
+            "ap": 5000,
+            "dps": 627.62,
+            "speed": 9,
+            "range": 450,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 3200,
+            "freq": 239,
+            "foreswing": 78,
+            "backswing": 43,
+            "tba": 81
+          },
+          "stageStats": {
+            "actualHp": 180000,
+            "actualAp": 4000,
+            "actualDps": 502.1,
+            "magnification": "80%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 150,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "520",
+          "enemyName": "完璧ヘラクライスト",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 40000,
+            "dps": 7547.17,
+            "speed": 4,
+            "range": 180,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 3000,
+            "freq": 159,
+            "foreswing": 116,
+            "backswing": 43,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 480000,
+            "actualAp": 32000,
+            "actualDps": 6037.74,
+            "magnification": "80%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 360,
+              "omni_range": [
+                -360,
+                360
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "519",
+          "enemyName": "シャーマンカーン",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 2500,
+            "dps": 471.7,
+            "speed": 8,
+            "range": 550,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 3100,
+            "freq": 159,
+            "foreswing": 70,
+            "backswing": 31,
+            "tba": 45
+          },
+          "stageStats": {
+            "actualHp": 128000,
+            "actualAp": 2000,
+            "actualDps": 377.36,
+            "magnification": "80%",
+            "count": "1",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 300,
+              "ld_range": [300, 800]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 3000,
+            "actualAp": 300,
+            "actualDps": 219.54,
+            "magnification": "600%",
+            "count": "10",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 15000,
+            "actualAp": 900,
+            "actualDps": 1173.9,
+            "magnification": "600%",
+            "count": "5",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 3000,
+            "actualAp": 300,
+            "actualDps": 219.54,
+            "magnification": "600%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 15000,
+            "actualAp": 900,
+            "actualDps": 1173.9,
+            "magnification": "600%",
+            "count": "0",
+            "spawnTime": "166.7s",
+            "spawnTimeFrames": "5,000f",
+            "delay": "40.0-60.0s",
+            "delayFrames": "1,200-1,800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 105000,
+            "actualAp": 1500,
+            "actualDps": 2045.46,
+            "magnification": "300%",
+            "count": "5",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "40.0-40.0s",
+            "delayFrames": "1,200-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 1,
+      "stageName": "天聖界 Lv.2",
+      "baseHp": "300000",
+      "width": "5000",
+      "enemyLimit": "12",
+      "requiredCost": "70",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "35",
+          "treasureName": "紫マタタビの実",
+          "probability": "1",
+          "amount": "3",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "518",
+          "enemyName": "スーパーゼウス",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 225000,
+            "ap": 5000,
+            "dps": 627.62,
+            "speed": 9,
+            "range": 450,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 3200,
+            "freq": 239,
+            "foreswing": 78,
+            "backswing": 43,
+            "tba": 81
+          },
+          "stageStats": {
+            "actualHp": 225000,
+            "actualAp": 5000,
+            "actualDps": 627.62,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 150,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "520",
+          "enemyName": "完璧ヘラクライスト",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 40000,
+            "dps": 7547.17,
+            "speed": 4,
+            "range": 180,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 3000,
+            "freq": 159,
+            "foreswing": 116,
+            "backswing": 43,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 600000,
+            "actualAp": 40000,
+            "actualDps": 7547.17,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 360,
+              "omni_range": [
+                -360,
+                360
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "519",
+          "enemyName": "シャーマンカーン",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 2500,
+            "dps": 471.7,
+            "speed": 8,
+            "range": 550,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 3100,
+            "freq": 159,
+            "foreswing": 70,
+            "backswing": 31,
+            "tba": 45
+          },
+          "stageStats": {
+            "actualHp": 160000,
+            "actualAp": 2500,
+            "actualDps": 471.7,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 300,
+              "ld_range": [300, 800]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 4750,
+            "actualAp": 475,
+            "actualDps": 347.61,
+            "magnification": "950%",
+            "count": "10",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 23750,
+            "actualAp": 1425,
+            "actualDps": 1858.67,
+            "magnification": "950%",
+            "count": "5",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 4750,
+            "actualAp": 475,
+            "actualDps": 347.61,
+            "magnification": "950%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 23750,
+            "actualAp": 1425,
+            "actualDps": 1858.67,
+            "magnification": "950%",
+            "count": "0",
+            "spawnTime": "166.7s",
+            "spawnTimeFrames": "5,000f",
+            "delay": "40.0-60.0s",
+            "delayFrames": "1,200-1,800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 148750,
+            "actualAp": 2125,
+            "actualDps": 2897.74,
+            "magnification": "425%",
+            "count": "5",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "40.0-40.0s",
+            "delayFrames": "1,200-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 2,
+      "stageName": "天聖界 Lv.3",
+      "baseHp": "350000",
+      "width": "5000",
+      "enemyLimit": "12",
+      "requiredCost": "70",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "6",
+          "treasureName": "ＸＰ",
+          "probability": "1",
+          "amount": "500000",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "518",
+          "enemyName": "スーパーゼウス",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 225000,
+            "ap": 5000,
+            "dps": 627.62,
+            "speed": 9,
+            "range": 450,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 3200,
+            "freq": 239,
+            "foreswing": 78,
+            "backswing": 43,
+            "tba": 81
+          },
+          "stageStats": {
+            "actualHp": 270000,
+            "actualAp": 6000,
+            "actualDps": 753.14,
+            "magnification": "120%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 150,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "520",
+          "enemyName": "完璧ヘラクライスト",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 40000,
+            "dps": 7547.17,
+            "speed": 4,
+            "range": 180,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 3000,
+            "freq": 159,
+            "foreswing": 116,
+            "backswing": 43,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 720000,
+            "actualAp": 48000,
+            "actualDps": 9056.6,
+            "magnification": "120%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 360,
+              "omni_range": [
+                -360,
+                360
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "519",
+          "enemyName": "シャーマンカーン",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 2500,
+            "dps": 471.7,
+            "speed": 8,
+            "range": 550,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 3100,
+            "freq": 159,
+            "foreswing": 70,
+            "backswing": 31,
+            "tba": 45
+          },
+          "stageStats": {
+            "actualHp": 192000,
+            "actualAp": 3000,
+            "actualDps": 566.04,
+            "magnification": "120%",
+            "count": "1",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 300,
+              "ld_range": [300, 800]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 6500,
+            "actualAp": 650,
+            "actualDps": 475.67,
+            "magnification": "1300%",
+            "count": "10",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 32500,
+            "actualAp": 1950,
+            "actualDps": 2543.45,
+            "magnification": "1300%",
+            "count": "5",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 6500,
+            "actualAp": 650,
+            "actualDps": 475.67,
+            "magnification": "1300%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 32500,
+            "actualAp": 1950,
+            "actualDps": 2543.45,
+            "magnification": "1300%",
+            "count": "0",
+            "spawnTime": "166.7s",
+            "spawnTimeFrames": "5,000f",
+            "delay": "40.0-60.0s",
+            "delayFrames": "1,200-1,800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 192500,
+            "actualAp": 2750,
+            "actualDps": 3750.01,
+            "magnification": "550%",
+            "count": "5",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "40.0-40.0s",
+            "delayFrames": "1,200-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 3,
+      "stageName": "天聖界 Lv.4",
+      "baseHp": "400000",
+      "width": "5000",
+      "enemyLimit": "12",
+      "requiredCost": "70",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "11",
+          "treasureName": "にゃんこチケット",
+          "probability": "1",
+          "amount": "1",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "518",
+          "enemyName": "スーパーゼウス",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 225000,
+            "ap": 5000,
+            "dps": 627.62,
+            "speed": 9,
+            "range": 450,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 3200,
+            "freq": 239,
+            "foreswing": 78,
+            "backswing": 43,
+            "tba": 81
+          },
+          "stageStats": {
+            "actualHp": 315000,
+            "actualAp": 7000,
+            "actualDps": 878.67,
+            "magnification": "140%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 150,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "520",
+          "enemyName": "完璧ヘラクライスト",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 40000,
+            "dps": 7547.17,
+            "speed": 4,
+            "range": 180,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 3000,
+            "freq": 159,
+            "foreswing": 116,
+            "backswing": 43,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 840000,
+            "actualAp": 56000,
+            "actualDps": 10566.04,
+            "magnification": "140%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 360,
+              "omni_range": [
+                -360,
+                360
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "519",
+          "enemyName": "シャーマンカーン",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 2500,
+            "dps": 471.7,
+            "speed": 8,
+            "range": 550,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 3100,
+            "freq": 159,
+            "foreswing": 70,
+            "backswing": 31,
+            "tba": 45
+          },
+          "stageStats": {
+            "actualHp": 224000,
+            "actualAp": 3500,
+            "actualDps": 660.38,
+            "magnification": "140%",
+            "count": "1",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 300,
+              "ld_range": [300, 800]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 8250,
+            "actualAp": 825,
+            "actualDps": 603.74,
+            "magnification": "1650%",
+            "count": "10",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 41250,
+            "actualAp": 2475,
+            "actualDps": 3228.22,
+            "magnification": "1650%",
+            "count": "5",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 8250,
+            "actualAp": 825,
+            "actualDps": 603.74,
+            "magnification": "1650%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 41250,
+            "actualAp": 2475,
+            "actualDps": 3228.22,
+            "magnification": "1650%",
+            "count": "0",
+            "spawnTime": "166.7s",
+            "spawnTimeFrames": "5,000f",
+            "delay": "40.0-60.0s",
+            "delayFrames": "1,200-1,800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 236250,
+            "actualAp": 3375,
+            "actualDps": 4602.29,
+            "magnification": "675%",
+            "count": "5",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "40.0-40.0s",
+            "delayFrames": "1,200-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 4,
+      "stageName": "天聖界 Lv.5",
+      "baseHp": "450000",
+      "width": "5000",
+      "enemyLimit": "12",
+      "requiredCost": "90",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "205",
+          "treasureName": "ビックリマンチョコ",
+          "probability": "1",
+          "amount": "3",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "518",
+          "enemyName": "スーパーゼウス",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 225000,
+            "ap": 5000,
+            "dps": 627.62,
+            "speed": 9,
+            "range": 450,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 3200,
+            "freq": 239,
+            "foreswing": 78,
+            "backswing": 43,
+            "tba": 81
+          },
+          "stageStats": {
+            "actualHp": 360000,
+            "actualAp": 8000,
+            "actualDps": 1004.19,
+            "magnification": "160%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 150,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "520",
+          "enemyName": "完璧ヘラクライスト",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 40000,
+            "dps": 7547.17,
+            "speed": 4,
+            "range": 180,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 3000,
+            "freq": 159,
+            "foreswing": 116,
+            "backswing": 43,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 960000,
+            "actualAp": 64000,
+            "actualDps": 12075.47,
+            "magnification": "160%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 360,
+              "omni_range": [
+                -360,
+                360
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "519",
+          "enemyName": "シャーマンカーン",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 2500,
+            "dps": 471.7,
+            "speed": 8,
+            "range": 550,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 3100,
+            "freq": 159,
+            "foreswing": 70,
+            "backswing": 31,
+            "tba": 45
+          },
+          "stageStats": {
+            "actualHp": 256000,
+            "actualAp": 4000,
+            "actualDps": 754.72,
+            "magnification": "160%",
+            "count": "1",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 300,
+              "ld_range": [300, 800]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 10000,
+            "actualAp": 1000,
+            "actualDps": 731.8,
+            "magnification": "2000%",
+            "count": "10",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 50000,
+            "actualAp": 3000,
+            "actualDps": 3913.0,
+            "magnification": "2000%",
+            "count": "5",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 10000,
+            "actualAp": 1000,
+            "actualDps": 731.8,
+            "magnification": "2000%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 50000,
+            "actualAp": 3000,
+            "actualDps": 3913.0,
+            "magnification": "2000%",
+            "count": "0",
+            "spawnTime": "166.7s",
+            "spawnTimeFrames": "5,000f",
+            "delay": "40.0-60.0s",
+            "delayFrames": "1,200-1,800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 280000,
+            "actualAp": 4000,
+            "actualDps": 5454.56,
+            "magnification": "800%",
+            "count": "5",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "40.0-40.0s",
+            "delayFrames": "1,200-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 5,
+      "stageName": "天聖界 Lv.6",
+      "baseHp": "500000",
+      "width": "5000",
+      "enemyLimit": "12",
+      "requiredCost": "90",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "36",
+          "treasureName": "赤マタタビの実",
+          "probability": "1",
+          "amount": "3",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "518",
+          "enemyName": "スーパーゼウス",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 225000,
+            "ap": 5000,
+            "dps": 627.62,
+            "speed": 9,
+            "range": 450,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 3200,
+            "freq": 239,
+            "foreswing": 78,
+            "backswing": 43,
+            "tba": 81
+          },
+          "stageStats": {
+            "actualHp": 400500,
+            "actualAp": 8900,
+            "actualDps": 1117.16,
+            "magnification": "178%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 150,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "520",
+          "enemyName": "完璧ヘラクライスト",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 40000,
+            "dps": 7547.17,
+            "speed": 4,
+            "range": 180,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 3000,
+            "freq": 159,
+            "foreswing": 116,
+            "backswing": 43,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1068000,
+            "actualAp": 71200,
+            "actualDps": 13433.96,
+            "magnification": "178%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 360,
+              "omni_range": [
+                -360,
+                360
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "519",
+          "enemyName": "シャーマンカーン",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 2500,
+            "dps": 471.7,
+            "speed": 8,
+            "range": 550,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 3100,
+            "freq": 159,
+            "foreswing": 70,
+            "backswing": 31,
+            "tba": 45
+          },
+          "stageStats": {
+            "actualHp": 284800,
+            "actualAp": 4450,
+            "actualDps": 839.63,
+            "magnification": "178%",
+            "count": "1",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 300,
+              "ld_range": [300, 800]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 11000,
+            "actualAp": 1100,
+            "actualDps": 804.98,
+            "magnification": "2200%",
+            "count": "10",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 55000,
+            "actualAp": 3300,
+            "actualDps": 4304.3,
+            "magnification": "2200%",
+            "count": "5",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 11000,
+            "actualAp": 1100,
+            "actualDps": 804.98,
+            "magnification": "2200%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 55000,
+            "actualAp": 3300,
+            "actualDps": 4304.3,
+            "magnification": "2200%",
+            "count": "0",
+            "spawnTime": "166.7s",
+            "spawnTimeFrames": "5,000f",
+            "delay": "40.0-60.0s",
+            "delayFrames": "1,200-1,800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 308000,
+            "actualAp": 4400,
+            "actualDps": 6000.02,
+            "magnification": "880%",
+            "count": "5",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "40.0-40.0s",
+            "delayFrames": "1,200-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 6,
+      "stageName": "天聖界 Lv.7",
+      "baseHp": "550000",
+      "width": "5000",
+      "enemyLimit": "12",
+      "requiredCost": "90",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "6",
+          "treasureName": "ＸＰ",
+          "probability": "1",
+          "amount": "750000",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "518",
+          "enemyName": "スーパーゼウス",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 225000,
+            "ap": 5000,
+            "dps": 627.62,
+            "speed": 9,
+            "range": 450,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 3200,
+            "freq": 239,
+            "foreswing": 78,
+            "backswing": 43,
+            "tba": 81
+          },
+          "stageStats": {
+            "actualHp": 441000,
+            "actualAp": 9800,
+            "actualDps": 1230.14,
+            "magnification": "196%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 150,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "520",
+          "enemyName": "完璧ヘラクライスト",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 40000,
+            "dps": 7547.17,
+            "speed": 4,
+            "range": 180,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 3000,
+            "freq": 159,
+            "foreswing": 116,
+            "backswing": 43,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1176000,
+            "actualAp": 78400,
+            "actualDps": 14792.45,
+            "magnification": "196%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 360,
+              "omni_range": [
+                -360,
+                360
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "519",
+          "enemyName": "シャーマンカーン",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 2500,
+            "dps": 471.7,
+            "speed": 8,
+            "range": 550,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 3100,
+            "freq": 159,
+            "foreswing": 70,
+            "backswing": 31,
+            "tba": 45
+          },
+          "stageStats": {
+            "actualHp": 313600,
+            "actualAp": 4900,
+            "actualDps": 924.53,
+            "magnification": "196%",
+            "count": "1",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 300,
+              "ld_range": [300, 800]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 12000,
+            "actualAp": 1200,
+            "actualDps": 878.16,
+            "magnification": "2400%",
+            "count": "10",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 60000,
+            "actualAp": 3600,
+            "actualDps": 4695.6,
+            "magnification": "2400%",
+            "count": "5",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 12000,
+            "actualAp": 1200,
+            "actualDps": 878.16,
+            "magnification": "2400%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 60000,
+            "actualAp": 3600,
+            "actualDps": 4695.6,
+            "magnification": "2400%",
+            "count": "0",
+            "spawnTime": "166.7s",
+            "spawnTimeFrames": "5,000f",
+            "delay": "40.0-60.0s",
+            "delayFrames": "1,200-1,800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 336000,
+            "actualAp": 4800,
+            "actualDps": 6545.47,
+            "magnification": "960%",
+            "count": "5",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "40.0-40.0s",
+            "delayFrames": "1,200-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 7,
+      "stageName": "天聖界 Lv.8",
+      "baseHp": "600000",
+      "width": "5000",
+      "enemyLimit": "12",
+      "requiredCost": "90",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "11",
+          "treasureName": "にゃんこチケット",
+          "probability": "1",
+          "amount": "2",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "518",
+          "enemyName": "スーパーゼウス",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 225000,
+            "ap": 5000,
+            "dps": 627.62,
+            "speed": 9,
+            "range": 450,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 3200,
+            "freq": 239,
+            "foreswing": 78,
+            "backswing": 43,
+            "tba": 81
+          },
+          "stageStats": {
+            "actualHp": 481500,
+            "actualAp": 10700,
+            "actualDps": 1343.11,
+            "magnification": "214%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 150,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "520",
+          "enemyName": "完璧ヘラクライスト",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 40000,
+            "dps": 7547.17,
+            "speed": 4,
+            "range": 180,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 3000,
+            "freq": 159,
+            "foreswing": 116,
+            "backswing": 43,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1284000,
+            "actualAp": 85600,
+            "actualDps": 16150.94,
+            "magnification": "214%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 360,
+              "omni_range": [
+                -360,
+                360
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "519",
+          "enemyName": "シャーマンカーン",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 2500,
+            "dps": 471.7,
+            "speed": 8,
+            "range": 550,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 3100,
+            "freq": 159,
+            "foreswing": 70,
+            "backswing": 31,
+            "tba": 45
+          },
+          "stageStats": {
+            "actualHp": 342400,
+            "actualAp": 5350,
+            "actualDps": 1009.44,
+            "magnification": "214%",
+            "count": "1",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 300,
+              "ld_range": [300, 800]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 13000,
+            "actualAp": 1300,
+            "actualDps": 951.34,
+            "magnification": "2600%",
+            "count": "10",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 65000,
+            "actualAp": 3900,
+            "actualDps": 5086.9,
+            "magnification": "2600%",
+            "count": "5",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 13000,
+            "actualAp": 1300,
+            "actualDps": 951.34,
+            "magnification": "2600%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 65000,
+            "actualAp": 3900,
+            "actualDps": 5086.9,
+            "magnification": "2600%",
+            "count": "0",
+            "spawnTime": "166.7s",
+            "spawnTimeFrames": "5,000f",
+            "delay": "40.0-60.0s",
+            "delayFrames": "1,200-1,800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 364000,
+            "actualAp": 5200,
+            "actualDps": 7090.93,
+            "magnification": "1040%",
+            "count": "5",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "40.0-40.0s",
+            "delayFrames": "1,200-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 8,
+      "stageName": "天聖界 Lv.9",
+      "baseHp": "650000",
+      "width": "5000",
+      "enemyLimit": "12",
+      "requiredCost": "90",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "105",
+          "treasureName": "統率力回復アイテム",
+          "probability": "1",
+          "amount": "1",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "518",
+          "enemyName": "スーパーゼウス",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 225000,
+            "ap": 5000,
+            "dps": 627.62,
+            "speed": 9,
+            "range": 450,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 3200,
+            "freq": 239,
+            "foreswing": 78,
+            "backswing": 43,
+            "tba": 81
+          },
+          "stageStats": {
+            "actualHp": 522000,
+            "actualAp": 11600,
+            "actualDps": 1456.08,
+            "magnification": "232%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 150,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "520",
+          "enemyName": "完璧ヘラクライスト",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 40000,
+            "dps": 7547.17,
+            "speed": 4,
+            "range": 180,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 3000,
+            "freq": 159,
+            "foreswing": 116,
+            "backswing": 43,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1392000,
+            "actualAp": 92800,
+            "actualDps": 17509.43,
+            "magnification": "232%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 360,
+              "omni_range": [
+                -360,
+                360
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "519",
+          "enemyName": "シャーマンカーン",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 2500,
+            "dps": 471.7,
+            "speed": 8,
+            "range": 550,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 3100,
+            "freq": 159,
+            "foreswing": 70,
+            "backswing": 31,
+            "tba": 45
+          },
+          "stageStats": {
+            "actualHp": 371200,
+            "actualAp": 5800,
+            "actualDps": 1094.34,
+            "magnification": "232%",
+            "count": "1",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 300,
+              "ld_range": [300, 800]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 14000,
+            "actualAp": 1400,
+            "actualDps": 1024.52,
+            "magnification": "2800%",
+            "count": "10",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 70000,
+            "actualAp": 4200,
+            "actualDps": 5478.2,
+            "magnification": "2800%",
+            "count": "5",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 14000,
+            "actualAp": 1400,
+            "actualDps": 1024.52,
+            "magnification": "2800%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 70000,
+            "actualAp": 4200,
+            "actualDps": 5478.2,
+            "magnification": "2800%",
+            "count": "0",
+            "spawnTime": "166.7s",
+            "spawnTimeFrames": "5,000f",
+            "delay": "40.0-60.0s",
+            "delayFrames": "1,200-1,800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 392000,
+            "actualAp": 5600,
+            "actualDps": 7636.38,
+            "magnification": "1120%",
+            "count": "5",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "40.0-40.0s",
+            "delayFrames": "1,200-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 9,
+      "stageName": "天聖界 Lv.10",
+      "baseHp": "700000",
+      "width": "5000",
+      "enemyLimit": "12",
+      "requiredCost": "110",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "205",
+          "treasureName": "ビックリマンチョコ",
+          "probability": "1",
+          "amount": "3",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "518",
+          "enemyName": "スーパーゼウス",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 225000,
+            "ap": 5000,
+            "dps": 627.62,
+            "speed": 9,
+            "range": 450,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 3200,
+            "freq": 239,
+            "foreswing": 78,
+            "backswing": 43,
+            "tba": 81
+          },
+          "stageStats": {
+            "actualHp": 562500,
+            "actualAp": 12500,
+            "actualDps": 1569.05,
+            "magnification": "250%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 150,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "520",
+          "enemyName": "完璧ヘラクライスト",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 40000,
+            "dps": 7547.17,
+            "speed": 4,
+            "range": 180,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 3000,
+            "freq": 159,
+            "foreswing": 116,
+            "backswing": 43,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1500000,
+            "actualAp": 100000,
+            "actualDps": 18867.92,
+            "magnification": "250%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 360,
+              "omni_range": [
+                -360,
+                360
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "519",
+          "enemyName": "シャーマンカーン",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 2500,
+            "dps": 471.7,
+            "speed": 8,
+            "range": 550,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 3100,
+            "freq": 159,
+            "foreswing": 70,
+            "backswing": 31,
+            "tba": 45
+          },
+          "stageStats": {
+            "actualHp": 400000,
+            "actualAp": 6250,
+            "actualDps": 1179.25,
+            "magnification": "250%",
+            "count": "1",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 300,
+              "ld_range": [300, 800]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 15000,
+            "actualAp": 1500,
+            "actualDps": 1097.7,
+            "magnification": "3000%",
+            "count": "10",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 75000,
+            "actualAp": 4500,
+            "actualDps": 5869.5,
+            "magnification": "3000%",
+            "count": "5",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 15000,
+            "actualAp": 1500,
+            "actualDps": 1097.7,
+            "magnification": "3000%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 75000,
+            "actualAp": 4500,
+            "actualDps": 5869.5,
+            "magnification": "3000%",
+            "count": "0",
+            "spawnTime": "166.7s",
+            "spawnTimeFrames": "5,000f",
+            "delay": "40.0-60.0s",
+            "delayFrames": "1,200-1,800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 420000,
+            "actualAp": 6000,
+            "actualDps": 8181.84,
+            "magnification": "1200%",
+            "count": "5",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "40.0-40.0s",
+            "delayFrames": "1,200-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 10,
+      "stageName": "天聖界 Lv.11",
+      "baseHp": "750000",
+      "width": "5000",
+      "enemyLimit": "12",
+      "requiredCost": "110",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "37",
+          "treasureName": "青マタタビの実",
+          "probability": "1",
+          "amount": "3",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "518",
+          "enemyName": "スーパーゼウス",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 225000,
+            "ap": 5000,
+            "dps": 627.62,
+            "speed": 9,
+            "range": 450,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 3200,
+            "freq": 239,
+            "foreswing": 78,
+            "backswing": 43,
+            "tba": 81
+          },
+          "stageStats": {
+            "actualHp": 607500,
+            "actualAp": 13500,
+            "actualDps": 1694.57,
+            "magnification": "270%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 150,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "520",
+          "enemyName": "完璧ヘラクライスト",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 40000,
+            "dps": 7547.17,
+            "speed": 4,
+            "range": 180,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 3000,
+            "freq": 159,
+            "foreswing": 116,
+            "backswing": 43,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1620000,
+            "actualAp": 108000,
+            "actualDps": 20377.36,
+            "magnification": "270%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 360,
+              "omni_range": [
+                -360,
+                360
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "519",
+          "enemyName": "シャーマンカーン",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 2500,
+            "dps": 471.7,
+            "speed": 8,
+            "range": 550,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 3100,
+            "freq": 159,
+            "foreswing": 70,
+            "backswing": 31,
+            "tba": 45
+          },
+          "stageStats": {
+            "actualHp": 432000,
+            "actualAp": 6750,
+            "actualDps": 1273.59,
+            "magnification": "270%",
+            "count": "1",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 300,
+              "ld_range": [300, 800]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 16000,
+            "actualAp": 1600,
+            "actualDps": 1170.88,
+            "magnification": "3200%",
+            "count": "10",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 80000,
+            "actualAp": 4800,
+            "actualDps": 6260.8,
+            "magnification": "3200%",
+            "count": "5",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 16000,
+            "actualAp": 1600,
+            "actualDps": 1170.88,
+            "magnification": "3200%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 80000,
+            "actualAp": 4800,
+            "actualDps": 6260.8,
+            "magnification": "3200%",
+            "count": "0",
+            "spawnTime": "166.7s",
+            "spawnTimeFrames": "5,000f",
+            "delay": "40.0-60.0s",
+            "delayFrames": "1,200-1,800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 448000,
+            "actualAp": 6400,
+            "actualDps": 8727.3,
+            "magnification": "1280%",
+            "count": "5",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "40.0-40.0s",
+            "delayFrames": "1,200-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 11,
+      "stageName": "天聖界 Lv.12",
+      "baseHp": "800000",
+      "width": "5000",
+      "enemyLimit": "12",
+      "requiredCost": "110",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "6",
+          "treasureName": "ＸＰ",
+          "probability": "1",
+          "amount": "1000000",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "518",
+          "enemyName": "スーパーゼウス",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 225000,
+            "ap": 5000,
+            "dps": 627.62,
+            "speed": 9,
+            "range": 450,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 3200,
+            "freq": 239,
+            "foreswing": 78,
+            "backswing": 43,
+            "tba": 81
+          },
+          "stageStats": {
+            "actualHp": 652500,
+            "actualAp": 14500,
+            "actualDps": 1820.1,
+            "magnification": "290%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 150,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "520",
+          "enemyName": "完璧ヘラクライスト",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 40000,
+            "dps": 7547.17,
+            "speed": 4,
+            "range": 180,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 3000,
+            "freq": 159,
+            "foreswing": 116,
+            "backswing": 43,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1740000,
+            "actualAp": 116000,
+            "actualDps": 21886.79,
+            "magnification": "290%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 360,
+              "omni_range": [
+                -360,
+                360
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "519",
+          "enemyName": "シャーマンカーン",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 2500,
+            "dps": 471.7,
+            "speed": 8,
+            "range": 550,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 3100,
+            "freq": 159,
+            "foreswing": 70,
+            "backswing": 31,
+            "tba": 45
+          },
+          "stageStats": {
+            "actualHp": 464000,
+            "actualAp": 7250,
+            "actualDps": 1367.93,
+            "magnification": "290%",
+            "count": "1",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 300,
+              "ld_range": [300, 800]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 17000,
+            "actualAp": 1700,
+            "actualDps": 1244.06,
+            "magnification": "3400%",
+            "count": "10",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 85000,
+            "actualAp": 5100,
+            "actualDps": 6652.1,
+            "magnification": "3400%",
+            "count": "5",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 17000,
+            "actualAp": 1700,
+            "actualDps": 1244.06,
+            "magnification": "3400%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 85000,
+            "actualAp": 5100,
+            "actualDps": 6652.1,
+            "magnification": "3400%",
+            "count": "0",
+            "spawnTime": "166.7s",
+            "spawnTimeFrames": "5,000f",
+            "delay": "40.0-60.0s",
+            "delayFrames": "1,200-1,800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 476000,
+            "actualAp": 6800,
+            "actualDps": 9272.75,
+            "magnification": "1360%",
+            "count": "5",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "40.0-40.0s",
+            "delayFrames": "1,200-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 12,
+      "stageName": "天聖界 Lv.13",
+      "baseHp": "850000",
+      "width": "5000",
+      "enemyLimit": "12",
+      "requiredCost": "120",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "11",
+          "treasureName": "にゃんこチケット",
+          "probability": "1",
+          "amount": "2",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "518",
+          "enemyName": "スーパーゼウス",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 225000,
+            "ap": 5000,
+            "dps": 627.62,
+            "speed": 9,
+            "range": 450,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 3200,
+            "freq": 239,
+            "foreswing": 78,
+            "backswing": 43,
+            "tba": 81
+          },
+          "stageStats": {
+            "actualHp": 697500,
+            "actualAp": 15500,
+            "actualDps": 1945.62,
+            "magnification": "310%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 150,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "520",
+          "enemyName": "完璧ヘラクライスト",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 40000,
+            "dps": 7547.17,
+            "speed": 4,
+            "range": 180,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 3000,
+            "freq": 159,
+            "foreswing": 116,
+            "backswing": 43,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1860000,
+            "actualAp": 124000,
+            "actualDps": 23396.23,
+            "magnification": "310%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 360,
+              "omni_range": [
+                -360,
+                360
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "519",
+          "enemyName": "シャーマンカーン",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 2500,
+            "dps": 471.7,
+            "speed": 8,
+            "range": 550,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 3100,
+            "freq": 159,
+            "foreswing": 70,
+            "backswing": 31,
+            "tba": 45
+          },
+          "stageStats": {
+            "actualHp": 496000,
+            "actualAp": 7750,
+            "actualDps": 1462.27,
+            "magnification": "310%",
+            "count": "1",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 300,
+              "ld_range": [300, 800]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 18000,
+            "actualAp": 1800,
+            "actualDps": 1317.24,
+            "magnification": "3600%",
+            "count": "10",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 90000,
+            "actualAp": 5400,
+            "actualDps": 7043.4,
+            "magnification": "3600%",
+            "count": "5",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 18000,
+            "actualAp": 1800,
+            "actualDps": 1317.24,
+            "magnification": "3600%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 90000,
+            "actualAp": 5400,
+            "actualDps": 7043.4,
+            "magnification": "3600%",
+            "count": "0",
+            "spawnTime": "166.7s",
+            "spawnTimeFrames": "5,000f",
+            "delay": "40.0-60.0s",
+            "delayFrames": "1,200-1,800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 504000,
+            "actualAp": 7200,
+            "actualDps": 9818.21,
+            "magnification": "1440%",
+            "count": "5",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "40.0-40.0s",
+            "delayFrames": "1,200-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 13,
+      "stageName": "天聖界 Lv.14",
+      "baseHp": "900000",
+      "width": "5000",
+      "enemyLimit": "12",
+      "requiredCost": "120",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "38",
+          "treasureName": "緑マタタビの実",
+          "probability": "1",
+          "amount": "3",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "518",
+          "enemyName": "スーパーゼウス",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 225000,
+            "ap": 5000,
+            "dps": 627.62,
+            "speed": 9,
+            "range": 450,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 3200,
+            "freq": 239,
+            "foreswing": 78,
+            "backswing": 43,
+            "tba": 81
+          },
+          "stageStats": {
+            "actualHp": 742500,
+            "actualAp": 16500,
+            "actualDps": 2071.15,
+            "magnification": "330%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 150,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "520",
+          "enemyName": "完璧ヘラクライスト",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 40000,
+            "dps": 7547.17,
+            "speed": 4,
+            "range": 180,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 3000,
+            "freq": 159,
+            "foreswing": 116,
+            "backswing": 43,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1980000,
+            "actualAp": 132000,
+            "actualDps": 24905.66,
+            "magnification": "330%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 360,
+              "omni_range": [
+                -360,
+                360
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "519",
+          "enemyName": "シャーマンカーン",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 2500,
+            "dps": 471.7,
+            "speed": 8,
+            "range": 550,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 3100,
+            "freq": 159,
+            "foreswing": 70,
+            "backswing": 31,
+            "tba": 45
+          },
+          "stageStats": {
+            "actualHp": 528000,
+            "actualAp": 8250,
+            "actualDps": 1556.61,
+            "magnification": "330%",
+            "count": "1",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 300,
+              "ld_range": [300, 800]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 19000,
+            "actualAp": 1900,
+            "actualDps": 1390.42,
+            "magnification": "3800%",
+            "count": "10",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 95000,
+            "actualAp": 5700,
+            "actualDps": 7434.7,
+            "magnification": "3800%",
+            "count": "5",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 19000,
+            "actualAp": 1900,
+            "actualDps": 1390.42,
+            "magnification": "3800%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 95000,
+            "actualAp": 5700,
+            "actualDps": 7434.7,
+            "magnification": "3800%",
+            "count": "0",
+            "spawnTime": "166.7s",
+            "spawnTimeFrames": "5,000f",
+            "delay": "40.0-60.0s",
+            "delayFrames": "1,200-1,800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 532000,
+            "actualAp": 7600,
+            "actualDps": 10363.66,
+            "magnification": "1520%",
+            "count": "5",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "40.0-40.0s",
+            "delayFrames": "1,200-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 14,
+      "stageName": "天聖界 Lv.15",
+      "baseHp": "950000",
+      "width": "5000",
+      "enemyLimit": "12",
+      "requiredCost": "130",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "205",
+          "treasureName": "ビックリマンチョコ",
+          "probability": "1",
+          "amount": "3",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "518",
+          "enemyName": "スーパーゼウス",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 225000,
+            "ap": 5000,
+            "dps": 627.62,
+            "speed": 9,
+            "range": 450,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 3200,
+            "freq": 239,
+            "foreswing": 78,
+            "backswing": 43,
+            "tba": 81
+          },
+          "stageStats": {
+            "actualHp": 787500,
+            "actualAp": 17500,
+            "actualDps": 2196.67,
+            "magnification": "350%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 150,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "520",
+          "enemyName": "完璧ヘラクライスト",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 40000,
+            "dps": 7547.17,
+            "speed": 4,
+            "range": 180,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 3000,
+            "freq": 159,
+            "foreswing": 116,
+            "backswing": 43,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 2100000,
+            "actualAp": 140000,
+            "actualDps": 26415.1,
+            "magnification": "350%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 360,
+              "omni_range": [
+                -360,
+                360
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "519",
+          "enemyName": "シャーマンカーン",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 2500,
+            "dps": 471.7,
+            "speed": 8,
+            "range": 550,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 3100,
+            "freq": 159,
+            "foreswing": 70,
+            "backswing": 31,
+            "tba": 45
+          },
+          "stageStats": {
+            "actualHp": 560000,
+            "actualAp": 8750,
+            "actualDps": 1650.95,
+            "magnification": "350%",
+            "count": "1",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 300,
+              "ld_range": [300, 800]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 20000,
+            "actualAp": 2000,
+            "actualDps": 1463.6,
+            "magnification": "4000%",
+            "count": "10",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 100000,
+            "actualAp": 6000,
+            "actualDps": 7826.0,
+            "magnification": "4000%",
+            "count": "5",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 20000,
+            "actualAp": 2000,
+            "actualDps": 1463.6,
+            "magnification": "4000%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 100000,
+            "actualAp": 6000,
+            "actualDps": 7826.0,
+            "magnification": "4000%",
+            "count": "0",
+            "spawnTime": "166.7s",
+            "spawnTimeFrames": "5,000f",
+            "delay": "40.0-60.0s",
+            "delayFrames": "1,200-1,800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 560000,
+            "actualAp": 8000,
+            "actualDps": 10909.12,
+            "magnification": "1600%",
+            "count": "5",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "40.0-40.0s",
+            "delayFrames": "1,200-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 15,
+      "stageName": "天聖界 Lv.16",
+      "baseHp": "1000000",
+      "width": "5000",
+      "enemyLimit": "12",
+      "requiredCost": "130",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "39",
+          "treasureName": "黄マタタビの実",
+          "probability": "1",
+          "amount": "3",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "518",
+          "enemyName": "スーパーゼウス",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 225000,
+            "ap": 5000,
+            "dps": 627.62,
+            "speed": 9,
+            "range": 450,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 3200,
+            "freq": 239,
+            "foreswing": 78,
+            "backswing": 43,
+            "tba": 81
+          },
+          "stageStats": {
+            "actualHp": 855000,
+            "actualAp": 19000,
+            "actualDps": 2384.96,
+            "magnification": "380%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 150,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "520",
+          "enemyName": "完璧ヘラクライスト",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 40000,
+            "dps": 7547.17,
+            "speed": 4,
+            "range": 180,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 3000,
+            "freq": 159,
+            "foreswing": 116,
+            "backswing": 43,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 2280000,
+            "actualAp": 152000,
+            "actualDps": 28679.25,
+            "magnification": "380%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 360,
+              "omni_range": [
+                -360,
+                360
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "519",
+          "enemyName": "シャーマンカーン",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 2500,
+            "dps": 471.7,
+            "speed": 8,
+            "range": 550,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 3100,
+            "freq": 159,
+            "foreswing": 70,
+            "backswing": 31,
+            "tba": 45
+          },
+          "stageStats": {
+            "actualHp": 608000,
+            "actualAp": 9500,
+            "actualDps": 1792.46,
+            "magnification": "380%",
+            "count": "1",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 300,
+              "ld_range": [300, 800]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 22000,
+            "actualAp": 2200,
+            "actualDps": 1609.96,
+            "magnification": "4400%",
+            "count": "10",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 110000,
+            "actualAp": 6600,
+            "actualDps": 8608.6,
+            "magnification": "4400%",
+            "count": "5",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 22000,
+            "actualAp": 2200,
+            "actualDps": 1609.96,
+            "magnification": "4400%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 110000,
+            "actualAp": 6600,
+            "actualDps": 8608.6,
+            "magnification": "4400%",
+            "count": "0",
+            "spawnTime": "166.7s",
+            "spawnTimeFrames": "5,000f",
+            "delay": "40.0-60.0s",
+            "delayFrames": "1,200-1,800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 588000,
+            "actualAp": 8400,
+            "actualDps": 11454.58,
+            "magnification": "1680%",
+            "count": "5",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "40.0-40.0s",
+            "delayFrames": "1,200-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 16,
+      "stageName": "天聖界 Lv.17",
+      "baseHp": "1050000",
+      "width": "5000",
+      "enemyLimit": "12",
+      "requiredCost": "130",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "105",
+          "treasureName": "統率力回復アイテム",
+          "probability": "1",
+          "amount": "1",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "518",
+          "enemyName": "スーパーゼウス",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 225000,
+            "ap": 5000,
+            "dps": 627.62,
+            "speed": 9,
+            "range": 450,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 3200,
+            "freq": 239,
+            "foreswing": 78,
+            "backswing": 43,
+            "tba": 81
+          },
+          "stageStats": {
+            "actualHp": 922500,
+            "actualAp": 20500,
+            "actualDps": 2573.24,
+            "magnification": "410%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 150,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "520",
+          "enemyName": "完璧ヘラクライスト",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 40000,
+            "dps": 7547.17,
+            "speed": 4,
+            "range": 180,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 3000,
+            "freq": 159,
+            "foreswing": 116,
+            "backswing": 43,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 2460000,
+            "actualAp": 164000,
+            "actualDps": 30943.4,
+            "magnification": "410%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 360,
+              "omni_range": [
+                -360,
+                360
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "519",
+          "enemyName": "シャーマンカーン",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 2500,
+            "dps": 471.7,
+            "speed": 8,
+            "range": 550,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 3100,
+            "freq": 159,
+            "foreswing": 70,
+            "backswing": 31,
+            "tba": 45
+          },
+          "stageStats": {
+            "actualHp": 656000,
+            "actualAp": 10250,
+            "actualDps": 1933.97,
+            "magnification": "410%",
+            "count": "1",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 300,
+              "ld_range": [300, 800]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 24000,
+            "actualAp": 2400,
+            "actualDps": 1756.32,
+            "magnification": "4800%",
+            "count": "10",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 120000,
+            "actualAp": 7200,
+            "actualDps": 9391.2,
+            "magnification": "4800%",
+            "count": "5",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 24000,
+            "actualAp": 2400,
+            "actualDps": 1756.32,
+            "magnification": "4800%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 120000,
+            "actualAp": 7200,
+            "actualDps": 9391.2,
+            "magnification": "4800%",
+            "count": "0",
+            "spawnTime": "166.7s",
+            "spawnTimeFrames": "5,000f",
+            "delay": "40.0-60.0s",
+            "delayFrames": "1,200-1,800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 616000,
+            "actualAp": 8800,
+            "actualDps": 12000.03,
+            "magnification": "1760%",
+            "count": "5",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "40.0-40.0s",
+            "delayFrames": "1,200-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 17,
+      "stageName": "天聖界 Lv.18",
+      "baseHp": "1100000",
+      "width": "5000",
+      "enemyLimit": "12",
+      "requiredCost": "140",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "6",
+          "treasureName": "ＸＰ",
+          "probability": "1",
+          "amount": "1500000",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "518",
+          "enemyName": "スーパーゼウス",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 225000,
+            "ap": 5000,
+            "dps": 627.62,
+            "speed": 9,
+            "range": 450,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 3200,
+            "freq": 239,
+            "foreswing": 78,
+            "backswing": 43,
+            "tba": 81
+          },
+          "stageStats": {
+            "actualHp": 990000,
+            "actualAp": 22000,
+            "actualDps": 2761.53,
+            "magnification": "440%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 150,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "520",
+          "enemyName": "完璧ヘラクライスト",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 40000,
+            "dps": 7547.17,
+            "speed": 4,
+            "range": 180,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 3000,
+            "freq": 159,
+            "foreswing": 116,
+            "backswing": 43,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 2640000,
+            "actualAp": 176000,
+            "actualDps": 33207.55,
+            "magnification": "440%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 360,
+              "omni_range": [
+                -360,
+                360
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "519",
+          "enemyName": "シャーマンカーン",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 2500,
+            "dps": 471.7,
+            "speed": 8,
+            "range": 550,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 3100,
+            "freq": 159,
+            "foreswing": 70,
+            "backswing": 31,
+            "tba": 45
+          },
+          "stageStats": {
+            "actualHp": 704000,
+            "actualAp": 11000,
+            "actualDps": 2075.48,
+            "magnification": "440%",
+            "count": "1",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 300,
+              "ld_range": [300, 800]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 26000,
+            "actualAp": 2600,
+            "actualDps": 1902.68,
+            "magnification": "5200%",
+            "count": "10",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 130000,
+            "actualAp": 7800,
+            "actualDps": 10173.8,
+            "magnification": "5200%",
+            "count": "5",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 26000,
+            "actualAp": 2600,
+            "actualDps": 1902.68,
+            "magnification": "5200%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 130000,
+            "actualAp": 7800,
+            "actualDps": 10173.8,
+            "magnification": "5200%",
+            "count": "0",
+            "spawnTime": "166.7s",
+            "spawnTimeFrames": "5,000f",
+            "delay": "40.0-60.0s",
+            "delayFrames": "1,200-1,800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 644000,
+            "actualAp": 9200,
+            "actualDps": 12545.49,
+            "magnification": "1840%",
+            "count": "5",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "40.0-40.0s",
+            "delayFrames": "1,200-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 18,
+      "stageName": "天聖界 Lv.19",
+      "baseHp": "1150000",
+      "width": "5000",
+      "enemyLimit": "12",
+      "requiredCost": "140",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "40",
+          "treasureName": "虹マタタビの実",
+          "probability": "1",
+          "amount": "3",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "518",
+          "enemyName": "スーパーゼウス",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 225000,
+            "ap": 5000,
+            "dps": 627.62,
+            "speed": 9,
+            "range": 450,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 3200,
+            "freq": 239,
+            "foreswing": 78,
+            "backswing": 43,
+            "tba": 81
+          },
+          "stageStats": {
+            "actualHp": 1057500,
+            "actualAp": 23500,
+            "actualDps": 2949.81,
+            "magnification": "470%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 150,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "520",
+          "enemyName": "完璧ヘラクライスト",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 40000,
+            "dps": 7547.17,
+            "speed": 4,
+            "range": 180,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 3000,
+            "freq": 159,
+            "foreswing": 116,
+            "backswing": 43,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 2820000,
+            "actualAp": 188000,
+            "actualDps": 35471.7,
+            "magnification": "470%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 360,
+              "omni_range": [
+                -360,
+                360
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "519",
+          "enemyName": "シャーマンカーン",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 2500,
+            "dps": 471.7,
+            "speed": 8,
+            "range": 550,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 3100,
+            "freq": 159,
+            "foreswing": 70,
+            "backswing": 31,
+            "tba": 45
+          },
+          "stageStats": {
+            "actualHp": 752000,
+            "actualAp": 11750,
+            "actualDps": 2216.99,
+            "magnification": "470%",
+            "count": "1",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 300,
+              "ld_range": [300, 800]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 28000,
+            "actualAp": 2800,
+            "actualDps": 2049.04,
+            "magnification": "5600%",
+            "count": "10",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 140000,
+            "actualAp": 8400,
+            "actualDps": 10956.4,
+            "magnification": "5600%",
+            "count": "5",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 28000,
+            "actualAp": 2800,
+            "actualDps": 2049.04,
+            "magnification": "5600%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 140000,
+            "actualAp": 8400,
+            "actualDps": 10956.4,
+            "magnification": "5600%",
+            "count": "0",
+            "spawnTime": "166.7s",
+            "spawnTimeFrames": "5,000f",
+            "delay": "40.0-60.0s",
+            "delayFrames": "1,200-1,800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 672000,
+            "actualAp": 9600,
+            "actualDps": 13090.94,
+            "magnification": "1920%",
+            "count": "5",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "40.0-40.0s",
+            "delayFrames": "1,200-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 19,
+      "stageName": "天聖界 Lv.20",
+      "baseHp": "1200000",
+      "width": "5000",
+      "enemyLimit": "12",
+      "requiredCost": "150",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "12",
+          "treasureName": "レアチケット",
+          "probability": "1",
+          "amount": "1",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "518",
+          "enemyName": "スーパーゼウス",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 225000,
+            "ap": 5000,
+            "dps": 627.62,
+            "speed": 9,
+            "range": 450,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 3200,
+            "freq": 239,
+            "foreswing": 78,
+            "backswing": 43,
+            "tba": 81
+          },
+          "stageStats": {
+            "actualHp": 1125000,
+            "actualAp": 25000,
+            "actualDps": 3138.1,
+            "magnification": "500%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 150,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "520",
+          "enemyName": "完璧ヘラクライスト",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 40000,
+            "dps": 7547.17,
+            "speed": 4,
+            "range": 180,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 3000,
+            "freq": 159,
+            "foreswing": 116,
+            "backswing": 43,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 3000000,
+            "actualAp": 200000,
+            "actualDps": 37735.85,
+            "magnification": "500%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 360,
+              "omni_range": [
+                -360,
+                360
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "519",
+          "enemyName": "シャーマンカーン",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 2500,
+            "dps": 471.7,
+            "speed": 8,
+            "range": 550,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 3100,
+            "freq": 159,
+            "foreswing": 70,
+            "backswing": 31,
+            "tba": 45
+          },
+          "stageStats": {
+            "actualHp": 800000,
+            "actualAp": 12500,
+            "actualDps": 2358.5,
+            "magnification": "500%",
+            "count": "1",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 300,
+              "ld_range": [300, 800]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 30000,
+            "actualAp": 3000,
+            "actualDps": 2195.4,
+            "magnification": "6000%",
+            "count": "10",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 150000,
+            "actualAp": 9000,
+            "actualDps": 11739.0,
+            "magnification": "6000%",
+            "count": "5",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 30000,
+            "actualAp": 3000,
+            "actualDps": 2195.4,
+            "magnification": "6000%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 150000,
+            "actualAp": 9000,
+            "actualDps": 11739.0,
+            "magnification": "6000%",
+            "count": "0",
+            "spawnTime": "166.7s",
+            "spawnTimeFrames": "5,000f",
+            "delay": "40.0-60.0s",
+            "delayFrames": "1,200-1,800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 700000,
+            "actualAp": 10000,
+            "actualDps": 13636.4,
+            "magnification": "2000%",
+            "count": "5",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "40.0-40.0s",
+            "delayFrames": "1,200-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    }
+  ]
+}

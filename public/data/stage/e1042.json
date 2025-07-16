@@ -1,0 +1,177 @@
+{
+  "eventId": 1042,
+  "eventName": "バースデープレゼント！その3",
+  "typeId": 1,
+  "typeName": "イベントステージ",
+  "prefix": "S",
+  "mapId": 42,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "祝！２周年！！",
+      "baseHp": "20000",
+      "width": "3600",
+      "enemyLimit": "9",
+      "requiredCost": "2",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "000",
+          "enemyName": "わんこ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 90,
+            "ap": 8,
+            "dps": 5.11,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 15,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 90,
+            "actualAp": 8,
+            "actualDps": 5.11,
+            "magnification": "100%",
+            "count": "8",
+            "spawnTime": "26.7s",
+            "spawnTimeFrames": "800f",
+            "delay": "6.7-20.0s",
+            "delayFrames": "200-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "001",
+          "enemyName": "にょろ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 100,
+            "ap": 15,
+            "dps": 12.16,
+            "speed": 8,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 30,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 100,
+            "actualAp": 15,
+            "actualDps": 12.16,
+            "magnification": "100%",
+            "count": "8",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "6.7-26.7s",
+            "delayFrames": "200-800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "002",
+          "enemyName": "例のヤツ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 200,
+            "ap": 20,
+            "dps": 20.0,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 75,
+            "freq": 30,
+            "foreswing": 10,
+            "backswing": 20,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 200,
+            "actualAp": 20,
+            "actualDps": 20.0,
+            "magnification": "100%",
+            "count": "8",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "6.7-33.3s",
+            "delayFrames": "200-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "120",
+          "enemyName": "ダミー",
+          "traits": ["メ"],
+          "baseStats": {
+            "hp": 50,
+            "ap": 1,
+            "dps": 0.97,
+            "speed": 4,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 2,
+            "freq": 31,
+            "foreswing": 5,
+            "backswing": 26,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 50,
+            "actualAp": 1,
+            "actualDps": 0.97,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {}
+        }
+      ]
+    }
+  ]
+}

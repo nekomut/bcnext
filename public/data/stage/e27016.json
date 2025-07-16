@@ -1,0 +1,15 @@
+{
+  "eventId": 27016,
+  "eventName": "強襲！神魔の塔（仮）",
+  "typeId": 27,
+  "typeName": "コラボ強襲ステージ",
+  "prefix": "CA",
+  "mapId": 16,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": []
+}

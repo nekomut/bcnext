@@ -1,0 +1,271 @@
+{
+  "eventId": 1355,
+  "eventName": "極悪のトリ降臨",
+  "typeId": 1,
+  "typeName": "イベントステージ",
+  "prefix": "S",
+  "mapId": 355,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "アポカリプス 超極ムズ",
+      "baseHp": "2500000",
+      "width": "5800",
+      "enemyLimit": "10",
+      "requiredCost": "200",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "10668",
+          "treasureName": "洗脳されし天空のネコへの進化権(洗脳されしネコノトリの第3形態)",
+          "probability": "100",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "665",
+          "enemyName": "極悪な天空のネコ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 1820000,
+            "ap": 53000,
+            "dps": 9408.28,
+            "speed": 2,
+            "range": 640,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 1999,
+            "freq": 169,
+            "foreswing": 20,
+            "backswing": 6,
+            "tba": 75
+          },
+          "stageStats": {
+            "actualHp": 1820000,
+            "actualAp": 53000,
+            "actualDps": 9408.28,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "mini-wave": {
+              "raw_columns": [27, 28, 86],
+              "chance": 50,
+              "level": 2
+            },
+            "shield": {
+              "raw_columns": 87,
+              "hp": 1340000
+            },
+            "counter-surge": {
+              "raw_columns": 103,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "586",
+          "enemyName": "ミッドナイトナカイ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 300000,
+            "ap": 23000,
+            "dps": 16829.27,
+            "speed": 25,
+            "range": 300,
+            "rangeType": "範囲",
+            "kbLevel": 20,
+            "money": 800,
+            "freq": 41,
+            "foreswing": 20,
+            "backswing": 21,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 300000,
+            "actualAp": 23000,
+            "actualDps": 16829.27,
+            "magnification": "100%",
+            "count": "5",
+            "spawnTime": "56.7s",
+            "spawnTimeFrames": "1,700f",
+            "delay": "96.7-103.3s",
+            "delayFrames": "2,900-3,100f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 80000
+            }
+          }
+        },
+        {
+          "enemyId": "477",
+          "enemyName": "フグ太くん",
+          "traits": ["古"],
+          "baseStats": {
+            "hp": 400000,
+            "ap": 30000,
+            "dps": 2990.03,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 400,
+            "money": 900,
+            "freq": 301,
+            "foreswing": 4,
+            "backswing": 297,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 400000,
+            "actualAp": 30000,
+            "actualDps": 2990.03,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "146.7s",
+            "spawnTimeFrames": "4,400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 350,
+              "omni_range": [
+                -350,
+                350
+              ]
+            },
+            "curse": {
+              "raw_columns": [73, 74],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            }
+          }
+        },
+        {
+          "enemyId": "171",
+          "enemyName": "レディ・ガ",
+          "traits": [
+            "浮",
+            "エ"
+          ],
+          "baseStats": {
+            "hp": 17777,
+            "ap": 777,
+            "dps": 264.89,
+            "speed": 15,
+            "range": 370,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1555,
+            "freq": 88,
+            "foreswing": 34,
+            "backswing": 54,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 426648,
+            "actualAp": 18648,
+            "actualDps": 6357.36,
+            "magnification": "2400%",
+            "count": "0",
+            "spawnTime": "200.0s",
+            "spawnTimeFrames": "6,000f",
+            "delay": "233.3-233.3s",
+            "delayFrames": "7,000-7,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 60,
+              "duration_s": 2.0
+            }
+          }
+        },
+        {
+          "enemyId": "649",
+          "enemyName": "聖天ゴクラッコ",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 400000,
+            "ap": 4497,
+            "dps": 5865.65,
+            "speed": 15,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 400,
+            "freq": 23,
+            "foreswing": 14,
+            "backswing": 9,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1000000,
+            "actualAp": 11242,
+            "actualDps": 14664.12,
+            "magnification": "250%",
+            "count": "1",
+            "spawnTime": "300.0s",
+            "spawnTimeFrames": "9,000f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 200,
+              "omni_range": [
+                -300,
+                200
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 50
+            },
+            "counter-surge": {
+              "raw_columns": 103,
+              "enabled": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

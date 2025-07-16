@@ -1,0 +1,322 @@
+{
+  "eventId": 25021,
+  "eventName": "蒼き本能の起源",
+  "typeId": 25,
+  "typeName": "発掘ステージ",
+  "prefix": "H",
+  "mapId": 21,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "起源の祠 極ムズ",
+      "baseHp": "600000",
+      "width": "4000",
+      "enemyLimit": "10",
+      "requiredCost": "100",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "30045",
+          "treasureName": "ユニット20045への進化権",
+          "probability": "410",
+          "amount": "1",
+          "times": "-4",
+          "limitText": "-4"
+        },
+        {
+          "treasureId": "30050",
+          "treasureName": "ユニット20050への進化権",
+          "probability": "410",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30046",
+          "treasureName": "ユニット20046への進化権",
+          "probability": "75",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30051",
+          "treasureName": "ユニット20051への進化権",
+          "probability": "75",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30125",
+          "treasureName": "ユニット20125への進化権",
+          "probability": "10",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30130",
+          "treasureName": "ユニット20130への進化権",
+          "probability": "10",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30135",
+          "treasureName": "ユニット20135への進化権",
+          "probability": "10",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "168",
+          "enemyName": "ワーニック",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 3000,
+            "ap": 900,
+            "dps": 870.97,
+            "speed": 8,
+            "range": 130,
+            "rangeType": "単体",
+            "kbLevel": 4,
+            "money": 130,
+            "freq": 31,
+            "foreswing": 6,
+            "backswing": 12,
+            "tba": 13
+          },
+          "stageStats": {
+            "actualHp": 30000,
+            "actualAp": 9000,
+            "actualDps": 8709.7,
+            "magnification": "1000%",
+            "count": "0",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "10.0-16.7s",
+            "delayFrames": "300-500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "169",
+          "enemyName": "カーバチャン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 7000,
+            "ap": 200,
+            "dps": 181.82,
+            "speed": 12,
+            "range": 222,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 350,
+            "freq": 33,
+            "foreswing": 8,
+            "backswing": 25,
+            "tba": 13
+          },
+          "stageStats": {
+            "actualHp": 70000,
+            "actualAp": 2000,
+            "actualDps": 1818.2,
+            "magnification": "1000%",
+            "count": "2",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "16.7-20.0s",
+            "delayFrames": "500-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "177",
+          "enemyName": "イノヴァルカン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 1799,
+            "dps": 3174.71,
+            "speed": 9,
+            "range": 125,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1800,
+            "freq": 17,
+            "foreswing": 8,
+            "backswing": 3,
+            "tba": 5
+          },
+          "stageStats": {
+            "actualHp": 1200000,
+            "actualAp": 13492,
+            "actualDps": 23810.33,
+            "magnification": "750%",
+            "count": "2",
+            "spawnTime": "60.0s",
+            "spawnTimeFrames": "1,800f",
+            "delay": "20.0-20.0s",
+            "delayFrames": "600-600f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 50
+            }
+          }
+        },
+        {
+          "enemyId": "172",
+          "enemyName": "デカメガネル",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 20000,
+            "ap": 800,
+            "dps": 750.0,
+            "speed": 18,
+            "range": 249,
+            "rangeType": "単体",
+            "kbLevel": 7,
+            "money": 250,
+            "freq": 32,
+            "foreswing": 9,
+            "backswing": 6,
+            "tba": 12
+          },
+          "stageStats": {
+            "actualHp": 120000,
+            "actualAp": 4800,
+            "actualDps": 4500.0,
+            "magnification": "600%",
+            "count": "4",
+            "spawnTime": "60.0s",
+            "spawnTimeFrames": "1,800f",
+            "delay": "10.0-10.0s",
+            "delayFrames": "300-300f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 25,
+              "power": 300,
+              "duration_f": 20,
+              "duration_s": 0.67
+            }
+          }
+        },
+        {
+          "enemyId": "208",
+          "enemyName": "よっちゃん",
+          "traits": [
+            "浮",
+            "エ"
+          ],
+          "baseStats": {
+            "hp": 45000,
+            "ap": 1200,
+            "dps": 562.5,
+            "speed": 5,
+            "range": 500,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 600,
+            "freq": 64,
+            "foreswing": 15,
+            "backswing": 41,
+            "tba": 25
+          },
+          "stageStats": {
+            "actualHp": 45000,
+            "actualAp": 1200,
+            "actualDps": 562.5,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 50,
+              "power": 150,
+              "duration_f": 10,
+              "duration_s": 0.33
+            }
+          }
+        },
+        {
+          "enemyId": "180",
+          "enemyName": "ギャラクシーニャンダム",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 144444,
+            "ap": 4444,
+            "dps": 471.1,
+            "speed": 2,
+            "range": 600,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 3000,
+            "freq": 283,
+            "foreswing": 104,
+            "backswing": 29,
+            "tba": 90
+          },
+          "stageStats": {
+            "actualHp": 288888,
+            "actualAp": 8888,
+            "actualDps": 942.2,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 50,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

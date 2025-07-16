@@ -1,0 +1,319 @@
+{
+  "eventId": 1379,
+  "eventName": "蜜江と聖者",
+  "typeId": 1,
+  "typeName": "イベントステージ",
+  "prefix": "S",
+  "mapId": 379,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "I'll Bee Bug 超極ムズ",
+      "baseHp": "1111111",
+      "width": "4400",
+      "enemyLimit": "8",
+      "requiredCost": "200",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "185",
+          "enemyName": "教授",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 320000,
+            "ap": 6800,
+            "dps": 8500.0,
+            "speed": 4,
+            "range": 501,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 2000,
+            "freq": 24,
+            "foreswing": 1,
+            "backswing": 23,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 640000,
+            "actualAp": 13600,
+            "actualDps": 17000.0,
+            "magnification": "200%",
+            "count": "2",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "143.3-146.7s",
+            "delayFrames": "4,300-4,400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 20,
+              "duration_f": 60,
+              "duration_s": 2.0
+            }
+          }
+        },
+        {
+          "enemyId": "118",
+          "enemyName": "赤毛のにょろ",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 12000,
+            "ap": 1800,
+            "dps": 3375.0,
+            "speed": 22,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 5,
+            "money": 130,
+            "freq": 16,
+            "foreswing": 10,
+            "backswing": 6,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 60000,
+            "actualAp": 9000,
+            "actualDps": 16875.0,
+            "magnification": "500%",
+            "count": "0",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "14.7-21.3s",
+            "delayFrames": "440-640f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "493",
+          "enemyName": "太古の蜜江",
+          "traits": [
+            "浮",
+            "古"
+          ],
+          "baseStats": {
+            "hp": 1555555,
+            "ap": 18888,
+            "dps": 4606.83,
+            "speed": 4,
+            "range": 999,
+            "rangeType": "範囲",
+            "kbLevel": 8,
+            "money": 6666,
+            "freq": 123,
+            "foreswing": 36,
+            "backswing": 45,
+            "tba": 44
+          },
+          "stageStats": {
+            "actualHp": 1555555,
+            "actualAp": 18888,
+            "actualDps": 4606.83,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 888,
+              "ld_range": [888, 1332]
+            },
+            "curse": {
+              "raw_columns": [73, 74],
+              "chance": 100,
+              "duration_f": 3333,
+              "duration_s": 111.1
+            }
+          }
+        },
+        {
+          "enemyId": "011",
+          "enemyName": "一角くん",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 15000,
+            "ap": 500,
+            "dps": 937.5,
+            "speed": 3,
+            "range": 40,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 2500,
+            "freq": 16,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 300000,
+            "actualAp": 10000,
+            "actualDps": 18750.0,
+            "magnification": "2000%",
+            "count": "3",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "56.0-58.7s",
+            "delayFrames": "1,680-1,760f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "407",
+          "enemyName": "古代わんこ",
+          "traits": ["古"],
+          "baseStats": {
+            "hp": 75000,
+            "ap": 12000,
+            "dps": 8571.43,
+            "speed": 20,
+            "range": 120,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 42,
+            "foreswing": 4,
+            "backswing": 38,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 75000,
+            "actualAp": 12000,
+            "actualDps": 8571.43,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "86.7s",
+            "spawnTimeFrames": "2,600f",
+            "delay": "10.0-12.0s",
+            "delayFrames": "300-360f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "curse": {
+              "raw_columns": [73, 74],
+              "chance": 35,
+              "duration_f": 100,
+              "duration_s": 3.33
+            }
+          }
+        },
+        {
+          "enemyId": "407",
+          "enemyName": "古代わんこ",
+          "traits": ["古"],
+          "baseStats": {
+            "hp": 75000,
+            "ap": 12000,
+            "dps": 8571.43,
+            "speed": 20,
+            "range": 120,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 42,
+            "foreswing": 4,
+            "backswing": 38,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 75000,
+            "actualAp": 12000,
+            "actualDps": 8571.43,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "160.0s",
+            "spawnTimeFrames": "4,800f",
+            "delay": "10.0-12.0s",
+            "delayFrames": "300-360f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "curse": {
+              "raw_columns": [73, 74],
+              "chance": 35,
+              "duration_f": 100,
+              "duration_s": 3.33
+            }
+          }
+        },
+        {
+          "enemyId": "407",
+          "enemyName": "古代わんこ",
+          "traits": ["古"],
+          "baseStats": {
+            "hp": 75000,
+            "ap": 12000,
+            "dps": 8571.43,
+            "speed": 20,
+            "range": 120,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 42,
+            "foreswing": 4,
+            "backswing": 38,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 75000,
+            "actualAp": 12000,
+            "actualDps": 8571.43,
+            "magnification": "100%",
+            "count": "2",
+            "spawnTime": "200.0s",
+            "spawnTimeFrames": "6,000f",
+            "delay": "12.0-16.0s",
+            "delayFrames": "360-480f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "curse": {
+              "raw_columns": [73, 74],
+              "chance": 35,
+              "duration_f": 100,
+              "duration_s": 3.33
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

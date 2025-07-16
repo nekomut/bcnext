@@ -1,0 +1,3806 @@
+{
+  "eventId": 24026,
+  "eventName": "続・10月強襲！",
+  "typeId": 24,
+  "typeName": "強襲ステージ",
+  "prefix": "A",
+  "mapId": 26,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "大運動会 Lv.11",
+      "baseHp": "275000",
+      "width": "4500",
+      "enemyLimit": "10",
+      "requiredCost": "110",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "0",
+          "treasureName": "スピードアップ",
+          "probability": "1",
+          "amount": "2",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "286",
+          "enemyName": "カバタリアン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 4000,
+            "dps": 2105.26,
+            "speed": 3,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 57,
+            "foreswing": 28,
+            "backswing": 5,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 100000,
+            "actualAp": 10000,
+            "actualDps": 5263.15,
+            "magnification": "250%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 625
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 360,
+              "duration_s": 12.0,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 9000,
+            "actualAp": 4400,
+            "actualDps": 3567.56,
+            "magnification": "200%",
+            "count": "2",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "554",
+          "enemyName": "ケルベローズ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 2500,
+            "dps": 1442.31,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 66,
+            "freq": 52,
+            "foreswing": 13,
+            "backswing": 16,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 5000,
+            "actualDps": 2884.62,
+            "magnification": "200%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "286",
+          "enemyName": "カバタリアン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 4000,
+            "dps": 2105.26,
+            "speed": 3,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 57,
+            "foreswing": 28,
+            "backswing": 5,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 100000,
+            "actualAp": 10000,
+            "actualDps": 5263.15,
+            "magnification": "250%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 625
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 360,
+              "duration_s": 12.0,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 9000,
+            "actualAp": 4400,
+            "actualDps": 3567.56,
+            "magnification": "200%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "554",
+          "enemyName": "ケルベローズ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 2500,
+            "dps": 1442.31,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 66,
+            "freq": 52,
+            "foreswing": 13,
+            "backswing": 16,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 5000,
+            "actualDps": 2884.62,
+            "magnification": "200%",
+            "count": "2",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 85000,
+            "actualAp": 6868,
+            "actualDps": 12877.5,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "425",
+          "enemyName": "ダッシュ死太郎",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 200000,
+            "ap": 6000,
+            "dps": 1224.49,
+            "speed": 25,
+            "range": 400,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1000,
+            "freq": 147,
+            "foreswing": 44,
+            "backswing": 27,
+            "tba": 52
+          },
+          "stageStats": {
+            "actualHp": 600000,
+            "actualAp": 18000,
+            "actualDps": 3673.47,
+            "magnification": "300%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-20.0s",
+            "delayFrames": "500-600f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 400,
+              "ld_range": [400, 700]
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 750
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 240,
+              "duration_s": 8.0,
+              "hp_ratio": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 1,
+      "stageName": "大運動会 Lv.12",
+      "baseHp": "300000",
+      "width": "4500",
+      "enemyLimit": "10",
+      "requiredCost": "110",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "55",
+          "treasureName": "ネコビタンA",
+          "probability": "1",
+          "amount": "2",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "286",
+          "enemyName": "カバタリアン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 4000,
+            "dps": 2105.26,
+            "speed": 3,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 57,
+            "foreswing": 28,
+            "backswing": 5,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 102400,
+            "actualAp": 10240,
+            "actualDps": 5389.47,
+            "magnification": "256%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 625
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 360,
+              "duration_s": 12.0,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 9990,
+            "actualAp": 4884,
+            "actualDps": 3959.99,
+            "magnification": "222%",
+            "count": "2",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "554",
+          "enemyName": "ケルベローズ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 2500,
+            "dps": 1442.31,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 66,
+            "freq": 52,
+            "foreswing": 13,
+            "backswing": 16,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 5550,
+            "actualAp": 5550,
+            "actualDps": 3201.93,
+            "magnification": "222%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "286",
+          "enemyName": "カバタリアン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 4000,
+            "dps": 2105.26,
+            "speed": 3,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 57,
+            "foreswing": 28,
+            "backswing": 5,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 102400,
+            "actualAp": 10240,
+            "actualDps": 5389.47,
+            "magnification": "256%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 625
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 360,
+              "duration_s": 12.0,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 9990,
+            "actualAp": 4884,
+            "actualDps": 3959.99,
+            "magnification": "222%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "554",
+          "enemyName": "ケルベローズ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 2500,
+            "dps": 1442.31,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 66,
+            "freq": 52,
+            "foreswing": 13,
+            "backswing": 16,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 5550,
+            "actualAp": 5550,
+            "actualDps": 3201.93,
+            "magnification": "222%",
+            "count": "2",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 94350,
+            "actualAp": 7623,
+            "actualDps": 14294.02,
+            "magnification": "111%",
+            "count": "1",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "425",
+          "enemyName": "ダッシュ死太郎",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 200000,
+            "ap": 6000,
+            "dps": 1224.49,
+            "speed": 25,
+            "range": 400,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1000,
+            "freq": 147,
+            "foreswing": 44,
+            "backswing": 27,
+            "tba": 52
+          },
+          "stageStats": {
+            "actualHp": 622000,
+            "actualAp": 18660,
+            "actualDps": 3808.16,
+            "magnification": "311%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-20.0s",
+            "delayFrames": "500-600f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 400,
+              "ld_range": [400, 700]
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 750
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 240,
+              "duration_s": 8.0,
+              "hp_ratio": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 2,
+      "stageName": "大運動会 Lv.13",
+      "baseHp": "325000",
+      "width": "4500",
+      "enemyLimit": "10",
+      "requiredCost": "120",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "3",
+          "treasureName": "ニャンピュータ",
+          "probability": "1",
+          "amount": "2",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "286",
+          "enemyName": "カバタリアン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 4000,
+            "dps": 2105.26,
+            "speed": 3,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 57,
+            "foreswing": 28,
+            "backswing": 5,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 104800,
+            "actualAp": 10480,
+            "actualDps": 5515.78,
+            "magnification": "262%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 625
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 360,
+              "duration_s": 12.0,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 10980,
+            "actualAp": 5368,
+            "actualDps": 4352.42,
+            "magnification": "244%",
+            "count": "2",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "554",
+          "enemyName": "ケルベローズ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 2500,
+            "dps": 1442.31,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 66,
+            "freq": 52,
+            "foreswing": 13,
+            "backswing": 16,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 6100,
+            "actualAp": 6100,
+            "actualDps": 3519.24,
+            "magnification": "244%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "286",
+          "enemyName": "カバタリアン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 4000,
+            "dps": 2105.26,
+            "speed": 3,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 57,
+            "foreswing": 28,
+            "backswing": 5,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 104800,
+            "actualAp": 10480,
+            "actualDps": 5515.78,
+            "magnification": "262%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 625
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 360,
+              "duration_s": 12.0,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 10980,
+            "actualAp": 5368,
+            "actualDps": 4352.42,
+            "magnification": "244%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "554",
+          "enemyName": "ケルベローズ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 2500,
+            "dps": 1442.31,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 66,
+            "freq": 52,
+            "foreswing": 13,
+            "backswing": 16,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 6100,
+            "actualAp": 6100,
+            "actualDps": 3519.24,
+            "magnification": "244%",
+            "count": "2",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 103700,
+            "actualAp": 8378,
+            "actualDps": 15710.55,
+            "magnification": "122%",
+            "count": "1",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "425",
+          "enemyName": "ダッシュ死太郎",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 200000,
+            "ap": 6000,
+            "dps": 1224.49,
+            "speed": 25,
+            "range": 400,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1000,
+            "freq": 147,
+            "foreswing": 44,
+            "backswing": 27,
+            "tba": 52
+          },
+          "stageStats": {
+            "actualHp": 644000,
+            "actualAp": 19320,
+            "actualDps": 3942.86,
+            "magnification": "322%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-20.0s",
+            "delayFrames": "500-600f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 400,
+              "ld_range": [400, 700]
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 750
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 240,
+              "duration_s": 8.0,
+              "hp_ratio": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 3,
+      "stageName": "大運動会 Lv.14",
+      "baseHp": "350000",
+      "width": "4500",
+      "enemyLimit": "10",
+      "requiredCost": "120",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "2",
+          "treasureName": "ネコボン",
+          "probability": "1",
+          "amount": "2",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "286",
+          "enemyName": "カバタリアン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 4000,
+            "dps": 2105.26,
+            "speed": 3,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 57,
+            "foreswing": 28,
+            "backswing": 5,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 107200,
+            "actualAp": 10720,
+            "actualDps": 5642.1,
+            "magnification": "268%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 625
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 360,
+              "duration_s": 12.0,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 11970,
+            "actualAp": 5852,
+            "actualDps": 4744.85,
+            "magnification": "266%",
+            "count": "2",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "554",
+          "enemyName": "ケルベローズ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 2500,
+            "dps": 1442.31,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 66,
+            "freq": 52,
+            "foreswing": 13,
+            "backswing": 16,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 6650,
+            "actualAp": 6650,
+            "actualDps": 3836.54,
+            "magnification": "266%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "286",
+          "enemyName": "カバタリアン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 4000,
+            "dps": 2105.26,
+            "speed": 3,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 57,
+            "foreswing": 28,
+            "backswing": 5,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 107200,
+            "actualAp": 10720,
+            "actualDps": 5642.1,
+            "magnification": "268%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 625
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 360,
+              "duration_s": 12.0,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 11970,
+            "actualAp": 5852,
+            "actualDps": 4744.85,
+            "magnification": "266%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "554",
+          "enemyName": "ケルベローズ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 2500,
+            "dps": 1442.31,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 66,
+            "freq": 52,
+            "foreswing": 13,
+            "backswing": 16,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 6650,
+            "actualAp": 6650,
+            "actualDps": 3836.54,
+            "magnification": "266%",
+            "count": "2",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 113050,
+            "actualAp": 9134,
+            "actualDps": 17127.08,
+            "magnification": "133%",
+            "count": "1",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "425",
+          "enemyName": "ダッシュ死太郎",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 200000,
+            "ap": 6000,
+            "dps": 1224.49,
+            "speed": 25,
+            "range": 400,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1000,
+            "freq": 147,
+            "foreswing": 44,
+            "backswing": 27,
+            "tba": 52
+          },
+          "stageStats": {
+            "actualHp": 666000,
+            "actualAp": 19980,
+            "actualDps": 4077.55,
+            "magnification": "333%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-20.0s",
+            "delayFrames": "500-600f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 400,
+              "ld_range": [400, 700]
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 750
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 240,
+              "duration_s": 8.0,
+              "hp_ratio": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 4,
+      "stageName": "大運動会 Lv.15",
+      "baseHp": "375000",
+      "width": "4500",
+      "enemyLimit": "10",
+      "requiredCost": "130",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "157",
+          "treasureName": "プラチナチケットの欠片",
+          "probability": "1",
+          "amount": "1",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "286",
+          "enemyName": "カバタリアン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 4000,
+            "dps": 2105.26,
+            "speed": 3,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 57,
+            "foreswing": 28,
+            "backswing": 5,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 109600,
+            "actualAp": 10960,
+            "actualDps": 5768.41,
+            "magnification": "274%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 625
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 360,
+              "duration_s": 12.0,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 12960,
+            "actualAp": 6336,
+            "actualDps": 5137.29,
+            "magnification": "288%",
+            "count": "2",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "554",
+          "enemyName": "ケルベローズ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 2500,
+            "dps": 1442.31,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 66,
+            "freq": 52,
+            "foreswing": 13,
+            "backswing": 16,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 7200,
+            "actualAp": 7200,
+            "actualDps": 4153.85,
+            "magnification": "288%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "286",
+          "enemyName": "カバタリアン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 4000,
+            "dps": 2105.26,
+            "speed": 3,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 57,
+            "foreswing": 28,
+            "backswing": 5,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 109600,
+            "actualAp": 10960,
+            "actualDps": 5768.41,
+            "magnification": "274%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 625
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 360,
+              "duration_s": 12.0,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 12960,
+            "actualAp": 6336,
+            "actualDps": 5137.29,
+            "magnification": "288%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "554",
+          "enemyName": "ケルベローズ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 2500,
+            "dps": 1442.31,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 66,
+            "freq": 52,
+            "foreswing": 13,
+            "backswing": 16,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 7200,
+            "actualAp": 7200,
+            "actualDps": 4153.85,
+            "magnification": "288%",
+            "count": "2",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 122400,
+            "actualAp": 9889,
+            "actualDps": 18543.6,
+            "magnification": "144%",
+            "count": "1",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "425",
+          "enemyName": "ダッシュ死太郎",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 200000,
+            "ap": 6000,
+            "dps": 1224.49,
+            "speed": 25,
+            "range": 400,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1000,
+            "freq": 147,
+            "foreswing": 44,
+            "backswing": 27,
+            "tba": 52
+          },
+          "stageStats": {
+            "actualHp": 688000,
+            "actualAp": 20640,
+            "actualDps": 4212.25,
+            "magnification": "344%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-20.0s",
+            "delayFrames": "500-600f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 400,
+              "ld_range": [400, 700]
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 750
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 240,
+              "duration_s": 8.0,
+              "hp_ratio": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 5,
+      "stageName": "大運動会 Lv.16",
+      "baseHp": "400000",
+      "width": "4500",
+      "enemyLimit": "10",
+      "requiredCost": "130",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "56",
+          "treasureName": "ネコビタンB",
+          "probability": "1",
+          "amount": "2",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "286",
+          "enemyName": "カバタリアン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 4000,
+            "dps": 2105.26,
+            "speed": 3,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 57,
+            "foreswing": 28,
+            "backswing": 5,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 112000,
+            "actualAp": 11200,
+            "actualDps": 5894.73,
+            "magnification": "280%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 625
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 360,
+              "duration_s": 12.0,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 13950,
+            "actualAp": 6820,
+            "actualDps": 5529.72,
+            "magnification": "310%",
+            "count": "2",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "554",
+          "enemyName": "ケルベローズ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 2500,
+            "dps": 1442.31,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 66,
+            "freq": 52,
+            "foreswing": 13,
+            "backswing": 16,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 7750,
+            "actualAp": 7750,
+            "actualDps": 4471.16,
+            "magnification": "310%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "286",
+          "enemyName": "カバタリアン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 4000,
+            "dps": 2105.26,
+            "speed": 3,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 57,
+            "foreswing": 28,
+            "backswing": 5,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 112000,
+            "actualAp": 11200,
+            "actualDps": 5894.73,
+            "magnification": "280%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 625
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 360,
+              "duration_s": 12.0,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 13950,
+            "actualAp": 6820,
+            "actualDps": 5529.72,
+            "magnification": "310%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "554",
+          "enemyName": "ケルベローズ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 2500,
+            "dps": 1442.31,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 66,
+            "freq": 52,
+            "foreswing": 13,
+            "backswing": 16,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 7750,
+            "actualAp": 7750,
+            "actualDps": 4471.16,
+            "magnification": "310%",
+            "count": "2",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 131750,
+            "actualAp": 10645,
+            "actualDps": 19960.12,
+            "magnification": "155%",
+            "count": "1",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "425",
+          "enemyName": "ダッシュ死太郎",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 200000,
+            "ap": 6000,
+            "dps": 1224.49,
+            "speed": 25,
+            "range": 400,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1000,
+            "freq": 147,
+            "foreswing": 44,
+            "backswing": 27,
+            "tba": 52
+          },
+          "stageStats": {
+            "actualHp": 710000,
+            "actualAp": 21300,
+            "actualDps": 4346.94,
+            "magnification": "355%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-20.0s",
+            "delayFrames": "500-600f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 400,
+              "ld_range": [400, 700]
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 750
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 240,
+              "duration_s": 8.0,
+              "hp_ratio": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 6,
+      "stageName": "大運動会 Lv.17",
+      "baseHp": "425000",
+      "width": "4500",
+      "enemyLimit": "10",
+      "requiredCost": "140",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "5",
+          "treasureName": "スニャイパー",
+          "probability": "1",
+          "amount": "2",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "286",
+          "enemyName": "カバタリアン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 4000,
+            "dps": 2105.26,
+            "speed": 3,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 57,
+            "foreswing": 28,
+            "backswing": 5,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 114400,
+            "actualAp": 11440,
+            "actualDps": 6021.04,
+            "magnification": "286%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 625
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 360,
+              "duration_s": 12.0,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 14940,
+            "actualAp": 7304,
+            "actualDps": 5922.15,
+            "magnification": "332%",
+            "count": "2",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "554",
+          "enemyName": "ケルベローズ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 2500,
+            "dps": 1442.31,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 66,
+            "freq": 52,
+            "foreswing": 13,
+            "backswing": 16,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 8300,
+            "actualAp": 8300,
+            "actualDps": 4788.47,
+            "magnification": "332%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "286",
+          "enemyName": "カバタリアン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 4000,
+            "dps": 2105.26,
+            "speed": 3,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 57,
+            "foreswing": 28,
+            "backswing": 5,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 114400,
+            "actualAp": 11440,
+            "actualDps": 6021.04,
+            "magnification": "286%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 625
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 360,
+              "duration_s": 12.0,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 14940,
+            "actualAp": 7304,
+            "actualDps": 5922.15,
+            "magnification": "332%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "554",
+          "enemyName": "ケルベローズ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 2500,
+            "dps": 1442.31,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 66,
+            "freq": 52,
+            "foreswing": 13,
+            "backswing": 16,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 8300,
+            "actualAp": 8300,
+            "actualDps": 4788.47,
+            "magnification": "332%",
+            "count": "2",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 141100,
+            "actualAp": 11400,
+            "actualDps": 21376.65,
+            "magnification": "166%",
+            "count": "1",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "425",
+          "enemyName": "ダッシュ死太郎",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 200000,
+            "ap": 6000,
+            "dps": 1224.49,
+            "speed": 25,
+            "range": 400,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1000,
+            "freq": 147,
+            "foreswing": 44,
+            "backswing": 27,
+            "tba": 52
+          },
+          "stageStats": {
+            "actualHp": 732000,
+            "actualAp": 21960,
+            "actualDps": 4481.63,
+            "magnification": "366%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-20.0s",
+            "delayFrames": "500-600f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 400,
+              "ld_range": [400, 700]
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 750
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 240,
+              "duration_s": 8.0,
+              "hp_ratio": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 7,
+      "stageName": "大運動会 Lv.18",
+      "baseHp": "450000",
+      "width": "4500",
+      "enemyLimit": "10",
+      "requiredCost": "140",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "57",
+          "treasureName": "ネコビタンC",
+          "probability": "1",
+          "amount": "2",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "286",
+          "enemyName": "カバタリアン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 4000,
+            "dps": 2105.26,
+            "speed": 3,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 57,
+            "foreswing": 28,
+            "backswing": 5,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 116800,
+            "actualAp": 11680,
+            "actualDps": 6147.36,
+            "magnification": "292%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 625
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 360,
+              "duration_s": 12.0,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 15930,
+            "actualAp": 7788,
+            "actualDps": 6314.58,
+            "magnification": "354%",
+            "count": "2",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "554",
+          "enemyName": "ケルベローズ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 2500,
+            "dps": 1442.31,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 66,
+            "freq": 52,
+            "foreswing": 13,
+            "backswing": 16,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 8850,
+            "actualAp": 8850,
+            "actualDps": 5105.78,
+            "magnification": "354%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "286",
+          "enemyName": "カバタリアン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 4000,
+            "dps": 2105.26,
+            "speed": 3,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 57,
+            "foreswing": 28,
+            "backswing": 5,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 116800,
+            "actualAp": 11680,
+            "actualDps": 6147.36,
+            "magnification": "292%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 625
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 360,
+              "duration_s": 12.0,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 15930,
+            "actualAp": 7788,
+            "actualDps": 6314.58,
+            "magnification": "354%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "554",
+          "enemyName": "ケルベローズ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 2500,
+            "dps": 1442.31,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 66,
+            "freq": 52,
+            "foreswing": 13,
+            "backswing": 16,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 8850,
+            "actualAp": 8850,
+            "actualDps": 5105.78,
+            "magnification": "354%",
+            "count": "2",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 150450,
+            "actualAp": 12156,
+            "actualDps": 22793.17,
+            "magnification": "177%",
+            "count": "1",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "425",
+          "enemyName": "ダッシュ死太郎",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 200000,
+            "ap": 6000,
+            "dps": 1224.49,
+            "speed": 25,
+            "range": 400,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1000,
+            "freq": 147,
+            "foreswing": 44,
+            "backswing": 27,
+            "tba": 52
+          },
+          "stageStats": {
+            "actualHp": 754000,
+            "actualAp": 22620,
+            "actualDps": 4616.33,
+            "magnification": "377%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-20.0s",
+            "delayFrames": "500-600f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 400,
+              "ld_range": [400, 700]
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 750
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 240,
+              "duration_s": 8.0,
+              "hp_ratio": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 8,
+      "stageName": "大運動会 Lv.19",
+      "baseHp": "475000",
+      "width": "4500",
+      "enemyLimit": "10",
+      "requiredCost": "150",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "160",
+          "treasureName": "悪マタタビの種",
+          "probability": "1",
+          "amount": "1",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "286",
+          "enemyName": "カバタリアン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 4000,
+            "dps": 2105.26,
+            "speed": 3,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 57,
+            "foreswing": 28,
+            "backswing": 5,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 119200,
+            "actualAp": 11920,
+            "actualDps": 6273.67,
+            "magnification": "298%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 625
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 360,
+              "duration_s": 12.0,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 16920,
+            "actualAp": 8272,
+            "actualDps": 6707.01,
+            "magnification": "376%",
+            "count": "2",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "554",
+          "enemyName": "ケルベローズ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 2500,
+            "dps": 1442.31,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 66,
+            "freq": 52,
+            "foreswing": 13,
+            "backswing": 16,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 9400,
+            "actualAp": 9400,
+            "actualDps": 5423.09,
+            "magnification": "376%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "286",
+          "enemyName": "カバタリアン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 4000,
+            "dps": 2105.26,
+            "speed": 3,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 57,
+            "foreswing": 28,
+            "backswing": 5,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 119200,
+            "actualAp": 11920,
+            "actualDps": 6273.67,
+            "magnification": "298%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 625
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 360,
+              "duration_s": 12.0,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 16920,
+            "actualAp": 8272,
+            "actualDps": 6707.01,
+            "magnification": "376%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "554",
+          "enemyName": "ケルベローズ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 2500,
+            "dps": 1442.31,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 66,
+            "freq": 52,
+            "foreswing": 13,
+            "backswing": 16,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 9400,
+            "actualAp": 9400,
+            "actualDps": 5423.09,
+            "magnification": "376%",
+            "count": "2",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 159800,
+            "actualAp": 12911,
+            "actualDps": 24209.7,
+            "magnification": "188%",
+            "count": "1",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "425",
+          "enemyName": "ダッシュ死太郎",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 200000,
+            "ap": 6000,
+            "dps": 1224.49,
+            "speed": 25,
+            "range": 400,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1000,
+            "freq": 147,
+            "foreswing": 44,
+            "backswing": 27,
+            "tba": 52
+          },
+          "stageStats": {
+            "actualHp": 776000,
+            "actualAp": 23280,
+            "actualDps": 4751.02,
+            "magnification": "388%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-20.0s",
+            "delayFrames": "500-600f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 400,
+              "ld_range": [400, 700]
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 750
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 240,
+              "duration_s": 8.0,
+              "hp_ratio": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 9,
+      "stageName": "大運動会 Lv.MAX",
+      "baseHp": "500000",
+      "width": "4500",
+      "enemyLimit": "10",
+      "requiredCost": "150",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "12",
+          "treasureName": "レアチケット",
+          "probability": "1",
+          "amount": "1",
+          "times": "-3",
+          "limitText": "-3"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "286",
+          "enemyName": "カバタリアン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 4000,
+            "dps": 2105.26,
+            "speed": 3,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 57,
+            "foreswing": 28,
+            "backswing": 5,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 120000,
+            "actualAp": 12000,
+            "actualDps": 6315.78,
+            "magnification": "300%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 625
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 360,
+              "duration_s": 12.0,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 18000,
+            "actualAp": 8800,
+            "actualDps": 7135.12,
+            "magnification": "400%",
+            "count": "2",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "554",
+          "enemyName": "ケルベローズ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 2500,
+            "dps": 1442.31,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 66,
+            "freq": 52,
+            "foreswing": 13,
+            "backswing": 16,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 10000,
+            "actualAp": 10000,
+            "actualDps": 5769.24,
+            "magnification": "400%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "286",
+          "enemyName": "カバタリアン",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 4000,
+            "dps": 2105.26,
+            "speed": 3,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 57,
+            "foreswing": 28,
+            "backswing": 5,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 120000,
+            "actualAp": 12000,
+            "actualDps": 6315.78,
+            "magnification": "300%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 625
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 360,
+              "duration_s": 12.0,
+              "hp_ratio": 50
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 18000,
+            "actualAp": 8800,
+            "actualDps": 7135.12,
+            "magnification": "400%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "554",
+          "enemyName": "ケルベローズ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 2500,
+            "dps": 1442.31,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 66,
+            "freq": 52,
+            "foreswing": 13,
+            "backswing": 16,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 10000,
+            "actualAp": 10000,
+            "actualDps": 5769.24,
+            "magnification": "400%",
+            "count": "2",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 170000,
+            "actualAp": 13736,
+            "actualDps": 25755.0,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "425",
+          "enemyName": "ダッシュ死太郎",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 200000,
+            "ap": 6000,
+            "dps": 1224.49,
+            "speed": 25,
+            "range": 400,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1000,
+            "freq": 147,
+            "foreswing": 44,
+            "backswing": 27,
+            "tba": 52
+          },
+          "stageStats": {
+            "actualHp": 800000,
+            "actualAp": 24000,
+            "actualDps": 4897.96,
+            "magnification": "400%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "16.7-20.0s",
+            "delayFrames": "500-600f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 400,
+              "ld_range": [400, 700]
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 750
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 240,
+              "duration_s": 8.0,
+              "hp_ratio": 100
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

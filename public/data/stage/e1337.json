@@ -1,0 +1,641 @@
+{
+  "eventId": 1337,
+  "eventName": "開眼のネコエッグ襲来！",
+  "typeId": 1,
+  "typeName": "イベントステージ",
+  "prefix": "S",
+  "mapId": 337,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "ネコエッグ進化への道 激ムズ",
+      "baseHp": "450000",
+      "width": "4000",
+      "enemyLimit": "20",
+      "requiredCost": "150",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "10330",
+          "treasureName": "ネコエッグ３への進化権(ネコエッグの第3形態)",
+          "probability": "5",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "554",
+          "enemyName": "ケルベローズ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 2500,
+            "dps": 1442.31,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 66,
+            "freq": 52,
+            "foreswing": 13,
+            "backswing": 16,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 5000,
+            "actualDps": 2884.62,
+            "magnification": "200%",
+            "count": "3",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "554",
+          "enemyName": "ケルベローズ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 2500,
+            "dps": 1442.31,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 66,
+            "freq": 52,
+            "foreswing": 13,
+            "backswing": 16,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 5000,
+            "actualDps": 2884.62,
+            "magnification": "200%",
+            "count": "5",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "5.3-12.0s",
+            "delayFrames": "160-360f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 9000,
+            "actualAp": 4400,
+            "actualDps": 3567.56,
+            "magnification": "200%",
+            "count": "5",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "554",
+          "enemyName": "ケルベローズ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 2500,
+            "dps": 1442.31,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 66,
+            "freq": 52,
+            "foreswing": 13,
+            "backswing": 16,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 5000,
+            "actualAp": 5000,
+            "actualDps": 2884.62,
+            "magnification": "200%",
+            "count": "5",
+            "spawnTime": "50.0s",
+            "spawnTimeFrames": "1,500f",
+            "delay": "3.3-10.0s",
+            "delayFrames": "100-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 9000,
+            "actualAp": 4400,
+            "actualDps": 3567.56,
+            "magnification": "200%",
+            "count": "0",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "16.7-20.0s",
+            "delayFrames": "500-600f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 85000,
+            "actualAp": 6868,
+            "actualDps": 12877.5,
+            "magnification": "100%",
+            "count": "4",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "23.3-26.7s",
+            "delayFrames": "700-800f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "635",
+          "enemyName": "ネコエッグ３",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1100000,
+            "ap": 11000,
+            "dps": 5500.0,
+            "speed": 7,
+            "range": 200,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 1800,
+            "freq": 60,
+            "foreswing": 15,
+            "backswing": 20,
+            "tba": 23
+          },
+          "stageStats": {
+            "actualHp": 1100000,
+            "actualAp": 11000,
+            "actualDps": 5500.0,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "1.0s",
+            "spawnTimeFrames": "30f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 300,
+              "omni_range": [
+                -300,
+                300
+              ]
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 1,
+      "stageName": "ネコエッグ進化への道 超激ムズ",
+      "baseHp": "550000",
+      "width": "5000",
+      "enemyLimit": "20",
+      "requiredCost": "150",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "10330",
+          "treasureName": "ネコエッグ３への進化権(ネコエッグの第3形態)",
+          "probability": "100",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "114",
+          "enemyName": "天使ガブリエル",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 13000,
+            "ap": 1550,
+            "dps": 1134.15,
+            "speed": 50,
+            "range": 80,
+            "rangeType": "範囲",
+            "kbLevel": 10,
+            "money": 250,
+            "freq": 41,
+            "foreswing": 3,
+            "backswing": 38,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 32500,
+            "actualAp": 3875,
+            "actualDps": 2835.38,
+            "magnification": "250%",
+            "count": "3",
+            "spawnTime": "6.0s",
+            "spawnTimeFrames": "180f",
+            "delay": "20.0-26.7s",
+            "delayFrames": "600-800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "113",
+          "enemyName": "天使カバちゃん",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 55000,
+            "ap": 1800,
+            "dps": 2000.0,
+            "speed": 9,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 450,
+            "freq": 27,
+            "foreswing": 8,
+            "backswing": 3,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 137500,
+            "actualAp": 4500,
+            "actualDps": 5000.0,
+            "magnification": "250%",
+            "count": "3",
+            "spawnTime": "16.0s",
+            "spawnTimeFrames": "480f",
+            "delay": "30.0-30.0s",
+            "delayFrames": "900-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "114",
+          "enemyName": "天使ガブリエル",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 13000,
+            "ap": 1550,
+            "dps": 1134.15,
+            "speed": 50,
+            "range": 80,
+            "rangeType": "範囲",
+            "kbLevel": 10,
+            "money": 250,
+            "freq": 41,
+            "foreswing": 3,
+            "backswing": 38,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 32500,
+            "actualAp": 3875,
+            "actualDps": 2835.38,
+            "magnification": "250%",
+            "count": "6",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "114",
+          "enemyName": "天使ガブリエル",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 13000,
+            "ap": 1550,
+            "dps": 1134.15,
+            "speed": 50,
+            "range": 80,
+            "rangeType": "範囲",
+            "kbLevel": 10,
+            "money": 250,
+            "freq": 41,
+            "foreswing": 3,
+            "backswing": 38,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 32500,
+            "actualAp": 3875,
+            "actualDps": 2835.38,
+            "magnification": "250%",
+            "count": "0",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "40.0-40.0s",
+            "delayFrames": "1,200-1,200f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "114",
+          "enemyName": "天使ガブリエル",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 13000,
+            "ap": 1550,
+            "dps": 1134.15,
+            "speed": 50,
+            "range": 80,
+            "rangeType": "範囲",
+            "kbLevel": 10,
+            "money": 250,
+            "freq": 41,
+            "foreswing": 3,
+            "backswing": 38,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 32500,
+            "actualAp": 3875,
+            "actualDps": 2835.38,
+            "magnification": "250%",
+            "count": "3",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "115",
+          "enemyName": "天使ゴンザレス",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 98000,
+            "ap": 5567,
+            "dps": 10438.12,
+            "speed": 32,
+            "range": 165,
+            "rangeType": "範囲",
+            "kbLevel": 6,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 147000,
+            "actualAp": 8350,
+            "actualDps": 15657.18,
+            "magnification": "150%",
+            "count": "2",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "50.0-50.0s",
+            "delayFrames": "1,500-1,500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "125",
+          "enemyName": "天使スレイプニール",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 363000,
+            "ap": 2247,
+            "dps": 4494.0,
+            "speed": 5,
+            "range": 372,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 905,
+            "freq": 15,
+            "foreswing": 9,
+            "backswing": 6,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 363000,
+            "actualAp": 2247,
+            "actualDps": 4494.0,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 15
+            }
+          }
+        },
+        {
+          "enemyId": "635",
+          "enemyName": "ネコエッグ３",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1100000,
+            "ap": 11000,
+            "dps": 5500.0,
+            "speed": 7,
+            "range": 200,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 1800,
+            "freq": 60,
+            "foreswing": 15,
+            "backswing": 20,
+            "tba": 23
+          },
+          "stageStats": {
+            "actualHp": 1100000,
+            "actualAp": 11000,
+            "actualDps": 5500.0,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "1.0s",
+            "spawnTimeFrames": "30f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 300,
+              "omni_range": [
+                -300,
+                300
+              ]
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

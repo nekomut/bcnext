@@ -1,0 +1,468 @@
+{
+  "eventId": 25044,
+  "eventName": "聖なる本能の秘境",
+  "typeId": 25,
+  "typeName": "発掘ステージ",
+  "prefix": "H",
+  "mapId": 44,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "044-00",
+      "baseHp": "750000",
+      "width": "5700",
+      "enemyLimit": "10",
+      "requiredCost": "100",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "30112",
+          "treasureName": "ユニット20112への進化権",
+          "probability": "8",
+          "amount": "1",
+          "times": "-4",
+          "limitText": "-4"
+        },
+        {
+          "treasureId": "30113",
+          "treasureName": "ユニット20113への進化権",
+          "probability": "2",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30117",
+          "treasureName": "ユニット20117への進化権",
+          "probability": "8",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30118",
+          "treasureName": "ユニット20118への進化権",
+          "probability": "2",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30122",
+          "treasureName": "ユニット20122への進化権",
+          "probability": "8",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30123",
+          "treasureName": "ユニット20123への進化権",
+          "probability": "2",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30037",
+          "treasureName": "ユニット20037への進化権",
+          "probability": "4",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30038",
+          "treasureName": "ユニット20038への進化権",
+          "probability": "1",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30042",
+          "treasureName": "ユニット20042への進化権",
+          "probability": "4",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30043",
+          "treasureName": "ユニット20043への進化権",
+          "probability": "1",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "254",
+          "enemyName": "ミスターエンジェル",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 13500,
+            "ap": 1600,
+            "dps": 1714.29,
+            "speed": 45,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 8,
+            "money": 75,
+            "freq": 28,
+            "foreswing": 9,
+            "backswing": 10,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 20250,
+            "actualAp": 2400,
+            "actualDps": 2571.43,
+            "magnification": "150%",
+            "count": "0",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "23.3-30.0s",
+            "delayFrames": "700-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 30,
+              "power": 150,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "113",
+          "enemyName": "天使カバちゃん",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 55000,
+            "ap": 1800,
+            "dps": 2000.0,
+            "speed": 9,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 450,
+            "freq": 27,
+            "foreswing": 8,
+            "backswing": 3,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 220000,
+            "actualAp": 7200,
+            "actualDps": 8000.0,
+            "magnification": "400%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "1.0-1.0s",
+            "delayFrames": "30-30f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "254",
+          "enemyName": "ミスターエンジェル",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 13500,
+            "ap": 1600,
+            "dps": 1714.29,
+            "speed": 45,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 8,
+            "money": 75,
+            "freq": 28,
+            "foreswing": 9,
+            "backswing": 10,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 20250,
+            "actualAp": 2400,
+            "actualDps": 2571.43,
+            "magnification": "150%",
+            "count": "3",
+            "spawnTime": "26.7s",
+            "spawnTimeFrames": "800f",
+            "delay": "1.0-1.0s",
+            "delayFrames": "30-30f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 30,
+              "power": 150,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "254",
+          "enemyName": "ミスターエンジェル",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 13500,
+            "ap": 1600,
+            "dps": 1714.29,
+            "speed": 45,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 8,
+            "money": 75,
+            "freq": 28,
+            "foreswing": 9,
+            "backswing": 10,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 20250,
+            "actualAp": 2400,
+            "actualDps": 2571.43,
+            "magnification": "150%",
+            "count": "3",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "1.0-1.0s",
+            "delayFrames": "30-30f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 30,
+              "power": 150,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "113",
+          "enemyName": "天使カバちゃん",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 55000,
+            "ap": 1800,
+            "dps": 2000.0,
+            "speed": 9,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 450,
+            "freq": 27,
+            "foreswing": 8,
+            "backswing": 3,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 220000,
+            "actualAp": 7200,
+            "actualDps": 8000.0,
+            "magnification": "400%",
+            "count": "3",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "30.0-36.7s",
+            "delayFrames": "900-1,100f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "113",
+          "enemyName": "天使カバちゃん",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 55000,
+            "ap": 1800,
+            "dps": 2000.0,
+            "speed": 9,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 450,
+            "freq": 27,
+            "foreswing": 8,
+            "backswing": 3,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 220000,
+            "actualAp": 7200,
+            "actualDps": 8000.0,
+            "magnification": "400%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "160",
+          "enemyName": "天使ヒオコエル",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 13000,
+            "dps": 3513.51,
+            "speed": 8,
+            "range": 370,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 770,
+            "freq": 111,
+            "foreswing": 32,
+            "backswing": 29,
+            "tba": 40
+          },
+          "stageStats": {
+            "actualHp": 320000,
+            "actualAp": 26000,
+            "actualDps": 7027.02,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 25,
+              "duration_f": 60,
+              "duration_s": 2.0
+            }
+          }
+        },
+        {
+          "enemyId": "379",
+          "enemyName": "天使ブッタ",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 800000,
+            "ap": 6000,
+            "dps": 8181.82,
+            "speed": 12,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 1200,
+            "freq": 22,
+            "foreswing": 14,
+            "backswing": 8,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 800000,
+            "actualAp": 6000,
+            "actualDps": 8181.82,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 340,
+              "omni_range": [
+                -340,
+                340
+              ]
+            },
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 150,
+              "duration_f": 10,
+              "duration_s": 0.33
+            }
+          }
+        },
+        {
+          "enemyId": "119",
+          "enemyName": "マンボーグ鈴木",
+          "traits": ["天"],
+          "baseStats": {
+            "hp": 1200000,
+            "ap": 9260,
+            "dps": 1076.74,
+            "speed": 3,
+            "range": 840,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 3333,
+            "freq": 258,
+            "foreswing": 59,
+            "backswing": 62,
+            "tba": 100
+          },
+          "stageStats": {
+            "actualHp": 1200000,
+            "actualAp": 9260,
+            "actualDps": 1076.74,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 30,
+              "duration_f": 90,
+              "duration_s": 3.0
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

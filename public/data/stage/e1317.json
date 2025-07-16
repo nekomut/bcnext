@@ -1,0 +1,167 @@
+{
+  "eventId": 1317,
+  "eventName": "トントンムシ相撲 準決勝",
+  "typeId": 1,
+  "typeName": "イベントステージ",
+  "prefix": "S",
+  "mapId": 317,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "挑戦！大関",
+      "baseHp": "300000",
+      "width": "3000",
+      "enemyLimit": "30",
+      "requiredCost": "100",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "6000",
+          "treasureName": "キャラクタードロップ(6000)",
+          "probability": "1",
+          "amount": "170",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "3000",
+          "treasureName": "キャラクタードロップ(3000)",
+          "probability": "2",
+          "amount": "168",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "2",
+          "amount": "167",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "038",
+          "enemyName": "イノシャシ",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 400000,
+            "ap": 4837,
+            "dps": 13191.82,
+            "speed": 14,
+            "range": 130,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 2100,
+            "freq": 11,
+            "foreswing": 8,
+            "backswing": 3,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 800000,
+            "actualAp": 9674,
+            "actualDps": 26383.64,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "581",
+          "enemyName": "風（赤）",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 100,
+            "dps": 230.77,
+            "speed": 8,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 250,
+            "freq": 13,
+            "foreswing": 2,
+            "backswing": 11,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 15000,
+            "actualAp": 300,
+            "actualDps": 692.31,
+            "magnification": "300%",
+            "count": "3",
+            "spawnTime": "43.3s",
+            "spawnTimeFrames": "1,300f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 30,
+              "duration_f": 50,
+              "duration_s": 1.67
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            },
+            "immune-surge": {
+              "raw_columns": 85,
+              "enabled": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

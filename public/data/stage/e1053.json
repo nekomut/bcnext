@@ -1,0 +1,305 @@
+{
+  "eventId": 1053,
+  "eventName": "開眼の忍者襲来！",
+  "typeId": 1,
+  "typeName": "イベントステージ",
+  "prefix": "S",
+  "mapId": 53,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "忍者進化への道 超上級",
+      "baseHp": "300000",
+      "width": "5500",
+      "enemyLimit": "10",
+      "requiredCost": "150",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "10019",
+          "treasureName": "ムササビネコ忍者への進化権(ネコ忍者の第3形態)",
+          "probability": "5",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "000",
+          "enemyName": "わんこ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 90,
+            "ap": 8,
+            "dps": 5.11,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 15,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 90,
+            "actualAp": 8,
+            "actualDps": 5.11,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.7s",
+            "delayFrames": "2-20f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "135",
+          "enemyName": "ムササビネコ忍者",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 1000000,
+            "ap": 7220,
+            "dps": 12033.33,
+            "speed": 4,
+            "range": 240,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 1980,
+            "freq": 18,
+            "foreswing": 6,
+            "backswing": 12,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1000000,
+            "actualAp": 7220,
+            "actualDps": 12033.33,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 1,
+      "stageName": "忍者進化への道 超激ムズ",
+      "baseHp": "900000",
+      "width": "5700",
+      "enemyLimit": "10",
+      "requiredCost": "150",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "10019",
+          "treasureName": "ムササビネコ忍者への進化権(ネコ忍者の第3形態)",
+          "probability": "100",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "135",
+          "enemyName": "ムササビネコ忍者",
+          "traits": ["浮"],
+          "baseStats": {
+            "hp": 1000000,
+            "ap": 7220,
+            "dps": 12033.33,
+            "speed": 4,
+            "range": 240,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 1980,
+            "freq": 18,
+            "foreswing": 6,
+            "backswing": 12,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 2000000,
+            "actualAp": 14440,
+            "actualDps": 24066.66,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "266.7-266.7s",
+            "delayFrames": "8,000-8,000f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "000",
+          "enemyName": "わんこ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 90,
+            "ap": 8,
+            "dps": 5.11,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 15,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 270000,
+            "actualAp": 24000,
+            "actualDps": 15330.0,
+            "magnification": "300000%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "2.0-4.0s",
+            "delayFrames": "60-120f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "000",
+          "enemyName": "わんこ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 90,
+            "ap": 8,
+            "dps": 5.11,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 15,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 270000,
+            "actualAp": 24000,
+            "actualDps": 15330.0,
+            "magnification": "300000%",
+            "count": "2",
+            "spawnTime": "233.3s",
+            "spawnTimeFrames": "7,000f",
+            "delay": "2.0-4.0s",
+            "delayFrames": "60-120f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "000",
+          "enemyName": "わんこ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 90,
+            "ap": 8,
+            "dps": 5.11,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 15,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 270000,
+            "actualAp": 24000,
+            "actualDps": 15330.0,
+            "magnification": "300000%",
+            "count": "3",
+            "spawnTime": "300.0s",
+            "spawnTimeFrames": "9,000f",
+            "delay": "2.0-4.0s",
+            "delayFrames": "60-120f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "000",
+          "enemyName": "わんこ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 90,
+            "ap": 8,
+            "dps": 5.11,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 15,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 270000,
+            "actualAp": 24000,
+            "actualDps": 15330.0,
+            "magnification": "300000%",
+            "count": "0",
+            "spawnTime": "366.7s",
+            "spawnTimeFrames": "11,000f",
+            "delay": "10.0-20.0s",
+            "delayFrames": "300-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    }
+  ]
+}

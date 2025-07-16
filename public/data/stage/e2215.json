@@ -1,0 +1,15 @@
+{
+  "eventId": 2215,
+  "eventName": "嶄新時代（新時代）（仮）",
+  "typeId": 2,
+  "typeName": "コラボステージ",
+  "prefix": "C",
+  "mapId": 215,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 3,
+    "magnifications": [100, 150, 200],
+    "baseDifficulty": 1
+  },
+  "stages": []
+}

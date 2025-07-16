@@ -1,0 +1,361 @@
+{
+  "eventId": 14042,
+  "eventName": "大狂乱のバトル降臨",
+  "typeId": 14,
+  "typeName": "ネコビタン",
+  "prefix": "B",
+  "mapId": 42,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "最凶戦士 極ムズ",
+      "baseHp": "440000",
+      "width": "4800",
+      "enemyLimit": "12",
+      "requiredCost": "4",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "10094",
+          "treasureName": "大狂乱の暗黒ネコへの進化権(狂乱のバトルネコの第3形態)",
+          "probability": "100",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 50000,
+            "actualAp": 3000,
+            "actualDps": 3913.0,
+            "magnification": "2000%",
+            "count": "0",
+            "spawnTime": "4.0s",
+            "spawnTimeFrames": "120f",
+            "delay": "16.7-20.0s",
+            "delayFrames": "500-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "049",
+          "enemyName": "赤井ブン太郎",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 400000,
+            "ap": 9287,
+            "dps": 8987.42,
+            "speed": 23,
+            "range": 200,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 2000,
+            "freq": 31,
+            "foreswing": 20,
+            "backswing": 11,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 2000000,
+            "actualAp": 46435,
+            "actualDps": 44937.1,
+            "magnification": "500%",
+            "count": "1",
+            "spawnTime": "126.7s",
+            "spawnTimeFrames": "3,800f",
+            "delay": "53.3-53.3s",
+            "delayFrames": "1,600-1,600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 630000,
+            "actualAp": 9000,
+            "actualDps": 12272.76,
+            "magnification": "1800%",
+            "count": "2",
+            "spawnTime": "126.7s",
+            "spawnTimeFrames": "3,800f",
+            "delay": "2.0-2.0s",
+            "delayFrames": "60-60f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 630000,
+            "actualAp": 9000,
+            "actualDps": 12272.76,
+            "magnification": "1800%",
+            "count": "3",
+            "spawnTime": "180.0s",
+            "spawnTimeFrames": "5,400f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "017",
+          "enemyName": "赤羅我王",
+          "traits": [
+            "赤",
+            "浮"
+          ],
+          "baseStats": {
+            "hp": 35000,
+            "ap": 500,
+            "dps": 681.82,
+            "speed": 40,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1500,
+            "freq": 22,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 630000,
+            "actualAp": 9000,
+            "actualDps": 12272.76,
+            "magnification": "1800%",
+            "count": "3",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "26.7-26.7s",
+            "delayFrames": "800-800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "118",
+          "enemyName": "赤毛のにょろ",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 12000,
+            "ap": 1800,
+            "dps": 3375.0,
+            "speed": 22,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 5,
+            "money": 130,
+            "freq": 16,
+            "foreswing": 10,
+            "backswing": 6,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 36000,
+            "actualAp": 5400,
+            "actualDps": 10125.0,
+            "magnification": "300%",
+            "count": "0",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "13.3-16.0s",
+            "delayFrames": "400-480f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "118",
+          "enemyName": "赤毛のにょろ",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 12000,
+            "ap": 1800,
+            "dps": 3375.0,
+            "speed": 22,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 5,
+            "money": 130,
+            "freq": 16,
+            "foreswing": 10,
+            "backswing": 6,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 36000,
+            "actualAp": 5400,
+            "actualDps": 10125.0,
+            "magnification": "300%",
+            "count": "0",
+            "spawnTime": "34.7s",
+            "spawnTimeFrames": "1,040f",
+            "delay": "13.3-16.0s",
+            "delayFrames": "400-480f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "023",
+          "enemyName": "悪の帝王 ニャンダム",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 99999,
+            "ap": 1800,
+            "dps": 116.63,
+            "speed": 2,
+            "range": 500,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 6000,
+            "freq": 463,
+            "foreswing": 104,
+            "backswing": 29,
+            "tba": 180
+          },
+          "stageStats": {
+            "actualHp": 1199988,
+            "actualAp": 21600,
+            "actualDps": 1399.56,
+            "magnification": "1200%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "2.0-6.0s",
+            "delayFrames": "60-180f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "244",
+          "enemyName": "大狂乱の暗黒ネコ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 2100000,
+            "ap": 6800,
+            "dps": 12750.0,
+            "speed": 7,
+            "range": 360,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 2000,
+            "freq": 16,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 2100000,
+            "actualAp": 6800,
+            "actualDps": 12750.0,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 65,
+              "duration_f": 150,
+              "duration_s": 5.0
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

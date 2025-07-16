@@ -1,0 +1,283 @@
+{
+  "eventId": 1130,
+  "eventName": "開眼のちびネコ襲来！",
+  "typeId": 1,
+  "typeName": "イベントステージ",
+  "prefix": "S",
+  "mapId": 130,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "ちびネコ進化への道 極ムズ",
+      "baseHp": "800000",
+      "width": "4000",
+      "enemyLimit": "10",
+      "requiredCost": "200",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "10210",
+          "treasureName": "ちびネコモヒカンへの進化権(ちびネコの第3形態)",
+          "probability": "100",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "012",
+          "enemyName": "クマ先生",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 3000,
+            "ap": 1000,
+            "dps": 280.37,
+            "speed": 4,
+            "range": 350,
+            "rangeType": "範囲",
+            "kbLevel": 10,
+            "money": 2000,
+            "freq": 107,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 50
+          },
+          "stageStats": {
+            "actualHp": 90000,
+            "actualAp": 30000,
+            "actualDps": 8411.1,
+            "magnification": "3000%",
+            "count": "0",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "73.3-80.0s",
+            "delayFrames": "2,200-2,400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "185",
+          "enemyName": "教授",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 320000,
+            "ap": 6800,
+            "dps": 8500.0,
+            "speed": 4,
+            "range": 501,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 2000,
+            "freq": 24,
+            "foreswing": 1,
+            "backswing": 23,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 320000,
+            "actualAp": 6800,
+            "actualDps": 8500.0,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "66.7s",
+            "spawnTimeFrames": "2,000f",
+            "delay": "126.7-126.7s",
+            "delayFrames": "3,800-3,800f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 20,
+              "duration_f": 60,
+              "duration_s": 2.0
+            }
+          }
+        },
+        {
+          "enemyId": "000",
+          "enemyName": "わんこ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 90,
+            "ap": 8,
+            "dps": 5.11,
+            "speed": 5,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 15,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 5400,
+            "actualAp": 480,
+            "actualDps": 306.6,
+            "magnification": "6000%",
+            "count": "0",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "10.0-166.7s",
+            "delayFrames": "300-5,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "001",
+          "enemyName": "にょろ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 100,
+            "ap": 15,
+            "dps": 12.16,
+            "speed": 8,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 30,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 6000,
+            "actualAp": 900,
+            "actualDps": 729.6,
+            "magnification": "6000%",
+            "count": "0",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "001",
+          "enemyName": "にょろ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 100,
+            "ap": 15,
+            "dps": 12.16,
+            "speed": 8,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 30,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 6000,
+            "actualAp": 900,
+            "actualDps": 729.6,
+            "magnification": "6000%",
+            "count": "0",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "322",
+          "enemyName": "ちびネコモヒカン",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 3200000,
+            "ap": 10880,
+            "dps": 18133.33,
+            "speed": 4,
+            "range": 240,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 1980,
+            "freq": 18,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 3200000,
+            "actualAp": 10880,
+            "actualDps": 18133.33,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "021",
+          "enemyName": "カンバン娘",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 10000,
+            "ap": 1,
+            "dps": 0.05,
+            "speed": 4,
+            "range": 800,
+            "rangeType": "単体",
+            "kbLevel": 10000,
+            "money": 1,
+            "freq": 607,
+            "foreswing": 8,
+            "backswing": 6,
+            "tba": 300
+          },
+          "stageStats": {
+            "actualHp": 10000,
+            "actualAp": 1,
+            "actualDps": 0.05,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "900.0s",
+            "spawnTimeFrames": "27,000f",
+            "delay": "900.0-900.0s",
+            "delayFrames": "27,000-27,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "eventId": 25033,
+  "eventName": "紅き本能の起源",
+  "typeId": 25,
+  "typeName": "発掘ステージ",
+  "prefix": "H",
+  "mapId": 33,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "起源の樹海 極ムズ",
+      "baseHp": "500000",
+      "width": "4800",
+      "enemyLimit": "8",
+      "requiredCost": "100",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "30065",
+          "treasureName": "ユニット20065への進化権",
+          "probability": "8",
+          "amount": "1",
+          "times": "-4",
+          "limitText": "-4"
+        },
+        {
+          "treasureId": "30066",
+          "treasureName": "ユニット20066への進化権",
+          "probability": "2",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30070",
+          "treasureName": "ユニット20070への進化権",
+          "probability": "8",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30071",
+          "treasureName": "ユニット20071への進化権",
+          "probability": "2",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30075",
+          "treasureName": "ユニット20075への進化権",
+          "probability": "8",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30076",
+          "treasureName": "ユニット20076への進化権",
+          "probability": "2",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30000",
+          "treasureName": "ユニット20000への進化権",
+          "probability": "4",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30001",
+          "treasureName": "ユニット20001への進化権",
+          "probability": "1",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30005",
+          "treasureName": "ユニット20005への進化権",
+          "probability": "4",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30006",
+          "treasureName": "ユニット20006への進化権",
+          "probability": "1",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "014",
+          "enemyName": "ウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 500,
+            "ap": 50,
+            "dps": 36.59,
+            "speed": 22,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 180,
+            "freq": 41,
+            "foreswing": 12,
+            "backswing": 4,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 9000,
+            "actualAp": 900,
+            "actualDps": 658.62,
+            "magnification": "1800%",
+            "count": "0",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "3.3-10.0s",
+            "delayFrames": "100-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "118",
+          "enemyName": "赤毛のにょろ",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 12000,
+            "ap": 1800,
+            "dps": 3375.0,
+            "speed": 22,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 5,
+            "money": 130,
+            "freq": 16,
+            "foreswing": 10,
+            "backswing": 6,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 24000,
+            "actualAp": 3600,
+            "actualDps": 6750.0,
+            "magnification": "200%",
+            "count": "5",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "6.7-20.0s",
+            "delayFrames": "200-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "038",
+          "enemyName": "イノシャシ",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 400000,
+            "ap": 4837,
+            "dps": 13191.82,
+            "speed": 14,
+            "range": 130,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 2100,
+            "freq": 11,
+            "foreswing": 8,
+            "backswing": 3,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 800000,
+            "actualAp": 9674,
+            "actualDps": 26383.64,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "10.0-40.0s",
+            "delayFrames": "300-1,200f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "023",
+          "enemyName": "悪の帝王 ニャンダム",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 99999,
+            "ap": 1800,
+            "dps": 116.63,
+            "speed": 2,
+            "range": 500,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 6000,
+            "freq": 463,
+            "foreswing": 104,
+            "backswing": 29,
+            "tba": 180
+          },
+          "stageStats": {
+            "actualHp": 799992,
+            "actualAp": 14400,
+            "actualDps": 933.04,
+            "magnification": "800%",
+            "count": "1",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "3.3-3.3s",
+            "delayFrames": "100-100f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {}
+        }
+      ]
+    }
+  ]
+}

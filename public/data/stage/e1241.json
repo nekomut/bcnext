@@ -1,0 +1,506 @@
+{
+  "eventId": 1241,
+  "eventName": "タッグ闘技場 プロ(旧)",
+  "typeId": 1,
+  "typeName": "イベントステージ",
+  "prefix": "S",
+  "mapId": 241,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "準々決勝 激ムズ",
+      "baseHp": "200000",
+      "width": "5000",
+      "enemyLimit": "2",
+      "requiredCost": "100",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "7500",
+          "treasureName": "キャラクタードロップ(7500)",
+          "probability": "1",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "4500",
+          "treasureName": "キャラクタードロップ(4500)",
+          "probability": "180000",
+          "amount": "2",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "1",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "172",
+          "enemyName": "デカメガネル",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 20000,
+            "ap": 800,
+            "dps": 750.0,
+            "speed": 18,
+            "range": 249,
+            "rangeType": "単体",
+            "kbLevel": 7,
+            "money": 250,
+            "freq": 32,
+            "foreswing": 9,
+            "backswing": 6,
+            "tba": 12
+          },
+          "stageStats": {
+            "actualHp": 20000,
+            "actualAp": 800,
+            "actualDps": 750.0,
+            "magnification": "100%",
+            "count": "4",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 25,
+              "power": 300,
+              "duration_f": 20,
+              "duration_s": 0.67
+            }
+          }
+        },
+        {
+          "enemyId": "051",
+          "enemyName": "ブラッゴリ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 3123,
+            "dps": 5855.62,
+            "speed": 30,
+            "range": 155,
+            "rangeType": "範囲",
+            "kbLevel": 8,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 40000,
+            "actualAp": 3123,
+            "actualDps": 5855.62,
+            "magnification": "100%",
+            "count": "4",
+            "spawnTime": "26.7s",
+            "spawnTimeFrames": "800f",
+            "delay": "33.3-33.3s",
+            "delayFrames": "1,000-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "016",
+          "enemyName": "ブラックマ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 550,
+            "ap": 3000,
+            "dps": 11250.0,
+            "speed": 150,
+            "range": 800,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 8,
+            "foreswing": 6,
+            "backswing": 2,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 5500,
+            "actualAp": 30000,
+            "actualDps": 112500.0,
+            "magnification": "1000%",
+            "count": "1",
+            "spawnTime": "900.0s",
+            "spawnTimeFrames": "27,000f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 1,
+      "stageName": "準決勝 超激ムズ",
+      "baseHp": "250000",
+      "width": "4800",
+      "enemyLimit": "2",
+      "requiredCost": "100",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "8500",
+          "treasureName": "キャラクタードロップ(8500)",
+          "probability": "1",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "4500",
+          "treasureName": "キャラクタードロップ(4500)",
+          "probability": "240000",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "1",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "183",
+          "enemyName": "サイバーX",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 120000,
+            "ap": 2200,
+            "dps": 4125.0,
+            "speed": 4,
+            "range": 60,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 800,
+            "freq": 16,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 120000,
+            "actualAp": 2200,
+            "actualDps": 4125.0,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "287",
+          "enemyName": "トンシー",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 48000,
+            "ap": 3600,
+            "dps": 2037.74,
+            "speed": 8,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 300,
+            "freq": 53,
+            "foreswing": 14,
+            "backswing": 8,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 72000,
+            "actualAp": 5400,
+            "actualDps": 3056.61,
+            "magnification": "150%",
+            "count": "2",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "30.0-33.3s",
+            "delayFrames": "900-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 30
+            },
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 1,
+              "distance": 750
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 480,
+              "duration_s": 16.0,
+              "hp_ratio": 100
+            }
+          }
+        },
+        {
+          "enemyId": "016",
+          "enemyName": "ブラックマ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 550,
+            "ap": 3000,
+            "dps": 11250.0,
+            "speed": 150,
+            "range": 800,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 8,
+            "foreswing": 6,
+            "backswing": 2,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 5500,
+            "actualAp": 30000,
+            "actualDps": 112500.0,
+            "magnification": "1000%",
+            "count": "1",
+            "spawnTime": "900.0s",
+            "spawnTimeFrames": "27,000f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 2,
+      "stageName": "決勝 極ムズ",
+      "baseHp": "400000",
+      "width": "6000",
+      "enemyLimit": "2",
+      "requiredCost": "100",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "7000",
+          "treasureName": "キャラクタードロップ(7000)",
+          "probability": "1",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "6000",
+          "treasureName": "キャラクタードロップ(6000)",
+          "probability": "300000",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "150000",
+          "amount": "12",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "211",
+          "enemyName": "パラサイトブンブン",
+          "traits": [
+            "浮",
+            "エ"
+          ],
+          "baseStats": {
+            "hp": 750000,
+            "ap": 8888,
+            "dps": 8601.29,
+            "speed": 18,
+            "range": 200,
+            "rangeType": "範囲",
+            "kbLevel": 5,
+            "money": 4000,
+            "freq": 31,
+            "foreswing": 20,
+            "backswing": 11,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 750000,
+            "actualAp": 8888,
+            "actualDps": 8601.29,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "36.7s",
+            "spawnTimeFrames": "1,100f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "wave": {
+              "raw_columns": [27, 28],
+              "chance": 5,
+              "level": 1
+            }
+          }
+        },
+        {
+          "enemyId": "124",
+          "enemyName": "ブラッコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 175000,
+            "ap": 6497,
+            "dps": 8474.35,
+            "speed": 9,
+            "range": 190,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 250,
+            "freq": 23,
+            "foreswing": 14,
+            "backswing": 9,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 175000,
+            "actualAp": 6497,
+            "actualDps": 8474.35,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "24.0-24.0s",
+            "delayFrames": "720-720f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "016",
+          "enemyName": "ブラックマ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 550,
+            "ap": 3000,
+            "dps": 11250.0,
+            "speed": 150,
+            "range": 800,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 8,
+            "foreswing": 6,
+            "backswing": 2,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 5500,
+            "actualAp": 30000,
+            "actualDps": 112500.0,
+            "magnification": "1000%",
+            "count": "1",
+            "spawnTime": "900.0s",
+            "spawnTimeFrames": "27,000f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    }
+  ]
+}

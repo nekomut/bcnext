@@ -1,0 +1,580 @@
+{
+  "eventId": 1226,
+  "eventName": "ほの暗い沼の底から",
+  "typeId": 1,
+  "typeName": "イベントステージ",
+  "prefix": "S",
+  "mapId": 226,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "河の流れのように 超極ムズ",
+      "baseHp": "1000000",
+      "width": "4800",
+      "enemyLimit": "12",
+      "requiredCost": "200",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1048",
+          "treasureName": "ネコックマ(531)",
+          "probability": "30",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "002",
+          "enemyName": "例のヤツ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 200,
+            "ap": 20,
+            "dps": 20.0,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 75,
+            "freq": 30,
+            "foreswing": 10,
+            "backswing": 20,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 3000,
+            "actualAp": 300,
+            "actualDps": 300.0,
+            "magnification": "1500%",
+            "count": "2",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "3.3-5.3s",
+            "delayFrames": "100-160f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "182",
+          "enemyName": "ハサミーマン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 24000,
+            "ap": 2800,
+            "dps": 1647.06,
+            "speed": 24,
+            "range": 199,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 700,
+            "freq": 51,
+            "foreswing": 12,
+            "backswing": 39,
+            "tba": 1
+          },
+          "stageStats": {
+            "actualHp": 288000,
+            "actualAp": 33600,
+            "actualDps": 19764.72,
+            "magnification": "1200%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 20
+            }
+          }
+        },
+        {
+          "enemyId": "469",
+          "enemyName": "スリラーズ",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 10000,
+            "ap": 6500,
+            "dps": 5131.58,
+            "speed": 18,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 75,
+            "freq": 38,
+            "foreswing": 10,
+            "backswing": 28,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 20000,
+            "actualAp": 13000,
+            "actualDps": 10263.16,
+            "magnification": "200%",
+            "count": "0",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "26.7-33.3s",
+            "delayFrames": "800-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 2,
+              "distance": 500
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 240,
+              "duration_s": 8.0,
+              "hp_ratio": 100
+            }
+          }
+        },
+        {
+          "enemyId": "469",
+          "enemyName": "スリラーズ",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 10000,
+            "ap": 6500,
+            "dps": 5131.58,
+            "speed": 18,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 75,
+            "freq": 38,
+            "foreswing": 10,
+            "backswing": 28,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 20000,
+            "actualAp": 13000,
+            "actualDps": 10263.16,
+            "magnification": "200%",
+            "count": "3",
+            "spawnTime": "93.3s",
+            "spawnTimeFrames": "2,800f",
+            "delay": "13.3-16.0s",
+            "delayFrames": "400-480f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 2,
+              "distance": 500
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 240,
+              "duration_s": 8.0,
+              "hp_ratio": 100
+            }
+          }
+        },
+        {
+          "enemyId": "469",
+          "enemyName": "スリラーズ",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 10000,
+            "ap": 6500,
+            "dps": 5131.58,
+            "speed": 18,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 75,
+            "freq": 38,
+            "foreswing": 10,
+            "backswing": 28,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 20000,
+            "actualAp": 13000,
+            "actualDps": 10263.16,
+            "magnification": "200%",
+            "count": "3",
+            "spawnTime": "120.0s",
+            "spawnTimeFrames": "3,600f",
+            "delay": "16.0-20.0s",
+            "delayFrames": "480-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 2,
+              "distance": 500
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 240,
+              "duration_s": 8.0,
+              "hp_ratio": 100
+            }
+          }
+        },
+        {
+          "enemyId": "469",
+          "enemyName": "スリラーズ",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 10000,
+            "ap": 6500,
+            "dps": 5131.58,
+            "speed": 18,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 75,
+            "freq": 38,
+            "foreswing": 10,
+            "backswing": 28,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 20000,
+            "actualAp": 13000,
+            "actualDps": 10263.16,
+            "magnification": "200%",
+            "count": "3",
+            "spawnTime": "173.3s",
+            "spawnTimeFrames": "5,200f",
+            "delay": "10.0-16.7s",
+            "delayFrames": "300-500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 2,
+              "distance": 500
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 240,
+              "duration_s": 8.0,
+              "hp_ratio": 100
+            }
+          }
+        },
+        {
+          "enemyId": "469",
+          "enemyName": "スリラーズ",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 10000,
+            "ap": 6500,
+            "dps": 5131.58,
+            "speed": 18,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 75,
+            "freq": 38,
+            "foreswing": 10,
+            "backswing": 28,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 20000,
+            "actualAp": 13000,
+            "actualDps": 10263.16,
+            "magnification": "200%",
+            "count": "3",
+            "spawnTime": "233.3s",
+            "spawnTimeFrames": "7,000f",
+            "delay": "8.0-14.7s",
+            "delayFrames": "240-440f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 2,
+              "distance": 500
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 240,
+              "duration_s": 8.0,
+              "hp_ratio": 100
+            }
+          }
+        },
+        {
+          "enemyId": "495",
+          "enemyName": "かわわっぱJr.",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 2000000,
+            "ap": 38000,
+            "dps": 14430.38,
+            "speed": 14,
+            "range": 230,
+            "rangeType": "範囲",
+            "kbLevel": 6,
+            "money": 1800,
+            "freq": 79,
+            "foreswing": 40,
+            "backswing": 39,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 2000000,
+            "actualAp": 38000,
+            "actualDps": 14430.38,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "surge": {
+              "raw_columns": [81, 82, 83, 84],
+              "chance": 100,
+              "distance_start": 150,
+              "distance_end": 750,
+              "level": 1
+            }
+          }
+        },
+        {
+          "enemyId": "002",
+          "enemyName": "例のヤツ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 200,
+            "ap": 20,
+            "dps": 20.0,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 75,
+            "freq": 30,
+            "foreswing": 10,
+            "backswing": 20,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 3000,
+            "actualAp": 300,
+            "actualDps": 300.0,
+            "magnification": "1500%",
+            "count": "0",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "12.0-14.0s",
+            "delayFrames": "360-420f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "182",
+          "enemyName": "ハサミーマン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 24000,
+            "ap": 2800,
+            "dps": 1647.06,
+            "speed": 24,
+            "range": 199,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 700,
+            "freq": 51,
+            "foreswing": 12,
+            "backswing": 39,
+            "tba": 1
+          },
+          "stageStats": {
+            "actualHp": 288000,
+            "actualAp": 33600,
+            "actualDps": 19764.72,
+            "magnification": "1200%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 20
+            }
+          }
+        },
+        {
+          "enemyId": "182",
+          "enemyName": "ハサミーマン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 24000,
+            "ap": 2800,
+            "dps": 1647.06,
+            "speed": 24,
+            "range": 199,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 700,
+            "freq": 51,
+            "foreswing": 12,
+            "backswing": 39,
+            "tba": 1
+          },
+          "stageStats": {
+            "actualHp": 288000,
+            "actualAp": 33600,
+            "actualDps": 19764.72,
+            "magnification": "1200%",
+            "count": "0",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "48.0-52.0s",
+            "delayFrames": "1,440-1,560f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 20
+            }
+          }
+        },
+        {
+          "enemyId": "469",
+          "enemyName": "スリラーズ",
+          "traits": ["ゾ"],
+          "baseStats": {
+            "hp": 10000,
+            "ap": 6500,
+            "dps": 5131.58,
+            "speed": 18,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 75,
+            "freq": 38,
+            "foreswing": 10,
+            "backswing": 28,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 20000,
+            "actualAp": 13000,
+            "actualDps": 10263.16,
+            "magnification": "200%",
+            "count": "2",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "2.0-4.0s",
+            "delayFrames": "60-120f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "burrow": {
+              "raw_columns": [43, 44],
+              "times": 2,
+              "distance": 500
+            },
+            "revive": {
+              "raw_columns": [45, 46, 47],
+              "times": 1,
+              "duration_f": 240,
+              "duration_s": 8.0,
+              "hp_ratio": 100
+            }
+          }
+        },
+        {
+          "enemyId": "182",
+          "enemyName": "ハサミーマン",
+          "traits": ["エ"],
+          "baseStats": {
+            "hp": 24000,
+            "ap": 2800,
+            "dps": 1647.06,
+            "speed": 24,
+            "range": 199,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 700,
+            "freq": 51,
+            "foreswing": 12,
+            "backswing": 39,
+            "tba": 1
+          },
+          "stageStats": {
+            "actualHp": 288000,
+            "actualAp": 33600,
+            "actualDps": 19764.72,
+            "magnification": "1200%",
+            "count": "2",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "28.0-30.7s",
+            "delayFrames": "840-920f",
+            "baseHpRatio": "75%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 20
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

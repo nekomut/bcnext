@@ -1,0 +1,395 @@
+{
+  "eventId": 1350,
+  "eventName": "極悪のネコ降臨",
+  "typeId": 1,
+  "typeName": "イベントステージ",
+  "prefix": "S",
+  "mapId": 350,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "世紀末 超極ムズ",
+      "baseHp": "2500000",
+      "width": "5000",
+      "enemyLimit": "7",
+      "requiredCost": "200",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "10630",
+          "treasureName": "洗脳されしネコモヒカンへの進化権(洗脳されしネコの第3形態)",
+          "probability": "100",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 27000,
+            "actualAp": 13200,
+            "actualDps": 10702.68,
+            "magnification": "600%",
+            "count": "7",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "13.3-20.0s",
+            "delayFrames": "400-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 27000,
+            "actualAp": 13200,
+            "actualDps": 10702.68,
+            "magnification": "600%",
+            "count": "0",
+            "spawnTime": "53.3s",
+            "spawnTimeFrames": "1,600f",
+            "delay": "33.3-40.0s",
+            "delayFrames": "1,000-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "553",
+          "enemyName": "インフェルにょろ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 8200,
+            "ap": 2800,
+            "dps": 2270.27,
+            "speed": 12,
+            "range": 120,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 120,
+            "freq": 37,
+            "foreswing": 10,
+            "backswing": 7,
+            "tba": 14
+          },
+          "stageStats": {
+            "actualHp": 49200,
+            "actualAp": 16800,
+            "actualDps": 13621.62,
+            "magnification": "600%",
+            "count": "6",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "16.7-23.3s",
+            "delayFrames": "500-700f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "death-surge": {
+              "raw_columns": [89, 90, 91, 92],
+              "chance": 50,
+              "distance_start": 350,
+              "distance_end": 750,
+              "level": 1
+            }
+          }
+        },
+        {
+          "enemyId": "554",
+          "enemyName": "ケルベローズ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 2500,
+            "dps": 1442.31,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 66,
+            "freq": 52,
+            "foreswing": 13,
+            "backswing": 16,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 15000,
+            "actualAp": 15000,
+            "actualDps": 8653.86,
+            "magnification": "600%",
+            "count": "8",
+            "spawnTime": "26.7s",
+            "spawnTimeFrames": "800f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "554",
+          "enemyName": "ケルベローズ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 2500,
+            "dps": 1442.31,
+            "speed": 10,
+            "range": 120,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 66,
+            "freq": 52,
+            "foreswing": 13,
+            "backswing": 16,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 15000,
+            "actualAp": 15000,
+            "actualDps": 8653.86,
+            "magnification": "600%",
+            "count": "0",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "26.7-33.3s",
+            "delayFrames": "800-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 30,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "557",
+          "enemyName": "悪魔ベヒモッス",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 380000,
+            "ap": 13600,
+            "dps": 2205.41,
+            "speed": 5,
+            "range": 380,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 800,
+            "freq": 185,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 90
+          },
+          "stageStats": {
+            "actualHp": 760000,
+            "actualAp": 27200,
+            "actualDps": 4410.82,
+            "magnification": "200%",
+            "count": "2",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "113.3-120.0s",
+            "delayFrames": "3,400-3,600f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 410,
+              "omni_range": [
+                -100,
+                410
+              ]
+            },
+            "shield": {
+              "raw_columns": 87,
+              "hp": 800000
+            }
+          }
+        },
+        {
+          "enemyId": "558",
+          "enemyName": "アックマ閣下",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 75000,
+            "ap": 15000,
+            "dps": 6521.74,
+            "speed": 8,
+            "range": 345,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 1200,
+            "freq": 69,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 32
+          },
+          "stageStats": {
+            "actualHp": 150000,
+            "actualAp": 30000,
+            "actualDps": 13043.48,
+            "magnification": "200%",
+            "count": "0",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "73.3-80.0s",
+            "delayFrames": "2,200-2,400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 250000
+            },
+            "death-surge": {
+              "raw_columns": [89, 90, 91, 92],
+              "chance": 100,
+              "distance_start": 450,
+              "distance_end": 1050,
+              "level": 1
+            }
+          }
+        },
+        {
+          "enemyId": "660",
+          "enemyName": "極悪なネコモヒカン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 3600000,
+            "ap": 18000,
+            "dps": 33750.0,
+            "speed": 25,
+            "range": 240,
+            "rangeType": "範囲",
+            "kbLevel": 30,
+            "money": 2000,
+            "freq": 16,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 3600000,
+            "actualAp": 18000,
+            "actualDps": 33750.0,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "2.0-6.0s",
+            "delayFrames": "60-180f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            },
+            "shield": {
+              "raw_columns": 87,
+              "hp": 48000
+            },
+            "counter-surge": {
+              "raw_columns": 103,
+              "enabled": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

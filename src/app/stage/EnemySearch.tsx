@@ -4,10 +4,53 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { buildEnemyDatabase, searchStagesByEnemies, sortEnemyStageResults, getEnemyList, searchEnemiesByName } from './enemyUtils';
 import type { EnemyDatabaseEntry, EnemyStageResult, ProgressInfo } from './enemyUtils';
+import { icons } from '../../data/icons';
 
 interface EnemySearchProps {
   onStageSelect: (eventId: number, stageId: number) => void;
 }
+
+// 属性名からアイコン名へのマッピング
+const getTraitIconName = (trait: string): string | null => {
+  const traitMap: Record<string, string | null> = {
+    '赤': 'traitRed',
+    '浮': 'traitFloating', 
+    '黒': 'traitBlack',
+    'メ': 'traitMetal',
+    '天': 'traitAngel',
+    'エ': 'traitAlien',
+    'ゾ': 'traitZombie',
+    '白': 'traitWhite',
+    '超': 'traitRelic',
+    '無': 'traitTraitless', // 無属性アイコン
+  };
+  return traitMap[trait] || null;
+};
+
+// 属性アイコンコンポーネント
+const TraitIcon: React.FC<{ trait: string }> = ({ trait }) => {
+  const iconName = getTraitIconName(trait);
+  if (!iconName || !icons[iconName as keyof typeof icons]) {
+    return (
+      <span className="inline-flex items-center px-1 rounded text-xs font-medium bg-gray-100 text-gray-800">
+        {trait}
+      </span>
+    );
+  }
+
+  const iconData = icons[iconName as keyof typeof icons];
+  return (
+    <div className="inline-flex items-center" title={trait}>
+      <Image
+        src={`data:image/png;base64,${iconData}`}
+        alt={trait}
+        width={16}
+        height={16}
+        className="w-4 h-4"
+      />
+    </div>
+  );
+};
 
 export function EnemySearch({ onStageSelect }: EnemySearchProps) {
   const [enemyDatabase, setEnemyDatabase] = useState<Map<string, EnemyDatabaseEntry>>(new Map());
@@ -194,12 +237,7 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
                     {enemy.traits.length > 0 && (
                       <div className="flex gap-0.5">
                         {enemy.traits.slice(0, 3).map((trait, index) => (
-                          <span
-                            key={index}
-                            className="inline-flex items-center px-1 rounded text-xs font-medium bg-gray-100 text-gray-800"
-                          >
-                            {trait}
-                          </span>
+                          <TraitIcon key={index} trait={trait} />
                         ))}
                       </div>
                     )}

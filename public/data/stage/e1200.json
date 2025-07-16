@@ -1,0 +1,168 @@
+{
+  "eventId": 1200,
+  "eventName": "にゃんこグミ大戦争",
+  "typeId": 1,
+  "typeName": "イベントステージ",
+  "prefix": "S",
+  "mapId": 200,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "にゃんコーラ味",
+      "baseHp": "5000",
+      "width": "3800",
+      "enemyLimit": "50",
+      "requiredCost": "30",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "13",
+          "treasureName": "ネコカン",
+          "probability": "1",
+          "amount": "30",
+          "times": "-3",
+          "limitText": "-3"
+        },
+        {
+          "treasureId": "13",
+          "treasureName": "ネコカン",
+          "probability": "1",
+          "amount": "29",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "13",
+          "treasureName": "ネコカン",
+          "probability": "1",
+          "amount": "29",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "13",
+          "treasureName": "ネコカン",
+          "probability": "1",
+          "amount": "29",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "457",
+          "enemyName": "グミネコ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 100000,
+            "ap": 1,
+            "dps": 0.04,
+            "speed": 12,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 100000,
+            "money": 100,
+            "freq": 707,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 350
+          },
+          "stageStats": {
+            "actualHp": 100000,
+            "actualAp": 1,
+            "actualDps": 0.04,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "13.3-26.7s",
+            "delayFrames": "400-800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "457",
+          "enemyName": "グミネコ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 100000,
+            "ap": 1,
+            "dps": 0.04,
+            "speed": 12,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 100000,
+            "money": 100,
+            "freq": 707,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 350
+          },
+          "stageStats": {
+            "actualHp": 100000,
+            "actualAp": 1,
+            "actualDps": 0.04,
+            "magnification": "100%",
+            "count": "20",
+            "spawnTime": "2.7s",
+            "spawnTimeFrames": "80f",
+            "delay": "0.3-2.7s",
+            "delayFrames": "10-80f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "457",
+          "enemyName": "グミネコ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 100000,
+            "ap": 1,
+            "dps": 0.04,
+            "speed": 12,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 100000,
+            "money": 100,
+            "freq": 707,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 350
+          },
+          "stageStats": {
+            "actualHp": 100000,
+            "actualAp": 1,
+            "actualDps": 0.04,
+            "magnification": "100%",
+            "count": "15",
+            "spawnTime": "2.0s",
+            "spawnTimeFrames": "60f",
+            "delay": "0.2-4.0s",
+            "delayFrames": "6-120f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    }
+  ]
+}

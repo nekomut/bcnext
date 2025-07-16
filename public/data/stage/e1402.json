@@ -1,0 +1,192 @@
+{
+  "eventId": 1402,
+  "eventName": "【限定】ご来店プレゼント！",
+  "typeId": 1,
+  "typeName": "イベントステージ",
+  "prefix": "S",
+  "mapId": 402,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "無くなり次第終了",
+      "baseHp": "7777",
+      "width": "4500",
+      "enemyLimit": "7",
+      "requiredCost": "50",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "12",
+          "treasureName": "レアチケット",
+          "probability": "100",
+          "amount": "1",
+          "times": "1",
+          "limitText": "1"
+        },
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "336",
+          "enemyName": "ゴールデンわんこ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1500,
+            "ap": 300,
+            "dps": 243.24,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 750,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 150,
+            "actualAp": 30,
+            "actualDps": 24.32,
+            "magnification": "10%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "20.0-23.3s",
+            "delayFrames": "600-700f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "336",
+          "enemyName": "ゴールデンわんこ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1500,
+            "ap": 300,
+            "dps": 243.24,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 750,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 150,
+            "actualAp": 30,
+            "actualDps": 24.32,
+            "magnification": "10%",
+            "count": "6",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "336",
+          "enemyName": "ゴールデンわんこ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1500,
+            "ap": 300,
+            "dps": 243.24,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 750,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 150,
+            "actualAp": 30,
+            "actualDps": 24.32,
+            "magnification": "10%",
+            "count": "6",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "20.0-23.3s",
+            "delayFrames": "600-700f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "337",
+          "enemyName": "金カバちゃん",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 40000,
+            "ap": 1000,
+            "dps": 638.3,
+            "speed": 6,
+            "range": 210,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 2000,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 4000,
+            "actualAp": 100,
+            "actualDps": 63.83,
+            "magnification": "10%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 20,
+              "duration_f": 90,
+              "duration_s": 3.0
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,478 @@
+{
+  "eventId": 25063,
+  "eventName": "悪しき本能の起源",
+  "typeId": 25,
+  "typeName": "発掘ステージ",
+  "prefix": "H",
+  "mapId": 63,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "起源の祠 極ムズ",
+      "baseHp": "550000",
+      "width": "4000",
+      "enemyLimit": "20",
+      "requiredCost": "100",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "30165",
+          "treasureName": "ユニット20165への進化権",
+          "probability": "8",
+          "amount": "1",
+          "times": "-4",
+          "limitText": "-4"
+        },
+        {
+          "treasureId": "30166",
+          "treasureName": "ユニット20166への進化権",
+          "probability": "2",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30170",
+          "treasureName": "ユニット20170への進化権",
+          "probability": "8",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30171",
+          "treasureName": "ユニット20171への進化権",
+          "probability": "2",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30175",
+          "treasureName": "ユニット20175への進化権",
+          "probability": "8",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30176",
+          "treasureName": "ユニット20176への進化権",
+          "probability": "2",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30155",
+          "treasureName": "ユニット20155への進化権",
+          "probability": "4",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30156",
+          "treasureName": "ユニット20156への進化権",
+          "probability": "1",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30160",
+          "treasureName": "ユニット20160への進化権",
+          "probability": "4",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "30161",
+          "treasureName": "ユニット20161への進化権",
+          "probability": "1",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 13500,
+            "actualAp": 6600,
+            "actualDps": 5351.34,
+            "magnification": "300%",
+            "count": "10",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "13.3-20.0s",
+            "delayFrames": "400-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "553",
+          "enemyName": "インフェルにょろ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 8200,
+            "ap": 2800,
+            "dps": 2270.27,
+            "speed": 12,
+            "range": 120,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 120,
+            "freq": 37,
+            "foreswing": 10,
+            "backswing": 7,
+            "tba": 14
+          },
+          "stageStats": {
+            "actualHp": 24600,
+            "actualAp": 8400,
+            "actualDps": 6810.81,
+            "magnification": "300%",
+            "count": "6",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "13.3-26.7s",
+            "delayFrames": "400-800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "death-surge": {
+              "raw_columns": [89, 90, 91, 92],
+              "chance": 50,
+              "distance_start": 350,
+              "distance_end": 750,
+              "level": 1
+            }
+          }
+        },
+        {
+          "enemyId": "555",
+          "enemyName": "ギルティ・ペン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 32250,
+            "ap": 4200,
+            "dps": 3230.77,
+            "speed": 10,
+            "range": 280,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 420,
+            "freq": 39,
+            "foreswing": 16,
+            "backswing": 10,
+            "tba": 12
+          },
+          "stageStats": {
+            "actualHp": 96750,
+            "actualAp": 12600,
+            "actualDps": 9692.31,
+            "magnification": "300%",
+            "count": "3",
+            "spawnTime": "26.7s",
+            "spawnTimeFrames": "800f",
+            "delay": "26.7-33.3s",
+            "delayFrames": "800-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 50,
+              "duration_f": 90,
+              "duration_s": 3.0
+            },
+            "death-surge": {
+              "raw_columns": [89, 90, 91, 92],
+              "chance": 100,
+              "distance_start": 450,
+              "distance_end": 950,
+              "level": 3
+            }
+          }
+        },
+        {
+          "enemyId": "552",
+          "enemyName": "デビルワン",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 4500,
+            "ap": 2200,
+            "dps": 1783.78,
+            "speed": 25,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 13500,
+            "actualAp": 6600,
+            "actualDps": 5351.34,
+            "magnification": "300%",
+            "count": "10",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "13.3-20.0s",
+            "delayFrames": "400-600f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 4500
+            }
+          }
+        },
+        {
+          "enemyId": "553",
+          "enemyName": "インフェルにょろ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 8200,
+            "ap": 2800,
+            "dps": 2270.27,
+            "speed": 12,
+            "range": 120,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 120,
+            "freq": 37,
+            "foreswing": 10,
+            "backswing": 7,
+            "tba": 14
+          },
+          "stageStats": {
+            "actualHp": 24600,
+            "actualAp": 8400,
+            "actualDps": 6810.81,
+            "magnification": "300%",
+            "count": "6",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "13.3-26.7s",
+            "delayFrames": "400-800f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "death-surge": {
+              "raw_columns": [89, 90, 91, 92],
+              "chance": 50,
+              "distance_start": 350,
+              "distance_end": 750,
+              "level": 1
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 170000,
+            "actualAp": 13736,
+            "actualDps": 25755.0,
+            "magnification": "200%",
+            "count": "3",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "556",
+          "enemyName": "ヘルゴリラー",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 85000,
+            "ap": 6868,
+            "dps": 12877.5,
+            "speed": 18,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 4,
+            "money": 500,
+            "freq": 16,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 170000,
+            "actualAp": 13736,
+            "actualDps": 25755.0,
+            "magnification": "200%",
+            "count": "2",
+            "spawnTime": "50.0s",
+            "spawnTimeFrames": "1,500f",
+            "delay": "13.3-20.0s",
+            "delayFrames": "400-600f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "savage-blow": {
+              "raw_columns": 75,
+              "chance": 100,
+              "power": 1.1
+            }
+          }
+        },
+        {
+          "enemyId": "558",
+          "enemyName": "アックマ閣下",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 75000,
+            "ap": 15000,
+            "dps": 6521.74,
+            "speed": 8,
+            "range": 345,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 1200,
+            "freq": 69,
+            "foreswing": 6,
+            "backswing": 10,
+            "tba": 32
+          },
+          "stageStats": {
+            "actualHp": 112500,
+            "actualAp": 22500,
+            "actualDps": 9782.61,
+            "magnification": "150%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {
+            "shield": {
+              "raw_columns": 87,
+              "hp": 250000
+            },
+            "death-surge": {
+              "raw_columns": [89, 90, 91, 92],
+              "chance": 100,
+              "distance_start": 450,
+              "distance_end": 1050,
+              "level": 1
+            }
+          }
+        },
+        {
+          "enemyId": "021",
+          "enemyName": "カンバン娘",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 10000,
+            "ap": 1,
+            "dps": 0.05,
+            "speed": 4,
+            "range": 800,
+            "rangeType": "単体",
+            "kbLevel": 10000,
+            "money": 1,
+            "freq": 607,
+            "foreswing": 8,
+            "backswing": 6,
+            "tba": 300
+          },
+          "stageStats": {
+            "actualHp": 10000,
+            "actualAp": 1,
+            "actualDps": 0.05,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "900.0s",
+            "spawnTimeFrames": "27,000f",
+            "delay": "2.0-6.0s",
+            "delayFrames": "60-180f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    }
+  ]
+}

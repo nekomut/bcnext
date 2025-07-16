@@ -1,0 +1,2271 @@
+{
+  "eventId": 11014,
+  "eventName": "ランキングの間（俺より強いやつに会いに行く）",
+  "typeId": 11,
+  "typeName": "ランキング道場",
+  "prefix": "R",
+  "mapId": 14,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "俺より強いやつに会いに行く",
+      "baseHp": "9999999",
+      "width": "4200",
+      "enemyLimit": "20",
+      "requiredCost": "30",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "283",
+          "enemyName": "ダミー",
+          "traits": [],
+          "baseStats": {
+            "hp": 100,
+            "ap": 999999,
+            "dps": 49261.03,
+            "speed": 0,
+            "range": 300,
+            "rangeType": "範囲",
+            "kbLevel": 0,
+            "money": 0,
+            "freq": 609,
+            "foreswing": 10,
+            "backswing": 27,
+            "tba": 300
+          },
+          "stageStats": {
+            "actualHp": 100,
+            "actualAp": 999999,
+            "actualDps": 49261.03,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "0%",
+            "isBoss": true
+          },
+          "abilities": {
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "480",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 200000,
+            "ap": 4000,
+            "dps": 1558.44,
+            "speed": 14,
+            "range": 380,
+            "rangeType": "範囲",
+            "kbLevel": 6,
+            "money": 1000,
+            "freq": 77,
+            "foreswing": 16,
+            "backswing": 39,
+            "tba": 31
+          },
+          "stageStats": {
+            "actualHp": 400000,
+            "actualAp": 8000,
+            "actualDps": 3116.88,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "1740000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 600,
+              "omni_range": [
+                -400,
+                600
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "482",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 400000,
+            "ap": 10500,
+            "dps": 2625.0,
+            "speed": 18,
+            "range": 420,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1000,
+            "freq": 120,
+            "foreswing": 25,
+            "backswing": 33,
+            "tba": 44
+          },
+          "stageStats": {
+            "actualHp": 800000,
+            "actualAp": 21000,
+            "actualDps": 5250.0,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "1740000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [5250, 5250],
+              "timings": [25, 33]
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "481",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 360000,
+            "ap": 5100,
+            "dps": 3923.08,
+            "speed": 25,
+            "range": 360,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 1000,
+            "freq": 39,
+            "foreswing": 8,
+            "backswing": 15,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 720000,
+            "actualAp": 10200,
+            "actualDps": 7846.16,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "1740000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [1700, 1700, 1700],
+              "timings": [8, 16, 24]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "483",
+          "enemyName": "ダミー",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 750000,
+            "ap": 8000,
+            "dps": 6000.0,
+            "speed": 7,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1000,
+            "freq": 40,
+            "foreswing": 3,
+            "backswing": 22,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1387500,
+            "actualAp": 14800,
+            "actualDps": 11100.0,
+            "magnification": "185%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "1620000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [4000, 4000],
+              "timings": [3, 18]
+            },
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 260,
+              "omni_range": [
+                -780,
+                260
+              ]
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "484",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 13000,
+            "dps": 4193.55,
+            "speed": 55,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 160,
+            "money": 1000,
+            "freq": 93,
+            "foreswing": 5,
+            "backswing": 88,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 296000,
+            "actualAp": 24050,
+            "actualDps": 7758.07,
+            "magnification": "185%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "1620000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 340,
+              "omni_range": [
+                -340,
+                340
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "486",
+          "enemyName": "ダミー",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 36000,
+            "dps": 9230.77,
+            "speed": 16,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1000,
+            "freq": 117,
+            "foreswing": 6,
+            "backswing": 45,
+            "tba": 53
+          },
+          "stageStats": {
+            "actualHp": 1080000,
+            "actualAp": 64800,
+            "actualDps": 16615.39,
+            "magnification": "180%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "1500000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [12000, 12000, 12000],
+              "timings": [6, 10, 12]
+            },
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 330,
+              "omni_range": [
+                -330,
+                330
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "485",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 240000,
+            "ap": 13500,
+            "dps": 3521.74,
+            "speed": 6,
+            "range": 390,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 1000,
+            "freq": 115,
+            "foreswing": 8,
+            "backswing": 15,
+            "tba": 47
+          },
+          "stageStats": {
+            "actualHp": 432000,
+            "actualAp": 24300,
+            "actualDps": 6339.13,
+            "magnification": "180%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "1500000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [4500, 4500, 4500],
+              "timings": [8, 15, 22]
+            },
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 100,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "480",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 200000,
+            "ap": 4000,
+            "dps": 1558.44,
+            "speed": 14,
+            "range": 380,
+            "rangeType": "範囲",
+            "kbLevel": 6,
+            "money": 1000,
+            "freq": 77,
+            "foreswing": 16,
+            "backswing": 39,
+            "tba": 31
+          },
+          "stageStats": {
+            "actualHp": 340000,
+            "actualAp": 6800,
+            "actualDps": 2649.35,
+            "magnification": "170%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "1380000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 600,
+              "omni_range": [
+                -400,
+                600
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "482",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 400000,
+            "ap": 10500,
+            "dps": 2625.0,
+            "speed": 18,
+            "range": 420,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1000,
+            "freq": 120,
+            "foreswing": 25,
+            "backswing": 33,
+            "tba": 44
+          },
+          "stageStats": {
+            "actualHp": 680000,
+            "actualAp": 17850,
+            "actualDps": 4462.5,
+            "magnification": "170%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "1380000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [5250, 5250],
+              "timings": [25, 33]
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "481",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 360000,
+            "ap": 5100,
+            "dps": 3923.08,
+            "speed": 25,
+            "range": 360,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 1000,
+            "freq": 39,
+            "foreswing": 8,
+            "backswing": 15,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 612000,
+            "actualAp": 8670,
+            "actualDps": 6669.24,
+            "magnification": "170%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "1380000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [1700, 1700, 1700],
+              "timings": [8, 16, 24]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "483",
+          "enemyName": "ダミー",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 750000,
+            "ap": 8000,
+            "dps": 6000.0,
+            "speed": 7,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1000,
+            "freq": 40,
+            "foreswing": 3,
+            "backswing": 22,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 1162500,
+            "actualAp": 12400,
+            "actualDps": 9300.0,
+            "magnification": "155%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "1270000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [4000, 4000],
+              "timings": [3, 18]
+            },
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 260,
+              "omni_range": [
+                -780,
+                260
+              ]
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "484",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 13000,
+            "dps": 4193.55,
+            "speed": 55,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 160,
+            "money": 1000,
+            "freq": 93,
+            "foreswing": 5,
+            "backswing": 88,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 248000,
+            "actualAp": 20150,
+            "actualDps": 6500.0,
+            "magnification": "155%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "1270000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 340,
+              "omni_range": [
+                -340,
+                340
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "486",
+          "enemyName": "ダミー",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 36000,
+            "dps": 9230.77,
+            "speed": 16,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1000,
+            "freq": 117,
+            "foreswing": 6,
+            "backswing": 45,
+            "tba": 53
+          },
+          "stageStats": {
+            "actualHp": 900000,
+            "actualAp": 54000,
+            "actualDps": 13846.16,
+            "magnification": "150%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "1160000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [12000, 12000, 12000],
+              "timings": [6, 10, 12]
+            },
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 330,
+              "omni_range": [
+                -330,
+                330
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "485",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 240000,
+            "ap": 13500,
+            "dps": 3521.74,
+            "speed": 6,
+            "range": 390,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 1000,
+            "freq": 115,
+            "foreswing": 8,
+            "backswing": 15,
+            "tba": 47
+          },
+          "stageStats": {
+            "actualHp": 360000,
+            "actualAp": 20250,
+            "actualDps": 5282.61,
+            "magnification": "150%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "1160000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [4500, 4500, 4500],
+              "timings": [8, 15, 22]
+            },
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 100,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "480",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 200000,
+            "ap": 4000,
+            "dps": 1558.44,
+            "speed": 14,
+            "range": 380,
+            "rangeType": "範囲",
+            "kbLevel": 6,
+            "money": 1000,
+            "freq": 77,
+            "foreswing": 16,
+            "backswing": 39,
+            "tba": 31
+          },
+          "stageStats": {
+            "actualHp": 280000,
+            "actualAp": 5600,
+            "actualDps": 2181.82,
+            "magnification": "140%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "1050000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 600,
+              "omni_range": [
+                -400,
+                600
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "482",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 400000,
+            "ap": 10500,
+            "dps": 2625.0,
+            "speed": 18,
+            "range": 420,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1000,
+            "freq": 120,
+            "foreswing": 25,
+            "backswing": 33,
+            "tba": 44
+          },
+          "stageStats": {
+            "actualHp": 560000,
+            "actualAp": 14700,
+            "actualDps": 3675.0,
+            "magnification": "140%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "1050000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [5250, 5250],
+              "timings": [25, 33]
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "481",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 360000,
+            "ap": 5100,
+            "dps": 3923.08,
+            "speed": 25,
+            "range": 360,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 1000,
+            "freq": 39,
+            "foreswing": 8,
+            "backswing": 15,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 504000,
+            "actualAp": 7140,
+            "actualDps": 5492.31,
+            "magnification": "140%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "1050000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [1700, 1700, 1700],
+              "timings": [8, 16, 24]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "483",
+          "enemyName": "ダミー",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 750000,
+            "ap": 8000,
+            "dps": 6000.0,
+            "speed": 7,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1000,
+            "freq": 40,
+            "foreswing": 3,
+            "backswing": 22,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 937500,
+            "actualAp": 10000,
+            "actualDps": 7500.0,
+            "magnification": "125%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "950000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [4000, 4000],
+              "timings": [3, 18]
+            },
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 260,
+              "omni_range": [
+                -780,
+                260
+              ]
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "484",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 13000,
+            "dps": 4193.55,
+            "speed": 55,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 160,
+            "money": 1000,
+            "freq": 93,
+            "foreswing": 5,
+            "backswing": 88,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 200000,
+            "actualAp": 16250,
+            "actualDps": 5241.94,
+            "magnification": "125%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "950000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 340,
+              "omni_range": [
+                -340,
+                340
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "486",
+          "enemyName": "ダミー",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 36000,
+            "dps": 9230.77,
+            "speed": 16,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1000,
+            "freq": 117,
+            "foreswing": 6,
+            "backswing": 45,
+            "tba": 53
+          },
+          "stageStats": {
+            "actualHp": 720000,
+            "actualAp": 43200,
+            "actualDps": 11076.92,
+            "magnification": "120%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "850000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [12000, 12000, 12000],
+              "timings": [6, 10, 12]
+            },
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 330,
+              "omni_range": [
+                -330,
+                330
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "485",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 240000,
+            "ap": 13500,
+            "dps": 3521.74,
+            "speed": 6,
+            "range": 390,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 1000,
+            "freq": 115,
+            "foreswing": 8,
+            "backswing": 15,
+            "tba": 47
+          },
+          "stageStats": {
+            "actualHp": 288000,
+            "actualAp": 16200,
+            "actualDps": 4226.09,
+            "magnification": "120%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "850000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [4500, 4500, 4500],
+              "timings": [8, 15, 22]
+            },
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 100,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "480",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 200000,
+            "ap": 4000,
+            "dps": 1558.44,
+            "speed": 14,
+            "range": 380,
+            "rangeType": "範囲",
+            "kbLevel": 6,
+            "money": 1000,
+            "freq": 77,
+            "foreswing": 16,
+            "backswing": 39,
+            "tba": 31
+          },
+          "stageStats": {
+            "actualHp": 220000,
+            "actualAp": 4400,
+            "actualDps": 1714.28,
+            "magnification": "110%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "750000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 600,
+              "omni_range": [
+                -400,
+                600
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "482",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 400000,
+            "ap": 10500,
+            "dps": 2625.0,
+            "speed": 18,
+            "range": 420,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1000,
+            "freq": 120,
+            "foreswing": 25,
+            "backswing": 33,
+            "tba": 44
+          },
+          "stageStats": {
+            "actualHp": 440000,
+            "actualAp": 11550,
+            "actualDps": 2887.5,
+            "magnification": "110%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "750000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [5250, 5250],
+              "timings": [25, 33]
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "481",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 360000,
+            "ap": 5100,
+            "dps": 3923.08,
+            "speed": 25,
+            "range": 360,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 1000,
+            "freq": 39,
+            "foreswing": 8,
+            "backswing": 15,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 396000,
+            "actualAp": 5610,
+            "actualDps": 4315.39,
+            "magnification": "110%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "750000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [1700, 1700, 1700],
+              "timings": [8, 16, 24]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "483",
+          "enemyName": "ダミー",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 750000,
+            "ap": 8000,
+            "dps": 6000.0,
+            "speed": 7,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1000,
+            "freq": 40,
+            "foreswing": 3,
+            "backswing": 22,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 712500,
+            "actualAp": 7600,
+            "actualDps": 5700.0,
+            "magnification": "95%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "660000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [4000, 4000],
+              "timings": [3, 18]
+            },
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 260,
+              "omni_range": [
+                -780,
+                260
+              ]
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "484",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 13000,
+            "dps": 4193.55,
+            "speed": 55,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 160,
+            "money": 1000,
+            "freq": 93,
+            "foreswing": 5,
+            "backswing": 88,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 152000,
+            "actualAp": 12350,
+            "actualDps": 3983.87,
+            "magnification": "95%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "660000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 340,
+              "omni_range": [
+                -340,
+                340
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "486",
+          "enemyName": "ダミー",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 36000,
+            "dps": 9230.77,
+            "speed": 16,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1000,
+            "freq": 117,
+            "foreswing": 6,
+            "backswing": 45,
+            "tba": 53
+          },
+          "stageStats": {
+            "actualHp": 540000,
+            "actualAp": 32400,
+            "actualDps": 8307.69,
+            "magnification": "90%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "570000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [12000, 12000, 12000],
+              "timings": [6, 10, 12]
+            },
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 330,
+              "omni_range": [
+                -330,
+                330
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "485",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 240000,
+            "ap": 13500,
+            "dps": 3521.74,
+            "speed": 6,
+            "range": 390,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 1000,
+            "freq": 115,
+            "foreswing": 8,
+            "backswing": 15,
+            "tba": 47
+          },
+          "stageStats": {
+            "actualHp": 216000,
+            "actualAp": 12150,
+            "actualDps": 3169.57,
+            "magnification": "90%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "570000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [4500, 4500, 4500],
+              "timings": [8, 15, 22]
+            },
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 100,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "480",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 200000,
+            "ap": 4000,
+            "dps": 1558.44,
+            "speed": 14,
+            "range": 380,
+            "rangeType": "範囲",
+            "kbLevel": 6,
+            "money": 1000,
+            "freq": 77,
+            "foreswing": 16,
+            "backswing": 39,
+            "tba": 31
+          },
+          "stageStats": {
+            "actualHp": 160000,
+            "actualAp": 3200,
+            "actualDps": 1246.75,
+            "magnification": "80%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "480000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 600,
+              "omni_range": [
+                -400,
+                600
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "482",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 400000,
+            "ap": 10500,
+            "dps": 2625.0,
+            "speed": 18,
+            "range": 420,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1000,
+            "freq": 120,
+            "foreswing": 25,
+            "backswing": 33,
+            "tba": 44
+          },
+          "stageStats": {
+            "actualHp": 320000,
+            "actualAp": 8400,
+            "actualDps": 2100.0,
+            "magnification": "80%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "480000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [5250, 5250],
+              "timings": [25, 33]
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "481",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 360000,
+            "ap": 5100,
+            "dps": 3923.08,
+            "speed": 25,
+            "range": 360,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 1000,
+            "freq": 39,
+            "foreswing": 8,
+            "backswing": 15,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 288000,
+            "actualAp": 4080,
+            "actualDps": 3138.46,
+            "magnification": "80%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "480000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [1700, 1700, 1700],
+              "timings": [8, 16, 24]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "483",
+          "enemyName": "ダミー",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 750000,
+            "ap": 8000,
+            "dps": 6000.0,
+            "speed": 7,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1000,
+            "freq": 40,
+            "foreswing": 3,
+            "backswing": 22,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 487500,
+            "actualAp": 5200,
+            "actualDps": 3900.0,
+            "magnification": "65%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "400000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [4000, 4000],
+              "timings": [3, 18]
+            },
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 260,
+              "omni_range": [
+                -780,
+                260
+              ]
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "484",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 13000,
+            "dps": 4193.55,
+            "speed": 55,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 160,
+            "money": 1000,
+            "freq": 93,
+            "foreswing": 5,
+            "backswing": 88,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 104000,
+            "actualAp": 8450,
+            "actualDps": 2725.81,
+            "magnification": "65%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "400000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 340,
+              "omni_range": [
+                -340,
+                340
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "486",
+          "enemyName": "ダミー",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 36000,
+            "dps": 9230.77,
+            "speed": 16,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1000,
+            "freq": 117,
+            "foreswing": 6,
+            "backswing": 45,
+            "tba": 53
+          },
+          "stageStats": {
+            "actualHp": 360000,
+            "actualAp": 21600,
+            "actualDps": 5538.46,
+            "magnification": "60%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "320000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [12000, 12000, 12000],
+              "timings": [6, 10, 12]
+            },
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 330,
+              "omni_range": [
+                -330,
+                330
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "485",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 240000,
+            "ap": 13500,
+            "dps": 3521.74,
+            "speed": 6,
+            "range": 390,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 1000,
+            "freq": 115,
+            "foreswing": 8,
+            "backswing": 15,
+            "tba": 47
+          },
+          "stageStats": {
+            "actualHp": 144000,
+            "actualAp": 8100,
+            "actualDps": 2113.04,
+            "magnification": "60%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "320000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [4500, 4500, 4500],
+              "timings": [8, 15, 22]
+            },
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 100,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "480",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 200000,
+            "ap": 4000,
+            "dps": 1558.44,
+            "speed": 14,
+            "range": 380,
+            "rangeType": "範囲",
+            "kbLevel": 6,
+            "money": 1000,
+            "freq": 77,
+            "foreswing": 16,
+            "backswing": 39,
+            "tba": 31
+          },
+          "stageStats": {
+            "actualHp": 100000,
+            "actualAp": 2000,
+            "actualDps": 779.22,
+            "magnification": "50%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "240000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 600,
+              "omni_range": [
+                -400,
+                600
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "482",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 400000,
+            "ap": 10500,
+            "dps": 2625.0,
+            "speed": 18,
+            "range": 420,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1000,
+            "freq": 120,
+            "foreswing": 25,
+            "backswing": 33,
+            "tba": 44
+          },
+          "stageStats": {
+            "actualHp": 200000,
+            "actualAp": 5250,
+            "actualDps": 1312.5,
+            "magnification": "50%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "240000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [5250, 5250],
+              "timings": [25, 33]
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "481",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 360000,
+            "ap": 5100,
+            "dps": 3923.08,
+            "speed": 25,
+            "range": 360,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 1000,
+            "freq": 39,
+            "foreswing": 8,
+            "backswing": 15,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 180000,
+            "actualAp": 2550,
+            "actualDps": 1961.54,
+            "magnification": "50%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "240000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [1700, 1700, 1700],
+              "timings": [8, 16, 24]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "483",
+          "enemyName": "ダミー",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 750000,
+            "ap": 8000,
+            "dps": 6000.0,
+            "speed": 7,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1000,
+            "freq": 40,
+            "foreswing": 3,
+            "backswing": 22,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 262500,
+            "actualAp": 2800,
+            "actualDps": 2100.0,
+            "magnification": "35%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "150000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [4000, 4000],
+              "timings": [3, 18]
+            },
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 260,
+              "omni_range": [
+                -780,
+                260
+              ]
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "484",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 13000,
+            "dps": 4193.55,
+            "speed": 55,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 160,
+            "money": 1000,
+            "freq": 93,
+            "foreswing": 5,
+            "backswing": 88,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 56000,
+            "actualAp": 4550,
+            "actualDps": 1467.74,
+            "magnification": "35%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "150000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 340,
+              "omni_range": [
+                -340,
+                340
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "486",
+          "enemyName": "ダミー",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 36000,
+            "dps": 9230.77,
+            "speed": 16,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1000,
+            "freq": 117,
+            "foreswing": 6,
+            "backswing": 45,
+            "tba": 53
+          },
+          "stageStats": {
+            "actualHp": 180000,
+            "actualAp": 10800,
+            "actualDps": 2769.23,
+            "magnification": "30%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "90000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [12000, 12000, 12000],
+              "timings": [6, 10, 12]
+            },
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 330,
+              "omni_range": [
+                -330,
+                330
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "485",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 240000,
+            "ap": 13500,
+            "dps": 3521.74,
+            "speed": 6,
+            "range": 390,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 1000,
+            "freq": 115,
+            "foreswing": 8,
+            "backswing": 15,
+            "tba": 47
+          },
+          "stageStats": {
+            "actualHp": 72000,
+            "actualAp": 4050,
+            "actualDps": 1056.52,
+            "magnification": "30%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "90000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [4500, 4500, 4500],
+              "timings": [8, 15, 22]
+            },
+            "weaken": {
+              "raw_columns": [29, 30, 31],
+              "chance": 100,
+              "power": 100,
+              "duration_f": 50,
+              "duration_s": 1.67
+            }
+          }
+        },
+        {
+          "enemyId": "482",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 400000,
+            "ap": 10500,
+            "dps": 2625.0,
+            "speed": 18,
+            "range": 420,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1000,
+            "freq": 120,
+            "foreswing": 25,
+            "backswing": 33,
+            "tba": 44
+          },
+          "stageStats": {
+            "actualHp": 80000,
+            "actualAp": 2100,
+            "actualDps": 525.0,
+            "magnification": "20%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "40000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [5250, 5250],
+              "timings": [25, 33]
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 120,
+              "duration_s": 4.0
+            }
+          }
+        },
+        {
+          "enemyId": "484",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 160000,
+            "ap": 13000,
+            "dps": 4193.55,
+            "speed": 55,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 160,
+            "money": 1000,
+            "freq": 93,
+            "foreswing": 5,
+            "backswing": 88,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 32000,
+            "actualAp": 2600,
+            "actualDps": 838.71,
+            "magnification": "20%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "40000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 340,
+              "omni_range": [
+                -340,
+                340
+              ]
+            }
+          }
+        },
+        {
+          "enemyId": "486",
+          "enemyName": "ダミー",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 600000,
+            "ap": 36000,
+            "dps": 9230.77,
+            "speed": 16,
+            "range": 180,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 1000,
+            "freq": 117,
+            "foreswing": 6,
+            "backswing": 45,
+            "tba": 53
+          },
+          "stageStats": {
+            "actualHp": 48000,
+            "actualAp": 2880,
+            "actualDps": 738.46,
+            "magnification": "8%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "10000%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [12000, 12000, 12000],
+              "timings": [6, 10, 12]
+            },
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 330,
+              "omni_range": [
+                -330,
+                330
+              ]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "480",
+          "enemyName": "ダミー",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 200000,
+            "ap": 4000,
+            "dps": 1558.44,
+            "speed": 14,
+            "range": 380,
+            "rangeType": "範囲",
+            "kbLevel": 6,
+            "money": 1000,
+            "freq": 77,
+            "foreswing": 16,
+            "backswing": 39,
+            "tba": 31
+          },
+          "stageStats": {
+            "actualHp": 12000,
+            "actualAp": 240,
+            "actualDps": 93.51,
+            "magnification": "6%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "500%",
+            "isBoss": true
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 600,
+              "omni_range": [
+                -400,
+                600
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

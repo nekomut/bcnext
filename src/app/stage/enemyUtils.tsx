@@ -52,7 +52,11 @@ export async function buildEnemyDatabase(
   
   try {
     // ステージインデックスデータを読み込み
-    const { stageIndexData } = await import('../../data/stage/index');
+    const response = await fetch('/data/stage/index.json');
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    }
+    const stageIndexData = await response.json();
     
     // レジェンドストーリー（タイプID 0）のみに絞り込み
     const legendEvents = stageIndexData.events.filter(event => event.typeId === 0);
@@ -73,18 +77,32 @@ export async function buildEnemyDatabase(
       
       try {
         // 動的にステージデータを読み込み
-        const stageModule = await import(`../../data/stage/e${event.eventId}`);
-        const stageData: StageData = stageModule.default;
+        const stageResponse = await fetch(`/data/stage/e${event.eventId}.json`);
+        if (!stageResponse.ok) {
+          continue; // スキップして次のイベントへ
+        }
+        const stageData: StageData = await stageResponse.json();
         
         // 各ステージの敵データを処理
         for (const stage of stageData.stages) {
           for (const enemy of stage.enemies) {
             if (!enemyMap.has(enemy.enemyId)) {
+              // アイコンデータを取得
+              let iconBase64 = '';
+              try {
+                const iconResponse = await fetch(`/data/enemy/${enemy.enemyId}`);
+                if (iconResponse.ok) {
+                  iconBase64 = (await iconResponse.text()).trim();
+                }
+              } catch (error) {
+                console.warn(`Failed to load icon for enemy ${enemy.enemyId}:`, error);
+              }
+              
               // 新しい敵をデータベースに追加
               enemyMap.set(enemy.enemyId, {
                 enemyId: enemy.enemyId,
                 enemyName: enemy.enemyName,
-                icon: enemy.icon || '',
+                icon: iconBase64,
                 traits: enemy.traits,
                 baseStats: enemy.baseStats,
                 abilities: enemy.abilities
@@ -113,7 +131,11 @@ export async function searchStagesByEnemies(
   
   try {
     // ステージインデックスデータを読み込み
-    const { stageIndexData } = await import('../../data/stage/index');
+    const response = await fetch('/data/stage/index.json');
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    }
+    const stageIndexData = await response.json();
     
     // レジェンドストーリー（タイプID 0）のみを対象とする
     const legendEvents = stageIndexData.events.filter(event => event.typeId === 0);
@@ -122,8 +144,11 @@ export async function searchStagesByEnemies(
     for (const event of legendEvents) {
       try {
         // 動的にステージデータを読み込み
-        const stageModule = await import(`../../data/stage/e${event.eventId}`);
-        const stageData: StageData = stageModule.default;
+        const stageResponse = await fetch(`/data/stage/e${event.eventId}.json`);
+        if (!stageResponse.ok) {
+          continue; // スキップして次のイベントへ
+        }
+        const stageData: StageData = await stageResponse.json();
         
         // 各ステージを検索
         for (let stageIndex = 0; stageIndex < stageData.stages.length; stageIndex++) {

@@ -1,0 +1,185 @@
+{
+  "eventId": 25027,
+  "eventName": "硬き本能の起源",
+  "typeId": 25,
+  "typeName": "発掘ステージ",
+  "prefix": "H",
+  "mapId": 27,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "起源の祠 極ムズ",
+      "baseHp": "600000",
+      "width": "4700",
+      "enemyLimit": "15",
+      "requiredCost": "100",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "30030",
+          "treasureName": "ユニット20030への進化権",
+          "probability": "850",
+          "amount": "1",
+          "times": "-4",
+          "limitText": "-4"
+        },
+        {
+          "treasureId": "30031",
+          "treasureName": "ユニット20031への進化権",
+          "probability": "150",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "047",
+          "enemyName": "メタルカバちゃん",
+          "traits": ["メ"],
+          "baseStats": {
+            "hp": 80,
+            "ap": 200,
+            "dps": 333.33,
+            "speed": 4,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 400,
+            "freq": 18,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 160,
+            "actualAp": 400,
+            "actualDps": 666.66,
+            "magnification": "200%",
+            "count": "10",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "497",
+          "enemyName": "ワーニネーター",
+          "traits": ["メ"],
+          "baseStats": {
+            "hp": 5,
+            "ap": 800,
+            "dps": 510.64,
+            "speed": 12,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 150,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 5,
+            "actualAp": 800,
+            "actualDps": 510.64,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "497",
+          "enemyName": "ワーニネーター",
+          "traits": ["メ"],
+          "baseStats": {
+            "hp": 5,
+            "ap": 800,
+            "dps": 510.64,
+            "speed": 12,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 150,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 5,
+            "actualAp": 800,
+            "actualDps": 510.64,
+            "magnification": "100%",
+            "count": "60",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "1.0-4.0s",
+            "delayFrames": "30-120f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "054",
+          "enemyName": "超メタルカバちゃん",
+          "traits": ["メ"],
+          "baseStats": {
+            "hp": 8000,
+            "ap": 3000,
+            "dps": 1914.89,
+            "speed": 18,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 16,
+            "money": 999,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 16000,
+            "actualAp": 6000,
+            "actualDps": 3829.78,
+            "magnification": "200%",
+            "count": "3",
+            "spawnTime": "23.3s",
+            "spawnTimeFrames": "700f",
+            "delay": "16.7-23.3s",
+            "delayFrames": "500-700f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    }
+  ]
+}

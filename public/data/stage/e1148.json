@@ -1,0 +1,177 @@
+{
+  "eventId": 1148,
+  "eventName": "開眼のネコフラワー襲来！",
+  "typeId": 1,
+  "typeName": "イベントステージ",
+  "prefix": "S",
+  "mapId": 148,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "ネコフラワー進化への道 初級",
+      "baseHp": "77777",
+      "width": "3600",
+      "enemyLimit": "15",
+      "requiredCost": "50",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "10128",
+          "treasureName": "ネコボンバーへの進化権(ネコフラワーの第3形態)",
+          "probability": "100",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "106",
+          "enemyName": "花火職人（高空）",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1,
+            "ap": 1,
+            "dps": 0.05,
+            "speed": 5,
+            "range": 50,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 569,
+            "foreswing": 190,
+            "backswing": -189,
+            "tba": 190
+          },
+          "stageStats": {
+            "actualHp": 1,
+            "actualAp": 1,
+            "actualDps": 0.05,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "6.0-12.0s",
+            "delayFrames": "180-360f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "107",
+          "enemyName": "花火職人（低空）",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1,
+            "ap": 1,
+            "dps": 0.05,
+            "speed": 5,
+            "range": 100,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 569,
+            "foreswing": 190,
+            "backswing": -189,
+            "tba": 190
+          },
+          "stageStats": {
+            "actualHp": 1,
+            "actualAp": 1,
+            "actualDps": 0.05,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "4.0s",
+            "spawnTimeFrames": "120f",
+            "delay": "6.0-12.0s",
+            "delayFrames": "180-360f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "106",
+          "enemyName": "花火職人（高空）",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1,
+            "ap": 1,
+            "dps": 0.05,
+            "speed": 5,
+            "range": 50,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 569,
+            "foreswing": 190,
+            "backswing": -189,
+            "tba": 190
+          },
+          "stageStats": {
+            "actualHp": 1,
+            "actualAp": 1,
+            "actualDps": 0.05,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "6.0-12.0s",
+            "delayFrames": "180-360f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "107",
+          "enemyName": "花火職人（低空）",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1,
+            "ap": 1,
+            "dps": 0.05,
+            "speed": 5,
+            "range": 100,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 1,
+            "freq": 569,
+            "foreswing": 190,
+            "backswing": -189,
+            "tba": 190
+          },
+          "stageStats": {
+            "actualHp": 1,
+            "actualAp": 1,
+            "actualDps": 0.05,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "6.0-12.0s",
+            "delayFrames": "180-360f",
+            "baseHpRatio": "50%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    }
+  ]
+}

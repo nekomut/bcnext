@@ -1,0 +1,5607 @@
+{
+  "eventId": 24064,
+  "eventName": "ネコたちの大逆襲",
+  "typeId": 24,
+  "typeName": "強襲ステージ",
+  "prefix": "A",
+  "mapId": 64,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "殺意 Lv.1",
+      "baseHp": "10",
+      "width": "5000",
+      "enemyLimit": "2",
+      "requiredCost": "50",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1030",
+          "treasureName": "殺意のネコ(319)",
+          "probability": "10",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "1",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "312",
+          "enemyName": "ダミー",
+          "traits": [],
+          "baseStats": {
+            "hp": 3000,
+            "ap": 100,
+            "dps": 3.99,
+            "speed": 0,
+            "range": 500,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 0,
+            "freq": 751,
+            "foreswing": 2,
+            "backswing": 19,
+            "tba": 375
+          },
+          "stageStats": {
+            "actualHp": 3000,
+            "actualAp": 100,
+            "actualDps": 3.99,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "wave": {
+              "raw_columns": [27, 28],
+              "chance": 100,
+              "level": 20
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 1800,
+            "actualAp": 120,
+            "actualDps": 97.3,
+            "magnification": "50%",
+            "count": "1",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 1,
+      "stageName": "殺意 Lv.2",
+      "baseHp": "10",
+      "width": "4000",
+      "enemyLimit": "6",
+      "requiredCost": "60",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1063",
+          "treasureName": "殺意のタンクネコ(695)",
+          "probability": "10",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "1",
+          "amount": "0",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "312",
+          "enemyName": "ダミー",
+          "traits": [],
+          "baseStats": {
+            "hp": 3000,
+            "ap": 100,
+            "dps": 3.99,
+            "speed": 0,
+            "range": 500,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 0,
+            "freq": 751,
+            "foreswing": 2,
+            "backswing": 19,
+            "tba": 375
+          },
+          "stageStats": {
+            "actualHp": 21000,
+            "actualAp": 700,
+            "actualDps": 27.93,
+            "magnification": "700%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "wave": {
+              "raw_columns": [27, 28],
+              "chance": 100,
+              "level": 20
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 14400,
+            "actualAp": 384,
+            "actualDps": 171.94,
+            "magnification": "160%",
+            "count": "1",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 5760,
+            "actualAp": 384,
+            "actualDps": 311.34,
+            "magnification": "160%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "13.3-13.3s",
+            "delayFrames": "400-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 14400,
+            "actualAp": 384,
+            "actualDps": 171.94,
+            "magnification": "160%",
+            "count": "1",
+            "spawnTime": "53.3s",
+            "spawnTimeFrames": "1,600f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 5760,
+            "actualAp": 384,
+            "actualDps": 311.34,
+            "magnification": "160%",
+            "count": "1",
+            "spawnTime": "64.0s",
+            "spawnTimeFrames": "1,920f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 14400,
+            "actualAp": 384,
+            "actualDps": 171.94,
+            "magnification": "160%",
+            "count": "1",
+            "spawnTime": "66.7s",
+            "spawnTimeFrames": "2,000f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 14400,
+            "actualAp": 384,
+            "actualDps": 171.94,
+            "magnification": "160%",
+            "count": "2",
+            "spawnTime": "68.0s",
+            "spawnTimeFrames": "2,040f",
+            "delay": "12.0-12.0s",
+            "delayFrames": "360-360f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 5760,
+            "actualAp": 384,
+            "actualDps": 311.34,
+            "magnification": "160%",
+            "count": "3",
+            "spawnTime": "72.0s",
+            "spawnTimeFrames": "2,160f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 2,
+      "stageName": "殺意 Lv.3",
+      "baseHp": "10",
+      "width": "4000",
+      "enemyLimit": "6",
+      "requiredCost": "70",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1030",
+          "treasureName": "殺意のネコ(319)",
+          "probability": "30",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "1",
+          "amount": "3",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "312",
+          "enemyName": "ダミー",
+          "traits": [],
+          "baseStats": {
+            "hp": 3000,
+            "ap": 100,
+            "dps": 3.99,
+            "speed": 0,
+            "range": 500,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 0,
+            "freq": 751,
+            "foreswing": 2,
+            "backswing": 19,
+            "tba": 375
+          },
+          "stageStats": {
+            "actualHp": 60000,
+            "actualAp": 2000,
+            "actualDps": 79.8,
+            "magnification": "2000%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "wave": {
+              "raw_columns": [27, 28],
+              "chance": 100,
+              "level": 20
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 43200,
+            "actualAp": 2880,
+            "actualDps": 2335.08,
+            "magnification": "1200%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 43200,
+            "actualAp": 2880,
+            "actualDps": 2335.08,
+            "magnification": "1200%",
+            "count": "1",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 43200,
+            "actualAp": 2880,
+            "actualDps": 2335.08,
+            "magnification": "1200%",
+            "count": "1",
+            "spawnTime": "63.3s",
+            "spawnTimeFrames": "1,900f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 43200,
+            "actualAp": 2880,
+            "actualDps": 2335.08,
+            "magnification": "1200%",
+            "count": "1",
+            "spawnTime": "76.7s",
+            "spawnTimeFrames": "2,300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 43200,
+            "actualAp": 2880,
+            "actualDps": 2335.08,
+            "magnification": "1200%",
+            "count": "1",
+            "spawnTime": "77.3s",
+            "spawnTimeFrames": "2,320f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 43200,
+            "actualAp": 2880,
+            "actualDps": 2335.08,
+            "magnification": "1200%",
+            "count": "1",
+            "spawnTime": "78.0s",
+            "spawnTimeFrames": "2,340f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 3,
+      "stageName": "殺意 Lv.4",
+      "baseHp": "10",
+      "width": "4000",
+      "enemyLimit": "6",
+      "requiredCost": "80",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1063",
+          "treasureName": "殺意のタンクネコ(695)",
+          "probability": "50",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "1",
+          "amount": "55",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "312",
+          "enemyName": "ダミー",
+          "traits": [],
+          "baseStats": {
+            "hp": 3000,
+            "ap": 100,
+            "dps": 3.99,
+            "speed": 0,
+            "range": 500,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 0,
+            "freq": 751,
+            "foreswing": 2,
+            "backswing": 19,
+            "tba": 375
+          },
+          "stageStats": {
+            "actualHp": 168000,
+            "actualAp": 5600,
+            "actualDps": 223.44,
+            "magnification": "5600%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "wave": {
+              "raw_columns": [27, 28],
+              "chance": 100,
+              "level": 20
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 150750,
+            "actualAp": 4020,
+            "actualDps": 1799.95,
+            "magnification": "1675%",
+            "count": "1",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 60300,
+            "actualAp": 4020,
+            "actualDps": 3259.38,
+            "magnification": "1675%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "13.3-13.3s",
+            "delayFrames": "400-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 150750,
+            "actualAp": 4020,
+            "actualDps": 1799.95,
+            "magnification": "1675%",
+            "count": "1",
+            "spawnTime": "53.3s",
+            "spawnTimeFrames": "1,600f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 60300,
+            "actualAp": 4020,
+            "actualDps": 3259.38,
+            "magnification": "1675%",
+            "count": "1",
+            "spawnTime": "64.0s",
+            "spawnTimeFrames": "1,920f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 150750,
+            "actualAp": 4020,
+            "actualDps": 1799.95,
+            "magnification": "1675%",
+            "count": "1",
+            "spawnTime": "66.7s",
+            "spawnTimeFrames": "2,000f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 150750,
+            "actualAp": 4020,
+            "actualDps": 1799.95,
+            "magnification": "1675%",
+            "count": "2",
+            "spawnTime": "68.0s",
+            "spawnTimeFrames": "2,040f",
+            "delay": "12.0-12.0s",
+            "delayFrames": "360-360f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 60300,
+            "actualAp": 4020,
+            "actualDps": 3259.38,
+            "magnification": "1675%",
+            "count": "3",
+            "spawnTime": "72.0s",
+            "spawnTimeFrames": "2,160f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 4,
+      "stageName": "殺意 Lv.5",
+      "baseHp": "10",
+      "width": "4000",
+      "enemyLimit": "6",
+      "requiredCost": "90",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1030",
+          "treasureName": "殺意のネコ(319)",
+          "probability": "50",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "1",
+          "amount": "12",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "312",
+          "enemyName": "ダミー",
+          "traits": [],
+          "baseStats": {
+            "hp": 3000,
+            "ap": 100,
+            "dps": 3.99,
+            "speed": 0,
+            "range": 500,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 0,
+            "freq": 751,
+            "foreswing": 2,
+            "backswing": 19,
+            "tba": 375
+          },
+          "stageStats": {
+            "actualHp": 276000,
+            "actualAp": 9200,
+            "actualDps": 367.08,
+            "magnification": "9200%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "wave": {
+              "raw_columns": [27, 28],
+              "chance": 100,
+              "level": 20
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 141120,
+            "actualAp": 9408,
+            "actualDps": 7627.93,
+            "magnification": "3920%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 141120,
+            "actualAp": 9408,
+            "actualDps": 7627.93,
+            "magnification": "3920%",
+            "count": "1",
+            "spawnTime": "40.0s",
+            "spawnTimeFrames": "1,200f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 141120,
+            "actualAp": 9408,
+            "actualDps": 7627.93,
+            "magnification": "3920%",
+            "count": "1",
+            "spawnTime": "63.3s",
+            "spawnTimeFrames": "1,900f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 141120,
+            "actualAp": 9408,
+            "actualDps": 7627.93,
+            "magnification": "3920%",
+            "count": "1",
+            "spawnTime": "76.7s",
+            "spawnTimeFrames": "2,300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 141120,
+            "actualAp": 9408,
+            "actualDps": 7627.93,
+            "magnification": "3920%",
+            "count": "1",
+            "spawnTime": "77.3s",
+            "spawnTimeFrames": "2,320f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 141120,
+            "actualAp": 9408,
+            "actualDps": 7627.93,
+            "magnification": "3920%",
+            "count": "1",
+            "spawnTime": "78.0s",
+            "spawnTimeFrames": "2,340f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 5,
+      "stageName": "殺意 Lv.6",
+      "baseHp": "10",
+      "width": "4500",
+      "enemyLimit": "20",
+      "requiredCost": "100",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1070",
+          "treasureName": "殺意のキモネコ(785)",
+          "probability": "10",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "1",
+          "amount": "5",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "678",
+          "enemyName": "ダミー",
+          "traits": [],
+          "baseStats": {
+            "hp": 30000,
+            "ap": 1500,
+            "dps": 80.5,
+            "speed": 0,
+            "range": 2000,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 0,
+            "freq": 559,
+            "foreswing": 42,
+            "backswing": 24,
+            "tba": 256
+          },
+          "stageStats": {
+            "actualHp": 300000,
+            "actualAp": 15000,
+            "actualDps": 805.0,
+            "magnification": "1000%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [500, 500, 500],
+              "timings": [42, 45, 48]
+            },
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 500,
+              "omni_range": [0, 500]
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 106200,
+            "actualAp": 7080,
+            "actualDps": 5740.4,
+            "magnification": "2950%",
+            "count": "1",
+            "spawnTime": "4.7s",
+            "spawnTimeFrames": "140f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 265500,
+            "actualAp": 7080,
+            "actualDps": 3170.07,
+            "magnification": "2950%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "719",
+          "enemyName": "殺意のキモネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 4000,
+            "ap": 240,
+            "dps": 33.64,
+            "speed": 10,
+            "range": 700,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 300,
+            "freq": 214,
+            "foreswing": 15,
+            "backswing": 22,
+            "tba": 100
+          },
+          "stageStats": {
+            "actualHp": 118000,
+            "actualAp": 7080,
+            "actualDps": 992.38,
+            "magnification": "2950%",
+            "count": "5",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "26.7-26.7s",
+            "delayFrames": "800-800f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 3600,
+            "actualAp": 240,
+            "actualDps": 194.59,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "2.0s",
+            "spawnTimeFrames": "60f",
+            "delay": "10.0-16.7s",
+            "delayFrames": "300-500f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 106200,
+            "actualAp": 7080,
+            "actualDps": 5740.4,
+            "magnification": "2950%",
+            "count": "1",
+            "spawnTime": "2.0s",
+            "spawnTimeFrames": "60f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 106200,
+            "actualAp": 7080,
+            "actualDps": 5740.4,
+            "magnification": "2950%",
+            "count": "7",
+            "spawnTime": "2.0s",
+            "spawnTimeFrames": "60f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 265500,
+            "actualAp": 7080,
+            "actualDps": 3170.07,
+            "magnification": "2950%",
+            "count": "3",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "10.0-12.0s",
+            "delayFrames": "300-360f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 106200,
+            "actualAp": 7080,
+            "actualDps": 5740.4,
+            "magnification": "2950%",
+            "count": "6",
+            "spawnTime": "8.0s",
+            "spawnTimeFrames": "240f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 265500,
+            "actualAp": 7080,
+            "actualDps": 3170.07,
+            "magnification": "2950%",
+            "count": "7",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 6,
+      "stageName": "殺意 Lv.7",
+      "baseHp": "10",
+      "width": "4500",
+      "enemyLimit": "20",
+      "requiredCost": "110",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1030",
+          "treasureName": "殺意のネコ(319)",
+          "probability": "100",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "1",
+          "amount": "56",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "678",
+          "enemyName": "ダミー",
+          "traits": [],
+          "baseStats": {
+            "hp": 30000,
+            "ap": 1500,
+            "dps": 80.5,
+            "speed": 0,
+            "range": 2000,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 0,
+            "freq": 559,
+            "foreswing": 42,
+            "backswing": 24,
+            "tba": 256
+          },
+          "stageStats": {
+            "actualHp": 375000,
+            "actualAp": 18750,
+            "actualDps": 1006.25,
+            "magnification": "1250%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [500, 500, 500],
+              "timings": [42, 45, 48]
+            },
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 500,
+              "omni_range": [0, 500]
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 132768,
+            "actualAp": 8851,
+            "actualDps": 7176.48,
+            "magnification": "3688%",
+            "count": "1",
+            "spawnTime": "4.7s",
+            "spawnTimeFrames": "140f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 331920,
+            "actualAp": 8851,
+            "actualDps": 3963.12,
+            "magnification": "3688%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "719",
+          "enemyName": "殺意のキモネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 4000,
+            "ap": 240,
+            "dps": 33.64,
+            "speed": 10,
+            "range": 700,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 300,
+            "freq": 214,
+            "foreswing": 15,
+            "backswing": 22,
+            "tba": 100
+          },
+          "stageStats": {
+            "actualHp": 147520,
+            "actualAp": 8851,
+            "actualDps": 1240.64,
+            "magnification": "3688%",
+            "count": "5",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "26.7-26.7s",
+            "delayFrames": "800-800f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 3600,
+            "actualAp": 240,
+            "actualDps": 194.59,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "2.0s",
+            "spawnTimeFrames": "60f",
+            "delay": "10.0-16.7s",
+            "delayFrames": "300-500f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 132768,
+            "actualAp": 8851,
+            "actualDps": 7176.48,
+            "magnification": "3688%",
+            "count": "1",
+            "spawnTime": "2.0s",
+            "spawnTimeFrames": "60f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 132768,
+            "actualAp": 8851,
+            "actualDps": 7176.48,
+            "magnification": "3688%",
+            "count": "7",
+            "spawnTime": "2.0s",
+            "spawnTimeFrames": "60f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 331920,
+            "actualAp": 8851,
+            "actualDps": 3963.12,
+            "magnification": "3688%",
+            "count": "3",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "10.0-12.0s",
+            "delayFrames": "300-360f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 132768,
+            "actualAp": 8851,
+            "actualDps": 7176.48,
+            "magnification": "3688%",
+            "count": "6",
+            "spawnTime": "8.0s",
+            "spawnTimeFrames": "240f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 331920,
+            "actualAp": 8851,
+            "actualDps": 3963.12,
+            "magnification": "3688%",
+            "count": "7",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 7,
+      "stageName": "殺意 Lv.8",
+      "baseHp": "10",
+      "width": "4500",
+      "enemyLimit": "20",
+      "requiredCost": "120",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1070",
+          "treasureName": "殺意のキモネコ(785)",
+          "probability": "50",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "1",
+          "amount": "11",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "678",
+          "enemyName": "ダミー",
+          "traits": [],
+          "baseStats": {
+            "hp": 30000,
+            "ap": 1500,
+            "dps": 80.5,
+            "speed": 0,
+            "range": 2000,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 0,
+            "freq": 559,
+            "foreswing": 42,
+            "backswing": 24,
+            "tba": 256
+          },
+          "stageStats": {
+            "actualHp": 450000,
+            "actualAp": 22500,
+            "actualDps": 1207.5,
+            "magnification": "1500%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [500, 500, 500],
+              "timings": [42, 45, 48]
+            },
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 500,
+              "omni_range": [0, 500]
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 159336,
+            "actualAp": 10622,
+            "actualDps": 8612.55,
+            "magnification": "4426%",
+            "count": "1",
+            "spawnTime": "4.7s",
+            "spawnTimeFrames": "140f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 398340,
+            "actualAp": 10622,
+            "actualDps": 4756.18,
+            "magnification": "4426%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "719",
+          "enemyName": "殺意のキモネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 4000,
+            "ap": 240,
+            "dps": 33.64,
+            "speed": 10,
+            "range": 700,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 300,
+            "freq": 214,
+            "foreswing": 15,
+            "backswing": 22,
+            "tba": 100
+          },
+          "stageStats": {
+            "actualHp": 177040,
+            "actualAp": 10622,
+            "actualDps": 1488.91,
+            "magnification": "4426%",
+            "count": "5",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "26.7-26.7s",
+            "delayFrames": "800-800f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 3600,
+            "actualAp": 240,
+            "actualDps": 194.59,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "2.0s",
+            "spawnTimeFrames": "60f",
+            "delay": "10.0-16.7s",
+            "delayFrames": "300-500f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 159336,
+            "actualAp": 10622,
+            "actualDps": 8612.55,
+            "magnification": "4426%",
+            "count": "1",
+            "spawnTime": "2.0s",
+            "spawnTimeFrames": "60f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 159336,
+            "actualAp": 10622,
+            "actualDps": 8612.55,
+            "magnification": "4426%",
+            "count": "7",
+            "spawnTime": "2.0s",
+            "spawnTimeFrames": "60f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 398340,
+            "actualAp": 10622,
+            "actualDps": 4756.18,
+            "magnification": "4426%",
+            "count": "3",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "10.0-12.0s",
+            "delayFrames": "300-360f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 159336,
+            "actualAp": 10622,
+            "actualDps": 8612.55,
+            "magnification": "4426%",
+            "count": "6",
+            "spawnTime": "8.0s",
+            "spawnTimeFrames": "240f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 398340,
+            "actualAp": 10622,
+            "actualDps": 4756.18,
+            "magnification": "4426%",
+            "count": "7",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 8,
+      "stageName": "殺意 Lv.9",
+      "baseHp": "10",
+      "width": "4500",
+      "enemyLimit": "20",
+      "requiredCost": "130",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1063",
+          "treasureName": "殺意のタンクネコ(695)",
+          "probability": "100",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "1",
+          "amount": "4",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "678",
+          "enemyName": "ダミー",
+          "traits": [],
+          "baseStats": {
+            "hp": 30000,
+            "ap": 1500,
+            "dps": 80.5,
+            "speed": 0,
+            "range": 2000,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 0,
+            "freq": 559,
+            "foreswing": 42,
+            "backswing": 24,
+            "tba": 256
+          },
+          "stageStats": {
+            "actualHp": 525000,
+            "actualAp": 26250,
+            "actualDps": 1408.75,
+            "magnification": "1750%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [500, 500, 500],
+              "timings": [42, 45, 48]
+            },
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 500,
+              "omni_range": [0, 500]
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 185904,
+            "actualAp": 12393,
+            "actualDps": 10048.63,
+            "magnification": "5164%",
+            "count": "1",
+            "spawnTime": "4.7s",
+            "spawnTimeFrames": "140f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 464760,
+            "actualAp": 12393,
+            "actualDps": 5549.23,
+            "magnification": "5164%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "719",
+          "enemyName": "殺意のキモネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 4000,
+            "ap": 240,
+            "dps": 33.64,
+            "speed": 10,
+            "range": 700,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 300,
+            "freq": 214,
+            "foreswing": 15,
+            "backswing": 22,
+            "tba": 100
+          },
+          "stageStats": {
+            "actualHp": 206560,
+            "actualAp": 12393,
+            "actualDps": 1737.17,
+            "magnification": "5164%",
+            "count": "5",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "26.7-26.7s",
+            "delayFrames": "800-800f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 3600,
+            "actualAp": 240,
+            "actualDps": 194.59,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "2.0s",
+            "spawnTimeFrames": "60f",
+            "delay": "10.0-16.7s",
+            "delayFrames": "300-500f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 185904,
+            "actualAp": 12393,
+            "actualDps": 10048.63,
+            "magnification": "5164%",
+            "count": "1",
+            "spawnTime": "2.0s",
+            "spawnTimeFrames": "60f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 185904,
+            "actualAp": 12393,
+            "actualDps": 10048.63,
+            "magnification": "5164%",
+            "count": "7",
+            "spawnTime": "2.0s",
+            "spawnTimeFrames": "60f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 464760,
+            "actualAp": 12393,
+            "actualDps": 5549.23,
+            "magnification": "5164%",
+            "count": "3",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "10.0-12.0s",
+            "delayFrames": "300-360f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 185904,
+            "actualAp": 12393,
+            "actualDps": 10048.63,
+            "magnification": "5164%",
+            "count": "6",
+            "spawnTime": "8.0s",
+            "spawnTimeFrames": "240f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 464760,
+            "actualAp": 12393,
+            "actualDps": 5549.23,
+            "magnification": "5164%",
+            "count": "7",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 9,
+      "stageName": "殺意 Lv.10",
+      "baseHp": "10",
+      "width": "4500",
+      "enemyLimit": "20",
+      "requiredCost": "140",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1070",
+          "treasureName": "殺意のキモネコ(785)",
+          "probability": "100",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "1",
+          "amount": "57",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "678",
+          "enemyName": "ダミー",
+          "traits": [],
+          "baseStats": {
+            "hp": 30000,
+            "ap": 1500,
+            "dps": 80.5,
+            "speed": 0,
+            "range": 2000,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 0,
+            "freq": 559,
+            "foreswing": 42,
+            "backswing": 24,
+            "tba": 256
+          },
+          "stageStats": {
+            "actualHp": 600000,
+            "actualAp": 30000,
+            "actualDps": 1610.0,
+            "magnification": "2000%",
+            "count": "1",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [500, 500, 500],
+              "timings": [42, 45, 48]
+            },
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 500,
+              "omni_range": [0, 500]
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 212400,
+            "actualAp": 14160,
+            "actualDps": 11480.81,
+            "magnification": "5900%",
+            "count": "1",
+            "spawnTime": "4.7s",
+            "spawnTimeFrames": "140f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 531000,
+            "actualAp": 14160,
+            "actualDps": 6340.14,
+            "magnification": "5900%",
+            "count": "1",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "719",
+          "enemyName": "殺意のキモネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 4000,
+            "ap": 240,
+            "dps": 33.64,
+            "speed": 10,
+            "range": 700,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 300,
+            "freq": 214,
+            "foreswing": 15,
+            "backswing": 22,
+            "tba": 100
+          },
+          "stageStats": {
+            "actualHp": 236000,
+            "actualAp": 14160,
+            "actualDps": 1984.76,
+            "magnification": "5900%",
+            "count": "5",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "26.7-26.7s",
+            "delayFrames": "800-800f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 3600,
+            "actualAp": 240,
+            "actualDps": 194.59,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "2.0s",
+            "spawnTimeFrames": "60f",
+            "delay": "10.0-16.7s",
+            "delayFrames": "300-500f",
+            "baseHpRatio": "99%",
+            "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 212400,
+            "actualAp": 14160,
+            "actualDps": 11480.81,
+            "magnification": "5900%",
+            "count": "1",
+            "spawnTime": "2.0s",
+            "spawnTimeFrames": "60f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 212400,
+            "actualAp": 14160,
+            "actualDps": 11480.81,
+            "magnification": "5900%",
+            "count": "7",
+            "spawnTime": "2.0s",
+            "spawnTimeFrames": "60f",
+            "delay": "6.7-13.3s",
+            "delayFrames": "200-400f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 531000,
+            "actualAp": 14160,
+            "actualDps": 6340.14,
+            "magnification": "5900%",
+            "count": "3",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "10.0-12.0s",
+            "delayFrames": "300-360f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 212400,
+            "actualAp": 14160,
+            "actualDps": 11480.81,
+            "magnification": "5900%",
+            "count": "6",
+            "spawnTime": "8.0s",
+            "spawnTimeFrames": "240f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 531000,
+            "actualAp": 14160,
+            "actualDps": 6340.14,
+            "magnification": "5900%",
+            "count": "7",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "99%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 10,
+      "stageName": "殺意 Lv.11",
+      "baseHp": "10",
+      "width": "3600",
+      "enemyLimit": "50",
+      "requiredCost": "150",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "1",
+          "amount": "11",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "678",
+          "enemyName": "ダミー",
+          "traits": [],
+          "baseStats": {
+            "hp": 30000,
+            "ap": 1500,
+            "dps": 80.5,
+            "speed": 0,
+            "range": 2000,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 0,
+            "freq": 559,
+            "foreswing": 42,
+            "backswing": 24,
+            "tba": 256
+          },
+          "stageStats": {
+            "actualHp": 675000,
+            "actualAp": 33750,
+            "actualDps": 1811.25,
+            "magnification": "2250%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [500, 500, 500],
+              "timings": [42, 45, 48]
+            },
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 500,
+              "omni_range": [0, 500]
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 288000,
+            "actualAp": 19200,
+            "actualDps": 15567.2,
+            "magnification": "8000%",
+            "count": "4",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "26.7-33.3s",
+            "delayFrames": "800-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 40000,
+            "actualAp": 16000,
+            "actualDps": 11707.28,
+            "magnification": "800%",
+            "count": "12",
+            "spawnTime": "11.3s",
+            "spawnTimeFrames": "340f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 720000,
+            "actualAp": 19200,
+            "actualDps": 8596.8,
+            "magnification": "8000%",
+            "count": "1",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "6.7-8.0s",
+            "delayFrames": "200-240f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "719",
+          "enemyName": "殺意のキモネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 4000,
+            "ap": 240,
+            "dps": 33.64,
+            "speed": 10,
+            "range": 700,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 300,
+            "freq": 214,
+            "foreswing": 15,
+            "backswing": 22,
+            "tba": 100
+          },
+          "stageStats": {
+            "actualHp": 320000,
+            "actualAp": 19200,
+            "actualDps": 2691.2,
+            "magnification": "8000%",
+            "count": "6",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 40000,
+            "actualAp": 16000,
+            "actualDps": 11707.28,
+            "magnification": "800%",
+            "count": "30",
+            "spawnTime": "53.3s",
+            "spawnTimeFrames": "1,600f",
+            "delay": "20.0-23.3s",
+            "delayFrames": "600-700f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 720000,
+            "actualAp": 19200,
+            "actualDps": 8596.8,
+            "magnification": "8000%",
+            "count": "6",
+            "spawnTime": "70.0s",
+            "spawnTimeFrames": "2,100f",
+            "delay": "12.0-13.3s",
+            "delayFrames": "360-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "719",
+          "enemyName": "殺意のキモネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 4000,
+            "ap": 240,
+            "dps": 33.64,
+            "speed": 10,
+            "range": 700,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 300,
+            "freq": 214,
+            "foreswing": 15,
+            "backswing": 22,
+            "tba": 100
+          },
+          "stageStats": {
+            "actualHp": 320000,
+            "actualAp": 19200,
+            "actualDps": 2691.2,
+            "magnification": "8000%",
+            "count": "4",
+            "spawnTime": "70.0s",
+            "spawnTimeFrames": "2,100f",
+            "delay": "13.3-20.0s",
+            "delayFrames": "400-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 288000,
+            "actualAp": 19200,
+            "actualDps": 15567.2,
+            "magnification": "8000%",
+            "count": "10",
+            "spawnTime": "76.7s",
+            "spawnTimeFrames": "2,300f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 288000,
+            "actualAp": 19200,
+            "actualDps": 15567.2,
+            "magnification": "8000%",
+            "count": "5",
+            "spawnTime": "73.3s",
+            "spawnTimeFrames": "2,200f",
+            "delay": "20.0-26.7s",
+            "delayFrames": "600-800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 720000,
+            "actualAp": 19200,
+            "actualDps": 8596.8,
+            "magnification": "8000%",
+            "count": "3",
+            "spawnTime": "80.0s",
+            "spawnTimeFrames": "2,400f",
+            "delay": "12.0-13.3s",
+            "delayFrames": "360-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 11,
+      "stageName": "殺意 Lv.12",
+      "baseHp": "10",
+      "width": "3600",
+      "enemyLimit": "50",
+      "requiredCost": "160",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "1",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "678",
+          "enemyName": "ダミー",
+          "traits": [],
+          "baseStats": {
+            "hp": 30000,
+            "ap": 1500,
+            "dps": 80.5,
+            "speed": 0,
+            "range": 2000,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 0,
+            "freq": 559,
+            "foreswing": 42,
+            "backswing": 24,
+            "tba": 256
+          },
+          "stageStats": {
+            "actualHp": 701400,
+            "actualAp": 35070,
+            "actualDps": 1882.09,
+            "magnification": "2338%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [500, 500, 500],
+              "timings": [42, 45, 48]
+            },
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 500,
+              "omni_range": [0, 500]
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 324000,
+            "actualAp": 21600,
+            "actualDps": 17513.1,
+            "magnification": "9000%",
+            "count": "4",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "26.7-33.3s",
+            "delayFrames": "800-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 45000,
+            "actualAp": 18000,
+            "actualDps": 13170.69,
+            "magnification": "900%",
+            "count": "12",
+            "spawnTime": "11.3s",
+            "spawnTimeFrames": "340f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 810000,
+            "actualAp": 21600,
+            "actualDps": 9671.4,
+            "magnification": "9000%",
+            "count": "1",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "6.7-8.0s",
+            "delayFrames": "200-240f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "719",
+          "enemyName": "殺意のキモネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 4000,
+            "ap": 240,
+            "dps": 33.64,
+            "speed": 10,
+            "range": 700,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 300,
+            "freq": 214,
+            "foreswing": 15,
+            "backswing": 22,
+            "tba": 100
+          },
+          "stageStats": {
+            "actualHp": 360000,
+            "actualAp": 21600,
+            "actualDps": 3027.6,
+            "magnification": "9000%",
+            "count": "6",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 45000,
+            "actualAp": 18000,
+            "actualDps": 13170.69,
+            "magnification": "900%",
+            "count": "30",
+            "spawnTime": "53.3s",
+            "spawnTimeFrames": "1,600f",
+            "delay": "20.0-23.3s",
+            "delayFrames": "600-700f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 810000,
+            "actualAp": 21600,
+            "actualDps": 9671.4,
+            "magnification": "9000%",
+            "count": "6",
+            "spawnTime": "70.0s",
+            "spawnTimeFrames": "2,100f",
+            "delay": "12.0-13.3s",
+            "delayFrames": "360-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "719",
+          "enemyName": "殺意のキモネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 4000,
+            "ap": 240,
+            "dps": 33.64,
+            "speed": 10,
+            "range": 700,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 300,
+            "freq": 214,
+            "foreswing": 15,
+            "backswing": 22,
+            "tba": 100
+          },
+          "stageStats": {
+            "actualHp": 360000,
+            "actualAp": 21600,
+            "actualDps": 3027.6,
+            "magnification": "9000%",
+            "count": "4",
+            "spawnTime": "70.0s",
+            "spawnTimeFrames": "2,100f",
+            "delay": "13.3-20.0s",
+            "delayFrames": "400-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 324000,
+            "actualAp": 21600,
+            "actualDps": 17513.1,
+            "magnification": "9000%",
+            "count": "10",
+            "spawnTime": "76.7s",
+            "spawnTimeFrames": "2,300f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 324000,
+            "actualAp": 21600,
+            "actualDps": 17513.1,
+            "magnification": "9000%",
+            "count": "5",
+            "spawnTime": "73.3s",
+            "spawnTimeFrames": "2,200f",
+            "delay": "20.0-26.7s",
+            "delayFrames": "600-800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 810000,
+            "actualAp": 21600,
+            "actualDps": 9671.4,
+            "magnification": "9000%",
+            "count": "3",
+            "spawnTime": "80.0s",
+            "spawnTimeFrames": "2,400f",
+            "delay": "12.0-13.3s",
+            "delayFrames": "360-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 12,
+      "stageName": "殺意 Lv.13",
+      "baseHp": "10",
+      "width": "3600",
+      "enemyLimit": "50",
+      "requiredCost": "170",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "1",
+          "amount": "105",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "678",
+          "enemyName": "ダミー",
+          "traits": [],
+          "baseStats": {
+            "hp": 30000,
+            "ap": 1500,
+            "dps": 80.5,
+            "speed": 0,
+            "range": 2000,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 0,
+            "freq": 559,
+            "foreswing": 42,
+            "backswing": 24,
+            "tba": 256
+          },
+          "stageStats": {
+            "actualHp": 727500,
+            "actualAp": 36375,
+            "actualDps": 1952.12,
+            "magnification": "2425%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [500, 500, 500],
+              "timings": [42, 45, 48]
+            },
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 500,
+              "omni_range": [0, 500]
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 360000,
+            "actualAp": 24000,
+            "actualDps": 19459.0,
+            "magnification": "10000%",
+            "count": "4",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "26.7-33.3s",
+            "delayFrames": "800-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 50000,
+            "actualAp": 20000,
+            "actualDps": 14634.1,
+            "magnification": "1000%",
+            "count": "12",
+            "spawnTime": "11.3s",
+            "spawnTimeFrames": "340f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 900000,
+            "actualAp": 24000,
+            "actualDps": 10746.0,
+            "magnification": "10000%",
+            "count": "1",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "6.7-8.0s",
+            "delayFrames": "200-240f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "719",
+          "enemyName": "殺意のキモネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 4000,
+            "ap": 240,
+            "dps": 33.64,
+            "speed": 10,
+            "range": 700,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 300,
+            "freq": 214,
+            "foreswing": 15,
+            "backswing": 22,
+            "tba": 100
+          },
+          "stageStats": {
+            "actualHp": 400000,
+            "actualAp": 24000,
+            "actualDps": 3364.0,
+            "magnification": "10000%",
+            "count": "6",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 50000,
+            "actualAp": 20000,
+            "actualDps": 14634.1,
+            "magnification": "1000%",
+            "count": "30",
+            "spawnTime": "53.3s",
+            "spawnTimeFrames": "1,600f",
+            "delay": "20.0-23.3s",
+            "delayFrames": "600-700f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 900000,
+            "actualAp": 24000,
+            "actualDps": 10746.0,
+            "magnification": "10000%",
+            "count": "6",
+            "spawnTime": "70.0s",
+            "spawnTimeFrames": "2,100f",
+            "delay": "12.0-13.3s",
+            "delayFrames": "360-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "719",
+          "enemyName": "殺意のキモネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 4000,
+            "ap": 240,
+            "dps": 33.64,
+            "speed": 10,
+            "range": 700,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 300,
+            "freq": 214,
+            "foreswing": 15,
+            "backswing": 22,
+            "tba": 100
+          },
+          "stageStats": {
+            "actualHp": 400000,
+            "actualAp": 24000,
+            "actualDps": 3364.0,
+            "magnification": "10000%",
+            "count": "4",
+            "spawnTime": "70.0s",
+            "spawnTimeFrames": "2,100f",
+            "delay": "13.3-20.0s",
+            "delayFrames": "400-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 360000,
+            "actualAp": 24000,
+            "actualDps": 19459.0,
+            "magnification": "10000%",
+            "count": "10",
+            "spawnTime": "76.7s",
+            "spawnTimeFrames": "2,300f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 360000,
+            "actualAp": 24000,
+            "actualDps": 19459.0,
+            "magnification": "10000%",
+            "count": "5",
+            "spawnTime": "73.3s",
+            "spawnTimeFrames": "2,200f",
+            "delay": "20.0-26.7s",
+            "delayFrames": "600-800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 900000,
+            "actualAp": 24000,
+            "actualDps": 10746.0,
+            "magnification": "10000%",
+            "count": "3",
+            "spawnTime": "80.0s",
+            "spawnTimeFrames": "2,400f",
+            "delay": "12.0-13.3s",
+            "delayFrames": "360-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 13,
+      "stageName": "殺意 Lv.14",
+      "baseHp": "10",
+      "width": "3600",
+      "enemyLimit": "50",
+      "requiredCost": "180",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "1",
+          "amount": "11",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "678",
+          "enemyName": "ダミー",
+          "traits": [],
+          "baseStats": {
+            "hp": 30000,
+            "ap": 1500,
+            "dps": 80.5,
+            "speed": 0,
+            "range": 2000,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 0,
+            "freq": 559,
+            "foreswing": 42,
+            "backswing": 24,
+            "tba": 256
+          },
+          "stageStats": {
+            "actualHp": 753900,
+            "actualAp": 37695,
+            "actualDps": 2022.96,
+            "magnification": "2513%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [500, 500, 500],
+              "timings": [42, 45, 48]
+            },
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 500,
+              "omni_range": [0, 500]
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 396000,
+            "actualAp": 26400,
+            "actualDps": 21404.9,
+            "magnification": "11000%",
+            "count": "4",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "26.7-33.3s",
+            "delayFrames": "800-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 55000,
+            "actualAp": 22000,
+            "actualDps": 16097.51,
+            "magnification": "1100%",
+            "count": "12",
+            "spawnTime": "11.3s",
+            "spawnTimeFrames": "340f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 990000,
+            "actualAp": 26400,
+            "actualDps": 11820.6,
+            "magnification": "11000%",
+            "count": "1",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "6.7-8.0s",
+            "delayFrames": "200-240f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "719",
+          "enemyName": "殺意のキモネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 4000,
+            "ap": 240,
+            "dps": 33.64,
+            "speed": 10,
+            "range": 700,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 300,
+            "freq": 214,
+            "foreswing": 15,
+            "backswing": 22,
+            "tba": 100
+          },
+          "stageStats": {
+            "actualHp": 440000,
+            "actualAp": 26400,
+            "actualDps": 3700.4,
+            "magnification": "11000%",
+            "count": "6",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 55000,
+            "actualAp": 22000,
+            "actualDps": 16097.51,
+            "magnification": "1100%",
+            "count": "30",
+            "spawnTime": "53.3s",
+            "spawnTimeFrames": "1,600f",
+            "delay": "20.0-23.3s",
+            "delayFrames": "600-700f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 990000,
+            "actualAp": 26400,
+            "actualDps": 11820.6,
+            "magnification": "11000%",
+            "count": "6",
+            "spawnTime": "70.0s",
+            "spawnTimeFrames": "2,100f",
+            "delay": "12.0-13.3s",
+            "delayFrames": "360-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "719",
+          "enemyName": "殺意のキモネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 4000,
+            "ap": 240,
+            "dps": 33.64,
+            "speed": 10,
+            "range": 700,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 300,
+            "freq": 214,
+            "foreswing": 15,
+            "backswing": 22,
+            "tba": 100
+          },
+          "stageStats": {
+            "actualHp": 440000,
+            "actualAp": 26400,
+            "actualDps": 3700.4,
+            "magnification": "11000%",
+            "count": "4",
+            "spawnTime": "70.0s",
+            "spawnTimeFrames": "2,100f",
+            "delay": "13.3-20.0s",
+            "delayFrames": "400-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 396000,
+            "actualAp": 26400,
+            "actualDps": 21404.9,
+            "magnification": "11000%",
+            "count": "10",
+            "spawnTime": "76.7s",
+            "spawnTimeFrames": "2,300f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 396000,
+            "actualAp": 26400,
+            "actualDps": 21404.9,
+            "magnification": "11000%",
+            "count": "5",
+            "spawnTime": "73.3s",
+            "spawnTimeFrames": "2,200f",
+            "delay": "20.0-26.7s",
+            "delayFrames": "600-800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 990000,
+            "actualAp": 26400,
+            "actualDps": 11820.6,
+            "magnification": "11000%",
+            "count": "3",
+            "spawnTime": "80.0s",
+            "spawnTimeFrames": "2,400f",
+            "delay": "12.0-13.3s",
+            "delayFrames": "360-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 14,
+      "stageName": "殺意 Lv.MAX",
+      "baseHp": "10",
+      "width": "3600",
+      "enemyLimit": "50",
+      "requiredCost": "190",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "1",
+          "amount": "54",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "678",
+          "enemyName": "ダミー",
+          "traits": [],
+          "baseStats": {
+            "hp": 30000,
+            "ap": 1500,
+            "dps": 80.5,
+            "speed": 0,
+            "range": 2000,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 0,
+            "freq": 559,
+            "foreswing": 42,
+            "backswing": 24,
+            "tba": 256
+          },
+          "stageStats": {
+            "actualHp": 780000,
+            "actualAp": 39000,
+            "actualDps": 2093.0,
+            "magnification": "2600%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [500, 500, 500],
+              "timings": [42, 45, 48]
+            },
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 500,
+              "omni_range": [0, 500]
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 432000,
+            "actualAp": 28800,
+            "actualDps": 23350.8,
+            "magnification": "12000%",
+            "count": "4",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "26.7-33.3s",
+            "delayFrames": "800-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 60000,
+            "actualAp": 24000,
+            "actualDps": 17560.92,
+            "magnification": "1200%",
+            "count": "12",
+            "spawnTime": "11.3s",
+            "spawnTimeFrames": "340f",
+            "delay": "10.0-13.3s",
+            "delayFrames": "300-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 1080000,
+            "actualAp": 28800,
+            "actualDps": 12895.2,
+            "magnification": "12000%",
+            "count": "1",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "6.7-8.0s",
+            "delayFrames": "200-240f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "719",
+          "enemyName": "殺意のキモネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 4000,
+            "ap": 240,
+            "dps": 33.64,
+            "speed": 10,
+            "range": 700,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 300,
+            "freq": 214,
+            "foreswing": 15,
+            "backswing": 22,
+            "tba": 100
+          },
+          "stageStats": {
+            "actualHp": 480000,
+            "actualAp": 28800,
+            "actualDps": 4036.8,
+            "magnification": "12000%",
+            "count": "6",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "046",
+          "enemyName": "殺意のわんこ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 5000,
+            "ap": 2000,
+            "dps": 1463.41,
+            "speed": 30,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 8,
+            "money": 400,
+            "freq": 41,
+            "foreswing": 4,
+            "backswing": 37,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 60000,
+            "actualAp": 24000,
+            "actualDps": 17560.92,
+            "magnification": "1200%",
+            "count": "30",
+            "spawnTime": "53.3s",
+            "spawnTimeFrames": "1,600f",
+            "delay": "20.0-23.3s",
+            "delayFrames": "600-700f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 1080000,
+            "actualAp": 28800,
+            "actualDps": 12895.2,
+            "magnification": "12000%",
+            "count": "6",
+            "spawnTime": "70.0s",
+            "spawnTimeFrames": "2,100f",
+            "delay": "12.0-13.3s",
+            "delayFrames": "360-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "719",
+          "enemyName": "殺意のキモネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 4000,
+            "ap": 240,
+            "dps": 33.64,
+            "speed": 10,
+            "range": 700,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 300,
+            "freq": 214,
+            "foreswing": 15,
+            "backswing": 22,
+            "tba": 100
+          },
+          "stageStats": {
+            "actualHp": 480000,
+            "actualAp": 28800,
+            "actualDps": 4036.8,
+            "magnification": "12000%",
+            "count": "4",
+            "spawnTime": "70.0s",
+            "spawnTimeFrames": "2,100f",
+            "delay": "13.3-20.0s",
+            "delayFrames": "400-600f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 432000,
+            "actualAp": 28800,
+            "actualDps": 23350.8,
+            "magnification": "12000%",
+            "count": "10",
+            "spawnTime": "76.7s",
+            "spawnTimeFrames": "2,300f",
+            "delay": "3.3-6.7s",
+            "delayFrames": "100-200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "311",
+          "enemyName": "殺意のネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 3600,
+            "ap": 240,
+            "dps": 194.59,
+            "speed": 15,
+            "range": 140,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 37,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 432000,
+            "actualAp": 28800,
+            "actualDps": 23350.8,
+            "magnification": "12000%",
+            "count": "5",
+            "spawnTime": "73.3s",
+            "spawnTimeFrames": "2,200f",
+            "delay": "20.0-26.7s",
+            "delayFrames": "600-800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "633",
+          "enemyName": "殺意のタンクネコ",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 9000,
+            "ap": 240,
+            "dps": 107.46,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 200,
+            "freq": 67,
+            "foreswing": 8,
+            "backswing": 8,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 1080000,
+            "actualAp": 28800,
+            "actualDps": 12895.2,
+            "magnification": "12000%",
+            "count": "3",
+            "spawnTime": "80.0s",
+            "spawnTimeFrames": "2,400f",
+            "delay": "12.0-13.3s",
+            "delayFrames": "360-400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    }
+  ]
+}

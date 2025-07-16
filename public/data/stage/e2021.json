@@ -1,0 +1,1308 @@
+{
+  "eventId": 2021,
+  "eventName": "メタルスラッグディフェンス",
+  "typeId": 2,
+  "typeName": "コラボステージ",
+  "prefix": "C",
+  "mapId": 21,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 4,
+    "magnifications": [100, 150, 200, 300],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "オニ軍曹 アレン・オニール",
+      "baseHp": "10000",
+      "width": "4500",
+      "enemyLimit": "5",
+      "requiredCost": "30",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 4,
+        "magnifications": [100, 150, 200, 300],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1121",
+          "treasureName": "百太郎(214)",
+          "probability": "1",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "6500",
+          "treasureName": "キャラクタードロップ(6500)",
+          "probability": "1",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "5000",
+          "treasureName": "キャラクタードロップ(5000)",
+          "probability": "50000",
+          "amount": "3",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "3500",
+          "treasureName": "キャラクタードロップ(3500)",
+          "probability": "1",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "10000",
+          "amount": "0",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "189",
+          "enemyName": "マーズピープル",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 125,
+            "ap": 50,
+            "dps": 15.63,
+            "speed": 7,
+            "range": 300,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 60,
+            "freq": 96,
+            "foreswing": 77,
+            "backswing": 19,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 125,
+            "actualAp": 50,
+            "actualDps": 15.63,
+            "magnification": "100%",
+            "count": "5",
+            "spawnTime": "6.7s",
+            "spawnTimeFrames": "200f",
+            "delay": "16.7-16.7s",
+            "delayFrames": "500-500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "189",
+          "enemyName": "マーズピープル",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 125,
+            "ap": 50,
+            "dps": 15.63,
+            "speed": 7,
+            "range": 300,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 60,
+            "freq": 96,
+            "foreswing": 77,
+            "backswing": 19,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 125,
+            "actualAp": 50,
+            "actualDps": 15.63,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "30.7s",
+            "spawnTimeFrames": "920f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "189",
+          "enemyName": "マーズピープル",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 125,
+            "ap": 50,
+            "dps": 15.63,
+            "speed": 7,
+            "range": 300,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 60,
+            "freq": 96,
+            "foreswing": 77,
+            "backswing": 19,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 125,
+            "actualAp": 50,
+            "actualDps": 15.63,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "192",
+          "enemyName": "マルコ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1500,
+            "ap": 125,
+            "dps": 61.48,
+            "speed": 8,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 180,
+            "freq": 61,
+            "foreswing": 2,
+            "backswing": 36,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 1500,
+            "actualAp": 125,
+            "actualDps": 61.48,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "60.0s",
+            "spawnTimeFrames": "1,800f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "189",
+          "enemyName": "マーズピープル",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 125,
+            "ap": 50,
+            "dps": 15.63,
+            "speed": 7,
+            "range": 300,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 60,
+            "freq": 96,
+            "foreswing": 77,
+            "backswing": 19,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 125,
+            "actualAp": 50,
+            "actualDps": 15.63,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "80.0s",
+            "spawnTimeFrames": "2,400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "189",
+          "enemyName": "マーズピープル",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 125,
+            "ap": 50,
+            "dps": 15.63,
+            "speed": 7,
+            "range": 300,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 60,
+            "freq": 96,
+            "foreswing": 77,
+            "backswing": 19,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 125,
+            "actualAp": 50,
+            "actualDps": 15.63,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "84.0s",
+            "spawnTimeFrames": "2,520f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "189",
+          "enemyName": "マーズピープル",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 125,
+            "ap": 50,
+            "dps": 15.63,
+            "speed": 7,
+            "range": 300,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 60,
+            "freq": 96,
+            "foreswing": 77,
+            "backswing": 19,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 125,
+            "actualAp": 50,
+            "actualDps": 15.63,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "20.0-40.0s",
+            "delayFrames": "600-1,200f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "189",
+          "enemyName": "マーズピープル",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 125,
+            "ap": 50,
+            "dps": 15.63,
+            "speed": 7,
+            "range": 300,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 60,
+            "freq": 96,
+            "foreswing": 77,
+            "backswing": 19,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 125,
+            "actualAp": 50,
+            "actualDps": 15.63,
+            "magnification": "100%",
+            "count": "3",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "20.0-40.0s",
+            "delayFrames": "600-1,200f",
+            "baseHpRatio": "90%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "192",
+          "enemyName": "マルコ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1500,
+            "ap": 125,
+            "dps": 61.48,
+            "speed": 8,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 180,
+            "freq": 61,
+            "foreswing": 2,
+            "backswing": 36,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 1500,
+            "actualAp": 125,
+            "actualDps": 61.48,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "90%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "191",
+          "enemyName": "アレン・オニール",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 6000,
+            "ap": 600,
+            "dps": 169.81,
+            "speed": 8,
+            "range": 400,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 450,
+            "freq": 106,
+            "foreswing": 1,
+            "backswing": 105,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 6000,
+            "actualAp": 600,
+            "actualDps": 169.81,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "90%",
+            "isBoss": true
+          },
+          "abilities": {
+            "survive": {
+              "raw_columns": 34,
+              "chance": 100
+            }
+          }
+        }
+      ]
+    },
+    {
+      "stageId": 1,
+      "stageName": "進撃のヒュージハーミット",
+      "baseHp": "90000",
+      "width": "5000",
+      "enemyLimit": "5",
+      "requiredCost": "60",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 4,
+        "magnifications": [100, 150, 200, 300],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1121",
+          "treasureName": "百太郎(214)",
+          "probability": "3",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "7000",
+          "treasureName": "キャラクタードロップ(7000)",
+          "probability": "1",
+          "amount": "5",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "5500",
+          "treasureName": "キャラクタードロップ(5500)",
+          "probability": "1",
+          "amount": "2",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "3500",
+          "treasureName": "キャラクタードロップ(3500)",
+          "probability": "1",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "40000",
+          "amount": "3",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "193",
+          "enemyName": "SV-001",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 7500,
+            "ap": 400,
+            "dps": 187.5,
+            "speed": 24,
+            "range": 400,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 600,
+            "freq": 64,
+            "foreswing": 15,
+            "backswing": 13,
+            "tba": 25
+          },
+          "stageStats": {
+            "actualHp": 7500,
+            "actualAp": 400,
+            "actualDps": 187.5,
+            "magnification": "100%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "20.0-30.0s",
+            "delayFrames": "600-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "193",
+          "enemyName": "SV-001",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 7500,
+            "ap": 400,
+            "dps": 187.5,
+            "speed": 24,
+            "range": 400,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 600,
+            "freq": 64,
+            "foreswing": 15,
+            "backswing": 13,
+            "tba": 25
+          },
+          "stageStats": {
+            "actualHp": 7500,
+            "actualAp": 400,
+            "actualDps": 187.5,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "80.0s",
+            "spawnTimeFrames": "2,400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "193",
+          "enemyName": "SV-001",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 7500,
+            "ap": 400,
+            "dps": 187.5,
+            "speed": 24,
+            "range": 400,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 600,
+            "freq": 64,
+            "foreswing": 15,
+            "backswing": 13,
+            "tba": 25
+          },
+          "stageStats": {
+            "actualHp": 7500,
+            "actualAp": 400,
+            "actualDps": 187.5,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "90.0s",
+            "spawnTimeFrames": "2,700f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "192",
+          "enemyName": "マルコ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1500,
+            "ap": 125,
+            "dps": 61.48,
+            "speed": 8,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 180,
+            "freq": 61,
+            "foreswing": 2,
+            "backswing": 36,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 3000,
+            "actualAp": 250,
+            "actualDps": 122.96,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "96.7s",
+            "spawnTimeFrames": "2,900f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "192",
+          "enemyName": "マルコ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1500,
+            "ap": 125,
+            "dps": 61.48,
+            "speed": 8,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 180,
+            "freq": 61,
+            "foreswing": 2,
+            "backswing": 36,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 3000,
+            "actualAp": 250,
+            "actualDps": 122.96,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "192",
+          "enemyName": "マルコ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1500,
+            "ap": 125,
+            "dps": 61.48,
+            "speed": 8,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 180,
+            "freq": 61,
+            "foreswing": 2,
+            "backswing": 36,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 3000,
+            "actualAp": 250,
+            "actualDps": 122.96,
+            "magnification": "200%",
+            "count": "0",
+            "spawnTime": "120.0s",
+            "spawnTimeFrames": "3,600f",
+            "delay": "33.3-50.0s",
+            "delayFrames": "1,000-1,500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "193",
+          "enemyName": "SV-001",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 7500,
+            "ap": 400,
+            "dps": 187.5,
+            "speed": 24,
+            "range": 400,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 600,
+            "freq": 64,
+            "foreswing": 15,
+            "backswing": 13,
+            "tba": 25
+          },
+          "stageStats": {
+            "actualHp": 7500,
+            "actualAp": 400,
+            "actualDps": 187.5,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "44.0-66.0s",
+            "delayFrames": "1,320-1,980f",
+            "baseHpRatio": "80%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "194",
+          "enemyName": "ヒュージハーミット",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 60000,
+            "ap": 1111,
+            "dps": 833.25,
+            "speed": 7,
+            "range": 166,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1000,
+            "freq": 40,
+            "foreswing": 9,
+            "backswing": 2,
+            "tba": 16
+          },
+          "stageStats": {
+            "actualHp": 60000,
+            "actualAp": 1111,
+            "actualDps": 833.25,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "80%",
+            "isBoss": true
+          },
+          "abilities": {}
+        }
+      ]
+    },
+    {
+      "stageId": 2,
+      "stageName": "ジュピターキングの護衛",
+      "baseHp": "200000",
+      "width": "4800",
+      "enemyLimit": "7",
+      "requiredCost": "80",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 4,
+        "magnifications": [100, 150, 200, 300],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1121",
+          "treasureName": "百太郎(214)",
+          "probability": "10",
+          "amount": "1",
+          "times": "-2",
+          "limitText": "-2"
+        },
+        {
+          "treasureId": "7500",
+          "treasureName": "キャラクタードロップ(7500)",
+          "probability": "1",
+          "amount": "11",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "5500",
+          "treasureName": "キャラクタードロップ(5500)",
+          "probability": "1",
+          "amount": "6",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "3000",
+          "treasureName": "キャラクタードロップ(3000)",
+          "probability": "150000",
+          "amount": "5",
+          "times": "-1",
+          "limitText": "-1"
+        },
+        {
+          "treasureId": "500",
+          "treasureName": "アイテム500",
+          "probability": "1",
+          "amount": "12",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "192",
+          "enemyName": "マルコ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1500,
+            "ap": 125,
+            "dps": 61.48,
+            "speed": 8,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 180,
+            "freq": 61,
+            "foreswing": 2,
+            "backswing": 36,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 6000,
+            "actualAp": 500,
+            "actualDps": 245.92,
+            "magnification": "400%",
+            "count": "5",
+            "spawnTime": "0.0s",
+            "spawnTimeFrames": "0f",
+            "delay": "13.3-26.7s",
+            "delayFrames": "400-800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "189",
+          "enemyName": "マーズピープル",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 125,
+            "ap": 50,
+            "dps": 15.63,
+            "speed": 7,
+            "range": 300,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 60,
+            "freq": 96,
+            "foreswing": 77,
+            "backswing": 19,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 500,
+            "actualAp": 200,
+            "actualDps": 62.52,
+            "magnification": "400%",
+            "count": "3",
+            "spawnTime": "3.3s",
+            "spawnTimeFrames": "100f",
+            "delay": "4.0-12.0s",
+            "delayFrames": "120-360f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "191",
+          "enemyName": "アレン・オニール",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 6000,
+            "ap": 600,
+            "dps": 169.81,
+            "speed": 8,
+            "range": 400,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 450,
+            "freq": 106,
+            "foreswing": 1,
+            "backswing": 105,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 36000,
+            "actualAp": 3600,
+            "actualDps": 1018.86,
+            "magnification": "600%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "survive": {
+              "raw_columns": 34,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "195",
+          "enemyName": "ジュピターキング",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 250000,
+            "ap": 7500,
+            "dps": 566.75,
+            "speed": 5,
+            "range": 570,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1800,
+            "freq": 397,
+            "foreswing": 38,
+            "backswing": 28,
+            "tba": 180
+          },
+          "stageStats": {
+            "actualHp": 250000,
+            "actualAp": 7500,
+            "actualDps": 566.75,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "30.0s",
+            "spawnTimeFrames": "900f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "189",
+          "enemyName": "マーズピープル",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 125,
+            "ap": 50,
+            "dps": 15.63,
+            "speed": 7,
+            "range": 300,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 60,
+            "freq": 96,
+            "foreswing": 77,
+            "backswing": 19,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 500,
+            "actualAp": 200,
+            "actualDps": 62.52,
+            "magnification": "400%",
+            "count": "5",
+            "spawnTime": "46.7s",
+            "spawnTimeFrames": "1,400f",
+            "delay": "8.0-12.0s",
+            "delayFrames": "240-360f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "192",
+          "enemyName": "マルコ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1500,
+            "ap": 125,
+            "dps": 61.48,
+            "speed": 8,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 180,
+            "freq": 61,
+            "foreswing": 2,
+            "backswing": 36,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 6000,
+            "actualAp": 500,
+            "actualDps": 245.92,
+            "magnification": "400%",
+            "count": "5",
+            "spawnTime": "80.0s",
+            "spawnTimeFrames": "2,400f",
+            "delay": "6.7-10.0s",
+            "delayFrames": "200-300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "193",
+          "enemyName": "SV-001",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 7500,
+            "ap": 400,
+            "dps": 187.5,
+            "speed": 24,
+            "range": 400,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 600,
+            "freq": 64,
+            "foreswing": 15,
+            "backswing": 13,
+            "tba": 25
+          },
+          "stageStats": {
+            "actualHp": 30000,
+            "actualAp": 1600,
+            "actualDps": 750.0,
+            "magnification": "400%",
+            "count": "3",
+            "spawnTime": "100.0s",
+            "spawnTimeFrames": "3,000f",
+            "delay": "4.0-6.0s",
+            "delayFrames": "120-180f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "192",
+          "enemyName": "マルコ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1500,
+            "ap": 125,
+            "dps": 61.48,
+            "speed": 8,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 180,
+            "freq": 61,
+            "foreswing": 2,
+            "backswing": 36,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 6000,
+            "actualAp": 500,
+            "actualDps": 245.92,
+            "magnification": "400%",
+            "count": "0",
+            "spawnTime": "190.0s",
+            "spawnTimeFrames": "5,700f",
+            "delay": "200.0-200.0s",
+            "delayFrames": "6,000-6,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "192",
+          "enemyName": "マルコ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1500,
+            "ap": 125,
+            "dps": 61.48,
+            "speed": 8,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 180,
+            "freq": 61,
+            "foreswing": 2,
+            "backswing": 36,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 6000,
+            "actualAp": 500,
+            "actualDps": 245.92,
+            "magnification": "400%",
+            "count": "0",
+            "spawnTime": "192.0s",
+            "spawnTimeFrames": "5,760f",
+            "delay": "200.0-200.0s",
+            "delayFrames": "6,000-6,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "192",
+          "enemyName": "マルコ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1500,
+            "ap": 125,
+            "dps": 61.48,
+            "speed": 8,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 180,
+            "freq": 61,
+            "foreswing": 2,
+            "backswing": 36,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 6000,
+            "actualAp": 500,
+            "actualDps": 245.92,
+            "magnification": "400%",
+            "count": "0",
+            "spawnTime": "194.0s",
+            "spawnTimeFrames": "5,820f",
+            "delay": "200.0-200.0s",
+            "delayFrames": "6,000-6,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "192",
+          "enemyName": "マルコ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 1500,
+            "ap": 125,
+            "dps": 61.48,
+            "speed": 8,
+            "range": 160,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 180,
+            "freq": 61,
+            "foreswing": 2,
+            "backswing": 36,
+            "tba": 30
+          },
+          "stageStats": {
+            "actualHp": 6000,
+            "actualAp": 500,
+            "actualDps": 245.92,
+            "magnification": "400%",
+            "count": "0",
+            "spawnTime": "196.7s",
+            "spawnTimeFrames": "5,900f",
+            "delay": "200.0-200.0s",
+            "delayFrames": "6,000-6,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "191",
+          "enemyName": "アレン・オニール",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 6000,
+            "ap": 600,
+            "dps": 169.81,
+            "speed": 8,
+            "range": 400,
+            "rangeType": "単体",
+            "kbLevel": 2,
+            "money": 450,
+            "freq": 106,
+            "foreswing": 1,
+            "backswing": 105,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 36000,
+            "actualAp": 3600,
+            "actualDps": 1018.86,
+            "magnification": "600%",
+            "count": "0",
+            "spawnTime": "200.0s",
+            "spawnTimeFrames": "6,000f",
+            "delay": "200.0-200.0s",
+            "delayFrames": "6,000-6,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "survive": {
+              "raw_columns": 34,
+              "chance": 100
+            }
+          }
+        },
+        {
+          "enemyId": "193",
+          "enemyName": "SV-001",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 7500,
+            "ap": 400,
+            "dps": 187.5,
+            "speed": 24,
+            "range": 400,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 600,
+            "freq": 64,
+            "foreswing": 15,
+            "backswing": 13,
+            "tba": 25
+          },
+          "stageStats": {
+            "actualHp": 30000,
+            "actualAp": 1600,
+            "actualDps": 750.0,
+            "magnification": "400%",
+            "count": "0",
+            "spawnTime": "296.7s",
+            "spawnTimeFrames": "8,900f",
+            "delay": "200.0-200.0s",
+            "delayFrames": "6,000-6,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "193",
+          "enemyName": "SV-001",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 7500,
+            "ap": 400,
+            "dps": 187.5,
+            "speed": 24,
+            "range": 400,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 600,
+            "freq": 64,
+            "foreswing": 15,
+            "backswing": 13,
+            "tba": 25
+          },
+          "stageStats": {
+            "actualHp": 30000,
+            "actualAp": 1600,
+            "actualDps": 750.0,
+            "magnification": "400%",
+            "count": "0",
+            "spawnTime": "298.0s",
+            "spawnTimeFrames": "8,940f",
+            "delay": "200.0-200.0s",
+            "delayFrames": "6,000-6,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "193",
+          "enemyName": "SV-001",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 7500,
+            "ap": 400,
+            "dps": 187.5,
+            "speed": 24,
+            "range": 400,
+            "rangeType": "単体",
+            "kbLevel": 3,
+            "money": 600,
+            "freq": 64,
+            "foreswing": 15,
+            "backswing": 13,
+            "tba": 25
+          },
+          "stageStats": {
+            "actualHp": 30000,
+            "actualAp": 1600,
+            "actualDps": 750.0,
+            "magnification": "400%",
+            "count": "0",
+            "spawnTime": "300.0s",
+            "spawnTimeFrames": "9,000f",
+            "delay": "200.0-200.0s",
+            "delayFrames": "6,000-6,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        }
+      ]
+    }
+  ]
+}

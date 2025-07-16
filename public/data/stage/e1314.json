@@ -1,0 +1,363 @@
+{
+  "eventId": 1314,
+  "eventName": "火山の脅威",
+  "typeId": 1,
+  "typeName": "イベントステージ",
+  "prefix": "S",
+  "mapId": 314,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "2つの巨影",
+      "baseHp": "900000",
+      "width": "5400",
+      "enemyLimit": "35",
+      "requiredCost": "250",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [
+        {
+          "treasureId": "1",
+          "treasureName": "トレジャーレーダー",
+          "probability": "0",
+          "amount": "1",
+          "times": "-1",
+          "limitText": "-1"
+        }
+      ],
+      "enemies": [
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 100000,
+            "actualAp": 6000,
+            "actualDps": 7826.0,
+            "magnification": "4000%",
+            "count": "2",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "16.7-23.3s",
+            "delayFrames": "500-700f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "610",
+          "enemyName": "超棘獣ナマケモルガ",
+          "traits": ["悪"],
+          "baseStats": {
+            "hp": 1000000,
+            "ap": 51000,
+            "dps": 5349.65,
+            "speed": 13,
+            "range": 500,
+            "rangeType": "範囲",
+            "kbLevel": 2,
+            "money": 2000,
+            "freq": 286,
+            "foreswing": 35,
+            "backswing": 34,
+            "tba": 124
+          },
+          "stageStats": {
+            "actualHp": 2000000,
+            "actualAp": 102000,
+            "actualDps": 10699.3,
+            "magnification": "200%",
+            "count": "1",
+            "spawnTime": "13.3s",
+            "spawnTimeFrames": "400f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [17000, 17000, 17000],
+              "timings": [35, 37, 39]
+            },
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 1,
+              "ld_range": [1, 501]
+            },
+            "freeze": {
+              "raw_columns": [21, 22],
+              "chance": 40,
+              "duration_f": 100,
+              "duration_s": 3.33
+            },
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "shield": {
+              "raw_columns": 87,
+              "hp": 50000
+            },
+            "behemoth": {
+              "raw_columns": 101,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "002",
+          "enemyName": "例のヤツ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 200,
+            "ap": 20,
+            "dps": 20.0,
+            "speed": 10,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 1,
+            "money": 75,
+            "freq": 30,
+            "foreswing": 10,
+            "backswing": 20,
+            "tba": 10
+          },
+          "stageStats": {
+            "actualHp": 8000,
+            "actualAp": 800,
+            "actualDps": 800.0,
+            "magnification": "4000%",
+            "count": "0",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "13.3-16.7s",
+            "delayFrames": "400-500f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "603",
+          "enemyName": "野生のわんこ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 55000,
+            "ap": 16500,
+            "dps": 10531.91,
+            "speed": 25,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 300,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 3,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 110000,
+            "actualAp": 33000,
+            "actualDps": 21063.82,
+            "magnification": "200%",
+            "count": "0",
+            "spawnTime": "33.3s",
+            "spawnTimeFrames": "1,000f",
+            "delay": "26.7-33.3s",
+            "delayFrames": "800-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "survive": {
+              "raw_columns": 34,
+              "chance": 30
+            },
+            "immune-surge": {
+              "raw_columns": 85,
+              "enabled": true
+            },
+            "behemoth": {
+              "raw_columns": 101,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "611",
+          "enemyName": "超闇獣ダックジョー",
+          "traits": ["黒"],
+          "baseStats": {
+            "hp": 2000000,
+            "ap": 27900,
+            "dps": 12681.82,
+            "speed": 20,
+            "range": 250,
+            "rangeType": "範囲",
+            "kbLevel": 11,
+            "money": 1800,
+            "freq": 66,
+            "foreswing": 10,
+            "backswing": 34,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 2000000,
+            "actualAp": 27900,
+            "actualDps": 12681.82,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "60.0s",
+            "spawnTimeFrames": "1,800f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [9300, 9300, 9300],
+              "timings": [10, 21, 32]
+            },
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 1,
+              "ld_range": [1, 251]
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            },
+            "immune-surge": {
+              "raw_columns": 85,
+              "enabled": true
+            },
+            "toxic": {
+              "raw_columns": [79, 80],
+              "chance": 5,
+              "damage": 50
+            },
+            "behemoth": {
+              "raw_columns": 101,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "008",
+          "enemyName": "ゴマさま",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 2500,
+            "ap": 150,
+            "dps": 195.65,
+            "speed": 10,
+            "range": 170,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 650,
+            "freq": 23,
+            "foreswing": 8,
+            "backswing": 10,
+            "tba": 8
+          },
+          "stageStats": {
+            "actualHp": 100000,
+            "actualAp": 6000,
+            "actualDps": 7826.0,
+            "magnification": "4000%",
+            "count": "8",
+            "spawnTime": "66.7s",
+            "spawnTimeFrames": "2,000f",
+            "delay": "33.3-36.7s",
+            "delayFrames": "1,000-1,100f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "603",
+          "enemyName": "野生のわんこ",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 55000,
+            "ap": 16500,
+            "dps": 10531.91,
+            "speed": 25,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 300,
+            "freq": 47,
+            "foreswing": 8,
+            "backswing": 3,
+            "tba": 20
+          },
+          "stageStats": {
+            "actualHp": 110000,
+            "actualAp": 33000,
+            "actualDps": 21063.82,
+            "magnification": "200%",
+            "count": "4",
+            "spawnTime": "103.3s",
+            "spawnTimeFrames": "3,100f",
+            "delay": "20.0-26.7s",
+            "delayFrames": "600-800f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "survive": {
+              "raw_columns": 34,
+              "chance": 30
+            },
+            "immune-surge": {
+              "raw_columns": 85,
+              "enabled": true
+            },
+            "behemoth": {
+              "raw_columns": 101,
+              "enabled": true
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

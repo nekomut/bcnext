@@ -1,10 +1,14 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
   output: "export",
   trailingSlash: true,
-  basePath: "/bcnext",
-  assetPrefix: "/bcnext",
+  ...(isProd && {
+    basePath: "/bcnext",
+    assetPrefix: "/bcnext",
+  }),
   distDir: "out",
   images: {
     unoptimized: true,

@@ -179,12 +179,12 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border mb-2">
+    <div className="bg-white rounded-lg shadow-sm border mb-1">
       <div className="p-2">
-        <h3 className="text-sm font-semibold text-gray-900 mb-2">逆引き検索（レジェンドストーリー）</h3>
+        <h3 className="text-sm font-semibold text-gray-900 mb-1">逆引き検索（レジェンドストーリー）</h3>
         
         {/* 検索フィールド */}
-        <div className="mb-2">
+        <div className="mb-1">
           <input
             type="text"
             placeholder="敵名で検索..."
@@ -196,7 +196,7 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
 
         {/* 検索候補 */}
         {searchTerm && (
-          <div className="border border-gray-200 rounded mb-2 max-h-24 overflow-y-auto">
+          <div className="border border-gray-200 rounded mb-1 max-h-24 overflow-y-auto">
             {filteredEnemies.length === 0 ? (
               <div className="p-2 text-xs text-gray-500 text-center">
                 該当する敵が見つかりません
@@ -251,7 +251,7 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
         {/* 選択中の敵表示 */}
         {selectedEnemies.size > 0 && (
           <div className="mb-2">
-            <div className="flex items-center gap-2 mb-2">
+            <div className="flex items-center gap-2 mb-1">
               <span className="text-xs text-gray-600">選択中の敵 ({selectedEnemies.size}体):</span>
               <div className="flex flex-wrap gap-1">
                 {Array.from(selectedEnemies).map((enemyId) => {

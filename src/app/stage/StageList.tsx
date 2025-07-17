@@ -64,15 +64,12 @@ export function StageList({ events, searchTerm, onStageSelect, onSpecificStageSe
               <th className="px-0.5 py-0 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                 ステージ
               </th>
-              <th className="px-0.5 py-0 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                数
-              </th>
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-200">
             {events.map((event) => (
               <tr key={event.eventId} className="hover:bg-gray-50 transition-colors">
-                <td className="px-0.5 py-0">
+                <td className="px-0.5 py-0 align-top">
                   <button
                     onClick={() => onStageSelect(event.eventId)}
                     className="inline-flex items-right px-0.5 py-0.5 text-xs font-mono font-medium text-blue-600 hover:text-blue-800 hover:bg-blue-50 rounded transition-colors"
@@ -80,7 +77,7 @@ export function StageList({ events, searchTerm, onStageSelect, onSpecificStageSe
                     <small>{event.eventId}</small>
                   </button>
                 </td>
-                <td className="px-0.5 py-0">
+                <td className="px-0.5 py-0 align-top">
                   <button
                     onClick={() => onStageSelect(event.eventId)}
                     className="text-left w-full font-medium text-blue-600 hover:text-blue-800 hover:underline"
@@ -88,22 +85,22 @@ export function StageList({ events, searchTerm, onStageSelect, onSpecificStageSe
                     <small>{highlightText(event.eventName, searchTerm)}</small>
                   </button>
                 </td>
-                <td className="px-0.5 py-0">
+                <td className="px-0.5 py-0 align-top">
                   <div className="flex items-center">
                     <span className="hidden">{event.typeId} </span>
                     <span className="ml-1 text-gray-900"><small>{event.typeName}</small></span>
                   </div>
                 </td>
-                <td className="px-0.5 py-0">
-                  <div className="max-h-20 overflow-y-auto space-y-0.5">
+                <td className="px-0.5 py-0 align-top">
+                  <div className="space-y-0.5">
                     {event.stageIds.map((stageId) => {
                       const stageName = event.stageInfo[stageId] || `ステージ${stageId}`;
                       const isMatch = searchTerm && stageName.toLowerCase().includes(searchTerm.toLowerCase());
                       
                       return (
-                        <div key={stageId} className="text-xs flex items-center gap-1">
+                        <div key={stageId} className="text-xs flex items-start gap-1">
                           <small>
-                            <span className="font-mono text-right px-1 py-0 text-gray-500">{stageId}</span>
+                            <span className="font-mono text-right px-1 py-0 text-gray-500 w-12 inline-block">{stageId}</span>
                             <button
                               onClick={() => {
                                 if (onSpecificStageSelect) {
@@ -123,11 +120,6 @@ export function StageList({ events, searchTerm, onStageSelect, onSpecificStageSe
                       );
                     })}
                   </div>
-                </td>
-                <td className="px-0.5 py-0 text-center">
-                  <span className="inline-flex items-center px-1 py-0.5 rounded text-xs font-medium text-gray-600">
-                    <small>{event.stageCount}</small>
-                  </span>
                 </td>
               </tr>
             ))}

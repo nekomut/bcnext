@@ -14,7 +14,9 @@ export async function loadUnitImages(unitId: string): Promise<string[]> {
 
   try {
     // Next.jsのbasePathを考慮したパスを生成
-    const basePath = process.env.NODE_ENV === 'production' ? '/bcnext' : '';
+    // GitHub Pagesデプロイ環境ではhostname判定を使用
+    const isGitHubPages = typeof window !== 'undefined' && window.location.hostname === 'nekomut.github.io';
+    const basePath = isGitHubPages ? '/bcnext' : '';
     
     const urlsToTry = [
       `${basePath}/data/anim/${unitId}`,

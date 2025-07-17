@@ -1197,11 +1197,16 @@ async function getUnitDataFromJSON(unitId: number): Promise<UnitData | null> {
 
     const unitIdStr = unitId.toString().padStart(3, '0');
     
+    // Next.jsのbasePathを考慮したパスを生成
+    // GitHub Pagesデプロイ環境ではhostname判定を使用
+    const isGitHubPages = typeof window !== 'undefined' && window.location.hostname === 'nekomut.github.io';
+    const basePath = isGitHubPages ? '/bcnext' : '';
+    
     // デプロイ環境対応：複数のURLパスを試行（Animの実装を参考）
     const urlsToTry = [
-      `/data/unit/${unitIdStr}.json`,
+      `${basePath}/data/unit/${unitIdStr}.json`,
       `./data/unit/${unitIdStr}.json`,
-      `${typeof window !== 'undefined' && window.location.origin || ''}/data/unit/${unitIdStr}.json`
+      `${typeof window !== 'undefined' && window.location.origin || ''}${basePath}/data/unit/${unitIdStr}.json`
     ].filter(Boolean);
     
     let response: Response | null = null;

@@ -18,7 +18,9 @@ export async function loadEnemyIcon(enemyId: string): Promise<string | null> {
   
   try {
     // Next.jsのbasePathを考慮したパスを生成
-    const basePath = process.env.NODE_ENV === 'production' ? '/bcnext' : '';
+    // GitHub Pagesデプロイ環境ではhostname判定を使用
+    const isGitHubPages = typeof window !== 'undefined' && window.location.hostname === 'nekomut.github.io';
+    const basePath = isGitHubPages ? '/bcnext' : '';
     
     // デプロイ環境で相対パスでの fetch が失敗する場合があるため、複数のパスを試行
     const urlsToTry = [

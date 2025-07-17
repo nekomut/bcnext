@@ -52,11 +52,16 @@ export class IconManager {
    */
   private static async fetchUnitIcons(unitId: string): Promise<string[]> {
     try {
+      // Next.jsのbasePathを考慮したパスを生成
+      // GitHub Pagesデプロイ環境ではhostname判定を使用
+      const isGitHubPages = typeof window !== 'undefined' && window.location.hostname === 'nekomut.github.io';
+      const basePath = isGitHubPages ? '/bcnext' : '';
+      
       // デプロイ環境で相対パスでの fetch が失敗する場合があるため、複数のパスを試行
       const urlsToTry = [
-        `/data/unit/${unitId}`,
+        `${basePath}/data/unit/${unitId}`,
         `./data/unit/${unitId}`,
-        `${typeof window !== 'undefined' && window.location.origin || ''}/data/unit/${unitId}`
+        `${typeof window !== 'undefined' && window.location.origin || ''}${basePath}/data/unit/${unitId}`
       ].filter(Boolean);
       
       let response: Response | null = null;

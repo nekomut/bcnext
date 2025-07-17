@@ -15,7 +15,9 @@ export const loadAnimationData = async (unitId: string) => {
 
   try {
     // Next.jsのbasePathを考慮したパスを生成
-    const basePath = process.env.NODE_ENV === 'production' ? '/bcnext' : '';
+    // GitHub Pagesデプロイ環境ではhostname判定を使用
+    const isGitHubPages = typeof window !== 'undefined' && window.location.hostname === 'nekomut.github.io';
+    const basePath = isGitHubPages ? '/bcnext' : '';
     
     // JSON専用読み込み（複数URLフォールバック）
     const urlsToTry = [

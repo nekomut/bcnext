@@ -104,34 +104,48 @@ export class StageDataManager {
    */
   private static async fetchStageData(eventId: number): Promise<StageData | null> {
     try {
-      // Next.jsのbasePathを考慮したパスを生成
-      // GitHub Pagesデプロイ環境ではhostname判定を使用
-      const isGitHubPages = typeof window !== 'undefined' && window.location.hostname === 'nekomut.github.io';
-      const basePath = isGitHubPages ? '/bcnext' : '';
+      // GitHub Pages環境での確実なbasePath取得
+      const getBasePath = (): string => {
+        if (typeof window === 'undefined') return '';
+        
+        // GitHub Pages環境での確実な判定
+        const isGitHubPages = window.location.hostname === 'nekomut.github.io' || 
+                             window.location.pathname.startsWith('/bcnext');
+        
+        return isGitHubPages ? '/bcnext' : '';
+      };
       
-      // デプロイ環境で相対パスでの fetch が失敗する場合があるため、複数のパスを試行
+      const basePath = getBasePath();
+      
+      // GitHub Pages環境に最適化されたURL構築
       const urlsToTry = [
         `${basePath}/data/stage/e${eventId}.json`,
-        `./data/stage/e${eventId}.json`,
-        `${typeof window !== 'undefined' && window.location.origin || ''}${basePath}/data/stage/e${eventId}.json`
-      ].filter(Boolean);
+        `${window.location.origin}${basePath}/data/stage/e${eventId}.json`
+      ];
       
       let response: Response | null = null;
+      let lastError: Error | null = null;
       
       for (const tryUrl of urlsToTry) {
         try {
+          console.log(`Attempting to fetch: ${tryUrl}`);
           response = await fetch(tryUrl);
           if (response.ok) {
+            console.log(`Successfully loaded from: ${tryUrl}`);
             break;
+          } else {
+            console.warn(`Failed to load from ${tryUrl}: ${response.status}`);
           }
-        } catch {
+        } catch (error) {
+          lastError = error as Error;
+          console.warn(`Error fetching from ${tryUrl}:`, error);
           continue;
         }
       }
       
       if (!response || !response.ok) {
         const errorMsg = `All URLs failed to load stage data e${eventId}. Last status: ${response?.status || 'network error'}`;
-        console.warn(errorMsg);
+        console.error(errorMsg, lastError);
         return null;
       }
 
@@ -148,33 +162,48 @@ export class StageDataManager {
    */
   private static async fetchStageIndex(): Promise<StageIndexData> {
     try {
-      // Next.jsのbasePathを考慮したパスを生成
-      // GitHub Pagesデプロイ環境ではhostname判定を使用
-      const isGitHubPages = typeof window !== 'undefined' && window.location.hostname === 'nekomut.github.io';
-      const basePath = isGitHubPages ? '/bcnext' : '';
+      // GitHub Pages環境での確実なbasePath取得
+      const getBasePath = (): string => {
+        if (typeof window === 'undefined') return '';
+        
+        // GitHub Pages環境での確実な判定
+        const isGitHubPages = window.location.hostname === 'nekomut.github.io' || 
+                             window.location.pathname.startsWith('/bcnext');
+        
+        return isGitHubPages ? '/bcnext' : '';
+      };
       
+      const basePath = getBasePath();
+      
+      // GitHub Pages環境に最適化されたURL構築
       const urlsToTry = [
         `${basePath}/data/stage/index.json`,
-        `./data/stage/index.json`,
-        `${typeof window !== 'undefined' && window.location.origin || ''}${basePath}/data/stage/index.json`
-      ].filter(Boolean);
+        `${window.location.origin}${basePath}/data/stage/index.json`
+      ];
       
       let response: Response | null = null;
+      let lastError: Error | null = null;
       
       for (const tryUrl of urlsToTry) {
         try {
+          console.log(`Attempting to fetch index: ${tryUrl}`);
           response = await fetch(tryUrl);
           if (response.ok) {
+            console.log(`Successfully loaded index from: ${tryUrl}`);
             break;
+          } else {
+            console.warn(`Failed to load index from ${tryUrl}: ${response.status}`);
           }
-        } catch {
+        } catch (error) {
+          lastError = error as Error;
+          console.warn(`Error fetching index from ${tryUrl}:`, error);
           continue;
         }
       }
       
       if (!response || !response.ok) {
         const errorMsg = `All URLs failed to load stage index. Last status: ${response?.status || 'network error'}`;
-        console.warn(errorMsg);
+        console.error(errorMsg, lastError);
         return { events: [], totalEvents: 0, totalStages: 0 };
       }
 
@@ -192,18 +221,27 @@ export class StageDataManager {
    */
   private static async fetchEnemyIcon(enemyId: string): Promise<string> {
     try {
-      // Next.jsのbasePathを考慮したパスを生成
-      // GitHub Pagesデプロイ環境ではhostname判定を使用
-      const isGitHubPages = typeof window !== 'undefined' && window.location.hostname === 'nekomut.github.io';
-      const basePath = isGitHubPages ? '/bcnext' : '';
+      // GitHub Pages環境での確実なbasePath取得
+      const getBasePath = (): string => {
+        if (typeof window === 'undefined') return '';
+        
+        // GitHub Pages環境での確実な判定
+        const isGitHubPages = window.location.hostname === 'nekomut.github.io' || 
+                             window.location.pathname.startsWith('/bcnext');
+        
+        return isGitHubPages ? '/bcnext' : '';
+      };
       
+      const basePath = getBasePath();
+      
+      // GitHub Pages環境に最適化されたURL構築
       const urlsToTry = [
         `${basePath}/data/enemy/${enemyId}`,
-        `./data/enemy/${enemyId}`,
-        `${typeof window !== 'undefined' && window.location.origin || ''}${basePath}/data/enemy/${enemyId}`
-      ].filter(Boolean);
+        `${window.location.origin}${basePath}/data/enemy/${enemyId}`
+      ];
       
       let response: Response | null = null;
+      let lastError: Error | null = null;
       
       for (const tryUrl of urlsToTry) {
         try {
@@ -211,13 +249,14 @@ export class StageDataManager {
           if (response.ok) {
             break;
           }
-        } catch {
+        } catch (error) {
+          lastError = error as Error;
           continue;
         }
       }
       
       if (!response || !response.ok) {
-        console.warn(`Failed to load enemy icon ${enemyId}. Status: ${response?.status || 'network error'}`);
+        console.warn(`Failed to load enemy icon ${enemyId}. Status: ${response?.status || 'network error'}`, lastError);
         return '';
       }
 

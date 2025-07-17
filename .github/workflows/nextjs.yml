@@ -77,7 +77,12 @@ jobs:
       - name: Build with Next.js
         env: 
           NODE_OPTIONS: "--max_old_space_size=16384"
+          NODE_ENV: "production"
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+      - name: Create RSC metadata files
+        run: |
+          echo '{}' > ./out/bcnext.txt
+          echo '{}' > ./out/index.txt
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

@@ -14,11 +14,14 @@ export const loadAnimationData = async (unitId: string) => {
   }
 
   try {
+    // Next.jsのbasePathを考慮したパスを生成
+    const basePath = process.env.NODE_ENV === 'production' ? '/bcnext' : '';
+    
     // JSON専用読み込み（複数URLフォールバック）
     const urlsToTry = [
-      `/data/anim/${unitId}.json`,
+      `${basePath}/data/anim/${unitId}.json`,
       `./data/anim/${unitId}.json`,
-      `${typeof window !== 'undefined' && window.location.origin || ''}/data/anim/${unitId}.json`
+      `${typeof window !== 'undefined' && window.location.origin || ''}${basePath}/data/anim/${unitId}.json`
     ].filter(Boolean);
     
     let response: Response | null = null;

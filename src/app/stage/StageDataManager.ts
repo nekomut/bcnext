@@ -104,11 +104,14 @@ export class StageDataManager {
    */
   private static async fetchStageData(eventId: number): Promise<StageData | null> {
     try {
+      // Next.jsのbasePathを考慮したパスを生成
+      const basePath = process.env.NODE_ENV === 'production' ? '/bcnext' : '';
+      
       // デプロイ環境で相対パスでの fetch が失敗する場合があるため、複数のパスを試行
       const urlsToTry = [
-        `/data/stage/e${eventId}.json`,
+        `${basePath}/data/stage/e${eventId}.json`,
         `./data/stage/e${eventId}.json`,
-        `${typeof window !== 'undefined' && window.location.origin || ''}/data/stage/e${eventId}.json`
+        `${typeof window !== 'undefined' && window.location.origin || ''}${basePath}/data/stage/e${eventId}.json`
       ].filter(Boolean);
       
       let response: Response | null = null;
@@ -143,10 +146,13 @@ export class StageDataManager {
    */
   private static async fetchStageIndex(): Promise<StageIndexData> {
     try {
+      // Next.jsのbasePathを考慮したパスを生成
+      const basePath = process.env.NODE_ENV === 'production' ? '/bcnext' : '';
+      
       const urlsToTry = [
-        `/data/stage/index.json`,
+        `${basePath}/data/stage/index.json`,
         `./data/stage/index.json`,
-        `${typeof window !== 'undefined' && window.location.origin || ''}/data/stage/index.json`
+        `${typeof window !== 'undefined' && window.location.origin || ''}${basePath}/data/stage/index.json`
       ].filter(Boolean);
       
       let response: Response | null = null;
@@ -182,10 +188,13 @@ export class StageDataManager {
    */
   private static async fetchEnemyIcon(enemyId: string): Promise<string> {
     try {
+      // Next.jsのbasePathを考慮したパスを生成
+      const basePath = process.env.NODE_ENV === 'production' ? '/bcnext' : '';
+      
       const urlsToTry = [
-        `/data/enemy/${enemyId}`,
+        `${basePath}/data/enemy/${enemyId}`,
         `./data/enemy/${enemyId}`,
-        `${typeof window !== 'undefined' && window.location.origin || ''}/data/enemy/${enemyId}`
+        `${typeof window !== 'undefined' && window.location.origin || ''}${basePath}/data/enemy/${enemyId}`
       ].filter(Boolean);
       
       let response: Response | null = null;

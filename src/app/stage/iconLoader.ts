@@ -17,11 +17,14 @@ export async function loadEnemyIcon(enemyId: string): Promise<string | null> {
   }
   
   try {
+    // Next.jsのbasePathを考慮したパスを生成
+    const basePath = process.env.NODE_ENV === 'production' ? '/bcnext' : '';
+    
     // デプロイ環境で相対パスでの fetch が失敗する場合があるため、複数のパスを試行
     const urlsToTry = [
-      `/data/enemy/${paddedId}`,
+      `${basePath}/data/enemy/${paddedId}`,
       `./data/enemy/${paddedId}`,
-      `${typeof window !== 'undefined' && window.location.origin || ''}/data/enemy/${paddedId}`
+      `${typeof window !== 'undefined' && window.location.origin || ''}${basePath}/data/enemy/${paddedId}`
     ].filter(Boolean);
     
     let response: Response | null = null;

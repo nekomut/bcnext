@@ -13,10 +13,13 @@ export async function loadUnitImages(unitId: string): Promise<string[]> {
   }
 
   try {
+    // Next.jsのbasePathを考慮したパスを生成
+    const basePath = process.env.NODE_ENV === 'production' ? '/bcnext' : '';
+    
     const urlsToTry = [
-      `/data/anim/${unitId}`,
+      `${basePath}/data/anim/${unitId}`,
       `./data/anim/${unitId}`,
-      `${typeof window !== 'undefined' && window.location.origin || ''}/data/anim/${unitId}`
+      `${typeof window !== 'undefined' && window.location.origin || ''}${basePath}/data/anim/${unitId}`
     ].filter(Boolean);
     
     let response: Response | null = null;

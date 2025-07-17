@@ -42,11 +42,11 @@ const TileTable = ({ rollsA, rollsB, showYami, showChouGeki, setShowYami, setSho
     return `tile-rarity-${rarity}${track}`;
   };
 
-  const getVisibleCount = (chunk: any[], track: 0 | 1, rarity: number) => {
+  const getVisibleCount = (chunk: Array<readonly [Roll[], Roll[]]>, track: 0 | 1, rarity: number) => {
     if (rarity === 4 && !showYami) return '';
     if (rarity === 3 && !showChouGeki) return '';
 
-    const count = chunk.filter(x => x[track][1].rarity === rarity).length;
+    const count = chunk.filter(x => x[track]?.[1]?.rarity === rarity).length;
     return count > 0 ? count : '';
   };
 
@@ -95,7 +95,7 @@ const TileTable = ({ rollsA, rollsB, showYami, showChouGeki, setShowYami, setSho
               <td className={getTileClass(row[0][1].rarity, 'A')}>■</td>
               </React.Fragment>
               ))}
-              <td className="tile-rarity-4A text-[0.9em] text-right font-bold">{getVisibleCount(chunk, 0, 4)}</td>
+              <td className="tile-rarity-4A text-[0.9em] text-right font-bold">{getVisibleCount(chunk as unknown as Array<readonly [Roll[], Roll[]]>, 0, 4)}</td>
             </tr>
             <tr>
               <td className='tile-chunkId-B text-[0.8em] leading-[0.9] pr-1'>{`${i*100+1}B`}</td>
@@ -104,7 +104,7 @@ const TileTable = ({ rollsA, rollsB, showYami, showChouGeki, setShowYami, setSho
               <td className={getTileClass(row[1][1].rarity, 'B')}>■</td>
               </React.Fragment>
               ))}
-              <td className="tile-rarity-4B text-[0.9em] text-right font-bold">{getVisibleCount(chunk, 1, 4)}</td>
+              <td className="tile-rarity-4B text-[0.9em] text-right font-bold">{getVisibleCount(chunk as unknown as Array<readonly [Roll[], Roll[]]>, 1, 4)}</td>
             </tr>
           </React.Fragment>
         ))}

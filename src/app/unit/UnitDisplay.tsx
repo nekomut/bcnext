@@ -325,7 +325,7 @@ export function UnitDisplay({
 
   const abilities = getAbilities(unitData, actualCurrentForm, level, plusLevel, totalAttackMultiplier, baseHpUpMultiplier, talentCriticalBonus, talentFreezeBonus, talentWeakenBonus, talentSlowBonus, talentKnockbackBonus, talentBarrierBreakerBonus);
   
-  // めっぽう強いのターゲット属性が「古のみ」「悪のみ」「古と悪のみ」の場合の判定
+  // めっぽう強いのターゲット属性が「古のみ」「悪のみ」「属性を持たない敵のみ」「古と悪のみ」「古と属性を持たない敵のみ」「悪と属性を持たない敵のみ」「古と悪と属性を持たない敵のみ」の場合の判定
   const getMightyTargets = () => {
     const mightyAbility = abilities.find(ability => ability.name === 'めっぽう強い');
     if (mightyAbility) {
@@ -338,16 +338,17 @@ export function UnitDisplay({
         if (mightyAbility.iconKeys) {
           const hasRelicIcon = mightyAbility.iconKeys.includes('traitRelic');
           const hasAkuIcon = mightyAbility.iconKeys.includes('traitAku');
+          const hasTraitlessIcon = mightyAbility.iconKeys.includes('traitTraitless');
           const hasOtherTraitIcons = mightyAbility.iconKeys.some(iconKey => 
-            iconKey !== 'traitRelic' && iconKey !== 'traitAku' && iconKey !== 'traitBehemoth'
+            iconKey !== 'traitRelic' && iconKey !== 'traitAku' && iconKey !== 'traitTraitless' && iconKey !== 'traitBehemoth'
           );
           
-          // 古・悪以外の属性が一つでもあれば、テキストボックス表示（false を返す）
+          // 古・悪・属性を持たない敵以外の属性が一つでもあれば、テキストボックス表示（false を返す）
           if (hasOtherTraitIcons) {
             return false; // テキストボックス表示
           } else {
-            // 古のみ、悪のみ、または古と悪のみの場合はテキストボックス非表示
-            return (hasRelicIcon && !hasAkuIcon) || (!hasRelicIcon && hasAkuIcon) || (hasRelicIcon && hasAkuIcon);
+            // 古のみ、悪のみ、属性を持たない敵のみ、または古と悪と属性を持たない敵の組み合わせの場合はテキストボックス非表示
+            return (hasRelicIcon || hasAkuIcon || hasTraitlessIcon);
           }
         }
         return false;
@@ -356,18 +357,19 @@ export function UnitDisplay({
       if (valueString) {
         const hasRelic = valueString.includes('古代種');
         const hasAku = valueString.includes('悪魔');
-        const hasOtherTraits = valueString.includes('白い敵') || valueString.includes('赤い敵') || 
+        const hasTraitless = valueString.includes('属性を持たない敵');
+        const hasOtherTraits = valueString.includes('赤い敵') || 
                               valueString.includes('黒い敵') || valueString.includes('メタル') || 
                               valueString.includes('天使') || valueString.includes('エイリアン') || 
                               valueString.includes('ゾンビ') || 
                               valueString.includes('浮いてる敵');
         
-        // 古・悪以外の属性が一つでもあれば、テキストボックス表示（false を返す）
+        // 古・悪・属性を持たない敵以外の属性が一つでもあれば、テキストボックス表示（false を返す）
         if (hasOtherTraits) {
           return false; // テキストボックス表示
         } else {
-          // 古のみ、悪のみ、または古と悪のみの場合はテキストボックス非表示
-          return (hasRelic && !hasAku) || (!hasRelic && hasAku) || (hasRelic && hasAku);
+          // 古のみ、悪のみ、属性を持たない敵のみ、または古と悪と属性を持たない敵の組み合わせの場合はテキストボックス非表示
+          return (hasRelic || hasAku || hasTraitless);
         }
       }
       return false;
@@ -376,7 +378,7 @@ export function UnitDisplay({
   };
   const hasOnlyRelicAkuTalent = getMightyTargets();
   
-  // 打たれ強いのターゲット属性が「古のみ」「悪のみ」「古と悪のみ」の場合の判定
+  // 打たれ強いのターゲット属性が「古のみ」「悪のみ」「属性を持たない敵のみ」「古と悪のみ」「古と属性を持たない敵のみ」「悪と属性を持たない敵のみ」「古と悪と属性を持たない敵のみ」の場合の判定
   const getToughTargets = () => {
     const toughAbility = abilities.find(ability => ability.name === '打たれ強い' || ability.name === '超打たれ強い');
     if (toughAbility) {
@@ -389,13 +391,17 @@ export function UnitDisplay({
         if (toughAbility.iconKeys) {
           const hasRelicIcon = toughAbility.iconKeys.includes('traitRelic');
           const hasAkuIcon = toughAbility.iconKeys.includes('traitAku');
+          const hasTraitlessIcon = toughAbility.iconKeys.includes('traitTraitless');
           const hasOtherTraitIcons = toughAbility.iconKeys.some(iconKey => 
-            iconKey !== 'traitRelic' && iconKey !== 'traitAku' && iconKey !== 'traitBehemoth'
+            iconKey !== 'traitRelic' && iconKey !== 'traitAku' && iconKey !== 'traitTraitless' && iconKey !== 'traitBehemoth'
           );
           
-          // 古のみ、悪のみ、または古と悪のみの場合のみtrue
-          if (!hasOtherTraitIcons) {
-            return (hasRelicIcon && !hasAkuIcon) || (!hasRelicIcon && hasAkuIcon) || (hasRelicIcon && hasAkuIcon);
+          // 古・悪・属性を持たない敵以外の属性が一つでもあれば、false を返す
+          if (hasOtherTraitIcons) {
+            return false;
+          } else {
+            // 古のみ、悪のみ、属性を持たない敵のみ、または古と悪と属性を持たない敵の組み合わせの場合のみtrue
+            return (hasRelicIcon || hasAkuIcon || hasTraitlessIcon);
           }
         }
         return false;
@@ -404,15 +410,19 @@ export function UnitDisplay({
       if (valueString) {
         const hasRelic = valueString.includes('古代種');
         const hasAku = valueString.includes('悪魔');
-        const hasOtherTraits = valueString.includes('白い敵') || valueString.includes('赤い敵') || 
+        const hasTraitless = valueString.includes('属性を持たない敵');
+        const hasOtherTraits = valueString.includes('赤い敵') || 
                               valueString.includes('黒い敵') || valueString.includes('メタル') || 
                               valueString.includes('天使') || valueString.includes('エイリアン') || 
                               valueString.includes('ゾンビ') || 
                               valueString.includes('浮いてる敵');
         
-        // 古のみ、悪のみ、または古と悪のみの場合のみtrue
-        if (!hasOtherTraits) {
-          return (hasRelic && !hasAku) || (!hasRelic && hasAku) || (hasRelic && hasAku);
+        // 古・悪・属性を持たない敵以外の属性が一つでもあれば、false を返す
+        if (hasOtherTraits) {
+          return false;
+        } else {
+          // 古のみ、悪のみ、属性を持たない敵のみ、または古と悪と属性を持たない敵の組み合わせの場合のみtrue
+          return (hasRelic || hasAku || hasTraitless);
         }
       }
       return false;
@@ -421,7 +431,7 @@ export function UnitDisplay({
   };
   const hasOnlyRelicAkuTough = getToughTargets();
   
-  // 超ダメージのターゲット属性が「古のみ」「悪のみ」「古と悪のみ」の場合の判定
+  // 超ダメージのターゲット属性が「古のみ」「悪のみ」「属性を持たない敵のみ」「古と悪のみ」「古と属性を持たない敵のみ」「悪と属性を持たない敵のみ」「古と悪と属性を持たない敵のみ」の場合の判定
   const getMassiveDamageTargets = () => {
     const massiveDamageAbility = abilities.find(ability => ability.name === '超ダメージ');
     if (massiveDamageAbility) {
@@ -434,13 +444,17 @@ export function UnitDisplay({
         if (massiveDamageAbility.iconKeys) {
           const hasRelicIcon = massiveDamageAbility.iconKeys.includes('traitRelic');
           const hasAkuIcon = massiveDamageAbility.iconKeys.includes('traitAku');
+          const hasTraitlessIcon = massiveDamageAbility.iconKeys.includes('traitTraitless');
           const hasOtherTraitIcons = massiveDamageAbility.iconKeys.some(iconKey => 
-            iconKey !== 'traitRelic' && iconKey !== 'traitAku' && iconKey !== 'traitBehemoth'
+            iconKey !== 'traitRelic' && iconKey !== 'traitAku' && iconKey !== 'traitTraitless' && iconKey !== 'traitBehemoth'
           );
           
-          // 古のみ、悪のみ、または古と悪のみの場合のみtrue
-          if (!hasOtherTraitIcons) {
-            return (hasRelicIcon && !hasAkuIcon) || (!hasRelicIcon && hasAkuIcon) || (hasRelicIcon && hasAkuIcon);
+          // 古・悪・属性を持たない敵以外の属性が一つでもあれば、false を返す
+          if (hasOtherTraitIcons) {
+            return false;
+          } else {
+            // 古のみ、悪のみ、属性を持たない敵のみ、または古と悪と属性を持たない敵の組み合わせの場合のみtrue
+            return (hasRelicIcon || hasAkuIcon || hasTraitlessIcon);
           }
         }
         return false;
@@ -449,15 +463,19 @@ export function UnitDisplay({
       if (valueString) {
         const hasRelic = valueString.includes('古代種');
         const hasAku = valueString.includes('悪魔');
-        const hasOtherTraits = valueString.includes('白い敵') || valueString.includes('赤い敵') || 
+        const hasTraitless = valueString.includes('属性を持たない敵');
+        const hasOtherTraits = valueString.includes('赤い敵') || 
                               valueString.includes('黒い敵') || valueString.includes('メタル') || 
                               valueString.includes('天使') || valueString.includes('エイリアン') || 
                               valueString.includes('ゾンビ') || 
                               valueString.includes('浮いてる敵');
         
-        // 古のみ、悪のみ、または古と悪のみの場合のみtrue
-        if (!hasOtherTraits) {
-          return (hasRelic && !hasAku) || (!hasRelic && hasAku) || (hasRelic && hasAku);
+        // 古・悪・属性を持たない敵以外の属性が一つでもあれば、false を返す
+        if (hasOtherTraits) {
+          return false;
+        } else {
+          // 古のみ、悪のみ、属性を持たない敵のみ、または古と悪と属性を持たない敵の組み合わせの場合のみtrue
+          return (hasRelic || hasAku || hasTraitless);
         }
       }
       return false;
@@ -898,20 +916,24 @@ function StatItem({
 }
 
 function DynamicMassiveDamage({ ability, attackUpMultiplier }: { ability: UnitAbility, attackUpMultiplier: number }) {
-  // ターゲット属性が「古のみ」「悪のみ」「古と悪のみ」の場合は3倍固定
+  // ターゲット属性が「古のみ」「悪のみ」「属性を持たない敵のみ」「古と悪のみ」「古と属性を持たない敵のみ」「悪と属性を持たない敵のみ」「古と悪と属性を持たない敵のみ」の場合は3倍固定
   const hasOnlyRelicAku = (() => {
     if (typeof ability.value === 'string') {
       const hasRelic = ability.value.includes('古代種');
       const hasAku = ability.value.includes('悪魔');
-      const hasOtherTraits = ability.value.includes('白い敵') || ability.value.includes('赤い敵') || 
+      const hasTraitless = ability.value.includes('属性を持たない敵');
+      const hasOtherTraits = ability.value.includes('赤い敵') || 
                             ability.value.includes('黒い敵') || ability.value.includes('メタル') || 
                             ability.value.includes('天使') || ability.value.includes('エイリアン') || 
                             ability.value.includes('ゾンビ') || 
                             ability.value.includes('浮いてる敵');
       
-      // 古のみ、悪のみ、または古と悪のみの場合のみtrue
-      if (!hasOtherTraits) {
-        return (hasRelic && !hasAku) || (!hasRelic && hasAku) || (hasRelic && hasAku);
+      // 古・悪・属性を持たない敵以外の属性が一つでもあれば、テキストボックス表示（false を返す）
+      if (hasOtherTraits) {
+        return false; // テキストボックス表示
+      } else {
+        // 古のみ、悪のみ、属性を持たない敵のみ、または古と悪と属性を持たない敵の組み合わせの場合はテキストボックス非表示
+        return (hasRelic || hasAku || hasTraitless);
       }
     }
     return false;
@@ -981,32 +1003,40 @@ function DynamicMassiveDamage({ ability, attackUpMultiplier }: { ability: UnitAb
 }
 
 function DynamicExtremeDamage({ ability, attackUpMultiplier }: { ability: UnitAbility, attackUpMultiplier: number }) {
-  // ターゲット属性が「古のみ」「悪のみ」「古と悪のみ」の場合は5倍固定
+  // ターゲット属性が「古のみ」「悪のみ」「属性を持たない敵のみ」「古と悪のみ」「古と属性を持たない敵のみ」「悪と属性を持たない敵のみ」「古と悪と属性を持たない敵のみ」の場合は5倍固定
   const hasOnlyRelicAku = (() => {
     if (typeof ability.value === 'string') {
       const hasRelic = ability.value.includes('古代種');
       const hasAku = ability.value.includes('悪魔');
-      const hasOtherTraits = ability.value.includes('白い敵') || ability.value.includes('赤い敵') || 
+      const hasTraitless = ability.value.includes('属性を持たない敵');
+      const hasOtherTraits = ability.value.includes('赤い敵') || 
                             ability.value.includes('黒い敵') || ability.value.includes('メタル') || 
                             ability.value.includes('天使') || ability.value.includes('エイリアン') || 
                             ability.value.includes('ゾンビ') || 
-                            ability.value.includes('浮いてる敵')  || ability.value.includes('属性を持たない敵');
+                            ability.value.includes('浮いてる敵');
       
-      // 古のみ、悪のみ、または古と悪のみの場合のみtrue
-      if (!hasOtherTraits) {
-        return (hasRelic && !hasAku) || (!hasRelic && hasAku) || (hasRelic && hasAku);
+      // 古・悪・属性を持たない敵以外の属性が一つでもあれば、テキストボックス表示（false を返す）
+      if (hasOtherTraits) {
+        return false; // テキストボックス表示
+      } else {
+        // 古のみ、悪のみ、属性を持たない敵のみ、または古と悪と属性を持たない敵の組み合わせの場合はテキストボックス非表示
+        return (hasRelic || hasAku || hasTraitless);
       }
     } else if (React.isValidElement(ability.value) && ability.iconKeys) {
       // React要素の場合、iconKeysを使用して判定
       const hasRelicIcon = ability.iconKeys.includes('traitRelic');
       const hasAkuIcon = ability.iconKeys.includes('traitAku');
+      const hasTraitlessIcon = ability.iconKeys.includes('traitTraitless');
       const hasOtherTraitIcons = ability.iconKeys.some(iconKey => 
-        iconKey !== 'traitRelic' && iconKey !== 'traitAku' && iconKey !== 'traitBehemoth'
+        iconKey !== 'traitRelic' && iconKey !== 'traitAku' && iconKey !== 'traitTraitless' && iconKey !== 'traitBehemoth'
       );
       
-      // 古のみ、悪のみ、または古と悪のみの場合のみtrue
-      if (!hasOtherTraitIcons) {
-        return (hasRelicIcon && !hasAkuIcon) || (!hasRelicIcon && hasAkuIcon) || (hasRelicIcon && hasAkuIcon);
+      // 古・悪・属性を持たない敵以外の属性が一つでもあれば、テキストボックス表示（false を返す）
+      if (hasOtherTraitIcons) {
+        return false; // テキストボックス表示
+      } else {
+        // 古のみ、悪のみ、属性を持たない敵のみ、または古と悪と属性を持たない敵の組み合わせの場合はテキストボックス非表示
+        return (hasRelicIcon || hasAkuIcon || hasTraitlessIcon);
       }
     }
     return false;
@@ -1076,20 +1106,24 @@ function DynamicExtremeDamage({ ability, attackUpMultiplier }: { ability: UnitAb
 }
 
 function DynamicToughness({ ability, hpUpMultiplier }: { ability: UnitAbility, hpUpMultiplier: number }) {
-  // ターゲット属性が「古のみ」「悪のみ」「古と悪のみ」の場合は0.25倍固定
+  // ターゲット属性が「古のみ」「悪のみ」「属性を持たない敵のみ」「古と悪のみ」「古と属性を持たない敵のみ」「悪と属性を持たない敵のみ」「古と悪と属性を持たない敵のみ」の場合は0.25倍固定
   const hasOnlyRelicAku = (() => {
     if (typeof ability.value === 'string') {
       const hasRelic = ability.value.includes('古代種');
       const hasAku = ability.value.includes('悪魔');
-      const hasOtherTraits = ability.value.includes('白い敵') || ability.value.includes('赤い敵') || 
+      const hasTraitless = ability.value.includes('属性を持たない敵');
+      const hasOtherTraits = ability.value.includes('赤い敵') || 
                             ability.value.includes('黒い敵') || ability.value.includes('メタル') || 
                             ability.value.includes('天使') || ability.value.includes('エイリアン') || 
                             ability.value.includes('ゾンビ') || 
                             ability.value.includes('浮いてる敵');
       
-      // 古のみ、悪のみ、または古と悪のみの場合のみtrue
-      if (!hasOtherTraits) {
-        return (hasRelic && !hasAku) || (!hasRelic && hasAku) || (hasRelic && hasAku);
+      // 古・悪・属性を持たない敵以外の属性が一つでもあれば、テキストボックス表示（false を返す）
+      if (hasOtherTraits) {
+        return false; // テキストボックス表示
+      } else {
+        // 古のみ、悪のみ、属性を持たない敵のみ、または古と悪と属性を持たない敵の組み合わせの場合はテキストボックス非表示
+        return (hasRelic || hasAku || hasTraitless);
       }
     }
     return false;
@@ -1197,32 +1231,40 @@ function DynamicSuperToughness({ ability, hpUpMultiplier }: { ability: UnitAbili
 }
 
 function DynamicMighty({ ability, attackUpMultiplier, hpUpMultiplier }: { ability: UnitAbility, attackUpMultiplier: number, hpUpMultiplier: number }) {
-  // ターゲット属性が「古のみ」「悪のみ」「古と悪のみ」の場合は1.5倍/0.5倍固定
+  // ターゲット属性が「古のみ」「悪のみ」「属性を持たない敵のみ」「古と悪のみ」「古と属性を持たない敵のみ」「悪と属性を持たない敵のみ」「古と悪と属性を持たない敵のみ」の場合は1.5倍/0.5倍固定
   const hasOnlyRelicAku = (() => {
     if (typeof ability.value === 'string') {
       const hasRelic = ability.value.includes('古代種');
       const hasAku = ability.value.includes('悪魔');
-      const hasOtherTraits = ability.value.includes('白い敵') || ability.value.includes('赤い敵') || 
+      const hasTraitless = ability.value.includes('属性を持たない敵');
+      const hasOtherTraits = ability.value.includes('赤い敵') || 
                             ability.value.includes('黒い敵') || ability.value.includes('メタル') || 
                             ability.value.includes('天使') || ability.value.includes('エイリアン') || 
                             ability.value.includes('ゾンビ') || 
-                            ability.value.includes('浮いてる敵') || ability.value.includes('属性を持たない敵');
+                            ability.value.includes('浮いてる敵');
       
-      // 古のみ、悪のみ、または古と悪のみの場合のみtrue
-      if (!hasOtherTraits) {
-        return (hasRelic && !hasAku) || (!hasRelic && hasAku) || (hasRelic && hasAku);
+      // 古・悪・属性を持たない敵以外の属性が一つでもあれば、テキストボックス表示（false を返す）
+      if (hasOtherTraits) {
+        return false; // テキストボックス表示
+      } else {
+        // 古のみ、悪のみ、属性を持たない敵のみ、または古と悪と属性を持たない敵の組み合わせの場合はテキストボックス非表示
+        return (hasRelic || hasAku || hasTraitless);
       }
     } else if (React.isValidElement(ability.value) && ability.iconKeys) {
       // React要素の場合、iconKeysを使用して判定
       const hasRelicIcon = ability.iconKeys.includes('traitRelic');
       const hasAkuIcon = ability.iconKeys.includes('traitAku');
+      const hasTraitlessIcon = ability.iconKeys.includes('traitTraitless');
       const hasOtherTraitIcons = ability.iconKeys.some(iconKey => 
-        iconKey !== 'traitRelic' && iconKey !== 'traitAku' && iconKey !== 'traitBehemoth'
+        iconKey !== 'traitRelic' && iconKey !== 'traitAku' && iconKey !== 'traitTraitless' && iconKey !== 'traitBehemoth'
       );
       
-      // 古のみ、悪のみ、または古と悪のみの場合のみtrue
-      if (!hasOtherTraitIcons) {
-        return (hasRelicIcon && !hasAkuIcon) || (!hasRelicIcon && hasAkuIcon) || (hasRelicIcon && hasAkuIcon);
+      // 古・悪・属性を持たない敵以外の属性が一つでもあれば、テキストボックス表示（false を返す）
+      if (hasOtherTraitIcons) {
+        return false; // テキストボックス表示
+      } else {
+        // 古のみ、悪のみ、属性を持たない敵のみ、または古と悪と属性を持たない敵の組み合わせの場合はテキストボックス非表示
+        return (hasRelicIcon || hasAkuIcon || hasTraitlessIcon);
       }
     }
     return false;

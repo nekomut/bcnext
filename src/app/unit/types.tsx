@@ -455,23 +455,23 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
       extremeDamageTargets.push({name: 'メタル', iconKey: 'traitMetal'});
     }
     
-    // Check for angel targeting (stats[19])
-    if (stats[19] && stats[19] !== 0 && stats[19] !== -1) {
+    // Check for angel targeting (stats[20])
+    if (stats[20] && stats[20] !== 0 && stats[20] !== -1) {
       extremeDamageTargets.push({name: '天使', iconKey: 'traitAngel'});
     }
     
-    // Check for alien targeting (stats[20])
-    if (stats[20] && stats[20] !== 0 && stats[20] !== -1) {
+    // Check for alien targeting (stats[21])
+    if (stats[21] && stats[21] !== 0 && stats[21] !== -1) {
       extremeDamageTargets.push({name: 'エイリアン', iconKey: 'traitAlien'});
     }
     
-    // Check for zombie targeting (stats[21])
-    if (stats[21] && stats[21] !== 0 && stats[21] !== -1) {
+    // Check for zombie targeting (stats[22])
+    if (stats[22] && stats[22] !== 0 && stats[22] !== -1) {
       extremeDamageTargets.push({name: 'ゾンビ', iconKey: 'traitZombie'});
     }
     
-    // Check for traitless targeting (stats[22])
-    if (stats[22] && stats[22] !== 0 && stats[22] !== -1) {
+    // Check for traitless targeting (stats[19])
+    if (stats[19] && stats[19] !== 0 && stats[19] !== -1) {
       extremeDamageTargets.push({name: '属性を持たない敵', iconKey: 'traitTraitless'});
     }
     

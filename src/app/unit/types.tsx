@@ -266,7 +266,25 @@ export const calculateUnitStats = (
   };
 };
 
-export const getAbilities = (unitData: UnitData, formId: number, level: number = 30, plusLevel: number = 0, attackUpMultiplier: number = 1, hpUpMultiplier: number = 1, talentCriticalBonus: number = 0, talentFreezeBonus: { chance: number; duration: number } = { chance: 0, duration: 0 }, talentWeakenBonus: { chance: number; duration: number } = { chance: 0, duration: 0 }, talentSlowBonus: { chance: number; duration: number } = { chance: 0, duration: 0 }, talentKnockbackBonus: { chance: number } = { chance: 0 }, talentBarrierBreakerBonus: { chance: number } = { chance: 0 }): UnitAbility[] => {
+export const getAbilities = (
+  unitData: UnitData, 
+  formId: number, 
+  level: number = 30, 
+  plusLevel: number = 0, 
+  attackUpMultiplier: number = 1, 
+  hpUpMultiplier: number = 1, 
+  talentCriticalBonus: number = 0, 
+  talentFreezeBonus: { chance: number; duration: number } = { chance: 0, duration: 0 }, 
+  talentWeakenBonus: { chance: number; duration: number } = { chance: 0, duration: 0 }, 
+  talentSlowBonus: { chance: number; duration: number } = { chance: 0, duration: 0 }, 
+  talentKnockbackBonus: { chance: number } = { chance: 0 }, 
+  talentBarrierBreakerBonus: { chance: number } = { chance: 0 },
+  dynamicMultipliers?: {
+    mightyAp?: number;
+    massiveDamage?: number;
+    extremeDamage?: number;
+  }
+): UnitAbility[] => {
   const form = unitData.coreData.forms[formId];
   if (!form) return [];
 
@@ -575,16 +593,43 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
   if (stats[82] && stats[82] > 0) {
     const chance = stats[82];
     
+    // ターゲット属性が「古のみ」「悪のみ」「属性を持たない敵のみ」「古と悪のみ」「古と属性を持たない敵のみ」「悪と属性を持たない敵のみ」「古と悪と属性を持たない敵のみ」の場合の判定
+    const isRelicAkuTraitlessOnly = (() => {
+      if (targets.length === 0) return false;
+      
+      const hasRelicIcon = targets.some(target => target.iconKey === 'traitRelic');
+      const hasAkuIcon = targets.some(target => target.iconKey === 'traitAku');
+      const hasTraitlessIcon = targets.some(target => target.iconKey === 'traitTraitless');
+      const hasOtherTraitIcons = targets.some(target => 
+        target.iconKey !== 'traitRelic' && target.iconKey !== 'traitAku' && target.iconKey !== 'traitTraitless' && target.iconKey !== 'traitBehemoth'
+      );
+      
+      // 古・悪・属性を持たない敵以外の属性が一つでもあれば、false を返す
+      if (hasOtherTraitIcons) {
+        return false;
+      } else {
+        // 古のみ、悪のみ、属性を持たない敵のみ、または古と悪と属性を持たない敵の組み合わせの場合のみtrue
+        return (hasRelicIcon || hasAkuIcon || hasTraitlessIcon);
+      }
+    })();
+    
     // 基本APの3倍値を計算（攻撃力アップを適用）
     let savageValues: React.ReactNode;
     
-    // 超ダメージ・極ダメージがあるかチェック
+    // めっぽう強い・超ダメージ・極ダメージがあるかチェック
+    const hasMighty = stats[23] && stats[23] > 0;
     const hasAdditionalDamage = (stats[30] && stats[30] > 0) || (stats[81] && stats[81] > 0);
     
+    // めっぽう強いの倍率を決定
+    let mightyMultiplier = 1;
+    if (hasMighty) {
+      mightyMultiplier = isRelicAkuTraitlessOnly ? 1.5 : (dynamicMultipliers?.mightyAp ?? 1.8);
+    }
+    
     if (calculatedStats.multihit) {
-      const hit1_3x = calculatedStats.atk1 ? Math.round(calculatedStats.atk1 * attackUpMultiplier * 3) : 0;
-      const hit2_3x = calculatedStats.atk2 ? Math.round(calculatedStats.atk2 * attackUpMultiplier * 3) : 0;
-      const hit3_3x = calculatedStats.atk3 ? Math.round(calculatedStats.atk3 * attackUpMultiplier * 3) : 0;
+      const hit1_3x = calculatedStats.atk1 ? Math.round(calculatedStats.atk1 * attackUpMultiplier * 3 * mightyMultiplier) : 0;
+      const hit2_3x = calculatedStats.atk2 ? Math.round(calculatedStats.atk2 * attackUpMultiplier * 3 * mightyMultiplier) : 0;
+      const hit3_3x = calculatedStats.atk3 ? Math.round(calculatedStats.atk3 * attackUpMultiplier * 3 * mightyMultiplier) : 0;
       
       const isEnhanced = attackUpMultiplier > 1;
       const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
@@ -592,7 +637,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
       const tilde = hasAdditionalDamage ? ' ~' : '';
       savageValues = <span dangerouslySetInnerHTML={{ __html: `${values.join(' / ')}${tilde}` }} />;
     } else {
-      const savageAP = Math.round(calculatedStats.ap * attackUpMultiplier * 3);
+      const savageAP = Math.round(calculatedStats.ap * attackUpMultiplier * 3 * mightyMultiplier);
       const isEnhanced = attackUpMultiplier > 1;
       const tilde = hasAdditionalDamage ? ' ~' : '';
       savageValues = (
@@ -606,16 +651,20 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
     // 超ダメージ・極ダメージがある場合の追加表示
     let additionalValues: React.ReactNode = null;
     
-    // 超ダメージがある場合（3倍~4倍の4倍 * 3 = 12倍）
+    // 超ダメージがある場合
     if (stats[30] && stats[30] > 0) {
+      // 古悪限定の場合は3倍、通常はdynamicMultipliersまたは4倍を適用
+      const massiveMultiplier = isRelicAkuTraitlessOnly ? 3 : (dynamicMultipliers?.massiveDamage ?? 4);
+      const totalMultiplier = 3 * massiveMultiplier * mightyMultiplier; // 基本3倍 × 超ダメージ倍率 × めっぽう強い倍率
+      
       if (calculatedStats.multihit) {
-        const hit1_12x = calculatedStats.atk1 ? Math.round(calculatedStats.atk1 * attackUpMultiplier * 12) : 0;
-        const hit2_12x = calculatedStats.atk2 ? Math.round(calculatedStats.atk2 * attackUpMultiplier * 12) : 0;
-        const hit3_12x = calculatedStats.atk3 ? Math.round(calculatedStats.atk3 * attackUpMultiplier * 12) : 0;
+        const hit1_max = calculatedStats.atk1 ? Math.round(calculatedStats.atk1 * attackUpMultiplier * totalMultiplier) : 0;
+        const hit2_max = calculatedStats.atk2 ? Math.round(calculatedStats.atk2 * attackUpMultiplier * totalMultiplier) : 0;
+        const hit3_max = calculatedStats.atk3 ? Math.round(calculatedStats.atk3 * attackUpMultiplier * totalMultiplier) : 0;
         
         const isEnhanced = attackUpMultiplier > 1;
         const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
-        const superValues = [hit1_12x, hit2_12x, hit3_12x].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
+        const superValues = [hit1_max, hit2_max, hit3_max].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
         additionalValues = (
           <>
             <br />
@@ -623,7 +672,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
           </>
         );
       } else {
-        const superAP = Math.round(calculatedStats.ap * attackUpMultiplier * 12);
+        const superAP = Math.round(calculatedStats.ap * attackUpMultiplier * totalMultiplier);
         const isEnhanced = attackUpMultiplier > 1;
         additionalValues = (
           <>
@@ -634,16 +683,20 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
       }
     }
     
-    // 極ダメージがある場合（5倍~6倍の6倍 * 3 = 18倍）
+    // 極ダメージがある場合
     if (stats[81] && stats[81] > 0) {
+      // 古悪限定の場合は5倍、通常はdynamicMultipliersまたは6倍を適用
+      const extremeMultiplier = isRelicAkuTraitlessOnly ? 5 : (dynamicMultipliers?.extremeDamage ?? 6);
+      const totalMultiplier = 3 * extremeMultiplier * mightyMultiplier; // 基本3倍 × 極ダメージ倍率 × めっぽう強い倍率
+      
       if (calculatedStats.multihit) {
-        const hit1_18x = calculatedStats.atk1 ? Math.round(calculatedStats.atk1 * attackUpMultiplier * 18) : 0;
-        const hit2_18x = calculatedStats.atk2 ? Math.round(calculatedStats.atk2 * attackUpMultiplier * 18) : 0;
-        const hit3_18x = calculatedStats.atk3 ? Math.round(calculatedStats.atk3 * attackUpMultiplier * 18) : 0;
+        const hit1_max = calculatedStats.atk1 ? Math.round(calculatedStats.atk1 * attackUpMultiplier * totalMultiplier) : 0;
+        const hit2_max = calculatedStats.atk2 ? Math.round(calculatedStats.atk2 * attackUpMultiplier * totalMultiplier) : 0;
+        const hit3_max = calculatedStats.atk3 ? Math.round(calculatedStats.atk3 * attackUpMultiplier * totalMultiplier) : 0;
         
         const isEnhanced = attackUpMultiplier > 1;
         const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
-        const extremeValues = [hit1_18x, hit2_18x, hit3_18x].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
+        const extremeValues = [hit1_max, hit2_max, hit3_max].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
         additionalValues = (
           <>
             <br />
@@ -651,7 +704,7 @@ export const getAbilities = (unitData: UnitData, formId: number, level: number =
           </>
         );
       } else {
-        const extremeAP = Math.round(calculatedStats.ap * attackUpMultiplier * 18);
+        const extremeAP = Math.round(calculatedStats.ap * attackUpMultiplier * totalMultiplier);
         const isEnhanced = attackUpMultiplier > 1;
         additionalValues = (
           <>

@@ -155,6 +155,9 @@ export function UnitDisplay({
   
   // 超ダメージ(7)の状態
   const [talentMassiveDamageMultiplier, setTalentMassiveDamageMultiplier] = useState(4);
+  
+  // 極ダメージの状態
+  const [talentExtremeDamageMultiplier, setTalentExtremeDamageMultiplier] = useState(6);
 
   // ユニットが変更されたときにフラグを再初期化
   useEffect(() => {
@@ -221,6 +224,7 @@ export function UnitDisplay({
     setTalentMightyDmgValue(0.4);
     setTalentToughnessValue(0.2);
     setTalentMassiveDamageMultiplier(4);
+    setTalentExtremeDamageMultiplier(6);
     
     // 能力・効果の攻撃力アップをリセット
     setAttackUpEnabled(false);
@@ -323,11 +327,12 @@ export function UnitDisplay({
     chance: actualBarrierBreakerChance 
   };
 
-  const abilities = getAbilities(unitData, actualCurrentForm, level, plusLevel, totalAttackMultiplier, baseHpUpMultiplier, talentCriticalBonus, talentFreezeBonus, talentWeakenBonus, talentSlowBonus, talentKnockbackBonus, talentBarrierBreakerBonus);
+  // 初回のgetAbilities呼び出し（判定用）
+  const tempAbilities = getAbilities(unitData, actualCurrentForm, level, plusLevel, totalAttackMultiplier, baseHpUpMultiplier, talentCriticalBonus, talentFreezeBonus, talentWeakenBonus, talentSlowBonus, talentKnockbackBonus, talentBarrierBreakerBonus);
   
   // めっぽう強いのターゲット属性が「古のみ」「悪のみ」「属性を持たない敵のみ」「古と悪のみ」「古と属性を持たない敵のみ」「悪と属性を持たない敵のみ」「古と悪と属性を持たない敵のみ」の場合の判定
   const getMightyTargets = () => {
-    const mightyAbility = abilities.find(ability => ability.name === 'めっぽう強い');
+    const mightyAbility = tempAbilities.find(ability => ability.name === 'めっぽう強い');
     if (mightyAbility) {
       // valueがstringの場合とReactNodeの場合を両方対応
       let valueString = '';
@@ -380,7 +385,7 @@ export function UnitDisplay({
   
   // 打たれ強いのターゲット属性が「古のみ」「悪のみ」「属性を持たない敵のみ」「古と悪のみ」「古と属性を持たない敵のみ」「悪と属性を持たない敵のみ」「古と悪と属性を持たない敵のみ」の場合の判定
   const getToughTargets = () => {
-    const toughAbility = abilities.find(ability => ability.name === '打たれ強い' || ability.name === '超打たれ強い');
+    const toughAbility = tempAbilities.find(ability => ability.name === '打たれ強い' || ability.name === '超打たれ強い');
     if (toughAbility) {
       // valueがstringの場合とReactNodeの場合を両方対応
       let valueString = '';
@@ -433,7 +438,7 @@ export function UnitDisplay({
   
   // 超ダメージのターゲット属性が「古のみ」「悪のみ」「属性を持たない敵のみ」「古と悪のみ」「古と属性を持たない敵のみ」「悪と属性を持たない敵のみ」「古と悪と属性を持たない敵のみ」の場合の判定
   const getMassiveDamageTargets = () => {
-    const massiveDamageAbility = abilities.find(ability => ability.name === '超ダメージ');
+    const massiveDamageAbility = tempAbilities.find(ability => ability.name === '超ダメージ');
     if (massiveDamageAbility) {
       // valueがstringの場合とReactNodeの場合を両方対応
       let valueString = '';
@@ -485,6 +490,7 @@ export function UnitDisplay({
   const hasOnlyRelicAkuMassiveDamage = getMassiveDamageTargets();
   
   
+  
   const enhancedStats = {
     ...stats,
     hp: Math.round(stats.hp * baseHpUpMultiplier),
@@ -497,6 +503,19 @@ export function UnitDisplay({
     speed: enhancedSpeed,
     recharge: enhancedRecharge
   };
+
+  // 最終的なgetAbilities呼び出し（動的倍率付き）
+  const abilities = getAbilities(
+    unitData, actualCurrentForm, level, plusLevel, 
+    totalAttackMultiplier, baseHpUpMultiplier, 
+    talentCriticalBonus, talentFreezeBonus, talentWeakenBonus, 
+    talentSlowBonus, talentKnockbackBonus, talentBarrierBreakerBonus,
+    {
+      mightyAp: talentMightyApValue,
+      massiveDamage: talentMassiveDamageMultiplier,
+      extremeDamage: talentExtremeDamageMultiplier
+    }
+  );
 
   if (!currentFormData) {
     return <div className="text-red-500">Invalid form ID: {actualCurrentForm}</div>;
@@ -723,7 +742,7 @@ export function UnitDisplay({
       <StatsTable stats={enhancedStats} attackUpEnabled={totalAttackMultiplier > 1} hpUpEnabled={baseHpUpMultiplier > 1} attackIntervalReductionEnabled={attackIntervalReductionEnabled && actualCurrentForm >= 2} costReductionEnabled={costReductionEnabled && actualCurrentForm >= 2} moveSpeedUpEnabled={moveSpeedUpEnabled && actualCurrentForm >= 2} rechargeSpeedUpEnabled={rechargeSpeedUpEnabled && actualCurrentForm >= 2} />
 
       {/* Abilities */}
-      {abilities.length > 0 && <AbilitiesList abilities={abilities} attackUpMultiplier={totalAttackMultiplier} hpUpMultiplier={baseHpUpMultiplier} attackUpEnabled={attackUpEnabled} setAttackUpEnabled={setAttackUpEnabled} />}
+      {abilities.length > 0 && <AbilitiesList abilities={abilities} attackUpMultiplier={totalAttackMultiplier} hpUpMultiplier={baseHpUpMultiplier} attackUpEnabled={attackUpEnabled} setAttackUpEnabled={setAttackUpEnabled} talentMassiveDamageMultiplier={talentMassiveDamageMultiplier} setTalentMassiveDamageMultiplier={setTalentMassiveDamageMultiplier} talentMightyApValue={talentMightyApValue} setTalentMightyApValue={setTalentMightyApValue} talentMightyDmgValue={talentMightyDmgValue} setTalentMightyDmgValue={setTalentMightyDmgValue} hasOnlyRelicAkuTalent={hasOnlyRelicAkuTalent} />}
 
       {/* Talents */}
       {unitData.auxiliaryData.talents.hasTalents && actualCurrentForm >= 2 && (
@@ -915,7 +934,7 @@ function StatItem({
   );
 }
 
-function DynamicMassiveDamage({ ability, attackUpMultiplier }: { ability: UnitAbility, attackUpMultiplier: number }) {
+function DynamicMassiveDamage({ ability, attackUpMultiplier, massiveDamageMultiplier, setMassiveDamageMultiplier }: { ability: UnitAbility, attackUpMultiplier: number, massiveDamageMultiplier: number, setMassiveDamageMultiplier: (value: number) => void }) {
   // ターゲット属性が「古のみ」「悪のみ」「属性を持たない敵のみ」「古と悪のみ」「古と属性を持たない敵のみ」「悪と属性を持たない敵のみ」「古と悪と属性を持たない敵のみ」の場合は3倍固定
   const hasOnlyRelicAku = (() => {
     if (typeof ability.value === 'string') {
@@ -938,8 +957,6 @@ function DynamicMassiveDamage({ ability, attackUpMultiplier }: { ability: UnitAb
     }
     return false;
   })();
-  
-  const [multiplier, setMultiplier] = useState(hasOnlyRelicAku ? 3 : 4);
   
   if (!ability.calculatedStats || !ability.isDynamic) return null;
   
@@ -978,12 +995,12 @@ function DynamicMassiveDamage({ ability, attackUpMultiplier }: { ability: UnitAb
           ) : (
             <input
               type="number"
-              value={multiplier}
+              value={massiveDamageMultiplier}
               onChange={(e) => {
                 const value = Number(e.target.value);
                 // 下限値未満は3に、上限値超過は4に調整
                 const clampedValue = Math.max(3, Math.min(4, value));
-                setMultiplier(clampedValue);
+                setMassiveDamageMultiplier(clampedValue);
               }}
               className="w-7 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
               min="3"
@@ -994,7 +1011,7 @@ function DynamicMassiveDamage({ ability, attackUpMultiplier }: { ability: UnitAb
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
-            <b className="text-gray-500" dangerouslySetInnerHTML={{ __html: calculateDamage(hasOnlyRelicAku ? 3 : multiplier) }}></b>
+            <b className="text-gray-500" dangerouslySetInnerHTML={{ __html: calculateDamage(hasOnlyRelicAku ? 3 : massiveDamageMultiplier) }}></b>
           </div>
         </div>
       </div>
@@ -1230,48 +1247,7 @@ function DynamicSuperToughness({ ability, hpUpMultiplier }: { ability: UnitAbili
   );
 }
 
-function DynamicMighty({ ability, attackUpMultiplier, hpUpMultiplier }: { ability: UnitAbility, attackUpMultiplier: number, hpUpMultiplier: number }) {
-  // ターゲット属性が「古のみ」「悪のみ」「属性を持たない敵のみ」「古と悪のみ」「古と属性を持たない敵のみ」「悪と属性を持たない敵のみ」「古と悪と属性を持たない敵のみ」の場合は1.5倍/0.5倍固定
-  const hasOnlyRelicAku = (() => {
-    if (typeof ability.value === 'string') {
-      const hasRelic = ability.value.includes('古代種');
-      const hasAku = ability.value.includes('悪魔');
-      const hasTraitless = ability.value.includes('属性を持たない敵');
-      const hasOtherTraits = ability.value.includes('赤い敵') || 
-                            ability.value.includes('黒い敵') || ability.value.includes('メタル') || 
-                            ability.value.includes('天使') || ability.value.includes('エイリアン') || 
-                            ability.value.includes('ゾンビ') || 
-                            ability.value.includes('浮いてる敵');
-      
-      // 古・悪・属性を持たない敵以外の属性が一つでもあれば、テキストボックス表示（false を返す）
-      if (hasOtherTraits) {
-        return false; // テキストボックス表示
-      } else {
-        // 古のみ、悪のみ、属性を持たない敵のみ、または古と悪と属性を持たない敵の組み合わせの場合はテキストボックス非表示
-        return (hasRelic || hasAku || hasTraitless);
-      }
-    } else if (React.isValidElement(ability.value) && ability.iconKeys) {
-      // React要素の場合、iconKeysを使用して判定
-      const hasRelicIcon = ability.iconKeys.includes('traitRelic');
-      const hasAkuIcon = ability.iconKeys.includes('traitAku');
-      const hasTraitlessIcon = ability.iconKeys.includes('traitTraitless');
-      const hasOtherTraitIcons = ability.iconKeys.some(iconKey => 
-        iconKey !== 'traitRelic' && iconKey !== 'traitAku' && iconKey !== 'traitTraitless' && iconKey !== 'traitBehemoth'
-      );
-      
-      // 古・悪・属性を持たない敵以外の属性が一つでもあれば、テキストボックス表示（false を返す）
-      if (hasOtherTraitIcons) {
-        return false; // テキストボックス表示
-      } else {
-        // 古のみ、悪のみ、属性を持たない敵のみ、または古と悪と属性を持たない敵の組み合わせの場合はテキストボックス非表示
-        return (hasRelicIcon || hasAkuIcon || hasTraitlessIcon);
-      }
-    }
-    return false;
-  })();
-  
-  const [apMultiplier, setApMultiplier] = useState(hasOnlyRelicAku ? 1.5 : 1.8);
-  const [dmgMultiplier, setDmgMultiplier] = useState(hasOnlyRelicAku ? 0.5 : 0.4);
+function DynamicMighty({ ability, attackUpMultiplier, hpUpMultiplier, mightyApValue, setMightyApValue, mightyDmgValue, setMightyDmgValue, hasOnlyRelicAku }: { ability: UnitAbility, attackUpMultiplier: number, hpUpMultiplier: number, mightyApValue: number, setMightyApValue: (value: number) => void, mightyDmgValue: number, setMightyDmgValue: (value: number) => void, hasOnlyRelicAku: boolean }) {
   
   if (!ability.calculatedStats || !ability.isDynamic) return null;
   
@@ -1331,12 +1307,12 @@ function DynamicMighty({ ability, attackUpMultiplier, hpUpMultiplier }: { abilit
           ) : (
             <input
               type="number"
-              value={apMultiplier}
+              value={mightyApValue}
               onChange={(e) => {
                 const value = Number(e.target.value);
                 // 下限値未満は1.5に、上限値超過は1.8に調整
                 const clampedValue = Math.max(1.5, Math.min(1.8, value));
-                setApMultiplier(clampedValue);
+                setMightyApValue(clampedValue);
               }}
               className="w-8 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
               min="1.5"
@@ -1351,12 +1327,12 @@ function DynamicMighty({ ability, attackUpMultiplier, hpUpMultiplier }: { abilit
           ) : (
             <input
               type="number"
-              value={dmgMultiplier}
+              value={mightyDmgValue}
               onChange={(e) => {
                 const value = Number(e.target.value);
                 // 下限値未満は0.4に、上限値超過は0.5に調整
                 const clampedValue = Math.max(0.4, Math.min(0.5, value));
-                setDmgMultiplier(clampedValue);
+                setMightyDmgValue(clampedValue);
               }}
               className="w-8 mx-1 px-1 text-center border border-gray-300 rounded text-xs"
               min="0.4"
@@ -1368,7 +1344,7 @@ function DynamicMighty({ ability, attackUpMultiplier, hpUpMultiplier }: { abilit
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
             <br />
-            <b>{calculateDamage(apMultiplier, dmgMultiplier)}</b>
+            <b>{calculateDamage(hasOnlyRelicAku ? 1.5 : mightyApValue, hasOnlyRelicAku ? 0.5 : mightyDmgValue)}</b>
           </div>
         </div>
       </div>
@@ -1792,12 +1768,19 @@ function DynamicWitchKiller({ ability, attackUpMultiplier, hpUpMultiplier }: { a
   );
 }
 
-function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUpEnabled, setAttackUpEnabled }: { 
+function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUpEnabled, setAttackUpEnabled, talentMassiveDamageMultiplier, setTalentMassiveDamageMultiplier, talentMightyApValue, setTalentMightyApValue, talentMightyDmgValue, setTalentMightyDmgValue, hasOnlyRelicAkuTalent }: { 
   abilities: UnitAbility[], 
   attackUpMultiplier: number,
   hpUpMultiplier: number,
   attackUpEnabled: boolean,
-  setAttackUpEnabled: (enabled: boolean) => void
+  setAttackUpEnabled: (enabled: boolean) => void,
+  talentMassiveDamageMultiplier: number,
+  setTalentMassiveDamageMultiplier: (value: number) => void,
+  talentMightyApValue: number,
+  setTalentMightyApValue: (value: number) => void,
+  talentMightyDmgValue: number,
+  setTalentMightyDmgValue: (value: number) => void,
+  hasOnlyRelicAkuTalent: boolean
 }) {
   return (
     <div className="mb-2.5">
@@ -1805,7 +1788,7 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUp
       <div className="space-y-0.5">
         {abilities.map((ability, index) => (
           ability.isDynamic && ability.name === "超ダメージ" ? (
-            <DynamicMassiveDamage key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} />
+            <DynamicMassiveDamage key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} massiveDamageMultiplier={talentMassiveDamageMultiplier} setMassiveDamageMultiplier={setTalentMassiveDamageMultiplier} />
           ) : ability.isDynamic && ability.name === "極ダメージ" ? (
             <DynamicExtremeDamage key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} />
           ) : ability.isDynamic && ability.name === "打たれ強い" ? (
@@ -1813,7 +1796,7 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUp
           ) : ability.isDynamic && ability.name === "超打たれ強い" ? (
             <DynamicSuperToughness key={index} ability={ability} hpUpMultiplier={hpUpMultiplier} />
           ) : ability.isDynamic && ability.name === "めっぽう強い" ? (
-            <DynamicMighty key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} hpUpMultiplier={hpUpMultiplier} />
+            <DynamicMighty key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} hpUpMultiplier={hpUpMultiplier} mightyApValue={talentMightyApValue} setMightyApValue={setTalentMightyApValue} mightyDmgValue={talentMightyDmgValue} setMightyDmgValue={setTalentMightyDmgValue} hasOnlyRelicAku={hasOnlyRelicAkuTalent} />
           ) : ability.isDynamic && ability.name === "使徒キラー" ? (
             <DynamicEvaAngelKiller key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} hpUpMultiplier={hpUpMultiplier} />
           ) : ability.isDynamic && ability.name === "魔女キラー" ? (

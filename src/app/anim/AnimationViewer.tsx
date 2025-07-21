@@ -64,6 +64,7 @@ export default function AnimationViewer({
   const [hiddenSprites, setHiddenSprites] = useState<Set<number>>(new Set());
   const [showPartPoints, setShowPartPoints] = useState<Set<number>>(new Set());
   const [showSpritePoints, setShowSpritePoints] = useState<Set<number>>(new Set());
+  const [hideInactiveParts, setHideInactiveParts] = useState(true);
   const [frameRate, setFrameRate] = useState(30);
 
   const formData = animationData?.[selectedForm] as Record<string, unknown> | undefined;
@@ -1379,7 +1380,8 @@ export default function AnimationViewer({
               <button
                 onClick={() => {
                   const totalPartsCount = Array.isArray(maModelData?.[2]) ? maModelData[2][0] : 0;
-                  const allPartIds = Array.from({length: totalPartsCount}, (_, i) => i);
+                  // Part#000を除外してallPartIdsを作成
+                  const allPartIds = Array.from({length: totalPartsCount}, (_, i) => i).filter(id => id !== 0);
                   const allSpriteIds = new Set<number>();
                   
                   // 全スプライトIDを収集
@@ -1397,6 +1399,15 @@ export default function AnimationViewer({
               >
                 全解除
               </button>
+              <label className="flex items-center gap-1 text-xs font-medium text-gray-600 font-mono">
+                <input
+                  type="checkbox"
+                  checked={hideInactiveParts}
+                  onChange={(e) => setHideInactiveParts(e.target.checked)}
+                  className="w-3 h-3"
+                />
+                非アクティブパーツ非表示
+              </label>
             </div>
           </div>
           <div className="text-xxxs text-gray-600 font-mono">
@@ -1480,6 +1491,11 @@ export default function AnimationViewer({
               };
               
               const handlePartToggle = (partId: number, checked: boolean) => {
+                // Part#000は常に表示されるため、操作を無視
+                if (partId === 0) {
+                  return;
+                }
+                
                 const newHiddenParts = new Set(hiddenParts);
                 const newHiddenSprites = new Set(hiddenSprites);
                 
@@ -1767,6 +1783,12 @@ export default function AnimationViewer({
                 
                 const results: React.ReactElement[] = [];
                 
+                // 非アクティブパーツ非表示設定が有効で、かつパーツが非アクティブの場合はスキップ
+                // ただし、Part#000は常に表示
+                if (hideInactiveParts && !isPartActive && partId !== 0) {
+                  return results;
+                }
+                
                 // Render current part
                 const currentPartElement = (
                   <div key={`part-${partId}`} className={`py-0 my-0 ${!isPartActive ? 'opacity-50' : ''}`} style={{ paddingLeft: `${indentLevel}px` }}>
@@ -1775,9 +1797,9 @@ export default function AnimationViewer({
                       <input
                         type="checkbox"
                         className="w-3 h-3"
-                        checked={!hiddenParts.has(partId)}
+                        checked={partId === 0 ? true : !hiddenParts.has(partId)}
                         onChange={(e) => handlePartToggle(partId, e.target.checked)}
-                        disabled={!isPartActive}
+                        disabled={partId === 0 || !isPartActive}
                       />
                       <span className="font-mono text-xs">
                         Part#{partId.toString().padStart(3, '0')} {parentName && typeof parentName === 'string' && !parentName.startsWith('"') && parentName}

@@ -1405,6 +1405,12 @@ export default function AnimationViewer({
               const totalPartsCount = Array.isArray(maModelData?.[2]) ? maModelData[2][0] : 0;
               const allPartIds = Array.from({length: totalPartsCount}, (_, i) => i);
               
+              // 座標フォーマット共通関数
+              const formatCoordinate = (value: number): string => {
+                const num = Math.round(value);
+                return num.toString().padStart(4, ' ');
+              };
+              
               // mamodelからパーツごとのスプライトIDを取得
               const getPartSprites = (partId: number) => {
                 // Part#0には絶対にスプライトをぶら下げない
@@ -1725,22 +1731,17 @@ export default function AnimationViewer({
                 
                 // パーツの座標情報を取得（mamodelで定義された座標）
                 const partCoordinates = (() => {
-                  const formatCoordinate = (value: number): string => {
-                    const num = Math.round(value);
-                    const str = num.toString();
-                    return str.padStart(4, ' ');
-                  };
-                  
-                  // 常にmamodelから基本座標を取得
+                  // 常にmamodelから基本座標を取得（X, Y, Z）
                   if (maModelData && Array.isArray(maModelData) && maModelData.length > 3 + partId) {
                     const partData = maModelData[3 + partId];
                     if (Array.isArray(partData) && partData.length > 5) {
                       const baseX = formatCoordinate(partData[4] as number);
                       const baseY = formatCoordinate(partData[5] as number);
-                      return `(${baseX}, ${baseY})`;
+                      const baseZ = formatCoordinate(partData[3] as number); // zDepth
+                      return `(${baseX}, ${baseY}, ${baseZ})`;
                     }
                   }
-                  return '(   ?,    ?)';
+                  return '(   ?,    ?,    ?)';
                 })();
                 
                 // Get parent info for hierarchy display
@@ -1855,7 +1856,7 @@ export default function AnimationViewer({
                           />
                           {isDisplayed && displayedSprite && (
                             <span className="font-mono text-[10px] text-amber-500">
-                              ({Math.round(displayedSprite.x)}, {Math.round(displayedSprite.y)})
+                              ({formatCoordinate(displayedSprite.x)}, {formatCoordinate(displayedSprite.y)}, {formatCoordinate(displayedSprite.renderOrder)})
                             </span>
                           )}
                         </div>

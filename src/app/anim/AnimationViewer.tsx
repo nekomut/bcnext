@@ -823,7 +823,7 @@ export default function AnimationViewer({
                     part.animCutId = changeValue;
                     break;
                   case 3: // Z_ORDER - 描画順序の動的変更
-                    part.zDepth = changeValue * modelParts.length + (part.id as number);
+                    part.zDepth = changeValue;
                     break;
                   case 4: // POS_X
                     part.animX = (part.baseX as number) + changeValue;

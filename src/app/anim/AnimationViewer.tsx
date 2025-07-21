@@ -1762,40 +1762,16 @@ export default function AnimationViewer({
                 
                 const { parentName } = getParentInfo();
                 
-                // Create indentation for hierarchy
-                const indentStyle = { marginLeft: `${depth * 12}px` };
-                
-                // Determine if this is the last child of its parent
-                const isLastChild = (() => {
-                  if (depth === 0) return false; // Root parts don't have siblings in this context
-                  
-                  // Find this part's parent and check if it's the last child
-                  if (!maModelData || !Array.isArray(maModelData) || maModelData.length <= 3 + partId) {
-                    return false;
-                  }
-                  
-                  const partData = maModelData[3 + partId];
-                  if (!Array.isArray(partData) || partData.length < 1) {
-                    return false;
-                  }
-                  
-                  const currentParentId = partData[0] as number;
-                  if (currentParentId < 0) return false;
-                  
-                  const siblings = childrenMap[currentParentId] || [];
-                  return siblings.length > 0 && siblings[siblings.length - 1] === partId;
-                })();
-                
-                const hierarchySymbol = depth > 0 ? (isLastChild ? '┗─ ' : '├─ ') : '';
+                // インデント計算
+                const indentLevel = depth * 16; // 16pxずつインデント
                 
                 const results: React.ReactElement[] = [];
                 
                 // Render current part
                 const currentPartElement = (
-                  <div key={`part-${partId}`} className={`py-0 my-0 ${!isPartActive ? 'opacity-50' : ''}`} style={indentStyle}>
+                  <div key={`part-${partId}`} className={`py-0 my-0 ${!isPartActive ? 'opacity-50' : ''}`} style={{ paddingLeft: `${indentLevel}px` }}>
                     {/* パーツ（親） */}
-                    <div className="py-0 my-0 flex items-center gap-1">
-                      <span className="text-gray-400 font-mono text-xs">{hierarchySymbol}</span>
+                    <div className="py-0 my-0 flex items-center gap-1 font-mono text-xs">
                       <input
                         type="checkbox"
                         className="w-3 h-3"
@@ -1819,7 +1795,6 @@ export default function AnimationViewer({
                     {/* このパーツに関連するすべてのスプライト */}
                     {partSpriteIds.length > 0 && partSpriteIds.map((spriteId, spriteIndex) => {
                       const isDisplayed = displayedSprite && displayedSprite.spriteId === spriteId;
-                      const isLast = spriteIndex === partSpriteIds.length - 1;
                       
                       // Simplified sprite usage check
                       const isSpriteUsed = isPartActive && (isDisplayed || (() => {
@@ -1836,9 +1811,8 @@ export default function AnimationViewer({
                       
                       return (
                         <div key={`sprite-${partId}-${spriteIndex}`} 
-                             className={`py-0 my-0 flex items-center gap-1 ${isDisplayed ? 'text-blue-500' : ''} ${!isSpriteUsed ? 'opacity-30' : ''}`} 
-                             style={{ marginLeft: `${(depth * 12) + 16}px` }}>
-                          <span className="text-gray-400 font-mono text-xs">{isLast ? '└─ ' : '├─ '}</span>
+                             className={`py-0 my-0 flex items-center gap-1 font-mono text-xs ${isDisplayed ? 'text-blue-500' : ''} ${!isSpriteUsed ? 'opacity-30' : ''}`}
+                             style={{ paddingLeft: `${indentLevel + 16}px` }}>
                           <input
                             type="checkbox"
                             className="w-3 h-3"
@@ -1894,7 +1868,7 @@ export default function AnimationViewer({
             <div className="mt-1 p-0">
               <pre className="whitespace-pre-wrap text-xxxs">{imgCutData ? (() => {
                 // データをクリーンアップしてからJSON化
-                const cleanData = JSON.parse(JSON.stringify(imgCutData, (key, value) => {
+                const cleanData = JSON.parse(JSON.stringify(imgCutData, (_, value) => {
                   if (typeof value === 'string') {
                     // BOM文字やその他の制御文字を除去
                     return value.replace(/[\uFEFF\u200B-\u200D\uFFFE\uFFFF]/g, '');
@@ -1930,7 +1904,7 @@ export default function AnimationViewer({
             <div className="mt-1 p-0">
               <pre className="whitespace-pre-wrap text-xxxs">{maModelData ? (() => {
                 // データをクリーンアップしてからJSON化
-                const cleanData = JSON.parse(JSON.stringify(maModelData, (key, value) => {
+                const cleanData = JSON.parse(JSON.stringify(maModelData, (_, value) => {
                   if (typeof value === 'string') {
                     // BOM文字やその他の制御文字を除去
                     return value.replace(/[\uFEFF\u200B-\u200D\uFFFE\uFFFF]/g, '');
@@ -1966,7 +1940,7 @@ export default function AnimationViewer({
             <div className="mt-1 p-0">
               <pre className="whitespace-pre-wrap text-xxxs">{animData ? (() => {
                 // データをクリーンアップしてからJSON化
-                const cleanData = JSON.parse(JSON.stringify(animData, (key, value) => {
+                const cleanData = JSON.parse(JSON.stringify(animData, (_, value) => {
                   if (typeof value === 'string') {
                     // BOM文字やその他の制御文字を除去
                     return value.replace(/[\uFEFF\u200B-\u200D\uFFFE\uFFFF]/g, '');

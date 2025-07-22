@@ -1907,20 +1907,10 @@ export default function AnimationViewer({
                     
                     {/* このパーツに関連するすべてのスプライト */}
                     {isExpanded && partSpriteIds.length > 0 && partSpriteIds.map((spriteId, spriteIndex) => {
-                      const isDisplayed = displayedSprite && displayedSprite.spriteId === spriteId;
+                      const isDisplayed = displayedSprite && displayedSprite.spriteId === spriteId && !hiddenParts.has(partId) && !hiddenSprites.has(spriteId);
                       
-                      // Simplified sprite usage check
-                      const isSpriteUsed = isPartActive && (isDisplayed || (() => {
-                        // Check if this is the base sprite defined in mamodel
-                        if (maModelData && Array.isArray(maModelData) && maModelData.length > 3 + partId) {
-                          const partData = maModelData[3 + partId];
-                          if (Array.isArray(partData) && partData.length > 2) {
-                            const baseCutId = partData[2] as number;
-                            return baseCutId === spriteId;
-                          }
-                        }
-                        return false;
-                      })());
+                      // Simplified sprite usage check - only currently displayed sprites are considered "used"
+                      const isSpriteUsed = isPartActive && isDisplayed;
                       
                       return (
                         <div key={`sprite-${partId}-${spriteIndex}`} 

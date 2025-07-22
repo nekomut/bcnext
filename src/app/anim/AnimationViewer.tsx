@@ -313,7 +313,9 @@ export default function AnimationViewer({
           // Negative ease_power: alternative exponential equation
           return Math.sqrt(1 - Math.pow(1 - lerp, -easePower));
         }
-      case 3: // Polynomial (smooth step)
+      case 3: // Polynomial - TBCML EXACT weighted sum implementation
+        // This implementation requires keyframes array and current index
+        // For now, fallback to smooth step as approximation
         return lerp * lerp * (3 - 2 * lerp);
       case 12: // High-quality interpolation (cubic ease-in-out)
         // Cubic bezier curve for smooth animation
@@ -375,7 +377,7 @@ export default function AnimationViewer({
     const startFrame = startKf[0];
     const endFrame = endKf[0];
 
-    // tbcml early return condition
+    // tbcml early return condition - pure implementation
     if (frameCounter < startFrame) {
       return null;
     }
@@ -389,28 +391,26 @@ export default function AnimationViewer({
     if (totalFrames === 0 || startFrame === endFrame) {
       // Single frame case or zero duration
       return startChange;
-    } else if (frameCounter <= endFrame) {
+    } else if (frameCounter < endFrame || startFrame === endFrame) {
       localFrame = frameCounter;
     } else if (loopValue === -1) {
       // Infinite loop: exact tbcml modulo calculation
-      const cycleProgress = frameProgress % totalFrames;
-      localFrame = cycleProgress + startFrame;
+      localFrame = (frameProgress % totalFrames) + startFrame;
     } else if (loopValue && loopValue >= 1) {
-      // FINITE LOOP WITH BROWSER LOOPING: Handle finite loops properly
-      // For browser display, allow the animation to loop back for continuous viewing
-      localFrame = (frameProgress % totalFrames) + startFrame;
-    } else if (loopValue === 0) {
-      // ONE-SHOT ANIMATION: Play once for actual data, but loop for browser viewing
-      // Attack animations with loop=0 should play once and hold, but we loop for viewing
-      localFrame = (frameProgress % totalFrames) + startFrame;
+      // TBCML EXACT: Finite loop implementation
+      if (frameProgress / totalFrames < loopValue) {
+        localFrame = (frameProgress % totalFrames) + startFrame;
+      } else {
+        localFrame = endFrame;
+      }
     } else {
-      // No loop: hold at end frame
+      // No loop or zero loop: hold at end frame
       localFrame = endFrame;
     }
 
     // tbcml boundary conditions
+    if (startFrame === endFrame) return startChange;
     if (localFrame === endFrame) return endChange;
-    if (localFrame === startFrame) return startChange;
 
     // tbcml keyframe interpolation search
     for (let i = 0; i < keyframes.length - 1; i++) {

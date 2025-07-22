@@ -1375,9 +1375,25 @@ export default function AnimationViewer({
       {/* Frame Control */}
       <div className="bg-gray-50 p-2 rounded">
         <div className="flex items-center justify-between mb-1">
-          <label className="text-sm font-medium text-gray-600 font-mono">
-            Frame {String(currentFrame).padStart(3, '0')} / {String(maxFrame).padStart(3, '0')}
-          </label>
+          <div className="flex items-center gap-2">
+            <label className="text-sm font-medium text-gray-600 font-mono">
+              Frame {String(currentFrame).padStart(3, '0')}/{String(maxFrame).padStart(3, '0')}
+            </label>
+            <button
+              onClick={() => setCurrentFrame(prev => prev > 0 ? prev - 1 : maxFrame)}
+              className="text-sm text-gray-600 hover:text-gray-800 font-mono"
+              disabled={isPlaying}
+            >
+              ◁
+            </button>
+            <button
+              onClick={() => setCurrentFrame(prev => prev < maxFrame ? prev + 1 : 0)}
+              className="text-sm text-gray-600 hover:text-gray-800 font-mono"
+              disabled={isPlaying}
+            >
+              ▷
+            </button>
+          </div>
           <div className="flex items-center gap-1">
             <label className="text-xs font-medium text-gray-600 font-mono">FPS</label>
             <select
@@ -1410,7 +1426,7 @@ export default function AnimationViewer({
               Parts({(() => {
                 const totalPartsCount = Array.isArray(maModelData?.[2]) ? maModelData[2][0] : 0;
                 return totalPartsCount;
-              })()}) | Sprites({(() => {
+              })()})|Sprites({(() => {
                 const totalSpritesCount = (() => {
                   if (imgCutData && Array.isArray(imgCutData) && imgCutData.length > 3) {
                     return Array.isArray(imgCutData[3]) ? imgCutData[3][0] : 0;

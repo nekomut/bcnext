@@ -64,13 +64,39 @@ export default function AnimationViewer({
   const [hiddenSprites, setHiddenSprites] = useState<Set<number>>(new Set());
   const [showPartPoints, setShowPartPoints] = useState<Set<number>>(new Set());
   const [showSpritePoints, setShowSpritePoints] = useState<Set<number>>(new Set());
-  const [hideInactiveParts, setHideInactiveParts] = useState(true);
+  const [showInactiveParts, setShowInactiveParts] = useState(false);
   const [frameRate, setFrameRate] = useState(30);
+  const [expandedParts, setExpandedParts] = useState<Set<number>>(new Set([0])); // デフォルトでPart#000のみ展開
 
   const formData = animationData?.[selectedForm] as Record<string, unknown> | undefined;
   const animData = formData?.[selectedAnimation] as unknown[] | undefined;
   const imgCutData = formData?.imgcut as unknown[] | undefined;
   const maModelData = formData?.mamodel as unknown[] | undefined;
+
+  // 折り畳み制御関数
+  const togglePartExpansion = useCallback((partId: number) => {
+    setExpandedParts(prev => {
+      const newExpanded = new Set(prev);
+      if (newExpanded.has(partId)) {
+        newExpanded.delete(partId);
+      } else {
+        newExpanded.add(partId);
+      }
+      return newExpanded;
+    });
+  }, []);
+  
+  // 全展開/全折り畳み制御
+  const expandAllParts = useCallback(() => {
+    if (!maModelData || !Array.isArray(maModelData) || maModelData.length < 3) return;
+    const totalPartsCount = Array.isArray(maModelData[2]) ? maModelData[2][0] : 0;
+    const allPartIds = Array.from({length: totalPartsCount}, (_, i) => i);
+    setExpandedParts(new Set(allPartIds));
+  }, [maModelData]);
+  
+  const collapseAllParts = useCallback(() => {
+    setExpandedParts(new Set([0])); // Part#000のみ展開状態で維持
+  }, []);
 
   // Load sprite image from external file
   useEffect(() => {
@@ -1352,7 +1378,8 @@ export default function AnimationViewer({
         
         {/* Parts List */}
         <div className="mt-2">
-          <div className="flex items-center gap-2 mb-1">
+          {/* Parts/Sprites カウントラベル */}
+          <div className="mb-2">
             <label className="text-sm font-medium text-gray-600 font-mono">
               Parts({(() => {
                 const totalPartsCount = Array.isArray(maModelData?.[2]) ? maModelData[2][0] : 0;
@@ -1367,48 +1394,62 @@ export default function AnimationViewer({
                 return totalSpritesCount;
               })()})
             </label>
-            <div className="flex gap-1">
-              <button
-                onClick={() => {
-                  setHiddenParts(new Set());
-                  setHiddenSprites(new Set());
-                }}
-                className="px-2 py-0 bg-gray-200 text-gray-700 rounded text-xxs hover:bg-gray-300 font-mono"
-              >
-                全選択
-              </button>
-              <button
-                onClick={() => {
-                  const totalPartsCount = Array.isArray(maModelData?.[2]) ? maModelData[2][0] : 0;
-                  // Part#000を除外してallPartIdsを作成
-                  const allPartIds = Array.from({length: totalPartsCount}, (_, i) => i).filter(id => id !== 0);
-                  const allSpriteIds = new Set<number>();
-                  
-                  // 全スプライトIDを収集
-                  if (imgCutData && Array.isArray(imgCutData) && imgCutData.length > 3) {
-                    const totalRectangles = Array.isArray(imgCutData[3]) ? imgCutData[3][0] : 0;
-                    for (let i = 0; i < totalRectangles; i++) {
-                      allSpriteIds.add(i);
-                    }
+          </div>
+          
+          {/* 制御ボタン群 */}
+          <div className="flex flex-wrap items-center gap-1 mb-2">
+            <button
+              onClick={() => {
+                setHiddenParts(new Set());
+                setHiddenSprites(new Set());
+              }}
+              className="px-2 py-0 bg-gray-200 text-gray-700 rounded text-xxs hover:bg-gray-300 font-mono"
+            >
+              全選択
+            </button>
+            <button
+              onClick={() => {
+                const totalPartsCount = Array.isArray(maModelData?.[2]) ? maModelData[2][0] : 0;
+                // Part#000を除外してallPartIdsを作成
+                const allPartIds = Array.from({length: totalPartsCount}, (_, i) => i).filter(id => id !== 0);
+                const allSpriteIds = new Set<number>();
+                
+                // 全スプライトIDを収集
+                if (imgCutData && Array.isArray(imgCutData) && imgCutData.length > 3) {
+                  const totalRectangles = Array.isArray(imgCutData[3]) ? imgCutData[3][0] : 0;
+                  for (let i = 0; i < totalRectangles; i++) {
+                    allSpriteIds.add(i);
                   }
-                  
-                  setHiddenParts(new Set(allPartIds));
-                  setHiddenSprites(allSpriteIds);
-                }}
-                className="px-2 py-0 bg-gray-200 text-gray-700 rounded text-xxs hover:bg-gray-300 font-mono"
-              >
-                全解除
-              </button>
-              <label className="flex items-center gap-1 text-xs font-medium text-gray-600 font-mono">
-                <input
-                  type="checkbox"
-                  checked={hideInactiveParts}
-                  onChange={(e) => setHideInactiveParts(e.target.checked)}
-                  className="w-3 h-3"
-                />
-                非アクティブパーツ非表示
-              </label>
-            </div>
+                }
+                
+                setHiddenParts(new Set(allPartIds));
+                setHiddenSprites(allSpriteIds);
+              }}
+              className="px-2 py-0 bg-gray-200 text-gray-700 rounded text-xxs hover:bg-gray-300 font-mono"
+            >
+              全解除
+            </button>
+            <button
+              onClick={expandAllParts}
+              className="px-2 py-0 bg-blue-200 text-blue-700 rounded text-xxs hover:bg-blue-300 font-mono"
+            >
+              全展開
+            </button>
+            <button
+              onClick={collapseAllParts}
+              className="px-2 py-0 bg-green-200 text-green-700 rounded text-xxs hover:bg-green-300 font-mono"
+            >
+              全折畳
+            </button>
+            <label className="flex items-center gap-1 text-xs font-medium text-gray-600 font-mono">
+              <input
+                type="checkbox"
+                checked={showInactiveParts}
+                onChange={(e) => setShowInactiveParts(e.target.checked)}
+                className="w-3 h-3"
+              />
+              非アクティブパーツ表示
+            </label>
           </div>
           <div className="text-xxxs text-gray-600 font-mono">
             {(() => {
@@ -1539,6 +1580,7 @@ export default function AnimationViewer({
                 
                 return parentParts;
               };
+
 
               // eslint-disable-next-line @typescript-eslint/no-unused-vars
               const handleSpriteToggle = (spriteId: number, checked: boolean, partId: number) => {
@@ -1778,22 +1820,37 @@ export default function AnimationViewer({
                 
                 const { parentName } = getParentInfo();
                 
-                // インデント計算
-                const indentLevel = depth * 16; // 16pxずつインデント
+                // インデント計算（16pxずつ深くなる）
+                const indentLevel = depth * 16;
                 
                 const results: React.ReactElement[] = [];
                 
-                // 非アクティブパーツ非表示設定が有効で、かつパーツが非アクティブの場合はスキップ
+                // 非アクティブパーツ表示設定が無効で、かつパーツが非アクティブの場合はスキップ
                 // ただし、Part#000は常に表示
-                if (hideInactiveParts && !isPartActive && partId !== 0) {
+                if (!showInactiveParts && !isPartActive && partId !== 0) {
                   return results;
                 }
                 
+                // 子要素の存在確認
+                const hasChildren = (childrenMap[partId] || []).length > 0 || partSpriteIds.length > 0;
+                const isExpanded = expandedParts.has(partId);
+
                 // Render current part
                 const currentPartElement = (
                   <div key={`part-${partId}`} className={`py-0 my-0 ${!isPartActive ? 'opacity-50' : ''}`} style={{ paddingLeft: `${indentLevel}px` }}>
                     {/* パーツ（親） */}
                     <div className="py-0 my-0 flex items-center gap-1 font-mono text-xs">
+                      {/* 折り畳みボタン */}
+                      {hasChildren ? (
+                        <button
+                          onClick={() => togglePartExpansion(partId)}
+                          className="w-3 h-3 flex items-center justify-center text-xs text-gray-600 hover:text-gray-800 cursor-pointer"
+                        >
+                          {isExpanded ? '▼' : '▶'}
+                        </button>
+                      ) : (
+                        <span className="w-3 h-3"></span>
+                      )}
                       <input
                         type="checkbox"
                         className="w-3 h-3"
@@ -1804,18 +1861,18 @@ export default function AnimationViewer({
                       <span className="font-mono text-xs">
                         Part#{partId.toString().padStart(3, '0')} {parentName && typeof parentName === 'string' && !parentName.startsWith('"') && parentName}
                       </span>
+                      <span className="font-mono text-[10px] text-red-500">{partCoordinates}</span>
                       <input
                         type="checkbox"
-                        className="w-2 h-2"
+                        className="w-3 h-3 accent-red-500"
                         checked={showPartPoints.has(partId)}
                         onChange={(e) => handlePointToggle(partId, e.target.checked)}
                         disabled={!isPartActive}
                       />
-                      <span className="font-mono text-[10px] text-red-500">{partCoordinates}</span>
                     </div>
                     
                     {/* このパーツに関連するすべてのスプライト */}
-                    {partSpriteIds.length > 0 && partSpriteIds.map((spriteId, spriteIndex) => {
+                    {isExpanded && partSpriteIds.length > 0 && partSpriteIds.map((spriteId, spriteIndex) => {
                       const isDisplayed = displayedSprite && displayedSprite.spriteId === spriteId;
                       
                       // Simplified sprite usage check
@@ -1833,28 +1890,28 @@ export default function AnimationViewer({
                       
                       return (
                         <div key={`sprite-${partId}-${spriteIndex}`} 
-                             className={`py-0 my-0 flex items-center gap-1 font-mono text-xs ${isDisplayed ? 'text-blue-500' : ''} ${!isSpriteUsed ? 'opacity-30' : ''}`}
-                             style={{ paddingLeft: `${indentLevel + 16}px` }}>
+                             className={`py-0 my-0 flex items-center gap-1 font-mono text-xs ${isDisplayed ? 'text-green-500' : ''} ${!isSpriteUsed ? 'opacity-30' : ''}`}
+                             style={{ paddingLeft: '28px' }}>
                           <input
                             type="checkbox"
-                            className="w-3 h-3"
+                            className="w-3 h-3 accent-green-500"
                             checked={!hiddenSprites.has(spriteId)}
                             onChange={(e) => handleSpriteToggle(spriteId, e.target.checked, partId)}
                             disabled={!isSpriteUsed}
                           />
                           <span className="font-mono text-xs">Sprite#{spriteId.toString().padStart(3, '0')}{isDisplayed ? ' ●' : ' ○'}</span>
-                          <input
-                            type="checkbox"
-                            className="w-2 h-2"
-                            checked={showSpritePoints.has(partId)}
-                            onChange={(e) => handleSpritePointToggle(partId, e.target.checked)}
-                            disabled={!isSpriteUsed || !isDisplayed}
-                          />
                           {isDisplayed && displayedSprite && (
                             <span className="font-mono text-[10px] text-amber-500">
                               ({formatCoordinate(displayedSprite.x)}, {formatCoordinate(displayedSprite.y)}, {formatCoordinate(displayedSprite.renderOrder)})
                             </span>
                           )}
+                          <input
+                            type="checkbox"
+                            className="w-3 h-3 accent-amber-500"
+                            checked={showSpritePoints.has(partId)}
+                            onChange={(e) => handleSpritePointToggle(partId, e.target.checked)}
+                            disabled={!isSpriteUsed || !isDisplayed}
+                          />
                         </div>
                       );
                     })}
@@ -1863,11 +1920,13 @@ export default function AnimationViewer({
                 
                 results.push(currentPartElement);
                 
-                // Render children recursively
-                const children = childrenMap[partId] || [];
-                children.forEach(childId => {
-                  results.push(...renderPartWithChildren(childId, depth + 1));
-                });
+                // Render children recursively (only if expanded)
+                if (isExpanded) {
+                  const children = childrenMap[partId] || [];
+                  children.forEach(childId => {
+                    results.push(...renderPartWithChildren(childId, depth + 1));
+                  });
+                }
                 
                 return results;
               };

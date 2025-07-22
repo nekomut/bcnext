@@ -197,14 +197,12 @@ export default function AnimationViewer({
     setShadowOffset({ x: -avgX, y: -avgY });
   }, [maModelData]);
 
-  // IMPROVED FRAME CALCULATION: Calculate max frame from metadata (tbcml get_end_frame style)
-  // Enhanced for Unit 003 complex animation patterns
+  // TBCML-COMPATIBLE FRAME CALCULATION: Calculate max frame exactly like tbcml get_end_frame
+  // Implements KeyFrames.get_end_frame() and UnitAnim.get_end_frame() logic
   useEffect(() => {
     if (!animData || !Array.isArray(animData)) return;
 
-    let maxEndFrame = 0;
-    let hasInfiniteLoop = false;
-    let mainChannelEndFrame = 0;
+    const keyframeGroupEndFrames: number[] = [];
     
     // Parse maanim data structure:
     // Row 0: ["[modelanim:animation]"]
@@ -212,13 +210,18 @@ export default function AnimationViewer({
     // Row 2: [total_keyframe_groups]
     // Row 3+: Keyframe group headers and keyframes
     
+    // Get total keyframe groups from header
+    const totalKeyframeGroups = Array.isArray(animData[2]) ? (animData[2] as number[])[0] : 0;
+    
     let currentRow = 3;
-    while (currentRow < animData.length) {
+    let groupIndex = 0;
+    
+    while (currentRow < animData.length && groupIndex < totalKeyframeGroups) {
       const row = animData[currentRow];
-      if (Array.isArray(row) && row.length >= 6) {
-        // This is a keyframe group header: [model_id, modification_type, loop, min_value, max_value, name]
-        const modelId = row[0] as number;
-        const modificationType = row[1] as number;
+      
+      // FLEXIBLE HEADER DETECTION: Check if this is a keyframe group header
+      // Headers can be 5 or 6 elements: [model_id, modification_type, loop, min_value, max_value, name?]
+      if (Array.isArray(row) && row.length >= 5) {
         const loopValue = row[2] as number;
         currentRow++;
         
@@ -233,7 +236,7 @@ export default function AnimationViewer({
           
           for (let i = 0; i < keyframeCount && currentRow < animData.length; i++) {
             const keyframe = animData[currentRow];
-            if (Array.isArray(keyframe) && keyframe.length >= 4) {
+            if (Array.isArray(keyframe) && keyframe.length >= 2) {
               const frameTime = (keyframe as number[])[0];
               if (frameTime > lastFrameTime) {
                 lastFrameTime = frameTime;
@@ -243,59 +246,40 @@ export default function AnimationViewer({
             currentRow++;
           }
           
-          // Keep all modification type 12 (opacity control) for processing
-          // Static control channels are important for part visibility control
-          
           if (hasValidKeyframes) {
-            // For infinite loop channels, use their end frame as the cycle length
-            if (loopValue === -1) {
-              hasInfiniteLoop = true;
-              // Track main channel (usually modelId 1, modificationType 2)
-              if (modelId === 1 && modificationType === 2) {
-                mainChannelEndFrame = lastFrameTime;
-              }
-              // Use the highest frame time from any infinite loop channel
-              if (lastFrameTime > maxEndFrame) {
-                maxEndFrame = lastFrameTime;
-              }
-            } else if (loopValue > 0) {
-              // FINITE LOOP: For specified loop count, use frame time as-is
-              if (lastFrameTime > maxEndFrame) {
-                maxEndFrame = lastFrameTime;
-              }
-            } else if (loopValue === 0) {
-              // ONE-SHOT: For one-shot animations (attack animations), use end frame
-              // Track main channel for one-shot animations (modelId varies)
-              if (modificationType === 1 || modificationType === 2) {
-                mainChannelEndFrame = lastFrameTime;
-              }
-              if (lastFrameTime > maxEndFrame) {
-                maxEndFrame = lastFrameTime;
-              }
+            // TBCML EXACT: KeyFrames.get_end_frame() implementation
+            // loop = self.loop if self.loop > 0 else 1
+            // val = (self.keyframes[-1].frame or 0) * loop
+            // return val if val > 0 else 1
+            
+            let effectiveLoop: number;
+            if (loopValue > 0) {
+              effectiveLoop = loopValue; // Use specified loop count
             } else {
-              // No loop: use last frame directly
-              if (lastFrameTime > maxEndFrame) {
-                maxEndFrame = lastFrameTime;
-              }
+              effectiveLoop = 1; // Default to 1 for loop values <= 0 (including -1, 0)
             }
+            
+            const groupEndFrame = lastFrameTime * effectiveLoop;
+            const finalEndFrame = groupEndFrame > 0 ? groupEndFrame : 1;
+            
+            keyframeGroupEndFrames.push(finalEndFrame);
           }
+          
+          groupIndex++;
         }
       } else {
+        // Skip non-header rows
         currentRow++;
       }
     }
     
-    // ACCURATE FRAME RANGE: For infinite loops, use the main channel's cycle length
+    // TBCML EXACT: UnitAnim.get_end_frame() implementation
+    // return max([keyframes.get_end_frame() for keyframes in self.parts])
     let newMaxFrame: number;
-    if (hasInfiniteLoop && mainChannelEndFrame > 0) {
-      // Use the main channel's cycle length for accurate looping
-      newMaxFrame = mainChannelEndFrame;
-    } else if (maxEndFrame > 0) {
-      // Use the calculated max frame
-      newMaxFrame = maxEndFrame;
+    if (keyframeGroupEndFrames.length > 0) {
+      newMaxFrame = Math.max(...keyframeGroupEndFrames);
     } else {
-      // Default fallback
-      newMaxFrame = 30;
+      newMaxFrame = 1; // tbcml default when no keyframes exist
     }
     
     setMaxFrame(prevMaxFrame => {

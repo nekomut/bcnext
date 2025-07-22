@@ -295,37 +295,43 @@ export default function AnimationViewer({
   const DEFAULT_ANGLE_UNIT = 360; // 360 degrees (not 3600)
   const DEFAULT_ALPHA_UNIT = 1000;
 
-  // ENHANCED EASING: Easing function from tbcml - exact implementation with type 12 support
-  const ease = (mode: number, progress: number): number => {
+  // TBCML-EXACT EASING: Easing function with ease_power support like tbcml anim.py
+  const ease = (mode: number, progress: number, easePower: number = 1): number => {
     // Clamp progress to valid range
-    const p = Math.max(0, Math.min(1, progress));
+    const lerp = Math.max(0, Math.min(1, progress));
     
     switch (mode) {
       case 0: // Linear
-        return p;
+        return lerp;
       case 1: // Instant - returns current keyframe value without interpolation
         return 1; // Always return 1 to use startValue (current keyframe)
-      case 2: // Exponential (quadratic ease-in)
-        return p * p;
+      case 2: // Exponential - TBCML EXACT with ease_power support
+        if (easePower >= 0) {
+          // Positive ease_power: standard exponential ease-in
+          return (1 - Math.sqrt(1 - Math.pow(lerp, easePower)));
+        } else {
+          // Negative ease_power: alternative exponential equation
+          return Math.sqrt(1 - Math.pow(1 - lerp, -easePower));
+        }
       case 3: // Polynomial (smooth step)
-        return p * p * (3 - 2 * p);
+        return lerp * lerp * (3 - 2 * lerp);
       case 12: // High-quality interpolation (cubic ease-in-out)
         // Cubic bezier curve for smooth animation
-        if (p < 0.5) {
-          return 4 * p * p * p;
+        if (lerp < 0.5) {
+          return 4 * lerp * lerp * lerp;
         } else {
-          const f = (2 * p) - 2;
+          const f = (2 * lerp) - 2;
           return 1 + (f * f * f) / 2;
         }
       case 4: // Ease-in-out (alternative)
-        return p < 0.5 
-          ? 2 * p * p 
-          : 1 - Math.pow(-2 * p + 2, 2) / 2;
+        return lerp < 0.5 
+          ? 2 * lerp * lerp 
+          : 1 - Math.pow(-2 * lerp + 2, 2) / 2;
       case 5: // Bounce (simplified)
-        return 1 - Math.pow(1 - p, 3);
+        return 1 - Math.pow(1 - lerp, 3);
       default:
         // Unknown mode, use linear as fallback
-        return p;
+        return lerp;
     }
   };
 
@@ -414,6 +420,7 @@ export default function AnimationViewer({
       const cFrame = currentKf[0];
       const nFrame = nextKf[0];
       const cEaseMode = currentKf[2];
+      const cEasePower = currentKf.length >= 4 ? (currentKf[3] as number) : 1; // Default ease_power = 1
       const cChange = currentKf[1];
       const nChange = nextKf[1];
 
@@ -422,25 +429,25 @@ export default function AnimationViewer({
         continue;
       }
 
-      // IMPROVED INTERPOLATION: tbcml ease calculation
+      // TBCML-EXACT INTERPOLATION: ease calculation with ease_power support
       if (cEaseMode === 1) {
         // Instant mode - always return current value
         return cChange;
       } else if (cFrame === nFrame) {
         // SAME FRAME: If current and next keyframes are at the same frame, return current value
         return cChange;
-      } else if (cEaseMode === 0 || cEaseMode === 2) {
-        // Linear interpolation (type 0 or 2)
+      } else if (cEaseMode === 0) {
+        // Linear interpolation (type 0 only) - ease_power ignored for linear
         const frameDiff = nFrame - cFrame;
         if (frameDiff === 0) return cChange; // Avoid division by zero
         const lerp = (localFrame - cFrame) / frameDiff;
         return Math.round(cChange + (nChange - cChange) * lerp);
       } else {
-        // Other ease modes (including type 12 - high quality interpolation)
+        // All other ease modes (including type 2 with ease_power support)
         const frameDiff = nFrame - cFrame;
         if (frameDiff === 0) return cChange; // Avoid division by zero
         const lerp = (localFrame - cFrame) / frameDiff;
-        const easedProgress = ease(cEaseMode, Math.max(0, Math.min(1, lerp)));
+        const easedProgress = ease(cEaseMode, Math.max(0, Math.min(1, lerp)), cEasePower);
         return Math.round(cChange + (nChange - cChange) * easedProgress);
       }
     }

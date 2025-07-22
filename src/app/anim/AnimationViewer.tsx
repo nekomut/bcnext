@@ -43,7 +43,6 @@ export default function AnimationViewer({
   selectedForm,
   selectedAnimation,
   isPlaying,
-  onStop,
   unitId,
   showBoundaries,
   onShowBoundariesChange
@@ -287,16 +286,24 @@ export default function AnimationViewer({
     }
     
     // ACCURATE FRAME RANGE: For infinite loops, use the main channel's cycle length
+    let newMaxFrame: number;
     if (hasInfiniteLoop && mainChannelEndFrame > 0) {
       // Use the main channel's cycle length for accurate looping
-      setMaxFrame(mainChannelEndFrame);
+      newMaxFrame = mainChannelEndFrame;
     } else if (maxEndFrame > 0) {
       // Use the calculated max frame
-      setMaxFrame(maxEndFrame);
+      newMaxFrame = maxEndFrame;
     } else {
       // Default fallback
-      setMaxFrame(30);
+      newMaxFrame = 30;
     }
+    
+    setMaxFrame(prevMaxFrame => {
+      if (prevMaxFrame !== newMaxFrame) {
+        return newMaxFrame;
+      }
+      return prevMaxFrame;
+    });
   }, [animData]);
 
   // Animation constants matching tbcml implementation
@@ -622,6 +629,18 @@ export default function AnimationViewer({
       setSpriteParts([]);
       return;
     }
+
+    // デバウンス：アニメーション再生中は頻繁な更新を制限
+    if (isPlaying) {
+      const timeoutId = setTimeout(() => {
+        updateSpriteParts();
+      }, 16); // 60fps相当の制限
+      return () => clearTimeout(timeoutId);
+    } else {
+      updateSpriteParts();
+    }
+
+    function updateSpriteParts() {
 
     const parts: SpritePart[] = [];
 
@@ -1141,8 +1160,10 @@ export default function AnimationViewer({
     parts.sort((a, b) => a.renderOrder - b.renderOrder);
     
     setSpriteParts(parts);
+    }
 
-  }, [currentFrame, maModelData, imgCutData, animData, maxFrame, getChangeInValue, transformPart, getBaseSize, getRecursiveScale, hiddenParts, hiddenSprites, selectedAnimation, selectedForm, unitId]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentFrame, maModelData, imgCutData, animData, hiddenParts, hiddenSprites, selectedAnimation, selectedForm, unitId, isPlaying]);
 
 
   // Animation playback
@@ -1166,7 +1187,12 @@ export default function AnimationViewer({
       const totalFrames = maxFrame + 1; // 0からmaxFrameまでの総フレーム数
       const currentAnimFrame = rawFrame % totalFrames;
       
-      setCurrentFrame(currentAnimFrame);
+      setCurrentFrame(prevFrame => {
+        if (prevFrame !== currentAnimFrame) {
+          return currentAnimFrame;
+        }
+        return prevFrame;
+      });
       animationFrameRef.current = requestAnimationFrame(animate);
     };
 
@@ -1177,7 +1203,7 @@ export default function AnimationViewer({
         cancelAnimationFrame(animationFrameRef.current);
       }
     };
-  }, [isPlaying, animData, maxFrame, onStop, frameRate, selectedAnimation]);
+  }, [isPlaying, animData, maxFrame, frameRate]);
 
   // Reset frame when animation changes
   useEffect(() => {
@@ -1584,6 +1610,7 @@ export default function AnimationViewer({
 
               // eslint-disable-next-line @typescript-eslint/no-unused-vars
               const handleSpriteToggle = (spriteId: number, checked: boolean, partId: number) => {
+                // partId is used in getParentPartsForSprite calls within this function
                 const newHiddenSprites = new Set(hiddenSprites);
                 const newHiddenParts = new Set(hiddenParts);
                 

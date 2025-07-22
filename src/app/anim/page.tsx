@@ -475,7 +475,6 @@ function AnimationPageContent() {
             selectedForm={selectedForm}
             selectedAnimation={selectedAnimation}
             isPlaying={isPlaying}
-            onStop={() => setIsPlaying(false)}
             unitId={selectedUnit}
             showBoundaries={showBoundaries}
             onShowBoundariesChange={setShowBoundaries}

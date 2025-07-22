@@ -1100,9 +1100,9 @@ export default function AnimationViewer({
       const scxBx = scaleX * baseX;
       const scyBy = scaleY * baseY;
       
-      // Flip calculation with animation flip flags
-      const flipX = (scaleX < 0 ? -1 : 1) * (part.hFlip as number);
-      const flipY = (scaleY < 0 ? -1 : 1) * (part.vFlip as number);
+      // TBCML EXACT: Flip calculation based purely on scale sign (no hFlip/vFlip)
+      const flipX = scaleX < 0 ? -1 : 1;
+      const flipY = scaleY < 0 ? -1 : 1;
       
       // Calculate pivot offset like tbcml
       const tPivX = (part.pivotX as number) * scxBx * flipX;

@@ -515,6 +515,29 @@ export default function AnimationViewer({
     return [scaleX, scaleY];
   }, []);
 
+  // Get recursive alpha calculation like tbcml - hierarchical alpha inheritance
+  const getRecursiveAlpha = useCallback((
+    part: Record<string, unknown>, 
+    currentAlpha: number, 
+    alphaUnit: number
+  ): number => {
+    if (!part) return currentAlpha;
+    
+    // Calculate this part's alpha contribution
+    const partAlpha = typeof part.animOpacity === 'number' 
+      ? part.animOpacity / alphaUnit 
+      : (typeof part.baseOpacity === 'number' ? part.baseOpacity / alphaUnit : 1.0);
+    
+    const alpha = currentAlpha * partAlpha;
+    
+    // Recurse to parent if it exists (like tbcml get_recursive_alpha)
+    if (part.parent) {
+      return getRecursiveAlpha(part.parent as Record<string, unknown>, alpha, alphaUnit);
+    }
+    
+    return alpha;
+  }, []);
+
   // Transform calculation based on exact tbcml implementation
   const transformPart = useCallback((
     part: Record<string, unknown>,
@@ -1148,7 +1171,18 @@ export default function AnimationViewer({
         scaleX: Math.abs(scxBx),
         scaleY: Math.abs(scyBy),
         rotation: ((part.animRotation as number) / angleUnit) * (Math.PI / 180),
-        opacity: Math.max(0, Math.min(1, (part.animOpacity as number) / alphaUnit)),
+        opacity: (() => {
+          const recursiveAlpha = getRecursiveAlpha(part, 1.0, alphaUnit);
+          const finalOpacity = Math.max(0, Math.min(1, recursiveAlpha));
+          
+          // Unit 025の"en"モデルのデバッグログ
+          if (unitId === '025' && selectedAnimation === 'maanim02' && 
+              typeof part.name === 'string' && part.name === 'en') {
+            console.log(`Unit 025 en model (Part ${part.id}): parentId=${part.parentId}, baseOpacity=${part.baseOpacity}, animOpacity=${part.animOpacity}, recursiveAlpha=${recursiveAlpha}, finalOpacity=${finalOpacity}`);
+          }
+          
+          return finalOpacity;
+        })(),
         renderOrder: part.zDepth as number,
         srcX,
         srcY,

@@ -380,8 +380,8 @@ export default function AnimationRenderer({
           // Part座標（maModel基本座標）
           const screenBaseX = (baseX * viewScale) + (canvas.width / 2);
           const screenBaseY = (baseY * viewScale) + (canvas.height / 2);
-          const partReferenceX = (screenBaseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX;
-          const partReferenceY = (screenBaseY - canvas.height / 2) * zoom + (canvas.height / 2) + offsetY;
+          const partReferenceX = (screenBaseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX + unitOffsetX;
+          const partReferenceY = (screenBaseY - canvas.height / 2) * zoom + (canvas.height / 2) + offsetY + unitOffsetY;
           
           // Draw 4px part point (red)
           ctx.fillStyle = '#ef4444'; // red-500
@@ -441,14 +441,14 @@ export default function AnimationRenderer({
             // Use tbcml-style matrix transformation
             const spriteBaseX = (part.x * viewScale) + (canvas.width / 2);
             const spriteBaseY = (part.y * viewScale) + (canvas.height / 2);
-            spriteReferenceX = (spriteBaseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX;
-            spriteReferenceY = (spriteBaseY - canvas.height / 2) * zoom + (canvas.height / 2) + offsetY;
+            spriteReferenceX = (spriteBaseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX + unitOffsetX;
+            spriteReferenceY = (spriteBaseY - canvas.height / 2) * zoom + (canvas.height / 2) + offsetY + unitOffsetY;
           } else {
             // Use simple transformation
             const spriteBaseX = (part.x * viewScale) + (canvas.width / 2);
             const spriteBaseY = (part.y * viewScale) + (canvas.height / 2);
-            spriteReferenceX = (spriteBaseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX;
-            spriteReferenceY = (spriteBaseY - canvas.height / 2) * zoom + (canvas.height / 2) + offsetY;
+            spriteReferenceX = (spriteBaseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX + unitOffsetX;
+            spriteReferenceY = (spriteBaseY - canvas.height / 2) * zoom + (canvas.height / 2) + offsetY + unitOffsetY;
           }
           
           // Draw 4px sprite point (amber)

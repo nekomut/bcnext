@@ -814,6 +814,7 @@ export default function AnimationViewer({
       part.animY = part.baseY;
       part.animRotation = part.baseRotation;
       part.animOpacity = part.baseOpacity;
+      
       part.animScaleX = part.baseScaleX;
       part.animScaleY = part.baseScaleY;
       part.animCutId = part.cutId;
@@ -888,7 +889,8 @@ export default function AnimationViewer({
                     if (unitId === '025' && (part.id as number) === 7 && selectedAnimation === 'maanim02') {
                       console.log(`Unit 025 Part 7 Sprite change: frame=${currentFrame}, old=${part.animCutId}, new=${changeValue}`);
                     }
-                    part.animCutId = changeValue;
+                    // IMPORTANT: Sprite IDs must be integers - round the value for proper sprite lookup
+                    part.animCutId = Math.round(changeValue);
                     break;
                   case 3: // Z_ORDER - 描画順序の動的変更
                     part.zDepth = changeValue;
@@ -1024,6 +1026,7 @@ export default function AnimationViewer({
         console.log(`Unit 025 Part ${part.id} (${part.name}): sprite=${part.animCutId}, frame=${currentFrame}, opacity=${part.animOpacity}`);
       }
       
+
       // Check if part should be rendered based on maanim rules
       const shouldRenderPart = (() => {
         // Check if part has animation control
@@ -1163,13 +1166,14 @@ export default function AnimationViewer({
         return;
       }
 
+
       parts.push({
         id: part.id as number,
         spriteId: part.animCutId as number,
         x: finalX,
         y: finalY,
-        scaleX: Math.abs(scxBx),
-        scaleY: Math.abs(scyBy),
+        scaleX: scxBx,
+        scaleY: scyBy,
         rotation: ((part.animRotation as number) / angleUnit) * (Math.PI / 180),
         opacity: (() => {
           const recursiveAlpha = getRecursiveAlpha(part, 1.0, alphaUnit);

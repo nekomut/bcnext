@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { UnitData, CalculatedStats, UnitAbility, UnitTalent, calculateUnitStats, getAbilities, frameToSecond, getValidFormCount, calculateTalentEffect } from './types';
 import { icons } from '@/data/icons';
 import IconManager from './IconManager';
@@ -568,9 +569,28 @@ export function UnitDisplay({
         
         {/* Unit Info */}
         <div className="flex-1 min-w-0">
-          <h2 className="text-sm sm:text-base font-bold text-gray-800 break-words">
-            <span className="text-xs sm:text-sm text-gray-600 font-normal">{unitData.unitId.toString().padStart(3, '0')}-{currentForm + 1}</span> {currentFormData.name || `Unit ${unitData.unitId.toString().padStart(3, '0')}`}
-          </h2>
+          {/* Animation URL construction */}
+          {(() => {
+            const formMap = ['f', 'c', 's', 'u'];
+            const formKey = formMap[actualCurrentForm] || 'f';
+            const unitIdPadded = unitData.unitId.toString().padStart(3, '0');
+            const animUrl = `/anim?unit=${unitIdPadded}&form=${formKey}&anim=maanim02`;
+            
+            return (
+              <h2 className="text-sm sm:text-base font-bold text-gray-800 break-words flex items-center gap-2">
+                <span className="flex-1">
+                  <span className="text-xs sm:text-sm text-gray-600 font-normal">{unitData.unitId.toString().padStart(3, '0')}-{currentForm + 1}</span> {currentFormData.name || `Unit ${unitData.unitId.toString().padStart(3, '0')}`}
+                </span>
+                <Link 
+                  href={animUrl}
+                  className="text-xs sm:text-sm hover:text-blue-600 transition-colors duration-200 opacity-75 hover:opacity-100"
+                  title="アニメーション表示"
+                >
+                  anim 🎬
+                </Link>
+              </h2>
+            );
+          })()}
           <div className="text-xs sm:text-sm text-gray-600 break-words flex items-center gap-2 flex-wrap">
             <div className="flex items-center gap-1">
               <span>Lv</span>

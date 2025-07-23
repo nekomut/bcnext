@@ -1401,7 +1401,7 @@ export default function AnimationViewer({
                   setZoom(value);
                 }
               }}
-              className="w-16 px-2 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-600 font-mono"
+              className="w-14 px-1 py-1 border border-gray-300 rounded text-xs text-right focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-600 font-mono"
               placeholder="0.5"
             />
           </div>
@@ -1411,7 +1411,7 @@ export default function AnimationViewer({
             </label>
             <input
               type="number"
-              step="1"
+              step="10"
               value={offsetX}
               onChange={(e) => {
                 const value = parseInt(e.target.value);
@@ -1419,7 +1419,7 @@ export default function AnimationViewer({
                   setOffsetX(value);
                 }
               }}
-              className="w-16 px-2 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-600 font-mono"
+              className="w-14 px-2 py-1 border border-gray-300 rounded text-xs text-right focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-600 font-mono"
               placeholder="0"
             />
           </div>
@@ -1429,7 +1429,7 @@ export default function AnimationViewer({
             </label>
             <input
               type="number"
-              step="1"
+              step="10"
               value={offsetY}
               onChange={(e) => {
                 const value = parseInt(e.target.value);
@@ -1437,7 +1437,7 @@ export default function AnimationViewer({
                   setOffsetY(value);
                 }
               }}
-              className="w-16 px-2 py-1 border border-gray-300 rounded text-sm focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-600 font-mono"
+              className="w-14 px-2 py-1 border border-gray-300 rounded text-xs text-right focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-600 font-mono"
               placeholder="150"
             />
           </div>

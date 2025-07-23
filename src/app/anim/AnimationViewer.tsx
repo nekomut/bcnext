@@ -60,7 +60,7 @@ export default function AnimationViewer({
   const [imageLoading, setImageLoading] = useState(false);
   const [imageError, setImageError] = useState<string | null>(null);
   const [hiddenParts, setHiddenParts] = useState<Set<number>>(new Set());
-  const [hiddenSprites, setHiddenSprites] = useState<Set<number>>(new Set());
+  const [hiddenSprites, setHiddenSprites] = useState<Set<string>>(new Set()); // Part-Sprite pair keys: "partId-spriteId"
   const [showPartPoints, setShowPartPoints] = useState<Set<number>>(new Set());
   const [showSpritePoints, setShowSpritePoints] = useState<Set<number>>(new Set());
   const [showInactiveParts, setShowInactiveParts] = useState(false);
@@ -990,8 +990,9 @@ export default function AnimationViewer({
         return;
       }
 
-      // Skip if sprite is hidden by user
-      if (hiddenSprites.has(part.animCutId as number)) {
+      // Skip if sprite is hidden by user (Part-Sprite pair)
+      const partSpriteKey = `${part.id}-${part.animCutId}`;
+      if (hiddenSprites.has(partSpriteKey)) {
         return;
       }
       
@@ -1464,18 +1465,21 @@ export default function AnimationViewer({
                 const totalPartsCount = Array.isArray(maModelData?.[2]) ? maModelData[2][0] : 0;
                 // Part#000を除外してallPartIdsを作成
                 const allPartIds = Array.from({length: totalPartsCount}, (_, i) => i).filter(id => id !== 0);
-                const allSpriteIds = new Set<number>();
+                const allPartSpriteKeys = new Set<string>();
                 
-                // 全スプライトIDを収集
+                // 全Part-Spriteペアを収集（簡略化）
+                // imgcutデータから全スプライトIDを取得し、各パートとの組み合わせを作成
                 if (imgCutData && Array.isArray(imgCutData) && imgCutData.length > 3) {
                   const totalRectangles = Array.isArray(imgCutData[3]) ? imgCutData[3][0] : 0;
-                  for (let i = 0; i < totalRectangles; i++) {
-                    allSpriteIds.add(i);
+                  for (let partId = 1; partId < totalPartsCount; partId++) { // Part#000は除外
+                    for (let spriteId = 0; spriteId < totalRectangles; spriteId++) {
+                      allPartSpriteKeys.add(`${partId}-${spriteId}`);
+                    }
                   }
                 }
                 
                 setHiddenParts(new Set(allPartIds));
-                setHiddenSprites(allSpriteIds);
+                setHiddenSprites(allPartSpriteKeys);
               }}
               className="px-2 py-0 bg-gray-200 text-gray-700 rounded text-xxs hover:bg-gray-300 font-mono"
             >
@@ -1600,7 +1604,8 @@ export default function AnimationViewer({
                   const partSpriteIds = getPartSprites(partId);
                   if (partSpriteIds.length === 1) {
                     const singleSpriteId = partSpriteIds[0];
-                    newHiddenSprites.delete(singleSpriteId);
+                    const partSpriteKey = `${partId}-${singleSpriteId}`;
+                    newHiddenSprites.delete(partSpriteKey);
                     setHiddenSprites(newHiddenSprites);
                   }
                 } else {
@@ -1611,65 +1616,48 @@ export default function AnimationViewer({
                   const partSpriteIds = getPartSprites(partId);
                   if (partSpriteIds.length === 1) {
                     const singleSpriteId = partSpriteIds[0];
-                    newHiddenSprites.add(singleSpriteId);
+                    const partSpriteKey = `${partId}-${singleSpriteId}`;
+                    newHiddenSprites.add(partSpriteKey);
                     setHiddenSprites(newHiddenSprites);
                   }
                 }
                 setHiddenParts(newHiddenParts);
               };
 
-              // 特定のSpriteがどの親Partに属しているかを逆引きする関数
-              const getParentPartsForSprite = (spriteId: number): number[] => {
-                const parentParts: number[] = [];
-                const totalPartsCount = Array.isArray(maModelData?.[2]) ? maModelData[2][0] : 0;
-                
-                for (let partId = 0; partId < totalPartsCount; partId++) {
-                  const partSpriteIds = getPartSprites(partId);
-                  if (partSpriteIds.includes(spriteId)) {
-                    parentParts.push(partId);
-                  }
-                }
-                
-                return parentParts;
-              };
+              // NOTE: getParentPartsForSprite function removed as it's no longer needed with Part-Sprite pair system
 
 
-              // eslint-disable-next-line @typescript-eslint/no-unused-vars
               const handleSpriteToggle = (spriteId: number, checked: boolean, partId: number) => {
-                // partId is used in getParentPartsForSprite calls within this function
+                // Part-Sprite pair key for individual control
+                const partSpriteKey = `${partId}-${spriteId}`;
                 const newHiddenSprites = new Set(hiddenSprites);
                 const newHiddenParts = new Set(hiddenParts);
                 
                 if (checked) {
                   // チェックされた場合、非表示リストから削除（表示する）
-                  newHiddenSprites.delete(spriteId);
+                  newHiddenSprites.delete(partSpriteKey);
                   
-                  // このSpriteが属するすべての親Partをチェック
-                  const parentParts = getParentPartsForSprite(spriteId);
-                  parentParts.forEach(parentPartId => {
-                    // 親Partが非表示の場合、自動的に表示する
-                    if (hiddenParts.has(parentPartId)) {
-                      newHiddenParts.delete(parentPartId);
-                    }
-                  });
+                  // 親Partが非表示の場合、自動的に表示する
+                  if (hiddenParts.has(partId)) {
+                    newHiddenParts.delete(partId);
+                  }
                   
                   setHiddenParts(newHiddenParts);
                 } else {
                   // チェックが外された場合、非表示リストに追加（隠す）
-                  newHiddenSprites.add(spriteId);
+                  newHiddenSprites.add(partSpriteKey);
                   
-                  // このSpriteが属するすべての親Partをチェック
-                  const parentParts = getParentPartsForSprite(spriteId);
-                  parentParts.forEach(parentPartId => {
-                    // 親Partの子Spriteがすべて非表示になったかチェック
-                    const partSpriteIds = getPartSprites(parentPartId);
-                    const allSpritesHidden = partSpriteIds.every(id => newHiddenSprites.has(id));
-                    
-                    // すべての子Spriteが非表示になった場合、親Partも非表示にする
-                    if (allSpritesHidden && partSpriteIds.length > 0) {
-                      newHiddenParts.add(parentPartId);
-                    }
+                  // 親Partの子Spriteがすべて非表示になったかチェック
+                  const partSpriteIds = getPartSprites(partId);
+                  const allSpritesHidden = partSpriteIds.every(id => {
+                    const key = `${partId}-${id}`;
+                    return newHiddenSprites.has(key);
                   });
+                  
+                  // すべての子Spriteが非表示になった場合、親Partも非表示にする
+                  if (allSpritesHidden && partSpriteIds.length > 0) {
+                    newHiddenParts.add(partId);
+                  }
                   
                   setHiddenParts(newHiddenParts);
                 }
@@ -1729,8 +1717,13 @@ export default function AnimationViewer({
                 const partSpriteIds = getPartSprites(partId);
                 const displayedSprite = spriteParts.find(sprite => sprite.id === partId);
                 
-                // Check if part is active (visible) based on rendering logic
+                // Check if part is active (visible) based on rendering logic and child sprite states
                 const isPartActive = (() => {
+                  // Part#000 is always considered active (root part)
+                  if (partId === 0) {
+                    return true;
+                  }
+                  
                   // Check if part meets basic rendering requirements
                   if (!maModelData || !Array.isArray(maModelData) || maModelData.length <= 3 + partId) {
                     return false;
@@ -1750,6 +1743,19 @@ export default function AnimationViewer({
                     return false;
                   }
                   
+                  // ENHANCED: Check if this part has any active child sprites
+                  const hasActiveChildSprites = (() => {
+                    // Check if any sprites belonging to this part are currently displayed
+                    const activeSprites = spriteParts.filter(sprite => sprite.id === partId);
+                    return activeSprites.length > 0;
+                  })();
+                  
+                  // If this part has active child sprites, it should be considered active
+                  if (hasActiveChildSprites) {
+                    return true;
+                  }
+                  
+                  // Traditional rendering logic for parts without active sprites
                   // Skip if no sprite to render (cutId < 0) - structural parts only
                   if (cutId < 0) {
                     return false;
@@ -1890,7 +1896,7 @@ export default function AnimationViewer({
 
                 // Render current part
                 const currentPartElement = (
-                  <div key={`part-${partId}`} className={`py-0 my-0 ${!isPartActive ? 'opacity-50' : ''}`} style={{ paddingLeft: `${indentLevel}px` }}>
+                  <div key={`part-${partId}`} className="py-0 my-0" style={{ paddingLeft: `${indentLevel}px` }}>
                     {/* パーツ（親） */}
                     <div className="py-0 my-0 flex items-center gap-1 font-mono text-xs">
                       {/* 折り畳みボタン */}
@@ -1909,7 +1915,7 @@ export default function AnimationViewer({
                         className="w-3 h-3"
                         checked={partId === 0 ? true : !hiddenParts.has(partId)}
                         onChange={(e) => handlePartToggle(partId, e.target.checked)}
-                        disabled={partId === 0 || !isPartActive}
+                        disabled={partId === 0}
                       />
                       <span className="font-mono text-xs">
                         Part#{partId.toString().padStart(3, '0')} {parentName && typeof parentName === 'string' && !parentName.startsWith('"') && parentName}
@@ -1920,13 +1926,13 @@ export default function AnimationViewer({
                         className="w-3 h-3 accent-red-500"
                         checked={showPartPoints.has(partId)}
                         onChange={(e) => handlePointToggle(partId, e.target.checked)}
-                        disabled={!isPartActive}
                       />
                     </div>
                     
                     {/* このパーツに関連するすべてのスプライト */}
                     {isExpanded && partSpriteIds.length > 0 && partSpriteIds.map((spriteId, spriteIndex) => {
-                      const isDisplayed = displayedSprite && displayedSprite.spriteId === spriteId && !hiddenParts.has(partId) && !hiddenSprites.has(spriteId);
+                      const partSpriteKey = `${partId}-${spriteId}`;
+                      const isDisplayed = displayedSprite && displayedSprite.spriteId === spriteId && !hiddenParts.has(partId) && !hiddenSprites.has(partSpriteKey);
                       
                       // Simplified sprite usage check - only currently displayed sprites are considered "used"
                       const isSpriteUsed = isPartActive && isDisplayed;
@@ -1938,9 +1944,8 @@ export default function AnimationViewer({
                           <input
                             type="checkbox"
                             className="w-3 h-3 accent-green-500"
-                            checked={!hiddenSprites.has(spriteId)}
+                            checked={!hiddenSprites.has(partSpriteKey)}
                             onChange={(e) => handleSpriteToggle(spriteId, e.target.checked, partId)}
-                            disabled={!isSpriteUsed}
                           />
                           <span className="font-mono text-xs">Sprite#{spriteId.toString().padStart(3, '0')}{isDisplayed ? ' ●' : ' ○'}</span>
                           {isDisplayed && displayedSprite && (
@@ -1953,7 +1958,6 @@ export default function AnimationViewer({
                             className="w-3 h-3 accent-amber-500"
                             checked={showSpritePoints.has(partId)}
                             onChange={(e) => handleSpritePointToggle(partId, e.target.checked)}
-                            disabled={!isSpriteUsed || !isDisplayed}
                           />
                         </div>
                       );

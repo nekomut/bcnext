@@ -88,12 +88,13 @@ export default function AnimationRenderer({
     // Draw coordinate reference lines (center origin)
     
     // Draw auxiliary grid lines (25px interval, cyan-50 0.2px)
+    // グリッド線は画面中央固定（オフセットの影響を受けない）
     ctx.strokeStyle = '#ecfeff';
     ctx.lineWidth = 0.2;
     ctx.setLineDash([]);
     
-    const centerX = canvas.width / 2 + offsetX;
-    const centerY = canvas.height / 2 + offsetY;
+    const centerX = canvas.width / 2;  // オフセットを除去して画面中央に固定
+    const centerY = canvas.height / 2 + 150; // オフセットを除去して画面中央に固定
     const gridSpacing = 25; // Fixed 25px spacing regardless of zoom
     
     // Draw vertical grid lines

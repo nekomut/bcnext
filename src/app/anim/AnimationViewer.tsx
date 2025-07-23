@@ -1109,7 +1109,7 @@ export default function AnimationViewer({
       }
       
       // Handle sprite info - use default values for invisible parts (cutId -1)
-      let srcX, srcY, srcW, srcH;
+      let srcX: number, srcY: number, srcW: number, srcH: number;
       
       if ((part.animCutId as number) >= 0) {
         const spriteInfo = imgCutData[(part.animCutId as number) + 4];
@@ -1326,8 +1326,8 @@ export default function AnimationViewer({
             zoom={zoom}
             offsetX={offsetX}
             offsetY={offsetY}
-            unitOffsetX={shadowOffset.x}
-            unitOffsetY={shadowOffset.y}
+            unitOffsetX={shadowOffset.x * zoom}
+            unitOffsetY={shadowOffset.y * zoom}
             showBoundaries={showBoundaries || false}
             showPartPoints={showPartPoints}
             showSpritePoints={showSpritePoints}

@@ -280,7 +280,7 @@ export default function AnimationRenderer({
         if (isVisible && showBoundaries) {
           ctx.save();
           ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset to identity matrix
-          ctx.strokeStyle = '#3b82f6';
+          ctx.strokeStyle = '#ef4444'; // red-500
           ctx.lineWidth = 0.4;
           ctx.setLineDash([]);
           
@@ -319,7 +319,7 @@ export default function AnimationRenderer({
         if (isVisible && showBoundaries) {
           ctx.save();
           ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset to identity matrix
-          ctx.strokeStyle = '#3b82f6';
+          ctx.strokeStyle = '#ef4444'; // red-500
           ctx.lineWidth = 0.4;
           ctx.setLineDash([]);
           
@@ -341,7 +341,7 @@ export default function AnimationRenderer({
     if (showBoundaries && visibleParts.length > 0 && isFinite(minX) && isFinite(minY) && isFinite(maxX) && isFinite(maxY)) {
       ctx.save();
       ctx.setTransform(1, 0, 0, 1, 0, 0); // Reset to identity matrix
-      ctx.strokeStyle = '#ef4444'; // red-500
+      ctx.strokeStyle = '#f59e0b'; // amber-500
       ctx.lineWidth = 0.6;
       ctx.setLineDash([]);
       

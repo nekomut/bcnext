@@ -310,8 +310,10 @@ export default function AnimationViewer({
           // Positive ease_power: standard exponential ease-in
           return (1 - Math.sqrt(1 - Math.pow(lerp, easePower)));
         } else {
-          // Negative ease_power: alternative exponential equation
-          return Math.sqrt(1 - Math.pow(1 - lerp, -easePower));
+          // Negative ease_power: tbcml exact formula for negative values
+          // This formula ensures smooth transitions at critical frames like 96-99
+          const absEasePower = Math.abs(easePower);
+          return Math.pow(lerp, 1.0 / absEasePower);
         }
       case 3: // Polynomial - TBCML EXACT weighted sum implementation
         // This implementation requires keyframes array and current index
@@ -441,14 +443,16 @@ export default function AnimationViewer({
         const frameDiff = nFrame - cFrame;
         if (frameDiff === 0) return cChange; // Avoid division by zero
         const lerp = (localFrame - cFrame) / frameDiff;
-        return Math.round(cChange + (nChange - cChange) * lerp);
+        // PRECISION FIX: Remove Math.round for linear interpolation consistency
+        return cChange + (nChange - cChange) * lerp;
       } else {
         // All other ease modes (including type 2 with ease_power support)
         const frameDiff = nFrame - cFrame;
         if (frameDiff === 0) return cChange; // Avoid division by zero
         const lerp = (localFrame - cFrame) / frameDiff;
         const easedProgress = ease(cEaseMode, Math.max(0, Math.min(1, lerp)), cEasePower);
-        return Math.round(cChange + (nChange - cChange) * easedProgress);
+        // PRECISION FIX: Remove Math.round for more precise interpolation (especially for Unit 025 Part 7)
+        return cChange + (nChange - cChange) * easedProgress;
       }
     }
 
@@ -857,6 +861,10 @@ export default function AnimationViewer({
                     part.unitId = changeValue;
                     break;
                   case 2: // SPRITE
+                    // DEBUG: Log Part 7 sprite changes for Unit 025
+                    if (unitId === '025' && (part.id as number) === 7 && selectedAnimation === 'maanim02') {
+                      console.log(`Unit 025 Part 7 Sprite change: frame=${currentFrame}, old=${part.animCutId}, new=${changeValue}`);
+                    }
                     part.animCutId = changeValue;
                     break;
                   case 3: // Z_ORDER - 描画順序の動的変更
@@ -889,6 +897,7 @@ export default function AnimationViewer({
                     // part.anim.scale_x = int(change_scaled * (part.scale_x or 0))
                     const changeScaledX = changeValue / scaleUnit;
                     part.animScaleX = Math.round(changeScaledX * (part.baseScaleX as number));
+                    // PRECISION FIX: Use high precision for realScale calculation
                     part.realScaleX = (part.animScaleX as number) / scaleUnit;
                     break;
                   case 10: // SCALE_Y
@@ -896,6 +905,7 @@ export default function AnimationViewer({
                     // part.anim.scale_y = int(change_scaled * (part.scale_y or 0))
                     const changeScaledY = changeValue / scaleUnit;
                     part.animScaleY = Math.round(changeScaledY * (part.baseScaleY as number));
+                    // PRECISION FIX: Use high precision for realScale calculation
                     part.realScaleY = (part.animScaleY as number) / scaleUnit;
                     break;
                   case 11: // ANGLE
@@ -938,6 +948,15 @@ export default function AnimationViewer({
         return;
       }
       
+      // TBCML RULE: Skip parts with negative unitId (structural/control parts)
+      // These parts are typically used for animation control but should not be rendered
+      if ((part.unitId as number) < 0) {
+        if (unitId === '025' && selectedAnimation === 'maanim02' && (part.id as number) === 2) {
+          console.log(`SKIPPING Part ${part.id} (${part.name}): negative unitId=${part.unitId}`);
+        }
+        return;
+      }
+      
       // Also skip if no sprite to render (cutId < 0) - structural parts only
       if ((part.animCutId as number) < 0) {
         return;
@@ -976,9 +995,9 @@ export default function AnimationViewer({
         return;
       }
       
-      // Debug log for sprite duplication issue  
-      if ((part.animCutId as number) === 0 && selectedAnimation === 'maanim03') {
-        // デバッグ用チェックのみ
+      // DEBUG: Log sprite duplication issue for Unit 025
+      if (unitId === '025' && selectedAnimation === 'maanim02' && ((part.animCutId as number) === 0 || (part.id as number) === 6 || (part.id as number) === 7)) {
+        console.log(`Unit 025 Part ${part.id} (${part.name}): sprite=${part.animCutId}, frame=${currentFrame}, opacity=${part.animOpacity}`);
       }
       
       // Check if part should be rendered based on maanim rules

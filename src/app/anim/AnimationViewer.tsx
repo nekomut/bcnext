@@ -1298,7 +1298,7 @@ export default function AnimationViewer({
   }
 
   return (
-    <div className="space-y-2">
+    <div className="space-y-1">
       <div className="text-center">
         <h3 className="text-lg font-semibold mb-1 font-mono flex items-center justify-center gap-2">
           <span className="text-xs text-blue-500">
@@ -1336,9 +1336,57 @@ export default function AnimationViewer({
         )}
       </div>
 
+      {/* Frame Control */}
+      <div className="bg-gray-50 p-1 rounded">
+        <div className="flex items-center justify-between mb-1">
+          <div className="flex items-center gap-2">
+            <label className="text-sm font-medium text-gray-600 font-mono">
+              Frame {String(currentFrame).padStart(3, '0')}/{String(maxFrame).padStart(3, '0')}
+            </label>
+            <button
+              onClick={() => setCurrentFrame(prev => prev > 0 ? prev - 1 : maxFrame)}
+              className="text-sm text-gray-600 hover:text-gray-800 font-mono"
+              disabled={isPlaying}
+            >
+              ◁
+            </button>
+            <button
+              onClick={() => setCurrentFrame(prev => prev < maxFrame ? prev + 1 : 0)}
+              className="text-sm text-gray-600 hover:text-gray-800 font-mono"
+              disabled={isPlaying}
+            >
+              ▷
+            </button>
+          </div>
+          <div className="flex items-center gap-1">
+            <label className="text-xs font-medium text-gray-600 font-mono">FPS</label>
+            <select
+              value={frameRate}
+              onChange={(e) => setFrameRate(parseInt(e.target.value))}
+              className="px-1 py-0 border border-gray-300 rounded text-xs focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-600 font-mono"
+            >
+              <option value={10}>10</option>
+              <option value={15}>15</option>
+              <option value={24}>24</option>
+              <option value={30}>30</option>
+              <option value={60}>60</option>
+            </select>
+          </div>
+        </div>
+        <input
+          type="range"
+          min="0"
+          max={maxFrame}
+          value={currentFrame}
+          onChange={(e) => setCurrentFrame(parseInt(e.target.value))}
+          className="w-full"
+          disabled={isPlaying}
+        />
+      </div>
+
       {/* View Controls */}
-      <div className="bg-gray-50 p-2 rounded">
-        <div className="flex items-center gap-4 mb-2">
+      <div className="bg-gray-50 p-1 rounded">
+        <div className="flex items-center gap-4 mb-1">
           <div className="flex items-center gap-1">
             <label className="text-sm font-medium text-gray-600 whitespace-nowrap font-mono">
               Zoom
@@ -1417,53 +1465,8 @@ export default function AnimationViewer({
         </div>
       </div>
 
-      {/* Frame Control */}
-      <div className="bg-gray-50 p-2 rounded">
-        <div className="flex items-center justify-between mb-1">
-          <div className="flex items-center gap-2">
-            <label className="text-sm font-medium text-gray-600 font-mono">
-              Frame {String(currentFrame).padStart(3, '0')}/{String(maxFrame).padStart(3, '0')}
-            </label>
-            <button
-              onClick={() => setCurrentFrame(prev => prev > 0 ? prev - 1 : maxFrame)}
-              className="text-sm text-gray-600 hover:text-gray-800 font-mono"
-              disabled={isPlaying}
-            >
-              ◁
-            </button>
-            <button
-              onClick={() => setCurrentFrame(prev => prev < maxFrame ? prev + 1 : 0)}
-              className="text-sm text-gray-600 hover:text-gray-800 font-mono"
-              disabled={isPlaying}
-            >
-              ▷
-            </button>
-          </div>
-          <div className="flex items-center gap-1">
-            <label className="text-xs font-medium text-gray-600 font-mono">FPS</label>
-            <select
-              value={frameRate}
-              onChange={(e) => setFrameRate(parseInt(e.target.value))}
-              className="px-1 py-0 border border-gray-300 rounded text-xs focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-600 font-mono"
-            >
-              <option value={15}>15</option>
-              <option value={24}>24</option>
-              <option value={30}>30</option>
-              <option value={60}>60</option>
-            </select>
-          </div>
-        </div>
-        <input
-          type="range"
-          min="0"
-          max={maxFrame}
-          value={currentFrame}
-          onChange={(e) => setCurrentFrame(parseInt(e.target.value))}
-          className="w-full"
-          disabled={isPlaying}
-        />
-        
-        {/* Parts List */}
+      {/* Parts List */}
+      <div className="bg-gray-50 p-1 rounded">
         <div className="mt-2">
           {/* Parts/Sprites カウントラベル */}
           <div className="mb-2">

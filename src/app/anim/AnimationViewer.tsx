@@ -63,7 +63,7 @@ export default function AnimationViewer({
   const [hiddenSprites, setHiddenSprites] = useState<Set<string>>(new Set()); // Part-Sprite pair keys: "partId-spriteId"
   const [showPartPoints, setShowPartPoints] = useState<Set<number>>(new Set());
   const [showSpritePoints, setShowSpritePoints] = useState<Set<number>>(new Set());
-  const [showInactiveParts, setShowInactiveParts] = useState(false);
+  const [showInactiveParts, setShowInactiveParts] = useState(true);
   const [frameRate, setFrameRate] = useState(30);
   const [expandedParts, setExpandedParts] = useState<Set<number>>(new Set([0])); // デフォルトでPart#000のみ展開
 

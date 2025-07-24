@@ -1266,10 +1266,10 @@ export default function AnimationViewer({
       <div className="space-y-2">
         <div className="text-center">
           <h3 className="text-lg font-semibold mb-1 font-mono flex items-center justify-center gap-2">
-            <span className="text-xs text-blue-500">
+            <span className="text-xs text-gray-600">
               {unitId}-{['f', 'c', 's', 'u'].indexOf(selectedForm) + 1}
             </span>
-            <span className="text-blue-500">
+            <span className="text-xs text-gray-600">
               {(formData?.name as string) || 'Unknown'}
             </span>
           </h3>
@@ -1286,10 +1286,10 @@ export default function AnimationViewer({
       <div className="space-y-2">
         <div className="text-center">
           <h3 className="text-lg font-semibold mb-1 font-mono flex items-center justify-center gap-2">
-            <span className="text-xs text-blue-500">
+            <span className="text-xs text-gray-600">
               {unitId}-{['f', 'c', 's', 'u'].indexOf(selectedForm) + 1}
             </span>
-            <span className="text-blue-500">
+            <span className="text-xs text-gray-600">
               {(formData?.name as string) || 'Unknown'}
             </span>
           </h3>
@@ -1305,10 +1305,10 @@ export default function AnimationViewer({
     <div className="space-y-1">
       <div className="text-center">
         <h3 className="text-lg font-semibold mb-1 font-mono flex items-center justify-center gap-2">
-          <span className="text-xs text-blue-500">
+          <span className="text-xs text-gray-600">
             {unitId}-{['f', 'c', 's', 'u'].indexOf(selectedForm) + 1}
           </span>
-          <span className="text-blue-500">
+          <span className="text-xs text-gray-600">
             {(formData?.name as string) || 'Unknown'}
           </span>
         </h3>

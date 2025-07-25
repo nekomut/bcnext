@@ -5,7 +5,7 @@ export const Set993: GatyaSet = {
   guaranteed: -1,
   shortName: "993",
   gatyasetId: 993,
-  rateCumSum: [0, 6970, 9470, 9970, 10000],
+  rateCumSum: [0, 6470, 9070, 9970, 10000],
   pools: [
     {
       rate: 0,
@@ -13,7 +13,7 @@ export const Set993: GatyaSet = {
       reroll: false,
     },
     {
-      rate: 6970,
+      rate: 6470,
       units: [
        'ネコ武闘家',            // 523
        'ネコマタドール',        // 495
@@ -44,7 +44,7 @@ export const Set993: GatyaSet = {
       reroll: true,
     },
     {
-      rate: 2500,
+      rate: 2600,
       units: [
        '泉のネコ女神',          // 522
        'ネコフェンシング',      // 377
@@ -67,7 +67,7 @@ export const Set993: GatyaSet = {
       reroll: false,
     },
     {
-      rate: 500,
+      rate: 900,
       units: [
        '韋駄天スカンダ',         // 811
        '曲射砲台ランチャーズ',   // 799

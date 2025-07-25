@@ -10,16 +10,16 @@
 // import { Set937 } from './set937'; // ミラクル4
 // import { Set938 } from './set938'; // エクセレント4
 // import { Set939 } from './set939'; // バスターズ祭
-import { Set942 } from './set942'; // ダイナマイツ
-import { Set943 } from './set943'; // バサラーズ
+// import { Set942 } from './set942'; // ダイナマイツ
+// import { Set943 } from './set943'; // バサラーズ
 import { Set944 } from './set944'; // ギャルズ
-import { Set945 } from './set945'; // エンペラーズ
-import { Set946 } from './set946'; // ウルトラソウルズ
-import { Set947 } from './set947'; // ダークヒーローズ
-import { Set948 } from './set948'; // ギガントゼウス
+// import { Set945 } from './set945'; // エンペラーズ
+// import { Set946 } from './set946'; // ウルトラソウルズ
+// import { Set947 } from './set947'; // ダークヒーローズ
+// import { Set948 } from './set948'; // ギガントゼウス
 // import { Set949 } from './set949'; // アイアンウォーズ
 // import { Set950 } from './set950'; // ギャルモン
-import { Set951 } from './set951'; // ピクシーズ
+// import { Set951 } from './set951'; // ピクシーズ
 // import { Set973 } from './set973'; // 超国王祭
 // import { Set962 } from './set962'; // ルガ族
 // import { Set963 } from './set963'; // 超ネコ祭
@@ -36,43 +36,50 @@ import { Set951 } from './set951'; // ピクシーズ
 // import { Set975 } from './set975'; // 超選抜祭
 // import { Set976 } from './set976'; // 極選抜祭
 // import { Set977 } from './set977'; // バキコラボ
-import { Set979 } from './set979'; // アイアンウォーズ
-import { Set981 } from './set981'; // 超ネコ祭
-import { Set982 } from './set982'; // 極ネコ祭
-import { Set983 } from './set983'; // プラチケ
-import { Set984 } from './set984'; // レジェチケ
+// import { Set979 } from './set979'; // アイアンウォーズ
+// import { Set981 } from './set981'; // 超ネコ祭
+// import { Set982 } from './set982'; // 極ネコ祭
+// import { Set983 } from './set983'; // プラチケ
+// import { Set984 } from './set984'; // レジェチケ
 // import { Set985 } from './set985'; // ソニックコラボ
 import { Set986 } from './set986'; // ルガ族
+import { Set992 } from './set992'; // ギガントゼウス
+import { Set993 } from './set993'; // 超ネコ祭
+import { Set995 } from './set995'; // プラチケ
+import { Set996 } from './set996'; // レジェチケ
 import { Set997 } from './set997'; // サマガ青
 import { Set998 } from './set998'; // エヴァ新世紀
 import { Set999 } from './set999'; // エヴァ新劇場版
+import { Set1000 } from './set1000'; // マンボウ
 
 export const RareGatyaSetList = [
 
     Set998, // エヴァ新世紀
-    Set999, // エヴァ新劇場版    
+    Set999, // エヴァ新劇場版
 
-    Set943, // バサラーズ
-    Set945, // エンペラーズ
-    Set947, // ダークヒーローズ
+    Set986, // ルガ族 
+    Set992, // ギガントゼウス
+    Set1000, // マンボウ
 
-    Set982, // 極ネコ祭
+    // Set943, // バサラーズ
+    // Set945, // エンペラーズ
+    // Set947, // ダークヒーローズ
 
-    Set942, // ダイナマイツ
+    // Set982, // 極ネコ祭
 
-    Set984, // レジェチケ
-    Set983, // プラチケ
+    // Set942, // ダイナマイツ
 
-    Set981, // 超ネコ祭
-    
+    Set944, // ギャルズ
+    Set993, // 超ネコ祭
+
+    Set996, // レジェチケ
+    Set995, // プラチケ
+
     Set997, // サマガ青
 
-    Set948, // ギガントゼウス
-    Set944, // ギャルズ
-    Set986, // ルガ族 
-    Set951, // ピクシーズ
-    Set979, // アイアンウォーズ
-    Set946, // ウルトラソウルズ
+    // Set951, // ピクシーズ
+    // Set979, // アイアンウォーズ
+    // Set946, // ウルトラソウルズ
 
     // Set950, // ギャルモン
 

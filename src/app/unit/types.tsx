@@ -300,18 +300,18 @@ export const getAbilities = (
 
   // 攻撃対象限定の判定
   const targets: Array<{name: string, iconKey: string}> = [];
-  const targetIndices = [10, 16, 17, 18, 19, 20, 21, 22, 78, 96];
+  const targetIndices = [10, 16, 17, 18, 20, 21, 22, 78, 96, 19];
   const targetData = [
     {name: '赤い敵', iconKey: 'traitRed'},
     {name: '浮いてる敵', iconKey: 'traitFloating'},
     {name: '黒い敵', iconKey: 'traitBlack'},
     {name: 'メタルな敵', iconKey: 'traitMetal'},
-    {name: '属性を持たない敵', iconKey: 'traitTraitless'},
     {name: '天使', iconKey: 'traitAngel'},
     {name: 'エイリアン', iconKey: 'traitAlien'},
     {name: 'ゾンビ', iconKey: 'traitZombie'},
     {name: '古代種', iconKey: 'traitRelic'},
-    {name: '悪魔', iconKey: 'traitAku'}
+    {name: '悪魔', iconKey: 'traitAku'},
+    {name: '属性を持たない敵', iconKey: 'traitTraitless'}
   ];
 
   targetIndices.forEach((index, i) => {

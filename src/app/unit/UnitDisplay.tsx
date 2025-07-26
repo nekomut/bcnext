@@ -2362,14 +2362,17 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUp
                   {(ability.name === "ターゲット属性" || ability.name === "攻撃ターゲット限定") && ability.iconKeys ? (
                     <div className="flex gap-1 flex-wrap justify-end">
                       {ability.iconKeys.map((iconKey, i) => (
-                        <Image
-                          key={i}
-                          src={`data:image/png;base64,${icons[iconKey as keyof typeof icons]}`}
-                          alt={`trait-${iconKey}`}
-                          width={20}
-                          height={20}
-                          className="rounded"
-                        />
+                        <React.Fragment key={i}>
+                          {/* 古代種（8番目）の前で改行（ゾンビと古代種の間） */}
+                          {i === 7 && <div className="w-full" />}
+                          <Image
+                            src={`data:image/png;base64,${icons[iconKey as keyof typeof icons]}`}
+                            alt={`trait-${iconKey}`}
+                            width={20}
+                            height={20}
+                            className="rounded"
+                          />
+                        </React.Fragment>
                       ))}
                     </div>
                   ) : ability.name === 'クリティカル' && ability.value ? (

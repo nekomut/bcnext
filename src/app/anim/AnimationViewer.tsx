@@ -1170,7 +1170,7 @@ export default function AnimationViewer({
       const scyBy = scaleY * baseY;
       
       // TBCML EXACT: Flip calculation based purely on scale sign (no hFlip/vFlip)
-      let flipX = scaleX < 0 ? -1 : 1;
+      const flipX = scaleX < 0 ? -1 : 1;
       const flipY = scaleY < 0 ? -1 : 1;
       
       // Calculate pivot offset like tbcml

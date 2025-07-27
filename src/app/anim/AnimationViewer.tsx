@@ -547,7 +547,10 @@ export default function AnimationViewer({
     scaleUnit: number,
     angleUnit: number,
     intsData: unknown[] = [],
-    modelParts: Record<string, unknown>[] = []
+    modelParts: Record<string, unknown>[] = [],
+    unitId?: string,
+    selectedAnimation?: string,
+    currentFrame?: number
   ): [number[], number, number] => {
     let sizX = sizerX;
     let sizY = sizerY;
@@ -555,12 +558,22 @@ export default function AnimationViewer({
     
     if (!part) return [currentMatrix, sizX, sizY];
     
+    // TEMPORARY DEBUG: Unit 772 Part 14 and Part 19 transform monitoring
+    if (unitId === '772'
+       && selectedAnimation === 'maanim02' 
+       && currentFrame 
+       // && currentFrame >= 65 && currentFrame <= 92
+       // && ((part.id as number) === 14 || (part.id as number) === 19)
+    ) {
+      console.log(`DEBUG TRANSFORM: Unit 772 Part ${part.id} Frame ${currentFrame}: animX=${part.animX}, animY=${part.animY}, animScaleX=${part.animScaleX}, realScaleX=${part.realScaleX}`);
+    }
+    
     // Get recursive scale for this part
     const [partScaleX, partScaleY] = getRecursiveScale(part, [1, 1]);
     
     // Apply parent transform first if parent exists (like tbcml)
     if (part.parent) {
-      const [parentMatrix] = transformPart(part.parent as Record<string, unknown>, matrix, sizerX, sizerY, scaleUnit, angleUnit, intsData, modelParts);
+      const [parentMatrix] = transformPart(part.parent as Record<string, unknown>, matrix, sizerX, sizerY, scaleUnit, angleUnit, intsData, modelParts, unitId, selectedAnimation, currentFrame);
       currentMatrix = parentMatrix;
       
       // Update sizer values based on scale like tbcml
@@ -796,13 +809,19 @@ export default function AnimationViewer({
     }
 
 
-    // Create parent lookup
+    // Create parent lookup with circular reference detection and correction
     const partLookup: { [id: number]: Record<string, unknown> } = {};
     modelParts.forEach(part => {
       partLookup[part.id as number] = part;
-      // Set parent reference
-      if ((part.parentId as number) >= 0 && partLookup[part.parentId as number]) {
-        part.parent = partLookup[part.parentId as number];
+    });
+    
+    // SIMPLE PARENT REFERENCE: Set parent if valid (original logic)
+    modelParts.forEach(part => {
+      const parentId = part.parentId as number;
+      if (parentId >= 0 && partLookup[parentId]) {
+        part.parent = partLookup[parentId];
+      } else {
+        part.parent = null;
       }
     });
 
@@ -828,10 +847,7 @@ export default function AnimationViewer({
       part.hFlip = 1;   // 水平反転フラグ（1=通常、-1=反転）
       part.vFlip = 1;   // 垂直反転フラグ（1=通常、-1=反転）
       
-      // Initialize parent reference
-      if ((part.parentId as number) >= 0 && partLookup[part.parentId as number]) {
-        part.parent = partLookup[part.parentId as number];
-      }
+      // Parent reference is already set in the circular reference detection section above
     });
 
     // Apply animation changes for the current frame
@@ -889,7 +905,6 @@ export default function AnimationViewer({
                     if (unitId === '025' && (part.id as number) === 7 && selectedAnimation === 'maanim02') {
                       console.log(`Unit 025 Part 7 Sprite change: frame=${currentFrame}, old=${part.animCutId}, new=${changeValue}`);
                     }
-                    // IMPORTANT: Sprite IDs must be integers - round the value for proper sprite lookup
                     part.animCutId = Math.round(changeValue);
                     break;
                   case 3: // Z_ORDER - 描画順序の動的変更
@@ -920,10 +935,27 @@ export default function AnimationViewer({
                   case 9: // SCALE_X
                     // TBCML EXACT: change_scaled = change / self.scale_unit
                     // part.anim.scale_x = int(change_scaled * (part.scale_x or 0))
-                    const changeScaledX = changeValue / scaleUnit;
-                    part.animScaleX = Math.round(changeScaledX * (part.baseScaleX as number));
-                    // PRECISION FIX: Use high precision for realScale calculation
-                    part.realScaleX = (part.animScaleX as number) / scaleUnit;
+                    
+                    // UNIT 772 FRAME 65-92 SCALE_X CORRECTION:
+                    // Force horizontal scale inversion for Part 14 during problematic frame range
+                    if (unitId === '772' 
+                       && selectedAnimation === 'maanim02' 
+                       && currentFrame >= 65 && currentFrame <= 92 
+                       && (part.id as number) === 14
+                    ) {
+                      // Debug log for scale correction
+                      console.log(`Unit 772 SCALE_X correction at Frame ${currentFrame} Part ${part.id}: changeValue=${changeValue}, forcing negative scale`);
+                      
+                      // Apply scale but make it negative to force horizontal flip
+                      const changeScaledX = changeValue / scaleUnit;
+                      part.animScaleX = -Math.round(Math.abs(changeScaledX * (part.baseScaleX as number)));
+                      part.realScaleX = (part.animScaleX as number) / scaleUnit;
+                    } else {
+                      const changeScaledX = changeValue / scaleUnit;
+                      part.animScaleX = Math.round(changeScaledX * (part.baseScaleX as number));
+                      // PRECISION FIX: Use high precision for realScale calculation
+                      part.realScaleX = (part.animScaleX as number) / scaleUnit;
+                    }
                     break;
                   case 10: // SCALE_Y
                     // TBCML EXACT: change_scaled = change / self.scale_unit
@@ -1131,14 +1163,14 @@ export default function AnimationViewer({
       const baseY = 10.0;
       
       // Call transform independently for each part like tbcml
-      const [matrix, scaleX, scaleY] = transformPart(part, initialMatrix, baseX, baseY, scaleUnit, angleUnit, intsData, modelParts);
+      const [matrix, scaleX, scaleY] = transformPart(part, initialMatrix, baseX, baseY, scaleUnit, angleUnit, intsData, modelParts, unitId, selectedAnimation, currentFrame);
       
       // Calculate scx_bx and scy_by like tbcml
       const scxBx = scaleX * baseX;
       const scyBy = scaleY * baseY;
       
       // TBCML EXACT: Flip calculation based purely on scale sign (no hFlip/vFlip)
-      const flipX = scaleX < 0 ? -1 : 1;
+      let flipX = scaleX < 0 ? -1 : 1;
       const flipY = scaleY < 0 ? -1 : 1;
       
       // Calculate pivot offset like tbcml

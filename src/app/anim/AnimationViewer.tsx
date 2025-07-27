@@ -558,15 +558,6 @@ export default function AnimationViewer({
     
     if (!part) return [currentMatrix, sizX, sizY];
     
-    // TEMPORARY DEBUG: Unit 772 Part 14 and Part 19 transform monitoring
-    if (unitId === '772'
-       && selectedAnimation === 'maanim02' 
-       && currentFrame 
-       // && currentFrame >= 65 && currentFrame <= 92
-       // && ((part.id as number) === 14 || (part.id as number) === 19)
-    ) {
-      console.log(`DEBUG TRANSFORM: Unit 772 Part ${part.id} Frame ${currentFrame}: animX=${part.animX}, animY=${part.animY}, animScaleX=${part.animScaleX}, realScaleX=${part.realScaleX}`);
-    }
     
     // Get recursive scale for this part
     const [partScaleX, partScaleY] = getRecursiveScale(part, [1, 1]);
@@ -639,6 +630,11 @@ export default function AnimationViewer({
       const sin = Math.sin(radians);
       const cos = Math.cos(radians);
 
+      // DEBUG: Part 65 rotation for Unit 815 around Frame 22
+      if (unitId === '815' && (part.id as number) === 65 && currentFrame >= 20 && currentFrame <= 24) {
+        console.log(`DEBUG ROTATION Unit 815 Part 65 Frame ${currentFrame}: animRotation=${part.animRotation}, angleUnit=${angleUnit}, degrees=${degrees.toFixed(1)}°`);
+      }
+
       const f = (m0 * cos) + (m1 * sin);
       const f2 = (m0 * -sin) + (m1 * cos);
       const f3 = (m3 * cos) + (m4 * sin);
@@ -708,6 +704,11 @@ export default function AnimationViewer({
         }
         if (detectedAlphaUnit && detectedAlphaUnit > 0) {
           alphaUnit = detectedAlphaUnit;
+        }
+        
+        // DEBUG: Unit 815 angleUnit detection
+        if (unitId === '815') {
+          console.log(`DEBUG ANGLEUNIT Unit 815: detected=${detectedAngleUnit}, final=${angleUnit}`);
         }
       }
     }
@@ -834,6 +835,11 @@ export default function AnimationViewer({
       part.animRotation = part.baseRotation;
       part.animOpacity = part.baseOpacity;
       
+      // DEBUG: Part 65 base rotation for Unit 815
+      if (unitId === '815' && (part.id as number) === 65) {
+        console.log(`DEBUG INIT Unit 815 Part 65: baseRotation=${part.baseRotation}, animRotation=${part.animRotation}`);
+      }
+      
       part.animScaleX = part.baseScaleX;
       part.animScaleY = part.baseScaleY;
       part.animCutId = part.cutId;
@@ -935,27 +941,9 @@ export default function AnimationViewer({
                   case 9: // SCALE_X
                     // TBCML EXACT: change_scaled = change / self.scale_unit
                     // part.anim.scale_x = int(change_scaled * (part.scale_x or 0))
-                    
-                    // UNIT 772 FRAME 65-92 SCALE_X CORRECTION:
-                    // Force horizontal scale inversion for Part 14 during problematic frame range
-                    if (unitId === '772' 
-                       && selectedAnimation === 'maanim02' 
-                       && currentFrame >= 65 && currentFrame <= 92 
-                       && (part.id as number) === 14
-                    ) {
-                      // Debug log for scale correction
-                      console.log(`Unit 772 SCALE_X correction at Frame ${currentFrame} Part ${part.id}: changeValue=${changeValue}, forcing negative scale`);
-                      
-                      // Apply scale but make it negative to force horizontal flip
-                      const changeScaledX = changeValue / scaleUnit;
-                      part.animScaleX = -Math.round(Math.abs(changeScaledX * (part.baseScaleX as number)));
-                      part.realScaleX = (part.animScaleX as number) / scaleUnit;
-                    } else {
-                      const changeScaledX = changeValue / scaleUnit;
-                      part.animScaleX = Math.round(changeScaledX * (part.baseScaleX as number));
-                      // PRECISION FIX: Use high precision for realScale calculation
-                      part.realScaleX = (part.animScaleX as number) / scaleUnit;
-                    }
+                    const changeScaledX = changeValue / scaleUnit;
+                    part.animScaleX = Math.round(changeScaledX * (part.baseScaleX as number));
+                    part.realScaleX = (part.animScaleX as number) / scaleUnit;
                     break;
                   case 10: // SCALE_Y
                     // TBCML EXACT: change_scaled = change / self.scale_unit
@@ -974,10 +962,36 @@ export default function AnimationViewer({
                     part.animOpacity = Math.round(changeAlpha * (part.baseOpacity as number));
                     break;
                   case 13: // H_FLIP - 水平反転
-                    part.hFlip = changeValue !== 0 ? -1 : 1;
+                    // TBCML EXACT: H_FLIP時はスケール値を負にする
+                    if (changeValue !== 0) {
+                      // H_FLIP active: Negate current X scale to create horizontal flip
+                      part.animScaleX = -(Math.abs(part.animScaleX as number));
+                      part.realScaleX = (part.animScaleX as number) / scaleUnit;
+                      part.hFlip = -1;
+                    } else {
+                      // H_FLIP disabled: Restore positive X scale (only if currently negative)
+                      if ((part.animScaleX as number) < 0) {
+                        part.animScaleX = Math.abs(part.animScaleX as number);
+                        part.realScaleX = (part.animScaleX as number) / scaleUnit;
+                      }
+                      part.hFlip = 1;
+                    }
                     break;
                   case 14: // V_FLIP - 垂直反転
-                    part.vFlip = changeValue !== 0 ? -1 : 1;
+                    // TBCML EXACT: V_FLIP時はスケール値を負にする
+                    if (changeValue !== 0) {
+                      // V_FLIP active: Negate current Y scale to create vertical flip
+                      part.animScaleY = -(Math.abs(part.animScaleY as number));
+                      part.realScaleY = (part.animScaleY as number) / scaleUnit;
+                      part.vFlip = -1;
+                    } else {
+                      // V_FLIP disabled: Restore positive Y scale (only if currently negative)
+                      if ((part.animScaleY as number) < 0) {
+                        part.animScaleY = Math.abs(part.animScaleY as number);
+                        part.realScaleY = (part.animScaleY as number) / scaleUnit;
+                      }
+                      part.vFlip = 1;
+                    }
                     break;
                   default:
                     // 未知の変更タイプは警告出力

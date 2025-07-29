@@ -2105,9 +2105,15 @@ export default function AnimationViewer({
                 if (canvas && spriteImage && imgCutData && Array.isArray(imgCutData)) {
                   const ctx = canvas.getContext('2d');
                   if (ctx) {
-                    // Canvas size setup
+                    // Canvas size setup to fit sprite image
                     canvas.width = spriteImage.width;
                     canvas.height = spriteImage.height;
+                    
+                    // Set canvas display size to fit sprite image
+                    canvas.style.width = `${spriteImage.width}px`;
+                    canvas.style.height = `${spriteImage.height}px`;
+                    canvas.style.maxWidth = '100%';
+                    canvas.style.height = 'auto';
                     
                     // Draw full sprite image
                     ctx.drawImage(spriteImage, 0, 0);
@@ -2126,7 +2132,6 @@ export default function AnimationViewer({
                   }
                 }
               }}
-              className="w-full h-auto"
               style={{ imageRendering: 'pixelated' }}
             />
           </div>
@@ -2140,10 +2145,7 @@ export default function AnimationViewer({
               const [x, y, w, h, name] = spriteData;
               return (
                 <div className="text-xxs font-mono text-gray-600">
-                  <div>ID: {String(selectedSpriteId).padStart(3, '0')}</div>
-                  <div>位置: ({x}, {y})</div>
-                  <div>サイズ: {w} × {h}</div>
-                  <div>名前: {name}</div>
+                  {String(selectedSpriteId).padStart(3, '0')}: {name} ({x}, {y}) [{w} × {h}]
                 </div>
               );
             }
@@ -2156,7 +2158,7 @@ export default function AnimationViewer({
       {/* Debug Section */}
       <div className="bg-gray-50 p-2 rounded">
         <label className="block text-sm font-medium text-gray-600 mb-1 font-mono">
-          Debug
+          Data
         </label>
         <div className="text-xxs text-gray-600 font-mono space-y-2">
           <details>

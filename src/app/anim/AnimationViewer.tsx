@@ -66,6 +66,7 @@ export default function AnimationViewer({
   const [showInactiveParts, setShowInactiveParts] = useState(true);
   const [frameRate, setFrameRate] = useState(30);
   const [expandedParts, setExpandedParts] = useState<Set<number>>(new Set([0])); // デフォルトでPart#000のみ展開
+  const [selectedSpriteId, setSelectedSpriteId] = useState<number>(0); // Spriteプレビュー用の選択されたSpriteID
 
   const formData = animationData?.[selectedForm] as Record<string, unknown> | undefined;
   const animData = formData?.[selectedAnimation] as unknown[] | undefined;
@@ -2069,6 +2070,86 @@ export default function AnimationViewer({
               return rootParts.flatMap(rootPartId => renderPartWithChildren(rootPartId, 0));
             })()}
           </div>
+        </div>
+      </div>
+
+      {/* Sprite Preview Section */}
+      <div className="bg-blue-50 p-2 rounded mb-2">
+        <label className="block text-sm font-medium text-gray-600 mb-1 font-mono">
+          Sprite Preview
+        </label>
+        <div className="space-y-2">
+          {/* Sprite ID Selector */}
+          <div className="flex items-center space-x-2">
+            <label className="text-xs font-mono text-gray-600">Sprite ID:</label>
+            <select
+              value={selectedSpriteId}
+              onChange={(e) => setSelectedSpriteId(Number(e.target.value))}
+              className="text-xs font-mono border rounded px-1 py-0.5 text-gray-500"
+            >
+              {imgCutData && Array.isArray(imgCutData) && imgCutData.length > 3 && (() => {
+                const totalRectangles = Array.isArray(imgCutData[3]) ? imgCutData[3][0] : 0;
+                return Array.from({ length: totalRectangles }, (_, index) => (
+                  <option key={index} value={index}>
+                    {String(index).padStart(3, '0')}
+                  </option>
+                ));
+              })()}
+            </select>
+          </div>
+          
+          {/* Sprite Preview Canvas */}
+          <div className="relative border border-gray-300 rounded overflow-hidden bg-gray-100">
+            <canvas
+              ref={(canvas) => {
+                if (canvas && spriteImage && imgCutData && Array.isArray(imgCutData)) {
+                  const ctx = canvas.getContext('2d');
+                  if (ctx) {
+                    // Canvas size setup
+                    canvas.width = spriteImage.width;
+                    canvas.height = spriteImage.height;
+                    
+                    // Draw full sprite image
+                    ctx.drawImage(spriteImage, 0, 0);
+                    
+                    // Draw red border around selected sprite
+                    const totalRectangles = Array.isArray(imgCutData[3]) ? imgCutData[3][0] : 0;
+                    if (selectedSpriteId < totalRectangles) {
+                      const spriteData = imgCutData[4 + selectedSpriteId] as number[];
+                      if (Array.isArray(spriteData) && spriteData.length >= 4) {
+                        const [x, y, w, h] = spriteData;
+                        ctx.strokeStyle = '#ff0000';
+                        ctx.lineWidth = 2;
+                        ctx.strokeRect(x, y, w, h);
+                      }
+                    }
+                  }
+                }
+              }}
+              className="w-full h-auto"
+              style={{ imageRendering: 'pixelated' }}
+            />
+          </div>
+          
+          {/* Selected Sprite Info */}
+          {imgCutData && Array.isArray(imgCutData) && (() => {
+            const totalRectangles = Array.isArray(imgCutData[3]) ? imgCutData[3][0] : 0;
+            return selectedSpriteId < totalRectangles && (() => {
+            const spriteData = imgCutData[4 + selectedSpriteId] as number[];
+            if (Array.isArray(spriteData) && spriteData.length >= 5) {
+              const [x, y, w, h, name] = spriteData;
+              return (
+                <div className="text-xxs font-mono text-gray-600">
+                  <div>ID: {String(selectedSpriteId).padStart(3, '0')}</div>
+                  <div>位置: ({x}, {y})</div>
+                  <div>サイズ: {w} × {h}</div>
+                  <div>名前: {name}</div>
+                </div>
+              );
+            }
+            return null;
+          })();
+          })()}
         </div>
       </div>
 

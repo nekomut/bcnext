@@ -2091,7 +2091,7 @@ export default function AnimationViewer({
                 const totalRectangles = Array.isArray(imgCutData[3]) ? imgCutData[3][0] : 0;
                 return Array.from({ length: totalRectangles }, (_, index) => {
                   const spriteData = imgCutData[4 + index] as number[];
-                  const spriteName = Array.isArray(spriteData) && spriteData.length >= 5 ? spriteData[4] : 'unnamed';
+                  const spriteName = Array.isArray(spriteData) && spriteData.length >= 5 ? spriteData[4] : '-';
                   return (
                     <option key={index} value={index}>
                       {String(index).padStart(3, '0')}: {spriteName}

@@ -2081,7 +2081,7 @@ export default function AnimationViewer({
         <div className="space-y-2">
           {/* Sprite ID Selector */}
           <div className="flex items-center space-x-2">
-            <label className="text-xs font-mono text-gray-600">Sprite ID:</label>
+            <label className="text-xs font-mono text-gray-600">Sprite:</label>
             <select
               value={selectedSpriteId}
               onChange={(e) => setSelectedSpriteId(Number(e.target.value))}
@@ -2089,13 +2089,33 @@ export default function AnimationViewer({
             >
               {imgCutData && Array.isArray(imgCutData) && imgCutData.length > 3 && (() => {
                 const totalRectangles = Array.isArray(imgCutData[3]) ? imgCutData[3][0] : 0;
-                return Array.from({ length: totalRectangles }, (_, index) => (
-                  <option key={index} value={index}>
-                    {String(index).padStart(3, '0')}
-                  </option>
-                ));
+                return Array.from({ length: totalRectangles }, (_, index) => {
+                  const spriteData = imgCutData[4 + index] as number[];
+                  const spriteName = Array.isArray(spriteData) && spriteData.length >= 5 ? spriteData[4] : 'unnamed';
+                  return (
+                    <option key={index} value={index}>
+                      {String(index).padStart(3, '0')}: {spriteName}
+                    </option>
+                  );
+                });
               })()}
             </select>
+            {/* Selected Sprite Position and Size Display */}
+            {imgCutData && Array.isArray(imgCutData) && (() => {
+              const totalRectangles = Array.isArray(imgCutData[3]) ? imgCutData[3][0] : 0;
+              if (selectedSpriteId < totalRectangles) {
+                const spriteData = imgCutData[4 + selectedSpriteId] as number[];
+                if (Array.isArray(spriteData) && spriteData.length >= 4) {
+                  const [x, y, w, h] = spriteData;
+                  return (
+                    <span className="text-xs font-mono text-gray-600">
+                      ({x}, {y}) [{w} × {h}]
+                    </span>
+                  );
+                }
+              }
+              return null;
+            })()}
           </div>
           
           {/* Sprite Preview Canvas */}
@@ -2135,23 +2155,6 @@ export default function AnimationViewer({
               style={{ imageRendering: 'pixelated' }}
             />
           </div>
-          
-          {/* Selected Sprite Info */}
-          {imgCutData && Array.isArray(imgCutData) && (() => {
-            const totalRectangles = Array.isArray(imgCutData[3]) ? imgCutData[3][0] : 0;
-            return selectedSpriteId < totalRectangles && (() => {
-            const spriteData = imgCutData[4 + selectedSpriteId] as number[];
-            if (Array.isArray(spriteData) && spriteData.length >= 5) {
-              const [x, y, w, h, name] = spriteData;
-              return (
-                <div className="text-xxs font-mono text-gray-600">
-                  {String(selectedSpriteId).padStart(3, '0')}: {name} ({x}, {y}) [{w} × {h}]
-                </div>
-              );
-            }
-            return null;
-          })();
-          })()}
         </div>
       </div>
 

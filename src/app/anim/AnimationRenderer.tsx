@@ -377,11 +377,9 @@ export default function AnimationRenderer({
             }
           }
           
-          // Part座標（maModel基本座標）
-          const screenBaseX = (baseX * viewScale) + (canvas.width / 2);
-          const screenBaseY = (baseY * viewScale) + (canvas.height / 2);
-          const partReferenceX = (screenBaseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX + unitOffsetX;
-          const partReferenceY = (screenBaseY - canvas.height / 2) * zoom + (canvas.height / 2) + offsetY + unitOffsetY;
+          // Part座標（maModel基本座標）- スプライト画像と同じ倍率で表示
+          const partReferenceX = (baseX * viewScale * zoom) + (canvas.width / 2) + offsetX + unitOffsetX;
+          const partReferenceY = (baseY * viewScale * zoom) + (canvas.height / 2) + offsetY + unitOffsetY;
           
           // Draw 4px part point (red)
           ctx.fillStyle = '#ef4444'; // red-500
@@ -403,10 +401,9 @@ export default function AnimationRenderer({
             }
           }
           
-          const screenBaseX = (baseX * viewScale) + (canvas.width / 2);
-          const screenBaseY = (baseY * viewScale) + (canvas.height / 2);
-          const referenceX = (screenBaseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX;
-          const referenceY = (screenBaseY - canvas.height / 2) * zoom + (canvas.height / 2) + offsetY;
+          // 非表示パーツの基準点も同じ倍率で表示
+          const referenceX = (baseX * viewScale * zoom) + (canvas.width / 2) + offsetX;
+          const referenceY = (baseY * viewScale * zoom) + (canvas.height / 2) + offsetY;
           
           // Draw 4px part point (grayed out for hidden parts)
           ctx.fillStyle = '#9ca3af'; // gray-400 for hidden parts

@@ -56,7 +56,6 @@ export default function AnimationViewer({
   const [zoom, setZoom] = useState(0.5);
   const [offsetX, setOffsetX] = useState(0);
   const [offsetY, setOffsetY] = useState(150);
-  const [shadowOffset, setShadowOffset] = useState({ x: 0, y: 0 });
   const [imageLoading, setImageLoading] = useState(false);
   const [imageError, setImageError] = useState<string | null>(null);
   const [hiddenParts, setHiddenParts] = useState<Set<number>>(new Set());
@@ -152,51 +151,6 @@ export default function AnimationViewer({
     };
   }, [unitId, selectedForm]);
 
-  // Calculate shadow offset for centering automatically
-  useEffect(() => {
-    if (!maModelData || !Array.isArray(maModelData)) {
-      setShadowOffset({ x: 0, y: 0 });
-      return;
-    }
-
-    // Find shadow parts in mamodel data
-    const shadowParts: { baseX: number, baseY: number }[] = [];
-    
-    for (let i = 3; i < maModelData.length; i++) {
-      const row = maModelData[i];
-      
-      if (Array.isArray(row) && row.length >= 14) {
-        const partName = (row[13] as string) || '';
-        if (typeof partName === 'string' && partName.includes('影')) {
-          const baseX = row[4] as number;
-          const baseY = row[5] as number;
-          shadowParts.push({ baseX, baseY });
-        }
-      } else if (Array.isArray(row) && row.length === 3) {
-        break; // Units row
-      }
-    }
-
-    if (shadowParts.length === 0) {
-      setShadowOffset({ x: 0, y: 0 });
-      return;
-    }
-
-    // Calculate average position of all shadow parts
-    let totalX = 0;
-    let totalY = 0;
-    
-    shadowParts.forEach(shadow => {
-      totalX += shadow.baseX;
-      totalY += shadow.baseY;
-    });
-    
-    const avgX = totalX / shadowParts.length;
-    const avgY = totalY / shadowParts.length;
-    
-    // Set offset to center shadows at origin
-    setShadowOffset({ x: -avgX, y: -avgY });
-  }, [maModelData]);
 
   // TBCML-COMPATIBLE FRAME CALCULATION: Calculate max frame exactly like tbcml get_end_frame
   // Implements KeyFrames.get_end_frame() and UnitAnim.get_end_frame() logic
@@ -593,32 +547,17 @@ export default function AnimationViewer({
       m2 += (m0 * tPosX) + (m1 * tPosY);
       m5 += (m3 * tPosX) + (m4 * tPosY);
     } else {
-      // Root part positioning
-      if (intsData.length > 0) {
-        const ints = intsData[0];
-        if (Array.isArray(ints) && ints.length >= 3) {
-          const intPartId = ints[0] as number;
-          const intX = ints[1] as number;
-          const intY = ints[2] as number;
+      // Root part positioning - Use second ints (gacha placement) for negative translation
+      if (intsData.length > 1) {
+        const gachaInts = intsData[1]; // Use second ints for gacha placement
+        if (Array.isArray(gachaInts) && gachaInts.length >= 4) {
+          const intX = gachaInts[2] as number; // X coordinate
+          const intY = gachaInts[3] as number; // Y coordinate
           
-          if (typeof intPartId === 'number' && typeof intX === 'number' && typeof intY === 'number') {
-            const [p0X, p0Y] = getBaseSize(part, false, intPartId, scaleUnit, modelParts);
-            
-            const shiX = intX * p0X;
-            const shiY = intY * p0Y;
-            const p3X = shiX * sizerX;
-            const p3Y = shiY * sizerY;
-            
-            const px = (part.pivotX as number) * partScaleX * sizerX;
-            const py = (part.pivotY as number) * partScaleY * sizerY;
-            
-            const x = px - p3X;
-            const y = py - p3Y;
-            
-            if (isFinite(x) && isFinite(y)) {
-              m2 += (m0 * x) + (m1 * y);
-              m5 += (m3 * x) + (m4 * y);
-            }
+          if (typeof intX === 'number' && typeof intY === 'number') {
+            // Negative translation by gacha ints coordinates
+            m2 -= intX;
+            m5 -= intY;
           }
         }
       }
@@ -648,7 +587,7 @@ export default function AnimationViewer({
     }
 
     return [[m0, m1, m2, m3, m4, m5], partScaleX, partScaleY];
-  }, [getRecursiveScale, getBaseSize]);
+  }, [getRecursiveScale]);
   
 
   // Update sprite parts based on current frame
@@ -1106,8 +1045,7 @@ export default function AnimationViewer({
         })();
         
         // Debug log for problematic parts
-        if ((selectedAnimation === 'maanim03' && [2, 6, 7].includes(part.id as number)) || 
-            (unitId === '000' && part.id === 2)) { // Unit 000の影パーツもログ出力
+        if ((selectedAnimation === 'maanim03' && [2, 6, 7].includes(part.id as number))) {
         }
         
         // If part has animation control, check if it's made transparent
@@ -1373,8 +1311,8 @@ export default function AnimationViewer({
             zoom={zoom}
             offsetX={offsetX}
             offsetY={offsetY}
-            unitOffsetX={shadowOffset.x * zoom}
-            unitOffsetY={shadowOffset.y * zoom}
+            unitOffsetX={0}
+            unitOffsetY={0}
             showBoundaries={showBoundaries || false}
             showPartPoints={showPartPoints}
             showSpritePoints={showSpritePoints}
@@ -2128,11 +2066,16 @@ export default function AnimationViewer({
                     canvas.width = spriteImage.width;
                     canvas.height = spriteImage.height;
                     
-                    // Set canvas display size to fit sprite image
-                    canvas.style.width = `${spriteImage.width}px`;
-                    canvas.style.height = `${spriteImage.height}px`;
+                    // Set canvas display size to fit container width (440px from main canvas)
+                    const containerWidth = 440; // Same as main animation canvas width
+                    const scale = Math.min(containerWidth / spriteImage.width, 1); // Don't upscale
+                    const displayWidth = spriteImage.width * scale;
+                    const displayHeight = spriteImage.height * scale;
+                    
+                    canvas.style.width = `${displayWidth}px`;
+                    canvas.style.height = `${displayHeight}px`;
                     canvas.style.maxWidth = '100%';
-                    canvas.style.height = 'auto';
+                    canvas.style.imageRendering = 'pixelated';
                     
                     // Draw full sprite image
                     ctx.drawImage(spriteImage, 0, 0);

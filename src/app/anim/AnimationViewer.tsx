@@ -2081,7 +2081,6 @@ export default function AnimationViewer({
         <div className="space-y-2">
           {/* Sprite ID Selector */}
           <div className="flex items-center space-x-2">
-            <label className="text-xs font-mono text-gray-600">Sprite:</label>
             <select
               value={selectedSpriteId}
               onChange={(e) => setSelectedSpriteId(Number(e.target.value))}
@@ -2108,7 +2107,7 @@ export default function AnimationViewer({
                 if (Array.isArray(spriteData) && spriteData.length >= 4) {
                   const [x, y, w, h] = spriteData;
                   return (
-                    <span className="text-xs font-mono text-gray-600">
+                    <span className="text-xxs font-mono text-gray-600">
                       ({x}, {y}) [{w} × {h}]
                     </span>
                   );

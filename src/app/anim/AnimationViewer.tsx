@@ -547,7 +547,7 @@ export default function AnimationViewer({
       m2 += (m0 * tPosX) + (m1 * tPosY);
       m5 += (m3 * tPosX) + (m4 * tPosY);
     } else {
-      // Root part positioning - Use second ints (gacha placement) for negative translation
+      // Root part positioning - Use second ints (gacha placement) for scale-adjusted translation
       if (intsData.length > 1) {
         const gachaInts = intsData[1]; // Use second ints for gacha placement
         if (Array.isArray(gachaInts) && gachaInts.length >= 4) {
@@ -555,9 +555,12 @@ export default function AnimationViewer({
           const intY = gachaInts[3] as number; // Y coordinate
           
           if (typeof intX === 'number' && typeof intY === 'number') {
-            // Negative translation by gacha ints coordinates
-            m2 -= intX;
-            m5 -= intY;
+            // Scale-adjusted translation by gacha ints coordinates multiplied by root part scales
+            const rootScaleX = (part.realScaleX as number) || 1;
+            const rootScaleY = (part.realScaleY as number) || 1;
+            
+            m2 -= intX * rootScaleX;
+            m5 -= intY * rootScaleY;
           }
         }
       }

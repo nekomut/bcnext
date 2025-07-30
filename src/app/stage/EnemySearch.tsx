@@ -213,7 +213,7 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
     return (
       <div className="p-4 text-center">
         <div className="text-gray-600 mb-2">
-          {usingWorker ? '敵データベースを読み込み中... (Web Worker使用)' : '敵データベースを読み込み中... (フォールバック)'}
+          {usingWorker ? '敵データベースを読み込み中...' : '敵データベースを読み込み中... (フォールバック)'}
           {workerError && (
             <div className="text-orange-600 text-xs mt-1">
               Web Worker エラー: {workerError} - フォールバックモードに切り替えます
@@ -223,11 +223,11 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
         {progress && (
           <div className="mt-2">
             <div className="text-sm text-gray-500 mb-1">
-              {progress.current}/{progress.total} ({progress.percentage}%)
+              {progress.current}/{progress.total} ({progress.percentage}%) 
               {(progress as WorkerProgressInfo).status && (
-                <div className="text-xs text-gray-400 mt-1">
+                <span className="text-xs text-gray-400 mt-1">
                   {(progress as WorkerProgressInfo).status}
-                </div>
+                </span>
               )}
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">

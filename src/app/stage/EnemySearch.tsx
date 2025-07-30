@@ -4,6 +4,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { buildEnemyDatabase, searchStagesByEnemies, sortEnemyStageResults, getEnemyList, searchEnemiesByName } from './enemyUtils';
 import type { EnemyDatabaseEntry, EnemyStageResult, ProgressInfo } from './enemyUtils';
+import { useEnemyDatabaseWorker, type WorkerProgressInfo } from './useEnemyDatabaseWorker';
 import { icons } from '../../data/icons';
 
 interface EnemySearchProps {
@@ -53,48 +54,95 @@ const TraitIcon: React.FC<{ trait: string }> = ({ trait }) => {
 };
 
 export function EnemySearch({ onStageSelect }: EnemySearchProps) {
-  const [enemyDatabase, setEnemyDatabase] = useState<Map<string, EnemyDatabaseEntry>>(new Map());
+  // Web Worker版を使用
+  const {
+    enemyDatabase: workerEnemyDatabase,
+    loading: workerLoading,
+    error: workerError,
+    progress: workerProgress,
+    supportsWorker,
+    searchEnemiesByName: workerSearchEnemies,
+    getEnemyList: workerGetEnemyList
+  } = useEnemyDatabaseWorker();
+
+  // フォールバック用の従来実装
+  const [fallbackEnemyDatabase, setFallbackEnemyDatabase] = useState<Map<string, EnemyDatabaseEntry>>(new Map());
+  const [fallbackLoading, setFallbackLoading] = useState(false);
+  const [fallbackProgress, setFallbackProgress] = useState<ProgressInfo | null>(null);
+
+  // 共通状態
   const [filteredEnemies, setFilteredEnemies] = useState<EnemyDatabaseEntry[]>([]);
   const [selectedEnemies, setSelectedEnemies] = useState<Set<string>>(new Set());
   const [searchResults, setSearchResults] = useState<EnemyStageResult[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const [loading, setLoading] = useState(true);
   const [searching, setSearching] = useState(false);
   const [showResults, setShowResults] = useState(false);
-  const [progress, setProgress] = useState<ProgressInfo | null>(null);
 
-  // 敵データベースを初期化
+  // 使用する実装を決定
+  const usingWorker = supportsWorker && !workerError;
+  const enemyDatabase = usingWorker ? workerEnemyDatabase : fallbackEnemyDatabase;
+  const loading = usingWorker ? workerLoading : fallbackLoading;
+  const progress = usingWorker ? workerProgress : fallbackProgress;
+
+  // フォールバック用の敵データベース初期化
   useEffect(() => {
-    const initializeDatabase = async () => {
-      setLoading(true);
-      setProgress(null);
+    if (usingWorker) {
+      return; // Web Worker を使用している場合はスキップ
+    }
+
+    const initializeFallbackDatabase = async () => {
+      setFallbackLoading(true);
+      setFallbackProgress(null);
       try {
         const database = await buildEnemyDatabase((progressInfo) => {
-          setProgress(progressInfo);
+          setFallbackProgress(progressInfo);
         });
-        setEnemyDatabase(database);
+        setFallbackEnemyDatabase(database);
         setFilteredEnemies(getEnemyList(database));
       } catch (error) {
-        console.error('Failed to initialize enemy database:', error);
+        console.error('Failed to initialize fallback enemy database:', error);
       } finally {
-        setLoading(false);
-        setProgress(null);
+        setFallbackLoading(false);
+        setFallbackProgress(null);
       }
     };
 
-    initializeDatabase();
-  }, []);
+    initializeFallbackDatabase();
+  }, [usingWorker]);
+
+  // Web Worker版データベースが準備完了時の処理
+  useEffect(() => {
+    if (usingWorker && workerEnemyDatabase.size > 0) {
+      setFilteredEnemies(workerGetEnemyList());
+    }
+  }, [usingWorker, workerEnemyDatabase, workerGetEnemyList]);
 
   // 敵名検索
-  const handleSearch = useCallback((term: string) => {
+  const handleSearch = useCallback(async (term: string) => {
     setSearchTerm(term);
     if (term.trim() === '') {
-      setFilteredEnemies(getEnemyList(enemyDatabase));
+      if (usingWorker) {
+        setFilteredEnemies(workerGetEnemyList());
+      } else {
+        setFilteredEnemies(getEnemyList(enemyDatabase));
+      }
     } else {
-      const results = searchEnemiesByName(enemyDatabase, term);
-      setFilteredEnemies(results);
+      try {
+        if (usingWorker) {
+          const results = await workerSearchEnemies(term);
+          setFilteredEnemies(results);
+        } else {
+          const results = searchEnemiesByName(enemyDatabase, term);
+          setFilteredEnemies(results);
+        }
+      } catch (error) {
+        console.error('Search failed:', error);
+        // エラー時はフォールバック検索
+        const results = searchEnemiesByName(enemyDatabase, term);
+        setFilteredEnemies(results);
+      }
     }
-  }, [enemyDatabase]);
+  }, [usingWorker, enemyDatabase, workerSearchEnemies, workerGetEnemyList]);
 
   // 自動検索の実行
   const executeAutoSearch = useCallback(async (enemyIds: string[]) => {
@@ -123,7 +171,11 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
         newSet.add(enemyId);
         // 敵を選択したときに検索テキストをクリア
         setSearchTerm('');
-        setFilteredEnemies(getEnemyList(enemyDatabase));
+        if (usingWorker) {
+          setFilteredEnemies(workerGetEnemyList());
+        } else {
+          setFilteredEnemies(getEnemyList(enemyDatabase));
+        }
       }
       
       // 敵が選択されている場合は自動的に検索を実行
@@ -137,7 +189,7 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
       
       return newSet;
     });
-  }, [enemyDatabase, executeAutoSearch]);
+  }, [usingWorker, enemyDatabase, workerGetEnemyList, executeAutoSearch]);
 
   // 選択をクリア
   const clearSelection = useCallback(() => {
@@ -160,11 +212,23 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
   if (loading) {
     return (
       <div className="p-4 text-center">
-        <div className="text-gray-600 mb-2">敵データベースを読み込み中...</div>
+        <div className="text-gray-600 mb-2">
+          {usingWorker ? '敵データベースを読み込み中... (Web Worker使用)' : '敵データベースを読み込み中... (フォールバック)'}
+          {workerError && (
+            <div className="text-orange-600 text-xs mt-1">
+              Web Worker エラー: {workerError} - フォールバックモードに切り替えます
+            </div>
+          )}
+        </div>
         {progress && (
           <div className="mt-2">
             <div className="text-sm text-gray-500 mb-1">
               {progress.current}/{progress.total} ({progress.percentage}%)
+              {(progress as WorkerProgressInfo).status && (
+                <div className="text-xs text-gray-400 mt-1">
+                  {(progress as WorkerProgressInfo).status}
+                </div>
+              )}
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div 

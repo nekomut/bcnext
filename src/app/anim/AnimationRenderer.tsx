@@ -16,7 +16,6 @@ interface SpritePart {
   srcY: number;
   srcW: number;
   srcH: number;
-  // Additional tbcml-style rendering data
   pivotX?: number;
   pivotY?: number;
   scaledWidth?: number;
@@ -31,7 +30,7 @@ interface SpritePart {
   };
   scW?: number;
   scH?: number;
-  glowEffect?: boolean; // tbcml glow処理（黒い部分透明化）
+  glowEffect?: boolean; // glow処理（黒い部分透明化）
 }
 
 interface AnimationRendererProps {
@@ -160,7 +159,6 @@ export default function AnimationRenderer({
     // Calculate each part's screen coordinates for bounding box
     visibleParts.forEach((part) => {
       if (part.matrix) {
-        // Use tbcml-style matrix transformation
         const baseX = (part.x * viewScale) + (canvas.width / 2);
         const baseY = (part.y * viewScale) + (canvas.height / 2);
         const screenX = (baseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX;
@@ -214,7 +212,7 @@ export default function AnimationRenderer({
       }
     });
 
-    // Render each sprite part using tbcml-style matrix transformation
+    // Render each sprite part using matrix transformation
     sortedParts.forEach((part) => {
       // Skip only completely invalid sprites, but allow structural parts (spriteId -1)
       // Structural parts may not have visible sprites but affect coordinate calculations
@@ -225,7 +223,7 @@ export default function AnimationRenderer({
       // Apply opacity
       ctx.globalAlpha = Math.max(0, Math.min(1, part.opacity));
       
-      // Apply glow effect (screen blend mode for tbcml glow processing)
+      // Apply glow effect (screen blend mode for glow processing)
       if (part.glowEffect) {
         ctx.globalCompositeOperation = 'screen';
       } else {
@@ -236,9 +234,9 @@ export default function AnimationRenderer({
       const isVisible = part.spriteId >= 0 && part.opacity > 0;
       
 
-      // Apply tbcml-style matrix transformation if available
+      // Apply matrix transformation if available
       if (part.matrix) {
-        // Apply the matrix transformation like tbcml: setTransform(m0, m3, m1, m4, matrix[2], matrix[5])
+        // Apply the matrix transformation: setTransform(m0, m3, m1, m4, matrix[2], matrix[5])
         // Convert position to screen coordinates (center origin), then apply zoom
         const baseX = (part.x * viewScale) + (canvas.width / 2);
         const baseY = (part.y * viewScale) + (canvas.height / 2);
@@ -255,12 +253,12 @@ export default function AnimationRenderer({
           screenY                             // f: vertical translation
         );
         
-        // Calculate pivot offset like tbcml draw_img
-        // Note: pivot values are already scaled by tbcml calculations
+        // Calculate pivot offset
+        // Note: pivot values are already scaled
         const pivotX = (part.pivotX || 0) / viewScale; // Only adjust for view scale, not zoom
         const pivotY = (part.pivotY || 0) / viewScale;
         
-        // Draw with pivot offset like tbcml: drawImage at (-pivot_x, -pivot_y, abs(size[0]), abs(size[1]))
+        // Draw with pivot offset: drawImage at (-pivot_x, -pivot_y, abs(size[0]), abs(size[1]))
         const drawX = -pivotX;
         const drawY = -pivotY;
         const drawWidth = part.scW ? Math.abs(part.scW) / viewScale : part.srcW;
@@ -435,7 +433,7 @@ export default function AnimationRenderer({
           // Sprite座標（アニメーション適用後座標）
           let spriteReferenceX, spriteReferenceY;
           if (part.matrix) {
-            // Use tbcml-style matrix transformation
+            // Matrix transformation
             const spriteBaseX = (part.x * viewScale) + (canvas.width / 2);
             const spriteBaseY = (part.y * viewScale) + (canvas.height / 2);
             spriteReferenceX = (spriteBaseX - canvas.width / 2) * zoom + (canvas.width / 2) + offsetX + unitOffsetX;

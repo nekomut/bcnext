@@ -35,7 +35,7 @@ interface SpritePart {
   };
   scW?: number;
   scH?: number;
-  glowEffect?: boolean; // tbcml glow処理（黒い部分透明化）
+  glowEffect?: boolean; // glow処理（黒い部分透明化）
 }
 
 export default function AnimationViewer({
@@ -152,7 +152,7 @@ export default function AnimationViewer({
   }, [unitId, selectedForm]);
 
 
-  // TBCML-COMPATIBLE FRAME CALCULATION: Calculate max frame exactly like tbcml get_end_frame
+  // TBCML-COMPATIBLE FRAME CALCULATION: Calculate max frame exactly
   // Implements KeyFrames.get_end_frame() and UnitAnim.get_end_frame() logic
   useEffect(() => {
     if (!animData || !Array.isArray(animData)) return;
@@ -228,13 +228,13 @@ export default function AnimationViewer({
       }
     }
     
-    // TBCML EXACT: UnitAnim.get_end_frame() implementation
+    // EXACT: UnitAnim.get_end_frame() implementation
     // return max([keyframes.get_end_frame() for keyframes in self.parts])
     let newMaxFrame: number;
     if (keyframeGroupEndFrames.length > 0) {
       newMaxFrame = Math.max(...keyframeGroupEndFrames);
     } else {
-      newMaxFrame = 1; // tbcml default when no keyframes exist
+      newMaxFrame = 1; // default when no keyframes exist
     }
     
     setMaxFrame(prevMaxFrame => {
@@ -245,12 +245,12 @@ export default function AnimationViewer({
     });
   }, [animData]);
 
-  // Animation constants matching tbcml implementation
+  // Animation constants matching implementation
   const DEFAULT_SCALE_UNIT = 1000;
   const DEFAULT_ANGLE_UNIT = 360; // 360 degrees (not 3600)
   const DEFAULT_ALPHA_UNIT = 1000;
 
-  // TBCML-EXACT EASING: Easing function with ease_power support like tbcml anim.py
+  // TBCML-EXACT EASING: Easing function with ease_power support
   const ease = (mode: number, progress: number, easePower: number = 1): number => {
     // Clamp progress to valid range
     const lerp = Math.max(0, Math.min(1, progress));
@@ -265,7 +265,7 @@ export default function AnimationViewer({
           // Positive ease_power: standard exponential ease-in
           return (1 - Math.sqrt(1 - Math.pow(lerp, easePower)));
         } else {
-          // Negative ease_power: tbcml exact formula for negative values
+          // Negative ease_power: exact formula for negative values
           // This formula ensures smooth transitions at critical frames like 96-99
           const absEasePower = Math.abs(easePower);
           return Math.pow(lerp, 1.0 / absEasePower);
@@ -294,7 +294,7 @@ export default function AnimationViewer({
     }
   };
 
-  // Get interpolated value for current frame - exact tbcml implementation with static control support
+  // Get interpolated value for current frame - exact implementation with static control support
   const getChangeInValue = useCallback((keyframes: unknown[], currentFrame: number, loopValue?: number, modificationType?: number): number | null => {
     if (!keyframes || keyframes.length === 0) return null;
 
@@ -334,7 +334,7 @@ export default function AnimationViewer({
     const startFrame = startKf[0];
     const endFrame = endKf[0];
 
-    // tbcml early return condition - pure implementation
+    // early return condition - pure implementation
     if (frameCounter < startFrame) {
       return null;
     }
@@ -351,7 +351,7 @@ export default function AnimationViewer({
     } else if (frameCounter < endFrame || startFrame === endFrame) {
       localFrame = frameCounter;
     } else if (loopValue === -1) {
-      // Infinite loop: exact tbcml modulo calculation
+      // Infinite loop: exact modulo calculation
       localFrame = (frameProgress % totalFrames) + startFrame;
     } else if (loopValue && loopValue >= 1) {
       // TBCML EXACT: Finite loop implementation
@@ -365,11 +365,11 @@ export default function AnimationViewer({
       localFrame = endFrame;
     }
 
-    // tbcml boundary conditions
+    // boundary conditions
     if (startFrame === endFrame) return startChange;
     if (localFrame === endFrame) return endChange;
 
-    // tbcml keyframe interpolation search
+    // keyframe interpolation search
     for (let i = 0; i < keyframes.length - 1; i++) {
       const currentKf = keyframes[i] as number[];
       const nextKf = keyframes[i + 1] as number[];
@@ -381,7 +381,7 @@ export default function AnimationViewer({
       const cChange = currentKf[1];
       const nChange = nextKf[1];
 
-      // tbcml range check
+      // range check
       if (localFrame < cFrame || localFrame >= nFrame) {
         continue;
       }
@@ -416,7 +416,7 @@ export default function AnimationViewer({
   }, []);
 
 
-  // get_base_size function like tbcml - MUST be defined first
+  // get_base_size function - MUST be defined first
   const getBaseSize = useCallback((part: Record<string, unknown>, parent: boolean, intPartId: number, scaleUnit: number, modelParts: Record<string, unknown>[]): [number, number] => {
     if (!part) {
       return [0, 0];
@@ -454,11 +454,11 @@ export default function AnimationViewer({
     return [resultX * signumX, resultY * signumY];
   }, []);
 
-  // Get recursive scale calculation like tbcml
+  // Get recursive scale calculation
   const getRecursiveScale: (part: Record<string, unknown>, currentScale: [number, number]) => [number, number] = useCallback((part, currentScale) => {
     if (!part) return currentScale;
     
-    // CRITICAL FIX: realScaleX/Y are already normalized by scale_unit in tbcml
+    // CRITICAL FIX: realScaleX/Y are already normalized
     // So we use them directly without further division
     const scaleX = currentScale[0] * (part.realScaleX as number);
     const scaleY = currentScale[1] * (part.realScaleY as number);
@@ -470,7 +470,7 @@ export default function AnimationViewer({
     return [scaleX, scaleY];
   }, []);
 
-  // Get recursive alpha calculation like tbcml - hierarchical alpha inheritance
+  // Get recursive alpha calculation - hierarchical alpha inheritance
   const getRecursiveAlpha = useCallback((
     part: Record<string, unknown>, 
     currentAlpha: number, 
@@ -485,7 +485,7 @@ export default function AnimationViewer({
     
     const alpha = currentAlpha * partAlpha;
     
-    // Recurse to parent if it exists (like tbcml get_recursive_alpha)
+    // Recurse to parent if it exists
     if (part.parent) {
       return getRecursiveAlpha(part.parent as Record<string, unknown>, alpha, alphaUnit);
     }
@@ -493,7 +493,7 @@ export default function AnimationViewer({
     return alpha;
   }, []);
 
-  // Transform calculation based on exact tbcml implementation
+  // Transform calculation based on exact implementation
   const transformPart = useCallback((
     part: Record<string, unknown>,
     matrix: number[],
@@ -517,12 +517,12 @@ export default function AnimationViewer({
     // Get recursive scale for this part
     const [partScaleX, partScaleY] = getRecursiveScale(part, [1, 1]);
     
-    // Apply parent transform first if parent exists (like tbcml)
+    // Apply parent transform first if parent exists
     if (part.parent) {
       const [parentMatrix] = transformPart(part.parent as Record<string, unknown>, matrix, sizerX, sizerY, scaleUnit, angleUnit, intsData, modelParts, unitId, selectedAnimation, currentFrame);
       currentMatrix = parentMatrix;
       
-      // Update sizer values based on scale like tbcml
+      // Update sizer values based on scale
       let scaleX = 0;
       let scaleY = 0;
       
@@ -540,7 +540,7 @@ export default function AnimationViewer({
 
     let [m0, m1, m2, m3, m4, m5] = currentMatrix;
 
-    // Apply position transformation exactly like tbcml
+    // Apply position transformation exactly
     if ((part.id as number) !== 0) {
       const tPosX = (part.animX as number) * sizX;
       const tPosY = (part.animY as number) * sizY;
@@ -614,7 +614,7 @@ export default function AnimationViewer({
 
     const parts: SpritePart[] = [];
 
-    // Parse mamodel data structure according to tbcml:
+    // Parse mamodel data structure:
     // Row 0: ["[modelanim:model]"]
     // Row 1: [version]
     // Row 2: [total_parts_count]
@@ -688,7 +688,7 @@ export default function AnimationViewer({
         // TBCML COMPATIBILITY: Most units use 1000-based scaling
         // Only use 100-based for very small scale values
         if (maxScale >= 1000 || avgScale >= 500) {
-          scaleUnit = 1000; // High precision scale (1000-based) - tbcml default
+          scaleUnit = 1000; // High precision scale (1000-based)
         } else if (maxScale >= 100 || avgScale >= 50) {
           scaleUnit = 100; // Standard scale (100-based)
         }
@@ -718,7 +718,7 @@ export default function AnimationViewer({
     
     const modelParts: Record<string, unknown>[] = [];
     
-    // Parse part definitions starting from row 3 - proper tbcml initialization
+    // Parse part definitions starting from row 3 - proper initialization
     for (let i = 0; i < totalPartsCount && (i + 3) < maModelData.length; i++) {
       const partData = maModelData[i + 3];
       
@@ -742,7 +742,7 @@ export default function AnimationViewer({
           baseOpacity: partData[11] as number,
           glow: partData[12] as number,
           name: (partData[13] as string) || `Part ${i}`,
-          // PRECISE SCALE CALCULATION: Pre-calculate real scale values like tbcml
+          // PRECISE SCALE CALCULATION: Pre-calculate real scale values
           // For form=s: 1790/1000=1.79, for form=f: 179/100=1.79
           realScaleX: baseScaleX !== 0 ? baseScaleX / scaleUnit : 0,
           realScaleY: baseScaleY !== 0 ? baseScaleY / scaleUnit : 0
@@ -770,9 +770,9 @@ export default function AnimationViewer({
     });
 
 
-    // IMPROVED INITIALIZATION: Initialize animation values for each part (like tbcml set_part_vals)
+    // IMPROVED INITIALIZATION: Initialize animation values for each part
     modelParts.forEach(part => {
-      // Start with base model values as integers like tbcml
+      // Start with base model values as integers
       part.animX = part.baseX;
       part.animY = part.baseY;
       part.animRotation = part.baseRotation;
@@ -836,7 +836,7 @@ export default function AnimationViewer({
               const changeValue = getChangeInValue(keyframes, currentFrame, loopValue as number, modificationType as number);
               
               
-              // Apply the animation change based on modification type (tbcml apply_change logic)
+              // Apply the animation change based on modification type
               if (changeValue !== null && changeValue !== undefined) {
                 switch (modificationType as number) {
                   case 0: // PARENT - 親パーツ関係の動的変更
@@ -953,10 +953,10 @@ export default function AnimationViewer({
       }
     }
 
-    // Process parts like tbcml draw_frame -> draw_part pattern
+    // Process parts -> draw_part pattern
     // Enhanced for Unit 003 dual structure (normal/attack parts)
     modelParts.forEach(part => {
-      // Check tbcml drawing conditions: skip if parent_id < 0 or unit_id < 0
+      // Check drawing conditions: skip if parent_id < 0 or unit_id < 0
       // BUT: unitId >= 0 is valid (unitId 44 is normal for Unit044)
       if ((part.parentId as number) < 0 && (part.unitId as number) < 0) {
         return;
@@ -1113,15 +1113,15 @@ export default function AnimationViewer({
         srcH = 1;
       }
 
-      // Transform part exactly like tbcml draw_part: each part independently
+      // Transform part exactly: each part independently
       const initialMatrix = [0.1, 0.0, 0.0, 0.0, 0.1, 0.0];
       const baseX = 10.0;
       const baseY = 10.0;
       
-      // Call transform independently for each part like tbcml
+      // Call transform independently for each part
       const [matrix, scaleX, scaleY] = transformPart(part, initialMatrix, baseX, baseY, scaleUnit, angleUnit, intsData, modelParts, unitId, selectedAnimation, currentFrame);
       
-      // Calculate scx_bx and scy_by like tbcml
+      // Calculate scx_bx and scy_by
       const scxBx = scaleX * baseX;
       const scyBy = scaleY * baseY;
       
@@ -1129,11 +1129,11 @@ export default function AnimationViewer({
       const flipX = scaleX < 0 ? -1 : 1;
       const flipY = scaleY < 0 ? -1 : 1;
       
-      // Calculate pivot offset like tbcml
+      // Calculate pivot offset
       const tPivX = (part.pivotX as number) * scxBx * flipX;
       const tPivY = (part.pivotY as number) * scyBy * flipY;
       
-      // Matrix elements with flip applied like tbcml
+      // Matrix elements with flip applied
       const m0 = matrix[0] * flipX;
       const m3 = matrix[3] * flipX;
       const m1 = matrix[1] * flipY;
@@ -1143,7 +1143,7 @@ export default function AnimationViewer({
       const finalX = matrix[2];
       const finalY = matrix[5];
       
-      // Sprite size calculation like tbcml
+      // Sprite size calculation
       const scW = srcW * scxBx;
       const scH = srcH * scyBy;
       
@@ -1189,7 +1189,7 @@ export default function AnimationViewer({
         matrix: { m0, m1, m3, m4 },
         scW,
         scH,
-        glowEffect: (part.glow as number) === 1 // tbcml glow処理（黒い部分透明化）
+        glowEffect: (part.glow as number) === 1 // glow処理（黒い部分透明化）
       });
     });
 
@@ -1767,7 +1767,7 @@ export default function AnimationViewer({
                   const unitId = partData[1] as number;
                   const cutId = partData[2] as number;
                   
-                  // Skip if parent_id < 0 and unit_id < 0 (tbcml rule)
+                  // Skip if parent_id < 0 and unit_id < 0
                   if (parentId < 0 && unitId < 0) {
                     return false;
                   }

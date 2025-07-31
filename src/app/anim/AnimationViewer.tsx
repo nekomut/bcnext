@@ -134,10 +134,6 @@ export default function AnimationViewer({
 
   // パーツごとのスプライトIDを取得する関数
   const getPartSprites = useCallback((partId: number): number[] => {
-    // Part#0には絶対にスプライトをぶら下げない
-    if (partId === 0) {
-      return [];
-    }
     
     const sprites = new Set<number>();
     let hasAnimationSprites = false;
@@ -512,11 +508,6 @@ export default function AnimationViewer({
     }
   }, [initializeAnimation, spriteImage]);
 
-
-
-
-
-
   // アニメーション描画処理
   const renderAnimation = useCallback(() => {
     const canvas = canvasRef.current;
@@ -551,8 +542,8 @@ export default function AnimationViewer({
         for (let partId = 0; partId < eAnimD.ent.length; partId++) {
           const part = eAnimD.ent[partId];
           if (part) {
-            // パーツレベルでの表示制御（Part#000は常に表示）
-            const partShouldBeVisible = partId === 0 || !hiddenParts.has(partId);
+            // パーツレベルでの表示制御
+            const partShouldBeVisible = !hiddenParts.has(partId);
             
             // スプライトレベルでの表示制御
             let spriteShouldBeVisible = true;

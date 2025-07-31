@@ -160,12 +160,27 @@ export class EAnimD extends EAnimI {
    * フレーム設定とアニメーション更新（フレーム進行なし）
    * フレームスライダー用の関数
    */
-  public setTimeAndUpdate(value: number, rotate: boolean = false): void {
+  public setTimeAndUpdate(value: number, rotate: boolean = false, unitId?: string): void {
     this.f = value;
+    
+    // Unit 000 Debug
+    if (unitId === '000') {
+      console.log(`EAnimD setTimeAndUpdate: frame=${value}, partCount=${this.ent?.length || 0}`);
+      if (this.ent && this.ent[1]) {
+        const part1 = this.ent[1] as { img?: number };
+        console.log(`  Part 1 before update: img=${part1.img || 'unknown'}`);
+      }
+    }
     
     // MaAnimでパーツ更新（フレーム進行なし）
     if (this.ent) {
-      this.ma.updateJava(this.f, this.ent, rotate, this.performanceMode);
+      this.ma.updateJava(this.f, this.ent, rotate, this.performanceMode, unitId);
+    }
+    
+    // Unit 000 Debug - after update
+    if (unitId === '000' && this.ent && this.ent[1]) {
+      const part1 = this.ent[1] as { img?: number };
+      console.log(`  Part 1 after update: img=${part1.img || 'unknown'}`);
     }
     
     // 描画順序ソート
@@ -341,6 +356,401 @@ export class EAnimD extends EAnimI {
     super.dispose();
     this.spriteImage = null;
     this.imgcut = null;
+  }
+
+  /**
+   * Java版drawWithTransform()メソッド - 高度な変換描画
+   */
+  public drawWithTransform(
+    ctx: CanvasRenderingContext2D, 
+    origin: P, 
+    size: number,
+    customTransform?: number[]
+  ): void {
+    if (!this.order) return;
+    
+    ctx.save();
+    
+    try {
+      // カスタム変換行列の適用
+      if (customTransform) {
+        ctx.setTransform(
+          customTransform[0], customTransform[1],
+          customTransform[2], customTransform[3],
+          customTransform[4], customTransform[5]
+        );
+      }
+      
+      // 描画順序（Z値ベース）でパーツを描画
+      for (const part of this.order) {
+        if (!part.visible || !part.isVisibleFull()) continue;
+        
+        this.drawPartWithAdvancedTransform(ctx, part, origin, size);
+      }
+      
+    } finally {
+      ctx.restore();
+    }
+  }
+
+  /**
+   * Java版の高度なパーツ描画（座標変換・エフェクト完全対応）
+   */
+  private drawPartWithAdvancedTransform(
+    ctx: CanvasRenderingContext2D, 
+    part: EPart, 
+    origin: P, 
+    size: number
+  ): void {
+    ctx.save();
+    
+    try {
+      // パーツの世界変換行列を取得
+      const worldTransform = part.getTransform();
+      
+      // Canvas変換行列を設定
+      ctx.setTransform(
+        worldTransform[0], worldTransform[1],
+        worldTransform[2], worldTransform[3],
+        worldTransform[4], worldTransform[5]
+      );
+      
+      // 透明度適用
+      if (part.opa < 1) {
+        ctx.globalAlpha = part.opa;
+      }
+      
+      // スプライト描画
+      const sizer = P.newP(size, size, 1);
+      part.drawPart(ctx, origin, sizer, this.spriteImage, this.imgcut);
+      
+    } catch (error) {
+      console.warn(`Advanced draw error for part ${part.id}:`, error);
+    } finally {
+      ctx.restore();
+    }
+  }
+
+  /**
+   * Java版drawBounds()メソッド - 境界ボックス描画（デバッグ用）
+   */
+  public drawBounds(ctx: CanvasRenderingContext2D): void {
+    if (!this.order) return;
+    
+    ctx.save();
+    ctx.strokeStyle = '#ff0000';
+    ctx.lineWidth = 1;
+    
+    for (const part of this.order) {
+      if (!part.visible) continue;
+      
+      const bounds = part.getBounds();
+      ctx.strokeRect(bounds.x, bounds.y, bounds.width, bounds.height);
+    }
+    
+    ctx.restore();
+  }
+
+  /**
+   * Java版hitTest()メソッド - 全体の当たり判定
+   */
+  public hitTest(worldPoint: P): EPart | null {
+    if (!this.order) return null;
+    
+    // Z値の逆順（手前から）で当たり判定
+    for (let i = this.order.length - 1; i >= 0; i--) {
+      const part = this.order[i];
+      if (part.hitTest(worldPoint)) {
+        return part;
+      }
+    }
+    
+    return null;
+  }
+
+  /**
+   * Java版getPartAt()メソッド - 座標でパーツ取得
+   */
+  public getPartAt(x: number, y: number): EPart | null {
+    const worldPoint = P.newP(x, y, 0);
+    return this.hitTest(worldPoint);
+  }
+
+  /**
+   * Java版getVisibleParts()メソッド - 表示中パーツの取得
+   */
+  public getVisibleParts(): EPart[] {
+    if (!this.order) return [];
+    
+    return this.order.filter(part => part.isVisibleFull());
+  }
+
+  /**
+   * Java版getPartsByDepth()メソッド - 深度別パーツ取得
+   */
+  public getPartsByDepth(depth: number): EPart[] {
+    if (!this.ent) return [];
+    
+    return this.ent.filter(part => part.getDepth() === depth);
+  }
+
+  /**
+   * Java版setGlobalOpacity()メソッド - 全体透明度設定
+   */
+  public setGlobalOpacity(opacity: number): void {
+    if (!this.ent) return;
+    
+    for (const part of this.ent) {
+      if (part.fa === null) { // ルートパーツのみ
+        part.setOpacityRecursive(opacity);
+      }
+    }
+  }
+
+  /**
+   * Java版setGlobalVisible()メソッド - 全体表示設定
+   */
+  public setGlobalVisible(visible: boolean): void {
+    if (!this.ent) return;
+    
+    for (const part of this.ent) {
+      if (part.fa === null) { // ルートパーツのみ
+        part.setVisibleRecursive(visible);
+      }
+    }
+  }
+
+  /**
+   * Java版getBounds()メソッド - 全体境界ボックス計算
+   */
+  public getBounds(): { x: number, y: number, width: number, height: number } {
+    if (!this.order || this.order.length === 0) {
+      return { x: 0, y: 0, width: 0, height: 0 };
+    }
+    
+    let minX = Infinity, minY = Infinity;
+    let maxX = -Infinity, maxY = -Infinity;
+    
+    for (const part of this.order) {
+      if (!part.isVisibleFull()) continue;
+      
+      const bounds = part.getBounds();
+      minX = Math.min(minX, bounds.x);
+      minY = Math.min(minY, bounds.y);
+      maxX = Math.max(maxX, bounds.x + bounds.width);
+      maxY = Math.max(maxY, bounds.y + bounds.height);
+    }
+    
+    if (minX === Infinity) {
+      return { x: 0, y: 0, width: 0, height: 0 };
+    }
+    
+    return {
+      x: minX,
+      y: minY,
+      width: maxX - minX,
+      height: maxY - minY
+    };
+  }
+
+  /**
+   * Java版optimizeRenderOrder()メソッド - 描画順序最適化
+   */
+  public optimizeRenderOrder(): void {
+    if (!this.order) return;
+    
+    // Z値とレイヤーベースでソート
+    this.order.sort((a, b) => {
+      const zDiff = a.pos.z - b.pos.z;
+      if (zDiff !== 0) return zDiff;
+      
+      return a.layer - b.layer;
+    });
+  }
+
+  /**
+   * Java版changeAnim()メソッド - 動的アニメーション切り替え
+   */
+  public changeAnim(newMaAnim: import('./MaAnim').MaAnim): void {
+    this.ma = newMaAnim;
+    this.f = 0; // フレームをリセット
+    
+    // EPart配列を再構築
+    this.organize();
+    
+    // 初期状態を設定
+    if (this.ent) {
+      for (const part of this.ent) {
+        part.setValue();
+      }
+    }
+    
+    console.log(`Animation changed to: max=${this.ma.max}, len=${this.ma.len}`);
+  }
+
+  /**
+   * Java版done()メソッド - アニメーション完了判定
+   */
+  public done(): boolean {
+    return this.f >= this.len();
+  }
+
+  /**
+   * Java版setup()メソッド - 初期化処理の分離
+   */
+  public setup(): void {
+    this.organize();
+    this.f = 0;
+    
+    if (this.ent) {
+      for (const part of this.ent) {
+        part.setValue();
+      }
+    }
+    
+    this.sort();
+  }
+
+  /**
+   * Java版paraTo()メソッド - ワープ・ノックバック合成
+   */
+  public paraTo(
+    targetX: number, 
+    targetY: number, 
+    duration: number,
+    easeType: number = 0
+  ): void {
+    if (!this.ent || this.ent.length === 0) return;
+    
+    // ルートパーツ（Part 0）の位置を変更
+    const rootPart = this.ent[0];
+    if (!rootPart) return;
+    
+    const startX = rootPart.pos.x;
+    const startY = rootPart.pos.y;
+    const deltaX = targetX - startX;
+    const deltaY = targetY - startY;
+    
+    // アニメーション合成のための一時的な実装
+    const steps = Math.max(1, duration);
+    
+    // 段階的に位置を変更（実際のゲームでは複雑なイージング）
+    for (let i = 1; i <= steps; i++) {
+      setTimeout(() => {
+        const progress = i / steps;
+        let easedProgress = progress;
+        
+        // イージング適用
+        switch (easeType) {
+          case 1: // ease-out
+            easedProgress = 1 - Math.pow(1 - progress, 2);
+            break;
+          case 2: // ease-in-out
+            easedProgress = progress < 0.5 
+              ? 2 * progress * progress 
+              : 1 - Math.pow(-2 * progress + 2, 2) / 2;
+            break;
+          default: // linear
+            break;
+        }
+        
+        rootPart.pos.x = startX + deltaX * easedProgress;
+        rootPart.pos.y = startY + deltaY * easedProgress;
+        
+      }, i * 16); // 約60FPS相当
+    }
+    
+    console.log(`paraTo: moving to (${targetX}, ${targetY}) over ${duration} steps`);
+  }
+
+  /**
+   * Java版drawBGEffect()メソッド - 背景エフェクト描画
+   */
+  public drawBGEffect(ctx: CanvasRenderingContext2D, origin: P, size: number): void {
+    if (!this.order) return;
+    
+    // 背景エフェクトを持つパーツのみ描画
+    for (const part of this.order) {
+      if (!part.visible || !part.hasExtendEffect()) continue;
+      
+      ctx.save();
+      
+      try {
+        const sizer = P.newP(size, size, 1);
+        part.transform(ctx, sizer);
+        part.drawBGEffect(ctx, origin, sizer, this.spriteImage, this.imgcut);
+        
+      } catch (error) {
+        console.warn(`BG effect error for part ${part.id}:`, error);
+      } finally {
+        ctx.restore();
+      }
+    }
+  }
+
+  /**
+   * Java版drawWithEffects()メソッド - エフェクト込み描画
+   */
+  public drawWithEffects(ctx: CanvasRenderingContext2D, origin: P, size: number): void {
+    if (!this.order) return;
+    
+    const imgcutCount = this.imgcut?.cuts?.length || 0;
+    
+    // 通常描画 + エフェクト描画
+    for (const part of this.order) {
+      if (!part.visible) continue;
+      
+      ctx.save();
+      
+      try {
+        const sizer = P.newP(size, size, 1);
+        part.transform(ctx, sizer);
+        
+        // 通常描画
+        part.drawPart(ctx, origin, sizer, this.spriteImage, this.imgcut);
+        
+        // 拡張エフェクト描画
+        if (part.hasExtendEffect()) {
+          switch (part.extType) {
+            case 2: // CURSE_EFFECT - ランダムスプライト
+              part.drawRandom(ctx, origin, sizer, this.spriteImage, this.imgcut, imgcutCount);
+              break;
+            case 3: // EXTEND_DRAW - 拡張描画
+              part.drawExtended(ctx, origin, sizer, this.spriteImage, this.imgcut);
+              break;
+          }
+        }
+        
+      } catch (error) {
+        console.warn(`Effects draw error for part ${part.id}:`, error);
+      } finally {
+        ctx.restore();
+      }
+    }
+  }
+
+  /**
+   * Java版isEffectActive()メソッド - エフェクト状態判定
+   */
+  public isEffectActive(effectType: number): boolean {
+    if (!this.ent) return false;
+    
+    return this.ent.some(part => part.extType === effectType);
+  }
+
+  /**
+   * Java版clearEffects()メソッド - エフェクトクリア
+   */
+  public clearEffects(): void {
+    if (!this.ent) return;
+    
+    for (const part of this.ent) {
+      part.extType = 0;
+      part.extendX = 0;
+      part.extendY = 0;
+    }
+    
+    console.log('All effects cleared');
   }
 
   /**

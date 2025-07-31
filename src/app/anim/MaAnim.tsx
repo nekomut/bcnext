@@ -284,7 +284,8 @@ export class MaAnim {
     frame: number, 
     entities: Array<{ setValue?: () => void, alter: (type: number, value: number) => void, id: number, fa?: unknown }>, 
     rotate: boolean = false,
-    performanceMode: boolean = false
+    performanceMode: boolean = false,
+    unitId?: string
   ): void {
     let adjustedFrame = frame;
     
@@ -343,7 +344,7 @@ export class MaAnim {
         }
       }
 
-      part.update(partFrame, entities);
+      part.update(partFrame, entities, unitId);
     }
 
     // Java版のZ値ベースソート（Phase 2で実装予定）

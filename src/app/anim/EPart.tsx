@@ -37,6 +37,11 @@ export class EPart {
   // ベース値（Java版args配列から）
   public args: number[];
 
+  // Java版拡張フィールド
+  public extType: number = 0;   // エフェクト拡張タイプ
+  public extendX: number = 0;   // X方向拡張値
+  public extendY: number = 0;   // Y方向拡張値
+
   constructor(
     model: MaModel,
     animInterface: unknown, // EAnimI参照（循環参照回避）
@@ -101,7 +106,13 @@ export class EPart {
         break;
 
       case 2: // IMG - スプライト変更
+        const oldImg = this.img;
         this.img = Math.floor(value);
+        
+        // Unit 000 debug logging
+        if (this.args && typeof this.args[13] === 'string' && this.args[13] === '' && this.id === 1) {
+          console.log(`EPart ALTER Part1: oldImg=${oldImg}, newImg=${this.img}, value=${value}`);
+        }
         break;
 
       case 4: // POS_X - X座標変更
@@ -157,6 +168,18 @@ export class EPart {
 
       case 17: // VERTICAL_FLIP - 垂直反転
         this.vf = value !== 0 ? -1 : 1;
+        break;
+
+      case 50: // EXT_TYPE - Java版拡張エフェクトタイプ
+        this.extType = value;
+        break;
+
+      case 51: // EXT_X - Java版X方向拡張
+        this.extendX = value;
+        break;
+
+      case 52: // EXT_Y - Java版Y方向拡張
+        this.extendY = value;
         break;
 
       default:
@@ -344,6 +367,450 @@ export class EPart {
     cloned.glow = this.glow;
     
     return cloned;
+  }
+
+  /**
+   * Java版getTransform()メソッド - 累積変換行列計算
+   * 親子関係を考慮した完全な変換行列を取得
+   */
+  public getTransform(): number[] {
+    const angleUnit = this.model.ints[1] || 3600;
+    
+    // 基本変換行列（スケール・回転・移動）
+    const scaleX = this.sca.x;
+    const scaleY = this.sca.y;
+    const angle = (Math.PI * 2 * this.angle) / angleUnit;
+    const translateX = this.pos.x;
+    const translateY = this.pos.y;
+    
+    const cos = Math.cos(angle);
+    const sin = Math.sin(angle);
+    
+    let transform = [
+      scaleX * cos * this.hf,  -scaleX * sin * this.hf,
+      scaleY * sin * this.vf,   scaleY * cos * this.vf,
+      translateX,               translateY
+    ];
+    
+    // 親の変換を累積
+    if (this.fa !== null) {
+      const parentTransform = this.fa.getTransform();
+      transform = this.multiplyMatrices(parentTransform, transform);
+    }
+    
+    return transform;
+  }
+
+  /**
+   * 3x3変換行列の乗算（2D変換用）
+   */
+  private multiplyMatrices(a: number[], b: number[]): number[] {
+    return [
+      a[0] * b[0] + a[2] * b[1],
+      a[1] * b[0] + a[3] * b[1],
+      a[0] * b[2] + a[2] * b[3],
+      a[1] * b[2] + a[3] * b[3],
+      a[0] * b[4] + a[2] * b[5] + a[4],
+      a[1] * b[4] + a[3] * b[5] + a[5]
+    ];
+  }
+
+  /**
+   * Java版drawScale()メソッド - 描画スケール計算
+   */
+  public drawScale(baseScale: number = 1): P {
+    const size = this.getSize();
+    return P.newP(size.x * baseScale, size.y * baseScale, 1);
+  }
+
+  /**
+   * Java版getBounds()メソッド - パーツの境界ボックス計算
+   */
+  public getBounds(): { x: number, y: number, width: number, height: number } {
+    const transform = this.getTransform();
+    const scale = this.drawScale(1);
+    
+    // 仮のスプライトサイズ（実際はimgcutから取得すべき）
+    const spriteWidth = 100;
+    const spriteHeight = 100;
+    
+    return {
+      x: transform[4] - this.piv.x, // translateX - pivotX
+      y: transform[5] - this.piv.y, // translateY - pivotY
+      width: spriteWidth * scale.x,
+      height: spriteHeight * scale.y
+    };
+  }
+
+  /**
+   * Java版isVisible()メソッド - 表示状態の完全判定
+   * 親の状態も考慮した階層的な表示判定
+   */
+  public isVisibleFull(): boolean {
+    // 基本的な表示判定
+    if (!this.visible || this.img < 0 || this.opa <= 0) {
+      return false;
+    }
+    
+    // 親が非表示なら子も非表示
+    if (this.fa !== null) {
+      return this.fa.isVisibleFull();
+    }
+    
+    return true;
+  }
+
+  /**
+   * Java版getDepth()メソッド - パーツの階層深度計算
+   */
+  public getDepth(): number {
+    if (this.fa === null) {
+      return 0; // ルートパーツ
+    }
+    
+    return 1 + this.fa.getDepth();
+  }
+
+  /**
+   * Java版getWorldPosition()メソッド - ワールド座標取得
+   */
+  public getWorldPosition(): P {
+    const transform = this.getTransform();
+    return P.newP(transform[4], transform[5], this.pos.z);
+  }
+
+  /**
+   * Java版getWorldScale()メソッド - ワールドスケール取得
+   */
+  public getWorldScale(): P {
+    const transform = this.getTransform();
+    const scaleX = Math.sqrt(transform[0] * transform[0] + transform[1] * transform[1]);
+    const scaleY = Math.sqrt(transform[2] * transform[2] + transform[3] * transform[3]);
+    return P.newP(scaleX, scaleY, 1);
+  }
+
+  /**
+   * Java版getWorldRotation()メソッド - ワールド回転取得
+   */
+  public getWorldRotation(): number {
+    const transform = this.getTransform();
+    return Math.atan2(transform[1], transform[0]);
+  }
+
+  /**
+   * Java版transformPoint()メソッド - 点の変換
+   */
+  public transformPoint(localPoint: P): P {
+    const transform = this.getTransform();
+    const worldX = transform[0] * localPoint.x + transform[2] * localPoint.y + transform[4];
+    const worldY = transform[1] * localPoint.x + transform[3] * localPoint.y + transform[5];
+    return P.newP(worldX, worldY, localPoint.z);
+  }
+
+  /**
+   * Java版inverseTransformPoint()メソッド - 逆変換
+   */
+  public inverseTransformPoint(worldPoint: P): P {
+    const transform = this.getTransform();
+    
+    // 逆行列の計算
+    const det = transform[0] * transform[3] - transform[1] * transform[2];
+    if (Math.abs(det) < 1e-10) {
+      return P.newP(0, 0, 0); // 特異行列の場合
+    }
+    
+    const invDet = 1.0 / det;
+    const dx = worldPoint.x - transform[4];
+    const dy = worldPoint.y - transform[5];
+    
+    const localX = invDet * (transform[3] * dx - transform[2] * dy);
+    const localY = invDet * (-transform[1] * dx + transform[0] * dy);
+    
+    return P.newP(localX, localY, worldPoint.z);
+  }
+
+  /**
+   * Java版hitTest()メソッド - 当たり判定
+   */
+  public hitTest(worldPoint: P): boolean {
+    if (!this.isVisibleFull()) {
+      return false;
+    }
+    
+    const localPoint = this.inverseTransformPoint(worldPoint);
+    const bounds = this.getBounds();
+    
+    return localPoint.x >= bounds.x && localPoint.x <= bounds.x + bounds.width &&
+           localPoint.y >= bounds.y && localPoint.y <= bounds.y + bounds.height;
+  }
+
+  /**
+   * Java版getChildParts()メソッド - 子パーツの取得
+   */
+  public getChildParts(): EPart[] {
+    const children: EPart[] = [];
+    
+    for (const part of this.ent) {
+      if (part.fa === this) {
+        children.push(part);
+      }
+    }
+    
+    return children;
+  }
+
+  /**
+   * Java版getAllDescendants()メソッド - 全子孫パーツの取得
+   */
+  public getAllDescendants(): EPart[] {
+    const descendants: EPart[] = [];
+    const children = this.getChildParts();
+    
+    for (const child of children) {
+      descendants.push(child);
+      descendants.push(...child.getAllDescendants());
+    }
+    
+    return descendants;
+  }
+
+  /**
+   * Java版setOpacityRecursive()メソッド - 再帰的透明度設定
+   */
+  public setOpacityRecursive(opacity: number): void {
+    this.opa = opacity;
+    
+    const children = this.getChildParts();
+    for (const child of children) {
+      child.setOpacityRecursive(opacity);
+    }
+  }
+
+  /**
+   * Java版setVisibleRecursive()メソッド - 再帰的表示設定
+   */
+  public setVisibleRecursive(visible: boolean): void {
+    this.visible = visible;
+    
+    const children = this.getChildParts();
+    for (const child of children) {
+      child.setVisibleRecursive(visible);
+    }
+  }
+
+  /**
+   * Java版drawBGEffect()メソッド - 背景エフェクト描画
+   */
+  public drawBGEffect(
+    ctx: CanvasRenderingContext2D,
+    _origin: P,
+    _sizer: P,
+    spriteImage: HTMLImageElement | null,
+    imgcut: { cuts?: number[][]; } | null
+  ): void {
+    if (!this.visible || this.img < 0 || !spriteImage || !imgcut || this.extType === 0) {
+      return;
+    }
+    
+    try {
+      if (!imgcut.cuts || this.img >= imgcut.cuts.length) {
+        return;
+      }
+      
+      const [sx, sy, sw, sh] = imgcut.cuts[this.img];
+      
+      // 背景エフェクト用の透明度調整
+      const bgOpacity = this.opa * 0.3; // 背景は30%の透明度
+      
+      ctx.save();
+      ctx.globalAlpha = bgOpacity;
+      
+      // 背景として少し大きく描画
+      const scale = 1.2;
+      const scaledWidth = sw * scale;
+      const scaledHeight = sh * scale;
+      const offsetX = (scaledWidth - sw) / 2;
+      const offsetY = (scaledHeight - sh) / 2;
+      
+      ctx.drawImage(
+        spriteImage,
+        sx, sy, sw, sh,
+        -this.piv.x - offsetX, -this.piv.y - offsetY, 
+        scaledWidth, scaledHeight
+      );
+      
+      ctx.restore();
+      
+    } catch (error) {
+      console.warn(`EPart#${this.id} BG effect error:`, error);
+    }
+  }
+
+  /**
+   * Java版drawRandom()メソッド - ランダムスプライト描画（カース効果）
+   */
+  public drawRandom(
+    ctx: CanvasRenderingContext2D,
+    _origin: P,
+    _sizer: P,
+    spriteImage: HTMLImageElement | null,
+    imgcut: { cuts?: number[][]; } | null,
+    maxSpriteId: number
+  ): void {
+    if (!this.visible || this.img < 0 || !spriteImage || !imgcut || this.extType !== 2) {
+      return;
+    }
+    
+    try {
+      // ランダムスプライトID生成（フレーム毎に変化）
+      const randomSeed = Math.floor(Date.now() / 100); // 100ms毎に変化
+      const randomSpriteId = randomSeed % maxSpriteId;
+      
+      if (!imgcut.cuts || randomSpriteId >= imgcut.cuts.length) {
+        return;
+      }
+      
+      const [sx, sy, sw, sh] = imgcut.cuts[randomSpriteId];
+      
+      // ランダム効果のための透明度とサイズ変化
+      const randomOpacity = this.opa * (0.7 + Math.random() * 0.3);
+      const randomScale = 0.9 + Math.random() * 0.2;
+      
+      ctx.save();
+      ctx.globalAlpha = randomOpacity;
+      
+      const scaledWidth = sw * randomScale;
+      const scaledHeight = sh * randomScale;
+      
+      ctx.drawImage(
+        spriteImage,
+        sx, sy, sw, sh,
+        -this.piv.x, -this.piv.y, 
+        scaledWidth, scaledHeight
+      );
+      
+      ctx.restore();
+      
+    } catch (error) {
+      console.warn(`EPart#${this.id} random draw error:`, error);
+    }
+  }
+
+  /**
+   * Java版drawExtended()メソッド - 拡張描画（repeat/tiling）
+   */
+  public drawExtended(
+    ctx: CanvasRenderingContext2D,
+    _origin: P,
+    _sizer: P,
+    spriteImage: HTMLImageElement | null,
+    imgcut: { cuts?: number[][]; } | null
+  ): void {
+    if (!this.visible || this.img < 0 || !spriteImage || !imgcut || 
+        this.extType !== 3 || (this.extendX <= 0 && this.extendY <= 0)) {
+      return;
+    }
+    
+    try {
+      if (!imgcut.cuts || this.img >= imgcut.cuts.length) {
+        return;
+      }
+      
+      const [sx, sy, sw, sh] = imgcut.cuts[this.img];
+      
+      // X方向とY方向の繰り返し数
+      const repeatX = Math.max(1, this.extendX);
+      const repeatY = Math.max(1, this.extendY);
+      
+      ctx.save();
+      ctx.globalAlpha = this.opa;
+      
+      for (let x = 0; x < repeatX; x++) {
+        for (let y = 0; y < repeatY; y++) {
+          const offsetX = x * sw;
+          const offsetY = y * sh;
+          
+          ctx.drawImage(
+            spriteImage,
+            sx, sy, sw, sh,
+            -this.piv.x + offsetX, -this.piv.y + offsetY, 
+            sw, sh
+          );
+        }
+      }
+      
+      ctx.restore();
+      
+    } catch (error) {
+      console.warn(`EPart#${this.id} extended draw error:`, error);
+    }
+  }
+
+  /**
+   * Java版removeBasePivot()メソッド - ピボット調整
+   */
+  public removeBasePivot(): void {
+    const basePivotX = this.args[6];
+    const basePivotY = this.args[7];
+    
+    // 現在のピボットからベースピボットを除去
+    this.piv.x -= basePivotX;
+    this.piv.y -= basePivotY;
+  }
+
+  /**
+   * Java版setPara()メソッド - パラメータ親設定
+   */
+  public setPara(parentPart: EPart | null): void {
+    this.fa = parentPart;
+  }
+
+  /**
+   * Java版getVal()メソッド - 現在値取得
+   */
+  public getVal(modifType: number): number {
+    switch (modifType) {
+      case 1: // POS_X
+      case 11: // POS_X_DIRECT
+        return this.pos.x;
+      case 3: // POS_Y
+      case 12: // POS_Y_DIRECT
+        return this.pos.y;
+      case 9: // SCALE_X
+        return this.sca.x * 1000;
+      case 10: // SCALE_Y
+        return this.sca.y * 1000;
+      case 13: // ROTATION
+        return this.angle;
+      case 14: // OPACITY
+        return this.opa * 1000;
+      case 2: // SPRITE_CHANGE
+        return this.img;
+      case 15: // VISIBLE
+        return this.visible ? 1 : 0;
+      case 50: // EXT_TYPE
+        return this.extType;
+      case 51: // EXT_X
+        return this.extendX;
+      case 52: // EXT_Y
+        return this.extendY;
+      default:
+        return 0;
+    }
+  }
+
+  /**
+   * Java版getValRaw()メソッド - 生値取得（変換なし）
+   */
+  public getValRaw(modifType: number): number {
+    return this.getVal(modifType);
+  }
+
+  /**
+   * Java版hasExtendEffect()メソッド - 拡張エフェクトの有無判定
+   */
+  public hasExtendEffect(): boolean {
+    return this.extType > 0 || this.extendX > 0 || this.extendY > 0;
   }
 
   /**

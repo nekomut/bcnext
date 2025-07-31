@@ -12,6 +12,10 @@ export interface PartData {
   max: number;
   off: number;
   fir: number;
+  // Java版拡張フィールド
+  extType: number;   // エフェクト拡張タイプ
+  extendX: number;   // X方向拡張値
+  extendY: number;   // Y方向拡張値
 }
 
 /**
@@ -28,6 +32,10 @@ export class Part {
   public fir: number;
   public frame: number = 0;  // エディタ用
   public vd: number = 0;     // エディタ用
+  // Java版拡張フィールド
+  public extType: number = 0;   // エフェクト拡張タイプ
+  public extendX: number = 0;   // X方向拡張値
+  public extendY: number = 0;   // Y方向拡張値
 
   constructor(data?: Partial<PartData>) {
     this.ints = data?.ints || [0, 5, -1, 0, 0];
@@ -37,6 +45,10 @@ export class Part {
     this.max = data?.max || 0;
     this.off = data?.off || 0;
     this.fir = data?.fir || 0;
+    // 拡張フィールド初期化
+    this.extType = data?.extType || 0;
+    this.extendX = data?.extendX || 0;
+    this.extendY = data?.extendY || 0;
     
     this.validate();
   }
@@ -106,13 +118,19 @@ export class Part {
    * フレーム更新処理
    * Java版のupdate(float f, EPart[] es)メソッド
    */
-  public update(frame: number, parts: Array<{ alter: (type: number, value: number) => void }>): void {
+  public update(frame: number, parts: Array<{ alter: (type: number, value: number) => void }>, unitId?: string): void {
     this.frame = frame;
 
     for (let i = 0; i < this.n; i++) {
       if (frame === this.moves[i][0]) {
         // 完全一致の場合
         this.vd = this.moves[i][1];
+        
+        // Unit 000 debug logging
+        if (unitId === '000' && this.ints[1] === 2 && this.ints[0] === 1) {
+          console.log(`SPRITE_CHANGE ExactMatch: frame=${frame}, part=${this.ints[0]}, vd=${this.vd}, move=[${this.moves[i][0]}, ${this.moves[i][1]}]`);
+        }
+        
         if (parts[this.ints[0]]) {
           parts[this.ints[0]].alter(this.ints[1], this.vd);
         }
@@ -170,6 +188,11 @@ export class Part {
               this.vd = Math.ceil((v1 - v0) * ti + v0);
             } else {
               this.vd = Math.floor((v1 - v0) * ti + v0);
+            }
+            
+            // Unit 000 debug logging
+            if (unitId === '000' && this.ints[1] === 2 && this.ints[0] === 1) {
+              console.log(`SPRITE_CHANGE Debug: frame=${frame}, part=${this.ints[0]}, v0=${v0}, v1=${v1}, ti=${ti}, vd=${this.vd}, currentMove=[${this.moves[i][0]}, ${this.moves[i][1]}], nextMove=[${this.moves[i+1]?.[0] || 'end'}, ${this.moves[i+1]?.[1] || 'end'}]`);
             }
           } else {
             this.vd = Math.floor((v1 - v0) * ti + v0);
@@ -234,6 +257,102 @@ export class Part {
   }
 
   /**
+   * Java版拡張エフェクト処理
+   * extType, extendX, extendYを使用した特殊エフェクト
+   */
+  public applyExtendedEffect(parts: Array<{ alter: (type: number, value: number) => void }>): void {
+    if (this.extType === 0) return; // エフェクトなし
+    
+    const targetPart = parts[this.ints[0]];
+    if (!targetPart) return;
+    
+    switch (this.extType) {
+      case 1: // SLOW_EFFECT - スロー効果
+        // フレーム進行を遅くする（実装は上位システムで）
+        console.debug(`Slow effect applied to part ${this.ints[0]}`);
+        break;
+        
+      case 2: // CURSE_EFFECT - カース効果（ランダムスプライト）
+        if (this.ints[1] === 2) { // SPRITE_CHANGE
+          // ランダムスプライトID生成
+          const randomSpriteId = Math.floor(Math.random() * 10); // 仮実装
+          targetPart.alter(this.ints[1], randomSpriteId);
+        }
+        break;
+        
+      case 3: // EXTEND_DRAW - 拡張描画（repeat/tiling）
+        // extendX, extendYを使用した拡張描画フラグ設定
+        if (this.extendX > 0 || this.extendY > 0) {
+          // 拡張描画情報を保存（描画システムで使用）
+          targetPart.alter(51, this.extendX); // EXT_X
+          targetPart.alter(52, this.extendY); // EXT_Y
+        }
+        break;
+        
+      default:
+        console.warn(`Unknown extType: ${this.extType}`);
+        break;
+    }
+  }
+
+  /**
+   * Java版isOld()メソッド - 古いデータ形式の判定
+   */
+  public isOld(): boolean {
+    // 古いデータ形式の判定ロジック
+    return this.ints.length < 5 || this.extType === undefined;
+  }
+
+  /**
+   * Java版migrate()メソッド - 古いデータの移行
+   */
+  public migrate(): void {
+    if (!this.isOld()) return;
+    
+    // 古いデータを新形式に移行
+    if (this.ints.length < 5) {
+      // ints配列を5要素に拡張
+      while (this.ints.length < 5) {
+        this.ints.push(0);
+      }
+    }
+    
+    // 拡張フィールドの初期化
+    if (this.extType === undefined) {
+      this.extType = 0;
+      this.extendX = 0;
+      this.extendY = 0;
+    }
+    
+    console.log(`Migrated old data format for part ${this.ints[0]}`);
+  }
+
+  /**
+   * Java版getExtendValue()メソッド - 拡張値取得
+   */
+  public getExtendValue(axis: 'x' | 'y'): number {
+    return axis === 'x' ? this.extendX : this.extendY;
+  }
+
+  /**
+   * Java版setExtendValue()メソッド - 拡張値設定
+   */
+  public setExtendValue(axis: 'x' | 'y', value: number): void {
+    if (axis === 'x') {
+      this.extendX = value;
+    } else {
+      this.extendY = value;
+    }
+  }
+
+  /**
+   * Java版hasExtendEffect()メソッド - 拡張エフェクトの有無判定
+   */
+  public hasExtendEffect(): boolean {
+    return this.extType > 0 || this.extendX > 0 || this.extendY > 0;
+  }
+
+  /**
    * クローンを作成
    */
   public clone(): Part {
@@ -244,7 +363,10 @@ export class Part {
       moves: this.moves.map(move => [...move]),
       max: this.max,
       off: this.off,
-      fir: this.fir
+      fir: this.fir,
+      extType: this.extType,
+      extendX: this.extendX,
+      extendY: this.extendY
     });
   }
 

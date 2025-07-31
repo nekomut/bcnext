@@ -380,4 +380,165 @@ export class MaModel {
     
     return lines.join('\n');
   }
+
+  /**
+   * Java版getBaseSize()メソッド - ベースサイズ計算
+   */
+  public getBaseSize(partIndex: number, includeParent: boolean = false): { x: number, y: number } {
+    if (partIndex < 0 || partIndex >= this.n) {
+      return { x: 1, y: 1 };
+    }
+    
+    const mi = 1.0 / (this.ints[0] || 1000);
+    const part = this.parts[partIndex];
+    
+    if (!includeParent || part[0] === -1) {
+      return {
+        x: part[8] * mi,
+        y: part[9] * mi
+      };
+    }
+    
+    const parentSize = this.getBaseSize(part[0], true);
+    return {
+      x: parentSize.x * part[8] * mi,
+      y: parentSize.y * part[9] * mi
+    };
+  }
+
+  /**
+   * Java版getTransform()メソッド - 累積変換行列計算
+   */
+  public getTransform(partIndex: number, includeParent: boolean = true): number[] {
+    if (partIndex < 0 || partIndex >= this.n) {
+      return [1, 0, 0, 1, 0, 0]; // 単位行列
+    }
+    
+    const part = this.parts[partIndex];
+    const scaleUnit = this.ints[0] || 1000;
+    const angleUnit = this.ints[1] || 3600;
+    
+    // 基本変換行列（スケール・回転・移動）
+    const scaleX = part[8] / scaleUnit;
+    const scaleY = part[9] / scaleUnit;
+    const angle = (Math.PI * 2 * part[10]) / angleUnit;
+    const translateX = part[4];
+    const translateY = part[5];
+    
+    const cos = Math.cos(angle);
+    const sin = Math.sin(angle);
+    
+    let transform = [
+      scaleX * cos,  -scaleX * sin,
+      scaleY * sin,   scaleY * cos,
+      translateX,     translateY
+    ];
+    
+    // 親の変換を累積
+    if (includeParent && part[0] >= 0) {
+      const parentTransform = this.getTransform(part[0], true);
+      transform = this.multiplyMatrices(parentTransform, transform);
+    }
+    
+    return transform;
+  }
+
+  /**
+   * 3x3変換行列の乗算（2D変換用）
+   */
+  private multiplyMatrices(a: number[], b: number[]): number[] {
+    return [
+      a[0] * b[0] + a[2] * b[1],
+      a[1] * b[0] + a[3] * b[1],
+      a[0] * b[2] + a[2] * b[3],
+      a[1] * b[2] + a[3] * b[3],
+      a[0] * b[4] + a[2] * b[5] + a[4],
+      a[1] * b[4] + a[3] * b[5] + a[5]
+    ];
+  }
+
+  /**
+   * Java版drawScale()メソッド - 描画スケール計算
+   */
+  public drawScale(partIndex: number, baseScale: number = 1): { x: number, y: number } {
+    if (partIndex < 0 || partIndex >= this.n) {
+      return { x: baseScale, y: baseScale };
+    }
+    
+    const size = this.getBaseSize(partIndex, true);
+    return {
+      x: size.x * baseScale,
+      y: size.y * baseScale
+    };
+  }
+
+  /**
+   * Java版getDepth()メソッド - パーツの階層深度計算
+   */
+  public getDepth(partIndex: number): number {
+    if (partIndex < 0 || partIndex >= this.n) {
+      return 0;
+    }
+    
+    const part = this.parts[partIndex];
+    if (part[0] === -1) {
+      return 0; // ルートパーツ
+    }
+    
+    return 1 + this.getDepth(part[0]);
+  }
+
+  /**
+   * Java版isVisible()メソッド - パーツの表示状態判定
+   */
+  public isVisible(partIndex: number): boolean {
+    if (partIndex < 0 || partIndex >= this.n) {
+      return false;
+    }
+    
+    const part = this.parts[partIndex];
+    
+    // 基本的な表示判定
+    if (part[2] < 0 || part[11] <= 0) { // spriteId < 0 or opacity <= 0
+      return false;
+    }
+    
+    // 親が非表示なら子も非表示
+    if (part[0] >= 0) {
+      return this.isVisible(part[0]);
+    }
+    
+    return true;
+  }
+
+  /**
+   * Java版getBounds()メソッド - パーツの境界ボックス計算
+   */
+  public getBounds(partIndex: number): { x: number, y: number, width: number, height: number } {
+    if (partIndex < 0 || partIndex >= this.n) {
+      return { x: 0, y: 0, width: 0, height: 0 };
+    }
+    
+    const part = this.parts[partIndex];
+    const transform = this.getTransform(partIndex, true);
+    const scale = this.drawScale(partIndex, 1);
+    
+    // 仮のスプライトサイズ（実際はimgcutから取得すべき）
+    const spriteWidth = 100;
+    const spriteHeight = 100;
+    
+    return {
+      x: transform[4] - part[6], // translateX - pivotX
+      y: transform[5] - part[7], // translateY - pivotY
+      width: spriteWidth * scale.x,
+      height: spriteHeight * scale.y
+    };
+  }
+
+  /**
+   * 文字列表現
+   */
+  public toString(): string {
+    return `MaModel(parts=${this.n}, configs=${this.m}, scale=${this.ints[0]})`;
+  }
 }

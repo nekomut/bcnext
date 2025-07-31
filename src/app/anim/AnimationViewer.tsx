@@ -599,11 +599,11 @@ export default function AnimationViewer({
       setCurrentFrame(externalCurrentFrame);
       // EAnimDのフレームも同期
       if (eAnimD) {
-        eAnimD.setTimeAndUpdate(externalCurrentFrame, false); // maanimデータを適用
+        eAnimD.setTimeAndUpdate(externalCurrentFrame, false, unitId); // maanimデータを適用
         renderAnimation(); // 即座に描画を更新
       }
     }
-  }, [externalCurrentFrame, currentFrame, eAnimD, renderAnimation, isPlaying]);
+  }, [externalCurrentFrame, currentFrame, eAnimD, renderAnimation, isPlaying, unitId]);
 
   // currentFrameの変更を親に通知とEAnimD同期
   useEffect(() => {
@@ -619,10 +619,10 @@ export default function AnimationViewer({
     
     // アニメーション停止時でもフレーム変更で描画更新
     if (!isPlaying && eAnimD && eAnimD.f !== currentFrame) {
-      eAnimD.setTimeAndUpdate(currentFrame, false); // maanimデータを適用
+      eAnimD.setTimeAndUpdate(currentFrame, false, unitId); // maanimデータを適用
       renderAnimation();
     }
-  }, [currentFrame, onFrameChange, isPlaying, eAnimD, renderAnimation]);
+  }, [currentFrame, onFrameChange, isPlaying, eAnimD, renderAnimation, unitId]);
 
   useEffect(() => {
     render();

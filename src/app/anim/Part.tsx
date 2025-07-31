@@ -277,4 +277,93 @@ export class Part {
   public compareTo(other: Part): number {
     return this.ints[0] - other.ints[0];
   }
+
+  /**
+   * Java版optimize()メソッド - 重複キーフレーム除去
+   * common/util/anim/Part.java の最適化機能に対応
+   */
+  public optimizeJava(): void {
+    if (this.n <= 1) return;
+
+    const optimizedMoves: number[][] = [];
+    let lastMove: number[] | null = null;
+
+    for (let i = 0; i < this.n; i++) {
+      const currentMove = this.moves[i];
+      
+      // 同一値の連続キーフレームをスキップ
+      if (lastMove && 
+          lastMove[1] === currentMove[1] && // 同じ値
+          lastMove[2] === currentMove[2] && // 同じイージング
+          lastMove[3] === currentMove[3]) { // 同じパラメータ
+        continue;
+      }
+      
+      optimizedMoves.push([...currentMove]);
+      lastMove = currentMove;
+    }
+
+    this.moves = optimizedMoves;
+    this.n = this.moves.length;
+    this.validate();
+  }
+
+  /**
+   * Java版のパフォーマンス測定更新処理
+   * Java版のperformanceModeに対応した高速化版update
+   */
+  public updateJavaPerformance(frame: number, parts: Array<{ alter: (type: number, value: number) => void }>): void {
+    // パフォーマンスモード時は補間を簡素化
+    for (let i = 0; i < this.n; i++) {
+      if (frame === this.moves[i][0]) {
+        // 完全一致の場合は即座に適用
+        this.vd = this.moves[i][1];
+        if (parts[this.ints[0]]) {
+          parts[this.ints[0]].alter(this.ints[1], this.vd);
+        }
+        return;
+      }
+    }
+
+    // 最後のフレームを超えた場合、または範囲内の場合
+    if (this.n > 0) {
+      if (frame >= this.moves[this.n - 1][0]) {
+        // 最後のキーフレーム値を適用
+        this.vd = this.moves[this.n - 1][1];
+        if (parts[this.ints[0]]) {
+          parts[this.ints[0]].alter(this.ints[1], this.vd);
+        }
+      }
+    }
+  }
+
+  /**
+   * Java版の詳細バリデーション
+   * common/util/anim/Part.java の check(AnimD<?, ?> anim) に対応
+   */
+  public checkJava(mamodelPartCount: number, imgcutCount: number): void {
+    // パーツIDの範囲チェック
+    if (this.ints[0] >= mamodelPartCount) {
+      this.ints[0] = 0;
+    }
+    if (this.ints[0] < 0) {
+      this.ints[0] = 0;
+    }
+    
+    // スプライト変更の場合、全てのmoveのスプライトIDをチェック
+    if (this.ints[1] === 2) { // SPRITE_CHANGE
+      for (const move of this.moves) {
+        if (move[1] >= imgcutCount || move[1] < 0) {
+          move[1] = 0;
+        }
+      }
+    }
+
+    // フレーム順序の検証
+    for (let i = 1; i < this.moves.length; i++) {
+      if (this.moves[i][0] <= this.moves[i-1][0]) {
+        console.warn(`Part ${this.ints[0]}: Frame order violation at index ${i}`);
+      }
+    }
+  }
 }

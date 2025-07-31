@@ -88,7 +88,7 @@ export class MaAnim {
    * アニメーション更新処理
    * Java版のupdate(float f, EAnimD<?> eAnim, boolean rotate)メソッド
    */
-  public update(frame: number, entities: Array<{ setValue?: () => void, alter: (type: number, value: number) => void, id: number, parentId: number }>, rotate: boolean = false): void {
+  public update(frame: number, entities: Array<{ setValue?: () => void, alter: (type: number, value: number) => void, id: number, fa?: unknown }>, rotate: boolean = false): void {
     let adjustedFrame = frame;
     
     if (rotate) {
@@ -149,12 +149,12 @@ export class MaAnim {
    * エンティティをソート（描画順序を決定）
    * Java版のsort()メソッドに対応
    */
-  private sortEntities(entities: Array<{ parentId: number, id: number }>): void {
+  private sortEntities(entities: Array<{ fa?: unknown, id: number }>): void {
     // 描画順序のソート（親から子の順番）
     entities.sort((a, b) => {
       // 親子関係を考慮したソート
-      if (a.parentId === -1 && b.parentId !== -1) return -1;
-      if (a.parentId !== -1 && b.parentId === -1) return 1;
+      if (!a.fa && b.fa) return -1;
+      if (a.fa && !b.fa) return 1;
       return a.id - b.id;
     });
   }
@@ -274,5 +274,127 @@ export class MaAnim {
       const lastFrame = part.moves[part.n - 1][0];
       return frame >= firstFrame && frame <= lastFrame;
     });
+  }
+
+  /**
+   * Java版update()メソッド - 高精度フレーム更新処理
+   * common/util/anim/MaAnim.java の update(float f, EAnimD<?> eAnim, boolean rotate) に対応
+   */
+  public updateJava(
+    frame: number, 
+    entities: Array<{ setValue?: () => void, alter: (type: number, value: number) => void, id: number, fa?: unknown }>, 
+    rotate: boolean = false,
+    performanceMode: boolean = false
+  ): void {
+    let adjustedFrame = frame;
+    
+    // パフォーマンスモード対応（Java版のperformanceModeAnimation）
+    if (performanceMode) {
+      adjustedFrame = Math.floor(frame / 2) * 2; // フレームスキップ
+    }
+    
+    if (rotate) {
+      adjustedFrame = adjustedFrame % (this.max + 1);
+    }
+
+    // フレーム0で初期値を設定
+    if (adjustedFrame === 0) {
+      for (const entity of entities) {
+        if (entity && entity.setValue) {
+          entity.setValue();
+        }
+      }
+    }
+
+    // Java版の詳細ループ処理
+    for (let i = 0; i < this.n; i++) {
+      const part = this.parts[i];
+      const loop = part.ints[2];
+      const smax = part.max;
+      const fir = part.fir;
+      const lmax = smax - fir;
+
+      const prot = rotate || loop === -1;
+      let partFrame: number;
+
+      // Java版のフレーム計算ロジック
+      if (prot) {
+        const mf = loop === -1 ? smax : this.max + 1;
+        partFrame = mf === 0 ? 0 : (adjustedFrame + part.off) % mf;
+      } else {
+        partFrame = adjustedFrame + part.off;
+      }
+
+      // Java版の複雑なループ制御
+      if (loop > 0 && lmax !== 0) {
+        if (partFrame > fir + loop * lmax) {
+          part.ensureLast(entities);
+          continue;
+        }
+        
+        if (partFrame <= fir) {
+          // ループ前区間
+        } else if (partFrame < fir + loop * lmax) {
+          // ループ区間内
+          partFrame = fir + (partFrame - fir) % lmax;
+        } else {
+          // ループ後区間
+          partFrame = smax;
+        }
+      }
+
+      part.update(partFrame, entities);
+    }
+
+    // Java版のZ値ベースソート（Phase 2で実装予定）
+    this.sortEntitiesJava(entities);
+  }
+
+  /**
+   * Java版ソート処理 - Z値・レイヤーベース
+   * Phase 2でEPart実装時に完全版を実装
+   */
+  private sortEntitiesJava(entities: Array<{ fa?: unknown, id: number }>): void {
+    // 暫定的な基本ソート（Phase 2で完全版に置き換え）
+    entities.sort((a, b) => {
+      if (!a.fa && b.fa) return -1;
+      if (a.fa && !b.fa) return 1;
+      return a.id - b.id;
+    });
+  }
+
+  /**
+   * Java版clearAnim()メソッド - アニメーションクリア
+   * common/util/anim/MaAnim.java の clearAnim(boolean[] bs, MaAnim[] as) に対応
+   */
+  public clearAnimJava(removeFlags: boolean[], animations: MaAnim[]): void {
+    for (const anim of animations) {
+      const newParts: Part[] = [];
+      for (const part of anim.parts) {
+        if (!removeFlags[part.ints[0]]) {
+          newParts.push(part);
+        }
+      }
+      anim.parts = newParts;
+      anim.n = anim.parts.length;
+    }
+  }
+
+  /**
+   * Java版optimize()メソッド - データ最適化
+   */
+  public optimizeJava(): void {
+    // 重複キーフレーム除去
+    for (const part of this.parts) {
+      if (part.optimizeJava) {
+        part.optimizeJava();
+      }
+    }
+
+    // 不要なパーツ除去
+    this.parts = this.parts.filter(part => part.n > 0);
+    this.n = this.parts.length;
+
+    this.validate();
   }
 }

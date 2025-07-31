@@ -1,9 +1,16 @@
 // common/util/animベースのアニメーションビューアー
+// Phase 3: 新システム統合対応
 
 'use client';
 
 import React, { useRef, useEffect, useState, useCallback } from 'react';
-import { AnimationData, AnimationState, EPart } from './types';
+import { AnimationData } from './types';
+import { AnimationPerformanceMonitor } from './FeatureFlags';
+import { EAnimD, P } from './EAnimD';
+import { MaModel } from './MaModel';
+import { MaAnim } from './MaAnim';
+import { Part } from './Part';
+import type { AnimI } from './EAnimI';
 
 interface AnimationViewerProps {
   animationData: { [form: string]: AnimationData };
@@ -75,14 +82,7 @@ export default function AnimationViewer({
   const animationIdRef = useRef<number>(0);
   const lastFrameTimeRef = useRef<number>(0);
   
-  const [animationState, setAnimationState] = useState<AnimationState>({
-    currentFrame: 0,
-    isPlaying: false,
-    selectedAnimation: '',
-    parts: [],
-    sprites: []
-  });
-  
+  const [currentFrame, setCurrentFrame] = useState<number>(0);
   const [zoom, setZoom] = useState<number>(1);
   const [offsetX, setOffsetX] = useState<number>(0);
   const [offsetY, setOffsetY] = useState<number>(0);
@@ -91,6 +91,10 @@ export default function AnimationViewer({
   // Sprite Preview用の状態変数
   const [selectedSpriteId, setSelectedSpriteId] = useState<number>(0);
   const [spriteImage, setSpriteImage] = useState<HTMLImageElement | null>(null);
+  
+  // アニメーションシステム
+  const [eAnimD, setEAnimD] = useState<EAnimD | null>(null);
+  const [settingsVisible, setSettingsVisible] = useState<boolean>(false);
   
   // Data折りたたみ用の状態変数
   const [dataExpanded, setDataExpanded] = useState({
@@ -123,7 +127,7 @@ export default function AnimationViewer({
     });
   };
 
-  // パーツごとのスプライトIDを取得する関数（maanimベース）
+  // パーツごとのスプライトIDを取得する関数
   const getPartSprites = useCallback((partId: number): number[] => {
     // Part#0には絶対にスプライトをぶら下げない
     if (partId === 0) {
@@ -153,10 +157,12 @@ export default function AnimationViewer({
       });
     }
     
-    // 2. 現在表示中のスプライト
-    const currentPart = animationState.parts[partId];
-    if (currentPart && currentPart.spriteId >= 0) {
-      sprites.add(currentPart.spriteId);
+    // 2. EAnimDから現在のパーツ状態を取得
+    if (eAnimD && eAnimD.ent && eAnimD.ent[partId]) {
+      const currentPart = eAnimD.ent[partId];
+      if (currentPart && currentPart.img >= 0) {
+        sprites.add(currentPart.img);
+      }
     }
     
     // 3. mamodelのベーススプライトID（アニメーションスプライトがない場合のみ）
@@ -171,7 +177,7 @@ export default function AnimationViewer({
     }
     
     return Array.from(sprites).sort((a, b) => a - b);
-  }, [animationData, selectedForm, selectedAnimation, animationState.parts]);
+  }, [animationData, selectedForm, selectedAnimation, eAnimD]);
 
   const handlePartToggle = useCallback((partId: number, checked: boolean) => {
     // Part#000は常に表示されるため、操作を無視
@@ -367,11 +373,6 @@ export default function AnimationViewer({
       console.log(`スプライト画像設定完了: ${selectedForm}`);
       setSpriteImage(img);
       
-      setAnimationState(prev => ({
-        ...prev,
-        sprites
-      }));
-      
       console.log(`スプライト読み込み完了: ${sprites.length}個, form=${selectedForm}`);
       
     } catch (error) {
@@ -379,252 +380,163 @@ export default function AnimationViewer({
     }
   }, [unitId, selectedForm, animationData]);
 
-  // アニメーション状態を初期化
+
+  // アニメーションシステム初期化処理
   const initializeAnimation = useCallback(() => {
     if (!animationData[selectedForm] || !animationData[selectedForm].maanim[selectedAnimation]) {
       return;
     }
-    
-    const formData = animationData[selectedForm];
-    const mamodel = formData.mamodel;
-    
-    // パーツを初期化
-    const parts: EPart[] = [];
-    for (let i = 0; i < mamodel.n; i++) {
-      const part = new EPart(mamodel.parts[i], mamodel.strs0[i], i);
-      parts.push(part);
-    }
-    
-    setAnimationState(prev => ({
-      ...prev,
-      currentFrame: 0,
-      selectedAnimation,
-      parts,
-      isPlaying
-    }));
-    
-    console.log(`アニメーション初期化: ${selectedAnimation}, パーツ数: ${parts.length}`);
-  }, [animationData, selectedForm, selectedAnimation, isPlaying]);
 
-  // フレーム更新処理（common/util/animベース）
-  const updateAnimation = useCallback((frame: number) => {
-    if (!animationData[selectedForm] || !animationData[selectedForm].maanim[selectedAnimation]) {
-      return;
-    }
-    
     const formData = animationData[selectedForm];
-    const mamodel = formData.mamodel;
-    const maanim = formData.maanim[selectedAnimation];
     
-    setAnimationState(prev => {
-      const newParts = [...prev.parts];
+    try {
+      // MaModel・MaAnimインスタンス作成
+      const maModel = new MaModel({
+        n: formData.mamodel.n,
+        m: formData.mamodel.m || 1,
+        ints: formData.mamodel.ints || [1000, 3600, 1000],
+        parts: formData.mamodel.parts || [],
+        confs: formData.mamodel.confs || [[0, 0, 0, 0, 0, 0]],
+        strs0: formData.mamodel.strs0 || [],
+        strs1: formData.mamodel.strs1 || ['default']
+      });
+
+      // MaAnim初期化時にPartオブジェクト配列を作成
+      const rawAnimData = formData.maanim[selectedAnimation];
+      const parts = rawAnimData.parts ? rawAnimData.parts.map((partData: unknown) => {
+        return new Part(partData as { ints: number[], n: number, moves: number[][], max: number, off: number, fir: number });
+      }) : [];
       
-      // 各パーツのベース値をリセット
-      for (let i = 0; i < newParts.length; i++) {
-        const modelPart = mamodel.parts[i];
-        if (modelPart) {
-          newParts[i] = new EPart(modelPart, mamodel.strs0[i], i);
-        }
-      }
-      
-      // アニメーションを適用（common/util/animのロジック）
-      maanim.parts.forEach(animPart => {
-        const partId = animPart.ints[0];
-        if (partId >= 0 && partId < newParts.length) {
-          updatePart(animPart, frame, newParts);
-        }
+      const maAnim = new MaAnim({
+        n: rawAnimData.n || parts.length,
+        parts: parts,
+        max: rawAnimData.max || 1,
+        len: rawAnimData.len || 1
       });
       
-      return {
-        ...prev,
-        currentFrame: frame,
-        parts: newParts
+      // フレーム数の再計算を実行
+      maAnim.validate();
+      
+      console.log(`🎯 MaAnim初期化: max=${maAnim.max}, len=${maAnim.len}, parts=${maAnim.n}`);
+
+      // AnimI実装
+      const animInterface: AnimI = {
+        name: selectedAnimation,
+        id: parseInt(unitId) || 0
       };
-    });
-  }, [animationData, selectedForm, selectedAnimation]);
 
-  // パーツ更新処理（Part.javaのupdateメソッドベース）
-  const updatePart = (animPart: { ints: number[], n: number, moves: number[][] }, frame: number, parts: EPart[]) => {
-    const partId = animPart.ints[0];
-    const modifType = animPart.ints[1];
-    
-    if (animPart.n === 0) return;
-    
-    // キーフレーム間補間処理
-    for (let i = 0; i < animPart.n; i++) {
-      const currentMove = animPart.moves[i];
-      const currentFrame = currentMove[0];
-      const currentValue = currentMove[1];
+      // EAnimD作成
+      const newEAnimD = new EAnimD(animInterface, maModel, maAnim);
       
-      if (frame === currentFrame) {
-        // 完全一致
-        parts[partId].alter(modifType, currentValue);
-        return;
-      } else if (i < animPart.n - 1) {
-        const nextMove = animPart.moves[i + 1];
-        const nextFrame = nextMove[0];
-        const nextValue = nextMove[1];
-        
-        if (frame > currentFrame && frame < nextFrame) {
-          // 線形補間
-          const progress = (frame - currentFrame) / (nextFrame - currentFrame);
-          const interpolatedValue = Math.round(currentValue + (nextValue - currentValue) * progress);
-          parts[partId].alter(modifType, interpolatedValue);
-          return;
-        }
+      // スプライト画像設定
+      if (spriteImage) {
+        newEAnimD.setSpriteImage(spriteImage);
+        newEAnimD.setImgCut(formData.imgcut);
       }
-    }
-    
-    // 最後のフレームを超えた場合
-    if (frame > animPart.moves[animPart.n - 1][0]) {
-      const lastValue = animPart.moves[animPart.n - 1][1];
-      parts[partId].alter(modifType, lastValue);
-    }
-  };
 
-  // 描画順序を収集
-  const collectDrawOrder = useCallback((partId: number, parts: EPart[], drawOrder: number[], visited: Set<number>) => {
-    if (visited.has(partId)) return;
-    visited.add(partId);
-    
-    drawOrder.push(partId);
-    
-    // 子パーツを追加
-    for (let i = 0; i < parts.length; i++) {
-      if (parts[i].parentId === partId) {
-        collectDrawOrder(i, parts, drawOrder, visited);
-      }
-    }
-  }, []);
+      // 初期フレームを0に設定して初期状態を表示
+      newEAnimD.setTime(0);
+      newEAnimD.update(false);
+      setCurrentFrame(0);
 
-  // 親の変換を適用
-  const applyParentTransforms = useCallback((partId: number, parts: EPart[], ctx: CanvasRenderingContext2D) => {
-    const part = parts[partId];
-    if (part.parentId === -1) return;
-    
-    // 再帰的に親の変換を適用
-    applyParentTransforms(part.parentId, parts, ctx);
-    
-    const parent = parts[part.parentId];
-    ctx.translate(parent.x, parent.y);
-    if (parent.rotation !== 0) {
-      ctx.rotate((parent.rotation * Math.PI) / 180);
+      setEAnimD(newEAnimD);
+      
+      console.log(`🎯 アニメーション初期化完了: ${selectedAnimation}, フレーム: ${newEAnimD.f}/${newEAnimD.len()}`);
+    } catch (error) {
+      console.error('アニメーション初期化エラー:', error);
+      setEAnimD(null);
     }
-    ctx.scale(parent.scaleX, parent.scaleY);
-  }, []);
+  }, [animationData, selectedForm, selectedAnimation, unitId, spriteImage]);
 
-  // パーツ描画処理（EPart階層を考慮）
-  const renderParts = useCallback((ctx: CanvasRenderingContext2D, parts: EPart[], sprites: HTMLCanvasElement[]) => {
-    // 描画順序: 親から子へ
-    const drawOrder: number[] = [];
-    const visited = new Set<number>();
-    
-    // ルートパーツから開始
-    for (let i = 0; i < parts.length; i++) {
-      if (parts[i].parentId === -1) {
-        collectDrawOrder(i, parts, drawOrder, visited);
-      }
+  // アニメーション初期化の実行
+  useEffect(() => {
+    if (spriteImage) {
+      initializeAnimation();
     }
-    
-    // 描画
-    for (const partId of drawOrder) {
-      const part = parts[partId];
-      if (!part.visible || part.spriteId < 0 || part.spriteId >= sprites.length) continue;
-      
-      ctx.save();
-      
-      // 親の変換を適用
-      applyParentTransforms(partId, parts, ctx);
-      
-      // 自身の変換を適用
-      ctx.translate(part.x, part.y);
-      if (part.rotation !== 0) {
-        ctx.rotate((part.rotation * Math.PI) / 180);
-      }
-      ctx.scale(part.scaleX, part.scaleY);
-      ctx.globalAlpha = Math.max(0, Math.min(1, part.opacity));
-      
-      // glowエフェクト処理
-      if (part.glow) {
-        ctx.globalCompositeOperation = 'screen';
-      }
-      
-      // スプライトを描画
-      const sprite = sprites[part.spriteId];
-      if (sprite) {
-        ctx.drawImage(sprite, -sprite.width / 2, -sprite.height / 2);
-      }
-      
-      // glowエフェクトをリセット
-      if (part.glow) {
-        ctx.globalCompositeOperation = 'source-over';
-      }
-      
-      ctx.restore();
-    }
-  }, [collectDrawOrder, applyParentTransforms]);
+  }, [initializeAnimation, spriteImage]);
 
-  // 描画処理
-  const render = useCallback(() => {
+
+
+
+
+  // アニメーション描画処理
+  const renderAnimation = useCallback(() => {
     const canvas = canvasRef.current;
-    if (!canvas || animationState.sprites.length === 0) return;
+    if (!canvas || !eAnimD) return;
     
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
-    
-    // クリア
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
-    // 変換マトリックスを設定
-    ctx.save();
-    ctx.translate(canvas.width / 2 + offsetX, canvas.height / 2 + offsetY);
-    ctx.scale(zoom, zoom);
-    
-    // 参照線を描画
-    if (showRefLines) {
-      ctx.strokeStyle = '#FF0000';
-      ctx.lineWidth = 1 / zoom;
-      ctx.beginPath();
-      ctx.moveTo(-1000, 0);
-      ctx.lineTo(1000, 0);
-      ctx.moveTo(0, -1000);
-      ctx.lineTo(0, 1000);
-      ctx.stroke();
-    }
-    
-    // パーツを描画（common/util/animベース）
-    renderParts(ctx, animationState.parts, animationState.sprites);
-    
-    ctx.restore();
-  }, [animationState, zoom, offsetX, offsetY, showRefLines, renderParts]);
+
+    return AnimationPerformanceMonitor.measure('animation_render', () => {
+      // クリア
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // 変換マトリックス設定
+      ctx.save();
+      ctx.translate(canvas.width / 2 + offsetX, canvas.height / 2 + offsetY);
+      ctx.scale(zoom, zoom);
+      
+      // 参照線描画
+      if (showRefLines) {
+        ctx.strokeStyle = '#ff0000';
+        ctx.lineWidth = 1 / zoom;
+        ctx.beginPath();
+        ctx.moveTo(-1000, 0);
+        ctx.lineTo(1000, 0);
+        ctx.moveTo(0, -1000);
+        ctx.lineTo(0, 1000);
+        ctx.stroke();
+      }
+      
+      // アニメーション描画
+      const origin = P.newP(0, 0, 0);
+      eAnimD.draw(ctx, origin, 1);
+      
+      ctx.restore();
+    });
+  }, [eAnimD, offsetX, offsetY, zoom, showRefLines]);
+
+  // 描画処理
+  const render = useCallback(() => {
+    renderAnimation();
+  }, [renderAnimation]);
 
   // アニメーションループ
   const animate = useCallback(() => {
-    if (!animationState.isPlaying) return;
+    if (!isPlaying || !eAnimD) return;
     
     const now = performance.now();
     if (now - lastFrameTimeRef.current >= 1000 / 30) { // 30 FPS
-      const formData = animationData[selectedForm];
-      if (formData && formData.maanim[selectedAnimation]) {
-        const maanim = formData.maanim[selectedAnimation];
-        const nextFrame = (animationState.currentFrame + 1) % (maanim.max || 1);
-        updateAnimation(nextFrame);
-      }
+      
+      AnimationPerformanceMonitor.measure('animation_loop', () => {
+        eAnimD.update(false);
+        
+        // ループ処理
+        if (eAnimD.isComplete()) {
+          eAnimD.setTime(0); // ループ再生
+        }
+        
+        // UI状態更新
+        setCurrentFrame(eAnimD.f);
+        
+        // 統計情報（30フレーム毎）
+        if (eAnimD.f % 30 === 0) {
+          const stats = eAnimD.getStats();
+          console.debug('アニメーション統計:', stats);
+        }
+      });
+      
       lastFrameTimeRef.current = now;
     }
     
     animationIdRef.current = requestAnimationFrame(animate);
-  }, [animationState.isPlaying, animationState.currentFrame, animationData, selectedForm, selectedAnimation, updateAnimation]);
+  }, [isPlaying, eAnimD]);
 
   // 初期化とクリーンアップ
   useEffect(() => {
     loadSprites();
     loadRawJsonData();
   }, [loadSprites, loadRawJsonData]);
-
-  useEffect(() => {
-    initializeAnimation();
-  }, [initializeAnimation]);
 
   // フォーム変更時にスプライト画像をリセット・再読み込み
   useEffect(() => {
@@ -634,13 +546,12 @@ export default function AnimationViewer({
     loadSprites();
   }, [selectedForm, loadSprites]);
 
-  useEffect(() => {
-    setAnimationState(prev => ({ ...prev, isPlaying }));
-  }, [isPlaying]);
 
   useEffect(() => {
     render();
   }, [render]);
+
+
 
   useEffect(() => {
     if (isPlaying) {
@@ -653,6 +564,15 @@ export default function AnimationViewer({
       cancelAnimationFrame(animationIdRef.current);
     };
   }, [isPlaying, animate]);
+
+  // アニメーションシステムのクリーンアップ
+  useEffect(() => {
+    return () => {
+      if (eAnimD) {
+        eAnimD.dispose();
+      }
+    };
+  }, [eAnimD]);
 
   return (
     <div className="space-y-4">
@@ -676,10 +596,69 @@ export default function AnimationViewer({
         >
           参照線
         </button>
+        <button
+          onClick={() => setSettingsVisible(!settingsVisible)}
+          className={`px-2 py-1 rounded ${settingsVisible ? 'bg-green-500' : 'bg-gray-500'} text-white`}
+        >
+          設定
+        </button>
         <span className="text-gray-600">
-          Frame: {animationState.currentFrame}
+          Frame: {eAnimD ? eAnimD.f : currentFrame}
         </span>
       </div>
+
+      {/* アニメーション設定パネル */}
+      {settingsVisible && (
+        <div className="bg-gray-100 p-3 rounded border">
+          <h3 className="text-sm font-bold mb-2">アニメーション設定</h3>
+          <div className="grid grid-cols-2 gap-2 text-xs">
+            <button
+              onClick={() => {
+                if (eAnimD) eAnimD.setPerformanceMode(true);
+              }}
+              className="px-2 py-1 bg-blue-500 text-white rounded hover:bg-blue-600"
+            >
+              パフォーマンスモード
+            </button>
+            <button
+              onClick={() => {
+                if (eAnimD) eAnimD.setPerformanceMode(false);
+              }}
+              className="px-2 py-1 bg-green-500 text-white rounded hover:bg-green-600"
+            >
+              標準モード
+            </button>
+            <button
+              onClick={() => {
+                const stats = AnimationPerformanceMonitor.getStats();
+                console.log('Performance Stats:', stats);
+                alert('パフォーマンス統計をコンソールに出力しました');
+              }}
+              className="px-2 py-1 bg-yellow-500 text-white rounded hover:bg-yellow-600"
+            >
+              統計表示
+            </button>
+            <button
+              onClick={() => {
+                if (eAnimD) {
+                  eAnimD.reset();
+                  setCurrentFrame(0);
+                }
+              }}
+              className="px-2 py-1 bg-purple-500 text-white rounded hover:bg-purple-600"
+            >
+              リセット
+            </button>
+          </div>
+          
+          {/* 現在の状態表示 */}
+          <div className="mt-2 text-xs text-gray-600">
+            {eAnimD && (
+              <div>アニメーション: Frame {eAnimD.f}/{eAnimD.len()}, パフォーマンス: {eAnimD.isPerformanceMode() ? 'ON' : 'OFF'}</div>
+            )}
+          </div>
+        </div>
+      )}
 
       {/* メインアニメーション表示 */}
       <div className="flex flex-col items-center">
@@ -782,7 +761,7 @@ export default function AnimationViewer({
           
           {/* パーツ階層表示 */}
           <div className="text-xxxs text-gray-600 font-mono">
-            <div className="bg-white border rounded p-2 max-h-64 overflow-y-auto">
+            <div className="bg-white border rounded p-2">
               {animationData[selectedForm] && animationData[selectedForm].mamodel && (() => {
                 const mamodel = animationData[selectedForm].mamodel;
                 
@@ -807,7 +786,8 @@ export default function AnimationViewer({
                 
                 // 再帰的にパーツを描画
                 const renderPartWithChildren = (partId: number, depth: number): React.ReactElement[] => {
-                  const part = animationState.parts[partId];
+                  // EAnimDからパーツ情報を取得
+                  const part = eAnimD?.ent?.[partId];
                   if (!part) return [];
                   
                   const partSpriteIds = getPartSprites(partId);
@@ -925,7 +905,7 @@ export default function AnimationViewer({
                       {/* このパーツに関連するすべてのスプライト */}
                       {isExpanded && partSpriteIds.length > 0 && partSpriteIds.map((spriteId, spriteIndex) => {
                         const partSpriteKey = `${partId}-${spriteId}`;
-                        const isDisplayed = part.spriteId === spriteId && part.visible && !hiddenParts.has(partId) && !hiddenSprites.has(partSpriteKey);
+                        const isDisplayed = part.img === spriteId && part.visible && !hiddenParts.has(partId) && !hiddenSprites.has(partSpriteKey);
                         
                         // Simplified sprite usage check - only currently displayed sprites are considered "used"
                         const isSpriteUsed = isPartActive && isDisplayed;
@@ -943,7 +923,7 @@ export default function AnimationViewer({
                             <span className="font-mono text-xs">Sprite#{spriteId.toString().padStart(3, '0')}{isDisplayed ? ' ●' : ' ○'}</span>
                             {isDisplayed && (
                               <span className="font-mono text-[10px] text-amber-500">
-                                ({formatCoordinate(part.x)}, {formatCoordinate(part.y)}, {formatCoordinate(part.spriteId)})
+                                ({formatCoordinate(part.pos?.x)}, {formatCoordinate(part.pos?.y)}, {formatCoordinate(part.img)})
                               </span>
                             )}
                             <input

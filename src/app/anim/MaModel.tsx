@@ -278,6 +278,81 @@ export class MaModel {
   }
 
   /**
+   * Java版arrange()メソッド - EPart配列生成
+   * common/util/anim/MaModel.java の arrange(EAnimI e) に対応
+   */
+  public arrangeJava(): unknown[] {
+    // 循環参照回避のため、EPart生成は呼び出し側で実行
+    // EAnimD.createEPartArray()で実際の生成を行う
+    return [];
+  }
+
+  /**
+   * Java版check()メソッド - 循環参照検出・修正
+   * common/util/anim/MaModel.java の check(AnimD<?, ?> anim) に対応
+   */
+  public checkJava(imgcutCount: number): void {
+    // imgcut ID検証
+    for (const part of this.parts) {
+      if (part[2] >= imgcutCount) part[2] = 0;
+      if (part[0] > this.n) part[0] = 0;
+    }
+
+    // 循環参照検出・修正
+    const temp = new Array(this.parts.length).fill(0);
+    for (let i = 0; i < this.parts.length; i++) {
+      this.checkLoopJava(temp, i);
+    }
+
+    // 循環参照パーツの親を-1にリセット
+    for (let i = 0; i < this.parts.length; i++) {
+      if (temp[i] === 2) {
+        this.parts[i][0] = -1;
+      }
+    }
+  }
+
+  /**
+   * Java版check()の再帰処理
+   * common/util/anim/MaModel.java の check(int[] temp, int p) に対応
+   */
+  private checkLoopJava(temp: number[], p: number): number {
+    if (temp[p] > 0) return temp[p];
+    if (this.parts[p][0] === -1) return temp[p] = 1;
+
+    temp[p] = 2; // 検証中マーク
+    if (this.parts[p][0] >= this.parts.length) {
+      this.parts[p][0] = 0;
+    }
+
+    const result = this.checkLoopJava(temp, this.parts[p][0]);
+    temp[p] = result;
+    return result;
+  }
+
+  /**
+   * Java版getChild()メソッド - 子パーツ数計算
+   * common/util/anim/MaModel.java の getChild(boolean[] bs) に対応
+   */
+  public getChildJava(flags: boolean[]): number {
+    let total = 0;
+    let count = 1;
+
+    while (count > 0) {
+      count = 0;
+      for (let i = 0; i < this.n; i++) {
+        if (!flags[i] && this.parts[i][0] >= 0 && flags[this.parts[i][0]]) {
+          count++;
+          total++;
+          flags[i] = true;
+        }
+      }
+    }
+
+    return total;
+  }
+
+  /**
    * ファイル出力用のwrite処理（デバッグ用）
    */
   public write(): string {

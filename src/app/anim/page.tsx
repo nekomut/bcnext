@@ -3,10 +3,12 @@
 import Link from 'next/link';
 import { useState, useEffect, useCallback, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import Image from 'next/image';
 import AnimationViewer from './AnimationViewer';
 import { unitNamesData, UnitNameData } from '@/data/unit-names';
 import { loadMultiFormAnimationData } from './animationLoader';
 import { AnimationData } from './types';
+import IconManager from './IconManager';
 
 function AnimationPageContent() {
   const router = useRouter();
@@ -31,6 +33,10 @@ function AnimationPageContent() {
   const [selectedUnitName, setSelectedUnitName] = useState<string>('');
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const [nameFilter, setNameFilter] = useState<string>('');
+  
+  // Form icons state
+  const [formIcons, setFormIcons] = useState<string[]>([]);
+  const [iconsLoading, setIconsLoading] = useState(true);
 
   const availableForms = animationData ? Object.keys(animationData) : [];
   const availableAnimations = availableForms.length > 0 && animationData && animationData[selectedForm] ? 
@@ -118,11 +124,11 @@ function AnimationPageContent() {
     setSelectedUnit(unitId);
     setInputUnit(unitId); // 入力フィールドも同期
     setLoading(true);
-    setLoadingProgress({ current: 0, total: 2, message: 'アニメーションデータを読み込み中...' });
+    setLoadingProgress({ current: 0, total: 3, message: 'アニメーションデータを読み込み中...' });
     
     try {
       // Step 1: アニメーションデータの読み込み（common/util/animベース）
-      setLoadingProgress({ current: 1, total: 2, message: 'アニメーションデータを読み込み中...' });
+      setLoadingProgress({ current: 1, total: 3, message: 'アニメーションデータを読み込み中...' });
       const newAnimationData = await loadMultiFormAnimationData(unitId);
       
       if (newAnimationData) {
@@ -137,7 +143,18 @@ function AnimationPageContent() {
           setSelectedUnitName(unitData.displayName);
         }
         
-        setLoadingProgress({ current: 2, total: 2, message: '読み込み完了' });
+        // Step 2: アイコンデータの読み込み
+        setLoadingProgress({ current: 2, total: 3, message: 'アイコンを読み込み中...' });
+        try {
+          const icons = await IconManager.loadUnitIcons(unitId);
+          setFormIcons(icons);
+        } catch {
+          setFormIcons([]);
+        } finally {
+          setIconsLoading(false);
+        }
+        
+        setLoadingProgress({ current: 3, total: 3, message: '読み込み完了' });
         
         // 短い遅延で読み込み完了を表示
         setTimeout(() => {
@@ -146,12 +163,12 @@ function AnimationPageContent() {
         
         return true;
       } else {
-        setLoadingProgress({ current: 0, total: 2, message: 'アニメーションデータが見つかりません' });
+        setLoadingProgress({ current: 0, total: 3, message: 'アニメーションデータが見つかりません' });
         setLoading(false);
         return false;
       }
     } catch {
-      setLoadingProgress({ current: 0, total: 2, message: 'アニメーションデータの読み込みに失敗しました' });
+      setLoadingProgress({ current: 0, total: 3, message: 'アニメーションデータの読み込みに失敗しました' });
       setLoading(false);
       return false;
     }
@@ -368,23 +385,32 @@ function AnimationPageContent() {
       {/* コントロール */}
       <div className="bg-white shadow rounded-lg p-3 mb-3">
         
-        {/* Form Tabs（シンプルタブ） */}
+        {/* Form Tabs（anim0スタイル） */}
         {availableForms.length > 1 && (
           <div className="flex mb-2.5">
-            {availableForms.map((form) => (
+            {availableForms.map((form, index) => (
               <div key={form} className="w-1/4 px-0.5">
                 <button
                   onClick={() => {
                     setSelectedForm(form);
                     updateURL({ form: form });
                   }}
-                  className={`w-full p-2 rounded transition-colors text-sm ${
+                  className={`w-full flex items-center justify-center p-0.5 rounded transition-colors ${
                     selectedForm === form
-                      ? 'bg-blue-500 text-white'
-                      : 'bg-gray-200 hover:bg-gray-300 text-gray-800'
+                      ? 'bg-blue-500'
+                      : 'bg-gray-200 hover:bg-gray-300'
                   }`}
                 >
-                  {getFormDisplayName(form, selectedUnit)}
+                  {/* Form Icon */}
+                  {!iconsLoading && formIcons[index] && (
+                    <Image 
+                      src={`data:image/png;base64,${formIcons[index]}`}
+                      alt={getFormDisplayName(form, selectedUnit)}
+                      width={40}
+                      height={40}
+                      className="rounded object-cover"
+                    />
+                  )}
                 </button>
               </div>
             ))}

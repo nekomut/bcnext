@@ -4,7 +4,6 @@
 
 import React, { useRef, useEffect, useState, useCallback } from 'react';
 import { AnimationData, AnimationState, EPart } from './types';
-import { loadUnitImage } from './animationLoader';
 
 interface AnimationViewerProps {
   animationData: { [form: string]: AnimationData };
@@ -12,6 +11,57 @@ interface AnimationViewerProps {
   selectedAnimation: string;
   isPlaying: boolean;
   unitId: string;
+}
+
+// Sprite Preview Canvas コンポーネント
+interface SpritePreviewCanvasProps {
+  spriteImage: HTMLImageElement | null;
+  selectedSpriteId: number;
+  selectedForm: string;
+  animationData: { [form: string]: AnimationData };
+}
+
+function SpritePreviewCanvas({ spriteImage, selectedSpriteId, selectedForm, animationData }: SpritePreviewCanvasProps) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas || !spriteImage || !animationData[selectedForm]) return;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    // Clear canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    // Set canvas size to match sprite image
+    canvas.width = spriteImage.width;
+    canvas.height = spriteImage.height;
+    
+    // Draw full sprite image
+    ctx.drawImage(spriteImage, 0, 0);
+    
+    // Draw red border around selected sprite
+    const formData = animationData[selectedForm];
+    const imgcut = formData.imgcut;
+    if (selectedSpriteId < imgcut.n && imgcut.cuts[selectedSpriteId]) {
+      const [x, y, w, h] = imgcut.cuts[selectedSpriteId];
+      ctx.strokeStyle = '#ff0000';
+      ctx.lineWidth = 2;
+      ctx.strokeRect(x, y, w, h);
+    }
+  }, [spriteImage, selectedSpriteId, selectedForm, animationData]);
+
+  return (
+    <canvas
+      ref={canvasRef}
+      className="max-w-full max-h-64 object-contain"
+      style={{ 
+        width: spriteImage ? Math.min(spriteImage.width, 600) : 'auto',
+        height: spriteImage ? Math.min(spriteImage.height, 256) : 'auto'
+      }}
+    />
+  );
 }
 
 export default function AnimationViewer({
@@ -37,21 +87,79 @@ export default function AnimationViewer({
   const [offsetX, setOffsetX] = useState<number>(0);
   const [offsetY, setOffsetY] = useState<number>(0);
   const [showRefLines, setShowRefLines] = useState<boolean>(true);
+  
+  // Sprite Preview用の状態変数
+  const [selectedSpriteId, setSelectedSpriteId] = useState<number>(0);
+  const [spriteImage, setSpriteImage] = useState<HTMLImageElement | null>(null);
 
-  // スプライト画像をロード
+  // スプライト画像をロード（フォーム別対応）
   const loadSprites = useCallback(async () => {
-    const canvas = await loadUnitImage(unitId);
-    if (!canvas || !animationData[selectedForm]) return;
+    console.log(`loadSprites開始: unitId=${unitId}, selectedForm=${selectedForm}`);
     
-    const formData = animationData[selectedForm];
-    const sprites = formData.imgcut.cut(canvas);
+    if (!animationData[selectedForm]) {
+      console.log(`loadSprites終了: formData=${!!animationData[selectedForm]}`);
+      return;
+    }
     
-    setAnimationState(prev => ({
-      ...prev,
-      sprites
-    }));
-    
-    console.log(`スプライト読み込み完了: ${sprites.length}個`);
+    try {
+      // フォーム別画像データを取得（anim0方式）
+      const response = await fetch(`/data/anim/${unitId}`);
+      if (!response.ok) {
+        console.warn(`画像データが見つかりません: ${unitId}`);
+        return;
+      }
+      
+      const text = await response.text();
+      const images = text.trim().split('\n').filter(line => {
+        return line.length > 0 && (line.startsWith('data:image/') || line.length > 100);
+      });
+      
+      // フォームインデックスに対応する画像を取得
+      const formIndex = ['f', 'c', 's', 'u'].indexOf(selectedForm);
+      if (formIndex < 0 || formIndex >= images.length) {
+        console.warn(`フォーム ${selectedForm} の画像が見つかりません`);
+        return;
+      }
+      
+      let imageSrc = images[formIndex];
+      if (!imageSrc.startsWith('data:image/')) {
+        imageSrc = `data:image/png;base64,${imageSrc}`;
+      }
+      
+      // フォーム別の画像からCanvasを作成
+      const img = new Image();
+      await new Promise<void>((resolve, reject) => {
+        img.onload = () => resolve();
+        img.onerror = () => reject(new Error('Image load failed'));
+        img.src = imageSrc;
+      });
+      
+      const canvas = document.createElement('canvas');
+      canvas.width = img.width;
+      canvas.height = img.height;
+      const ctx = canvas.getContext('2d');
+      if (ctx) {
+        ctx.drawImage(img, 0, 0);
+      }
+      
+      // スプライトを切り出し
+      const formData = animationData[selectedForm];
+      const sprites = formData.imgcut.cut(canvas);
+      
+      // Sprite Preview用のHTMLImageElementを設定
+      console.log(`スプライト画像設定完了: ${selectedForm}`);
+      setSpriteImage(img);
+      
+      setAnimationState(prev => ({
+        ...prev,
+        sprites
+      }));
+      
+      console.log(`スプライト読み込み完了: ${sprites.length}個, form=${selectedForm}`);
+      
+    } catch (error) {
+      console.error(`スプライト読み込みエラー (${unitId}, ${selectedForm}):`, error);
+    }
   }, [unitId, selectedForm, animationData]);
 
   // アニメーション状態を初期化
@@ -300,6 +408,14 @@ export default function AnimationViewer({
     initializeAnimation();
   }, [initializeAnimation]);
 
+  // フォーム変更時にスプライト画像をリセット・再読み込み
+  useEffect(() => {
+    console.log(`フォーム変更検出: ${selectedForm}`);
+    setSpriteImage(null);
+    setSelectedSpriteId(0);
+    loadSprites();
+  }, [selectedForm, loadSprites]);
+
   useEffect(() => {
     setAnimationState(prev => ({ ...prev, isPlaying }));
   }, [isPlaying]);
@@ -321,7 +437,7 @@ export default function AnimationViewer({
   }, [isPlaying, animate]);
 
   return (
-    <div className="flex flex-col items-center space-y-2">
+    <div className="space-y-4">
       {/* コントロール */}
       <div className="flex items-center space-x-2 text-sm">
         <button
@@ -346,31 +462,95 @@ export default function AnimationViewer({
           Frame: {animationState.currentFrame}
         </span>
       </div>
+
+      {/* メインアニメーション表示 */}
+      <div className="flex flex-col items-center">
       
-      {/* キャンバス */}
-      <canvas
-        ref={canvasRef}
-        width={600}
-        height={400}
-        className="border border-gray-300 bg-white"
-        onMouseDown={(e) => {
-          const startX = e.clientX - offsetX;
-          const startY = e.clientY - offsetY;
+        {/* キャンバス */}
+        <canvas
+          ref={canvasRef}
+          width={600}
+          height={400}
+          className="border border-gray-300 bg-white"
+          onMouseDown={(e) => {
+            const startX = e.clientX - offsetX;
+            const startY = e.clientY - offsetY;
+            
+            const handleMouseMove = (moveE: MouseEvent) => {
+              setOffsetX(moveE.clientX - startX);
+              setOffsetY(moveE.clientY - startY);
+            };
+            
+            const handleMouseUp = () => {
+              document.removeEventListener('mousemove', handleMouseMove);
+              document.removeEventListener('mouseup', handleMouseUp);
+            };
+            
+            document.addEventListener('mousemove', handleMouseMove);
+            document.addEventListener('mouseup', handleMouseUp);
+          }}
+        />
+      </div>
+
+      {/* Sprite Preview Section */}
+      <div className="bg-blue-50 p-2 rounded mb-2">
+        <label className="block text-sm font-medium text-gray-600 mb-1 font-mono">
+          Sprite Preview
+        </label>
+        <div className="space-y-2">
+          {/* Sprite ID Selector */}
+          <div className="flex items-center space-x-2">
+            <select
+              value={selectedSpriteId}
+              onChange={(e) => setSelectedSpriteId(Number(e.target.value))}
+              className="text-xs font-mono border rounded px-1 py-0.5 text-gray-500"
+            >
+              {animationData[selectedForm] && animationData[selectedForm].imgcut && (() => {
+                const formData = animationData[selectedForm];
+                const imgcut = formData.imgcut;
+                const totalSprites = imgcut.n || 0;
+                
+                const options = [];
+                for (let i = 0; i < totalSprites; i++) {
+                  // anim0と同じ形式でスプライト名を取得
+                  const spriteName = imgcut.strs && imgcut.strs[i] ? imgcut.strs[i] : '-';
+                  options.push(
+                    <option key={i} value={i}>
+                      {i.toString().padStart(3, '0')}: {spriteName}
+                    </option>
+                  );
+                }
+                return options;
+              })()}
+            </select>
+            
+            {/* Selected Sprite Position and Size Display */}
+            {animationData[selectedForm] && animationData[selectedForm].imgcut && (() => {
+              const formData = animationData[selectedForm];
+              const imgcut = formData.imgcut;
+              if (selectedSpriteId < imgcut.n && imgcut.cuts[selectedSpriteId]) {
+                const [x, y, w, h] = imgcut.cuts[selectedSpriteId];
+                return (
+                  <span className="text-xs font-mono text-gray-600">
+                    ({x}, {y}) [{w} × {h}]
+                  </span>
+                );
+              }
+              return null;
+            })()}
+          </div>
           
-          const handleMouseMove = (moveE: MouseEvent) => {
-            setOffsetX(moveE.clientX - startX);
-            setOffsetY(moveE.clientY - startY);
-          };
-          
-          const handleMouseUp = () => {
-            document.removeEventListener('mousemove', handleMouseMove);
-            document.removeEventListener('mouseup', handleMouseUp);
-          };
-          
-          document.addEventListener('mousemove', handleMouseMove);
-          document.addEventListener('mouseup', handleMouseUp);
-        }}
-      />
+          {/* Sprite Preview Canvas */}
+          <div className="relative border border-gray-300 rounded overflow-hidden bg-gray-100">
+            <SpritePreviewCanvas 
+              spriteImage={spriteImage}
+              selectedSpriteId={selectedSpriteId}
+              selectedForm={selectedForm}
+              animationData={animationData}
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

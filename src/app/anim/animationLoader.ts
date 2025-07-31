@@ -195,25 +195,53 @@ function convertMaAnim(maanimData: unknown[]): MaAnim {
 }
 
 /**
- * 画像データを読み込んでCanvasに変換
+ * 画像データを読み込んでCanvasに変換（anim0の実装を参考に簡略化）
  */
 export async function loadUnitImage(unitId: string): Promise<HTMLCanvasElement | null> {
   try {
-    // Base64画像データを読み込み
+    // anim0の方式を参考にした画像データ読み込み
     const response = await fetch(`/data/anim/${unitId}`);
     if (!response.ok) {
       console.warn(`画像データが見つかりません: ${unitId}`);
       return null;
     }
     
-    const base64Data = await response.text();
+    const text = await response.text();
+    
+    if (!text || text.trim().length === 0) {
+      console.warn(`空の画像データ: ${unitId}`);
+      return null;
+    }
+    
+    // 最初の有効な画像データを取得（anim0の方式）
+    const lines = text.trim().split('\n').filter(line => {
+      return line.length > 0 && (line.startsWith('data:image/') || line.length > 100);
+    });
+    
+    if (lines.length === 0) {
+      console.warn(`有効な画像データが見つかりません: ${unitId}`);
+      return null;
+    }
+    
+    let imageSrc = lines[0];
+    
+    // data:image/ プレフィックスがない場合は追加
+    if (!imageSrc.startsWith('data:image/')) {
+      imageSrc = `data:image/png;base64,${imageSrc}`;
+    }
     
     // 画像を作成
     const img = new Image();
-    await new Promise((resolve, reject) => {
-      img.onload = resolve;
-      img.onerror = reject;
-      img.src = `data:image/png;base64,${base64Data}`;
+    await new Promise<void>((resolve, reject) => {
+      img.onload = () => {
+        console.log(`画像読み込み成功 (${unitId}): ${img.width}x${img.height}`);
+        resolve();
+      };
+      img.onerror = () => {
+        console.error(`画像の作成に失敗 (${unitId})`);
+        reject(new Error(`Image load failed for unit ${unitId}`));
+      };
+      img.src = imageSrc;
     });
     
     // Canvasに描画
@@ -222,15 +250,17 @@ export async function loadUnitImage(unitId: string): Promise<HTMLCanvasElement |
     canvas.height = img.height;
     
     const ctx = canvas.getContext('2d');
-    if (ctx) {
-      ctx.drawImage(img, 0, 0);
+    if (!ctx) {
+      throw new Error(`2Dコンテキストの取得に失敗: ${unitId}`);
     }
+    
+    ctx.drawImage(img, 0, 0);
     
     console.log(`Unit ${unitId} 画像読み込み完了: ${img.width}x${img.height}`);
     return canvas;
     
   } catch (error) {
-    console.error(`画像データの読み込みエラー (${unitId}):`, error);
+    console.error(`画像データの読み込みエラー (${unitId}):`, error instanceof Error ? error.message : String(error));
     return null;
   }
 }

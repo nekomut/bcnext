@@ -165,19 +165,19 @@ function convertMaModel(mamodelData: unknown[]): MaModel {
       
       const part = [
         item[0],   // parent
+        item[1],   // unitId (Java版MaModelのparts[i][1]に対応)
         item[2],   // cutId (sprite)  
+        item[3],   // zDepth 
         item[4],   // baseX (x)
         item[5],   // baseY (y)
-        0,         // 未使用
         item[6],   // pivotX
         item[7],   // pivotY
-        0,         // 未使用
         item[8],   // baseScaleX (scaleX)
         item[9],   // baseScaleY (scaleY)
         item[10],  // baseRotation (rotation)
         item[11],  // baseOpacity (opacity)
         item[12],  // glow
-        0          // extra
+        item[13] || ''
       ];
       
       parts.push(part);

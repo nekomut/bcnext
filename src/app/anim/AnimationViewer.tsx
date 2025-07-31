@@ -433,14 +433,31 @@ export default function AnimationViewer({
     
     try {
       // MaModel・MaAnimインスタンス作成
+      console.log(`🔍 MaModel初期化 (${unitId}, ${selectedForm}):`, {
+        n: formData.mamodel.n,
+        partsCount: formData.mamodel.parts?.length || 0,
+        firstPart: formData.mamodel.parts?.[0],
+        lastPart: formData.mamodel.parts?.[formData.mamodel.parts.length - 1]
+      });
+      
+      // AnimationLoader側で既に正しく変換されているため、そのまま使用
+      
       const maModel = new MaModel({
         n: formData.mamodel.n,
         m: formData.mamodel.m || 1,
         ints: formData.mamodel.ints || [1000, 3600, 1000],
-        parts: formData.mamodel.parts || [],
+        parts: formData.mamodel.parts,
         confs: formData.mamodel.confs || [[0, 0, 0, 0, 0, 0]],
         strs0: formData.mamodel.strs0 || [],
         strs1: formData.mamodel.strs1 || ['default']
+      });
+      
+      console.log(`🔍 MaModel作成後:`, {
+        n: maModel.n,
+        partsCount: maModel.parts.length,
+        firstModelPart: maModel.parts[0],
+        lastModelPart: maModel.parts[maModel.parts.length - 1],
+        firstStr0: maModel.strs0[0]
       });
 
       // MaAnim初期化時にPartオブジェクト配列を作成
@@ -678,6 +695,24 @@ export default function AnimationViewer({
       }
     };
   }, [eAnimD]);
+
+  // Part 0のSpriteを初期状態で非表示にする
+  useEffect(() => {
+    if (animationData[selectedForm] && animationData[selectedForm].mamodel) {
+      const part0Sprites = getPartSprites(0);
+      if (part0Sprites.length > 0) {
+        setHiddenSprites(prevHiddenSprites => {
+          const newHiddenSprites = new Set(prevHiddenSprites);
+          part0Sprites.forEach(spriteId => {
+            const partSpriteKey = `0-${spriteId}`;
+            newHiddenSprites.add(partSpriteKey);
+          });
+          console.log(`Part 0のSpriteを非表示にしました:`, Array.from(newHiddenSprites));
+          return newHiddenSprites;
+        });
+      }
+    }
+  }, [animationData, selectedForm, selectedAnimation, getPartSprites]);
 
   return (
     <div className="space-y-4">

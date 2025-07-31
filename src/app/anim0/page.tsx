@@ -3,10 +3,12 @@
 import Link from 'next/link';
 import { useState, useEffect, useCallback, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import Image from 'next/image';
 import AnimationViewer from './AnimationViewer';
 import { unitNamesData, UnitNameData } from '@/data/unit-names';
-import { loadMultiFormAnimationData } from './animationLoader';
-import { AnimationData } from './types';
+import { loadUnitImages } from './imageLoader';
+import { loadAnimationData } from './animationLoader';
+import IconManager from './IconManager';
 
 function AnimationPageContent() {
   const router = useRouter();
@@ -20,10 +22,12 @@ function AnimationPageContent() {
   
   const [selectedUnit, setSelectedUnit] = useState(initialUnit || '');
   const [inputUnit, setInputUnit] = useState(initialUnit || ''); // 入力中の値を管理
-  const [animationData, setAnimationData] = useState<{ [form: string]: AnimationData } | null>(null);
+  const [animationData, setAnimationData] = useState<Record<string, unknown> | null>(null);
   const [selectedForm, setSelectedForm] = useState(initialForm || 'f');
   const [selectedAnimation, setSelectedAnimation] = useState(initialAnim || 'maanim02');
   const [isPlaying, setIsPlaying] = useState(initialPlaying);
+  const [showBoundaries, setShowBoundaries] = useState(false);
+  const [showRefPoints, setShowRefPoints] = useState(false);
   const [loading, setLoading] = useState(false);
   const [loadingProgress, setLoadingProgress] = useState({ current: 0, total: 0, message: '' });
   
@@ -31,10 +35,15 @@ function AnimationPageContent() {
   const [selectedUnitName, setSelectedUnitName] = useState<string>('');
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const [nameFilter, setNameFilter] = useState<string>('');
+  
+  // Form icons state
+  const [formIcons, setFormIcons] = useState<string[]>([]);
+  const [iconsLoading, setIconsLoading] = useState(true);
 
   const availableForms = animationData ? Object.keys(animationData) : [];
-  const availableAnimations = availableForms.length > 0 && animationData && animationData[selectedForm] ? 
-    Object.keys(animationData[selectedForm].maanim || {}) : [];
+  const availableAnimations = availableForms.length > 0 && animationData ? 
+    Object.keys((animationData as Record<string, unknown>)[selectedForm] as Record<string, unknown> || {})
+      .filter(key => key.startsWith('maanim')) : [];
   
   // フィルタリングされたユニット名リスト
   const filteredUnits = unitNamesData.filter(unit =>
@@ -65,7 +74,7 @@ function AnimationPageContent() {
   };
   
   // キーボード入力ハンドラ
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+  const handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
       handleUnitSearch();
     }
@@ -118,12 +127,12 @@ function AnimationPageContent() {
     setSelectedUnit(unitId);
     setInputUnit(unitId); // 入力フィールドも同期
     setLoading(true);
-    setLoadingProgress({ current: 0, total: 2, message: 'アニメーションデータを読み込み中...' });
+    setLoadingProgress({ current: 0, total: 3, message: 'アニメーションデータを読み込み中...' });
     
     try {
-      // Step 1: アニメーションデータの読み込み（common/util/animベース）
-      setLoadingProgress({ current: 1, total: 2, message: 'アニメーションデータを読み込み中...' });
-      const newAnimationData = await loadMultiFormAnimationData(unitId);
+      // Step 1: アニメーションデータの読み込み（最適化されたローダーを使用）
+      setLoadingProgress({ current: 1, total: 3, message: 'アニメーションデータを読み込み中...' });
+      const newAnimationData = await loadAnimationData(unitId);
       
       if (newAnimationData) {
         setAnimationData(newAnimationData);
@@ -137,7 +146,14 @@ function AnimationPageContent() {
           setSelectedUnitName(unitData.displayName);
         }
         
-        setLoadingProgress({ current: 2, total: 2, message: '読み込み完了' });
+        // Step 2: 画像データのプリロード
+        setLoadingProgress({ current: 2, total: 3, message: '画像データを読み込み中...' });
+        try {
+          await loadUnitImages(unitId);
+          setLoadingProgress({ current: 3, total: 3, message: '読み込み完了' });
+        } catch {
+          setLoadingProgress({ current: 3, total: 3, message: '画像読み込みエラー（アニメーションは表示可能）' });
+        }
         
         // 短い遅延で読み込み完了を表示
         setTimeout(() => {
@@ -146,18 +162,35 @@ function AnimationPageContent() {
         
         return true;
       } else {
-        setLoadingProgress({ current: 0, total: 2, message: 'アニメーションデータが見つかりません' });
+        setLoadingProgress({ current: 0, total: 3, message: 'アニメーションデータが見つかりません' });
         setLoading(false);
         return false;
       }
     } catch {
-      setLoadingProgress({ current: 0, total: 2, message: 'アニメーションデータの読み込みに失敗しました' });
+      setLoadingProgress({ current: 0, total: 3, message: 'アニメーションデータの読み込みに失敗しました' });
       setLoading(false);
       return false;
     }
   }, [updateURL]);
   
-  // アイコン読み込み処理は削除（common/util/animベースでは不要）
+  // アイコン読み込み処理（animationDataが変更された時のみ実行）
+  useEffect(() => {
+    const loadIcons = async () => {
+      if (!selectedUnit || !animationData) return;
+      
+      setIconsLoading(true);
+      try {
+        const icons = await IconManager.loadUnitIcons(selectedUnit);
+        setFormIcons(icons);
+      } catch {
+        setFormIcons([]);
+      } finally {
+        setIconsLoading(false);
+      }
+    };
+    
+    loadIcons();
+  }, [selectedUnit, animationData]); // selectedUnitとanimationDataに依存
 
   // Load initial unit on mount
   useEffect(() => {
@@ -187,8 +220,8 @@ function AnimationPageContent() {
         const targetForm = currentForm && forms.includes(currentForm) ? currentForm : forms[forms.length - 1];
         setSelectedForm(targetForm);
         
-        const formData = animationData[targetForm];
-        const animations = formData ? Object.keys(formData.maanim || {}) : [];
+        const formData = animationData[targetForm] as Record<string, unknown> || {};
+        const animations = Object.keys(formData).filter(key => key.startsWith('maanim'));
         if (animations.length > 0) {
           // URLで指定されたアニメーション、または攻撃アニメーション（maanim02）を選択
           const targetAnim = currentAnim && animations.includes(currentAnim) ? currentAnim : 
@@ -238,8 +271,8 @@ function AnimationPageContent() {
       <Link href="/" className="font-bold hover:text-green-600 px-1">bcnext</Link>|
       <Link href="/stage" className="hover:text-green-600 px-1">Stage</Link>|
       <Link href="/unit" className="hover:text-green-600 px-1">Unit</Link>|
-      <Link href="/anim" className="text-green-500 hover:text-green-600 px-1">Anim</Link>|
-      <Link href="/anim0" className="hover:text-green-600 px-1">Anim0</Link>|
+      <Link href="/anim" className="hover:text-green-600 px-1">Anim</Link>|
+      <Link href="/anim0" className="text-green-500 hover:text-green-600 px-1">Anim0</Link>|
       <Link href="/seek" className="hover:text-green-600 px-1">Seek</Link>|
       <Link href="/rare" className="hover:text-green-600 px-1">Rare</Link>|
       <Link href="/normal" className="hover:text-green-600 px-1">Normal</Link>|
@@ -280,7 +313,7 @@ function AnimationPageContent() {
                   setInputUnit(Number(value).toString());
                 }
               }}
-              onKeyDown={handleKeyDown}
+              onKeyPress={handleKeyPress}
               className="border rounded px-1 py-0.5 text-xs w-8 sm:w-24 text-gray-900 text-center"
             />
           </div>
@@ -368,23 +401,32 @@ function AnimationPageContent() {
       {/* コントロール */}
       <div className="bg-white shadow rounded-lg p-3 mb-3">
         
-        {/* Form Tabs（シンプルタブ） */}
+        {/* Form Tabs（unitスタイル） */}
         {availableForms.length > 1 && (
           <div className="flex mb-2.5">
-            {availableForms.map((form) => (
+            {availableForms.map((form, index) => (
               <div key={form} className="w-1/4 px-0.5">
                 <button
                   onClick={() => {
                     setSelectedForm(form);
                     updateURL({ form: form });
                   }}
-                  className={`w-full p-2 rounded transition-colors text-sm ${
+                  className={`w-full flex items-center justify-center p-0.5 rounded transition-colors ${
                     selectedForm === form
-                      ? 'bg-blue-500 text-white'
-                      : 'bg-gray-200 hover:bg-gray-300 text-gray-800'
+                      ? 'bg-blue-500'
+                      : 'bg-gray-200 hover:bg-gray-300'
                   }`}
-                >
-                  {getFormDisplayName(form, selectedUnit)}
+              >
+                {/* Form Icon */}
+                {!iconsLoading && formIcons[index] && (
+                  <Image 
+                    src={`data:image/png;base64,${formIcons[index]}`}
+                    alt={getFormDisplayName(form, selectedUnit)}
+                    width={40}
+                    height={40}
+                    className="rounded object-cover"
+                  />
+                )}
                 </button>
               </div>
             ))}
@@ -435,6 +477,10 @@ function AnimationPageContent() {
             selectedAnimation={selectedAnimation}
             isPlaying={isPlaying}
             unitId={selectedUnit}
+            showBoundaries={showBoundaries}
+            onShowBoundariesChange={setShowBoundaries}
+            showRefPoints={showRefPoints}
+            onShowRefPointsChange={setShowRefPoints}
           />
         ) : (
           <div className="flex justify-center items-center h-64">

@@ -85,6 +85,7 @@ export default function AnimationViewer({
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationIdRef = useRef<number>(0);
   const lastFrameTimeRef = useRef<number>(0);
+  const isInternalUpdateRef = useRef<boolean>(false); // 内部フレーム更新フラグ
   
   const [currentFrame, setCurrentFrame] = useState<number>(externalCurrentFrame || 0);
   const [zoom, setZoom] = useState<number>(1);
@@ -467,9 +468,20 @@ export default function AnimationViewer({
       // 初期フレームを0に設定して初期状態を表示
       newEAnimD.setTime(0);
       newEAnimD.update(false);
+      isInternalUpdateRef.current = true;
       setCurrentFrame(0);
 
       setEAnimD(newEAnimD);
+      
+      // 初期描画を実行
+      setTimeout(() => {
+        if (newEAnimD) {
+          const canvas = canvasRef.current;
+          if (canvas && canvas.getContext('2d')) {
+            newEAnimD.draw(canvas.getContext('2d')!, P.newP(0, 0, 0), 1);
+          }
+        }
+      }, 0);
       
       console.log(`🎯 アニメーション初期化完了: ${selectedAnimation}, フレーム: ${newEAnimD.f}/${newEAnimD.len()}`);
     } catch (error) {
@@ -484,20 +496,6 @@ export default function AnimationViewer({
       initializeAnimation();
     }
   }, [initializeAnimation, spriteImage]);
-
-  // 外部currentFrameとの同期
-  useEffect(() => {
-    if (externalCurrentFrame !== undefined && externalCurrentFrame !== currentFrame) {
-      setCurrentFrame(externalCurrentFrame);
-    }
-  }, [externalCurrentFrame, currentFrame]);
-
-  // currentFrameの変更を親に通知
-  useEffect(() => {
-    if (onFrameChange) {
-      onFrameChange(currentFrame);
-    }
-  }, [currentFrame, onFrameChange]);
 
 
 
@@ -561,8 +559,12 @@ export default function AnimationViewer({
           eAnimD.setTime(0); // ループ再生
         }
         
-        // UI状態更新
+        // UI状態更新（内部更新フラグを設定）
+        isInternalUpdateRef.current = true;
         setCurrentFrame(eAnimD.f);
+        
+        // 描画実行
+        render();
         
         // 統計情報（30フレーム毎）
         if (eAnimD.f % 30 === 0) {
@@ -575,7 +577,7 @@ export default function AnimationViewer({
     }
     
     animationIdRef.current = requestAnimationFrame(animate);
-  }, [isPlaying, eAnimD]);
+  }, [isPlaying, eAnimD, render]);
 
   // 初期化とクリーンアップ
   useEffect(() => {
@@ -591,6 +593,36 @@ export default function AnimationViewer({
     loadSprites();
   }, [selectedForm, loadSprites]);
 
+  // 外部currentFrameとの同期（アニメーション停止時のみ）
+  useEffect(() => {
+    if (!isPlaying && externalCurrentFrame !== undefined && externalCurrentFrame !== currentFrame) {
+      setCurrentFrame(externalCurrentFrame);
+      // EAnimDのフレームも同期
+      if (eAnimD) {
+        eAnimD.setTimeAndUpdate(externalCurrentFrame, false); // maanimデータを適用
+        renderAnimation(); // 即座に描画を更新
+      }
+    }
+  }, [externalCurrentFrame, currentFrame, eAnimD, renderAnimation, isPlaying]);
+
+  // currentFrameの変更を親に通知とEAnimD同期
+  useEffect(() => {
+    // 内部更新の場合はスキップ
+    if (isInternalUpdateRef.current) {
+      isInternalUpdateRef.current = false;
+      return;
+    }
+    
+    if (onFrameChange) {
+      onFrameChange(currentFrame);
+    }
+    
+    // アニメーション停止時でもフレーム変更で描画更新
+    if (!isPlaying && eAnimD && eAnimD.f !== currentFrame) {
+      eAnimD.setTimeAndUpdate(currentFrame, false); // maanimデータを適用
+      renderAnimation();
+    }
+  }, [currentFrame, onFrameChange, isPlaying, eAnimD, renderAnimation]);
 
   useEffect(() => {
     render();
@@ -647,9 +679,6 @@ export default function AnimationViewer({
         >
           設定
         </button>
-        <span className="text-gray-600">
-          Frame: {eAnimD ? eAnimD.f : currentFrame}
-        </span>
       </div>
 
       {/* アニメーション設定パネル */}

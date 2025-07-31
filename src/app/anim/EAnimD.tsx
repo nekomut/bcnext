@@ -157,6 +157,22 @@ export class EAnimD extends EAnimI {
   }
 
   /**
+   * フレーム設定とアニメーション更新（フレーム進行なし）
+   * フレームスライダー用の関数
+   */
+  public setTimeAndUpdate(value: number, rotate: boolean = false): void {
+    this.f = value;
+    
+    // MaAnimでパーツ更新（フレーム進行なし）
+    if (this.ent) {
+      this.ma.updateJava(this.f, this.ent, rotate, this.performanceMode);
+    }
+    
+    // 描画順序ソート
+    this.sort();
+  }
+
+  /**
    * パフォーマンスモード設定
    */
   public setPerformanceMode(enabled: boolean): void {

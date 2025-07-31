@@ -102,6 +102,193 @@ export default function AnimationViewer({
   // 元のJSONデータを保存する状態
   const [rawJsonData, setRawJsonData] = useState<Record<string, unknown> | null>(null);
 
+  // パーツリスト表示用の状態変数
+  const [expandedParts, setExpandedParts] = useState<Set<number>>(new Set([0])); // Part#000は初期展開
+  const [hiddenParts, setHiddenParts] = useState<Set<number>>(new Set());
+  const [showInactiveParts, setShowInactiveParts] = useState<boolean>(true);
+  const [showPartPoints, setShowPartPoints] = useState<Set<number>>(new Set());
+  const [hiddenSprites, setHiddenSprites] = useState<Set<string>>(new Set());
+  const [showSpritePoints, setShowSpritePoints] = useState<Set<number>>(new Set());
+
+  // パーツリスト用のヘルパー関数
+  const togglePartExpansion = (partId: number) => {
+    setExpandedParts(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(partId)) {
+        newSet.delete(partId);
+      } else {
+        newSet.add(partId);
+      }
+      return newSet;
+    });
+  };
+
+  // パーツごとのスプライトIDを取得する関数（maanimベース）
+  const getPartSprites = useCallback((partId: number): number[] => {
+    // Part#0には絶対にスプライトをぶら下げない
+    if (partId === 0) {
+      return [];
+    }
+    
+    const sprites = new Set<number>();
+    let hasAnimationSprites = false;
+    
+    // 1. アニメーションデータから使用されるスプライトを収集
+    const maanim = animationData[selectedForm]?.maanim?.[selectedAnimation];
+    if (maanim) {
+      maanim.parts.forEach(animPart => {
+        const animPartId = animPart.ints[0];
+        const modifType = animPart.ints[1];
+        
+        // SPRITE modification (type 2) をチェック
+        if (animPartId === partId && modifType === 2) {
+          hasAnimationSprites = true;
+          animPart.moves.forEach(move => {
+            const spriteId = move[1];
+            if (spriteId >= 0) {
+              sprites.add(spriteId);
+            }
+          });
+        }
+      });
+    }
+    
+    // 2. 現在表示中のスプライト
+    const currentPart = animationState.parts[partId];
+    if (currentPart && currentPart.spriteId >= 0) {
+      sprites.add(currentPart.spriteId);
+    }
+    
+    // 3. mamodelのベーススプライトID（アニメーションスプライトがない場合のみ）
+    if (!hasAnimationSprites) {
+      const mamodel = animationData[selectedForm]?.mamodel;
+      if (partId > 0 && mamodel?.parts[partId]) {
+        const baseCutId = mamodel.parts[partId][2];
+        if (baseCutId >= 0) {
+          sprites.add(baseCutId);
+        }
+      }
+    }
+    
+    return Array.from(sprites).sort((a, b) => a - b);
+  }, [animationData, selectedForm, selectedAnimation, animationState.parts]);
+
+  const handlePartToggle = useCallback((partId: number, checked: boolean) => {
+    // Part#000は常に表示されるため、操作を無視
+    if (partId === 0) {
+      return;
+    }
+    
+    const newHiddenParts = new Set(hiddenParts);
+    const newHiddenSprites = new Set(hiddenSprites);
+    
+    if (checked) {
+      // チェックされた場合、非表示リストから削除（表示する）
+      newHiddenParts.delete(partId);
+      
+      // 子Spriteが一つだけの場合、自動でチェックを入れる
+      const partSpriteIds = getPartSprites(partId);
+      if (partSpriteIds.length === 1) {
+        const singleSpriteId = partSpriteIds[0];
+        const partSpriteKey = `${partId}-${singleSpriteId}`;
+        newHiddenSprites.delete(partSpriteKey);
+        setHiddenSprites(newHiddenSprites);
+      }
+    } else {
+      // チェックが外された場合、非表示リストに追加（隠す）
+      newHiddenParts.add(partId);
+      
+      // 子Spriteが一つだけの場合、自動でチェックを外す
+      const partSpriteIds = getPartSprites(partId);
+      if (partSpriteIds.length === 1) {
+        const singleSpriteId = partSpriteIds[0];
+        const partSpriteKey = `${partId}-${singleSpriteId}`;
+        newHiddenSprites.add(partSpriteKey);
+        setHiddenSprites(newHiddenSprites);
+      }
+    }
+    setHiddenParts(newHiddenParts);
+  }, [hiddenParts, hiddenSprites, getPartSprites]);
+
+  const handleSpriteToggle = useCallback((spriteId: number, checked: boolean, partId: number) => {
+    // Part-Sprite pair key for individual control
+    const partSpriteKey = `${partId}-${spriteId}`;
+    const newHiddenSprites = new Set(hiddenSprites);
+    const newHiddenParts = new Set(hiddenParts);
+    
+    if (checked) {
+      // チェックされた場合、非表示リストから削除（表示する）
+      newHiddenSprites.delete(partSpriteKey);
+      
+      // 親Partが非表示の場合、自動的に表示する
+      if (hiddenParts.has(partId)) {
+        newHiddenParts.delete(partId);
+      }
+      
+      setHiddenParts(newHiddenParts);
+    } else {
+      // チェックが外された場合、非表示リストに追加（隠す）
+      newHiddenSprites.add(partSpriteKey);
+      
+      // 親Partの子Spriteがすべて非表示になったかチェック
+      const partSpriteIds = getPartSprites(partId);
+      const allSpritesHidden = partSpriteIds.every(id => {
+        const key = `${partId}-${id}`;
+        return newHiddenSprites.has(key);
+      });
+      
+      // すべての子Spriteが非表示になった場合、親Partも非表示にする
+      if (allSpritesHidden && partSpriteIds.length > 0) {
+        newHiddenParts.add(partId);
+      }
+      
+      setHiddenParts(newHiddenParts);
+    }
+    setHiddenSprites(newHiddenSprites);
+  }, [hiddenSprites, hiddenParts, getPartSprites]);
+
+  const handlePointToggle = (partId: number, checked: boolean) => {
+    setShowPartPoints(prev => {
+      const newSet = new Set(prev);
+      if (checked) {
+        newSet.add(partId);
+      } else {
+        newSet.delete(partId);
+      }
+      return newSet;
+    });
+  };
+
+  const handleSpritePointToggle = (partId: number, checked: boolean) => {
+    setShowSpritePoints(prev => {
+      const newSet = new Set(prev);
+      if (checked) {
+        newSet.add(partId);
+      } else {
+        newSet.delete(partId);
+      }
+      return newSet;
+    });
+  };
+
+  // 座標フォーマット関数
+  const formatCoordinate = (coord: number | undefined): string => {
+    if (coord === undefined || coord === null) return '    ?';
+    return coord.toString().padStart(5, ' ');
+  };
+
+  // 全展開/全折り畳み制御
+  const expandAllParts = useCallback(() => {
+    if (!animationData[selectedForm] || !animationData[selectedForm].mamodel) return;
+    const mamodel = animationData[selectedForm].mamodel;
+    const allPartIds = Array.from({length: mamodel.n}, (_, i) => i);
+    setExpandedParts(new Set(allPartIds));
+  }, [animationData, selectedForm]);
+  
+  const collapseAllParts = useCallback(() => {
+    setExpandedParts(new Set([0])); // Part#000のみ展開状態で維持
+  }, []);
+
   // 元のJSONデータを読み込む関数
   const loadRawJsonData = useCallback(async () => {
     if (!unitId) return;
@@ -521,6 +708,275 @@ export default function AnimationViewer({
             document.addEventListener('mouseup', handleMouseUp);
           }}
         />
+      </div>
+
+      {/* Parts List Section */}
+      <div className="bg-gray-50 p-1 rounded mb-2">
+        <div className="mt-2">
+          {/* Parts/Sprites カウントラベル */}
+          <div className="mb-2">
+            <label className="text-sm font-medium text-gray-600 font-mono">
+              Parts({animationData[selectedForm] && animationData[selectedForm].mamodel ? animationData[selectedForm].mamodel.n : 0})|Sprites({animationData[selectedForm] && animationData[selectedForm].imgcut ? animationData[selectedForm].imgcut.n : 0})
+            </label>
+          </div>
+          
+          {/* 制御ボタン群 */}
+          <div className="flex flex-wrap items-center gap-1 mb-2">
+            <button
+              onClick={() => {
+                setHiddenParts(new Set());
+                setHiddenSprites(new Set());
+              }}
+              className="px-2 py-0 bg-gray-200 text-gray-700 rounded text-xxs hover:bg-gray-300 font-mono"
+            >
+              全選択
+            </button>
+            <button
+              onClick={() => {
+                const mamodel = animationData[selectedForm]?.mamodel;
+                if (!mamodel) return;
+                
+                // Part#000を除外してallPartIdsを作成
+                const allPartIds = Array.from({length: mamodel.n}, (_, i) => i).filter(id => id !== 0);
+                const allPartSpriteKeys = new Set<string>();
+                
+                // 全Part-Spriteペアを収集
+                const imgcut = animationData[selectedForm]?.imgcut;
+                if (imgcut) {
+                  for (let partId = 1; partId < mamodel.n; partId++) { // Part#000は除外
+                    for (let spriteId = 0; spriteId < imgcut.n; spriteId++) {
+                      allPartSpriteKeys.add(`${partId}-${spriteId}`);
+                    }
+                  }
+                }
+                
+                setHiddenParts(new Set(allPartIds));
+                setHiddenSprites(allPartSpriteKeys);
+              }}
+              className="px-2 py-0 bg-gray-200 text-gray-700 rounded text-xxs hover:bg-gray-300 font-mono"
+            >
+              全解除
+            </button>
+            <button
+              onClick={expandAllParts}
+              className="px-2 py-0 bg-blue-200 text-blue-700 rounded text-xxs hover:bg-blue-300 font-mono"
+            >
+              全展開
+            </button>
+            <button
+              onClick={collapseAllParts}
+              className="px-2 py-0 bg-green-200 text-green-700 rounded text-xxs hover:bg-green-300 font-mono"
+            >
+              全折畳
+            </button>
+            <label className="flex items-center gap-1 text-xs font-medium text-gray-600 font-mono">
+              <input
+                type="checkbox"
+                checked={showInactiveParts}
+                onChange={(e) => setShowInactiveParts(e.target.checked)}
+                className="w-3 h-3"
+              />
+              非アクティブパーツ表示
+            </label>
+          </div>
+          
+          {/* パーツ階層表示 */}
+          <div className="text-xxxs text-gray-600 font-mono">
+            <div className="bg-white border rounded p-2 max-h-64 overflow-y-auto">
+              {animationData[selectedForm] && animationData[selectedForm].mamodel && (() => {
+                const mamodel = animationData[selectedForm].mamodel;
+                
+
+                // パーツの親子関係を構築
+                const childrenMap: { [key: number]: number[] } = {};
+                const rootParts: number[] = [];
+                
+                for (let i = 0; i < mamodel.n; i++) {
+                  const modelPart = mamodel.parts[i];
+                  const parentId = modelPart[0]; // parentIdは配列の最初の要素
+                  
+                  if (parentId === -1) {
+                    rootParts.push(i);
+                  } else {
+                    if (!childrenMap[parentId]) {
+                      childrenMap[parentId] = [];
+                    }
+                    childrenMap[parentId].push(i);
+                  }
+                }
+                
+                // 再帰的にパーツを描画
+                const renderPartWithChildren = (partId: number, depth: number): React.ReactElement[] => {
+                  const part = animationState.parts[partId];
+                  if (!part) return [];
+                  
+                  const partSpriteIds = getPartSprites(partId);
+                  
+                  // パーツがアクティブかどうかを詳細判定
+                  const isPartActive = (() => {
+                    // Part#000 is always considered active (root part)
+                    if (partId === 0) {
+                      return true;
+                    }
+                    
+                    // Check if part meets basic rendering requirements
+                    if (!mamodel.parts[partId]) {
+                      return false;
+                    }
+                    
+                    const modelPart = mamodel.parts[partId];
+                    const parentId = modelPart[0];
+                    const unitId = modelPart[1];
+                    const cutId = modelPart[2];
+                    
+                    // Skip if parent_id < 0 and unit_id < 0
+                    if (parentId < 0 && unitId < 0) {
+                      return false;
+                    }
+                    
+                    // ENHANCED: Check if this part has any active child sprites
+                    const hasActiveChildSprites = partSpriteIds.length > 0;
+                    
+                    // If this part has active child sprites, it should be considered active
+                    if (hasActiveChildSprites) {
+                      return true;
+                    }
+                    
+                    // Traditional rendering logic for parts without active sprites
+                    // Skip if no sprite to render (cutId < 0) - structural parts only
+                    if (cutId < 0) {
+                      return false;
+                    }
+                    
+                    // Check if it has valid sprite and unit for rendering
+                    if (cutId >= 0 && unitId >= 0) {
+                      return true;
+                    }
+                    
+                    return false;
+                  })();
+                  
+                  // パーツ名を取得
+                  const partName = mamodel.strs0[partId] || '';
+                  
+                  // パーツの座標情報を取得（mamodelで定義された座標）
+                  const partCoordinates = (() => {
+                    // 常にmamodelから基本座標を取得（X, Y, Z）
+                    if (mamodel.parts[partId]) {
+                      const modelPart = mamodel.parts[partId];
+                      const baseX = formatCoordinate(modelPart[4]);
+                      const baseY = formatCoordinate(modelPart[5]);
+                      const baseZ = formatCoordinate(modelPart[3]); // zDepth
+                      return `(${baseX}, ${baseY}, ${baseZ})`;
+                    }
+                    return '(   ?,    ?,    ?)';
+                  })();
+                  
+                  // インデント計算
+                  const indentLevel = depth * 16;
+                  
+                  const results: React.ReactElement[] = [];
+                  
+                  // 非アクティブパーツ表示設定が無効で、かつパーツが非アクティブの場合はスキップ
+                  // ただし、Part#000は常に表示
+                  if (!showInactiveParts && !isPartActive && partId !== 0) {
+                    return results;
+                  }
+                  
+                  // 子要素の存在確認
+                  const hasChildren = (childrenMap[partId] || []).length > 0 || partSpriteIds.length > 0;
+                  const isExpanded = expandedParts.has(partId);
+                  
+                  // 現在のパーツを描画
+                  const currentPartElement = (
+                    <div key={`part-${partId}`} className="py-0 my-0" style={{ paddingLeft: `${indentLevel}px` }}>
+                      {/* パーツ（親） */}
+                      <div className="py-0 my-0 flex items-center gap-1 font-mono text-xs">
+                        {/* 折り畳みボタン */}
+                        {hasChildren ? (
+                          <button
+                            onClick={() => togglePartExpansion(partId)}
+                            className="w-3 h-3 flex items-center justify-center text-xs text-gray-600 hover:text-gray-800 cursor-pointer"
+                          >
+                            {isExpanded ? '▼' : '▶'}
+                          </button>
+                        ) : (
+                          <span className="w-3 h-3"></span>
+                        )}
+                        <input
+                          type="checkbox"
+                          className="w-3 h-3"
+                          checked={partId === 0 ? true : !hiddenParts.has(partId)}
+                          onChange={(e) => handlePartToggle(partId, e.target.checked)}
+                          disabled={partId === 0}
+                        />
+                        <span className="font-mono text-xs">
+                          Part#{partId.toString().padStart(3, '0')} {partName && typeof partName === 'string' && !partName.startsWith('"') && partName}
+                        </span>
+                        <span className="font-mono text-[10px] text-red-500">{partCoordinates}</span>
+                        <input
+                          type="checkbox"
+                          className="w-3 h-3 accent-red-500"
+                          checked={showPartPoints.has(partId)}
+                          onChange={(e) => handlePointToggle(partId, e.target.checked)}
+                        />
+                      </div>
+                      
+                      {/* このパーツに関連するすべてのスプライト */}
+                      {isExpanded && partSpriteIds.length > 0 && partSpriteIds.map((spriteId, spriteIndex) => {
+                        const partSpriteKey = `${partId}-${spriteId}`;
+                        const isDisplayed = part.spriteId === spriteId && part.visible && !hiddenParts.has(partId) && !hiddenSprites.has(partSpriteKey);
+                        
+                        // Simplified sprite usage check - only currently displayed sprites are considered "used"
+                        const isSpriteUsed = isPartActive && isDisplayed;
+                        
+                        return (
+                          <div key={`sprite-${partId}-${spriteIndex}`} 
+                               className={`py-0 my-0 flex items-center gap-1 font-mono text-xs ${isDisplayed ? 'text-green-500' : ''} ${!isSpriteUsed ? 'opacity-30' : ''}`}
+                               style={{ paddingLeft: '28px' }}>
+                            <input
+                              type="checkbox"
+                              className="w-3 h-3 accent-green-500"
+                              checked={!hiddenSprites.has(partSpriteKey)}
+                              onChange={(e) => handleSpriteToggle(spriteId, e.target.checked, partId)}
+                            />
+                            <span className="font-mono text-xs">Sprite#{spriteId.toString().padStart(3, '0')}{isDisplayed ? ' ●' : ' ○'}</span>
+                            {isDisplayed && (
+                              <span className="font-mono text-[10px] text-amber-500">
+                                ({formatCoordinate(part.x)}, {formatCoordinate(part.y)}, {formatCoordinate(part.spriteId)})
+                              </span>
+                            )}
+                            <input
+                              type="checkbox"
+                              className="w-3 h-3 accent-amber-500"
+                              checked={showSpritePoints.has(partId)}
+                              onChange={(e) => handleSpritePointToggle(partId, e.target.checked)}
+                            />
+                          </div>
+                        );
+                      })}
+                    </div>
+                  );
+                  
+                  results.push(currentPartElement);
+                  
+                  // 子要素を再帰的に描画（展開されている場合のみ）
+                  if (isExpanded) {
+                    const children = childrenMap[partId] || [];
+                    children.forEach(childId => {
+                      results.push(...renderPartWithChildren(childId, depth + 1));
+                    });
+                  }
+                  
+                  return results;
+                };
+                
+                // 全てのルートパーツとその子要素を描画
+                return rootParts.flatMap(rootPartId => renderPartWithChildren(rootPartId, 0));
+              })()}
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Sprite Preview Section */}

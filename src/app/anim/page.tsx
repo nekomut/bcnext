@@ -289,9 +289,11 @@ function AnimationPageContent() {
           )}
           
           <div className="flex items-center gap-1">
-            <label className="text-xs text-gray-200">Unit ID</label>
+            <label htmlFor="unitId" className="text-xs text-gray-200">Unit ID</label>
             <input
               type="text"
+              id="unitId"
+              name="unitId"
               value={inputUnit}
               onChange={(e) => setInputUnit(e.target.value)}
               onBlur={(e) => {

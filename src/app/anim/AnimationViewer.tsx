@@ -329,10 +329,36 @@ export default function AnimationViewer({
     }
     
     try {
-      // フォーム別画像データを取得（anim0方式）
-      const response = await fetch(`/data/anim/${unitId}`);
-      if (!response.ok) {
-        console.warn(`画像データが見つかりません: ${unitId}`);
+      // Next.jsのbasePathを考慮したパスを生成（anim0と同じ方式）
+      const isGitHubPages = typeof window !== 'undefined' && window.location.hostname === 'nekomut.github.io';
+      const basePath = isGitHubPages ? '/bcnext' : '';
+      
+      // 画像データ読み込み（複数URLフォールバック）
+      const urlsToTry = [
+        `${basePath}/data/anim/${unitId}`,
+        `./data/anim/${unitId}`,
+        `${typeof window !== 'undefined' && window.location.origin || ''}${basePath}/data/anim/${unitId}`
+      ].filter(Boolean);
+      
+      let response: Response | null = null;
+      let lastError: Error | null = null;
+      
+      for (const tryUrl of urlsToTry) {
+        try {
+          response = await fetch(tryUrl);
+          if (response.ok) {
+            break;
+          } else {
+            lastError = new Error(`HTTP ${response.status}: ${response.statusText}`);
+          }
+        } catch (error) {
+          lastError = error as Error;
+          continue;
+        }
+      }
+      
+      if (!response || !response.ok) {
+        console.warn(`All URLs failed to load sprite image for unit ${unitId}. Last error: ${lastError?.message || 'unknown'}`);
         return;
       }
       

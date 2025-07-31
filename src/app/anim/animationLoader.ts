@@ -2,15 +2,60 @@
 
 import { AnimationData, ImgCut, MaModel, MaAnim, Part } from './types';
 
+// グローバルキャッシュ（anim0と同じ方式）
+interface AnimationDataCache {
+  [unitId: string]: { [form: string]: AnimationData } | AnimationData;
+}
+
+const animationCache: AnimationDataCache = {};
+
+export class AnimationLoadError extends Error {
+  constructor(
+    message: string,
+    public unitId: string,
+    public cause?: Error
+  ) {
+    super(message);
+    this.name = 'AnimationLoadError';
+  }
+}
+
 /**
  * tbcmlベースのJSONデータをcommon/util/animベースの構造に変換
  */
 export async function loadAnimationData(unitId: string): Promise<AnimationData | null> {
   try {
-    // JSONデータを読み込み
-    const response = await fetch(`/data/anim/${unitId}.json`);
-    if (!response.ok) {
-      console.warn(`アニメーションデータが見つかりません: ${unitId}`);
+    // Next.jsのbasePathを考慮したパスを生成（anim0と同じ方式）
+    // GitHub Pagesデプロイ環境ではhostname判定を使用
+    const isGitHubPages = typeof window !== 'undefined' && window.location.hostname === 'nekomut.github.io';
+    const basePath = isGitHubPages ? '/bcnext' : '';
+    
+    // JSON専用読み込み（複数URLフォールバック）
+    const urlsToTry = [
+      `${basePath}/data/anim/${unitId}.json`,
+      `./data/anim/${unitId}.json`,
+      `${typeof window !== 'undefined' && window.location.origin || ''}${basePath}/data/anim/${unitId}.json`
+    ].filter(Boolean);
+    
+    let response: Response | null = null;
+    let lastError: Error | null = null;
+    
+    for (const tryUrl of urlsToTry) {
+      try {
+        response = await fetch(tryUrl);
+        if (response.ok) {
+          break;
+        } else {
+          lastError = new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+      } catch (error) {
+        lastError = error as Error;
+        continue;
+      }
+    }
+    
+    if (!response || !response.ok) {
+      console.warn(`All URLs failed to load animation data for unit ${unitId}. Last error: ${lastError?.message || 'unknown'}`);
       return null;
     }
     
@@ -250,10 +295,36 @@ function convertMaAnim(maanimData: unknown[]): MaAnim {
  */
 export async function loadUnitImage(unitId: string): Promise<HTMLCanvasElement | null> {
   try {
-    // anim0の方式を参考にした画像データ読み込み
-    const response = await fetch(`/data/anim/${unitId}`);
-    if (!response.ok) {
-      console.warn(`画像データが見つかりません: ${unitId}`);
+    // Next.jsのbasePathを考慮したパスを生成（anim0と同じ方式）
+    const isGitHubPages = typeof window !== 'undefined' && window.location.hostname === 'nekomut.github.io';
+    const basePath = isGitHubPages ? '/bcnext' : '';
+    
+    // 画像データ読み込み（複数URLフォールバック）
+    const urlsToTry = [
+      `${basePath}/data/anim/${unitId}`,
+      `./data/anim/${unitId}`,
+      `${typeof window !== 'undefined' && window.location.origin || ''}${basePath}/data/anim/${unitId}`
+    ].filter(Boolean);
+    
+    let response: Response | null = null;
+    let lastError: Error | null = null;
+    
+    for (const tryUrl of urlsToTry) {
+      try {
+        response = await fetch(tryUrl);
+        if (response.ok) {
+          break;
+        } else {
+          lastError = new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+      } catch (error) {
+        lastError = error as Error;
+        continue;
+      }
+    }
+    
+    if (!response || !response.ok) {
+      console.warn(`All URLs failed to load image data for unit ${unitId}. Last error: ${lastError?.message || 'unknown'}`);
       return null;
     }
     
@@ -320,9 +391,42 @@ export async function loadUnitImage(unitId: string): Promise<HTMLCanvasElement |
  * 複数フォーム対応の統合アニメーションデータローダー
  */
 export async function loadMultiFormAnimationData(unitId: string): Promise<{ [form: string]: AnimationData } | null> {
+  // キャッシュチェック
+  if (animationCache[unitId] && typeof animationCache[unitId] === 'object' && !('imgcut' in animationCache[unitId])) {
+    return animationCache[unitId] as { [form: string]: AnimationData };
+  }
+
   try {
-    const response = await fetch(`/data/anim/${unitId}.json`);
-    if (!response.ok) {
+    // Next.jsのbasePathを考慮したパスを生成（anim0と同じ方式）
+    const isGitHubPages = typeof window !== 'undefined' && window.location.hostname === 'nekomut.github.io';
+    const basePath = isGitHubPages ? '/bcnext' : '';
+    
+    // JSON専用読み込み（複数URLフォールバック）
+    const urlsToTry = [
+      `${basePath}/data/anim/${unitId}.json`,
+      `./data/anim/${unitId}.json`,
+      `${typeof window !== 'undefined' && window.location.origin || ''}${basePath}/data/anim/${unitId}.json`
+    ].filter(Boolean);
+    
+    let response: Response | null = null;
+    let lastError: Error | null = null;
+    
+    for (const tryUrl of urlsToTry) {
+      try {
+        response = await fetch(tryUrl);
+        if (response.ok) {
+          break;
+        } else {
+          lastError = new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+      } catch (error) {
+        lastError = error as Error;
+        continue;
+      }
+    }
+    
+    if (!response || !response.ok) {
+      console.warn(`All URLs failed to load multi-form animation data for unit ${unitId}. Last error: ${lastError?.message || 'unknown'}`);
       return null;
     }
     
@@ -353,10 +457,51 @@ export async function loadMultiFormAnimationData(unitId: string): Promise<{ [for
       }
     }
     
-    return Object.keys(result).length > 0 ? result : null;
+    if (Object.keys(result).length > 0) {
+      // キャッシュに保存
+      animationCache[unitId] = result;
+      return result;
+    } else {
+      return null;
+    }
     
   } catch (error) {
-    console.error(`マルチフォームアニメーションデータの読み込みエラー (${unitId}):`, error);
-    return null;
+    if (error instanceof AnimationLoadError) {
+      throw error;
+    }
+    
+    const loadError = new AnimationLoadError(
+      `Failed to load multi-form animation data for unit ${unitId}: ${(error as Error).message}`,
+      unitId,
+      error as Error
+    );
+    
+    console.error(loadError.message, loadError);
+    throw loadError;
   }
+}
+
+// メモリ管理のためのキャッシュクリア機能（anim0と同じ）
+export const clearAnimationCache = (unitId?: string): void => {
+  if (unitId) {
+    delete animationCache[unitId];
+  } else {
+    // 全てのキャッシュをクリア
+    Object.keys(animationCache).forEach(key => delete animationCache[key]);
+  }
+};
+
+// キャッシュ情報の取得（デバッグ用）
+export const getAnimationCacheInfo = (): { unitCount: number } => {
+  return { unitCount: Object.keys(animationCache).length };
+};
+
+// デバッグ用のコンソール出力（開発環境のみ）
+if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
+  (window as Window & { animDataDebug?: object }).animDataDebug = {
+    getCache: () => animationCache,
+    getCacheInfo: getAnimationCacheInfo,
+    clearCache: clearAnimationCache,
+    loadUnit: loadMultiFormAnimationData
+  };
 }

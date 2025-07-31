@@ -190,73 +190,88 @@ export default function AnimationViewer({
       return;
     }
     
-    const newHiddenParts = new Set(hiddenParts);
-    const newHiddenSprites = new Set(hiddenSprites);
-    
-    if (checked) {
-      // チェックされた場合、非表示リストから削除（表示する）
-      newHiddenParts.delete(partId);
+    setHiddenParts(prevHiddenParts => {
+      const newHiddenParts = new Set(prevHiddenParts);
       
-      // 子Spriteが一つだけの場合、自動でチェックを入れる
+      if (checked) {
+        // チェックされた場合、非表示リストから削除（表示する）
+        newHiddenParts.delete(partId);
+      } else {
+        // チェックが外された場合、非表示リストに追加（隠す）
+        newHiddenParts.add(partId);
+      }
+      
+      return newHiddenParts;
+    });
+
+    // 子Spriteの状態も同期
+    setHiddenSprites(prevHiddenSprites => {
+      const newHiddenSprites = new Set(prevHiddenSprites);
       const partSpriteIds = getPartSprites(partId);
+      
       if (partSpriteIds.length === 1) {
         const singleSpriteId = partSpriteIds[0];
         const partSpriteKey = `${partId}-${singleSpriteId}`;
-        newHiddenSprites.delete(partSpriteKey);
-        setHiddenSprites(newHiddenSprites);
+        
+        if (checked) {
+          newHiddenSprites.delete(partSpriteKey);
+        } else {
+          newHiddenSprites.add(partSpriteKey);
+        }
       }
-    } else {
-      // チェックが外された場合、非表示リストに追加（隠す）
-      newHiddenParts.add(partId);
       
-      // 子Spriteが一つだけの場合、自動でチェックを外す
-      const partSpriteIds = getPartSprites(partId);
-      if (partSpriteIds.length === 1) {
-        const singleSpriteId = partSpriteIds[0];
-        const partSpriteKey = `${partId}-${singleSpriteId}`;
-        newHiddenSprites.add(partSpriteKey);
-        setHiddenSprites(newHiddenSprites);
-      }
-    }
-    setHiddenParts(newHiddenParts);
-  }, [hiddenParts, hiddenSprites, getPartSprites]);
+      return newHiddenSprites;
+    });
+  }, [getPartSprites]);
 
   const handleSpriteToggle = useCallback((spriteId: number, checked: boolean, partId: number) => {
     // Part-Sprite pair key for individual control
     const partSpriteKey = `${partId}-${spriteId}`;
-    const newHiddenSprites = new Set(hiddenSprites);
-    const newHiddenParts = new Set(hiddenParts);
     
-    if (checked) {
-      // チェックされた場合、非表示リストから削除（表示する）
-      newHiddenSprites.delete(partSpriteKey);
+    setHiddenSprites(prevHiddenSprites => {
+      const newHiddenSprites = new Set(prevHiddenSprites);
       
-      // 親Partが非表示の場合、自動的に表示する
-      if (hiddenParts.has(partId)) {
-        newHiddenParts.delete(partId);
+      if (checked) {
+        // チェックされた場合、非表示リストから削除（表示する）
+        newHiddenSprites.delete(partSpriteKey);
+      } else {
+        // チェックが外された場合、非表示リストに追加（隠す）
+        newHiddenSprites.add(partSpriteKey);
       }
       
-      setHiddenParts(newHiddenParts);
-    } else {
-      // チェックが外された場合、非表示リストに追加（隠す）
-      newHiddenSprites.add(partSpriteKey);
+      return newHiddenSprites;
+    });
+
+    setHiddenParts(prevHiddenParts => {
+      const newHiddenParts = new Set(prevHiddenParts);
       
-      // 親Partの子Spriteがすべて非表示になったかチェック
-      const partSpriteIds = getPartSprites(partId);
-      const allSpritesHidden = partSpriteIds.every(id => {
-        const key = `${partId}-${id}`;
-        return newHiddenSprites.has(key);
-      });
-      
-      // すべての子Spriteが非表示になった場合、親Partも非表示にする
-      if (allSpritesHidden && partSpriteIds.length > 0) {
-        newHiddenParts.add(partId);
+      if (checked) {
+        // 親Partが非表示の場合、自動的に表示する
+        if (prevHiddenParts.has(partId)) {
+          newHiddenParts.delete(partId);
+        }
+      } else {
+        // 親Partの子Spriteがすべて非表示になったかチェック
+        const partSpriteIds = getPartSprites(partId);
+        const allSpritesHidden = partSpriteIds.every(id => {
+          const key = `${partId}-${id}`;
+          // 現在変更中のスプライトは新しい状態を使用
+          if (key === partSpriteKey) {
+            return true; // 現在非表示にしようとしている
+          }
+          // 他のスプライトの既存の隠れ状態をチェック
+          return hiddenSprites.has(key);
+        });
+        
+        // すべての子Spriteが非表示になった場合、親Partも非表示にする
+        if (allSpritesHidden && partSpriteIds.length > 0) {
+          newHiddenParts.add(partId);
+        }
       }
       
-      setHiddenParts(newHiddenParts);
-    }
-    setHiddenSprites(newHiddenSprites);
-  }, [hiddenSprites, hiddenParts, getPartSprites]);
+      return newHiddenParts;
+    });
+  }, [getPartSprites, hiddenSprites]);
 
   const handlePointToggle = (partId: number, checked: boolean) => {
     setShowPartPoints(prev => {
@@ -531,13 +546,35 @@ export default function AnimationViewer({
         ctx.stroke();
       }
       
+      // hidden状態をEAnimDに反映
+      if (eAnimD.ent && eAnimD.ent.length > 0) {
+        for (let partId = 0; partId < eAnimD.ent.length; partId++) {
+          const part = eAnimD.ent[partId];
+          if (part) {
+            // パーツレベルでの表示制御（Part#000は常に表示）
+            const partShouldBeVisible = partId === 0 || !hiddenParts.has(partId);
+            
+            // スプライトレベルでの表示制御
+            let spriteShouldBeVisible = true;
+            if (partShouldBeVisible && part.img !== undefined && part.img >= 0) {
+              const partSpriteKey = `${partId}-${part.img}`;
+              spriteShouldBeVisible = !hiddenSprites.has(partSpriteKey);
+            }
+            
+            // 最終的な表示状態 = パーツ表示 AND スプライト表示
+            const finalVisibility = partShouldBeVisible && spriteShouldBeVisible;
+            part.setVisibleRecursive(finalVisibility);
+          }
+        }
+      }
+      
       // アニメーション描画
       const origin = P.newP(0, 0, 0);
       eAnimD.draw(ctx, origin, 1);
       
       ctx.restore();
     });
-  }, [eAnimD, offsetX, offsetY, zoom, showRefLines]);
+  }, [eAnimD, offsetX, offsetY, zoom, showRefLines, hiddenParts, hiddenSprites]);
 
   // 描画処理
   const render = useCallback(() => {
@@ -1305,7 +1342,7 @@ export default function AnimationViewer({
                   });
                   
                   // ints配列を特別に1行にする
-                  result = result.replace(/("ints":\s*)\[\s*\n([\s\S]*?)\n\s*\]/g, (match, intsLabel, content) => {
+                  result = result.replace(/("ints":\s*)\[\s*\n([\s\S]*?)\n\s*\]/g, (_, intsLabel, content) => {
                     const lines = content.split('\n').map((line: string) => line.trim()).filter((line: string) => line);
                     const items = lines.map((line: string) => line.replace(/,$/, ''));
                     return `${intsLabel}[${items.join(', ')}]`;
@@ -1402,7 +1439,7 @@ export default function AnimationViewer({
                   });
                   
                   // ints配列を特別に1行にする
-                  result = result.replace(/("ints":\s*)\[\s*\n([\s\S]*?)\n\s*\]/g, (match, intsLabel, content) => {
+                  result = result.replace(/("ints":\s*)\[\s*\n([\s\S]*?)\n\s*\]/g, (_, intsLabel, content) => {
                     const lines = content.split('\n').map((line: string) => line.trim()).filter((line: string) => line);
                     const items = lines.map((line: string) => line.replace(/,$/, ''));
                     return `${intsLabel}[${items.join(', ')}]`;

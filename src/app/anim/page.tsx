@@ -29,6 +29,9 @@ function AnimationPageContent() {
   const [loading, setLoading] = useState(false);
   const [loadingProgress, setLoadingProgress] = useState({ current: 0, total: 0, message: '' });
   
+  // Frame control states
+  const [currentFrame, setCurrentFrame] = useState(0);
+  
   // Unit selection UI states (unitスタイル)
   const [selectedUnitName, setSelectedUnitName] = useState<string>('');
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
@@ -461,6 +464,8 @@ function AnimationPageContent() {
             selectedAnimation={selectedAnimation}
             isPlaying={isPlaying}
             unitId={selectedUnit}
+            currentFrame={currentFrame}
+            onFrameChange={setCurrentFrame}
           />
         ) : (
           <div className="flex justify-center items-center h-64">

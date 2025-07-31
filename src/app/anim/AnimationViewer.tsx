@@ -18,6 +18,8 @@ interface AnimationViewerProps {
   selectedAnimation: string;
   isPlaying: boolean;
   unitId: string;
+  currentFrame?: number;
+  onFrameChange?: (frame: number) => void;
 }
 
 // Sprite Preview Canvas コンポーネント
@@ -76,13 +78,15 @@ export default function AnimationViewer({
   selectedForm,
   selectedAnimation,
   isPlaying,
-  unitId
+  unitId,
+  currentFrame: externalCurrentFrame,
+  onFrameChange
 }: AnimationViewerProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationIdRef = useRef<number>(0);
   const lastFrameTimeRef = useRef<number>(0);
   
-  const [currentFrame, setCurrentFrame] = useState<number>(0);
+  const [currentFrame, setCurrentFrame] = useState<number>(externalCurrentFrame || 0);
   const [zoom, setZoom] = useState<number>(1);
   const [offsetX, setOffsetX] = useState<number>(0);
   const [offsetY, setOffsetY] = useState<number>(0);
@@ -455,6 +459,21 @@ export default function AnimationViewer({
     }
   }, [initializeAnimation, spriteImage]);
 
+  // 外部currentFrameとの同期
+  useEffect(() => {
+    if (externalCurrentFrame !== undefined && externalCurrentFrame !== currentFrame) {
+      setCurrentFrame(externalCurrentFrame);
+    }
+  }, [externalCurrentFrame, currentFrame]);
+
+  // currentFrameの変更を親に通知
+  useEffect(() => {
+    if (onFrameChange) {
+      onFrameChange(currentFrame);
+    }
+  }, [currentFrame, onFrameChange]);
+
+
 
 
 
@@ -686,6 +705,40 @@ export default function AnimationViewer({
             document.addEventListener('mousemove', handleMouseMove);
             document.addEventListener('mouseup', handleMouseUp);
           }}
+        />
+      </div>
+
+      {/* Frame Control */}
+      <div className="bg-gray-50 p-1 rounded">
+        <div className="flex items-center justify-between mb-1">
+          <div className="flex items-center gap-2">
+            <label className="text-sm font-medium text-gray-600 font-mono">
+              Frame {String(currentFrame).padStart(3, '0')}/{String(eAnimD ? eAnimD.len() : 0).padStart(3, '0')}
+            </label>
+            <button
+              onClick={() => setCurrentFrame(prev => prev > 0 ? prev - 1 : (eAnimD ? eAnimD.len() : 0))}
+              className="text-sm text-gray-600 hover:text-gray-800 font-mono"
+              disabled={isPlaying}
+            >
+              ◁
+            </button>
+            <button
+              onClick={() => setCurrentFrame(prev => prev < (eAnimD ? eAnimD.len() : 0) ? prev + 1 : 0)}
+              className="text-sm text-gray-600 hover:text-gray-800 font-mono"
+              disabled={isPlaying}
+            >
+              ▷
+            </button>
+          </div>
+        </div>
+        <input
+          type="range"
+          min="0"
+          max={eAnimD ? eAnimD.len() : 0}
+          value={currentFrame}
+          onChange={(e) => setCurrentFrame(parseInt(e.target.value))}
+          className="w-full"
+          disabled={isPlaying}
         />
       </div>
 

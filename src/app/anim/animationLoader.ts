@@ -94,42 +94,79 @@ function convertImgCut(imgcutData: unknown[]): ImgCut {
 function convertMaModel(mamodelData: unknown[]): MaModel {
   const parts: number[][] = [];
   const strs0: string[] = [];
+  const strs1: string[] = [];
   
-  for (const item of mamodelData) {
+  // データ構造の解析
+  // [0] ["[modelanim:model]"]
+  // [1] [パーツ数]
+  // [2] [設定数]
+  // [3以降] パーツデータ
+  // [パーツ数+3] ints設定
+  // [パーツ数+4] strs1の数
+  // [パーツ数+5以降] strs1エントリ
+  
+  let currentIndex = 3; // パーツデータ開始位置
+  
+  // パーツ数を取得（インデックス2が正しいパーツ数）
+  const partsCount = Array.isArray(mamodelData[2]) ? mamodelData[2][0] : 0;
+  
+  // パーツデータを処理
+  for (let i = 0; i < partsCount && currentIndex < mamodelData.length; i++, currentIndex++) {
+    const item = mamodelData[currentIndex];
+    
     if (Array.isArray(item) && item.length >= 13) {
-      // tbcmlフォーマット: [parent, sprite, x, y, z, pivotX, pivotY, scaleX, scaleY, rotation, opacity, glow, name]
+      // JSONフォーマット: [parent, unitId, cutId, zDepth, baseX, baseY, pivotX, pivotY, baseScaleX, baseScaleY, baseRotation, baseOpacity, glow, name?]
       // common/util/animフォーマットに変換: [parent, sprite, x, y, 0, 0, 0, 0, scaleX, scaleY, rotation, opacity, glow, extra]
       
       const part = [
         item[0],   // parent
-        item[1],   // sprite  
-        item[2],   // x
-        item[3],   // y
+        item[2],   // cutId (sprite)  
+        item[4],   // baseX (x)
+        item[5],   // baseY (y)
         0,         // 未使用
-        item[5],   // pivotX
-        item[6],   // pivotY
+        item[6],   // pivotX
+        item[7],   // pivotY
         0,         // 未使用
-        item[7],   // scaleX
-        item[8],   // scaleY
-        item[9],   // rotation
-        item[10],  // opacity
-        item[11],  // glow
+        item[8],   // baseScaleX (scaleX)
+        item[9],   // baseScaleY (scaleY)
+        item[10],  // baseRotation (rotation)
+        item[11],  // baseOpacity (opacity)
+        item[12],  // glow
         0          // extra
       ];
       
       parts.push(part);
-      strs0.push(item[12] || ''); // name
+      // nameはインデックス13にあり、存在しない場合もある
+      strs0.push(item.length > 13 ? (item[13] || '') : '');
+    }
+  }
+  
+  // ints設定を飛ばす
+  currentIndex++; // [パーツ数+3] ints設定をスキップ
+  
+  // strs1の数を取得
+  const strs1Count = Array.isArray(mamodelData[currentIndex]) ? mamodelData[currentIndex][0] : 0;
+  currentIndex++; // strs1数の次の位置へ
+  
+  // strs1エントリを処理
+  for (let i = 0; i < strs1Count && currentIndex < mamodelData.length; i++, currentIndex++) {
+    const item = mamodelData[currentIndex];
+    
+    if (Array.isArray(item) && item.length > 0) {
+      // strs1エントリの最後の要素が名前文字列
+      const lastElement = item[item.length - 1];
+      strs1.push(typeof lastElement === 'string' ? lastElement : '');
     }
   }
   
   return new MaModel({
     n: parts.length,
-    m: 2, // デフォルトコンフィグ数
+    m: strs1Count, // 実際のstrs1数
     ints: [1000, 3600, 1000], // [scale, angle, extra]
     parts,
     confs: [[0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]], // デフォルトコンフィグ
     strs0,
-    strs1: ['default', 'default']
+    strs1
   });
 }
 
@@ -139,50 +176,64 @@ function convertMaModel(mamodelData: unknown[]): MaModel {
 function convertMaAnim(maanimData: unknown[]): MaAnim {
   const parts: Part[] = [];
   
-  for (const partData of maanimData) {
-    if (Array.isArray(partData) && partData.length >= 2) {
-      // tbcmlフォーマット: [partId, modifType, loop, offset, extra, name], [moves...]
-      const [partInfo, ...movesData] = partData;
+  // データ構造の解析
+  // [0] ["[modelanim:animation]"] - ヘッダー
+  // [1] [version] - バージョン
+  // [2] [keyframe_group_count] - キーフレームグループ数
+  // [3+] キーフレームグループデータ
+  
+  let currentIndex = 3; // キーフレームグループ開始位置
+  
+  // キーフレームグループ数を取得
+  const groupCount = Array.isArray(maanimData[2]) ? maanimData[2][0] : 0;
+  
+  for (let groupIndex = 0; groupIndex < groupCount && currentIndex < maanimData.length; groupIndex++) {
+    // グループヘッダーを取得
+    const groupHeader = maanimData[currentIndex];
+    
+    if (Array.isArray(groupHeader) && groupHeader.length >= 2) {
+      const partId = groupHeader[0];
+      const modifType = groupHeader[1];
+      const loop = groupHeader.length > 2 ? groupHeader[2] : -1;
+      const offset = groupHeader.length > 3 ? groupHeader[3] : 0;
+      const extra = groupHeader.length > 4 ? groupHeader[4] : 0;
+      const name = groupHeader.length > 5 ? (groupHeader[5] || '') : '';
       
-      if (Array.isArray(partInfo) && partInfo.length >= 2) {
-        const partId = partInfo[0];
-        const modifType = partInfo[1];
-        const loop = partInfo.length > 2 ? partInfo[2] : -1;
-        const offset = partInfo.length > 3 ? partInfo[3] : 0;
-        const name = partInfo.length > 5 ? partInfo[5] : '';
+      currentIndex++; // 次の要素（キーフレーム数）へ
+      
+      // キーフレーム数を取得
+      const keyframeCount = Array.isArray(maanimData[currentIndex]) ? maanimData[currentIndex][0] : 0;
+      currentIndex++; // キーフレームデータ開始位置へ
+      
+      // キーフレームデータを変換
+      const moves: number[][] = [];
+      
+      for (let i = 0; i < keyframeCount && currentIndex < maanimData.length; i++, currentIndex++) {
+        const keyframe = maanimData[currentIndex];
         
-        // キーフレームデータを変換
-        const moves: number[][] = [];
-        
-        for (const moveGroup of movesData) {
-          if (Array.isArray(moveGroup)) {
-            for (const move of moveGroup) {
-              if (Array.isArray(move) && move.length >= 2) {
-                // tbcmlフォーマット: [frame, value, easing, easingParam]
-                moves.push([
-                  move[0], // frame
-                  move[1], // value
-                  move.length > 2 ? move[2] : 0, // easing
-                  move.length > 3 ? move[3] : 0  // easingParam
-                ]);
-              }
-            }
-          }
+        if (Array.isArray(keyframe) && keyframe.length >= 2) {
+          // JSONフォーマット: [frame, value, easing?, easingParam?]
+          moves.push([
+            keyframe[0], // frame
+            keyframe[1], // value
+            keyframe.length > 2 ? keyframe[2] : 0, // easing
+            keyframe.length > 3 ? keyframe[3] : 0  // easingParam
+          ]);
         }
-        
-        // Partオブジェクトを作成
-        const part = new Part({
-          ints: [partId, modifType, loop, offset, 0],
-          name,
-          n: moves.length,
-          moves,
-          max: 0,
-          off: 0,
-          fir: 0
-        });
-        
-        parts.push(part);
       }
+      
+      // Partオブジェクトを作成
+      const part = new Part({
+        ints: [partId, modifType, loop, offset, extra],
+        name,
+        n: moves.length,
+        moves,
+        max: 0,
+        off: 0,
+        fir: 0
+      });
+      
+      parts.push(part);
     }
   }
   

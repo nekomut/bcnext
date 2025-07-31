@@ -91,6 +91,36 @@ export default function AnimationViewer({
   // Sprite Preview用の状態変数
   const [selectedSpriteId, setSelectedSpriteId] = useState<number>(0);
   const [spriteImage, setSpriteImage] = useState<HTMLImageElement | null>(null);
+  
+  // Data折りたたみ用の状態変数
+  const [dataExpanded, setDataExpanded] = useState({
+    imgcut: false,
+    mamodel: false,
+    maanim: false
+  });
+  
+  // 元のJSONデータを保存する状態
+  const [rawJsonData, setRawJsonData] = useState<Record<string, unknown> | null>(null);
+
+  // 元のJSONデータを読み込む関数
+  const loadRawJsonData = useCallback(async () => {
+    if (!unitId) return;
+    
+    try {
+      const response = await fetch(`/data/anim/${unitId}.json`);
+      if (!response.ok) {
+        console.warn(`JSONデータが見つかりません: ${unitId}.json`);
+        setRawJsonData(null);
+        return;
+      }
+      
+      const jsonData = await response.json();
+      setRawJsonData(jsonData);
+    } catch (error) {
+      console.error(`JSONデータの読み込みに失敗しました: ${unitId}.json`, error);
+      setRawJsonData(null);
+    }
+  }, [unitId]);
 
   // スプライト画像をロード（フォーム別対応）
   const loadSprites = useCallback(async () => {
@@ -402,7 +432,8 @@ export default function AnimationViewer({
   // 初期化とクリーンアップ
   useEffect(() => {
     loadSprites();
-  }, [loadSprites]);
+    loadRawJsonData();
+  }, [loadSprites, loadRawJsonData]);
 
   useEffect(() => {
     initializeAnimation();
@@ -549,6 +580,295 @@ export default function AnimationViewer({
               animationData={animationData}
             />
           </div>
+        </div>
+      </div>
+
+      {/* Data Section - anim0と同様の実装 */}
+      <div className="bg-gray-50 p-2 rounded mt-4">
+        <label className="block text-sm font-medium text-gray-600 mb-2 font-mono">
+          Data
+        </label>
+        
+        {/* imgcut データ */}
+        <div className="bg-white p-2 rounded mb-2">
+          <button
+            onClick={() => setDataExpanded(prev => ({ ...prev, imgcut: !prev.imgcut }))}
+            className="flex items-center justify-between w-full text-left text-xs font-medium text-gray-500 font-mono hover:text-gray-700"
+          >
+            imgcut
+            <span className="text-gray-400">{dataExpanded.imgcut ? '▼' : '▶'}</span>
+          </button>
+          {dataExpanded.imgcut && (
+            <div className="mt-2 space-y-2">
+              {/* 元のJSONデータ */}
+              <div className="bg-gray-50 p-2 rounded">
+                <label className="block text-xxs font-medium text-gray-400 mb-1 font-mono">Original JSON</label>
+                <pre className="whitespace-pre-wrap text-xxxs text-gray-500">{rawJsonData && (rawJsonData[selectedForm] as Record<string, unknown>)?.imgcut ? (() => {
+                  const data = (rawJsonData[selectedForm] as Record<string, unknown>).imgcut;
+                  // データをクリーンアップしてからJSON化
+                  const cleanData = JSON.parse(JSON.stringify(data, (_, value) => {
+                    if (typeof value === 'string') {
+                      // BOM文字やその他の制御文字を除去
+                      return value.replace(/[\uFEFF\u200B-\u200D\uFFFE\uFFFF]/g, '');
+                    }
+                    return value;
+                  }));
+                  
+                  const jsonStr = JSON.stringify(cleanData, null, 2);
+                  
+                  // ネストした配列のみ1行にする
+                  return jsonStr.replace(/(  )\[\s*\n([\s\S]*?)\n\s*\]/g, (match, indent, content) => {
+                    // インデントが2スペース以上（ネストした配列）の場合のみ処理
+                    const lines = content.split('\n').map((line: string) => line.trim()).filter((line: string) => line);
+                    
+                    // 全ての行がプリミティブ値かチェック
+                    const allPrimitive = lines.every((line: string) => {
+                      const cleanLine = line.replace(/,$/, '');
+                      return /^(-?\d+(\.\d+)?|".*"|true|false|null)$/.test(cleanLine);
+                    });
+                    
+                    if (allPrimitive) {
+                      const items = lines.map((line: string) => line.replace(/,$/, ''));
+                      return `${indent}[${items.join(', ')}]`;
+                    }
+                    
+                    return match;
+                  });
+                })() : 'No data'}</pre>
+              </div>
+              
+              {/* 変換後のanimationData */}
+              <div className="bg-blue-50 p-2 rounded">
+                <label className="block text-xxs font-medium text-blue-600 mb-1 font-mono">Converted animationData</label>
+                <pre className="whitespace-pre-wrap text-xxxs text-blue-600">{animationData[selectedForm]?.imgcut ? (() => {
+                  const data = animationData[selectedForm].imgcut;
+                  // データをクリーンアップしてからJSON化
+                  const cleanData = JSON.parse(JSON.stringify(data, (_, value) => {
+                    if (typeof value === 'string') {
+                      // BOM文字やその他の制御文字を除去
+                      return value.replace(/[\uFEFF\u200B-\u200D\uFFFE\uFFFF]/g, '');
+                    }
+                    return value;
+                  }));
+                  
+                  const jsonStr = JSON.stringify(cleanData, null, 2);
+                  
+                  // ネストした配列のみ1行にする
+                  return jsonStr.replace(/(  )\[\s*\n([\s\S]*?)\n\s*\]/g, (match, indent, content) => {
+                    // インデントが2スペース以上（ネストした配列）の場合のみ処理
+                    const lines = content.split('\n').map((line: string) => line.trim()).filter((line: string) => line);
+                    
+                    // 全ての行がプリミティブ値かチェック
+                    const allPrimitive = lines.every((line: string) => {
+                      const cleanLine = line.replace(/,$/, '');
+                      return /^(-?\d+(\.\d+)?|".*"|true|false|null)$/.test(cleanLine);
+                    });
+                    
+                    if (allPrimitive) {
+                      const items = lines.map((line: string) => line.replace(/,$/, ''));
+                      return `${indent}[${items.join(', ')}]`;
+                    }
+                    
+                    return match;
+                  });
+                })() : 'No data'}</pre>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* mamodel データ */}
+        <div className="bg-white p-2 rounded mb-2">
+          <button
+            onClick={() => setDataExpanded(prev => ({ ...prev, mamodel: !prev.mamodel }))}
+            className="flex items-center justify-between w-full text-left text-xs font-medium text-gray-500 font-mono hover:text-gray-700"
+          >
+            mamodel
+            <span className="text-gray-400">{dataExpanded.mamodel ? '▼' : '▶'}</span>
+          </button>
+          {dataExpanded.mamodel && (
+            <div className="mt-2 space-y-2">
+              {/* 元のJSONデータ */}
+              <div className="bg-gray-50 p-2 rounded">
+                <label className="block text-xxs font-medium text-gray-400 mb-1 font-mono">Original JSON</label>
+                <pre className="whitespace-pre-wrap text-xxxs text-gray-500">{rawJsonData && (rawJsonData[selectedForm] as Record<string, unknown>)?.mamodel ? (() => {
+                  const data = (rawJsonData[selectedForm] as Record<string, unknown>).mamodel;
+                  // データをクリーンアップしてからJSON化
+                  const cleanData = JSON.parse(JSON.stringify(data, (_, value) => {
+                    if (typeof value === 'string') {
+                      // BOM文字やその他の制御文字を除去
+                      return value.replace(/[\uFEFF\u200B-\u200D\uFFFE\uFFFF]/g, '');
+                    }
+                    return value;
+                  }));
+                  
+                  const jsonStr = JSON.stringify(cleanData, null, 2);
+                  
+                  // ネストした配列のみ1行にする
+                  return jsonStr.replace(/(  )\[\s*\n([\s\S]*?)\n\s*\]/g, (match, indent, content) => {
+                    // インデントが2スペース以上（ネストした配列）の場合のみ処理
+                    const lines = content.split('\n').map((line: string) => line.trim()).filter((line: string) => line);
+                    
+                    // 全ての行がプリミティブ値かチェック
+                    const allPrimitive = lines.every((line: string) => {
+                      const cleanLine = line.replace(/,$/, '');
+                      return /^(-?\d+(\.\d+)?|".*"|true|false|null)$/.test(cleanLine);
+                    });
+                    
+                    if (allPrimitive) {
+                      const items = lines.map((line: string) => line.replace(/,$/, ''));
+                      return `${indent}[${items.join(', ')}]`;
+                    }
+                    
+                    return match;
+                  });
+                })() : 'No data'}</pre>
+              </div>
+              
+              {/* 変換後のanimationData */}
+              <div className="bg-blue-50 p-2 rounded">
+                <label className="block text-xxs font-medium text-blue-600 mb-1 font-mono">Converted animationData</label>
+                <pre className="whitespace-pre-wrap text-xxxs text-blue-600">{animationData[selectedForm]?.mamodel ? (() => {
+                  const data = animationData[selectedForm].mamodel;
+                  // データをクリーンアップしてからJSON化
+                  const cleanData = JSON.parse(JSON.stringify(data, (_, value) => {
+                    if (typeof value === 'string') {
+                      // BOM文字やその他の制御文字を除去
+                      return value.replace(/[\uFEFF\u200B-\u200D\uFFFE\uFFFF]/g, '');
+                    }
+                    return value;
+                  }));
+                  
+                  const jsonStr = JSON.stringify(cleanData, null, 2);
+                  
+                  // ネストした配列のみ1行にする
+                  let result = jsonStr.replace(/(  )\[\s*\n([\s\S]*?)\n\s*\]/g, (match, indent, content) => {
+                    // インデントが2スペース以上（ネストした配列）の場合のみ処理
+                    const lines = content.split('\n').map((line: string) => line.trim()).filter((line: string) => line);
+                    
+                    // 全ての行がプリミティブ値かチェック
+                    const allPrimitive = lines.every((line: string) => {
+                      const cleanLine = line.replace(/,$/, '');
+                      return /^(-?\d+(\.\d+)?|".*"|true|false|null)$/.test(cleanLine);
+                    });
+                    
+                    if (allPrimitive) {
+                      const items = lines.map((line: string) => line.replace(/,$/, ''));
+                      return `${indent}[${items.join(', ')}]`;
+                    }
+                    
+                    return match;
+                  });
+                  
+                  // ints配列を特別に1行にする
+                  result = result.replace(/("ints":\s*)\[\s*\n([\s\S]*?)\n\s*\]/g, (match, intsLabel, content) => {
+                    const lines = content.split('\n').map((line: string) => line.trim()).filter((line: string) => line);
+                    const items = lines.map((line: string) => line.replace(/,$/, ''));
+                    return `${intsLabel}[${items.join(', ')}]`;
+                  });
+                  
+                  return result;
+                })() : 'No data'}</pre>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* maanim データ */}
+        <div className="bg-white p-2 rounded mb-2">
+          <button
+            onClick={() => setDataExpanded(prev => ({ ...prev, maanim: !prev.maanim }))}
+            className="flex items-center justify-between w-full text-left text-xs font-medium text-gray-500 font-mono hover:text-gray-700"
+          >
+            {selectedAnimation}
+            <span className="text-gray-400">{dataExpanded.maanim ? '▼' : '▶'}</span>
+          </button>
+          {dataExpanded.maanim && (
+            <div className="mt-2 space-y-2">
+              {/* 元のJSONデータ */}
+              <div className="bg-gray-50 p-2 rounded">
+                <label className="block text-xxs font-medium text-gray-400 mb-1 font-mono">Original JSON</label>
+                <pre className="whitespace-pre-wrap text-xxxs text-gray-500">{rawJsonData && (rawJsonData[selectedForm] as Record<string, unknown>)?.[selectedAnimation] ? (() => {
+                  const data = (rawJsonData[selectedForm] as Record<string, unknown>)[selectedAnimation];
+                  // データをクリーンアップしてからJSON化
+                  const cleanData = JSON.parse(JSON.stringify(data, (_, value) => {
+                    if (typeof value === 'string') {
+                      // BOM文字やその他の制御文字を除去
+                      return value.replace(/[\uFEFF\u200B-\u200D\uFFFE\uFFFF]/g, '');
+                    }
+                    return value;
+                  }));
+                  
+                  const jsonStr = JSON.stringify(cleanData, null, 2);
+                  
+                  // ネストした配列のみ1行にする
+                  return jsonStr.replace(/(  )\[\s*\n([\s\S]*?)\n\s*\]/g, (match, indent, content) => {
+                    // インデントが2スペース以上（ネストした配列）の場合のみ処理
+                    const lines = content.split('\n').map((line: string) => line.trim()).filter((line: string) => line);
+                    
+                    // 全ての行がプリミティブ値かチェック
+                    const allPrimitive = lines.every((line: string) => {
+                      const cleanLine = line.replace(/,$/, '');
+                      return /^(-?\d+(\.\d+)?|".*"|true|false|null)$/.test(cleanLine);
+                    });
+                    
+                    if (allPrimitive) {
+                      const items = lines.map((line: string) => line.replace(/,$/, ''));
+                      return `${indent}[${items.join(', ')}]`;
+                    }
+                    
+                    return match;
+                  });
+                })() : 'No data'}</pre>
+              </div>
+              
+              {/* 変換後のanimationData */}
+              <div className="bg-blue-50 p-2 rounded">
+                <label className="block text-xxs font-medium text-blue-600 mb-1 font-mono">Converted animationData</label>
+                <pre className="whitespace-pre-wrap text-xxxs text-blue-600">{animationData[selectedForm]?.maanim?.[selectedAnimation] ? (() => {
+                  const data = animationData[selectedForm].maanim[selectedAnimation];
+                  // データをクリーンアップしてからJSON化
+                  const cleanData = JSON.parse(JSON.stringify(data, (_, value) => {
+                    if (typeof value === 'string') {
+                      // BOM文字やその他の制御文字を除去
+                      return value.replace(/[\uFEFF\u200B-\u200D\uFFFE\uFFFF]/g, '');
+                    }
+                    return value;
+                  }));
+                  
+                  const jsonStr = JSON.stringify(cleanData, null, 2);
+                  
+                  // ネストした配列のみ1行にする
+                  let result = jsonStr.replace(/(  )\[\s*\n([\s\S]*?)\n\s*\]/g, (match, indent, content) => {
+                    // インデントが2スペース以上（ネストした配列）の場合のみ処理
+                    const lines = content.split('\n').map((line: string) => line.trim()).filter((line: string) => line);
+                    
+                    // 全ての行がプリミティブ値かチェック
+                    const allPrimitive = lines.every((line: string) => {
+                      const cleanLine = line.replace(/,$/, '');
+                      return /^(-?\d+(\.\d+)?|".*"|true|false|null)$/.test(cleanLine);
+                    });
+                    
+                    if (allPrimitive) {
+                      const items = lines.map((line: string) => line.replace(/,$/, ''));
+                      return `${indent}[${items.join(', ')}]`;
+                    }
+                    
+                    return match;
+                  });
+                  
+                  // ints配列を特別に1行にする
+                  result = result.replace(/("ints":\s*)\[\s*\n([\s\S]*?)\n\s*\]/g, (match, intsLabel, content) => {
+                    const lines = content.split('\n').map((line: string) => line.trim()).filter((line: string) => line);
+                    const items = lines.map((line: string) => line.replace(/,$/, ''));
+                    return `${intsLabel}[${items.join(', ')}]`;
+                  });
+                  
+                  return result;
+                })() : 'No data'}</pre>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

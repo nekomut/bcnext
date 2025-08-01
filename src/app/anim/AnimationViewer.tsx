@@ -136,7 +136,6 @@ export default function AnimationViewer({
   const getPartSprites = useCallback((partId: number): number[] => {
     
     const sprites = new Set<number>();
-    let hasAnimationSprites = false;
     let isUsedInAnimation = false;
     
     // 1. アニメーションデータから使用されるスプライトを収集
@@ -151,7 +150,6 @@ export default function AnimationViewer({
           
           // SPRITE modification (type 2) をチェック
           if (modifType === 2) {
-            hasAnimationSprites = true;
             animPart.moves.forEach(move => {
               const spriteId = move[1];
               if (spriteId >= 0) {
@@ -171,8 +169,8 @@ export default function AnimationViewer({
       }
     }
     
-    // 3. Part#000の特別処理 - 常にmamodelのベーススプライトを表示
-    if (partId === 0) {
+    // 3. すべてのパーツでベーススプライトをチェック（汎用化）
+    if (sprites.size === 0) {
       const mamodel = animationData[selectedForm]?.mamodel;
       if (mamodel?.parts[partId]) {
         const baseCutId = mamodel.parts[partId][2];
@@ -182,20 +180,9 @@ export default function AnimationViewer({
       }
     }
     
-    // 4. アニメーションで使用されないパーツは表示しない
-    if (!isUsedInAnimation && partId !== 0) {
+    // 4. ベーススプライトも存在せず、アニメーションでも使用されない場合は非表示
+    if (sprites.size === 0 && !isUsedInAnimation) {
       return [];
-    }
-    
-    // 5. SPRITE変更がなく、アニメーションで使用されるパーツはベーススプライトを表示
-    if (!hasAnimationSprites && isUsedInAnimation && sprites.size === 0 && partId !== 0) {
-      const mamodel = animationData[selectedForm]?.mamodel;
-      if (mamodel?.parts[partId]) {
-        const baseCutId = mamodel.parts[partId][2];
-        if (baseCutId >= 0) {
-          sprites.add(baseCutId);
-        }
-      }
     }
     
     return Array.from(sprites).sort((a, b) => a - b);
@@ -225,7 +212,7 @@ export default function AnimationViewer({
   }, [animationData, selectedForm, selectedAnimation]);
 
   const handlePartToggle = useCallback((partId: number, checked: boolean) => {
-    // Part#000は常に表示されるため、操作を無視
+    // Part 0の操作を無視
     if (partId === 0) {
       return;
     }
@@ -265,6 +252,11 @@ export default function AnimationViewer({
   }, [getPartSprites]);
 
   const handleSpriteToggle = useCallback((spriteId: number, checked: boolean, partId: number) => {
+    // Part 0のスプライト操作を無視
+    if (partId === 0) {
+      return;
+    }
+    
     // Part-Sprite pair key for individual control
     const partSpriteKey = `${partId}-${spriteId}`;
     
@@ -743,7 +735,7 @@ export default function AnimationViewer({
     };
   }, [eAnimD]);
 
-  // Part 0のSpriteを初期状態で非表示にする
+  // Part 0のスプライトを初期状態で非表示にする
   useEffect(() => {
     if (animationData[selectedForm] && animationData[selectedForm].mamodel) {
       const part0Sprites = getPartSprites(0);
@@ -1010,13 +1002,8 @@ export default function AnimationViewer({
                   
                   const partSpriteIds = getPartSprites(partId);
                   
-                  // パーツがアクティブかどうかを詳細判定
+                  // パーツがアクティブかどうかを汎用的に判定
                   const isPartActive = (() => {
-                    // Part#000 is always considered active (root part)
-                    if (partId === 0) {
-                      return true;
-                    }
-                    
                     // Check if part meets basic rendering requirements
                     if (!mamodel.parts[partId]) {
                       return false;
@@ -1027,11 +1014,6 @@ export default function AnimationViewer({
                     const unitId = modelPart[1];
                     const cutId = modelPart[2];
                     
-                    // Skip if parent_id < 0 and unit_id < 0
-                    if (parentId < 0 && unitId < 0) {
-                      return false;
-                    }
-                    
                     // ENHANCED: Check if this part has any active child sprites
                     const hasActiveChildSprites = partSpriteIds.length > 0;
                     
@@ -1040,15 +1022,14 @@ export default function AnimationViewer({
                       return true;
                     }
                     
-                    // Traditional rendering logic for parts without active sprites
-                    // Skip if no sprite to render (cutId < 0) - structural parts only
-                    if (cutId < 0) {
-                      return false;
+                    // Check if it has valid sprite for rendering
+                    if (cutId >= 0) {
+                      return true;
                     }
                     
-                    // Check if it has valid sprite and unit for rendering
-                    if (cutId >= 0 && unitId >= 0) {
-                      return true;
+                    // Skip if parent_id < 0 and unit_id < 0 (structural parts only)
+                    if (parentId < 0 && unitId < 0) {
+                      return false;
                     }
                     
                     return false;
@@ -1076,8 +1057,7 @@ export default function AnimationViewer({
                   const results: React.ReactElement[] = [];
                   
                   // 非アクティブパーツ表示設定が無効で、かつパーツが非アクティブの場合はスキップ
-                  // ただし、Part#000は常に表示
-                  if (!showInactiveParts && !isPartActive && partId !== 0) {
+                  if (!showInactiveParts && !isPartActive) {
                     return results;
                   }
                   
@@ -1103,8 +1083,8 @@ export default function AnimationViewer({
                         )}
                         <input
                           type="checkbox"
-                          className="w-3 h-3"
-                          checked={partId === 0 ? true : !hiddenParts.has(partId)}
+                          className={`w-3 h-3 ${partId === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                          checked={!hiddenParts.has(partId)}
                           onChange={(e) => handlePartToggle(partId, e.target.checked)}
                           disabled={partId === 0}
                         />
@@ -1129,7 +1109,9 @@ export default function AnimationViewer({
                         const isOpacityZero = isPartOpacityZero(partId);
                         
                         // スプライト使用状況の判定
-                        const isSpriteUsed = isPartActive && (isDisplayed || !isOpacityZero);
+                        // Part 0のスプライトは常に非アクティブ表示
+                        // maanimで実際に表示されていないスプライトも非アクティブ表示
+                        const isSpriteUsed = partId === 0 ? false : isPartActive && isDisplayed;
                         
                         return (
                           <div key={`sprite-${partId}-${spriteIndex}`} 
@@ -1137,9 +1119,10 @@ export default function AnimationViewer({
                                style={{ paddingLeft: '28px' }}>
                             <input
                               type="checkbox"
-                              className="w-3 h-3 accent-green-500"
+                              className={`w-3 h-3 accent-green-500 ${partId === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
                               checked={!hiddenSprites.has(partSpriteKey)}
                               onChange={(e) => handleSpriteToggle(spriteId, e.target.checked, partId)}
+                              disabled={partId === 0}
                             />
                             <span className="font-mono text-xs">
                               Sprite#{spriteId.toString().padStart(3, '0')}

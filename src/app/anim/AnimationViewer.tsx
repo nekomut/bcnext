@@ -595,9 +595,9 @@ export default function AnimationViewer({
       // 共通基準点システム実装（../common/util/anim準拠）
       ctx.save();
       
-      // 1. キャンバス中央を共通基準点として設定
+      // 1. キャンバス中心座標を(0, 150)に設定
       const commonOriginX = canvas.width / 2;
-      const commonOriginY = canvas.height / 2;
+      const commonOriginY = canvas.height / 2 + 150; // Y座標を+150オフセット
       
       // 2. ユーザー操作によるオフセット追加
       ctx.translate(commonOriginX + offsetX, commonOriginY + offsetY);
@@ -606,7 +606,7 @@ export default function AnimationViewer({
       
       // 参照線描画
       if (showRefLines) {
-        ctx.strokeStyle = '#ff0000';
+        ctx.strokeStyle = '#dbeafe'; // Tailwind blue-200
         ctx.lineWidth = 1 / zoom;
         ctx.beginPath();
         ctx.moveTo(-1000, 0);

@@ -64,11 +64,7 @@ function SpritePreviewCanvas({ spriteImage, selectedSpriteId, selectedForm, anim
   return (
     <canvas
       ref={canvasRef}
-      className="max-w-full max-h-64 object-contain"
-      style={{ 
-        width: spriteImage ? Math.min(spriteImage.width, 600) : 'auto',
-        height: spriteImage ? Math.min(spriteImage.height, 256) : 'auto'
-      }}
+      className="w-full object-contain"
     />
   );
 }
@@ -901,8 +897,8 @@ export default function AnimationViewer({
         {/* キャンバス */}
         <canvas
           ref={canvasRef}
-          width={600}
-          height={400}
+          width={440}
+          height={500}
           className="border border-gray-300 bg-white"
           onMouseDown={(e) => {
             const startX = e.clientX - offsetX;

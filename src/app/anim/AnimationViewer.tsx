@@ -503,14 +503,20 @@ export default function AnimationViewer({
       
       // AnimationLoader側で既に正しく変換されているため、そのまま使用
       
+      // MaModel作成（../common/util/anim準拠のconfs配列実装）
       const maModel = new MaModel({
         n: formData.mamodel.n,
-        m: formData.mamodel.m || 1,
+        m: formData.mamodel.m || 2,
         ints: formData.mamodel.ints || [1000, 3600, 1000],
         parts: formData.mamodel.parts,
-        confs: formData.mamodel.confs || [[0, 0, 0, 0, 0, 0]],
+        // ../common/util/animと同様の基準位置調整用confs配列
+        // [0, 0, offsetX, offsetY, scaleX, scaleY] の形式
+        confs: formData.mamodel.confs || [
+          [0, 0, 500, 500, 1000, 1000], // config0: 基準位置調整用
+          [0, 0, 0, 0, 1000, 1000]      // config1: デフォルト
+        ],
         strs0: formData.mamodel.strs0 || [],
-        strs1: formData.mamodel.strs1 || ['default']
+        strs1: formData.mamodel.strs1 || ['unified_position', 'default']
       });
 
       // MaAnim初期化時にPartオブジェクト配列を作成
@@ -574,7 +580,7 @@ export default function AnimationViewer({
     }
   }, [initializeAnimation, spriteImage]);
 
-  // アニメーション描画処理
+  // アニメーション描画処理（../common/util/anim準拠の位置統一システム）
   const renderAnimation = useCallback(() => {
     const canvas = canvasRef.current;
     if (!canvas || !eAnimD) return;
@@ -586,9 +592,15 @@ export default function AnimationViewer({
       // クリア
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
-      // 変換マトリックス設定
+      // 共通基準点システム実装（../common/util/anim準拠）
       ctx.save();
-      ctx.translate(canvas.width / 2 + offsetX, canvas.height / 2 + offsetY);
+      
+      // 1. キャンバス中央を共通基準点として設定
+      const commonOriginX = canvas.width / 2;
+      const commonOriginY = canvas.height / 2;
+      
+      // 2. ユーザー操作によるオフセット追加
+      ctx.translate(commonOriginX + offsetX, commonOriginY + offsetY);
       ctx.scale(zoom, zoom);
       
       
@@ -629,9 +641,11 @@ export default function AnimationViewer({
         }
       }
       
-      // アニメーション描画
-      const origin = P.newP(0, 0, 0);
-      eAnimD.draw(ctx, origin, 1);
+      // 統一位置システムによるアニメーション描画（../common/util/anim準拠）
+      // 共通基準点をoriginとして設定し、統一サイズでの描画
+      const unifiedOrigin = P.newP(0, 0, 0);
+      const unifiedSize = 1.0;
+      eAnimD.draw(ctx, unifiedOrigin, unifiedSize);
       
       ctx.restore();
     });

@@ -102,24 +102,26 @@ export class EAnimD extends EAnimI {
   }
 
   /**
-   * Canvas描画処理（Java版draw相当）
-   * Z値順にソートされたパーツを順次描画
+   * Canvas描画処理（../common/util/anim準拠の位置統一システム）
+   * 共通基準点を使用してZ値順にソートされたパーツを順次描画
    */
   public draw(ctx: CanvasRenderingContext2D, origin: P, size: number): void {
     if (!this.order) return;
     
-    // 描画順序（Z値ベース）でパーツを描画
+    // ../common/util/animのEAnimD.drawと同様の処理
+    // 全パーツに対して統一された基準点（origin）とサイズ（size）を適用
     for (const part of this.order) {
       if (!part.visible) continue;
       
-      this.drawPartWithTransform(ctx, part, origin, size);
+      // 共通基準点システムによる描画
+      this.drawPartWithUnifiedPosition(ctx, part, origin, size);
     }
   }
 
   /**
-   * 個別パーツ描画（座標変換付き）
+   * 共通基準点による統一位置描画（../common/util/anim準拠）
    */
-  private drawPartWithTransform(
+  private drawPartWithUnifiedPosition(
     ctx: CanvasRenderingContext2D, 
     part: EPart, 
     origin: P, 
@@ -128,18 +130,34 @@ export class EAnimD extends EAnimI {
     ctx.save();
     
     try {
-      // パーツ変換適用（Java版のtransform()ロジック）
+      // ../common/util/anim/EAnimD.javaのdraw()メソッドと同じロジック
+      // 統一されたサイズ（sizer）を全パーツに適用
       const sizer = P.newP(size, size, 1);
+      
+      // パーツ変換適用（階層的変換システム）
       part.transform(ctx, sizer);
       
-      // スプライト描画
+      // スプライト描画（共通基準点システム使用）
       part.drawPart(ctx, origin, sizer, this.spriteImage, this.imgcut);
       
     } catch (error) {
-      console.warn(`Draw error for part ${part.id}:`, error);
+      console.warn(`Unified position draw error for part ${part.id}:`, error);
     } finally {
       ctx.restore();
     }
+  }
+
+  /**
+   * 個別パーツ描画（座標変換付き） - 下位互換のため保持
+   */
+  private drawPartWithTransform(
+    ctx: CanvasRenderingContext2D, 
+    part: EPart, 
+    origin: P, 
+    size: number
+  ): void {
+    // 新しい統一位置システムに委譲
+    this.drawPartWithUnifiedPosition(ctx, part, origin, size);
   }
 
   /**

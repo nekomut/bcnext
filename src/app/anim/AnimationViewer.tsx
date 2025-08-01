@@ -211,6 +211,43 @@ export default function AnimationViewer({
     return hasOpacityZero;
   }, [animationData, selectedForm, selectedAnimation]);
 
+  // パーツにぶら下がっているスプライトがすべて非アクティブかどうかを判定する関数
+  const areAllPartSpritesInactive = useCallback((partId: number): boolean => {
+    const partSpriteIds = getPartSprites(partId);
+    
+    // スプライトが存在しない場合は非アクティブとみなす
+    if (partSpriteIds.length === 0) {
+      return true;
+    }
+    
+    // 現在のフレームで表示されているかチェック
+    if (eAnimD && eAnimD.ent) {
+      const part = eAnimD.ent[partId];
+      if (!part || !part.visible || part.img < 0) {
+        return true; // パーツが非表示またはスプライトが無効
+      }
+      
+      // opacity=0のパーツかチェック
+      if (isPartOpacityZero(partId)) {
+        return true; // opacity=0なら非アクティブ
+      }
+      
+      // パーツが非表示設定されているかチェック
+      if (hiddenParts.has(partId)) {
+        return true;
+      }
+      
+      // 関連スプライトがすべて非表示設定されているかチェック
+      const allSpritesHidden = partSpriteIds.every(spriteId => 
+        hiddenSprites.has(`${partId}-${spriteId}`)
+      );
+      
+      return allSpritesHidden;
+    }
+    
+    return true; // eAnimDが存在しない場合は非アクティブ
+  }, [getPartSprites, eAnimD, isPartOpacityZero, hiddenParts, hiddenSprites]);
+
   const handlePartToggle = useCallback((partId: number, checked: boolean) => {
     // Part 0の操作を無視
     if (partId === 0) {
@@ -1049,38 +1086,9 @@ export default function AnimationViewer({
                   
                   const partSpriteIds = getPartSprites(partId);
                   
-                  // パーツがアクティブかどうかを汎用的に判定
-                  const isPartActive = (() => {
-                    // Check if part meets basic rendering requirements
-                    if (!mamodel.parts[partId]) {
-                      return false;
-                    }
-                    
-                    const modelPart = mamodel.parts[partId];
-                    const parentId = modelPart[0];
-                    const unitId = modelPart[1];
-                    const cutId = modelPart[2];
-                    
-                    // ENHANCED: Check if this part has any active child sprites
-                    const hasActiveChildSprites = partSpriteIds.length > 0;
-                    
-                    // If this part has active child sprites, it should be considered active
-                    if (hasActiveChildSprites) {
-                      return true;
-                    }
-                    
-                    // Check if it has valid sprite for rendering
-                    if (cutId >= 0) {
-                      return true;
-                    }
-                    
-                    // Skip if parent_id < 0 and unit_id < 0 (structural parts only)
-                    if (parentId < 0 && unitId < 0) {
-                      return false;
-                    }
-                    
-                    return false;
-                  })();
+                  // パーツがアクティブかどうかを汎用的に判定（新しいロジックを使用）
+                  // Part 0は例外として常にアクティブとして扱う
+                  const isPartActive = partId === 0 ? true : !areAllPartSpritesInactive(partId);
                   
                   // パーツ名を取得
                   const partName = mamodel.strs0[partId] || '';
@@ -1116,7 +1124,7 @@ export default function AnimationViewer({
                   const currentPartElement = (
                     <div key={`part-${partId}`} className="py-0 my-0" style={{ paddingLeft: `${indentLevel}px` }}>
                       {/* パーツ（親） */}
-                      <div className="py-0 my-0 flex items-center gap-1 font-mono text-xs">
+                      <div className={`py-0 my-0 flex items-center gap-1 font-mono text-xs ${!isPartActive ? 'opacity-40' : ''}`}>
                         {/* 折り畳みボタン */}
                         {hasChildren ? (
                           <button

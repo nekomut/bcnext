@@ -18,11 +18,11 @@ export class P {
     this.z = z;
   }
 
-  public static newP(x: number, y: number, z: number = 0): P;
+  public static newP(x: number, y: number, z?: number): P;
   public static newP(other: P): P;
-  public static newP(a: number | P, y?: number, z: number = 0): P {
+  public static newP(a: number | P, y?: number, z?: number): P {
     if (typeof a === 'number') {
-      return new P(a, y || 0, z);
+      return new P(a, y || 0, z || 0);
     } else {
       return new P(a.x, a.y, a.z);
     }
@@ -43,13 +43,14 @@ export class P {
     }
   }
 
-  public setTo(x: number, y: number, z: number = 0): P {
+  public setTo(x: number, y: number, z?: number): P {
     this.x = x;
     this.y = y;
-    this.z = z;
+    this.z = z || 0;
     return this;
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   public static delete(_p?: P): void {
     // TypeScriptでは実質的に何もしない（Java版のGC対応）
   }

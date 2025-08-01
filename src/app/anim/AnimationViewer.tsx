@@ -442,7 +442,8 @@ export default function AnimationViewer({
       
       // スプライトを切り出し
       const formData = animationData[selectedForm];
-      const sprites = formData.imgcut.cut(canvas);
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      const _sprites = formData.imgcut.cut(canvas);
       
       // Sprite Preview用のHTMLImageElementを設定
       setSpriteImage(img);

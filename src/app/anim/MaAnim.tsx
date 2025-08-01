@@ -85,7 +85,68 @@ export class MaAnim {
   }
 
   /**
-   * アニメーション更新処理
+   * Java版完全互換のアニメーション更新処理
+   * updateJava(float f, EPart[] ent, boolean rotate, boolean performanceMode, String unitId)
+   */
+  public updateJava(frame: number, entities: Array<{ setValue?: () => void, alter: (type: number, value: number) => void, id: number, fa?: unknown }>, rotate: boolean = false, performanceMode: boolean = false, unitId?: string): void {
+    let adjustedFrame = frame;
+    
+    if (rotate) {
+      adjustedFrame = frame % (this.max + 1);
+    }
+
+    // フレーム0で初期値を設定
+    if (adjustedFrame === 0) {
+      for (const entity of entities) {
+        if (entity && entity.setValue) {
+          entity.setValue();
+        }
+      }
+    }
+
+    // 各パーツの更新処理（Java版の完全移植）
+    for (let i = 0; i < this.n; i++) {
+      const part = this.parts[i];
+      const loop = part.ints[2];
+      const smax = part.max;
+      const fir = part.fir;
+      const lmax = smax - fir;
+
+      const prot = rotate || loop === -1;
+      let partFrame: number;
+
+      if (prot) {
+        const mf = loop === -1 ? smax : this.max + 1;
+        partFrame = mf === 0 ? 0 : (adjustedFrame + part.off) % mf;
+      } else {
+        partFrame = adjustedFrame + part.off;
+      }
+
+      // ループ処理
+      if (loop > 0 && lmax !== 0) {
+        if (partFrame > fir + loop * lmax) {
+          part.ensureLast(entities);
+          continue;
+        }
+        
+        if (partFrame <= fir) {
+          // そのまま
+        } else if (partFrame < fir + loop * lmax) {
+          partFrame = fir + (partFrame - fir) % lmax;
+        } else {
+          partFrame = smax;
+        }
+      }
+
+      part.update(partFrame, entities, unitId);
+    }
+
+    // エンティティのソート（描画順序）
+    this.sortEntities(entities);
+  }
+
+  /**
+   * 旧版のアニメーション更新処理（後方互換性用）
    * Java版のupdate(float f, EAnimD<?> eAnim, boolean rotate)メソッド
    */
   public update(frame: number, entities: Array<{ setValue?: () => void, alter: (type: number, value: number) => void, id: number, fa?: unknown }>, rotate: boolean = false): void {

@@ -369,10 +369,7 @@ export default function AnimationViewer({
 
   // スプライト画像をロード（フォーム別対応）
   const loadSprites = useCallback(async () => {
-    console.log(`loadSprites開始: unitId=${unitId}, selectedForm=${selectedForm}`);
-    
     if (!animationData[selectedForm]) {
-      console.log(`loadSprites終了: formData=${!!animationData[selectedForm]}`);
       return;
     }
     
@@ -448,10 +445,7 @@ export default function AnimationViewer({
       const sprites = formData.imgcut.cut(canvas);
       
       // Sprite Preview用のHTMLImageElementを設定
-      console.log(`スプライト画像設定完了: ${selectedForm}`);
       setSpriteImage(img);
-      
-      console.log(`スプライト読み込み完了: ${sprites.length}個, form=${selectedForm}`);
       
     } catch (error) {
       console.error(`スプライト読み込みエラー (${unitId}, ${selectedForm}):`, error);
@@ -469,12 +463,6 @@ export default function AnimationViewer({
     
     try {
       // MaModel・MaAnimインスタンス作成
-      console.log(`🔍 MaModel初期化 (${unitId}, ${selectedForm}):`, {
-        n: formData.mamodel.n,
-        partsCount: formData.mamodel.parts?.length || 0,
-        firstPart: formData.mamodel.parts?.[0],
-        lastPart: formData.mamodel.parts?.[formData.mamodel.parts.length - 1]
-      });
       
       // AnimationLoader側で既に正しく変換されているため、そのまま使用
       
@@ -486,14 +474,6 @@ export default function AnimationViewer({
         confs: formData.mamodel.confs || [[0, 0, 0, 0, 0, 0]],
         strs0: formData.mamodel.strs0 || [],
         strs1: formData.mamodel.strs1 || ['default']
-      });
-      
-      console.log(`🔍 MaModel作成後:`, {
-        n: maModel.n,
-        partsCount: maModel.parts.length,
-        firstModelPart: maModel.parts[0],
-        lastModelPart: maModel.parts[maModel.parts.length - 1],
-        firstStr0: maModel.strs0[0]
       });
 
       // MaAnim初期化時にPartオブジェクト配列を作成
@@ -511,8 +491,6 @@ export default function AnimationViewer({
       
       // フレーム数の再計算を実行
       maAnim.validate();
-      
-      console.log(`🎯 MaAnim初期化: max=${maAnim.max}, len=${maAnim.len}, parts=${maAnim.n}`);
 
       // AnimI実装
       const animInterface: AnimI = {
@@ -546,8 +524,6 @@ export default function AnimationViewer({
           }
         }
       }, 0);
-      
-      console.log(`🎯 アニメーション初期化完了: ${selectedAnimation}, フレーム: ${newEAnimD.f}/${newEAnimD.len()}`);
     } catch (error) {
       console.error('アニメーション初期化エラー:', error);
       setEAnimD(null);
@@ -630,7 +606,10 @@ export default function AnimationViewer({
 
   // アニメーションループ
   const animate = useCallback(() => {
-    if (!isPlaying || !eAnimD) return;
+    // 再生中でない場合は即座に停止
+    if (!isPlaying || !eAnimD) {
+      return;
+    }
     
     const now = performance.now();
     if (now - lastFrameTimeRef.current >= 1000 / 30) { // 30 FPS
@@ -650,17 +629,15 @@ export default function AnimationViewer({
         // 描画実行
         render();
         
-        // 統計情報（30フレーム毎）
-        if (eAnimD.f % 30 === 0) {
-          const stats = eAnimD.getStats();
-          console.debug('アニメーション統計:', stats);
-        }
       });
       
       lastFrameTimeRef.current = now;
     }
     
-    animationIdRef.current = requestAnimationFrame(animate);
+    // 再生中の場合のみ次のフレームをリクエスト（二重チェック）
+    if (isPlaying) {
+      animationIdRef.current = requestAnimationFrame(animate);
+    }
   }, [isPlaying, eAnimD, render]);
 
   // 初期化とクリーンアップ
@@ -671,25 +648,32 @@ export default function AnimationViewer({
 
   // フォーム変更時にスプライト画像をリセット・再読み込み
   useEffect(() => {
-    console.log(`フォーム変更検出: ${selectedForm}`);
     setSpriteImage(null);
     setSelectedSpriteId(0);
     loadSprites();
   }, [selectedForm, loadSprites]);
 
-  // 外部currentFrameとの同期（アニメーション停止時のみ）
+  // 外部currentFrameとの同期（アニメーション停止時のみ、ボタンクリック時は無視）
   useEffect(() => {
-    if (!isPlaying && externalCurrentFrame !== undefined && externalCurrentFrame !== currentFrame) {
-      setCurrentFrame(externalCurrentFrame);
-      // EAnimDのフレームも同期
-      if (eAnimD) {
-        eAnimD.setTimeAndUpdate(externalCurrentFrame, false, unitId); // maanimデータを適用
-        renderAnimation(); // 即座に描画を更新
-      }
+    const now = Date.now();
+    
+    // ボタンクリックによる即座更新中は外部同期をスキップ
+    if (immediateUpdateRef.current) {
+      return;
     }
-  }, [externalCurrentFrame, currentFrame, eAnimD, renderAnimation, isPlaying, unitId]);
+    
+    // 外部同期がブロックされている期間はスキップ
+    if (now < externalSyncBlockedUntilRef.current) {
+      return;
+    }
+    
+    if (!isPlaying && externalCurrentFrame !== undefined && externalCurrentFrame !== currentFrame) {
+      isInternalUpdateRef.current = true; // 内部更新フラグを設定して循環を防ぐ
+      setCurrentFrame(externalCurrentFrame);
+    }
+  }, [externalCurrentFrame, currentFrame, isPlaying]);
 
-  // currentFrameの変更を親に通知とEAnimD同期
+  // currentFrameの変更を親に通知のみ（EAnimD同期は別の場所で処理）
   useEffect(() => {
     // 内部更新の場合はスキップ
     if (isInternalUpdateRef.current) {
@@ -700,17 +684,51 @@ export default function AnimationViewer({
     if (onFrameChange) {
       onFrameChange(currentFrame);
     }
-    
-    // アニメーション停止時でもフレーム変更で描画更新
-    if (!isPlaying && eAnimD && eAnimD.f !== currentFrame) {
-      eAnimD.setTimeAndUpdate(currentFrame, false, unitId); // maanimデータを適用
-      renderAnimation();
-    }
-  }, [currentFrame, onFrameChange, isPlaying, eAnimD, renderAnimation, unitId]);
+  }, [currentFrame, onFrameChange, isPlaying]);
 
+  // EAnimDフレーム同期（停止時のみ、デバウンス付き）
+  const frameUpdateTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const immediateUpdateRef = useRef<boolean>(false); // 即座更新フラグ
+  const externalSyncBlockedUntilRef = useRef<number>(0); // 外部同期ブロック期限
+  
   useEffect(() => {
-    render();
-  }, [render]);
+    if (!isPlaying && eAnimD && eAnimD.f !== currentFrame) {
+      // 即座更新フラグがある場合はデバウンスをスキップ
+      if (immediateUpdateRef.current) {
+        eAnimD.setTimeAndUpdate(currentFrame, false, `${unitId}-immediate`);
+        renderAnimation();
+        immediateUpdateRef.current = false;
+        return;
+      }
+      
+      // デバウンス処理でチャタリングを防ぐ
+      if (frameUpdateTimeoutRef.current) {
+        clearTimeout(frameUpdateTimeoutRef.current);
+      }
+      
+      frameUpdateTimeoutRef.current = setTimeout(() => {
+        if (eAnimD && eAnimD.f !== currentFrame) {
+          eAnimD.setTimeAndUpdate(currentFrame, false, `${unitId}-stopped`);
+          renderAnimation();
+        }
+        frameUpdateTimeoutRef.current = null;
+      }, 16); // 16ms（60FPS相当）でデバウンス
+    }
+    
+    return () => {
+      if (frameUpdateTimeoutRef.current) {
+        clearTimeout(frameUpdateTimeoutRef.current);
+        frameUpdateTimeoutRef.current = null;
+      }
+    };
+  }, [currentFrame, isPlaying, eAnimD, unitId, renderAnimation]);
+
+  // 初期描画のみ
+  useEffect(() => {
+    if (eAnimD && !isPlaying) {
+      render();
+    }
+  }, [eAnimD, isPlaying, render]);
 
 
 
@@ -719,10 +737,14 @@ export default function AnimationViewer({
       animationIdRef.current = requestAnimationFrame(animate);
     } else {
       cancelAnimationFrame(animationIdRef.current);
+      animationIdRef.current = 0; // リセット
     }
     
     return () => {
-      cancelAnimationFrame(animationIdRef.current);
+      if (animationIdRef.current !== 0) {
+        cancelAnimationFrame(animationIdRef.current);
+        animationIdRef.current = 0;
+      }
     };
   }, [isPlaying, animate]);
 
@@ -746,7 +768,6 @@ export default function AnimationViewer({
             const partSpriteKey = `0-${spriteId}`;
             newHiddenSprites.add(partSpriteKey);
           });
-          console.log(`Part 0のSpriteを非表示にしました:`, Array.from(newHiddenSprites));
           return newHiddenSprites;
         });
       }
@@ -873,14 +894,32 @@ export default function AnimationViewer({
               Frame {String(currentFrame).padStart(3, '0')}/{String(eAnimD ? eAnimD.len() : 0).padStart(3, '0')}
             </label>
             <button
-              onClick={() => setCurrentFrame(prev => prev > 0 ? prev - 1 : (eAnimD ? eAnimD.len() : 0))}
+              onClick={() => {
+                if (!eAnimD) return;
+                const maxFrame = eAnimD.len();
+                const newFrame = currentFrame > 0 ? currentFrame - 1 : maxFrame;
+                
+                // 外部同期を200msブロック
+                externalSyncBlockedUntilRef.current = Date.now() + 200;
+                immediateUpdateRef.current = true; // 即座更新フラグを設定
+                setCurrentFrame(newFrame);
+              }}
               className="text-sm text-gray-600 hover:text-gray-800 font-mono"
               disabled={isPlaying}
             >
               ◁
             </button>
             <button
-              onClick={() => setCurrentFrame(prev => prev < (eAnimD ? eAnimD.len() : 0) ? prev + 1 : 0)}
+              onClick={() => {
+                if (!eAnimD) return;
+                const maxFrame = eAnimD.len();
+                const newFrame = currentFrame < maxFrame ? currentFrame + 1 : 0;
+                
+                // 外部同期を200msブロック
+                externalSyncBlockedUntilRef.current = Date.now() + 200;
+                immediateUpdateRef.current = true; // 即座更新フラグを設定
+                setCurrentFrame(newFrame);
+              }}
               className="text-sm text-gray-600 hover:text-gray-800 font-mono"
               disabled={isPlaying}
             >
@@ -893,7 +932,14 @@ export default function AnimationViewer({
           min="0"
           max={eAnimD ? eAnimD.len() : 0}
           value={currentFrame}
-          onChange={(e) => setCurrentFrame(parseInt(e.target.value))}
+          onChange={(e) => {
+            const newFrame = parseInt(e.target.value);
+            
+            // 外部同期を200msブロック
+            externalSyncBlockedUntilRef.current = Date.now() + 200;
+            immediateUpdateRef.current = true; // 即座更新フラグを設定
+            setCurrentFrame(newFrame);
+          }}
           className="w-full"
           disabled={isPlaying}
         />

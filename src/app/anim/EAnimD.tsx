@@ -18,8 +18,14 @@ export class P {
     this.z = z;
   }
 
-  public static newP(x: number, y: number, z: number = 0): P {
-    return new P(x, y, z);
+  public static newP(x: number, y: number, z: number = 0): P;
+  public static newP(other: P): P;
+  public static newP(a: number | P, y?: number, z: number = 0): P {
+    if (typeof a === 'number') {
+      return new P(a, y || 0, z);
+    } else {
+      return new P(a.x, a.y, a.z);
+    }
   }
 
   public times(scalar: number): P;
@@ -44,7 +50,7 @@ export class P {
     return this;
   }
 
-  public static delete(): void {
+  public static delete(_p?: P): void {
     // TypeScriptでは実質的に何もしない（Java版のGC対応）
   }
 }
@@ -295,6 +301,7 @@ export class EAnimD extends EAnimI {
   private createEPartArray(): EPart[] {
     const entities: EPart[] = new Array(this.mamodel.n);
     
+    // 1. 全パーツのインスタンスを作成
     for (let i = 0; i < this.mamodel.n; i++) {
       entities[i] = new EPart(
         this.mamodel,
@@ -304,6 +311,16 @@ export class EAnimD extends EAnimI {
         i,
         entities
       );
+    }
+    
+    // 2. 親子関係を設定（全インスタンス作成後）
+    for (let i = 0; i < this.mamodel.n; i++) {
+      const parentId = this.mamodel.parts[i][0];
+      if (parentId >= 0 && parentId < entities.length) {
+        entities[i].fa = entities[parentId];
+      } else {
+        entities[i].fa = null;
+      }
     }
     
     return entities;

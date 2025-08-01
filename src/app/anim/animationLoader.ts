@@ -134,6 +134,43 @@ function convertImgCut(imgcutData: unknown[]): ImgCut {
 }
 
 /**
+ * Java版common/util/anim互換のscaleUnit自動検出
+ */
+function detectScaleUnit(mamodelData: unknown[]): number {
+  if (!mamodelData || mamodelData.length < 6) return 1000;
+  
+  const partsCount = Array.isArray(mamodelData[2]) ? mamodelData[2][0] : 0;
+  let maxScale = 0;
+  let scaleSum = 0;
+  let validParts = 0;
+
+  // 全パーツのScaleX/ScaleYを統計分析
+  for (let i = 0; i < partsCount && (3 + i) < mamodelData.length; i++) {
+    const partData = mamodelData[3 + i];
+    if (Array.isArray(partData) && partData.length >= 10) {
+      const scaleX = Math.abs(partData[8]);
+      const scaleY = Math.abs(partData[9]);
+      const maxPartScale = Math.max(scaleX, scaleY);
+      
+      if (maxPartScale > 0) {
+        maxScale = Math.max(maxScale, maxPartScale);
+        scaleSum += maxPartScale;
+        validParts++;
+      }
+    }
+  }
+
+  const avgScale = validParts > 0 ? scaleSum / validParts : 0;
+  
+  // tbcml互換の判定ロジック（実際のデータ分析結果に基づく）
+  if (maxScale >= 1000 || avgScale >= 500) {
+    return 1000;
+  } else {
+    return 100;
+  }
+}
+
+/**
  * tbcmlのmamodelデータをMaModelクラスに変換
  */
 function convertMaModel(mamodelData: unknown[]): MaModel {
@@ -186,8 +223,16 @@ function convertMaModel(mamodelData: unknown[]): MaModel {
     }
   }
   
-  // ints設定を飛ばす
-  currentIndex++; // [パーツ数+3] ints設定をスキップ
+  // scaleUnitを自動検出
+  const detectedScaleUnit = detectScaleUnit(mamodelData);
+  
+  // ints設定を読み込む（angleUnitとextraのみJSONから取得）
+  let ints = [detectedScaleUnit, 3600, 1000]; // scaleUnitは自動検出値を使用
+  const intsData = mamodelData[currentIndex];
+  if (Array.isArray(intsData) && intsData.length >= 3) {
+    ints = [detectedScaleUnit, intsData[1], intsData[2]]; // scaleUnitは検出値、angleUnitとextraはJSONから
+  }
+  currentIndex++; // 次の位置へ
   
   // strs1の数を取得
   const strs1Count = Array.isArray(mamodelData[currentIndex]) ? mamodelData[currentIndex][0] : 0;
@@ -207,7 +252,7 @@ function convertMaModel(mamodelData: unknown[]): MaModel {
   return new MaModel({
     n: parts.length,
     m: strs1Count, // 実際のstrs1数
-    ints: [1000, 3600, 1000], // [scale, angle, extra]
+    ints: ints, // 実際のJSONからのints値
     parts,
     confs: [[0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]], // デフォルトコンフィグ
     strs0,

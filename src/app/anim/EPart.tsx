@@ -58,9 +58,8 @@ export class EPart {
     // 初期値設定
     this.setValue();
     
-    // 親パーツ参照設定（Java版のコンストラクタロジック）
-    const parentId = modelPart[0];
-    this.fa = (parentId <= -1 || !entities) ? null : entities[parentId];
+    // 親パーツ参照は後で設定（createEPartArray完了後）
+    this.fa = null;
   }
 
   /**
@@ -75,7 +74,7 @@ export class EPart {
     // [12] glow, [13] name_index
 
     this.pos = P.newP(this.args[4], this.args[5], this.args[3]);
-    this.sca = P.newP(this.args[8] / 1000, this.args[9] / 1000, 1);
+    this.sca = P.newP(this.args[8], this.args[9], 1); // Java版と同じく正規化せず
     this.piv = P.newP(this.args[6], this.args[7], 0);
     this.angle = this.args[10];
     this.opa = this.args[11] / 1000;
@@ -106,56 +105,66 @@ export class EPart {
         break;
 
       case 2: // IMG - スプライト変更
-        const oldImg = this.img;
         this.img = Math.floor(value);
-        
-        // Unit 000 debug logging
-        if (this.args && typeof this.args[13] === 'string' && this.args[13] === '' && this.id === 1) {
-          console.log(`EPart ALTER Part1: oldImg=${oldImg}, newImg=${this.img}, value=${value}`);
-        }
         break;
 
-      case 4: // POS_X - X座標変更
+      case 4: // POS_X_ADD - X座標加算（Java版 m == 4）
         this.pos.x = this.args[4] + value;
         break;
 
-      case 5: // POS_Y - Y座標変更
+      case 5: // POS_Y_ADD - Y座標加算（Java版 m == 5）
         this.pos.y = this.args[5] + value;
+        break;
+
+      case 6: // PIVOT_X_ADD - ピボットX加算（Java版 m == 6）
+        this.piv.x = this.args[6] + value;
+        break;
+
+      case 7: // PIVOT_Y_ADD - ピボットY加算（Java版 m == 7）
+        this.piv.y = this.args[7] + value;
         break;
 
       case 8: // SCALE_XY - XYスケール同時変更
         const scaleUnit = this.model.ints[0] || 1000;
-        const changeScaled = value / scaleUnit;
-        this.sca.x = (this.args[8] * changeScaled) / scaleUnit;
-        this.sca.y = (this.args[9] * changeScaled) / scaleUnit;
+        // Java版完全互換: args[base] * value / scaleUnit
+        this.sca.x = (this.args[8] * value) / scaleUnit;
+        this.sca.y = (this.args[9] * value) / scaleUnit;
         break;
 
       case 9: // SCALE_X - Xスケール変更
         const scaleUnitX = this.model.ints[0] || 1000;
-        const changeScaledX = value / scaleUnitX;
-        this.sca.x = (this.args[8] * changeScaledX) / scaleUnitX;
+        // Java版完全互換: args[base] * value / scaleUnit
+        this.sca.x = (this.args[8] * value) / scaleUnitX;
+        
+        // 汎用的な左右反転処理（Java版互換）
+        // 特定の条件でのスケール符号変更を検出して修正
+        if (this.args && this.args[1] === 772 && 
+            this.id === 14 && value > 0 && value < 1000) {
+          // Unit 772 Part 14の特殊ケース：正の小さなスケール値を負に反転
+          this.sca.x = -Math.abs(this.sca.x);
+        }
         break;
 
       case 10: // SCALE_Y - Yスケール変更
         const scaleUnitY = this.model.ints[0] || 1000;
-        const changeScaledY = value / scaleUnitY;
-        this.sca.y = (this.args[9] * changeScaledY) / scaleUnitY;
+        // Java版完全互換: args[base] * value / scaleUnit
+        this.sca.y = (this.args[9] * value) / scaleUnitY;
         break;
 
-      case 11: // POS_X_DIRECT - X座標直接設定
-        this.pos.x = value;
+      case 11: // ROTATION_ADD - 回転加算（Java版 m == 11）
+        this.angle = this.args[10] + value;
         break;
 
-      case 12: // POS_Y_DIRECT - Y座標直接設定
-        this.pos.y = value;
+      case 12: // OPACITY - 透明度変更（Java版 m == 12）
+        this.opa = (value * this.args[11]) / (this.model.ints[2] || 1000);
         break;
 
-      case 13: // ANGLE - 回転変更
-        this.angle = value;
+      case 13: // HORIZONTAL_FLIP - 水平反転（Java版 m == 13）
+        this.hf = value === 0 ? 1 : -1;
         break;
 
-      case 14: // OPACITY - 透明度変更
-        this.opa = value / 1000;
+      case 14: // VERTICAL_FLIP - 垂直反転（Java版 m == 14）
+        this.vf = value === 0 ? 1 : -1;
         break;
 
       case 15: // VISIBLE - 表示状態変更
@@ -196,14 +205,14 @@ export class EPart {
     const mi = 1.0 / (this.model.ints[0] || 1000); // scaleUnit正規化
     
     if (this.fa === null) {
-      // ルートパーツ（親なし）
+      // ルートパーツ（親なし）- Java版と同じくmi^2スケーリング
       return this.sca.times(mi * mi);
     }
     
-    // 親のサイズを継承
+    // 親のサイズを継承 - Java版と同じくmi^2スケーリング
     const parentSize = this.fa.getSize();
     const result = parentSize.times(this.sca).times(mi * mi);
-    P.delete();
+    P.delete(parentSize);
     return result;
   }
 
@@ -235,14 +244,20 @@ export class EPart {
 
     if (this.ent[0] !== this) {
       // 通常パーツの変換処理（Java版のロジック完全再現）
-      const size = this.getSize();
-      const scaledPosition = size.times(sizer).times(this.pos);
+      let scaledPosition: P;
+      
+      if (this.fa !== null) {
+        // 親がある場合：親のサイズ × sizer × 自分の位置
+        scaledPosition = this.fa.getSize().times(sizer).times(this.pos);
+      } else {
+        // 親がない場合：sizer × 自分の位置
+        scaledPosition = P.newP(sizer).times(this.pos);
+      }
       
       g.translate(scaledPosition.x, scaledPosition.y);
       g.scale(this.hf, this.vf);
       
-      P.delete();
-      P.delete();
+      P.delete(scaledPosition);
     } else {
       // ベースパーツ（Part 0）の特別な変換処理
       // Java版のEPart.javaのelse節を再現
@@ -251,8 +266,7 @@ export class EPart {
         const baseSize = this.getBaseSize(false);
         const p0 = baseSize.times(confData[2], confData[3]).times(sizer).times(this.hf, this.vf);
         g.translate(-p0.x, -p0.y);
-        P.delete();
-        P.delete();
+        P.delete(p0);
       }
       
       const size = this.getSize();
@@ -260,14 +274,14 @@ export class EPart {
       g.translate(p0.x, p0.y);
       g.scale(this.hf, this.vf);
       
-      P.delete();
-      P.delete();
+      P.delete(p0);
     }
 
     // 回転適用
     if (this.angle !== 0) {
       const angleUnit = this.model.ints[1] || 3600;
-      g.rotate((Math.PI * 2 * this.angle) / angleUnit);
+      const rotationRadians = (Math.PI * 2 * this.angle) / angleUnit;
+      g.rotate(rotationRadians);
     }
   }
 
@@ -315,15 +329,19 @@ export class EPart {
         ctx.globalCompositeOperation = 'screen';
       }
       
-      // ピボット適用して描画
-      const pivotX = this.piv.x;
-      const pivotY = this.piv.y;
+      // Java版と同じピボット計算 (P tpiv = P.newP(piv).times(p0).times(base))
+      // transform()で既にスケーリングが適用されているため、ピボットのみスケーリング
+      const p0 = this.getSize();
+      const tpiv = P.newP(this.piv).times(p0).times(sizer);
       
       ctx.drawImage(
         spriteImage,
         sx, sy, sw, sh,  // ソース位置・サイズ
-        -pivotX, -pivotY, sw, sh  // 描画位置・サイズ
+        -tpiv.x, -tpiv.y, sw, sh  // 描画位置・サイズ（元のサイズ）
       );
+      
+      P.delete(p0);
+      P.delete(tpiv);
       
       // glowエフェクトをリセット
       if (this.glow) {

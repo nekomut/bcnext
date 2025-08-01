@@ -591,6 +591,7 @@ export default function AnimationViewer({
       ctx.translate(canvas.width / 2 + offsetX, canvas.height / 2 + offsetY);
       ctx.scale(zoom, zoom);
       
+      
       // 参照線描画
       if (showRefLines) {
         ctx.strokeStyle = '#ff0000';

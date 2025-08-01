@@ -41,6 +41,7 @@ export class EPart {
   public extType: number = 0;   // エフェクト拡張タイプ
   public extendX: number = 0;   // X方向拡張値
   public extendY: number = 0;   // Y方向拡張値
+  public gsca: number = 1000;   // グローバルスケール（Java版gsca）
 
   constructor(
     model: MaModel,
@@ -82,6 +83,7 @@ export class EPart {
     this.layer = this.args[3]; // Z値をレイヤーとして使用
     this.glow = this.args[12] === 1;
     this.visible = true;
+    this.gsca = this.model.ints[0] || 1000;  // Java版と同じgsca初期化
     
     // 反転フラグリセット
     this.hf = 1;
@@ -190,6 +192,10 @@ export class EPart {
       case 52: // EXT_Y - Java版Y方向拡張
         this.extendY = value;
         break;
+        
+      case 53: // GSCA - グローバルスケール（Java版 m == 53）
+        this.gsca = value;
+        break;
 
       default:
         console.warn(`EPart: Unknown modifier type: ${modifType}`);
@@ -205,13 +211,13 @@ export class EPart {
     const mi = 1.0 / (this.model.ints[0] || 1000); // scaleUnit正規化
     
     if (this.fa === null) {
-      // ルートパーツ（親なし）- Java版と同じくmi^2スケーリング
-      return this.sca.times(mi * mi);
+      // ルートパーツ（親なし）- Java版と同じくgsca * mi^2スケーリング
+      return this.sca.times(this.gsca * mi * mi);
     }
     
-    // 親のサイズを継承 - Java版と同じくmi^2スケーリング
+    // 親のサイズを継承 - Java版と同じくgsca * mi^2スケーリング
     const parentSize = this.fa.getSize();
-    const result = parentSize.times(this.sca).times(mi * mi);
+    const result = parentSize.times(this.sca).times(this.gsca * mi * mi);
     P.delete(parentSize);
     return result;
   }
@@ -265,6 +271,8 @@ export class EPart {
         const confData = this.model.confs[0];
         const baseSize = this.getBaseSize(false);
         const p0 = baseSize.times(confData[2], confData[3]).times(sizer).times(this.hf, this.vf);
+        
+        
         g.translate(-p0.x, -p0.y);
         P.delete(p0);
       }
@@ -307,7 +315,7 @@ export class EPart {
    */
   public drawPart(
     ctx: CanvasRenderingContext2D,
-    origin: P,
+    _origin: P,
     sizer: P,
     spriteImage: HTMLImageElement | null,
     imgcut: { cuts?: number[][]; } | null
@@ -329,19 +337,31 @@ export class EPart {
         ctx.globalCompositeOperation = 'screen';
       }
       
-      // Java版と同じピボット計算 (P tpiv = P.newP(piv).times(p0).times(base))
-      // transform()で既にスケーリングが適用されているため、ピボットのみスケーリング
+      // Java版と同じピボット・スケール計算 (P tpiv = P.newP(piv).times(p0).times(base))
+      // Java版 EPart.java:240-241の完全再現
       const p0 = this.getSize();
       const tpiv = P.newP(this.piv).times(p0).times(sizer);
+      const sc = P.newP(sw, sh).times(p0).times(sizer);  // Java版と同じスプライトサイズスケーリング
       
-      ctx.drawImage(
-        spriteImage,
-        sx, sy, sw, sh,  // ソース位置・サイズ
-        -tpiv.x, -tpiv.y, sw, sh  // 描画位置・サイズ（元のサイズ）
-      );
+      // Safety check for valid scale values - also check for extremely small values
+      if (!isFinite(sc.x) || !isFinite(sc.y) || sc.x <= 0 || sc.y <= 0 || sc.x < 0.01 || sc.y < 0.01) {
+        console.warn(`Invalid or too small scale values: sc=(${sc.x}, ${sc.y}), p0=(${p0.x}, ${p0.y}), sizer=(${sizer.x}, ${sizer.y}), using original size`);
+        ctx.drawImage(
+          spriteImage,
+          sx, sy, sw, sh,  // ソース位置・サイズ
+          -tpiv.x, -tpiv.y, sw, sh  // 描画位置・サイズ（元のサイズ）
+        );
+      } else {
+        ctx.drawImage(
+          spriteImage,
+          sx, sy, sw, sh,  // ソース位置・サイズ
+          -tpiv.x, -tpiv.y, sc.x, sc.y  // 描画位置・サイズ（スケール適用）
+        );
+      }
       
       P.delete(p0);
       P.delete(tpiv);
+      P.delete(sc);
       
       // glowエフェクトをリセット
       if (this.glow) {

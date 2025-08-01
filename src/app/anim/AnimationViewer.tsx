@@ -65,6 +65,9 @@ function SpritePreviewCanvas({ spriteImage, selectedSpriteId, selectedForm, anim
     <canvas
       ref={canvasRef}
       className="w-full object-contain"
+      style={{
+        maxHeight: spriteImage ? `${spriteImage.width * 3.232}px` : 'auto'
+      }}
     />
   );
 }

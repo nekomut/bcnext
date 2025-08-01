@@ -137,6 +137,7 @@ export default function AnimationViewer({
     
     const sprites = new Set<number>();
     let hasAnimationSprites = false;
+    let isUsedInAnimation = false;
     
     // 1. アニメーションデータから使用されるスプライトを収集
     const maanim = animationData[selectedForm]?.maanim?.[selectedAnimation];
@@ -145,15 +146,19 @@ export default function AnimationViewer({
         const animPartId = animPart.ints[0];
         const modifType = animPart.ints[1];
         
-        // SPRITE modification (type 2) をチェック
-        if (animPartId === partId && modifType === 2) {
-          hasAnimationSprites = true;
-          animPart.moves.forEach(move => {
-            const spriteId = move[1];
-            if (spriteId >= 0) {
-              sprites.add(spriteId);
-            }
-          });
+        if (animPartId === partId) {
+          isUsedInAnimation = true;
+          
+          // SPRITE modification (type 2) をチェック
+          if (modifType === 2) {
+            hasAnimationSprites = true;
+            animPart.moves.forEach(move => {
+              const spriteId = move[1];
+              if (spriteId >= 0) {
+                sprites.add(spriteId);
+              }
+            });
+          }
         }
       });
     }
@@ -166,10 +171,26 @@ export default function AnimationViewer({
       }
     }
     
-    // 3. mamodelのベーススプライトID（アニメーションスプライトがない場合のみ）
-    if (!hasAnimationSprites) {
+    // 3. Part#000の特別処理 - 常にmamodelのベーススプライトを表示
+    if (partId === 0) {
       const mamodel = animationData[selectedForm]?.mamodel;
-      if (partId > 0 && mamodel?.parts[partId]) {
+      if (mamodel?.parts[partId]) {
+        const baseCutId = mamodel.parts[partId][2];
+        if (baseCutId >= 0) {
+          sprites.add(baseCutId);
+        }
+      }
+    }
+    
+    // 4. アニメーションで使用されないパーツは表示しない
+    if (!isUsedInAnimation && partId !== 0) {
+      return [];
+    }
+    
+    // 5. SPRITE変更がなく、アニメーションで使用されるパーツはベーススプライトを表示
+    if (!hasAnimationSprites && isUsedInAnimation && sprites.size === 0 && partId !== 0) {
+      const mamodel = animationData[selectedForm]?.mamodel;
+      if (mamodel?.parts[partId]) {
         const baseCutId = mamodel.parts[partId][2];
         if (baseCutId >= 0) {
           sprites.add(baseCutId);
@@ -179,6 +200,29 @@ export default function AnimationViewer({
     
     return Array.from(sprites).sort((a, b) => a - b);
   }, [animationData, selectedForm, selectedAnimation, eAnimD]);
+
+  // パーツがopacity=0かどうかを判定する関数
+  const isPartOpacityZero = useCallback((partId: number): boolean => {
+    const maanim = animationData[selectedForm]?.maanim?.[selectedAnimation];
+    if (!maanim) return false;
+    
+    let hasOpacityZero = false;
+    maanim.parts.forEach(animPart => {
+      const animPartId = animPart.ints[0];
+      const modifType = animPart.ints[1];
+      
+      if (animPartId === partId && modifType === 12) {
+        // OPACITY modification (type 12) をチェック
+        animPart.moves.forEach(move => {
+          if (move[1] === 0) {
+            hasOpacityZero = true;
+          }
+        });
+      }
+    });
+    
+    return hasOpacityZero;
+  }, [animationData, selectedForm, selectedAnimation]);
 
   const handlePartToggle = useCallback((partId: number, checked: boolean) => {
     // Part#000は常に表示されるため、操作を無視
@@ -569,8 +613,11 @@ export default function AnimationViewer({
               spriteShouldBeVisible = !hiddenSprites.has(partSpriteKey);
             }
             
-            // 最終的な表示状態 = パーツ表示 AND スプライト表示
-            const finalVisibility = partShouldBeVisible && spriteShouldBeVisible;
+            // opacity=0のパーツは表示しない（../common/util/anim と同じ動作）
+            const isOpacityZero = isPartOpacityZero(partId);
+            
+            // 最終的な表示状態 = パーツ表示 AND スプライト表示 AND opacity非ゼロ
+            const finalVisibility = partShouldBeVisible && spriteShouldBeVisible && !isOpacityZero;
             part.setVisibleRecursive(finalVisibility);
           }
         }
@@ -582,7 +629,7 @@ export default function AnimationViewer({
       
       ctx.restore();
     });
-  }, [eAnimD, offsetX, offsetY, zoom, showRefLines, hiddenParts, hiddenSprites]);
+  }, [eAnimD, offsetX, offsetY, zoom, showRefLines, hiddenParts, hiddenSprites, isPartOpacityZero]);
 
   // 描画処理
   const render = useCallback(() => {
@@ -1078,12 +1125,15 @@ export default function AnimationViewer({
                         const partSpriteKey = `${partId}-${spriteId}`;
                         const isDisplayed = part.img === spriteId && part.visible && !hiddenParts.has(partId) && !hiddenSprites.has(partSpriteKey);
                         
-                        // Simplified sprite usage check - only currently displayed sprites are considered "used"
-                        const isSpriteUsed = isPartActive && isDisplayed;
+                        // opacity=0のパーツかチェック
+                        const isOpacityZero = isPartOpacityZero(partId);
+                        
+                        // スプライト使用状況の判定
+                        const isSpriteUsed = isPartActive && (isDisplayed || !isOpacityZero);
                         
                         return (
                           <div key={`sprite-${partId}-${spriteIndex}`} 
-                               className={`py-0 my-0 flex items-center gap-1 font-mono text-xs ${isDisplayed ? 'text-green-500' : ''} ${!isSpriteUsed ? 'opacity-30' : ''}`}
+                               className={`py-0 my-0 flex items-center gap-1 font-mono text-xs ${isDisplayed && !isOpacityZero ? 'text-green-500' : ''} ${isOpacityZero ? 'text-red-400' : ''} ${!isSpriteUsed ? 'opacity-30' : ''}`}
                                style={{ paddingLeft: '28px' }}>
                             <input
                               type="checkbox"
@@ -1091,7 +1141,11 @@ export default function AnimationViewer({
                               checked={!hiddenSprites.has(partSpriteKey)}
                               onChange={(e) => handleSpriteToggle(spriteId, e.target.checked, partId)}
                             />
-                            <span className="font-mono text-xs">Sprite#{spriteId.toString().padStart(3, '0')}{isDisplayed ? ' ●' : ' ○'}</span>
+                            <span className="font-mono text-xs">
+                              Sprite#{spriteId.toString().padStart(3, '0')}
+                              {isOpacityZero ? ' ✕' : (isDisplayed ? ' ●' : ' ○')}
+                              {isOpacityZero ? ' (opacity=0)' : ''}
+                            </span>
                             {isDisplayed && (
                               <span className="font-mono text-[10px] text-amber-500">
                                 ({formatCoordinate(part.pos?.x)}, {formatCoordinate(part.pos?.y)}, {formatCoordinate(part.img)})

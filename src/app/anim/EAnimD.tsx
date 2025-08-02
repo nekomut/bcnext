@@ -75,6 +75,7 @@ export class EAnimD extends EAnimI {
     super(animInterface, mamodel);
     this.ma = maanim;
     this.maModel = mamodel; // 位置調整用に参照を保持
+    // Java版準拠：コンストラクタでorganize()を呼び出す
     this.organize();
   }
 
@@ -180,10 +181,16 @@ export class EAnimD extends EAnimI {
   }
 
   /**
-   * 時間設定（Java版setTime()）
+   * 時間設定（Java版setTime()完全再現）
+   * Java版: setup(); f = value; ma.update(f, this, true);
    */
   public setTime(value: number): void {
+    // Java版準拠：setup()→フレーム設定→update()の順序
+    this.setup();
     this.f = value;
+    if (this.ent) {
+      this.ma.updateJava(this.f, this.ent, true, this.performanceMode);
+    }
   }
 
   /**
@@ -310,22 +317,49 @@ export class EAnimD extends EAnimI {
   }
 
   /**
-   * MaModel.arrange()の実装を完了
+   * Java版EAnimI.organize()完全再現
+   * Java版準拠：ent配列をコピーしてソート、setup()で動的Z値変更を反映
    */
   public organize(): void {
-    // MaModel.arrangeJava()を呼び出してEPart配列を生成
+    // Java版: ent = mamodel.arrange(this);
     this.ent = this.createEPartArray();
+    
+    // Java版準拠：setValue()でパーツ初期化
+    if (this.ent) {
+      for (const part of this.ent) {
+        part.setValue();
+      }
+    }
+    
+    // Java版: order = new EPart[ent.length]; for(...) order[i] = ent[i];
     this.order = this.ent ? [...this.ent] : null;
+    
+    // Java版準拠：初期Z値でソート実行
     this.sort();
+    
+    // Java版準拠：organize()完了後にsetup()実行でアニメーション状態を初期化
+    this.setup();
+    
+    // 重要：Java版準拠でsetup()後に再度ソート実行
+    // setup()中のma.update()でZ値が動的に変更される可能性があるため
+    // その変更を反映したソート順序を確定
+    this.sort();
+    
+    // Java版準拠：この時点でorderの順序を最終確定
+    // 以降のアニメーション中はこの順序を維持（安定ソート）
+    if (this.order) {
+      this.order = Object.freeze([...this.order]);
+    }
   }
 
   /**
    * EPart配列の生成（Java版MaModel.arrange()ロジック）
+   * setValue()はorganize()で一元実行
    */
   private createEPartArray(): EPart[] {
     const entities: EPart[] = new Array(this.mamodel.n);
     
-    // 1. 全パーツのインスタンスを作成
+    // 1. 全パーツのインスタンスを作成（setValue()は後で実行）
     for (let i = 0; i < this.mamodel.n; i++) {
       entities[i] = new EPart(
         this.mamodel,
@@ -595,28 +629,18 @@ export class EAnimD extends EAnimI {
   }
 
   /**
-   * Java版optimizeRenderOrder()メソッド - 描画順序最適化
+   * Java版準拠：描画順序は初期化時のみ決定、その後は変更しない
+   * 削除：optimizeRenderOrder() - Java版には存在しない
    */
-  public optimizeRenderOrder(): void {
-    if (!this.order) return;
-    
-    // Z値とレイヤーベースでソート
-    this.order.sort((a, b) => {
-      const zDiff = a.pos.z - b.pos.z;
-      if (zDiff !== 0) return zDiff;
-      
-      return a.layer - b.layer;
-    });
-  }
 
   /**
    * Java版changeAnim()メソッド - 動的アニメーション切り替え
    */
   public changeAnim(newMaAnim: import('./MaAnim').MaAnim): void {
     this.ma = newMaAnim;
-    this.f = 0; // フレームをリセット
+    this.f = -1; // Java版準拠：フレームを-1にリセット
     
-    // EPart配列を再構築
+    // EPart配列を再構築（ソートもorganize()内で実行）
     this.organize();
     
     // 初期状態を設定
@@ -638,18 +662,13 @@ export class EAnimD extends EAnimI {
 
   /**
    * Java版setup()メソッド - 初期化処理の分離
+   * Java版準拠：ma.update(0, this, false)を実行
    */
   public setup(): void {
-    this.organize();
-    this.f = 0;
-    
+    // Java版: ma.update(0, this, false);
     if (this.ent) {
-      for (const part of this.ent) {
-        part.setValue();
-      }
+      this.ma.updateJava(0, this.ent, false, this.performanceMode);
     }
-    
-    this.sort();
   }
 
   /**

@@ -21,9 +21,9 @@ export class EPart {
   public glow: boolean = false;
 
   // 座標・変換（Java版と同じフィールド名）
-  public pos: P;
-  public sca: P;
-  public piv: P;
+  public pos: P = new P(0, 0, 0);
+  public sca: P = new P(0, 0, 0);
+  public piv: P = new P(0, 0, 0);
   public angle: number = 0;
   public opacity: number = 255;  // opacity値（Java版互換）
 
@@ -59,8 +59,8 @@ export class EPart {
     this.model = model;
     this.args = [...modelPart];
     
-    // 初期値設定
-    this.setValue();
+    // 初期値設定は外部（organize()）で実行
+    // Java版準拠：値設定のタイミングを統一
     
     // 親パーツ参照は後で設定（createEPartArray完了後）
     this.fa = null;
@@ -122,7 +122,9 @@ export class EPart {
         break;
 
       case 3: // Z_DEPTH - Z深度変更（Java版 m == 3）
+        // Java版準拠：Z値変更は記録するが、描画順序(order)には影響しない
         this.z = value * this.ent.length + this.ind;
+        // 注意：Java版では描画順序配列(order)は初期化時に確定され、その後は不変
         break;
 
       case 4: // POS_X_ADD - X座標加算（Java版 m == 4）
@@ -315,23 +317,13 @@ export class EPart {
   }
 
   /**
-   * Z値・レイヤーベース比較（Java版compareTo完全再現）
+   * Java版compareTo完全再現 - Z値のみでソート
    * 描画順序決定のためのソート用
    */
   public compareTo(other: EPart): number {
-    // Z値での比較を優先
-    if (other.pos.z !== this.pos.z) {
-      return this.pos.z - other.pos.z;
-    }
-    
-    // Z値が同じ場合はレイヤーで比較
-    if (this.layer !== other.layer) {
-      return this.layer - other.layer;
-    }
-    
-    // Z値・レイヤーが同じ場合は配列インデックスで安定ソート
-    // より小さいインデックス（先に定義されたパーツ）が奥に描画される
-    return this.ind - other.ind;
+    // Java版 EPart.java:115 の Float.compare(z, o.z) を完全再現
+    // Z値のみで比較、追加の条件は行わない
+    return this.z - other.z;
   }
 
 
@@ -356,12 +348,23 @@ export class EPart {
     }
     
     try {
-      // imgcutからスプライト情報を取得
+      // Java版の a.parts(img) == null チェックを完全再現
+      // imgcutからスプライト情報を取得、範囲外の場合は描画しない
       if (!imgcut.cuts || this.img >= imgcut.cuts.length) {
         return;
       }
       
-      const [sx, sy, sw, sh] = imgcut.cuts[this.img];
+      // imgcut.cuts[this.img]が有効なスプライト定義かチェック
+      const spriteData = imgcut.cuts[this.img];
+      if (!spriteData || spriteData.length < 4) {
+        return;
+      }
+      
+      // スプライトサイズが0以下の場合も描画しない（Java版準拠）
+      const [sx, sy, sw, sh] = spriteData;
+      if (sw <= 0 || sh <= 0) {
+        return;
+      }
       
       // glowエフェクト処理
       if (this.glow) {
@@ -715,16 +718,24 @@ export class EPart {
     spriteImage: HTMLImageElement | null,
     imgcut: { cuts?: number[][]; } | null
   ): void {
-    if (!this.visible || this.img < 0 || !spriteImage || !imgcut || this.extType === 0) {
+    // Java版準拠：visibleチェックを削除
+    if (this.img < 0 || !spriteImage || !imgcut || this.extType === 0) {
       return;
     }
     
     try {
+      // Java版準拠の範囲外スプライトチェック
       if (!imgcut.cuts || this.img >= imgcut.cuts.length) {
         return;
       }
       
-      const [sx, sy, sw, sh] = imgcut.cuts[this.img];
+      // 有効なスプライトデータかチェック
+      const spriteData = imgcut.cuts[this.img];
+      if (!spriteData || spriteData.length < 4) {
+        return;
+      }
+      
+      const [sx, sy, sw, sh] = spriteData;
       
       // 背景エフェクト用の透明度調整
       const bgOpacity = this.opa() * 0.3; // 背景は30%の透明度
@@ -764,7 +775,8 @@ export class EPart {
     imgcut: { cuts?: number[][]; } | null,
     maxSpriteId: number
   ): void {
-    if (!this.visible || this.img < 0 || !spriteImage || !imgcut || this.extType !== 2) {
+    // Java版準拠：visibleチェックを削除
+    if (this.img < 0 || !spriteImage || !imgcut || this.extType !== 2) {
       return;
     }
     
@@ -813,7 +825,8 @@ export class EPart {
     spriteImage: HTMLImageElement | null,
     imgcut: { cuts?: number[][]; } | null
   ): void {
-    if (!this.visible || this.img < 0 || !spriteImage || !imgcut || 
+    // Java版準拠：visibleチェックを削除
+    if (this.img < 0 || !spriteImage || !imgcut || 
         this.extType !== 3 || (this.extendX <= 0 && this.extendY <= 0)) {
       return;
     }

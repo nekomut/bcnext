@@ -72,18 +72,21 @@ export abstract class EAnimI extends BattleObj {
   public abstract update(rotate: boolean): void;
 
   /**
-   * パーツ配列初期化（Java版organize相当）
-   * MaModel.arrange()を呼び出してEPart配列を生成
+   * パーツ配列初期化（Java版EAnimI.organize()完全再現）
+   * Java版: ent = mamodel.arrange(this); order = new EPart[ent.length]; for(...) order[i] = ent[i]; sort();
    */
   public organize(): void {
-    this.ent = this.mamodel.arrangeJava() as EPart[];
-    this.order = this.ent ? [...this.ent] : null;
-    this.sort();
+    // EAnimDがオーバーライドしない場合のデフォルト実装
+    if (!this.ent) {
+      this.ent = this.mamodel.arrangeJava() as EPart[];
+      this.order = this.ent ? [...this.ent] : null;
+      this.sort();
+    }
   }
 
   /**
    * Z値ベースクイックソート（Java版sort完全再現）
-   * フレーム毎に呼び出されて描画順序を決定
+   * Java版準拠：初期化時のみ実行、アニメーション中は安定ソート維持
    */
   public sort(): void {
     if (this.order && this.order.length > 0) {

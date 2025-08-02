@@ -15,6 +15,7 @@ export class EPart {
   public ind: number;              // パーツインデックス（Java版のind）
   public id: number;               // パーツID（Java版のid）
   public img: number;              // spriteId (Java版のimg)
+  public z: number;                // Z深度（Java版のz）
   public layer: number;
   public visible: boolean = true;
   public glow: boolean = false;
@@ -93,6 +94,7 @@ export class EPart {
     this.angle = this.args[10];
     this.opacity = this.args[11];
     this.img = this.args[2];
+    this.z = this.args[3] * this.ent.length + this.ind; // Java版互換のZ深度計算
     this.layer = this.args[3]; // Z値をレイヤーとして使用
     this.glow = this.args[12] === 1;
     this.visible = true;
@@ -117,6 +119,10 @@ export class EPart {
 
       case 2: // IMG - スプライト変更
         this.img = Math.floor(value);
+        break;
+
+      case 3: // Z_DEPTH - Z深度変更（Java版 m == 3）
+        this.z = value * this.ent.length + this.ind;
         break;
 
       case 4: // POS_X_ADD - X座標加算（Java版 m == 4）

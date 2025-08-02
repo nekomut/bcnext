@@ -12,8 +12,9 @@ import { P } from './EAnimD';
  */
 export class EPart {
   // 基本プロパティ
-  public id: number;
-  public img: number;  // spriteId (Java版のimg)
+  public ind: number;              // パーツインデックス（Java版のind）
+  public id: number;               // パーツID（Java版のid）
+  public img: number;              // spriteId (Java版のimg)
   public layer: number;
   public visible: boolean = true;
   public glow: boolean = false;
@@ -23,7 +24,7 @@ export class EPart {
   public sca: P;
   public piv: P;
   public angle: number = 0;
-  public opa: number = 1;  // opacity (Java版のopa)
+  public opacity: number = 255;  // opacity値（Java版互換）
 
   // 親子関係（Java版のfa, entに対応）
   public fa: EPart | null = null;  // 親パーツ参照
@@ -51,7 +52,8 @@ export class EPart {
     index: number, 
     entities: EPart[]
   ) {
-    this.id = index;
+    this.ind = index;                // パーツインデックス（Java版互換）
+    this.id = modelPart[1];          // パーツID（args[1]から設定）
     this.ent = entities;
     this.model = model;
     this.args = [...modelPart];
@@ -78,7 +80,7 @@ export class EPart {
     this.sca = P.newP(this.args[8], this.args[9], 1); // Java版と同じく正規化せず
     this.piv = P.newP(this.args[6], this.args[7], 0);
     this.angle = this.args[10];
-    this.opa = this.args[11] / 1000;
+    this.opacity = this.args[11];
     this.img = this.args[2];
     this.layer = this.args[3]; // Z値をレイヤーとして使用
     this.glow = this.args[12] === 1;
@@ -158,7 +160,7 @@ export class EPart {
         break;
 
       case 12: // OPACITY - 透明度変更（Java版 m == 12）
-        this.opa = (value * this.args[11]) / (this.model.ints[2] || 1000);
+        this.opacity = value * this.args[11] / (this.model.ints[2] || 1000);
         break;
 
       case 13: // HORIZONTAL_FLIP - 水平反転（Java版 m == 13）
@@ -201,6 +203,20 @@ export class EPart {
         console.warn(`EPart: Unknown modifier type: ${modifType}`);
         break;
     }
+  }
+
+  /**
+   * Java版opa()メソッド完全再現
+   * 親パーツの透明度を継承した最終的な透明度を計算
+   */
+  public opa(): number {
+    if (this.opacity === 0) {
+      return 0;
+    }
+    if (this.fa !== null) {
+      return this.fa.opa() * this.opacity / (this.model.ints[2] || 1000);
+    }
+    return this.opacity / (this.model.ints[2] || 1000);
   }
 
   /**
@@ -320,7 +336,11 @@ export class EPart {
     spriteImage: HTMLImageElement | null,
     imgcut: { cuts?: number[][]; } | null
   ): void {
-    if (!this.visible || this.img < 0 || !spriteImage || !imgcut) {
+    // Java版EPart.java:232条件チェック完全再現
+    // if (img < 0 || id < 0 || opa() < CommonStatic.getConfig().deadOpa * 0.01 + 1e-5 || a.parts(img) == null)
+    const deadOpaThreshold = 10 * 0.01 + 1e-5; // Java版のdeadOpa閾値（デフォルト値=10）
+    
+    if (this.img < 0 || this.id < 0 || this.opa() < deadOpaThreshold || !spriteImage || !imgcut) {
       return;
     }
     
@@ -389,16 +409,18 @@ export class EPart {
       null, // animInterface
       [...this.args],
       '',
-      this.id,
+      this.ind,  // indexパラメータに正しくindを渡す
       this.ent
     );
     
     // 現在の状態をコピー
+    cloned.id = this.id;  // idを正しくコピー
+    cloned.img = this.img;
     cloned.pos = P.newP(this.pos.x, this.pos.y, this.pos.z);
     cloned.sca = P.newP(this.sca.x, this.sca.y, this.sca.z);
     cloned.piv = P.newP(this.piv.x, this.piv.y, this.piv.z);
     cloned.angle = this.angle;
-    cloned.opa = this.opa;
+    cloned.opacity = this.opacity;
     cloned.visible = this.visible;
     cloned.hf = this.hf;
     cloned.vf = this.vf;
@@ -486,7 +508,7 @@ export class EPart {
    */
   public isVisibleFull(): boolean {
     // 基本的な表示判定
-    if (!this.visible || this.img < 0 || this.opa <= 0) {
+    if (!this.visible || this.img < 0 || this.opa() <= 0) {
       return false;
     }
     
@@ -616,7 +638,7 @@ export class EPart {
    * Java版setOpacityRecursive()メソッド - 再帰的透明度設定
    */
   public setOpacityRecursive(opacity: number): void {
-    this.opa = opacity;
+    this.opacity = opacity;
     
     const children = this.getChildParts();
     for (const child of children) {
@@ -658,7 +680,7 @@ export class EPart {
       const [sx, sy, sw, sh] = imgcut.cuts[this.img];
       
       // 背景エフェクト用の透明度調整
-      const bgOpacity = this.opa * 0.3; // 背景は30%の透明度
+      const bgOpacity = this.opa() * 0.3; // 背景は30%の透明度
       
       ctx.save();
       ctx.globalAlpha = bgOpacity;
@@ -711,7 +733,7 @@ export class EPart {
       const [sx, sy, sw, sh] = imgcut.cuts[randomSpriteId];
       
       // ランダム効果のための透明度とサイズ変化
-      const randomOpacity = this.opa * (0.7 + Math.random() * 0.3);
+      const randomOpacity = this.opa() * (0.7 + Math.random() * 0.3);
       const randomScale = 0.9 + Math.random() * 0.2;
       
       ctx.save();
@@ -761,7 +783,7 @@ export class EPart {
       const repeatY = Math.max(1, this.extendY);
       
       ctx.save();
-      ctx.globalAlpha = this.opa;
+      ctx.globalAlpha = this.opa();
       
       for (let x = 0; x < repeatX; x++) {
         for (let y = 0; y < repeatY; y++) {
@@ -821,7 +843,7 @@ export class EPart {
       case 13: // ROTATION
         return this.angle;
       case 14: // OPACITY
-        return this.opa * 1000;
+        return this.opa() * 1000;
       case 2: // SPRITE_CHANGE
         return this.img;
       case 15: // VISIBLE

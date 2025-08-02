@@ -452,8 +452,8 @@ export class EAnimD extends EAnimI {
       );
       
       // 透明度適用
-      if (part.opa < 1) {
-        ctx.globalAlpha = part.opa;
+      if (part.opa() < 1) {
+        ctx.globalAlpha = part.opa();
       }
       
       // スプライト描画

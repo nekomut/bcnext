@@ -809,6 +809,19 @@ export default function AnimationViewer({
     };
   }, [eAnimD]);
 
+  // デバッグ情報をwindowに公開
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      (window as typeof window & { animDebugInfo?: Record<string, unknown> }).animDebugInfo = {
+        eAnimD,
+        selectedForm,
+        selectedAnimation,
+        currentFrame,
+        animationData: animationData[selectedForm]
+      };
+    }
+  }, [eAnimD, selectedForm, selectedAnimation, currentFrame, animationData]);
+
   // Part 0のスプライトを初期状態で非表示にする
   useEffect(() => {
     if (animationData[selectedForm] && animationData[selectedForm].mamodel) {

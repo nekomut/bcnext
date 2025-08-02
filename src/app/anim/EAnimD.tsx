@@ -81,6 +81,7 @@ export class EAnimD extends EAnimI {
   /**
    * フレーム更新処理（Java版update完全再現）
    * パフォーマンスモード対応のフレーム制御
+   * 重要：Java版準拠でフレーム毎ソートは行わない（安定ソート維持）
    */
   public update(rotate: boolean): void {
     // パフォーマンスモード対応（Java版のperformanceModeAnimation）
@@ -99,8 +100,8 @@ export class EAnimD extends EAnimI {
       this.ma.updateJava(this.f, this.ent, rotate, this.performanceMode);
     }
     
-    // 描画順序ソート（フレーム毎）
-    this.sort();
+    // Java版準拠：アニメーション中はソートしない
+    // ソートはorganize()時のみ実行して描画順序を安定化
   }
 
   /**
@@ -210,8 +211,8 @@ export class EAnimD extends EAnimI {
       console.log(`  Part 1 after update: img=${part1.img || 'unknown'}`);
     }
     
-    // 描画順序ソート
-    this.sort();
+    // Java版準拠：アニメーション中はソートしない
+    // ソートはorganize()時のみ実行
   }
 
   /**
@@ -267,7 +268,7 @@ export class EAnimD extends EAnimI {
         part.setValue();
       }
     }
-    this.sort();
+    // Java版準拠：フレーム移動時はソートしない
   }
 
   /**
@@ -286,7 +287,7 @@ export class EAnimD extends EAnimI {
       if (this.ent) {
         this.ma.updateJava(this.f, this.ent, false, this.performanceMode);
       }
-      this.sort();
+      // Java版準拠：フレーム移動時はソートしない
     }
   }
 

@@ -77,7 +77,18 @@ export class EPart {
     // [12] glow, [13] name_index
 
     this.pos = P.newP(this.args[4], this.args[5], this.args[3]);
-    this.sca = P.newP(this.args[8], this.args[9], 1); // Java版と同じく正規化せず
+    
+    // 負のスケール値を反転フラグとして処理（../common/util/anim準拠）
+    const scaleX = this.args[8];
+    const scaleY = this.args[9];
+    
+    // 反転フラグを負のスケール値から設定
+    this.hf = scaleX < 0 ? -1 : 1;
+    this.vf = scaleY < 0 ? -1 : 1;
+    
+    // スケール値は絶対値を使用
+    this.sca = P.newP(Math.abs(scaleX), Math.abs(scaleY), 1);
+    
     this.piv = P.newP(this.args[6], this.args[7], 0);
     this.angle = this.args[10];
     this.opacity = this.args[11];
@@ -86,10 +97,6 @@ export class EPart {
     this.glow = this.args[12] === 1;
     this.visible = true;
     this.gsca = this.model.ints[0] || 1000;  // Java版と同じgsca初期化
-    
-    // 反転フラグリセット
-    this.hf = 1;
-    this.vf = 1;
   }
 
   /**
@@ -175,14 +182,6 @@ export class EPart {
         this.visible = value !== 0;
         break;
 
-      case 16: // HORIZONTAL_FLIP - 水平反転
-        this.hf = value !== 0 ? -1 : 1;
-        break;
-
-      case 17: // VERTICAL_FLIP - 垂直反転
-        this.vf = value !== 0 ? -1 : 1;
-        break;
-
       case 50: // EXT_TYPE - Java版拡張エフェクトタイプ
         this.extType = value;
         break;
@@ -259,13 +258,13 @@ export class EPart {
    * 再帰的に親の変換を適用してから自分の変換を適用
    */
   public transform(g: CanvasRenderingContext2D, sizer: P): void {
-    // 親の変換を先に適用（再帰的）
+    // 親の変換を先に適用（Java版EPart.java:374-376準拠）
     if (this.fa !== null) {
       this.fa.transform(g, sizer);
     }
 
     if (this.ent[0] !== this) {
-      // 通常パーツの変換処理（Java版のロジック完全再現）
+      // 通常パーツの変換処理（Java版EPart.java:378-390準拠）
       let scaledPosition: P;
       
       if (this.fa !== null) {
@@ -277,30 +276,31 @@ export class EPart {
       }
       
       g.translate(scaledPosition.x, scaledPosition.y);
-      g.scale(this.hf, this.vf);
+      g.scale(this.hf, this.vf);  // Java版準拠：位置移動後にスケール適用
       
       P.delete(scaledPosition);
     } else {
-      // ベースパーツ（Part 0）の特別な変換処理
-      // Java版EPart.java:392-398準拠のconfs位置調整（Part#0のみ適用）
-      if (this.ind === 0 && this.model.confs && this.model.confs.length > 0) {
+      // Part 0の特別な変換処理（Java版EPart.java:392-403準拠）
+      if (this.model.confs && this.model.confs.length > 0) {
         const confData = this.model.confs[0];
         const baseSize = this.getBaseSize(false);
-        const p0 = baseSize.times(confData[2], confData[3]).times(sizer).times(this.hf, this.vf);
         
+        // Java版:395 準拠 - p0 = getBaseSize(false).times(data[2], data[3]).times(sizer).times(hf, vf)
+        const p0 = baseSize.times(confData[2], confData[3]).times(sizer).times(this.hf, this.vf);
         g.translate(-p0.x, -p0.y);
         P.delete(p0);
       }
       
+      // Java版:400-402 準拠 - p0 = getSize().times(sizer).times(piv).times(hf, vf)
       const size = this.getSize();
       const p0 = size.times(sizer).times(this.piv).times(this.hf, this.vf);
       g.translate(p0.x, p0.y);
-      g.scale(this.hf, this.vf);
+      g.scale(this.hf, this.vf);  // Java版準拠：pivot移動後にスケール適用
       
       P.delete(p0);
     }
 
-    // 回転適用
+    // 回転適用（Java版EPart.java:406-407準拠）
     if (this.angle !== 0) {
       const angleUnit = this.model.ints[1] || 3600;
       const rotationRadians = (Math.PI * 2 * this.angle) / angleUnit;

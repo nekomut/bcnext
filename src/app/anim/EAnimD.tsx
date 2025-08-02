@@ -340,10 +340,8 @@ export class EAnimD extends EAnimI {
     // Java版準拠：organize()完了後にsetup()実行でアニメーション状態を初期化
     this.setup();
     
-    // 重要：Java版準拠でsetup()後に再度ソート実行
-    // setup()中のma.update()でZ値が動的に変更される可能性があるため
-    // その変更を反映したソート順序を確定
-    this.sort();
+    // Java版準拠：setup()後はソートしない
+    // Java版ではorganize()でのソートのみで、その後は描画順序を固定
     
     // Java版準拠：この時点でorderの順序を最終確定
     // 以降のアニメーション中はこの順序を維持（安定ソート）

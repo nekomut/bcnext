@@ -325,7 +325,13 @@ export class EPart {
     }
     
     // Z値が同じ場合はレイヤーで比較
-    return this.layer - other.layer;
+    if (this.layer !== other.layer) {
+      return this.layer - other.layer;
+    }
+    
+    // Z値・レイヤーが同じ場合は配列インデックスで安定ソート
+    // より小さいインデックス（先に定義されたパーツ）が奥に描画される
+    return this.ind - other.ind;
   }
 
 

@@ -79,16 +79,16 @@ export class EPart {
 
     this.pos = P.newP(this.args[4], this.args[5], this.args[3]);
     
-    // 負のスケール値を反転フラグとして処理（../common/util/anim準拠）
+    // Java版準拠: setValue()では生の値をそのまま設定
     const scaleX = this.args[8];
     const scaleY = this.args[9];
     
-    // 反転フラグを負のスケール値から設定
-    this.hf = scaleX < 0 ? -1 : 1;
-    this.vf = scaleY < 0 ? -1 : 1;
+    // Java版と同じ: sca = sca.setTo(args[8], args[9])
+    this.sca = P.newP(scaleX, scaleY, 1);
     
-    // スケール値は絶対値を使用
-    this.sca = P.newP(Math.abs(scaleX), Math.abs(scaleY), 1);
+    // Java版と同じ初期値設定
+    this.hf = 1;
+    this.vf = 1;
     
     this.piv = P.newP(this.args[6], this.args[7], 0);
     this.angle = this.args[10];
@@ -368,20 +368,56 @@ export class EPart {
       const tpiv = P.newP(this.piv).times(p0).times(sizer);
       const sc = P.newP(sw, sh).times(p0).times(sizer);  // Java版と同じスプライトサイズスケーリング
       
-      // Safety check for valid scale values - also check for extremely small values
-      if (!isFinite(sc.x) || !isFinite(sc.y) || sc.x <= 0 || sc.y <= 0 || sc.x < 0.01 || sc.y < 0.01) {
-        console.warn(`Invalid or too small scale values: sc=(${sc.x}, ${sc.y}), p0=(${p0.x}, ${p0.y}), sizer=(${sizer.x}, ${sizer.y}), using original size`);
+      // 負のスケール値の処理（Java版の負のスケール効果を再現）
+      const isFlipX = sc.x < 0;
+      const isFlipY = sc.y < 0;
+      const absScX = Math.abs(sc.x);
+      const absScY = Math.abs(sc.y);
+      
+      // Java版準拠: 有限値かつ0でなければ描画（極小値も許可）
+      if (!isFinite(sc.x) || !isFinite(sc.y) || absScX === 0 || absScY === 0) {
+        // 完全に無効な値の場合のみ元サイズで描画
         ctx.drawImage(
           spriteImage,
           sx, sy, sw, sh,  // ソース位置・サイズ
           -tpiv.x, -tpiv.y, sw, sh  // 描画位置・サイズ（元のサイズ）
         );
       } else {
-        ctx.drawImage(
-          spriteImage,
-          sx, sy, sw, sh,  // ソース位置・サイズ
-          -tpiv.x, -tpiv.y, sc.x, sc.y  // 描画位置・サイズ（スケール適用）
-        );
+        // Canvas状態保存
+        ctx.save();
+        
+        // 負のスケール値による反転処理（Java版準拠：ピボット点基準）
+        if (isFlipX || isFlipY) {
+          // ピボット点を反転の基準とする（Java版の動作と推定）
+          // tpivはピボット点の絶対位置
+          ctx.translate(-tpiv.x, -tpiv.y);
+          
+          // 反転適用
+          const flipX = isFlipX ? -1 : 1;
+          const flipY = isFlipY ? -1 : 1;
+          ctx.scale(flipX, flipY);
+          
+          // ピボット点からの相対描画
+          // 通常: 描画位置 = -tpiv + offset
+          // 反転時: ピボット基準でoffsetを適用
+          const pivotOffsetX = -tpiv.x - (-tpiv.x); // = 0
+          const pivotOffsetY = -tpiv.y - (-tpiv.y); // = 0
+          
+          ctx.drawImage(
+            spriteImage,
+            sx, sy, sw, sh,  // ソース位置・サイズ
+            pivotOffsetX, pivotOffsetY, absScX, absScY  // ピボット基準位置・サイズ
+          );
+        } else {
+          // 通常描画（Java版と同じ）
+          ctx.drawImage(
+            spriteImage,
+            sx, sy, sw, sh,  // ソース位置・サイズ
+            -tpiv.x, -tpiv.y, absScX, absScY  // 通常位置・サイズ
+          );
+        }
+        
+        ctx.restore();
       }
       
       P.delete(p0);

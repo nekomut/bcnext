@@ -238,7 +238,10 @@ function convertMaModel(mamodelData: unknown[]): MaModel {
   const strs1Count = Array.isArray(mamodelData[currentIndex]) ? mamodelData[currentIndex][0] : 0;
   currentIndex++; // strs1数の次の位置へ
   
-  // strs1エントリを処理
+  // confs配列を初期化（default値で最低2つは確保）
+  const confs: number[][] = [];
+  
+  // strs1エントリを処理（confs配列も含む）
   for (let i = 0; i < strs1Count && currentIndex < mamodelData.length; i++, currentIndex++) {
     const item = mamodelData[currentIndex];
     
@@ -246,7 +249,31 @@ function convertMaModel(mamodelData: unknown[]): MaModel {
       // strs1エントリの最後の要素が名前文字列
       const lastElement = item[item.length - 1];
       strs1.push(typeof lastElement === 'string' ? lastElement : '');
+      
+      // confs配列を構築（../common/util/anim準拠の6要素形式）
+      // JSONフォーマット: [type, flag, offsetX, offsetY, scaleX, scaleY, name]
+      if (item.length >= 6) {
+        confs.push([
+          item[0] || 0, // type
+          item[1] || 0, // flag  
+          item[2] || 0, // offsetX - 位置調整用
+          item[3] || 0, // offsetY - 位置調整用
+          item[4] || 1000, // scaleX
+          item[5] || 1000  // scaleY
+        ]);
+      } else {
+        // 不完全なデータの場合はデフォルト値を設定
+        confs.push([0, 0, 0, 0, 1000, 1000]);
+      }
     }
+  }
+  
+  // confs配列が空の場合は最低限のデフォルト設定を追加
+  if (confs.length === 0) {
+    confs.push([0, 0, 0, 0, 1000, 1000]); // config0: デフォルト
+    confs.push([0, 0, 0, 0, 1000, 1000]); // config1: デフォルト
+  } else if (confs.length === 1) {
+    confs.push([0, 0, 0, 0, 1000, 1000]); // config1: デフォルト
   }
   
   return new MaModel({
@@ -254,7 +281,7 @@ function convertMaModel(mamodelData: unknown[]): MaModel {
     m: strs1Count, // 実際のstrs1数
     ints: ints, // 実際のJSONからのints値
     parts,
-    confs: [[0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0]], // デフォルトコンフィグ
+    confs: confs, // 実際のJSONからのconfs配列
     strs0,
     strs1
   });

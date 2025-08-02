@@ -64,6 +64,7 @@ export class P {
 export class EAnimD extends EAnimI {
   public f: number = -1;           // 現在のフレーム番号
   public ma: MaAnim;               // MaAnimインスタンス
+  public maModel: MaModel;         // MaModelインスタンス（位置調整用）
   private performanceMode: boolean = false;  // パフォーマンスモード
   
   // スプライト関連
@@ -73,6 +74,7 @@ export class EAnimD extends EAnimI {
   constructor(animInterface: AnimI, mamodel: MaModel, maanim: MaAnim) {
     super(animInterface, mamodel);
     this.ma = maanim;
+    this.maModel = mamodel; // 位置調整用に参照を保持
     this.organize();
   }
 

@@ -282,12 +282,11 @@ export class EPart {
       P.delete(scaledPosition);
     } else {
       // ベースパーツ（Part 0）の特別な変換処理
-      // Java版のEPart.javaのelse節を再現
-      if (this.model.confs && this.model.confs.length > 0) {
+      // Java版EPart.java:392-398準拠のconfs位置調整（Part#0のみ適用）
+      if (this.ind === 0 && this.model.confs && this.model.confs.length > 0) {
         const confData = this.model.confs[0];
         const baseSize = this.getBaseSize(false);
         const p0 = baseSize.times(confData[2], confData[3]).times(sizer).times(this.hf, this.vf);
-        
         
         g.translate(-p0.x, -p0.y);
         P.delete(p0);

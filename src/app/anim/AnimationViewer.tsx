@@ -595,9 +595,11 @@ export default function AnimationViewer({
       // 共通基準点システム実装（../common/util/anim準拠）
       ctx.save();
       
-      // 1. キャンバス中心座標を(0, 150)に設定
-      const commonOriginX = canvas.width / 2;
-      const commonOriginY = canvas.height / 2 + 150; // Y座標を+150オフセット
+      // 1. ../common/util/anim準拠の統一位置システム
+      // canvas中心座標を(canvas.width / 2, canvas.height * 0.9)に固定
+      // confs[0][2], confs[0][3]は各パーツ描画時にEPart側で適用される
+      const commonOriginX = canvas.width / 2; // X方向は中央
+      const commonOriginY = canvas.height * 0.9; // Y方向は下端から90%位置
       
       // 2. ユーザー操作によるオフセット追加
       ctx.translate(commonOriginX + offsetX, commonOriginY + offsetY);

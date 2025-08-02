@@ -187,28 +187,49 @@ export default function AnimationViewer({
     return Array.from(sprites).sort((a, b) => a - b);
   }, [animationData, selectedForm, selectedAnimation, eAnimD]);
 
-  // パーツがopacity=0かどうかを判定する関数
+  // パーツが現在のフレームでopacity=0かどうかを判定する関数
   const isPartOpacityZero = useCallback((partId: number): boolean => {
     const maanim = animationData[selectedForm]?.maanim?.[selectedAnimation];
-    if (!maanim) return false;
+    if (!maanim || !eAnimD) return false;
     
-    let hasOpacityZero = false;
+    // EAnimDから現在のフレームと実際のパーツ透明度を取得
+    const currentFrame = eAnimD.f;
+    const part = eAnimD.ent?.[partId];
+    
+    if (!part) return true; // パーツが存在しない場合は透明扱い
+    
+    // 現在のフレームでの透明度を計算
+    let currentFrameOpacity = null;
+    
     maanim.parts.forEach(animPart => {
       const animPartId = animPart.ints[0];
       const modifType = animPart.ints[1];
       
       if (animPartId === partId && modifType === 12) {
-        // OPACITY modification (type 12) をチェック
+        // OPACITY modification (type 12) で現在フレームでの値を取得
+        // 最新の適用可能なmoveを探す
+        let latestMove = null;
         animPart.moves.forEach(move => {
-          if (move[1] === 0) {
-            hasOpacityZero = true;
+          const moveFrame = move[0];
+          if (moveFrame <= currentFrame) {
+            latestMove = move;
           }
         });
+        
+        if (latestMove) {
+          currentFrameOpacity = latestMove[1];
+        }
       }
     });
     
-    return hasOpacityZero;
-  }, [animationData, selectedForm, selectedAnimation]);
+    // currentFrameOpacityが設定されている場合はそれを使用、そうでなければパーツの実際の透明度を使用
+    if (currentFrameOpacity !== null) {
+      return currentFrameOpacity === 0;
+    }
+    
+    // フォールバック: パーツの実際の透明度をチェック
+    return part.opa() <= 0;
+  }, [animationData, selectedForm, selectedAnimation, eAnimD]);
 
   // パーツにぶら下がっているスプライトがすべて非アクティブかどうかを判定する関数
   const areAllPartSpritesInactive = useCallback((partId: number): boolean => {

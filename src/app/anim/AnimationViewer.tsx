@@ -91,6 +91,8 @@ export default function AnimationViewer({
   const [offsetX, setOffsetX] = useState<number>(0);
   const [offsetY, setOffsetY] = useState<number>(0);
   const [showRefLines, setShowRefLines] = useState<boolean>(true);
+  const [canvasWidth, setCanvasWidth] = useState<number>(440);
+  const canvasHeight = 600; // 高さは固定（上側20%伸ばし）
   
   // Sprite Preview用の状態変数
   const [selectedSpriteId, setSelectedSpriteId] = useState<number>(0);
@@ -99,6 +101,33 @@ export default function AnimationViewer({
   // アニメーションシステム
   const [eAnimD, setEAnimD] = useState<EAnimD | null>(null);
   const [settingsVisible, setSettingsVisible] = useState<boolean>(false);
+  
+  // Canvas サイズ自動調整
+  useEffect(() => {
+    const updateCanvasSize = () => {
+      const container = document.querySelector('.animation-container');
+      if (container) {
+        const containerWidth = container.clientWidth;
+        const newWidth = Math.min(containerWidth - 32, 800); // 最大800px、パディング考慮
+        
+        if (newWidth > 300 && newWidth !== canvasWidth) { // 最小幅制限と不要な更新防止
+          setCanvasWidth(newWidth);
+        }
+      }
+    };
+    
+    // 初期設定
+    updateCanvasSize();
+    
+    // リサイズイベントリスナー
+    window.addEventListener('resize', updateCanvasSize);
+    
+    return () => {
+      window.removeEventListener('resize', updateCanvasSize);
+    };
+  }, [canvasWidth]); // canvasWidthを依存配列に追加
+  
+  // canvasサイズ変更時の再描画（render関数定義後に移動）
   
   // Data折りたたみ用の状態変数
   const [dataExpanded, setDataExpanded] = useState({
@@ -556,14 +585,13 @@ export default function AnimationViewer({
         m: formData.mamodel.m || 2,
         ints: formData.mamodel.ints || [1000, 3600, 1000],
         parts: formData.mamodel.parts,
-        // ../common/util/animと同様の基準位置調整用confs配列
-        // [0, 0, offsetX, offsetY, scaleX, scaleY] の形式
+        // 実際のJSONデータからconfs配列を取得（Java版と同じ動作）
         confs: formData.mamodel.confs || [
-          [0, 0, 500, 500, 1000, 1000], // config0: 基準位置調整用
-          [0, 0, 0, 0, 1000, 1000]      // config1: デフォルト
+          [0, 0, 0, 0, 1000, 1000], // config0: デフォルト
+          [0, 0, 0, 0, 1000, 1000]  // config1: デフォルト
         ],
         strs0: formData.mamodel.strs0 || [],
-        strs1: formData.mamodel.strs1 || ['unified_position', 'default']
+        strs1: formData.mamodel.strs1 || ['default', 'default']
       });
 
       // MaAnim初期化時にPartオブジェクト配列を作成
@@ -643,10 +671,10 @@ export default function AnimationViewer({
       ctx.save();
       
       // 1. ../common/util/anim準拠の統一位置システム
-      // canvas中心座標を(canvas.width / 2, canvas.height * 0.9)に固定
+      // canvas中心座標を(canvas.width / 2, canvas.height * 0.9)に調整（中心をより下側に移動）
       // confs[0][2], confs[0][3]は各パーツ描画時にEPart側で適用される
       const commonOriginX = canvas.width / 2; // X方向は中央
-      const commonOriginY = canvas.height * 0.9; // Y方向は下端から90%位置
+      const commonOriginY = canvas.height * 0.9; // Y方向：中心をより下側に移動
       
       // 2. ユーザー操作によるオフセット追加
       ctx.translate(commonOriginX + offsetX, commonOriginY + offsetY);
@@ -704,6 +732,18 @@ export default function AnimationViewer({
   const render = useCallback(() => {
     renderAnimation();
   }, [renderAnimation]);
+
+  // canvasサイズ変更時の再描画
+  useEffect(() => {
+    if (eAnimD && !isPlaying) {
+      // サイズ変更後に少し遅延してから再描画
+      const timeoutId = setTimeout(() => {
+        render();
+      }, 100);
+      
+      return () => clearTimeout(timeoutId);
+    }
+  }, [canvasWidth, eAnimD, isPlaying, render]);
 
   // アニメーションループ
   const animate = useCallback(() => {
@@ -891,7 +931,7 @@ export default function AnimationViewer({
   return (
     <div className="space-y-4">
       {/* コントロール */}
-      <div className="flex items-center space-x-2 text-sm">
+      <div className="flex flex-wrap items-center gap-2 text-sm">
         <button
           onClick={() => setZoom(zoom * 1.2)}
           className="px-2 py-1 bg-blue-500 text-white rounded"
@@ -911,11 +951,32 @@ export default function AnimationViewer({
           参照線
         </button>
         <button
+          onClick={() => setCanvasWidth(440)}
+          className="px-2 py-1 bg-purple-500 text-white rounded"
+        >
+          標準幅
+        </button>
+        <button
+          onClick={() => setCanvasWidth(600)}
+          className="px-2 py-1 bg-indigo-500 text-white rounded"
+        >
+          幅大
+        </button>
+        <button
+          onClick={() => setCanvasWidth(800)}
+          className="px-2 py-1 bg-cyan-500 text-white rounded"
+        >
+          幅最大
+        </button>
+        <button
           onClick={() => setSettingsVisible(!settingsVisible)}
           className={`px-2 py-1 rounded ${settingsVisible ? 'bg-green-500' : 'bg-gray-500'} text-white`}
         >
           設定
         </button>
+        <span className="text-xs text-gray-600 font-mono">
+          W:{canvasWidth}
+        </span>
       </div>
 
       {/* アニメーション設定パネル */}
@@ -972,14 +1033,19 @@ export default function AnimationViewer({
       )}
 
       {/* メインアニメーション表示 */}
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center animation-container">
       
         {/* キャンバス */}
         <canvas
           ref={canvasRef}
-          width={440}
-          height={500}
-          className="border border-gray-300 bg-white"
+          width={canvasWidth}
+          height={canvasHeight}
+          className="border border-gray-300 bg-white w-full max-w-full"
+          style={{ 
+            width: '100%',
+            height: 'auto',
+            aspectRatio: `${canvasWidth} / ${canvasHeight}`
+          }}
           onMouseDown={(e) => {
             const startX = e.clientX - offsetX;
             const startY = e.clientY - offsetY;

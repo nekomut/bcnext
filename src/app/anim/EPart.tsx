@@ -227,18 +227,18 @@ export class EPart {
   }
 
   /**
-   * 親のサイズを継承してサイズ計算（Java版getSize完全再現）
+   * Java版getSize完全再現（EPart.java:330-337）
    * scaleUnit正規化と親子関係のスケール継承
    */
   private getSize(): P {
     const mi = 1.0 / (this.model.ints[0] || 1000); // scaleUnit正規化
     
     if (this.fa === null) {
-      // ルートパーツ（親なし）- Java版と同じくgsca * mi^2スケーリング
-      return this.sca.times(this.gsca * mi * mi);
+      // Java版準拠: P.newP(sca).times(gsca * mi * mi)
+      return P.newP(this.sca).times(this.gsca * mi * mi);
     }
     
-    // 親のサイズを継承 - Java版と同じくgsca * mi^2スケーリング
+    // Java版準拠: fa.getSize().times(sca).times(gsca * mi * mi)
     const parentSize = this.fa.getSize();
     const result = parentSize.times(this.sca).times(this.gsca * mi * mi);
     P.delete(parentSize);
@@ -246,19 +246,60 @@ export class EPart {
   }
 
   /**
-   * ベースサイズ計算（Java版getBaseSize相当）
+   * Java版getBaseSize完全再現（EPart.java:339-363）
+   * 座標変換の基準となる重要なメソッド
    */
-  private getBaseSize(includeParent: boolean): P {
-    const mi = 1.0 / (this.model.ints[0] || 1000);
-    
-    if (!includeParent || this.fa === null) {
-      return P.newP(this.args[8] * mi, this.args[9] * mi, 1);
+  private getBaseSize(parent: boolean): P {
+    if (this.model.confs && this.model.confs.length > 0) {
+      const mi = 1.0 / (this.model.ints[0] || 1000);
+      
+      if (parent) {
+        if (this.fa !== null) {
+          // 親の基準サイズ × 符号のみ（Java版のMath.signum相当）
+          return this.fa.getBaseSize(true).times(
+            Math.sign(this.model.parts[this.ind][8]) || 1, 
+            Math.sign(this.model.parts[this.ind][9]) || 1
+          );
+        } else {
+          // ルートパーツの符号のみ
+          return P.newP(
+            Math.sign(this.model.parts[this.ind][8]) || 1, 
+            Math.sign(this.model.parts[this.ind][9]) || 1, 
+            1
+          );
+        }
+      } else {
+        if (this.model.confs[0][0] === -1) {
+          // Part 0のサイズを基準とする
+          return P.newP(
+            this.model.parts[0][8] * mi, 
+            this.model.parts[0][9] * mi, 
+            1
+          );
+        } else {
+          if (this.model.confs[0][0] === this.ind) {
+            // 自分自身を基準とする
+            return P.newP(
+              this.model.parts[this.model.confs[0][0]][8] * mi, 
+              this.model.parts[this.model.confs[0][0]][9] * mi, 
+              1
+            );
+          } else {
+            // 指定されたパーツを基準とする
+            const basePartSize = this.ent[this.model.confs[0][0]].getBaseSize(true);
+            const result = basePartSize.times(
+              this.model.parts[this.model.confs[0][0]][8] * mi, 
+              this.model.parts[this.model.confs[0][0]][9] * mi
+            );
+            P.delete(basePartSize);
+            return result;
+          }
+        }
+      }
+    } else {
+      // confsが存在しない場合はデフォルト値
+      return P.newP(1.0, 1.0, 1.0);
     }
-    
-    const parentSize = this.fa.getBaseSize(true);
-    const result = parentSize.times(this.args[8] * mi, this.args[9] * mi);
-    P.delete();
-    return result;
   }
 
   /**

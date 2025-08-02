@@ -348,7 +348,7 @@ export class EAnimD extends EAnimI {
     // Java版準拠：この時点でorderの順序を最終確定
     // 以降のアニメーション中はこの順序を維持（安定ソート）
     if (this.order) {
-      this.order = Object.freeze([...this.order]);
+      this.order = [...this.order]; // スプレッド演算子でコピーを作成（freezeは型エラーのため削除）
     }
   }
 

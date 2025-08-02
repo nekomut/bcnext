@@ -409,9 +409,36 @@ export default function AnimationViewer({
     if (!unitId) return;
     
     try {
-      const response = await fetch(`/data/anim/${unitId}.json`);
-      if (!response.ok) {
-        console.warn(`JSONデータが見つかりません: ${unitId}.json`);
+      // Next.jsのbasePathを考慮したパスを生成（loadSpritesと同じ方式）
+      const isGitHubPages = typeof window !== 'undefined' && window.location.hostname === 'nekomut.github.io';
+      const basePath = isGitHubPages ? '/bcnext' : '';
+      
+      // JSONデータ読み込み（複数URLフォールバック）
+      const urlsToTry = [
+        `${basePath}/data/anim/${unitId}.json`,
+        `./data/anim/${unitId}.json`,
+        `${typeof window !== 'undefined' && window.location.origin || ''}${basePath}/data/anim/${unitId}.json`
+      ].filter(Boolean);
+      
+      let response: Response | null = null;
+      let lastError: Error | null = null;
+      
+      for (const tryUrl of urlsToTry) {
+        try {
+          response = await fetch(tryUrl);
+          if (response.ok) {
+            break;
+          } else {
+            lastError = new Error(`HTTP ${response.status}: ${response.statusText}`);
+          }
+        } catch (error) {
+          lastError = error as Error;
+          continue;
+        }
+      }
+      
+      if (!response || !response.ok) {
+        console.warn(`All URLs failed to load JSON data for unit ${unitId}. Last error: ${lastError?.message || 'unknown'}`);
         setRawJsonData(null);
         return;
       }
@@ -499,8 +526,7 @@ export default function AnimationViewer({
       
       // スプライトを切り出し
       const formData = animationData[selectedForm];
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      const _sprites = formData.imgcut.cut(canvas);
+      formData.imgcut.cut(canvas);
       
       // Sprite Preview用のHTMLImageElementを設定
       setSpriteImage(img);

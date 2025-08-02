@@ -107,14 +107,16 @@ export class EAnimD extends EAnimI {
   /**
    * Canvas描画処理（../common/util/anim準拠の位置統一システム）
    * 共通基準点を使用してZ値順にソートされたパーツを順次描画
+   * Java版準拠：visibleチェックなしで全パーツを描画
    */
   public draw(ctx: CanvasRenderingContext2D, origin: P, size: number): void {
     if (!this.order) return;
     
     // ../common/util/animのEAnimD.drawと同様の処理
+    // Java版準拠：for (EPart e : order) { e.drawPart(g, p); }
     // 全パーツに対して統一された基準点（origin）とサイズ（size）を適用
     for (const part of this.order) {
-      if (!part.visible) continue;
+      // Java版準拠：visibleチェックを削除
       
       // 共通基準点システムによる描画
       this.drawPartWithUnifiedPosition(ctx, part, origin, size);
@@ -422,7 +424,7 @@ export class EAnimD extends EAnimI {
       
       // 描画順序（Z値ベース）でパーツを描画
       for (const part of this.order) {
-        if (!part.visible || !part.isVisibleFull()) continue;
+        // Java版準拠：visibleチェックを削除
         
         this.drawPartWithAdvancedTransform(ctx, part, origin, size);
       }
@@ -481,7 +483,7 @@ export class EAnimD extends EAnimI {
     ctx.lineWidth = 1;
     
     for (const part of this.order) {
-      if (!part.visible) continue;
+      // Java版準拠：visibleチェックを削除
       
       const bounds = part.getBounds();
       ctx.strokeRect(bounds.x, bounds.y, bounds.width, bounds.height);
@@ -710,7 +712,8 @@ export class EAnimD extends EAnimI {
     
     // 背景エフェクトを持つパーツのみ描画
     for (const part of this.order) {
-      if (!part.visible || !part.hasExtendEffect()) continue;
+      if (!part.hasExtendEffect()) continue;
+      // Java版準拠：visibleチェックを削除
       
       ctx.save();
       
@@ -737,7 +740,7 @@ export class EAnimD extends EAnimI {
     
     // 通常描画 + エフェクト描画
     for (const part of this.order) {
-      if (!part.visible) continue;
+      // Java版準拠：visibleチェックを削除
       
       ctx.save();
       

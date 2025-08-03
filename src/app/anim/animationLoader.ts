@@ -251,29 +251,29 @@ function convertMaModel(mamodelData: unknown[]): MaModel {
       strs1.push(typeof lastElement === 'string' ? lastElement : '');
       
       // confs配列を構築（../common/util/anim準拠の6要素形式）
-      // JSONフォーマット: [type, flag, offsetX, offsetY, scaleX, scaleY, name]
+      // JSONフォーマット: [type, flag, offsetX, offsetY, param4, param5, name]
       if (item.length >= 6) {
         confs.push([
           item[0] || 0, // type
           item[1] || 0, // flag  
           item[2] || 0, // offsetX - 位置調整用
           item[3] || 0, // offsetY - 位置調整用
-          item[4] || 1000, // scaleX
-          item[5] || 1000  // scaleY
+          item[4] ?? 5, // param4 - 幅/width関連（標準値5）
+          item[5] ?? 0  // param5 - 高さ/height関連（標準値0、0は有効値）
         ]);
       } else {
         // 不完全なデータの場合はデフォルト値を設定
-        confs.push([0, 0, 0, 0, 1000, 1000]);
+        confs.push([0, 0, 0, 0, 5, 0]);
       }
     }
   }
   
   // confs配列が空の場合は最低限のデフォルト設定を追加
   if (confs.length === 0) {
-    confs.push([0, 0, 0, 0, 1000, 1000]); // config0: デフォルト
-    confs.push([0, 0, 0, 0, 1000, 1000]); // config1: デフォルト
+    confs.push([0, 0, 0, 0, 5, 0]); // config0: デフォルト
+    confs.push([0, 0, 0, 0, 5, 0]); // config1: デフォルト
   } else if (confs.length === 1) {
-    confs.push([0, 0, 0, 0, 1000, 1000]); // config1: デフォルト
+    confs.push([0, 0, 0, 0, 5, 0]); // config1: デフォルト
   }
   
   return new MaModel({

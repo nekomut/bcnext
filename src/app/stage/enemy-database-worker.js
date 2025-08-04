@@ -29,6 +29,61 @@ class EnemyDatabaseWorker {
   constructor() {
     this.enemyMap = new Map();
     this.isBuilding = false;
+    this.maxConcurrency = this.detectMaxConcurrency();
+  }
+
+  /**
+   * 環境のパフォーマンス特性を検出
+   * @returns {number} 最大並列度
+   */
+  detectMaxConcurrency() {
+    // ナビゲーター情報による推定
+    const cores = navigator?.hardwareConcurrency || 4;
+    const connection = navigator?.connection;
+    
+    // ネットワーク速度による調整
+    let networkMultiplier = 1.0;
+    if (connection) {
+      switch (connection.effectiveType) {
+        case '4g': networkMultiplier = 1.5; break;
+        case '3g': networkMultiplier = 0.8; break;
+        case '2g': networkMultiplier = 0.4; break;
+        default: networkMultiplier = 1.0;
+      }
+    }
+    
+    // 最大16並列、最小4並列
+    return Math.max(4, Math.min(16, Math.floor(cores * networkMultiplier)));
+  }
+
+  /**
+   * 最適なバッチサイズを計算
+   * @param {number} totalItems 総アイテム数
+   * @returns {number} バッチサイズ
+   */
+  getOptimalBatchSize(totalItems) {
+    const baseSize = Math.min(this.maxConcurrency, totalItems);
+    
+    // アイテム数に応じた調整
+    if (totalItems < 50) return Math.min(6, baseSize);
+    if (totalItems < 100) return Math.min(8, baseSize);
+    if (totalItems < 200) return Math.min(10, baseSize);
+    return Math.min(12, baseSize);
+  }
+
+  /**
+   * アイコン読み込み用の最適バッチサイズ
+   * @param {number} iconCount アイコン数
+   * @returns {number} バッチサイズ
+   */
+  getOptimalIconBatchSize(iconCount) {
+    // アイコンは小さなファイルなのでより多く並列化
+    const baseSize = this.maxConcurrency * 2;
+    
+    if (iconCount < 50) return Math.min(15, baseSize);
+    if (iconCount < 200) return Math.min(20, baseSize);
+    if (iconCount < 500) return Math.min(25, baseSize);
+    return Math.min(30, baseSize);
   }
 
   /**
@@ -77,11 +132,12 @@ class EnemyDatabaseWorker {
   }
 
   /**
-   * ステージデータを読み込む
+   * ステージデータを読み込む（リトライ機能付き）
    * @param {number} eventId イベントID
+   * @param {number} retries 最大リトライ回数
    * @returns {Promise<Object|null>} ステージデータ
    */
-  async loadStageData(eventId) {
+  async loadStageData(eventId, retries = 2) {
     const basePath = this.getBasePath();
     
     const urlsToTry = [
@@ -89,26 +145,46 @@ class EnemyDatabaseWorker {
       `${location.origin}${basePath}/data/stage/e${eventId}.json`
     ];
     
-    let response = null;
-    
-    for (const tryUrl of urlsToTry) {
-      try {
-        response = await fetch(tryUrl);
-        if (response.ok) {
-          break;
+    for (let attempt = 0; attempt <= retries; attempt++) {
+      for (const tryUrl of urlsToTry) {
+        try {
+          const response = await fetch(tryUrl, {
+            method: 'GET',
+            cache: 'default', // キャッシュ利用
+            timeout: 5000 // 5秒タイムアウト
+          });
+          
+          if (response.ok) {
+            return await response.json();
+          }
+          
+          // レスポンスが不正な場合はリトライ
+          if (response.status >= 500 && attempt < retries) {
+            console.warn(`Server error ${response.status} for e${eventId}, retrying...`);
+            await this.delay(100 * (attempt + 1)); // 指数バックオフ
+            continue;
+          }
+          
+        } catch (error) {
+          if (attempt < retries) {
+            console.warn(`Network error for e${eventId}, retrying... (${error.message})`);
+            await this.delay(100 * (attempt + 1));
+            continue;
+          }
         }
-      } catch {
-        // エラーを無視して次のURLを試行
-        continue;
       }
     }
     
-    if (!response || !response.ok) {
-      console.warn(`Failed to load stage data e${eventId}. Status: ${response?.status || 'network error'}`);
-      return null;
-    }
+    console.warn(`Failed to load stage data e${eventId} after ${retries + 1} attempts`);
+    return null;
+  }
 
-    return await response.json();
+  /**
+   * 遅延ユーティリティ
+   * @param {number} ms ミリ秒
+   */
+  async delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
   }
 
   /**
@@ -147,7 +223,7 @@ class EnemyDatabaseWorker {
   }
 
   /**
-   * 敵データベースを構築する
+   * 敵データベースを構築する（並列化版）
    * @returns {Promise<Map>} 敵データベース
    */
   async buildEnemyDatabase() {
@@ -174,17 +250,56 @@ class EnemyDatabaseWorker {
       
       self.postMessage({
         type: 'progress', 
-        data: { current: 0, total: totalEvents, percentage: 0, status: `レジェンドストーリー ${totalEvents}イベントを処理中...` }
+        data: { current: 0, total: totalEvents, percentage: 0, status: `レジェンドストーリー ${totalEvents}イベントを並列処理中...` }
       });
 
-      // 順次処理で進捗の一貫性を保つ
-      let processedCount = 0;
+      // **並列化実装**: バッチ処理で大幅高速化
+      // 環境に応じた動的バッチサイズ調整
+      const batchSize = this.getOptimalBatchSize(legendEvents.length);
+      const batches = [];
       
-      for (const event of legendEvents) {
-        try {
-          const stageData = await this.loadStageData(event.eventId);
+      // イベントをバッチに分割
+      for (let i = 0; i < legendEvents.length; i += batchSize) {
+        batches.push(legendEvents.slice(i, i + batchSize));
+      }
+      
+      let processedCount = 0;
+      const uniqueEnemyIds = new Set(); // 重複除去用
+      
+      // バッチごとに並列処理
+      for (let batchIndex = 0; batchIndex < batches.length; batchIndex++) {
+        const batch = batches[batchIndex];
+        
+        // バッチ内のイベントを並列で読み込み
+        const stageDataPromises = batch.map(async (event) => {
+          try {
+            const stageData = await this.loadStageData(event.eventId);
+            return { event, stageData };
+          } catch (error) {
+            console.warn(`Failed to load stage data for event ${event.eventId}:`, error);
+            return { event, stageData: null };
+          }
+        });
+        
+        // バッチ全体を並列で待機
+        const batchResults = await Promise.all(stageDataPromises);
+        
+        // バッチ結果を処理
+        for (const { event, stageData } of batchResults) {
+          processedCount++;
+          
           if (!stageData) {
-            processedCount++;
+            // 進捗報告（スキップしたイベント）
+            const percentage = Math.round((processedCount / totalEvents) * 100);
+            self.postMessage({
+              type: 'progress',
+              data: { 
+                current: processedCount, 
+                total: totalEvents, 
+                percentage, 
+                status: `スキップ: ${event.eventName} (${processedCount}/${totalEvents})` 
+              }
+            });
             continue;
           }
           
@@ -192,19 +307,13 @@ class EnemyDatabaseWorker {
           for (const stage of stageData.stages) {
             for (const enemy of stage.enemies) {
               if (!this.enemyMap.has(enemy.enemyId)) {
-                // アイコンデータを取得（エラーは無視）
-                let iconBase64 = '';
-                try {
-                  iconBase64 = await this.loadEnemyIcon(enemy.enemyId);
-                } catch {
-                  // アイコン読み込みエラーは無視
-                }
+                uniqueEnemyIds.add(enemy.enemyId);
                 
-                // 新しい敵をデータベースに追加
+                // 敵データを一時的に追加（アイコン無し）
                 this.enemyMap.set(enemy.enemyId, {
                   enemyId: enemy.enemyId,
                   enemyName: enemy.enemyName,
-                  icon: iconBase64,
+                  icon: '', // 後で並列で取得
                   traits: enemy.traits,
                   baseStats: enemy.baseStats,
                   abilities: enemy.abilities
@@ -213,23 +322,32 @@ class EnemyDatabaseWorker {
             }
           }
           
-        } catch (error) {
-          console.warn(`Failed to load stage data for event ${event.eventId}:`, error);
+          // 進捗報告
+          const percentage = Math.round((processedCount / totalEvents) * 100);
+          self.postMessage({
+            type: 'progress',
+            data: { 
+              current: processedCount, 
+              total: totalEvents, 
+              percentage, 
+              status: `処理完了: ${event.eventName} (${processedCount}/${totalEvents})` 
+            }
+          });
         }
-        
-        // 確実に順次増加する進捗を報告
-        processedCount++;
-        const percentage = Math.round((processedCount / totalEvents) * 100);
-        self.postMessage({
-          type: 'progress',
-          data: { 
-            current: processedCount, 
-            total: totalEvents, 
-            percentage, 
-            status: `${event.eventName} (${processedCount}/${totalEvents})` 
-          }
-        });
       }
+
+      // **アイコン並列読み込み**: 敵データ構築完了後にアイコンを並列取得
+      self.postMessage({
+        type: 'progress',
+        data: { 
+          current: totalEvents, 
+          total: totalEvents, 
+          percentage: 100, 
+          status: `アイコンを並列読み込み中... (${uniqueEnemyIds.size}体)` 
+        }
+      });
+      
+      await this.loadIconsInParallel(Array.from(uniqueEnemyIds));
 
       // 完了報告
       self.postMessage({
@@ -238,7 +356,7 @@ class EnemyDatabaseWorker {
           current: totalEvents, 
           total: totalEvents, 
           percentage: 100, 
-          status: `完了: ${this.enemyMap.size}体の敵を登録` 
+          status: `完了: ${this.enemyMap.size}体の敵を登録（並列処理による高速化）` 
         }
       });
 
@@ -252,6 +370,43 @@ class EnemyDatabaseWorker {
       throw error;
     } finally {
       this.isBuilding = false;
+    }
+  }
+
+  /**
+   * アイコンを並列で読み込む
+   * @param {string[]} enemyIds 敵IDの配列
+   */
+  async loadIconsInParallel(enemyIds) {
+    const iconBatchSize = this.getOptimalIconBatchSize(enemyIds.length);
+    const iconBatches = [];
+    
+    // 敵IDをバッチに分割
+    for (let i = 0; i < enemyIds.length; i += iconBatchSize) {
+      iconBatches.push(enemyIds.slice(i, i + iconBatchSize));
+    }
+    
+    // バッチごとにアイコンを並列取得
+    for (const iconBatch of iconBatches) {
+      const iconPromises = iconBatch.map(async (enemyId) => {
+        try {
+          const iconBase64 = await this.loadEnemyIcon(enemyId);
+          return { enemyId, iconBase64 };
+        } catch {
+          return { enemyId, iconBase64: '' }; // エラー時は空文字
+        }
+      });
+      
+      // バッチのアイコンを並列で待機
+      const iconResults = await Promise.all(iconPromises);
+      
+      // アイコンデータを敵情報に反映
+      iconResults.forEach(({ enemyId, iconBase64 }) => {
+        const enemy = this.enemyMap.get(enemyId);
+        if (enemy) {
+          enemy.icon = iconBase64;
+        }
+      });
     }
   }
 

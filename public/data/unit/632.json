@@ -31,9 +31,58 @@
   "auxiliaryData": {
     "names": ["超竜戦機デス・トロイ", "電磁戦機ディア・ボロス", "超電磁戦機ディア・ボロス"],
     "talents": {
-      "hasTalents": false,
+      "hasTalents": true,
       "hasUltra": false,
-      "talentList": []
+      "talentList": [
+        {
+          "id": 63,
+          "name": "超生命体特効",
+          "type": "normal",
+          "data": [63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 85, 9, -1, 0],
+          "npCost": 100,
+          "isTotal": false
+        },
+        {
+          "id": 55,
+          "name": "裂波ダメージ無効",
+          "type": "normal",
+          "data": [55, 0, 0, 0, 0, 0, 0, 0, 0, 0, 67, 9, -1, 0],
+          "npCost": 100,
+          "isTotal": false
+        },
+        {
+          "id": 47,
+          "name": "ふっとばし無効",
+          "type": "normal",
+          "data": [47, 0, 0, 0, 0, 0, 0, 0, 0, 0, 56, 9, -1, 0],
+          "npCost": 100,
+          "isTotal": false
+        },
+        {
+          "id": 59,
+          "name": "魂攻撃",
+          "type": "normal",
+          "data": [59, 0, 0, 0, 0, 0, 0, 0, 0, 0, 79, 9, -1, 0],
+          "npCost": 100,
+          "isTotal": false
+        },
+        {
+          "id": 32,
+          "name": "基本体力アップ",
+          "type": "normal",
+          "data": [32, 10, 2, 20, 0, 0, 0, 0, 0, 0, 27, 8, -1, 0],
+          "npCost": 175,
+          "isTotal": true
+        },
+        {
+          "id": 31,
+          "name": "基本攻撃力アップ",
+          "type": "normal",
+          "data": [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
+          "npCost": 175,
+          "isTotal": true
+        }
+      ]
     }
   }
 }

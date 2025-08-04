@@ -32,7 +32,7 @@
     "names": ["天誅ハヤブサ", "斬魔ハヤブサ", "滅殺ハヤブサ"],
     "talents": {
       "hasTalents": true,
-      "hasUltra": false,
+      "hasUltra": true,
       "talentList": [
         {
           "id": 57,
@@ -73,6 +73,30 @@
           "data": [31, 10, 2, 20, 0, 0, 0, 0, 0, 0, 28, 8, -1, 0],
           "npCost": 175,
           "isTotal": true
+        },
+        {
+          "id": 5,
+          "name": "めっぽう強い",
+          "type": "ultra",
+          "data": [5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 10, -1, 1],
+          "npCost": 150,
+          "isTotal": false
+        },
+        {
+          "id": 61,
+          "name": "攻撃間隔短縮",
+          "type": "ultra",
+          "data": [61, 10, 8, 62, 0, 0, 0, 0, 0, 0, 82, 14, -1, 1],
+          "npCost": 225,
+          "isTotal": true
+        },
+        {
+          "id": 55,
+          "name": "裂波ダメージ無効",
+          "type": "ultra",
+          "data": [55, 0, 0, 0, 0, 0, 0, 0, 0, 0, 67, 10, -1, 1],
+          "npCost": 150,
+          "isTotal": false
         }
       ]
     }

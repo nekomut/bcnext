@@ -37,6 +37,7 @@ import { Set951 } from './set951'; // ピクシーズ
 // import { Set976 } from './set976'; // 極選抜祭
 // import { Set977 } from './set977'; // バキコラボ
 import { Set979 } from './set979'; // アイアンウォーズ
+// import { Set980 } from './set980'; // アイアンウォーズ
 // import { Set981 } from './set981'; // 超ネコ祭
 // import { Set982 } from './set982'; // 極ネコ祭
 // import { Set983 } from './set983'; // プラチケ
@@ -48,26 +49,45 @@ import { Set993 } from './set993'; // 超ネコ祭
 import { Set994 } from './set994'; // 極ネコ祭
 import { Set995 } from './set995'; // プラチケ
 import { Set996 } from './set996'; // レジェチケ
-import { Set997 } from './set997'; // サマガ青
+import { Set997 } from './set997'; // サマーガールズブルーオーシャン
 // import { Set998 } from './set998'; // エヴァ新世紀
 // import { Set999 } from './set999'; // エヴァ新劇場版
 import { Set1000 } from './set1000'; // マンボウ
+// import { Set1004 } from './set1004'; // エレメントピクシーズ（汎用）
+import { Set1005 } from './set1005'; // エレメントピクシーズ（新規）
+import { Set1006 } from './set1006'; // 超ネコ祭
+import { Set1007 } from './set1007'; // 極ネコ祭
+import { Set1008 } from './set1008'; // プラチナ
+import { Set1009 } from './set1009'; // レジェンド
+import { Set1010 } from './set1010'; // サマーガールズサンシャイン
+import { Set1011 } from './set1011'; // 1.1億DL記念
+import { Set1012 } from './set1012'; // 超国王祭
 
 export const RareGatyaSetList = [
 
     Set1000, // マンボウ
-    Set993, // 超ネコ祭
 
-    Set997, // サマガ青
+    Set997, // サマーガールズブルーオーシャン
+    Set1010, // サマーガールズサンシャイン
 
     Set951, // ピクシーズ
     Set979, // アイアンウォーズ
     Set943, // バサラーズ
     Set945, // エンペラーズ
 
-    Set996, // レジェチケ
     Set995, // プラチケ
+    Set996, // レジェチケ
+    Set993, // 超ネコ祭
+    Set994, // 極ネコ祭
 
+    Set1005, // エレメントピクシーズ（新規）
+    Set1008, // プラチナ
+    Set1009, // レジェンド
+    Set1006, // 超ネコ祭
+    Set1007, // 極ネコ祭
+
+    Set1011, // 1.1億DL記念
+    Set1012, // 超国王祭
     Set942, // ダイナマイツ
 
     // Set946, // ウルトラソウルズ
@@ -83,7 +103,6 @@ export const RareGatyaSetList = [
     // Set861, // 女王祭
 
     // Set972, // 超極ネコ祭 
-    Set994, // 極ネコ祭
 
     // Set939, // バスターズ祭
     // Set696, // レッドバスターズ

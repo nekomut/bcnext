@@ -1,7 +1,7 @@
 import { GatyaSet } from "@/data/gatyasets";
 
 export const E36: GatyaSet = {
-  name: "春節",
+  name: "春節イベント（伝説の縁起物）",
   guaranteed: 1,
   shortName: "e36",
   gatyasetId: 36,

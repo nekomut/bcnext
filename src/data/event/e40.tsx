@@ -1,7 +1,7 @@
 import { GatyaSet } from "@/data/gatyasets";
 
 export const E40: GatyaSet = {
-  name: "伝説の罠",
+  name: "ねこなつサバイバル編（伝説の罠）",
   guaranteed: 1,
   shortName: "e40",
   gatyasetId: 40,
@@ -10,17 +10,17 @@ export const E40: GatyaSet = {
     {
       rate: 1000,
       units: [
-       'XP 5000',               //  10
+       'XP 5,000',              //  10
       ],
       reroll: false,
     },
     {
       rate: 5000,
       units: [
-       'スピードアップ',        //   0
-       'ニャンピュータ',        //   3
-       'XP 10000',              //  11
-       'XP 30000',              //  12
+       'スピードアップ*',       //   0
+       'ニャンピュータ*',       //   3
+       'XP 10,000*',            //  11
+       'XP 30,000*',            //  12
       ],
       reroll: true,
     },
@@ -30,7 +30,7 @@ export const E40: GatyaSet = {
        'ネコボン',              //   2
        'おかめはちもく',        //   4
        'スニャイパー',          //   5
-       'XP 100000',             //  14
+       'XP 100,000',            //  14
       ],
       reroll: false,
     },
@@ -47,4 +47,3 @@ export const E40: GatyaSet = {
   ],
 
 };
-

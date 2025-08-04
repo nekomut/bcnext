@@ -1,11 +1,11 @@
 import { GatyaSet } from "@/data/gatyasets";
 
-export const Set995: GatyaSet = {
-  name: "プラチナ",
+export const Set1009: GatyaSet = {
+  name: "レジェンド",
   guaranteed: -1,
-  shortName: "995",
-  gatyasetId: 995,
-  rateCumSum: [0, 0, 0, 10000],
+  shortName: "1009",
+  gatyasetId: 1009,
+  rateCumSum: [0, 0, 0, 9500, 10000],
   pools: [
     {
       rate: 0,
@@ -23,8 +23,9 @@ export const Set995: GatyaSet = {
       reroll: false,
     },
     {
-      rate: 10000,
+      rate: 9500,
       units: [
+       '樹の精霊コモリ',         // 817
        '韋駄天スカンダ',         // 811
        '曲射砲台ランチャーズ',   // 799
        '冥護の天女ルナーシャ',   // 787
@@ -153,6 +154,25 @@ export const Set995: GatyaSet = {
        '美女神アフロディーテ',   // 259
        '太陽神アマテラス',       // 271
        '繁栄神ガネーシャ',       // 272
+      ],
+      reroll: false,
+    },
+    {
+      rate: 500,
+      units: [
+       '宵のイザナミ',          // 738
+       '暁のイザナギ',          // 731
+       'ネコ王子',              // 586
+       '創造神ガイア',          // 493
+       '超越科学者ヘヴン博士',  // 481
+       '幻の精霊ルミナ',        // 478
+       '終末兵器ムー',          // 463
+       'レジェルガ',            // 461
+       'ワンダー・モモコ',      // 455
+       'うしわか丸',            // 451
+       '天城龍バベル',          // 450
+       '聖会長ジャンヌダルク',  // 449
+       '宮本武蔵',              // 448
       ],
       reroll: false,
     },

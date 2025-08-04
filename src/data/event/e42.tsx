@@ -1,11 +1,11 @@
 import { GatyaSet } from "@/data/gatyasets";
 
-export const E39: GatyaSet = {
-  name: "刃牙（伝説のダンベル）",
+export const E42: GatyaSet = {
+  name: "1.1億イベント（伝説のきらめき）",
   guaranteed: 1,
-  shortName: "e39",
-  gatyasetId: 39,
-  rateCumSum: [1000, 5500, 8000, 10000],
+  shortName: "e42",
+  gatyasetId: 42,
+  rateCumSum: [1000, 6000, 9000, 10000],
   pools: [
     {
       rate: 1000,
@@ -15,7 +15,7 @@ export const E39: GatyaSet = {
       reroll: false,
     },
     {
-      rate: 4500,
+      rate: 5000,
       units: [
        'スピードアップ*',       //   0
        'ニャンピュータ*',       //   3
@@ -25,7 +25,7 @@ export const E39: GatyaSet = {
       reroll: true,
     },
     {
-      rate: 2500,
+      rate: 3000,
       units: [
        'ネコボン',              //   2
        'おかめはちもく',        //   4
@@ -35,15 +35,14 @@ export const E39: GatyaSet = {
       reroll: false,
     },
     {
-      rate: 2000,
+      rate: 1000,
       units: [
-       'ネコ刃牙',              // 796
-       'ネコ海王',              // 797
-       'ネコ独歩',              // 798
+       '記念ネコ',              // 375
+       'ねこ農家',              // 381
+       '石の上にも10年ネコ',    // 689
       ],
       reroll: false,
     },
   ],
 
 };
-

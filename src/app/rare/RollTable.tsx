@@ -85,7 +85,7 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
                 <td className={`
                   rolltable-cell-unitname
                   rarity-${unit.rarity}A
-                  ${rollsA[j].gatyasetName.startsWith('プラチケ') ? 'platinum-ticket-A' : rollsA[j].gatyasetName.startsWith('レジェチケ') ? 'legendary-ticket-A' : ''}
+                  ${rollsA[j].gatyasetName.startsWith('プラチナ') ? 'platinum-ticket-A' : rollsA[j].gatyasetName.startsWith('レジェンド') ? 'legendary-ticket-A' : ''}
                   ${MISTIC_CATS.includes(unit.unitIfDistinct.unitName) ? 'mistic-A' : ''}
                   ${LIMITED_CATS.includes(unit.unitIfDistinct.unitName) ? 'limited-A' : ''}
                   ${PICKUP_UBER_CATS.includes(unit.unitIfDistinct.unitName) ? 'pickup-A' : ''}
@@ -150,7 +150,7 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
                 <td className={`
                   rolltable-cell-unitname
                   rarity-${unit.rarity}B
-                  ${rollsA[j].gatyasetName.startsWith('プラチケ') ? 'platinum-ticket-B' : rollsA[j].gatyasetName.startsWith('レジェチケ') ? 'legendary-ticket-B' : ''}
+                  ${rollsA[j].gatyasetName.startsWith('プラチナ') ? 'platinum-ticket-B' : rollsA[j].gatyasetName.startsWith('レジェンド') ? 'legendary-ticket-B' : ''}
                   ${MISTIC_CATS.includes(unit.unitIfDistinct.unitName) ? 'mistic-B' : ''}
                   ${LIMITED_CATS.includes(unit.unitIfDistinct.unitName) ? 'limited-B' : ''}
                   ${PICKUP_UBER_CATS.includes(unit.unitIfDistinct.unitName) ? 'pickup-B' : ''}

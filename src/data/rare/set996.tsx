@@ -1,7 +1,7 @@
 import { GatyaSet } from "@/data/gatyasets";
 
 export const Set996: GatyaSet = {
-  name: "レジェチケ",
+  name: "レジェンド",
   guaranteed: -1,
   shortName: "996",
   gatyasetId: 996,

@@ -1,49 +1,49 @@
 import { GatyaSet } from "@/data/gatyasets";
 
-export const E39: GatyaSet = {
-  name: "刃牙（伝説のダンベル）",
+export const E41: GatyaSet = {
+  name: "ねこなつパラダイス編（伝説の札束）",
   guaranteed: 1,
-  shortName: "e39",
-  gatyasetId: 39,
-  rateCumSum: [1000, 5500, 8000, 10000],
+  shortName: "e41",
+  gatyasetId: 41,
+  rateCumSum: [1000, 6000, 9000, 10000],
   pools: [
     {
       rate: 1000,
       units: [
        'XP 5,000',              //  10
+       'XP 2,000',              // 222
       ],
       reroll: false,
     },
     {
-      rate: 4500,
+      rate: 5000,
       units: [
        'スピードアップ*',       //   0
        'ニャンピュータ*',       //   3
        'XP 10,000*',            //  11
-       'XP 30,000*',            //  12
+       'XP 25,000*',            // 223
       ],
       reroll: true,
     },
     {
-      rate: 2500,
+      rate: 3000,
       units: [
        'ネコボン',              //   2
        'おかめはちもく',        //   4
        'スニャイパー',          //   5
-       'XP 100,000',            //  14
       ],
       reroll: false,
     },
     {
-      rate: 2000,
+      rate: 1000,
       units: [
-       'ネコ刃牙',              // 796
-       'ネコ海王',              // 797
-       'ネコ独歩',              // 798
+       'にゃんこバーガー',      // 213
+       'ネコまねき',            // 342
+       '100万ドルのネコ',       // 635
+       'ネココンサルタント',    // 822
       ],
       reroll: false,
     },
   ],
 
 };
-

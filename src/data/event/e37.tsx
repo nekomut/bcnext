@@ -1,7 +1,7 @@
 import { GatyaSet } from "@/data/gatyasets";
 
 export const E37: GatyaSet = {
-  name: "にゃんこ学園",
+  name: "トキメキにゃんこ学園（伝説のラブレター）",
   guaranteed: 1,
   shortName: "e37",
   gatyasetId: 37,

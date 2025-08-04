@@ -1,7 +1,7 @@
 import { GatyaSet } from "@/data/gatyasets";
 
 export const E38: GatyaSet = {
-  name: "伝説の買い物かご",
+  name: "プレミアムフェア（伝説の買い物かご）",
   guaranteed: 1,
   shortName: "e38",
   gatyasetId: 38,

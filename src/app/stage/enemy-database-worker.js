@@ -177,67 +177,58 @@ class EnemyDatabaseWorker {
         data: { current: 0, total: totalEvents, percentage: 0, status: `レジェンドストーリー ${totalEvents}イベントを処理中...` }
       });
 
-      // 並列処理のためのチャンク設定
-      const chunkSize = 3; // 同時に処理するイベント数
+      // 順次処理で進捗の一貫性を保つ
+      let processedCount = 0;
       
-      for (let i = 0; i < legendEvents.length; i += chunkSize) {
-        const chunk = legendEvents.slice(i, i + chunkSize);
-        
-        // チャンク内のイベントを並列処理
-        const chunkPromises = chunk.map(async (event, chunkIndex) => {
-          const actualIndex = i + chunkIndex;
+      for (const event of legendEvents) {
+        try {
+          const stageData = await this.loadStageData(event.eventId);
+          if (!stageData) {
+            processedCount++;
+            continue;
+          }
           
-          try {
-            const stageData = await this.loadStageData(event.eventId);
-            if (!stageData) {
-              return;
-            }
-            
-            // 各ステージの敵データを処理
-            for (const stage of stageData.stages) {
-              for (const enemy of stage.enemies) {
-                if (!this.enemyMap.has(enemy.enemyId)) {
-                  // アイコンデータを取得（エラーは無視）
-                  let iconBase64 = '';
-                  try {
-                    iconBase64 = await this.loadEnemyIcon(enemy.enemyId);
-                  } catch {
-                    // アイコン読み込みエラーは無視
-                  }
-                  
-                  // 新しい敵をデータベースに追加
-                  this.enemyMap.set(enemy.enemyId, {
-                    enemyId: enemy.enemyId,
-                    enemyName: enemy.enemyName,
-                    icon: iconBase64,
-                    traits: enemy.traits,
-                    baseStats: enemy.baseStats,
-                    abilities: enemy.abilities
-                  });
+          // 各ステージの敵データを処理
+          for (const stage of stageData.stages) {
+            for (const enemy of stage.enemies) {
+              if (!this.enemyMap.has(enemy.enemyId)) {
+                // アイコンデータを取得（エラーは無視）
+                let iconBase64 = '';
+                try {
+                  iconBase64 = await this.loadEnemyIcon(enemy.enemyId);
+                } catch {
+                  // アイコン読み込みエラーは無視
                 }
+                
+                // 新しい敵をデータベースに追加
+                this.enemyMap.set(enemy.enemyId, {
+                  enemyId: enemy.enemyId,
+                  enemyName: enemy.enemyName,
+                  icon: iconBase64,
+                  traits: enemy.traits,
+                  baseStats: enemy.baseStats,
+                  abilities: enemy.abilities
+                });
               }
             }
-            
-            // 進捗を報告
-            const current = actualIndex + 1;
-            const percentage = Math.round((current / totalEvents) * 100);
-            self.postMessage({
-              type: 'progress',
-              data: { 
-                current, 
-                total: totalEvents, 
-                percentage, 
-                status: `${event.eventName} (${current}/${totalEvents})` 
-              }
-            });
-            
-          } catch (error) {
-            console.warn(`Failed to load stage data for event ${event.eventId}:`, error);
+          }
+          
+        } catch (error) {
+          console.warn(`Failed to load stage data for event ${event.eventId}:`, error);
+        }
+        
+        // 確実に順次増加する進捗を報告
+        processedCount++;
+        const percentage = Math.round((processedCount / totalEvents) * 100);
+        self.postMessage({
+          type: 'progress',
+          data: { 
+            current: processedCount, 
+            total: totalEvents, 
+            percentage, 
+            status: `${event.eventName} (${processedCount}/${totalEvents})` 
           }
         });
-        
-        // チャンクの完了を待つ
-        await Promise.all(chunkPromises);
       }
 
       // 完了報告

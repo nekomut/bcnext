@@ -3583,8 +3583,8 @@ export const unitNamesData: UnitNameData[] = [
   },
   {
     unitId: "715",
-    displayName: "建築兵団スフィンクス..突撃部隊コンボーイズ",
-    forms: ["建築兵団スフィンクス", "突撃部隊コンボーイズ"]
+    displayName: "建築兵団スフィンクス..超突撃部隊コンボーイズ",
+    forms: ["建築兵団スフィンクス", "突撃部隊コンボーイズ", "超突撃部隊コンボーイズ"]
   },
   {
     unitId: "716",
@@ -4090,6 +4090,36 @@ export const unitNamesData: UnitNameData[] = [
     unitId: "816",
     displayName: "817-1",
     forms: ["817-1"]
+  },
+  {
+    unitId: "817",
+    displayName: "樹の精霊コモリ..樹木の精霊モリリン",
+    forms: ["樹の精霊コモリ", "樹木の精霊モリリン"]
+  },
+  {
+    unitId: "818",
+    displayName: "819-1",
+    forms: ["819-1"]
+  },
+  {
+    unitId: "819",
+    displayName: "ネコ大工..ネコラッパー",
+    forms: ["ネコ大工", "ネコラッパー"]
+  },
+  {
+    unitId: "820",
+    displayName: "シーサイドペガサ..シーサイドペガサν",
+    forms: ["シーサイドペガサ", "シーサイドペガサν"]
+  },
+  {
+    unitId: "821",
+    displayName: "822_1",
+    forms: ["822_1"]
+  },
+  {
+    unitId: "822",
+    displayName: "ネココンサルタント..ネコビジネスパートナー",
+    forms: ["ネココンサルタント", "ネコビジネスパートナー"]
   }
 ];
 

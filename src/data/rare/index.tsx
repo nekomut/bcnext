@@ -41,7 +41,7 @@ import { Set979 } from './set979'; // アイアンウォーズ
 // import { Set981 } from './set981'; // 超ネコ祭
 // import { Set982 } from './set982'; // 極ネコ祭
 // import { Set983 } from './set983'; // プラチケ
-// import { Set984 } from './set984'; // レジェチケ
+// import { Set984 } from './set984'; // レジェンド
 // import { Set985 } from './set985'; // ソニックコラボ
 // import { Set986 } from './set986'; // ルガ族
 // import { Set992 } from './set992'; // ギガントゼウス
@@ -75,8 +75,8 @@ export const RareGatyaSetList = [
     Set943, // バサラーズ
     Set945, // エンペラーズ
 
-    Set995, // プラチケ
-    Set996, // レジェチケ
+    Set995, // プラチナ
+    Set996, // レジェンド
     Set993, // 超ネコ祭
     Set994, // 極ネコ祭
 

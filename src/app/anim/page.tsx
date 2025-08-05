@@ -392,62 +392,77 @@ function AnimationPageContent() {
         
         {/* Form Tabs（anim0スタイル） */}
         {availableForms.length > 1 && (
-          <div className="flex mb-2.5">
-            {availableForms.map((form, index) => (
-              <div key={form} className="w-1/4 px-0.5">
-                <button
-                  onClick={() => {
-                    setSelectedForm(form);
-                    updateURL({ form: form });
-                  }}
-                  className={`w-full flex items-center justify-center p-0.5 rounded transition-colors ${
-                    selectedForm === form
-                      ? 'bg-blue-500'
-                      : 'bg-gray-200 hover:bg-gray-300'
-                  }`}
-                >
-                  {/* Form Icon */}
-                  {!iconsLoading && formIcons[index] && (
-                    <Image 
-                      src={`data:image/png;base64,${formIcons[index]}`}
-                      alt={getFormDisplayName(form, selectedUnit)}
-                      width={40}
-                      height={40}
-                      className="rounded object-cover"
-                    />
-                  )}
-                </button>
-              </div>
-            ))}
+          <div className="flex mb-2.5 justify-between items-start">
+            <div className="flex w-4/5">
+              {availableForms.map((form, index) => (
+                <div key={form} className="w-1/4 px-0.5">
+                  <button
+                    onClick={() => {
+                      setSelectedForm(form);
+                      updateURL({ form: form });
+                    }}
+                    className={`w-full flex items-center justify-center p-0 rounded transition-colors ${
+                      selectedForm === form
+                        ? 'bg-blue-500'
+                        : 'bg-gray-200 hover:bg-gray-300'
+                    }`}
+                  >
+                    {/* Form Icon */}
+                    {!iconsLoading && formIcons[index] && (
+                      <Image 
+                        src={`data:image/png;base64,${formIcons[index]}`}
+                        alt={getFormDisplayName(form, selectedUnit)}
+                        width={48}
+                        height={48}
+                        className="rounded object-cover"
+                      />
+                    )}
+                  </button>
+                </div>
+              ))}
+            </div>
+            
+            {/* Unit Calculator Link */}
+            {selectedUnit && (
+              <Link 
+                href={`/unit?unit=${selectedUnit}&form=${selectedForm}`}
+                className="text-xs text-gray-500 hover:text-gray-700 hover:underline font-mono font-bold"
+              >
+                unit{selectedUnit}
+              </Link>
+            )}
           </div>
         )}
         
         <div className="flex gap-0">
-          {/* Animation Selector */}
-          <div className="w-1/2 px-0.5">
-            <select 
-              value={selectedAnimation} 
-              onChange={(e) => {
-                setSelectedAnimation(e.target.value);
-                updateURL({ anim: e.target.value });
-              }}
-              className="w-full p-1 border border-gray-300 rounded-md text-gray-500 font-mono"
-            >
-              {availableAnimations.map(anim => (
-                <option key={anim} value={anim}>{getAnimationDisplayName(anim)}</option>
-              ))}
-            </select>
-          </div>
+          {/* Animation Buttons */}
+          {availableAnimations.map(anim => (
+            <div key={anim} className="w-1/5 px-0.5">
+              <button
+                onClick={() => {
+                  setSelectedAnimation(anim);
+                  updateURL({ anim: anim });
+                }}
+                className={`w-full p-1 rounded-md font-medium font-mono text-xs ${
+                  selectedAnimation === anim
+                    ? 'bg-blue-500 hover:bg-blue-600 text-white'
+                    : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
+                }`}
+              >
+                {getAnimationDisplayName(anim)}
+              </button>
+            </div>
+          ))}
 
           {/* Play Controls */}
-          <div className="w-1/2 px-0.5">
+          <div className="w-1/5 px-0.5">
             <button
               onClick={() => {
                 const newPlaying = !isPlaying;
                 setIsPlaying(newPlaying);
                 updateURL({ playing: newPlaying });
               }}
-              className={`w-full p-1 rounded-md text-white font-medium font-mono ${
+              className={`w-full p-1 rounded-md text-white font-medium font-mono text-xs ${
                 isPlaying ? 'bg-red-500 hover:bg-red-600' : 'bg-green-500 hover:bg-green-600'
               }`}
             >

@@ -974,9 +974,6 @@ export default function AnimationViewer({
         >
           設定
         </button>
-        <span className="text-xs text-gray-600 font-mono">
-          W:{canvasWidth}
-        </span>
       </div>
 
       {/* アニメーション設定パネル */}

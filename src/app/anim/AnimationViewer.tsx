@@ -135,9 +135,20 @@ export default function AnimationViewer({
     mamodel: false,
     maanim: false
   });
+
+  // Original JSON折りたたみ用の状態変数
+  const [originalJsonExpanded, setOriginalJsonExpanded] = useState({
+    imgcut: false,
+    mamodel: false,
+    maanim: false
+  });
   
   // 元のJSONデータを保存する状態
   const [rawJsonData, setRawJsonData] = useState<Record<string, unknown> | null>(null);
+
+
+  // Sprite Preview折り畳み用の状態変数
+  const [spritePreviewExpanded, setSpritePreviewExpanded] = useState<boolean>(true);
 
   // パーツリスト表示用の状態変数
   const [expandedParts, setExpandedParts] = useState<Set<number>>(new Set([0])); // Part#000は初期展開
@@ -260,42 +271,6 @@ export default function AnimationViewer({
     return part.opa() <= 0;
   }, [animationData, selectedForm, selectedAnimation, eAnimD]);
 
-  // パーツにぶら下がっているスプライトがすべて非アクティブかどうかを判定する関数
-  const areAllPartSpritesInactive = useCallback((partId: number): boolean => {
-    const partSpriteIds = getPartSprites(partId);
-    
-    // スプライトが存在しない場合は非アクティブとみなす
-    if (partSpriteIds.length === 0) {
-      return true;
-    }
-    
-    // 現在のフレームで表示されているかチェック
-    if (eAnimD && eAnimD.ent) {
-      const part = eAnimD.ent[partId];
-      if (!part || !part.visible || part.img < 0) {
-        return true; // パーツが非表示またはスプライトが無効
-      }
-      
-      // opacity=0のパーツかチェック
-      if (isPartOpacityZero(partId)) {
-        return true; // opacity=0なら非アクティブ
-      }
-      
-      // パーツが非表示設定されているかチェック
-      if (hiddenParts.has(partId)) {
-        return true;
-      }
-      
-      // 関連スプライトがすべて非表示設定されているかチェック
-      const allSpritesHidden = partSpriteIds.every(spriteId => 
-        hiddenSprites.has(`${partId}-${spriteId}`)
-      );
-      
-      return allSpritesHidden;
-    }
-    
-    return true; // eAnimDが存在しない場合は非アクティブ
-  }, [getPartSprites, eAnimD, isPartOpacityZero, hiddenParts, hiddenSprites]);
 
   const handlePartToggle = useCallback((partId: number, checked: boolean) => {
     // Part 0の操作を無視
@@ -303,19 +278,24 @@ export default function AnimationViewer({
       return;
     }
     
+    console.log(`Part ${partId} toggle: ${checked ? 'checked' : 'unchecked'}`);
+    
     setHiddenParts(prevHiddenParts => {
       const newHiddenParts = new Set(prevHiddenParts);
       
       if (checked) {
         // チェックされた場合、非表示リストから削除（表示する）
         newHiddenParts.delete(partId);
+        console.log(`Part ${partId} now visible, hiddenParts:`, Array.from(newHiddenParts));
       } else {
         // チェックが外された場合、非表示リストに追加（隠す）
         newHiddenParts.add(partId);
+        console.log(`Part ${partId} now hidden, hiddenParts:`, Array.from(newHiddenParts));
       }
       
       return newHiddenParts;
     });
+
 
     // 子Spriteの状態も同期
     setHiddenSprites(prevHiddenSprites => {
@@ -345,6 +325,7 @@ export default function AnimationViewer({
     
     // Part-Sprite pair key for individual control
     const partSpriteKey = `${partId}-${spriteId}`;
+    console.log(`Sprite ${partSpriteKey} toggle: ${checked ? 'checked' : 'unchecked'}`);
     
     setHiddenSprites(prevHiddenSprites => {
       const newHiddenSprites = new Set(prevHiddenSprites);
@@ -701,6 +682,8 @@ export default function AnimationViewer({
             // パーツレベルでの表示制御
             const partShouldBeVisible = !hiddenParts.has(partId);
             
+            // mamodelのpartsチェックボックス状態による表示制御は、hiddenPartsで統一管理されるため不要
+            
             // スプライトレベルでの表示制御
             let spriteShouldBeVisible = true;
             if (partShouldBeVisible && part.img !== undefined && part.img >= 0) {
@@ -713,6 +696,12 @@ export default function AnimationViewer({
             
             // 最終的な表示状態 = パーツ表示 AND スプライト表示 AND opacity非ゼロ
             const finalVisibility = partShouldBeVisible && spriteShouldBeVisible && !isOpacityZero;
+            
+            // デバッグ情報
+            if (hiddenParts.size > 0) {
+              console.log(`Part ${partId}: partShouldBeVisible=${partShouldBeVisible}, spriteShouldBeVisible=${spriteShouldBeVisible}, isOpacityZero=${isOpacityZero}, finalVisibility=${finalVisibility}`);
+            }
+            
             part.setVisibleRecursive(finalVisibility);
           }
         }
@@ -722,6 +711,12 @@ export default function AnimationViewer({
       // 共通基準点をoriginとして設定し、統一サイズでの描画
       const unifiedOrigin = P.newP(0, 0, 0);
       const unifiedSize = 1.0;
+      
+      // デバッグ情報
+      if (hiddenParts.size > 0) {
+        console.log('Drawing with hiddenParts:', Array.from(hiddenParts));
+      }
+      
       eAnimD.draw(ctx, unifiedOrigin, unifiedSize);
       
       ctx.restore();
@@ -744,6 +739,15 @@ export default function AnimationViewer({
       return () => clearTimeout(timeoutId);
     }
   }, [canvasWidth, eAnimD, isPlaying, render]);
+
+  // パーツ表示状態変更時の再描画
+  useEffect(() => {
+    if (eAnimD && !isPlaying) {
+      console.log('Hidden parts changed:', Array.from(hiddenParts));
+      console.log('Hidden sprites changed:', Array.from(hiddenSprites));
+      render();
+    }
+  }, [hiddenParts, hiddenSprites, eAnimD, isPlaying, render]);
 
   // アニメーションループ
   const animate = useCallback(() => {
@@ -1225,9 +1229,21 @@ export default function AnimationViewer({
                   
                   const partSpriteIds = getPartSprites(partId);
                   
-                  // パーツがアクティブかどうかを汎用的に判定（新しいロジックを使用）
-                  // Part 0は例外として常にアクティブとして扱う
-                  const isPartActive = partId === 0 ? true : !areAllPartSpritesInactive(partId);
+                  // パーツがアクティブかどうかを判定（チェックボックス状態を直接反映）
+                  const isPartActive = (() => {
+                    // Part 0は例外として常にアクティブとして扱う
+                    if (partId === 0) return true;
+                    
+                    // hiddenPartsに含まれている場合は非アクティブ（チェックボックス状態優先）
+                    if (hiddenParts.has(partId)) return false;
+                    
+                    // opacity=0の場合は非アクティブ
+                    if (isPartOpacityZero(partId)) return false;
+                    
+                    // チェックボックスがチェックされていれば基本的にアクティブ
+                    // パーツのvisible状態やスプライトの存在に関係なく、ユーザーの意図を尊重
+                    return true;
+                  })();
                   
                   // パーツ名を取得
                   const partName = mamodel.strs0[partId] || '';
@@ -1297,23 +1313,90 @@ export default function AnimationViewer({
                       {/* このパーツに関連するすべてのスプライト */}
                       {isExpanded && partSpriteIds.length > 0 && partSpriteIds.map((spriteId, spriteIndex) => {
                         const partSpriteKey = `${partId}-${spriteId}`;
+                        // 現在実際に表示されているかの判定（チェックボックス状態も考慮）
                         const isDisplayed = part.img === spriteId && part.visible && !hiddenParts.has(partId) && !hiddenSprites.has(partSpriteKey);
+                        
+                        // デバッグ: 表示判定の詳細（詳細ログは特定のパーツのみ）
+                        if (partId !== 0 && partId <= 3) { // Part 1-3のみでログ出力（ログ量を制限）
+                          console.log(`Sprite ${partSpriteKey} display check:`, {
+                            partImg: part.img,
+                            spriteId,
+                            imgMatch: part.img === spriteId,
+                            partVisible: part.visible,
+                            partNotHidden: !hiddenParts.has(partId),
+                            spriteNotHidden: !hiddenSprites.has(partSpriteKey),
+                            isDisplayed
+                          });
+                        }
                         
                         // opacity=0のパーツかチェック
                         const isOpacityZero = isPartOpacityZero(partId);
                         
-                        // スプライト使用状況の判定
-                        // Part 0のスプライトは常に非アクティブ表示
-                        // maanimで実際に表示されていないスプライトも非アクティブ表示
-                        const isSpriteUsed = partId === 0 ? false : isPartActive && isDisplayed;
+                        // スプライト使用状況の判定（チェックボックス状態を直接反映）
+                        const isSpriteUsed = (() => {
+                          if (partId === 0) return false; // Part 0は常に非アクティブ
+                          
+                          // チェックボックスが外されている場合は非アクティブ
+                          if (hiddenParts.has(partId) || hiddenSprites.has(partSpriteKey)) {
+                            if (partId <= 3) console.log(`Sprite ${partSpriteKey} hidden by checkbox`);
+                            return false;
+                          }
+                          
+                          // opacity=0の場合は非アクティブ
+                          if (isOpacityZero) {
+                            if (partId <= 3) console.log(`Sprite ${partSpriteKey} hidden by opacity=0`);
+                            return false;
+                          }
+                          
+                          // チェックボックスがチェックされていれば基本的にアクティブ
+                          // パーツのvisible状態に関係なく、ユーザーがチェックした意図を尊重
+                          if (partId <= 3) console.log(`Sprite ${partSpriteKey} active by checkbox`);
+                          return true;
+                        })();
                         
+                        // スプライトの表示色を明確に決定
+                        const spriteTextColor = (() => {
+                          if (isOpacityZero) {
+                            if (partId <= 3) console.log(`Sprite ${partSpriteKey} color: red (opacity=0)`);
+                            return 'text-red-400 opacity-100'; // opacity=0は赤色（明確）
+                          }
+                          if (isDisplayed && !isOpacityZero) {
+                            if (partId <= 3) console.log(`Sprite ${partSpriteKey} color: green (displayed)`);
+                            return 'text-green-500 opacity-100'; // 実際に表示中は緑色（明確）
+                          }
+                          if (isSpriteUsed) {
+                            if (partId <= 3) console.log(`Sprite ${partSpriteKey} color: normal (used but not displayed)`);
+                            return 'text-gray-700 opacity-100'; // チェック済みだが非表示は通常色（明確）
+                          }
+                          if (partId <= 3) console.log(`Sprite ${partSpriteKey} color: dim (inactive)`);
+                          return 'text-gray-500 opacity-30'; // 非アクティブは薄いグレー（より薄く、明確な指定）
+                        })();
+
+                        // チェックボックスの表示スタイルを決定
+                        const checkboxStyle = (() => {
+                          if (partId === 0) {
+                            if (partId <= 3) console.log(`Sprite ${partSpriteKey} checkbox: disabled (Part 0)`);
+                            return 'opacity-50 cursor-not-allowed'; // Part 0は無効化
+                          }
+                          if (isOpacityZero) {
+                            if (partId <= 3) console.log(`Sprite ${partSpriteKey} checkbox: dim (opacity=0)`);
+                            return 'opacity-60'; // opacity=0スプライトは薄く
+                          }
+                          if (!isSpriteUsed) {
+                            if (partId <= 3) console.log(`Sprite ${partSpriteKey} checkbox: very dim (inactive)`);
+                            return 'opacity-40'; // 非アクティブスプライトはさらに薄く
+                          }
+                          if (partId <= 3) console.log(`Sprite ${partSpriteKey} checkbox: normal (active)`);
+                          return 'opacity-100'; // アクティブは通常
+                        })();
+
                         return (
                           <div key={`sprite-${partId}-${spriteIndex}`} 
-                               className={`py-0 my-0 flex items-center gap-1 font-mono text-xxs ${isDisplayed && !isOpacityZero ? 'text-green-500' : ''} ${isOpacityZero ? 'text-red-400' : ''} ${!isSpriteUsed ? 'opacity-30' : ''}`}
+                               className={`py-0 my-0 flex items-center gap-1 font-mono text-xxs ${spriteTextColor}`}
                                style={{ paddingLeft: '28px' }}>
                             <input
                               type="checkbox"
-                              className={`w-3 h-3 accent-green-500 ${partId === 0 ? 'opacity-50 cursor-not-allowed' : ''}`}
+                              className={`w-3 h-3 accent-green-500 ${checkboxStyle}`}
                               checked={!hiddenSprites.has(partSpriteKey)}
                               onChange={(e) => handleSpriteToggle(spriteId, e.target.checked, partId)}
                               disabled={partId === 0}
@@ -1363,10 +1446,15 @@ export default function AnimationViewer({
 
       {/* Sprite Preview Section */}
       <div className="bg-blue-50 p-2 rounded mb-2">
-        <label className="block text-sm font-medium text-gray-600 mb-1 font-mono">
+        <button
+          onClick={() => setSpritePreviewExpanded(!spritePreviewExpanded)}
+          className="flex items-center justify-between w-full text-left text-sm font-medium text-gray-600 mb-1 font-mono hover:text-gray-800"
+        >
           Sprite Preview
-        </label>
-        <div className="space-y-2">
+          <span className="text-gray-400">{spritePreviewExpanded ? '▼' : '▶'}</span>
+        </button>
+        {spritePreviewExpanded && (
+          <div className="space-y-2">
           {/* Sprite ID Selector */}
           <div className="flex items-center space-x-2">
             <select
@@ -1419,6 +1507,7 @@ export default function AnimationViewer({
             />
           </div>
         </div>
+        )}
       </div>
 
       {/* Data Section - anim0と同様の実装 */}
@@ -1440,8 +1529,15 @@ export default function AnimationViewer({
             <div className="mt-2 space-y-2">
               {/* 元のJSONデータ */}
               <div className="bg-gray-50 p-2 rounded">
-                <label className="block text-xxs font-medium text-gray-400 mb-1 font-mono">Original JSON</label>
-                <pre className="whitespace-pre-wrap text-xxxs text-gray-500">{rawJsonData && (rawJsonData[selectedForm] as Record<string, unknown>)?.imgcut ? (() => {
+                <button
+                  onClick={() => setOriginalJsonExpanded(prev => ({ ...prev, imgcut: !prev.imgcut }))}
+                  className="flex items-center justify-between w-full text-left text-xxs font-medium text-gray-400 mb-1 font-mono hover:text-gray-600"
+                >
+                  Original JSON
+                  <span className="text-gray-400">{originalJsonExpanded.imgcut ? '▼' : '▶'}</span>
+                </button>
+                {originalJsonExpanded.imgcut && (
+                  <pre className="whitespace-pre-wrap text-xxxs text-gray-500">{rawJsonData && (rawJsonData[selectedForm] as Record<string, unknown>)?.imgcut ? (() => {
                   const data = (rawJsonData[selectedForm] as Record<string, unknown>).imgcut;
                   // データをクリーンアップしてからJSON化
                   const cleanData = JSON.parse(JSON.stringify(data, (_, value) => {
@@ -1473,12 +1569,15 @@ export default function AnimationViewer({
                     return match;
                   });
                 })() : 'No data'}</pre>
+                )}
               </div>
               
               {/* 変換後のanimationData */}
               <div className="bg-blue-50 p-2 rounded">
                 <label className="block text-xxs font-medium text-blue-600 mb-1 font-mono">Converted animationData</label>
-                <pre className="whitespace-pre-wrap text-xxxs text-blue-600">{animationData[selectedForm]?.imgcut ? (() => {
+                <pre className="whitespace-pre-wrap text-xxxs text-blue-600">{(() => {
+                  if (!animationData[selectedForm]?.imgcut) return 'No data';
+                  
                   const data = animationData[selectedForm].imgcut;
                   // データをクリーンアップしてからJSON化
                   const cleanData = JSON.parse(JSON.stringify(data, (_, value) => {
@@ -1509,7 +1608,7 @@ export default function AnimationViewer({
                     
                     return match;
                   });
-                })() : 'No data'}</pre>
+                })()}</pre>
               </div>
             </div>
           )}
@@ -1528,8 +1627,15 @@ export default function AnimationViewer({
             <div className="mt-2 space-y-2">
               {/* 元のJSONデータ */}
               <div className="bg-gray-50 p-2 rounded">
-                <label className="block text-xxs font-medium text-gray-400 mb-1 font-mono">Original JSON</label>
-                <pre className="whitespace-pre-wrap text-xxxs text-gray-500">{rawJsonData && (rawJsonData[selectedForm] as Record<string, unknown>)?.mamodel ? (() => {
+                <button
+                  onClick={() => setOriginalJsonExpanded(prev => ({ ...prev, mamodel: !prev.mamodel }))}
+                  className="flex items-center justify-between w-full text-left text-xxs font-medium text-gray-400 mb-1 font-mono hover:text-gray-600"
+                >
+                  Original JSON
+                  <span className="text-gray-400">{originalJsonExpanded.mamodel ? '▼' : '▶'}</span>
+                </button>
+                {originalJsonExpanded.mamodel && (
+                  <pre className="whitespace-pre-wrap text-xxxs text-gray-500">{rawJsonData && (rawJsonData[selectedForm] as Record<string, unknown>)?.mamodel ? (() => {
                   const data = (rawJsonData[selectedForm] as Record<string, unknown>).mamodel;
                   // データをクリーンアップしてからJSON化
                   const cleanData = JSON.parse(JSON.stringify(data, (_, value) => {
@@ -1561,52 +1667,136 @@ export default function AnimationViewer({
                     return match;
                   });
                 })() : 'No data'}</pre>
+                )}
               </div>
               
               {/* 変換後のanimationData */}
               <div className="bg-blue-50 p-2 rounded">
-                <label className="block text-xxs font-medium text-blue-600 mb-1 font-mono">Converted animationData</label>
-                <pre className="whitespace-pre-wrap text-xxxs text-blue-600">{animationData[selectedForm]?.mamodel ? (() => {
-                  const data = animationData[selectedForm].mamodel;
-                  // データをクリーンアップしてからJSON化
-                  const cleanData = JSON.parse(JSON.stringify(data, (_, value) => {
-                    if (typeof value === 'string') {
-                      // BOM文字やその他の制御文字を除去
-                      return value.replace(/[\uFEFF\u200B-\u200D\uFFFE\uFFFF]/g, '');
-                    }
-                    return value;
-                  }));
+                <div className="flex items-center justify-between mb-2">
+                  <label className="block text-xxs font-medium text-blue-600 font-mono">Converted animationData</label>
+                  <div className="flex gap-2">
+                    <button
+                      onClick={() => {
+                        // Parts|Spritesセクションの全選択ボタンと同じ処理
+                        setHiddenParts(new Set());
+                        setHiddenSprites(new Set());
+                      }}
+                      className="px-2 py-0 bg-blue-200 text-blue-700 rounded text-xxs hover:bg-blue-300 font-mono"
+                    >
+                      全選択
+                    </button>
+                    <button
+                      onClick={() => {
+                        // Parts|Spritesセクションの全解除ボタンと同じ処理
+                        const mamodel = animationData[selectedForm]?.mamodel;
+                        if (!mamodel) return;
+                        
+                        const allPartIds = Array.from({length: mamodel.n}, (_, i) => i).filter(id => id !== 0);
+                        const allPartSpriteKeys = new Set<string>();
+                        
+                        const imgcut = animationData[selectedForm]?.imgcut;
+                        if (imgcut) {
+                          for (let partId = 1; partId < mamodel.n; partId++) {
+                            for (let spriteId = 0; spriteId < imgcut.n; spriteId++) {
+                              allPartSpriteKeys.add(`${partId}-${spriteId}`);
+                            }
+                          }
+                        }
+                        
+                        setHiddenParts(new Set(allPartIds));
+                        setHiddenSprites(allPartSpriteKeys);
+                      }}
+                      className="px-2 py-0 bg-gray-200 text-gray-700 rounded text-xxs hover:bg-gray-300 font-mono"
+                    >
+                      全解除
+                    </button>
+                  </div>
+                </div>
+                
+                
+                <div className="space-y-1">{animationData[selectedForm]?.mamodel ? (() => {
+                  const originalData = animationData[selectedForm].mamodel;
                   
-                  const jsonStr = JSON.stringify(cleanData, null, 2);
+                  // プロパティを順序通りに表示（parts配列はintsとconfsの間）
+                  const { parts, ints, confs, ...otherProps } = originalData;
                   
-                  // ネストした配列のみ1行にする
-                  let result = jsonStr.replace(/(  )\[\s*\n([\s\S]*?)\n\s*\]/g, (match, indent, content) => {
-                    // インデントが2スペース以上（ネストした配列）の場合のみ処理
-                    const lines = content.split('\n').map((line: string) => line.trim()).filter((line: string) => line);
-                    
-                    // 全ての行がプリミティブ値かチェック
-                    const allPrimitive = lines.every((line: string) => {
-                      const cleanLine = line.replace(/,$/, '');
-                      return /^(-?\d+(\.\d+)?|".*"|true|false|null)$/.test(cleanLine);
-                    });
-                    
-                    if (allPrimitive) {
-                      const items = lines.map((line: string) => line.replace(/,$/, ''));
-                      return `${indent}[${items.join(', ')}]`;
-                    }
-                    
-                    return match;
-                  });
-                  
-                  // ints配列を特別に1行にする
-                  result = result.replace(/("ints":\s*)\[\s*\n([\s\S]*?)\n\s*\]/g, (_, intsLabel, content) => {
-                    const lines = content.split('\n').map((line: string) => line.trim()).filter((line: string) => line);
-                    const items = lines.map((line: string) => line.replace(/,$/, ''));
-                    return `${intsLabel}[${items.join(', ')}]`;
-                  });
-                  
-                  return result;
-                })() : 'No data'}</pre>
+                  return (
+                    <div>
+                      {/* n, m などの基本プロパティ */}
+                      <pre className="whitespace-pre-wrap text-xxxs text-blue-600">
+                        {`{
+  "n": ${originalData.n || 0},
+  "m": ${originalData.m || 2},`}
+                      </pre>
+                      
+                      {/* ints配列 */}
+                      <pre className="whitespace-pre-wrap text-xxxs text-blue-600">
+                        {`  "ints": [${(ints || []).join(', ')}],`}
+                      </pre>
+                      
+                      {/* parts配列の表示 */}
+                      <div className="space-y-1">
+                        <pre className="whitespace-pre-wrap text-xxxs text-blue-600">  &quot;parts&quot;: [</pre>
+                        {parts && Array.isArray(parts) && parts.map((part, partIndex) => {
+                          // Parts|Spritesセクションと同じロジックを使用（hiddenPartsベース）
+                          const isVisible = !hiddenParts.has(partIndex);
+                          const partJson = `[${part.join(', ')}]${partIndex < parts.length - 1 ? ',' : ''}`;
+                          
+                          return (
+                            <div key={partIndex} className="flex items-start gap-2 ml-6">
+                              <span className="text-xxxs font-mono text-gray-400 mt-0.5 flex-shrink-0 w-6 text-right">
+                                {partIndex.toString().padStart(2, '0')}:
+                              </span>
+                              <input
+                                type="checkbox"
+                                checked={isVisible}
+                                onChange={(e) => {
+                                  // handlePartToggleを直接使用して一貫性を保つ
+                                  handlePartToggle(partIndex, e.target.checked);
+                                }}
+                                className="w-3 h-3 mt-0.5 flex-shrink-0"
+                              />
+                              <span 
+                                className={`text-xxxs font-mono break-all ${
+                                  isVisible ? 'text-blue-600' : 'text-gray-300'
+                                }`}
+                              >
+                                {partJson}
+                              </span>
+                            </div>
+                          );
+                        })}
+                        <pre className="whitespace-pre-wrap text-xxxs text-blue-600">  ],</pre>
+                      </div>
+                      
+                      {/* confs配列 */}
+                      <div className="space-y-1">
+                        <pre className="whitespace-pre-wrap text-xxxs text-blue-600">  &quot;confs&quot;: [</pre>
+                        {confs && Array.isArray(confs) && confs.map((conf, confIndex) => {
+                          const confJson = `[${conf.join(', ')}]${confIndex < confs.length - 1 ? ',' : ''}`;
+                          return (
+                            <div key={confIndex} className="ml-6">
+                              <span className="text-xxxs font-mono text-blue-600">
+                                {confJson}
+                              </span>
+                            </div>
+                          );
+                        })}
+                        <pre className="whitespace-pre-wrap text-xxxs text-blue-600">  ],</pre>
+                      </div>
+                      
+                      {/* その他のプロパティ */}
+                      {Object.entries(otherProps).map(([key, value]) => (
+                        <pre key={key} className="whitespace-pre-wrap text-xxxs text-blue-600">
+                          {`  "${key}": ${JSON.stringify(value)},`}
+                        </pre>
+                      ))}
+                      
+                      {/* 閉じ括弧 */}
+                      <pre className="whitespace-pre-wrap text-xxxs text-blue-600">{"}"}</pre>
+                    </div>
+                  );
+                })() : <span className="text-xxxs text-gray-500">No data</span>}</div>
               </div>
             </div>
           )}
@@ -1625,8 +1815,15 @@ export default function AnimationViewer({
             <div className="mt-2 space-y-2">
               {/* 元のJSONデータ */}
               <div className="bg-gray-50 p-2 rounded">
-                <label className="block text-xxs font-medium text-gray-400 mb-1 font-mono">Original JSON</label>
-                <pre className="whitespace-pre-wrap text-xxxs text-gray-500">{rawJsonData && (rawJsonData[selectedForm] as Record<string, unknown>)?.[selectedAnimation] ? (() => {
+                <button
+                  onClick={() => setOriginalJsonExpanded(prev => ({ ...prev, maanim: !prev.maanim }))}
+                  className="flex items-center justify-between w-full text-left text-xxs font-medium text-gray-400 mb-1 font-mono hover:text-gray-600"
+                >
+                  Original JSON
+                  <span className="text-gray-400">{originalJsonExpanded.maanim ? '▼' : '▶'}</span>
+                </button>
+                {originalJsonExpanded.maanim && (
+                  <pre className="whitespace-pre-wrap text-xxxs text-gray-500">{rawJsonData && (rawJsonData[selectedForm] as Record<string, unknown>)?.[selectedAnimation] ? (() => {
                   const data = (rawJsonData[selectedForm] as Record<string, unknown>)[selectedAnimation];
                   // データをクリーンアップしてからJSON化
                   const cleanData = JSON.parse(JSON.stringify(data, (_, value) => {
@@ -1658,6 +1855,7 @@ export default function AnimationViewer({
                     return match;
                   });
                 })() : 'No data'}</pre>
+                )}
               </div>
               
               {/* 変換後のanimationData */}

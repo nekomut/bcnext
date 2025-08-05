@@ -384,7 +384,12 @@ export class EPart {
     // if (img < 0 || id < 0 || opa() < CommonStatic.getConfig().deadOpa * 0.01 + 1e-5 || a.parts(img) == null)
     const deadOpaThreshold = 10 * 0.01 + 1e-5; // Java版のdeadOpa閾値（デフォルト値=10）
     
-    if (this.img < 0 || this.id < 0 || this.opa() < deadOpaThreshold || !spriteImage || !imgcut) {
+    // visibleチェックを追加
+    if (!this.visible || this.img < 0 || this.id < 0 || this.opa() < deadOpaThreshold || !spriteImage || !imgcut) {
+      // デバッグ情報
+      if (!this.visible) {
+        console.log(`Part ${this.id} skipped draw: visible=${this.visible}`);
+      }
       return;
     }
     
@@ -759,8 +764,8 @@ export class EPart {
     spriteImage: HTMLImageElement | null,
     imgcut: { cuts?: number[][]; } | null
   ): void {
-    // Java版準拠：visibleチェックを削除
-    if (this.img < 0 || !spriteImage || !imgcut || this.extType === 0) {
+    // visibleチェックを追加
+    if (!this.visible || this.img < 0 || !spriteImage || !imgcut || this.extType === 0) {
       return;
     }
     
@@ -816,8 +821,8 @@ export class EPart {
     imgcut: { cuts?: number[][]; } | null,
     maxSpriteId: number
   ): void {
-    // Java版準拠：visibleチェックを削除
-    if (this.img < 0 || !spriteImage || !imgcut || this.extType !== 2) {
+    // visibleチェックを追加
+    if (!this.visible || this.img < 0 || !spriteImage || !imgcut || this.extType !== 2) {
       return;
     }
     
@@ -866,8 +871,8 @@ export class EPart {
     spriteImage: HTMLImageElement | null,
     imgcut: { cuts?: number[][]; } | null
   ): void {
-    // Java版準拠：visibleチェックを削除
-    if (this.img < 0 || !spriteImage || !imgcut || 
+    // visibleチェックを追加
+    if (!this.visible || this.img < 0 || !spriteImage || !imgcut || 
         this.extType !== 3 || (this.extendX <= 0 && this.extendY <= 0)) {
       return;
     }

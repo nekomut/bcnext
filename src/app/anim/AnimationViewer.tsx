@@ -1263,12 +1263,12 @@ export default function AnimationViewer({
                   const currentPartElement = (
                     <div key={`part-${partId}`} className="py-0 my-0" style={{ paddingLeft: `${indentLevel}px` }}>
                       {/* パーツ（親） */}
-                      <div className={`py-0 my-0 flex items-center gap-1 font-mono text-xs ${!isPartActive ? 'opacity-40' : ''}`}>
+                      <div className={`py-0 my-0 flex items-center gap-1 font-mono text-xxs ${!isPartActive ? 'opacity-40' : ''}`}>
                         {/* 折り畳みボタン */}
                         {hasChildren ? (
                           <button
                             onClick={() => togglePartExpansion(partId)}
-                            className="w-3 h-3 flex items-center justify-center text-xs text-gray-600 hover:text-gray-800 cursor-pointer"
+                            className="w-3 h-3 flex items-center justify-center text-xxs text-gray-600 hover:text-gray-800 cursor-pointer"
                           >
                             {isExpanded ? '▼' : '▶'}
                           </button>
@@ -1282,7 +1282,7 @@ export default function AnimationViewer({
                           onChange={(e) => handlePartToggle(partId, e.target.checked)}
                           disabled={partId === 0}
                         />
-                        <span className="font-mono text-xs">
+                        <span className="font-mono text-xxs">
                           Part#{partId.toString().padStart(3, '0')} {partName && typeof partName === 'string' && !partName.startsWith('"') && partName}
                         </span>
                         <span className="font-mono text-[10px] text-red-500">{partCoordinates}</span>
@@ -1309,7 +1309,7 @@ export default function AnimationViewer({
                         
                         return (
                           <div key={`sprite-${partId}-${spriteIndex}`} 
-                               className={`py-0 my-0 flex items-center gap-1 font-mono text-xs ${isDisplayed && !isOpacityZero ? 'text-green-500' : ''} ${isOpacityZero ? 'text-red-400' : ''} ${!isSpriteUsed ? 'opacity-30' : ''}`}
+                               className={`py-0 my-0 flex items-center gap-1 font-mono text-xxs ${isDisplayed && !isOpacityZero ? 'text-green-500' : ''} ${isOpacityZero ? 'text-red-400' : ''} ${!isSpriteUsed ? 'opacity-30' : ''}`}
                                style={{ paddingLeft: '28px' }}>
                             <input
                               type="checkbox"
@@ -1318,7 +1318,7 @@ export default function AnimationViewer({
                               onChange={(e) => handleSpriteToggle(spriteId, e.target.checked, partId)}
                               disabled={partId === 0}
                             />
-                            <span className="font-mono text-xs">
+                            <span className="font-mono text-xxs">
                               Sprite#{spriteId.toString().padStart(3, '0')}
                               {isOpacityZero ? ' ✕' : (isDisplayed ? ' ●' : ' ○')}
                               {isOpacityZero ? ' (opacity=0)' : ''}

@@ -1,7 +1,7 @@
 import { GatyaSet } from "@/data/gatyasets";
 
 export const Set1010: GatyaSet = {
-  name: "サマーガールズサンシャイン",
+  name: "サマガ赤",
   guaranteed: -1,
   shortName: "1010",
   gatyasetId: 1010,

@@ -24,13 +24,13 @@ import { Set951 } from './set951'; // ピクシーズ
 // import { Set962 } from './set962'; // ルガ族
 // import { Set963 } from './set963'; // 超ネコ祭
 // import { Set964 } from './set964'; // 極ネコ祭
-// import { Set965 } from './set965'; // プラチケ
-// import { Set966 } from './set966'; // レジェチケ
+// import { Set965 } from './set965'; // プラチナ
+// import { Set966 } from './set966'; // レジェンド
 // import { Set967 } from './set967'; // 1億DL記念選抜
 // import { Set968 } from './set968'; // ホワイトデー
 // import { Set969 } from './set969'; // 極ネコ祭
-// import { Set970 } from './set970'; // プラチケ
-// import { Set971 } from './set971'; // レジェチケ
+// import { Set970 } from './set970'; // プラチナ
+// import { Set971 } from './set971'; // レジェンド
 // import { Set972 } from './set972'; // 超極ネコ祭
 // import { Set974 } from './set974'; // アウトレット
 // import { Set975 } from './set975'; // 超選抜祭

@@ -171,13 +171,6 @@ export default function AnimationViewer({
     });
   };
 
-  // 実際のスプライトIDからimgcut配列インデックスに変換する関数
-  const getSpriteDisplayIndex = useCallback((actualSpriteId: number): number => {
-    // imgcut配列内でのインデックスを返す（表示用）
-    // 実際のスプライトIDと配列インデックスは同じ場合が多いが、
-    // Sprite Previewとの表示統一のため明示的にインデックスを返す
-    return actualSpriteId;
-  }, []);
 
   // パーツごとのスプライトIDを取得する関数
   const getPartSprites = useCallback((partId: number): number[] => {
@@ -1450,7 +1443,7 @@ export default function AnimationViewer({
                               disabled={partId === 0}
                             />
                             <span className="font-mono text-xxs">
-                              Sprite#{getSpriteDisplayIndex(spriteId).toString().padStart(3, '0')}
+                              Sprite#{spriteId.toString().padStart(3, '0')}
                               {isOpacityZero ? ' ✕' : (isDisplayed ? ' ●' : ' ○')}
                               {isOpacityZero ? ' (opacity=0)' : ''}
                             </span>

@@ -359,21 +359,49 @@ export class EAnimD extends EAnimI {
     
     // 1. 全パーツのインスタンスを作成（setValue()は後で実行）
     for (let i = 0; i < this.mamodel.n; i++) {
-      entities[i] = new EPart(
-        this.mamodel,
-        this,
-        this.mamodel.parts[i],
-        this.mamodel.strs0[i] || '',
-        i,
-        entities
-      );
+      const modelPart = this.mamodel.parts[i];
+      
+      // modelPartの安全性チェック
+      if (!modelPart || !Array.isArray(modelPart)) {
+        console.error(`EAnimD.createEPartArray: Invalid modelPart at index ${i}:`, modelPart);
+        console.error('MaModel info:', {
+          n: this.mamodel.n,
+          partsLength: this.mamodel.parts?.length,
+          partsType: typeof this.mamodel.parts,
+          parts: this.mamodel.parts
+        });
+        // デフォルトのパーツデータを使用
+        const defaultPart = [0, 0, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 255, 0];
+        entities[i] = new EPart(
+          this.mamodel,
+          this,
+          defaultPart,
+          this.mamodel.strs0[i] || '',
+          i,
+          entities
+        );
+      } else {
+        entities[i] = new EPart(
+          this.mamodel,
+          this,
+          modelPart,
+          this.mamodel.strs0[i] || '',
+          i,
+          entities
+        );
+      }
     }
     
     // 2. 親子関係を設定（全インスタンス作成後）
     for (let i = 0; i < this.mamodel.n; i++) {
-      const parentId = this.mamodel.parts[i][0];
-      if (parentId >= 0 && parentId < entities.length) {
-        entities[i].fa = entities[parentId];
+      const modelPart = this.mamodel.parts[i];
+      if (modelPart && Array.isArray(modelPart) && modelPart.length > 0) {
+        const parentId = modelPart[0];
+        if (parentId >= 0 && parentId < entities.length) {
+          entities[i].fa = entities[parentId];
+        } else {
+          entities[i].fa = null;
+        }
       } else {
         entities[i].fa = null;
       }

@@ -54,10 +54,17 @@ export class EPart {
     entities: EPart[]
   ) {
     this.ind = index;                // パーツインデックス（Java版互換）
-    this.id = modelPart[1];          // パーツID（args[1]から設定）
+    this.id = index;                 // パーツID（配列インデックスを使用）
     this.ent = entities;
     this.model = model;
-    this.args = [...modelPart];
+    
+    // modelPartの安全性チェック
+    if (!modelPart || !Array.isArray(modelPart)) {
+      console.error(`EPart constructor: modelPart is not an array at index ${index}:`, modelPart);
+      this.args = [0, 0, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 255, 0]; // デフォルト値
+    } else {
+      this.args = [...modelPart];
+    }
     
     // 初期値設定は外部（organize()）で実行
     // Java版準拠：値設定のタイミングを統一

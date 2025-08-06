@@ -2,12 +2,6 @@
 
 import { AnimationData, ImgCut, MaModel, MaAnim, Part } from './types';
 
-// グローバルキャッシュ（anim0と同じ方式）
-interface AnimationDataCache {
-  [unitId: string]: { [form: string]: AnimationData } | AnimationData;
-}
-
-const animationCache: AnimationDataCache = {};
 
 export class AnimationLoadError extends Error {
   constructor(
@@ -21,9 +15,9 @@ export class AnimationLoadError extends Error {
 }
 
 /**
- * tbcmlベースのJSONデータをcommon/util/animベースの構造に変換
+ * tbcmlベースのJSONデータをcommon/util/animベースの構造に変換（複数フォーム対応）
  */
-export async function loadAnimationData(unitId: string): Promise<AnimationData | null> {
+export async function loadMultiFormAnimationData(unitId: string): Promise<{ [form: string]: AnimationData } | null> {
   try {
     // Next.jsのbasePathを考慮したパスを生成（anim0と同じ方式）
     // GitHub Pagesデプロイ環境ではhostname判定を使用
@@ -60,49 +54,58 @@ export async function loadAnimationData(unitId: string): Promise<AnimationData |
     }
     
     const jsonData = await response.json();
-    console.log(`Unit ${unitId} JSONデータ読み込み完了:`, Object.keys(jsonData));
     
-    // 最初に見つかったフォームのデータを使用（通常は 'f'）
-    const formKeys = Object.keys(jsonData);
-    if (formKeys.length === 0) {
-      console.warn(`フォームデータが見つかりません: ${unitId}`);
-      return null;
-    }
+    // 複数フォームの変換結果を格納
+    const result: { [form: string]: AnimationData } = {};
     
-    const firstFormKey = formKeys[0];
-    const formData = jsonData[firstFormKey];
-    
-    if (!formData.imgcut || !formData.mamodel) {
-      console.warn(`必要なデータが不足しています: ${unitId}`);
-      return null;
-    }
-    
-    // ImgCut変換
-    const imgcut = convertImgCut(formData.imgcut);
-    
-    // MaModel変換
-    const mamodel = convertMaModel(formData.mamodel);
-    
-    // MaAnim変換（複数のアニメーション）
-    const maanim: { [key: string]: MaAnim } = {};
-    
-    // tbcmlフォーマットのアニメーションキーを検索
-    const animKeys = Object.keys(formData).filter(key => key.startsWith('maanim'));
-    
-    for (const animKey of animKeys) {
-      const animData = formData[animKey];
-      if (animData) {
-        maanim[animKey] = convertMaAnim(animData);
+    // 各フォーム（f, c, s, u など）を処理
+    for (const formKey of Object.keys(jsonData)) {
+      const formData = jsonData[formKey];
+      
+      if (!formData.imgcut || !formData.mamodel) {
+        console.warn(`必要なデータが不足しています: ${unitId} form=${formKey}`);
+        continue;
+      }
+      
+      try {
+        // ImgCut変換
+        const imgcut = convertImgCut(formData.imgcut);
+        
+        // MaModel変換
+        const mamodel = convertMaModel(formData.mamodel);
+        
+        // MaAnim変換（複数のアニメーション）
+        const maanim: { [key: string]: MaAnim } = {};
+        
+        // tbcmlフォーマットのアニメーションキーを検索
+        const animKeys = Object.keys(formData).filter(key => key.startsWith('maanim'));
+        
+        for (const animKey of animKeys) {
+          const animData = formData[animKey];
+          if (animData) {
+            maanim[animKey] = convertMaAnim(animData);
+          }
+        }
+        
+        result[formKey] = {
+          imgcut,
+          mamodel, 
+          maanim
+        };
+        
+        
+      } catch (error) {
+        console.error(`Unit ${unitId} form=${formKey} 変換エラー:`, error);
+        continue;
       }
     }
     
-    console.log(`Unit ${unitId} 変換完了 - アニメーション数: ${Object.keys(maanim).length}`);
+    if (Object.keys(result).length === 0) {
+      console.warn(`変換可能なフォームデータが見つかりません: ${unitId}`);
+      return null;
+    }
     
-    return {
-      imgcut,
-      mamodel, 
-      maanim
-    };
+    return result;
     
   } catch (error) {
     console.error(`アニメーションデータの読み込みエラー (${unitId}):`, error);
@@ -174,14 +177,15 @@ function detectScaleUnit(mamodelData: unknown[]): number {
  * tbcmlのmamodelデータをMaModelクラスに変換
  */
 function convertMaModel(mamodelData: unknown[]): MaModel {
+  
   const parts: number[][] = [];
   const strs0: string[] = [];
   const strs1: string[] = [];
   
   // データ構造の解析
-  // [0] ["[modelanim:model]"]
-  // [1] [パーツ数]
-  // [2] [設定数]
+  // [0] ["[modelanim:model]" or "[modelanim:model2]"]
+  // [1] [レベル数]
+  // [2] [パーツ数]
   // [3以降] パーツデータ
   // [パーツ数+3] ints設定
   // [パーツ数+4] strs1の数
@@ -275,6 +279,7 @@ function convertMaModel(mamodelData: unknown[]): MaModel {
   } else if (confs.length === 1) {
     confs.push([0, 0, 0, 0, 5, 0]); // config1: デフォルト
   }
+  
   
   return new MaModel({
     n: parts.length,
@@ -428,11 +433,9 @@ export async function loadUnitImage(unitId: string): Promise<HTMLCanvasElement |
     const img = new Image();
     await new Promise<void>((resolve, reject) => {
       img.onload = () => {
-        console.log(`画像読み込み成功 (${unitId}): ${img.width}x${img.height}`);
         resolve();
       };
       img.onerror = () => {
-        console.error(`画像の作成に失敗 (${unitId})`);
         reject(new Error(`Image load failed for unit ${unitId}`));
       };
       img.src = imageSrc;
@@ -450,7 +453,6 @@ export async function loadUnitImage(unitId: string): Promise<HTMLCanvasElement |
     
     ctx.drawImage(img, 0, 0);
     
-    console.log(`Unit ${unitId} 画像読み込み完了: ${img.width}x${img.height}`);
     return canvas;
     
   } catch (error) {
@@ -459,121 +461,3 @@ export async function loadUnitImage(unitId: string): Promise<HTMLCanvasElement |
   }
 }
 
-/**
- * 複数フォーム対応の統合アニメーションデータローダー
- */
-export async function loadMultiFormAnimationData(unitId: string): Promise<{ [form: string]: AnimationData } | null> {
-  // キャッシュチェック
-  if (animationCache[unitId] && typeof animationCache[unitId] === 'object' && !('imgcut' in animationCache[unitId])) {
-    return animationCache[unitId] as { [form: string]: AnimationData };
-  }
-
-  try {
-    // Next.jsのbasePathを考慮したパスを生成（anim0と同じ方式）
-    const isGitHubPages = typeof window !== 'undefined' && window.location.hostname === 'nekomut.github.io';
-    const basePath = isGitHubPages ? '/bcnext' : '';
-    
-    // JSON専用読み込み（複数URLフォールバック）
-    const urlsToTry = [
-      `${basePath}/data/anim/${unitId}.json`,
-      `./data/anim/${unitId}.json`,
-      `${typeof window !== 'undefined' && window.location.origin || ''}${basePath}/data/anim/${unitId}.json`
-    ].filter(Boolean);
-    
-    let response: Response | null = null;
-    let lastError: Error | null = null;
-    
-    for (const tryUrl of urlsToTry) {
-      try {
-        response = await fetch(tryUrl);
-        if (response.ok) {
-          break;
-        } else {
-          lastError = new Error(`HTTP ${response.status}: ${response.statusText}`);
-        }
-      } catch (error) {
-        lastError = error as Error;
-        continue;
-      }
-    }
-    
-    if (!response || !response.ok) {
-      console.warn(`All URLs failed to load multi-form animation data for unit ${unitId}. Last error: ${lastError?.message || 'unknown'}`);
-      return null;
-    }
-    
-    const jsonData = await response.json();
-    const result: { [form: string]: AnimationData } = {};
-    
-    // 各フォームのデータを変換
-    for (const [formKey, formData] of Object.entries(jsonData)) {
-      if (typeof formData === 'object' && formData !== null) {
-        const typedFormData = formData as Record<string, unknown>;
-        
-        if (typedFormData.imgcut && typedFormData.mamodel) {
-          const imgcut = convertImgCut(typedFormData.imgcut as unknown[]);
-          const mamodel = convertMaModel(typedFormData.mamodel as unknown[]);
-          
-          const maanim: { [key: string]: MaAnim } = {};
-          const animKeys = Object.keys(typedFormData).filter(key => key.startsWith('maanim'));
-          
-          for (const animKey of animKeys) {
-            const animData = typedFormData[animKey];
-            if (animData) {
-              maanim[animKey] = convertMaAnim(animData as unknown[]);
-            }
-          }
-          
-          result[formKey] = { imgcut, mamodel, maanim };
-        }
-      }
-    }
-    
-    if (Object.keys(result).length > 0) {
-      // キャッシュに保存
-      animationCache[unitId] = result;
-      return result;
-    } else {
-      return null;
-    }
-    
-  } catch (error) {
-    if (error instanceof AnimationLoadError) {
-      throw error;
-    }
-    
-    const loadError = new AnimationLoadError(
-      `Failed to load multi-form animation data for unit ${unitId}: ${(error as Error).message}`,
-      unitId,
-      error as Error
-    );
-    
-    console.error(loadError.message, loadError);
-    throw loadError;
-  }
-}
-
-// メモリ管理のためのキャッシュクリア機能（anim0と同じ）
-export const clearAnimationCache = (unitId?: string): void => {
-  if (unitId) {
-    delete animationCache[unitId];
-  } else {
-    // 全てのキャッシュをクリア
-    Object.keys(animationCache).forEach(key => delete animationCache[key]);
-  }
-};
-
-// キャッシュ情報の取得（デバッグ用）
-export const getAnimationCacheInfo = (): { unitCount: number } => {
-  return { unitCount: Object.keys(animationCache).length };
-};
-
-// デバッグ用のコンソール出力（開発環境のみ）
-if (typeof window !== 'undefined' && process.env.NODE_ENV === 'development') {
-  (window as Window & { animDataDebug?: object }).animDataDebug = {
-    getCache: () => animationCache,
-    getCacheInfo: getAnimationCacheInfo,
-    clearCache: clearAnimationCache,
-    loadUnit: loadMultiFormAnimationData
-  };
-}

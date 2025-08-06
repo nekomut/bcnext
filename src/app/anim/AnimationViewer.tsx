@@ -175,25 +175,43 @@ export default function AnimationViewer({
   // パーツごとのスプライトIDを取得する関数
   const getPartSprites = useCallback((partId: number): number[] => {
     
-    const sprites = new Set<number>();
+    const currentSprite: number[] = [];
+    const additionalSprites = new Set<number>();
     let isUsedInAnimation = false;
     
-    // 1. アニメーションデータから使用されるスプライトを収集
+    
+    
+    // 1. EAnimDから現在のパーツ状態を取得（実際に表示されているスプライト）
+    if (eAnimD && eAnimD.ent && eAnimD.ent[partId]) {
+      const currentPart = eAnimD.ent[partId];
+      if (currentPart && currentPart.img >= 0) {
+        currentSprite.push(currentPart.img);
+      }
+    }
+    
+    // 2. アニメーションデータから使用される可能性のあるスプライトを追加収集
     const maanim = animationData[selectedForm]?.maanim?.[selectedAnimation];
-    if (maanim) {
-      maanim.parts.forEach(animPart => {
+    if (maanim && maanim.parts) {
+      maanim.parts.forEach((animPart) => {
+        if (!animPart || !animPart.ints || animPart.ints.length < 2) {
+          return;
+        }
         const animPartId = animPart.ints[0];
         const modifType = animPart.ints[1];
         
         if (animPartId === partId) {
           isUsedInAnimation = true;
           
+          
           // SPRITE modification (type 2) をチェック
-          if (modifType === 2) {
-            animPart.moves.forEach(move => {
+          if (modifType === 2 && animPart.moves) {
+            animPart.moves.forEach((move) => {
+              if (!move || move.length < 2) {
+                return;
+              }
               const spriteId = move[1];
-              if (spriteId >= 0) {
-                sprites.add(spriteId);
+              if (spriteId >= 0 && !currentSprite.includes(spriteId)) {
+                additionalSprites.add(spriteId);
               }
             });
           }
@@ -201,31 +219,29 @@ export default function AnimationViewer({
       });
     }
     
-    // 2. EAnimDから現在のパーツ状態を取得
-    if (eAnimD && eAnimD.ent && eAnimD.ent[partId]) {
-      const currentPart = eAnimD.ent[partId];
-      if (currentPart && currentPart.img >= 0) {
-        sprites.add(currentPart.img);
-      }
-    }
-    
-    // 3. すべてのパーツでベーススプライトをチェック（汎用化）
-    if (sprites.size === 0) {
+    // 3. ベーススプライトをフォールバックとして追加（他のスプライトが見つからない場合のみ）
+    if (currentSprite.length === 0 && additionalSprites.size === 0) {
       const mamodel = animationData[selectedForm]?.mamodel;
       if (mamodel?.parts[partId]) {
         const baseCutId = mamodel.parts[partId][2];
         if (baseCutId >= 0) {
-          sprites.add(baseCutId);
+          currentSprite.push(baseCutId);
         }
       }
     }
     
-    // 4. ベーススプライトも存在せず、アニメーションでも使用されない場合は非表示
-    if (sprites.size === 0 && !isUsedInAnimation) {
+    // 4. 何も見つからない場合は非表示
+    if (currentSprite.length === 0 && additionalSprites.size === 0 && !isUsedInAnimation) {
       return [];
     }
     
-    return Array.from(sprites).sort((a, b) => a - b);
+    // 5. 現在のスプライトを最優先、その後に追加スプライトをソート順で配置
+    const result = [...currentSprite];
+    const sortedAdditional = Array.from(additionalSprites).sort((a, b) => a - b);
+    result.push(...sortedAdditional);
+    
+    
+    return result;
   }, [animationData, selectedForm, selectedAnimation, eAnimD]);
 
   // パーツが現在のフレームでopacity=0かどうかを判定する関数
@@ -242,26 +258,36 @@ export default function AnimationViewer({
     // 現在のフレームでの透明度を計算
     let currentFrameOpacity = null;
     
-    maanim.parts.forEach(animPart => {
-      const animPartId = animPart.ints[0];
-      const modifType = animPart.ints[1];
-      
-      if (animPartId === partId && modifType === 12) {
-        // OPACITY modification (type 12) で現在フレームでの値を取得
-        // 最新の適用可能なmoveを探す
-        let latestMove = null;
-        animPart.moves.forEach(move => {
-          const moveFrame = move[0];
-          if (moveFrame <= currentFrame) {
-            latestMove = move;
-          }
-        });
-        
-        if (latestMove) {
-          currentFrameOpacity = latestMove[1];
+    if (maanim.parts) {
+      maanim.parts.forEach(animPart => {
+        if (!animPart || !animPart.ints || animPart.ints.length < 2) {
+          return;
         }
-      }
-    });
+        const animPartId = animPart.ints[0];
+        const modifType = animPart.ints[1];
+        
+        if (animPartId === partId && modifType === 12) {
+          // OPACITY modification (type 12) で現在フレームでの値を取得
+          // 最新の適用可能なmoveを探す
+          let latestMove = null;
+          if (animPart.moves) {
+            animPart.moves.forEach(move => {
+              if (!move || move.length < 2) {
+                return;
+              }
+              const moveFrame = move[0];
+              if (moveFrame <= currentFrame) {
+                latestMove = move;
+              }
+            });
+          }
+        
+          if (latestMove) {
+            currentFrameOpacity = latestMove[1];
+          }
+        }
+      });
+    }
     
     // currentFrameOpacityが設定されている場合はそれを使用、そうでなければパーツの実際の透明度を使用
     if (currentFrameOpacity !== null) {
@@ -562,6 +588,13 @@ export default function AnimationViewer({
       // AnimationLoader側で既に正しく変換されているため、そのまま使用
       
       // MaModel作成（../common/util/anim準拠のconfs配列実装）
+      console.log('Creating MaModel with data:', {
+        n: formData.mamodel.n,
+        partsLength: formData.mamodel.parts?.length,
+        partsType: typeof formData.mamodel.parts,
+        firstPart: formData.mamodel.parts?.[0]
+      });
+      
       const maModel = new MaModel({
         n: formData.mamodel.n,
         m: formData.mamodel.m || 2,
@@ -698,10 +731,6 @@ export default function AnimationViewer({
             // 最終的な表示状態 = パーツ表示 AND スプライト表示 AND opacity非ゼロ
             const finalVisibility = partShouldBeVisible && spriteShouldBeVisible && !isOpacityZero;
             
-            // Unit 024のデバッグ情報を追加
-            if (unitId === '024' && (partId === 24 || partId <= 5)) {
-              console.log(`Unit 024 Part ${partId}: hiddenParts.has=${hiddenParts.has(partId)}, partShouldBeVisible=${partShouldBeVisible}, spriteShouldBeVisible=${spriteShouldBeVisible}, isOpacityZero=${isOpacityZero}, finalVisibility=${finalVisibility}, part.img=${part.img}`);
-            }
             
             // デバッグ情報
             if (hiddenParts.size > 0) {
@@ -762,7 +791,7 @@ export default function AnimationViewer({
       
       ctx.restore();
     });
-  }, [eAnimD, offsetX, offsetY, zoom, showRefLines, hiddenParts, hiddenSprites, isPartOpacityZero, unitId]);
+  }, [eAnimD, offsetX, offsetY, zoom, showRefLines, hiddenParts, hiddenSprites, isPartOpacityZero]);
 
   // 描画処理
   const render = useCallback(() => {
@@ -1243,13 +1272,19 @@ export default function AnimationViewer({
               {animationData[selectedForm] && animationData[selectedForm].mamodel && (() => {
                 const mamodel = animationData[selectedForm].mamodel;
                 
+                if (!mamodel.parts || !Array.isArray(mamodel.parts)) {
+                  return <div className="text-xs text-red-500">Invalid mamodel data</div>;
+                }
 
                 // パーツの親子関係を構築
                 const childrenMap: { [key: number]: number[] } = {};
                 const rootParts: number[] = [];
                 
-                for (let i = 0; i < mamodel.n; i++) {
+                for (let i = 0; i < mamodel.n && i < mamodel.parts.length; i++) {
                   const modelPart = mamodel.parts[i];
+                  if (!modelPart || !Array.isArray(modelPart) || modelPart.length === 0) {
+                    continue;
+                  }
                   const parentId = modelPart[0]; // parentIdは配列の最初の要素
                   
                   if (parentId === -1) {
@@ -1292,7 +1327,7 @@ export default function AnimationViewer({
                   // パーツの座標情報を取得（mamodelで定義された座標）
                   const partCoordinates = (() => {
                     // 常にmamodelから基本座標を取得（X, Y, Z）
-                    if (mamodel.parts[partId]) {
+                    if (mamodel.parts[partId] && Array.isArray(mamodel.parts[partId]) && mamodel.parts[partId].length >= 6) {
                       const modelPart = mamodel.parts[partId];
                       const baseX = formatCoordinate(modelPart[4]);
                       const baseY = formatCoordinate(modelPart[5]);

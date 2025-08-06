@@ -68,8 +68,8 @@ export class EAnimD extends EAnimI {
   private performanceMode: boolean = false;  // パフォーマンスモード
   
   // スプライト関連
-  private spriteImage: HTMLImageElement | null = null;
-  private imgcut: { cuts?: number[][]; } | null = null;
+  public spriteImage: HTMLImageElement | null = null;
+  public imgcut: { cuts?: number[][]; } | null = null;
 
   constructor(animInterface: AnimI, mamodel: MaModel, maanim: MaAnim) {
     super(animInterface, mamodel);

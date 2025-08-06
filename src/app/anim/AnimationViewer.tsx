@@ -171,6 +171,14 @@ export default function AnimationViewer({
     });
   };
 
+  // 実際のスプライトIDからimgcut配列インデックスに変換する関数
+  const getSpriteDisplayIndex = useCallback((actualSpriteId: number): number => {
+    // imgcut配列内でのインデックスを返す（表示用）
+    // 実際のスプライトIDと配列インデックスは同じ場合が多いが、
+    // Sprite Previewとの表示統一のため明示的にインデックスを返す
+    return actualSpriteId;
+  }, []);
+
   // パーツごとのスプライトIDを取得する関数
   const getPartSprites = useCallback((partId: number): number[] => {
     
@@ -697,12 +705,18 @@ export default function AnimationViewer({
             // 最終的な表示状態 = パーツ表示 AND スプライト表示 AND opacity非ゼロ
             const finalVisibility = partShouldBeVisible && spriteShouldBeVisible && !isOpacityZero;
             
+            // Unit 024のデバッグ情報を追加
+            if (unitId === '024' && (partId === 24 || partId <= 5)) {
+              console.log(`Unit 024 Part ${partId}: hiddenParts.has=${hiddenParts.has(partId)}, partShouldBeVisible=${partShouldBeVisible}, spriteShouldBeVisible=${spriteShouldBeVisible}, isOpacityZero=${isOpacityZero}, finalVisibility=${finalVisibility}, part.img=${part.img}`);
+            }
+            
             // デバッグ情報
             if (hiddenParts.size > 0) {
               console.log(`Part ${partId}: partShouldBeVisible=${partShouldBeVisible}, spriteShouldBeVisible=${spriteShouldBeVisible}, isOpacityZero=${isOpacityZero}, finalVisibility=${finalVisibility}`);
             }
             
-            part.setVisibleRecursive(finalVisibility);
+            // 描画前に毎回visible状態を強制設定（アニメーション更新による上書きを防ぐ）
+            part.visible = finalVisibility;
           }
         }
       }
@@ -717,11 +731,45 @@ export default function AnimationViewer({
         console.log('Drawing with hiddenParts:', Array.from(hiddenParts));
       }
       
-      eAnimD.draw(ctx, unifiedOrigin, unifiedSize);
+      // カスタム描画：各パーツの表示状態をチェックしながら描画
+      if (eAnimD.order) {
+        for (const part of eAnimD.order) {
+          const partId = part.ind;
+          
+          // チェックボックス状態に基づく表示判定
+          const partShouldBeVisible = !hiddenParts.has(partId);
+          let spriteShouldBeVisible = true;
+          if (partShouldBeVisible && part.img !== undefined && part.img >= 0) {
+            const partSpriteKey = `${partId}-${part.img}`;
+            spriteShouldBeVisible = !hiddenSprites.has(partSpriteKey);
+          }
+          const isOpacityZero = isPartOpacityZero(partId);
+          const shouldDraw = partShouldBeVisible && spriteShouldBeVisible && !isOpacityZero;
+          
+          // 表示すべきパーツのみ描画
+          if (shouldDraw) {
+            ctx.save();
+            try {
+              const sizer = P.newP(unifiedSize, unifiedSize, 1);
+              part.transform(ctx, sizer);
+              
+              // 一時的にvisibleを強制的にtrueに設定して描画
+              const originalVisible = part.visible;
+              part.visible = true;
+              part.drawPart(ctx, unifiedOrigin, sizer, eAnimD.spriteImage, eAnimD.imgcut);
+              part.visible = originalVisible; // 元に戻す
+            } catch (error) {
+              console.warn(`Custom draw error for part ${part.id}:`, error);
+            } finally {
+              ctx.restore();
+            }
+          }
+        }
+      }
       
       ctx.restore();
     });
-  }, [eAnimD, offsetX, offsetY, zoom, showRefLines, hiddenParts, hiddenSprites, isPartOpacityZero]);
+  }, [eAnimD, offsetX, offsetY, zoom, showRefLines, hiddenParts, hiddenSprites, isPartOpacityZero, unitId]);
 
   // 描画処理
   const render = useCallback(() => {
@@ -1402,7 +1450,7 @@ export default function AnimationViewer({
                               disabled={partId === 0}
                             />
                             <span className="font-mono text-xxs">
-                              Sprite#{spriteId.toString().padStart(3, '0')}
+                              Sprite#{getSpriteDisplayIndex(spriteId).toString().padStart(3, '0')}
                               {isOpacityZero ? ' ✕' : (isDisplayed ? ' ●' : ' ○')}
                               {isOpacityZero ? ' (opacity=0)' : ''}
                             </span>

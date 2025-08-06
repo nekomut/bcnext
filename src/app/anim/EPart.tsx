@@ -746,6 +746,11 @@ export class EPart {
    * Java版setVisibleRecursive()メソッド - 再帰的表示設定
    */
   public setVisibleRecursive(visible: boolean): void {
+    // Unit 024のデバッグ情報
+    if (this.args && this.args[1] === 24 && this.id === 24 && visible === false) {
+      console.log(`Unit 024 Part ${this.id} setVisibleRecursive(false) called:`, new Error().stack);
+    }
+    
     this.visible = visible;
     
     const children = this.getChildParts();

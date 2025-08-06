@@ -54,7 +54,7 @@ abstract class BattleObj {
 export abstract class EAnimI extends BattleObj {
   public sele: number = -1;        // 選択されたパーツのインデックス
   public ent: EPart[] | null = null;  // エンティティパーツの配列
-  protected order: EPart[] | null = null;  // パーツの描画順序配列
+  public order: EPart[] | null = null;  // パーツの描画順序配列
   protected readonly a: AnimI;     // アニメーション実装参照
   protected readonly mamodel: MaModel;  // モデルデータ参照
 

@@ -435,9 +435,40 @@ export class EPart {
         useCanvas = true;
       }
       
-      // glowエフェクト処理
-      if (this.glow) {
-        ctx.globalCompositeOperation = 'screen';
+      // Java版準拠の透明度・glow処理（ImgCore.drawImg完全再現）
+      const finalOpacity = this.opa();
+      const glowValue = (this.args && this.args.length > 12) ? this.args[12] as number : 0;
+      const glowSupport = (glowValue >= 1 && glowValue <= 3) || glowValue === -1;
+      
+      // Java版の透明度閾値: fullOpa = 90
+      const fullOpaThreshold = 90 * 0.01 - 1e-5; // 0.9 - 1e-5
+      
+      ctx.save();
+      
+      if (finalOpacity < fullOpaThreshold) {
+        // 透明度が90%未満の場合
+        if (glowSupport) {
+          // Java版: g.setComposite(FakeGraphics.BLEND, (int)(opa * 256), glow)
+          ctx.globalAlpha = finalOpacity;
+          if (needsBlackTransparency || glowValue === 1) {
+            ctx.globalCompositeOperation = 'lighten';
+          }
+        } else {
+          // 通常の透明度処理
+          ctx.globalAlpha = finalOpacity;
+        }
+      } else {
+        // 透明度が90%以上の場合
+        if (glowSupport) {
+          // Java版: g.setComposite(FakeGraphics.BLEND, 256, glow)
+          ctx.globalAlpha = 1.0; // 完全不透明
+          if (needsBlackTransparency || glowValue === 1) {
+            ctx.globalCompositeOperation = 'lighten';
+          }
+        } else {
+          // 通常処理（完全不透明）
+          ctx.globalAlpha = 1.0;
+        }
       }
       
       // Java版と同じピボット・スケール計算 (P tpiv = P.newP(piv).times(p0).times(base))
@@ -532,10 +563,8 @@ export class EPart {
       P.delete(tpiv);
       P.delete(sc);
       
-      // glowエフェクトをリセット
-      if (this.glow) {
-        ctx.globalCompositeOperation = 'source-over';
-      }
+      // Canvas状態復元（Java版のg.setComposite(FakeGraphics.DEF, 0, 0)相当）
+      ctx.restore();
       
     } catch (error) {
       console.warn(`EPart#${this.id} 描画エラー:`, error);
@@ -1076,20 +1105,45 @@ export class EPart {
     const imageData = tempCtx.getImageData(0, 0, sw, sh);
     const data = imageData.data;
     
-    // 黒い部分（RGB値が低い部分）を透明化
-    // しきい値: RGB各成分が200以下の場合を暗色とみなす
-    const blackThreshold = 200;
-    
+    // Java版BLEND処理準拠の黒い部分透明化
+    // より精密なグラデーション透明化を実現
     for (let i = 0; i < data.length; i += 4) {
       const r = data[i];     // Red
       const g = data[i + 1]; // Green
       const b = data[i + 2]; // Blue
-      // data[i + 3] はAlpha
+      const a = data[i + 3]; // Alpha
       
-      // RGB値がすべてしきい値以下の場合は黒とみなして透明化
-      if (r <= blackThreshold && g <= blackThreshold && b <= blackThreshold) {
-        data[i + 3] = 0; // Alpha = 0 (完全透明)
+      // 元のアルファ値が0の場合はスキップ
+      if (a === 0) {
+        continue;
       }
+      
+      // 輝度計算（ITU-R BT.709係数使用）
+      const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+      
+      // Java版BLENDモードに近い処理：黒に近いほど透明に
+      let alphaMultiplier = 1.0;
+      
+      if (luminance <= 32) {
+        // 非常に暗い部分: 完全透明〜10%透明
+        alphaMultiplier = Math.pow(luminance / 32, 2) * 0.1;
+      } else if (luminance <= 96) {
+        // 暗い部分: 10%〜40%透明
+        const t = (luminance - 32) / 64;
+        alphaMultiplier = 0.1 + t * 0.3;
+      } else if (luminance <= 160) {
+        // 中間部: 40%〜70%透明
+        const t = (luminance - 96) / 64;
+        alphaMultiplier = 0.4 + t * 0.3;
+      } else {
+        // 明るい部分: 70%〜100%不透明
+        const t = (luminance - 160) / 95;
+        alphaMultiplier = 0.7 + t * 0.3;
+      }
+      
+      // 元のアルファ値と乗算
+      const newAlpha = Math.round(a * alphaMultiplier);
+      data[i + 3] = Math.max(0, Math.min(255, newAlpha));
     }
     
     // 変更したImageDataを描画し直し

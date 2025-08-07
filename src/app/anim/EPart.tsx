@@ -100,6 +100,7 @@ export class EPart {
     this.piv = P.newP(this.args[6] as number, this.args[7] as number, 0);
     this.angle = this.args[10] as number;
     this.opacity = this.args[11] as number;
+    this.id = this.args[1] as number;  // unit_id設定（Java版互換）
     this.img = this.args[2] as number;
     this.z = (this.args[3] as number) * this.ent.length + this.ind; // Java版互換のZ深度計算
     this.layer = this.args[3] as number; // Z値をレイヤーとして使用

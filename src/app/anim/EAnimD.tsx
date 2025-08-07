@@ -413,6 +413,8 @@ export class EAnimD extends EAnimI {
       } else {
         entities[i].fa = null;
       }
+      // EAnimIへの参照を設定（Z値変更時の再ソート用）
+      entities[i].ea = this;
     }
     
     return entities;

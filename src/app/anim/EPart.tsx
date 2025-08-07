@@ -44,6 +44,7 @@ export class EPart {
   public extendX: number = 0;   // X方向拡張値
   public extendY: number = 0;   // Y方向拡張値
   public gsca: number = 1000;   // グローバルスケール（Java版gsca）
+  public ea: { sort: () => void } | null = null;  // EAnimIへの参照（再ソート用）
 
   constructor(
     model: MaModel,
@@ -132,9 +133,12 @@ export class EPart {
         break;
 
       case 3: // Z_DEPTH - Z深度変更（Java版 m == 3）
-        // Java版準拠：Z値変更は記録するが、描画順序(order)には影響しない
+        // Java版準拠：Z値を更新
         this.z = value * this.ent.length + this.ind;
-        // 注意：Java版では描画順序配列(order)は初期化時に確定され、その後は不変
+        // Z値変更後、EAnimIのorder配列を再ソートする必要がある
+        if (this.ea) {
+          this.ea.sort();
+        }
         break;
 
       case 4: // POS_X_ADD - X座標加算（Java版 m == 4）
@@ -368,13 +372,24 @@ export class EPart {
   }
 
   /**
-   * Java版compareTo完全再現 - Z値のみでソート
+   * Java版compareTo完全再現 + 安定ソート保証
    * 描画順序決定のためのソート用
    */
   public compareTo(other: EPart): number {
-    // Java版 EPart.java:115 の Float.compare(z, o.z) を完全再現
-    // Z値のみで比較、追加の条件は行わない
-    return this.z - other.z;
+    // Java版 EPart.java:115 の Float.compare(z, o.z) を基本とする
+    const zDiff = this.z - other.z;
+    if (zDiff !== 0) {
+      return zDiff;
+    }
+    
+    // 同一Z値の場合：レイヤー比較（基本Z値 args[3]）
+    const layerDiff = this.layer - other.layer;
+    if (layerDiff !== 0) {
+      return layerDiff;
+    }
+    
+    // 同一Z値・同一レイヤーの場合：配列インデックス比較（安定ソート保証）
+    return this.ind - other.ind;
   }
 
 

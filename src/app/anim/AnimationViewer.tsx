@@ -670,8 +670,33 @@ export default function AnimationViewer({
       ctx.scale(zoom, zoom);
       
       
-      // 参照線描画
+      // グリッド補助線描画（25px間隔）
       if (showRefLines) {
+        const gridSpacing = 25;
+        
+        // グリッド線（薄いグレー）
+        ctx.strokeStyle = '#e5e7eb'; // Tailwind gray-200
+        ctx.lineWidth = 0.2 / zoom;
+        ctx.beginPath();
+        
+        // 垂直グリッド線
+        for (let x = gridSpacing; x < 1000; x += gridSpacing) {
+          ctx.moveTo(x, -1000);
+          ctx.lineTo(x, 1000);
+          ctx.moveTo(-x, -1000);
+          ctx.lineTo(-x, 1000);
+        }
+        
+        // 水平グリッド線
+        for (let y = gridSpacing; y < 1000; y += gridSpacing) {
+          ctx.moveTo(-1000, y);
+          ctx.lineTo(1000, y);
+          ctx.moveTo(-1000, -y);
+          ctx.lineTo(1000, -y);
+        }
+        ctx.stroke();
+        
+        // 中心軸線（青色）
         ctx.strokeStyle = '#dbeafe'; // Tailwind blue-200
         ctx.lineWidth = 1 / zoom;
         ctx.beginPath();
@@ -1087,7 +1112,7 @@ export default function AnimationViewer({
           ref={canvasRef}
           width={canvasWidth}
           height={canvasHeight}
-          className="border border-gray-300 bg-white w-full max-w-full"
+          className="border border-gray-300 bg-cyan-400 w-full max-w-full"
           style={{ 
             width: '100%',
             height: 'auto',

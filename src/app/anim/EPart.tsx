@@ -1039,21 +1039,13 @@ export class EPart {
 
   /**
    * 黒い部分透明化が必要かどうかを判定
-   * Unit 044 Sprite 50「こん棒燃え１」などで黒い部分を完全に透明化
+   * Java版準拠: glow=1が設定されているパーツで黒い部分を透明化
    */
   private shouldApplyBlackTransparency(): boolean {
-    // Unit 044のSprite 50「こん棒燃え１」が対象
-    if (this.args && (this.args[1] as number) === 44 && this.img === 50) {
-      return true;
-    }
-    
-    // 他の燃えエフェクト系スプライトも対象とする
-    if (this.args && (this.args[1] as number) === 44) {
-      const spriteName = this.args[13] as string;
-      if (typeof spriteName === 'string' && 
-          (spriteName.includes('燃え') || spriteName.includes('炎'))) {
-        return true;
-      }
+    // Java版準拠: args[12]（glow値）が1の場合に透明化処理を適用
+    if (this.args && this.args.length > 12) {
+      const glowValue = this.args[12] as number;
+      return glowValue === 1;
     }
     
     return false;

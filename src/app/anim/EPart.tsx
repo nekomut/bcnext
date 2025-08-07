@@ -422,6 +422,19 @@ export class EPart {
         return;
       }
       
+      // 黒い部分透明化処理（Unit 044 Sprite 50「こん棒燃え１」など）
+      // 特定のスプライトで黒い部分を完全に透明化
+      const needsBlackTransparency = this.shouldApplyBlackTransparency();
+      
+      let useCanvas = false;
+      let transparentCanvas: HTMLCanvasElement | null = null;
+      
+      if (needsBlackTransparency) {
+        // 黒い部分を透明化した画像を作成
+        transparentCanvas = this.createBlackTransparentImage(spriteImage, sx, sy, sw, sh);
+        useCanvas = true;
+      }
+      
       // glowエフェクト処理
       if (this.glow) {
         ctx.globalCompositeOperation = 'screen';
@@ -442,11 +455,21 @@ export class EPart {
       // Java版準拠: 有限値かつ0でなければ描画（極小値も許可）
       if (!isFinite(sc.x) || !isFinite(sc.y) || absScX === 0 || absScY === 0) {
         // 完全に無効な値の場合のみ元サイズで描画
-        ctx.drawImage(
-          spriteImage,
-          sx, sy, sw, sh,  // ソース位置・サイズ
-          -tpiv.x, -tpiv.y, sw, sh  // 描画位置・サイズ（元のサイズ）
-        );
+        if (useCanvas && transparentCanvas) {
+          // Canvasから描画
+          ctx.drawImage(
+            transparentCanvas,
+            0, 0, sw, sh,  // ソース位置・サイズ（Canvasは切り出し済み）
+            -tpiv.x, -tpiv.y, sw, sh  // 描画位置・サイズ（元のサイズ）
+          );
+        } else {
+          // 通常の画像から描画
+          ctx.drawImage(
+            spriteImage,
+            sx, sy, sw, sh,  // ソース位置・サイズ
+            -tpiv.x, -tpiv.y, sw, sh  // 描画位置・サイズ（元のサイズ）
+          );
+        }
       } else {
         // Canvas状態保存
         ctx.save();
@@ -468,18 +491,38 @@ export class EPart {
           const pivotOffsetX = -tpiv.x - (-tpiv.x); // = 0
           const pivotOffsetY = -tpiv.y - (-tpiv.y); // = 0
           
-          ctx.drawImage(
-            spriteImage,
-            sx, sy, sw, sh,  // ソース位置・サイズ
-            pivotOffsetX, pivotOffsetY, absScX, absScY  // ピボット基準位置・サイズ
-          );
+          if (useCanvas && transparentCanvas) {
+            // Canvasから描画
+            ctx.drawImage(
+              transparentCanvas,
+              0, 0, sw, sh,  // ソース位置・サイズ（Canvasは切り出し済み）
+              pivotOffsetX, pivotOffsetY, absScX, absScY  // ピボット基準位置・サイズ
+            );
+          } else {
+            // 通常の画像から描画
+            ctx.drawImage(
+              spriteImage,
+              sx, sy, sw, sh,  // ソース位置・サイズ
+              pivotOffsetX, pivotOffsetY, absScX, absScY  // ピボット基準位置・サイズ
+            );
+          }
         } else {
           // 通常描画（Java版と同じ）
-          ctx.drawImage(
-            spriteImage,
-            sx, sy, sw, sh,  // ソース位置・サイズ
-            -tpiv.x, -tpiv.y, absScX, absScY  // 通常位置・サイズ
-          );
+          if (useCanvas && transparentCanvas) {
+            // Canvasから描画
+            ctx.drawImage(
+              transparentCanvas,
+              0, 0, sw, sh,  // ソース位置・サイズ（Canvasは切り出し済み）
+              -tpiv.x, -tpiv.y, absScX, absScY  // 通常位置・サイズ
+            );
+          } else {
+            // 通常の画像から描画
+            ctx.drawImage(
+              spriteImage,
+              sx, sy, sw, sh,  // ソース位置・サイズ
+              -tpiv.x, -tpiv.y, absScX, absScY  // 通常位置・サイズ
+            );
+          }
         }
         
         ctx.restore();
@@ -992,6 +1035,75 @@ export class EPart {
    */
   public hasExtendEffect(): boolean {
     return this.extType > 0 || this.extendX > 0 || this.extendY > 0;
+  }
+
+  /**
+   * 黒い部分透明化が必要かどうかを判定
+   * Unit 044 Sprite 50「こん棒燃え１」などで黒い部分を完全に透明化
+   */
+  private shouldApplyBlackTransparency(): boolean {
+    // Unit 044のSprite 50「こん棒燃え１」が対象
+    if (this.args && (this.args[1] as number) === 44 && this.img === 50) {
+      return true;
+    }
+    
+    // 他の燃えエフェクト系スプライトも対象とする
+    if (this.args && (this.args[1] as number) === 44) {
+      const spriteName = this.args[13] as string;
+      if (typeof spriteName === 'string' && 
+          (spriteName.includes('燃え') || spriteName.includes('炎'))) {
+        return true;
+      }
+    }
+    
+    return false;
+  }
+
+  /**
+   * 黒い部分を透明化した画像を作成
+   * 黒に近い色のピクセルを透明にする
+   */
+  private createBlackTransparentImage(
+    sourceImage: HTMLImageElement,
+    sx: number, sy: number, sw: number, sh: number
+  ): HTMLCanvasElement {
+    // 一時的なcanvasを作成してImageDataを取得
+    const tempCanvas = document.createElement('canvas');
+    tempCanvas.width = sw;
+    tempCanvas.height = sh;
+    const tempCtx = tempCanvas.getContext('2d');
+    
+    if (!tempCtx) {
+      return tempCanvas;
+    }
+    
+    // 元画像から指定された部分を描画
+    tempCtx.drawImage(sourceImage, sx, sy, sw, sh, 0, 0, sw, sh);
+    
+    // ImageDataを取得
+    const imageData = tempCtx.getImageData(0, 0, sw, sh);
+    const data = imageData.data;
+    
+    // 黒い部分（RGB値が低い部分）を透明化
+    // しきい値: RGB各成分が200以下の場合を暗色とみなす
+    const blackThreshold = 200;
+    
+    for (let i = 0; i < data.length; i += 4) {
+      const r = data[i];     // Red
+      const g = data[i + 1]; // Green
+      const b = data[i + 2]; // Blue
+      // data[i + 3] はAlpha
+      
+      // RGB値がすべてしきい値以下の場合は黒とみなして透明化
+      if (r <= blackThreshold && g <= blackThreshold && b <= blackThreshold) {
+        data[i + 3] = 0; // Alpha = 0 (完全透明)
+      }
+    }
+    
+    // 変更したImageDataを描画し直し
+    tempCtx.putImageData(imageData, 0, 0);
+    
+    return tempCanvas;
   }
 
   /**

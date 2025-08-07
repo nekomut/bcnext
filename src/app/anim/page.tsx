@@ -24,7 +24,7 @@ function AnimationPageContent() {
   const [inputUnit, setInputUnit] = useState(initialUnit || ''); // 入力中の値を管理
   const [animationData, setAnimationData] = useState<{ [form: string]: AnimationData } | null>(null);
   const [selectedForm, setSelectedForm] = useState(initialForm || 'f');
-  const [selectedAnimation, setSelectedAnimation] = useState(initialAnim || 'maanim02');
+  const [selectedAnimation, setSelectedAnimation] = useState(initialAnim || 'maanim00');
   const [isPlaying, setIsPlaying] = useState(initialPlaying);
   const [loading, setLoading] = useState(false);
   const [loadingProgress, setLoadingProgress] = useState({ current: 0, total: 0, message: '' });

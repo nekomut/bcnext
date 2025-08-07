@@ -172,77 +172,51 @@ export default function AnimationViewer({
   };
 
 
-  // パーツごとのスプライトIDを取得する関数
+  // パーツごとのスプライトIDを取得する関数（Java版EPart.imgに対応）
   const getPartSprites = useCallback((partId: number): number[] => {
+    const formData = animationData[selectedForm];
     
-    const currentSprite: number[] = [];
-    const additionalSprites = new Set<number>();
-    let isUsedInAnimation = false;
+    // 重要: mamodel.nでパーツ数をチェックし、範囲外アクセスを防ぐ
+    if (!formData?.mamodel || partId >= (formData.mamodel.n || 0)) {
+      return []; // 範囲外の場合は空配列を返す
+    }
     
+    // EAnimDから実際のパーツを取得
+    // 重要: Z値ソートによりorder配列とent配列の順序が異なる場合がある
+    let actualPart = null;
+    if (eAnimD && eAnimD.ent) {
+      // partIdに対応する実際のパーツを、パーツのind（元のインデックス）で検索
+      actualPart = eAnimD.ent.find(part => part && part.ind === partId);
+    }
     
-    
-    // 1. EAnimDから現在のパーツ状態を取得（実際に表示されているスプライト）
-    if (eAnimD && eAnimD.ent && eAnimD.ent[partId]) {
-      const currentPart = eAnimD.ent[partId];
-      if (currentPart && currentPart.img >= 0) {
-        currentSprite.push(currentPart.img);
+    if (actualPart) {
+      // 実際のパーツから現在のスプライトIDを取得
+      const displayedSpriteId = actualPart.img;
+      
+      // Unit 000 デバッグ
+      if (unitId === '000' && (partId === 3 || partId === 4)) {
+        console.log(`Unit 000 getPartSprites Part ${partId}: actualPart found with ind=${actualPart.ind}, img=${displayedSpriteId}, name=${actualPart.args?.[13] || 'unknown'}`);
       }
-    }
-    
-    // 2. アニメーションデータから使用される可能性のあるスプライトを追加収集
-    const maanim = animationData[selectedForm]?.maanim?.[selectedAnimation];
-    if (maanim && maanim.parts) {
-      maanim.parts.forEach((animPart) => {
-        if (!animPart || !animPart.ints || animPart.ints.length < 2) {
-          return;
-        }
-        const animPartId = animPart.ints[0];
-        const modifType = animPart.ints[1];
-        
-        if (animPartId === partId) {
-          isUsedInAnimation = true;
-          
-          
-          // SPRITE modification (type 2) をチェック
-          if (modifType === 2 && animPart.moves) {
-            animPart.moves.forEach((move) => {
-              if (!move || move.length < 2) {
-                return;
-              }
-              const spriteId = move[1];
-              if (spriteId >= 0 && !currentSprite.includes(spriteId)) {
-                additionalSprites.add(spriteId);
-              }
-            });
-          }
-        }
-      });
-    }
-    
-    // 3. ベーススプライトをフォールバックとして追加（他のスプライトが見つからない場合のみ）
-    if (currentSprite.length === 0 && additionalSprites.size === 0) {
-      const mamodel = animationData[selectedForm]?.mamodel;
-      if (mamodel?.parts[partId]) {
-        const baseCutId = mamodel.parts[partId][2];
-        if (baseCutId >= 0) {
-          currentSprite.push(baseCutId);
+      
+      return displayedSpriteId >= 0 ? [displayedSpriteId] : [];
+    } else {
+      // フォールバック: mamodelから基本cutIdを取得
+      let displayedSpriteId = -1;
+      if (formData.mamodel.parts && Array.isArray(formData.mamodel.parts) && partId < formData.mamodel.parts.length) {
+        const partData = formData.mamodel.parts[partId];
+        if (Array.isArray(partData) && partData.length > 2) {
+          displayedSpriteId = partData[2]; // cutId
         }
       }
+      
+      // Unit 000 デバッグ
+      if (unitId === '000' && (partId === 3 || partId === 4)) {
+        console.log(`Unit 000 getPartSprites Part ${partId}: fallback to mamodel, cutId=${displayedSpriteId}`);
+      }
+      
+      return displayedSpriteId >= 0 ? [displayedSpriteId] : [];
     }
-    
-    // 4. 何も見つからない場合は非表示
-    if (currentSprite.length === 0 && additionalSprites.size === 0 && !isUsedInAnimation) {
-      return [];
-    }
-    
-    // 5. 現在のスプライトを最優先、その後に追加スプライトをソート順で配置
-    const result = [...currentSprite];
-    const sortedAdditional = Array.from(additionalSprites).sort((a, b) => a - b);
-    result.push(...sortedAdditional);
-    
-    
-    return result;
-  }, [animationData, selectedForm, selectedAnimation, eAnimD]);
+  }, [animationData, selectedForm, eAnimD, unitId]);
 
   // パーツが現在のフレームでopacity=0かどうかを判定する関数
   const isPartOpacityZero = useCallback((partId: number): boolean => {
@@ -725,16 +699,17 @@ export default function AnimationViewer({
               spriteShouldBeVisible = !hiddenSprites.has(partSpriteKey);
             }
             
-            // opacity=0のパーツは表示しない（../common/util/anim と同じ動作）
+            // opacity=0のパーツでもチェックボックスで強制表示可能
             const isOpacityZero = isPartOpacityZero(partId);
             
-            // 最終的な表示状態 = パーツ表示 AND スプライト表示 AND opacity非ゼロ
-            const finalVisibility = partShouldBeVisible && spriteShouldBeVisible && !isOpacityZero;
+            // 最終的な表示状態 = パーツ表示 AND スプライト表示
+            // opacity=0でもユーザーがチェックボックスで表示を選択している場合は表示する
+            const finalVisibility = partShouldBeVisible && spriteShouldBeVisible;
             
             
-            // デバッグ情報
-            if (hiddenParts.size > 0) {
-              console.log(`Part ${partId}: partShouldBeVisible=${partShouldBeVisible}, spriteShouldBeVisible=${spriteShouldBeVisible}, isOpacityZero=${isOpacityZero}, finalVisibility=${finalVisibility}`);
+            // デバッグ情報（Unit 000のみ）
+            if (unitId === '000' && hiddenParts.size > 0 && partId >= 1 && partId <= 4) {
+              console.log(`Unit 000 Part ${partId}: partShouldBeVisible=${partShouldBeVisible}, spriteShouldBeVisible=${spriteShouldBeVisible}, isOpacityZero=${isOpacityZero}, finalVisibility=${finalVisibility}`);
             }
             
             // 描画前に毎回visible状態を強制設定（アニメーション更新による上書きを防ぐ）
@@ -748,9 +723,9 @@ export default function AnimationViewer({
       const unifiedOrigin = P.newP(0, 0, 0);
       const unifiedSize = 1.0;
       
-      // デバッグ情報
-      if (hiddenParts.size > 0) {
-        console.log('Drawing with hiddenParts:', Array.from(hiddenParts));
+      // デバッグ情報（Unit 000のみ）
+      if (unitId === '000' && hiddenParts.size > 0) {
+        console.log('Unit 000 Drawing with hiddenParts:', Array.from(hiddenParts));
       }
       
       // カスタム描画：各パーツの表示状態をチェックしながら描画
@@ -765,8 +740,7 @@ export default function AnimationViewer({
             const partSpriteKey = `${partId}-${part.img}`;
             spriteShouldBeVisible = !hiddenSprites.has(partSpriteKey);
           }
-          const isOpacityZero = isPartOpacityZero(partId);
-          const shouldDraw = partShouldBeVisible && spriteShouldBeVisible && !isOpacityZero;
+          const shouldDraw = partShouldBeVisible && spriteShouldBeVisible;
           
           // 表示すべきパーツのみ描画
           if (shouldDraw) {
@@ -791,7 +765,7 @@ export default function AnimationViewer({
       
       ctx.restore();
     });
-  }, [eAnimD, offsetX, offsetY, zoom, showRefLines, hiddenParts, hiddenSprites, isPartOpacityZero]);
+  }, [eAnimD, offsetX, offsetY, zoom, showRefLines, hiddenParts, hiddenSprites, isPartOpacityZero, unitId]);
 
   // 描画処理
   const render = useCallback(() => {
@@ -813,11 +787,13 @@ export default function AnimationViewer({
   // パーツ表示状態変更時の再描画
   useEffect(() => {
     if (eAnimD && !isPlaying) {
-      console.log('Hidden parts changed:', Array.from(hiddenParts));
-      console.log('Hidden sprites changed:', Array.from(hiddenSprites));
+      if (unitId === '000') {
+        console.log('Unit 000 Hidden parts changed:', Array.from(hiddenParts));
+        console.log('Unit 000 Hidden sprites changed:', Array.from(hiddenSprites));
+      }
       render();
     }
-  }, [hiddenParts, hiddenSprites, eAnimD, isPlaying, render]);
+  }, [hiddenParts, hiddenSprites, eAnimD, isPlaying, render, unitId]);
 
   // アニメーションループ
   const animate = useCallback(() => {
@@ -1202,7 +1178,7 @@ export default function AnimationViewer({
           {/* Parts/Sprites カウントラベル */}
           <div className="mb-2">
             <label className="text-sm font-medium text-gray-600 font-mono">
-              Parts({animationData[selectedForm] && animationData[selectedForm].mamodel ? animationData[selectedForm].mamodel.n : 0})|Sprites({animationData[selectedForm] && animationData[selectedForm].imgcut ? animationData[selectedForm].imgcut.n : 0})
+              Parts({animationData[selectedForm] && animationData[selectedForm].mamodel ? animationData[selectedForm].mamodel.n || 0 : 0})|Sprites({animationData[selectedForm] && animationData[selectedForm].imgcut ? animationData[selectedForm].imgcut.n || 0 : 0})
             </label>
           </div>
           
@@ -1280,7 +1256,9 @@ export default function AnimationViewer({
                 const childrenMap: { [key: number]: number[] } = {};
                 const rootParts: number[] = [];
                 
-                for (let i = 0; i < mamodel.n && i < mamodel.parts.length; i++) {
+                // mamodel.nを正確に使用してパーツ範囲を制限
+                const actualPartCount = Math.min(mamodel.n || 0, mamodel.parts.length);
+                for (let i = 0; i < actualPartCount; i++) {
                   const modelPart = mamodel.parts[i];
                   if (!modelPart || !Array.isArray(modelPart) || modelPart.length === 0) {
                     continue;
@@ -1313,8 +1291,9 @@ export default function AnimationViewer({
                     // hiddenPartsに含まれている場合は非アクティブ（チェックボックス状態優先）
                     if (hiddenParts.has(partId)) return false;
                     
-                    // opacity=0の場合は非アクティブ
-                    if (isPartOpacityZero(partId)) return false;
+                    // opacity=0の場合でも、パーツにスプライトがある場合はアクティブとして扱う
+                    // これにより、Part 3（Sprite 11）とPart 4（Sprite 12）が表示される
+                    if (partSpriteIds.length > 0) return true;
                     
                     // チェックボックスがチェックされていれば基本的にアクティブ
                     // パーツのvisible状態やスプライトの存在に関係なく、ユーザーの意図を尊重
@@ -1386,15 +1365,16 @@ export default function AnimationViewer({
                         />
                       </div>
                       
-                      {/* このパーツに関連するすべてのスプライト */}
+                      {/* このパーツに関連するスプライト（Java版EPart.imgに対応） */}
                       {isExpanded && partSpriteIds.length > 0 && partSpriteIds.map((spriteId, spriteIndex) => {
                         const partSpriteKey = `${partId}-${spriteId}`;
+                        // Java版EPart.imgとの対応：パーツは単一のスプライトIDのみ表示
                         // 現在実際に表示されているかの判定（チェックボックス状態も考慮）
                         const isDisplayed = part.img === spriteId && part.visible && !hiddenParts.has(partId) && !hiddenSprites.has(partSpriteKey);
                         
-                        // デバッグ: 表示判定の詳細（詳細ログは特定のパーツのみ）
-                        if (partId !== 0 && partId <= 3) { // Part 1-3のみでログ出力（ログ量を制限）
-                          console.log(`Sprite ${partSpriteKey} display check:`, {
+                        // デバッグ: 表示判定の詳細（Unit 000のみ、Part 1-2のみでログ出力）
+                        if (unitId === '000' && partId >= 1 && partId <= 2) {
+                          console.log(`Unit 000 Sprite ${partSpriteKey} display check:`, {
                             partImg: part.img,
                             spriteId,
                             imgMatch: part.img === spriteId,
@@ -1414,55 +1394,53 @@ export default function AnimationViewer({
                           
                           // チェックボックスが外されている場合は非アクティブ
                           if (hiddenParts.has(partId) || hiddenSprites.has(partSpriteKey)) {
-                            if (partId <= 3) console.log(`Sprite ${partSpriteKey} hidden by checkbox`);
+                            if (unitId === '000' && partId >= 1 && partId <= 2) console.log(`Unit 000 Sprite ${partSpriteKey} hidden by checkbox`);
                             return false;
                           }
                           
                           // opacity=0の場合は非アクティブ
                           if (isOpacityZero) {
-                            if (partId <= 3) console.log(`Sprite ${partSpriteKey} hidden by opacity=0`);
+                            if (unitId === '000' && partId >= 1 && partId <= 2) console.log(`Unit 000 Sprite ${partSpriteKey} hidden by opacity=0`);
                             return false;
                           }
                           
                           // チェックボックスがチェックされていれば基本的にアクティブ
                           // パーツのvisible状態に関係なく、ユーザーがチェックした意図を尊重
-                          if (partId <= 3) console.log(`Sprite ${partSpriteKey} active by checkbox`);
+                          if (unitId === '000' && partId >= 1 && partId <= 2) console.log(`Unit 000 Sprite ${partSpriteKey} active by checkbox`);
                           return true;
                         })();
                         
                         // スプライトの表示色を明確に決定
                         const spriteTextColor = (() => {
                           if (isOpacityZero) {
-                            if (partId <= 3) console.log(`Sprite ${partSpriteKey} color: red (opacity=0)`);
+                            if (unitId === '000' && partId >= 1 && partId <= 2) console.log(`Unit 000 Sprite ${partSpriteKey} color: red (opacity=0)`);
                             return 'text-red-400 opacity-100'; // opacity=0は赤色（明確）
                           }
                           if (isDisplayed && !isOpacityZero) {
-                            if (partId <= 3) console.log(`Sprite ${partSpriteKey} color: green (displayed)`);
+                            if (unitId === '000' && partId >= 1 && partId <= 2) console.log(`Unit 000 Sprite ${partSpriteKey} color: green (displayed)`);
                             return 'text-green-500 opacity-100'; // 実際に表示中は緑色（明確）
                           }
                           if (isSpriteUsed) {
-                            if (partId <= 3) console.log(`Sprite ${partSpriteKey} color: normal (used but not displayed)`);
+                            if (unitId === '000' && partId >= 1 && partId <= 2) console.log(`Unit 000 Sprite ${partSpriteKey} color: normal (used but not displayed)`);
                             return 'text-gray-700 opacity-100'; // チェック済みだが非表示は通常色（明確）
                           }
-                          if (partId <= 3) console.log(`Sprite ${partSpriteKey} color: dim (inactive)`);
                           return 'text-gray-500 opacity-30'; // 非アクティブは薄いグレー（より薄く、明確な指定）
                         })();
 
                         // チェックボックスの表示スタイルを決定
                         const checkboxStyle = (() => {
                           if (partId === 0) {
-                            if (partId <= 3) console.log(`Sprite ${partSpriteKey} checkbox: disabled (Part 0)`);
                             return 'opacity-50 cursor-not-allowed'; // Part 0は無効化
                           }
                           if (isOpacityZero) {
-                            if (partId <= 3) console.log(`Sprite ${partSpriteKey} checkbox: dim (opacity=0)`);
+                            if (unitId === '000' && partId >= 1 && partId <= 2) console.log(`Unit 000 Sprite ${partSpriteKey} checkbox: dim (opacity=0)`);
                             return 'opacity-60'; // opacity=0スプライトは薄く
                           }
                           if (!isSpriteUsed) {
-                            if (partId <= 3) console.log(`Sprite ${partSpriteKey} checkbox: very dim (inactive)`);
+                            if (unitId === '000' && partId >= 1 && partId <= 2) console.log(`Unit 000 Sprite ${partSpriteKey} checkbox: very dim (inactive)`);
                             return 'opacity-40'; // 非アクティブスプライトはさらに薄く
                           }
-                          if (partId <= 3) console.log(`Sprite ${partSpriteKey} checkbox: normal (active)`);
+                          if (unitId === '000' && partId >= 1 && partId <= 2) console.log(`Unit 000 Sprite ${partSpriteKey} checkbox: normal (active)`);
                           return 'opacity-100'; // アクティブは通常
                         })();
 

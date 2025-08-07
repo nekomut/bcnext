@@ -103,14 +103,15 @@ export class Part {
    * 最後のキーフレームを強制適用
    * Java版のensureLast(EPart[] es)メソッド
    */
-  public ensureLast(parts: Array<{ alter: (type: number, value: number) => void }>): void {
+  public ensureLast(parts: Array<{ alter: (type: number, value: number) => void; ind: number }>): void {
     if (this.n === 0) return;
     
     this.frame = this.moves[this.n - 1][0];
     this.vd = this.moves[this.n - 1][1];
     
-    if (parts[this.ints[0]]) {
-      parts[this.ints[0]].alter(this.ints[1], this.vd);
+    const targetPart = parts.find(part => part && part.ind === this.ints[0]);
+    if (targetPart) {
+      targetPart.alter(this.ints[1], this.vd);
     }
   }
 
@@ -118,7 +119,7 @@ export class Part {
    * フレーム更新処理
    * Java版のupdate(float f, EPart[] es)メソッド
    */
-  public update(frame: number, parts: Array<{ alter: (type: number, value: number) => void }>, unitId?: string): void {
+  public update(frame: number, parts: Array<{ alter: (type: number, value: number) => void; ind: number }>, unitId?: string): void {
     this.frame = frame;
 
     for (let i = 0; i < this.n; i++) {
@@ -131,8 +132,10 @@ export class Part {
           console.log(`SPRITE_CHANGE ExactMatch: frame=${frame}, part=${this.ints[0]}, vd=${this.vd}, move=[${this.moves[i][0]}, ${this.moves[i][1]}]`);
         }
         
-        if (parts[this.ints[0]]) {
-          parts[this.ints[0]].alter(this.ints[1], this.vd);
+        // Z値ソート後の配列では配列インデックス != partIdなので、indで検索
+        const targetPart = parts.find(part => part && part.ind === this.ints[0]);
+        if (targetPart) {
+          targetPart.alter(this.ints[1], this.vd);
         }
         return;
       } else if (i < this.n - 1 && frame > this.moves[i][0] && frame < this.moves[i + 1][0]) {
@@ -167,8 +170,9 @@ export class Part {
           } else if (easingType === 3) {
             // カスタムイージング（ease3）
             this.vd = this.ease3(i, realFrame);
-            if (parts[this.ints[0]]) {
-              parts[this.ints[0]].alter(this.ints[1], this.vd);
+            const targetPart = parts.find(part => part && part.ind === this.ints[0]);
+            if (targetPart) {
+              targetPart.alter(this.ints[1], this.vd);
             }
             return;
           } else if (easingType === 4) {
@@ -198,14 +202,16 @@ export class Part {
             this.vd = Math.floor((v1 - v0) * ti + v0);
           }
 
-          if (parts[this.ints[0]]) {
-            parts[this.ints[0]].alter(this.ints[1], this.vd);
+          const targetPart = parts.find(part => part && part.ind === this.ints[0]);
+          if (targetPart) {
+            targetPart.alter(this.ints[1], this.vd);
           }
           return;
         } else if (this.ints[1] === 0) {
           // VISIBLE
-          if (parts[this.ints[0]]) {
-            parts[this.ints[0]].alter(this.ints[1], this.moves[i][1]);
+          const targetPartVisible = parts.find(part => part && part.ind === this.ints[0]);
+          if (targetPartVisible) {
+            targetPartVisible.alter(this.ints[1], this.moves[i][1]);
           }
         }
       }

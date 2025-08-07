@@ -353,13 +353,20 @@ export class EAnimD extends EAnimI {
   /**
    * EPart配列の生成（Java版MaModel.arrange()ロジック）
    * setValue()はorganize()で一元実行
+   * 修正: mamodel.partsの順序でパーツを正しく配置
    */
   private createEPartArray(): EPart[] {
     const entities: EPart[] = new Array(this.mamodel.n);
     
     // 1. 全パーツのインスタンスを作成（setValue()は後で実行）
+    // 重要: mamodel.parts[i]はパーツiのデータを表し、entities[i]に配置される
     for (let i = 0; i < this.mamodel.n; i++) {
       const modelPart = this.mamodel.parts[i];
+      
+      // Unit 000 デバッグ
+      if (this.mamodel.strs0?.[i] && (this.mamodel.strs0[i].includes('ダメージ') || this.mamodel.strs0[i].includes('影'))) {
+        console.log(`Unit 000 createEPartArray[${i}]: ${this.mamodel.strs0[i]}, cutId=${modelPart?.[2]}, zDepth=${modelPart?.[3]}`);
+      }
       
       // modelPartの安全性チェック
       if (!modelPart || !Array.isArray(modelPart)) {
@@ -377,7 +384,7 @@ export class EAnimD extends EAnimI {
           this,
           defaultPart,
           this.mamodel.strs0[i] || '',
-          i,
+          i, // パーツインデックス（indプロパティ）
           entities
         );
       } else {
@@ -386,7 +393,7 @@ export class EAnimD extends EAnimI {
           this,
           modelPart,
           this.mamodel.strs0[i] || '',
-          i,
+          i, // パーツインデックス（indプロパティ）
           entities
         );
       }

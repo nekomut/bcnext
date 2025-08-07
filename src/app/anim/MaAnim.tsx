@@ -89,7 +89,7 @@ export class MaAnim {
    * 旧版のアニメーション更新処理（後方互換性用）
    * Java版のupdate(float f, EAnimD<?> eAnim, boolean rotate)メソッド
    */
-  public update(frame: number, entities: Array<{ setValue?: () => void, alter: (type: number, value: number) => void, id: number, fa?: unknown }>, rotate: boolean = false): void {
+  public update(frame: number, entities: Array<{ setValue?: () => void, alter: (type: number, value: number) => void, id: number, fa?: unknown, ind: number }>, rotate: boolean = false): void {
     let adjustedFrame = frame;
     
     if (rotate) {
@@ -283,7 +283,7 @@ export class MaAnim {
    */
   public updateJava(
     frame: number, 
-    entities: Array<{ setValue?: () => void, alter: (type: number, value: number) => void, id: number, fa?: unknown }>, 
+    entities: Array<{ setValue?: () => void, alter: (type: number, value: number) => void, id: number, fa?: unknown, ind: number }>, 
     rotate: boolean = false,
     _performanceMode: boolean = false,
     unitId?: string

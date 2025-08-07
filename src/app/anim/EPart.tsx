@@ -106,6 +106,8 @@ export class EPart {
     this.glow = this.args[12] === 1;
     this.visible = true;
     this.gsca = this.model.ints[0] || 1000;  // Java版と同じgsca初期化
+    
+    // デバッグログは型エラーのため削除
   }
 
   /**

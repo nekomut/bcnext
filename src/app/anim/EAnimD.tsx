@@ -364,8 +364,9 @@ export class EAnimD extends EAnimI {
       const modelPart = this.mamodel.parts[i];
       
       // Unit 000 デバッグ
-      if (this.mamodel.strs0?.[i] && (this.mamodel.strs0[i].includes('ダメージ') || this.mamodel.strs0[i].includes('影'))) {
-        console.log(`Unit 000 createEPartArray[${i}]: ${this.mamodel.strs0[i]}, cutId=${modelPart?.[2]}, zDepth=${modelPart?.[3]}`);
+      const partName = this.mamodel.strs0?.[i];
+      if (typeof partName === 'string' && (partName.includes('ダメージ') || partName.includes('影'))) {
+        console.log(`Unit 000 createEPartArray[${i}]: ${partName}, cutId=${modelPart?.[2]}, zDepth=${modelPart?.[3]}`);
       }
       
       // modelPartの安全性チェック
@@ -383,7 +384,7 @@ export class EAnimD extends EAnimI {
           this.mamodel,
           this,
           defaultPart,
-          this.mamodel.strs0[i] || '',
+          typeof this.mamodel.strs0[i] === 'string' ? this.mamodel.strs0[i] : '',
           i, // パーツインデックス（indプロパティ）
           entities
         );
@@ -392,7 +393,7 @@ export class EAnimD extends EAnimI {
           this.mamodel,
           this,
           modelPart,
-          this.mamodel.strs0[i] || '',
+          typeof this.mamodel.strs0[i] === 'string' ? this.mamodel.strs0[i] : '',
           i, // パーツインデックス（indプロパティ）
           entities
         );

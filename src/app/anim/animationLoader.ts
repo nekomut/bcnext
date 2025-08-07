@@ -222,8 +222,9 @@ function convertMaModel(mamodelData: unknown[]): MaModel {
       ];
       
       parts.push(part);
-      // nameはインデックス13にあり、存在しない場合もある
-      strs0.push(item.length > 13 ? (item[13] || '') : '');
+      // nameはインデックス13にあり、存在しない場合もある。型安全にstring確保
+      const name = item.length > 13 ? item[13] : '';
+      strs0.push(typeof name === 'string' ? name : String(name || ''));
     }
   }
   

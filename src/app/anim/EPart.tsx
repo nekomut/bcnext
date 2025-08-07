@@ -37,7 +37,7 @@ export class EPart {
   public vf: number = 1;  // 垂直反転
 
   // ベース値（Java版args配列から）
-  public args: number[];
+  public args: (number | string)[];
 
   // Java版拡張フィールド
   public extType: number = 0;   // エフェクト拡張タイプ
@@ -48,7 +48,7 @@ export class EPart {
   constructor(
     model: MaModel,
     animInterface: unknown, // EAnimI参照（循環参照回避）
-    modelPart: number[], 
+    modelPart: (number | string)[], 
     partName: string, 
     index: number, 
     entities: EPart[]
@@ -61,7 +61,7 @@ export class EPart {
     // modelPartの安全性チェック
     if (!modelPart || !Array.isArray(modelPart)) {
       console.error(`EPart constructor: modelPart is not an array at index ${index}:`, modelPart);
-      this.args = [0, 0, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 255, 0]; // デフォルト値
+      this.args = [0, 0, 0, 0, 0, 0, 0, 0, 1000, 1000, 0, 255, 0, '']; // デフォルト値（name含む）
     } else {
       this.args = [...modelPart];
     }
@@ -84,11 +84,11 @@ export class EPart {
     // [8] scale_x, [9] scale_y, [10] angle, [11] opacity,
     // [12] glow, [13] name_index
 
-    this.pos = P.newP(this.args[4], this.args[5], this.args[3]);
+    this.pos = P.newP(this.args[4] as number, this.args[5] as number, this.args[3] as number);
     
     // Java版準拠: setValue()では生の値をそのまま設定
-    const scaleX = this.args[8];
-    const scaleY = this.args[9];
+    const scaleX = this.args[8] as number;
+    const scaleY = this.args[9] as number;
     
     // Java版と同じ: sca = sca.setTo(args[8], args[9])
     this.sca = P.newP(scaleX, scaleY, 1);
@@ -97,13 +97,13 @@ export class EPart {
     this.hf = 1;
     this.vf = 1;
     
-    this.piv = P.newP(this.args[6], this.args[7], 0);
-    this.angle = this.args[10];
-    this.opacity = this.args[11];
-    this.img = this.args[2];
-    this.z = this.args[3] * this.ent.length + this.ind; // Java版互換のZ深度計算
-    this.layer = this.args[3]; // Z値をレイヤーとして使用
-    this.glow = this.args[12] === 1;
+    this.piv = P.newP(this.args[6] as number, this.args[7] as number, 0);
+    this.angle = this.args[10] as number;
+    this.opacity = this.args[11] as number;
+    this.img = this.args[2] as number;
+    this.z = (this.args[3] as number) * this.ent.length + this.ind; // Java版互換のZ深度計算
+    this.layer = this.args[3] as number; // Z値をレイヤーとして使用
+    this.glow = (this.args[12] as number) === 1;
     this.visible = true;
     this.gsca = this.model.ints[0] || 1000;  // Java版と同じgsca初期化
     
@@ -137,36 +137,36 @@ export class EPart {
         break;
 
       case 4: // POS_X_ADD - X座標加算（Java版 m == 4）
-        this.pos.x = this.args[4] + value;
+        this.pos.x = (this.args[4] as number) + value;
         break;
 
       case 5: // POS_Y_ADD - Y座標加算（Java版 m == 5）
-        this.pos.y = this.args[5] + value;
+        this.pos.y = (this.args[5] as number) + value;
         break;
 
       case 6: // PIVOT_X_ADD - ピボットX加算（Java版 m == 6）
-        this.piv.x = this.args[6] + value;
+        this.piv.x = (this.args[6] as number) + value;
         break;
 
       case 7: // PIVOT_Y_ADD - ピボットY加算（Java版 m == 7）
-        this.piv.y = this.args[7] + value;
+        this.piv.y = (this.args[7] as number) + value;
         break;
 
       case 8: // SCALE_XY - XYスケール同時変更
         const scaleUnit = this.model.ints[0] || 1000;
         // Java版完全互換: args[base] * value / scaleUnit
-        this.sca.x = (this.args[8] * value) / scaleUnit;
-        this.sca.y = (this.args[9] * value) / scaleUnit;
+        this.sca.x = ((this.args[8] as number) * value) / scaleUnit;
+        this.sca.y = ((this.args[9] as number) * value) / scaleUnit;
         break;
 
       case 9: // SCALE_X - Xスケール変更
         const scaleUnitX = this.model.ints[0] || 1000;
         // Java版完全互換: args[base] * value / scaleUnit
-        this.sca.x = (this.args[8] * value) / scaleUnitX;
+        this.sca.x = ((this.args[8] as number) * value) / scaleUnitX;
         
         // 汎用的な左右反転処理（Java版互換）
         // 特定の条件でのスケール符号変更を検出して修正
-        if (this.args && this.args[1] === 772 && 
+        if (this.args && (this.args[1] as number) === 772 && 
             this.id === 14 && value > 0 && value < 1000) {
           // Unit 772 Part 14の特殊ケース：正の小さなスケール値を負に反転
           this.sca.x = -Math.abs(this.sca.x);
@@ -176,15 +176,15 @@ export class EPart {
       case 10: // SCALE_Y - Yスケール変更
         const scaleUnitY = this.model.ints[0] || 1000;
         // Java版完全互換: args[base] * value / scaleUnit
-        this.sca.y = (this.args[9] * value) / scaleUnitY;
+        this.sca.y = ((this.args[9] as number) * value) / scaleUnitY;
         break;
 
       case 11: // ROTATION_ADD - 回転加算（Java版 m == 11）
-        this.angle = this.args[10] + value;
+        this.angle = (this.args[10] as number) + value;
         break;
 
       case 12: // OPACITY - 透明度変更（Java版 m == 12）
-        this.opacity = value * this.args[11] / (this.model.ints[2] || 1000);
+        this.opacity = value * (this.args[11] as number) / (this.model.ints[2] || 1000);
         break;
 
       case 13: // HORIZONTAL_FLIP - 水平反転（Java版 m == 13）
@@ -756,7 +756,7 @@ export class EPart {
    */
   public setVisibleRecursive(visible: boolean): void {
     // Unit 024のデバッグ情報
-    if (this.args && this.args[1] === 24 && this.id === 24 && visible === false) {
+    if (this.args && (this.args[1] as number) === 24 && this.id === 24 && visible === false) {
       console.log(`Unit 024 Part ${this.id} setVisibleRecursive(false) called:`, new Error().stack);
     }
     
@@ -930,8 +930,8 @@ export class EPart {
    * Java版removeBasePivot()メソッド - ピボット調整
    */
   public removeBasePivot(): void {
-    const basePivotX = this.args[6];
-    const basePivotY = this.args[7];
+    const basePivotX = this.args[6] as number;
+    const basePivotY = this.args[7] as number;
     
     // 現在のピボットからベースピボットを除去
     this.piv.x -= basePivotX;

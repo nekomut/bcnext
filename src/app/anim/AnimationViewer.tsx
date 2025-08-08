@@ -966,27 +966,6 @@ export default function AnimationViewer({
 
   return (
     <div className="space-y-4">
-      {/* コントロール */}
-      <div className="flex flex-wrap items-center gap-2 text-sm">
-        <button
-          onClick={() => setZoom(zoom * 1.2)}
-          className="px-2 py-1 bg-blue-500 text-white rounded"
-        >
-          拡大
-        </button>
-        <button
-          onClick={() => setZoom(zoom / 1.2)}
-          className="px-2 py-1 bg-blue-500 text-white rounded"
-        >
-          縮小
-        </button>
-        <button
-          onClick={() => setShowRefLines(!showRefLines)}
-          className={`px-2 py-1 rounded ${showRefLines ? 'bg-red-500' : 'bg-gray-500'} text-white`}
-        >
-          参照線
-        </button>
-      </div>
 
 
       {/* メインアニメーション表示 */}
@@ -1080,6 +1059,52 @@ export default function AnimationViewer({
           className="w-full"
           disabled={isPlaying}
         />
+        
+        {/* コントロールボタン */}
+        <div className="flex flex-wrap items-center justify-center gap-2 text-xs mt-2">
+          <button
+            onClick={() => setZoom(zoom * 1.2)}
+            className="px-2 py-1 bg-blue-500 text-white rounded"
+          >
+            拡大
+          </button>
+          <button
+            onClick={() => setZoom(zoom / 1.2)}
+            className="px-2 py-1 bg-blue-500 text-white rounded"
+          >
+            縮小
+          </button>
+          <button
+            onClick={() => setOffsetY(offsetY - 20)}
+            className="px-2 py-1 bg-green-500 text-white rounded"
+          >
+            ↑
+          </button>
+          <button
+            onClick={() => setOffsetY(offsetY + 20)}
+            className="px-2 py-1 bg-green-500 text-white rounded"
+          >
+            ↓
+          </button>
+          <button
+            onClick={() => setOffsetX(offsetX - 20)}
+            className="px-2 py-1 bg-green-500 text-white rounded"
+          >
+            ←
+          </button>
+          <button
+            onClick={() => setOffsetX(offsetX + 20)}
+            className="px-2 py-1 bg-green-500 text-white rounded"
+          >
+            →
+          </button>
+          <button
+            onClick={() => setShowRefLines(!showRefLines)}
+            className={`px-2 py-1 rounded ${showRefLines ? 'bg-red-500' : 'bg-gray-500'} text-white`}
+          >
+            参照線
+          </button>
+        </div>
       </div>
 
       {/* Parts List Section */}

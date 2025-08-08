@@ -99,9 +99,11 @@ function UnitPageContent() {
       }
     }
     if (formParam) {
-      const form = parseInt(formParam);
-      if (!isNaN(form) && form >= 0 && form <= 3) {
-        setFormId(form);
+      // 短縮形 f,c,s,u を数値に変換
+      const formMap: { [key: string]: number } = { 'f': 0, 'c': 1, 's': 2, 'u': 3 };
+      const formIndex = formMap[formParam];
+      if (formIndex !== undefined) {
+        setFormId(formIndex);
       }
     }
 
@@ -407,7 +409,12 @@ function UnitPageContent() {
               const currentParams = new URLSearchParams(searchParams);
               currentParams.set('level', params.level.toString());
               currentParams.set('plus', params.plusLevel.toString());
-              currentParams.set('form', params.formId.toString());
+              
+              // 数値を短縮形に変換
+              const formMap = ['f', 'c', 's', 'u'];
+              const formKey = formMap[params.formId] || 'f';
+              currentParams.set('form', formKey);
+              
               router.push(`/unit?${currentParams.toString()}`);
             }}
           />

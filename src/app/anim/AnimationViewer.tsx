@@ -92,7 +92,7 @@ export default function AnimationViewer({
   const [offsetY, setOffsetY] = useState<number>(0);
   const [showRefLines, setShowRefLines] = useState<boolean>(true);
   const canvasWidth = 440; // 固定値
-  const canvasHeight = Math.round(canvasWidth * 1.618); // 幅の1.618倍（黄金比）
+  const canvasHeight = Math.round(canvasWidth * 1.5); // 幅の1.5倍
   
   // Sprite Preview用の状態変数
   const [selectedSpriteId, setSelectedSpriteId] = useState<number>(0);
@@ -646,25 +646,28 @@ export default function AnimationViewer({
       if (showRefLines) {
         const gridSpacing = 25;
         
+        // ズームレベルに応じて描画範囲を動的に調整
+        const drawRange = Math.max(2000, Math.ceil(2000 / zoom));
+        
         // グリッド線（薄いグレー）
         ctx.strokeStyle = '#e5e7eb'; // Tailwind gray-200
         ctx.lineWidth = 0.2 / zoom;
         ctx.beginPath();
         
         // 垂直グリッド線
-        for (let x = gridSpacing; x < 1000; x += gridSpacing) {
-          ctx.moveTo(x, -1000);
-          ctx.lineTo(x, 1000);
-          ctx.moveTo(-x, -1000);
-          ctx.lineTo(-x, 1000);
+        for (let x = gridSpacing; x < drawRange; x += gridSpacing) {
+          ctx.moveTo(x, -drawRange);
+          ctx.lineTo(x, drawRange);
+          ctx.moveTo(-x, -drawRange);
+          ctx.lineTo(-x, drawRange);
         }
         
         // 水平グリッド線
-        for (let y = gridSpacing; y < 1000; y += gridSpacing) {
-          ctx.moveTo(-1000, y);
-          ctx.lineTo(1000, y);
-          ctx.moveTo(-1000, -y);
-          ctx.lineTo(1000, -y);
+        for (let y = gridSpacing; y < drawRange; y += gridSpacing) {
+          ctx.moveTo(-drawRange, y);
+          ctx.lineTo(drawRange, y);
+          ctx.moveTo(-drawRange, -y);
+          ctx.lineTo(drawRange, -y);
         }
         ctx.stroke();
         
@@ -672,10 +675,10 @@ export default function AnimationViewer({
         ctx.strokeStyle = '#dbeafe'; // Tailwind blue-200
         ctx.lineWidth = 1 / zoom;
         ctx.beginPath();
-        ctx.moveTo(-1000, 0);
-        ctx.lineTo(1000, 0);
-        ctx.moveTo(0, -1000);
-        ctx.lineTo(0, 1000);
+        ctx.moveTo(-drawRange, 0);
+        ctx.lineTo(drawRange, 0);
+        ctx.moveTo(0, -drawRange);
+        ctx.lineTo(0, drawRange);
         ctx.stroke();
       }
       
@@ -1062,6 +1065,9 @@ export default function AnimationViewer({
         
         {/* コントロールボタン */}
         <div className="flex flex-wrap items-center justify-center gap-2 text-xs mt-2">
+          <span className="text-gray-600 font-mono text-xs">
+            {zoom.toFixed(2)}x ({offsetX}, {offsetY})
+          </span>
           <button
             onClick={() => setZoom(zoom * 1.2)}
             className="px-2 py-1 bg-blue-500 text-white rounded"

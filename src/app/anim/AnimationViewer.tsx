@@ -91,8 +91,8 @@ export default function AnimationViewer({
   const [offsetX, setOffsetX] = useState<number>(0);
   const [offsetY, setOffsetY] = useState<number>(0);
   const [showRefLines, setShowRefLines] = useState<boolean>(true);
-  const [canvasWidth, setCanvasWidth] = useState<number>(440);
-  const canvasHeight = 600; // 高さは固定（上側20%伸ばし）
+  const canvasWidth = 440; // 固定値
+  const canvasHeight = Math.round(canvasWidth * 1.618); // 幅の1.618倍（黄金比）
   
   // Sprite Preview用の状態変数
   const [selectedSpriteId, setSelectedSpriteId] = useState<number>(0);
@@ -100,34 +100,6 @@ export default function AnimationViewer({
   
   // アニメーションシステム
   const [eAnimD, setEAnimD] = useState<EAnimD | null>(null);
-  const [settingsVisible, setSettingsVisible] = useState<boolean>(false);
-  
-  // Canvas サイズ自動調整
-  useEffect(() => {
-    const updateCanvasSize = () => {
-      const container = document.querySelector('.animation-container');
-      if (container) {
-        const containerWidth = container.clientWidth;
-        const newWidth = Math.min(containerWidth - 32, 800); // 最大800px、パディング考慮
-        
-        if (newWidth > 300 && newWidth !== canvasWidth) { // 最小幅制限と不要な更新防止
-          setCanvasWidth(newWidth);
-        }
-      }
-    };
-    
-    // 初期設定
-    updateCanvasSize();
-    
-    // リサイズイベントリスナー
-    window.addEventListener('resize', updateCanvasSize);
-    
-    return () => {
-      window.removeEventListener('resize', updateCanvasSize);
-    };
-  }, [canvasWidth]); // canvasWidthを依存配列に追加
-  
-  // canvasサイズ変更時の再描画（render関数定義後に移動）
   
   // Data折りたたみ用の状態変数
   const [dataExpanded, setDataExpanded] = useState({
@@ -797,17 +769,6 @@ export default function AnimationViewer({
     renderAnimation();
   }, [renderAnimation]);
 
-  // canvasサイズ変更時の再描画
-  useEffect(() => {
-    if (eAnimD && !isPlaying) {
-      // サイズ変更後に少し遅延してから再描画
-      const timeoutId = setTimeout(() => {
-        render();
-      }, 100);
-      
-      return () => clearTimeout(timeoutId);
-    }
-  }, [canvasWidth, eAnimD, isPlaying, render]);
 
   // パーツ表示状態変更時の再描画
   useEffect(() => {
@@ -1025,84 +986,8 @@ export default function AnimationViewer({
         >
           参照線
         </button>
-        <button
-          onClick={() => setCanvasWidth(440)}
-          className="px-2 py-1 bg-purple-500 text-white rounded"
-        >
-          標準幅
-        </button>
-        <button
-          onClick={() => setCanvasWidth(600)}
-          className="px-2 py-1 bg-indigo-500 text-white rounded"
-        >
-          幅大
-        </button>
-        <button
-          onClick={() => setCanvasWidth(800)}
-          className="px-2 py-1 bg-cyan-500 text-white rounded"
-        >
-          幅最大
-        </button>
-        <button
-          onClick={() => setSettingsVisible(!settingsVisible)}
-          className={`px-2 py-1 rounded ${settingsVisible ? 'bg-green-500' : 'bg-gray-500'} text-white`}
-        >
-          設定
-        </button>
       </div>
 
-      {/* アニメーション設定パネル */}
-      {settingsVisible && (
-        <div className="bg-gray-100 p-3 rounded border">
-          <h3 className="text-sm font-bold mb-2">アニメーション設定</h3>
-          <div className="grid grid-cols-2 gap-2 text-xs">
-            <button
-              onClick={() => {
-                if (eAnimD) eAnimD.setPerformanceMode(true);
-              }}
-              className="px-2 py-1 bg-blue-500 text-white rounded hover:bg-blue-600"
-            >
-              パフォーマンスモード
-            </button>
-            <button
-              onClick={() => {
-                if (eAnimD) eAnimD.setPerformanceMode(false);
-              }}
-              className="px-2 py-1 bg-green-500 text-white rounded hover:bg-green-600"
-            >
-              標準モード
-            </button>
-            <button
-              onClick={() => {
-                const stats = AnimationPerformanceMonitor.getStats();
-                console.log('Performance Stats:', stats);
-                alert('パフォーマンス統計をコンソールに出力しました');
-              }}
-              className="px-2 py-1 bg-yellow-500 text-white rounded hover:bg-yellow-600"
-            >
-              統計表示
-            </button>
-            <button
-              onClick={() => {
-                if (eAnimD) {
-                  eAnimD.reset();
-                  setCurrentFrame(0);
-                }
-              }}
-              className="px-2 py-1 bg-purple-500 text-white rounded hover:bg-purple-600"
-            >
-              リセット
-            </button>
-          </div>
-          
-          {/* 現在の状態表示 */}
-          <div className="mt-2 text-xs text-gray-600">
-            {eAnimD && (
-              <div>アニメーション: Frame {eAnimD.f}/{eAnimD.len()}, パフォーマンス: {eAnimD.isPerformanceMode() ? 'ON' : 'OFF'}</div>
-            )}
-          </div>
-        </div>
-      )}
 
       {/* メインアニメーション表示 */}
       <div className="flex flex-col items-center animation-container">

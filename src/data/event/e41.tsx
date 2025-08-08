@@ -2,13 +2,13 @@ import { GatyaSet } from "@/data/gatyasets";
 
 export const E41: GatyaSet = {
   name: "ねこなつパラダイス編（伝説の札束）",
-  guaranteed: 1,
+  guaranteed: -1,
   shortName: "e41",
   gatyasetId: 41,
-  rateCumSum: [1000, 6000, 9000, 10000],
+  rateCumSum: [3400, 7200, 9200, 10000],
   pools: [
     {
-      rate: 1000,
+      rate: 3400,
       units: [
        'XP 5,000',              //  10
        'XP 2,000',              // 222
@@ -16,7 +16,7 @@ export const E41: GatyaSet = {
       reroll: false,
     },
     {
-      rate: 5000,
+      rate: 3800,
       units: [
        'スピードアップ*',       //   0
        'ニャンピュータ*',       //   3
@@ -26,7 +26,7 @@ export const E41: GatyaSet = {
       reroll: true,
     },
     {
-      rate: 3000,
+      rate: 2000,
       units: [
        'ネコボン',              //   2
        'おかめはちもく',        //   4
@@ -35,7 +35,7 @@ export const E41: GatyaSet = {
       reroll: false,
     },
     {
-      rate: 1000,
+      rate: 800,
       units: [
        'にゃんこバーガー',      // 213
        'ネコまねき',            // 342

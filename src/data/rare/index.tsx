@@ -14,12 +14,12 @@ import { Set942 } from './set942'; // ダイナマイツ
 import { Set943 } from './set943'; // バサラーズ
 // import { Set944 } from './set944'; // ギャルズ
 import { Set945 } from './set945'; // エンペラーズ
-// import { Set946 } from './set946'; // ウルトラソウルズ
-// import { Set947 } from './set947'; // ダークヒーローズ
+import { Set946 } from './set946'; // ウルトラソウルズ
+import { Set947 } from './set947'; // ダークヒーローズ
 // import { Set948 } from './set948'; // ギガントゼウス
 // import { Set949 } from './set949'; // アイアンウォーズ
-// import { Set950 } from './set950'; // ギャルモン
-import { Set951 } from './set951'; // ピクシーズ
+import { Set950 } from './set950'; // ギャルモン
+// import { Set951 } from './set951'; // ピクシーズ
 // import { Set973 } from './set973'; // 超国王祭
 // import { Set962 } from './set962'; // ルガ族
 // import { Set963 } from './set963'; // 超ネコ祭
@@ -36,16 +36,16 @@ import { Set951 } from './set951'; // ピクシーズ
 // import { Set975 } from './set975'; // 超選抜祭
 // import { Set976 } from './set976'; // 極選抜祭
 // import { Set977 } from './set977'; // バキコラボ
-import { Set979 } from './set979'; // アイアンウォーズ
+// import { Set979 } from './set979'; // アイアンウォーズ
 // import { Set980 } from './set980'; // アイアンウォーズ
 // import { Set981 } from './set981'; // 超ネコ祭
 // import { Set982 } from './set982'; // 極ネコ祭
 // import { Set983 } from './set983'; // プラチケ
 // import { Set984 } from './set984'; // レジェンド
 // import { Set985 } from './set985'; // ソニックコラボ
-// import { Set986 } from './set986'; // ルガ族
+import { Set986 } from './set986'; // ルガ族
 // import { Set992 } from './set992'; // ギガントゼウス
-import { Set993 } from './set993'; // 超ネコ祭
+// import { Set993 } from './set993'; // 超ネコ祭
 import { Set994 } from './set994'; // 極ネコ祭
 import { Set995 } from './set995'; // プラチケ
 import { Set996 } from './set996'; // レジェチケ
@@ -68,17 +68,18 @@ export const RareGatyaSetList = [
     Set1000, // マンボウ
 
     Set997, // サマーガールズブルーオーシャン
-    Set1010, // サマーガールズサンシャイン
 
-    Set951, // ピクシーズ
-    Set979, // アイアンウォーズ
     Set943, // バサラーズ
     Set945, // エンペラーズ
-
+    Set947, // ダークヒーローズ
+    Set942, // ダイナマイツ
+    Set946, // ウルトラソウルズ
+    Set1010, // サマーガールズサンシャイン
+    Set986, // ルガ族 
+    Set994, // 極ネコ祭
+    Set950, // ギャルモン
     Set995, // プラチナ
     Set996, // レジェンド
-    Set993, // 超ネコ祭
-    Set994, // 極ネコ祭
 
     Set1005, // エレメントピクシーズ（新規）
     Set1008, // プラチナ
@@ -88,21 +89,16 @@ export const RareGatyaSetList = [
 
     Set1011, // 1.1億DL記念
     Set1012, // 超国王祭
-    Set942, // ダイナマイツ
 
-    // Set946, // ウルトラソウルズ
-    // Set947, // ダークヒーローズ
     // Set944, // ギャルズ
-    // Set986, // ルガ族 
     // Set992, // ギガントゼウス
-
-
-    // Set950, // ギャルモン
+    // Set979, // アイアンウォーズ
 
     // Set973, // 超国王祭
     // Set861, // 女王祭
 
     // Set972, // 超極ネコ祭 
+    // Set993, // 超ネコ祭
 
     // Set939, // バスターズ祭
     // Set696, // レッドバスターズ

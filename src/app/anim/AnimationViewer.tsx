@@ -968,7 +968,7 @@ export default function AnimationViewer({
   }, [animationData, selectedForm, selectedAnimation, getPartSprites]);
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-2">
 
 
       {/* メインアニメーション表示 */}
@@ -1006,7 +1006,7 @@ export default function AnimationViewer({
       </div>
 
       {/* Frame Control */}
-      <div className="bg-gray-50 p-1 rounded">
+      <div className="bg-gray-50 p-1 rounded mt-1">
         <div className="flex items-center justify-between mb-1">
           <div className="flex items-center gap-2">
             <label className="text-sm font-medium text-gray-600 font-mono">
@@ -1114,7 +1114,7 @@ export default function AnimationViewer({
       </div>
 
       {/* Parts List Section */}
-      <div className="bg-gray-50 p-1 rounded mb-2">
+      <div className="bg-gray-50 p-1 rounded mt-1">
         <div className="mt-2">
           {/* Parts/Sprites カウントラベル */}
           <div className="mb-2">
@@ -1440,7 +1440,7 @@ export default function AnimationViewer({
       </div>
 
       {/* Sprite Preview Section */}
-      <div className="bg-blue-50 p-2 rounded mb-2">
+      <div className="bg-blue-50 p-2 rounded mt-1">
         <button
           onClick={() => setSpritePreviewExpanded(!spritePreviewExpanded)}
           className="flex items-center justify-between w-full text-left text-sm font-medium text-gray-600 mb-1 font-mono hover:text-gray-800"
@@ -1506,13 +1506,13 @@ export default function AnimationViewer({
       </div>
 
       {/* Data Section - anim0と同様の実装 */}
-      <div className="bg-gray-50 p-2 rounded mt-4">
+      <div className="bg-gray-50 p-2 rounded mt-1">
         <label className="block text-sm font-medium text-gray-600 mb-2 font-mono">
           Data
         </label>
         
         {/* imgcut データ */}
-        <div className="bg-white p-2 rounded mb-2">
+        <div className="bg-white p-2 rounded mb-1">
           <button
             onClick={() => setDataExpanded(prev => ({ ...prev, imgcut: !prev.imgcut }))}
             className="flex items-center justify-between w-full text-left text-xs font-medium text-gray-500 font-mono hover:text-gray-700"
@@ -1610,7 +1610,7 @@ export default function AnimationViewer({
         </div>
 
         {/* mamodel データ */}
-        <div className="bg-white p-2 rounded mb-2">
+        <div className="bg-white p-2 rounded mb-1">
           <button
             onClick={() => setDataExpanded(prev => ({ ...prev, mamodel: !prev.mamodel }))}
             className="flex items-center justify-between w-full text-left text-xs font-medium text-gray-500 font-mono hover:text-gray-700"
@@ -1798,7 +1798,7 @@ export default function AnimationViewer({
         </div>
 
         {/* maanim データ */}
-        <div className="bg-white p-2 rounded mb-2">
+        <div className="bg-white p-2 rounded mb-1">
           <button
             onClick={() => setDataExpanded(prev => ({ ...prev, maanim: !prev.maanim }))}
             className="flex items-center justify-between w-full text-left text-xs font-medium text-gray-500 font-mono hover:text-gray-700"

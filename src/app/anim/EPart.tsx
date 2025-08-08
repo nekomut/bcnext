@@ -498,25 +498,15 @@ export class EPart {
       const absScX = Math.abs(sc.x);
       const absScY = Math.abs(sc.y);
       
-      // Java版準拠: 有限値かつ0でなければ描画（極小値も許可）
+      // Java版準拠: スケール値が0または無効な場合は描画しない
       if (!isFinite(sc.x) || !isFinite(sc.y) || absScX === 0 || absScY === 0) {
-        // 完全に無効な値の場合のみ元サイズで描画
-        if (useCanvas && transparentCanvas) {
-          // Canvasから描画
-          ctx.drawImage(
-            transparentCanvas,
-            0, 0, sw, sh,  // ソース位置・サイズ（Canvasは切り出し済み）
-            -tpiv.x, -tpiv.y, sw, sh  // 描画位置・サイズ（元のサイズ）
-          );
-        } else {
-          // 通常の画像から描画
-          ctx.drawImage(
-            spriteImage,
-            sx, sy, sw, sh,  // ソース位置・サイズ
-            -tpiv.x, -tpiv.y, sw, sh  // 描画位置・サイズ（元のサイズ）
-          );
-        }
-      } else {
+        // スケール値が0または無効な場合は描画しない（Java版準拠）
+        ctx.restore();
+        return;
+      }
+      
+      // 正常な描画処理のみ実行
+      {
         // Canvas状態保存
         ctx.save();
         

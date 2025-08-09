@@ -773,7 +773,9 @@ export default function AnimationViewer({
                             const tpiv = P.newP(part.piv).times(p0).times(sizer);
                             const sc = P.newP(sw, sh).times(p0).times(sizer);
                             
-                            // drawPart()と同じスケール値チェック
+                            // drawPart()と同じ反転・スケール値チェック
+                            const isFlipX = sc.x < 0;
+                            const isFlipY = sc.y < 0;
                             const absScX = Math.abs(sc.x);
                             const absScY = Math.abs(sc.y);
                             
@@ -781,45 +783,111 @@ export default function AnimationViewer({
                               // 現在のCanvas変換状態を取得（part.transform()適用後）
                               const currentTransform = ctx.getTransform();
                               
-                              // drawPart()と完全に同じ描画位置計算
-                              const drawX = -tpiv.x;
-                              const drawY = -tpiv.y;
-                              const drawWidth = absScX;
-                              const drawHeight = absScY;
+                              // drawPart()と完全に同じ描画位置計算（反転考慮）
+                              let drawX, drawY, drawWidth, drawHeight;
                               
-                              // Canvas変換マトリックスを使用して画面座標に変換
-                              const corners = [
-                                { x: drawX, y: drawY },
-                                { x: drawX + drawWidth, y: drawY },
-                                { x: drawX + drawWidth, y: drawY + drawHeight },
-                                { x: drawX, y: drawY + drawHeight }
-                              ];
-                              
-                              let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
-                              
-                              corners.forEach(corner => {
-                                // 現在のCanvas変換を適用
-                                const screenX = currentTransform.a * corner.x + currentTransform.c * corner.y + currentTransform.e;
-                                const screenY = currentTransform.b * corner.x + currentTransform.d * corner.y + currentTransform.f;
+                              if (isFlipX || isFlipY) {
+                                // 反転時: EPart.drawPart()と同じ計算（ピボット基準）
+                                drawX = 0; // ピボット基準での描画位置
+                                drawY = 0;
+                                drawWidth = absScX;
+                                drawHeight = absScY;
                                 
-                                minX = Math.min(minX, screenX);
-                                minY = Math.min(minY, screenY);
-                                maxX = Math.max(maxX, screenX);
-                                maxY = Math.max(maxY, screenY);
-                              });
-                              
-                              const bounds = {
-                                x: minX,
-                                y: minY,
-                                width: maxX - minX,
-                                height: maxY - minY,
-                                partId: partId
-                              };
-                              
-                              if (isFinite(bounds.x) && isFinite(bounds.y) && 
-                                  isFinite(bounds.width) && isFinite(bounds.height) &&
-                                  bounds.width > 0 && bounds.height > 0) {
-                                visibleParts.push(bounds);
+                                // 反転マトリックスを手動で適用
+                                const flipMatrix = {
+                                  a: isFlipX ? -1 : 1,
+                                  b: 0,
+                                  c: 0,
+                                  d: isFlipY ? -1 : 1,
+                                  e: -tpiv.x,
+                                  f: -tpiv.y
+                                };
+                                
+                                // 合成マトリックス計算（currentTransform * flipMatrix）
+                                const combinedTransform = {
+                                  a: currentTransform.a * flipMatrix.a + currentTransform.c * flipMatrix.b,
+                                  b: currentTransform.b * flipMatrix.a + currentTransform.d * flipMatrix.b,
+                                  c: currentTransform.a * flipMatrix.c + currentTransform.c * flipMatrix.d,
+                                  d: currentTransform.b * flipMatrix.c + currentTransform.d * flipMatrix.d,
+                                  e: currentTransform.a * flipMatrix.e + currentTransform.c * flipMatrix.f + currentTransform.e,
+                                  f: currentTransform.b * flipMatrix.e + currentTransform.d * flipMatrix.f + currentTransform.f
+                                };
+                                
+                                // 反転後の変換マトリックスを使用
+                                const corners = [
+                                  { x: drawX, y: drawY },
+                                  { x: drawX + drawWidth, y: drawY },
+                                  { x: drawX + drawWidth, y: drawY + drawHeight },
+                                  { x: drawX, y: drawY + drawHeight }
+                                ];
+                                
+                                let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+                                
+                                corners.forEach(corner => {
+                                  // 反転を考慮したCanvas変換を適用
+                                  const screenX = combinedTransform.a * corner.x + combinedTransform.c * corner.y + combinedTransform.e;
+                                  const screenY = combinedTransform.b * corner.x + combinedTransform.d * corner.y + combinedTransform.f;
+                                  
+                                  minX = Math.min(minX, screenX);
+                                  minY = Math.min(minY, screenY);
+                                  maxX = Math.max(maxX, screenX);
+                                  maxY = Math.max(maxY, screenY);
+                                });
+                                
+                                const bounds = {
+                                  x: minX,
+                                  y: minY,
+                                  width: maxX - minX,
+                                  height: maxY - minY,
+                                  partId: partId
+                                };
+                                
+                                if (isFinite(bounds.x) && isFinite(bounds.y) && 
+                                    isFinite(bounds.width) && isFinite(bounds.height) &&
+                                    bounds.width > 0 && bounds.height > 0) {
+                                  visibleParts.push(bounds);
+                                }
+                              } else {
+                                // 通常時: 従来の計算
+                                drawX = -tpiv.x;
+                                drawY = -tpiv.y;
+                                drawWidth = absScX;
+                                drawHeight = absScY;
+                                
+                                // Canvas変換マトリックスを使用して画面座標に変換
+                                const corners = [
+                                  { x: drawX, y: drawY },
+                                  { x: drawX + drawWidth, y: drawY },
+                                  { x: drawX + drawWidth, y: drawY + drawHeight },
+                                  { x: drawX, y: drawY + drawHeight }
+                                ];
+                                
+                                let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+                                
+                                corners.forEach(corner => {
+                                  // 現在のCanvas変換を適用
+                                  const screenX = currentTransform.a * corner.x + currentTransform.c * corner.y + currentTransform.e;
+                                  const screenY = currentTransform.b * corner.x + currentTransform.d * corner.y + currentTransform.f;
+                                  
+                                  minX = Math.min(minX, screenX);
+                                  minY = Math.min(minY, screenY);
+                                  maxX = Math.max(maxX, screenX);
+                                  maxY = Math.max(maxY, screenY);
+                                });
+                                
+                                const bounds = {
+                                  x: minX,
+                                  y: minY,
+                                  width: maxX - minX,
+                                  height: maxY - minY,
+                                  partId: partId
+                                };
+                                
+                                if (isFinite(bounds.x) && isFinite(bounds.y) && 
+                                    isFinite(bounds.width) && isFinite(bounds.height) &&
+                                    bounds.width > 0 && bounds.height > 0) {
+                                  visibleParts.push(bounds);
+                                }
                               }
                             }
                             

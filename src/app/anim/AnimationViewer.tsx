@@ -92,6 +92,7 @@ export default function AnimationViewer({
   const [offsetY, setOffsetY] = useState<number>(0);
   const [showRefLines, setShowRefLines] = useState<boolean>(true);
   const [showBounds, setShowBounds] = useState<boolean>(false);
+  const [fps, setFps] = useState<number>(30);
   const canvasWidth = 440; // 固定値
   const canvasHeight = Math.round(canvasWidth * 1.3); // 幅の1.3倍
   
@@ -991,7 +992,7 @@ export default function AnimationViewer({
     }
     
     const now = performance.now();
-    if (now - lastFrameTimeRef.current >= 1000 / 30) { // 30 FPS
+    if (now - lastFrameTimeRef.current >= 1000 / fps) { // 設定されたFPS
       
       AnimationPerformanceMonitor.measure('animation_loop', () => {
         eAnimD.update(false);
@@ -1017,7 +1018,7 @@ export default function AnimationViewer({
     if (isPlaying) {
       animationIdRef.current = requestAnimationFrame(animate);
     }
-  }, [isPlaying, eAnimD, render]);
+  }, [isPlaying, eAnimD, render, fps]);
 
   // 初期化とクリーンアップ
   useEffect(() => {
@@ -1243,6 +1244,20 @@ export default function AnimationViewer({
             >
               ▷
             </button>
+          </div>
+          <div className="flex items-center gap-1">
+            <label className="text-xs font-medium text-gray-600 font-mono">FPS</label>
+            <select
+              value={fps}
+              onChange={(e) => setFps(parseInt(e.target.value))}
+              className="px-1 py-0 border border-gray-300 rounded text-xs focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-600 font-mono"
+            >
+              <option value={10}>10</option>
+              <option value={15}>15</option>
+              <option value={24}>24</option>
+              <option value={30}>30</option>
+              <option value={60}>60</option>
+            </select>
           </div>
         </div>
         <input

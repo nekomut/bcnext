@@ -92,7 +92,7 @@ export default function AnimationViewer({
   const [offsetY, setOffsetY] = useState<number>(0);
   const [showRefLines, setShowRefLines] = useState<boolean>(true);
   const canvasWidth = 440; // 固定値
-  const canvasHeight = Math.round(canvasWidth * 1.5); // 幅の1.5倍
+  const canvasHeight = Math.round(canvasWidth * 1.4); // 幅の1.4倍
   
   // Sprite Preview用の状態変数
   const [selectedSpriteId, setSelectedSpriteId] = useState<number>(0);
@@ -632,10 +632,10 @@ export default function AnimationViewer({
       ctx.save();
       
       // 1. ../common/util/anim準拠の統一位置システム
-      // canvas中心座標を(canvas.width / 2, canvas.height * 0.9)に調整（中心をより下側に移動）
+      // canvas中心座標を(canvas.width / 2, canvas.height * 0.95)に調整（中心をより下側に移動）
       // confs[0][2], confs[0][3]は各パーツ描画時にEPart側で適用される
       const commonOriginX = canvas.width / 2; // X方向は中央
-      const commonOriginY = canvas.height * 0.9; // Y方向：中心をより下側に移動
+      const commonOriginY = canvas.height * 0.95; // Y方向：中心をより下側に移動
       
       // 2. ユーザー操作によるオフセット追加
       ctx.translate(commonOriginX + offsetX, commonOriginY + offsetY);

@@ -91,8 +91,9 @@ export default function AnimationViewer({
   const [offsetX, setOffsetX] = useState<number>(0);
   const [offsetY, setOffsetY] = useState<number>(0);
   const [showRefLines, setShowRefLines] = useState<boolean>(true);
+  const [showBounds, setShowBounds] = useState<boolean>(false);
   const canvasWidth = 440; // 固定値
-  const canvasHeight = Math.round(canvasWidth * 1.4); // 幅の1.4倍
+  const canvasHeight = Math.round(canvasWidth * 1.3); // 幅の1.3倍
   
   // Sprite Preview用の状態変数
   const [selectedSpriteId, setSelectedSpriteId] = useState<number>(0);
@@ -729,6 +730,8 @@ export default function AnimationViewer({
       }
       
       // カスタム描画：各パーツの表示状態をチェックしながら描画
+      const visibleParts: { x: number; y: number; width: number; height: number; partId: number }[] = [];
+      
       if (eAnimD.order) {
         for (const part of eAnimD.order) {
           const partId = part.ind;
@@ -749,6 +752,49 @@ export default function AnimationViewer({
               const sizer = P.newP(unifiedSize, unifiedSize, 1);
               part.transform(ctx, sizer);
               
+              // 境界線表示用の座標を記録（描画前）
+              if (showBounds) {
+                try {
+                  if (part.opa() > 0.1) {
+                    // EPart の実際の描画領域を計算
+                    const pos = part.pos || { x: 0, y: 0, z: 0 };
+                    const sca = part.sca || { x: 1, y: 1 };
+                    
+                    // imgcut からスプライトサイズを取得
+                    let spriteWidth = 100;  // デフォルト値
+                    let spriteHeight = 100; // デフォルト値
+                    
+                    try {
+                      if (eAnimD.imgcut && part.img >= 0 && part.img < eAnimD.imgcut.cuts.length) {
+                        const imgcutData = eAnimD.imgcut.cuts[part.img];
+                        if (imgcutData && imgcutData.length >= 4) {
+                          spriteWidth = imgcutData[2];  // width
+                          spriteHeight = imgcutData[3]; // height
+                        }
+                      }
+                    } catch (imgcutError) {
+                      console.warn(`Imgcut access error for part ${partId}:`, imgcutError);
+                    }
+                    
+                    const bounds = {
+                      x: pos.x - (spriteWidth * sca.x) / 2,
+                      y: pos.y - (spriteHeight * sca.y) / 2,
+                      width: spriteWidth * Math.abs(sca.x),
+                      height: spriteHeight * Math.abs(sca.y),
+                      partId: partId
+                    };
+                    
+                    if (isFinite(bounds.x) && isFinite(bounds.y) && 
+                        isFinite(bounds.width) && isFinite(bounds.height) &&
+                        bounds.width > 0 && bounds.height > 0) {
+                      visibleParts.push(bounds);
+                    }
+                  }
+                } catch (boundsError) {
+                  console.warn(`Bounds calculation error for part ${partId}:`, boundsError);
+                }
+              }
+              
               // 一時的にvisibleを強制的にtrueに設定して描画
               const originalVisible = part.visible;
               part.visible = true;
@@ -763,9 +809,47 @@ export default function AnimationViewer({
         }
       }
       
+      // 境界線の描画（showBoundsが有効時）
+      if (showBounds && visibleParts.length > 0) {
+        try {
+          // 簡易的な境界線描画（座標変換は適用済み）
+          ctx.strokeStyle = '#ef4444'; // red-500
+          ctx.lineWidth = 1; // 固定線幅
+          ctx.setLineDash([]);
+          
+          // 個別パーツの境界線を簡単に描画
+          visibleParts.forEach(({ x, y, width, height }) => {
+            if (isFinite(x) && isFinite(y) && isFinite(width) && isFinite(height)) {
+              ctx.strokeRect(x, y, width, height);
+            }
+          });
+          
+          // 全体のバウンディングボックス（琥珀色）
+          if (visibleParts.length > 1) {
+            const xs = visibleParts.map(p => p.x).filter(isFinite);
+            const ys = visibleParts.map(p => p.y).filter(isFinite);
+            const maxXs = visibleParts.map(p => p.x + p.width).filter(isFinite);
+            const maxYs = visibleParts.map(p => p.y + p.height).filter(isFinite);
+            
+            if (xs.length > 0 && ys.length > 0 && maxXs.length > 0 && maxYs.length > 0) {
+              const minX = Math.min(...xs);
+              const minY = Math.min(...ys);
+              const maxX = Math.max(...maxXs);
+              const maxY = Math.max(...maxYs);
+              
+              ctx.strokeStyle = '#f59e0b'; // amber-500
+              ctx.lineWidth = 2;
+              ctx.strokeRect(minX, minY, maxX - minX, maxY - minY);
+            }
+          }
+        } catch (drawError) {
+          console.warn('Bounds drawing error:', drawError);
+        }
+      }
+      
       ctx.restore();
     });
-  }, [eAnimD, offsetX, offsetY, zoom, showRefLines, hiddenParts, hiddenSprites, isPartOpacityZero, unitId]);
+  }, [eAnimD, offsetX, offsetY, zoom, showRefLines, showBounds, hiddenParts, hiddenSprites, isPartOpacityZero, unitId]);
 
   // 描画処理
   const render = useCallback(() => {
@@ -1009,7 +1093,7 @@ export default function AnimationViewer({
       <div className="bg-gray-50 p-1 rounded mt-1">
         <div className="flex items-center justify-between mb-1">
           <div className="flex items-center gap-2">
-            <label className="text-sm font-medium text-gray-600 font-mono">
+            <label className="text-xs font-medium text-gray-600 font-mono">
               Frame {String(currentFrame).padStart(3, '0')}/{String(eAnimD ? eAnimD.len() : 0).padStart(3, '0')}
             </label>
             <button
@@ -1065,50 +1149,56 @@ export default function AnimationViewer({
         
         {/* コントロールボタン */}
         <div className="flex flex-wrap items-center justify-center gap-2 text-xs mt-2">
-          <span className="text-gray-600 font-mono text-xs">
+          <span className="text-gray-600 font-mono text-xxs">
             {zoom.toFixed(2)}x ({offsetX}, {offsetY})
           </span>
           <button
             onClick={() => setZoom(zoom * 1.2)}
-            className="px-2 py-1 bg-blue-500 text-white rounded"
+            className="px-2 py-1 bg-blue-500 text-white rounded font-mono"
           >
-            拡大
+            +
           </button>
           <button
             onClick={() => setZoom(zoom / 1.2)}
-            className="px-2 py-1 bg-blue-500 text-white rounded"
+            className="px-2 py-1 bg-blue-500 text-white rounded font-mono"
           >
-            縮小
+            -
           </button>
           <button
             onClick={() => setOffsetY(offsetY - 20)}
-            className="px-2 py-1 bg-green-500 text-white rounded"
+            className="px-2 py-1 bg-green-500 text-white rounded font-mono"
           >
             ↑
           </button>
           <button
             onClick={() => setOffsetY(offsetY + 20)}
-            className="px-2 py-1 bg-green-500 text-white rounded"
+            className="px-2 py-1 bg-green-500 text-white rounded font-mono"
           >
             ↓
           </button>
           <button
             onClick={() => setOffsetX(offsetX - 20)}
-            className="px-2 py-1 bg-green-500 text-white rounded"
+            className="px-2 py-1 bg-green-500 text-white rounded font-mono"
           >
             ←
           </button>
           <button
             onClick={() => setOffsetX(offsetX + 20)}
-            className="px-2 py-1 bg-green-500 text-white rounded"
+            className="px-2 py-1 bg-green-500 text-white rounded font-mono"
           >
             →
           </button>
           <button
             onClick={() => setShowRefLines(!showRefLines)}
-            className={`px-2 py-1 rounded ${showRefLines ? 'bg-red-500' : 'bg-gray-500'} text-white`}
+            className={`px-2 py-1 rounded ${showRefLines ? 'bg-red-500' : 'bg-gray-500'} text-white font-mono`}
           >
-            参照線
+            Grid
+          </button>
+          <button
+            onClick={() => setShowBounds(!showBounds)}
+            className={`px-2 py-1 rounded ${showBounds ? 'bg-purple-500' : 'bg-gray-500'} text-white font-mono`}
+          >
+            Bound
           </button>
         </div>
       </div>
@@ -1118,7 +1208,7 @@ export default function AnimationViewer({
         <div className="mt-2">
           {/* Parts/Sprites カウントラベル */}
           <div className="mb-2">
-            <label className="text-sm font-medium text-gray-600 font-mono">
+            <label className="text-xs font-medium text-gray-600 font-mono">
               Parts({animationData[selectedForm] && animationData[selectedForm].mamodel ? animationData[selectedForm].mamodel.n || 0 : 0})|Sprites({animationData[selectedForm] && animationData[selectedForm].imgcut ? animationData[selectedForm].imgcut.n || 0 : 0})
             </label>
           </div>
@@ -1172,7 +1262,7 @@ export default function AnimationViewer({
             >
               全折畳
             </button>
-            <label className="flex items-center gap-1 text-xs font-medium text-gray-600 font-mono">
+            <label className="flex items-center gap-1 text-xxs font-medium text-gray-600 font-mono">
               <input
                 type="checkbox"
                 checked={showInactiveParts}
@@ -1443,7 +1533,7 @@ export default function AnimationViewer({
       <div className="bg-blue-50 p-2 rounded mt-1">
         <button
           onClick={() => setSpritePreviewExpanded(!spritePreviewExpanded)}
-          className="flex items-center justify-between w-full text-left text-sm font-medium text-gray-600 mb-1 font-mono hover:text-gray-800"
+          className="flex items-center justify-between w-full text-left text-xs font-medium text-gray-600 mb-1 font-mono hover:text-gray-800"
         >
           Sprite Preview
           <span className="text-gray-400">{spritePreviewExpanded ? '▼' : '▶'}</span>
@@ -1507,7 +1597,7 @@ export default function AnimationViewer({
 
       {/* Data Section - anim0と同様の実装 */}
       <div className="bg-gray-50 p-2 rounded mt-1">
-        <label className="block text-sm font-medium text-gray-600 mb-2 font-mono">
+        <label className="block text-xs font-medium text-gray-600 mb-2 font-mono">
           Data
         </label>
         

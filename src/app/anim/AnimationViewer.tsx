@@ -851,16 +851,18 @@ export default function AnimationViewer({
         }
       }
       
-      // 境界線の描画（showBoundsが有効時）
+      ctx.restore();
+      
+      // 境界線の描画（showBoundsが有効時）- 座標変換の外で描画
       if (showBounds && visibleParts.length > 0) {
         console.log(`Drawing bounds for ${visibleParts.length} visible parts:`, visibleParts);
         try {
-          // 簡易的な境界線描画（座標変換は適用済み）
+          // 境界線描画（既に画面座標系に変換済み）
           ctx.strokeStyle = '#ef4444'; // red-500
-          ctx.lineWidth = 2; // より目立つように線幅を増加
+          ctx.lineWidth = Math.min(1 / zoom, 1.5); // ズームに応じて線幅を調整（最大1.5px）
           ctx.setLineDash([]);
           
-          // 個別パーツの境界線を簡単に描画
+          // 個別パーツの境界線を画面座標で描画
           visibleParts.forEach(({ x, y, width, height, partId }) => {
             console.log(`Drawing boundary for part ${partId}: (${x}, ${y}, ${width}, ${height})`);
             if (isFinite(x) && isFinite(y) && isFinite(width) && isFinite(height)) {
@@ -885,7 +887,7 @@ export default function AnimationViewer({
               const maxY = Math.max(...maxYs);
               
               ctx.strokeStyle = '#f59e0b'; // amber-500
-              ctx.lineWidth = 2;
+              ctx.lineWidth = Math.min(1 / zoom, 1.5); // ズームに応じて線幅を調整（最大1.5px）
               ctx.strokeRect(minX, minY, maxX - minX, maxY - minY);
             }
           }
@@ -893,8 +895,6 @@ export default function AnimationViewer({
           console.warn('Bounds drawing error:', drawError);
         }
       }
-      
-      ctx.restore();
     });
   }, [eAnimD, offsetX, offsetY, zoom, showRefLines, showBounds, hiddenParts, hiddenSprites, isPartOpacityZero, unitId]);
 

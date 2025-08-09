@@ -3909,7 +3909,7 @@ function TalentsList({
                           talent.id === 35 ? 'traitBlack' :
                           talent.id === 36 ? 'traitMetal' :
                           talent.id === 37 ? 'traitAngel' :
-                          talent.id === 38 ? 'traitTraitless' :
+                          talent.id === 38 ? 'traitAlien' :
                           talent.id === 39 ? 'traitZombie' :
                           talent.id === 40 ? 'traitRelic' :
                           talent.id === 41 ? 'traitTraitless' :

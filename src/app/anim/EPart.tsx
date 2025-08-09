@@ -244,7 +244,7 @@ export class EPart {
    * Java版getSize完全再現（EPart.java:330-337）
    * scaleUnit正規化と親子関係のスケール継承
    */
-  private getSize(): P {
+  public getSize(): P {
     const mi = 1.0 / (this.model.ints[0] || 1000); // scaleUnit正規化
     
     if (this.fa === null) {
@@ -668,20 +668,58 @@ export class EPart {
 
   /**
    * Java版getBounds()メソッド - パーツの境界ボックス計算
+   * 実際のimgcutデータを使用して正確な境界を計算
    */
-  public getBounds(): { x: number, y: number, width: number, height: number } {
+  public getBounds(imgcut?: { cuts?: number[][]; }): { x: number, y: number, width: number, height: number } {
     const transform = this.getTransform();
-    const scale = this.drawScale(1);
     
-    // 仮のスプライトサイズ（実際はimgcutから取得すべき）
-    const spriteWidth = 100;
-    const spriteHeight = 100;
+    // 実際のスプライトサイズをimgcutから取得
+    let spriteWidth = 100;  // デフォルト値
+    let spriteHeight = 100; // デフォルト値
+    
+    if (imgcut && imgcut.cuts && this.img >= 0 && this.img < imgcut.cuts.length) {
+      const imgcutData = imgcut.cuts[this.img];
+      if (imgcutData && imgcutData.length >= 4) {
+        spriteWidth = imgcutData[2];  // width
+        spriteHeight = imgcutData[3]; // height
+      }
+    }
+    
+    // スプライトの4つの角を計算（ピボット考慮）
+    const pivotX = this.piv?.x || 0;
+    const pivotY = this.piv?.y || 0;
+    const drawX = -pivotX;
+    const drawY = -pivotY;
+    const drawWidth = spriteWidth;
+    const drawHeight = spriteHeight;
+    
+    // 4つの角の座標
+    const corners = [
+      { x: drawX, y: drawY },
+      { x: drawX + drawWidth, y: drawY },
+      { x: drawX + drawWidth, y: drawY + drawHeight },
+      { x: drawX, y: drawY + drawHeight }
+    ];
+    
+    // 変換後の座標を計算
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+    
+    corners.forEach(corner => {
+      // マトリックス変換適用
+      const transformedX = transform[0] * corner.x + transform[2] * corner.y + transform[4];
+      const transformedY = transform[1] * corner.x + transform[3] * corner.y + transform[5];
+      
+      minX = Math.min(minX, transformedX);
+      minY = Math.min(minY, transformedY);
+      maxX = Math.max(maxX, transformedX);
+      maxY = Math.max(maxY, transformedY);
+    });
     
     return {
-      x: transform[4] - this.piv.x, // translateX - pivotX
-      y: transform[5] - this.piv.y, // translateY - pivotY
-      width: spriteWidth * scale.x,
-      height: spriteHeight * scale.y
+      x: minX,
+      y: minY,
+      width: maxX - minX,
+      height: maxY - minY
     };
   }
 
@@ -775,13 +813,13 @@ export class EPart {
   /**
    * Java版hitTest()メソッド - 当たり判定
    */
-  public hitTest(worldPoint: P): boolean {
+  public hitTest(worldPoint: P, imgcut?: { cuts?: number[][]; }): boolean {
     if (!this.isVisibleFull()) {
       return false;
     }
     
     const localPoint = this.inverseTransformPoint(worldPoint);
-    const bounds = this.getBounds();
+    const bounds = this.getBounds(imgcut);
     
     return localPoint.x >= bounds.x && localPoint.x <= bounds.x + bounds.width &&
            localPoint.y >= bounds.y && localPoint.y <= bounds.y + bounds.height;

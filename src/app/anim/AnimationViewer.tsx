@@ -752,42 +752,84 @@ export default function AnimationViewer({
               const sizer = P.newP(unifiedSize, unifiedSize, 1);
               part.transform(ctx, sizer);
               
-              // 境界線表示用の座標を記録（描画前）
+              // 境界線表示用の座標を記録（part.transform()とpart.drawPart()と完全に同じ計算）
               if (showBounds) {
                 try {
                   if (part.opa() > 0.1) {
-                    // EPart の実際の描画領域を計算
-                    const pos = part.pos || { x: 0, y: 0, z: 0 };
-                    const sca = part.sca || { x: 1, y: 1 };
-                    
-                    // imgcut からスプライトサイズを取得
-                    let spriteWidth = 100;  // デフォルト値
-                    let spriteHeight = 100; // デフォルト値
-                    
-                    try {
-                      if (eAnimD.imgcut && part.img >= 0 && part.img < eAnimD.imgcut.cuts.length) {
-                        const imgcutData = eAnimD.imgcut.cuts[part.img];
-                        if (imgcutData && imgcutData.length >= 4) {
-                          spriteWidth = imgcutData[2];  // width
-                          spriteHeight = imgcutData[3]; // height
+                    // drawPart()と全く同じ条件チェック
+                    const deadOpaThreshold = 10 * 0.01 + 1e-5;
+                    if (part.visible && part.img >= 0 && part.id >= 0 && part.opa() >= deadOpaThreshold && 
+                        eAnimD.spriteImage && eAnimD.imgcut) {
+                      
+                      // drawPart()と同じスプライトデータ取得
+                      if (eAnimD.imgcut.cuts && part.img < eAnimD.imgcut.cuts.length) {
+                        const spriteData = eAnimD.imgcut.cuts[part.img];
+                        if (spriteData && spriteData.length >= 4) {
+                          const [, , sw, sh] = spriteData;
+                          if (sw > 0 && sh > 0) {
+                            
+                            // drawPart()と完全に同じピボット・スケール計算
+                            const p0 = part.getSize();
+                            const tpiv = P.newP(part.piv).times(p0).times(sizer);
+                            const sc = P.newP(sw, sh).times(p0).times(sizer);
+                            
+                            // drawPart()と同じスケール値チェック
+                            const absScX = Math.abs(sc.x);
+                            const absScY = Math.abs(sc.y);
+                            
+                            if (isFinite(sc.x) && isFinite(sc.y) && absScX > 0 && absScY > 0) {
+                              // 現在のCanvas変換状態を取得（part.transform()適用後）
+                              const currentTransform = ctx.getTransform();
+                              
+                              // drawPart()と完全に同じ描画位置計算
+                              const drawX = -tpiv.x;
+                              const drawY = -tpiv.y;
+                              const drawWidth = absScX;
+                              const drawHeight = absScY;
+                              
+                              // Canvas変換マトリックスを使用して画面座標に変換
+                              const corners = [
+                                { x: drawX, y: drawY },
+                                { x: drawX + drawWidth, y: drawY },
+                                { x: drawX + drawWidth, y: drawY + drawHeight },
+                                { x: drawX, y: drawY + drawHeight }
+                              ];
+                              
+                              let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+                              
+                              corners.forEach(corner => {
+                                // 現在のCanvas変換を適用
+                                const screenX = currentTransform.a * corner.x + currentTransform.c * corner.y + currentTransform.e;
+                                const screenY = currentTransform.b * corner.x + currentTransform.d * corner.y + currentTransform.f;
+                                
+                                minX = Math.min(minX, screenX);
+                                minY = Math.min(minY, screenY);
+                                maxX = Math.max(maxX, screenX);
+                                maxY = Math.max(maxY, screenY);
+                              });
+                              
+                              const bounds = {
+                                x: minX,
+                                y: minY,
+                                width: maxX - minX,
+                                height: maxY - minY,
+                                partId: partId
+                              };
+                              
+                              if (isFinite(bounds.x) && isFinite(bounds.y) && 
+                                  isFinite(bounds.width) && isFinite(bounds.height) &&
+                                  bounds.width > 0 && bounds.height > 0) {
+                                visibleParts.push(bounds);
+                              }
+                            }
+                            
+                            // メモリ解放
+                            P.delete(p0);
+                            P.delete(tpiv);
+                            P.delete(sc);
+                          }
                         }
                       }
-                    } catch (imgcutError) {
-                      console.warn(`Imgcut access error for part ${partId}:`, imgcutError);
-                    }
-                    
-                    const bounds = {
-                      x: pos.x - (spriteWidth * sca.x) / 2,
-                      y: pos.y - (spriteHeight * sca.y) / 2,
-                      width: spriteWidth * Math.abs(sca.x),
-                      height: spriteHeight * Math.abs(sca.y),
-                      partId: partId
-                    };
-                    
-                    if (isFinite(bounds.x) && isFinite(bounds.y) && 
-                        isFinite(bounds.width) && isFinite(bounds.height) &&
-                        bounds.width > 0 && bounds.height > 0) {
-                      visibleParts.push(bounds);
                     }
                   }
                 } catch (boundsError) {
@@ -811,16 +853,21 @@ export default function AnimationViewer({
       
       // 境界線の描画（showBoundsが有効時）
       if (showBounds && visibleParts.length > 0) {
+        console.log(`Drawing bounds for ${visibleParts.length} visible parts:`, visibleParts);
         try {
           // 簡易的な境界線描画（座標変換は適用済み）
           ctx.strokeStyle = '#ef4444'; // red-500
-          ctx.lineWidth = 1; // 固定線幅
+          ctx.lineWidth = 2; // より目立つように線幅を増加
           ctx.setLineDash([]);
           
           // 個別パーツの境界線を簡単に描画
-          visibleParts.forEach(({ x, y, width, height }) => {
+          visibleParts.forEach(({ x, y, width, height, partId }) => {
+            console.log(`Drawing boundary for part ${partId}: (${x}, ${y}, ${width}, ${height})`);
             if (isFinite(x) && isFinite(y) && isFinite(width) && isFinite(height)) {
               ctx.strokeRect(x, y, width, height);
+              console.log(`Successfully drew boundary for part ${partId}`);
+            } else {
+              console.log(`Failed to draw boundary for part ${partId}: invalid values`);
             }
           });
           
@@ -1190,13 +1237,13 @@ export default function AnimationViewer({
           </button>
           <button
             onClick={() => setShowRefLines(!showRefLines)}
-            className={`px-2 py-1 rounded ${showRefLines ? 'bg-red-500' : 'bg-gray-500'} text-white font-mono`}
+            className={`px-2 py-1 rounded ${showRefLines ? 'bg-red-500' : 'bg-gray-500'} text-white font-mono text-xxs`}
           >
             Grid
           </button>
           <button
             onClick={() => setShowBounds(!showBounds)}
-            className={`px-2 py-1 rounded ${showBounds ? 'bg-purple-500' : 'bg-gray-500'} text-white font-mono`}
+            className={`px-2 py-1 rounded ${showBounds ? 'bg-purple-500' : 'bg-gray-500'} text-white font-mono text-xxs`}
           >
             Bound
           </button>

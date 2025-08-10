@@ -480,8 +480,6 @@ function AnimationPageContent() {
               <Link 
                 href={`/unit?unit=${selectedUnit}`}
                 className="text-xs text-gray-500 hover:text-gray-700 hover:underline font-mono font-bold"
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 unit{selectedUnit}
               </Link>

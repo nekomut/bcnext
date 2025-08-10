@@ -62,7 +62,7 @@ export const DEFAULTS = {
     1011, // 1.1億DL記念
     1012, // 超王国祭
   ].join(","),
-  rolls: "40",
+  rolls: "50",
   lastCat: "",
   selected: "",
 };

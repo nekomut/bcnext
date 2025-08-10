@@ -532,16 +532,25 @@ export function UnitDisplay({
         {/* Unit Icon and Rarity */}
         {!iconsLoading && formIcons[actualCurrentForm] && (
           <div className="flex-shrink-0 flex flex-col items-center gap-1">
-            <div className="w-12 h-8 border-0 border-gray-200 overflow-hidden">
+            <div className={`border-0 border-gray-200 overflow-hidden ${
+              validFormCount === 1 ? 'w-12 h-12' : 'w-12 h-8'
+            }`}>
               <Image 
                 src={`data:image/png;base64,${formIcons[actualCurrentForm]}`}
                 alt={currentFormData.name || 'Unit Icon'}
                 width={64}
                 height={64}
-                className="object-cover object-center w-full h-full"
+                className={`w-full h-full object-cover ${
+                  validFormCount === 1 ? 'object-top' : 'object-center'
+                }`}
               />
             </div>
             {(() => {
+              // フォームが一つしか存在しないユニットにはレアリティ画像を表示しない
+              if (validFormCount === 1) {
+                return null;
+              }
+              
               const rarityName = unitData.coreData.rarity.name;
               const rarityIconMap: { [key: string]: string } = {
                 '基本': 'rarityBasic',

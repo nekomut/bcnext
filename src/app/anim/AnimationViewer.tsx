@@ -928,7 +928,7 @@ export default function AnimationViewer({
         try {
           // 境界線描画（既に画面座標系に変換済み）
           ctx.strokeStyle = '#ef4444'; // red-500
-          ctx.lineWidth = Math.min(1 / zoom, 1.5); // ズームに応じて線幅を調整（最大1.5px）
+          ctx.lineWidth = Math.min(0.5 / zoom, 1.0); // ズームに応じて線幅を調整（より細く、最大1.0px）
           ctx.setLineDash([]);
           
           // 個別パーツの境界線を画面座標で描画
@@ -956,7 +956,7 @@ export default function AnimationViewer({
               const maxY = Math.max(...maxYs);
               
               ctx.strokeStyle = '#f59e0b'; // amber-500
-              ctx.lineWidth = Math.min(1 / zoom, 1.5); // ズームに応じて線幅を調整（最大1.5px）
+              ctx.lineWidth = Math.min(0.5 / zoom, 1.0); // ズームに応じて線幅を調整（より細く、最大1.0px）
               ctx.strokeRect(minX, minY, maxX - minX, maxY - minY);
             }
           }

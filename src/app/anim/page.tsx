@@ -434,42 +434,98 @@ function AnimationPageContent() {
           </div>
         )}
         
-        <div className="flex gap-0">
-          {/* Animation Buttons */}
-          {availableAnimations.map(anim => (
-            <div key={anim} className="w-1/5 px-0.5">
+        {/* Play Controls - レイアウト調整 */}
+        {availableForms.length === 1 ? (
+          /* 単一フォーム: フォームタブレイアウトと同じ構造 */
+          <div className="flex justify-between items-start">
+            <div className="flex w-4/5 gap-0">
+              {/* Animation Buttons */}
+              {availableAnimations.map(anim => (
+                <div key={anim} className="w-1/4 px-0.5">
+                  <button
+                    onClick={() => {
+                      setSelectedAnimation(anim);
+                      updateURL({ anim: anim });
+                    }}
+                    className={`w-full p-1 rounded-md font-medium font-mono text-xs ${
+                      selectedAnimation === anim
+                        ? 'bg-blue-500 hover:bg-blue-600 text-white'
+                        : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
+                    }`}
+                  >
+                    {getAnimationDisplayName(anim)}
+                  </button>
+                </div>
+              ))}
+
+              {/* Play Controls */}
+              <div className="w-1/4 px-0.5">
+                <button
+                  onClick={() => {
+                    const newPlaying = !isPlaying;
+                    setIsPlaying(newPlaying);
+                    updateURL({ playing: newPlaying });
+                  }}
+                  className={`w-full p-1 rounded-md text-white font-medium font-mono text-xs ${
+                    isPlaying ? 'bg-red-500 hover:bg-red-600' : 'bg-green-500 hover:bg-green-600'
+                  }`}
+                >
+                  {isPlaying ? '停止' : '再生'}
+                </button>
+              </div>
+            </div>
+            
+            {/* Unit Calculator Link - 右寄せ・上付き */}
+            {selectedUnit && (
+              <Link 
+                href={`/unit?unit=${selectedUnit}`}
+                className="text-xs text-gray-500 hover:text-gray-700 hover:underline font-mono font-bold"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                unit{selectedUnit}
+              </Link>
+            )}
+          </div>
+        ) : (
+          /* 複数フォーム: 従来のレイアウト */
+          <div className="flex gap-0">
+            {/* Animation Buttons */}
+            {availableAnimations.map(anim => (
+              <div key={anim} className="flex-1 px-0.5">
+                <button
+                  onClick={() => {
+                    setSelectedAnimation(anim);
+                    updateURL({ anim: anim });
+                  }}
+                  className={`w-full p-1 rounded-md font-medium font-mono text-xs ${
+                    selectedAnimation === anim
+                      ? 'bg-blue-500 hover:bg-blue-600 text-white'
+                      : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
+                  }`}
+                >
+                  {getAnimationDisplayName(anim)}
+                </button>
+              </div>
+            ))}
+
+            {/* Play Controls */}
+            <div className="w-1/5 px-0.5">
               <button
                 onClick={() => {
-                  setSelectedAnimation(anim);
-                  updateURL({ anim: anim });
+                  const newPlaying = !isPlaying;
+                  setIsPlaying(newPlaying);
+                  updateURL({ playing: newPlaying });
                 }}
-                className={`w-full p-1 rounded-md font-medium font-mono text-xs ${
-                  selectedAnimation === anim
-                    ? 'bg-blue-500 hover:bg-blue-600 text-white'
-                    : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
+                className={`w-full p-1 rounded-md text-white font-medium font-mono text-xs ${
+                  isPlaying ? 'bg-red-500 hover:bg-red-600' : 'bg-green-500 hover:bg-green-600'
                 }`}
               >
-                {getAnimationDisplayName(anim)}
+                {isPlaying ? '停止' : '再生'}
               </button>
             </div>
-          ))}
-
-          {/* Play Controls */}
-          <div className="w-1/5 px-0.5">
-            <button
-              onClick={() => {
-                const newPlaying = !isPlaying;
-                setIsPlaying(newPlaying);
-                updateURL({ playing: newPlaying });
-              }}
-              className={`w-full p-1 rounded-md text-white font-medium font-mono text-xs ${
-                isPlaying ? 'bg-red-500 hover:bg-red-600' : 'bg-green-500 hover:bg-green-600'
-              }`}
-            >
-              {isPlaying ? '停止' : '再生'}
-            </button>
           </div>
-        </div>
+        )}
       </div>
 
       {/* Animation Viewer */}

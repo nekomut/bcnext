@@ -2396,6 +2396,77 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUp
                     <div className="text-gray-600 font-medium break-words">
                       {ability.value}
                     </div>
+                  ) : ability.name === '召喚' && ability.value ? (
+                    <div className="text-gray-600 font-medium break-words">
+                      {(() => {
+                        // React要素の場合は先にテキスト化
+                        let valueString: string;
+                        if (typeof ability.value === 'string') {
+                          valueString = ability.value;
+                        } else if (React.isValidElement(ability.value)) {
+                          // React要素からテキストを抽出（プレーンテキストのみ）
+                          const extractText = (element: React.ReactElement): string => {
+                            const props = element.props as { children?: React.ReactNode };
+                            if (typeof props.children === 'string') {
+                              return props.children;
+                            } else if (Array.isArray(props.children)) {
+                              return props.children.map((child: React.ReactNode) => 
+                                typeof child === 'string' ? child : 
+                                React.isValidElement(child) ? extractText(child) : ''
+                              ).join('');
+                            }
+                            return '';
+                          };
+                          valueString = extractText(ability.value);
+                        } else {
+                          valueString = String(ability.value);
+                        }
+                        
+                        // Unit XXX の形式を検出してリンク化
+                        const unitPattern = /Unit (\d{3})/g;
+                        const parts: React.ReactNode[] = [];
+                        let lastIndex = 0;
+                        let match: RegExpExecArray | null;
+                        let keyIndex = 0;
+                        
+                        while ((match = unitPattern.exec(valueString)) !== null) {
+                          // マッチ前のテキスト
+                          if (match.index > lastIndex) {
+                            parts.push(
+                              <span key={`text-${keyIndex++}`}>
+                                {valueString.substring(lastIndex, match.index)}
+                              </span>
+                            );
+                          }
+                          
+                          // Unit IDをリンクとして追加
+                          const unitId = match[1];
+                          parts.push(
+                            <Link 
+                              key={`unit-${unitId}-${keyIndex++}`}
+                              href={`/unit/?unit=${unitId}`}
+                              className="text-gray-500 font-bold hover:text-gray-700"
+                            >
+                              Unit {unitId}
+                            </Link>
+                          );
+                          
+                          lastIndex = unitPattern.lastIndex;
+                        }
+                        
+                        // 残りのテキスト
+                        if (lastIndex < valueString.length) {
+                          parts.push(
+                            <span key={`text-${keyIndex++}`}>
+                              {valueString.substring(lastIndex)}
+                            </span>
+                          );
+                        }
+                        
+                        // Unit パターンが見つからない場合は元の値を返す
+                        return parts.length > 0 ? <>{parts}</> : ability.value;
+                      })()}
+                    </div>
                   ) : ability.value ? (
                     <div className="text-gray-600 font-medium break-words">
                       {ability.value}

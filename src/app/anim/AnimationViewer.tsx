@@ -128,9 +128,7 @@ export default function AnimationViewer({
   const [expandedParts, setExpandedParts] = useState<Set<number>>(new Set([0])); // Part#000は初期展開
   const [hiddenParts, setHiddenParts] = useState<Set<number>>(new Set());
   const [showInactiveParts, setShowInactiveParts] = useState<boolean>(true);
-  const [showPartPoints, setShowPartPoints] = useState<Set<number>>(new Set());
   const [hiddenSprites, setHiddenSprites] = useState<Set<string>>(new Set());
-  const [showSpritePoints, setShowSpritePoints] = useState<Set<number>>(new Set());
 
   // パーツリスト用のヘルパー関数
   const togglePartExpansion = (partId: number) => {
@@ -360,29 +358,6 @@ export default function AnimationViewer({
     });
   }, [getPartSprites, hiddenSprites]);
 
-  const handlePointToggle = (partId: number, checked: boolean) => {
-    setShowPartPoints(prev => {
-      const newSet = new Set(prev);
-      if (checked) {
-        newSet.add(partId);
-      } else {
-        newSet.delete(partId);
-      }
-      return newSet;
-    });
-  };
-
-  const handleSpritePointToggle = (partId: number, checked: boolean) => {
-    setShowSpritePoints(prev => {
-      const newSet = new Set(prev);
-      if (checked) {
-        newSet.add(partId);
-      } else {
-        newSet.delete(partId);
-      }
-      return newSet;
-    });
-  };
 
   // 座標フォーマット関数
   const formatCoordinate = (coord: number | undefined): string => {
@@ -1539,12 +1514,6 @@ export default function AnimationViewer({
                           Part#{partId.toString().padStart(3, '0')} {partName && typeof partName === 'string' && !partName.startsWith('"') && partName}
                         </span>
                         <span className="font-mono text-[10px] text-red-500">{partCoordinates}</span>
-                        <input
-                          type="checkbox"
-                          className="w-3 h-3 accent-red-500"
-                          checked={showPartPoints.has(partId)}
-                          onChange={(e) => handlePointToggle(partId, e.target.checked)}
-                        />
                       </div>
                       
                       {/* このパーツに関連するスプライト（基本スプライトIDに基づく） */}
@@ -1651,12 +1620,6 @@ export default function AnimationViewer({
                                 ({formatCoordinate(part.pos?.x)}, {formatCoordinate(part.pos?.y)}, {formatCoordinate(part.img)})
                               </span>
                             )}
-                            <input
-                              type="checkbox"
-                              className="w-3 h-3 accent-amber-500"
-                              checked={showSpritePoints.has(partId)}
-                              onChange={(e) => handleSpritePointToggle(partId, e.target.checked)}
-                            />
                           </div>
                         );
                       })}

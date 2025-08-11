@@ -44,6 +44,7 @@ import { Set950 } from './set950'; // ギャルモン
 // import { Set984 } from './set984'; // レジェンド
 // import { Set985 } from './set985'; // ソニックコラボ
 import { Set986 } from './set986'; // ルガ族
+import { Set990 } from './set990'; // 極選抜祭(対トリクシー入り)
 // import { Set992 } from './set992'; // ギガントゼウス
 // import { Set993 } from './set993'; // 超ネコ祭
 import { Set994 } from './set994'; // 極ネコ祭
@@ -89,6 +90,7 @@ export const RareGatyaSetList = [
 
     Set1011, // 1.1億DL記念
     Set1012, // 超国王祭
+    Set990,  // 極選抜祭(対トリクシー入り)
 
     // Set944, // ギャルズ
     // Set992, // ギガントゼウス

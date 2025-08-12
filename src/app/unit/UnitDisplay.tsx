@@ -3414,53 +3414,275 @@ function TalentsList({
               </div>
               {talent.data && (
                 <div className="text-gray-500 text-right break-words flex-shrink-0 max-w-[50%]">
-                  {/* 基本体力アップ(32)の場合はテキストボックスを表示 */}
-                  {talent.id === 32 ? (
+
+                  {/* 攻撃力ダウン(1)の場合はテキストボックスを表示 */} 
+                  {talent.id === 1 ? (
                     <div className="text-right">
-                      <div className="text-xs mb-1">
-                        <b className="text-gray-500">+</b>
-                        <input
-                          type="number"
-                          value={baseHpUpValue}
-                          onChange={(e) => {
-                            const value = Number(e.target.value);
-                            if (value >= 0 && value <= 20) {
-                              setBaseHpUpValue(value);
-                            }
-                          }}
-                          className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
-                          min="0"
-                          max="20"
-                          step="2"
-                        />
-                        <small><b className="text-gray-500">%</b></small>
-                        <small className="text-gray-400" style={{fontSize: '10px'}}> <b>(0-20)</b></small>
+                      {/* 能力・効果に攻撃力ダウンがある場合のみテキストボックスを表示 */}
+                      {unitData.coreData.forms[actualCurrentForm]?.stats[37] && unitData.coreData.forms[actualCurrentForm]?.stats[37] > 0 ? (
+                        <>
+                          {/* 確率の範囲が変動する場合のみテキストボックスを表示 */}
+                          {talent.data[2] !== talent.data[3] ? (
+                            <div className="text-xs mb-1">
+                              <b className="text-gray-500">+</b>
+                              <input
+                                type="number"
+                                value={talentWeakenChance}
+                                onChange={(e) => {
+                                  const value = Number(e.target.value);
+                                  const minValue = talent.data[2];
+                                  const maxValue = talent.data[3];
+                                  if (value >= minValue && value <= maxValue) {
+                                    setTalentWeakenChance(value);
+                                  }
+                                }}
+                                className="w-9 px-1 text-center border border-gray-300 rounded text-xs"
+                                min={talent.data[2]}
+                                max={talent.data[3]}
+                                step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
+                              />
+                              <small><b className="text-gray-500">%</b></small>
+                              <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
+                            </div>
+                          ) : talent.data[2] !== 0 ? (
+                            <div className="text-xs mb-1">
+                              <b className="text-gray-500">+{talent.data[2]}%</b>
+                            </div>
+                          ) : null}
+                          <div className="text-xs mb-1">
+                            <b className="text-gray-500">
+                              +{(talentWeakenDuration/30).toFixed(2)}s{' '}
+                              <small className="text-gray-400">( +
+                                <input
+                                  type="number"
+                                  value={talentWeakenDuration}
+                                  onChange={(e) => {
+                                    const value = Number(e.target.value);
+                                    const minValue = talent.data[4];
+                                    const maxValue = talent.data[5];
+                                    if (value >= minValue && value <= maxValue) {
+                                      setTalentWeakenDuration(value);
+                                    }
+                                  }}
+                                  className="w-9 px-1 text-center border border-gray-300 rounded text-xs text-gray-400"
+                                  min={talent.data[4]}
+                                  max={talent.data[5]}
+                                  step={Math.ceil((talent.data[5]-talent.data[4])/(talent.data[1]-1))}
+                                /> f )
+                              </small>
+                            </b>
+                            <br />
+                            <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[4]}~{talent.data[5]})</b></small>
+                          </div>
+                        </>
+                      ) : (
+                        /* 能力・効果に攻撃力ダウンがない場合は従来のテキスト表示 */
+                        (() => {
+                          const talentEffect = calculateTalentEffect(talent);
+                          return talentEffect;
+                        })()
+                      )}
+                    </div>
+                  ) : /* 動きを止める(2)の場合はテキストボックスを表示 */
+                  talent.id === 2 ? (
+                    <div className="text-right">
+                      {/* 能力・効果に動きを止めるがある場合のみテキストボックスを表示 */}
+                      {unitData.coreData.forms[actualCurrentForm]?.stats[25] && unitData.coreData.forms[actualCurrentForm]?.stats[25] > 0 ? (
+                        <>
+                          {/* 確率の範囲が変動する場合のみテキストボックスを表示 */}
+                          {talent.data[2] !== talent.data[3] ? (
+                            <div className="text-xs mb-1">
+                              <b className="text-gray-500">+</b>
+                              <input
+                                type="number"
+                                value={talentFreezeChance}
+                                onChange={(e) => {
+                                  const value = Number(e.target.value);
+                                  const minValue = talent.data[2];
+                                  const maxValue = talent.data[3];
+                                  if (value >= minValue && value <= maxValue) {
+                                    setTalentFreezeChance(value);
+                                  }
+                                }}
+                                className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                                min={talent.data[2]}
+                                max={talent.data[3]}
+                                step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
+                              />
+                              <small><b className="text-gray-500">%</b></small>
+                              <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
+                            </div>
+                          ) : talent.data[2] !== 0 ? (
+                            <div className="text-xs mb-1">
+                              <b className="text-gray-500">+{talent.data[2]}%</b>
+                            </div>
+                          ) : null}
+                          {/* フレーム数が0~0の場合は非表示 */}
+                          {talent.data[4] !== 0 || talent.data[5] !== 0 ? (
+                            <div className="text-xs mb-1">
+                              <b className="text-gray-500">
+                                +{(talentFreezeDuration/30).toFixed(2)}s{' '}
+                                <small className="text-gray-400">( +
+                                  <input
+                                    type="number"
+                                    value={talentFreezeDuration}
+                                    onChange={(e) => {
+                                      const value = Number(e.target.value);
+                                      const minValue = talent.data[4];
+                                      const maxValue = talent.data[5];
+                                      if (value >= minValue && value <= maxValue) {
+                                        setTalentFreezeDuration(value);
+                                      }
+                                    }}
+                                    className="w-6 px-1 text-center border border-gray-300 rounded text-xs text-gray-400"
+                                    min={talent.data[4]}
+                                    max={talent.data[5]}
+                                    step={Math.ceil((talent.data[5]-talent.data[4])/(talent.data[1]-1))}
+                                  /> f )
+                              </small>
+                            </b>
+                            <br />
+                            <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[4]}~{talent.data[5]})</b></small>
+                            </div>
+                          ) : null}
+                        </>
+                      ) : (
+                        /* 能力・効果に動きを止めるがない場合は従来のテキスト表示 */
+                        (() => {
+                          const talentEffect = calculateTalentEffect(talent);
+                          return talentEffect;
+                        })()
+                      )}
+                    </div>
+                  ) : /* 動きを遅くする(3)の場合はテキストボックスを表示 */
+                  talent.id === 3 ? (
+                    <div className="text-right">
+                      {/* 確率の範囲が変動する場合のみテキストボックスを表示 */}
+                      {talent.data[2] !== talent.data[3] ? (
+                        <span className="text-xs mb-1">
+                          <b className="text-gray-500">+</b>
+                          <input
+                            type="number"
+                            value={talentSlowChance}
+                            onChange={(e) => {
+                              const value = Number(e.target.value);
+                              const minValue = talent.data[2];
+                              const maxValue = talent.data[3];
+                              if (value >= minValue && value <= maxValue) {
+                                setTalentSlowChance(value);
+                              }
+                            }}
+                            className="w-9 px-1 text-center border border-gray-300 rounded text-xs"
+                            min={talent.data[2]}
+                            max={talent.data[3]}
+                            step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
+                          />
+                          <small><b className="text-gray-500">%</b></small>
+                          <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b>{' '}</small>
+                        </span>
+                      ) : talent.data[2] !== 0 ? (
+                        <span className="text-xs mb-1">
+                          <b className="text-gray-500">+{talent.data[2]}%{' '}</b>
+                        </span>
+                      ) : null}
+                      {/* フレーム数が0~0の場合は非表示 */}
+                      {talent.data[4] !== 0 || talent.data[5] !== 0 ? (
+                        <span className="text-xs mb-1">
+                          <b className="text-gray-500">
+                            +{(talentSlowDuration/30).toFixed(2)}s{' '}
+                            <small className="text-gray-400">( +
+                              <input
+                                type="number"
+                                value={talentSlowDuration}
+                                onChange={(e) => {
+                                  const value = Number(e.target.value);
+                                  const minValue = talent.data[4];
+                                  const maxValue = talent.data[5];
+                                  if (value >= minValue && value <= maxValue) {
+                                    setTalentSlowDuration(value);
+                                  }
+                                }}
+                                className="w-9 px-1 text-center border border-gray-300 rounded text-xs text-gray-400"
+                                min={talent.data[4]}
+                                max={talent.data[5]}
+                                step={Math.ceil((talent.data[5]-talent.data[4])/(talent.data[1]-1))}
+                              /> f )
+                            </small>
+                          </b>
+                          <br />
+                          <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[4]}~{talent.data[5]})</b></small>
+                        </span>
+                      ) : null}
+                    </div>
+                  ) : /* めっぽう強い(5)の場合は計算結果を表示 */
+                  talent.id === 5 ? (
+                    <div className="text-right">
+                      <br />
+                      <div className="text-xs">
+                        <small className="text-red-500"><b>攻撃力</b></small> <b className="text-gray-500">{Math.floor(currentAp * (hasOnlyRelicAkuTalent ? 1.5 : talentMightyApValue)).toLocaleString()}</b>
+                      </div>
+                      <div className="text-xs">
+                        <small className="text-blue-500"><b>体力(換算値)</b></small> <b className="text-gray-500">{Math.floor(currentHp / (hasOnlyRelicAkuTalent ? 0.5 : talentMightyDmgValue)).toLocaleString()}</b>
                       </div>
                     </div>
-                  ) : /* 基本攻撃力アップ(31)の場合はテキストボックスを表示 */
-                  talent.id === 31 ? (
+                  ) : /* 打たれ強い(6)の場合は計算結果を表示 */
+                  talent.id === 6 ? (
                     <div className="text-right">
-                      <div className="text-xs mb-1">
-                        <b className="text-gray-500">+</b>
-                        <input
-                          type="number"
-                          value={baseAttackUpValue}
-                          onChange={(e) => {
-                            const value = Number(e.target.value);
-                            if (value >= 0 && value <= 20) {
-                              setBaseAttackUpValue(value);
-                            }
-                          }}
-                          className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
-                          min="0"
-                          max="20"
-                          step="2"
-                        />
-                        <small><b className="text-gray-500">%</b></small>
-                        <small className="text-gray-400" style={{fontSize: '10px'}}> <b>(0-20)</b></small>
+                      <br />
+                      <div className="text-xs">
+                        <small className="text-blue-500"><b>体力(換算値)</b></small> <b className={totalHpMultiplier > 1 ? "text-blue-500" : "text-gray-500"}>{Math.floor(currentHp / (hasOnlyRelicAkuTough ? 0.25 : talentToughnessValue)).toLocaleString()}</b>
                       </div>
                     </div>
-                  ) : /* 攻撃力アップ(10)の場合はテキストボックスを表示 */
+                  ) : /* 超ダメージ(7)の場合は計算結果を表示 */
+                  talent.id === 7 ? (
+                    <div className="text-right">
+                      <br />
+                      <div className="text-xs">
+                        <small className="text-red-500"><b>攻撃力</b></small> <b className="text-gray-500">{Math.floor(currentAp * (hasOnlyRelicAkuMassiveDamage ? 3 : talentMassiveDamageMultiplier)).toLocaleString()}</b>
+                      </div>
+                    </div>
+                  ) : /* ふっとばす(8)の場合はテキストボックスを表示 */
+                  talent.id === 8 ? (
+                    <div className="text-right">
+                      {/* 能力・効果にふっとばすがある場合のみテキストボックスを表示 */}
+                      {unitData.coreData.forms[actualCurrentForm]?.stats[24] && unitData.coreData.forms[actualCurrentForm]?.stats[24] > 0 ? (
+                        /* 確率の範囲が変動する場合のみテキストボックスを表示 */
+                        talent.data[2] !== talent.data[3] ? (
+                          <div className="text-xs mb-1">
+                            <b className="text-gray-500">+</b>
+                            <input
+                              type="number"
+                              value={talentKnockbackChance}
+                              onChange={(e) => {
+                                const value = Number(e.target.value);
+                                const minValue = talent.data[2];
+                                const maxValue = talent.data[3];
+                                if (value >= minValue && value <= maxValue) {
+                                  setTalentKnockbackChance(value);
+                                }
+                              }}
+                              className="w-9 px-1 text-center border border-gray-300 rounded text-xs"
+                              min={talent.data[2]}
+                              max={talent.data[3]}
+                              step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
+                            />
+                            <small><b className="text-gray-500">%</b></small>
+                            <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
+                          </div>
+                        ) : talent.data[2] !== 0 ? (
+                          <div className="text-xs mb-1">
+                            <b className="text-gray-500">+{talent.data[2]}%</b>
+                          </div>
+                        ) : null
+                      ) : (
+                        /* 能力・効果にふっとばすがない場合は従来のテキスト表示 */
+                        (() => {
+                          const talentEffect = calculateTalentEffect(talent);
+                          return talentEffect;
+                        })()
+                      )}
+                    </div>
+                  ) :  /* 攻撃力アップ(10)の場合はテキストボックスを表示 */
                   talent.id === 10 ? (
                     <div className="text-right">
                       <div className="text-xs mb-1">
@@ -3488,20 +3710,20 @@ function TalentsList({
                         <small className="text-gray-400" style={{fontSize: '10px'}}><b>({talent.data[4]}~{talent.data[5]})</b></small>
                       </div>
                     </div>
-                  ) : /* 攻撃間隔短縮(61)の場合はテキストボックスを表示 */
-                  talent.id === 61 ? (
+                  ) : /* クリティカル(13)の場合はテキストボックスを表示 */
+                  talent.id === 13 ? (
                     <div className="text-right">
                       <div className="text-xs mb-1">
-                        <b className="text-gray-500">-</b>
+                        <b className="text-gray-500">+</b>
                         <input
                           type="number"
-                          value={attackIntervalReductionValue}
+                          value={talentCriticalValue}
                           onChange={(e) => {
                             const value = Number(e.target.value);
                             const minValue = talent.data[2];
                             const maxValue = talent.data[3];
                             if (value >= minValue && value <= maxValue) {
-                              setAttackIntervalReductionValue(value);
+                              setTalentCriticalValue(value);
                             }
                           }}
                           className="w-9 px-1 text-center border border-gray-300 rounded text-xs"
@@ -3509,8 +3731,56 @@ function TalentsList({
                           max={talent.data[3]}
                           step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
                         />
-                        <small><b className="text-gray-500">%</b>{' '}</small>
-                        <small className="text-gray-400" style={{fontSize: '10px'}}><b>({talent.data[2]}~{talent.data[3]})</b></small>
+                        <small><b className="text-gray-500">% </b></small>
+                        <small className="text-gray-400" style={{fontSize: '10px'}}>({talent.data[2]}~{talent.data[3]})</small>
+                      </div>
+                    </div>
+                  ) : /* バリアブレイカー(15)の場合はテキストボックスを表示 */
+                  talent.id === 15 ? (
+                    <div className="text-right">
+                      {/* 能力・効果にバリアブレイカーがある場合のみテキストボックスを表示 */}
+                      {unitData.coreData.forms[actualCurrentForm]?.stats[70] && unitData.coreData.forms[actualCurrentForm]?.stats[70] > 0 ? (
+                        /* 確率の範囲が変動する場合のみテキストボックスを表示 */
+                        talent.data[2] !== talent.data[3] ? (
+                          <div className="text-xs mb-1">
+                            <b className="text-gray-500">+</b>
+                            <input
+                              type="number"
+                              value={talentBarrierBreakerChance}
+                              onChange={(e) => {
+                                const value = Number(e.target.value);
+                                const minValue = talent.data[2];
+                                const maxValue = talent.data[3];
+                                if (value >= minValue && value <= maxValue) {
+                                  setTalentBarrierBreakerChance(value);
+                                }
+                              }}
+                              className="w-9 px-1 text-center border border-gray-300 rounded text-xs"
+                              min={talent.data[2]}
+                              max={talent.data[3]}
+                              step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
+                            />
+                            <small><b className="text-gray-500">%</b></small>
+                            <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
+                          </div>
+                        ) : talent.data[2] !== 0 ? (
+                          <div className="text-xs mb-1">
+                            <b className="text-gray-500">+{talent.data[2]}%</b>
+                          </div>
+                        ) : null
+                      ) : (
+                        /* 能力・効果にバリアブレイカーがない場合は従来のテキスト表示 */
+                        (() => {
+                          const talentEffect = calculateTalentEffect(talent);
+                          return talentEffect;
+                        })()
+                      )}
+                    </div>
+                  ) : /* 撃破時お金アップ(16)の場合は+100%を表示 */
+                  talent.id === 16 ? (
+                    <div className="text-right">
+                      <div className="text-xs">
+                        <b className="text-gray-500">+100%</b>
                       </div>
                     </div>
                   ) :  /* 生産コスト割引(25)の場合はテキストボックスを表示 */ 
@@ -3586,288 +3856,50 @@ function TalentsList({
                         <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
                       </div>
                     </div>
-                  ) : /* 動きを止める(2)の場合はテキストボックスを表示 */
-                  talent.id === 2 ? (
-                    <div className="text-right">
-                      {/* 能力・効果に動きを止めるがある場合のみテキストボックスを表示 */}
-                      {unitData.coreData.forms[actualCurrentForm]?.stats[25] && unitData.coreData.forms[actualCurrentForm]?.stats[25] > 0 ? (
-                        <>
-                          {/* 確率の範囲が変動する場合のみテキストボックスを表示 */}
-                          {talent.data[2] !== talent.data[3] ? (
-                            <div className="text-xs mb-1">
-                              <b className="text-gray-500">+</b>
-                              <input
-                                type="number"
-                                value={talentFreezeChance}
-                                onChange={(e) => {
-                                  const value = Number(e.target.value);
-                                  const minValue = talent.data[2];
-                                  const maxValue = talent.data[3];
-                                  if (value >= minValue && value <= maxValue) {
-                                    setTalentFreezeChance(value);
-                                  }
-                                }}
-                                className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
-                                min={talent.data[2]}
-                                max={talent.data[3]}
-                                step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
-                              />
-                              <small><b className="text-gray-500">%</b></small>
-                              <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
-                            </div>
-                          ) : talent.data[2] !== 0 ? (
-                            <div className="text-xs mb-1">
-                              <b className="text-gray-500">+{talent.data[2]}%</b>
-                            </div>
-                          ) : null}
-                          {/* フレーム数が0~0の場合は非表示 */}
-                          {talent.data[4] !== 0 || talent.data[5] !== 0 ? (
-                            <div className="text-xs mb-1">
-                              <b className="text-gray-500">
-                                +{(talentFreezeDuration/30).toFixed(2)}s{' '}
-                                <small className="text-gray-400">( +
-                                  <input
-                                    type="number"
-                                    value={talentFreezeDuration}
-                                    onChange={(e) => {
-                                      const value = Number(e.target.value);
-                                      const minValue = talent.data[4];
-                                      const maxValue = talent.data[5];
-                                      if (value >= minValue && value <= maxValue) {
-                                        setTalentFreezeDuration(value);
-                                      }
-                                    }}
-                                    className="w-6 px-1 text-center border border-gray-300 rounded text-xs text-gray-400"
-                                    min={talent.data[4]}
-                                    max={talent.data[5]}
-                                    step={Math.ceil((talent.data[5]-talent.data[4])/(talent.data[1]-1))}
-                                  /> f )
-                              </small>
-                            </b>
-                            <br />
-                            <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[4]}~{talent.data[5]})</b></small>
-                            </div>
-                          ) : null}
-                        </>
-                      ) : (
-                        /* 能力・効果に動きを止めるがない場合は従来のテキスト表示 */
-                        (() => {
-                          const talentEffect = calculateTalentEffect(talent);
-                          return talentEffect;
-                        })()
-                      )}
-                    </div>
-                  ) : /* 攻撃力ダウン(1)の場合はテキストボックスを表示 */
-                  talent.id === 1 ? (
-                    <div className="text-right">
-                      {/* 能力・効果に攻撃力ダウンがある場合のみテキストボックスを表示 */}
-                      {unitData.coreData.forms[actualCurrentForm]?.stats[37] && unitData.coreData.forms[actualCurrentForm]?.stats[37] > 0 ? (
-                        <>
-                          {/* 確率の範囲が変動する場合のみテキストボックスを表示 */}
-                          {talent.data[2] !== talent.data[3] ? (
-                            <div className="text-xs mb-1">
-                              <b className="text-gray-500">+</b>
-                              <input
-                                type="number"
-                                value={talentWeakenChance}
-                                onChange={(e) => {
-                                  const value = Number(e.target.value);
-                                  const minValue = talent.data[2];
-                                  const maxValue = talent.data[3];
-                                  if (value >= minValue && value <= maxValue) {
-                                    setTalentWeakenChance(value);
-                                  }
-                                }}
-                                className="w-9 px-1 text-center border border-gray-300 rounded text-xs"
-                                min={talent.data[2]}
-                                max={talent.data[3]}
-                                step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
-                              />
-                              <small><b className="text-gray-500">%</b></small>
-                              <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
-                            </div>
-                          ) : talent.data[2] !== 0 ? (
-                            <div className="text-xs mb-1">
-                              <b className="text-gray-500">+{talent.data[2]}%</b>
-                            </div>
-                          ) : null}
-                          <div className="text-xs mb-1">
-                            <b className="text-gray-500">
-                              +{(talentWeakenDuration/30).toFixed(2)}s{' '}
-                              <small className="text-gray-400">( +
-                                <input
-                                  type="number"
-                                  value={talentWeakenDuration}
-                                  onChange={(e) => {
-                                    const value = Number(e.target.value);
-                                    const minValue = talent.data[4];
-                                    const maxValue = talent.data[5];
-                                    if (value >= minValue && value <= maxValue) {
-                                      setTalentWeakenDuration(value);
-                                    }
-                                  }}
-                                  className="w-9 px-1 text-center border border-gray-300 rounded text-xs text-gray-400"
-                                  min={talent.data[4]}
-                                  max={talent.data[5]}
-                                  step={Math.ceil((talent.data[5]-talent.data[4])/(talent.data[1]-1))}
-                                /> f )
-                              </small>
-                            </b>
-                            <br />
-                            <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[4]}~{talent.data[5]})</b></small>
-                          </div>
-                        </>
-                      ) : (
-                        /* 能力・効果に攻撃力ダウンがない場合は従来のテキスト表示 */
-                        (() => {
-                          const talentEffect = calculateTalentEffect(talent);
-                          return talentEffect;
-                        })()
-                      )}
-                    </div>
-                  ) : /* 動きを遅くする(3)の場合はテキストボックスを表示 */
-                  talent.id === 3 ? (
-                    <div className="text-right">
-                      {/* 確率の範囲が変動する場合のみテキストボックスを表示 */}
-                      {talent.data[2] !== talent.data[3] ? (
-                        <span className="text-xs mb-1">
-                          <b className="text-gray-500">+</b>
-                          <input
-                            type="number"
-                            value={talentSlowChance}
-                            onChange={(e) => {
-                              const value = Number(e.target.value);
-                              const minValue = talent.data[2];
-                              const maxValue = talent.data[3];
-                              if (value >= minValue && value <= maxValue) {
-                                setTalentSlowChance(value);
-                              }
-                            }}
-                            className="w-9 px-1 text-center border border-gray-300 rounded text-xs"
-                            min={talent.data[2]}
-                            max={talent.data[3]}
-                            step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
-                          />
-                          <small><b className="text-gray-500">%</b></small>
-                          <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b>{' '}</small>
-                        </span>
-                      ) : talent.data[2] !== 0 ? (
-                        <span className="text-xs mb-1">
-                          <b className="text-gray-500">+{talent.data[2]}%{' '}</b>
-                        </span>
-                      ) : null}
-                      {/* フレーム数が0~0の場合は非表示 */}
-                      {talent.data[4] !== 0 || talent.data[5] !== 0 ? (
-                        <span className="text-xs mb-1">
-                          <b className="text-gray-500">
-                            +{(talentSlowDuration/30).toFixed(2)}s{' '}
-                            <small className="text-gray-400">( +
-                              <input
-                                type="number"
-                                value={talentSlowDuration}
-                                onChange={(e) => {
-                                  const value = Number(e.target.value);
-                                  const minValue = talent.data[4];
-                                  const maxValue = talent.data[5];
-                                  if (value >= minValue && value <= maxValue) {
-                                    setTalentSlowDuration(value);
-                                  }
-                                }}
-                                className="w-9 px-1 text-center border border-gray-300 rounded text-xs text-gray-400"
-                                min={talent.data[4]}
-                                max={talent.data[5]}
-                                step={Math.ceil((talent.data[5]-talent.data[4])/(talent.data[1]-1))}
-                              /> f )
-                            </small>
-                          </b>
-                          <br />
-                          <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[4]}~{talent.data[5]})</b></small>
-                        </span>
-                      ) : null}
-                    </div>
-                  ) : /* ふっとばす(8)の場合はテキストボックスを表示 */
-                  talent.id === 8 ? (
-                    <div className="text-right">
-                      {/* 能力・効果にふっとばすがある場合のみテキストボックスを表示 */}
-                      {unitData.coreData.forms[actualCurrentForm]?.stats[24] && unitData.coreData.forms[actualCurrentForm]?.stats[24] > 0 ? (
-                        /* 確率の範囲が変動する場合のみテキストボックスを表示 */
-                        talent.data[2] !== talent.data[3] ? (
-                          <div className="text-xs mb-1">
-                            <b className="text-gray-500">+</b>
-                            <input
-                              type="number"
-                              value={talentKnockbackChance}
-                              onChange={(e) => {
-                                const value = Number(e.target.value);
-                                const minValue = talent.data[2];
-                                const maxValue = talent.data[3];
-                                if (value >= minValue && value <= maxValue) {
-                                  setTalentKnockbackChance(value);
-                                }
-                              }}
-                              className="w-9 px-1 text-center border border-gray-300 rounded text-xs"
-                              min={talent.data[2]}
-                              max={talent.data[3]}
-                              step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
-                            />
-                            <small><b className="text-gray-500">%</b></small>
-                            <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
-                          </div>
-                        ) : talent.data[2] !== 0 ? (
-                          <div className="text-xs mb-1">
-                            <b className="text-gray-500">+{talent.data[2]}%</b>
-                          </div>
-                        ) : null
-                      ) : (
-                        /* 能力・効果にふっとばすがない場合は従来のテキスト表示 */
-                        (() => {
-                          const talentEffect = calculateTalentEffect(talent);
-                          return talentEffect;
-                        })()
-                      )}
-                    </div>
-                  ) : /* クリティカル(13)の場合はテキストボックスを表示 */
-                  talent.id === 13 ? (
+                  ) : /* 基本攻撃力アップ(31)の場合はテキストボックスを表示 */
+                  talent.id === 31 ? (
                     <div className="text-right">
                       <div className="text-xs mb-1">
                         <b className="text-gray-500">+</b>
                         <input
                           type="number"
-                          value={talentCriticalValue}
+                          value={baseAttackUpValue}
                           onChange={(e) => {
                             const value = Number(e.target.value);
-                            const minValue = talent.data[2];
-                            const maxValue = talent.data[3];
-                            if (value >= minValue && value <= maxValue) {
-                              setTalentCriticalValue(value);
+                            if (value >= 0 && value <= 20) {
+                              setBaseAttackUpValue(value);
                             }
                           }}
-                          className="w-9 px-1 text-center border border-gray-300 rounded text-xs"
-                          min={talent.data[2]}
-                          max={talent.data[3]}
-                          step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
+                          className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                          min="0"
+                          max="20"
+                          step="2"
                         />
-                        <small><b className="text-gray-500">% </b></small>
-                        <small className="text-gray-400" style={{fontSize: '10px'}}>({talent.data[2]}~{talent.data[3]})</small>
+                        <small><b className="text-gray-500">%</b></small>
+                        <small className="text-gray-400" style={{fontSize: '10px'}}> <b>(0-20)</b></small>
                       </div>
                     </div>
-                  ) : /* 打たれ強い(6)の場合は計算結果を表示 */
-                  talent.id === 6 ? (
+                  ) : /* 基本体力アップ(32)の場合はテキストボックスを表示 */
+                  talent.id === 32 ? (
                     <div className="text-right">
-                      <br />
-                      <div className="text-xs">
-                        <small className="text-blue-500"><b>体力(換算値)</b></small> <b className={totalHpMultiplier > 1 ? "text-blue-500" : "text-gray-500"}>{Math.floor(currentHp / (hasOnlyRelicAkuTough ? 0.25 : talentToughnessValue)).toLocaleString()}</b>
-                      </div>
-                    </div>
-                  ) : /* めっぽう強い(5)の場合は計算結果を表示 */
-                  talent.id === 5 ? (
-                    <div className="text-right">
-                      <br />
-                      <div className="text-xs">
-                        <small className="text-red-500"><b>攻撃力</b></small> <b className="text-gray-500">{Math.floor(currentAp * (hasOnlyRelicAkuTalent ? 1.5 : talentMightyApValue)).toLocaleString()}</b>
-                      </div>
-                      <div className="text-xs">
-                        <small className="text-blue-500"><b>体力(換算値)</b></small> <b className="text-gray-500">{Math.floor(currentHp / (hasOnlyRelicAkuTalent ? 0.5 : talentMightyDmgValue)).toLocaleString()}</b>
+                      <div className="text-xs mb-1">
+                        <b className="text-gray-500">+</b>
+                        <input
+                          type="number"
+                          value={baseHpUpValue}
+                          onChange={(e) => {
+                            const value = Number(e.target.value);
+                            if (value >= 0 && value <= 20) {
+                              setBaseHpUpValue(value);
+                            }
+                          }}
+                          className="w-8 px-1 text-center border border-gray-300 rounded text-xs"
+                          min="0"
+                          max="20"
+                          step="2"
+                        />
+                        <small><b className="text-gray-500">%</b></small>
+                        <small className="text-gray-400" style={{fontSize: '10px'}}> <b>(0-20)</b></small>
                       </div>
                     </div>
                   ) : /* 渾身の一撃(50)の場合は能力・効果と同じ表示 */
@@ -3892,60 +3924,29 @@ function TalentsList({
                         })()}
                       </div>
                     </div>
-                  ) : /* バリアブレイカー(15)の場合はテキストボックスを表示 */
-                  talent.id === 15 ? (
+                  ) : /* 攻撃間隔短縮(61)の場合はテキストボックスを表示 */
+                  talent.id === 61 ? (
                     <div className="text-right">
-                      {/* 能力・効果にバリアブレイカーがある場合のみテキストボックスを表示 */}
-                      {unitData.coreData.forms[actualCurrentForm]?.stats[70] && unitData.coreData.forms[actualCurrentForm]?.stats[70] > 0 ? (
-                        /* 確率の範囲が変動する場合のみテキストボックスを表示 */
-                        talent.data[2] !== talent.data[3] ? (
-                          <div className="text-xs mb-1">
-                            <b className="text-gray-500">+</b>
-                            <input
-                              type="number"
-                              value={talentBarrierBreakerChance}
-                              onChange={(e) => {
-                                const value = Number(e.target.value);
-                                const minValue = talent.data[2];
-                                const maxValue = talent.data[3];
-                                if (value >= minValue && value <= maxValue) {
-                                  setTalentBarrierBreakerChance(value);
-                                }
-                              }}
-                              className="w-9 px-1 text-center border border-gray-300 rounded text-xs"
-                              min={talent.data[2]}
-                              max={talent.data[3]}
-                              step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
-                            />
-                            <small><b className="text-gray-500">%</b></small>
-                            <small className="text-gray-400" style={{fontSize: '10px'}}> <b>({talent.data[2]}~{talent.data[3]})</b></small>
-                          </div>
-                        ) : talent.data[2] !== 0 ? (
-                          <div className="text-xs mb-1">
-                            <b className="text-gray-500">+{talent.data[2]}%</b>
-                          </div>
-                        ) : null
-                      ) : (
-                        /* 能力・効果にバリアブレイカーがない場合は従来のテキスト表示 */
-                        (() => {
-                          const talentEffect = calculateTalentEffect(talent);
-                          return talentEffect;
-                        })()
-                      )}
-                    </div>
-                  ) : /* 撃破時お金アップ(16)の場合は+100%を表示 */
-                  talent.id === 16 ? (
-                    <div className="text-right">
-                      <div className="text-xs">
-                        <b className="text-gray-500">+100%</b>
-                      </div>
-                    </div>
-                  ) : /* 超ダメージ(7)の場合は計算結果を表示 */
-                  talent.id === 7 ? (
-                    <div className="text-right">
-                      <br />
-                      <div className="text-xs">
-                        <small className="text-red-500"><b>攻撃力</b></small> <b className="text-gray-500">{Math.floor(currentAp * (hasOnlyRelicAkuMassiveDamage ? 3 : talentMassiveDamageMultiplier)).toLocaleString()}</b>
+                      <div className="text-xs mb-1">
+                        <b className="text-gray-500">-</b>
+                        <input
+                          type="number"
+                          value={attackIntervalReductionValue}
+                          onChange={(e) => {
+                            const value = Number(e.target.value);
+                            const minValue = talent.data[2];
+                            const maxValue = talent.data[3];
+                            if (value >= minValue && value <= maxValue) {
+                              setAttackIntervalReductionValue(value);
+                            }
+                          }}
+                          className="w-9 px-1 text-center border border-gray-300 rounded text-xs"
+                          min={talent.data[2]}
+                          max={talent.data[3]}
+                          step={Math.ceil((talent.data[3]-talent.data[2])/(talent.data[1]-1))}
+                        />
+                        <small><b className="text-gray-500">%</b>{' '}</small>
+                        <small className="text-gray-400" style={{fontSize: '10px'}}><b>({talent.data[2]}~{talent.data[3]})</b></small>
                       </div>
                     </div>
                   ) : /* 超生命体特効(63)の場合は計算結果を表示 */
@@ -3981,6 +3982,15 @@ function TalentsList({
                         <small className="text-blue-500"><b>体力(換算値)</b></small> <b className={totalHpMultiplier > 1 ? "text-blue-500" : "text-gray-500"}>{Math.floor(currentHp / 0.5).toLocaleString()}</b>
                       </div>
                     </div>
+                  ) : /* 妨害無効化の本能の場合は何も表示しない */
+                  (
+                    talent.id === 44 || 
+                    talent.id === 45 || 
+                    talent.id === 46 || 
+                    talent.id === 47 || 
+                    talent.id === 48 || 
+                    talent.id === 49) ? (
+                    <></>
                   ) : /* 属性追加の本能の場合はアイコンを表示 */
                   (talent.id >= 33 && talent.id <= 43) || talent.id === 57 ? (
                     <div className="flex justify-end">

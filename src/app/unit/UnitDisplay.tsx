@@ -2647,29 +2647,8 @@ function TalentsList({
           <div key={index} className={`p-1.5 rounded ${talent.type === 'ultra' ? 'bg-red-50 border-l-4 border-red-500' : 'bg-yellow-50 border-l-4 border-yellow-500'}`}>
             <div className="flex justify-between items-center gap-2">
               <div className={`font-bold text-xs ${talent.type === 'ultra' ? 'text-red-600' : 'text-yellow-600'}`}>
-                {talent.id === 67 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityExplosion}`}
-                      alt="爆波攻撃"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 62 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityMiniWave}`}
-                      alt="小波動"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 1 ? (
+
+                {talent.id === 1 ? (
                   <>
                     <Image
                       src={`data:image/png;base64,${icons.abilityWeaken}`}
@@ -2723,540 +2702,6 @@ function TalentsList({
                       checked={talentSlowEnabled}
                       onChange={(e) => setTalentSlowEnabled(e.target.checked)}
                       className="mr-1 align-middle"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 8 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityKnockback}`}
-                      alt="ふっとばす"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {/* 能力・効果にふっとばすがある場合のみチェックボックスを表示 */}
-                    {(unitData.coreData.forms[actualCurrentForm]?.stats[24] && unitData.coreData.forms[actualCurrentForm]?.stats[24] > 0) ? (
-                      <input
-                        type="checkbox"
-                        checked={talentKnockbackEnabled}
-                        onChange={(e) => setTalentKnockbackEnabled(e.target.checked)}
-                        className="mr-1 align-middle"
-                      />
-                    ) : null}
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 11 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilitySurvive}`}
-                      alt="生き残る"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 13 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityCritical}`}
-                      alt="クリティカル"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    <input
-                      type="checkbox"
-                      checked={talentCriticalEnabled}
-                      onChange={(e) => setTalentCriticalEnabled(e.target.checked)}
-                      className="mr-1 align-middle"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 17 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityWave}`}
-                      alt="波動攻撃"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 15 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityBarrierBreaker}`}
-                      alt="バリアブレイカー"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {/* 能力・効果にバリアブレイカーがある場合のみチェックボックスを表示 */}
-                    {(unitData.coreData.forms[actualCurrentForm]?.stats[70] && unitData.coreData.forms[actualCurrentForm]?.stats[70] > 0) ? (
-                      <input
-                        type="checkbox"
-                        checked={talentBarrierBreakerEnabled}
-                        onChange={(e) => setTalentBarrierBreakerEnabled(e.target.checked)}
-                        className="mr-1 align-middle"
-                      />
-                    ) : null}
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 20 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityResistSlow}`}
-                      alt="動きを遅くする耐性"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 19 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityResistFreeze}`}
-                      alt="動きを止める耐性"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 21 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityResistKnockback}`}
-                      alt="ふっとばし耐性"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 22 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityResistWave}`}
-                      alt="波動ダメージ耐性"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 32 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityDefenseBuff}`}
-                      alt="基本体力アップ"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    <input
-                      type="checkbox"
-                      checked={baseHpUpEnabled}
-                      onChange={(e) => setBaseHpUpEnabled(e.target.checked)}
-                      className="mr-1 align-middle"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 31 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityAttackBuff}`}
-                      alt="基本攻撃力アップ"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    <input
-                      type="checkbox"
-                      checked={baseAttackUpEnabled}
-                      onChange={(e) => setBaseAttackUpEnabled(e.target.checked)}
-                      className="mr-1 align-middle"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 48 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityImmuneWave}`}
-                      alt="波動ダメージ無効"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 29 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityImmuneCurse}`}
-                      alt="古代の呪い無効"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 53 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityImmuneToxic}`}
-                      alt="毒撃ダメージ無効"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 54 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityResistSurge}`}
-                      alt="裂波ダメージ耐性"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 66 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilitySage}`}
-                      alt="超賢者特効"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                    {talent.npCost > 0 && (
-                      <span className="text-[10px] text-gray-600 font-medium ml-1">
-                        [{talent.isTotal ? '合計' : ''}{talent.npCost}NP]
-                      </span>
-                    )}
-                    <br />
-                    <span className="text-red-500 ml-5"><small>攻撃力
-                    <span className="w-8 mx-1 px-1 text-center text-xs font-bold">1.2</span>倍 </small></span>
-                    <br />
-                    <span className="text-blue-500 ml-5"><small>被ダメ
-                    <span className="w-8 mx-1 px-1 text-center text-xs font-bold">0.5</span>倍 </small></span>
-                  </>
-                ) : talent.id === 65 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityMiniSurge}`}
-                      alt="小裂波"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 25 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityCostDown}`}
-                      alt="生産コスト割引"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    <input
-                      type="checkbox"
-                      checked={costReductionEnabled}
-                      onChange={(e) => setCostReductionEnabled(e.target.checked)}
-                      className="mr-1 align-middle"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 30 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityResistCurse}`}
-                      alt="古代の呪い耐性"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 26 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityRecoverSpeedUp}`}
-                      alt="生産スピードアップ"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    <input
-                      type="checkbox"
-                      checked={rechargeSpeedUpEnabled}
-                      onChange={(e) => setRechargeSpeedUpEnabled(e.target.checked)}
-                      className="mr-1 align-middle"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 27 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityMoveSpeedUp}`}
-                      alt="移動速度アップ"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    <input
-                      type="checkbox"
-                      checked={moveSpeedUpEnabled}
-                      onChange={(e) => setMoveSpeedUpEnabled(e.target.checked)}
-                      className="mr-1 align-middle"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 56 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilitySurge}`}
-                      alt="裂波攻撃"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 51 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityDodgeAttack}`}
-                      alt="攻撃無効"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 47 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityImmuneKnockback}`}
-                      alt="ふっとばし無効"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 18 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityResistWeaken}`}
-                      alt="攻撃力ダウン耐性"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 14 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityZombieKiller}`}
-                      alt="ゾンビキラー"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 44 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityImmuneWeaken}`}
-                      alt="攻撃力ダウン無効"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 10 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityStrengthen}`}
-                      alt="攻撃力アップ"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    <input
-                      type="checkbox"
-                      checked={talentAttackUpEnabled}
-                      onChange={(e) => setTalentAttackUpEnabled(e.target.checked)}
-                      className="mr-1 align-middle"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 52 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityResistToxic}`}
-                      alt="毒撃ダメージ耐性"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 55 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityImmuneSurge}`}
-                      alt="裂波ダメージ無効"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 49 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityImmuneWarp}`}
-                      alt="ワープ無効"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 45 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityImmuneFreeze}`}
-                      alt="動きを止める無効"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 46 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityImmuneSlow}`}
-                      alt="動きを遅くする無効"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 59 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilitySoulStrike}`}
-                      alt="魂攻撃"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 63 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityColossus}`}
-                      alt="超生命体特効"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                    <br />
-                    <span className="text-red-500 ml-5"><small>攻撃力
-                    <span className="w-8 mx-1 px-1 text-center text-xs font-bold">1.6</span>倍 </small></span>
-                    <br />
-                    <span className="text-blue-500 ml-5"><small>被ダメ
-                    <span className="w-8 mx-1 px-1 text-center text-xs font-bold">0.7</span>倍 </small></span>
-                  </>
-                ) : talent.id === 58 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityShieldPiercing}`}
-                      alt="シールドブレイカー"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 60 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityCurse}`}
-                      alt="呪い"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 64 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityBehemoth}`}
-                      alt="超獣特効"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                    {talent.npCost > 0 && (
-                      <span className="text-[10px] text-gray-600 font-medium ml-1">
-                        [{talent.isTotal ? '合計' : ''}{talent.npCost}NP]
-                      </span>
-                    )}
-                    <br />
-                    <span className="text-red-500 ml-5"><small>攻撃力
-                    <span className="w-8 mx-1 px-1 text-center text-xs font-bold">2.5</span>倍 </small></span>
-                    <br />
-                    <span className="text-blue-500 ml-5"><small>被ダメ
-                    <span className="w-8 mx-1 px-1 text-center text-xs font-bold">0.6</span>倍 </small></span>
-                  </>
-                ) : talent.id === 61 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityAttackFrequencyUp}`}
-                      alt="攻撃間隔短縮"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    <input
-                      type="checkbox"
-                      checked={attackIntervalReductionEnabled}
-                      onChange={(e) => setAttackIntervalReductionEnabled(e.target.checked)}
-                      className="mr-1 align-middle"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
-                ) : talent.id === 50 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilitySavageBlow}`}
-                      alt="渾身の一撃"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
                     />
                     {talent.name} ({talent.id})
                   </>
@@ -3352,17 +2797,6 @@ function TalentsList({
                     )}
                     <small><b className="text-gray-500">倍</b></small> {hasOnlyRelicAkuTough ? null : <small className="text-gray-400" style={{fontSize: '10px'}}>(0.25~0.2)</small>}
                   </>
-                ) : talent.id === 16 ? (
-                  <>
-                    <Image
-                      src={`data:image/png;base64,${icons.abilityExtraMoney}`}
-                      alt="撃破時お金アップ"
-                      width={16}
-                      height={16}
-                      className="inline mr-1 align-top"
-                    />
-                    {talent.name} ({talent.id})
-                  </>
                 ) : talent.id === 7 ? (
                   <>
                     <Image
@@ -3399,11 +2833,579 @@ function TalentsList({
                     )}
                     <small><b className="text-gray-500">倍</b></small> {hasOnlyRelicAkuMassiveDamage ? null : <small className="text-gray-400" style={{fontSize: '10px'}}>(3~4)</small>}
                   </>
+                ) : talent.id === 8 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityKnockback}`}
+                      alt="ふっとばす"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {/* 能力・効果にふっとばすがある場合のみチェックボックスを表示 */}
+                    {(unitData.coreData.forms[actualCurrentForm]?.stats[24] && unitData.coreData.forms[actualCurrentForm]?.stats[24] > 0) ? (
+                      <input
+                        type="checkbox"
+                        checked={talentKnockbackEnabled}
+                        onChange={(e) => setTalentKnockbackEnabled(e.target.checked)}
+                        className="mr-1 align-middle"
+                      />
+                    ) : null}
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 10 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityStrengthen}`}
+                      alt="攻撃力アップ"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    <input
+                      type="checkbox"
+                      checked={talentAttackUpEnabled}
+                      onChange={(e) => setTalentAttackUpEnabled(e.target.checked)}
+                      className="mr-1 align-middle"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 11 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilitySurvive}`}
+                      alt="生き残る"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 13 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityCritical}`}
+                      alt="クリティカル"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    <input
+                      type="checkbox"
+                      checked={talentCriticalEnabled}
+                      onChange={(e) => setTalentCriticalEnabled(e.target.checked)}
+                      className="mr-1 align-middle"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 14 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityZombieKiller}`}
+                      alt="ゾンビキラー"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 15 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityBarrierBreaker}`}
+                      alt="バリアブレイカー"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {/* 能力・効果にバリアブレイカーがある場合のみチェックボックスを表示 */}
+                    {(unitData.coreData.forms[actualCurrentForm]?.stats[70] && unitData.coreData.forms[actualCurrentForm]?.stats[70] > 0) ? (
+                      <input
+                        type="checkbox"
+                        checked={talentBarrierBreakerEnabled}
+                        onChange={(e) => setTalentBarrierBreakerEnabled(e.target.checked)}
+                        className="mr-1 align-middle"
+                      />
+                    ) : null}
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 16 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityExtraMoney}`}
+                      alt="撃破時お金アップ"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 17 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityWave}`}
+                      alt="波動攻撃"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 18 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityResistWeaken}`}
+                      alt="攻撃力ダウン耐性"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 19 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityResistFreeze}`}
+                      alt="動きを止める耐性"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 20 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityResistSlow}`}
+                      alt="動きを遅くする耐性"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 21 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityResistKnockback}`}
+                      alt="ふっとばし耐性"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 22 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityResistWave}`}
+                      alt="波動ダメージ耐性"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 25 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityCostDown}`}
+                      alt="生産コスト割引"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    <input
+                      type="checkbox"
+                      checked={costReductionEnabled}
+                      onChange={(e) => setCostReductionEnabled(e.target.checked)}
+                      className="mr-1 align-middle"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 26 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityRecoverSpeedUp}`}
+                      alt="生産スピードアップ"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    <input
+                      type="checkbox"
+                      checked={rechargeSpeedUpEnabled}
+                      onChange={(e) => setRechargeSpeedUpEnabled(e.target.checked)}
+                      className="mr-1 align-middle"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 27 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityMoveSpeedUp}`}
+                      alt="移動速度アップ"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    <input
+                      type="checkbox"
+                      checked={moveSpeedUpEnabled}
+                      onChange={(e) => setMoveSpeedUpEnabled(e.target.checked)}
+                      className="mr-1 align-middle"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 29 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityImmuneCurse}`}
+                      alt="古代の呪い無効"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 30 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityResistCurse}`}
+                      alt="古代の呪い耐性"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 31 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityAttackBuff}`}
+                      alt="基本攻撃力アップ"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    <input
+                      type="checkbox"
+                      checked={baseAttackUpEnabled}
+                      onChange={(e) => setBaseAttackUpEnabled(e.target.checked)}
+                      className="mr-1 align-middle"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 32 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityDefenseBuff}`}
+                      alt="基本体力アップ"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    <input
+                      type="checkbox"
+                      checked={baseHpUpEnabled}
+                      onChange={(e) => setBaseHpUpEnabled(e.target.checked)}
+                      className="mr-1 align-middle"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 44 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityImmuneWeaken}`}
+                      alt="攻撃力ダウン無効"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 45 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityImmuneFreeze}`}
+                      alt="動きを止める無効"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 46 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityImmuneSlow}`}
+                      alt="動きを遅くする無効"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 47 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityImmuneKnockback}`}
+                      alt="ふっとばし無効"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 48 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityImmuneWave}`}
+                      alt="波動ダメージ無効"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 49 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityImmuneWarp}`}
+                      alt="ワープ無効"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 50 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilitySavageBlow}`}
+                      alt="渾身の一撃"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 51 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityDodgeAttack}`}
+                      alt="攻撃無効"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 52 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityResistToxic}`}
+                      alt="毒撃ダメージ耐性"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 53 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityImmuneToxic}`}
+                      alt="毒撃ダメージ無効"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 54 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityResistSurge}`}
+                      alt="裂波ダメージ耐性"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 55 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityImmuneSurge}`}
+                      alt="裂波ダメージ無効"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 56 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilitySurge}`}
+                      alt="裂波攻撃"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 58 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityShieldPiercing}`}
+                      alt="シールドブレイカー"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 59 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilitySoulStrike}`}
+                      alt="魂攻撃"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 60 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityCurse}`}
+                      alt="呪い"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 61 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityAttackFrequencyUp}`}
+                      alt="攻撃間隔短縮"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    <input
+                      type="checkbox"
+                      checked={attackIntervalReductionEnabled}
+                      onChange={(e) => setAttackIntervalReductionEnabled(e.target.checked)}
+                      className="mr-1 align-middle"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 62 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityMiniWave}`}
+                      alt="小波動"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 63 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityColossus}`}
+                      alt="超生命体特効"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                    <br />
+                    <span className="text-red-500 ml-5"><small>攻撃力
+                    <span className="w-8 mx-1 px-1 text-center text-xs font-bold">1.6</span>倍 </small></span>
+                    <br />
+                    <span className="text-blue-500 ml-5"><small>被ダメ
+                    <span className="w-8 mx-1 px-1 text-center text-xs font-bold">0.7</span>倍 </small></span>
+                  </>
+                ) : talent.id === 64 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityBehemoth}`}
+                      alt="超獣特効"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                    {talent.npCost > 0 && (
+                      <span className="text-[10px] text-gray-600 font-medium ml-1">
+                        [{talent.isTotal ? '合計' : ''}{talent.npCost}NP]
+                      </span>
+                    )}
+                    <br />
+                    <span className="text-red-500 ml-5"><small>攻撃力
+                    <span className="w-8 mx-1 px-1 text-center text-xs font-bold">2.5</span>倍 </small></span>
+                    <br />
+                    <span className="text-blue-500 ml-5"><small>被ダメ
+                    <span className="w-8 mx-1 px-1 text-center text-xs font-bold">0.6</span>倍 </small></span>
+                  </>
+                ) : talent.id === 65 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityMiniSurge}`}
+                      alt="小裂波"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
+                ) : talent.id === 66 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilitySage}`}
+                      alt="超賢者特効"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                    {talent.npCost > 0 && (
+                      <span className="text-[10px] text-gray-600 font-medium ml-1">
+                        [{talent.isTotal ? '合計' : ''}{talent.npCost}NP]
+                      </span>
+                    )}
+                    <br />
+                    <span className="text-red-500 ml-5"><small>攻撃力
+                    <span className="w-8 mx-1 px-1 text-center text-xs font-bold">1.2</span>倍 </small></span>
+                    <br />
+                    <span className="text-blue-500 ml-5"><small>被ダメ
+                    <span className="w-8 mx-1 px-1 text-center text-xs font-bold">0.5</span>倍 </small></span>
+                  </>
+                ) : talent.id === 67 ? (
+                  <>
+                    <Image
+                      src={`data:image/png;base64,${icons.abilityExplosion}`}
+                      alt="爆波攻撃"
+                      width={16}
+                      height={16}
+                      className="inline mr-1 align-top"
+                    />
+                    {talent.name} ({talent.id})
+                  </>
                 ) : (
                   <>
                     {talent.name} ({talent.id})
                   </>
                 )}
+
                 {talent.npCost > 0 && talent.id !== 5 && talent.id !== 6 && talent.id !== 64 && talent.id !== 66 && (
                   <span className="text-[10px] text-gray-600 font-medium ml-1">
                     [{talent.isTotal ? '合計' : ''}{talent.npCost}NP]

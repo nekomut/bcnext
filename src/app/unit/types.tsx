@@ -1362,23 +1362,6 @@ export const calculateTalentEffect = (talent: UnitTalent): string | React.ReactN
       
       return (<><b className="text-gray-500">{slow_chance}<small>%</small> {slow_initial_duration_s}s <small className="text-gray-400">({slow_initial_duration}f)</small></b></>);
       
-    case 51: // 攻撃無効
-      const dodge_chance = data[2] || 0;
-      const dodge_initial_duration = data[4] || 0;
-      const dodge_max_duration = data[5] || 0;
-      const dodge_max_lv = data[1] || 1;
-      
-      // 持続時間の計算（フレームを秒に変換）
-      const dodge_duration_per_level = dodge_max_lv > 1 ? Math.floor((dodge_max_duration - dodge_initial_duration) / (dodge_max_lv - 1)) : 0;
-      const dodge_initial_duration_s = (dodge_initial_duration / 30).toFixed(1);
-      const dodge_max_duration_s = (dodge_max_duration / 30).toFixed(1);
-      
-      if (dodge_max_lv > 1 && dodge_duration_per_level > 0) {
-        return (<><b>{dodge_chance}<small>%</small> {dodge_initial_duration_s}s~{dodge_max_duration_s}s <small className="text-gray-400">({dodge_initial_duration}f~{dodge_max_duration}f)</small></b></>);
-      }
-      
-      return (<><b>{dodge_chance}<small>%</small> {dodge_initial_duration_s}s <small className="text-gray-400">({dodge_initial_duration}f)</small></b></>);
-      
     case 5: // めっぽう強い
       // この効果はテキストボックスで動的に計算されるため、空文字列を返す
       return "";
@@ -1386,22 +1369,6 @@ export const calculateTalentEffect = (talent: UnitTalent): string | React.ReactN
     case 6: // 打たれ強い
       // この効果はテキストボックスで動的に計算されるため、空文字列を返す
       return "";
-      
-    case 60: // 呪い
-      const curse_chance = data[2] || 0;
-      const curse_initial_duration = data[4] || 0;
-      const curse_max_duration = data[5] || 0;
-      const curse_max_lv = data[1] || 1;
-      
-      // 持続時間の計算（フレームを秒に変換）
-      const curse_initial_duration_s = (curse_initial_duration / 30).toFixed(1);
-      const curse_max_duration_s = (curse_max_duration / 30).toFixed(1);
-      
-      if (curse_max_lv > 1 && curse_max_duration > curse_initial_duration) {
-        return (<><b className="text-gray-500">{curse_chance}<small>%</small> {curse_initial_duration_s}s~{curse_max_duration_s}s <small className="text-gray-400">({curse_initial_duration}f~{curse_max_duration}f)</small></b></>);
-      }
-      
-      return (<><b className="text-gray-500">{curse_chance}<small>%</small> {curse_initial_duration_s}s <small className="text-gray-400">({curse_initial_duration}f)</small></b></>);
       
     case 46: // 動きを遅くする無効
     case 44: // 攻撃力ダウン無効
@@ -1420,8 +1387,59 @@ export const calculateTalentEffect = (talent: UnitTalent): string | React.ReactN
     case 41: // 属性 エイリアン
     case 42: // 属性 ゾンビ
     case 43: // 属性を持たない敵
+    case 51: // 攻撃無効
+      const dodge_max_lv = data[1] || 1;
+      const dodge_min_chance = data[2] || 0;
+      const dodge_max_chance = data[3] || data[2] || 0;
+      const dodge_initial_duration = data[4] || 0;
+      const dodge_max_duration = data[5] || 0;
+      
+      // 持続時間の計算（フレームを秒に変換）
+      const dodge_duration_per_level = dodge_max_lv > 1 ? Math.floor((dodge_max_duration - dodge_initial_duration) / (dodge_max_lv - 1)) : 0;
+      const dodge_initial_duration_s = (dodge_initial_duration / 30).toFixed(1);
+      const dodge_max_duration_s = (dodge_max_duration / 30).toFixed(1);
+      
+      // 確率の変動確認
+      const chance_varies = dodge_max_lv > 1 && dodge_max_chance > dodge_min_chance;
+      const duration_varies = dodge_max_lv > 1 && dodge_duration_per_level > 0;
+      
+      // 確率表示の組み立て
+      let chance_display: React.ReactNode;
+      if (chance_varies) {
+        const chance_per_level = ((dodge_max_chance - dodge_min_chance) / (dodge_max_lv - 1)).toFixed(0);
+        chance_display = (<><b>{dodge_min_chance}~{dodge_max_chance}<small>%</small></b> <small className="text-gray-400">(+{chance_per_level}%/Lv)</small></>);
+      } else {
+        chance_display = (<><b>{dodge_min_chance}<small>%</small></b></>);
+      }
+      
+      // 持続時間表示の組み立て
+      let duration_display: React.ReactNode;
+      if (duration_varies) {
+        duration_display = (<> <b>{dodge_initial_duration_s}s~{dodge_max_duration_s}s</b> <small className="text-gray-400">({dodge_initial_duration}f~{dodge_max_duration}f)</small></>);
+      } else {
+        duration_display = (<> <b>{dodge_initial_duration_s}s</b> <small className="text-gray-400">({dodge_initial_duration}f)</small></>);
+      }
+      
+      return (<>{chance_display}{duration_display}</>);
+      
     case 57: // 属性 悪魔
       return "";
+      
+    case 60: // 呪い
+      const curse_chance = data[2] || 0;
+      const curse_initial_duration = data[4] || 0;
+      const curse_max_duration = data[5] || 0;
+      const curse_max_lv = data[1] || 1;
+      
+      // 持続時間の計算（フレームを秒に変換）
+      const curse_initial_duration_s = (curse_initial_duration / 30).toFixed(1);
+      const curse_max_duration_s = (curse_max_duration / 30).toFixed(1);
+      
+      if (curse_max_lv > 1 && curse_max_duration > curse_initial_duration) {
+        return (<><b className="text-gray-500">{curse_chance}<small>%</small> {curse_initial_duration_s}s~{curse_max_duration_s}s <small className="text-gray-400">({curse_initial_duration}f~{curse_max_duration}f)</small></b></>);
+      }
+      
+      return (<><b className="text-gray-500">{curse_chance}<small>%</small> {curse_initial_duration_s}s <small className="text-gray-400">({curse_initial_duration}f)</small></b></>);
       
     default:
       // その他の本能は基本形式

@@ -1232,14 +1232,20 @@ export class EPart {
           
           let rBoost = radialBoost;
           let gBoost = radialBoost;
-          let bBoost = radialBoost * 0.8; // 青を抑えて暖色強調
+          let bBoost = radialBoost * 0.4; // 青を大幅削減して暖色強調
           
           if (isWarmColor) {
-            rBoost *= 1.4; // 赤を更に強化
-            gBoost *= 1.2; // 黄色に近づける
+            rBoost *= 1.8; // 赤を大幅強化
+            gBoost *= 1.5; // オレンジ系を強化
           } else if (isCoolColor) {
-            bBoost *= 1.2; // 青系も強化
-            rBoost *= 0.9;
+            // 寒色系でも暖色方向にシフト（Java版の特徴）
+            rBoost *= 1.3; // 赤成分を追加
+            gBoost *= 1.1; // 緑成分をやや強化
+            bBoost *= 0.7; // 青成分を削減
+          } else {
+            // 中間色も暖色方向にシフト
+            rBoost *= 1.6; // 赤成分強化
+            gBoost *= 1.3; // オレンジ系強化
           }
           
           // 3. ガンマ補正による明度強化
@@ -1248,11 +1254,21 @@ export class EPart {
           const gGamma = Math.pow(g / 255.0, gamma) * gBoost;
           const bGamma = Math.pow(b / 255.0, gamma) * bBoost;
           
-          // 4. 加算合成による強い発光効果
-          const glowStrength = radialFactor * 0.6;
-          newR = Math.min(255, Math.round((rGamma + glowStrength) * 255));
-          newG = Math.min(255, Math.round((gGamma + glowStrength) * 255));
-          newB = Math.min(255, Math.round((bGamma + glowStrength) * 255));
+          // 4. Java版の暖色ベース色を加算合成
+          const warmBaseStrength = radialFactor * 0.8;
+          const warmBaseR = 1.0; // オレンジ系ベース色
+          const warmBaseG = 0.6; // 
+          const warmBaseB = 0.2; // 青は最小限
+          
+          // 5. 加算合成による強い発光効果（暖色強化）
+          const glowStrength = radialFactor * 1.2; // 発光強度大幅アップ
+          const finalR = rGamma + glowStrength + (warmBaseR * warmBaseStrength);
+          const finalG = gGamma + glowStrength + (warmBaseG * warmBaseStrength);
+          const finalB = bGamma + glowStrength + (warmBaseB * warmBaseStrength);
+          
+          newR = Math.min(255, Math.round(finalR * 255));
+          newG = Math.min(255, Math.round(finalG * 255));
+          newB = Math.min(255, Math.round(finalB * 255));
           
           // 5. 透明度も放射状に調整
           alphaMultiplier = Math.min(1.0, 0.3 + radialFactor * 0.7);
@@ -1400,19 +1416,28 @@ export class EPart {
           // 4. 境界部分での暖色発光強化（Java版の特徴的な暖色効果）
           if (isBoundary) {
             const boundaryFactor = Math.max(0, (3.0 - distance) / 3.0); // 0.0-1.0
-            const warmGlowStrength = boundaryFactor * 0.6;
+            const warmGlowStrength = boundaryFactor * 1.2; // 発光強度大幅アップ
+            
+            // Java版の暖色ベース色を加算
+            const warmBaseR = 1.0; // オレンジ系ベース
+            const warmBaseG = 0.6; // 
+            const warmBaseB = 0.2; // 青は最小限
             
             // 暖色系（赤・オレンジ・黄色）を境界で強く発光
-            rEnhanced = Math.min(1.0, rEnhanced + warmGlowStrength * 1.2); // 赤を最も強化
-            gEnhanced = Math.min(1.0, gEnhanced + warmGlowStrength * 0.8); // オレンジ系
-            bEnhanced = Math.min(1.0, bEnhanced + warmGlowStrength * 0.3); // 黄色系（青は控えめ）
+            rEnhanced = Math.min(1.0, rEnhanced + warmGlowStrength * 1.8 + warmBaseR * boundaryFactor * 0.4); // 赤を大幅強化
+            gEnhanced = Math.min(1.0, gEnhanced + warmGlowStrength * 1.4 + warmBaseG * boundaryFactor * 0.4); // オレンジ系
+            bEnhanced = Math.min(1.0, bEnhanced + warmGlowStrength * 0.1 + warmBaseB * boundaryFactor * 0.4); // 青は最小限
           }
           
-          // 5. 加算合成による全体発光効果
-          const additionStrength = luminance / 255.0 * 0.4;
-          rEnhanced = Math.min(1.0, rEnhanced + additionStrength);
-          gEnhanced = Math.min(1.0, gEnhanced + additionStrength);
-          bEnhanced = Math.min(1.0, bEnhanced + additionStrength);
+          // 5. 加算合成による全体発光効果（暖色強化）
+          const additionStrength = luminance / 255.0 * 0.6; // 強度アップ
+          const warmAdditionR = additionStrength * 1.4; // 赤成分を強化
+          const warmAdditionG = additionStrength * 1.0; // 緑成分は標準
+          const warmAdditionB = additionStrength * 0.6; // 青成分を削減
+          
+          rEnhanced = Math.min(1.0, rEnhanced + warmAdditionR);
+          gEnhanced = Math.min(1.0, gEnhanced + warmAdditionG);
+          bEnhanced = Math.min(1.0, bEnhanced + warmAdditionB);
           
           // 6. コントラスト強化
           const contrast = 1.3;
@@ -1454,17 +1479,17 @@ export class EPart {
               } else if (luminance <= 96) {
                 const t = (luminance - 32) / 64;
                 // 境界部分での暖色発光を考慮した透明度強化
-                const warmGlowBonus = distance <= 3.0 ? (3.0 - distance) / 3.0 * 0.2 : 0;
+                const warmGlowBonus = distance <= 3.0 ? (3.0 - distance) / 3.0 * 0.3 : 0; // ボーナス強化
                 sampleAlphaValue = hermite * (0.1 + t * 0.4 + warmGlowBonus);
               } else if (luminance <= 160) {
                 const t = (luminance - 96) / 64;
                 // 境界部分での暖色発光を考慮した透明度強化
-                const warmGlowBonus = distance <= 3.0 ? (3.0 - distance) / 3.0 * 0.15 : 0;
+                const warmGlowBonus = distance <= 3.0 ? (3.0 - distance) / 3.0 * 0.25 : 0; // ボーナス強化
                 sampleAlphaValue = hermite * (0.5 + t * 0.3 + warmGlowBonus);
               } else {
                 const t = (luminance - 160) / 95;
                 // 高輝度境界部分での最大暖色発光効果
-                const warmGlowBonus = distance <= 3.0 ? (3.0 - distance) / 3.0 * 0.1 : 0;
+                const warmGlowBonus = distance <= 3.0 ? (3.0 - distance) / 3.0 * 0.2 : 0; // ボーナス大幅強化
                 sampleAlphaValue = hermite * (0.8 + t * 0.2 + warmGlowBonus);
               }
             } else {

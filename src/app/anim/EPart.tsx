@@ -1161,17 +1161,12 @@ export class EPart {
     for (let y = 0; y < height; y++) {
       for (let x = 0; x < width; x++) {
         const idx = (y * width + x) * 4;
-        const r = data[idx];
-        const g = data[idx + 1];
-        const b = data[idx + 2];
         const a = data[idx + 3];
         
         if (a === 0) {
           distanceField[y * width + x] = -1000; // 完全透明領域
           continue;
         }
-        
-        const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;
         
         // Java版準拠の距離フィールド計算
         let minDistance = 1000;

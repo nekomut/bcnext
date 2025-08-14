@@ -437,15 +437,19 @@ export class EPart {
         return;
       }
       
-      // 黒い部分透明化処理（Unit 044 Sprite 50「こん棒燃え１」など）
-      // 特定のスプライトで黒い部分を完全に透明化
+      // 特殊エフェクト処理（glow=1パーツ）
       const needsBlackTransparency = this.shouldApplyBlackTransparency();
+      const isRadialGlow = this.isRadialGlowEffect();
       
       let useCanvas = false;
       let transparentCanvas: HTMLCanvasElement | null = null;
       
-      if (needsBlackTransparency) {
-        // 黒い部分を透明化した画像を作成
+      if (isRadialGlow) {
+        // 光環専用の放射状発光処理
+        transparentCanvas = this.createRadialGlowImage(spriteImage, sx, sy, sw, sh);
+        useCanvas = true;
+      } else if (needsBlackTransparency) {
+        // 通常のglow処理（黒い部分透明化）
         transparentCanvas = this.createBlackTransparentImage(spriteImage, sx, sy, sw, sh);
         useCanvas = true;
       }
@@ -465,7 +469,10 @@ export class EPart {
         if (glowSupport) {
           // Java版: g.setComposite(FakeGraphics.BLEND, (int)(opa * 256), glow)
           ctx.globalAlpha = finalOpacity;
-          if (needsBlackTransparency || glowValue === 1) {
+          if (isRadialGlow) {
+            // 光環は加算合成で強い発光効果
+            ctx.globalCompositeOperation = 'lighter';
+          } else if (needsBlackTransparency || glowValue === 1) {
             ctx.globalCompositeOperation = 'lighten';
           }
         } else {
@@ -477,7 +484,10 @@ export class EPart {
         if (glowSupport) {
           // Java版: g.setComposite(FakeGraphics.BLEND, 256, glow)
           ctx.globalAlpha = 1.0; // 完全不透明
-          if (needsBlackTransparency || glowValue === 1) {
+          if (isRadialGlow) {
+            // 光環は加算合成で強い発光効果
+            ctx.globalCompositeOperation = 'lighter';
+          } else if (needsBlackTransparency || glowValue === 1) {
             ctx.globalCompositeOperation = 'lighten';
           }
         } else {
@@ -1121,6 +1131,148 @@ export class EPart {
     }
     
     return false;
+  }
+
+  /**
+   * 光環エフェクトかどうかを判定
+   * Unit 043 Sprite 66「光環」(100x50px)など、放射状発光が必要なエフェクト
+   */
+  private isRadialGlowEffect(): boolean {
+    if (!this.args || this.args.length <= 13) {
+      return false;
+    }
+    
+    const unitId = this.args[1] as number;
+    const spriteId = this.img;
+    const partName = this.args[13] as string;
+    
+    // Unit 043 Sprite 66「光環」(100x50px) - Part#168, Part#169「半線」の特定
+    if (unitId === 43 && spriteId === 66 && typeof partName === 'string' && partName.includes('半線')) {
+      return true;
+    }
+    
+    // 他の光環系エフェクトも対象
+    if (typeof partName === 'string' && 
+        (partName.includes('光環') || partName.includes('光輪') || partName.includes('半線') || partName.includes('ライトリング'))) {
+      return true;
+    }
+    
+    return false;
+  }
+
+  /**
+   * 光環専用の放射状発光処理による強化画像を作成
+   * Java版の光環エフェクトを完全再現
+   */
+  private createRadialGlowImage(
+    sourceImage: HTMLImageElement,
+    sx: number, sy: number, sw: number, sh: number
+  ): HTMLCanvasElement {
+    const tempCanvas = document.createElement('canvas');
+    tempCanvas.width = sw;
+    tempCanvas.height = sh;
+    const tempCtx = tempCanvas.getContext('2d');
+    
+    if (!tempCtx) {
+      return tempCanvas;
+    }
+    
+    // 元画像から指定された部分を描画
+    tempCtx.drawImage(sourceImage, sx, sy, sw, sh, 0, 0, sw, sh);
+    
+    // ImageDataを取得
+    const imageData = tempCtx.getImageData(0, 0, sw, sh);
+    const data = imageData.data;
+    const width = sw;
+    const height = sh;
+    
+    // 光環専用の放射状発光処理
+    const centerX = width / 2;
+    const centerY = height / 2;
+    const maxRadius = Math.sqrt(centerX * centerX + centerY * centerY);
+    
+    const processedData = new Uint8ClampedArray(data.length);
+    
+    for (let y = 0; y < height; y++) {
+      for (let x = 0; x < width; x++) {
+        const idx = (y * width + x) * 4;
+        const r = data[idx];
+        const g = data[idx + 1];
+        const b = data[idx + 2];
+        const a = data[idx + 3];
+        
+        if (a === 0) {
+          processedData[idx] = r;
+          processedData[idx + 1] = g;
+          processedData[idx + 2] = b;
+          processedData[idx + 3] = a;
+          continue;
+        }
+        
+        const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+        
+        // 中心からの距離を計算
+        const dx = x - centerX;
+        const dy = y - centerY;
+        const distanceFromCenter = Math.sqrt(dx * dx + dy * dy);
+        const normalizedDistance = distanceFromCenter / maxRadius;
+        
+        // Java版光環の特殊発光処理
+        let newR = r, newG = g, newB = b;
+        let alphaMultiplier = 1.0;
+        
+        if (luminance > 32) {
+          // 1. 中心から外側への放射状グラデーション強化
+          const radialFactor = Math.max(0, 1.0 - normalizedDistance * 0.7);
+          const radialBoost = 1.0 + radialFactor * 2.0; // 中心部で3倍明るく
+          
+          // 2. 色相別の強化（光環は通常黄色〜白色系）
+          const isWarmColor = r >= g && r >= b; // 赤成分が最大
+          const isCoolColor = b >= r && b >= g; // 青成分が最大
+          
+          let rBoost = radialBoost;
+          let gBoost = radialBoost;
+          let bBoost = radialBoost * 0.8; // 青を抑えて暖色強調
+          
+          if (isWarmColor) {
+            rBoost *= 1.4; // 赤を更に強化
+            gBoost *= 1.2; // 黄色に近づける
+          } else if (isCoolColor) {
+            bBoost *= 1.2; // 青系も強化
+            rBoost *= 0.9;
+          }
+          
+          // 3. ガンマ補正による明度強化
+          const gamma = 0.6; // より明るく
+          const rGamma = Math.pow(r / 255.0, gamma) * rBoost;
+          const gGamma = Math.pow(g / 255.0, gamma) * gBoost;
+          const bGamma = Math.pow(b / 255.0, gamma) * bBoost;
+          
+          // 4. 加算合成による強い発光効果
+          const glowStrength = radialFactor * 0.6;
+          newR = Math.min(255, Math.round((rGamma + glowStrength) * 255));
+          newG = Math.min(255, Math.round((gGamma + glowStrength) * 255));
+          newB = Math.min(255, Math.round((bGamma + glowStrength) * 255));
+          
+          // 5. 透明度も放射状に調整
+          alphaMultiplier = Math.min(1.0, 0.3 + radialFactor * 0.7);
+        } else {
+          // 暗い部分は完全透明化
+          alphaMultiplier = Math.pow(luminance / 32, 1.5) * 0.1;
+        }
+        
+        processedData[idx] = newR;
+        processedData[idx + 1] = newG;
+        processedData[idx + 2] = newB;
+        processedData[idx + 3] = Math.round(a * alphaMultiplier);
+      }
+    }
+    
+    // 最終ImageDataを適用
+    const finalImageData = new ImageData(processedData, width, height);
+    tempCtx.putImageData(finalImageData, 0, 0);
+    
+    return tempCanvas;
   }
 
   /**

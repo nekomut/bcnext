@@ -1124,8 +1124,8 @@ export class EPart {
   }
 
   /**
-   * 黒い部分を透明化した画像を作成
-   * 黒に近い色のピクセルを透明にする
+   * Java版超高精度境界処理による発色強化画像を作成
+   * サブピクセル精度のマルチサンプリング・アンチエイリアシング
    */
   private createBlackTransparentImage(
     sourceImage: HTMLImageElement,
@@ -1147,52 +1147,222 @@ export class EPart {
     // ImageDataを取得
     const imageData = tempCtx.getImageData(0, 0, sw, sh);
     const data = imageData.data;
+    const width = sw;
+    const height = sh;
     
-    // Java版BLEND処理準拠の黒い部分透明化
-    // より精密なグラデーション透明化を実現
-    for (let i = 0; i < data.length; i += 4) {
-      const r = data[i];     // Red
-      const g = data[i + 1]; // Green
-      const b = data[i + 2]; // Blue
-      const a = data[i + 3]; // Alpha
-      
-      // 元のアルファ値が0の場合はスキップ
-      if (a === 0) {
-        continue;
+    // 高解像度処理用のマルチサンプリング
+    const superSamplingFactor = 2; // 2x2スーパーサンプリング
+    const processedData = new Uint8ClampedArray(data.length);
+    
+    // サブピクセル精度の距離フィールド計算
+    const distanceField = new Float32Array(width * height);
+    
+    // 1パス目：距離フィールド生成（Java版の高精度境界検出）
+    for (let y = 0; y < height; y++) {
+      for (let x = 0; x < width; x++) {
+        const idx = (y * width + x) * 4;
+        const r = data[idx];
+        const g = data[idx + 1];
+        const b = data[idx + 2];
+        const a = data[idx + 3];
+        
+        if (a === 0) {
+          distanceField[y * width + x] = -1000; // 完全透明領域
+          continue;
+        }
+        
+        const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+        
+        // Java版準拠の距離フィールド計算
+        let minDistance = 1000;
+        const searchRadius = 8; // 検索半径を拡大
+        
+        for (let dy = -searchRadius; dy <= searchRadius; dy++) {
+          for (let dx = -searchRadius; dx <= searchRadius; dx++) {
+            const ny = y + dy;
+            const nx = x + dx;
+            
+            if (ny >= 0 && ny < height && nx >= 0 && nx < width) {
+              const nIdx = (ny * width + nx) * 4;
+              const nLum = 0.2126 * data[nIdx] + 0.7152 * data[nIdx + 1] + 0.0722 * data[nIdx + 2];
+              const nAlpha = data[nIdx + 3];
+              
+              // 暗い領域または透明領域との距離を計算
+              if (nLum <= 32 || nAlpha === 0) {
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                minDistance = Math.min(minDistance, distance);
+              }
+            }
+          }
+        }
+        
+        distanceField[y * width + x] = minDistance;
       }
-      
-      // 輝度計算（ITU-R BT.709係数使用）
-      const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;
-      
-      // Java版BLENDモードに近い処理：黒に近いほど透明に
-      let alphaMultiplier = 1.0;
-      
-      if (luminance <= 32) {
-        // 非常に暗い部分: 完全透明〜10%透明
-        alphaMultiplier = Math.pow(luminance / 32, 2) * 0.1;
-      } else if (luminance <= 96) {
-        // 暗い部分: 10%〜40%透明
-        const t = (luminance - 32) / 64;
-        alphaMultiplier = 0.1 + t * 0.3;
-      } else if (luminance <= 160) {
-        // 中間部: 40%〜70%透明
-        const t = (luminance - 96) / 64;
-        alphaMultiplier = 0.4 + t * 0.3;
-      } else {
-        // 明るい部分: 70%〜100%不透明
-        const t = (luminance - 160) / 95;
-        alphaMultiplier = 0.7 + t * 0.3;
-      }
-      
-      // 元のアルファ値と乗算
-      const newAlpha = Math.round(a * alphaMultiplier);
-      data[i + 3] = Math.max(0, Math.min(255, newAlpha));
     }
     
-    // 変更したImageDataを描画し直し
-    tempCtx.putImageData(imageData, 0, 0);
+    // 2パス目：マルチサンプリング・アンチエイリアシング
+    for (let y = 0; y < height; y++) {
+      for (let x = 0; x < width; x++) {
+        const idx = (y * width + x) * 4;
+        const r = data[idx];
+        const g = data[idx + 1];
+        const b = data[idx + 2];
+        const a = data[idx + 3];
+        
+        if (a === 0) {
+          processedData[idx] = r;
+          processedData[idx + 1] = g;
+          processedData[idx + 2] = b;
+          processedData[idx + 3] = a;
+          continue;
+        }
+        
+        const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+        
+        // Java版BLEND発色強化処理
+        let newR = r, newG = g, newB = b;
+        let alphaMultiplier = 1.0;
+        
+        if (luminance > 32) {
+          // 1. ガンマ補正による明度強化
+          const gamma = 0.7;
+          const rNorm = r / 255.0;
+          const gNorm = g / 255.0;
+          const bNorm = b / 255.0;
+          
+          const rGamma = Math.pow(rNorm, gamma);
+          const gGamma = Math.pow(gNorm, gamma);
+          const bGamma = Math.pow(bNorm, gamma);
+          
+          // 2. 彩度強化
+          const saturationBoost = 1.6;
+          const maxComponent = Math.max(rGamma, gGamma, bGamma);
+          const minComponent = Math.min(rGamma, gGamma, bGamma);
+          const saturation = maxComponent > 0 ? (maxComponent - minComponent) / maxComponent : 0;
+          
+          const satBoostFactor = 1 + saturation * saturationBoost;
+          
+          // 3. 色成分別強化
+          let rEnhanced = rGamma * satBoostFactor;
+          let gEnhanced = gGamma * satBoostFactor;
+          let bEnhanced = bGamma * satBoostFactor;
+          
+          // 4. 加算合成による発光効果
+          const additionStrength = luminance / 255.0 * 0.4;
+          rEnhanced = Math.min(1.0, rEnhanced + additionStrength);
+          gEnhanced = Math.min(1.0, gEnhanced + additionStrength);
+          bEnhanced = Math.min(1.0, bEnhanced + additionStrength);
+          
+          // 5. コントラスト強化
+          const contrast = 1.3;
+          rEnhanced = Math.min(1.0, Math.max(0.0, (rEnhanced - 0.5) * contrast + 0.5));
+          gEnhanced = Math.min(1.0, Math.max(0.0, (gEnhanced - 0.5) * contrast + 0.5));
+          bEnhanced = Math.min(1.0, Math.max(0.0, (bEnhanced - 0.5) * contrast + 0.5));
+          
+          newR = Math.round(rEnhanced * 255);
+          newG = Math.round(gEnhanced * 255);
+          newB = Math.round(bEnhanced * 255);
+        }
+        
+        // サブピクセル精度のマルチサンプリング
+        let sampleAlpha = 0;
+        const samples = superSamplingFactor * superSamplingFactor;
+        
+        for (let sy = 0; sy < superSamplingFactor; sy++) {
+          for (let sx = 0; sx < superSamplingFactor; sx++) {
+            // サブピクセル位置での距離フィールド値をサンプリング
+            const subX = x + (sx + 0.5) / superSamplingFactor - 0.5;
+            const subY = y + (sy + 0.5) / superSamplingFactor - 0.5;
+            
+            // バイリニア補間で距離フィールド値を取得
+            const distance = this.sampleDistanceField(distanceField, width, height, subX, subY);
+            
+            // Java版準拠のスムーズステップ関数で滑らかな透明度遷移
+            let sampleAlphaValue = 1.0;
+            
+            if (distance < 0) {
+              sampleAlphaValue = 0.0; // 完全透明領域
+            } else if (distance < 2.0) {
+              // 境界から2ピクセル以内でスムーズな遷移
+              const smoothFactor = distance / 2.0;
+              // エルミート補間（S字カーブ）でさらに滑らかに
+              const hermite = smoothFactor * smoothFactor * (3.0 - 2.0 * smoothFactor);
+              
+              if (luminance <= 32) {
+                sampleAlphaValue = Math.pow(hermite, 2.0) * 0.1;
+              } else if (luminance <= 96) {
+                const t = (luminance - 32) / 64;
+                sampleAlphaValue = hermite * (0.1 + t * 0.4);
+              } else if (luminance <= 160) {
+                const t = (luminance - 96) / 64;
+                sampleAlphaValue = hermite * (0.5 + t * 0.3);
+              } else {
+                const t = (luminance - 160) / 95;
+                sampleAlphaValue = hermite * (0.8 + t * 0.2);
+              }
+            } else {
+              // 境界から遠い領域
+              if (luminance <= 32) {
+                sampleAlphaValue = Math.pow(luminance / 32, 1.5) * 0.1;
+              } else if (luminance <= 96) {
+                const t = (luminance - 32) / 64;
+                sampleAlphaValue = 0.1 + t * 0.4;
+              } else if (luminance <= 160) {
+                const t = (luminance - 96) / 64;
+                sampleAlphaValue = 0.5 + t * 0.3;
+              } else {
+                const t = (luminance - 160) / 95;
+                sampleAlphaValue = 0.8 + t * 0.2;
+              }
+            }
+            
+            sampleAlpha += sampleAlphaValue;
+          }
+        }
+        
+        alphaMultiplier = sampleAlpha / samples;
+        
+        processedData[idx] = newR;
+        processedData[idx + 1] = newG;
+        processedData[idx + 2] = newB;
+        processedData[idx + 3] = Math.round(a * alphaMultiplier);
+      }
+    }
+    
+    // 最終ImageDataを適用
+    const finalImageData = new ImageData(processedData, width, height);
+    tempCtx.putImageData(finalImageData, 0, 0);
     
     return tempCanvas;
+  }
+
+  /**
+   * 距離フィールドのバイリニア補間サンプリング
+   */
+  private sampleDistanceField(
+    distanceField: Float32Array, 
+    width: number, 
+    height: number, 
+    x: number, 
+    y: number
+  ): number {
+    const x0 = Math.floor(x);
+    const y0 = Math.floor(y);
+    const x1 = Math.min(x0 + 1, width - 1);
+    const y1 = Math.min(y0 + 1, height - 1);
+    
+    const fx = x - x0;
+    const fy = y - y0;
+    
+    const v00 = distanceField[y0 * width + x0];
+    const v10 = distanceField[y0 * width + x1];
+    const v01 = distanceField[y1 * width + x0];
+    const v11 = distanceField[y1 * width + x1];
+    
+    const v0 = v00 * (1 - fx) + v10 * fx;
+    const v1 = v01 * (1 - fx) + v11 * fx;
+    
+    return v0 * (1 - fy) + v1 * fy;
   }
 
   /**

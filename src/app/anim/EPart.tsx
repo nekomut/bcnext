@@ -1389,18 +1389,32 @@ export class EPart {
           
           const satBoostFactor = 1 + saturation * saturationBoost;
           
-          // 3. 色成分別強化
+          // 3. 境界距離に基づく暖色強化（Java版準拠の発光効果）
+          const distance = distanceField[y * width + x];
+          const isBoundary = distance > 0 && distance <= 3.0; // 境界3ピクセル以内
+          
           let rEnhanced = rGamma * satBoostFactor;
           let gEnhanced = gGamma * satBoostFactor;
           let bEnhanced = bGamma * satBoostFactor;
           
-          // 4. 加算合成による発光効果
+          // 4. 境界部分での暖色発光強化（Java版の特徴的な暖色効果）
+          if (isBoundary) {
+            const boundaryFactor = Math.max(0, (3.0 - distance) / 3.0); // 0.0-1.0
+            const warmGlowStrength = boundaryFactor * 0.6;
+            
+            // 暖色系（赤・オレンジ・黄色）を境界で強く発光
+            rEnhanced = Math.min(1.0, rEnhanced + warmGlowStrength * 1.2); // 赤を最も強化
+            gEnhanced = Math.min(1.0, gEnhanced + warmGlowStrength * 0.8); // オレンジ系
+            bEnhanced = Math.min(1.0, bEnhanced + warmGlowStrength * 0.3); // 黄色系（青は控えめ）
+          }
+          
+          // 5. 加算合成による全体発光効果
           const additionStrength = luminance / 255.0 * 0.4;
           rEnhanced = Math.min(1.0, rEnhanced + additionStrength);
           gEnhanced = Math.min(1.0, gEnhanced + additionStrength);
           bEnhanced = Math.min(1.0, bEnhanced + additionStrength);
           
-          // 5. コントラスト強化
+          // 6. コントラスト強化
           const contrast = 1.3;
           rEnhanced = Math.min(1.0, Math.max(0.0, (rEnhanced - 0.5) * contrast + 0.5));
           gEnhanced = Math.min(1.0, Math.max(0.0, (gEnhanced - 0.5) * contrast + 0.5));
@@ -1439,13 +1453,19 @@ export class EPart {
                 sampleAlphaValue = Math.pow(hermite, 2.0) * 0.1;
               } else if (luminance <= 96) {
                 const t = (luminance - 32) / 64;
-                sampleAlphaValue = hermite * (0.1 + t * 0.4);
+                // 境界部分での暖色発光を考慮した透明度強化
+                const warmGlowBonus = distance <= 3.0 ? (3.0 - distance) / 3.0 * 0.2 : 0;
+                sampleAlphaValue = hermite * (0.1 + t * 0.4 + warmGlowBonus);
               } else if (luminance <= 160) {
                 const t = (luminance - 96) / 64;
-                sampleAlphaValue = hermite * (0.5 + t * 0.3);
+                // 境界部分での暖色発光を考慮した透明度強化
+                const warmGlowBonus = distance <= 3.0 ? (3.0 - distance) / 3.0 * 0.15 : 0;
+                sampleAlphaValue = hermite * (0.5 + t * 0.3 + warmGlowBonus);
               } else {
                 const t = (luminance - 160) / 95;
-                sampleAlphaValue = hermite * (0.8 + t * 0.2);
+                // 高輝度境界部分での最大暖色発光効果
+                const warmGlowBonus = distance <= 3.0 ? (3.0 - distance) / 3.0 * 0.1 : 0;
+                sampleAlphaValue = hermite * (0.8 + t * 0.2 + warmGlowBonus);
               }
             } else {
               // 境界から遠い領域

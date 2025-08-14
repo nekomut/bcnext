@@ -87,7 +87,7 @@ export default function AnimationViewer({
   const isInternalUpdateRef = useRef<boolean>(false); // 内部フレーム更新フラグ
   
   const [currentFrame, setCurrentFrame] = useState<number>(externalCurrentFrame || 0);
-  const [zoom, setZoom] = useState<number>(1);
+  const [zoom, setZoom] = useState<number>(0.7);
   const [offsetX, setOffsetX] = useState<number>(0);
   const [offsetY, setOffsetY] = useState<number>(0);
   const [showRefLines, setShowRefLines] = useState<boolean>(true);
@@ -1271,13 +1271,13 @@ export default function AnimationViewer({
             {zoom.toFixed(2)}x ({offsetX}, {offsetY})
           </span>
           <button
-            onClick={() => setZoom(zoom * 1.2)}
+            onClick={() => setZoom(zoom + 0.05)}
             className="px-2 py-1 bg-blue-500 text-white rounded font-mono"
           >
             +
           </button>
           <button
-            onClick={() => setZoom(zoom / 1.2)}
+            onClick={() => setZoom(Math.max(0.05, zoom - 0.05))}
             className="px-2 py-1 bg-blue-500 text-white rounded font-mono"
           >
             -

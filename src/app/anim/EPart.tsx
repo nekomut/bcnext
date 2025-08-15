@@ -440,11 +440,21 @@ export class EPart {
       // 特殊エフェクト処理（glow=1パーツ）
       const needsBlackTransparency = this.shouldApplyBlackTransparency();
       const isRadialGlow = this.isRadialGlowEffect();
+      const isSpecialRedGlow = this.isSpecialRedGlowEffect();
+      const isSpecialOrangeGlow = this.isSpecialOrangeGlowEffect();
       
       let useCanvas = false;
       let transparentCanvas: HTMLCanvasElement | null = null;
       
-      if (isRadialGlow) {
+      if (isSpecialRedGlow) {
+        // Unit 043 Part#128, Part#131のSprite#049「光暈し」赤色強化処理（最優先）
+        transparentCanvas = this.createSpecialRedGlowImage(spriteImage, sx, sy, sw, sh);
+        useCanvas = true;
+      } else if (isSpecialOrangeGlow) {
+        // Unit 043 Part#170~#175のSprite#049「光暈し」オレンジ色処理（第2優先）
+        transparentCanvas = this.createSpecialOrangeGlowImage(spriteImage, sx, sy, sw, sh);
+        useCanvas = true;
+      } else if (isRadialGlow) {
         // 光環専用の放射状発光処理
         transparentCanvas = this.createRadialGlowImage(spriteImage, sx, sy, sw, sh);
         useCanvas = true;
@@ -1161,6 +1171,69 @@ export class EPart {
   }
 
   /**
+   * Unit 043のSprite#049「光暈し」赤色強化エフェクトかどうかを判定
+   * 「光暈し<color=0>」と「光暈し<color=2>」の全パーツを対象
+   */
+  private isSpecialRedGlowEffect(): boolean {
+    if (!this.args || this.args.length <= 13) {
+      return false;
+    }
+    
+    const unitId = this.args[1] as number;
+    const spriteId = this.img;
+    const partName = this.args[13] as string;
+    
+    // Unit 043 Sprite 49「光暈し」をチェック
+    if (unitId !== 43 || spriteId !== 49) {
+      return false;
+    }
+    
+    // パーツ名で判定（色指定0と2を対象）
+    if (typeof partName === 'string') {
+      if (partName.includes('光暈し<color=0>') || partName.includes('光暈し<color=2>')) {
+        return true;
+      }
+    }
+    
+    return false;
+  }
+
+  /**
+   * Unit 043のSprite#049「光暈し」オレンジ色エフェクトかどうかを判定
+   * Part#170~#175の範囲を対象
+   */
+  private isSpecialOrangeGlowEffect(): boolean {
+    if (!this.args || this.args.length <= 13) {
+      return false;
+    }
+    
+    const unitId = this.args[1] as number;
+    const spriteId = this.img;
+    const partId = this.ind;
+    const partName = this.args[13] as string;
+    
+    // Unit 043 Sprite 49「光暈し」をチェック
+    if (unitId !== 43 || spriteId !== 49) {
+      return false;
+    }
+    
+    // Part#170~#175の範囲をチェック
+    if (partId >= 170 && partId <= 175) {
+      return true;
+    }
+    
+    // パーツ名で判定（念のため）
+    if (typeof partName === 'string' && partName.includes('光暈し')) {
+      // Part IDが170-175の場合
+      if (partId >= 170 && partId <= 175) {
+        return true;
+      }
+    }
+    
+    return false;
+  }
+
+  /**
    * 光環専用の放射状発光処理による強化画像を作成
    * Java版の光環エフェクトを完全再現
    */
@@ -1285,6 +1358,200 @@ export class EPart {
     }
     
     // 最終ImageDataを適用
+    const finalImageData = new ImageData(processedData, width, height);
+    tempCtx.putImageData(finalImageData, 0, 0);
+    
+    return tempCanvas;
+  }
+
+  /**
+   * Unit 043 Sprite#049「光暈し」赤色強化処理
+   * Part#128, Part#131専用の赤みを大幅に強化した画像を作成
+   */
+  private createSpecialRedGlowImage(
+    sourceImage: HTMLImageElement,
+    sx: number, sy: number, sw: number, sh: number
+  ): HTMLCanvasElement {
+    const tempCanvas = document.createElement('canvas');
+    tempCanvas.width = sw;
+    tempCanvas.height = sh;
+    const tempCtx = tempCanvas.getContext('2d');
+    
+    if (!tempCtx) {
+      return tempCanvas;
+    }
+    
+    // 元画像から指定された部分を描画
+    tempCtx.drawImage(sourceImage, sx, sy, sw, sh, 0, 0, sw, sh);
+    
+    // ImageDataを取得
+    const imageData = tempCtx.getImageData(0, 0, sw, sh);
+    const data = imageData.data;
+    const width = sw;
+    const height = sh;
+    
+    // 赤色強化処理用の配列を作成
+    const processedData = new Uint8ClampedArray(data.length);
+    
+    for (let y = 0; y < height; y++) {
+      for (let x = 0; x < width; x++) {
+        const idx = (y * width + x) * 4;
+        const r = data[idx];
+        const g = data[idx + 1];
+        const b = data[idx + 2];
+        const a = data[idx + 3];
+        
+        if (a === 0) {
+          // 完全透明ピクセルはそのまま
+          processedData[idx] = r;
+          processedData[idx + 1] = g;
+          processedData[idx + 2] = b;
+          processedData[idx + 3] = a;
+          continue;
+        }
+        
+        const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+        
+        // 黒い部分は透明化
+        if (luminance <= 50) {
+          processedData[idx] = r;
+          processedData[idx + 1] = g;
+          processedData[idx + 2] = b;
+          processedData[idx + 3] = 0;
+          continue;
+        }
+        
+        // 控えめな赤色強化（1.2倍ブースト）
+        let newR = Math.min(255, r * 1.2);
+        let newG = g * 0.85; // 緑をわずかに減らす
+        let newB = b * 0.85; // 青をわずかに減らす
+        
+        // 明るい部分のみごく軽く赤色を強化
+        if (luminance > 128) {
+          const brightnessFactor = (luminance - 128) / 127;
+          newR = Math.min(255, newR + brightnessFactor * 15);
+          
+          // 中心部分にごく軽い発光効果を追加
+          const centerX = width / 2;
+          const centerY = height / 2;
+          const distToCenter = Math.sqrt((x - centerX) ** 2 + (y - centerY) ** 2);
+          const maxDist = Math.sqrt(centerX ** 2 + centerY ** 2);
+          const centerFactor = 1 - (distToCenter / maxDist);
+          
+          newR = Math.min(255, newR + centerFactor * 10);
+        }
+        
+        // 軽いガンマ補正で自然な色調に
+        newR = Math.pow(newR / 255, 0.9) * 255;
+        newG = Math.pow(newG / 255, 0.9) * 255;
+        newB = Math.pow(newB / 255, 0.9) * 255;
+        
+        processedData[idx] = Math.round(newR);
+        processedData[idx + 1] = Math.round(newG);
+        processedData[idx + 2] = Math.round(newB);
+        processedData[idx + 3] = a;
+      }
+    }
+    
+    // 変更したImageDataを描画し直し
+    const finalImageData = new ImageData(processedData, width, height);
+    tempCtx.putImageData(finalImageData, 0, 0);
+    
+    return tempCanvas;
+  }
+
+  /**
+   * Unit 043 Sprite#049「光暈し」オレンジ色処理
+   * Part#170~#175専用のオレンジ色変換
+   */
+  private createSpecialOrangeGlowImage(
+    sourceImage: HTMLImageElement,
+    sx: number, sy: number, sw: number, sh: number
+  ): HTMLCanvasElement {
+    const tempCanvas = document.createElement('canvas');
+    tempCanvas.width = sw;
+    tempCanvas.height = sh;
+    const tempCtx = tempCanvas.getContext('2d');
+    
+    if (!tempCtx) {
+      return tempCanvas;
+    }
+    
+    // 元画像から指定された部分を描画
+    tempCtx.drawImage(sourceImage, sx, sy, sw, sh, 0, 0, sw, sh);
+    
+    // ImageDataを取得
+    const imageData = tempCtx.getImageData(0, 0, sw, sh);
+    const data = imageData.data;
+    const width = sw;
+    const height = sh;
+    
+    // オレンジ色変換処理用の配列を作成
+    const processedData = new Uint8ClampedArray(data.length);
+    
+    for (let y = 0; y < height; y++) {
+      for (let x = 0; x < width; x++) {
+        const idx = (y * width + x) * 4;
+        const r = data[idx];
+        const g = data[idx + 1];
+        const b = data[idx + 2];
+        const a = data[idx + 3];
+        
+        if (a === 0) {
+          // 完全透明ピクセルはそのまま
+          processedData[idx] = r;
+          processedData[idx + 1] = g;
+          processedData[idx + 2] = b;
+          processedData[idx + 3] = a;
+          continue;
+        }
+        
+        const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+        
+        // 黒い部分は透明化
+        if (luminance <= 50) {
+          processedData[idx] = r;
+          processedData[idx + 1] = g;
+          processedData[idx + 2] = b;
+          processedData[idx + 3] = 0;
+          continue;
+        }
+        
+        // オレンジ色変換（赤と緑のバランス調整）
+        let newR = Math.min(255, r * 1.3); // 赤を適度に強化
+        let newG = Math.min(255, g * 1.1); // 緑を軽く強化
+        let newB = b * 0.6; // 青を減らしてオレンジ感を出す
+        
+        // 明るい部分でオレンジ色をより強化
+        if (luminance > 128) {
+          const brightnessFactor = (luminance - 128) / 127;
+          newR = Math.min(255, newR + brightnessFactor * 25);
+          newG = Math.min(255, newG + brightnessFactor * 15);
+          
+          // 中心部分により温かみのある色を追加
+          const centerX = width / 2;
+          const centerY = height / 2;
+          const distToCenter = Math.sqrt((x - centerX) ** 2 + (y - centerY) ** 2);
+          const maxDist = Math.sqrt(centerX ** 2 + centerY ** 2);
+          const centerFactor = 1 - (distToCenter / maxDist);
+          
+          newR = Math.min(255, newR + centerFactor * 15);
+          newG = Math.min(255, newG + centerFactor * 8);
+        }
+        
+        // 軽いガンマ補正で自然な色調に
+        newR = Math.pow(newR / 255, 0.9) * 255;
+        newG = Math.pow(newG / 255, 0.9) * 255;
+        newB = Math.pow(newB / 255, 0.9) * 255;
+        
+        processedData[idx] = Math.round(newR);
+        processedData[idx + 1] = Math.round(newG);
+        processedData[idx + 2] = Math.round(newB);
+        processedData[idx + 3] = a;
+      }
+    }
+    
+    // 変更したImageDataを描画し直し
     const finalImageData = new ImageData(processedData, width, height);
     tempCtx.putImageData(finalImageData, 0, 0);
     

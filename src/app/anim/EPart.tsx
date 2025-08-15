@@ -1156,6 +1156,11 @@ export class EPart {
     const spriteId = this.img;
     const partName = this.args[13] as string;
     
+    // Unit 043 Sprite 62「光環」- Part#155, Part#156の特定（極限赤色化対象）
+    if (unitId === 43 && spriteId === 62 && typeof partName === 'string' && partName.includes('光環')) {
+      return true;
+    }
+    
     // Unit 043 Sprite 66「光環」(100x50px) - Part#168, Part#169「半線」の特定
     if (unitId === 43 && spriteId === 66 && typeof partName === 'string' && partName.includes('半線')) {
       return true;
@@ -1299,26 +1304,31 @@ export class EPart {
           const radialFactor = Math.max(0, 1.0 - normalizedDistance * 0.7);
           const radialBoost = 1.0 + radialFactor * 2.0; // 中心部で3倍明るく
           
+          // Unit 043 Sprite 62専用の極限赤色化判定
+          const unitId = this.args[1] as number;
+          const spriteId = this.img;
+          const isUnit043Sprite62 = (unitId === 43 && spriteId === 62);
+          
           // 2. 色相別の強化（光環は通常黄色〜白色系）
           const isWarmColor = r >= g && r >= b; // 赤成分が最大
           const isCoolColor = b >= r && b >= g; // 青成分が最大
           
           let rBoost = radialBoost;
           let gBoost = radialBoost;
-          let bBoost = radialBoost * 0.4; // 青を大幅削減して暖色強調
+          let bBoost = radialBoost * (isUnit043Sprite62 ? 0.05 : 0.4); // Unit 043では青をほぼ完全除去
           
           if (isWarmColor) {
-            rBoost *= 1.8; // 赤を大幅強化
-            gBoost *= 1.5; // オレンジ系を強化
+            rBoost *= (isUnit043Sprite62 ? 4.5 : 1.8); // Unit 043では赤を極限強化
+            gBoost *= (isUnit043Sprite62 ? 0.8 : 1.5); // Unit 043では緑を大幅抑制
           } else if (isCoolColor) {
             // 寒色系でも暖色方向にシフト（Java版の特徴）
-            rBoost *= 1.3; // 赤成分を追加
-            gBoost *= 1.1; // 緑成分をやや強化
-            bBoost *= 0.7; // 青成分を削減
+            rBoost *= (isUnit043Sprite62 ? 3.8 : 1.3); // Unit 043では赤成分を極限追加
+            gBoost *= (isUnit043Sprite62 ? 0.6 : 1.1); // Unit 043では緑を抑制
+            bBoost *= (isUnit043Sprite62 ? 0.02 : 0.7); // Unit 043では青をほぼ完全除去
           } else {
             // 中間色も暖色方向にシフト
-            rBoost *= 1.6; // 赤成分強化
-            gBoost *= 1.3; // オレンジ系強化
+            rBoost *= (isUnit043Sprite62 ? 4.0 : 1.6); // Unit 043では赤成分を極限強化
+            gBoost *= (isUnit043Sprite62 ? 0.7 : 1.3); // Unit 043では緑を抑制
           }
           
           // 3. ガンマ補正による明度強化
@@ -1328,16 +1338,20 @@ export class EPart {
           const bGamma = Math.pow(b / 255.0, gamma) * bBoost;
           
           // 4. Java版の暖色ベース色を加算合成
-          const warmBaseStrength = radialFactor * 0.8;
-          const warmBaseR = 1.0; // オレンジ系ベース色
-          const warmBaseG = 0.6; // 
-          const warmBaseB = 0.2; // 青は最小限
+          const warmBaseStrength = radialFactor * (isUnit043Sprite62 ? 1.8 : 0.8);
+          const warmBaseR = isUnit043Sprite62 ? 2.5 : 1.0; // Unit 043では純赤に近いベース色
+          const warmBaseG = isUnit043Sprite62 ? 0.2 : 0.6; // Unit 043では緑を極限削減
+          const warmBaseB = isUnit043Sprite62 ? 0.0 : 0.2; // Unit 043では青を完全除去
           
           // 5. 加算合成による強い発光効果（暖色強化）
-          const glowStrength = radialFactor * 1.2; // 発光強度大幅アップ
-          const finalR = rGamma + glowStrength + (warmBaseR * warmBaseStrength);
-          const finalG = gGamma + glowStrength + (warmBaseG * warmBaseStrength);
-          const finalB = bGamma + glowStrength + (warmBaseB * warmBaseStrength);
+          const glowStrength = radialFactor * (isUnit043Sprite62 ? 2.5 : 1.2); // Unit 043では発光を極限強化
+          
+          // Unit 043では赤成分に特別な追加ブーストを適用
+          const redBoostExtra = isUnit043Sprite62 ? radialFactor * 1.5 : 0;
+          
+          const finalR = rGamma + glowStrength + (warmBaseR * warmBaseStrength) + redBoostExtra;
+          const finalG = gGamma + (glowStrength * (isUnit043Sprite62 ? 0.3 : 1.0)) + (warmBaseG * warmBaseStrength);
+          const finalB = bGamma + (glowStrength * (isUnit043Sprite62 ? 0.0 : 1.0)) + (warmBaseB * warmBaseStrength);
           
           newR = Math.min(255, Math.round(finalR * 255));
           newG = Math.min(255, Math.round(finalG * 255));

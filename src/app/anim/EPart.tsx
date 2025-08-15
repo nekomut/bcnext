@@ -450,8 +450,12 @@ export class EPart {
         // Unit 043 Part#128, Part#131のSprite#049「光暈し」赤色強化処理（最優先）
         transparentCanvas = this.createSpecialRedGlowImage(spriteImage, sx, sy, sw, sh);
         useCanvas = true;
+      } else if (this.isFlameOrangeEffect()) {
+        // Unit 044の炎エフェクト専用オレンジ化処理（第2優先）
+        transparentCanvas = this.createFlameOrangeImage(spriteImage, sx, sy, sw, sh);
+        useCanvas = true;
       } else if (isSpecialOrangeGlow) {
-        // Unit 043 Part#170~#175のSprite#049「光暈し」オレンジ色処理（第2優先）
+        // Unit 043 Part#170~#175のSprite#049「光暈し」オレンジ色処理（第3優先）
         transparentCanvas = this.createSpecialOrangeGlowImage(spriteImage, sx, sy, sw, sh);
         useCanvas = true;
       } else if (isRadialGlow) {
@@ -474,16 +478,25 @@ export class EPart {
       
       ctx.save();
       
+      // Unit 044炎エフェクト専用の発光強化
+      const isUnit044FlameEffect = this.isFlameOrangeEffect();
+      
       if (finalOpacity < fullOpaThreshold) {
         // 透明度が90%未満の場合
         if (glowSupport) {
           // Java版: g.setComposite(FakeGraphics.BLEND, (int)(opa * 256), glow)
-          ctx.globalAlpha = finalOpacity;
-          if (isRadialGlow) {
-            // 光環は加算合成で強い発光効果
-            ctx.globalCompositeOperation = 'lighter';
-          } else if (needsBlackTransparency || glowValue === 1) {
-            ctx.globalCompositeOperation = 'lighten';
+          if (isUnit044FlameEffect) {
+            // Unit 044炎エフェクトは強化された透明度と加算合成
+            ctx.globalAlpha = Math.min(1.0, finalOpacity * 1.2); // 透明度を1.2倍強化
+            ctx.globalCompositeOperation = 'lighter'; // 加算合成で強い発光
+          } else {
+            ctx.globalAlpha = finalOpacity;
+            if (isRadialGlow) {
+              // 光環は加算合成で強い発光効果
+              ctx.globalCompositeOperation = 'lighter';
+            } else if (needsBlackTransparency || glowValue === 1) {
+              ctx.globalCompositeOperation = 'lighten';
+            }
           }
         } else {
           // 通常の透明度処理
@@ -493,12 +506,18 @@ export class EPart {
         // 透明度が90%以上の場合
         if (glowSupport) {
           // Java版: g.setComposite(FakeGraphics.BLEND, 256, glow)
-          ctx.globalAlpha = 1.0; // 完全不透明
-          if (isRadialGlow) {
-            // 光環は加算合成で強い発光効果
-            ctx.globalCompositeOperation = 'lighter';
-          } else if (needsBlackTransparency || glowValue === 1) {
-            ctx.globalCompositeOperation = 'lighten';
+          if (isUnit044FlameEffect) {
+            // Unit 044炎エフェクトは完全不透明で最大発光
+            ctx.globalAlpha = 1.0;
+            ctx.globalCompositeOperation = 'lighter'; // 加算合成で最大発光
+          } else {
+            ctx.globalAlpha = 1.0; // 完全不透明
+            if (isRadialGlow) {
+              // 光環は加算合成で強い発光効果
+              ctx.globalCompositeOperation = 'lighter';
+            } else if (needsBlackTransparency || glowValue === 1) {
+              ctx.globalCompositeOperation = 'lighten';
+            }
           }
         } else {
           // 通常処理（完全不透明）
@@ -1236,6 +1255,125 @@ export class EPart {
     }
     
     return false;
+  }
+
+  /**
+   * Unit 044の炎エフェクトかどうかを判定
+   * sprites 46, 50-58の炎関連エフェクトを対象
+   */
+  private isFlameOrangeEffect(): boolean {
+    if (!this.args || this.args.length <= 13) {
+      return false;
+    }
+    
+    const unitId = this.args[1] as number;
+    const spriteId = this.img;
+    const partName = this.args[13] as string;
+    
+    // Unit 044専用の炎エフェクト判定
+    if (unitId !== 44) {
+      return false;
+    }
+    
+    // Sprite 46「攻撃ef 45%」も炎エフェクトの対象に追加
+    if (spriteId === 46) {
+      return true;
+    }
+    
+    // sprites 50-58の範囲をチェック（炎エフェクト用スプライト）
+    if (spriteId >= 50 && spriteId <= 58) {
+      return true;
+    }
+    
+    // パーツ名による炎エフェクト判定（念のため）
+    if (typeof partName === 'string') {
+      if (partName.includes('炎') || partName.includes('燃え') || partName.includes('こん棒燃え') || partName.includes('攻撃ef')) {
+        return true;
+      }
+    }
+    
+    return false;
+  }
+
+  /**
+   * Unit 044炎エフェクト専用オレンジ化処理
+   * 白い部分はそのままで、黄色い部分のみをオレンジに変換
+   */
+  private createFlameOrangeImage(
+    sourceImage: HTMLImageElement,
+    sx: number, sy: number, sw: number, sh: number
+  ): HTMLCanvasElement {
+    const tempCanvas = document.createElement('canvas');
+    tempCanvas.width = sw;
+    tempCanvas.height = sh;
+    const tempCtx = tempCanvas.getContext('2d');
+    
+    if (!tempCtx) {
+      return tempCanvas;
+    }
+    
+    // 元画像から指定された部分を描画
+    tempCtx.drawImage(sourceImage, sx, sy, sw, sh, 0, 0, sw, sh);
+    
+    // ImageDataを取得
+    const imageData = tempCtx.getImageData(0, 0, sw, sh);
+    const data = imageData.data;
+    
+    // 黄色→オレンジ変換処理（白い部分は保持）
+    for (let i = 0; i < data.length; i += 4) {
+      const r = data[i];
+      const g = data[i + 1];
+      const b = data[i + 2];
+      const a = data[i + 3];
+      
+      if (a === 0) {
+        continue; // 透明ピクセルはスキップ
+      }
+      
+      const luminance = 0.2126 * r + 0.7152 * g + 0.0722 * b;
+      
+      // 黒い部分は透明化（glow処理）- 複数の判定で確実に透明化
+      if (luminance <= 80 || (r <= 50 && g <= 50 && b <= 50)) {
+        data[i + 3] = 0;
+        continue;
+      }
+      
+      // 白い部分（明度240以上）はそのまま保持
+      if (luminance >= 240) {
+        continue;
+      }
+      
+      // 黄色成分の判定：緑が多く、青が少ない = 黄色系
+      const isYellowish = g > r * 0.9 && g > b * 1.3 && r > 150 && g > 150;
+      
+      if (isYellowish) {
+        // 黄色→オレンジ変換（発光強化版）
+        data[i] = Math.min(255, r * 1.3);     // 赤を強化（1.1→1.3）
+        data[i + 1] = Math.min(255, g * 0.85); // 緑を減らす（0.9→0.85）
+        data[i + 2] = Math.min(255, b * 0.7);  // 青を減らす（0.8→0.7）
+      }
+      
+      // 強化された発光効果（明度に応じて）
+      if (luminance > 100) { // 閾値を120→100に下げて適用範囲を拡大
+        const glowFactor = (luminance - 100) / 155; // 0.0-1.0の範囲（分母を155に調整）
+        data[i] = Math.min(255, data[i] + glowFactor * 60);     // 赤発光強化（40→60）
+        data[i + 1] = Math.min(255, data[i + 1] + glowFactor * 40); // 緑発光強化（25→40）
+        data[i + 2] = Math.min(255, data[i + 2] + glowFactor * 15); // 青発光軽め（10→15）
+      }
+      
+      // 超高輝度部分での追加発光ブースト
+      if (luminance > 180) {
+        const superGlowFactor = (luminance - 180) / 75; // 0.0-1.0の範囲
+        data[i] = Math.min(255, data[i] + superGlowFactor * 50);     // 超発光赤
+        data[i + 1] = Math.min(255, data[i + 1] + superGlowFactor * 30); // 超発光緑
+        data[i + 2] = Math.min(255, data[i + 2] + superGlowFactor * 10); // 超発光青
+      }
+    }
+    
+    // 変更したImageDataを描画し直し
+    tempCtx.putImageData(imageData, 0, 0);
+    
+    return tempCanvas;
   }
 
   /**

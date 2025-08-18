@@ -13,7 +13,7 @@ export const E41: GatyaSet = {
        'XP 5,000',              //  10
        'XP 2,000',              // 222
       ],
-      reroll: false,
+      reroll: true,
     },
     {
       rate: 3800,

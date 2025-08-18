@@ -50,10 +50,10 @@ import { Set990 } from './set990'; // 極選抜祭(対トリクシー入り)
 import { Set994 } from './set994'; // 極ネコ祭
 import { Set995 } from './set995'; // プラチケ
 import { Set996 } from './set996'; // レジェチケ
-import { Set997 } from './set997'; // サマーガールズブルーオーシャン
+// import { Set997 } from './set997'; // サマーガールズブルーオーシャン
 // import { Set998 } from './set998'; // エヴァ新世紀
 // import { Set999 } from './set999'; // エヴァ新劇場版
-import { Set1000 } from './set1000'; // マンボウ
+// import { Set1000 } from './set1000'; // マンボウ
 // import { Set1004 } from './set1004'; // エレメントピクシーズ（汎用）
 import { Set1005 } from './set1005'; // エレメントピクシーズ（新規）
 import { Set1006 } from './set1006'; // 超ネコ祭
@@ -66,12 +66,6 @@ import { Set1012 } from './set1012'; // 超国王祭
 
 export const RareGatyaSetList = [
 
-    Set1000, // マンボウ
-
-    Set942, // ダイナマイツ
-    
-    Set997, // サマーガールズブルーオーシャン
-    
     Set946, // ウルトラソウルズ
     Set1010, // サマーガールズサンシャイン
     Set986, // ルガ族 
@@ -96,6 +90,8 @@ export const RareGatyaSetList = [
     // Set943, // バサラーズ
     // Set945, // エンペラーズ
     // Set947, // ダークヒーローズ
+    Set942, // ダイナマイツ
+    
 
     // Set973, // 超国王祭
     // Set861, // 女王祭
@@ -125,10 +121,12 @@ export const RareGatyaSetList = [
     // Set785, // バレンタイン
     // Set968, // ホワイトデー
     // Set875, // イースター
+    // Set997, // サマーガールズブルーオーシャン
 
     // Set977, // バキコラボ
     // Set985, // ソニックコラボ
     // Set998, // エヴァ新世紀
     // Set999, // エヴァ新劇場版
+    // Set1000, // マンボウ
 
 ];

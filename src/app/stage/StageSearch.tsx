@@ -105,25 +105,25 @@ export function StageSearch({ onSearch, loading }: StageSearchProps) {
             className="px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
             style={{flexBasis: '61.8%'}}
           >
-            <option value="34">レジェンドストーリー0</option>
             <option value="13">真レジェンドストーリー</option>
-            <option value="0">レジェンドストーリー</option>
-            <option value="1">イベントステージ</option>
-            <option value="24">強襲ステージ</option>
-            <option value="11">ランキング道場</option>
-            <option value="36">異次元コロシアム</option>
-            <option value="7">にゃんこ塔</option>
+            <option value="14">ネコビタン</option>
             <option value="2">コラボステージ</option>
             <option value="27">コラボ強襲ステージ</option>
-            <option value="25">発掘ステージ</option>
-            <option value="31">超獣討伐</option>
-            <option value="3">メインステージ</option>
-            <option value="14">ネコビタン</option>
             <option value="4">EXステージ</option>
+            <option value="37">にゃんこ道検定</option>
+            <option value="25">発掘ステージ</option>
+            <option value="33">グランドアビス</option>
             <option value="12">チャレンジバトル</option>
+            <option value="0">レジェンドストーリー</option>
+            <option value="34">レジェンドストーリー0</option>
+            <option value="31">超獣討伐</option>
+            <option value="11">ランキング道場</option>
+            <option value="24">強襲ステージ</option>
+            <option value="1">イベントステージ</option>
+            <option value="36">異次元コロシアム</option>
             <option value="6">ネコ道場</option>
-            {/*<option value="16">レジェンドクエスト</option>*/}
-            {/* <option value="33">グランドアビス</option> */}
+            <option value="7">にゃんこ塔</option>
+            <option value="3">メインストーリー</option>
           </select>
         </div>
         

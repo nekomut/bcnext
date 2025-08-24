@@ -11444,6 +11444,1099 @@
       }
     },
     {
+      "eventId": 4000,
+      "eventName": "進化の緑マタタビ",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 0,
+      "prefix": "EX",
+      "stageCount": 3,
+      "stageIds": [0, 1, 2],
+      "stageInfo": {
+        "0": "奇跡の虹マタタビ",
+        "1": "奇跡の虹マタタビ",
+        "2": "奇跡の虹マタタビ"
+      }
+    },
+    {
+      "eventId": 4001,
+      "eventName": "進化の紫マタタビ",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 1,
+      "prefix": "EX",
+      "stageCount": 3,
+      "stageIds": [0, 1, 2],
+      "stageInfo": {
+        "0": "奇跡の虹マタタビ",
+        "1": "奇跡の虹マタタビ",
+        "2": "奇跡の虹マタタビ"
+      }
+    },
+    {
+      "eventId": 4002,
+      "eventName": "進化の赤マタタビ",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 2,
+      "prefix": "EX",
+      "stageCount": 3,
+      "stageIds": [0, 1, 2],
+      "stageInfo": {
+        "0": "奇跡の虹マタタビ",
+        "1": "奇跡の虹マタタビ",
+        "2": "奇跡の虹マタタビ"
+      }
+    },
+    {
+      "eventId": 4003,
+      "eventName": "進化の青マタタビ",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 3,
+      "prefix": "EX",
+      "stageCount": 3,
+      "stageIds": [0, 1, 2],
+      "stageInfo": {
+        "0": "奇跡の虹マタタビ",
+        "1": "奇跡の虹マタタビ",
+        "2": "奇跡の虹マタタビ"
+      }
+    },
+    {
+      "eventId": 4004,
+      "eventName": "進化の黄マタタビ",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 4,
+      "prefix": "EX",
+      "stageCount": 3,
+      "stageIds": [0, 1, 2],
+      "stageInfo": {
+        "0": "奇跡の虹マタタビ",
+        "1": "奇跡の虹マタタビ",
+        "2": "奇跡の虹マタタビ"
+      }
+    },
+    {
+      "eventId": 4005,
+      "eventName": "弱り目に祟り目EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 5,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "暗黒天国 超激ムズ"
+      }
+    },
+    {
+      "eventId": 4006,
+      "eventName": "神判の日EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 6,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "天変地異 超激ムズ"
+      }
+    },
+    {
+      "eventId": 4007,
+      "eventName": "オーバーテクノロジーEX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 7,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "宇宙戦争 超激ムズ"
+      }
+    },
+    {
+      "eventId": 4008,
+      "eventName": "マタタビチャレンジEX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 8,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "紫電一閃 上級"
+      }
+    },
+    {
+      "eventId": 4009,
+      "eventName": "マタタビチャレンジEX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 9,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "紅の情熱 上級"
+      }
+    },
+    {
+      "eventId": 4010,
+      "eventName": "マタタビチャレンジEX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 10,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "蒼の幻惑 上級"
+      }
+    },
+    {
+      "eventId": 4011,
+      "eventName": "マタタビチャレンジEX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 11,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "怪光の煌めき 上級"
+      }
+    },
+    {
+      "eventId": 4012,
+      "eventName": "マタタビチャレンジEX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 12,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "紫電一閃 激ムズ"
+      }
+    },
+    {
+      "eventId": 4013,
+      "eventName": "マタタビチャレンジEX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 13,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "紅の情熱 激ムズ"
+      }
+    },
+    {
+      "eventId": 4014,
+      "eventName": "マタタビチャレンジEX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 14,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "蒼の幻惑 激ムズ"
+      }
+    },
+    {
+      "eventId": 4015,
+      "eventName": "マタタビチャレンジEX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 15,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "怪光の煌めき 激ムズ"
+      }
+    },
+    {
+      "eventId": 4016,
+      "eventName": "マタタビチャレンジEX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 16,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "紫電一閃 超激ムズ"
+      }
+    },
+    {
+      "eventId": 4017,
+      "eventName": "マタタビチャレンジEX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 17,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "紅の情熱 超激ムズ"
+      }
+    },
+    {
+      "eventId": 4018,
+      "eventName": "マタタビチャレンジEX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 18,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "蒼の幻惑 超激ムズ"
+      }
+    },
+    {
+      "eventId": 4019,
+      "eventName": "マタタビチャレンジEX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 19,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "怪光の煌めき 超激ムズ"
+      }
+    },
+    {
+      "eventId": 4020,
+      "eventName": "マタタビチャレンジEX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 20,
+      "prefix": "EX",
+      "stageCount": 3,
+      "stageIds": [0, 1, 2],
+      "stageInfo": {
+        "0": "奇跡の虹マタタビ",
+        "1": "奇跡の虹マタタビ",
+        "2": "奇跡の虹マタタビ"
+      }
+    },
+    {
+      "eventId": 4021,
+      "eventName": "狂乱のもねこ降臨EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 21,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "in MOON"
+      }
+    },
+    {
+      "eventId": 4022,
+      "eventName": "進化の古代マタタビEX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 22,
+      "prefix": "EX",
+      "stageCount": 7,
+      "stageIds": [0, 1, 2, 3, 4, 5, 6],
+      "stageInfo": {
+        "0": "太古の鮮血 極ムズ",
+        "1": "太古の羽音 極ムズ",
+        "2": "太古の黒連星 極ムズ",
+        "3": "太古の天上界 極ムズ",
+        "4": "太古の蒼い悪夢 極ムズ",
+        "5": "太古のメタル採掘所 極ムズ",
+        "6": "太古の死海 極ムズ"
+      }
+    },
+    {
+      "eventId": 4023,
+      "eventName": "協賛BitSummit記念！EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 23,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "One more thing..."
+      }
+    },
+    {
+      "eventId": 4024,
+      "eventName": "協賛BitSummit記念！EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 24,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "One more thing..."
+      }
+    },
+    {
+      "eventId": 4025,
+      "eventName": "進化の虹マタタビ",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 25,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "奇跡の虹彩種 極ムズ"
+      }
+    },
+    {
+      "eventId": 4026,
+      "eventName": "古代研究所",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 26,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "太古の力"
+      }
+    },
+    {
+      "eventId": 4027,
+      "eventName": "終末ノ連戦場EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 27,
+      "prefix": "EX",
+      "stageCount": 2,
+      "stageIds": [0, 1],
+      "stageInfo": {
+        "0": "二の修練 ～明～ 中級",
+        "1": "二の修練 ～暗～ 中級"
+      }
+    },
+    {
+      "eventId": 4028,
+      "eventName": "終末ノ連戦場EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 28,
+      "prefix": "EX",
+      "stageCount": 2,
+      "stageIds": [0, 1],
+      "stageInfo": {
+        "0": "三の修練 ～明～ 上級",
+        "1": "三の修練 ～暗～ 上級"
+      }
+    },
+    {
+      "eventId": 4029,
+      "eventName": "終末ノ連戦場EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 29,
+      "prefix": "EX",
+      "stageCount": 2,
+      "stageIds": [0, 1],
+      "stageInfo": {
+        "0": "四の修練 ～明～ 超上級",
+        "1": "四の修練 ～暗～ 超上級"
+      }
+    },
+    {
+      "eventId": 4030,
+      "eventName": "終末ノ連戦場EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 30,
+      "prefix": "EX",
+      "stageCount": 2,
+      "stageIds": [0, 1],
+      "stageInfo": {
+        "0": "終の修練 ～明～ 超上級",
+        "1": "終の修練 ～暗～ 超上級"
+      }
+    },
+    {
+      "eventId": 4031,
+      "eventName": "終末ノ連戦場EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 31,
+      "prefix": "EX",
+      "stageCount": 2,
+      "stageIds": [0, 1],
+      "stageInfo": {
+        "0": "二の修練 ～明～ 激ムズ",
+        "1": "二の修練 ～暗～ 激ムズ"
+      }
+    },
+    {
+      "eventId": 4032,
+      "eventName": "終末ノ連戦場EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 32,
+      "prefix": "EX",
+      "stageCount": 2,
+      "stageIds": [0, 1],
+      "stageInfo": {
+        "0": "三の修練 ～明～ 超激ムズ",
+        "1": "三の修練 ～暗～ 超激ムズ"
+      }
+    },
+    {
+      "eventId": 4033,
+      "eventName": "終末ノ連戦場EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 33,
+      "prefix": "EX",
+      "stageCount": 2,
+      "stageIds": [0, 1],
+      "stageInfo": {
+        "0": "四の修練 ～明～ 極ムズ",
+        "1": "四の修練 ～暗～ 極ムズ"
+      }
+    },
+    {
+      "eventId": 4034,
+      "eventName": "終末ノ連戦場EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 34,
+      "prefix": "EX",
+      "stageCount": 2,
+      "stageIds": [0, 1],
+      "stageInfo": {
+        "0": "終の修練 ～明～ 極ムズ",
+        "1": "終の修練 ～暗～ 極ムズ"
+      }
+    },
+    {
+      "eventId": 4035,
+      "eventName": "終末ノ連戦場EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 35,
+      "prefix": "EX",
+      "stageCount": 2,
+      "stageIds": [0, 1],
+      "stageInfo": {
+        "0": "二の修練 ～明～ 極ムズ",
+        "1": "二の修練 ～暗～ 極ムズ"
+      }
+    },
+    {
+      "eventId": 4036,
+      "eventName": "終末ノ連戦場EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 36,
+      "prefix": "EX",
+      "stageCount": 2,
+      "stageIds": [0, 1],
+      "stageInfo": {
+        "0": "三の修練 ～明～ 極ムズ",
+        "1": "三の修練 ～暗～ 極ムズ"
+      }
+    },
+    {
+      "eventId": 4037,
+      "eventName": "終末ノ連戦場EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 37,
+      "prefix": "EX",
+      "stageCount": 2,
+      "stageIds": [0, 1],
+      "stageInfo": {
+        "0": "四の修練 ～明～ 超極ムズ",
+        "1": "四の修練 ～暗～ 超極ムズ"
+      }
+    },
+    {
+      "eventId": 4038,
+      "eventName": "終末ノ連戦場EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 38,
+      "prefix": "EX",
+      "stageCount": 2,
+      "stageIds": [0, 1],
+      "stageInfo": {
+        "0": "終の修練 ～明～ 超極ムズ",
+        "1": "終の修練 ～暗～ 超極ムズ"
+      }
+    },
+    {
+      "eventId": 4039,
+      "eventName": "天使と般若EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 39,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "修羅の道 極ムズ"
+      }
+    },
+    {
+      "eventId": 4040,
+      "eventName": "女帝と亡者EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 40,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "死者の行進 極ムズ"
+      }
+    },
+    {
+      "eventId": 4041,
+      "eventName": "伯爵と乙女EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 41,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "バクダン娘 極ムズ"
+      }
+    },
+    {
+      "eventId": 4042,
+      "eventName": "魔界編",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 42,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "富士山"
+      }
+    },
+    {
+      "eventId": 4043,
+      "eventName": "ヒュージゴマ強襲",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 43,
+      "prefix": "EX",
+      "stageCount": 3,
+      "stageIds": [0, 1, 2],
+      "stageInfo": {
+        "0": "起源の樹海 極ムズ",
+        "1": "頂の樹海 超極ムズ",
+        "2": "秘境の樹海 超極ムズ"
+      }
+    },
+    {
+      "eventId": 4044,
+      "eventName": "ジャイアント黒蔵強襲",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 44,
+      "prefix": "EX",
+      "stageCount": 3,
+      "stageIds": [0, 1, 2],
+      "stageInfo": {
+        "0": "起源の樹海 極ムズ",
+        "1": "頂の樹海 超極ムズ",
+        "2": "秘境の樹海 超極ムズ"
+      }
+    },
+    {
+      "eventId": 4045,
+      "eventName": "ギガガガ強襲",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 45,
+      "prefix": "EX",
+      "stageCount": 3,
+      "stageIds": [0, 1, 2],
+      "stageInfo": {
+        "0": "起源の樹海 極ムズ",
+        "1": "頂の樹海 超極ムズ",
+        "2": "秘境の樹海 超極ムズ"
+      }
+    },
+    {
+      "eventId": 4046,
+      "eventName": "デッカーバチャン強襲",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 46,
+      "prefix": "EX",
+      "stageCount": 3,
+      "stageIds": [0, 1, 2],
+      "stageInfo": {
+        "0": "起源の樹海 極ムズ",
+        "1": "頂の樹海 超極ムズ",
+        "2": "秘境の樹海 超極ムズ"
+      }
+    },
+    {
+      "eventId": 4047,
+      "eventName": "時の運EX(天国)",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 47,
+      "prefix": "EX",
+      "stageCount": 5,
+      "stageIds": [0, 1, 2, 3, 4],
+      "stageInfo": {
+        "0": "扉が開いた！天国？地獄？",
+        "1": "扉が開いた！天国？地獄？",
+        "2": "扉が開いた！天国？地獄？",
+        "3": "扉が開いた！天国？地獄？",
+        "4": "扉が開いた！天国？地獄？"
+      }
+    },
+    {
+      "eventId": 4048,
+      "eventName": "時の運EX(地獄)",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 48,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "扉が開いた！天国？地獄？"
+      }
+    },
+    {
+      "eventId": 4049,
+      "eventName": "大天使エクスエル強襲",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 49,
+      "prefix": "EX",
+      "stageCount": 3,
+      "stageIds": [0, 1, 2],
+      "stageInfo": {
+        "0": "起源の樹海 極ムズ",
+        "1": "頂の樹海 超極ムズ",
+        "2": "秘境の樹海 超極ムズ"
+      }
+    },
+    {
+      "eventId": 4050,
+      "eventName": "ビッグペンZ強襲",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 50,
+      "prefix": "EX",
+      "stageCount": 3,
+      "stageIds": [0, 1, 2],
+      "stageInfo": {
+        "0": "起源の樹海 極ムズ",
+        "1": "頂の樹海 超極ムズ",
+        "2": "秘境の樹海 超極ムズ"
+      }
+    },
+    {
+      "eventId": 4051,
+      "eventName": "修学旅行ステージEX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 51,
+      "prefix": "EX",
+      "stageCount": 5,
+      "stageIds": [0, 1, 2, 3, 4],
+      "stageInfo": {
+        "0": "【緊急】あの子からの呼び出し",
+        "1": "【緊急】あの子からの呼び出し",
+        "2": "【緊急】あの子からの呼び出し",
+        "3": "【緊急】あの子からの呼び出し",
+        "4": "【緊急】あの子からの呼び出し"
+      }
+    },
+    {
+      "eventId": 4052,
+      "eventName": "亡者と河豚EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 52,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "リバーピッグプラネット 超極ムズ"
+      }
+    },
+    {
+      "eventId": 4053,
+      "eventName": "女帝と乙女EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 53,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "バクダン娘 極ムズ"
+      }
+    },
+    {
+      "eventId": 4054,
+      "eventName": "伯爵と天使EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 54,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "ネコ補完計画 極ムズ"
+      }
+    },
+    {
+      "eventId": 4055,
+      "eventName": "狂乱のもねこ降臨EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 55,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "in MOON"
+      }
+    },
+    {
+      "eventId": 4056,
+      "eventName": "#02「13日は何曜日」EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 56,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "霧の教会に眠るモノ"
+      }
+    },
+    {
+      "eventId": 4057,
+      "eventName": "お年玉襲来！EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 57,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "幸運！お年玉大襲来！"
+      }
+    },
+    {
+      "eventId": 4058,
+      "eventName": "お年玉襲来！EX(韓国版)",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 58,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "058-00"
+      }
+    },
+    {
+      "eventId": 4059,
+      "eventName": "オーメンズ強襲",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 59,
+      "prefix": "EX",
+      "stageCount": 3,
+      "stageIds": [0, 1, 2],
+      "stageInfo": {
+        "0": "起源の樹海 極ムズ",
+        "1": "頂の樹海 超極ムズ",
+        "2": "秘境の樹海 超極ムズ"
+      }
+    },
+    {
+      "eventId": 4060,
+      "eventName": "狩人の地図ⅣEX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 60,
+      "prefix": "EX",
+      "stageCount": 5,
+      "stageIds": [0, 1, 2, 3, 4],
+      "stageInfo": {
+        "0": "紫獣結晶の密林",
+        "1": "翠獣結晶の砂漠",
+        "2": "紅獣結晶の密林",
+        "3": "蒼獣結晶の砂漠",
+        "4": "黄獣結晶の火山"
+      }
+    },
+    {
+      "eventId": 4061,
+      "eventName": "熱血！リレー大会EX1",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 61,
+      "prefix": "EX",
+      "stageCount": 3,
+      "stageIds": [0, 1, 2],
+      "stageInfo": {
+        "0": "400mリレー  第2走者",
+        "1": "800mリレー 第2走者",
+        "2": "1600mリレー 第2走者"
+      }
+    },
+    {
+      "eventId": 4062,
+      "eventName": "熱血！リレー大会EX2",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 62,
+      "prefix": "EX",
+      "stageCount": 3,
+      "stageIds": [0, 1, 2],
+      "stageInfo": {
+        "0": "400mリレー  アンカー",
+        "1": "800mリレー アンカー",
+        "2": "1600mリレー アンカー"
+      }
+    },
+    {
+      "eventId": 4063,
+      "eventName": "第2章 ツボーン洞窟　EXステージ",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 63,
+      "prefix": "EX",
+      "stageCount": 5,
+      "stageIds": [0, 1, 2, 3, 4],
+      "stageInfo": {
+        "0": "テッテレー！",
+        "1": "テッテレー！",
+        "2": "テッテレー！",
+        "3": "テッテレー！",
+        "4": "テッテレー！"
+      }
+    },
+    {
+      "eventId": 4064,
+      "eventName": "大型土器ダイハニワン強襲",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 64,
+      "prefix": "EX",
+      "stageCount": 3,
+      "stageIds": [0, 1, 2],
+      "stageInfo": {
+        "0": "起源の樹海 極ムズ",
+        "1": "頂の樹海 超極ムズ",
+        "2": "秘境の樹海 超極ムズ"
+      }
+    },
+    {
+      "eventId": 4065,
+      "eventName": "阿亀と赤子EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 65,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "ベビーフェイク 超極ムズ"
+      }
+    },
+    {
+      "eventId": 4066,
+      "eventName": "王子と死霊EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 66,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "最後の死者 超極ムズ"
+      }
+    },
+    {
+      "eventId": 4067,
+      "eventName": "蜜江と聖者EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 67,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "聖おねえさん 超極ムズ"
+      }
+    },
+    {
+      "eventId": 4068,
+      "eventName": "イディ第3進化マップ",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 68,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "神の面を賜りし者"
+      }
+    },
+    {
+      "eventId": 4069,
+      "eventName": "古代賢者マップ",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 69,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "起源の覚醒"
+      }
+    },
+    {
+      "eventId": 4070,
+      "eventName": "天下統一への道 ～前編～EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 70,
+      "prefix": "EX",
+      "stageCount": 10,
+      "stageIds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "stageInfo": {
+        "0": "わんこの乱",
+        "1": "わんこの乱",
+        "2": "わんこの乱",
+        "3": "わんこの乱",
+        "4": "わんこの乱",
+        "5": "わんこの乱",
+        "6": "わんこの乱",
+        "7": "わんこの乱",
+        "8": "わんこの乱",
+        "9": "わんこの乱"
+      }
+    },
+    {
+      "eventId": 4071,
+      "eventName": "天下統一への道 ～後編～EX",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 71,
+      "prefix": "EX",
+      "stageCount": 10,
+      "stageIds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+      "stageInfo": {
+        "0": "わんこの乱",
+        "1": "わんこの乱",
+        "2": "わんこの乱",
+        "3": "わんこの乱",
+        "4": "わんこの乱",
+        "5": "わんこの乱",
+        "6": "わんこの乱",
+        "7": "わんこの乱",
+        "8": "わんこの乱",
+        "9": "わんこの乱"
+      }
+    },
+    {
+      "eventId": 4072,
+      "eventName": "2024年思い出アルバム ２戦目",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 72,
+      "prefix": "EX",
+      "stageCount": 4,
+      "stageIds": [0, 1, 2, 3],
+      "stageInfo": {
+        "0": "春の思い出 2ページ目",
+        "1": "夏の思い出 2ページ目",
+        "2": "秋の思い出 2ページ目",
+        "3": "冬の思い出 2ページ目"
+      }
+    },
+    {
+      "eventId": 4073,
+      "eventName": "2024年思い出アルバム ３戦目",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 73,
+      "prefix": "EX",
+      "stageCount": 4,
+      "stageIds": [0, 1, 2, 3],
+      "stageInfo": {
+        "0": "春の思い出 3ページ目",
+        "1": "夏の思い出 3ページ目",
+        "2": "秋の思い出 3ページ目",
+        "3": "冬の思い出 3ページ目"
+      }
+    },
+    {
+      "eventId": 4074,
+      "eventName": "スカイサンクチュアリ",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 74,
+      "prefix": "EX",
+      "stageCount": 3,
+      "stageIds": [0, 1, 2],
+      "stageInfo": {
+        "0": "ボーナスステージ",
+        "1": "ボーナスステージ",
+        "2": "ボーナスステージ"
+      }
+    },
+    {
+      "eventId": 4075,
+      "eventName": "破天候予報",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 75,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "警戒！雷雨発生"
+      }
+    },
+    {
+      "eventId": 4076,
+      "eventName": "破天候予報",
+      "typeId": 4,
+      "typeName": "EXステージ",
+      "mapId": 76,
+      "prefix": "EX",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "超警戒！巨大暴風雨発生"
+      }
+    },
+    {
       "eventId": 6000,
       "eventName": "初心の間",
       "typeId": 6,
@@ -17618,6 +18711,131 @@
       }
     },
     {
+      "eventId": 33000,
+      "eventName": "地底迷宮 グランドアビス",
+      "typeId": 33,
+      "typeName": "地底迷宮",
+      "mapId": 0,
+      "prefix": "L",
+      "stageCount": 113,
+      "stageIds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112],
+      "stageInfo": {
+        "0": "地底1~9層",
+        "1": "地底1~9層",
+        "2": "地底1~9層",
+        "3": "地底1~9層",
+        "4": "地底1~9層",
+        "5": "地底1~9層",
+        "6": "地底1~9層",
+        "7": "地底1~9層",
+        "8": "地底1~9層",
+        "9": "地底11~19/21~29層",
+        "10": "地底11~19/21~29層",
+        "11": "地底11~19/21~29層",
+        "12": "地底11~19/21~29層",
+        "13": "地底11~19/21~29層",
+        "14": "地底11~19/21~29層",
+        "15": "地底11~19/21~29層",
+        "16": "地底11~19/21~29層",
+        "17": "地底11~19/21~29層",
+        "18": "地底11~19/21~29層",
+        "19": "地底11~19/21~29層",
+        "20": "地底11~19/21~29層",
+        "21": "地底11~19/21~29層",
+        "22": "地底11~19/21~29層",
+        "23": "地底11~19/21~29層",
+        "24": "地底11~19/21~29層",
+        "25": "地底11~19/21~29層",
+        "26": "地底11~19/21~29層",
+        "27": "地底31~39/41~49/51~59層",
+        "28": "地底31~39/41~49/51~59層",
+        "29": "地底31~39/41~49/51~59層",
+        "30": "地底31~39/41~49/51~59層",
+        "31": "地底31~39/41~49/51~59層",
+        "32": "地底31~39/41~49/51~59層",
+        "33": "地底31~39/41~49/51~59層",
+        "34": "地底31~39/41~49/51~59層",
+        "35": "地底31~39/41~49/51~59層",
+        "36": "地底31~39/41~49/51~59層",
+        "37": "地底31~39/41~49/51~59層",
+        "38": "地底31~39/41~49/51~59層",
+        "39": "地底31~39/41~49/51~59層",
+        "40": "地底31~39/41~49/51~59層",
+        "41": "地底31~39/41~49/51~59層",
+        "42": "地底31~39/41~49/51~59層",
+        "43": "地底31~39/41~49/51~59層",
+        "44": "地底31~39/41~49/51~59層",
+        "45": "地底31~39/41~49/51~59層",
+        "46": "地底31~39/41~49/51~59層",
+        "47": "地底31~39/41~49/51~59層",
+        "48": "地底31~39/41~49/51~59層",
+        "49": "地底31~39/41~49/51~59層",
+        "50": "地底31~39/41~49/51~59層",
+        "51": "地底31~39/41~49/51~59層",
+        "52": "地底31~39/41~49/51~59層",
+        "53": "地底31~39/41~49/51~59層",
+        "54": "地底61~69/71~79/81~89/91~98層",
+        "55": "地底61~69/71~79/81~89/91~98層",
+        "56": "地底61~69/71~79/81~89/91~98層",
+        "57": "地底61~69/71~79/81~89/91~98層",
+        "58": "地底61~69/71~79/81~89/91~98層",
+        "59": "地底61~69/71~79/81~89/91~98層",
+        "60": "地底61~69/71~79/81~89/91~98層",
+        "61": "地底61~69/71~79/81~89/91~98層",
+        "62": "地底61~69/71~79/81~89/91~98層",
+        "63": "地底61~69/71~79/81~89/91~98層",
+        "64": "地底61~69/71~79/81~89/91~98層",
+        "65": "地底61~69/71~79/81~89/91~98層",
+        "66": "地底61~69/71~79/81~89/91~98層",
+        "67": "地底61~69/71~79/81~89/91~98層",
+        "68": "地底61~69/71~79/81~89/91~98層",
+        "69": "地底61~69/71~79/81~89/91~98層",
+        "70": "地底61~69/71~79/81~89/91~98層",
+        "71": "地底61~69/71~79/81~89/91~98層",
+        "72": "地底61~69/71~79/81~89/91~98層",
+        "73": "地底61~69/71~79/81~89/91~98層",
+        "74": "地底61~69/71~79/81~89/91~98層",
+        "75": "地底61~69/71~79/81~89/91~98層",
+        "76": "地底61~69/71~79/81~89/91~98層",
+        "77": "地底61~69/71~79/81~89/91~98層",
+        "78": "地底61~69/71~79/81~89/91~98層",
+        "79": "地底61~69/71~79/81~89/91~98層",
+        "80": "地底61~69/71~79/81~89/91~98層",
+        "81": "地底61~69/71~79/81~89/91~98層",
+        "82": "地底61~69/71~79/81~89/91~98層",
+        "83": "地底61~69/71~79/81~89/91~98層",
+        "84": "地底61~69/71~79/81~89/91~98層",
+        "85": "地底61~69/71~79/81~89/91~98層",
+        "86": "地底61~69/71~79/81~89/91~98層",
+        "87": "地底61~69/71~79/81~89/91~98層",
+        "88": "地底61~69/71~79/81~89/91~98層",
+        "89": "地底61~69/71~79/81~89/91~98層",
+        "90": "地底10層",
+        "91": "地底10層",
+        "92": "地底10層",
+        "93": "地底10層",
+        "94": "地底20/30層",
+        "95": "地底20/30層",
+        "96": "地底20/30層",
+        "97": "地底20/30層",
+        "98": "地底40/50/60層",
+        "99": "地底40/50/60層",
+        "100": "地底40/50/60層",
+        "101": "地底40/50/60層",
+        "102": "地底40/50/60層",
+        "103": "地底40/50/60層",
+        "104": "地底70/80/90/99層",
+        "105": "地底70/80/90/99層",
+        "106": "地底70/80/90/99層",
+        "107": "地底70/80/90/99層",
+        "108": "地底70/80/90/99層",
+        "109": "地底70/80/90/99層",
+        "110": "地底70/80/90/99層",
+        "111": "地底70/80/90/99層",
+        "112": "最深部100層"
+      }
+    },
+    {
       "eventId": 34000,
       "eventName": "ゼロフィールド",
       "typeId": 34,
@@ -18280,8 +19498,181 @@
         "3": "Round 4",
         "4": "Round 5"
       }
+    },
+    {
+      "eventId": 37000,
+      "eventName": "にゃんこ道検定 初段",
+      "typeId": 37,
+      "typeName": "にゃんこ道検定",
+      "mapId": 0,
+      "prefix": "G",
+      "stageCount": 3,
+      "stageIds": [0, 1, 2],
+      "stageInfo": {
+        "0": "昇段試験１",
+        "1": "昇段試験２",
+        "2": "昇段試験３"
+      }
+    },
+    {
+      "eventId": 37001,
+      "eventName": "にゃんこ道検定 二段",
+      "typeId": 37,
+      "typeName": "にゃんこ道検定",
+      "mapId": 1,
+      "prefix": "G",
+      "stageCount": 3,
+      "stageIds": [0, 1, 2],
+      "stageInfo": {
+        "0": "昇段試験１",
+        "1": "昇段試験２",
+        "2": "昇段試験３"
+      }
+    },
+    {
+      "eventId": 37002,
+      "eventName": "にゃんこ道検定 三段",
+      "typeId": 37,
+      "typeName": "にゃんこ道検定",
+      "mapId": 2,
+      "prefix": "G",
+      "stageCount": 2,
+      "stageIds": [0, 1],
+      "stageInfo": {
+        "0": "昇段試験１",
+        "1": "昇段試験２"
+      }
+    },
+    {
+      "eventId": 37003,
+      "eventName": "にゃんこ道検定 四段",
+      "typeId": 37,
+      "typeName": "にゃんこ道検定",
+      "mapId": 3,
+      "prefix": "G",
+      "stageCount": 2,
+      "stageIds": [0, 1],
+      "stageInfo": {
+        "0": "昇段試験１",
+        "1": "昇段試験２"
+      }
+    },
+    {
+      "eventId": 37004,
+      "eventName": "にゃんこ道検定 五段",
+      "typeId": 37,
+      "typeName": "にゃんこ道検定",
+      "mapId": 4,
+      "prefix": "G",
+      "stageCount": 3,
+      "stageIds": [0, 1, 2],
+      "stageInfo": {
+        "0": "昇段試験１",
+        "1": "昇段試験２",
+        "2": "昇段試験３"
+      }
+    },
+    {
+      "eventId": 37005,
+      "eventName": "にゃんこ道検定 六段",
+      "typeId": 37,
+      "typeName": "にゃんこ道検定",
+      "mapId": 5,
+      "prefix": "G",
+      "stageCount": 2,
+      "stageIds": [0, 1],
+      "stageInfo": {
+        "0": "昇段試験１",
+        "1": "昇段試験２"
+      }
+    },
+    {
+      "eventId": 37006,
+      "eventName": "にゃんこ道検定 七段",
+      "typeId": 37,
+      "typeName": "にゃんこ道検定",
+      "mapId": 6,
+      "prefix": "G",
+      "stageCount": 2,
+      "stageIds": [0, 1],
+      "stageInfo": {
+        "0": "昇段試験１",
+        "1": "昇段試験２"
+      }
+    },
+    {
+      "eventId": 37007,
+      "eventName": "にゃんこ道検定 八段",
+      "typeId": 37,
+      "typeName": "にゃんこ道検定",
+      "mapId": 7,
+      "prefix": "G",
+      "stageCount": 3,
+      "stageIds": [0, 1, 2],
+      "stageInfo": {
+        "0": "昇段試験１",
+        "1": "昇段試験２",
+        "2": "昇段試験３"
+      }
+    },
+    {
+      "eventId": 37008,
+      "eventName": "にゃんこ道検定 九段",
+      "typeId": 37,
+      "typeName": "にゃんこ道検定",
+      "mapId": 8,
+      "prefix": "G",
+      "stageCount": 3,
+      "stageIds": [0, 1, 2],
+      "stageInfo": {
+        "0": "昇段試験１",
+        "1": "昇段試験２",
+        "2": "昇段試験３"
+      }
+    },
+    {
+      "eventId": 37009,
+      "eventName": "にゃんこ道検定 十段",
+      "typeId": 37,
+      "typeName": "にゃんこ道検定",
+      "mapId": 9,
+      "prefix": "G",
+      "stageCount": 1,
+      "stageIds": [0],
+      "stageInfo": {
+        "0": "昇段試験"
+      }
+    },
+    {
+      "eventId": 37010,
+      "eventName": "にゃんこ道検定 十一段",
+      "typeId": 37,
+      "typeName": "にゃんこ道検定",
+      "mapId": 10,
+      "prefix": "G",
+      "stageCount": 2,
+      "stageIds": [0, 1],
+      "stageInfo": {
+        "0": "昇段試験１",
+        "1": "昇段試験２"
+      }
+    },
+    {
+      "eventId": 37011,
+      "eventName": "にゃんこ道検定 十二段",
+      "typeId": 37,
+      "typeName": "にゃんこ道検定",
+      "mapId": 11,
+      "prefix": "G",
+      "stageCount": 3,
+      "stageIds": [0, 1, 2],
+      "stageInfo": {
+        "0": "昇段試験１",
+        "1": "昇段試験２",
+        "2": "昇段試験３"
+      }
     }
   ],
-  "totalEvents": 1072,
-  "totalStages": 5417
+  "totalEvents": 1162,
+  "totalStages": 5728
 }

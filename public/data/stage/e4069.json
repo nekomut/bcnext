@@ -1,0 +1,509 @@
+{
+  "eventId": 4069,
+  "eventName": "古代賢者マップ",
+  "typeId": 4,
+  "typeName": "EXステージ",
+  "prefix": "EX",
+  "mapId": 69,
+  "specialRule": null,
+  "crownData": {
+    "crownCount": 1,
+    "magnifications": [100],
+    "baseDifficulty": 1
+  },
+  "stages": [
+    {
+      "stageId": 0,
+      "stageName": "起源の覚醒",
+      "baseHp": "3000000",
+      "width": "4000",
+      "enemyLimit": "10",
+      "requiredCost": "0",
+      "costLimits": {
+        "lower": "0",
+        "upper": "0"
+      },
+      "crownData": {
+        "crownCount": 1,
+        "magnifications": [100],
+        "baseDifficulty": 1
+      },
+      "treasures": [],
+      "enemies": [
+        {
+          "enemyId": "632",
+          "enemyName": "ダミー",
+          "traits": [],
+          "baseStats": {
+            "hp": 3000000,
+            "ap": 0,
+            "dps": 0,
+            "speed": 0,
+            "range": 0,
+            "rangeType": "単体",
+            "kbLevel": 0,
+            "money": 0,
+            "freq": 1,
+            "foreswing": 1,
+            "backswing": 0,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 3000000,
+            "actualAp": 0,
+            "actualDps": 0,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "0.1s",
+            "spawnTimeFrames": "2f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "immune-waves": {
+              "raw_columns": 37,
+              "enabled": true
+            },
+            "immune-knockback": {
+              "raw_columns": 39,
+              "enabled": true
+            },
+            "immune-freeze": {
+              "raw_columns": 40,
+              "enabled": true
+            },
+            "immune-slow": {
+              "raw_columns": 41,
+              "enabled": true
+            },
+            "immune-weaken": {
+              "raw_columns": 42,
+              "enabled": true
+            },
+            "immune-surge": {
+              "raw_columns": 85,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "699",
+          "enemyName": "生命の賢者Dr.ノーヴァ",
+          "traits": ["古"],
+          "baseStats": {
+            "hp": 5000000,
+            "ap": 99999,
+            "dps": 13698.49,
+            "speed": 7,
+            "range": 350,
+            "rangeType": "範囲",
+            "kbLevel": 8,
+            "money": 9999,
+            "freq": 219,
+            "foreswing": 60,
+            "backswing": 71,
+            "tba": 80
+          },
+          "stageStats": {
+            "actualHp": 5000000,
+            "actualAp": 99999,
+            "actualDps": 13698.49,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "5.3s",
+            "spawnTimeFrames": "160f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": true
+          },
+          "abilities": {
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 250,
+              "ld_range": [250, 650]
+            },
+            "slow": {
+              "raw_columns": [23, 24],
+              "chance": 100,
+              "duration_f": 200,
+              "duration_s": 6.67
+            },
+            "curse": {
+              "raw_columns": [73, 74],
+              "chance": 100,
+              "duration_f": 999,
+              "duration_s": 33.3
+            },
+            "explosion": {
+              "raw_columns": [106, 107],
+              "chance": 100,
+              "range": 350
+            },
+            "sage": {
+              "raw_columns": 104,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "407",
+          "enemyName": "古代わんこ",
+          "traits": ["古"],
+          "baseStats": {
+            "hp": 75000,
+            "ap": 12000,
+            "dps": 8571.43,
+            "speed": 20,
+            "range": 120,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 42,
+            "foreswing": 4,
+            "backswing": 38,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 112500,
+            "actualAp": 18000,
+            "actualDps": 12857.15,
+            "magnification": "150%",
+            "count": "5",
+            "spawnTime": "10.0s",
+            "spawnTimeFrames": "300f",
+            "delay": "26.7-30.0s",
+            "delayFrames": "800-900f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "curse": {
+              "raw_columns": [73, 74],
+              "chance": 35,
+              "duration_f": 100,
+              "duration_s": 3.33
+            }
+          }
+        },
+        {
+          "enemyId": "412",
+          "enemyName": "イングリッス",
+          "traits": ["古"],
+          "baseStats": {
+            "hp": 50000,
+            "ap": 12500,
+            "dps": 28846.15,
+            "speed": 40,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 5,
+            "money": 50,
+            "freq": 13,
+            "foreswing": 6,
+            "backswing": 7,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 75000,
+            "actualAp": 18750,
+            "actualDps": 43269.22,
+            "magnification": "150%",
+            "count": "3",
+            "spawnTime": "16.7s",
+            "spawnTimeFrames": "500f",
+            "delay": "30.0-33.3s",
+            "delayFrames": "900-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "curse": {
+              "raw_columns": [73, 74],
+              "chance": 100,
+              "duration_f": 150,
+              "duration_s": 5.0
+            }
+          }
+        },
+        {
+          "enemyId": "607",
+          "enemyName": "オオウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 65000,
+            "ap": 9000,
+            "dps": 6279.07,
+            "speed": 22,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 43,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 130000,
+            "actualAp": 18000,
+            "actualDps": 12558.14,
+            "magnification": "200%",
+            "count": "2",
+            "spawnTime": "20.0s",
+            "spawnTimeFrames": "600f",
+            "delay": "66.7-100.0s",
+            "delayFrames": "2,000-3,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [4500, 4500],
+              "timings": [12, 14]
+            },
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 1,
+              "ld_range": [1, 151]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 30
+            },
+            "colossus": {
+              "raw_columns": 94,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "607",
+          "enemyName": "オオウサ銀",
+          "traits": ["赤"],
+          "baseStats": {
+            "hp": 65000,
+            "ap": 9000,
+            "dps": 6279.07,
+            "speed": 22,
+            "range": 150,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 200,
+            "freq": 43,
+            "foreswing": 12,
+            "backswing": 10,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 130000,
+            "actualAp": 18000,
+            "actualDps": 12558.14,
+            "magnification": "200%",
+            "count": "2",
+            "spawnTime": "36.7s",
+            "spawnTimeFrames": "1,100f",
+            "delay": "26.7-33.3s",
+            "delayFrames": "800-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "multi-hit": {
+              "raw_columns": [3, 55, 56],
+              "hits": [4500, 4500],
+              "timings": [12, 14]
+            },
+            "long-distance": {
+              "raw_columns": [35, 36],
+              "standing_range": 1,
+              "ld_range": [1, 151]
+            },
+            "knockback": {
+              "raw_columns": 20,
+              "chance": 30
+            },
+            "colossus": {
+              "raw_columns": 94,
+              "enabled": true
+            }
+          }
+        },
+        {
+          "enemyId": "414",
+          "enemyName": "超町長",
+          "traits": [
+            "浮",
+            "古"
+          ],
+          "baseStats": {
+            "hp": 800000,
+            "ap": 11111,
+            "dps": 3787.84,
+            "speed": 20,
+            "range": 340,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1500,
+            "freq": 88,
+            "foreswing": 34,
+            "backswing": 54,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 800000,
+            "actualAp": 11111,
+            "actualDps": 3787.84,
+            "magnification": "100%",
+            "count": "2",
+            "spawnTime": "53.3s",
+            "spawnTimeFrames": "1,600f",
+            "delay": "146.7-146.7s",
+            "delayFrames": "4,400-4,400f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "omni-strike": {
+              "raw_columns": [35, 36],
+              "standing_range": 440,
+              "omni_range": [
+                -440,
+                440
+              ]
+            },
+            "curse": {
+              "raw_columns": [73, 74],
+              "chance": 100,
+              "duration_f": 60,
+              "duration_s": 2.0
+            }
+          }
+        },
+        {
+          "enemyId": "413",
+          "enemyName": "コライノくん",
+          "traits": ["古"],
+          "baseStats": {
+            "hp": 2400000,
+            "ap": 12000,
+            "dps": 30000.0,
+            "speed": 4,
+            "range": 80,
+            "rangeType": "範囲",
+            "kbLevel": 1,
+            "money": 1000,
+            "freq": 12,
+            "foreswing": 6,
+            "backswing": 6,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 2400000,
+            "actualAp": 12000,
+            "actualDps": 30000.0,
+            "magnification": "100%",
+            "count": "1",
+            "spawnTime": "120.0s",
+            "spawnTimeFrames": "3,600f",
+            "delay": "0.1-0.1s",
+            "delayFrames": "2-2f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "curse": {
+              "raw_columns": [73, 74],
+              "chance": 100,
+              "duration_f": 300,
+              "duration_s": 10.0
+            }
+          }
+        },
+        {
+          "enemyId": "407",
+          "enemyName": "古代わんこ",
+          "traits": ["古"],
+          "baseStats": {
+            "hp": 75000,
+            "ap": 12000,
+            "dps": 8571.43,
+            "speed": 20,
+            "range": 120,
+            "rangeType": "範囲",
+            "kbLevel": 3,
+            "money": 100,
+            "freq": 42,
+            "foreswing": 4,
+            "backswing": 38,
+            "tba": 15
+          },
+          "stageStats": {
+            "actualHp": 112500,
+            "actualAp": 18000,
+            "actualDps": 12857.15,
+            "magnification": "150%",
+            "count": "0",
+            "spawnTime": "120.0s",
+            "spawnTimeFrames": "3,600f",
+            "delay": "40.0-43.3s",
+            "delayFrames": "1,200-1,300f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "curse": {
+              "raw_columns": [73, 74],
+              "chance": 35,
+              "duration_f": 100,
+              "duration_s": 3.33
+            }
+          }
+        },
+        {
+          "enemyId": "412",
+          "enemyName": "イングリッス",
+          "traits": ["古"],
+          "baseStats": {
+            "hp": 50000,
+            "ap": 12500,
+            "dps": 28846.15,
+            "speed": 40,
+            "range": 110,
+            "rangeType": "単体",
+            "kbLevel": 5,
+            "money": 50,
+            "freq": 13,
+            "foreswing": 6,
+            "backswing": 7,
+            "tba": 0
+          },
+          "stageStats": {
+            "actualHp": 75000,
+            "actualAp": 18750,
+            "actualDps": 43269.22,
+            "magnification": "150%",
+            "count": "0",
+            "spawnTime": "126.7s",
+            "spawnTimeFrames": "3,800f",
+            "delay": "50.0-56.7s",
+            "delayFrames": "1,500-1,700f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {
+            "curse": {
+              "raw_columns": [73, 74],
+              "chance": 100,
+              "duration_f": 150,
+              "duration_s": 5.0
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

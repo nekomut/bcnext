@@ -276,7 +276,6 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
         {stageData.stages.length > 1 && (
           <div className="px-1 pb-1">
             <div className="flex items-center gap-2">
-              <label className="text-xs font-medium text-gray-700">ステージ選択:</label>
               <div className="flex flex-wrap gap-1">
               {stageData.stages.map((stage, index) => (
                 <button
@@ -288,7 +287,7 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
                       : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50 hover:border-gray-400'
                   }`}
                 >
-                  <span className="font-mono">{index + 1}</span>: {stage.stageName}
+                  <span className="font-mono">{stage.stageId}</span>: {stage.stageName}
                 </button>
               ))}
               </div>

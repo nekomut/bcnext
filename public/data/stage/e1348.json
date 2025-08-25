@@ -270,7 +270,7 @@
             "delay": "900.0-900.0s",
             "delayFrames": "27,000-27,000f",
             "baseHpRatio": "99%",
-            "isBoss": false
+            "isBoss": true
           },
           "abilities": {
             "multi-hit": {
@@ -732,7 +732,7 @@
             "delay": "0.1-0.1s",
             "delayFrames": "2-2f",
             "baseHpRatio": "100%",
-            "isBoss": false
+            "isBoss": true
           },
           "abilities": {
             "multi-hit": {
@@ -1084,7 +1084,7 @@
             "delay": "0.1-0.1s",
             "delayFrames": "2-2f",
             "baseHpRatio": "100%",
-            "isBoss": false
+            "isBoss": true
           },
           "abilities": {
             "multi-hit": {
@@ -1551,7 +1551,7 @@
             "delay": "0.1-0.1s",
             "delayFrames": "2-2f",
             "baseHpRatio": "99%",
-            "isBoss": false
+            "isBoss": true
           },
           "abilities": {
             "multi-hit": {

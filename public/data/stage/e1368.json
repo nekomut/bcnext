@@ -115,10 +115,10 @@
         },
         {
           "enemyId": "186",
-          "enemyName": "1億DL記念ケーキわんこ",
+          "enemyName": "1億1000万DL記念ケーキわんこ",
           "traits": ["メ"],
           "baseStats": {
-            "hp": 100,
+            "hp": 30,
             "ap": 1,
             "dps": 0.6,
             "speed": 4,
@@ -132,7 +132,7 @@
             "tba": 0
           },
           "stageStats": {
-            "actualHp": 100,
+            "actualHp": 30,
             "actualAp": 1,
             "actualDps": 0.6,
             "magnification": "100%",
@@ -174,6 +174,39 @@
             "spawnTimeFrames": "0f",
             "delay": "2.0-33.3s",
             "delayFrames": "60-1,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "021",
+          "enemyName": "カンバン娘",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 10000,
+            "ap": 1,
+            "dps": 0.05,
+            "speed": 4,
+            "range": 800,
+            "rangeType": "単体",
+            "kbLevel": 10000,
+            "money": 1,
+            "freq": 607,
+            "foreswing": 8,
+            "backswing": 6,
+            "tba": 300
+          },
+          "stageStats": {
+            "actualHp": 120000,
+            "actualAp": 12,
+            "actualDps": 0.6,
+            "magnification": "1200%",
+            "count": "0",
+            "spawnTime": "900.0s",
+            "spawnTimeFrames": "27,000f",
+            "delay": "900.0-900.0s",
+            "delayFrames": "27,000-27,000f",
             "baseHpRatio": "100%",
             "isBoss": false
           },

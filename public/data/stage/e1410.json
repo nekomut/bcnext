@@ -78,7 +78,7 @@
             "money": 1,
             "freq": 569,
             "foreswing": 190,
-            "backswing": -174,
+            "backswing": -189,
             "tba": 190
           },
           "stageStats": {
@@ -111,7 +111,7 @@
             "money": 1,
             "freq": 569,
             "foreswing": 190,
-            "backswing": -174,
+            "backswing": -189,
             "tba": 190
           },
           "stageStats": {
@@ -144,7 +144,7 @@
             "money": 650,
             "freq": 23,
             "foreswing": 8,
-            "backswing": 8,
+            "backswing": 10,
             "tba": 8
           },
           "stageStats": {
@@ -169,21 +169,21 @@
           "baseStats": {
             "hp": 1300,
             "ap": 80,
-            "dps": 141.18,
+            "dps": 100.0,
             "speed": 11,
             "range": 150,
             "rangeType": "単体",
             "kbLevel": 3,
             "money": 450,
-            "freq": 17,
+            "freq": 24,
             "foreswing": 8,
-            "backswing": 8,
+            "backswing": 16,
             "tba": 5
           },
           "stageStats": {
             "actualHp": 31200,
             "actualAp": 1920,
-            "actualDps": 3388.32,
+            "actualDps": 2400.0,
             "magnification": "2400%",
             "count": "1",
             "spawnTime": "13.3s",
@@ -251,21 +251,21 @@
           "baseStats": {
             "hp": 1300,
             "ap": 80,
-            "dps": 141.18,
+            "dps": 100.0,
             "speed": 11,
             "range": 150,
             "rangeType": "単体",
             "kbLevel": 3,
             "money": 450,
-            "freq": 17,
+            "freq": 24,
             "foreswing": 8,
-            "backswing": 8,
+            "backswing": 16,
             "tba": 5
           },
           "stageStats": {
             "actualHp": 31200,
             "actualAp": 1920,
-            "actualDps": 3388.32,
+            "actualDps": 2400.0,
             "magnification": "2400%",
             "count": "0",
             "spawnTime": "46.7s",
@@ -292,7 +292,7 @@
             "money": 650,
             "freq": 23,
             "foreswing": 8,
-            "backswing": 8,
+            "backswing": 10,
             "tba": 8
           },
           "stageStats": {
@@ -378,7 +378,7 @@
             "money": 1,
             "freq": 569,
             "foreswing": 190,
-            "backswing": -174,
+            "backswing": -189,
             "tba": 190
           },
           "stageStats": {
@@ -411,7 +411,7 @@
             "money": 1,
             "freq": 569,
             "foreswing": 190,
-            "backswing": -174,
+            "backswing": -189,
             "tba": 190
           },
           "stageStats": {
@@ -444,7 +444,7 @@
             "money": 300,
             "freq": 72,
             "foreswing": 25,
-            "backswing": -9,
+            "backswing": 14,
             "tba": 24
           },
           "stageStats": {
@@ -504,21 +504,21 @@
           "baseStats": {
             "hp": 9000,
             "ap": 5000,
-            "dps": 9375.0,
+            "dps": 3658.54,
             "speed": 20,
             "range": 140,
             "rangeType": "単体",
             "kbLevel": 2,
             "money": 700,
-            "freq": 16,
+            "freq": 41,
             "foreswing": 17,
-            "backswing": -1,
+            "backswing": 24,
             "tba": 0
           },
           "stageStats": {
             "actualHp": 90000,
             "actualAp": 50000,
-            "actualDps": 93750.0,
+            "actualDps": 36585.4,
             "magnification": "1000%",
             "count": "0",
             "spawnTime": "13.3s",
@@ -537,21 +537,21 @@
           "baseStats": {
             "hp": 75000,
             "ap": 12000,
-            "dps": 10909.09,
+            "dps": 8571.43,
             "speed": 20,
             "range": 120,
             "rangeType": "範囲",
             "kbLevel": 3,
             "money": 100,
-            "freq": 33,
+            "freq": 42,
             "foreswing": 4,
-            "backswing": 12,
+            "backswing": 38,
             "tba": 15
           },
           "stageStats": {
             "actualHp": 75000,
             "actualAp": 12000,
-            "actualDps": 10909.09,
+            "actualDps": 8571.43,
             "magnification": "100%",
             "count": "1",
             "spawnTime": "0.0s",
@@ -585,7 +585,7 @@
             "money": 300,
             "freq": 72,
             "foreswing": 25,
-            "backswing": -9,
+            "backswing": 14,
             "tba": 24
           },
           "stageStats": {
@@ -648,21 +648,21 @@
           "baseStats": {
             "hp": 800000,
             "ap": 11111,
-            "dps": 10100.91,
+            "dps": 3787.84,
             "speed": 20,
             "range": 340,
             "rangeType": "範囲",
             "kbLevel": 1,
             "money": 1500,
-            "freq": 33,
+            "freq": 88,
             "foreswing": 34,
-            "backswing": -18,
+            "backswing": 54,
             "tba": 0
           },
           "stageStats": {
             "actualHp": 800000,
             "actualAp": 11111,
-            "actualDps": 10100.91,
+            "actualDps": 3787.84,
             "magnification": "100%",
             "count": "1",
             "spawnTime": "3.3s",

@@ -41,7 +41,7 @@
       "enemies": [
         {
           "enemyId": "739",
-          "enemyName": "停止木人城",
+          "enemyName": "ダミー",
           "traits": [],
           "baseStats": {
             "hp": 100,

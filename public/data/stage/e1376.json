@@ -653,7 +653,7 @@
             "delay": "26.7-30.0s",
             "delayFrames": "800-900f",
             "baseHpRatio": "100%",
-            "isBoss": false
+            "isBoss": true
           },
           "abilities": {
             "immune-waves": {

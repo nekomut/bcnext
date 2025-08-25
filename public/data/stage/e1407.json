@@ -70,21 +70,21 @@
           "baseStats": {
             "hp": 200,
             "ap": 20,
-            "dps": 20.69,
+            "dps": 20.0,
             "speed": 10,
             "range": 110,
             "rangeType": "単体",
             "kbLevel": 1,
             "money": 75,
-            "freq": 29,
+            "freq": 30,
             "foreswing": 10,
-            "backswing": 6,
+            "backswing": 20,
             "tba": 10
           },
           "stageStats": {
             "actualHp": 200,
             "actualAp": 20,
-            "actualDps": 20.69,
+            "actualDps": 20.0,
             "magnification": "100%",
             "count": "6",
             "spawnTime": "10.0s",
@@ -103,21 +103,21 @@
           "baseStats": {
             "hp": 200,
             "ap": 20,
-            "dps": 20.69,
+            "dps": 20.0,
             "speed": 10,
             "range": 110,
             "rangeType": "単体",
             "kbLevel": 1,
             "money": 75,
-            "freq": 29,
+            "freq": 30,
             "foreswing": 10,
-            "backswing": 6,
+            "backswing": 20,
             "tba": 10
           },
           "stageStats": {
             "actualHp": 200,
             "actualAp": 20,
-            "actualDps": 20.69,
+            "actualDps": 20.0,
             "magnification": "100%",
             "count": "0",
             "spawnTime": "8.0s",
@@ -144,7 +144,7 @@
             "money": 400,
             "freq": 73,
             "foreswing": 14,
-            "backswing": 2,
+            "backswing": 8,
             "tba": 30
           },
           "stageStats": {
@@ -177,7 +177,7 @@
             "money": 650,
             "freq": 23,
             "foreswing": 8,
-            "backswing": 8,
+            "backswing": 10,
             "tba": 8
           },
           "stageStats": {
@@ -190,6 +190,39 @@
             "spawnTimeFrames": "1,600f",
             "delay": "2.0-6.0s",
             "delayFrames": "60-180f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "021",
+          "enemyName": "カンバン娘",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 10000,
+            "ap": 1,
+            "dps": 0.05,
+            "speed": 4,
+            "range": 800,
+            "rangeType": "単体",
+            "kbLevel": 10000,
+            "money": 1,
+            "freq": 607,
+            "foreswing": 8,
+            "backswing": 6,
+            "tba": 300
+          },
+          "stageStats": {
+            "actualHp": 10000,
+            "actualAp": 1,
+            "actualDps": 0.05,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "900.0s",
+            "spawnTimeFrames": "27,000f",
+            "delay": "900.0-900.0s",
+            "delayFrames": "27,000-27,000f",
             "baseHpRatio": "100%",
             "isBoss": false
           },
@@ -362,7 +395,7 @@
             "money": 650,
             "freq": 23,
             "foreswing": 8,
-            "backswing": 8,
+            "backswing": 10,
             "tba": 8
           },
           "stageStats": {
@@ -387,21 +420,21 @@
           "baseStats": {
             "hp": 4000,
             "ap": 250,
-            "dps": 441.18,
+            "dps": 208.33,
             "speed": 20,
             "range": 160,
             "rangeType": "単体",
             "kbLevel": 1,
             "money": 1400,
-            "freq": 17,
+            "freq": 36,
             "foreswing": 2,
-            "backswing": 0,
+            "backswing": 20,
             "tba": 1
           },
           "stageStats": {
             "actualHp": 6000,
             "actualAp": 375,
-            "actualDps": 661.77,
+            "actualDps": 312.5,
             "magnification": "150%",
             "count": "1",
             "spawnTime": "36.7s",
@@ -428,7 +461,7 @@
             "money": 650,
             "freq": 23,
             "foreswing": 8,
-            "backswing": 8,
+            "backswing": 10,
             "tba": 8
           },
           "stageStats": {
@@ -509,6 +542,39 @@
             "delayFrames": "60-180f",
             "baseHpRatio": "99%",
             "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "021",
+          "enemyName": "カンバン娘",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 10000,
+            "ap": 1,
+            "dps": 0.05,
+            "speed": 4,
+            "range": 800,
+            "rangeType": "単体",
+            "kbLevel": 10000,
+            "money": 1,
+            "freq": 607,
+            "foreswing": 8,
+            "backswing": 6,
+            "tba": 300
+          },
+          "stageStats": {
+            "actualHp": 10000,
+            "actualAp": 1,
+            "actualDps": 0.05,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "900.0s",
+            "spawnTimeFrames": "27,000f",
+            "delay": "900.0-900.0s",
+            "delayFrames": "27,000-27,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
           },
           "abilities": {}
         }
@@ -613,7 +679,7 @@
             "money": 150,
             "freq": 53,
             "foreswing": 14,
-            "backswing": 2,
+            "backswing": 8,
             "tba": 20
           },
           "stageStats": {
@@ -671,21 +737,21 @@
           "baseStats": {
             "hp": 40000,
             "ap": 400,
-            "dps": 750.0,
+            "dps": 545.45,
             "speed": 8,
             "range": 160,
             "rangeType": "範囲",
             "kbLevel": 4,
             "money": 600,
-            "freq": 16,
+            "freq": 22,
             "foreswing": 14,
-            "backswing": 2,
+            "backswing": 8,
             "tba": 0
           },
           "stageStats": {
             "actualHp": 40000,
             "actualAp": 400,
-            "actualDps": 750.0,
+            "actualDps": 545.45,
             "magnification": "100%",
             "count": "1",
             "spawnTime": "26.7s",
@@ -727,6 +793,39 @@
             "delayFrames": "60-180f",
             "baseHpRatio": "100%",
             "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "021",
+          "enemyName": "カンバン娘",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 10000,
+            "ap": 1,
+            "dps": 0.05,
+            "speed": 4,
+            "range": 800,
+            "rangeType": "単体",
+            "kbLevel": 10000,
+            "money": 1,
+            "freq": 607,
+            "foreswing": 8,
+            "backswing": 6,
+            "tba": 300
+          },
+          "stageStats": {
+            "actualHp": 10000,
+            "actualAp": 1,
+            "actualDps": 0.05,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "900.0s",
+            "spawnTimeFrames": "27,000f",
+            "delay": "900.0-900.0s",
+            "delayFrames": "27,000-27,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
           },
           "abilities": {}
         }
@@ -790,21 +889,21 @@
           "baseStats": {
             "hp": 200,
             "ap": 20,
-            "dps": 20.69,
+            "dps": 20.0,
             "speed": 10,
             "range": 110,
             "rangeType": "単体",
             "kbLevel": 1,
             "money": 75,
-            "freq": 29,
+            "freq": 30,
             "foreswing": 10,
-            "backswing": 6,
+            "backswing": 20,
             "tba": 10
           },
           "stageStats": {
             "actualHp": 1200,
             "actualAp": 120,
-            "actualDps": 124.14,
+            "actualDps": 120.0,
             "magnification": "600%",
             "count": "0",
             "spawnTime": "3.3s",
@@ -831,7 +930,7 @@
             "money": 130,
             "freq": 31,
             "foreswing": 6,
-            "backswing": 10,
+            "backswing": 12,
             "tba": 13
           },
           "stageStats": {
@@ -859,21 +958,21 @@
           "baseStats": {
             "hp": 17777,
             "ap": 777,
-            "dps": 706.36,
+            "dps": 264.89,
             "speed": 15,
             "range": 370,
             "rangeType": "範囲",
             "kbLevel": 1,
             "money": 1555,
-            "freq": 33,
+            "freq": 88,
             "foreswing": 34,
-            "backswing": -18,
+            "backswing": 54,
             "tba": 0
           },
           "stageStats": {
             "actualHp": 17777,
             "actualAp": 777,
-            "actualDps": 706.36,
+            "actualDps": 264.89,
             "magnification": "100%",
             "count": "1",
             "spawnTime": "23.3s",
@@ -907,7 +1006,7 @@
             "money": 500,
             "freq": 57,
             "foreswing": 12,
-            "backswing": 4,
+            "backswing": 10,
             "tba": 23
           },
           "stageStats": {
@@ -946,7 +1045,7 @@
             "money": 1000,
             "freq": 96,
             "foreswing": 17,
-            "backswing": -1,
+            "backswing": 24,
             "tba": 40
           },
           "stageStats": {
@@ -961,6 +1060,39 @@
             "delayFrames": "60-180f",
             "baseHpRatio": "100%",
             "isBoss": true
+          },
+          "abilities": {}
+        },
+        {
+          "enemyId": "021",
+          "enemyName": "カンバン娘",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 10000,
+            "ap": 1,
+            "dps": 0.05,
+            "speed": 4,
+            "range": 800,
+            "rangeType": "単体",
+            "kbLevel": 10000,
+            "money": 1,
+            "freq": 607,
+            "foreswing": 8,
+            "backswing": 6,
+            "tba": 300
+          },
+          "stageStats": {
+            "actualHp": 10000,
+            "actualAp": 1,
+            "actualDps": 0.05,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "900.0s",
+            "spawnTimeFrames": "27,000f",
+            "delay": "900.0-900.0s",
+            "delayFrames": "27,000-27,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
           },
           "abilities": {}
         }
@@ -1024,21 +1156,21 @@
           "baseStats": {
             "hp": 5000,
             "ap": 2000,
-            "dps": 3750.0,
+            "dps": 1463.41,
             "speed": 30,
             "range": 110,
             "rangeType": "単体",
             "kbLevel": 8,
             "money": 400,
-            "freq": 16,
+            "freq": 41,
             "foreswing": 4,
-            "backswing": 12,
+            "backswing": 37,
             "tba": 0
           },
           "stageStats": {
             "actualHp": 20000,
             "actualAp": 8000,
-            "actualDps": 15000.0,
+            "actualDps": 5853.64,
             "magnification": "400%",
             "count": "1",
             "spawnTime": "10.0s",
@@ -1057,21 +1189,21 @@
           "baseStats": {
             "hp": 13000,
             "ap": 1550,
-            "dps": 2906.25,
+            "dps": 1134.15,
             "speed": 50,
             "range": 80,
             "rangeType": "範囲",
             "kbLevel": 10,
             "money": 250,
-            "freq": 16,
+            "freq": 41,
             "foreswing": 3,
-            "backswing": 13,
+            "backswing": 38,
             "tba": 0
           },
           "stageStats": {
             "actualHp": 26000,
             "actualAp": 3100,
-            "actualDps": 5812.5,
+            "actualDps": 2268.3,
             "magnification": "200%",
             "count": "2",
             "spawnTime": "13.3s",
@@ -1090,21 +1222,21 @@
           "baseStats": {
             "hp": 5000,
             "ap": 2000,
-            "dps": 3750.0,
+            "dps": 1463.41,
             "speed": 30,
             "range": 110,
             "rangeType": "単体",
             "kbLevel": 8,
             "money": 400,
-            "freq": 16,
+            "freq": 41,
             "foreswing": 4,
-            "backswing": 12,
+            "backswing": 37,
             "tba": 0
           },
           "stageStats": {
             "actualHp": 20000,
             "actualAp": 8000,
-            "actualDps": 15000.0,
+            "actualDps": 5853.64,
             "magnification": "400%",
             "count": "0",
             "spawnTime": "0.0s",
@@ -1123,21 +1255,21 @@
           "baseStats": {
             "hp": 13000,
             "ap": 1550,
-            "dps": 2906.25,
+            "dps": 1134.15,
             "speed": 50,
             "range": 80,
             "rangeType": "範囲",
             "kbLevel": 10,
             "money": 250,
-            "freq": 16,
+            "freq": 41,
             "foreswing": 3,
-            "backswing": 13,
+            "backswing": 38,
             "tba": 0
           },
           "stageStats": {
             "actualHp": 26000,
             "actualAp": 3100,
-            "actualDps": 5812.5,
+            "actualDps": 2268.3,
             "magnification": "200%",
             "count": "0",
             "spawnTime": "13.3s",
@@ -1156,21 +1288,21 @@
           "baseStats": {
             "hp": 13000,
             "ap": 1550,
-            "dps": 2906.25,
+            "dps": 1134.15,
             "speed": 50,
             "range": 80,
             "rangeType": "範囲",
             "kbLevel": 10,
             "money": 250,
-            "freq": 16,
+            "freq": 41,
             "foreswing": 3,
-            "backswing": 13,
+            "backswing": 38,
             "tba": 0
           },
           "stageStats": {
             "actualHp": 26000,
             "actualAp": 3100,
-            "actualDps": 5812.5,
+            "actualDps": 2268.3,
             "magnification": "200%",
             "count": "2",
             "spawnTime": "133.3s",
@@ -1189,21 +1321,21 @@
           "baseStats": {
             "hp": 9000,
             "ap": 5000,
-            "dps": 9375.0,
+            "dps": 3658.54,
             "speed": 20,
             "range": 140,
             "rangeType": "単体",
             "kbLevel": 2,
             "money": 700,
-            "freq": 16,
+            "freq": 41,
             "foreswing": 17,
-            "backswing": -1,
+            "backswing": 24,
             "tba": 0
           },
           "stageStats": {
             "actualHp": 36000,
             "actualAp": 20000,
-            "actualDps": 37500.0,
+            "actualDps": 14634.16,
             "magnification": "400%",
             "count": "5",
             "spawnTime": "6.7s",
@@ -1288,21 +1420,21 @@
           "baseStats": {
             "hp": 400000,
             "ap": 9000,
-            "dps": 16875.0,
+            "dps": 6585.37,
             "speed": 15,
             "range": 270,
             "rangeType": "範囲",
             "kbLevel": 3,
             "money": 1800,
-            "freq": 16,
+            "freq": 41,
             "foreswing": 17,
-            "backswing": -1,
+            "backswing": 24,
             "tba": 0
           },
           "stageStats": {
             "actualHp": 1200000,
             "actualAp": 27000,
-            "actualDps": 50625.0,
+            "actualDps": 19756.11,
             "magnification": "300%",
             "count": "1",
             "spawnTime": "0.0s",
@@ -1324,6 +1456,39 @@
               "duration_s": 6.67
             }
           }
+        },
+        {
+          "enemyId": "021",
+          "enemyName": "カンバン娘",
+          "traits": ["無"],
+          "baseStats": {
+            "hp": 10000,
+            "ap": 1,
+            "dps": 0.05,
+            "speed": 4,
+            "range": 800,
+            "rangeType": "単体",
+            "kbLevel": 10000,
+            "money": 1,
+            "freq": 607,
+            "foreswing": 8,
+            "backswing": 6,
+            "tba": 300
+          },
+          "stageStats": {
+            "actualHp": 10000,
+            "actualAp": 1,
+            "actualDps": 0.05,
+            "magnification": "100%",
+            "count": "0",
+            "spawnTime": "900.0s",
+            "spawnTimeFrames": "27,000f",
+            "delay": "900.0-900.0s",
+            "delayFrames": "27,000-27,000f",
+            "baseHpRatio": "100%",
+            "isBoss": false
+          },
+          "abilities": {}
         }
       ]
     }

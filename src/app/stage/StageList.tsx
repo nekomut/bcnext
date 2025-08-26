@@ -59,9 +59,6 @@ export function StageList({ events, searchTerm, onStageSelect, onSpecificStageSe
                 イベント
               </th>
               <th className="px-0.5 py-0 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
-                タイプ
-              </th>
-              <th className="px-0.5 py-0 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
                 ステージ
               </th>
             </tr>
@@ -84,12 +81,6 @@ export function StageList({ events, searchTerm, onStageSelect, onSpecificStageSe
                   >
                     <small>{highlightText(event.eventName, searchTerm)}</small>
                   </button>
-                </td>
-                <td className="px-0.5 py-0 align-top">
-                  <div className="flex items-center">
-                    <span className="hidden">{event.typeId} </span>
-                    <span className="ml-1 text-gray-900"><small>{event.typeName}</small></span>
-                  </div>
                 </td>
                 <td className="px-0.5 py-0 align-top">
                   <div className="space-y-0.5">

@@ -165,9 +165,7 @@ export function UnitDisplay({
     // 新しいユニットに対して最終形態を自動選択
     const newValidFormCount = getValidFormCount(unitData);
     const newDefaultFormId = initialFormId !== undefined ? initialFormId : Math.max(0, newValidFormCount - 1);
-    if (initialFormId === undefined) {
-      setCurrentForm(newDefaultFormId);
-    }
+    setCurrentForm(newDefaultFormId);
     const talentList = unitData.auxiliaryData.talents.talentList;
     const newHasBaseAttackUp = talentList.some(talent => talent.id === 31);
     const newHasBaseHpUp = talentList.some(talent => talent.id === 32);

@@ -276,21 +276,40 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
         {stageData.stages.length > 1 && (
           <div className="px-1 pb-1">
             <div className="flex items-center gap-2">
-              <div className="flex flex-wrap gap-1">
-              {stageData.stages.map((stage, index) => (
-                <button
-                  key={index}
-                  onClick={() => setSelectedStageId(index)}
-                  className={`px-2 py-1 text-xs font-medium rounded border transition-colors ${
-                    selectedStageId === index
-                      ? 'bg-blue-600 text-white border-blue-600 shadow-sm'
-                      : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50 hover:border-gray-400'
-                  }`}
-                >
-                  <span className="font-mono">{stage.stageId}</span>: {stage.stageName}
-                </button>
-              ))}
-              </div>
+              {stageData.eventId === 33000 ? (
+                // event_id=33000の場合はプルダウン表示
+                <div className="flex items-center gap-2">
+                  <label className="text-xs font-medium text-gray-700">ステージ:</label>
+                  <select
+                    value={selectedStageId}
+                    onChange={(e) => setSelectedStageId(parseInt(e.target.value))}
+                    className="text-xs text-gray-500 border border-gray-300 rounded px-2 py-1 bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  >
+                    {stageData.stages.map((stage, index) => (
+                      <option key={index} value={index}>
+                        {stage.stageId}: {stage.stageName}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              ) : (
+                // その他のevent_idの場合は従来のボタン表示
+                <div className="flex flex-wrap gap-1">
+                  {stageData.stages.map((stage, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setSelectedStageId(index)}
+                      className={`px-2 py-1 text-xs font-medium rounded border transition-colors ${
+                        selectedStageId === index
+                          ? 'bg-blue-600 text-white border-blue-600 shadow-sm'
+                          : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50 hover:border-gray-400'
+                      }`}
+                    >
+                      <span className="font-mono">{stage.stageId}</span>: {stage.stageName}
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         )}

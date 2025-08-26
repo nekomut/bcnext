@@ -281,7 +281,7 @@ function AnimationPageContent() {
                 await handleUnitChange(formattedId);
               }}
               disabled={loading || parseInt(selectedUnit) <= 0}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-2 py-0.5 rounded text-xs disabled:opacity-50"
+              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-0.5 rounded text-xs disabled:opacity-50 w-12"
             >
               ◁
             </button>
@@ -359,13 +359,6 @@ function AnimationPageContent() {
             </div>
           </div>
           
-          <button
-            onClick={handleUnitSearch}
-            disabled={loading}
-            className="bg-blue-500 hover:bg-blue-600 text-white px-2 py-0.5 rounded text-xs disabled:opacity-50 w-12"
-          >
-            {loading ? '読込..' : '表示'}
-          </button>
           
           {/* 次のIDボタン - 右端 */}
           {selectedUnit && !isNaN(parseInt(selectedUnit)) && (
@@ -378,7 +371,7 @@ function AnimationPageContent() {
                 await handleUnitChange(formattedId);
               }}
               disabled={loading}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-2 py-0.5 rounded text-xs disabled:opacity-50"
+              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-0.5 rounded text-xs disabled:opacity-50 w-12"
             >
               ▷
             </button>

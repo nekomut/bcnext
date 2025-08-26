@@ -52,13 +52,13 @@ export function StageList({ events, searchTerm, onStageSelect, onSpecificStageSe
         <table className="w-full">
           <thead>
             <tr className="bg-gray-50 border-b border-gray-200">
-              <th className="px-0.5 py-0 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-0.5 py-0 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 ID
               </th>
-              <th className="px-0.5 py-0 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-0.5 py-0 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 イベント
               </th>
-              <th className="px-0.5 py-0 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-3.5 py-0 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                 ステージ
               </th>
             </tr>
@@ -91,7 +91,7 @@ export function StageList({ events, searchTerm, onStageSelect, onSpecificStageSe
                       return (
                         <div key={stageId} className="text-xs flex items-start gap-1">
                           <small>
-                            <span className="font-mono text-right px-1 py-0 text-gray-500 w-12 inline-block">{stageId}</span>
+                            <span className="font-mono text-right px-1 py-0 text-gray-500 w-6 inline-block">{stageId}</span>
                             <button
                               onClick={() => {
                                 if (onSpecificStageSelect) {

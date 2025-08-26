@@ -259,15 +259,15 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
                 <span className="inline-flex items-center px-1 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">
                   {stageData.stages.length}ステージ
                 </span>
-                {stageData.specialRule && stageData.specialRule !== null && (
-                  <div className="text-xs text-yellow-600 mt-0 whitespace-pre-line">
-                    {stageData.specialRule.explanation}
-                  </div>
-                )}
               </h2>
               <p className="text-xs text-gray-600">
                 {stageData.typeName} ({stageData.typeId}) | マップID: {stageData.mapId} | プレフィックス: {stageData.prefix}
               </p>
+              {stageData.specialRule && stageData.specialRule !== null && (
+                <div className="text-xs text-yellow-800 bg-yellow-100 rounded-md px-1 py-0.5 mt-0 whitespace-pre-line">
+                  {stageData.specialRule.explanation}
+                </div>
+              )}
             </div>
           </div>
         </div>

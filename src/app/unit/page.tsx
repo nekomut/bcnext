@@ -259,206 +259,224 @@ function UnitPageContent() {
       // 検索可能なユニットリストを生成
       const searchableUnits: SearchableUnit[] = [];
       
-      for (const unitName of unitNamesData) {
-        const unitData = await getUnitData(parseInt(unitName.unitId));
-        if (!unitData) continue;
+      // バッチサイズを小さくして並列処理
+      const BATCH_SIZE = 20;
+      const totalUnits = unitNamesData.length;
+      let processedUnits = 0;
+      
+      for (let i = 0; i < totalUnits; i += BATCH_SIZE) {
+        const batch = unitNamesData.slice(i, i + BATCH_SIZE);
+        
+        // バッチ内は並列処理
+        const batchResults = await Promise.allSettled(
+          batch.map(async (unitName) => {
+            try {
+              const unitData = await getUnitData(parseInt(unitName.unitId));
+              if (!unitData) return [];
 
-        // レアリティフィルタ
-        if (advancedFilters.rarity.length > 0 && !advancedFilters.rarity.includes(unitData.coreData.rarity.name)) {
-          continue;
-        }
+              // レアリティフィルタ
+              if (advancedFilters.rarity.length > 0 && !advancedFilters.rarity.includes(unitData.coreData.rarity.name)) {
+                return [];
+              }
 
-        // 形態数フィルタ
-        if (advancedFilters.formCount !== 'all') {
-          const formCount = unitData.coreData.forms.length;
-          if (formCount.toString() !== advancedFilters.formCount) {
-            continue;
-          }
-        }
-
-        // 形態ごとにSearchableUnitを作成
-        for (let formIndex = 0; formIndex < unitData.coreData.forms.length; formIndex++) {
-          const form = unitData.coreData.forms[formIndex];
-          const stats = calculateUnitStats(unitData, formIndex, 30, 0);
-          
-          // 各ステータス範囲をチェック
-          const filterChecks = [
-            { range: advancedFilters.hpRange, value: stats.hp },
-            { range: advancedFilters.attackRange, value: stats.ap },
-            { range: advancedFilters.costRange, value: stats.cost },
-            { range: advancedFilters.speedRange, value: stats.speed },
-            { range: advancedFilters.rangeRange, value: stats.range },
-            { range: advancedFilters.dpsRange, value: stats.dps },
-            { range: advancedFilters.kbRange, value: stats.kb },
-            { range: advancedFilters.rechargeRange, value: stats.recharge },
-            { range: advancedFilters.foreswingRange, value: frameToSecond(stats.foreswing) },
-            { range: advancedFilters.tbaRange, value: frameToSecond(stats.tba) },
-            { range: advancedFilters.backswingRange, value: frameToSecond(stats.backswing) },
-            { range: advancedFilters.freqRange, value: frameToSecond(stats.freq) }
-          ];
-
-          let passesFilters = true;
-          for (const check of filterChecks) {
-            if (check.range.min && check.value < parseFloat(check.range.min)) {
-              passesFilters = false;
-              break;
-            }
-            if (check.range.max && check.value > parseFloat(check.range.max)) {
-              passesFilters = false;
-              break;
-            }
-          }
-
-          if (!passesFilters) continue;
-
-          // ターゲット属性フィルタ（独立して判定）
-          let hasMatchingTargetTrait = true;
-          if (advancedFilters.targetTraits.length > 0) {
-            const abilities = getAbilities(unitData, formIndex, 30, 0);
-            
-            // キーから日本語名への変換
-            const traitNames = advancedFilters.targetTraits.map(traitKey => {
-              const traitOption = targetTraitOptions.find(option => option.key === traitKey);
-              return traitOption ? traitOption.name : traitKey;
-            });
-            
-            // デバッグログ（Unit 006, 008と643の場合）
-            if (parseInt(unitName.unitId) === 6 || parseInt(unitName.unitId) === 8 || parseInt(unitName.unitId) === 643) {
-              console.log(`Unit ${unitName.unitId}-${formIndex}: `, {
-                unitName: unitName.displayName,
-                formName: form.name,
-                traitNames,
-                abilities: abilities.map(a => ({ name: a.name, value: a.value }))
-              });
-            }
-            
-            hasMatchingTargetTrait = abilities.some(ability => 
-              traitNames.some(traitName => {
-                const abilityText = typeof ability.name === 'string' ? ability.name : '';
-                const valueText = typeof ability.value === 'string' ? ability.value : '';
-                const match = abilityText.includes(traitName) || valueText.includes(traitName);
-                
-                // デバッグログ（マッチした場合）
-                if (match && (parseInt(unitName.unitId) === 6 || parseInt(unitName.unitId) === 8 || parseInt(unitName.unitId) === 643)) {
-                  console.log(`MATCH: Unit ${unitName.unitId}-${formIndex} has ${traitName} in ability:`, {
-                    abilityText,
-                    valueText
-                  });
+              // 形態数フィルタ
+              if (advancedFilters.formCount !== 'all') {
+                const formCount = unitData.coreData.forms.length;
+                if (formCount.toString() !== advancedFilters.formCount) {
+                  return [];
                 }
+              }
+
+              const unitResults: SearchableUnit[] = [];
+
+              // 形態ごとにSearchableUnitを作成
+              for (let formIndex = 0; formIndex < unitData.coreData.forms.length; formIndex++) {
+                const form = unitData.coreData.forms[formIndex];
+                const stats = calculateUnitStats(unitData, formIndex, 30, 0);
                 
-                return match;
-              })
-            );
+                // 各ステータス範囲をチェック
+                const filterChecks = [
+                  { range: advancedFilters.hpRange, value: stats.hp },
+                  { range: advancedFilters.attackRange, value: stats.ap },
+                  { range: advancedFilters.costRange, value: stats.cost },
+                  { range: advancedFilters.speedRange, value: stats.speed },
+                  { range: advancedFilters.rangeRange, value: stats.range },
+                  { range: advancedFilters.dpsRange, value: stats.dps },
+                  { range: advancedFilters.kbRange, value: stats.kb },
+                  { range: advancedFilters.rechargeRange, value: stats.recharge },
+                  { range: advancedFilters.foreswingRange, value: frameToSecond(stats.foreswing) },
+                  { range: advancedFilters.tbaRange, value: frameToSecond(stats.tba) },
+                  { range: advancedFilters.backswingRange, value: frameToSecond(stats.backswing) },
+                  { range: advancedFilters.freqRange, value: frameToSecond(stats.freq) }
+                ];
+
+                let passesFilters = true;
+                for (const check of filterChecks) {
+                  if (check.range.min && check.value < parseFloat(check.range.min)) {
+                    passesFilters = false;
+                    break;
+                  }
+                  if (check.range.max && check.value > parseFloat(check.range.max)) {
+                    passesFilters = false;
+                    break;
+                  }
+                }
+
+                if (!passesFilters) continue;
+
+                // ターゲット属性フィルタ（独立して判定）
+                let hasMatchingTargetTrait = true;
+                if (advancedFilters.targetTraits.length > 0) {
+                  const abilities = getAbilities(unitData, formIndex, 30, 0);
+                  
+                  // キーから日本語名への変換
+                  const traitNames = advancedFilters.targetTraits.map(traitKey => {
+                    const traitOption = targetTraitOptions.find(option => option.key === traitKey);
+                    return traitOption ? traitOption.name : traitKey;
+                  });
+                  
+                  hasMatchingTargetTrait = abilities.some(ability => 
+                    traitNames.some(traitName => {
+                      const abilityText = typeof ability.name === 'string' ? ability.name : '';
+                      const valueText = typeof ability.value === 'string' ? ability.value : '';
+                      return abilityText.includes(traitName) || valueText.includes(traitName);
+                    })
+                  );
+                }
+
+                if (!hasMatchingTargetTrait) continue;
+
+                // 能力フィルタ（この形態のみ）
+                let hasMatchingAbility = true;
+                if (advancedFilters.hasTargetAbility || advancedFilters.hasResistance || 
+                    advancedFilters.hasStatusEffect || advancedFilters.hasSpecialAttack) {
+                  
+                  const abilities = getAbilities(unitData, formIndex, 30, 0);
+                  const abilityChecks = [];
+                  
+                  if (advancedFilters.hasTargetAbility) {
+                    // キーから日本語名への変換
+                    const traitNames = advancedFilters.targetTraits.map(traitKey => {
+                      const traitOption = targetTraitOptions.find(option => option.key === traitKey);
+                      return traitOption ? traitOption.name : traitKey;
+                    });
+                    
+                    const hasTarget = abilities.some(ability => 
+                      traitNames.some(traitName => {
+                        const abilityText = typeof ability.name === 'string' ? ability.name : '';
+                        const valueText = typeof ability.value === 'string' ? ability.value : '';
+                        return abilityText.includes(traitName) || valueText.includes(traitName);
+                      })
+                    );
+                    abilityChecks.push(hasTarget);
+                  }
+                  
+                  if (advancedFilters.hasResistance) {
+                    const hasResist = abilities.some(ability => {
+                      const abilityText = typeof ability.name === 'string' ? ability.name : '';
+                      const valueText = typeof ability.value === 'string' ? ability.value : '';
+                      return abilityText.includes('耐性') || abilityText.includes('無効') ||
+                             valueText.includes('耐性') || valueText.includes('無効');
+                    });
+                    abilityChecks.push(hasResist);
+                  }
+                  
+                  if (advancedFilters.hasStatusEffect) {
+                    const hasStatus = abilities.some(ability => {
+                      const abilityText = typeof ability.name === 'string' ? ability.name : '';
+                      const valueText = typeof ability.value === 'string' ? ability.value : '';
+                      return abilityText.includes('停止') || abilityText.includes('遅く') ||
+                             abilityText.includes('ふっとばす') || abilityText.includes('クリティカル') ||
+                             valueText.includes('停止') || valueText.includes('遅く') ||
+                             valueText.includes('ふっとばす') || valueText.includes('クリティカル');
+                    });
+                    abilityChecks.push(hasStatus);
+                  }
+                  
+                  if (advancedFilters.hasSpecialAttack) {
+                    const hasSpecial = abilities.some(ability => {
+                      const abilityText = typeof ability.name === 'string' ? ability.name : '';
+                      const valueText = typeof ability.value === 'string' ? ability.value : '';
+                      return abilityText.includes('範囲攻撃') || abilityText.includes('全体攻撃') ||
+                             abilityText.includes('波動') || abilityText.includes('バリア') ||
+                             valueText.includes('範囲攻撃') || valueText.includes('全体攻撃') ||
+                             valueText.includes('波動') || valueText.includes('バリア');
+                    });
+                    abilityChecks.push(hasSpecial);
+                  }
+                  
+                  // OR/AND検索モードに応じた判定
+                  if (advancedFilters.searchMode === 'OR') {
+                    hasMatchingAbility = abilityChecks.some(check => check === true);
+                  } else { // AND
+                    hasMatchingAbility = abilityChecks.every(check => check === true);
+                  }
+                }
+
+                if (!hasMatchingAbility) continue;
+
+                // 本能・超本能フィルタ
+                if (advancedFilters.hasTalents || advancedFilters.hasUltraTalents) {
+                  // 実装は後で追加（現在はスキップ）
+                }
+
+                // ユニットアイコンを取得
+                const unitIconData = await IconManager.getFormIcon(unitName.unitId, formIndex);
+                
+                // SearchableUnitオブジェクトを作成（この形態用）
+                const searchableUnit: SearchableUnit = {
+                  unitId: unitName.unitId,
+                  displayName: unitName.displayName,
+                  formId: formIndex,
+                  formName: form.name,
+                  rarity: unitData.coreData.rarity,
+                  unitIcon: unitIconData,
+                  baseStats: {
+                    hp: stats.hp,
+                    attack: stats.ap,
+                    cost: stats.cost,
+                    speed: stats.speed,
+                    range: stats.range,
+                    kb: stats.kb,
+                    dps: stats.dps,
+                    rechargeSeconds: stats.recharge,
+                    foreswingSeconds: frameToSecond(stats.foreswing),
+                    tbaSeconds: frameToSecond(stats.tba),
+                    backswingSeconds: frameToSecond(stats.backswing),
+                    freq: frameToSecond(stats.freq)
+                  },
+                  abilities: [],
+                  talents: [],
+                  ultraTalents: []
+                };
+
+                unitResults.push(searchableUnit);
+              }
+
+              return unitResults;
+            } catch (error) {
+              console.warn(`Failed to process unit ${unitName.unitId}:`, error);
+              return [];
+            }
+          })
+        );
+        
+        // バッチ結果をマージ
+        for (const result of batchResults) {
+          if (result.status === 'fulfilled') {
+            searchableUnits.push(...result.value);
           }
-
-          if (!hasMatchingTargetTrait) continue;
-
-          // 能力フィルタ（この形態のみ）
-          let hasMatchingAbility = true;
-          if (advancedFilters.hasTargetAbility || advancedFilters.hasResistance || 
-              advancedFilters.hasStatusEffect || advancedFilters.hasSpecialAttack) {
-            
-            const abilities = getAbilities(unitData, formIndex, 30, 0);
-            const abilityChecks = [];
-            
-            if (advancedFilters.hasTargetAbility) {
-              // キーから日本語名への変換
-              const traitNames = advancedFilters.targetTraits.map(traitKey => {
-                const traitOption = targetTraitOptions.find(option => option.key === traitKey);
-                return traitOption ? traitOption.name : traitKey;
-              });
-              
-              const hasTarget = abilities.some(ability => 
-                traitNames.some(traitName => {
-                  const abilityText = typeof ability.name === 'string' ? ability.name : '';
-                  const valueText = typeof ability.value === 'string' ? ability.value : '';
-                  return abilityText.includes(traitName) || valueText.includes(traitName);
-                })
-              );
-              abilityChecks.push(hasTarget);
-            }
-            
-            if (advancedFilters.hasResistance) {
-              const hasResist = abilities.some(ability => {
-                const abilityText = typeof ability.name === 'string' ? ability.name : '';
-                const valueText = typeof ability.value === 'string' ? ability.value : '';
-                return abilityText.includes('耐性') || abilityText.includes('無効') ||
-                       valueText.includes('耐性') || valueText.includes('無効');
-              });
-              abilityChecks.push(hasResist);
-            }
-            
-            if (advancedFilters.hasStatusEffect) {
-              const hasStatus = abilities.some(ability => {
-                const abilityText = typeof ability.name === 'string' ? ability.name : '';
-                const valueText = typeof ability.value === 'string' ? ability.value : '';
-                return abilityText.includes('停止') || abilityText.includes('遅く') ||
-                       abilityText.includes('ふっとばす') || abilityText.includes('クリティカル') ||
-                       valueText.includes('停止') || valueText.includes('遅く') ||
-                       valueText.includes('ふっとばす') || valueText.includes('クリティカル');
-              });
-              abilityChecks.push(hasStatus);
-            }
-            
-            if (advancedFilters.hasSpecialAttack) {
-              const hasSpecial = abilities.some(ability => {
-                const abilityText = typeof ability.name === 'string' ? ability.name : '';
-                const valueText = typeof ability.value === 'string' ? ability.value : '';
-                return abilityText.includes('範囲攻撃') || abilityText.includes('全体攻撃') ||
-                       abilityText.includes('波動') || abilityText.includes('バリア') ||
-                       valueText.includes('範囲攻撃') || valueText.includes('全体攻撃') ||
-                       valueText.includes('波動') || valueText.includes('バリア');
-              });
-              abilityChecks.push(hasSpecial);
-            }
-            
-            // OR/AND検索モードに応じた判定
-            if (advancedFilters.searchMode === 'OR') {
-              hasMatchingAbility = abilityChecks.some(check => check === true);
-            } else { // AND
-              hasMatchingAbility = abilityChecks.every(check => check === true);
-            }
-          }
-
-          if (!hasMatchingAbility) continue;
-
-          // 本能・超本能フィルタ
-          if (advancedFilters.hasTalents || advancedFilters.hasUltraTalents) {
-            // 実装は後で追加（現在はスキップ）
-          }
-
-          // ユニットアイコンを取得
-          const unitIconData = await IconManager.getFormIcon(unitName.unitId, formIndex);
-          
-          // SearchableUnitオブジェクトを作成（この形態用）
-          const searchableUnit: SearchableUnit = {
-            unitId: unitName.unitId,
-            displayName: unitName.displayName,
-            formId: formIndex,
-            formName: form.name,
-            rarity: unitData.coreData.rarity,
-            unitIcon: unitIconData,
-            baseStats: {
-              hp: stats.hp,
-              attack: stats.ap,
-              cost: stats.cost,
-              speed: stats.speed,
-              range: stats.range,
-              kb: stats.kb,
-              dps: stats.dps,
-              rechargeSeconds: stats.recharge,
-              foreswingSeconds: frameToSecond(stats.foreswing),
-              tbaSeconds: frameToSecond(stats.tba),
-              backswingSeconds: frameToSecond(stats.backswing),
-              freq: frameToSecond(stats.freq)
-            },
-            abilities: [],
-            talents: [],
-            ultraTalents: []
-          };
-
-          searchableUnits.push(searchableUnit);
         }
+        
+        processedUnits += batch.length;
+        
+        // 進捗を表示（デバッグ用）
+        if (process.env.NODE_ENV === 'development') {
+          console.log(`Search progress: ${processedUnits}/${totalUnits} units processed`);
+        }
+        
+        // UIをブロックしないよう短時間待機
+        await new Promise(resolve => setTimeout(resolve, 10));
       }
 
       // ソート
@@ -486,8 +504,9 @@ function UnitPageContent() {
       setSearchResults(searchableUnits);
       setSearchResultsExecuted(true);
       setCurrentResultPage(1);
-    } catch {
-      setError('検索中にエラーが発生しました');
+    } catch (error) {
+      console.error('Advanced search error:', error);
+      setError('検索中にエラーが発生しました。条件を見直してお試しください。');
     } finally {
       setLoading(false);
     }

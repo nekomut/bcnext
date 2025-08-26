@@ -1,20 +1,20 @@
-// import { Set452 } from './set452'; // エアバスターズ
+import { Set452 } from './set452'; // エアバスターズ
 // import { Set523 } from './set523'; // 波動バスターズ
-// import { Set696 } from './set696'; // レッドバスターズ
+import { Set696 } from './set696'; // レッドバスターズ
 // import { Set772 } from './set772'; // 超生命体バスターズ
 // import { Set785 } from './set785'; // バレンタイン
 // import { Set861 } from './set861'; // 女王祭
 // import { Set875 } from './set875'; // イースター
-// import { Set906 } from './set906'; // メタルバスターズ
+import { Set906 } from './set906'; // メタルバスターズ
 // import { Set936 } from './set936'; // ウルトラ4
 // import { Set937 } from './set937'; // ミラクル4
 // import { Set938 } from './set938'; // エクセレント4
 // import { Set939 } from './set939'; // バスターズ祭
 import { Set942 } from './set942'; // ダイナマイツ
-// import { Set943 } from './set943'; // バサラーズ
-// import { Set944 } from './set944'; // ギャルズ
+import { Set943 } from './set943'; // バサラーズ
+import { Set944 } from './set944'; // ギャルズ
 // import { Set945 } from './set945'; // エンペラーズ
-import { Set946 } from './set946'; // ウルトラソウルズ
+// import { Set946 } from './set946'; // ウルトラソウルズ
 // import { Set947 } from './set947'; // ダークヒーローズ
 // import { Set948 } from './set948'; // ギガントゼウス
 // import { Set949 } from './set949'; // アイアンウォーズ
@@ -43,11 +43,11 @@ import { Set950 } from './set950'; // ギャルモン
 // import { Set983 } from './set983'; // プラチケ
 // import { Set984 } from './set984'; // レジェンド
 // import { Set985 } from './set985'; // ソニックコラボ
-import { Set986 } from './set986'; // ルガ族
+// import { Set986 } from './set986'; // ルガ族
 import { Set990 } from './set990'; // 極選抜祭(対トリクシー入り)
-// import { Set992 } from './set992'; // ギガントゼウス
-// import { Set993 } from './set993'; // 超ネコ祭
-import { Set994 } from './set994'; // 極ネコ祭
+import { Set991 } from './set991'; // ギガントゼウス
+import { Set993 } from './set993'; // 超ネコ祭
+// import { Set994 } from './set994'; // 極ネコ祭
 import { Set995 } from './set995'; // プラチケ
 import { Set996 } from './set996'; // レジェチケ
 // import { Set997 } from './set997'; // サマーガールズブルーオーシャン
@@ -66,13 +66,20 @@ import { Set1012 } from './set1012'; // 超国王祭
 
 export const RareGatyaSetList = [
 
-    Set946, // ウルトラソウルズ
     Set1010, // サマーガールズサンシャイン
-    Set986, // ルガ族 
-    Set994, // 極ネコ祭
     Set950, // ギャルモン
+
+    Set944, // ギャルズ
+    Set943, // バサラーズ
+
     Set995, // プラチナ
     Set996, // レジェンド
+
+    Set993, // 超ネコ祭
+    Set991, // ギガントゼウス
+    Set696, // レッドバスターズ
+    Set452, // エアバスターズ
+    Set906, // メタルバスターズ
 
     Set1005, // エレメントピクシーズ（新規）
     Set1008, // プラチナ
@@ -84,25 +91,20 @@ export const RareGatyaSetList = [
     Set1012, // 超国王祭
     Set990,  // 極選抜祭(対トリクシー入り)
 
-    // Set944, // ギャルズ
-    // Set992, // ギガントゼウス
     // Set979, // アイアンウォーズ
-    // Set943, // バサラーズ
     // Set945, // エンペラーズ
     // Set947, // ダークヒーローズ
     Set942, // ダイナマイツ
-    
+    // Set946, // ウルトラソウルズ
+    // Set986, // ルガ族 
 
     // Set973, // 超国王祭
     // Set861, // 女王祭
 
     // Set972, // 超極ネコ祭 
-    // Set993, // 超ネコ祭
+    // Set994, // 極ネコ祭
 
     // Set939, // バスターズ祭
-    // Set696, // レッドバスターズ
-    // Set452, // エアバスターズ
-    // Set906, // メタルバスターズ
     // Set523, // 波動バスターズ
     // Set772, // 超生命体バスターズ
 

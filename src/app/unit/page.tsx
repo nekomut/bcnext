@@ -9,6 +9,7 @@ import { UnitDisplay } from './UnitDisplay';
 import { UnitData, getUnitData, calculateUnitStats, frameToSecond, getAbilities, getValidFormCount } from './types';
 import { unitNamesData, UnitNameData } from '@/data/unit-names';
 import IconManager from './IconManager';
+import UnitGallery from './UnitGallery';
 
 // 検索中アニメーション用コンポーネント
 function SearchingAnimation() {
@@ -1557,6 +1558,12 @@ function UnitPageContent() {
             }}
           />
         )}
+
+        {/* ユニット一覧セクション */}
+        <UnitGallery onUnitSelect={(unitId: number, formId: number) => {
+          const formParam = ['f', 'c', 's', 'u'][formId] || 'f';
+          router.push(`/unit?unit=${unitId}&form=${formParam}`);
+        }} />
       </div>
     </>
   );

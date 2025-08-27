@@ -1430,7 +1430,7 @@ function UnitPageContent() {
         )}
 
         {/* 検索結果表示エリア */}
-        {searchResults.length > 0 && (
+        {isAdvancedSearchOpen && searchResults.length >= 0 && (
           <div className="mb-2">
             {/* 検索結果ヘッダー */}
             <div className="flex justify-between items-center mb-1">

@@ -284,8 +284,7 @@ export const getAbilities = (
     massiveDamage?: number;
     extremeDamage?: number;
   },
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  _includeInstincts: boolean = false
+  includeInstincts: boolean = false
 ): UnitAbility[] => {
   const form = unitData.coreData.forms[formId];
   if (!form) return [];
@@ -1163,6 +1162,41 @@ export const getAbilities = (
       name: "召喚",
       value: (<b className="text-gray-500"><small>Unit</small> {summonedUnitId.toString().padStart(3, '0')}</b>),
       iconKeys: ["abilitySummon"]
+    });
+  }
+
+  // 本能・超本能の処理
+  if (includeInstincts && unitData.auxiliaryData.talents.hasTalents) {
+    unitData.auxiliaryData.talents.talentList.forEach(talent => {
+      // 形態固有の本能発動チェック
+      // data[11]が最小必要形態レベルを示す (0=第1形態, 1=第2形態, 7=第3形態等)
+      const minFormLevel = talent.data[11] || 0;
+      let isActivatedInThisForm = false;
+      
+      // 形態レベルの判定ロジック
+      if (minFormLevel === 7 || minFormLevel === 8 || minFormLevel === 9) {
+        // 第3形態専用の本能（data[11] = 7, 8, 9）
+        isActivatedInThisForm = (formId === 2);
+      } else if (minFormLevel === 4 || minFormLevel === 5 || minFormLevel === 6) {
+        // 第2形態以上の本能（data[11] = 4, 5, 6）
+        isActivatedInThisForm = (formId >= 1);
+      } else {
+        // 全形態で有効な本能（data[11] = 0, 1, 2, 3）
+        isActivatedInThisForm = true;
+      }
+      
+      // この形態で本能が有効な場合のみ追加
+      if (isActivatedInThisForm) {
+        switch (talent.id) {
+          case 1: // 攻撃力ダウン
+            abilities.push({
+              name: "攻撃力ダウン",
+              value: `本能による攻撃力ダウン効果`,
+              iconKeys: ["abilityWeaken"]
+            });
+            break;
+        }
+      }
     });
   }
 

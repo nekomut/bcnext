@@ -315,7 +315,7 @@ function UnitPageContent() {
                 // ターゲット属性フィルタ（独立して判定）
                 let hasMatchingTargetTrait = true;
                 if (advancedFilters.targetTraits.length > 0) {
-                  const abilities = getAbilities(unitData, formIndex, 30, 0, 1, 1, 0, { chance: 0, duration: 0 }, { chance: 0, duration: 0 }, { chance: 0, duration: 0 }, { chance: 0 }, { chance: 0 }, undefined, false);
+                  const abilities = getAbilities(unitData, formIndex, 30, 0, 1, 1, 0, { chance: 0, duration: 0 }, { chance: 0, duration: 0 }, { chance: 0, duration: 0 }, { chance: 0 }, { chance: 0 }, undefined, advancedFilters.includeInstincts);
                   
                   // キーから日本語名への変換
                   const traitNames = advancedFilters.targetTraits.map(traitKey => {
@@ -337,7 +337,7 @@ function UnitPageContent() {
                 // 能力タイプフィルタ（アイコン形式）
                 let hasMatchingAbilityType = true;
                 if (advancedFilters.abilityTypes.length > 0) {
-                  const abilities = getAbilities(unitData, formIndex, 30, 0, 1, 1, 0, { chance: 0, duration: 0 }, { chance: 0, duration: 0 }, { chance: 0, duration: 0 }, { chance: 0 }, { chance: 0 }, undefined, false);
+                  const abilities = getAbilities(unitData, formIndex, 30, 0, 1, 1, 0, { chance: 0, duration: 0 }, { chance: 0, duration: 0 }, { chance: 0, duration: 0 }, { chance: 0 }, { chance: 0 }, undefined, advancedFilters.includeInstincts);
                   
                   const abilityTypeChecks = advancedFilters.abilityTypes.map(abilityType => {
                     switch (abilityType) {
@@ -345,8 +345,12 @@ function UnitPageContent() {
                         return abilities.some(ability => {
                           const abilityText = typeof ability.name === 'string' ? ability.name : '';
                           const valueText = typeof ability.value === 'string' ? ability.value : '';
-                          return abilityText.includes('攻撃力ダウン') || valueText.includes('攻撃力ダウン') ||
-                                 abilityText.includes('攻撃力DOWN') || valueText.includes('攻撃力DOWN');
+                          // 攻撃力ダウンを含むが、攻撃力ダウン無効は除外する
+                          const hasWeaken = abilityText.includes('攻撃力ダウン') || valueText.includes('攻撃力ダウン') ||
+                                           abilityText.includes('攻撃力DOWN') || valueText.includes('攻撃力DOWN');
+                          const hasImmuneWeaken = abilityText.includes('攻撃力ダウン無効') || valueText.includes('攻撃力ダウン無効') ||
+                                                 abilityText.includes('攻撃力DOWN無効') || valueText.includes('攻撃力DOWN無効');
+                          return hasWeaken && !hasImmuneWeaken;
                         });
                       default:
                         return false;

@@ -368,6 +368,15 @@ function UnitPageContent() {
                                                  abilityText.includes('攻撃力DOWN無効') || valueText.includes('攻撃力DOWN無効');
                           return hasWeaken && !hasImmuneWeaken;
                         });
+                      case 'freeze':
+                        return abilities.some(ability => {
+                          const abilityText = typeof ability.name === 'string' ? ability.name : '';
+                          const valueText = typeof ability.value === 'string' ? ability.value : '';
+                          // 動きを止めるを含むが、動きを止める無効は除外する
+                          const hasFreeze = abilityText.includes('動きを止める') || valueText.includes('動きを止める');
+                          const hasImmuneFreeze = abilityText.includes('動きを止める無効') || valueText.includes('動きを止める無効');
+                          return hasFreeze && !hasImmuneFreeze;
+                        });
                       default:
                         return false;
                     }
@@ -936,7 +945,8 @@ function UnitPageContent() {
                   <div className="flex items-center gap-2 mb-1">
                     <div className="flex gap-1">
                       {[
-                        { key: 'weaken', name: '攻撃力ダウン', icon: icons.abilityWeaken }
+                        { key: 'weaken', name: '攻撃力ダウン', icon: icons.abilityWeaken },
+                        { key: 'freeze', name: '動きを止める', icon: icons.abilityFreeze }
                       ].map(ability => (
                         <label key={ability.key} className="cursor-pointer">
                           <input

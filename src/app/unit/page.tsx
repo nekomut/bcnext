@@ -506,7 +506,8 @@ function UnitPageContent() {
     // URLを更新 - useEffectでパラメータ処理される
     router.push(`/unit?unit=${numericId}&form=${formParam}`);
     
-    setIsAdvancedSearchOpen(false);
+    // アドバンス検索パネルは開いたままにする（結果リストを維持）
+    // setIsAdvancedSearchOpen(false);
   };
 
   return (

@@ -283,7 +283,9 @@ export const getAbilities = (
     mightyAp?: number;
     massiveDamage?: number;
     extremeDamage?: number;
-  }
+  },
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  _includeInstincts: boolean = false
 ): UnitAbility[] => {
   const form = unitData.coreData.forms[formId];
   if (!form) return [];

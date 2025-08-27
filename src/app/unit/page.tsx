@@ -20,8 +20,8 @@ const targetTraitOptions = [
   { key: 'alien', name: 'エイリアン' },
   { key: 'zombie', name: 'ゾンビ' },
   { key: 'relic', name: '古代種' },
-  { key: 'base', name: '悪魔' },
-  { key: 'white', name: '属性を持たない敵' },
+  { key: 'aku', name: '悪魔' },
+  { key: 'traitless', name: '属性を持たない敵' },
   { key: 'eva', name: 'エヴァ使徒' },
   { key: 'witch', name: '魔女' }
 ];
@@ -44,13 +44,8 @@ interface AdvancedFilters {
   backswingRange: { min: string; max: string };
   freqRange: { min: string; max: string };
   targetTraits: string[];
-  hasTargetAbility: boolean;
-  hasResistance: boolean;
-  hasStatusEffect: boolean;
-  hasSpecialAttack: boolean;
-  hasTalents: boolean;
-  hasUltraTalents: boolean;
-  includeTalentSearch: boolean;
+  abilityTypes: string[];
+  includeInstincts: boolean;
 }
 
 interface SearchableUnit {
@@ -75,8 +70,6 @@ interface SearchableUnit {
     freq: number;
   };
   abilities: string[];
-  talents: string[];
-  ultraTalents: string[];
 }
 
 function UnitPageContent() {
@@ -116,13 +109,8 @@ function UnitPageContent() {
     backswingRange: { min: '', max: '' },
     freqRange: { min: '', max: '' },
     targetTraits: [],
-    hasTargetAbility: false,
-    hasResistance: false,
-    hasStatusEffect: false,
-    hasSpecialAttack: false,
-    hasTalents: false,
-    hasUltraTalents: false,
-    includeTalentSearch: false,
+    abilityTypes: [],
+    includeInstincts: false,
   });
   
   const searchParams = useSearchParams();
@@ -327,7 +315,7 @@ function UnitPageContent() {
                 // ターゲット属性フィルタ（独立して判定）
                 let hasMatchingTargetTrait = true;
                 if (advancedFilters.targetTraits.length > 0) {
-                  const abilities = getAbilities(unitData, formIndex, 30, 0);
+                  const abilities = getAbilities(unitData, formIndex, 30, 0, 1, 1, 0, { chance: 0, duration: 0 }, { chance: 0, duration: 0 }, { chance: 0, duration: 0 }, { chance: 0 }, { chance: 0 }, undefined, false);
                   
                   // キーから日本語名への変換
                   const traitNames = advancedFilters.targetTraits.map(traitKey => {
@@ -346,79 +334,36 @@ function UnitPageContent() {
 
                 if (!hasMatchingTargetTrait) continue;
 
-                // 能力フィルタ（この形態のみ）
-                let hasMatchingAbility = true;
-                if (advancedFilters.hasTargetAbility || advancedFilters.hasResistance || 
-                    advancedFilters.hasStatusEffect || advancedFilters.hasSpecialAttack) {
+                // 能力タイプフィルタ（アイコン形式）
+                let hasMatchingAbilityType = true;
+                if (advancedFilters.abilityTypes.length > 0) {
+                  const abilities = getAbilities(unitData, formIndex, 30, 0, 1, 1, 0, { chance: 0, duration: 0 }, { chance: 0, duration: 0 }, { chance: 0, duration: 0 }, { chance: 0 }, { chance: 0 }, undefined, false);
                   
-                  const abilities = getAbilities(unitData, formIndex, 30, 0);
-                  const abilityChecks = [];
-                  
-                  if (advancedFilters.hasTargetAbility) {
-                    // キーから日本語名への変換
-                    const traitNames = advancedFilters.targetTraits.map(traitKey => {
-                      const traitOption = targetTraitOptions.find(option => option.key === traitKey);
-                      return traitOption ? traitOption.name : traitKey;
-                    });
-                    
-                    const hasTarget = abilities.some(ability => 
-                      traitNames.some(traitName => {
-                        const abilityText = typeof ability.name === 'string' ? ability.name : '';
-                        const valueText = typeof ability.value === 'string' ? ability.value : '';
-                        return abilityText.includes(traitName) || valueText.includes(traitName);
-                      })
-                    );
-                    abilityChecks.push(hasTarget);
-                  }
-                  
-                  if (advancedFilters.hasResistance) {
-                    const hasResist = abilities.some(ability => {
-                      const abilityText = typeof ability.name === 'string' ? ability.name : '';
-                      const valueText = typeof ability.value === 'string' ? ability.value : '';
-                      return abilityText.includes('耐性') || abilityText.includes('無効') ||
-                             valueText.includes('耐性') || valueText.includes('無効');
-                    });
-                    abilityChecks.push(hasResist);
-                  }
-                  
-                  if (advancedFilters.hasStatusEffect) {
-                    const hasStatus = abilities.some(ability => {
-                      const abilityText = typeof ability.name === 'string' ? ability.name : '';
-                      const valueText = typeof ability.value === 'string' ? ability.value : '';
-                      return abilityText.includes('停止') || abilityText.includes('遅く') ||
-                             abilityText.includes('ふっとばす') || abilityText.includes('クリティカル') ||
-                             valueText.includes('停止') || valueText.includes('遅く') ||
-                             valueText.includes('ふっとばす') || valueText.includes('クリティカル');
-                    });
-                    abilityChecks.push(hasStatus);
-                  }
-                  
-                  if (advancedFilters.hasSpecialAttack) {
-                    const hasSpecial = abilities.some(ability => {
-                      const abilityText = typeof ability.name === 'string' ? ability.name : '';
-                      const valueText = typeof ability.value === 'string' ? ability.value : '';
-                      return abilityText.includes('範囲攻撃') || abilityText.includes('全体攻撃') ||
-                             abilityText.includes('波動') || abilityText.includes('バリア') ||
-                             valueText.includes('範囲攻撃') || valueText.includes('全体攻撃') ||
-                             valueText.includes('波動') || valueText.includes('バリア');
-                    });
-                    abilityChecks.push(hasSpecial);
-                  }
+                  const abilityTypeChecks = advancedFilters.abilityTypes.map(abilityType => {
+                    switch (abilityType) {
+                      case 'weaken':
+                        return abilities.some(ability => {
+                          const abilityText = typeof ability.name === 'string' ? ability.name : '';
+                          const valueText = typeof ability.value === 'string' ? ability.value : '';
+                          return abilityText.includes('攻撃力ダウン') || valueText.includes('攻撃力ダウン') ||
+                                 abilityText.includes('攻撃力DOWN') || valueText.includes('攻撃力DOWN');
+                        });
+                      default:
+                        return false;
+                    }
+                  });
                   
                   // OR/AND検索モードに応じた判定
                   if (advancedFilters.searchMode === 'OR') {
-                    hasMatchingAbility = abilityChecks.some(check => check === true);
+                    hasMatchingAbilityType = abilityTypeChecks.some(check => check === true);
                   } else { // AND
-                    hasMatchingAbility = abilityChecks.every(check => check === true);
+                    hasMatchingAbilityType = abilityTypeChecks.every(check => check === true);
                   }
                 }
 
-                if (!hasMatchingAbility) continue;
+                if (!hasMatchingAbilityType) continue;
 
-                // 本能・超本能フィルタ
-                if (advancedFilters.hasTalents || advancedFilters.hasUltraTalents) {
-                  // 実装は後で追加（現在はスキップ）
-                }
+
 
                 // ユニットアイコンを取得
                 const unitIconData = await IconManager.getFormIcon(unitName.unitId, formIndex);
@@ -445,9 +390,7 @@ function UnitPageContent() {
                     backswingSeconds: frameToSecond(stats.backswing),
                     freq: frameToSecond(stats.freq)
                   },
-                  abilities: [],
-                  talents: [],
-                  ultraTalents: []
+                  abilities: []
                 };
 
                 unitResults.push(searchableUnit);
@@ -531,13 +474,8 @@ function UnitPageContent() {
       backswingRange: { min: '', max: '' },
       freqRange: { min: '', max: '' },
       targetTraits: [],
-      hasTargetAbility: false,
-      hasResistance: false,
-      hasStatusEffect: false,
-      hasSpecialAttack: false,
-      hasTalents: false,
-      hasUltraTalents: false,
-      includeTalentSearch: false
+      abilityTypes: [],
+      includeInstincts: false,
     });
     setSearchResults([]);
     // setSearchResultsExecuted(false);
@@ -846,15 +784,14 @@ function UnitPageContent() {
               </div>
             </div>
             
-            {/* 4列レイアウト */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 text-xs">
               
-              {/* 列1: 基本情報 + ターゲット属性 */}
+              {/* 基本情報 + ターゲット属性 */}
               <div>
                 {/* レアリティ選択 */}
                 <div className="mb-2">
                   <div className="flex items-center gap-2 mb-1">
-                    <label className="font-bold text-[10px] text-gray-600">レア度</label>
+                    <label className="font-bold text-[12px] text-gray-600">レア度</label>
                     <div className="flex gap-1">
                       {[
                         { key: '基本', icon: icons.rarityBasic },
@@ -898,7 +835,7 @@ function UnitPageContent() {
                 {/* ターゲット属性 */}
                 <div>
                   <div className="flex items-center gap-2 mb-1">
-                    <label className="font-bold text-[10px] text-gray-600">ターゲット</label>
+                    <label className="font-bold text-[12px] text-gray-600">ターゲット</label>
                     <div className="flex flex-wrap gap-1">
                       {[
                         { key: 'red', name: '赤い敵', icon: icons.traitRed },
@@ -909,8 +846,8 @@ function UnitPageContent() {
                         { key: 'alien', name: 'エイリアン', icon: icons.traitAlien },
                         { key: 'zombie', name: 'ゾンビ', icon: icons.traitZombie },
                         { key: 'relic', name: '古代種', icon: icons.traitRelic },
-                        { key: 'base', name: '悪魔', icon: icons.traitAku },
-                        { key: 'white', name: '属性を持たない敵', icon: icons.traitTraitless },
+                        { key: 'aku', name: '悪魔', icon: icons.traitAku },
+                        { key: 'traitless', name: '属性を持たない敵', icon: icons.traitTraitless },
                         { key: 'eva', name: 'エヴァ使徒', icon: icons.traitEvaAngel },
                         { key: 'witch', name: '魔女', icon: icons.traitWitch }
                       ].map(trait => (
@@ -949,7 +886,68 @@ function UnitPageContent() {
                 </div>
               </div>
               
-              {/* 列2: 基本ステータス範囲 */}
+              {/* 能力・効果 + 本能・超本能 */}
+              <div>
+                <div className="flex items-center gap-2 mb-1">
+                  <h4 className="font-semibold text-gray-600">能力・効果</h4>
+                  <label className="flex items-center text-[10px] text-gray-600">
+                    <input
+                      type="checkbox"
+                      checked={advancedFilters.includeInstincts}
+                      onChange={(e) => setAdvancedFilters({
+                        ...advancedFilters, 
+                        includeInstincts: e.target.checked
+                      })}
+                      className="mr-1 scale-75"
+                    />
+                    本能・超本能を含める
+                  </label>
+                </div>
+                
+                {/* 能力タイプ（アイコン形式） */}
+                <div className="mb-2">
+                  <div className="flex items-center gap-2 mb-1">
+                    <div className="flex gap-1">
+                      {[
+                        { key: 'weaken', name: '攻撃力ダウン', icon: icons.abilityWeaken }
+                      ].map(ability => (
+                        <label key={ability.key} className="cursor-pointer">
+                          <input
+                            type="checkbox"
+                            checked={advancedFilters.abilityTypes.includes(ability.key)}
+                            onChange={(e) => {
+                              const newAbilities = e.target.checked
+                                ? [...advancedFilters.abilityTypes, ability.key]
+                                : advancedFilters.abilityTypes.filter(a => a !== ability.key);
+                              setAdvancedFilters({...advancedFilters, abilityTypes: newAbilities});
+                            }}
+                            className="sr-only"
+                          />
+                          <div 
+                            className={`border-2 rounded flex items-center justify-center my-0 py-0 ${
+                              advancedFilters.abilityTypes.includes(ability.key) 
+                                ? 'border-blue-500 bg-blue-50' 
+                                : 'border-gray-300 bg-white hover:border-gray-400'
+                            }`}
+                            style={{ width: '24px', height: '24px' }}
+                          >
+                            <Image 
+                              src={`data:image/png;base64,${ability.icon}`} 
+                              alt={ability.name} 
+                              width={20} 
+                              height={20} 
+                              className="object-contain"
+                            />
+                          </div>
+                        </label>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+
+              {/* ステータス範囲 */}
               <div>
                 <h4 className="font-semibold mb-1 text-gray-600">ステータス</h4>
                 
@@ -1306,122 +1304,21 @@ function UnitPageContent() {
                 </div>
               </div>
               
-              {/* 列4: 能力・効果 + 本能・超本能 */}
-              <div>
-                <h4 className="font-semibold mb-1 text-gray-600">能力・効果</h4>
-                
-                <div className="space-y-1 mb-3">
-                  <label className="flex items-center text-[10px] text-gray-600">
-                    <input
-                      type="checkbox"
-                      checked={advancedFilters.hasTargetAbility}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        hasTargetAbility: e.target.checked
-                      })}
-                      className="mr-1 scale-75"
-                    />
-                    特定対象への特殊攻撃
-                  </label>
-                  
-                  <label className="flex items-center text-[10px] text-gray-600">
-                    <input
-                      type="checkbox"
-                      checked={advancedFilters.hasResistance}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        hasResistance: e.target.checked
-                      })}
-                      className="mr-1 scale-75"
-                    />
-                    耐性能力
-                  </label>
-                  
-                  <label className="flex items-center text-[10px] text-gray-600">
-                    <input
-                      type="checkbox"
-                      checked={advancedFilters.hasStatusEffect}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        hasStatusEffect: e.target.checked
-                      })}
-                      className="mr-1 scale-75"
-                    />
-                    状態異常
-                  </label>
-                  
-                  <label className="flex items-center text-[10px] text-gray-600">
-                    <input
-                      type="checkbox"
-                      checked={advancedFilters.hasSpecialAttack}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        hasSpecialAttack: e.target.checked
-                      })}
-                      className="mr-1 scale-75"
-                    />
-                    特殊攻撃（波動・サージ等）
-                  </label>
-                </div>
-                
-                <h4 className="font-semibold mb-1 text-gray-600">本能・超本能</h4>
-                
-                <div className="space-y-1">
-                  <label className="flex items-center text-[10px] text-gray-600">
-                    <input
-                      type="checkbox"
-                      checked={advancedFilters.hasTalents}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        hasTalents: e.target.checked
-                      })}
-                      className="mr-1 scale-75"
-                    />
-                    本能あり
-                  </label>
-                  
-                  <label className="flex items-center text-[10px] text-gray-600">
-                    <input
-                      type="checkbox"
-                      checked={advancedFilters.hasUltraTalents}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        hasUltraTalents: e.target.checked
-                      })}
-                      className="mr-1 scale-75"
-                    />
-                    超本能あり
-                  </label>
-                  
-                  <div className="border-t pt-1 mt-2">
-                    <label className="flex items-center text-[10px] font-medium text-gray-600">
-                      <input
-                        type="checkbox"
-                        checked={advancedFilters.includeTalentSearch}
-                        onChange={(e) => setAdvancedFilters({
-                          ...advancedFilters, 
-                          includeTalentSearch: e.target.checked
-                        })}
-                        className="mr-1 scale-75"
-                      />
-                      本能・超本能を検索対象に含める
-                    </label>
-                  </div>
-                </div>
-              </div>
             </div>
             
             {/* 検索実行・リセットボタン */}
             <div className="flex gap-2 mt-2">
               <button 
                 onClick={handleAdvancedSearch}
-                className="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded text-xs"
+                disabled={loading}
+                className="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded text-xs disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                検索実行
+                {loading ? '検索中...' : '検索実行'}
               </button>
               <button 
                 onClick={resetAdvancedFilters}
-                className="bg-gray-500 hover:bg-gray-600 text-white px-3 py-1 rounded text-xs"
+                disabled={loading}
+                className="bg-gray-500 hover:bg-gray-600 text-white px-3 py-1 rounded text-xs disabled:opacity-50"
               >
                 条件リセット
               </button>
@@ -1518,19 +1415,6 @@ function UnitPageContent() {
                         {unit.formName}
                       </span>
                       
-                      {/* 右側: 本能・超本能 */}
-                      <div className="flex items-center gap-1 ml-auto">
-                        {unit.talents.length > 0 && (
-                          <span className="text-[8px] px-1 py-0.5 rounded bg-orange-100 text-orange-700">
-                            本能
-                          </span>
-                        )}
-                        {unit.ultraTalents.length > 0 && (
-                          <span className="text-[8px] px-1 py-0.5 rounded bg-red-100 text-red-700">
-                            超本能
-                          </span>
-                        )}
-                      </div>
                     </div>
                   </div>
                 );

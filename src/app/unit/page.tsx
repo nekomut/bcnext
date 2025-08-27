@@ -6,7 +6,7 @@ import React, { useState, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { icons } from '@/data/icons';
 import { UnitDisplay } from './UnitDisplay';
-import { UnitData, getUnitData, calculateUnitStats, frameToSecond, getAbilities } from './types';
+import { UnitData, getUnitData, calculateUnitStats, frameToSecond, getAbilities, getValidFormCount } from './types';
 import { unitNamesData, UnitNameData } from '@/data/unit-names';
 import IconManager from './IconManager';
 
@@ -277,8 +277,11 @@ function UnitPageContent() {
 
               const unitResults: SearchableUnit[] = [];
 
-              // 形態ごとにSearchableUnitを作成
-              for (let formIndex = 0; formIndex < unitData.coreData.forms.length; formIndex++) {
+              // 有効な形態数を取得
+              const validFormCount = getValidFormCount(unitData);
+
+              // 形態ごとにSearchableUnitを作成（有効な形態のみ）
+              for (let formIndex = 0; formIndex < validFormCount; formIndex++) {
                 const form = unitData.coreData.forms[formIndex];
                 const stats = calculateUnitStats(unitData, formIndex, 30, 0);
                 

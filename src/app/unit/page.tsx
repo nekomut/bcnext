@@ -96,7 +96,7 @@ function UnitPageContent() {
   // アドバンス検索用のstate
   const [isAdvancedSearchOpen, setIsAdvancedSearchOpen] = useState<boolean>(false);
   const [searchResults, setSearchResults] = useState<SearchableUnit[]>([]);
-  const [searchResultsExecuted, setSearchResultsExecuted] = useState<boolean>(false);
+  // const [searchResultsExecuted, setSearchResultsExecuted] = useState<boolean>(false);
   const [currentResultPage, setCurrentResultPage] = useState<number>(1);
   const [sortOption, setSortOption] = useState<string>('id');
   const [advancedFilters, setAdvancedFilters] = useState<AdvancedFilters>({
@@ -253,7 +253,7 @@ function UnitPageContent() {
   const handleAdvancedSearch = async () => {
     setLoading(true);
     setError('');
-    setSearchResultsExecuted(false);
+    // setSearchResultsExecuted(false);
 
     try {
       // 検索可能なユニットリストを生成
@@ -502,7 +502,7 @@ function UnitPageContent() {
       });
 
       setSearchResults(searchableUnits);
-      setSearchResultsExecuted(true);
+      // setSearchResultsExecuted(true);
       setCurrentResultPage(1);
     } catch (error) {
       console.error('Advanced search error:', error);
@@ -540,7 +540,7 @@ function UnitPageContent() {
       includeTalentSearch: false
     });
     setSearchResults([]);
-    setSearchResultsExecuted(false);
+    // setSearchResultsExecuted(false);
     setCurrentResultPage(1);
   };
 
@@ -815,7 +815,7 @@ function UnitPageContent() {
             {/* OR/AND検索モード選択 */}
             <div className="mb-1 border-gray-200">
               <div className="flex gap-4">
-                <label className="flex items-center text-[9px] text-gray-600">
+                <label className="flex items-center font-bold text-[9px] text-gray-600">
                   <input
                     type="radio"
                     name="searchMode"
@@ -829,7 +829,7 @@ function UnitPageContent() {
                   />
                   <span>AND</span>
                 </label>
-                <label className="flex items-center text-[9px] text-gray-600">
+                <label className="flex items-center font-bold text-[9px] text-gray-600">
                   <input
                     type="radio"
                     name="searchMode"
@@ -854,7 +854,7 @@ function UnitPageContent() {
                 {/* レアリティ選択 */}
                 <div className="mb-2">
                   <div className="flex items-center gap-2 mb-1">
-                    <label className="text-[10px] text-gray-600">レア度</label>
+                    <label className="font-bold text-[10px] text-gray-600">レア度</label>
                     <div className="flex gap-1">
                       {[
                         { key: '基本', icon: icons.rarityBasic },
@@ -898,7 +898,7 @@ function UnitPageContent() {
                 {/* ターゲット属性 */}
                 <div>
                   <div className="flex items-center gap-2 mb-1">
-                    <label className="text-[10px] text-gray-600">ターゲット</label>
+                    <label className="font-bold text-[10px] text-gray-600">ターゲット</label>
                     <div className="flex flex-wrap gap-1">
                       {[
                         { key: 'red', name: '赤い敵', icon: icons.traitRed },
@@ -951,290 +951,357 @@ function UnitPageContent() {
               
               {/* 列2: 基本ステータス範囲 */}
               <div>
-                <h4 className="font-semibold mb-1 text-gray-600">基本ステータス</h4>
+                <h4 className="font-semibold mb-1 text-gray-600">ステータス</h4>
                 
-                {/* HP範囲 */}
+                {/* HP・攻撃力範囲 */}
                 <div className="mb-2">
-                  <label className="block text-[10px] text-gray-600">HP</label>
                   <div className="flex gap-1">
-                    <input
-                      type="number"
-                      placeholder="最小"
-                      value={advancedFilters.hpRange.min}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        hpRange: {...advancedFilters.hpRange, min: e.target.value}
-                      })}
-                      className="w-1/2 border rounded px-1 py-0.5 text-[8px]"
-                    />
-                    <input
-                      type="number"
-                      placeholder="最大"
-                      value={advancedFilters.hpRange.max}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        hpRange: {...advancedFilters.hpRange, max: e.target.value}
-                      })}
-                      className="w-1/2 border rounded px-1 py-0.5 text-[8px]"
-                    />
+                    {/* HP範囲 */}
+                    <div className="flex items-center gap-1 w-1/2">
+                      <label className="text-[10px] text-gray-600 w-[60px]">HP</label>
+                      <input
+                        type="number"
+                        placeholder="最小"
+                        value={advancedFilters.hpRange.min}
+                        onChange={(e) => setAdvancedFilters({
+                          ...advancedFilters, 
+                          hpRange: {...advancedFilters.hpRange, min: e.target.value}
+                        })}
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                      />
+                      ~
+                      <input
+                        type="number"
+                        placeholder="最大"
+                        value={advancedFilters.hpRange.max}
+                        onChange={(e) => setAdvancedFilters({
+                          ...advancedFilters, 
+                          hpRange: {...advancedFilters.hpRange, max: e.target.value}
+                        })}
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                      />
+                    </div>
+                    
+                    {/* 攻撃力範囲 */}
+                    <div className="flex items-center gap-1 w-1/2">
+                      <label className="text-[10px] text-gray-600 w-[60px]">攻撃</label>
+                      <input
+                        type="number"
+                        placeholder="最小"
+                        value={advancedFilters.attackRange.min}
+                        onChange={(e) => setAdvancedFilters({
+                          ...advancedFilters, 
+                          attackRange: {...advancedFilters.attackRange, min: e.target.value}
+                        })}
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                      />
+                      ~
+                      <input
+                        type="number"
+                        placeholder="最大"
+                        value={advancedFilters.attackRange.max}
+                        onChange={(e) => setAdvancedFilters({
+                          ...advancedFilters, 
+                          attackRange: {...advancedFilters.attackRange, max: e.target.value}
+                        })}
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                      />
+                    </div>
                   </div>
                 </div>
                 
-                {/* 攻撃力範囲 */}
+                {/* DPS・射程範囲 */}
                 <div className="mb-2">
-                  <label className="block text-[10px] text-gray-600">攻撃力</label>
                   <div className="flex gap-1">
-                    <input
-                      type="number"
-                      placeholder="最小"
-                      value={advancedFilters.attackRange.min}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        attackRange: {...advancedFilters.attackRange, min: e.target.value}
-                      })}
-                      className="w-1/2 border rounded px-1 py-0.5 text-[8px]"
-                    />
-                    <input
-                      type="number"
-                      placeholder="最大"
-                      value={advancedFilters.attackRange.max}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        attackRange: {...advancedFilters.attackRange, max: e.target.value}
-                      })}
-                      className="w-1/2 border rounded px-1 py-0.5 text-[8px]"
-                    />
+                    {/* DPS範囲 */}
+                    <div className="flex items-center gap-1 w-1/2">
+                      <label className="text-[10px] text-gray-600 w-[60px]">DPS</label>
+                      <input
+                        type="number"
+                        placeholder="最小"
+                        value={advancedFilters.dpsRange.min}
+                        onChange={(e) => setAdvancedFilters({
+                          ...advancedFilters, 
+                          dpsRange: {...advancedFilters.dpsRange, min: e.target.value}
+                        })}
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                      />
+                      ~
+                      <input
+                        type="number"
+                        placeholder="最大"
+                        value={advancedFilters.dpsRange.max}
+                        onChange={(e) => setAdvancedFilters({
+                          ...advancedFilters, 
+                          dpsRange: {...advancedFilters.dpsRange, max: e.target.value}
+                        })}
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                      />
+                    </div>
+                    
+                    {/* 射程範囲 */}
+                    <div className="flex items-center gap-1 w-1/2">
+                      <label className="text-[10px] text-gray-600 w-[60px]">射程</label>
+                      <input
+                        type="number"
+                        placeholder="最小"
+                        value={advancedFilters.rangeRange.min}
+                        onChange={(e) => setAdvancedFilters({
+                          ...advancedFilters, 
+                          rangeRange: {...advancedFilters.rangeRange, min: e.target.value}
+                        })}
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                      />
+                      ~
+                      <input
+                        type="number"
+                        placeholder="最大"
+                        value={advancedFilters.rangeRange.max}
+                        onChange={(e) => setAdvancedFilters({
+                          ...advancedFilters, 
+                          rangeRange: {...advancedFilters.rangeRange, max: e.target.value}
+                        })}
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                      />
+                    </div>
                   </div>
                 </div>
                 
-                {/* DPS範囲 */}
+                {/* KB・速度範囲 */}
                 <div className="mb-2">
-                  <label className="block text-[10px] text-gray-600">DPS</label>
                   <div className="flex gap-1">
-                    <input
-                      type="number"
-                      placeholder="最小"
-                      value={advancedFilters.dpsRange.min}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        dpsRange: {...advancedFilters.dpsRange, min: e.target.value}
-                      })}
-                      className="w-1/2 border rounded px-1 py-0.5 text-[8px]"
-                    />
-                    <input
-                      type="number"
-                      placeholder="最大"
-                      value={advancedFilters.dpsRange.max}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        dpsRange: {...advancedFilters.dpsRange, max: e.target.value}
-                      })}
-                      className="w-1/2 border rounded px-1 py-0.5 text-[8px]"
-                    />
+                    {/* KB範囲 */}
+                    <div className="flex items-center gap-1 w-1/2">
+                      <label className="text-[10px] text-gray-600 w-[60px]">KB</label>
+                      <input
+                        type="number"
+                        placeholder="最小"
+                        value={advancedFilters.kbRange.min}
+                        onChange={(e) => setAdvancedFilters({
+                          ...advancedFilters, 
+                          kbRange: {...advancedFilters.kbRange, min: e.target.value}
+                        })}
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                      />
+                      ~
+                      <input
+                        type="number"
+                        placeholder="最大"
+                        value={advancedFilters.kbRange.max}
+                        onChange={(e) => setAdvancedFilters({
+                          ...advancedFilters, 
+                          kbRange: {...advancedFilters.kbRange, max: e.target.value}
+                        })}
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                      />
+                    </div>
+                    
+                    {/* 速度範囲 */}
+                    <div className="flex items-center gap-1 w-1/2">
+                      <label className="text-[10px] text-gray-600 w-[60px]">速度</label>
+                      <input
+                        type="number"
+                        placeholder="最小"
+                        value={advancedFilters.speedRange.min}
+                        onChange={(e) => setAdvancedFilters({
+                          ...advancedFilters, 
+                          speedRange: {...advancedFilters.speedRange, min: e.target.value}
+                        })}
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                      />
+                      ~
+                      <input
+                        type="number"
+                        placeholder="最大"
+                        value={advancedFilters.speedRange.max}
+                        onChange={(e) => setAdvancedFilters({
+                          ...advancedFilters, 
+                          speedRange: {...advancedFilters.speedRange, max: e.target.value}
+                        })}
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                      />
+                    </div>
                   </div>
                 </div>
                 
-                {/* コスト範囲 */}
+                {/* コスト・再生産範囲 */}
                 <div className="mb-2">
-                  <label className="block text-[10px] text-gray-600">コスト</label>
                   <div className="flex gap-1">
-                    <input
-                      type="number"
-                      placeholder="最小"
-                      value={advancedFilters.costRange.min}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        costRange: {...advancedFilters.costRange, min: e.target.value}
-                      })}
-                      className="w-1/2 border rounded px-1 py-0.5 text-[8px]"
-                    />
-                    <input
-                      type="number"
-                      placeholder="最大"
-                      value={advancedFilters.costRange.max}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        costRange: {...advancedFilters.costRange, max: e.target.value}
-                      })}
-                      className="w-1/2 border rounded px-1 py-0.5 text-[8px]"
-                    />
+                    {/* コスト範囲 */}
+                    <div className="flex items-center gap-1 w-1/2">
+                      <label className="text-[10px] text-gray-600 w-[60px]">コスト</label>
+                      <input
+                        type="number"
+                        placeholder="最小"
+                        value={advancedFilters.costRange.min}
+                        onChange={(e) => setAdvancedFilters({
+                          ...advancedFilters, 
+                          costRange: {...advancedFilters.costRange, min: e.target.value}
+                        })}
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                      />
+                      ~
+                      <input
+                        type="number"
+                        placeholder="最大"
+                        value={advancedFilters.costRange.max}
+                        onChange={(e) => setAdvancedFilters({
+                          ...advancedFilters, 
+                          costRange: {...advancedFilters.costRange, max: e.target.value}
+                        })}
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                      />
+                    </div>
+                    
+                    {/* 再生産範囲 */}
+                    <div className="flex items-center gap-1 w-1/2">
+                      <label className="text-[10px] text-gray-600 w-[60px]">再生産</label>
+                      <input
+                        type="number"
+                        step="0.1"
+                        placeholder="最小"
+                        value={advancedFilters.rechargeRange.min}
+                        onChange={(e) => setAdvancedFilters({
+                          ...advancedFilters, 
+                          rechargeRange: {...advancedFilters.rechargeRange, min: e.target.value}
+                        })}
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                      />
+                      ~
+                      <input
+                        type="number"
+                        step="0.1"
+                        placeholder="最大"
+                        value={advancedFilters.rechargeRange.max}
+                        onChange={(e) => setAdvancedFilters({
+                          ...advancedFilters, 
+                          rechargeRange: {...advancedFilters.rechargeRange, max: e.target.value}
+                        })}
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                      />
+                    </div>
                   </div>
                 </div>
                 
-                {/* KB範囲 */}
+                {/* 攻撃発生・攻撃間隔範囲 */}
                 <div className="mb-2">
-                  <label className="block text-[10px] text-gray-600">KB</label>
                   <div className="flex gap-1">
-                    <input
-                      type="number"
-                      placeholder="最小"
-                      value={advancedFilters.kbRange.min}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        kbRange: {...advancedFilters.kbRange, min: e.target.value}
-                      })}
-                      className="w-1/2 border rounded px-1 py-0.5 text-[8px]"
-                    />
-                    <input
-                      type="number"
-                      placeholder="最大"
-                      value={advancedFilters.kbRange.max}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        kbRange: {...advancedFilters.kbRange, max: e.target.value}
-                      })}
-                      className="w-1/2 border rounded px-1 py-0.5 text-[8px]"
-                    />
-                  </div>
-                </div>
-              </div>
-              
-              {/* 列3: 攻撃・時間ステータス範囲 */}
-              <div>
-                <h4 className="font-semibold mb-1 text-gray-600">攻撃・時間</h4>
-                
-                {/* 再生産範囲 */}
-                <div className="mb-2">
-                  <label className="block text-[10px] text-gray-600">再生産（秒）</label>
-                  <div className="flex gap-1">
-                    <input
-                      type="number"
-                      step="0.1"
-                      placeholder="最小"
-                      value={advancedFilters.rechargeRange.min}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        rechargeRange: {...advancedFilters.rechargeRange, min: e.target.value}
-                      })}
-                      className="w-1/2 border rounded px-1 py-0.5 text-[8px]"
-                    />
-                    <input
-                      type="number"
-                      step="0.1"
-                      placeholder="最大"
-                      value={advancedFilters.rechargeRange.max}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        rechargeRange: {...advancedFilters.rechargeRange, max: e.target.value}
-                      })}
-                      className="w-1/2 border rounded px-1 py-0.5 text-[8px]"
-                    />
-                  </div>
-                </div>
-                
-                {/* 攻撃発生範囲 */}
-                <div className="mb-2">
-                  <label className="block text-[10px] text-gray-600">攻撃発生（秒）</label>
-                  <div className="flex gap-1">
-                    <input
-                      type="number"
-                      step="0.1"
-                      placeholder="最小"
-                      value={advancedFilters.foreswingRange.min}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        foreswingRange: {...advancedFilters.foreswingRange, min: e.target.value}
-                      })}
-                      className="w-1/2 border rounded px-1 py-0.5 text-[8px]"
-                    />
-                    <input
-                      type="number"
-                      step="0.1"
-                      placeholder="最大"
-                      value={advancedFilters.foreswingRange.max}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        foreswingRange: {...advancedFilters.foreswingRange, max: e.target.value}
-                      })}
-                      className="w-1/2 border rounded px-1 py-0.5 text-[8px]"
-                    />
+                    {/* 攻撃発生範囲 */}
+                    <div className="flex items-center gap-1 w-1/2">
+                      <label className="text-[10px] text-gray-600 w-[60px]">攻撃発生</label>
+                      <input
+                        type="number"
+                        step="0.1"
+                        placeholder="最小"
+                        value={advancedFilters.foreswingRange.min}
+                        onChange={(e) => setAdvancedFilters({
+                          ...advancedFilters, 
+                          foreswingRange: {...advancedFilters.foreswingRange, min: e.target.value}
+                        })}
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                      />
+                      ~
+                      <input
+                        type="number"
+                        step="0.1"
+                        placeholder="最大"
+                        value={advancedFilters.foreswingRange.max}
+                        onChange={(e) => setAdvancedFilters({
+                          ...advancedFilters, 
+                          foreswingRange: {...advancedFilters.foreswingRange, max: e.target.value}
+                        })}
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                      />
+                    </div>
+                    
+                    {/* 攻撃間隔範囲 */}
+                    <div className="flex items-center gap-1 w-1/2">
+                      <label className="text-[10px] text-gray-600 w-[60px]">攻撃間隔</label>
+                      <input
+                        type="number"
+                        step="0.1"
+                        placeholder="最小"
+                        value={advancedFilters.tbaRange.min}
+                        onChange={(e) => setAdvancedFilters({
+                          ...advancedFilters, 
+                          tbaRange: {...advancedFilters.tbaRange, min: e.target.value}
+                        })}
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                      />
+                      ~
+                      <input
+                        type="number"
+                        step="0.1"
+                        placeholder="最大"
+                        value={advancedFilters.tbaRange.max}
+                        onChange={(e) => setAdvancedFilters({
+                          ...advancedFilters, 
+                          tbaRange: {...advancedFilters.tbaRange, max: e.target.value}
+                        })}
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                      />
+                    </div>
                   </div>
                 </div>
                 
-                {/* 攻撃間隔範囲 */}
+                {/* 攻撃後硬直・攻撃頻度範囲 */}
                 <div className="mb-2">
-                  <label className="block text-[10px] text-gray-600">攻撃間隔（秒）</label>
                   <div className="flex gap-1">
-                    <input
-                      type="number"
-                      step="0.1"
-                      placeholder="最小"
-                      value={advancedFilters.tbaRange.min}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        tbaRange: {...advancedFilters.tbaRange, min: e.target.value}
-                      })}
-                      className="w-1/2 border rounded px-1 py-0.5 text-[8px]"
-                    />
-                    <input
-                      type="number"
-                      step="0.1"
-                      placeholder="最大"
-                      value={advancedFilters.tbaRange.max}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        tbaRange: {...advancedFilters.tbaRange, max: e.target.value}
-                      })}
-                      className="w-1/2 border rounded px-1 py-0.5 text-[8px]"
-                    />
-                  </div>
-                </div>
-                
-                {/* 攻撃後硬直範囲 */}
-                <div className="mb-2">
-                  <label className="block text-[10px] text-gray-600">攻撃後硬直（秒）</label>
-                  <div className="flex gap-1">
-                    <input
-                      type="number"
-                      step="0.1"
-                      placeholder="最小"
-                      value={advancedFilters.backswingRange.min}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        backswingRange: {...advancedFilters.backswingRange, min: e.target.value}
-                      })}
-                      className="w-1/2 border rounded px-1 py-0.5 text-[8px]"
-                    />
-                    <input
-                      type="number"
-                      step="0.1"
-                      placeholder="最大"
-                      value={advancedFilters.backswingRange.max}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        backswingRange: {...advancedFilters.backswingRange, max: e.target.value}
-                      })}
-                      className="w-1/2 border rounded px-1 py-0.5 text-[8px]"
-                    />
-                  </div>
-                </div>
-                
-                {/* 攻撃頻度範囲 */}
-                <div className="mb-2">
-                  <label className="block text-[10px] text-gray-600">攻撃頻度（/秒）</label>
-                  <div className="flex gap-1">
-                    <input
-                      type="number"
-                      step="0.01"
-                      placeholder="最小"
-                      value={advancedFilters.freqRange.min}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        freqRange: {...advancedFilters.freqRange, min: e.target.value}
-                      })}
-                      className="w-1/2 border rounded px-1 py-0.5 text-[8px]"
-                    />
-                    <input
-                      type="number"
-                      step="0.01"
-                      placeholder="最大"
-                      value={advancedFilters.freqRange.max}
-                      onChange={(e) => setAdvancedFilters({
-                        ...advancedFilters, 
-                        freqRange: {...advancedFilters.freqRange, max: e.target.value}
-                      })}
-                      className="w-1/2 border rounded px-1 py-0.5 text-[8px]"
-                    />
+                    {/* 攻撃後硬直範囲 */}
+                    <div className="flex items-center gap-1 w-1/2">
+                      <label className="text-[10px] text-gray-600 w-[60px]">攻撃後硬直</label>
+                      <input
+                        type="number"
+                        step="0.1"
+                        placeholder="最小"
+                        value={advancedFilters.backswingRange.min}
+                        onChange={(e) => setAdvancedFilters({
+                          ...advancedFilters, 
+                          backswingRange: {...advancedFilters.backswingRange, min: e.target.value}
+                        })}
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                      />
+                      ~
+                      <input
+                        type="number"
+                        step="0.1"
+                        placeholder="最大"
+                        value={advancedFilters.backswingRange.max}
+                        onChange={(e) => setAdvancedFilters({
+                          ...advancedFilters, 
+                          backswingRange: {...advancedFilters.backswingRange, max: e.target.value}
+                        })}
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                      />
+                    </div>
+                    
+                    {/* 攻撃頻度範囲 */}
+                    <div className="flex items-center gap-1 w-1/2">
+                      <label className="text-[10px] text-gray-600 w-[60px]">攻撃頻度</label>
+                      <input
+                        type="number"
+                        step="0.01"
+                        placeholder="最小"
+                        value={advancedFilters.freqRange.min}
+                        onChange={(e) => setAdvancedFilters({
+                          ...advancedFilters, 
+                          freqRange: {...advancedFilters.freqRange, min: e.target.value}
+                        })}
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                      />
+                      ~
+                      <input
+                        type="number"
+                        step="0.01"
+                        placeholder="最大"
+                        value={advancedFilters.freqRange.max}
+                        onChange={(e) => setAdvancedFilters({
+                          ...advancedFilters, 
+                          freqRange: {...advancedFilters.freqRange, max: e.target.value}
+                        })}
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1494,19 +1561,6 @@ function UnitPageContent() {
                 </div>
               </div>
             )}
-          </div>
-        )}
-
-        {/* 検索結果が0件の場合 */}
-        {searchResultsExecuted && searchResults.length === 0 && (
-          <div className="mb-2 p-3 bg-yellow-50 border border-yellow-200 rounded text-sm text-yellow-800">
-            <div className="flex items-center gap-2">
-              <span>⚠️</span>
-              <span>指定した条件に一致するユニットが見つかりませんでした。</span>
-            </div>
-            <div className="mt-1 text-xs text-yellow-600">
-              検索条件を緩和するか、「条件リセット」をお試しください。
-            </div>
           </div>
         )}
 

@@ -255,7 +255,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect }) => {
           >
             {/* ユニットID（クリック可能） */}
             <div 
-              className="w-6 px-2 text-xxs text-gray-500 font-mono flex-shrink-0 cursor-pointer hover:text-blue-600 hover:bg-blue-50 rounded"
+              className="w-6 px-2 text-xs text-gray-500 font-mono flex-shrink-0 cursor-pointer hover:text-blue-600 hover:bg-blue-50 rounded"
               onClick={(e) => {
                 e.stopPropagation();
                 onUnitSelect(parseInt(unit.unitId), 0); // 第1形態（formId=0）を選択
@@ -266,11 +266,11 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect }) => {
             </div>
             
             {/* 形態アイコン（1-4形態） */}
-            <div className="flex gap-1 ml-2 mr-2">
+            <div className="flex gap-1 ml-3 mr-2">
               {Array.from({ length: 4 }, (_, formIndex) => (
                 <div
                   key={formIndex}
-                  className={`w-6 h-5 border border-gray-300 rounded flex items-center justify-center ${
+                  className={`w-7 h-6 border border-gray-300 rounded flex items-center justify-center ${
                     formIndex < unit.formIcons.length ? 'bg-white hover:bg-blue-50 cursor-pointer hover:border-blue-400' : 'bg-gray-100'
                   }`}
                   onClick={(e) => {
@@ -285,8 +285,8 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect }) => {
                     <Image 
                       src={`data:image/png;base64,${unit.formIcons[formIndex]}`} 
                       alt={`${unit.displayName} 第${formIndex + 1}形態`} 
-                      width={24} 
-                      height={20} 
+                      width={36} 
+                      height={24} 
                       className="object-contain"
                     />
                   ) : (
@@ -301,14 +301,14 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect }) => {
               {unit.talentIcons.map((iconKey, index) => (
                 <div 
                   key={index}
-                  className="w-4 h-4 flex items-center justify-center" 
+                  className="w-5 h-5 flex items-center justify-center" 
                   title={`本能・超本能: ${iconKey}`}
                 >
                   <Image 
                     src={`data:image/png;base64,${icons[iconKey as keyof typeof icons]}`} 
                     alt={iconKey} 
-                    width={16} 
-                    height={16} 
+                    width={20} 
+                    height={20} 
                     className="object-contain"
                   />
                 </div>

@@ -1407,7 +1407,7 @@ function UnitPageContent() {
           <div className="mb-2">
             {/* 検索結果ヘッダー */}
             <div className="flex justify-between items-center mb-1">
-              <h4 className="text-xs font-semibold text-blue-600">
+              <h4 className="text-xs font-semibold text-cyan-500">
                 検索結果: {searchResults.length}件
               </h4>
               
@@ -1433,7 +1433,7 @@ function UnitPageContent() {
             </div>
             
             {/* 検索結果グリッド（横6個×縦4個の24個表示） */}
-            <div className="border border-gray-300 rounded bg-white p-2">
+            <div className="border border-gray-300 rounded bg-cyan-500 p-2">
               <div className="grid grid-cols-6 grid-rows-4 gap-0.5">
                 {searchResults.slice((currentResultPage - 1) * 24, currentResultPage * 24).map((unit) => {
                   return (
@@ -1444,7 +1444,7 @@ function UnitPageContent() {
                       title={`${unit.unitId}-${unit.formId + 1}: ${unit.formName}`}
                     >
                       {/* ユニットアイコン */}
-                      <div className="w-12 h-12 flex items-center justify-center">
+                      <div className="w-12 h-10 flex items-center justify-center bg-cyan-500 rounded">
                         {unit.unitIcon ? (
                           <Image 
                             src={`data:image/png;base64,${unit.unitIcon}`} 
@@ -1454,7 +1454,7 @@ function UnitPageContent() {
                             className="object-contain"
                           />
                         ) : (
-                          <div className="w-12 h-12 bg-gray-200 rounded"></div>
+                          <div className="w-12 h-12 bg-cyan-500 rounded"></div>
                         )}
                       </div>
                     </div>

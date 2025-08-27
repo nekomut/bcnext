@@ -1433,13 +1433,13 @@ function UnitPageContent() {
             </div>
             
             {/* 検索結果グリッド（横6個×縦4個の24個表示） */}
-            <div className="border border-gray-300 rounded bg-cyan-500 p-2">
-              <div className="grid grid-cols-6 grid-rows-4 gap-0.5">
+            <div className="border border-gray-800 rounded bg-cyan-500 p-0">
+              <div className="grid grid-cols-6 grid-rows-4 gap-0">
                 {searchResults.slice((currentResultPage - 1) * 24, currentResultPage * 24).map((unit) => {
                   return (
                     <div
                       key={`${unit.unitId}-${unit.formId}`}
-                      className="relative flex items-center justify-center cursor-pointer hover:bg-gray-100 px-1 py-0 rounded"
+                      className="relative flex items-center justify-center cursor-pointer hover:bg-cyan-500 px-1 py-0 rounded"
                       onClick={() => handleSearchResultSelect(unit)}
                       title={`${unit.unitId}-${unit.formId + 1}: ${unit.formName}`}
                     >
@@ -1454,7 +1454,7 @@ function UnitPageContent() {
                             className="object-contain"
                           />
                         ) : (
-                          <div className="w-12 h-12 bg-cyan-500 rounded"></div>
+                          <div className="w-12 h-10 bg-cyan-500 rounded"></div>
                         )}
                       </div>
                     </div>
@@ -1470,7 +1470,7 @@ function UnitPageContent() {
                   <button 
                     onClick={() => setCurrentResultPage(Math.max(1, currentResultPage - 1))}
                     disabled={currentResultPage === 1}
-                    className="px-2 py-1 border rounded hover:bg-gray-100 disabled:opacity-50"
+                    className="px-2 py-1 border rounded hover:bg-gray-700 disabled:opacity-50"
                   >
                     前
                   </button>
@@ -1480,7 +1480,7 @@ function UnitPageContent() {
                   <button 
                     onClick={() => setCurrentResultPage(Math.min(Math.ceil(searchResults.length / 24), currentResultPage + 1))}
                     disabled={currentResultPage === Math.ceil(searchResults.length / 24)}
-                    className="px-2 py-1 border rounded hover:bg-gray-100 disabled:opacity-50"
+                    className="px-2 py-1 border rounded hover:bg-gray-700 disabled:opacity-50"
                   >
                     次
                   </button>

@@ -55,6 +55,7 @@ interface SearchableUnit {
   formName: string;
   rarity: { id: number; name: string; maxLevels: readonly [number, number] };
   unitIcon: string;
+  sortKey?: number;
   baseStats: {
     hp: number;
     attack: number;
@@ -390,6 +391,7 @@ function UnitPageContent() {
                   formName: form.name,
                   rarity: unitData.coreData.rarity,
                   unitIcon: unitIconData,
+                  sortKey: unitData.sortKey,
                   baseStats: {
                     hp: stats.hp,
                     attack: stats.ap,
@@ -453,6 +455,11 @@ function UnitPageContent() {
             const unitIdCompare2 = parseInt(a.unitId) - parseInt(b.unitId);
             if (unitIdCompare2 !== 0) return unitIdCompare2;
             return a.formId - b.formId; // 最後に形態順
+          case 'pokedex':
+            // 図鑑順ソート: sortKeyを使用
+            const sortKeyCompare = (a.sortKey || 0) - (b.sortKey || 0);
+            if (sortKeyCompare !== 0) return sortKeyCompare;
+            return a.formId - b.formId; // 同じユニットなら形態順
           default:
             return 0;
         }
@@ -1359,6 +1366,7 @@ function UnitPageContent() {
                   <option value="id">ID順</option>
                   <option value="rarity">レアリティ順</option>
                   <option value="name">名前順</option>
+                  <option value="pokedex">図鑑順</option>
                 </select>
                 
                 <button

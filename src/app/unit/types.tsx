@@ -24,6 +24,7 @@ export interface UnitTalent {
 
 export interface UnitData {
   readonly unitId: number;
+  readonly sortKey?: number;
   readonly coreData: {
     readonly forms: readonly UnitForm[];
     readonly rarity: UnitRarity;

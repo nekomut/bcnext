@@ -10,6 +10,24 @@ import { UnitData, getUnitData, calculateUnitStats, frameToSecond, getAbilities,
 import { unitNamesData, UnitNameData } from '@/data/unit-names';
 import IconManager from './IconManager';
 
+// 検索中アニメーション用コンポーネント
+function SearchingAnimation() {
+  const [dots, setDots] = useState('');
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setDots(prev => {
+        if (prev === '...') return '';
+        return prev + '.';
+      });
+    }, 500);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return <span>検索中{dots}</span>;
+}
+
 // ターゲット属性の選択肢
 const targetTraitOptions = [
   { key: 'red', name: '赤い敵' },
@@ -93,6 +111,7 @@ function UnitPageContent() {
   // const [searchResultsExecuted, setSearchResultsExecuted] = useState<boolean>(false);
   const [currentResultPage, setCurrentResultPage] = useState<number>(1);
   const [sortOption, setSortOption] = useState<string>('pokedex');
+  const [isStatsCollapsed, setIsStatsCollapsed] = useState<boolean>(true);
   const [advancedFilters, setAdvancedFilters] = useState<AdvancedFilters>({
     searchMode: 'AND',
     rarity: [],
@@ -289,7 +308,7 @@ function UnitPageContent() {
               // 形態ごとにSearchableUnitを作成（有効な形態のみ）
               for (let formIndex = 0; formIndex < validFormCount; formIndex++) {
                 const form = unitData.coreData.forms[formIndex];
-                const stats = calculateUnitStats(unitData, formIndex, 30, 0);
+                const stats = calculateUnitStats(unitData, formIndex, 50, 0);
                 
                 // 各ステータス範囲をチェック
                 const filterChecks = [
@@ -324,7 +343,7 @@ function UnitPageContent() {
                 // ターゲット属性フィルタ（独立して判定）
                 let hasMatchingTargetTrait = true;
                 if (advancedFilters.targetTraits.length > 0) {
-                  const abilities = getAbilities(unitData, formIndex, 30, 0, 1, 1, 0, { chance: 0, duration: 0 }, { chance: 0, duration: 0 }, { chance: 0, duration: 0 }, { chance: 0 }, { chance: 0 }, undefined, advancedFilters.includeInstincts);
+                  const abilities = getAbilities(unitData, formIndex, 50, 0, 1, 1, 0, { chance: 0, duration: 0 }, { chance: 0, duration: 0 }, { chance: 0, duration: 0 }, { chance: 0 }, { chance: 0 }, undefined, advancedFilters.includeInstincts);
                   
                   // キーから日本語名への変換
                   const traitNames = advancedFilters.targetTraits.map(traitKey => {
@@ -353,7 +372,7 @@ function UnitPageContent() {
                 // 能力タイプフィルタ（アイコン形式）
                 let hasMatchingAbilityType = true;
                 if (advancedFilters.abilityTypes.length > 0) {
-                  const abilities = getAbilities(unitData, formIndex, 30, 0, 1, 1, 0, { chance: 0, duration: 0 }, { chance: 0, duration: 0 }, { chance: 0, duration: 0 }, { chance: 0 }, { chance: 0 }, undefined, advancedFilters.includeInstincts);
+                  const abilities = getAbilities(unitData, formIndex, 50, 0, 1, 1, 0, { chance: 0, duration: 0 }, { chance: 0, duration: 0 }, { chance: 0, duration: 0 }, { chance: 0 }, { chance: 0 }, undefined, advancedFilters.includeInstincts);
                   
                   const abilityTypeChecks = advancedFilters.abilityTypes.map(abilityType => {
                     switch (abilityType) {
@@ -861,8 +880,8 @@ function UnitPageContent() {
                 {/* レアリティ選択 */}
                 <div className="mb-1">
                   <div className="flex items-center gap-2 mb-1">
-                    <label className="font-bold text-[12px] text-gray-600">レア度</label>
-                    <div className="flex gap-1">
+                    <label className="font-bold text-[10px] text-gray-600">レア度</label>
+                    <div className="flex gap-0.5">
                       {[
                         { key: '基本', icon: icons.rarityBasic },
                         { key: 'EX', icon: icons.rarityEx },
@@ -905,7 +924,7 @@ function UnitPageContent() {
                 {/* ターゲット属性 */}
                 <div>
                   <div className="flex items-center gap-2 mb-0">
-                    <label className="font-bold text-[12px] text-gray-600">ターゲット</label>
+                    <label className="font-bold text-[10px] text-gray-600">ターゲット</label>
                     <div className="flex flex-wrap gap-1">
                       {[
                         { key: 'red', name: '赤い敵', icon: icons.traitRed },
@@ -1025,7 +1044,15 @@ function UnitPageContent() {
 
               {/* ステータス範囲 */}
               <div>
-                <h4 className="font-semibold mb-1 text-gray-600">ステータス</h4>
+                <div 
+                  className="flex items-center gap-1 cursor-pointer"
+                  onClick={() => setIsStatsCollapsed(!isStatsCollapsed)}
+                >
+                  <h4 className="font-semibold mb-1 text-gray-600">{isStatsCollapsed ? '▶' : '▼'} ステータス<small>(Lv50)</small></h4>
+                </div>
+                
+                {!isStatsCollapsed && (
+                <div>
                 
                 {/* HP・攻撃力範囲 */}
                 <div className="mb-1">
@@ -1378,6 +1405,8 @@ function UnitPageContent() {
                     </div>
                   </div>
                 </div>
+                </div>
+                )}
               </div>
               
             </div>
@@ -1387,14 +1416,14 @@ function UnitPageContent() {
               <button 
                 onClick={handleAdvancedSearch}
                 disabled={loading}
-                className="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded text-xs disabled:opacity-50 disabled:cursor-not-allowed"
+                className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-xs disabled:opacity-50 disabled:cursor-not-allowed w-20 flex items-center justify-center"
               >
-                {loading ? '検索中...' : '検索実行'}
+{loading ? <SearchingAnimation /> : '検索実行'}
               </button>
               <button 
                 onClick={resetAdvancedFilters}
                 disabled={loading}
-                className="bg-gray-500 hover:bg-gray-600 text-white px-3 py-1 rounded text-xs disabled:opacity-50"
+                className="bg-gray-500 hover:bg-gray-600 text-white px-3 py-1 rounded text-xs disabled:opacity-50 w-18"
               >
                 条件リセット
               </button>

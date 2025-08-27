@@ -1432,74 +1432,39 @@ function UnitPageContent() {
               </div>
             </div>
             
-            {/* 検索結果リスト */}
-            <div className="border border-gray-300 rounded max-h-64 overflow-y-auto bg-white">
-              {searchResults.slice((currentResultPage - 1) * 50, currentResultPage * 50).map((unit, index) => {
-                // レアリティアイコンのマッピング
-                const rarityIconMap: { [key: string]: string } = {
-                  '基本': icons.rarityBasic,
-                  'EX': icons.rarityEx,
-                  'レア': icons.rarityRare,
-                  '激レア': icons.raritySuperRare,
-                  '超激レア': icons.rarityUberRare,
-                  '伝説レア': icons.rarityLegendRare
-                };
-                
-                const rarityIcon = rarityIconMap[unit.rarity.name] || icons.rarityBasic;
-                
-                return (
-                  <div
-                    key={`${unit.unitId}-${unit.formId}`}
-                    className={`px-2 py-0 hover:bg-blue-50 cursor-pointer border-b border-gray-100 last:border-b-0 ${
-                      index % 2 === 0 ? 'bg-gray-50' : 'bg-white'
-                    }`}
-                    onClick={() => handleSearchResultSelect(unit)}
-                  >
-                    <div className="flex items-center gap-2">
-                      {/* ユニットID-形態 */}
-                      <span className="text-xs font-semibold text-gray-800 min-w-[35px]">
-                        {unit.unitId}-{unit.formId + 1}
-                      </span>
-                      
-                      {/* レアリティアイコン */}
-                      <div className="w-12 h-6 flex items-center justify-center">
-                        <Image 
-                          src={`data:image/png;base64,${rarityIcon}`} 
-                          alt={unit.rarity.name} 
-                          width={48} 
-                          height={24} 
-                          className="object-contain"
-                        />
-                      </div>
-                      
+            {/* 検索結果グリッド（横6個×縦4個の24個表示） */}
+            <div className="border border-gray-300 rounded bg-white p-2">
+              <div className="grid grid-cols-6 grid-rows-4 gap-0.5">
+                {searchResults.slice((currentResultPage - 1) * 24, currentResultPage * 24).map((unit) => {
+                  return (
+                    <div
+                      key={`${unit.unitId}-${unit.formId}`}
+                      className="relative flex items-center justify-center cursor-pointer hover:bg-gray-100 px-1 py-0 rounded"
+                      onClick={() => handleSearchResultSelect(unit)}
+                      title={`${unit.unitId}-${unit.formId + 1}: ${unit.formName}`}
+                    >
                       {/* ユニットアイコン */}
-                      <div className="w-8 h-8 flex items-center justify-center">
+                      <div className="w-12 h-12 flex items-center justify-center">
                         {unit.unitIcon ? (
                           <Image 
                             src={`data:image/png;base64,${unit.unitIcon}`} 
-                            alt={unit.displayName} 
-                            width={32} 
-                            height={32} 
+                            alt={unit.formName} 
+                            width={48} 
+                            height={48} 
                             className="object-contain"
                           />
                         ) : (
-                          <div className="w-8 h-8 bg-gray-200 rounded"></div>
+                          <div className="w-12 h-12 bg-gray-200 rounded"></div>
                         )}
                       </div>
-                      
-                      {/* ユニット名 */}
-                      <span className="text-xs text-gray-700">
-                        {unit.formName}
-                      </span>
-                      
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>
             </div>
             
             {/* ページネーション（結果が多い場合） */}
-            {searchResults.length > 50 && (
+            {searchResults.length > 24 && (
               <div className="flex justify-center mt-2">
                 <div className="flex gap-1 text-xs">
                   <button 
@@ -1510,11 +1475,11 @@ function UnitPageContent() {
                     前
                   </button>
                   <span className="px-2 py-1">
-                    {currentResultPage} / {Math.ceil(searchResults.length / 50)}
+                    {currentResultPage} / {Math.ceil(searchResults.length / 24)}
                   </span>
                   <button 
-                    onClick={() => setCurrentResultPage(Math.min(Math.ceil(searchResults.length / 50), currentResultPage + 1))}
-                    disabled={currentResultPage === Math.ceil(searchResults.length / 50)}
+                    onClick={() => setCurrentResultPage(Math.min(Math.ceil(searchResults.length / 24), currentResultPage + 1))}
+                    disabled={currentResultPage === Math.ceil(searchResults.length / 24)}
                     className="px-2 py-1 border rounded hover:bg-gray-100 disabled:opacity-50"
                   >
                     次

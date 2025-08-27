@@ -22,7 +22,7 @@ const targetTraitOptions = [
   { key: 'relic', name: '古代種' },
   { key: 'aku', name: '悪魔' },
   { key: 'traitless', name: '属性を持たない敵' },
-  { key: 'eva', name: 'エヴァ使徒' },
+  { key: 'eva', name: '使徒' },
   { key: 'witch', name: '魔女' }
 ];
 
@@ -330,6 +330,13 @@ function UnitPageContent() {
                     traitNames.some(traitName => {
                       const abilityText = typeof ability.name === 'string' ? ability.name : '';
                       const valueText = typeof ability.value === 'string' ? ability.value : '';
+                      
+                      // 特別な属性マッピング: 「使徒」の場合は「使徒キラー」も含めて検索
+                      if (traitName === '使徒') {
+                        return abilityText.includes('使徒') || valueText.includes('使徒') ||
+                               abilityText.includes('使徒キラー') || valueText.includes('使徒キラー');
+                      }
+                      
                       return abilityText.includes(traitName) || valueText.includes(traitName);
                     })
                   );
@@ -855,7 +862,7 @@ function UnitPageContent() {
                         { key: 'relic', name: '古代種', icon: icons.traitRelic },
                         { key: 'aku', name: '悪魔', icon: icons.traitAku },
                         { key: 'traitless', name: '属性を持たない敵', icon: icons.traitTraitless },
-                        { key: 'eva', name: 'エヴァ使徒', icon: icons.traitEvaAngel },
+                        { key: 'eva', name: '使徒', icon: icons.traitEvaAngel },
                         { key: 'witch', name: '魔女', icon: icons.traitWitch }
                       ].map(trait => (
                         <label key={trait.key} className="cursor-pointer">

@@ -92,7 +92,7 @@ function UnitPageContent() {
   const [searchResults, setSearchResults] = useState<SearchableUnit[]>([]);
   // const [searchResultsExecuted, setSearchResultsExecuted] = useState<boolean>(false);
   const [currentResultPage, setCurrentResultPage] = useState<number>(1);
-  const [sortOption, setSortOption] = useState<string>('id');
+  const [sortOption, setSortOption] = useState<string>('pokedex');
   const [advancedFilters, setAdvancedFilters] = useState<AdvancedFilters>({
     searchMode: 'AND',
     rarity: [],
@@ -262,6 +262,11 @@ function UnitPageContent() {
             try {
               const unitData = await getUnitData(parseInt(unitName.unitId));
               if (!unitData) return [];
+
+              // ソートキー -1 のユニットを除外
+              if (unitData.sortKey === -1) {
+                return [];
+              }
 
               // レアリティフィルタ
               if (advancedFilters.rarity.length > 0 && !advancedFilters.rarity.includes(unitData.coreData.rarity.name)) {

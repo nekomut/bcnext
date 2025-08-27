@@ -1210,6 +1210,13 @@ export const getAbilities = (
               iconKeys: ["abilitySlow"]
             });
             break;
+          case 5: // めっぽう強い
+            abilities.push({
+              name: "めっぽう強い",
+              value: `本能によるめっぽう強い効果`,
+              iconKeys: ["abilityStrongAgainst"]
+            });
+            break;
         }
       }
     });

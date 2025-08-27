@@ -22,7 +22,7 @@ const targetTraitOptions = [
   { key: 'relic', name: '古代種' },
   { key: 'aku', name: '悪魔' },
   { key: 'traitless', name: '属性を持たない敵' },
-  { key: 'eva', name: '使徒' },
+  { key: 'evaangel', name: '使徒' },
   { key: 'witch', name: '魔女' }
 ];
 
@@ -862,7 +862,7 @@ function UnitPageContent() {
                         { key: 'relic', name: '古代種', icon: icons.traitRelic },
                         { key: 'aku', name: '悪魔', icon: icons.traitAku },
                         { key: 'traitless', name: '属性を持たない敵', icon: icons.traitTraitless },
-                        { key: 'eva', name: '使徒', icon: icons.traitEvaAngel },
+                        { key: 'evaangel', name: '使徒', icon: icons.traitEvaAngel },
                         { key: 'witch', name: '魔女', icon: icons.traitWitch }
                       ].map(trait => (
                         <label key={trait.key} className="cursor-pointer">

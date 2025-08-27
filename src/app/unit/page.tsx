@@ -377,6 +377,15 @@ function UnitPageContent() {
                           const hasImmuneFreeze = abilityText.includes('動きを止める無効') || valueText.includes('動きを止める無効');
                           return hasFreeze && !hasImmuneFreeze;
                         });
+                      case 'slow':
+                        return abilities.some(ability => {
+                          const abilityText = typeof ability.name === 'string' ? ability.name : '';
+                          const valueText = typeof ability.value === 'string' ? ability.value : '';
+                          // 動きを遅くするを含むが、動きを遅くする無効は除外する
+                          const hasSlow = abilityText.includes('動きを遅くする') || valueText.includes('動きを遅くする');
+                          const hasImmuneSlow = abilityText.includes('動きを遅くする無効') || valueText.includes('動きを遅くする無効');
+                          return hasSlow && !hasImmuneSlow;
+                        });
                       default:
                         return false;
                     }
@@ -786,9 +795,10 @@ function UnitPageContent() {
         {/* アドバンス検索パネル */}
         {isAdvancedSearchOpen && (
           <div className="border border-gray-300 rounded p-2 mb-1 bg-gray-50">
+
             {/* OR/AND検索モード選択 */}
             <div className="mb-1 border-gray-200">
-              <div className="flex gap-4">
+              <div className="flex gap-2">
                 <label className="flex items-center font-bold text-[9px] text-gray-600">
                   <input
                     type="radio"
@@ -825,7 +835,7 @@ function UnitPageContent() {
               {/* 基本情報 + ターゲット属性 */}
               <div>
                 {/* レアリティ選択 */}
-                <div className="mb-2">
+                <div className="mb-1">
                   <div className="flex items-center gap-2 mb-1">
                     <label className="font-bold text-[12px] text-gray-600">レア度</label>
                     <div className="flex gap-1">
@@ -870,7 +880,7 @@ function UnitPageContent() {
                 
                 {/* ターゲット属性 */}
                 <div>
-                  <div className="flex items-center gap-2 mb-1">
+                  <div className="flex items-center gap-2 mb-0">
                     <label className="font-bold text-[12px] text-gray-600">ターゲット</label>
                     <div className="flex flex-wrap gap-1">
                       {[
@@ -941,12 +951,13 @@ function UnitPageContent() {
                 </div>
                 
                 {/* 能力タイプ（アイコン形式） */}
-                <div className="mb-2">
+                <div className="mb-1">
                   <div className="flex items-center gap-2 mb-1">
                     <div className="flex gap-1">
                       {[
                         { key: 'weaken', name: '攻撃力ダウン', icon: icons.abilityWeaken },
-                        { key: 'freeze', name: '動きを止める', icon: icons.abilityFreeze }
+                        { key: 'freeze', name: '動きを止める', icon: icons.abilityFreeze },
+                        { key: 'slow', name: '動きを遅くする', icon: icons.abilitySlow }
                       ].map(ability => (
                         <label key={ability.key} className="cursor-pointer">
                           <input
@@ -989,7 +1000,7 @@ function UnitPageContent() {
                 <h4 className="font-semibold mb-1 text-gray-600">ステータス</h4>
                 
                 {/* HP・攻撃力範囲 */}
-                <div className="mb-2">
+                <div className="mb-1">
                   <div className="flex gap-1">
                     {/* HP範囲 */}
                     <div className="flex items-center gap-1 w-1/2">
@@ -1046,7 +1057,7 @@ function UnitPageContent() {
                 </div>
                 
                 {/* DPS・射程範囲 */}
-                <div className="mb-2">
+                <div className="mb-1">
                   <div className="flex gap-1">
                     {/* DPS範囲 */}
                     <div className="flex items-center gap-1 w-1/2">
@@ -1103,7 +1114,7 @@ function UnitPageContent() {
                 </div>
                 
                 {/* KB・速度範囲 */}
-                <div className="mb-2">
+                <div className="mb-1">
                   <div className="flex gap-1">
                     {/* KB範囲 */}
                     <div className="flex items-center gap-1 w-1/2">
@@ -1160,7 +1171,7 @@ function UnitPageContent() {
                 </div>
                 
                 {/* コスト・再生産範囲 */}
-                <div className="mb-2">
+                <div className="mb-1">
                   <div className="flex gap-1">
                     {/* コスト範囲 */}
                     <div className="flex items-center gap-1 w-1/2">
@@ -1219,7 +1230,7 @@ function UnitPageContent() {
                 </div>
                 
                 {/* 攻撃発生・攻撃間隔範囲 */}
-                <div className="mb-2">
+                <div className="mb-1">
                   <div className="flex gap-1">
                     {/* 攻撃発生範囲 */}
                     <div className="flex items-center gap-1 w-1/2">
@@ -1280,7 +1291,7 @@ function UnitPageContent() {
                 </div>
                 
                 {/* 攻撃後硬直・攻撃頻度範囲 */}
-                <div className="mb-2">
+                <div className="mb-1">
                   <div className="flex gap-1">
                     {/* 攻撃後硬直範囲 */}
                     <div className="flex items-center gap-1 w-1/2">
@@ -1344,7 +1355,7 @@ function UnitPageContent() {
             </div>
             
             {/* 検索実行・リセットボタン */}
-            <div className="flex gap-2 mt-2">
+            <div className="flex gap-2 mt-1">
               <button 
                 onClick={handleAdvancedSearch}
                 disabled={loading}
@@ -1411,14 +1422,14 @@ function UnitPageContent() {
                 return (
                   <div
                     key={`${unit.unitId}-${unit.formId}`}
-                    className={`px-3 py-2 hover:bg-blue-50 cursor-pointer border-b border-gray-100 last:border-b-0 ${
+                    className={`px-2 py-0 hover:bg-blue-50 cursor-pointer border-b border-gray-100 last:border-b-0 ${
                       index % 2 === 0 ? 'bg-gray-50' : 'bg-white'
                     }`}
                     onClick={() => handleSearchResultSelect(unit)}
                   >
                     <div className="flex items-center gap-2">
                       {/* ユニットID-形態 */}
-                      <span className="text-xs font-semibold text-gray-800 min-w-[50px]">
+                      <span className="text-xs font-semibold text-gray-800 min-w-[35px]">
                         {unit.unitId}-{unit.formId + 1}
                       </span>
                       

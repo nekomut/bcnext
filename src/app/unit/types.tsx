@@ -1176,8 +1176,8 @@ export const getAbilities = (
       
       // 形態レベルの判定ロジック
       if (minFormLevel === 7 || minFormLevel === 8 || minFormLevel === 9) {
-        // 第3形態専用の本能（data[11] = 7, 8, 9）
-        isActivatedInThisForm = (formId === 2);
+        // 第3形態以上の本能（data[11] = 7, 8, 9）
+        isActivatedInThisForm = (formId >= 2);
       } else if (minFormLevel === 4 || minFormLevel === 5 || minFormLevel === 6) {
         // 第2形態以上の本能（data[11] = 4, 5, 6）
         isActivatedInThisForm = (formId >= 1);
@@ -1194,6 +1194,20 @@ export const getAbilities = (
               name: "攻撃力ダウン",
               value: `本能による攻撃力ダウン効果`,
               iconKeys: ["abilityWeaken"]
+            });
+            break;
+          case 2: // 動きを止める
+            abilities.push({
+              name: "動きを止める",
+              value: `本能による動きを止める効果`,
+              iconKeys: ["abilityFreeze"]
+            });
+            break;
+          case 3: // 動きを遅くする
+            abilities.push({
+              name: "動きを遅くする",
+              value: `本能による動きを遅くする効果`,
+              iconKeys: ["abilitySlow"]
             });
             break;
         }

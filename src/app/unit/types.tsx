@@ -1212,6 +1212,13 @@ export const getAbilities = (
               iconKeys: ["abilityResistant"]
             });
             break;
+          case 7: // 超ダメージ
+            abilities.push({
+              name: "超ダメージ",
+              value: `本能による超ダメージ効果`,
+              iconKeys: ["abilityMassiveDamage"]
+            });
+            break;
         }
       }
     });

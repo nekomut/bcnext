@@ -130,7 +130,7 @@ function UnitPageContent() {
     freqRange: { min: '', max: '' },
     targetTraits: [],
     abilityTypes: [],
-    includeInstincts: false,
+    includeInstincts: true,
   });
   
   const searchParams = useSearchParams();
@@ -429,6 +429,12 @@ function UnitPageContent() {
                           // 超打たれ強いを含む能力を検索
                           return abilityText.includes('超打たれ強い');
                         });
+                      case 'massiveDamage':
+                        return abilities.some(ability => {
+                          const abilityText = typeof ability.name === 'string' ? ability.name : '';
+                          // 超ダメージを含む能力を検索
+                          return abilityText.includes('超ダメージ');
+                        });
                       default:
                         return false;
                     }
@@ -562,7 +568,7 @@ function UnitPageContent() {
       freqRange: { min: '', max: '' },
       targetTraits: [],
       abilityTypes: [],
-      includeInstincts: false,
+      includeInstincts: true,
     });
     setSearchResults([]);
     // setSearchResultsExecuted(false);
@@ -1004,7 +1010,8 @@ function UnitPageContent() {
                         { key: 'attacksOnly', name: '攻撃ターゲット限定', icon: icons.abilityAttacksOnly },
                         { key: 'strongAgainst', name: 'めっぽう強い', icon: icons.abilityStrongAgainst },
                         { key: 'resistant', name: '打たれ強い', icon: icons.abilityResistant },
-                        { key: 'insanelyTough', name: '超打たれ強い', icon: icons.abilityInsanelyTough }
+                        { key: 'insanelyTough', name: '超打たれ強い', icon: icons.abilityInsanelyTough },
+                        { key: 'massiveDamage', name: '超ダメージ', icon: icons.abilityMassiveDamage }
                       ].map(ability => (
                         <label key={ability.key} className="cursor-pointer">
                           <input

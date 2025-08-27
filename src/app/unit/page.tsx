@@ -967,7 +967,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           hpRange: {...advancedFilters.hpRange, min: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right text-gray-600"
                       />
                       ~
                       <input
@@ -978,7 +978,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           hpRange: {...advancedFilters.hpRange, max: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right text-gray-600"
                       />
                     </div>
                     
@@ -993,7 +993,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           attackRange: {...advancedFilters.attackRange, min: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right text-gray-600"
                       />
                       ~
                       <input
@@ -1004,7 +1004,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           attackRange: {...advancedFilters.attackRange, max: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right text-gray-600"
                       />
                     </div>
                   </div>
@@ -1024,7 +1024,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           dpsRange: {...advancedFilters.dpsRange, min: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right text-gray-600"
                       />
                       ~
                       <input
@@ -1035,7 +1035,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           dpsRange: {...advancedFilters.dpsRange, max: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right text-gray-600"
                       />
                     </div>
                     
@@ -1050,7 +1050,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           rangeRange: {...advancedFilters.rangeRange, min: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right text-gray-600"
                       />
                       ~
                       <input
@@ -1061,7 +1061,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           rangeRange: {...advancedFilters.rangeRange, max: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right text-gray-600"
                       />
                     </div>
                   </div>
@@ -1081,7 +1081,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           kbRange: {...advancedFilters.kbRange, min: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right text-gray-600"
                       />
                       ~
                       <input
@@ -1092,7 +1092,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           kbRange: {...advancedFilters.kbRange, max: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right text-gray-600"
                       />
                     </div>
                     
@@ -1107,7 +1107,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           speedRange: {...advancedFilters.speedRange, min: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right text-gray-600"
                       />
                       ~
                       <input
@@ -1118,7 +1118,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           speedRange: {...advancedFilters.speedRange, max: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right text-gray-600"
                       />
                     </div>
                   </div>
@@ -1138,7 +1138,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           costRange: {...advancedFilters.costRange, min: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right text-gray-600"
                       />
                       ~
                       <input
@@ -1149,7 +1149,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           costRange: {...advancedFilters.costRange, max: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right text-gray-600"
                       />
                     </div>
                     
@@ -1165,7 +1165,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           rechargeRange: {...advancedFilters.rechargeRange, min: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right text-gray-600"
                       />
                       ~
                       <input
@@ -1177,7 +1177,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           rechargeRange: {...advancedFilters.rechargeRange, max: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right text-gray-600"
                       />
                     </div>
                   </div>
@@ -1198,7 +1198,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           foreswingRange: {...advancedFilters.foreswingRange, min: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right text-gray-600"
                       />
                       ~
                       <input
@@ -1210,7 +1210,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           foreswingRange: {...advancedFilters.foreswingRange, max: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right text-gray-600"
                       />
                     </div>
                     
@@ -1226,7 +1226,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           tbaRange: {...advancedFilters.tbaRange, min: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right text-gray-600"
                       />
                       ~
                       <input
@@ -1238,7 +1238,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           tbaRange: {...advancedFilters.tbaRange, max: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right text-gray-600"
                       />
                     </div>
                   </div>
@@ -1259,7 +1259,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           backswingRange: {...advancedFilters.backswingRange, min: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right text-gray-600"
                       />
                       ~
                       <input
@@ -1271,7 +1271,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           backswingRange: {...advancedFilters.backswingRange, max: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right text-gray-600"
                       />
                     </div>
                     
@@ -1287,7 +1287,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           freqRange: {...advancedFilters.freqRange, min: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right text-gray-600"
                       />
                       ~
                       <input
@@ -1299,7 +1299,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           freqRange: {...advancedFilters.freqRange, max: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right"
+                        className="w-[50px] border rounded px-1 py-0.5 text-[8px] text-right text-gray-600"
                       />
                     </div>
                   </div>

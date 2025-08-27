@@ -398,6 +398,12 @@ function UnitPageContent() {
                           // めっぽう強いを含む能力を検索
                           return abilityText.includes('めっぽう強い');
                         });
+                      case 'resistant':
+                        return abilities.some(ability => {
+                          const abilityText = typeof ability.name === 'string' ? ability.name : '';
+                          // 打たれ強いを含む能力を検索
+                          return abilityText.includes('打たれ強い');
+                        });
                       default:
                         return false;
                     }
@@ -971,7 +977,8 @@ function UnitPageContent() {
                         { key: 'freeze', name: '動きを止める', icon: icons.abilityFreeze },
                         { key: 'slow', name: '動きを遅くする', icon: icons.abilitySlow },
                         { key: 'attacksOnly', name: '攻撃ターゲット限定', icon: icons.abilityAttacksOnly },
-                        { key: 'mighty', name: 'めっぽう強い', icon: icons.abilityStrongAgainst }
+                        { key: 'mighty', name: 'めっぽう強い', icon: icons.abilityStrongAgainst },
+                        { key: 'resistant', name: '打たれ強い', icon: icons.abilityResistant }
                       ].map(ability => (
                         <label key={ability.key} className="cursor-pointer">
                           <input

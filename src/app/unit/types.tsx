@@ -1217,6 +1217,13 @@ export const getAbilities = (
               iconKeys: ["abilityStrongAgainst"]
             });
             break;
+          case 6: // 打たれ強い
+            abilities.push({
+              name: "打たれ強い",
+              value: `本能による打たれ強い効果`,
+              iconKeys: ["abilityResistant"]
+            });
+            break;
         }
       }
     });

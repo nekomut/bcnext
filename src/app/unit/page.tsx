@@ -853,94 +853,98 @@ function UnitPageContent() {
               <div>
                 {/* レアリティ選択 */}
                 <div className="mb-2">
-                  <label className="block text-[10px] text-gray-600 mb-1">レア度</label>
-                  <div className="flex flex-wrap gap-1">
-                    {[
-                      { key: '基本', icon: icons.rarityBasic },
-                      { key: 'EX', icon: icons.rarityEx },
-                      { key: 'レア', icon: icons.rarityRare },
-                      { key: '激レア', icon: icons.raritySuperRare },
-                      { key: '超激レア', icon: icons.rarityUberRare },
-                      { key: '伝説レア', icon: icons.rarityLegendRare }
-                    ].map(rarity => (
-                      <label key={rarity.key} className="cursor-pointer">
-                        <input
-                          type="checkbox"
-                          checked={advancedFilters.rarity.includes(rarity.key)}
-                          onChange={(e) => {
-                            const newRarities = e.target.checked
-                              ? [...advancedFilters.rarity, rarity.key]
-                              : advancedFilters.rarity.filter(r => r !== rarity.key);
-                            setAdvancedFilters({...advancedFilters, rarity: newRarities});
-                          }}
-                          className="sr-only"
-                        />
-                        <div className={`w-12 h-6 border-2 rounded flex items-center justify-center my-0 py-0 ${
-                          advancedFilters.rarity.includes(rarity.key) 
-                            ? 'border-blue-500 bg-blue-50' 
-                            : 'border-gray-300 bg-white hover:border-gray-400'
-                        }`}>
-                          <Image 
-                            src={`data:image/png;base64,${rarity.icon}`} 
-                            alt={rarity.key} 
-                            width={32} 
-                            height={32} 
-                            className="object-contain"
+                  <div className="flex items-center gap-2 mb-1">
+                    <label className="text-[10px] text-gray-600">レア度</label>
+                    <div className="flex gap-1">
+                      {[
+                        { key: '基本', icon: icons.rarityBasic },
+                        { key: 'EX', icon: icons.rarityEx },
+                        { key: 'レア', icon: icons.rarityRare },
+                        { key: '激レア', icon: icons.raritySuperRare },
+                        { key: '超激レア', icon: icons.rarityUberRare },
+                        { key: '伝説レア', icon: icons.rarityLegendRare }
+                      ].map(rarity => (
+                        <label key={rarity.key} className="cursor-pointer">
+                          <input
+                            type="checkbox"
+                            checked={advancedFilters.rarity.includes(rarity.key)}
+                            onChange={(e) => {
+                              const newRarities = e.target.checked
+                                ? [...advancedFilters.rarity, rarity.key]
+                                : advancedFilters.rarity.filter(r => r !== rarity.key);
+                              setAdvancedFilters({...advancedFilters, rarity: newRarities});
+                            }}
+                            className="sr-only"
                           />
-                        </div>
-                      </label>
-                    ))}
+                          <div className={`w-14 h-6 border-2 rounded flex items-center justify-center my-0 py-0 ${
+                            advancedFilters.rarity.includes(rarity.key) 
+                              ? 'border-blue-500 bg-blue-50' 
+                              : 'border-gray-300 bg-white hover:border-gray-400'
+                          }`}>
+                            <Image 
+                              src={`data:image/png;base64,${rarity.icon}`} 
+                              alt={rarity.key} 
+                              width={48} 
+                              height={32} 
+                              className="object-contain"
+                            />
+                          </div>
+                        </label>
+                      ))}
+                    </div>
                   </div>
                 </div>
                 
                 {/* ターゲット属性 */}
                 <div>
-                  <label className="block text-[10px] text-gray-600 mb-1">ターゲット属性</label>
-                  <div className="flex flex-wrap gap-1">
-                    {[
-                      { key: 'red', name: '赤い敵', icon: icons.traitRed },
-                      { key: 'floating', name: '浮いてる敵', icon: icons.traitFloating },
-                      { key: 'black', name: '黒い敵', icon: icons.traitBlack },
-                      { key: 'metal', name: 'メタル敵', icon: icons.traitMetal },
-                      { key: 'angel', name: '天使', icon: icons.traitAngel },
-                      { key: 'alien', name: 'エイリアン', icon: icons.traitAlien },
-                      { key: 'zombie', name: 'ゾンビ', icon: icons.traitZombie },
-                      { key: 'relic', name: '古代種', icon: icons.traitRelic },
-                      { key: 'base', name: '悪魔', icon: icons.traitAku },
-                      { key: 'white', name: '属性を持たない敵', icon: icons.traitTraitless },
-                      { key: 'eva', name: 'エヴァ使徒', icon: icons.traitEvaAngel },
-                      { key: 'witch', name: '魔女', icon: icons.traitWitch }
-                    ].map(trait => (
-                      <label key={trait.key} className="cursor-pointer">
-                        <input
-                          type="checkbox"
-                          checked={advancedFilters.targetTraits.includes(trait.key)}
-                          onChange={(e) => {
-                            const newTraits = e.target.checked
-                              ? [...advancedFilters.targetTraits, trait.key]
-                              : advancedFilters.targetTraits.filter(t => t !== trait.key);
-                            setAdvancedFilters({...advancedFilters, targetTraits: newTraits});
-                          }}
-                          className="sr-only"
-                        />
-                        <div 
-                          className={`border-2 rounded flex items-center justify-center my-0 py-0 ${
-                            advancedFilters.targetTraits.includes(trait.key) 
-                              ? 'border-blue-500 bg-blue-50' 
-                              : 'border-gray-300 bg-white hover:border-gray-400'
-                          }`}
-                          style={{ width: '24px', height: '24px' }}
-                        >
-                          <Image 
-                            src={`data:image/png;base64,${trait.icon}`} 
-                            alt={trait.name} 
-                            width={24} 
-                            height={24} 
-                            className="object-contain"
+                  <div className="flex items-center gap-2 mb-1">
+                    <label className="text-[10px] text-gray-600">ターゲット</label>
+                    <div className="flex flex-wrap gap-1">
+                      {[
+                        { key: 'red', name: '赤い敵', icon: icons.traitRed },
+                        { key: 'floating', name: '浮いてる敵', icon: icons.traitFloating },
+                        { key: 'black', name: '黒い敵', icon: icons.traitBlack },
+                        { key: 'metal', name: 'メタル敵', icon: icons.traitMetal },
+                        { key: 'angel', name: '天使', icon: icons.traitAngel },
+                        { key: 'alien', name: 'エイリアン', icon: icons.traitAlien },
+                        { key: 'zombie', name: 'ゾンビ', icon: icons.traitZombie },
+                        { key: 'relic', name: '古代種', icon: icons.traitRelic },
+                        { key: 'base', name: '悪魔', icon: icons.traitAku },
+                        { key: 'white', name: '属性を持たない敵', icon: icons.traitTraitless },
+                        { key: 'eva', name: 'エヴァ使徒', icon: icons.traitEvaAngel },
+                        { key: 'witch', name: '魔女', icon: icons.traitWitch }
+                      ].map(trait => (
+                        <label key={trait.key} className="cursor-pointer">
+                          <input
+                            type="checkbox"
+                            checked={advancedFilters.targetTraits.includes(trait.key)}
+                            onChange={(e) => {
+                              const newTraits = e.target.checked
+                                ? [...advancedFilters.targetTraits, trait.key]
+                                : advancedFilters.targetTraits.filter(t => t !== trait.key);
+                              setAdvancedFilters({...advancedFilters, targetTraits: newTraits});
+                            }}
+                            className="sr-only"
                           />
-                        </div>
-                      </label>
-                    ))}
+                          <div 
+                            className={`border-2 rounded flex items-center justify-center my-0 py-0 ${
+                              advancedFilters.targetTraits.includes(trait.key) 
+                                ? 'border-blue-500 bg-blue-50' 
+                                : 'border-gray-300 bg-white hover:border-gray-400'
+                            }`}
+                            style={{ width: '24px', height: '24px' }}
+                          >
+                            <Image 
+                              src={`data:image/png;base64,${trait.icon}`} 
+                              alt={trait.name} 
+                              width={24} 
+                              height={24} 
+                              className="object-contain"
+                            />
+                          </div>
+                        </label>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </div>

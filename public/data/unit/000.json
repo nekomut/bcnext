@@ -1,6 +1,7 @@
 {
   "unitId": 0,
   "sortKey": 0,
+  "isLimited": false,
   "coreData": {
     "forms": [
       {

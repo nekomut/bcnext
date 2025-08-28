@@ -1,6 +1,7 @@
 {
   "unitId": 66,
   "sortKey": 4500000,
+  "isLimited": true,
   "coreData": {
     "forms": [
       {

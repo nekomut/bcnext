@@ -50,7 +50,8 @@ export type AbilityType =
   | 'barrierBreaker'
   | 'shieldPiercing'
   | 'savageBlow'
-  | 'extraMoney';
+  | 'extraMoney'
+  | 'metal';
 
 // 能力検索設定の型定義
 interface AbilitySearchConfig {
@@ -165,6 +166,11 @@ const ABILITY_SEARCH_CONFIG: Record<AbilityType, AbilitySearchConfig> = {
   },
   extraMoney: {
     searchTerms: ['撃破時お金アップ'],
+    searchBothNameAndValue: false
+  },
+  metal: {
+    searchTerms: ['メタル'],
+    immunityTerms: ['メタルキラー'],
     searchBothNameAndValue: false
   }
 };

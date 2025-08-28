@@ -289,6 +289,11 @@ function UnitPageContent() {
                 return [];
               }
 
+              // isVisible=false のユニットを除外
+              if (unitData.isVisible === false) {
+                return [];
+              }
+
               // レアリティフィルタ
               if (advancedFilters.rarity.length > 0 && !advancedFilters.rarity.includes(unitData.coreData.rarity.name)) {
                 return [];
@@ -1018,7 +1023,8 @@ function UnitPageContent() {
                           { key: 'savageBlow', name: '渾身の一撃', icon: icons.abilitySavageBlow }
                         ],
                         [
-                          { key: 'extraMoney', name: '撃破時お金アップ', icon: icons.abilityExtraMoney }
+                          { key: 'extraMoney', name: '撃破時お金アップ', icon: icons.abilityExtraMoney },
+                          { key: 'metal', name: 'メタル', icon: icons.abilityMetal }
                         ]
                       ].map((row, rowIndex) => (
                         <React.Fragment key={rowIndex}>

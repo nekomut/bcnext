@@ -3,6 +3,7 @@
   "sortKey": 1920000,
   "isLimited": false,
   "isSeasonal": false,
+  "isVisible": true,
   "coreData": {
     "forms": [
       {

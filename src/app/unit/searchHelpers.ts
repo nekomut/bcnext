@@ -40,7 +40,8 @@ export type AbilityType =
   | 'warp' 
   | 'curse'
   | 'dodgeAttack'
-  | 'strengthen';
+  | 'strengthen'
+  | 'survive';
 
 // 能力検索設定の型定義
 interface AbilitySearchConfig {
@@ -115,6 +116,10 @@ const ABILITY_SEARCH_CONFIG: Record<AbilityType, AbilitySearchConfig> = {
   },
   strengthen: {
     searchTerms: ['攻撃力アップ'],
+    searchBothNameAndValue: true
+  },
+  survive: {
+    searchTerms: ['生き残る'],
     searchBothNameAndValue: true
   }
 };

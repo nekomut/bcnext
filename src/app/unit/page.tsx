@@ -957,7 +957,7 @@ function UnitPageContent() {
               {/* 能力・効果 + 本能・超本能 */}
               {/* 
                 新しい能力ボタンを追加する場合のテンプレート：
-                1. 上記の2次元配列の適切な行に新しいオブジェクトを追加 { key: 'newAbility', name: '新しい能力名', icon: icons.abilityXXX }
+                1. 2次元配列の適切な行に新しいオブジェクトを追加 { key: 'newAbility', name: '新しい能力名', icon: icons.abilityXXX }
                 2. 新しい行を作る場合は新しい配列を追加 [{ key: 'newAbility', ... }]
                 3. searchHelpers.ts でAbilityType型と設定を追加
                 4. types.tsx での実装も忘れずに
@@ -1002,7 +1002,8 @@ function UnitPageContent() {
                           { key: 'dodgeAttack', name: '攻撃無効', icon: icons.abilityDodgeAttack }
                         ],
                         [
-                          { key: 'strengthen', name: '攻撃力アップ', icon: icons.abilityStrengthen }
+                          { key: 'strengthen', name: '攻撃力アップ', icon: icons.abilityStrengthen },
+                          { key: 'survive', name: '生き残る', icon: icons.abilitySurvive }
                         ]
                       ].map((row, rowIndex) => (
                         <React.Fragment key={rowIndex}>

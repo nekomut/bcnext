@@ -21,6 +21,7 @@ interface UnitGalleryItem {
   validFormCount: number;
   talentIcons: string[];
   talentTypes: ('normal' | 'ultra')[];
+  isLimited: boolean;
 }
 
 // 本能・超本能IDからアイコンキーへのマッピング（UnitDisplayと完全一致）
@@ -100,6 +101,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
   const [currentPage, setCurrentPage] = useState(1);
   const [sortOrder, setSortOrder] = useState<'pokedex' | 'id'>('pokedex');
   const [showTalentsOnly, setShowTalentsOnly] = useState(true);
+  const [showLimitedOnly, setShowLimitedOnly] = useState(false);
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -162,7 +164,8 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                 formIcons,
                 validFormCount,
                 talentIcons,
-                talentTypes
+                talentTypes,
+                isLimited: unitData.isLimited || false
               };
             } catch {
               return null;
@@ -192,6 +195,11 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
   const filteredAndSortedUnits = React.useMemo(() => {
     let filtered = [...units];
     
+    // 限定キャラフィルター（デフォルトは通常ユニットのみ、チェックONで限定キャラも含める）
+    if (!showLimitedOnly) {
+      filtered = filtered.filter(unit => !unit.isLimited);
+    }
+    
     // 本能・超本能を持つユニットのみフィルター
     if (showTalentsOnly) {
       filtered = filtered.filter(unit => unit.talentIcons.length > 0);
@@ -204,7 +212,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
       filtered.sort((a, b) => parseInt(a.unitId) - parseInt(b.unitId));
     }
     return filtered;
-  }, [units, sortOrder, showTalentsOnly]);
+  }, [units, sortOrder, showTalentsOnly, showLimitedOnly]);
 
   // ページネーション
   const totalPages = Math.ceil(filteredAndSortedUnits.length / itemsPerPage);
@@ -270,18 +278,33 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
         <>
           {/* チェックボックスとページネーション */}
           <div className="flex justify-between items-center mb-2">
-            <label className="flex items-center text-[10px] text-gray-600">
-              <input
-                type="checkbox"
-                checked={showTalentsOnly}
-                onChange={(e) => {
-                  setShowTalentsOnly(e.target.checked);
-                  setCurrentPage(1);
-                }}
-                className="mr-1 scale-75"
-              />
-              本能・超本能を持つユニットのみ
-            </label>
+            <div className="flex items-center gap-4">
+              <label className="flex items-center text-[10px] text-gray-600">
+                <input
+                  type="checkbox"
+                  checked={showTalentsOnly}
+                  onChange={(e) => {
+                    setShowTalentsOnly(e.target.checked);
+                    setCurrentPage(1);
+                  }}
+                  className="mr-1 scale-75"
+                />
+                本能・超本能ユニットのみ
+              </label>
+              
+              <label className="flex items-center text-[10px] text-gray-600">
+                <input
+                  type="checkbox"
+                  checked={showLimitedOnly}
+                  onChange={(e) => {
+                    setShowLimitedOnly(e.target.checked);
+                    setCurrentPage(1);
+                  }}
+                  className="mr-1 scale-75"
+                />
+                限定キャラ
+              </label>
+            </div>
 
             {totalPages > 1 && (
               <div className="flex items-center gap-2">

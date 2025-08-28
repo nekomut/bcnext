@@ -1081,6 +1081,37 @@ function UnitPageContent() {
                           />
                         </div>
                       </label>
+                      
+                      {/* 攻撃無効ボタン */}
+                      <label className="cursor-pointer">
+                        <input
+                          type="checkbox"
+                          checked={advancedFilters.abilityTypes.includes('dodgeAttack')}
+                          onChange={(e) => {
+                            const newAbilities = e.target.checked
+                              ? [...advancedFilters.abilityTypes, 'dodgeAttack' as AbilityType]
+                              : advancedFilters.abilityTypes.filter(a => a !== 'dodgeAttack');
+                            setAdvancedFilters({...advancedFilters, abilityTypes: newAbilities});
+                          }}
+                          className="sr-only"
+                        />
+                        <div 
+                          className={`border-2 rounded-[5px] flex items-center justify-center my-0 py-0 ${
+                            advancedFilters.abilityTypes.includes('dodgeAttack') 
+                              ? 'border-blue-500 bg-blue-50' 
+                              : 'border-gray-200 bg-white hover:border-gray-400'
+                          }`}
+                          style={{ width: '24px', height: '24px' }}
+                        >
+                          <Image 
+                            src={`data:image/png;base64,${icons.abilityDodgeAttack}`} 
+                            alt="攻撃無効" 
+                            width={20} 
+                            height={20} 
+                            className="object-contain"
+                          />
+                        </div>
+                      </label>
                     </div>
                   </div>
                 </div>

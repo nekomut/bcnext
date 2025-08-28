@@ -441,6 +441,12 @@ export const getAbilities = (
     });
   }
 
+  // アドバンス検索に新しい基本能力を追加する場合：
+  // 1. 対応するstats配列のインデックスを確認
+  // 2. 適切な条件分岐でability.pushを追加
+  // 3. iconKeysは icons.tsx で定義されているアイコンキーを使用
+  // 4. searchHelpers.tsでも対応する設定を追加すること
+  
   // 超ダメージ
   if (stats[30] && stats[30] > 0) {
     abilities.push({
@@ -1177,6 +1183,10 @@ export const getAbilities = (
       
       // この形態で本能が有効な場合のみ追加
       if (isActivatedInThisForm) {
+        // アドバンス検索に新しい本能・超本能能力を追加する場合：
+        // 1. 新しいcase文を追加（talent.idに対応）
+        // 2. iconKeysは icons.tsx で定義されているアイコンキーを使用
+        // 3. searchHelpers.tsでも対応する設定を追加すること
         switch (talent.id) {
           case 1: // 攻撃力ダウン
             abilities.push({
@@ -1225,6 +1235,13 @@ export const getAbilities = (
               name: "ふっとばす",
               value: `本能によるふっとばす効果`,
               iconKeys: ["abilityKnockback"]
+            });
+            break;
+          case 51: // 攻撃無効
+            abilities.push({
+              name: "攻撃無効",
+              value: `本能による攻撃無効効果`,
+              iconKeys: ["abilityDodgeAttack"]
             });
             break;
           case 60: // 呪い

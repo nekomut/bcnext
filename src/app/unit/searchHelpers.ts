@@ -2,6 +2,29 @@
 
 import { UnitAbility } from './types';
 
+/**
+ * アドバンス検索に新しい能力・効果を追加する手順:
+ * 
+ * 1. このファイル (searchHelpers.ts):
+ *    - AbilityType型に新しい能力キーを追加 (例: 'newAbility')
+ *    - ABILITY_SEARCH_CONFIG に新しい能力の設定を追加
+ *    
+ * 2. page.tsx:
+ *    - 能力選択UIに新しいボタンを追加（アイコン付き）
+ *    - icons.abilityXXX を使用してアイコンを設定
+ *    - AbilityType as でキャストして型安全性を保つ
+ *    
+ * 3. types.tsx:
+ *    - getAbilities関数内で新しい能力の検出ロジックを追加
+ *    - 本能・超本能の場合はswitch文にcase追加（talent.id に対応）
+ *    - 基本能力の場合は該当するstats配列インデックスをチェック
+ *    
+ * 4. テスト:
+ *    - npm run buildで型エラーがないことを確認
+ *    - Playwrightで実際の検索動作をテスト
+ *    - 該当ユニットが正しく検索されることを確認
+ */
+
 // 能力タイプの定義
 export type AbilityType = 
   | 'weaken' 
@@ -15,7 +38,8 @@ export type AbilityType =
   | 'insaneDamage' 
   | 'knockback' 
   | 'warp' 
-  | 'curse';
+  | 'curse'
+  | 'dodgeAttack';
 
 // 能力検索設定の型定義
 interface AbilitySearchConfig {
@@ -25,6 +49,10 @@ interface AbilitySearchConfig {
 }
 
 // 能力検索設定マップ
+// 新しい能力を追加する際は、ここに設定を追加してください
+// searchTerms: 検索対象となる日本語名称
+// immunityTerms: 無効/耐性の場合に除外する用語（オプション）
+// searchBothNameAndValue: ability.nameとability.valueの両方を検索するか（通常はtrue）
 const ABILITY_SEARCH_CONFIG: Record<AbilityType, AbilitySearchConfig> = {
   weaken: {
     searchTerms: ['攻撃力ダウン'],
@@ -78,6 +106,10 @@ const ABILITY_SEARCH_CONFIG: Record<AbilityType, AbilitySearchConfig> = {
   curse: {
     searchTerms: ['呪い'],
     immunityTerms: ['呪い無効', '呪い耐性'],
+    searchBothNameAndValue: true
+  },
+  dodgeAttack: {
+    searchTerms: ['攻撃無効'],
     searchBothNameAndValue: true
   }
 };

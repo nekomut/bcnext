@@ -928,11 +928,13 @@ export const getAbilities = (
   if (stats[35] && stats[35] > 0) {
     const waveLevel = stats[36] || 0;
     const waveRange = 332.5 + (waveLevel - 1) * 200;
-    const waveType = stats[94] === 1 ? '小波動' : '波動攻撃';
+    const isMiniWave = stats[94] === 1;
+    const waveType = isMiniWave ? '小波動' : '波動攻撃';
+    const iconKey = isMiniWave ? "abilityMiniWave" : "abilityWave";
     abilities.push({
       name: waveType,
       value: (<b className="text-gray-500">Lv{waveLevel} {stats[35]}<small>%</small> {waveRange}</b>),
-      iconKeys: ["abilityWave"]
+      iconKeys: [iconKey]
     });
   }
 
@@ -1333,6 +1335,20 @@ export const getAbilities = (
               iconKeys: ["abilityExtraMoney"]
             });
             break;
+          case 62: // 小波動
+            abilities.push({
+              name: "小波動",
+              value: calculateTalentEffect(talent),
+              iconKeys: ["abilityMiniWave"]
+            });
+            break;
+          case 17: // 波動攻撃
+            abilities.push({
+              name: "波動攻撃",
+              value: calculateTalentEffect(talent),
+              iconKeys: ["abilityWave"]
+            });
+            break;
         }
       }
     });
@@ -1706,6 +1722,34 @@ export const calculateTalentEffect = (talent: UnitTalent): string | React.ReactN
       
     case 16: // 撃破時お金アップ
       return (<><b className="text-gray-500">+100<small>%</small></b></>);
+      
+    case 62: // 小波動
+      const miniwave_chance = data[2] || 0;
+      const miniwave_max_lv = data[1] || 1;
+      const miniwave_max_chance = data[3] || 0;
+      const miniwave_level = data[4] || 0;
+      const miniwave_max_level = data[5] || 0;
+      
+      if (miniwave_max_lv > 1 && miniwave_max_chance !== miniwave_chance) {
+        const level_text = miniwave_max_level !== miniwave_level ? `Lv${miniwave_level}~${miniwave_max_level}` : `Lv${miniwave_level}`;
+        return (<><b className="text-gray-500">{level_text} {miniwave_chance}<small>%</small>~{miniwave_max_chance}<small>%</small></b></>);
+      }
+      
+      return (<><b className="text-gray-500">Lv{miniwave_level} {miniwave_chance}<small>%</small></b></>);
+      
+    case 17: // 波動攻撃
+      const wave_chance = data[2] || 0;
+      const wave_max_lv = data[1] || 1;
+      const wave_max_chance = data[3] || 0;
+      const wave_level = data[4] || 0;
+      const wave_max_level = data[5] || 0;
+      
+      if (wave_max_lv > 1 && wave_max_chance !== wave_chance) {
+        const level_text = wave_max_level !== wave_level ? `Lv${wave_level}~${wave_max_level}` : `Lv${wave_level}`;
+        return (<><b className="text-gray-500">{level_text} {wave_chance}<small>%</small>~{wave_max_chance}<small>%</small></b></>);
+      }
+      
+      return (<><b className="text-gray-500">Lv{wave_level} {wave_chance}<small>%</small></b></>);
       
     default:
       // その他の本能は基本形式

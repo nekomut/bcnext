@@ -1024,7 +1024,9 @@ function UnitPageContent() {
                         ],
                         [
                           { key: 'extraMoney', name: '撃破時お金アップ', icon: icons.abilityExtraMoney },
-                          { key: 'metal', name: 'メタル', icon: icons.abilityMetal }
+                          { key: 'metal', name: 'メタル', icon: icons.abilityMetal },
+                          { key: 'miniWave', name: '小波動', icon: icons.abilityMiniWave },
+                          { key: 'wave', name: '波動攻撃', icon: icons.abilityWave }
                         ]
                       ].map((row, rowIndex) => (
                         <React.Fragment key={rowIndex}>

@@ -51,7 +51,9 @@ export type AbilityType =
   | 'shieldPiercing'
   | 'savageBlow'
   | 'extraMoney'
-  | 'metal';
+  | 'metal'
+  | 'miniWave'
+  | 'wave';
 
 // 能力検索設定の型定義
 interface AbilitySearchConfig {
@@ -172,6 +174,16 @@ const ABILITY_SEARCH_CONFIG: Record<AbilityType, AbilitySearchConfig> = {
     searchTerms: ['メタル'],
     immunityTerms: ['メタルキラー'],
     searchBothNameAndValue: false
+  },
+  miniWave: {
+    searchTerms: ['小波動'],
+    immunityTerms: ['小波動無効', '小波動耐性'],
+    searchBothNameAndValue: true
+  },
+  wave: {
+    searchTerms: ['波動攻撃'],
+    immunityTerms: ['波動攻撃無効', '波動攻撃耐性'],
+    searchBothNameAndValue: true
   }
 };
 

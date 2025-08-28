@@ -940,14 +940,16 @@ export const getAbilities = (
 
   // 裂波攻撃
   if (stats[86] && stats[86] > 0) {
-    const waveType = (stats.length >= 109 && stats[108] === 1) ? '小裂波' : '裂波攻撃';
+    const isMiniSurge = (stats.length >= 109 && stats[108] === 1);
+    const waveType = isMiniSurge ? '小裂波' : '裂波攻撃';
+    const iconKey = isMiniSurge ? "abilityMiniSurge" : "abilitySurge";
     const waveLevel = stats[89] || 0;
     const range1 = Math.floor((stats[87] || 0) / 4);
     const range2 = range1 + Math.floor((stats[88] || 0) / 4);
     abilities.push({
       name: waveType,
       value: (<b className="text-gray-500">Lv{waveLevel} {stats[86]}<small>%</small> {range1}~{range2}</b>),
-      iconKeys: ["abilitySurge"]
+      iconKeys: [iconKey]
     });
   }
 
@@ -1347,6 +1349,13 @@ export const getAbilities = (
               name: "波動攻撃",
               value: calculateTalentEffect(talent),
               iconKeys: ["abilityWave"]
+            });
+            break;
+          case 56: // 裂波攻撃
+            abilities.push({
+              name: "裂波攻撃",
+              value: calculateTalentEffect(talent),
+              iconKeys: ["abilitySurge"]
             });
             break;
         }
@@ -1750,6 +1759,20 @@ export const calculateTalentEffect = (talent: UnitTalent): string | React.ReactN
       }
       
       return (<><b className="text-gray-500">Lv{wave_level} {wave_chance}<small>%</small></b></>);
+      
+    case 56: // 裂波攻撃
+      const surge_chance = data[2] || 0;
+      const surge_max_lv = data[1] || 1;
+      const surge_max_chance = data[3] || 0;
+      const surge_level = data[4] || 0;
+      const surge_max_level = data[5] || 0;
+      
+      if (surge_max_lv > 1 && surge_max_chance !== surge_chance) {
+        const level_text = surge_max_level !== surge_level ? `Lv${surge_level}~${surge_max_level}` : `Lv${surge_level}`;
+        return (<><b className="text-gray-500">{level_text} {surge_chance}<small>%</small>~{surge_max_chance}<small>%</small></b></>);
+      }
+      
+      return (<><b className="text-gray-500">Lv{surge_level} {surge_chance}<small>%</small></b></>);
       
     default:
       // その他の本能は基本形式

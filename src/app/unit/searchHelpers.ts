@@ -53,7 +53,9 @@ export type AbilityType =
   | 'extraMoney'
   | 'metal'
   | 'miniWave'
-  | 'wave';
+  | 'wave'
+  | 'miniSurge'
+  | 'surge';
 
 // 能力検索設定の型定義
 interface AbilitySearchConfig {
@@ -183,6 +185,16 @@ const ABILITY_SEARCH_CONFIG: Record<AbilityType, AbilitySearchConfig> = {
   wave: {
     searchTerms: ['波動攻撃'],
     immunityTerms: ['波動攻撃無効', '波動攻撃耐性'],
+    searchBothNameAndValue: true
+  },
+  miniSurge: {
+    searchTerms: ['小裂波'],
+    immunityTerms: ['小裂波無効', '小裂波耐性'],
+    searchBothNameAndValue: true
+  },
+  surge: {
+    searchTerms: ['裂波攻撃'],
+    immunityTerms: ['裂波攻撃無効', '裂波攻撃耐性'],
     searchBothNameAndValue: true
   }
 };

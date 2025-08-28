@@ -9,6 +9,8 @@ import { getUnitData, getValidFormCount } from './types';
 
 interface UnitGalleryProps {
   onUnitSelect: (unitId: number, formId: number) => void;
+  currentUnitId?: number;
+  currentFormId?: number;
 }
 
 interface UnitGalleryItem {
@@ -91,7 +93,7 @@ const getTalentIconKey = (talentId: number): string | null => {
   return talentIconMap[talentId] || 'abilityStrengthen'; // デフォルトアイコン
 };
 
-const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect }) => {
+const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, currentFormId }) => {
   const [units, setUnits] = useState<UnitGalleryItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
@@ -324,33 +326,40 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect }) => {
             
             {/* 形態アイコン（1-4形態） */}
             <div className="flex gap-1 ml-3 mr-2">
-              {Array.from({ length: 4 }, (_, formIndex) => (
-                <div
-                  key={formIndex}
-                  className={`w-7 h-6 border border-gray-300 rounded flex items-center justify-center ${
-                    formIndex < unit.formIcons.length ? 'bg-white hover:bg-blue-50 cursor-pointer hover:border-blue-400' : 'bg-gray-100'
-                  }`}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    if (formIndex < unit.formIcons.length) {
-                      onUnitSelect(parseInt(unit.unitId), formIndex);
-                    }
-                  }}
-                  title={formIndex < unit.formIcons.length ? `${unit.displayName} 第${formIndex + 1}形態を表示` : '形態なし'}
-                >
-                  {formIndex < unit.formIcons.length && unit.formIcons[formIndex] ? (
-                    <Image 
-                      src={`data:image/png;base64,${unit.formIcons[formIndex]}`} 
-                      alt={`${unit.displayName} 第${formIndex + 1}形態`} 
-                      width={36} 
-                      height={24} 
-                      className="object-contain"
-                    />
-                  ) : (
-                    <div className="text-xs text-gray-400">-</div>
-                  )}
-                </div>
-              ))}
+              {Array.from({ length: 4 }, (_, formIndex) => {
+                const isCurrentForm = currentUnitId === parseInt(unit.unitId) && currentFormId === formIndex;
+                return (
+                  <div
+                    key={formIndex}
+                    className={`w-7 h-6 border-2 rounded flex items-center justify-center ${
+                      isCurrentForm 
+                        ? 'border-red-500 bg-white' 
+                        : formIndex < unit.formIcons.length 
+                        ? 'border-gray-300 bg-white hover:bg-blue-50 cursor-pointer hover:border-blue-400' 
+                        : 'border-gray-300 bg-gray-100'
+                    } ${formIndex < unit.formIcons.length ? 'cursor-pointer' : ''}`}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      if (formIndex < unit.formIcons.length) {
+                        onUnitSelect(parseInt(unit.unitId), formIndex);
+                      }
+                    }}
+                    title={formIndex < unit.formIcons.length ? `${unit.displayName} 第${formIndex + 1}形態を表示` : '形態なし'}
+                  >
+                    {formIndex < unit.formIcons.length && unit.formIcons[formIndex] ? (
+                      <Image 
+                        src={`data:image/png;base64,${unit.formIcons[formIndex]}`} 
+                        alt={`${unit.displayName} 第${formIndex + 1}形態`} 
+                        width={36} 
+                        height={24} 
+                        className="object-contain"
+                      />
+                    ) : (
+                      <div className="text-xs text-gray-400">-</div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
 
             {/* 本能・超本能アイコン */}

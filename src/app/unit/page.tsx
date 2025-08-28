@@ -1560,10 +1560,14 @@ function UnitPageContent() {
         )}
 
         {/* ユニット一覧セクション */}
-        <UnitGallery onUnitSelect={(unitId: number, formId: number) => {
-          const formParam = ['f', 'c', 's', 'u'][formId] || 'f';
-          router.push(`/unit?unit=${unitId}&form=${formParam}`);
-        }} />
+        <UnitGallery 
+          onUnitSelect={(unitId: number, formId: number) => {
+            const formParam = ['f', 'c', 's', 'u'][formId] || 'f';
+            router.push(`/unit?unit=${unitId}&form=${formParam}`);
+          }}
+          currentUnitId={currentUnit?.unitId}
+          currentFormId={formId}
+        />
       </div>
     </>
   );

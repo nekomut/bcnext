@@ -879,7 +879,7 @@ function UnitPageContent() {
                 </label>
               </div>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2 text-xs">
               
               {/* 基本情報 + ターゲット属性 */}
@@ -912,7 +912,7 @@ function UnitPageContent() {
                           <div className={`w-14 h-6 border-2 rounded flex items-center justify-center my-0 py-0 ${
                             advancedFilters.rarity.includes(rarity.key) 
                               ? 'border-blue-500 bg-blue-50' 
-                              : 'border-gray-300 bg-white hover:border-gray-400'
+                              : 'border-gray-200 bg-white hover:border-gray-400'
                           }`}>
                             <Image 
                               src={`data:image/png;base64,${rarity.icon}`} 
@@ -927,7 +927,7 @@ function UnitPageContent() {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* ターゲット属性 */}
                 <div>
                   <div className="flex items-center gap-2 mb-0">
@@ -960,10 +960,10 @@ function UnitPageContent() {
                             className="sr-only"
                           />
                           <div 
-                            className={`border rounded-[7px] flex items-center justify-center my-0 py-0 ${
+                            className={`border-2 rounded-[7px] flex items-center justify-center my-0 py-0 ${
                               advancedFilters.targetTraits.includes(trait.key) 
                                 ? 'border-blue-500 bg-blue-50' 
-                                : 'border-gray-300 bg-white hover:border-gray-400'
+                                : 'border-gray-200 bg-white hover:border-gray-400'
                             }`}
                             style={{ width: '24px', height: '24px' }}
                           >
@@ -981,7 +981,7 @@ function UnitPageContent() {
                   </div>
                 </div>
               </div>
-              
+
               {/* 能力・効果 + 本能・超本能 */}
               <div>
                 <div className="flex items-center gap-2 mb-1">
@@ -1030,7 +1030,7 @@ function UnitPageContent() {
                             className={`border-2 rounded-[5px] flex items-center justify-center my-0 py-0 ${
                               advancedFilters.abilityTypes.includes(ability.key) 
                                 ? 'border-blue-500 bg-blue-50' 
-                                : 'border-gray-300 bg-white hover:border-gray-400'
+                                : 'border-gray-200 bg-white hover:border-gray-400'
                             }`}
                             style={{ width: '24px', height: '24px' }}
                           >

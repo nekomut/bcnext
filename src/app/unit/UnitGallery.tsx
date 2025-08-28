@@ -335,7 +335,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                 return (
                   <div
                     key={formIndex}
-                    className={`w-7 h-6 border-1 rounded-xs flex items-center justify-center ${
+                    className={`w-8 h-7 border-1 rounded-xs flex items-center justify-center ${
                       isCurrentForm 
                         ? 'border-blue-500 bg-white border-2' 
                         : formIndex < unit.formIcons.length 
@@ -354,8 +354,8 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                       <Image 
                         src={`data:image/png;base64,${unit.formIcons[formIndex]}`} 
                         alt={`${unit.displayName} 第${formIndex + 1}形態`} 
-                        width={24} 
-                        height={24} 
+                        width={32} 
+                        height={28} 
                         className="object-contain"
                       />
                     ) : (
@@ -374,7 +374,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                 return (
                   <div 
                     key={index}
-                    className={`w-5 h-5 flex items-center justify-center rounded-[5px] border-2 ${borderColor}`}
+                    className={`w-6 h-6 flex items-center justify-center rounded-[5px] border-2 ${borderColor}`}
                     title={`${talentType === 'ultra' ? '超本能' : '本能'}: ${iconKey}`}
                   >
                     <Image 

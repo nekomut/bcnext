@@ -344,7 +344,28 @@ function UnitPageContent() {
                 // ターゲット属性フィルタ（独立して判定）
                 let hasMatchingTargetTrait = true;
                 if (advancedFilters.targetTraits.length > 0) {
-                  const abilities = getAbilities(unitData, formIndex, 50, 0, 1, 1, 0, { chance: 0, duration: 0 }, { chance: 0, duration: 0 }, { chance: 0, duration: 0 }, { chance: 0 }, { chance: 0 }, undefined, advancedFilters.includeInstincts);
+                  // 本能・超本能によるボーナス値を計算（第三形態以上のみ適用）
+                  const calculateTalentBonus = (talentId: number) => {
+                    const talent = unitData.auxiliaryData.talents.talentList.find(t => t.id === talentId);
+                    return (talent && formIndex >= 2) ? (talent.data[3] || 0) : 0;
+                  };
+                  
+                  const talentFreezeBonus = { 
+                    chance: calculateTalentBonus(2), 
+                    duration: unitData.auxiliaryData.talents.talentList.find(t => t.id === 2)?.data[5] || 0 
+                  };
+                  const talentWeakenBonus = { 
+                    chance: calculateTalentBonus(1), 
+                    duration: unitData.auxiliaryData.talents.talentList.find(t => t.id === 1)?.data[5] || 0 
+                  };
+                  const talentSlowBonus = { 
+                    chance: calculateTalentBonus(3), 
+                    duration: unitData.auxiliaryData.talents.talentList.find(t => t.id === 3)?.data[5] || 0 
+                  };
+                  const talentKnockbackBonus = { chance: calculateTalentBonus(8) };
+                  const talentBarrierBreakerBonus = { chance: calculateTalentBonus(9) };
+                  
+                  const abilities = getAbilities(unitData, formIndex, 50, 0, 1, 1, 0, talentFreezeBonus, talentWeakenBonus, talentSlowBonus, talentKnockbackBonus, talentBarrierBreakerBonus, undefined, advancedFilters.includeInstincts);
                   
                   // キーから日本語名への変換
                   const traitNames = advancedFilters.targetTraits.map(traitKey => {
@@ -373,7 +394,28 @@ function UnitPageContent() {
                 // 能力タイプフィルタ（アイコン形式）
                 let hasMatchingAbilityType = true;
                 if (advancedFilters.abilityTypes.length > 0) {
-                  const abilities = getAbilities(unitData, formIndex, 50, 0, 1, 1, 0, { chance: 0, duration: 0 }, { chance: 0, duration: 0 }, { chance: 0, duration: 0 }, { chance: 0 }, { chance: 0 }, undefined, advancedFilters.includeInstincts);
+                  // 本能・超本能によるボーナス値を計算（第三形態以上のみ適用）
+                  const calculateTalentBonus = (talentId: number) => {
+                    const talent = unitData.auxiliaryData.talents.talentList.find(t => t.id === talentId);
+                    return (talent && formIndex >= 2) ? (talent.data[3] || 0) : 0;
+                  };
+                  
+                  const talentFreezeBonus = { 
+                    chance: calculateTalentBonus(2), 
+                    duration: unitData.auxiliaryData.talents.talentList.find(t => t.id === 2)?.data[5] || 0 
+                  };
+                  const talentWeakenBonus = { 
+                    chance: calculateTalentBonus(1), 
+                    duration: unitData.auxiliaryData.talents.talentList.find(t => t.id === 1)?.data[5] || 0 
+                  };
+                  const talentSlowBonus = { 
+                    chance: calculateTalentBonus(3), 
+                    duration: unitData.auxiliaryData.talents.talentList.find(t => t.id === 3)?.data[5] || 0 
+                  };
+                  const talentKnockbackBonus = { chance: calculateTalentBonus(8) };
+                  const talentBarrierBreakerBonus = { chance: calculateTalentBonus(9) };
+                  
+                  const abilities = getAbilities(unitData, formIndex, 50, 0, 1, 1, 0, talentFreezeBonus, talentWeakenBonus, talentSlowBonus, talentKnockbackBonus, talentBarrierBreakerBonus, undefined, advancedFilters.includeInstincts);
                   
                   const abilityTypeChecks = advancedFilters.abilityTypes.map(abilityType => {
                     switch (abilityType) {
@@ -382,10 +424,9 @@ function UnitPageContent() {
                           const abilityText = typeof ability.name === 'string' ? ability.name : '';
                           const valueText = typeof ability.value === 'string' ? ability.value : '';
                           // 攻撃力ダウンを含むが、攻撃力ダウン無効は除外する
-                          const hasWeaken = abilityText.includes('攻撃力ダウン') || valueText.includes('攻撃力ダウン') ||
-                                           abilityText.includes('攻撃力DOWN') || valueText.includes('攻撃力DOWN');
+                          const hasWeaken = abilityText.includes('攻撃力ダウン') || valueText.includes('攻撃力ダウン');
                           const hasImmuneWeaken = abilityText.includes('攻撃力ダウン無効') || valueText.includes('攻撃力ダウン無効') ||
-                                                 abilityText.includes('攻撃力DOWN無効') || valueText.includes('攻撃力DOWN無効');
+                                                  abilityText.includes('攻撃力ダウン耐性') || valueText.includes('攻撃力ダウン耐性');
                           return hasWeaken && !hasImmuneWeaken;
                         });
                       case 'freeze':
@@ -394,7 +435,8 @@ function UnitPageContent() {
                           const valueText = typeof ability.value === 'string' ? ability.value : '';
                           // 動きを止めるを含むが、動きを止める無効は除外する
                           const hasFreeze = abilityText.includes('動きを止める') || valueText.includes('動きを止める');
-                          const hasImmuneFreeze = abilityText.includes('動きを止める無効') || valueText.includes('動きを止める無効');
+                          const hasImmuneFreeze = abilityText.includes('動きを止める無効') || valueText.includes('動きを止める無効') ||
+                                                  abilityText.includes('動きを止める耐性') || valueText.includes('動きを止める耐性');
                           return hasFreeze && !hasImmuneFreeze;
                         });
                       case 'slow':
@@ -403,7 +445,8 @@ function UnitPageContent() {
                           const valueText = typeof ability.value === 'string' ? ability.value : '';
                           // 動きを遅くするを含むが、動きを遅くする無効は除外する
                           const hasSlow = abilityText.includes('動きを遅くする') || valueText.includes('動きを遅くする');
-                          const hasImmuneSlow = abilityText.includes('動きを遅くする無効') || valueText.includes('動きを遅くする無効');
+                          const hasImmuneSlow = abilityText.includes('動きを遅くする無効') || valueText.includes('動きを遅くする無効') ||
+                                                abilityText.includes('動きを遅くする耐性') || valueText.includes('動きを遅くする耐性');
                           return hasSlow && !hasImmuneSlow;
                         });
                       case 'attacksOnly':
@@ -441,6 +484,16 @@ function UnitPageContent() {
                           const abilityText = typeof ability.name === 'string' ? ability.name : '';
                           // 極ダメージを含む能力を検索
                           return abilityText.includes('極ダメージ');
+                        });
+                      case 'knockback':
+                        return abilities.some(ability => {
+                          const abilityText = typeof ability.name === 'string' ? ability.name : '';
+                          const valueText = typeof ability.value === 'string' ? ability.value : '';
+                          // React要素の場合はname（文字列）のみで判定、文字列の場合はname+valueで判定
+                          const hasKnockback = abilityText.includes('ふっとばす') || valueText.includes('ふっとばす');
+                          const hasImmuneKnockback = abilityText.includes('ふっとばし無効') || valueText.includes('ふっとばし無効') ||
+                                                     abilityText.includes('ふっとばし耐性') || valueText.includes('ふっとばし耐性');
+                          return hasKnockback && !hasImmuneKnockback;
                         });
                       default:
                         return false;
@@ -1018,7 +1071,8 @@ function UnitPageContent() {
                         { key: 'resistant', name: '打たれ強い', icon: icons.abilityResistant },
                         { key: 'insanelyTough', name: '超打たれ強い', icon: icons.abilityInsanelyTough },
                         { key: 'massiveDamage', name: '超ダメージ', icon: icons.abilityMassiveDamage },
-                        { key: 'insaneDamage', name: '極ダメージ', icon: icons.abilityInsaneDamage }
+                        { key: 'insaneDamage', name: '極ダメージ', icon: icons.abilityInsaneDamage },
+                        { key: 'knockback', name: 'ふっとばす', icon: icons.abilityKnockback }
                       ].map(ability => (
                         <label key={ability.key} className="cursor-pointer">
                           <input

@@ -756,12 +756,10 @@ export const getAbilities = (
   }
 
   // ふっとばす
-  if (stats[24] && stats[24] > 0) {
-    const baseChance = stats[24];
-    
-    // 本能によるボーナスを加算
-    const totalChance = baseChance + talentKnockbackBonus.chance;
-    
+  const baseKnockbackChance = stats[24] || 0;
+  const totalKnockbackChance = baseKnockbackChance + talentKnockbackBonus.chance;
+  
+  if (totalKnockbackChance > 0) {
     // 確率が強化されているかチェック
     const chanceEnhanced = talentKnockbackBonus.chance > 0;
     
@@ -770,7 +768,7 @@ export const getAbilities = (
     
     abilities.push({
       name: "ふっとばす",
-      value: (<b className={chanceColor}>{totalChance}<small>%</small></b>),
+      value: (<b className={chanceColor}>{totalKnockbackChance}<small>%</small></b>),
       iconKeys: ["abilityKnockback"],
       enhanced: chanceEnhanced
     });
@@ -1219,6 +1217,13 @@ export const getAbilities = (
               name: "超ダメージ",
               value: `本能による超ダメージ効果`,
               iconKeys: ["abilityMassiveDamage"]
+            });
+            break;
+          case 8: // ふっとばす
+            abilities.push({
+              name: "ふっとばす",
+              value: `本能によるふっとばす効果`,
+              iconKeys: ["abilityKnockback"]
             });
             break;
         }

@@ -1325,6 +1325,13 @@ export const getAbilities = (
               iconKeys: ["abilitySavageBlow"]
             });
             break;
+          case 16: // 撃破時お金アップ
+            abilities.push({
+              name: "撃破時お金アップ",
+              value: calculateTalentEffect(talent),
+              iconKeys: ["abilityExtraMoney"]
+            });
+            break;
         }
       }
     });
@@ -1695,6 +1702,9 @@ export const calculateTalentEffect = (talent: UnitTalent): string | React.ReactN
       }
       
       return (<><b className="text-gray-500">{savage_chance}<small>%</small></b></>);
+      
+    case 16: // 撃破時お金アップ
+      return (<><b className="text-gray-500">+100<small>%</small></b></>);
       
     default:
       // その他の本能は基本形式

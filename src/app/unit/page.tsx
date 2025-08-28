@@ -1016,6 +1016,9 @@ function UnitPageContent() {
                           { key: 'barrierBreaker', name: 'バリアブレイカー', icon: icons.abilityBarrierBreaker },
                           { key: 'shieldPiercing', name: 'シールドブレイカー', icon: icons.abilityShieldPiercing },
                           { key: 'savageBlow', name: '渾身の一撃', icon: icons.abilitySavageBlow }
+                        ],
+                        [
+                          { key: 'extraMoney', name: '撃破時お金アップ', icon: icons.abilityExtraMoney }
                         ]
                       ].map((row, rowIndex) => (
                         <React.Fragment key={rowIndex}>

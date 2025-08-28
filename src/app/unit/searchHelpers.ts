@@ -49,7 +49,8 @@ export type AbilityType =
   | 'soulStrike'
   | 'barrierBreaker'
   | 'shieldPiercing'
-  | 'savageBlow';
+  | 'savageBlow'
+  | 'extraMoney';
 
 // 能力検索設定の型定義
 interface AbilitySearchConfig {
@@ -160,6 +161,10 @@ const ABILITY_SEARCH_CONFIG: Record<AbilityType, AbilitySearchConfig> = {
   },
   savageBlow: {
     searchTerms: ['渾身の一撃'],
+    searchBothNameAndValue: false
+  },
+  extraMoney: {
+    searchTerms: ['撃破時お金アップ'],
     searchBothNameAndValue: false
   }
 };

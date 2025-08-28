@@ -98,6 +98,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect }) => {
   const [sortOrder, setSortOrder] = useState<'pokedex' | 'id'>('pokedex');
   const [showTalentsOnly, setShowTalentsOnly] = useState(true);
   const [itemsPerPage, setItemsPerPage] = useState(10);
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
   useEffect(() => {
     const loadUnitsData = async () => {
@@ -218,81 +219,91 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect }) => {
     <div className="mt-2 p-2 border border-gray-600 rounded bg-gray-50">
       {/* ヘッダー、ソート順、表示件数 */}
       <div className="flex justify-between items-center mb-1">
-        <h3 className="text-[12px] font-bold text-gray-600">ユニット一覧 ({filteredAndSortedUnits.length}体)</h3>
+        <h3 
+          className="text-[12px] font-bold text-gray-600 cursor-pointer flex items-center gap-1"
+          onClick={() => setIsCollapsed(!isCollapsed)}
+        >
+          <span>{isCollapsed ? '▶' : '▼'}</span>
+          ユニット一覧 ({filteredAndSortedUnits.length}体)
+        </h3>
         
-        <div className="flex items-center gap-2">
+        {!isCollapsed && (
           <div className="flex items-center gap-2">
-            <span className="text-[10px] text-gray-500">表示件数:</span>
-            <input
-              type="number"
-              value={itemsPerPage}
-              onChange={(e) => {
-                const value = parseInt(e.target.value);
-                if (value > 0 && value <= 1000) {
-                  setItemsPerPage(value);
-                  setCurrentPage(1);
-                }
-              }}
-              className="w-16 border rounded px-1 py-0.5 text-[10px] text-gray-600 text-center"
-              min="1"
-              max="1000"
-            />
-            <span className="text-[10px] text-gray-500">件</span>
-          </div>
-          
-          <select 
-            value={sortOrder}
-            onChange={(e) => setSortOrder(e.target.value as 'pokedex' | 'id')}
-            className="border rounded px-2 py-0.5 text-[10px] text-gray-600"
-          >
-            <option value="pokedex">図鑑順</option>
-            <option value="id">ID順</option>
-          </select>
-        </div>
-      </div>
-
-      {/* チェックボックスとページネーション */}
-      <div className="flex justify-between items-center mb-2">
-        <label className="flex items-center text-[10px] text-gray-600">
-          <input
-            type="checkbox"
-            checked={showTalentsOnly}
-            onChange={(e) => {
-              setShowTalentsOnly(e.target.checked);
-              setCurrentPage(1);
-            }}
-            className="mr-1 scale-75"
-          />
-          本能・超本能を持つユニットのみ
-        </label>
-
-        {totalPages > 1 && (
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
-              disabled={currentPage === 1}
-              className="px-3 py-1 border border-gray-300 rounded text-[10px] text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
-            >
-              前
-            </button>
+            <div className="flex items-center gap-2">
+              <span className="text-[10px] text-gray-500">表示件数:</span>
+              <input
+                type="number"
+                value={itemsPerPage}
+                onChange={(e) => {
+                  const value = parseInt(e.target.value);
+                  if (value > 0 && value <= 1000) {
+                    setItemsPerPage(value);
+                    setCurrentPage(1);
+                  }
+                }}
+                className="w-16 border rounded px-1 py-0.5 text-[10px] text-gray-600 text-center"
+                min="1"
+                max="1000"
+              />
+              <span className="text-[10px] text-gray-500">件</span>
+            </div>
             
-            <span className="px-3 py-1 text-[10px] text-gray-500">
-              {currentPage} / {totalPages}
-            </span>
-            
-            <button
-              onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
-              disabled={currentPage === totalPages}
-              className="px-3 py-1 border border-gray-300 rounded text-[10px] text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
+            <select 
+              value={sortOrder}
+              onChange={(e) => setSortOrder(e.target.value as 'pokedex' | 'id')}
+              className="border rounded px-2 py-0.5 text-[10px] text-gray-600"
             >
-              次
-            </button>
+              <option value="pokedex">図鑑順</option>
+              <option value="id">ID順</option>
+            </select>
           </div>
         )}
       </div>
 
-      {/* ユニットリスト */}
-      <div className="space-y-0 mb-0">
+      {!isCollapsed && (
+        <>
+          {/* チェックボックスとページネーション */}
+          <div className="flex justify-between items-center mb-2">
+            <label className="flex items-center text-[10px] text-gray-600">
+              <input
+                type="checkbox"
+                checked={showTalentsOnly}
+                onChange={(e) => {
+                  setShowTalentsOnly(e.target.checked);
+                  setCurrentPage(1);
+                }}
+                className="mr-1 scale-75"
+              />
+              本能・超本能を持つユニットのみ
+            </label>
+
+            {totalPages > 1 && (
+              <div className="flex items-center gap-2">
+                <button
+                  onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
+                  disabled={currentPage === 1}
+                  className="px-3 py-1 border border-gray-300 rounded text-[10px] text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
+                >
+                  前
+                </button>
+                
+                <span className="px-3 py-1 text-[10px] text-gray-500">
+                  {currentPage} / {totalPages}
+                </span>
+                
+                <button
+                  onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
+                  disabled={currentPage === totalPages}
+                  className="px-3 py-1 border border-gray-300 rounded text-[10px] text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
+                >
+                  次
+                </button>
+              </div>
+            )}
+          </div>
+
+          {/* ユニットリスト */}
+          <div className="space-y-0 mb-0">
         {currentUnits.map((unit) => (
           <div
             key={unit.unitId}
@@ -362,7 +373,9 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect }) => {
             </div>
           </div>
         ))}
-      </div>
+          </div>
+        </>
+      )}
     </div>
   );
 };

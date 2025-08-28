@@ -1003,7 +1003,9 @@ function UnitPageContent() {
                         ],
                         [
                           { key: 'strengthen', name: '攻撃力アップ', icon: icons.abilityStrengthen },
-                          { key: 'survive', name: '生き残る', icon: icons.abilitySurvive }
+                          { key: 'survive', name: '生き残る', icon: icons.abilitySurvive },
+                          { key: 'baseDestroyer', name: '城破壊が得意', icon: icons.abilityBaseDestroyer },
+                          { key: 'critical', name: 'クリティカル', icon: icons.abilityCritical }
                         ]
                       ].map((row, rowIndex) => (
                         <React.Fragment key={rowIndex}>

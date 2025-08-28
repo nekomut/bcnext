@@ -41,7 +41,9 @@ export type AbilityType =
   | 'curse'
   | 'dodgeAttack'
   | 'strengthen'
-  | 'survive';
+  | 'survive'
+  | 'baseDestroyer'
+  | 'critical';
 
 // 能力検索設定の型定義
 interface AbilitySearchConfig {
@@ -120,6 +122,14 @@ const ABILITY_SEARCH_CONFIG: Record<AbilityType, AbilitySearchConfig> = {
   },
   survive: {
     searchTerms: ['生き残る'],
+    searchBothNameAndValue: true
+  },
+  baseDestroyer: {
+    searchTerms: ['城破壊が得意'],
+    searchBothNameAndValue: false
+  },
+  critical: {
+    searchTerms: ['クリティカル'],
     searchBothNameAndValue: true
   }
 };

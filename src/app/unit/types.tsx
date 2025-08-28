@@ -1265,6 +1265,13 @@ export const getAbilities = (
               iconKeys: ["abilityCurse"]
             });
             break;
+          case 13: // クリティカル
+            abilities.push({
+              name: "クリティカル",
+              value: calculateTalentEffect(talent),
+              iconKeys: ["abilityCritical"]
+            });
+            break;
         }
       }
     });
@@ -1570,6 +1577,17 @@ export const calculateTalentEffect = (talent: UnitTalent): string | React.ReactN
       }
       
       return (<><b className="text-gray-500">{curse_chance}<small>%</small> {curse_initial_duration_s}s <small className="text-gray-400">({curse_initial_duration}f)</small></b></>);
+      
+    case 13: // クリティカル
+      const critical_chance = data[2] || 0;
+      const critical_max_lv = data[1] || 1;
+      const critical_max_chance = data[3] || 0;
+      
+      if (critical_max_lv > 1 && critical_max_chance !== critical_chance) {
+        return (<><b className="text-gray-500"><small>+</small>{critical_chance}<small>%</small>~{critical_max_chance}<small>%</small></b></>);
+      }
+      
+      return (<><b className="text-gray-500"><small>+</small>{critical_chance}<small>%</small></b></>);
       
     default:
       // その他の本能は基本形式

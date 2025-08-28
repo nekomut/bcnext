@@ -97,8 +97,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [sortOrder, setSortOrder] = useState<'pokedex' | 'id'>('pokedex');
   const [showTalentsOnly, setShowTalentsOnly] = useState(true);
-  
-  const ITEMS_PER_PAGE = 20; // リスト表示
+  const [itemsPerPage, setItemsPerPage] = useState(10);
 
   useEffect(() => {
     const loadUnitsData = async () => {
@@ -201,9 +200,9 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect }) => {
   }, [units, sortOrder, showTalentsOnly]);
 
   // ページネーション
-  const totalPages = Math.ceil(filteredAndSortedUnits.length / ITEMS_PER_PAGE);
-  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
-  const endIndex = startIndex + ITEMS_PER_PAGE;
+  const totalPages = Math.ceil(filteredAndSortedUnits.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
   const currentUnits = filteredAndSortedUnits.slice(startIndex, endIndex);
 
   if (loading) {
@@ -217,22 +216,29 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect }) => {
 
   return (
     <div className="mt-2 p-2 border border-gray-600 rounded bg-gray-50">
+      {/* ヘッダー、ソート順、表示件数 */}
       <div className="flex justify-between items-center mb-1">
         <h3 className="text-[12px] font-bold text-gray-600">ユニット一覧 ({filteredAndSortedUnits.length}体)</h3>
         
         <div className="flex items-center gap-2">
-          <label className="flex items-center text-[10px] text-gray-600">
+          <div className="flex items-center gap-2">
+            <span className="text-[10px] text-gray-500">表示件数:</span>
             <input
-              type="checkbox"
-              checked={showTalentsOnly}
+              type="number"
+              value={itemsPerPage}
               onChange={(e) => {
-                setShowTalentsOnly(e.target.checked);
-                setCurrentPage(1);
+                const value = parseInt(e.target.value);
+                if (value > 0 && value <= 1000) {
+                  setItemsPerPage(value);
+                  setCurrentPage(1);
+                }
               }}
-              className="mr-1 scale-75"
+              className="w-16 border rounded px-1 py-0.5 text-[10px] text-gray-600 text-center"
+              min="1"
+              max="1000"
             />
-            本能・超本能を持つユニットのみ
-          </label>
+            <span className="text-[10px] text-gray-500">件</span>
+          </div>
           
           <select 
             value={sortOrder}
@@ -243,6 +249,46 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect }) => {
             <option value="id">ID順</option>
           </select>
         </div>
+      </div>
+
+      {/* チェックボックスとページネーション */}
+      <div className="flex justify-between items-center mb-2">
+        <label className="flex items-center text-[10px] text-gray-600">
+          <input
+            type="checkbox"
+            checked={showTalentsOnly}
+            onChange={(e) => {
+              setShowTalentsOnly(e.target.checked);
+              setCurrentPage(1);
+            }}
+            className="mr-1 scale-75"
+          />
+          本能・超本能を持つユニットのみ
+        </label>
+
+        {totalPages > 1 && (
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
+              disabled={currentPage === 1}
+              className="px-3 py-1 border border-gray-300 rounded text-[10px] text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
+            >
+              前
+            </button>
+            
+            <span className="px-3 py-1 text-[10px] text-gray-500">
+              {currentPage} / {totalPages}
+            </span>
+            
+            <button
+              onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
+              disabled={currentPage === totalPages}
+              className="px-3 py-1 border border-gray-300 rounded text-[10px] text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
+            >
+              次
+            </button>
+          </div>
+        )}
       </div>
 
       {/* ユニットリスト */}
@@ -317,31 +363,6 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect }) => {
           </div>
         ))}
       </div>
-
-      {/* ページネーション */}
-      {totalPages > 1 && (
-        <div className="flex justify-center gap-2">
-          <button
-            onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
-            disabled={currentPage === 1}
-            className="px-3 py-1 border border-gray-300 rounded text-[10px] text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
-          >
-            前
-          </button>
-          
-          <span className="px-3 py-1 text-[10px] text-gray-500">
-            {currentPage} / {totalPages}
-          </span>
-          
-          <button
-            onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
-            disabled={currentPage === totalPages}
-            className="px-3 py-1 border border-gray-300 rounded text-[10px] text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
-          >
-            次
-          </button>
-        </div>
-      )}
     </div>
   );
 };

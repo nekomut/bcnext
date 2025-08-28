@@ -282,6 +282,8 @@ export const getAbilities = (
   talentSlowBonus: { chance: number; duration: number } = { chance: 0, duration: 0 }, 
   talentKnockbackBonus: { chance: number } = { chance: 0 }, 
   talentBarrierBreakerBonus: { chance: number } = { chance: 0 },
+  talentShieldPiercingBonus: { chance: number } = { chance: 0 },
+  talentSavageBlowBonus: { chance: number } = { chance: 0 },
   dynamicMultipliers?: {
     mightyAp?: number;
     massiveDamage?: number;
@@ -600,9 +602,10 @@ export const getAbilities = (
   }
 
   // 渾身の一撃
-  if (stats[82] && stats[82] > 0) {
-    const chance = stats[82];
-    
+  const baseSavageChance = stats[82] || 0;
+  const totalSavageChance = baseSavageChance + talentSavageBlowBonus.chance;
+  
+  if (totalSavageChance > 0) {
     // ターゲット属性が「古のみ」「悪のみ」「属性を持たない敵のみ」「古と悪のみ」「古と属性を持たない敵のみ」「悪と属性を持たない敵のみ」「古と悪と属性を持たない敵のみ」の場合の判定
     const isRelicAkuTraitlessOnly = (() => {
       if (targets.length === 0) return false;
@@ -635,6 +638,10 @@ export const getAbilities = (
     if (hasMighty) {
       mightyMultiplier = isRelicAkuTraitlessOnly ? 1.5 : (dynamicMultipliers?.mightyAp ?? 1.8);
     }
+    
+    // 確率が強化されているかチェック
+    const chanceEnhanced = talentSavageBlowBonus.chance > 0;
+    const chanceColor = chanceEnhanced ? "text-orange-600" : "text-gray-500";
     
     if (calculatedStats.multihit) {
       const hit1_3x = calculatedStats.atk1 ? Math.round(calculatedStats.atk1 * attackUpMultiplier * 3 * mightyMultiplier) : 0;
@@ -729,11 +736,12 @@ export const getAbilities = (
       name: "渾身の一撃",
       value: (
         <>
-          <span className="text-red-500"><b className="text-gray-500">{chance}</b><small><b className="text-gray-500">%</b></small> <small><b>攻撃力</b></small></span><b className="text-gray-500">+200</b><small><b className="text-gray-500">%</b></small> {calculatedStats.multihit ? <br /> : ' '}{savageValues}
+          <span className="text-red-500"><b className={chanceColor}>{totalSavageChance}</b><small><b className="text-gray-500">%</b></small> <small><b>攻撃力</b></small></span><b className="text-gray-500">+200</b><small><b className="text-gray-500">%</b></small> {calculatedStats.multihit ? <br /> : ' '}{savageValues}
           {additionalValues}
         </>
       ),
-      iconKeys: ["abilitySavageBlow"]
+      iconKeys: ["abilitySavageBlow"],
+      enhanced: chanceEnhanced
     });
   }
 
@@ -1012,10 +1020,20 @@ export const getAbilities = (
 
   // シールドブレイカー
   if (stats[95] && stats[95] > 0) {
+    const baseChance = stats[95];
+    
+    // 本能によるボーナスを加算
+    const totalChance = baseChance + talentShieldPiercingBonus.chance;
+    
+    // 本能によるボーナスがあるかチェック
+    const isEnhanced = talentShieldPiercingBonus.chance > 0;
+    const chanceColor = isEnhanced ? "text-orange-600" : "text-gray-500";
+    
     abilities.push({
       name: "シールドブレイカー",
-      value: (<b className="text-gray-500">{stats[95]}<small>%</small></b>),
-      iconKeys: ["abilityShieldPiercing"]
+      value: (<b className={chanceColor}>{totalChance}<small>%</small></b>),
+      iconKeys: ["abilityShieldPiercing"],
+      enhanced: isEnhanced
     });
   }
 
@@ -1286,12 +1304,48 @@ export const getAbilities = (
               iconKeys: ["abilitySoulStrike"]
             });
             break;
+          case 15: // バリアブレイカー
+            abilities.push({
+              name: "バリアブレイカー",
+              value: calculateTalentEffect(talent),
+              iconKeys: ["abilityBarrierBreaker"]
+            });
+            break;
+          case 58: // シールドブレイカー
+            abilities.push({
+              name: "シールドブレイカー",
+              value: calculateTalentEffect(talent),
+              iconKeys: ["abilityShieldPiercing"]
+            });
+            break;
+          case 50: // 渾身の一撃
+            abilities.push({
+              name: "渾身の一撃",
+              value: calculateTalentEffect(talent),
+              iconKeys: ["abilitySavageBlow"]
+            });
+            break;
         }
       }
     });
   }
 
-  return abilities;
+  // 重複除去：同じ名前の能力は最後に追加されたもののみを保持
+  const uniqueAbilities: UnitAbility[] = [];
+  const seenNames = new Set<string>();
+  
+  // 逆順で処理して最後に追加された能力を優先
+  for (let i = abilities.length - 1; i >= 0; i--) {
+    const ability = abilities[i];
+    const nameKey = typeof ability.name === 'string' ? ability.name : String(ability.name);
+    
+    if (!seenNames.has(nameKey)) {
+      seenNames.add(nameKey);
+      uniqueAbilities.unshift(ability); // 元の順序を維持
+    }
+  }
+
+  return uniqueAbilities;
 };
 
 // LRU Cache implementation for unit data
@@ -1608,6 +1662,39 @@ export const calculateTalentEffect = (talent: UnitTalent): string | React.ReactN
       
     case 59: // 魂攻撃
       return (<><b className="text-gray-500">魂攻撃</b></>);
+      
+    case 15: // バリアブレイカー
+      const barrier_chance = data[2] || 0;
+      const barrier_max_lv = data[1] || 1;
+      const barrier_max_chance = data[3] || 0;
+      
+      if (barrier_max_lv > 1 && barrier_max_chance !== barrier_chance) {
+        return (<><b className="text-gray-500"><small>+</small>{barrier_chance}<small>%</small>~{barrier_max_chance}<small>%</small></b></>);
+      }
+      
+      return (<><b className="text-gray-500"><small>+</small>{barrier_chance}<small>%</small></b></>);
+      
+    case 58: // シールドブレイカー
+      const shield_chance = data[2] || 0;
+      const shield_max_lv = data[1] || 1;
+      const shield_max_chance = data[3] || 0;
+      
+      if (shield_max_lv > 1 && shield_max_chance !== shield_chance) {
+        return (<><b className="text-gray-500">{shield_chance}<small>%</small>~{shield_max_chance}<small>%</small></b></>);
+      }
+      
+      return (<><b className="text-gray-500">{shield_chance}<small>%</small></b></>);
+      
+    case 50: // 渾身の一撃
+      const savage_chance = data[2] || 0;
+      const savage_max_lv = data[1] || 1;
+      const savage_max_chance = data[3] || 0;
+      
+      if (savage_max_lv > 1 && savage_max_chance !== savage_chance) {
+        return (<><b className="text-gray-500">{savage_chance}<small>%</small>~{savage_max_chance}<small>%</small></b></>);
+      }
+      
+      return (<><b className="text-gray-500">{savage_chance}<small>%</small></b></>);
       
     default:
       // その他の本能は基本形式

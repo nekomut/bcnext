@@ -46,7 +46,10 @@ export type AbilityType =
   | 'critical'
   | 'metalKiller'
   | 'zombieKiller'
-  | 'soulStrike';
+  | 'soulStrike'
+  | 'barrierBreaker'
+  | 'shieldPiercing'
+  | 'savageBlow';
 
 // 能力検索設定の型定義
 interface AbilitySearchConfig {
@@ -145,6 +148,18 @@ const ABILITY_SEARCH_CONFIG: Record<AbilityType, AbilitySearchConfig> = {
   },
   soulStrike: {
     searchTerms: ['魂攻撃'],
+    searchBothNameAndValue: false
+  },
+  barrierBreaker: {
+    searchTerms: ['バリアブレイカー'],
+    searchBothNameAndValue: false
+  },
+  shieldPiercing: {
+    searchTerms: ['シールドブレイカー'],
+    searchBothNameAndValue: false
+  },
+  savageBlow: {
+    searchTerms: ['渾身の一撃'],
     searchBothNameAndValue: false
   }
 };

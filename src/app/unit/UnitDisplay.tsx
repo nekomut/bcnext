@@ -509,6 +509,8 @@ export function UnitDisplay({
     totalAttackMultiplier, baseHpUpMultiplier, 
     talentCriticalBonus, talentFreezeBonus, talentWeakenBonus, 
     talentSlowBonus, talentKnockbackBonus, talentBarrierBreakerBonus,
+    { chance: 0 }, // talentShieldPiercingBonus
+    { chance: 0 }, // talentSavageBlowBonus
     {
       mightyAp: talentMightyApValue,
       massiveDamage: talentMassiveDamageMultiplier,

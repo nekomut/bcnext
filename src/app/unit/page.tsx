@@ -364,9 +364,11 @@ function UnitPageContent() {
                     duration: unitData.auxiliaryData.talents.talentList.find(t => t.id === 3)?.data[5] || 0 
                   };
                   const talentKnockbackBonus = { chance: calculateTalentBonus(8) };
-                  const talentBarrierBreakerBonus = { chance: calculateTalentBonus(9) };
+                  const talentBarrierBreakerBonus = { chance: calculateTalentBonus(15) };
+                  const talentShieldPiercingBonus = { chance: calculateTalentBonus(58) };
+                  const talentSavageBlowBonus = { chance: calculateTalentBonus(50) };
                   
-                  const abilities = getAbilities(unitData, formIndex, 50, 0, 1, 1, 0, talentFreezeBonus, talentWeakenBonus, talentSlowBonus, talentKnockbackBonus, talentBarrierBreakerBonus, undefined, advancedFilters.includeInstincts);
+                  const abilities = getAbilities(unitData, formIndex, 50, 0, 1, 1, 0, talentFreezeBonus, talentWeakenBonus, talentSlowBonus, talentKnockbackBonus, talentBarrierBreakerBonus, talentShieldPiercingBonus, talentSavageBlowBonus, undefined, advancedFilters.includeInstincts);
                   
                   // キーから日本語名への変換
                   const traitNames = advancedFilters.targetTraits.map(traitKey => {
@@ -414,9 +416,11 @@ function UnitPageContent() {
                     duration: unitData.auxiliaryData.talents.talentList.find(t => t.id === 3)?.data[5] || 0 
                   };
                   const talentKnockbackBonus = { chance: calculateTalentBonus(8) };
-                  const talentBarrierBreakerBonus = { chance: calculateTalentBonus(9) };
+                  const talentBarrierBreakerBonus = { chance: calculateTalentBonus(15) };
+                  const talentShieldPiercingBonus = { chance: calculateTalentBonus(58) };
+                  const talentSavageBlowBonus = { chance: calculateTalentBonus(50) };
                   
-                  const abilities = getAbilities(unitData, formIndex, 50, 0, 1, 1, 0, talentFreezeBonus, talentWeakenBonus, talentSlowBonus, talentKnockbackBonus, talentBarrierBreakerBonus, undefined, advancedFilters.includeInstincts);
+                  const abilities = getAbilities(unitData, formIndex, 50, 0, 1, 1, 0, talentFreezeBonus, talentWeakenBonus, talentSlowBonus, talentKnockbackBonus, talentBarrierBreakerBonus, talentShieldPiercingBonus, talentSavageBlowBonus, undefined, advancedFilters.includeInstincts);
                   
                   // 新しいヘルパー関数を使用してチェック
                   hasMatchingAbilityType = checkAbilityTypes(abilities, advancedFilters.abilityTypes, advancedFilters.searchMode);
@@ -1008,7 +1012,10 @@ function UnitPageContent() {
                           { key: 'critical', name: 'クリティカル', icon: icons.abilityCritical },
                           { key: 'metalKiller', name: 'メタルキラー', icon: icons.abilityMetalKiller },
                           { key: 'zombieKiller', name: 'ゾンビキラー', icon: icons.abilityZombieKiller },
-                          { key: 'soulStrike', name: '魂攻撃', icon: icons.abilitySoulStrike }
+                          { key: 'soulStrike', name: '魂攻撃', icon: icons.abilitySoulStrike },
+                          { key: 'barrierBreaker', name: 'バリアブレイカー', icon: icons.abilityBarrierBreaker },
+                          { key: 'shieldPiercing', name: 'シールドブレイカー', icon: icons.abilityShieldPiercing },
+                          { key: 'savageBlow', name: '渾身の一撃', icon: icons.abilitySavageBlow }
                         ]
                       ].map((row, rowIndex) => (
                         <React.Fragment key={rowIndex}>

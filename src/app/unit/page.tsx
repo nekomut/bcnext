@@ -10,6 +10,7 @@ import { UnitData, getUnitData, calculateUnitStats, frameToSecond, getAbilities,
 import { unitNamesData, UnitNameData } from '@/data/unit-names';
 import IconManager from './IconManager';
 import UnitGallery from './UnitGallery';
+import { checkAbilityTypes, AbilityType } from './searchHelpers';
 
 // 検索中アニメーション用コンポーネント
 function SearchingAnimation() {
@@ -63,7 +64,7 @@ interface AdvancedFilters {
   backswingRange: { min: string; max: string };
   freqRange: { min: string; max: string };
   targetTraits: string[];
-  abilityTypes: string[];
+  abilityTypes: AbilityType[];
   includeInstincts: boolean;
 }
 
@@ -417,115 +418,8 @@ function UnitPageContent() {
                   
                   const abilities = getAbilities(unitData, formIndex, 50, 0, 1, 1, 0, talentFreezeBonus, talentWeakenBonus, talentSlowBonus, talentKnockbackBonus, talentBarrierBreakerBonus, undefined, advancedFilters.includeInstincts);
                   
-                  const abilityTypeChecks = advancedFilters.abilityTypes.map(abilityType => {
-                    switch (abilityType) {
-                      case 'weaken':
-                        return abilities.some(ability => {
-                          const abilityText = typeof ability.name === 'string' ? ability.name : '';
-                          const valueText = typeof ability.value === 'string' ? ability.value : '';
-                          // 攻撃力ダウンを含むが、攻撃力ダウン無効は除外する
-                          const hasWeaken = abilityText.includes('攻撃力ダウン') || valueText.includes('攻撃力ダウン');
-                          const hasImmuneWeaken = abilityText.includes('攻撃力ダウン無効') || valueText.includes('攻撃力ダウン無効') ||
-                                                  abilityText.includes('攻撃力ダウン耐性') || valueText.includes('攻撃力ダウン耐性');
-                          return hasWeaken && !hasImmuneWeaken;
-                        });
-                      case 'freeze':
-                        return abilities.some(ability => {
-                          const abilityText = typeof ability.name === 'string' ? ability.name : '';
-                          const valueText = typeof ability.value === 'string' ? ability.value : '';
-                          // 動きを止めるを含むが、動きを止める無効は除外する
-                          const hasFreeze = abilityText.includes('動きを止める') || valueText.includes('動きを止める');
-                          const hasImmuneFreeze = abilityText.includes('動きを止める無効') || valueText.includes('動きを止める無効') ||
-                                                  abilityText.includes('動きを止める耐性') || valueText.includes('動きを止める耐性');
-                          return hasFreeze && !hasImmuneFreeze;
-                        });
-                      case 'slow':
-                        return abilities.some(ability => {
-                          const abilityText = typeof ability.name === 'string' ? ability.name : '';
-                          const valueText = typeof ability.value === 'string' ? ability.value : '';
-                          // 動きを遅くするを含むが、動きを遅くする無効は除外する
-                          const hasSlow = abilityText.includes('動きを遅くする') || valueText.includes('動きを遅くする');
-                          const hasImmuneSlow = abilityText.includes('動きを遅くする無効') || valueText.includes('動きを遅くする無効') ||
-                                                abilityText.includes('動きを遅くする耐性') || valueText.includes('動きを遅くする耐性');
-                          return hasSlow && !hasImmuneSlow;
-                        });
-                      case 'attacksOnly':
-                        return abilities.some(ability => {
-                          const abilityText = typeof ability.name === 'string' ? ability.name : '';
-                          // 攻撃ターゲット限定を含む能力を検索
-                          return abilityText.includes('攻撃ターゲット限定');
-                        });
-                      case 'strongAgainst':
-                        return abilities.some(ability => {
-                          const abilityText = typeof ability.name === 'string' ? ability.name : '';
-                          // めっぽう強いを含む能力を検索
-                          return abilityText.includes('めっぽう強い');
-                        });
-                      case 'resistant':
-                        return abilities.some(ability => {
-                          const abilityText = typeof ability.name === 'string' ? ability.name : '';
-                          // 打たれ強いを含む能力を検索
-                          return abilityText.includes('打たれ強い');
-                        });
-                      case 'insanelyTough':
-                        return abilities.some(ability => {
-                          const abilityText = typeof ability.name === 'string' ? ability.name : '';
-                          // 超打たれ強いを含む能力を検索
-                          return abilityText.includes('超打たれ強い');
-                        });
-                      case 'massiveDamage':
-                        return abilities.some(ability => {
-                          const abilityText = typeof ability.name === 'string' ? ability.name : '';
-                          // 超ダメージを含む能力を検索
-                          return abilityText.includes('超ダメージ');
-                        });
-                      case 'insaneDamage':
-                        return abilities.some(ability => {
-                          const abilityText = typeof ability.name === 'string' ? ability.name : '';
-                          // 極ダメージを含む能力を検索
-                          return abilityText.includes('極ダメージ');
-                        });
-                      case 'knockback':
-                        return abilities.some(ability => {
-                          const abilityText = typeof ability.name === 'string' ? ability.name : '';
-                          const valueText = typeof ability.value === 'string' ? ability.value : '';
-                          // React要素の場合はname（文字列）のみで判定、文字列の場合はname+valueで判定
-                          const hasKnockback = abilityText.includes('ふっとばす') || valueText.includes('ふっとばす');
-                          const hasImmuneKnockback = abilityText.includes('ふっとばし無効') || valueText.includes('ふっとばし無効') ||
-                                                     abilityText.includes('ふっとばし耐性') || valueText.includes('ふっとばし耐性');
-                          return hasKnockback && !hasImmuneKnockback;
-                        });
-                      case 'warp':
-                        return abilities.some(ability => {
-                          const abilityText = typeof ability.name === 'string' ? ability.name : '';
-                          const valueText = typeof ability.value === 'string' ? ability.value : '';
-                          // ワープを含むが、ワープ無効は除外する
-                          const hasWarp = abilityText.includes('ワープ') || valueText.includes('ワープ');
-                          const hasImmuneWarp = abilityText.includes('ワープ無効') || valueText.includes('ワープ無効') ||
-                                                abilityText.includes('ワープ耐性') || valueText.includes('ワープ耐性');
-                          return hasWarp && !hasImmuneWarp;
-                        });
-                      case 'curse':
-                        return abilities.some(ability => {
-                          const abilityText = typeof ability.name === 'string' ? ability.name : '';
-                          const valueText = typeof ability.value === 'string' ? ability.value : '';
-                          // 呪いを含むが、呪い無効は除外する
-                          const hasCurse = abilityText.includes('呪い') || valueText.includes('呪い');
-                          const hasImmuneCurse = abilityText.includes('呪い無効') || valueText.includes('呪い無効') ||
-                                                abilityText.includes('呪い耐性') || valueText.includes('呪い耐性');
-                          return hasCurse && !hasImmuneCurse;
-                        });
-                      default:
-                        return false;
-                    }
-                  });
-                  
-                  // OR/AND検索モードに応じた判定
-                  if (advancedFilters.searchMode === 'OR') {
-                    hasMatchingAbilityType = abilityTypeChecks.some(check => check === true);
-                  } else { // AND
-                    hasMatchingAbilityType = abilityTypeChecks.every(check => check === true);
-                  }
+                  // 新しいヘルパー関数を使用してチェック
+                  hasMatchingAbilityType = checkAbilityTypes(abilities, advancedFilters.abilityTypes, advancedFilters.searchMode);
                 }
 
                 if (!hasMatchingAbilityType) continue;
@@ -1097,10 +991,10 @@ function UnitPageContent() {
                         <label key={ability.key} className="cursor-pointer">
                           <input
                             type="checkbox"
-                            checked={advancedFilters.abilityTypes.includes(ability.key)}
+                            checked={advancedFilters.abilityTypes.includes(ability.key as AbilityType)}
                             onChange={(e) => {
                               const newAbilities = e.target.checked
-                                ? [...advancedFilters.abilityTypes, ability.key]
+                                ? [...advancedFilters.abilityTypes, ability.key as AbilityType]
                                 : advancedFilters.abilityTypes.filter(a => a !== ability.key);
                               setAdvancedFilters({...advancedFilters, abilityTypes: newAbilities});
                             }}
@@ -1108,7 +1002,7 @@ function UnitPageContent() {
                           />
                           <div 
                             className={`border-2 rounded-[5px] flex items-center justify-center my-0 py-0 ${
-                              advancedFilters.abilityTypes.includes(ability.key) 
+                              advancedFilters.abilityTypes.includes(ability.key as AbilityType) 
                                 ? 'border-blue-500 bg-blue-50' 
                                 : 'border-gray-200 bg-white hover:border-gray-400'
                             }`}
@@ -1133,7 +1027,7 @@ function UnitPageContent() {
                           checked={advancedFilters.abilityTypes.includes('warp')}
                           onChange={(e) => {
                             const newAbilities = e.target.checked
-                              ? [...advancedFilters.abilityTypes, 'warp']
+                              ? [...advancedFilters.abilityTypes, 'warp' as AbilityType]
                               : advancedFilters.abilityTypes.filter(a => a !== 'warp');
                             setAdvancedFilters({...advancedFilters, abilityTypes: newAbilities});
                           }}
@@ -1164,7 +1058,7 @@ function UnitPageContent() {
                           checked={advancedFilters.abilityTypes.includes('curse')}
                           onChange={(e) => {
                             const newAbilities = e.target.checked
-                              ? [...advancedFilters.abilityTypes, 'curse']
+                              ? [...advancedFilters.abilityTypes, 'curse' as AbilityType]
                               : advancedFilters.abilityTypes.filter(a => a !== 'curse');
                             setAdvancedFilters({...advancedFilters, abilityTypes: newAbilities});
                           }}

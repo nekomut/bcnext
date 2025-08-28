@@ -960,7 +960,7 @@ function UnitPageContent() {
                             className="sr-only"
                           />
                           <div 
-                            className={`border-2 rounded flex items-center justify-center my-0 py-0 ${
+                            className={`border rounded-[7px] flex items-center justify-center my-0 py-0 ${
                               advancedFilters.targetTraits.includes(trait.key) 
                                 ? 'border-blue-500 bg-blue-50' 
                                 : 'border-gray-300 bg-white hover:border-gray-400'
@@ -1027,7 +1027,7 @@ function UnitPageContent() {
                             className="sr-only"
                           />
                           <div 
-                            className={`border-2 rounded flex items-center justify-center my-0 py-0 ${
+                            className={`border-2 rounded-[5px] flex items-center justify-center my-0 py-0 ${
                               advancedFilters.abilityTypes.includes(ability.key) 
                                 ? 'border-blue-500 bg-blue-50' 
                                 : 'border-gray-300 bg-white hover:border-gray-400'

@@ -335,9 +335,9 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                 return (
                   <div
                     key={formIndex}
-                    className={`w-7 h-6 border-2 rounded flex items-center justify-center ${
+                    className={`w-7 h-6 border-1 rounded-xs flex items-center justify-center ${
                       isCurrentForm 
-                        ? 'border-blue-500 bg-white' 
+                        ? 'border-blue-500 bg-white border-2' 
                         : formIndex < unit.formIcons.length 
                         ? 'border-gray-300 bg-white hover:bg-blue-50 cursor-pointer hover:border-blue-400' 
                         : 'border-gray-300 bg-gray-100'
@@ -354,7 +354,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                       <Image 
                         src={`data:image/png;base64,${unit.formIcons[formIndex]}`} 
                         alt={`${unit.displayName} 第${formIndex + 1}形態`} 
-                        width={36} 
+                        width={24} 
                         height={24} 
                         className="object-contain"
                       />
@@ -370,11 +370,11 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
             <div className="flex gap-1">
               {unit.talentIcons.map((iconKey, index) => {
                 const talentType = unit.talentTypes[index];
-                const borderColor = talentType === 'ultra' ? 'border-red-300' : 'border-yellow-100';
+                const borderColor = talentType === 'ultra' ? 'border-red-300' : 'border-amber-200';
                 return (
                   <div 
                     key={index}
-                    className={`w-5 h-5 flex items-center justify-center border-2 ${borderColor}`}
+                    className={`w-5 h-5 flex items-center justify-center rounded-[5px] border-2 ${borderColor}`}
                     title={`${talentType === 'ultra' ? '超本能' : '本能'}: ${iconKey}`}
                   >
                     <Image 

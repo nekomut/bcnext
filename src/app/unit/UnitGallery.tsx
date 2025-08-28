@@ -371,10 +371,11 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
               {unit.talentIcons.map((iconKey, index) => {
                 const talentType = unit.talentTypes[index];
                 const borderColor = talentType === 'ultra' ? 'border-red-300' : 'border-amber-200';
+                const bgColor = talentType === 'ultra' ? 'bg-red-300' : 'bg-amber-200';
                 return (
                   <div 
                     key={index}
-                    className={`w-6 h-6 flex items-center justify-center rounded-[5px] border-2 ${borderColor}`}
+                    className={`w-6 h-6 flex items-center justify-center rounded-[5px] border-2 ${borderColor} ${bgColor}`}
                     title={`${talentType === 'ultra' ? '超本能' : '本能'}: ${iconKey}`}
                   >
                     <Image 

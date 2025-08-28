@@ -22,6 +22,7 @@ interface UnitGalleryItem {
   talentIcons: string[];
   talentTypes: ('normal' | 'ultra')[];
   isLimited: boolean;
+  isSeasonal: boolean;
 }
 
 // 本能・超本能IDからアイコンキーへのマッピング（UnitDisplayと完全一致）
@@ -101,7 +102,8 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
   const [currentPage, setCurrentPage] = useState(1);
   const [sortOrder, setSortOrder] = useState<'pokedex' | 'id'>('pokedex');
   const [showTalentsOnly, setShowTalentsOnly] = useState(true);
-  const [showLimitedOnly, setShowLimitedOnly] = useState(false);
+  const [includeSeasonal, setIncludeSeasonal] = useState(false);
+  const [includeLimited, setIncludeLimited] = useState(false);
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -165,7 +167,8 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                 validFormCount,
                 talentIcons,
                 talentTypes,
-                isLimited: unitData.isLimited || false
+                isLimited: unitData.isLimited || false,
+                isSeasonal: unitData.isSeasonal || false
               };
             } catch {
               return null;
@@ -195,8 +198,13 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
   const filteredAndSortedUnits = React.useMemo(() => {
     let filtered = [...units];
     
+    // 季節キャラフィルター（デフォルトは通常ユニットのみ、チェックONで季節キャラも含める）
+    if (!includeSeasonal) {
+      filtered = filtered.filter(unit => !unit.isSeasonal);
+    }
+    
     // 限定キャラフィルター（デフォルトは通常ユニットのみ、チェックONで限定キャラも含める）
-    if (!showLimitedOnly) {
+    if (!includeLimited) {
       filtered = filtered.filter(unit => !unit.isLimited);
     }
     
@@ -212,7 +220,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
       filtered.sort((a, b) => parseInt(a.unitId) - parseInt(b.unitId));
     }
     return filtered;
-  }, [units, sortOrder, showTalentsOnly, showLimitedOnly]);
+  }, [units, sortOrder, showTalentsOnly, includeSeasonal, includeLimited]);
 
   // ページネーション
   const totalPages = Math.ceil(filteredAndSortedUnits.length / itemsPerPage);
@@ -278,7 +286,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
         <>
           {/* チェックボックスとページネーション */}
           <div className="flex justify-between items-center mb-2">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-1">
               <label className="flex items-center text-[10px] text-gray-600">
                 <input
                   type="checkbox"
@@ -289,41 +297,54 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                   }}
                   className="mr-1 scale-75"
                 />
-                本能ユニットのみ
+                本能実装済のみ
               </label>
               
               <label className="flex items-center text-[10px] text-gray-600">
                 <input
                   type="checkbox"
-                  checked={showLimitedOnly}
+                  checked={includeSeasonal}
                   onChange={(e) => {
-                    setShowLimitedOnly(e.target.checked);
+                    setIncludeSeasonal(e.target.checked);
                     setCurrentPage(1);
                   }}
                   className="mr-1 scale-75"
                 />
-                限定表示
+                季節
+              </label>
+              
+              <label className="flex items-center text-[10px] text-gray-600">
+                <input
+                  type="checkbox"
+                  checked={includeLimited}
+                  onChange={(e) => {
+                    setIncludeLimited(e.target.checked);
+                    setCurrentPage(1);
+                  }}
+                  className="mr-1 scale-75"
+                />
+                限定
               </label>
             </div>
 
             {totalPages > 1 && (
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1">
                 <button
                   onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
                   disabled={currentPage === 1}
-                  className="px-3 py-1 border border-gray-300 rounded text-[10px] text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
+                  className="px-2 py-1 border border-gray-300 rounded text-[10px] text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
                 >
                   前
                 </button>
                 
-                <span className="px-3 py-1 text-[10px] text-gray-500">
+                <span className="px-1 py-1 text-[10px] text-gray-500">
                   {currentPage} / {totalPages}
                 </span>
                 
                 <button
                   onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
                   disabled={currentPage === totalPages}
-                  className="px-3 py-1 border border-gray-300 rounded text-[10px] text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
+                  className="px-2 py-1 border border-gray-300 rounded text-[10px] text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
                 >
                   次
                 </button>
@@ -363,7 +384,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                         ? 'border-blue-500 bg-white border-2' 
                         : formIndex < unit.formIcons.length 
                         ? 'border-gray-300 bg-white hover:bg-blue-50 cursor-pointer hover:border-blue-400' 
-                        : 'border-gray-300 bg-gray-100'
+                        : 'border-gray-300 bg-white'
                     } ${formIndex < unit.formIcons.length ? 'cursor-pointer' : ''}`}
                     onClick={(e) => {
                       e.stopPropagation();
@@ -382,7 +403,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                         className="object-contain"
                       />
                     ) : (
-                      <div className="text-xs text-gray-400">-</div>
+                      <div className="text-xs text-gray-400"></div>
                     )}
                   </div>
                 );

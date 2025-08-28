@@ -26,6 +26,7 @@ export interface UnitData {
   readonly unitId: number;
   readonly sortKey?: number;
   readonly isLimited?: boolean;
+  readonly isSeasonal?: boolean;
   readonly coreData: {
     readonly forms: readonly UnitForm[];
     readonly rarity: UnitRarity;

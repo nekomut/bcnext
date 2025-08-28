@@ -43,7 +43,8 @@ export type AbilityType =
   | 'strengthen'
   | 'survive'
   | 'baseDestroyer'
-  | 'critical';
+  | 'critical'
+  | 'metalKiller';
 
 // 能力検索設定の型定義
 interface AbilitySearchConfig {
@@ -131,6 +132,10 @@ const ABILITY_SEARCH_CONFIG: Record<AbilityType, AbilitySearchConfig> = {
   critical: {
     searchTerms: ['クリティカル'],
     searchBothNameAndValue: true
+  },
+  metalKiller: {
+    searchTerms: ['メタルキラー'],
+    searchBothNameAndValue: false
   }
 };
 

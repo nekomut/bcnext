@@ -444,6 +444,25 @@ export const getAbilities = (
     });
   }
 
+  // 単体攻撃・範囲攻撃
+  // 遠方攻撃・全方位攻撃とは独立して判定する（同時に存在可能）
+  // UnitDisplay.tsxと同じ正しい判定ロジックを使用: stats[12] === 1 で範囲攻撃
+  const isAreaAttack = (stats[12] || 0) === 1;
+  
+  if (isAreaAttack) {
+    abilities.push({
+      name: "範囲攻撃",
+      value: "",
+      iconKeys: ["abilityAreaAttack"]
+    });
+  } else {
+    abilities.push({
+      name: "単体攻撃",
+      value: "",
+      iconKeys: ["abilitySingleTarget"]
+    });
+  }
+
   // アドバンス検索に新しい基本能力を追加する場合：
   // 1. 対応するstats配列のインデックスを確認
   // 2. 適切な条件分岐でability.pushを追加
@@ -1358,6 +1377,13 @@ export const getAbilities = (
               iconKeys: ["abilitySurge"]
             });
             break;
+          case 67: // 爆波攻撃
+            abilities.push({
+              name: "爆波攻撃",
+              value: calculateTalentEffect(talent),
+              iconKeys: ["abilityExplosion"]
+            });
+            break;
         }
       }
     });
@@ -1773,6 +1799,20 @@ export const calculateTalentEffect = (talent: UnitTalent): string | React.ReactN
       }
       
       return (<><b className="text-gray-500">Lv{surge_level} {surge_chance}<small>%</small></b></>);
+      
+    case 67: // 爆波攻撃
+      const explosion_chance = data[2] || 0;
+      const explosion_max_lv = data[1] || 1;
+      const explosion_max_chance = data[3] || 0;
+      const explosion_level = data[4] || 0;
+      const explosion_max_level = data[5] || 0;
+      
+      if (explosion_max_lv > 1 && explosion_max_chance !== explosion_chance) {
+        const level_text = explosion_max_level !== explosion_level ? `Lv${explosion_level}~${explosion_max_level}` : `Lv${explosion_level}`;
+        return (<><b className="text-gray-500">{level_text} {explosion_chance}<small>%</small>~{explosion_max_chance}<small>%</small></b></>);
+      }
+      
+      return (<><b className="text-gray-500">Lv{explosion_level} {explosion_chance}<small>%</small></b></>);
       
     default:
       // その他の本能は基本形式

@@ -1028,7 +1028,17 @@ function UnitPageContent() {
                           { key: 'miniWave', name: '小波動', icon: icons.abilityMiniWave },
                           { key: 'wave', name: '波動攻撃', icon: icons.abilityWave },
                           { key: 'miniSurge', name: '小裂波', icon: icons.abilityMiniSurge },
-                          { key: 'surge', name: '裂波攻撃', icon: icons.abilitySurge }
+                          { key: 'surge', name: '裂波攻撃', icon: icons.abilitySurge },
+                          { key: 'explosion', name: '爆波攻撃', icon: icons.abilityExplosion },
+                          { key: 'counterSurge', name: '裂波カウンター', icon: icons.abilityCounterSurge },
+                          { key: 'waveShield', name: '波動ストッパー', icon: icons.abilityWaveShield },
+                          { key: 'summon', name: '召喚', icon: icons.abilitySummon }
+                        ],
+                        [
+                          { key: 'singleTarget', name: '単体攻撃', icon: icons.abilitySingleTarget },
+                          { key: 'areaAttack', name: '範囲攻撃', icon: icons.abilityAreaAttack },
+                          { key: 'longDistance', name: '遠方攻撃', icon: icons.abilityLongDistance },
+                          { key: 'omniStrike', name: '全方位攻撃', icon: icons.abilityOmniStrike }
                         ]
                       ].map((row, rowIndex) => (
                         <React.Fragment key={rowIndex}>

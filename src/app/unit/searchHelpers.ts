@@ -55,7 +55,15 @@ export type AbilityType =
   | 'miniWave'
   | 'wave'
   | 'miniSurge'
-  | 'surge';
+  | 'surge'
+  | 'explosion'
+  | 'counterSurge'
+  | 'waveShield'
+  | 'summon'
+  | 'singleTarget'
+  | 'areaAttack'
+  | 'longDistance'
+  | 'omniStrike';
 
 // 能力検索設定の型定義
 interface AbilitySearchConfig {
@@ -196,6 +204,39 @@ const ABILITY_SEARCH_CONFIG: Record<AbilityType, AbilitySearchConfig> = {
     searchTerms: ['裂波攻撃'],
     immunityTerms: ['裂波攻撃無効', '裂波攻撃耐性'],
     searchBothNameAndValue: true
+  },
+  explosion: {
+    searchTerms: ['爆波攻撃'],
+    immunityTerms: ['爆波攻撃無効', '爆波攻撃耐性'],
+    searchBothNameAndValue: true
+  },
+  counterSurge: {
+    searchTerms: ['裂波カウンター'],
+    searchBothNameAndValue: false
+  },
+  waveShield: {
+    searchTerms: ['波動ストッパー'],
+    searchBothNameAndValue: false
+  },
+  summon: {
+    searchTerms: ['召喚'],
+    searchBothNameAndValue: false
+  },
+  singleTarget: {
+    searchTerms: ['単体攻撃'],
+    searchBothNameAndValue: false
+  },
+  areaAttack: {
+    searchTerms: ['範囲攻撃'],
+    searchBothNameAndValue: false
+  },
+  longDistance: {
+    searchTerms: ['遠方攻撃'],
+    searchBothNameAndValue: false
+  },
+  omniStrike: {
+    searchTerms: ['全方位攻撃'],
+    searchBothNameAndValue: false
   }
 };
 

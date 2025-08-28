@@ -1112,6 +1112,15 @@ function UnitPageContent() {
                           />
                         </div>
                       </label>
+                      
+                      {/* 
+                        新しい能力ボタンを追加する場合のテンプレート：
+                        1. 'newAbility' を適切な能力キーに変更
+                        2. icons.abilityXXX を対応するアイコンに変更  
+                        3. alt属性を適切な日本語名に変更
+                        4. AbilityType as でキャストして型安全性を保つ
+                        5. searchHelpers.ts と types.tsx での実装も忘れずに
+                      */}
                     </div>
                   </div>
                 </div>

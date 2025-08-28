@@ -886,9 +886,9 @@ function UnitPageContent() {
               <div>
                 {/* レアリティ選択 */}
                 <div className="mb-1">
-                  <div className="flex items-center gap-2 mb-1">
-                    <label className="font-bold text-[10px] text-gray-600">レア度</label>
-                    <div className="flex gap-0.5">
+                  <div className="mb-1">
+                    <label className="font-bold text-[11px] text-gray-600">レア度・ターゲット</label>
+                    <div className="flex gap-0.5 mt-1">
                       {[
                         { key: '基本', icon: icons.rarityBasic },
                         { key: 'EX', icon: icons.rarityEx },
@@ -931,7 +931,6 @@ function UnitPageContent() {
                 {/* ターゲット属性 */}
                 <div>
                   <div className="flex items-center gap-2 mb-0">
-                    <label className="font-bold text-[10px] text-gray-600">ターゲット</label>
                     <div className="flex flex-wrap gap-1">
                       {[
                         { key: 'red', name: '赤い敵', icon: icons.traitRed },
@@ -985,7 +984,7 @@ function UnitPageContent() {
               {/* 能力・効果 + 本能・超本能 */}
               <div>
                 <div className="flex items-center gap-2 mb-1">
-                  <h4 className="font-semibold text-gray-600">能力・効果</h4>
+                  <h4 className="font-semibold text-gray-600 text-[11px]">能力・効果</h4>
                   <label className="flex items-center text-[10px] text-gray-600">
                     <input
                       type="checkbox"
@@ -1056,7 +1055,7 @@ function UnitPageContent() {
                   className="flex items-center gap-1 cursor-pointer"
                   onClick={() => setIsStatsCollapsed(!isStatsCollapsed)}
                 >
-                  <h4 className="font-semibold mb-1 text-gray-600">{isStatsCollapsed ? '▶' : '▼'} ステータス<small>(Lv50)</small></h4>
+                  <h4 className="font-semibold mb-1 text-gray-600 text-[11px]">{isStatsCollapsed ? '▶' : '▼'} ステータス<small>(Lv50)</small></h4>
                 </div>
                 
                 {!isStatsCollapsed && (
@@ -1446,6 +1445,12 @@ function UnitPageContent() {
             <div className="flex justify-between items-center mb-1">
               <h4 className="text-xs font-semibold text-cyan-500">
                 検索結果: {searchResults.length}件
+                <button
+                  onClick={() => setSearchResults([])}
+                  className="text-xxs text-red-500 hover:text-red-700 mx-2"
+                >
+                  結果をクリア
+                </button>
               </h4>
               
               <div className="flex items-center gap-2">
@@ -1459,13 +1464,6 @@ function UnitPageContent() {
                   <option value="name">名前順</option>
                   <option value="pokedex">図鑑順</option>
                 </select>
-                
-                <button
-                  onClick={() => setSearchResults([])}
-                  className="text-xs text-red-600 hover:text-red-700"
-                >
-                  結果をクリア
-                </button>
               </div>
             </div>
             

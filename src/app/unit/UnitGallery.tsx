@@ -243,8 +243,8 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
         
         {!isCollapsed && (
           <div className="flex items-center gap-2">
-            <div className="flex items-center gap-2">
-              <span className="text-[10px] text-gray-500">表示件数:</span>
+            <div className="flex items-center gap-1">
+              <span className="text-[10px] text-gray-500"></span>
               <input
                 type="number"
                 value={itemsPerPage}
@@ -255,7 +255,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                     setCurrentPage(1);
                   }
                 }}
-                className="w-16 border rounded px-1 py-0.5 text-[10px] text-gray-600 text-center"
+                className="w-12 border rounded px-1 py-0.5 text-[10px] text-gray-600 text-right"
                 min="1"
                 max="1000"
               />
@@ -289,7 +289,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                   }}
                   className="mr-1 scale-75"
                 />
-                本能・超本能ユニットのみ
+                本能ユニットのみ
               </label>
               
               <label className="flex items-center text-[10px] text-gray-600">
@@ -302,7 +302,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                   }}
                   className="mr-1 scale-75"
                 />
-                限定キャラ
+                限定表示
               </label>
             </div>
 
@@ -341,7 +341,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
           >
             {/* ユニットID（クリック可能） */}
             <div 
-              className="w-6 px-2 text-xxs text-gray-500 font-mono flex-shrink-0 cursor-pointer hover:text-blue-600 hover:bg-blue-50 rounded"
+              className="w-4 pl-1 text-xxs text-gray-500 font-mono flex-shrink-0 cursor-pointer hover:text-blue-600 hover:bg-blue-50 rounded"
               onClick={(e) => {
                 e.stopPropagation();
                 onUnitSelect(parseInt(unit.unitId), 0); // 第1形態（formId=0）を選択
@@ -352,7 +352,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
             </div>
             
             {/* 形態アイコン（1-4形態） */}
-            <div className="flex gap-1 ml-3 mr-2">
+            <div className="flex gap-0 ml-3 mr-1">
               {Array.from({ length: 4 }, (_, formIndex) => {
                 const isCurrentForm = currentUnitId === parseInt(unit.unitId) && currentFormId === formIndex;
                 return (
@@ -390,7 +390,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
             </div>
 
             {/* 本能・超本能アイコン */}
-            <div className="flex gap-1">
+            <div className="flex gap-0">
               {unit.talentIcons.map((iconKey, index) => {
                 const talentType = unit.talentTypes[index];
                 const borderColor = talentType === 'ultra' ? 'border-red-300' : 'border-amber-200';

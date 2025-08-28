@@ -39,7 +39,8 @@ export type AbilityType =
   | 'knockback' 
   | 'warp' 
   | 'curse'
-  | 'dodgeAttack';
+  | 'dodgeAttack'
+  | 'strengthen';
 
 // 能力検索設定の型定義
 interface AbilitySearchConfig {
@@ -110,6 +111,10 @@ const ABILITY_SEARCH_CONFIG: Record<AbilityType, AbilitySearchConfig> = {
   },
   dodgeAttack: {
     searchTerms: ['攻撃無効'],
+    searchBothNameAndValue: true
+  },
+  strengthen: {
+    searchTerms: ['攻撃力アップ'],
     searchBothNameAndValue: true
   }
 };

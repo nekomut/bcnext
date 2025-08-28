@@ -1113,6 +1113,40 @@ function UnitPageContent() {
                         </div>
                       </label>
                       
+                      {/* 攻撃無効ボタンを別行に配置 */}
+                      <div className="w-full"></div>
+                      
+                      {/* 攻撃力アップボタン */}
+                      <label className="cursor-pointer">
+                        <input
+                          type="checkbox"
+                          checked={advancedFilters.abilityTypes.includes('strengthen')}
+                          onChange={(e) => {
+                            const newAbilities = e.target.checked
+                              ? [...advancedFilters.abilityTypes, 'strengthen' as AbilityType]
+                              : advancedFilters.abilityTypes.filter(a => a !== 'strengthen');
+                            setAdvancedFilters({...advancedFilters, abilityTypes: newAbilities});
+                          }}
+                          className="sr-only"
+                        />
+                        <div 
+                          className={`border-2 rounded-[5px] flex items-center justify-center my-0 py-0 ${
+                            advancedFilters.abilityTypes.includes('strengthen') 
+                              ? 'border-blue-500 bg-blue-50' 
+                              : 'border-gray-200 bg-white hover:border-gray-400'
+                          }`}
+                          style={{ width: '24px', height: '24px' }}
+                        >
+                          <Image 
+                            src={`data:image/png;base64,${icons.abilityStrengthen}`} 
+                            alt="攻撃力アップ" 
+                            width={20} 
+                            height={20} 
+                            className="object-contain"
+                          />
+                        </div>
+                      </label>
+                      
                       {/* 
                         新しい能力ボタンを追加する場合のテンプレート：
                         1. 'newAbility' を適切な能力キーに変更

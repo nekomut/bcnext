@@ -1237,6 +1237,13 @@ export const getAbilities = (
               iconKeys: ["abilityKnockback"]
             });
             break;
+          case 10: // 攻撃力アップ
+            abilities.push({
+              name: "攻撃力アップ",
+              value: calculateTalentEffect(talent),
+              iconKeys: ["abilityStrengthen"]
+            });
+            break;
           case 51: // 攻撃無効
             abilities.push({
               name: "攻撃無効",
@@ -1461,6 +1468,19 @@ export const calculateTalentEffect = (talent: UnitTalent): string | React.ReactN
     case 6: // 打たれ強い
       // この効果はテキストボックスで動的に計算されるため、空文字列を返す
       return "";
+      
+    case 10: // 攻撃力アップ
+      const strengthen_hp_threshold = data[2] || 0;
+      const strengthen_attack_boost = data[4] || 0;
+      const strengthen_hp_max_threshold = data[3] || 0;
+      const strengthen_attack_max_boost = data[5] || 0;
+      const strengthen_max_lv = data[1] || 1;
+      
+      if (strengthen_max_lv > 1 && strengthen_hp_max_threshold !== strengthen_hp_threshold) {
+        return (<><b className="text-gray-500"><small className="text-blue-500">体力</small><small>≦</small>{100 - strengthen_hp_threshold}<small>%</small>~{100 - strengthen_hp_max_threshold}<small>%</small> <small className="text-red-500">攻撃力</small><small>+</small>{strengthen_attack_boost}<small>%</small>~{strengthen_attack_max_boost}<small>%</small></b></>);
+      }
+      
+      return (<><b className="text-gray-500"><small className="text-blue-500">体力</small><small>≦</small>{100 - strengthen_hp_threshold}<small>%</small> <small className="text-red-500">攻撃力</small><small>+</small>{strengthen_attack_boost}<small>%</small></b></>);
       
     case 46: // 動きを遅くする無効
     case 44: // 攻撃力ダウン無効

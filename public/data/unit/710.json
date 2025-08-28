@@ -2,6 +2,7 @@
   "unitId": 710,
   "sortKey": 4538040,
   "isLimited": true,
+  "isSeasonal": false,
   "coreData": {
     "forms": [
       {

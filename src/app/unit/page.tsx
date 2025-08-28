@@ -955,6 +955,13 @@ function UnitPageContent() {
               </div>
 
               {/* 能力・効果 + 本能・超本能 */}
+              {/* 
+                新しい能力ボタンを追加する場合のテンプレート：
+                1. 上記の2次元配列の適切な行に新しいオブジェクトを追加 { key: 'newAbility', name: '新しい能力名', icon: icons.abilityXXX }
+                2. 新しい行を作る場合は新しい配列を追加 [{ key: 'newAbility', ... }]
+                3. searchHelpers.ts でAbilityType型と設定を追加
+                4. types.tsx での実装も忘れずに
+              */}
               <div>
                 <div className="flex items-center gap-2 mb-1">
                   <h4 className="font-semibold text-gray-600 text-[11px]">能力・効果</h4>
@@ -977,184 +984,62 @@ function UnitPageContent() {
                   <div className="flex items-center gap-2 mb-1">
                     <div className="flex flex-wrap gap-1">
                       {[
-                        { key: 'weaken', name: '攻撃力ダウン', icon: icons.abilityWeaken },
-                        { key: 'freeze', name: '動きを止める', icon: icons.abilityFreeze },
-                        { key: 'slow', name: '動きを遅くする', icon: icons.abilitySlow },
-                        { key: 'attacksOnly', name: '攻撃ターゲット限定', icon: icons.abilityAttacksOnly },
-                        { key: 'strongAgainst', name: 'めっぽう強い', icon: icons.abilityStrongAgainst },
-                        { key: 'resistant', name: '打たれ強い', icon: icons.abilityResistant },
-                        { key: 'insanelyTough', name: '超打たれ強い', icon: icons.abilityInsanelyTough },
-                        { key: 'massiveDamage', name: '超ダメージ', icon: icons.abilityMassiveDamage },
-                        { key: 'insaneDamage', name: '極ダメージ', icon: icons.abilityInsaneDamage },
-                        { key: 'knockback', name: 'ふっとばす', icon: icons.abilityKnockback }
-                      ].map(ability => (
-                        <label key={ability.key} className="cursor-pointer">
-                          <input
-                            type="checkbox"
-                            checked={advancedFilters.abilityTypes.includes(ability.key as AbilityType)}
-                            onChange={(e) => {
-                              const newAbilities = e.target.checked
-                                ? [...advancedFilters.abilityTypes, ability.key as AbilityType]
-                                : advancedFilters.abilityTypes.filter(a => a !== ability.key);
-                              setAdvancedFilters({...advancedFilters, abilityTypes: newAbilities});
-                            }}
-                            className="sr-only"
-                          />
-                          <div 
-                            className={`border-2 rounded-[5px] flex items-center justify-center my-0 py-0 ${
-                              advancedFilters.abilityTypes.includes(ability.key as AbilityType) 
-                                ? 'border-blue-500 bg-blue-50' 
-                                : 'border-gray-200 bg-white hover:border-gray-400'
-                            }`}
-                            style={{ width: '24px', height: '24px' }}
-                          >
-                            <Image 
-                              src={`data:image/png;base64,${ability.icon}`} 
-                              alt={ability.name} 
-                              width={20} 
-                              height={20} 
-                              className="object-contain"
-                            />
-                          </div>
-                        </label>
+                        [
+                          { key: 'weaken', name: '攻撃力ダウン', icon: icons.abilityWeaken },
+                          { key: 'freeze', name: '動きを止める', icon: icons.abilityFreeze },
+                          { key: 'slow', name: '動きを遅くする', icon: icons.abilitySlow },
+                          { key: 'attacksOnly', name: '攻撃ターゲット限定', icon: icons.abilityAttacksOnly },
+                          { key: 'strongAgainst', name: 'めっぽう強い', icon: icons.abilityStrongAgainst },
+                          { key: 'resistant', name: '打たれ強い', icon: icons.abilityResistant },
+                          { key: 'insanelyTough', name: '超打たれ強い', icon: icons.abilityInsanelyTough },
+                          { key: 'massiveDamage', name: '超ダメージ', icon: icons.abilityMassiveDamage },
+                          { key: 'insaneDamage', name: '極ダメージ', icon: icons.abilityInsaneDamage },
+                          { key: 'knockback', name: 'ふっとばす', icon: icons.abilityKnockback }
+                        ],
+                        [
+                          { key: 'warp', name: 'ワープ', icon: icons.abilityWarp },
+                          { key: 'curse', name: '呪い', icon: icons.abilityCurse },
+                          { key: 'dodgeAttack', name: '攻撃無効', icon: icons.abilityDodgeAttack }
+                        ],
+                        [
+                          { key: 'strengthen', name: '攻撃力アップ', icon: icons.abilityStrengthen }
+                        ]
+                      ].map((row, rowIndex) => (
+                        <React.Fragment key={rowIndex}>
+                          {rowIndex > 0 && <div className="w-full"></div>}
+                          {row.map(ability => (
+                            <label key={ability.key} className="cursor-pointer">
+                              <input
+                                type="checkbox"
+                                checked={advancedFilters.abilityTypes.includes(ability.key as AbilityType)}
+                                onChange={(e) => {
+                                  const newAbilities = e.target.checked
+                                    ? [...advancedFilters.abilityTypes, ability.key as AbilityType]
+                                    : advancedFilters.abilityTypes.filter(a => a !== ability.key);
+                                  setAdvancedFilters({...advancedFilters, abilityTypes: newAbilities});
+                                }}
+                                className="sr-only"
+                              />
+                              <div 
+                                className={`border-2 rounded-[5px] flex items-center justify-center my-0 py-0 ${
+                                  advancedFilters.abilityTypes.includes(ability.key as AbilityType) 
+                                    ? 'border-blue-500 bg-blue-50' 
+                                    : 'border-gray-200 bg-white hover:border-gray-400'
+                                }`}
+                                style={{ width: '24px', height: '24px' }}
+                              >
+                                <Image 
+                                  src={`data:image/png;base64,${ability.icon}`} 
+                                  alt={ability.name} 
+                                  width={20} 
+                                  height={20} 
+                                  className="object-contain"
+                                />
+                              </div>
+                            </label>
+                          ))}
+                        </React.Fragment>
                       ))}
-                      
-                      {/* ワープ・呪いボタンを別行に配置 */}
-                      <div className="w-full"></div>
-                      <label className="cursor-pointer">
-                        <input
-                          type="checkbox"
-                          checked={advancedFilters.abilityTypes.includes('warp')}
-                          onChange={(e) => {
-                            const newAbilities = e.target.checked
-                              ? [...advancedFilters.abilityTypes, 'warp' as AbilityType]
-                              : advancedFilters.abilityTypes.filter(a => a !== 'warp');
-                            setAdvancedFilters({...advancedFilters, abilityTypes: newAbilities});
-                          }}
-                          className="sr-only"
-                        />
-                        <div 
-                          className={`border-2 rounded-[5px] flex items-center justify-center my-0 py-0 ${
-                            advancedFilters.abilityTypes.includes('warp') 
-                              ? 'border-blue-500 bg-blue-50' 
-                              : 'border-gray-200 bg-white hover:border-gray-400'
-                          }`}
-                          style={{ width: '24px', height: '24px' }}
-                        >
-                          <Image 
-                            src={`data:image/png;base64,${icons.abilityWarp}`} 
-                            alt="ワープ" 
-                            width={20} 
-                            height={20} 
-                            className="object-contain"
-                          />
-                        </div>
-                      </label>
-                      
-                      {/* 呪いボタン */}
-                      <label className="cursor-pointer">
-                        <input
-                          type="checkbox"
-                          checked={advancedFilters.abilityTypes.includes('curse')}
-                          onChange={(e) => {
-                            const newAbilities = e.target.checked
-                              ? [...advancedFilters.abilityTypes, 'curse' as AbilityType]
-                              : advancedFilters.abilityTypes.filter(a => a !== 'curse');
-                            setAdvancedFilters({...advancedFilters, abilityTypes: newAbilities});
-                          }}
-                          className="sr-only"
-                        />
-                        <div 
-                          className={`border-2 rounded-[5px] flex items-center justify-center my-0 py-0 ${
-                            advancedFilters.abilityTypes.includes('curse') 
-                              ? 'border-blue-500 bg-blue-50' 
-                              : 'border-gray-200 bg-white hover:border-gray-400'
-                          }`}
-                          style={{ width: '24px', height: '24px' }}
-                        >
-                          <Image 
-                            src={`data:image/png;base64,${icons.abilityCurse}`} 
-                            alt="呪い" 
-                            width={20} 
-                            height={20} 
-                            className="object-contain"
-                          />
-                        </div>
-                      </label>
-                      
-                      {/* 攻撃無効ボタン */}
-                      <label className="cursor-pointer">
-                        <input
-                          type="checkbox"
-                          checked={advancedFilters.abilityTypes.includes('dodgeAttack')}
-                          onChange={(e) => {
-                            const newAbilities = e.target.checked
-                              ? [...advancedFilters.abilityTypes, 'dodgeAttack' as AbilityType]
-                              : advancedFilters.abilityTypes.filter(a => a !== 'dodgeAttack');
-                            setAdvancedFilters({...advancedFilters, abilityTypes: newAbilities});
-                          }}
-                          className="sr-only"
-                        />
-                        <div 
-                          className={`border-2 rounded-[5px] flex items-center justify-center my-0 py-0 ${
-                            advancedFilters.abilityTypes.includes('dodgeAttack') 
-                              ? 'border-blue-500 bg-blue-50' 
-                              : 'border-gray-200 bg-white hover:border-gray-400'
-                          }`}
-                          style={{ width: '24px', height: '24px' }}
-                        >
-                          <Image 
-                            src={`data:image/png;base64,${icons.abilityDodgeAttack}`} 
-                            alt="攻撃無効" 
-                            width={20} 
-                            height={20} 
-                            className="object-contain"
-                          />
-                        </div>
-                      </label>
-                      
-                      {/* 攻撃無効ボタンを別行に配置 */}
-                      <div className="w-full"></div>
-                      
-                      {/* 攻撃力アップボタン */}
-                      <label className="cursor-pointer">
-                        <input
-                          type="checkbox"
-                          checked={advancedFilters.abilityTypes.includes('strengthen')}
-                          onChange={(e) => {
-                            const newAbilities = e.target.checked
-                              ? [...advancedFilters.abilityTypes, 'strengthen' as AbilityType]
-                              : advancedFilters.abilityTypes.filter(a => a !== 'strengthen');
-                            setAdvancedFilters({...advancedFilters, abilityTypes: newAbilities});
-                          }}
-                          className="sr-only"
-                        />
-                        <div 
-                          className={`border-2 rounded-[5px] flex items-center justify-center my-0 py-0 ${
-                            advancedFilters.abilityTypes.includes('strengthen') 
-                              ? 'border-blue-500 bg-blue-50' 
-                              : 'border-gray-200 bg-white hover:border-gray-400'
-                          }`}
-                          style={{ width: '24px', height: '24px' }}
-                        >
-                          <Image 
-                            src={`data:image/png;base64,${icons.abilityStrengthen}`} 
-                            alt="攻撃力アップ" 
-                            width={20} 
-                            height={20} 
-                            className="object-contain"
-                          />
-                        </div>
-                      </label>
-                      
-                      {/* 
-                        新しい能力ボタンを追加する場合のテンプレート：
-                        1. 'newAbility' を適切な能力キーに変更
-                        2. icons.abilityXXX を対応するアイコンに変更  
-                        3. alt属性を適切な日本語名に変更
-                        4. AbilityType as でキャストして型安全性を保つ
-                        5. searchHelpers.ts と types.tsx での実装も忘れずに
-                      */}
                     </div>
                   </div>
                 </div>

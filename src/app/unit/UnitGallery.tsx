@@ -223,7 +223,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
   if (loading) {
     return (
       <div className="mt-2 p-2 border border-gray-600 rounded bg-gray-50">
-        <h3 className="text-[12px] font-bold mb-1">ユニット一覧</h3>
+        <h3 className="text-[12px] font-semibold text-gray-600">ユニット一覧</h3>
         <div className="text-center text-gray-600">読み込み中...</div>
       </div>
     );
@@ -234,7 +234,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
       {/* ヘッダー、ソート順、表示件数 */}
       <div className="flex justify-between items-center mb-1">
         <h3 
-          className="text-[12px] font-bold text-gray-600 cursor-pointer flex items-center gap-1"
+          className="text-[12px] font-semibold text-gray-600 cursor-pointer flex items-center gap-1"
           onClick={() => setIsCollapsed(!isCollapsed)}
         >
           <span>{isCollapsed ? '▶' : '▼'}</span>

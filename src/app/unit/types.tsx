@@ -1056,6 +1056,7 @@ export const getAbilities = (
     });
   }
 
+
   // 使徒キラー（動的）
   if (stats[77] && stats[77] > 0) {
     abilities.push({
@@ -1224,6 +1225,13 @@ export const getAbilities = (
               name: "ふっとばす",
               value: `本能によるふっとばす効果`,
               iconKeys: ["abilityKnockback"]
+            });
+            break;
+          case 60: // 呪い
+            abilities.push({
+              name: "呪い",
+              value: `本能による呪い効果`,
+              iconKeys: ["abilityCurse"]
             });
             break;
         }

@@ -495,6 +495,26 @@ function UnitPageContent() {
                                                      abilityText.includes('ふっとばし耐性') || valueText.includes('ふっとばし耐性');
                           return hasKnockback && !hasImmuneKnockback;
                         });
+                      case 'warp':
+                        return abilities.some(ability => {
+                          const abilityText = typeof ability.name === 'string' ? ability.name : '';
+                          const valueText = typeof ability.value === 'string' ? ability.value : '';
+                          // ワープを含むが、ワープ無効は除外する
+                          const hasWarp = abilityText.includes('ワープ') || valueText.includes('ワープ');
+                          const hasImmuneWarp = abilityText.includes('ワープ無効') || valueText.includes('ワープ無効') ||
+                                                abilityText.includes('ワープ耐性') || valueText.includes('ワープ耐性');
+                          return hasWarp && !hasImmuneWarp;
+                        });
+                      case 'curse':
+                        return abilities.some(ability => {
+                          const abilityText = typeof ability.name === 'string' ? ability.name : '';
+                          const valueText = typeof ability.value === 'string' ? ability.value : '';
+                          // 呪いを含むが、呪い無効は除外する
+                          const hasCurse = abilityText.includes('呪い') || valueText.includes('呪い');
+                          const hasImmuneCurse = abilityText.includes('呪い無効') || valueText.includes('呪い無効') ||
+                                                abilityText.includes('呪い耐性') || valueText.includes('呪い耐性');
+                          return hasCurse && !hasImmuneCurse;
+                        });
                       default:
                         return false;
                     }
@@ -1061,7 +1081,7 @@ function UnitPageContent() {
                 {/* 能力タイプ（アイコン形式） */}
                 <div className="mb-1">
                   <div className="flex items-center gap-2 mb-1">
-                    <div className="flex gap-1">
+                    <div className="flex flex-wrap gap-1">
                       {[
                         { key: 'weaken', name: '攻撃力ダウン', icon: icons.abilityWeaken },
                         { key: 'freeze', name: '動きを止める', icon: icons.abilityFreeze },
@@ -1104,6 +1124,69 @@ function UnitPageContent() {
                           </div>
                         </label>
                       ))}
+                      
+                      {/* ワープ・呪いボタンを別行に配置 */}
+                      <div className="w-full"></div>
+                      <label className="cursor-pointer">
+                        <input
+                          type="checkbox"
+                          checked={advancedFilters.abilityTypes.includes('warp')}
+                          onChange={(e) => {
+                            const newAbilities = e.target.checked
+                              ? [...advancedFilters.abilityTypes, 'warp']
+                              : advancedFilters.abilityTypes.filter(a => a !== 'warp');
+                            setAdvancedFilters({...advancedFilters, abilityTypes: newAbilities});
+                          }}
+                          className="sr-only"
+                        />
+                        <div 
+                          className={`border-2 rounded-[5px] flex items-center justify-center my-0 py-0 ${
+                            advancedFilters.abilityTypes.includes('warp') 
+                              ? 'border-blue-500 bg-blue-50' 
+                              : 'border-gray-200 bg-white hover:border-gray-400'
+                          }`}
+                          style={{ width: '24px', height: '24px' }}
+                        >
+                          <Image 
+                            src={`data:image/png;base64,${icons.abilityWarp}`} 
+                            alt="ワープ" 
+                            width={20} 
+                            height={20} 
+                            className="object-contain"
+                          />
+                        </div>
+                      </label>
+                      
+                      {/* 呪いボタン */}
+                      <label className="cursor-pointer">
+                        <input
+                          type="checkbox"
+                          checked={advancedFilters.abilityTypes.includes('curse')}
+                          onChange={(e) => {
+                            const newAbilities = e.target.checked
+                              ? [...advancedFilters.abilityTypes, 'curse']
+                              : advancedFilters.abilityTypes.filter(a => a !== 'curse');
+                            setAdvancedFilters({...advancedFilters, abilityTypes: newAbilities});
+                          }}
+                          className="sr-only"
+                        />
+                        <div 
+                          className={`border-2 rounded-[5px] flex items-center justify-center my-0 py-0 ${
+                            advancedFilters.abilityTypes.includes('curse') 
+                              ? 'border-blue-500 bg-blue-50' 
+                              : 'border-gray-200 bg-white hover:border-gray-400'
+                          }`}
+                          style={{ width: '24px', height: '24px' }}
+                        >
+                          <Image 
+                            src={`data:image/png;base64,${icons.abilityCurse}`} 
+                            alt="呪い" 
+                            width={20} 
+                            height={20} 
+                            className="object-contain"
+                          />
+                        </div>
+                      </label>
                     </div>
                   </div>
                 </div>

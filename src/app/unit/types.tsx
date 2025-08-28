@@ -1279,6 +1279,13 @@ export const getAbilities = (
               iconKeys: ["abilityZombieKiller"]
             });
             break;
+          case 59: // 魂攻撃
+            abilities.push({
+              name: "魂攻撃",
+              value: "魂攻撃",
+              iconKeys: ["abilitySoulStrike"]
+            });
+            break;
         }
       }
     });
@@ -1598,6 +1605,9 @@ export const calculateTalentEffect = (talent: UnitTalent): string | React.ReactN
       
     case 14: // ゾンビキラー
       return (<><b className="text-gray-500">ゾンビキラー</b></>);
+      
+    case 59: // 魂攻撃
+      return (<><b className="text-gray-500">魂攻撃</b></>);
       
     default:
       // その他の本能は基本形式

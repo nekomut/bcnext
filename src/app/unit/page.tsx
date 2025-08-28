@@ -1006,7 +1006,8 @@ function UnitPageContent() {
                           { key: 'survive', name: '生き残る', icon: icons.abilitySurvive },
                           { key: 'baseDestroyer', name: '城破壊が得意', icon: icons.abilityBaseDestroyer },
                           { key: 'critical', name: 'クリティカル', icon: icons.abilityCritical },
-                          { key: 'metalKiller', name: 'メタルキラー', icon: icons.abilityMetalKiller }
+                          { key: 'metalKiller', name: 'メタルキラー', icon: icons.abilityMetalKiller },
+                          { key: 'zombieKiller', name: 'ゾンビキラー', icon: icons.abilityZombieKiller }
                         ]
                       ].map((row, rowIndex) => (
                         <React.Fragment key={rowIndex}>

@@ -1272,6 +1272,13 @@ export const getAbilities = (
               iconKeys: ["abilityCritical"]
             });
             break;
+          case 14: // ゾンビキラー
+            abilities.push({
+              name: "ゾンビキラー",
+              value: "ゾンビキラー",
+              iconKeys: ["abilityZombieKiller"]
+            });
+            break;
         }
       }
     });
@@ -1588,6 +1595,9 @@ export const calculateTalentEffect = (talent: UnitTalent): string | React.ReactN
       }
       
       return (<><b className="text-gray-500"><small>+</small>{critical_chance}<small>%</small></b></>);
+      
+    case 14: // ゾンビキラー
+      return (<><b className="text-gray-500">ゾンビキラー</b></>);
       
     default:
       // その他の本能は基本形式

@@ -9,6 +9,7 @@ import { unitNamesData, UnitNameData } from '@/data/unit-names';
 import { loadMultiFormAnimationData } from './animationLoader';
 import { AnimationData } from './types';
 import IconManager from './IconManager';
+import { getUnitData } from '../unit/types';
 
 function AnimationPageContent() {
   const router = useRouter();
@@ -37,6 +38,9 @@ function AnimationPageContent() {
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const [nameFilter, setNameFilter] = useState<string>('');
   
+  // ナビゲーション順序設定
+  const [navigationOrder, setNavigationOrder] = useState<'pokedex' | 'id'>('pokedex');
+  
   // Form icons state
   const [formIcons, setFormIcons] = useState<string[]>([]);
   const [iconsLoading, setIconsLoading] = useState(true);
@@ -50,6 +54,53 @@ function AnimationPageContent() {
     unit.displayName.toLowerCase().includes(nameFilter.toLowerCase()) ||
     unit.forms.some(form => form.toLowerCase().includes(nameFilter.toLowerCase()))
   );
+
+  // ナビゲーション用のユニットリストを取得する関数
+  const getNavigationUnits = async (): Promise<{unitId: number, sortKey?: number}[]> => {
+    const units: {unitId: number, sortKey?: number}[] = [];
+    
+    for (const unitName of unitNamesData) {
+      try {
+        const unitData = await getUnitData(parseInt(unitName.unitId));
+        if (unitData && unitData.isVisible !== false) {
+          units.push({
+            unitId: parseInt(unitName.unitId),
+            sortKey: unitData.sortKey
+          });
+        }
+      } catch {
+        // ユニットデータが見つからない場合はスキップ
+      }
+    }
+    
+    // ナビゲーション順序でソート
+    if (navigationOrder === 'pokedex') {
+      units.sort((a, b) => {
+        const aSortKey = a.sortKey ?? 999999;
+        const bSortKey = b.sortKey ?? 999999;
+        return aSortKey - bSortKey;
+      });
+    } else {
+      units.sort((a, b) => a.unitId - b.unitId);
+    }
+    
+    return units;
+  };
+
+  // 前後のユニットIDを取得する関数
+  const getAdjacentUnitIds = async (currentId: number): Promise<{prevId?: number, nextId?: number}> => {
+    const units = await getNavigationUnits();
+    const currentIndex = units.findIndex(unit => unit.unitId === currentId);
+    
+    if (currentIndex === -1) {
+      return {};
+    }
+    
+    return {
+      prevId: currentIndex > 0 ? units[currentIndex - 1].unitId : undefined,
+      nextId: currentIndex < units.length - 1 ? units[currentIndex + 1].unitId : undefined
+    };
+  };
 
   // URLパラメータを更新する関数
   const updateURL = useCallback((params: { unit?: string; form?: string; anim?: string; playing?: boolean }) => {
@@ -270,18 +321,20 @@ function AnimationPageContent() {
       {/* ユニット検索UI（unitスタイル） */}
       <div className="p-2">
         <div className="mb-1 flex gap-1 items-end">
-          {/* 前のIDボタン - 左端 */}
+          {/* 前のUnitボタン - 左端 */}
           {selectedUnit && !isNaN(parseInt(selectedUnit)) && (
             <button
               onClick={async () => {
                 const currentId = parseInt(selectedUnit);
-                const prevId = Math.max(0, currentId - 1);
-                const formattedId = prevId.toString().padStart(3, '0');
+                const { prevId } = await getAdjacentUnitIds(currentId);
                 
-                await handleUnitChange(formattedId);
+                if (prevId !== undefined) {
+                  const formattedId = prevId.toString().padStart(3, '0');
+                  await handleUnitChange(formattedId);
+                }
               }}
-              disabled={loading || parseInt(selectedUnit) <= 0}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-0.5 rounded text-xs disabled:opacity-50 w-12"
+              disabled={loading}
+              className="bg-blue-500 hover:bg-blue-600 text-white px-0 py-0.5 rounded text-xs disabled:opacity-50 w-10"
             >
               ◁
             </button>
@@ -359,19 +412,32 @@ function AnimationPageContent() {
             </div>
           </div>
           
+          {/* ソート順選択プルダウン */}
+          <div className="flex items-center gap-1">
+            <select
+              value={navigationOrder}
+              onChange={(e) => setNavigationOrder(e.target.value as 'pokedex' | 'id')}
+              className="border rounded px-1 py-0.5 text-xs text-gray-900"
+            >
+              <option value="pokedex">図鑑順</option>
+              <option value="id">ID順</option>
+            </select>
+          </div>
           
-          {/* 次のIDボタン - 右端 */}
+          {/* 次のUnitボタン - 右端 */}
           {selectedUnit && !isNaN(parseInt(selectedUnit)) && (
             <button
               onClick={async () => {
                 const currentId = parseInt(selectedUnit);
-                const nextId = currentId + 1;
-                const formattedId = nextId.toString().padStart(3, '0');
+                const { nextId } = await getAdjacentUnitIds(currentId);
                 
-                await handleUnitChange(formattedId);
+                if (nextId !== undefined) {
+                  const formattedId = nextId.toString().padStart(3, '0');
+                  await handleUnitChange(formattedId);
+                }
               }}
               disabled={loading}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-0.5 rounded text-xs disabled:opacity-50 w-12"
+              className="bg-blue-500 hover:bg-blue-600 text-white px-0 py-0.5 rounded text-xs disabled:opacity-50 w-10"
             >
               ▷
             </button>

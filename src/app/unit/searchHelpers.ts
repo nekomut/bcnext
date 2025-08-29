@@ -66,7 +66,17 @@ export type AbilityType =
   | 'omniStrike'
   | 'colossusSlayer'
   | 'behemothSlayer'
-  | 'sageSlayer';
+  | 'sageSlayer'
+  | 'immuneWeaken'
+  | 'immuneFreeze'
+  | 'immuneSlow'
+  | 'immuneKnockback'
+  | 'immuneWave'
+  | 'immuneSurge'
+  | 'immuneExplosion'
+  | 'immuneWarp'
+  | 'immuneCurse'
+  | 'immuneToxic';
 
 // 能力検索設定の型定義
 interface AbilitySearchConfig {
@@ -251,6 +261,46 @@ const ABILITY_SEARCH_CONFIG: Record<AbilityType, AbilitySearchConfig> = {
   },
   sageSlayer: {
     searchTerms: ['超賢者特効'],
+    searchBothNameAndValue: false
+  },
+  immuneWeaken: {
+    searchTerms: ['攻撃力ダウン無効'],
+    searchBothNameAndValue: false
+  },
+  immuneFreeze: {
+    searchTerms: ['動きを止める無効'],
+    searchBothNameAndValue: false
+  },
+  immuneSlow: {
+    searchTerms: ['動きを遅くする無効'],
+    searchBothNameAndValue: false
+  },
+  immuneKnockback: {
+    searchTerms: ['ふっとばす無効', 'ふっとばし無効'],
+    searchBothNameAndValue: false
+  },
+  immuneWave: {
+    searchTerms: ['波動ダメージ無効'],
+    searchBothNameAndValue: false
+  },
+  immuneSurge: {
+    searchTerms: ['裂波ダメージ無効'],
+    searchBothNameAndValue: false
+  },
+  immuneExplosion: {
+    searchTerms: ['爆波ダメージ無効'],
+    searchBothNameAndValue: false
+  },
+  immuneWarp: {
+    searchTerms: ['ワープ無効'],
+    searchBothNameAndValue: false
+  },
+  immuneCurse: {
+    searchTerms: ['古代の呪い無効'],
+    searchBothNameAndValue: false
+  },
+  immuneToxic: {
+    searchTerms: ['毒撃ダメージ無効'],
     searchBothNameAndValue: false
   }
 };

@@ -95,6 +95,7 @@ export interface UnitAbility {
   readonly baseAP?: number;
   readonly calculatedStats?: CalculatedStats;
   readonly enhanced?: boolean;
+  readonly isHidden?: boolean;
 }
 
 // Calculation functions
@@ -449,17 +450,20 @@ export const getAbilities = (
   // UnitDisplay.tsxと同じ正しい判定ロジックを使用: stats[12] === 1 で範囲攻撃
   const isAreaAttack = (stats[12] || 0) === 1;
   
+  // アドバンス検索用にデータは作成するが、UIでは非表示にする
   if (isAreaAttack) {
     abilities.push({
       name: "範囲攻撃",
       value: "",
-      iconKeys: ["abilityAreaAttack"]
+      iconKeys: ["abilityAreaAttack"],
+      isHidden: true  // UI非表示フラグ
     });
   } else {
     abilities.push({
-      name: "単体攻撃",
+      name: "単体攻撃", 
       value: "",
-      iconKeys: ["abilitySingleTarget"]
+      iconKeys: ["abilitySingleTarget"],
+      isHidden: true  // UI非表示フラグ
     });
   }
 
@@ -1151,6 +1155,18 @@ export const getAbilities = (
     }
   });
 
+  // 毒撃ダメージ無効の特別処理
+  const hasImmuneToxic = (stats[90] && stats[90] > 0) || 
+    [686, 787, 806, 709, 723].includes(unitData.unitId);
+  
+  if (hasImmuneToxic) {
+    abilities.push({
+      name: "毒撃ダメージ無効",
+      value: "",
+      iconKeys: ["abilityImmuneToxic"]
+    });
+  }
+
   // 裂波ダメージ無効
   if (stats[91] && stats[91] > 0) {
     abilities.push({
@@ -1403,6 +1419,69 @@ export const getAbilities = (
               name: "超賢者特効",
               value: calculateTalentEffect(talent),
               iconKeys: ["abilitySageSlayer"]
+            });
+            break;
+          case 44: // 攻撃力ダウン無効
+            abilities.push({
+              name: "攻撃力ダウン無効",
+              value: "攻撃力ダウン無効",
+              iconKeys: ["abilityImmuneWeaken"]
+            });
+            break;
+          case 45: // 動きを止める無効
+            abilities.push({
+              name: "動きを止める無効",
+              value: "動きを止める無効",
+              iconKeys: ["abilityImmuneFreeze"]
+            });
+            break;
+          case 46: // 動きを遅くする無効
+            abilities.push({
+              name: "動きを遅くする無効",
+              value: "動きを遅くする無効",
+              iconKeys: ["abilityImmuneSlow"]
+            });
+            break;
+          case 47: // ふっとばし無効
+            abilities.push({
+              name: "ふっとばし無効",
+              value: "ふっとばし無効",
+              iconKeys: ["abilityImmuneKnockback"]
+            });
+            break;
+          case 48: // 波動ダメージ無効
+            abilities.push({
+              name: "波動ダメージ無効",
+              value: "波動ダメージ無効",
+              iconKeys: ["abilityImmuneWave"]
+            });
+            break;
+          case 55: // 裂波ダメージ無効
+            abilities.push({
+              name: "裂波ダメージ無効",
+              value: "裂波ダメージ無効",
+              iconKeys: ["abilityImmuneSurge"]
+            });
+            break;
+          case 49: // ワープ無効
+            abilities.push({
+              name: "ワープ無効",
+              value: "ワープ無効",
+              iconKeys: ["abilityImmuneWarp"]
+            });
+            break;
+          case 29: // 古代の呪い無効
+            abilities.push({
+              name: "古代の呪い無効",
+              value: "古代の呪い無効",
+              iconKeys: ["abilityImmuneCurse"]
+            });
+            break;
+          case 53: // 毒撃ダメージ無効
+            abilities.push({
+              name: "毒撃ダメージ無効",
+              value: "毒撃ダメージ無効",
+              iconKeys: ["abilityImmuneToxic"]
             });
             break;
         }

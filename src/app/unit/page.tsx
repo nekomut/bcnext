@@ -1044,6 +1044,18 @@ function UnitPageContent() {
                           { key: 'colossusSlayer', name: '超生命体特効', icon: icons.abilityColossusSlayer },
                           { key: 'behemothSlayer', name: '超獣特効', icon: icons.abilityBehemothSlayer },
                           { key: 'sageSlayer', name: '超賢者特効', icon: icons.abilitySageSlayer }
+                        ],
+                        [
+                          { key: 'immuneWeaken', name: '攻撃力ダウン無効', icon: icons.abilityImmuneWeaken },
+                          { key: 'immuneFreeze', name: '動きを止める無効', icon: icons.abilityImmuneFreeze },
+                          { key: 'immuneSlow', name: '動きを遅くする無効', icon: icons.abilityImmuneSlow },
+                          { key: 'immuneKnockback', name: 'ふっとばす無効', icon: icons.abilityImmuneKnockback },
+                          { key: 'immuneWave', name: '波動ダメージ無効', icon: icons.abilityImmuneWave },
+                          { key: 'immuneSurge', name: '裂波ダメージ無効', icon: icons.abilityImmuneSurge },
+                          { key: 'immuneExplosion', name: '爆波ダメージ無効', icon: icons.abilityImmuneExplosion },
+                          { key: 'immuneWarp', name: 'ワープ無効', icon: icons.abilityImmuneWarp },
+                          { key: 'immuneCurse', name: '古代の呪い無効', icon: icons.abilityImmuneCurse },
+                          { key: 'immuneToxic', name: '毒撃ダメージ無効', icon: icons.abilityImmuneToxic }
                         ]
                       ].map((row, rowIndex) => (
                         <React.Fragment key={rowIndex}>

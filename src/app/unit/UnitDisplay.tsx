@@ -1815,7 +1815,7 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUp
     <div className="mb-2.5">
       <h3 className="text-sm sm:text-base font-semibold mb-0.3 text-gray-800">能力・効果</h3>
       <div className="space-y-0.5">
-        {abilities.map((ability, index) => (
+        {abilities.filter(ability => !ability.isHidden).map((ability, index) => (
           ability.isDynamic && ability.name === "超ダメージ" ? (
             <DynamicMassiveDamage key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} massiveDamageMultiplier={talentMassiveDamageMultiplier} setMassiveDamageMultiplier={setTalentMassiveDamageMultiplier} />
           ) : ability.isDynamic && ability.name === "極ダメージ" ? (
@@ -2149,6 +2149,17 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUp
                         className="inline mr-1 align-top"
                       />
                       裂波ダメージ無効
+                    </>
+                  ) : ability.name === '毒撃ダメージ無効' && ability.iconKeys ? (
+                    <>
+                      <Image
+                        src={`data:image/png;base64,${icons.abilityImmuneToxic}`}
+                        alt="毒撃ダメージ無効"
+                        width={16}
+                        height={16}
+                        className="inline mr-1 align-top"
+                      />
+                      毒撃ダメージ無効
                     </>
                   ) : ability.name === '呪い' && ability.iconKeys ? (
                     <>

@@ -1,11 +1,13 @@
 'use client'
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import Image from 'next/image';
 import { unitNamesData } from '@/data/unit-names';
 import { icons } from '@/data/icons';
-import IconManager from './IconManager';
+// import IconManager from './IconManager'; // LazyUnitIcon で使用するため一時的にコメントアウト
 import { getUnitData, getValidFormCount } from './types';
+import UnitGalleryProgressBar, { UnitGalleryProgressInfo, ErrorProgressBar } from './components/UnitGalleryProgressBar';
+import LazyUnitIcon from './components/LazyUnitIcon';
 
 interface UnitGalleryProps {
   onUnitSelect: (unitId: number, formId: number) => void;
@@ -100,6 +102,8 @@ const getTalentIconKey = (talentId: number): string | null => {
 const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, currentFormId }) => {
   const [units, setUnits] = useState<UnitGalleryItem[]>([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [progress, setProgress] = useState<UnitGalleryProgressInfo | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [sortOrder, setSortOrder] = useState<'pokedex' | 'id'>('pokedex');
   const [showTalentsOnly, setShowTalentsOnly] = useState(true);
@@ -108,17 +112,47 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
   const [selectedRarities, setSelectedRarities] = useState<string[]>(['超激レア']);
   const [itemsPerPage, setItemsPerPage] = useState(400);
   const [isCollapsed, setIsCollapsed] = useState(false);
+  
+  // デバウンス用の検索語
+  const [searchTerm, setSearchTerm] = useState('');
+  const [debouncedSearchTerm, setDebouncedSearchTerm] = useState('');
 
+  // デバウンス処理（300ms）
   useEffect(() => {
-    const loadUnitsData = async () => {
-      setLoading(true);
-      const unitsData: UnitGalleryItem[] = [];
+    const timer = setTimeout(() => {
+      setDebouncedSearchTerm(searchTerm);
+    }, 300);
+    return () => clearTimeout(timer);
+  }, [searchTerm]);
 
-      // バッチ処理で効率的に読み込み
+  // 段階的読み込み関数
+  const loadUnitsIncrementally = useCallback(async () => {
+    try {
+      setLoading(true);
+      setError(null);
+      setProgress({
+        current: 0,
+        total: unitNamesData.length,
+        percentage: 0,
+        status: 'ユニットデータの読み込みを開始...'
+      });
+
+      const unitsData: UnitGalleryItem[] = [];
       const BATCH_SIZE = 20;
-      for (let i = 0; i < unitNamesData.length; i += BATCH_SIZE) {
-        const batch = unitNamesData.slice(i, i + BATCH_SIZE);
+      const totalBatches = Math.ceil(unitNamesData.length / BATCH_SIZE);
+
+      for (let batchIndex = 0; batchIndex < totalBatches; batchIndex++) {
+        const startIndex = batchIndex * BATCH_SIZE;
+        const endIndex = Math.min(startIndex + BATCH_SIZE, unitNamesData.length);
+        const batch = unitNamesData.slice(startIndex, endIndex);
         
+        setProgress({
+          current: startIndex,
+          total: unitNamesData.length,
+          percentage: Math.round((startIndex / unitNamesData.length) * 100),
+          status: `${startIndex}/${unitNamesData.length} ユニットを読み込み中...`
+        });
+
         const batchResults = await Promise.allSettled(
           batch.map(async (unitName) => {
             try {
@@ -128,17 +162,9 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
               }
 
               const validFormCount = getValidFormCount(unitData);
-              const formIcons: string[] = [];
-
-              // 各形態のアイコンを取得（最大4形態）
-              for (let formId = 0; formId < Math.min(4, validFormCount); formId++) {
-                try {
-                  const icon = await IconManager.getFormIcon(unitName.unitId, formId);
-                  formIcons.push(icon);
-                } catch {
-                  formIcons.push('');
-                }
-              }
+              
+              // アイコンは遅延読み込みに変更（後でLazyUnitIconが読み込む）
+              const formIcons: string[] = new Array(Math.min(4, validFormCount)).fill('');
 
               // 本能・超本能のアイコンを取得
               const talentIcons: string[] = [];
@@ -146,13 +172,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
               if (unitData.auxiliaryData.talents.hasTalents || unitData.auxiliaryData.talents.hasUltra) {
                 const talents = unitData.auxiliaryData.talents.talentList;
                 
-                // デバッグ情報を出力（開発時のみ）
-                if (process.env.NODE_ENV === 'development' && talents.length > 0) {
-                  console.log(`Unit ${unitName.unitId}: hasTalents=${unitData.auxiliaryData.talents.hasTalents}, hasUltra=${unitData.auxiliaryData.talents.hasUltra}, talentCount=${talents.length}`);
-                  console.log('Talents:', talents.map(t => ({ id: t.id, name: t.name, type: t.type })));
-                }
-                
-                for (const talent of talents.slice(0, 12)) { // 最大12個まで表示（本能・超本能両方対応）
+                for (const talent of talents.slice(0, 12)) {
                   const iconKey = getTalentIconKey(talent.id);
                   if (iconKey) {
                     talentIcons.push(iconKey);
@@ -186,20 +206,50 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
           }
         }
 
-        // UI更新のため少し待機
-        await new Promise(resolve => setTimeout(resolve, 10));
+        // 読み込み済みユニットを即座に表示
+        setUnits([...unitsData]);
+        
+        // UI更新のための短時間待機
+        await new Promise(resolve => setTimeout(resolve, 16));
       }
 
-      setUnits(unitsData);
-      setLoading(false);
-    };
+      // 完了報告
+      setProgress({
+        current: unitNamesData.length,
+        total: unitNamesData.length,
+        percentage: 100,
+        status: `完了: ${unitsData.length}体のユニットを登録`
+      });
 
-    loadUnitsData();
+      // 少し待ってからプログレスバーを非表示
+      setTimeout(() => {
+        setLoading(false);
+        setProgress(null);
+      }, 1000);
+
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'ユニットデータの読み込みに失敗しました');
+      setLoading(false);
+      setProgress(null);
+    }
   }, []);
 
-  // フィルタリング・ソート処理
-  const filteredAndSortedUnits = React.useMemo(() => {
-    let filtered = [...units];
+  useEffect(() => {
+    loadUnitsIncrementally();
+  }, [loadUnitsIncrementally]);
+
+  // 最適化されたフィルタリング・ソート処理
+  const filteredAndSortedUnits = useMemo(() => {
+    let filtered = units;
+    
+    // 検索フィルター（デバウンス済み）
+    if (debouncedSearchTerm) {
+      const searchLower = debouncedSearchTerm.toLowerCase();
+      filtered = filtered.filter(unit => 
+        unit.displayName.toLowerCase().includes(searchLower) ||
+        unit.unitId.includes(debouncedSearchTerm)
+      );
+    }
     
     // 季節キャラフィルター（デフォルトは通常ユニットのみ、チェックONで季節キャラも含める）
     if (!includeSeasonal) {
@@ -227,8 +277,9 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
     } else {
       filtered.sort((a, b) => parseInt(a.unitId) - parseInt(b.unitId));
     }
+    
     return filtered;
-  }, [units, sortOrder, showTalentsOnly, includeSeasonal, includeLimited, selectedRarities]);
+  }, [units, debouncedSearchTerm, sortOrder, showTalentsOnly, includeSeasonal, includeLimited, selectedRarities]);
 
   // ページネーション
   const totalPages = Math.ceil(filteredAndSortedUnits.length / itemsPerPage);
@@ -236,12 +287,22 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
   const endIndex = startIndex + itemsPerPage;
   const currentUnits = filteredAndSortedUnits.slice(startIndex, endIndex);
 
-  if (loading) {
+  // エラー表示
+  if (error) {
     return (
-      <div className="mt-2 p-2 border border-gray-600 rounded bg-gray-50">
-        <h3 className="text-[12px] font-semibold text-gray-600">ユニット一覧</h3>
-        <div className="text-center text-gray-600">読み込み中...</div>
-      </div>
+      <ErrorProgressBar 
+        error={error} 
+        onRetry={loadUnitsIncrementally}
+      />
+    );
+  }
+
+  // プログレスバー表示
+  if (loading && progress) {
+    return (
+      <UnitGalleryProgressBar 
+        progress={progress}
+      />
     );
   }
 
@@ -260,7 +321,6 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
         {!isCollapsed && (
           <div className="flex items-center gap-2">
             <div className="flex items-center gap-1">
-              <span className="text-[10px] text-gray-500"></span>
               <input
                 type="number"
                 value={itemsPerPage}
@@ -292,6 +352,20 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
 
       {!isCollapsed && (
         <>
+          {/* 検索フィールド */}
+          <div className="mb-2">
+            <input
+              type="text"
+              placeholder="ユニット名またはIDで検索..."
+              value={searchTerm}
+              onChange={(e) => {
+                setSearchTerm(e.target.value);
+                setCurrentPage(1);
+              }}
+              className="w-full px-2 py-1 text-xs border border-gray-300 rounded focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+            />
+          </div>
+
           {/* チェックボックスとページネーション */}
           <div className="flex justify-between items-center mb-2">
             <div className="flex items-center gap-1">
@@ -430,25 +504,27 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                     className={`w-8 h-7 border-1 rounded-xs flex items-center justify-center ${
                       isCurrentForm 
                         ? 'border-blue-500 bg-white border-2' 
-                        : formIndex < unit.formIcons.length 
+                        : formIndex < unit.validFormCount 
                         ? 'border-gray-300 bg-white hover:bg-blue-50 cursor-pointer hover:border-blue-400' 
                         : 'border-gray-300 bg-white'
-                    } ${formIndex < unit.formIcons.length ? 'cursor-pointer' : ''}`}
+                    } ${formIndex < unit.validFormCount ? 'cursor-pointer' : ''}`}
                     onClick={(e) => {
                       e.stopPropagation();
-                      if (formIndex < unit.formIcons.length) {
+                      if (formIndex < unit.validFormCount) {
                         onUnitSelect(parseInt(unit.unitId), formIndex);
                       }
                     }}
-                    title={formIndex < unit.formIcons.length ? `${unit.displayName} 第${formIndex + 1}形態を表示` : '形態なし'}
+                    title={formIndex < unit.validFormCount ? `${unit.displayName} 第${formIndex + 1}形態を表示` : '形態なし'}
                   >
-                    {formIndex < unit.formIcons.length && unit.formIcons[formIndex] ? (
-                      <Image 
-                        src={`data:image/png;base64,${unit.formIcons[formIndex]}`} 
-                        alt={`${unit.displayName} 第${formIndex + 1}形態`} 
-                        width={32} 
-                        height={28} 
+                    {formIndex < unit.validFormCount ? (
+                      <LazyUnitIcon
+                        unitId={unit.unitId}
+                        formId={formIndex}
+                        displayName={unit.displayName}
+                        width={32}
+                        height={28}
                         className="object-contain"
+                        priority={startIndex <= 20} // 最初の20体は優先読み込み
                       />
                     ) : (
                       <div className="text-xs text-gray-400"></div>

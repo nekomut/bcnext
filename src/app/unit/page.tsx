@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { useState, useEffect, useCallback, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { icons } from '@/data/icons';
 import { UnitDisplay } from './UnitDisplay';
@@ -194,6 +194,12 @@ function UnitPageContent() {
     };
   };
 
+  // ユニットの最終形態インデックスを取得する関数
+  const getLastFormIndex = (unitData: UnitData): number => {
+    const validFormCount = getValidFormCount(unitData);
+    return Math.max(0, validFormCount - 1);
+  };
+
   // ユニット名選択時の処理
   const handleUnitNameSelect = (unit: UnitNameData) => {
     setSelectedUnitName(unit.displayName);
@@ -207,7 +213,7 @@ function UnitPageContent() {
     handleUnitSearchWithId(numericId);
   };
 
-  const handleUnitSearchWithId = async (id: number) => {
+  const handleUnitSearchWithId = useCallback(async (id: number) => {
     if (isNaN(id) || id < 0) {
       setError('Invalid unit ID');
       return;
@@ -220,6 +226,20 @@ function UnitPageContent() {
       const unitData = await getUnitData(id);
       if (unitData) {
         setCurrentUnit(unitData);
+        
+        // URLパラメータでformが指定されていない場合は最終形態を設定
+        const formParam = searchParams.get('form');
+        if (!formParam) {
+          const lastFormIndex = getLastFormIndex(unitData);
+          setFormId(lastFormIndex);
+          
+          // URLを更新（最終形態を反映）
+          const formMap = ['f', 'c', 's', 'u'];
+          const formKey = formMap[lastFormIndex] || 'f';
+          const currentParams = new URLSearchParams(searchParams);
+          currentParams.set('form', formKey);
+          router.replace(`/unit?${currentParams.toString()}`);
+        }
       } else {
         setError(`Unit ${id.toString().padStart(3, '0')} not found`);
         setCurrentUnit(null);
@@ -230,7 +250,7 @@ function UnitPageContent() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [searchParams, router]);
 
   // URLパラメータを読み込む
   useEffect(() => {
@@ -240,7 +260,7 @@ function UnitPageContent() {
     const formParam = searchParams.get('form');
 
     // 最初にフォームパラメータを処理
-    let formIndex = 0; // デフォルトは第1形態
+    let formIndex = 0; // 一時的なデフォルト値
     if (formParam) {
       // 短縮形 f,c,s,u を数値に変換
       const formMap: { [key: string]: number } = { 'f': 0, 'c': 1, 's': 2, 'u': 3 };
@@ -250,7 +270,7 @@ function UnitPageContent() {
       }
     }
 
-    // フォームIDを設定
+    // フォームIDを設定（ただし、formParamが指定されていない場合は後でhandleUnitSearchWithIdで最終形態に更新される）
     setFormId(formIndex);
 
     if (unitParam) {
@@ -286,7 +306,7 @@ function UnitPageContent() {
       // 初期表示時（URLパラメータがない場合）はUnit 731を自動表示
       handleUnitSearchWithId(731);
     }
-  }, [searchParams]);
+  }, [searchParams, handleUnitSearchWithId]);
 
   const handleUnitSearch = async () => {
     const id = parseInt(unitId);

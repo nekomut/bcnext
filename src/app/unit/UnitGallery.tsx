@@ -23,6 +23,7 @@ interface UnitGalleryItem {
   talentTypes: ('normal' | 'ultra')[];
   isLimited: boolean;
   isSeasonal: boolean;
+  rarity: string;
 }
 
 // 本能・超本能IDからアイコンキーへのマッピング（UnitDisplayと完全一致）
@@ -104,6 +105,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
   const [showTalentsOnly, setShowTalentsOnly] = useState(true);
   const [includeSeasonal, setIncludeSeasonal] = useState(false);
   const [includeLimited, setIncludeLimited] = useState(false);
+  const [selectedRarities, setSelectedRarities] = useState<string[]>(['超激レア']);
   const [itemsPerPage, setItemsPerPage] = useState(400);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
@@ -168,7 +170,8 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                 talentIcons,
                 talentTypes,
                 isLimited: unitData.isLimited || false,
-                isSeasonal: unitData.isSeasonal || false
+                isSeasonal: unitData.isSeasonal || false,
+                rarity: unitData.coreData.rarity.name
               };
             } catch {
               return null;
@@ -213,6 +216,11 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
       filtered = filtered.filter(unit => unit.talentIcons.length > 0);
     }
     
+    // レア度フィルター
+    if (selectedRarities.length > 0) {
+      filtered = filtered.filter(unit => selectedRarities.includes(unit.rarity));
+    }
+    
     // ソート処理
     if (sortOrder === 'pokedex') {
       filtered.sort((a, b) => a.sortKey - b.sortKey);
@@ -220,7 +228,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
       filtered.sort((a, b) => parseInt(a.unitId) - parseInt(b.unitId));
     }
     return filtered;
-  }, [units, sortOrder, showTalentsOnly, includeSeasonal, includeLimited]);
+  }, [units, sortOrder, showTalentsOnly, includeSeasonal, includeLimited, selectedRarities]);
 
   // ページネーション
   const totalPages = Math.ceil(filteredAndSortedUnits.length / itemsPerPage);
@@ -350,6 +358,46 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                 </button>
               </div>
             )}
+          </div>
+
+          {/* レア度フィルター */}
+          <div className="flex items-center gap-1 flex-wrap mb-2">
+            {[
+              { key: '基本', icon: icons.rarityBasic },
+              { key: 'EX', icon: icons.rarityEx },
+              { key: 'レア', icon: icons.rarityRare },
+              { key: '激レア', icon: icons.raritySuperRare },
+              { key: '超激レア', icon: icons.rarityUberRare },
+              { key: '伝説レア', icon: icons.rarityLegendRare }
+            ].map(rarity => (
+              <label key={rarity.key} className="cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={selectedRarities.includes(rarity.key)}
+                  onChange={(e) => {
+                    const newRarities = e.target.checked
+                      ? [...selectedRarities, rarity.key]
+                      : selectedRarities.filter(r => r !== rarity.key);
+                    setSelectedRarities(newRarities);
+                    setCurrentPage(1);
+                  }}
+                  className="sr-only"
+                />
+                <div className={`${['基本', 'EX', 'レア'].includes(rarity.key) ? 'w-13' : 'w-14'} h-6 border-2 rounded flex items-center justify-center my-0 py-0 ${
+                  selectedRarities.includes(rarity.key) 
+                    ? 'border-blue-500 bg-blue-50' 
+                    : 'border-gray-300 bg-white hover:border-blue-400'
+                }`}>
+                  <Image 
+                    src={`data:image/png;base64,${rarity.icon}`} 
+                    alt={rarity.key} 
+                    width={40} 
+                    height={40} 
+                    className="object-contain"
+                  />
+                </div>
+              </label>
+            ))}
           </div>
 
           {/* ユニットリスト */}

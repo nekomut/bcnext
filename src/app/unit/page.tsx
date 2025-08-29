@@ -110,6 +110,10 @@ function UnitPageContent() {
   // ナビゲーション順序設定
   const [navigationOrder, setNavigationOrder] = useState<'pokedex' | 'id'>('pokedex');
   
+  // ナビゲーション専用のstate
+  const [navigationCache, setNavigationCache] = useState<Map<string, {unitId: number, sortKey?: number}[]>>(new Map());
+  const [navLoading, setNavLoading] = useState<{prev: boolean, next: boolean}>({prev: false, next: false});
+  
   // アドバンス検索用のstate
   const [isAdvancedSearchOpen, setIsAdvancedSearchOpen] = useState<boolean>(false);
   const [searchResults, setSearchResults] = useState<SearchableUnit[]>([]);
@@ -147,8 +151,16 @@ function UnitPageContent() {
     unit.forms.some(form => form.toLowerCase().includes(nameFilter.toLowerCase()))
   );
 
-  // ナビゲーション用のユニットリストを取得する関数
-  const getNavigationUnits = async (): Promise<{unitId: number, sortKey?: number}[]> => {
+  // ナビゲーション用のユニットリストを取得する関数（キャッシュ対応）
+  const getNavigationUnitsOptimized = useCallback(async (order: 'pokedex' | 'id'): Promise<{unitId: number, sortKey?: number}[]> => {
+    const cacheKey = order;
+    
+    // キャッシュがあれば即座に返す
+    if (navigationCache.has(cacheKey)) {
+      return navigationCache.get(cacheKey)!;
+    }
+    
+    // 初回のみ重い処理を実行
     const units: {unitId: number, sortKey?: number}[] = [];
     
     for (const unitName of unitNamesData) {
@@ -166,7 +178,7 @@ function UnitPageContent() {
     }
     
     // ナビゲーション順序でソート
-    if (navigationOrder === 'pokedex') {
+    if (order === 'pokedex') {
       units.sort((a, b) => {
         const aSortKey = a.sortKey ?? 999999;
         const bSortKey = b.sortKey ?? 999999;
@@ -176,23 +188,28 @@ function UnitPageContent() {
       units.sort((a, b) => a.unitId - b.unitId);
     }
     
+    // キャッシュに保存
+    const newCache = new Map(navigationCache);
+    newCache.set(cacheKey, units);
+    setNavigationCache(newCache);
+    
     return units;
-  };
-
-  // 前後のユニットIDを取得する関数
-  const getAdjacentUnitIds = async (currentId: number): Promise<{prevId?: number, nextId?: number}> => {
-    const units = await getNavigationUnits();
+  }, [navigationCache]);
+  
+  // 前後のユニットIDを取得する関数（最適化版）
+  const getAdjacentUnitIdsOptimized = useCallback(async (currentId: number, order: 'pokedex' | 'id'): Promise<{prevId?: number, nextId?: number}> => {
+    const units = await getNavigationUnitsOptimized(order);
     const currentIndex = units.findIndex(unit => unit.unitId === currentId);
     
     if (currentIndex === -1) {
-      return {};
+      return { prevId: undefined, nextId: undefined };
     }
     
     return {
       prevId: currentIndex > 0 ? units[currentIndex - 1].unitId : undefined,
       nextId: currentIndex < units.length - 1 ? units[currentIndex + 1].unitId : undefined
     };
-  };
+  }, [getNavigationUnitsOptimized]);
 
   // ユニットの最終形態インデックスを取得する関数
   const getLastFormIndex = (unitData: UnitData): number => {
@@ -251,6 +268,41 @@ function UnitPageContent() {
       setLoading(false);
     }
   }, [searchParams, router]);
+
+  // 改善されたナビゲーションハンドラー
+  const handleNavigation = useCallback(async (direction: 'prev' | 'next') => {
+    const currentId = parseInt(unitId);
+    
+    // ローディング開始
+    setNavLoading(prev => ({...prev, [direction]: true}));
+    
+    try {
+      const { prevId, nextId } = await getAdjacentUnitIdsOptimized(currentId, navigationOrder);
+      const targetId = direction === 'prev' ? prevId : nextId;
+      
+      if (targetId !== undefined) {
+        // 即座にUI更新
+        setUnitId(targetId.toString());
+        
+        // ユニット名同期
+        const paddedId = targetId.toString().padStart(3, '0');
+        const matchingUnit = unitNamesData.find(unit => unit.unitId === paddedId);
+        if (matchingUnit) {
+          setSelectedUnitName(matchingUnit.displayName);
+        }
+        
+        // 非同期でデータ取得
+        router.push(`/unit?unit=${targetId}`);
+        await handleUnitSearchWithId(targetId);
+      }
+    } catch (error) {
+      console.error('Navigation error:', error);
+      setError('ナビゲーション中にエラーが発生しました');
+    } finally {
+      // ローディング終了
+      setNavLoading(prev => ({...prev, [direction]: false}));
+    }
+  }, [unitId, navigationOrder, getAdjacentUnitIdsOptimized, router, handleUnitSearchWithId]);
 
   // URLパラメータを読み込む
   useEffect(() => {
@@ -328,6 +380,53 @@ function UnitPageContent() {
     await handleUnitSearchWithId(id);
   };
 
+  // キーボードショートカート
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // フォーカスがinput要素やtextarea要素にない場合のみ実行
+      const activeElement = document.activeElement;
+      if (activeElement?.tagName === 'INPUT' || activeElement?.tagName === 'TEXTAREA') return;
+      
+      if (e.key === 'ArrowLeft' && !navLoading.prev && !navLoading.next && !loading) {
+        e.preventDefault();
+        handleNavigation('prev');
+      } else if (e.key === 'ArrowRight' && !navLoading.prev && !navLoading.next && !loading) {
+        e.preventDefault();
+        handleNavigation('next');
+      }
+    };
+    
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [handleNavigation, navLoading, loading]);
+
+  // プリロード機能
+  const preloadAdjacentUnits = useCallback(async (currentId: number) => {
+    try {
+      const { prevId, nextId } = await getAdjacentUnitIdsOptimized(currentId, navigationOrder);
+      
+      // 前後のユニットデータをバックグラウンドでプリロード
+      if (prevId) {
+        getUnitData(prevId).catch(() => {}); // エラーは無視
+      }
+      if (nextId) {
+        getUnitData(nextId).catch(() => {}); // エラーは無視
+      }
+    } catch {
+      // プリロードエラーは無視
+    }
+  }, [getAdjacentUnitIdsOptimized, navigationOrder]);
+
+  // ユニットが変更されたときにプリロードを実行
+  useEffect(() => {
+    if (currentUnit?.unitId) {
+      // 少し遅延させてプリロード実行（メイン処理を優先）
+      const timer = setTimeout(() => {
+        preloadAdjacentUnits(currentUnit.unitId);
+      }, 1000);
+      return () => clearTimeout(timer);
+    }
+  }, [currentUnit?.unitId, preloadAdjacentUnits]);
 
   // アドバンス検索実行
   const handleAdvancedSearch = async () => {
@@ -758,31 +857,16 @@ function UnitPageContent() {
       {/* ユニット検索UI */}
       <div className="p-2">
         <div className="mb-1 flex gap-1 items-end">
-          {/* 前のUnitボタン - 左端 */}
+          {/* 前のUnitボタン - 改善版 */}
           {unitId && !isNaN(parseInt(unitId)) && (
             <button
-              onClick={async () => {
-                const currentId = parseInt(unitId);
-                const { prevId } = await getAdjacentUnitIds(currentId);
-                
-                if (prevId !== undefined) {
-                  setUnitId(prevId.toString());
-                  
-                  // ユニット名も同期
-                  const paddedId = prevId.toString().padStart(3, '0');
-                  const matchingUnit = unitNamesData.find(unit => unit.unitId === paddedId);
-                  if (matchingUnit) {
-                    setSelectedUnitName(matchingUnit.displayName);
-                  }
-                  
-                  router.push(`/unit?unit=${prevId}`);
-                  handleUnitSearchWithId(prevId);
-                }
-              }}
-              disabled={loading}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-0 py-0.5 rounded text-xs disabled:opacity-50 w-10"
+              onClick={() => handleNavigation('prev')}
+              disabled={navLoading.prev || navLoading.next || loading}
+              className={`bg-blue-500 hover:bg-blue-600 text-white px-0 py-0.5 rounded text-xs disabled:opacity-50 w-10 transition-all duration-200 ${
+                navLoading.prev ? 'animate-pulse' : ''
+              }`}
             >
-              ◁
+              {navLoading.prev ? '⋯' : '◁'}
             </button>
           )}
           
@@ -872,31 +956,16 @@ function UnitPageContent() {
             </select>
           </div>
           
-          {/* 次のUnitボタン - 右端 */}
+          {/* 次のUnitボタン - 改善版 */}
           {unitId && !isNaN(parseInt(unitId)) && (
             <button
-              onClick={async () => {
-                const currentId = parseInt(unitId);
-                const { nextId } = await getAdjacentUnitIds(currentId);
-                
-                if (nextId !== undefined) {
-                  setUnitId(nextId.toString());
-                  
-                  // ユニット名も同期
-                  const paddedId = nextId.toString().padStart(3, '0');
-                  const matchingUnit = unitNamesData.find(unit => unit.unitId === paddedId);
-                  if (matchingUnit) {
-                    setSelectedUnitName(matchingUnit.displayName);
-                  }
-                  
-                  router.push(`/unit?unit=${nextId}`);
-                  handleUnitSearchWithId(nextId);
-                }
-              }}
-              disabled={loading}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-0 py-0.5 rounded text-xs disabled:opacity-50 w-10"
+              onClick={() => handleNavigation('next')}
+              disabled={navLoading.prev || navLoading.next || loading}
+              className={`bg-blue-500 hover:bg-blue-600 text-white px-0 py-0.5 rounded text-xs disabled:opacity-50 w-10 transition-all duration-200 ${
+                navLoading.next ? 'animate-pulse' : ''
+              }`}
             >
-              ▷
+              {navLoading.next ? '⋯' : '▷'}
             </button>
           )}
         </div>

@@ -891,7 +891,7 @@ function UnitPageContent() {
                             }}
                             className="sr-only"
                           />
-                          <div className={`w-14 h-6 border-2 rounded flex items-center justify-center my-0 py-0 ${
+                          <div className={`${['基本', 'EX', 'レア'].includes(rarity.key) ? 'w-13' : 'w-14'} h-6 border-2 rounded flex items-center justify-center my-0 py-0 ${
                             advancedFilters.rarity.includes(rarity.key) 
                               ? 'border-blue-500 bg-blue-50' 
                               : 'border-gray-200 bg-white hover:border-gray-400'

@@ -104,7 +104,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
   const [showTalentsOnly, setShowTalentsOnly] = useState(true);
   const [includeSeasonal, setIncludeSeasonal] = useState(false);
   const [includeLimited, setIncludeLimited] = useState(false);
-  const [itemsPerPage, setItemsPerPage] = useState(200);
+  const [itemsPerPage, setItemsPerPage] = useState(400);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   useEffect(() => {
@@ -121,7 +121,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
           batch.map(async (unitName) => {
             try {
               const unitData = await getUnitData(parseInt(unitName.unitId));
-              if (!unitData || unitData.sortKey === -1) {
+              if (!unitData || unitData.sortKey === -1 || unitData.isVisible === false) {
                 return null;
               }
 

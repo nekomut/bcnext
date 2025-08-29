@@ -63,7 +63,10 @@ export type AbilityType =
   | 'singleTarget'
   | 'areaAttack'
   | 'longDistance'
-  | 'omniStrike';
+  | 'omniStrike'
+  | 'colossusSlayer'
+  | 'behemothSlayer'
+  | 'sageSlayer';
 
 // 能力検索設定の型定義
 interface AbilitySearchConfig {
@@ -236,6 +239,18 @@ const ABILITY_SEARCH_CONFIG: Record<AbilityType, AbilitySearchConfig> = {
   },
   omniStrike: {
     searchTerms: ['全方位攻撃'],
+    searchBothNameAndValue: false
+  },
+  colossusSlayer: {
+    searchTerms: ['超生命体特効'],
+    searchBothNameAndValue: false
+  },
+  behemothSlayer: {
+    searchTerms: ['超獣特効'],
+    searchBothNameAndValue: false
+  },
+  sageSlayer: {
+    searchTerms: ['超賢者特効'],
     searchBothNameAndValue: false
   }
 };

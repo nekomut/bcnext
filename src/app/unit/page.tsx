@@ -990,8 +990,8 @@ function UnitPageContent() {
                 
                 {/* 能力タイプ（アイコン形式） */}
                 <div className="mb-1">
-                  <div className="flex items-center gap-2 mb-1">
-                    <div className="flex flex-wrap gap-1">
+                  <div className="flex items-center gap-2 mb-0">
+                    <div className="flex flex-wrap gap-0">
                       {[
                         [
                           { key: 'weaken', name: '攻撃力ダウン', icon: icons.abilityWeaken },
@@ -1039,6 +1039,11 @@ function UnitPageContent() {
                           { key: 'areaAttack', name: '範囲攻撃', icon: icons.abilityAreaAttack },
                           { key: 'longDistance', name: '遠方攻撃', icon: icons.abilityLongDistance },
                           { key: 'omniStrike', name: '全方位攻撃', icon: icons.abilityOmniStrike }
+                        ],
+                        [
+                          { key: 'colossusSlayer', name: '超生命体特効', icon: icons.abilityColossusSlayer },
+                          { key: 'behemothSlayer', name: '超獣特効', icon: icons.abilityBehemothSlayer },
+                          { key: 'sageSlayer', name: '超賢者特効', icon: icons.abilitySageSlayer }
                         ]
                       ].map((row, rowIndex) => (
                         <React.Fragment key={rowIndex}>
@@ -1057,7 +1062,7 @@ function UnitPageContent() {
                                 className="sr-only"
                               />
                               <div 
-                                className={`border-2 rounded-[5px] flex items-center justify-center my-0 py-0 ${
+                                className={`border-2 rounded-[5px] flex items-center justify-center mx-0.5 ${
                                   advancedFilters.abilityTypes.includes(ability.key as AbilityType) 
                                     ? 'border-blue-500 bg-blue-50' 
                                     : 'border-gray-200 bg-white hover:border-gray-400'

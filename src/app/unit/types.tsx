@@ -1384,6 +1384,27 @@ export const getAbilities = (
               iconKeys: ["abilityExplosion"]
             });
             break;
+          case 63: // 超生命体特効
+            abilities.push({
+              name: "超生命体特効",
+              value: calculateTalentEffect(talent),
+              iconKeys: ["abilityColossusSlayer"]
+            });
+            break;
+          case 64: // 超獣特効
+            abilities.push({
+              name: "超獣特効",
+              value: calculateTalentEffect(talent),
+              iconKeys: ["abilityBehemothSlayer"]
+            });
+            break;
+          case 66: // 超賢者特効
+            abilities.push({
+              name: "超賢者特効",
+              value: calculateTalentEffect(talent),
+              iconKeys: ["abilitySageSlayer"]
+            });
+            break;
         }
       }
     });
@@ -1813,6 +1834,18 @@ export const calculateTalentEffect = (talent: UnitTalent): string | React.ReactN
       }
       
       return (<><b className="text-gray-500">Lv{explosion_level} {explosion_chance}<small>%</small></b></>);
+
+    case 63: // 超生命体特効
+      const colossus_chance = data[2] || 0;
+      return (<><b className="text-gray-500">{colossus_chance}<small>%</small></b></>);
+
+    case 64: // 超獣特効  
+      const behemoth_chance = data[2] || 0;
+      return (<><b className="text-gray-500">{behemoth_chance}<small>%</small></b></>);
+
+    case 66: // 超賢者特効
+      const sage_chance = data[2] || 0;  
+      return (<><b className="text-gray-500">{sage_chance}<small>%</small></b></>);
       
     default:
       // その他の本能は基本形式

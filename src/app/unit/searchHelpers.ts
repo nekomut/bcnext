@@ -85,7 +85,14 @@ export type AbilityType =
   | 'resistSurge'
   | 'resistWarp'
   | 'resistCurse'
-  | 'resistToxic';
+  | 'resistToxic'
+  | 'defenseBuff'
+  | 'attackBuff'
+  | 'moveSpeedUp'
+  | 'improvedKnockback'
+  | 'costDown'
+  | 'recoverSpeedUp'
+  | 'attackFrequencyUp';
 
 // 能力検索設定の型定義
 interface AbilitySearchConfig {
@@ -346,6 +353,34 @@ const ABILITY_SEARCH_CONFIG: Record<AbilityType, AbilitySearchConfig> = {
   },
   resistToxic: {
     searchTerms: ['毒撃ダメージ耐性'],
+    searchBothNameAndValue: false
+  },
+  defenseBuff: {
+    searchTerms: ['基本体力アップ'],
+    searchBothNameAndValue: false
+  },
+  attackBuff: {
+    searchTerms: ['基本攻撃力アップ'],
+    searchBothNameAndValue: false
+  },
+  moveSpeedUp: {
+    searchTerms: ['移動速度アップ'],
+    searchBothNameAndValue: false
+  },
+  improvedKnockback: {
+    searchTerms: ['ノックバック回数増加'],
+    searchBothNameAndValue: false
+  },
+  costDown: {
+    searchTerms: ['生産コスト割引'],
+    searchBothNameAndValue: false
+  },
+  recoverSpeedUp: {
+    searchTerms: ['生産スピードアップ'],
+    searchBothNameAndValue: false
+  },
+  attackFrequencyUp: {
+    searchTerms: ['攻撃間隔短縮'],
     searchBothNameAndValue: false
   }
 };

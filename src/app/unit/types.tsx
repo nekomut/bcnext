@@ -1570,6 +1570,55 @@ export const getAbilities = (
               iconKeys: ["abilityResistToxic"]
             });
             break;
+          case 32: // 基本体力アップ
+            abilities.push({
+              name: "基本体力アップ",
+              value: "基本体力アップ",
+              iconKeys: ["abilityDefenseBuff"]
+            });
+            break;
+          case 31: // 基本攻撃力アップ
+            abilities.push({
+              name: "基本攻撃力アップ",
+              value: "基本攻撃力アップ",
+              iconKeys: ["abilityAttackBuff"]
+            });
+            break;
+          case 27: // 移動速度アップ
+            abilities.push({
+              name: "移動速度アップ",
+              value: "移動速度アップ",
+              iconKeys: ["abilityMoveSpeedUp"]
+            });
+            break;
+          // case XX: // ノックバック回数増加 - 実際のデータに存在しない可能性
+          //   abilities.push({
+          //     name: "ノックバック回数増加",
+          //     value: "ノックバック回数増加",
+          //     iconKeys: ["abilityImprovedKnockback"]
+          //   });
+          //   break;
+          case 25: // 生産コスト割引
+            abilities.push({
+              name: "生産コスト割引",
+              value: "生産コスト割引",
+              iconKeys: ["abilityCostDown"]
+            });
+            break;
+          case 26: // 生産スピードアップ
+            abilities.push({
+              name: "生産スピードアップ",
+              value: "生産スピードアップ",
+              iconKeys: ["abilityRecoverSpeedUp"]
+            });
+            break;
+          case 61: // 攻撃間隔短縮
+            abilities.push({
+              name: "攻撃間隔短縮",
+              value: "攻撃間隔短縮",
+              iconKeys: ["abilityAttackFrequencyUp"]
+            });
+            break;
         }
       }
     });

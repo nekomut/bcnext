@@ -1067,6 +1067,15 @@ function UnitPageContent() {
                           { key: 'resistWarp', name: 'ワープ耐性', icon: icons.abilityResistWarp },
                           { key: 'resistCurse', name: '古代の呪い耐性', icon: icons.abilityResistCurse },
                           { key: 'resistToxic', name: '毒撃ダメージ耐性', icon: icons.abilityResistToxic }
+                        ],
+                        [
+                          { key: 'defenseBuff', name: '基本体力アップ', icon: icons.abilityDefenseBuff },
+                          { key: 'attackBuff', name: '基本攻撃力アップ', icon: icons.abilityAttackBuff },
+                          { key: 'moveSpeedUp', name: '移動速度アップ', icon: icons.abilityMoveSpeedUp },
+                          { key: 'improvedKnockback', name: 'ノックバック回数増加', icon: icons.abilityImprovedKnockback },
+                          { key: 'costDown', name: '生産コスト割引', icon: icons.abilityCostDown },
+                          { key: 'recoverSpeedUp', name: '生産スピードアップ', icon: icons.abilityRecoverSpeedUp },
+                          { key: 'attackFrequencyUp', name: '攻撃間隔短縮', icon: icons.abilityAttackFrequencyUp }
                         ]
                       ].map((row, rowIndex) => (
                         <React.Fragment key={rowIndex}>

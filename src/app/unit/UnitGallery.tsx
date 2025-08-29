@@ -104,7 +104,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
   const [showTalentsOnly, setShowTalentsOnly] = useState(true);
   const [includeSeasonal, setIncludeSeasonal] = useState(false);
   const [includeLimited, setIncludeLimited] = useState(false);
-  const [itemsPerPage, setItemsPerPage] = useState(10);
+  const [itemsPerPage, setItemsPerPage] = useState(200);
   const [isCollapsed, setIsCollapsed] = useState(false);
 
   useEffect(() => {

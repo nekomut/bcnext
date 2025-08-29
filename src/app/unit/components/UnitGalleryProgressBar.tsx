@@ -35,10 +35,6 @@ const UnitGalleryProgressBar: React.FC<UnitGalleryProgressBarProps> = ({ progres
         />
       </div>
 
-      {/* ステータスメッセージ */}
-      <div className="text-xs text-gray-600">
-        {progress.status}
-      </div>
     </div>
   );
 };

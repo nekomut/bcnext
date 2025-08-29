@@ -76,7 +76,16 @@ export type AbilityType =
   | 'immuneExplosion'
   | 'immuneWarp'
   | 'immuneCurse'
-  | 'immuneToxic';
+  | 'immuneToxic'
+  | 'resistWeaken'
+  | 'resistFreeze'
+  | 'resistSlow'
+  | 'resistKnockback'
+  | 'resistWave'
+  | 'resistSurge'
+  | 'resistWarp'
+  | 'resistCurse'
+  | 'resistToxic';
 
 // 能力検索設定の型定義
 interface AbilitySearchConfig {
@@ -301,6 +310,42 @@ const ABILITY_SEARCH_CONFIG: Record<AbilityType, AbilitySearchConfig> = {
   },
   immuneToxic: {
     searchTerms: ['毒撃ダメージ無効'],
+    searchBothNameAndValue: false
+  },
+  resistWeaken: {
+    searchTerms: ['攻撃力ダウン耐性'],
+    searchBothNameAndValue: false
+  },
+  resistFreeze: {
+    searchTerms: ['動きを止める耐性'],
+    searchBothNameAndValue: false
+  },
+  resistSlow: {
+    searchTerms: ['動きを遅くする耐性'],
+    searchBothNameAndValue: false
+  },
+  resistKnockback: {
+    searchTerms: ['ふっとばし耐性'],
+    searchBothNameAndValue: false
+  },
+  resistWave: {
+    searchTerms: ['波動ダメージ耐性'],
+    searchBothNameAndValue: false
+  },
+  resistSurge: {
+    searchTerms: ['裂波ダメージ耐性'],
+    searchBothNameAndValue: false
+  },
+  resistWarp: {
+    searchTerms: ['ワープ耐性'],
+    searchBothNameAndValue: false
+  },
+  resistCurse: {
+    searchTerms: ['古代の呪い耐性'],
+    searchBothNameAndValue: false
+  },
+  resistToxic: {
+    searchTerms: ['毒撃ダメージ耐性'],
     searchBothNameAndValue: false
   }
 };

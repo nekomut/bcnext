@@ -1145,7 +1145,30 @@ export const getAbilities = (
     { index: 79, name: "古代の呪い無効", iconKey: "abilityImmuneCurse" }
   ];
 
+  // 各種耐性
+  const resistances = [
+    { index: 117, name: "攻撃力ダウン耐性", iconKey: "abilityResistWeaken" },
+    { index: 118, name: "動きを止める耐性", iconKey: "abilityResistFreeze" },
+    { index: 119, name: "動きを遅くする耐性", iconKey: "abilityResistSlow" },
+    { index: 120, name: "ふっとばし耐性", iconKey: "abilityResistKnockback" },
+    { index: 121, name: "波動ダメージ耐性", iconKey: "abilityResistWave" },
+    { index: 122, name: "裂波ダメージ耐性", iconKey: "abilityResistSurge" },
+    { index: 123, name: "ワープ耐性", iconKey: "abilityResistWarp" },
+    { index: 124, name: "古代の呪い耐性", iconKey: "abilityResistCurse" },
+    { index: 125, name: "毒撃ダメージ耐性", iconKey: "abilityResistToxic" }
+  ];
+
   immunities.forEach(({ index, name, iconKey }) => {
+    if (stats[index] && stats[index] > 0) {
+      abilities.push({
+        name,
+        value: "",
+        iconKeys: iconKey ? [iconKey] : undefined
+      });
+    }
+  });
+
+  resistances.forEach(({ index, name, iconKey }) => {
     if (stats[index] && stats[index] > 0) {
       abilities.push({
         name,
@@ -1482,6 +1505,69 @@ export const getAbilities = (
               name: "毒撃ダメージ無効",
               value: "毒撃ダメージ無効",
               iconKeys: ["abilityImmuneToxic"]
+            });
+            break;
+          case 18: // 攻撃力ダウン耐性
+            abilities.push({
+              name: "攻撃力ダウン耐性",
+              value: "攻撃力ダウン耐性",
+              iconKeys: ["abilityResistWeaken"]
+            });
+            break;
+          case 19: // 動きを止める耐性
+            abilities.push({
+              name: "動きを止める耐性",
+              value: "動きを止める耐性",
+              iconKeys: ["abilityResistFreeze"]
+            });
+            break;
+          case 20: // 動きを遅くする耐性
+            abilities.push({
+              name: "動きを遅くする耐性",
+              value: "動きを遅くする耐性",
+              iconKeys: ["abilityResistSlow"]
+            });
+            break;
+          case 21: // ふっとばし耐性
+            abilities.push({
+              name: "ふっとばし耐性",
+              value: "ふっとばし耐性",
+              iconKeys: ["abilityResistKnockback"]
+            });
+            break;
+          case 22: // 波動ダメージ耐性
+            abilities.push({
+              name: "波動ダメージ耐性",
+              value: "波動ダメージ耐性",
+              iconKeys: ["abilityResistWave"]
+            });
+            break;
+          case 54: // 裂波ダメージ耐性
+            abilities.push({
+              name: "裂波ダメージ耐性",
+              value: "裂波ダメージ耐性",
+              iconKeys: ["abilityResistSurge"]
+            });
+            break;
+          // case 24: // ワープ耐性 - 実際のデータに存在しない可能性
+          //   abilities.push({
+          //     name: "ワープ耐性",
+          //     value: "ワープ耐性",
+          //     iconKeys: ["abilityResistWarp"]
+          //   });
+          //   break;
+          case 30: // 古代の呪い耐性
+            abilities.push({
+              name: "古代の呪い耐性",
+              value: "古代の呪い耐性",
+              iconKeys: ["abilityResistCurse"]
+            });
+            break;
+          case 52: // 毒撃ダメージ耐性
+            abilities.push({
+              name: "毒撃ダメージ耐性",
+              value: "毒撃ダメージ耐性",
+              iconKeys: ["abilityResistToxic"]
             });
             break;
         }

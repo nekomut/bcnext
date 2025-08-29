@@ -1056,6 +1056,17 @@ function UnitPageContent() {
                           { key: 'immuneWarp', name: 'ワープ無効', icon: icons.abilityImmuneWarp },
                           { key: 'immuneCurse', name: '古代の呪い無効', icon: icons.abilityImmuneCurse },
                           { key: 'immuneToxic', name: '毒撃ダメージ無効', icon: icons.abilityImmuneToxic }
+                        ],
+                        [
+                          { key: 'resistWeaken', name: '攻撃力ダウン耐性', icon: icons.abilityResistWeaken },
+                          { key: 'resistFreeze', name: '動きを止める耐性', icon: icons.abilityResistFreeze },
+                          { key: 'resistSlow', name: '動きを遅くする耐性', icon: icons.abilityResistSlow },
+                          { key: 'resistKnockback', name: 'ふっとばし耐性', icon: icons.abilityResistKnockback },
+                          { key: 'resistWave', name: '波動ダメージ耐性', icon: icons.abilityResistWave },
+                          { key: 'resistSurge', name: '裂波ダメージ耐性', icon: icons.abilityResistSurge },
+                          { key: 'resistWarp', name: 'ワープ耐性', icon: icons.abilityResistWarp },
+                          { key: 'resistCurse', name: '古代の呪い耐性', icon: icons.abilityResistCurse },
+                          { key: 'resistToxic', name: '毒撃ダメージ耐性', icon: icons.abilityResistToxic }
                         ]
                       ].map((row, rowIndex) => (
                         <React.Fragment key={rowIndex}>

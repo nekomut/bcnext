@@ -1337,7 +1337,7 @@ function DynamicMighty({ ability, attackUpMultiplier, hpUpMultiplier, mightyApVa
               max="0.5"
               step="0.1"
             />
-          )}倍 </small></span>{hasOnlyRelicAku ? null : <small>(0.5~0.4)</small>}
+          )}倍 </small></span>{hasOnlyRelicAku ? null : <small>(0.4~0.5)</small>}
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
@@ -1404,8 +1404,6 @@ function DynamicColossusSlayer({
     const minApMultiplier = baseApMultiplier;
     const maxApMultiplier = effectiveMultiplier > 1 ? baseApMultiplier * effectiveMultiplier : baseApMultiplier;
     
-    const minDmgMultiplier = baseDmgMultiplier;
-    const maxDmgMultiplier = hasMighty && mightyDmgValue ? baseDmgMultiplier * mightyDmgValue : baseDmgMultiplier;
     
     if (stats.multihit) {
       // 最小値計算
@@ -1440,20 +1438,35 @@ function DynamicColossusSlayer({
       
       const apDisplay = rangeValues.join(' / ');
       
-      // HP相当計算（打たれ強い系の倍率も考慮）
+      // HP相当計算（打たれ強い系とめっぽう強いの倍率も考慮）
       const actualToughnessMultiplier = hasToughness === true && toughnessMultiplier ? toughnessMultiplier : 1;
-      // 被ダメ範囲：基本0.7 ～ 0.7×toughness（軽減後）
-      const baseDamageRatio = minDmgMultiplier; // 0.7
-      const toughnessDamageRatio = minDmgMultiplier * actualToughnessMultiplier; // 0.7 × toughness
-      // HP相当値範囲：基本HP/0.7 ～ 基本HP/(0.7×toughness)
-      const maxHpMultiplier = 1 / baseDamageRatio; // 最小被ダメ時の最大HP相当値
-      const minHpMultiplier = 1 / toughnessDamageRatio; // 最大被ダメ時の最小HP相当値
+      
+      // めっぽう強いと打たれ強いによる最終被ダメ倍率
+      let minDamageRatio: number, maxDamageRatio: number;
+      
+      if (hasMighty && mightyDmgValue && mightyDmgValue !== 1) {
+        // めっぽう強いがある場合：0.7×mighty ～ 0.7
+        minDamageRatio = baseDmgMultiplier * mightyDmgValue * actualToughnessMultiplier;
+        maxDamageRatio = baseDmgMultiplier;
+      } else if (hasToughness === true && actualToughnessMultiplier < 1) {
+        // 打たれ強いのみの場合：0.7×toughness ～ 0.7
+        minDamageRatio = baseDmgMultiplier * actualToughnessMultiplier;
+        maxDamageRatio = baseDmgMultiplier;
+      } else {
+        // どちらもない場合
+        minDamageRatio = maxDamageRatio = baseDmgMultiplier;
+      }
+      
+      // HP相当値：被ダメが小さいほど体力換算値は大きくなる
+      const maxHpMultiplier = 1 / minDamageRatio; // 最小被ダメ時の最大HP相当値
+      const minHpMultiplier = 1 / maxDamageRatio; // 最大被ダメ時の最小HP相当値
       const minHpEquivalent = Math.round(stats.hp * hpUpMultiplier * minHpMultiplier);
       const maxHpEquivalent = Math.round(stats.hp * hpUpMultiplier * maxHpMultiplier);
       
-      const hpDisplay = (hasMighty && (minDmgMultiplier !== maxDmgMultiplier)) || (hasToughness === true && actualToughnessMultiplier < 1)
-        ? `<b>${maxHpEquivalent.toLocaleString()}~${minHpEquivalent.toLocaleString()}</b>`
-        : `<b>${minHpEquivalent.toLocaleString()}</b>`;
+      const hasRangeDisplay = (hasMighty && mightyDmgValue && mightyDmgValue !== 1) || (hasToughness === true && actualToughnessMultiplier < 1);
+      const hpDisplay = hasRangeDisplay
+        ? `<b>${minHpEquivalent.toLocaleString()}~${maxHpEquivalent.toLocaleString()}</b>`
+        : `<b>${maxHpEquivalent.toLocaleString()}</b>`;
       
       return apDisplay + '<br />' + hpDisplay;
     } else {
@@ -1468,20 +1481,35 @@ function DynamicColossusSlayer({
         ? `<b style="${colorClass}">${minAp.toLocaleString()}~${maxAp.toLocaleString()}</b>`
         : `<b style="${colorClass}">${minAp.toLocaleString()}</b>`;
       
-      // HP相当計算（打たれ強い系の倍率も考慮）
+      // HP相当計算（打たれ強い系とめっぽう強いの倍率も考慮）
       const actualToughnessMultiplier = hasToughness === true && toughnessMultiplier ? toughnessMultiplier : 1;
-      // 被ダメ範囲：基本0.7 ～ 0.7×toughness（軽減後）
-      const baseDamageRatio = minDmgMultiplier; // 0.7
-      const toughnessDamageRatio = minDmgMultiplier * actualToughnessMultiplier; // 0.7 × toughness
-      // HP相当値範囲：基本HP/0.7 ～ 基本HP/(0.7×toughness)
-      const maxHpMultiplier = 1 / baseDamageRatio; // 最小被ダメ時の最大HP相当値
-      const minHpMultiplier = 1 / toughnessDamageRatio; // 最大被ダメ時の最小HP相当値
+      
+      // めっぽう強いと打たれ強いによる最終被ダメ倍率
+      let minDamageRatio: number, maxDamageRatio: number;
+      
+      if (hasMighty && mightyDmgValue && mightyDmgValue !== 1) {
+        // めっぽう強いがある場合：0.7×mighty ～ 0.7
+        minDamageRatio = baseDmgMultiplier * mightyDmgValue * actualToughnessMultiplier;
+        maxDamageRatio = baseDmgMultiplier;
+      } else if (hasToughness === true && actualToughnessMultiplier < 1) {
+        // 打たれ強いのみの場合：0.7×toughness ～ 0.7
+        minDamageRatio = baseDmgMultiplier * actualToughnessMultiplier;
+        maxDamageRatio = baseDmgMultiplier;
+      } else {
+        // どちらもない場合
+        minDamageRatio = maxDamageRatio = baseDmgMultiplier;
+      }
+      
+      // HP相当値：被ダメが小さいほど体力換算値は大きくなる
+      const maxHpMultiplier = 1 / minDamageRatio; // 最小被ダメ時の最大HP相当値
+      const minHpMultiplier = 1 / maxDamageRatio; // 最大被ダメ時の最小HP相当値
       const minHpEquivalent = Math.round(stats.hp * hpUpMultiplier * minHpMultiplier);
       const maxHpEquivalent = Math.round(stats.hp * hpUpMultiplier * maxHpMultiplier);
       
-      const hpDisplay = (hasMighty && (minDmgMultiplier !== maxDmgMultiplier)) || (hasToughness === true && actualToughnessMultiplier < 1)
-        ? `<b>${maxHpEquivalent.toLocaleString()}~${minHpEquivalent.toLocaleString()}</b>`
-        : `<b>${minHpEquivalent.toLocaleString()}</b>`;
+      const hasRangeDisplay = (hasMighty && mightyDmgValue && mightyDmgValue !== 1) || (hasToughness === true && actualToughnessMultiplier < 1);
+      const hpDisplay = hasRangeDisplay
+        ? `<b>${minHpEquivalent.toLocaleString()}~${maxHpEquivalent.toLocaleString()}</b>`
+        : `<b>${maxHpEquivalent.toLocaleString()}</b>`;
       
       return apDisplay + '<br />' + hpDisplay;
     }
@@ -1523,8 +1551,8 @@ function DynamicColossusSlayer({
   // 被ダメ表示：基本被ダメ(0.7)から打たれ強い適用後の被ダメまでの範囲
   const baseDmgDisplay = baseDmgMultiplier; // 基本0.7倍
   const toughnessDmgDisplay = actualToughnessMultiplier < 1 ? baseDmgMultiplier * actualToughnessMultiplier : baseDmgMultiplier; // 打たれ強い適用後（被ダメ軽減なので乗算）
-  const mightyMaxDmgDisplay = hasMighty && mightyDmgValue ? baseDmgMultiplier * mightyDmgValue : baseDmgMultiplier;
-  const mightyMinDmgDisplay = hasMighty && mightyDmgValue ? (baseDmgMultiplier * mightyDmgValue) * actualToughnessMultiplier : toughnessDmgDisplay;
+  const mightyMinDmgDisplay = baseDmgMultiplier; // めっぽう強いがない場合の被ダメ（0.7 = 最小値）
+  const mightyMaxDmgDisplay = hasMighty && mightyDmgValue ? baseDmgMultiplier * mightyDmgValue : baseDmgMultiplier; // めっぽう強い適用後の被ダメ（0.7 × mightyDmgValue = 最大値）
   
   return (
     <div className="bg-gray-50 p-1.5 rounded">
@@ -1570,7 +1598,7 @@ function DynamicColossusSlayer({
             } else if (hasMighty && mightyDmgValue) {
               return (
                 <span className="w-auto mx-1 px-1 text-center text-xs font-bold">
-                  {mightyMaxDmgDisplay.toFixed(1)}~{mightyMinDmgDisplay.toFixed(damageDecimals)}
+                  {mightyMinDmgDisplay.toFixed(1)}~{mightyMaxDmgDisplay.toFixed(2)}
                 </span>
               );
             } else {

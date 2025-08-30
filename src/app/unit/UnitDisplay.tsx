@@ -151,8 +151,8 @@ export function UnitDisplay({
   const [talentMightyApValue, setTalentMightyApValue] = useState(1.8);
   const [talentMightyDmgValue, setTalentMightyDmgValue] = useState(0.4);
   
-  // 打たれ強い(6)の状態
-  const [talentToughnessValue, setTalentToughnessValue] = useState(0.2);
+  // 打たれ強い(6)の状態（被ダメ倍率）
+  const [talentToughnessValue, setTalentToughnessValue] = useState(0.143);
   
   // 超ダメージ(7)の状態
   const [talentMassiveDamageMultiplier, setTalentMassiveDamageMultiplier] = useState(4);
@@ -191,6 +191,14 @@ export function UnitDisplay({
     const newTalentBarrierBreakerTalent = talentList.find(talent => talent.id === 15);
     const newHasTalentBarrierBreaker = talentList.some(talent => talent.id === 15);
     
+    // toughness（打たれ強い/超打たれ強い）の判定
+    // ユニットデータからabilitiesを取得して判定
+    const abilitiesForToughness = getAbilities(unitData, newDefaultFormId, level, plusLevel);
+    const hasToughness = abilitiesForToughness.some(a => a.name === '打たれ強い');
+    const hasSuperToughness = abilitiesForToughness.some(a => a.name === '超打たれ強い');
+    const newToughnessValue = hasSuperToughness ? 0.143 : hasToughness ? 0.2 : 1.0;
+    setTalentToughnessValue(newToughnessValue);
+    
     
     setBaseAttackUpEnabled(newHasBaseAttackUp);
     setBaseHpUpEnabled(newHasBaseHpUp);
@@ -227,7 +235,7 @@ export function UnitDisplay({
     
     // 能力・効果の攻撃力アップをリセット
     setAttackUpEnabled(false);
-  }, [unitData.unitId, unitData.auxiliaryData.talents.talentList, unitData.coreData.forms, initialFormId, unitData]);
+  }, [unitData.unitId, unitData.auxiliaryData.talents.talentList, unitData.coreData.forms, initialFormId, unitData, level, plusLevel]);
 
   // アイコンを読み込むuseEffect
   useEffect(() => {
@@ -730,7 +738,7 @@ export function UnitDisplay({
       <StatsTable stats={enhancedStats} attackUpEnabled={totalAttackMultiplier > 1} hpUpEnabled={baseHpUpMultiplier > 1} attackIntervalReductionEnabled={attackIntervalReductionEnabled && actualCurrentForm >= 2} costReductionEnabled={costReductionEnabled && actualCurrentForm >= 2} moveSpeedUpEnabled={moveSpeedUpEnabled && actualCurrentForm >= 2} rechargeSpeedUpEnabled={rechargeSpeedUpEnabled && actualCurrentForm >= 2} />
 
       {/* Abilities */}
-      {abilities.length > 0 && <AbilitiesList abilities={abilities} attackUpMultiplier={totalAttackMultiplier} hpUpMultiplier={baseHpUpMultiplier} attackUpEnabled={attackUpEnabled} setAttackUpEnabled={setAttackUpEnabled} talentMassiveDamageMultiplier={talentMassiveDamageMultiplier} setTalentMassiveDamageMultiplier={setTalentMassiveDamageMultiplier} talentMightyApValue={talentMightyApValue} setTalentMightyApValue={setTalentMightyApValue} talentMightyDmgValue={talentMightyDmgValue} setTalentMightyDmgValue={setTalentMightyDmgValue} hasOnlyRelicAkuTalent={hasOnlyRelicAkuTalent} />}
+      {abilities.length > 0 && <AbilitiesList abilities={abilities} attackUpMultiplier={totalAttackMultiplier} hpUpMultiplier={baseHpUpMultiplier} attackUpEnabled={attackUpEnabled} setAttackUpEnabled={setAttackUpEnabled} talentMassiveDamageMultiplier={talentMassiveDamageMultiplier} setTalentMassiveDamageMultiplier={setTalentMassiveDamageMultiplier} talentMightyApValue={talentMightyApValue} setTalentMightyApValue={setTalentMightyApValue} talentMightyDmgValue={talentMightyDmgValue} setTalentMightyDmgValue={setTalentMightyDmgValue} hasOnlyRelicAkuTalent={hasOnlyRelicAkuTalent} talentToughnessValue={talentToughnessValue} />}
 
       {/* Talents */}
       {unitData.auxiliaryData.talents.hasTalents && actualCurrentForm >= 2 && (
@@ -1352,7 +1360,10 @@ function DynamicColossusSlayer({
   hasMassiveDamage,
   massiveDamageMultiplier,
   hasExtremeDamage,
-  extremeDamageMultiplier
+  extremeDamageMultiplier,
+  hasToughness,
+  toughnessMultiplier,
+  hasNormalToughness
 }: { 
   ability: UnitAbility, 
   attackUpMultiplier: number, 
@@ -1363,7 +1374,10 @@ function DynamicColossusSlayer({
   hasMassiveDamage?: boolean,
   massiveDamageMultiplier?: number,
   hasExtremeDamage?: boolean,
-  extremeDamageMultiplier?: number
+  extremeDamageMultiplier?: number,
+  hasToughness?: boolean,
+  toughnessMultiplier?: number,
+  hasNormalToughness?: boolean
 }) {
   if (!ability.calculatedStats || !ability.isDynamic) return null;
   
@@ -1426,14 +1440,19 @@ function DynamicColossusSlayer({
       
       const apDisplay = rangeValues.join(' / ');
       
-      // HP相当計算
-      const minHpMultiplier = 1 / minDmgMultiplier;
-      const maxHpMultiplier = 1 / maxDmgMultiplier;
-      const minHpEquivalent = Math.round(stats.hp * minHpMultiplier);
-      const maxHpEquivalent = Math.round(stats.hp * maxHpMultiplier);
+      // HP相当計算（打たれ強い系の倍率も考慮）
+      const actualToughnessMultiplier = hasToughness === true && toughnessMultiplier ? toughnessMultiplier : 1;
+      // 被ダメ範囲：基本0.7 ～ 0.7×toughness（軽減後）
+      const baseDamageRatio = minDmgMultiplier; // 0.7
+      const toughnessDamageRatio = minDmgMultiplier * actualToughnessMultiplier; // 0.7 × toughness
+      // HP相当値範囲：基本HP/0.7 ～ 基本HP/(0.7×toughness)
+      const maxHpMultiplier = 1 / baseDamageRatio; // 最小被ダメ時の最大HP相当値
+      const minHpMultiplier = 1 / toughnessDamageRatio; // 最大被ダメ時の最小HP相当値
+      const minHpEquivalent = Math.round(stats.hp * hpUpMultiplier * minHpMultiplier);
+      const maxHpEquivalent = Math.round(stats.hp * hpUpMultiplier * maxHpMultiplier);
       
-      const hpDisplay = hasMighty && (minDmgMultiplier !== maxDmgMultiplier)
-        ? `<b>${minHpEquivalent.toLocaleString()}~${maxHpEquivalent.toLocaleString()}</b>`
+      const hpDisplay = (hasMighty && (minDmgMultiplier !== maxDmgMultiplier)) || (hasToughness === true && actualToughnessMultiplier < 1)
+        ? `<b>${maxHpEquivalent.toLocaleString()}~${minHpEquivalent.toLocaleString()}</b>`
         : `<b>${minHpEquivalent.toLocaleString()}</b>`;
       
       return apDisplay + '<br />' + hpDisplay;
@@ -1449,14 +1468,19 @@ function DynamicColossusSlayer({
         ? `<b style="${colorClass}">${minAp.toLocaleString()}~${maxAp.toLocaleString()}</b>`
         : `<b style="${colorClass}">${minAp.toLocaleString()}</b>`;
       
-      // HP相当計算
-      const minHpMultiplier = 1 / minDmgMultiplier;
-      const maxHpMultiplier = 1 / maxDmgMultiplier;
-      const minHpEquivalent = Math.round(stats.hp * minHpMultiplier);
-      const maxHpEquivalent = Math.round(stats.hp * maxHpMultiplier);
+      // HP相当計算（打たれ強い系の倍率も考慮）
+      const actualToughnessMultiplier = hasToughness === true && toughnessMultiplier ? toughnessMultiplier : 1;
+      // 被ダメ範囲：基本0.7 ～ 0.7×toughness（軽減後）
+      const baseDamageRatio = minDmgMultiplier; // 0.7
+      const toughnessDamageRatio = minDmgMultiplier * actualToughnessMultiplier; // 0.7 × toughness
+      // HP相当値範囲：基本HP/0.7 ～ 基本HP/(0.7×toughness)
+      const maxHpMultiplier = 1 / baseDamageRatio; // 最小被ダメ時の最大HP相当値
+      const minHpMultiplier = 1 / toughnessDamageRatio; // 最大被ダメ時の最小HP相当値
+      const minHpEquivalent = Math.round(stats.hp * hpUpMultiplier * minHpMultiplier);
+      const maxHpEquivalent = Math.round(stats.hp * hpUpMultiplier * maxHpMultiplier);
       
-      const hpDisplay = hasMighty && (minDmgMultiplier !== maxDmgMultiplier)
-        ? `<b>${minHpEquivalent.toLocaleString()}~${maxHpEquivalent.toLocaleString()}</b>`
+      const hpDisplay = (hasMighty && (minDmgMultiplier !== maxDmgMultiplier)) || (hasToughness === true && actualToughnessMultiplier < 1)
+        ? `<b>${maxHpEquivalent.toLocaleString()}~${minHpEquivalent.toLocaleString()}</b>`
         : `<b>${minHpEquivalent.toLocaleString()}</b>`;
       
       return apDisplay + '<br />' + hpDisplay;
@@ -1481,8 +1505,26 @@ function DynamicColossusSlayer({
   }
   
   const maxApDisplay = totalEffectiveMultiplier > 1 ? baseApMultiplier * totalEffectiveMultiplier : baseApMultiplier;
-  const minDmgDisplay = baseDmgMultiplier;
-  const maxDmgDisplay = hasMighty && mightyDmgValue ? baseDmgMultiplier * mightyDmgValue : baseDmgMultiplier;
+  const actualToughnessMultiplier = hasToughness === true && toughnessMultiplier ? toughnessMultiplier : 1;
+  
+  // 小数点精度の決定：打たれ強い(2桁) vs 超打たれ強い(1桁)
+  const damageDecimals = hasNormalToughness ? 2 : 1;
+  
+  // デバッグ用ログ
+  if (ability.calculatedStats && ability.calculatedStats.ap) {
+    console.log(`DynamicColossusSlayer debug:`, {
+      hasToughness,
+      actualToughnessMultiplier,
+      hasNormalToughness,
+      shouldBeBlue: !hasNormalToughness
+    });
+  }
+  
+  // 被ダメ表示：基本被ダメ(0.7)から打たれ強い適用後の被ダメまでの範囲
+  const baseDmgDisplay = baseDmgMultiplier; // 基本0.7倍
+  const toughnessDmgDisplay = actualToughnessMultiplier < 1 ? baseDmgMultiplier * actualToughnessMultiplier : baseDmgMultiplier; // 打たれ強い適用後（被ダメ軽減なので乗算）
+  const mightyMaxDmgDisplay = hasMighty && mightyDmgValue ? baseDmgMultiplier * mightyDmgValue : baseDmgMultiplier;
+  const mightyMinDmgDisplay = hasMighty && mightyDmgValue ? (baseDmgMultiplier * mightyDmgValue) * actualToughnessMultiplier : toughnessDmgDisplay;
   
   return (
     <div className="bg-gray-50 p-1.5 rounded">
@@ -1505,13 +1547,38 @@ function DynamicColossusSlayer({
           )}倍 </small></span>
           <br />
           <span className="text-blue-500 ml-5"><small>被ダメ
-          {hasMighty && (minDmgDisplay !== maxDmgDisplay) ? (
-            <span className="w-auto mx-1 px-1 text-center text-xs font-bold">
-              {minDmgDisplay}~{maxDmgDisplay.toFixed(2)}
-            </span>
-          ) : (
-            <span className="w-8 mx-1 px-1 text-center text-xs font-bold">0.7</span>
-          )}倍 </small></span>
+          {(() => {
+            console.log('Damage display debug:', {
+              condition1: hasToughness === true && actualToughnessMultiplier < 1,
+              condition2: hasMighty && mightyDmgValue,
+              hasToughness,
+              actualToughnessMultiplier,
+              hasMighty,
+              mightyDmgValue,
+              hasNormalToughness
+            });
+            
+            if (hasToughness === true && actualToughnessMultiplier < 1) {
+              return (
+                <span 
+                  className={`w-auto mx-1 px-1 text-center text-xs font-bold`}
+                  style={!hasNormalToughness ? { color: '#3b82f6' } : {}}
+                >
+                  {baseDmgDisplay.toFixed(1)}~{toughnessDmgDisplay.toFixed(damageDecimals)}
+                </span>
+              );
+            } else if (hasMighty && mightyDmgValue) {
+              return (
+                <span className="w-auto mx-1 px-1 text-center text-xs font-bold">
+                  {mightyMaxDmgDisplay.toFixed(1)}~{mightyMinDmgDisplay.toFixed(damageDecimals)}
+                </span>
+              );
+            } else {
+              return (
+                <span className="w-8 mx-1 px-1 text-center text-xs font-bold">{baseDmgDisplay.toFixed(1)}</span>
+              );
+            }
+          })()}倍 </small></span>
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
@@ -1876,7 +1943,7 @@ function DynamicWitchKiller({ ability, attackUpMultiplier, hpUpMultiplier }: { a
   );
 }
 
-function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUpEnabled, setAttackUpEnabled, talentMassiveDamageMultiplier, setTalentMassiveDamageMultiplier, talentMightyApValue, setTalentMightyApValue, talentMightyDmgValue, setTalentMightyDmgValue, hasOnlyRelicAkuTalent }: { 
+function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUpEnabled, setAttackUpEnabled, talentMassiveDamageMultiplier, setTalentMassiveDamageMultiplier, talentMightyApValue, setTalentMightyApValue, talentMightyDmgValue, setTalentMightyDmgValue, hasOnlyRelicAkuTalent, talentToughnessValue }: { 
   abilities: UnitAbility[], 
   attackUpMultiplier: number,
   hpUpMultiplier: number,
@@ -1888,7 +1955,8 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUp
   setTalentMightyApValue: (value: number) => void,
   talentMightyDmgValue: number,
   setTalentMightyDmgValue: (value: number) => void,
-  hasOnlyRelicAkuTalent: boolean
+  hasOnlyRelicAkuTalent: boolean,
+  talentToughnessValue: number
 }) {
   return (
     <div className="mb-2.5">
@@ -1922,6 +1990,9 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUp
               massiveDamageMultiplier={talentMassiveDamageMultiplier}
               hasExtremeDamage={abilities.some((a: UnitAbility) => a.name === '極ダメージ')}
               extremeDamageMultiplier={6}
+              hasToughness={abilities.some((a: UnitAbility) => a.name === '打たれ強い' || a.name === '超打たれ強い')}
+              toughnessMultiplier={abilities.some((a: UnitAbility) => a.name === '打たれ強い' || a.name === '超打たれ強い') ? talentToughnessValue : 1.0}
+              hasNormalToughness={abilities.some((a: UnitAbility) => a.name === '打たれ強い')}
             />
           ) : ability.isDynamic && ability.name === "超獣特効" ? (
             <DynamicBehemothSlayer key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} hpUpMultiplier={hpUpMultiplier} />

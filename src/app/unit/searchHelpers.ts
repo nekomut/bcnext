@@ -98,6 +98,7 @@ export type AbilityType =
 interface AbilitySearchConfig {
   searchTerms: string[];
   immunityTerms?: string[];
+  excludeTerms?: string[];
   searchBothNameAndValue?: boolean;
 }
 
@@ -132,6 +133,7 @@ const ABILITY_SEARCH_CONFIG: Record<AbilityType, AbilitySearchConfig> = {
   },
   resistant: {
     searchTerms: ['打たれ強い'],
+    excludeTerms: ['超打たれ強い'],
     searchBothNameAndValue: false
   },
   insanelyTough: {
@@ -397,8 +399,18 @@ function extractAbilityStrings(ability: UnitAbility): { name: string; value: str
 /**
  * テキストに検索用語が含まれているかチェック
  */
-function containsAnyTerm(text: string, terms: string[]): boolean {
-  return terms.some(term => text.includes(term));
+function containsAnyTerm(text: string, terms: string[], excludeTerms?: string[]): boolean {
+  const hasMatch = terms.some(term => text.includes(term));
+  
+  if (!hasMatch) return false;
+  
+  // 除外項目があれば、それらが含まれていないことを確認
+  if (excludeTerms && excludeTerms.length > 0) {
+    const hasExclusion = excludeTerms.some(excludeTerm => text.includes(excludeTerm));
+    return !hasExclusion;
+  }
+  
+  return true;
 }
 
 /**
@@ -414,8 +426,8 @@ export function hasAbilityType(abilities: UnitAbility[], abilityType: AbilityTyp
     const searchTexts = config.searchBothNameAndValue ? [name, value] : [name];
     const searchText = searchTexts.join(' ');
     
-    // 能力が存在するかチェック
-    const hasAbility = containsAnyTerm(searchText, config.searchTerms);
+    // 能力が存在するかチェック（除外項目も考慮）
+    const hasAbility = containsAnyTerm(searchText, config.searchTerms, config.excludeTerms);
     
     // 無効/耐性チェック（設定されている場合のみ）
     const hasImmunity = config.immunityTerms 

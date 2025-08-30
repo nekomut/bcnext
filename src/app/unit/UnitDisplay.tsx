@@ -592,7 +592,7 @@ export function UnitDisplay({
                 </span>
                 <Link 
                   href={animUrl}
-                  className="text-xs sm:text-sm hover:text-blue-600 transition-colors duration-200 opacity-75 hover:opacity-100"
+                  className="text-xs sm:text-sm hover:text-blue-600 transition-colors duration-200 opacity-75 hover:opacity-100 pb-1"
                   title="アニメーション表示"
                 >
                   anim 🎬

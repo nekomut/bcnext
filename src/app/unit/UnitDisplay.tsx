@@ -1381,41 +1381,100 @@ function DynamicMighty({ ability, attackUpMultiplier, hpUpMultiplier, mightyApVa
   );
 }
 
-function DynamicColossusSlayer({ ability, attackUpMultiplier, hpUpMultiplier }: { ability: UnitAbility, attackUpMultiplier: number, hpUpMultiplier: number }) {
+function DynamicColossusSlayer({ 
+  ability, 
+  attackUpMultiplier, 
+  hpUpMultiplier,
+  hasMighty,
+  mightyApValue,
+  mightyDmgValue
+}: { 
+  ability: UnitAbility, 
+  attackUpMultiplier: number, 
+  hpUpMultiplier: number,
+  hasMighty?: boolean,
+  mightyApValue?: number,
+  mightyDmgValue?: number
+}) {
   if (!ability.calculatedStats || !ability.isDynamic) return null;
   
   const calculateDamage = () => {
     const stats = ability.calculatedStats!;
-    const apMultiplier = 1.6;
-    const dmgMultiplier = 0.7;
+    const baseApMultiplier = 1.6;
+    const baseDmgMultiplier = 0.7;
+    
+    // めっぽう強いがある場合の計算
+    const minApMultiplier = baseApMultiplier;
+    const maxApMultiplier = hasMighty && mightyApValue ? baseApMultiplier * mightyApValue : baseApMultiplier;
+    
+    const minDmgMultiplier = baseDmgMultiplier;
+    const maxDmgMultiplier = hasMighty && mightyDmgValue ? baseDmgMultiplier * mightyDmgValue : baseDmgMultiplier;
     
     if (stats.multihit) {
-      const hit1 = stats.atk1 ? Math.round(stats.atk1 * attackUpMultiplier * apMultiplier) : 0;
-      const hit2 = stats.atk2 ? Math.round(stats.atk2 * attackUpMultiplier * apMultiplier) : 0;
-      const hit3 = stats.atk3 ? Math.round(stats.atk3 * attackUpMultiplier * apMultiplier) : 0;
+      // 最小値計算
+      const hit1Min = stats.atk1 ? Math.round(stats.atk1 * attackUpMultiplier * minApMultiplier) : 0;
+      const hit2Min = stats.atk2 ? Math.round(stats.atk2 * attackUpMultiplier * minApMultiplier) : 0;
+      const hit3Min = stats.atk3 ? Math.round(stats.atk3 * attackUpMultiplier * minApMultiplier) : 0;
+      
+      // 最大値計算
+      const hit1Max = stats.atk1 ? Math.round(stats.atk1 * attackUpMultiplier * maxApMultiplier) : 0;
+      const hit2Max = stats.atk2 ? Math.round(stats.atk2 * attackUpMultiplier * maxApMultiplier) : 0;
+      const hit3Max = stats.atk3 ? Math.round(stats.atk3 * attackUpMultiplier * maxApMultiplier) : 0;
       
       const isEnhanced = attackUpMultiplier > 1;
       const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
-      const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
-      const apDisplay = values.join(' / ');
       
-      // HP相当計算（1.43倍体力相当）
-      const hpMultiplier = 1 / dmgMultiplier; // 1.43倍
-      const hpEquivalent = Math.round(stats.hp * hpMultiplier);
+      const minValues = [hit1Min, hit2Min, hit3Min].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
+      const maxValues = [hit1Max, hit2Max, hit3Max].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
       
-      return apDisplay + '<br /><b>' + hpEquivalent.toLocaleString() + '</b>';
+      const apDisplay = hasMighty && (minApMultiplier !== maxApMultiplier) 
+        ? `${minValues.join(' / ')}~${maxValues.join(' / ')}`
+        : minValues.join(' / ');
+      
+      // HP相当計算
+      const minHpMultiplier = 1 / minDmgMultiplier;
+      const maxHpMultiplier = 1 / maxDmgMultiplier;
+      const minHpEquivalent = Math.round(stats.hp * minHpMultiplier);
+      const maxHpEquivalent = Math.round(stats.hp * maxHpMultiplier);
+      
+      const hpDisplay = hasMighty && (minDmgMultiplier !== maxDmgMultiplier)
+        ? `<b>${minHpEquivalent.toLocaleString()}~${maxHpEquivalent.toLocaleString()}</b>`
+        : `<b>${minHpEquivalent.toLocaleString()}</b>`;
+      
+      return apDisplay + '<br />' + hpDisplay;
     } else {
-      const ap = Math.round(stats.ap * attackUpMultiplier * apMultiplier);
+      // 単発攻撃の場合
+      const minAp = Math.round(stats.ap * attackUpMultiplier * minApMultiplier);
+      const maxAp = Math.round(stats.ap * attackUpMultiplier * maxApMultiplier);
+      
       const isEnhanced = attackUpMultiplier > 1;
       const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
       
-      // HP相当計算（1.43倍体力相当）
-      const hpMultiplier = 1 / dmgMultiplier; // 1.43倍  
-      const hpEquivalent = Math.round(stats.hp * hpMultiplier);
+      const apDisplay = hasMighty && (minApMultiplier !== maxApMultiplier)
+        ? `<b style="${colorClass}">${minAp.toLocaleString()}~${maxAp.toLocaleString()}</b>`
+        : `<b style="${colorClass}">${minAp.toLocaleString()}</b>`;
       
-      return `<b style="${colorClass}">${ap.toLocaleString()}</b><br /><b>${hpEquivalent.toLocaleString()}</b>`;
+      // HP相当計算
+      const minHpMultiplier = 1 / minDmgMultiplier;
+      const maxHpMultiplier = 1 / maxDmgMultiplier;
+      const minHpEquivalent = Math.round(stats.hp * minHpMultiplier);
+      const maxHpEquivalent = Math.round(stats.hp * maxHpMultiplier);
+      
+      const hpDisplay = hasMighty && (minDmgMultiplier !== maxDmgMultiplier)
+        ? `<b>${minHpEquivalent.toLocaleString()}~${maxHpEquivalent.toLocaleString()}</b>`
+        : `<b>${minHpEquivalent.toLocaleString()}</b>`;
+      
+      return apDisplay + '<br />' + hpDisplay;
     }
   };
+  
+  // 倍率表示の計算
+  const baseApMultiplier = 1.6;
+  const baseDmgMultiplier = 0.7;
+  const minApDisplay = baseApMultiplier;
+  const maxApDisplay = hasMighty && mightyApValue ? baseApMultiplier * mightyApValue : baseApMultiplier;
+  const minDmgDisplay = baseDmgMultiplier;
+  const maxDmgDisplay = hasMighty && mightyDmgValue ? baseDmgMultiplier * mightyDmgValue : baseDmgMultiplier;
   
   return (
     <div className="bg-gray-50 p-1.5 rounded">
@@ -1429,10 +1488,22 @@ function DynamicColossusSlayer({ ability, attackUpMultiplier, hpUpMultiplier }: 
             className="inline mr-1 align-top"
           />
           超生命体特効<br /> <span className="text-red-500 ml-5"><small>攻撃力
-          <span className="w-8 mx-1 px-1 text-center text-xs font-bold">1.6</span>倍 </small></span>
+          {hasMighty && (minApDisplay !== maxApDisplay) ? (
+            <span className="w-auto mx-1 px-1 text-center text-xs font-bold">
+              {minApDisplay}~{maxApDisplay.toFixed(2)}
+            </span>
+          ) : (
+            <span className="w-8 mx-1 px-1 text-center text-xs font-bold">1.6</span>
+          )}倍 </small></span>
           <br />
           <span className="text-blue-500 ml-5"><small>被ダメ
-          <span className="w-8 mx-1 px-1 text-center text-xs font-bold">0.7</span>倍 </small></span>
+          {hasMighty && (minDmgDisplay !== maxDmgDisplay) ? (
+            <span className="w-auto mx-1 px-1 text-center text-xs font-bold">
+              {minDmgDisplay}~{maxDmgDisplay.toFixed(2)}
+            </span>
+          ) : (
+            <span className="w-8 mx-1 px-1 text-center text-xs font-bold">0.7</span>
+          )}倍 </small></span>
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
@@ -1831,7 +1902,15 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUp
           ) : ability.isDynamic && ability.name === "魔女キラー" ? (
             <DynamicWitchKiller key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} hpUpMultiplier={hpUpMultiplier} />
           ) : ability.isDynamic && ability.name === "超生命体特効" ? (
-            <DynamicColossusSlayer key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} hpUpMultiplier={hpUpMultiplier} />
+            <DynamicColossusSlayer 
+              key={index} 
+              ability={ability} 
+              attackUpMultiplier={attackUpMultiplier} 
+              hpUpMultiplier={hpUpMultiplier}
+              hasMighty={abilities.some((a: UnitAbility) => a.name === 'めっぽう強い')}
+              mightyApValue={talentMightyApValue}
+              mightyDmgValue={talentMightyDmgValue}
+            />
           ) : ability.isDynamic && ability.name === "超獣特効" ? (
             <DynamicBehemothSlayer key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} hpUpMultiplier={hpUpMultiplier} />
           ) : ability.isDynamic && ability.name === "超賢者特効" ? (

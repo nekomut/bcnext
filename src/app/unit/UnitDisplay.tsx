@@ -848,7 +848,7 @@ function StatsTable({ stats, attackUpEnabled, hpUpEnabled, attackIntervalReducti
               <>
                 <b className={attackUpEnabled ? "text-red-500" : "text-gray-500"}>{stats.ap.toLocaleString()}</b>
                 <br />
-                <small className={attackUpEnabled ? "text-red-500" : ""}>{`${[stats.atk1, stats.atk2, stats.atk3].filter(Boolean).map(x => x?.toLocaleString()).join(' / ')}`}</small>
+                <small className={attackUpEnabled ? "text-red-500" : ""}>{`${[stats.atk1, stats.atk2, stats.atk3].filter(Boolean).map(x => x?.toLocaleString()).join(' ')}`}</small>
               </>
             }
             labelClassName="text-red-500"
@@ -968,7 +968,7 @@ function DynamicMassiveDamage({ ability, attackUpMultiplier, massiveDamageMultip
       const isEnhanced = attackUpMultiplier > 1;
       const colorClass = isEnhanced ? 'color: red;' : '';
       const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => `<span style="${colorClass}">${v.toLocaleString()}</span>`);
-      return values.join(' / ');
+      return values.join(' ');
     } else {
       const damage = Math.round(stats.ap * attackUpMultiplier * mult);
       const isEnhanced = attackUpMultiplier > 1;
@@ -987,7 +987,7 @@ function DynamicMassiveDamage({ ability, attackUpMultiplier, massiveDamageMultip
             height={16}
             className="inline mr-1 align-top"
           />
-          超ダメージ <span className="text-red-500"><small>攻撃力
+          超ダメージ <span className="text-red-500"><small>与ダメ
           {hasOnlyRelicAku ? (
             <span className="w-7 mx-1 px-1 text-center text-xs font-bold">3</span>
           ) : (
@@ -1071,7 +1071,7 @@ function DynamicExtremeDamage({ ability, attackUpMultiplier }: { ability: UnitAb
       const isEnhanced = attackUpMultiplier > 1;
       const colorClass = isEnhanced ? 'color: red;' : '';
       const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => `<span style="${colorClass}">${v.toLocaleString()}</span>`);
-      return values.join(' / ');
+      return values.join(' ');
     } else {
       const damage = Math.round(stats.ap * attackUpMultiplier * mult);
       const isEnhanced = attackUpMultiplier > 1;
@@ -1090,7 +1090,7 @@ function DynamicExtremeDamage({ ability, attackUpMultiplier }: { ability: UnitAb
             height={16}
             className="inline mr-1 align-top"
           />
-          極ダメージ <span className="text-red-500"><small>攻撃力
+          極ダメージ <span className="text-red-500"><small>与ダメ
           {hasOnlyRelicAku ? (
             <span className="w-7 mx-1 px-1 text-center text-xs font-bold">5</span>
           ) : (
@@ -1299,7 +1299,7 @@ function DynamicMighty({ ability, attackUpMultiplier, hpUpMultiplier, mightyApVa
             height={16}
             className="inline mr-1 align-top"
           />
-          めっぽう強い<br /> <span className="text-red-500 ml-5"><small>攻撃力
+          めっぽう強い<br /> <span className="text-red-500 ml-5"><small>与ダメ
           {hasOnlyRelicAku ? (
             <span className="w-8 mx-1 px-1 text-center text-xs font-bold">1.5</span>
           ) : (
@@ -1436,7 +1436,7 @@ function DynamicColossusSlayer({
           : `<b style="${colorClass}">${hit3Min.toLocaleString()}</b>`);
       }
       
-      const apDisplay = rangeValues.join(' / ');
+      const apDisplay = rangeValues.join(' ');
       
       // HP相当計算（打たれ強い系とめっぽう強いの倍率も考慮）
       const actualToughnessMultiplier = hasToughness === true && toughnessMultiplier ? toughnessMultiplier : 1;
@@ -1565,7 +1565,7 @@ function DynamicColossusSlayer({
             height={16}
             className="inline mr-1 align-top"
           />
-          超生命体特効<br /> <span className="text-red-500 ml-5"><small>攻撃力
+          超生命体特効<br /> <span className="text-red-500 ml-5"><small>与ダメ
           {totalEffectiveMultiplier > 1 && (minApDisplay !== maxApDisplay) ? (
             <span className="w-auto mx-1 px-1 text-center text-xs font-bold">
               {minApDisplay}~{maxApDisplay.toFixed(2)}
@@ -1621,39 +1621,100 @@ function DynamicColossusSlayer({
   );
 }
 
-function DynamicBehemothSlayer({ ability, attackUpMultiplier, hpUpMultiplier }: { ability: UnitAbility, attackUpMultiplier: number, hpUpMultiplier: number }) {
+function DynamicBehemothSlayer({ 
+  ability, 
+  attackUpMultiplier, 
+  hpUpMultiplier,
+  hasMighty,
+  mightyApValue,
+  mightyDmgValue
+}: { 
+  ability: UnitAbility, 
+  attackUpMultiplier: number, 
+  hpUpMultiplier: number,
+  hasMighty?: boolean,
+  mightyApValue?: number,
+  mightyDmgValue?: number
+}) {
   if (!ability.calculatedStats || !ability.isDynamic) return null;
+  
+  const baseApMultiplier = 2.5; // 超獣特効の基本与ダメ倍率
+  const baseDmgMultiplier = 0.6; // 超獣特効の基本被ダメ倍率
+  
+  // めっぽう強いの倍率計算
+  const minApDisplay = baseApMultiplier; // めっぽう強いがない場合（2.5倍）
+  const maxApDisplay = hasMighty && mightyApValue ? baseApMultiplier * mightyApValue : baseApMultiplier; // めっぽう強い適用後（2.5 × mightyApValue倍）
+  
+  // 被ダメ表示：基本被ダメ(0.6)からめっぽう強い適用後の被ダメまでの範囲
+  const minDmgDisplay = baseDmgMultiplier; // めっぽう強いがない場合の被ダメ（0.6 = 最小値）
+  const maxDmgDisplay = hasMighty && mightyDmgValue ? baseDmgMultiplier * mightyDmgValue : baseDmgMultiplier; // めっぽう強い適用後の被ダメ（0.6 × mightyDmgValue = 最大値）
   
   const calculateDamage = () => {
     const stats = ability.calculatedStats!;
-    const apMultiplier = 2.5;
-    const dmgMultiplier = 0.6;
+    const totalEffectiveMultiplier = hasMighty && mightyApValue ? mightyApValue : 1;
     
     if (stats.multihit) {
-      const hit1 = stats.atk1 ? Math.round(stats.atk1 * attackUpMultiplier * apMultiplier) : 0;
-      const hit2 = stats.atk2 ? Math.round(stats.atk2 * attackUpMultiplier * apMultiplier) : 0;
-      const hit3 = stats.atk3 ? Math.round(stats.atk3 * attackUpMultiplier * apMultiplier) : 0;
+      const minHit1 = stats.atk1 ? Math.round(stats.atk1 * attackUpMultiplier * baseApMultiplier) : 0;
+      const minHit2 = stats.atk2 ? Math.round(stats.atk2 * attackUpMultiplier * baseApMultiplier) : 0;
+      const minHit3 = stats.atk3 ? Math.round(stats.atk3 * attackUpMultiplier * baseApMultiplier) : 0;
+      
+      const maxHit1 = stats.atk1 ? Math.round(stats.atk1 * attackUpMultiplier * maxApDisplay) : 0;
+      const maxHit2 = stats.atk2 ? Math.round(stats.atk2 * attackUpMultiplier * maxApDisplay) : 0;
+      const maxHit3 = stats.atk3 ? Math.round(stats.atk3 * attackUpMultiplier * maxApDisplay) : 0;
       
       const isEnhanced = attackUpMultiplier > 1;
       const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
-      const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
-      const apDisplay = values.join(' / ');
       
-      // HP相当計算（1.67倍体力相当）
-      const hpMultiplier = 1 / dmgMultiplier; // 1.67倍
-      const hpEquivalent = Math.round(stats.hp * hpMultiplier);
-      
-      return apDisplay + '<br /><b>' + hpEquivalent.toLocaleString() + '</b>';
+      if (totalEffectiveMultiplier > 1 && (minApDisplay !== maxApDisplay)) {
+        const rangeValues = [];
+        if (minHit1 > 0) {
+          rangeValues.push(`${minHit1.toLocaleString()}~${maxHit1.toLocaleString()}`);
+        }
+        if (minHit2 > 0) {
+          rangeValues.push(`${minHit2.toLocaleString()}~${maxHit2.toLocaleString()}`);
+        }
+        if (minHit3 > 0) {
+          rangeValues.push(`${minHit3.toLocaleString()}~${maxHit3.toLocaleString()}`);
+        }
+        const apDisplay = `<b style="${colorClass}">${rangeValues.join(' ')}</b>`;
+        
+        // HP相当計算（範囲表示）
+        const minHpEquivalent = Math.round(stats.hp / minDmgDisplay);
+        const maxHpEquivalent = Math.round(stats.hp / maxDmgDisplay);
+        
+        return `${apDisplay}<br /><b>${minHpEquivalent.toLocaleString()}~${maxHpEquivalent.toLocaleString()}</b>`;
+      } else {
+        const values = [minHit1, minHit2, minHit3].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
+        const apDisplay = values.join(' ');
+        
+        // HP相当計算（固定表示）
+        const hpEquivalent = Math.round(stats.hp / baseDmgMultiplier);
+        
+        return `${apDisplay}<br /><b>${hpEquivalent.toLocaleString()}</b>`;
+      }
     } else {
-      const ap = Math.round(stats.ap * attackUpMultiplier * apMultiplier);
+      const minAp = Math.round(stats.ap * attackUpMultiplier * baseApMultiplier);
+      const maxAp = Math.round(stats.ap * attackUpMultiplier * maxApDisplay);
+      
       const isEnhanced = attackUpMultiplier > 1;
       const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
       
-      // HP相当計算（1.67倍体力相当）
-      const hpMultiplier = 1 / dmgMultiplier; // 1.67倍  
-      const hpEquivalent = Math.round(stats.hp * hpMultiplier);
-      
-      return `<b style="${colorClass}">${ap.toLocaleString()}</b><br /><b>${hpEquivalent.toLocaleString()}</b>`;
+      if (totalEffectiveMultiplier > 1 && (minApDisplay !== maxApDisplay)) {
+        const apDisplay = `<b style="${colorClass}">${minAp.toLocaleString()}~${maxAp.toLocaleString()}</b>`;
+        
+        // HP相当計算（範囲表示）
+        const minHpEquivalent = Math.round(stats.hp / minDmgDisplay);
+        const maxHpEquivalent = Math.round(stats.hp / maxDmgDisplay);
+        
+        return `${apDisplay}<br /><b>${minHpEquivalent.toLocaleString()}~${maxHpEquivalent.toLocaleString()}</b>`;
+      } else {
+        const apDisplay = `<b style="${colorClass}">${minAp.toLocaleString()}</b>`;
+        
+        // HP相当計算（固定表示）
+        const hpEquivalent = Math.round(stats.hp / baseDmgMultiplier);
+        
+        return `${apDisplay}<br /><b>${hpEquivalent.toLocaleString()}</b>`;
+      }
     }
   };
   
@@ -1668,11 +1729,23 @@ function DynamicBehemothSlayer({ ability, attackUpMultiplier, hpUpMultiplier }: 
             height={16}
             className="inline mr-1 align-top"
           />
-          超獣特効<br /> <span className="text-red-500 ml-5"><small>攻撃力
-          <span className="w-8 mx-1 px-1 text-center text-xs font-bold">2.5</span>倍 </small></span>
+          超獣特効<br /> <span className="text-red-500 ml-5"><small>与ダメ
+          {(hasMighty && mightyApValue && minApDisplay !== maxApDisplay) ? (
+            <span className="w-auto mx-1 px-1 text-center text-xs font-bold">
+              {minApDisplay}~{maxApDisplay.toFixed(2)}
+            </span>
+          ) : (
+            <span className="w-8 mx-1 px-1 text-center text-xs font-bold">2.5</span>
+          )}倍 </small></span>
           <br />
           <span className="text-blue-500 ml-5"><small>被ダメ
-          <span className="w-8 mx-1 px-1 text-center text-xs font-bold">0.6</span>倍 </small></span>
+          {(hasMighty && mightyDmgValue && minDmgDisplay !== maxDmgDisplay) ? (
+            <span className="w-auto mx-1 px-1 text-center text-xs font-bold">
+              {maxDmgDisplay.toFixed(2)}~{minDmgDisplay}
+            </span>
+          ) : (
+            <span className="w-8 mx-1 px-1 text-center text-xs font-bold">0.6</span>
+          )}倍 </small></span>
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
@@ -1703,7 +1776,7 @@ function DynamicSageSlayer({ ability, attackUpMultiplier, hpUpMultiplier }: { ab
       const isEnhanced = attackUpMultiplier > 1;
       const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
       const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
-      const apDisplay = values.join(' / ');
+      const apDisplay = values.join(' ');
       
       // HP相当計算（2倍体力相当）
       const hpMultiplier = 1 / dmgMultiplier; // 2倍
@@ -1734,7 +1807,7 @@ function DynamicSageSlayer({ ability, attackUpMultiplier, hpUpMultiplier }: { ab
             height={16}
             className="inline mr-1 align-top"
           />
-          超賢者特効<br /> <span className="text-red-500 ml-5"><small>攻撃力
+          超賢者特効<br /> <span className="text-red-500 ml-5"><small>与ダメ
           <span className="w-8 mx-1 px-1 text-center text-xs font-bold">1.2</span>倍 </small></span>
           <br />
           <span className="text-blue-500 ml-5"><small>被ダメ
@@ -1809,7 +1882,7 @@ function DynamicEvaAngelKiller({ ability, attackUpMultiplier, hpUpMultiplier }: 
             height={16}
             className="inline mr-1 align-top"
           />
-          使徒キラー<br /> <span className="text-red-500 ml-5"><small>攻撃力
+          使徒キラー<br /> <span className="text-red-500 ml-5"><small>与ダメ
           <input
             type="number"
             value={apMultiplier}
@@ -1918,7 +1991,7 @@ function DynamicWitchKiller({ ability, attackUpMultiplier, hpUpMultiplier }: { a
             height={16}
             className="inline mr-1 align-top"
           />
-          魔女キラー<br /> <span className="text-red-500 ml-5"><small>攻撃力
+          魔女キラー<br /> <span className="text-red-500 ml-5"><small>与ダメ
           <input
             type="number"
             value={apMultiplier}
@@ -2023,7 +2096,15 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUp
               hasNormalToughness={abilities.some((a: UnitAbility) => a.name === '打たれ強い')}
             />
           ) : ability.isDynamic && ability.name === "超獣特効" ? (
-            <DynamicBehemothSlayer key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} hpUpMultiplier={hpUpMultiplier} />
+            <DynamicBehemothSlayer 
+              key={index} 
+              ability={ability} 
+              attackUpMultiplier={attackUpMultiplier} 
+              hpUpMultiplier={hpUpMultiplier}
+              hasMighty={abilities.some((a: UnitAbility) => a.name === 'めっぽう強い')}
+              mightyApValue={talentMightyApValue}
+              mightyDmgValue={talentMightyDmgValue}
+            />
           ) : ability.isDynamic && ability.name === "超賢者特効" ? (
             <DynamicSageSlayer key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} hpUpMultiplier={hpUpMultiplier} />
           ) : (
@@ -3613,7 +3694,7 @@ function TalentsList({
                       </span>
                     )}
                     <br />
-                    <span className="text-red-500 ml-5"><small>攻撃力
+                    <span className="text-red-500 ml-5"><small>与ダメ
                     <span className="w-8 mx-1 px-1 text-center text-xs font-bold">2.5</span>倍 </small></span>
                     <br />
                     <span className="text-blue-500 ml-5"><small>被ダメ
@@ -3646,7 +3727,7 @@ function TalentsList({
                       </span>
                     )}
                     <br />
-                    <span className="text-red-500 ml-5"><small>攻撃力
+                    <span className="text-red-500 ml-5"><small>与ダメ
                     <span className="w-8 mx-1 px-1 text-center text-xs font-bold">1.2</span>倍 </small></span>
                     <br />
                     <span className="text-blue-500 ml-5"><small>被ダメ

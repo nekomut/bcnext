@@ -600,7 +600,7 @@ export function UnitDisplay({
               </h2>
             );
           })()}
-          <div className="text-xs sm:text-sm text-gray-600 break-words flex items-center gap-2 flex-wrap">
+          <div className="text-xs sm:text-sm text-gray-600 break-words flex items-center gap-1 flex-wrap">
             <div className="flex items-center gap-1">
               <span>Lv</span>
               <input
@@ -661,63 +661,22 @@ export function UnitDisplay({
                 className="border rounded px-0.5 sm:px-1 py-1 w-6 sm:w-16 text-right text-xs sm:text-sm text-gray-900"
               />
             </div>
-            <span className="text-xs text-gray-500">/ <small><b>{maxLevel} + {maxPlusLevel}</b></small></span>
-            <button
-              onClick={() => { 
-                const targetLevel = Math.min(45, maxLevel);
-                setLevel(targetLevel); 
-                setPlusLevel(0);
-                setLevelInput(targetLevel.toString());
-                setPlusLevelInput('0');
-                onParamsChange?.({ level: targetLevel, plusLevel: 0, formId: actualCurrentForm });
-              }}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-1 py-1 rounded text-xs sm:text-sm"
-            >
-              Lv45
-            </button>
-            <button
-              onClick={() => { 
-                const targetLevel = Math.min(50, maxLevel);
-                setLevel(targetLevel); 
-                setPlusLevel(0);
-                setLevelInput(targetLevel.toString());
-                setPlusLevelInput('0');
-                onParamsChange?.({ level: targetLevel, plusLevel: 0, formId: actualCurrentForm });
-              }}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-1 py-1 rounded text-xs sm:text-sm"
-            >
-              Lv50
-            </button>
-            {maxLevel >= 55 && (
+            <span className="text-xs text-gray-500 pr-2">/ <small><b>{maxLevel} + {maxPlusLevel}</b></small></span>
+            {[45, 50, 55, 60].filter(lv => lv <= maxLevel).map(targetLevel => (
               <button
+                key={targetLevel}
                 onClick={() => { 
-                  const targetLevel = Math.min(55, maxLevel);
                   setLevel(targetLevel); 
                   setPlusLevel(0);
                   setLevelInput(targetLevel.toString());
                   setPlusLevelInput('0');
                   onParamsChange?.({ level: targetLevel, plusLevel: 0, formId: actualCurrentForm });
                 }}
-                className="bg-blue-500 hover:bg-blue-600 text-white px-1 py-1 rounded text-xs sm:text-sm"
+                className="bg-blue-500 hover:bg-blue-600 text-white px-1 py-0.5 rounded text-xxs sm:text-sm"
               >
-                Lv55
+                Lv{targetLevel}
               </button>
-            )}
-            {maxLevel >= 60 && (
-              <button
-                onClick={() => { 
-                  const targetLevel = Math.min(60, maxLevel);
-                  setLevel(targetLevel); 
-                  setPlusLevel(0);
-                  setLevelInput(targetLevel.toString());
-                  setPlusLevelInput('0');
-                  onParamsChange?.({ level: targetLevel, plusLevel: 0, formId: actualCurrentForm });
-                }}
-                className="bg-blue-500 hover:bg-blue-600 text-white px-1 py-1 rounded text-xs sm:text-sm"
-              >
-                Lv60
-              </button>
-            )}
+            ))}
             <button
               onClick={() => { 
                 setLevel(maxLevel); 
@@ -726,7 +685,7 @@ export function UnitDisplay({
                 setPlusLevelInput(maxPlusLevel.toString());
                 onParamsChange?.({ level: maxLevel, plusLevel: maxPlusLevel, formId: actualCurrentForm });
               }}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-1 py-1 rounded text-xs sm:text-sm"
+              className="bg-blue-500 hover:bg-blue-600 text-white px-1 py-0.5 rounded text-xxs sm:text-sm"
             >
               Max
             </button>

@@ -3542,14 +3542,25 @@ function TalentsList({
                     {(() => {
                       // めっぽう強いがあるかチェック
                       const hasMighty = unitData.coreData.forms[actualCurrentForm]?.stats[23] && unitData.coreData.forms[actualCurrentForm]?.stats[23] > 0;
-                      if (hasMighty) {
-                        // めっぽう強いがある場合：1.6倍～2.9倍の範囲
-                        const mightyApValue = hasOnlyRelicAkuTalent ? 1.5 : 1.8;
+                      // 超ダメージがあるかチェック
+                      const hasMassiveDamage = unitData.coreData.forms[actualCurrentForm]?.stats[30] && unitData.coreData.forms[actualCurrentForm]?.stats[30] > 0;
+                      if (hasMighty || hasMassiveDamage) {
+                        // めっぽう強いまたは超ダメージがある場合の範囲計算
                         const baseColossusApMultiplier = 1.6;
-                        const enhancedColossusApMultiplier = baseColossusApMultiplier * mightyApValue;
+                        let enhancedColossusApMultiplier = baseColossusApMultiplier;
+                        
+                        if (hasMighty) {
+                          // めっぽう強い: 1.8倍 (古悪限定: 1.5倍)
+                          const mightyApValue = hasOnlyRelicAkuTalent ? 1.5 : 1.8;
+                          enhancedColossusApMultiplier = baseColossusApMultiplier * mightyApValue;
+                        } else if (hasMassiveDamage) {
+                          // 超ダメージ: 4倍 (古悪限定: 3倍)
+                          const massiveApValue = hasOnlyRelicAkuTalent ? 3 : 4;
+                          enhancedColossusApMultiplier = baseColossusApMultiplier * massiveApValue;
+                        }
                         return (
                           <>
-                            <span className="w-auto mx-1 px-1 text-center text-xs font-bold">{baseColossusApMultiplier}~{enhancedColossusApMultiplier.toFixed(2)}</span>倍
+                            <span className="w-auto mx-1 px-1 text-center text-xs font-bold">{baseColossusApMultiplier.toFixed(2)}~{enhancedColossusApMultiplier.toFixed(2)}</span>倍
                           </>
                         );
                       } else {

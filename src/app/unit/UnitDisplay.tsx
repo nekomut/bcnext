@@ -1627,14 +1627,20 @@ function DynamicBehemothSlayer({
   hpUpMultiplier,
   hasMighty,
   mightyApValue,
-  mightyDmgValue
+  mightyDmgValue,
+  hasToughness,
+  toughnessMultiplier,
+  hasNormalToughness
 }: { 
   ability: UnitAbility, 
   attackUpMultiplier: number, 
   hpUpMultiplier: number,
   hasMighty?: boolean,
   mightyApValue?: number,
-  mightyDmgValue?: number
+  mightyDmgValue?: number,
+  hasToughness?: boolean,
+  toughnessMultiplier?: number,
+  hasNormalToughness?: boolean
 }) {
   if (!ability.calculatedStats || !ability.isDynamic) return null;
   
@@ -1645,76 +1651,129 @@ function DynamicBehemothSlayer({
   const minApDisplay = baseApMultiplier; // めっぽう強いがない場合（2.5倍）
   const maxApDisplay = hasMighty && mightyApValue ? baseApMultiplier * mightyApValue : baseApMultiplier; // めっぽう強い適用後（2.5 × mightyApValue倍）
   
-  // 被ダメ表示：基本被ダメ(0.6)からめっぽう強い適用後の被ダメまでの範囲
-  const minDmgDisplay = baseDmgMultiplier; // めっぽう強いがない場合の被ダメ（0.6 = 最小値）
-  const maxDmgDisplay = hasMighty && mightyDmgValue ? baseDmgMultiplier * mightyDmgValue : baseDmgMultiplier; // めっぽう強い適用後の被ダメ（0.6 × mightyDmgValue = 最大値）
+  const actualToughnessMultiplier = hasToughness === true && toughnessMultiplier ? toughnessMultiplier : 1;
+  
+  // 小数点精度の決定：打たれ強い(2桁) vs 超打たれ強い(1桁)
+  const damageDecimals = hasNormalToughness ? 2 : 1;
+  
+  // 被ダメ表示：基本被ダメ(0.6)から打たれ強い適用後の被ダメまでの範囲
+  const baseDmgDisplay = baseDmgMultiplier; // 基本0.6倍
+  const toughnessDmgDisplay = actualToughnessMultiplier < 1 ? baseDmgMultiplier * actualToughnessMultiplier : baseDmgMultiplier; // 打たれ強い適用後（被ダメ軽減なので乗算）
+  const mightyMinDmgDisplay = baseDmgMultiplier; // めっぽう強いがない場合の被ダメ（0.6 = 最小値）
+  const mightyMaxDmgDisplay = hasMighty && mightyDmgValue ? baseDmgMultiplier * mightyDmgValue : baseDmgMultiplier; // めっぽう強い適用後の被ダメ（0.6 × mightyDmgValue = 最大値）
   
   const calculateDamage = () => {
     const stats = ability.calculatedStats!;
     const totalEffectiveMultiplier = hasMighty && mightyApValue ? mightyApValue : 1;
+    const actualToughnessMultiplier = hasToughness === true && toughnessMultiplier ? toughnessMultiplier : 1;
+    
+    const minApMultiplier = baseApMultiplier;
+    const maxApMultiplier = totalEffectiveMultiplier > 1 ? baseApMultiplier * totalEffectiveMultiplier : baseApMultiplier;
     
     if (stats.multihit) {
-      const minHit1 = stats.atk1 ? Math.round(stats.atk1 * attackUpMultiplier * baseApMultiplier) : 0;
-      const minHit2 = stats.atk2 ? Math.round(stats.atk2 * attackUpMultiplier * baseApMultiplier) : 0;
-      const minHit3 = stats.atk3 ? Math.round(stats.atk3 * attackUpMultiplier * baseApMultiplier) : 0;
+      // 最小値計算
+      const hit1Min = stats.atk1 ? Math.round(stats.atk1 * attackUpMultiplier * minApMultiplier) : 0;
+      const hit2Min = stats.atk2 ? Math.round(stats.atk2 * attackUpMultiplier * minApMultiplier) : 0;
+      const hit3Min = stats.atk3 ? Math.round(stats.atk3 * attackUpMultiplier * minApMultiplier) : 0;
       
-      const maxHit1 = stats.atk1 ? Math.round(stats.atk1 * attackUpMultiplier * maxApDisplay) : 0;
-      const maxHit2 = stats.atk2 ? Math.round(stats.atk2 * attackUpMultiplier * maxApDisplay) : 0;
-      const maxHit3 = stats.atk3 ? Math.round(stats.atk3 * attackUpMultiplier * maxApDisplay) : 0;
+      // 最大値計算
+      const hit1Max = stats.atk1 ? Math.round(stats.atk1 * attackUpMultiplier * maxApMultiplier) : 0;
+      const hit2Max = stats.atk2 ? Math.round(stats.atk2 * attackUpMultiplier * maxApMultiplier) : 0;
+      const hit3Max = stats.atk3 ? Math.round(stats.atk3 * attackUpMultiplier * maxApMultiplier) : 0;
       
       const isEnhanced = attackUpMultiplier > 1;
       const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
       
-      if (totalEffectiveMultiplier > 1 && (minApDisplay !== maxApDisplay)) {
-        const rangeValues = [];
-        if (minHit1 > 0) {
-          rangeValues.push(`${minHit1.toLocaleString()}~${maxHit1.toLocaleString()}`);
-        }
-        if (minHit2 > 0) {
-          rangeValues.push(`${minHit2.toLocaleString()}~${maxHit2.toLocaleString()}`);
-        }
-        if (minHit3 > 0) {
-          rangeValues.push(`${minHit3.toLocaleString()}~${maxHit3.toLocaleString()}`);
-        }
-        const apDisplay = `<b style="${colorClass}">${rangeValues.join(' ')}</b>`;
-        
-        // HP相当計算（範囲表示）
-        const minHpEquivalent = Math.round(stats.hp / minDmgDisplay);
-        const maxHpEquivalent = Math.round(stats.hp / maxDmgDisplay);
-        
-        return `${apDisplay}<br /><b>${minHpEquivalent.toLocaleString()}~${maxHpEquivalent.toLocaleString()}</b>`;
-      } else {
-        const values = [minHit1, minHit2, minHit3].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
-        const apDisplay = values.join(' ');
-        
-        // HP相当計算（固定表示）
-        const hpEquivalent = Math.round(stats.hp / baseDmgMultiplier);
-        
-        return `${apDisplay}<br /><b>${hpEquivalent.toLocaleString()}</b>`;
+      const rangeValues = [];
+      if (hit1Min > 0) {
+        rangeValues.push(totalEffectiveMultiplier > 1 && (minApMultiplier !== maxApMultiplier) 
+          ? `${hit1Min.toLocaleString()}~${hit1Max.toLocaleString()}`
+          : `${hit1Min.toLocaleString()}`);
       }
+      if (hit2Min > 0) {
+        rangeValues.push(totalEffectiveMultiplier > 1 && (minApMultiplier !== maxApMultiplier) 
+          ? `${hit2Min.toLocaleString()}~${hit2Max.toLocaleString()}`
+          : `${hit2Min.toLocaleString()}`);
+      }
+      if (hit3Min > 0) {
+        rangeValues.push(totalEffectiveMultiplier > 1 && (minApMultiplier !== maxApMultiplier) 
+          ? `${hit3Min.toLocaleString()}~${hit3Max.toLocaleString()}`
+          : `${hit3Min.toLocaleString()}`);
+      }
+      
+      const apDisplay = `<b style="${colorClass}">${rangeValues.join(' ')}</b>`;
+      
+      // HP相当計算（打たれ強い系とめっぽう強いの倍率も考慮）
+      let minDamageRatio: number, maxDamageRatio: number;
+      
+      if (hasMighty && mightyDmgValue && mightyDmgValue !== 1) {
+        // めっぽう強いがある場合：0.6×mighty ～ 0.6
+        minDamageRatio = baseDmgMultiplier * mightyDmgValue * actualToughnessMultiplier;
+        maxDamageRatio = baseDmgMultiplier;
+      } else if (hasToughness === true && actualToughnessMultiplier < 1) {
+        // 打たれ強いのみの場合：0.6×toughness ～ 0.6
+        minDamageRatio = baseDmgMultiplier * actualToughnessMultiplier;
+        maxDamageRatio = baseDmgMultiplier;
+      } else {
+        // どちらもない場合
+        minDamageRatio = maxDamageRatio = baseDmgMultiplier;
+      }
+      
+      // HP相当値：被ダメが小さいほど体力換算値は大きくなる
+      const maxHpMultiplier = 1 / minDamageRatio; // 最小被ダメ時の最大HP相当値
+      const minHpMultiplier = 1 / maxDamageRatio; // 最大被ダメ時の最小HP相当値
+      const minHpEquivalent = Math.round(stats.hp * hpUpMultiplier * minHpMultiplier);
+      const maxHpEquivalent = Math.round(stats.hp * hpUpMultiplier * maxHpMultiplier);
+      
+      const hasRangeDisplay = (hasMighty && mightyDmgValue && mightyDmgValue !== 1) || (hasToughness === true && actualToughnessMultiplier < 1);
+      const hpDisplay = hasRangeDisplay
+        ? `<b>${minHpEquivalent.toLocaleString()}~${maxHpEquivalent.toLocaleString()}</b>`
+        : `<b>${maxHpEquivalent.toLocaleString()}</b>`;
+      
+      return apDisplay + '<br />' + hpDisplay;
     } else {
-      const minAp = Math.round(stats.ap * attackUpMultiplier * baseApMultiplier);
-      const maxAp = Math.round(stats.ap * attackUpMultiplier * maxApDisplay);
+      // 単発攻撃の場合
+      const minAp = Math.round(stats.ap * attackUpMultiplier * minApMultiplier);
+      const maxAp = Math.round(stats.ap * attackUpMultiplier * maxApMultiplier);
       
       const isEnhanced = attackUpMultiplier > 1;
       const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
       
-      if (totalEffectiveMultiplier > 1 && (minApDisplay !== maxApDisplay)) {
-        const apDisplay = `<b style="${colorClass}">${minAp.toLocaleString()}~${maxAp.toLocaleString()}</b>`;
-        
-        // HP相当計算（範囲表示）
-        const minHpEquivalent = Math.round(stats.hp / minDmgDisplay);
-        const maxHpEquivalent = Math.round(stats.hp / maxDmgDisplay);
-        
-        return `${apDisplay}<br /><b>${minHpEquivalent.toLocaleString()}~${maxHpEquivalent.toLocaleString()}</b>`;
+      const apDisplay = totalEffectiveMultiplier > 1 && (minApMultiplier !== maxApMultiplier)
+        ? `<b style="${colorClass}">${minAp.toLocaleString()}~${maxAp.toLocaleString()}</b>`
+        : `<b style="${colorClass}">${minAp.toLocaleString()}</b>`;
+      
+      // HP相当計算（打たれ強い系とめっぽう強いの倍率も考慮）
+      const actualToughnessMultiplier = hasToughness === true && toughnessMultiplier ? toughnessMultiplier : 1;
+      
+      // めっぽう強いと打たれ強いによる最終被ダメ倍率
+      let minDamageRatio: number, maxDamageRatio: number;
+      
+      if (hasMighty && mightyDmgValue && mightyDmgValue !== 1) {
+        // めっぽう強いがある場合：0.6×mighty ～ 0.6
+        minDamageRatio = baseDmgMultiplier * mightyDmgValue * actualToughnessMultiplier;
+        maxDamageRatio = baseDmgMultiplier;
+      } else if (hasToughness === true && actualToughnessMultiplier < 1) {
+        // 打たれ強いのみの場合：0.6×toughness ～ 0.6
+        minDamageRatio = baseDmgMultiplier * actualToughnessMultiplier;
+        maxDamageRatio = baseDmgMultiplier;
       } else {
-        const apDisplay = `<b style="${colorClass}">${minAp.toLocaleString()}</b>`;
-        
-        // HP相当計算（固定表示）
-        const hpEquivalent = Math.round(stats.hp / baseDmgMultiplier);
-        
-        return `${apDisplay}<br /><b>${hpEquivalent.toLocaleString()}</b>`;
+        // どちらもない場合
+        minDamageRatio = maxDamageRatio = baseDmgMultiplier;
       }
+      
+      // HP相当値：被ダメが小さいほど体力換算値は大きくなる
+      const maxHpMultiplier = 1 / minDamageRatio; // 最小被ダメ時の最大HP相当値
+      const minHpMultiplier = 1 / maxDamageRatio; // 最大被ダメ時の最小HP相当値
+      const minHpEquivalent = Math.round(stats.hp * hpUpMultiplier * minHpMultiplier);
+      const maxHpEquivalent = Math.round(stats.hp * hpUpMultiplier * maxHpMultiplier);
+      
+      const hasRangeDisplay = (hasMighty && mightyDmgValue && mightyDmgValue !== 1) || (hasToughness === true && actualToughnessMultiplier < 1);
+      const hpDisplay = hasRangeDisplay
+        ? `<b>${minHpEquivalent.toLocaleString()}~${maxHpEquivalent.toLocaleString()}</b>`
+        : `<b>${maxHpEquivalent.toLocaleString()}</b>`;
+      
+      return apDisplay + '<br />' + hpDisplay;
     }
   };
   
@@ -1739,13 +1798,28 @@ function DynamicBehemothSlayer({
           )}倍 </small></span>
           <br />
           <span className="text-blue-500 ml-5"><small>被ダメ
-          {(hasMighty && mightyDmgValue && minDmgDisplay !== maxDmgDisplay) ? (
-            <span className="w-auto mx-1 px-1 text-center text-xs font-bold">
-              {maxDmgDisplay.toFixed(2)}~{minDmgDisplay}
-            </span>
-          ) : (
-            <span className="w-8 mx-1 px-1 text-center text-xs font-bold">0.6</span>
-          )}倍 </small></span>
+          {(() => {
+            if (hasToughness === true && actualToughnessMultiplier < 1) {
+              return (
+                <span 
+                  className={`w-auto mx-1 px-1 text-center text-xs font-bold`}
+                  style={!hasNormalToughness ? { color: '#3b82f6' } : {}}
+                >
+                  {baseDmgDisplay.toFixed(1)}~{toughnessDmgDisplay.toFixed(damageDecimals)}
+                </span>
+              );
+            } else if (hasMighty && mightyDmgValue) {
+              return (
+                <span className="w-auto mx-1 px-1 text-center text-xs font-bold">
+                  {mightyMinDmgDisplay.toFixed(1)}~{mightyMaxDmgDisplay.toFixed(2)}
+                </span>
+              );
+            } else {
+              return (
+                <span className="w-8 mx-1 px-1 text-center text-xs font-bold">{baseDmgDisplay.toFixed(1)}</span>
+              );
+            }
+          })()}倍 </small></span>
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
@@ -2104,6 +2178,9 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUp
               hasMighty={abilities.some((a: UnitAbility) => a.name === 'めっぽう強い')}
               mightyApValue={talentMightyApValue}
               mightyDmgValue={talentMightyDmgValue}
+              hasToughness={abilities.some((a: UnitAbility) => a.name === '打たれ強い' || a.name === '超打たれ強い')}
+              toughnessMultiplier={abilities.some((a: UnitAbility) => a.name === '打たれ強い' || a.name === '超打たれ強い') ? talentToughnessValue : 1.0}
+              hasNormalToughness={abilities.some((a: UnitAbility) => a.name === '打たれ強い')}
             />
           ) : ability.isDynamic && ability.name === "超賢者特効" ? (
             <DynamicSageSlayer key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} hpUpMultiplier={hpUpMultiplier} />

@@ -1628,6 +1628,10 @@ function DynamicBehemothSlayer({
   hasMighty,
   mightyApValue,
   mightyDmgValue,
+  hasMassiveDamage,
+  massiveDamageMultiplier,
+  hasExtremeDamage,
+  extremeDamageMultiplier,
   hasToughness,
   toughnessMultiplier,
   hasNormalToughness
@@ -1638,6 +1642,10 @@ function DynamicBehemothSlayer({
   hasMighty?: boolean,
   mightyApValue?: number,
   mightyDmgValue?: number,
+  hasMassiveDamage?: boolean,
+  massiveDamageMultiplier?: number,
+  hasExtremeDamage?: boolean,
+  extremeDamageMultiplier?: number,
   hasToughness?: boolean,
   toughnessMultiplier?: number,
   hasNormalToughness?: boolean
@@ -1647,9 +1655,20 @@ function DynamicBehemothSlayer({
   const baseApMultiplier = 2.5; // 超獣特効の基本与ダメ倍率
   const baseDmgMultiplier = 0.6; // 超獣特効の基本被ダメ倍率
   
-  // めっぽう強いの倍率計算
-  const minApDisplay = baseApMultiplier; // めっぽう強いがない場合（2.5倍）
-  const maxApDisplay = hasMighty && mightyApValue ? baseApMultiplier * mightyApValue : baseApMultiplier; // めっぽう強い適用後（2.5 × mightyApValue倍）
+  // 超ダメージ・極ダメージの最大倍率を計算
+  let maxAdditionalMultiplier = 1;
+  if (hasExtremeDamage && extremeDamageMultiplier) {
+    maxAdditionalMultiplier = extremeDamageMultiplier; // 極ダメージが最優先
+  } else if (hasMassiveDamage && massiveDamageMultiplier) {
+    maxAdditionalMultiplier = massiveDamageMultiplier; // 超ダメージ
+  }
+  
+  // 総合的な倍率計算（超獣特効 × めっぽう強い × 超/極ダメージ）
+  const totalEffectiveMultiplier = (hasMighty && mightyApValue ? mightyApValue : 1) * maxAdditionalMultiplier;
+  
+  // 与ダメ表示用の倍率範囲
+  const minApDisplay = baseApMultiplier; // 基本超獣特効のみ（2.5倍）
+  const maxApDisplay = totalEffectiveMultiplier > 1 ? baseApMultiplier * totalEffectiveMultiplier : baseApMultiplier; // 全効果適用後
   
   const actualToughnessMultiplier = hasToughness === true && toughnessMultiplier ? toughnessMultiplier : 1;
   
@@ -1664,7 +1683,6 @@ function DynamicBehemothSlayer({
   
   const calculateDamage = () => {
     const stats = ability.calculatedStats!;
-    const totalEffectiveMultiplier = hasMighty && mightyApValue ? mightyApValue : 1;
     const actualToughnessMultiplier = hasToughness === true && toughnessMultiplier ? toughnessMultiplier : 1;
     
     const minApMultiplier = baseApMultiplier;
@@ -1789,12 +1807,12 @@ function DynamicBehemothSlayer({
             className="inline mr-1 align-top"
           />
           超獣特効<br /> <span className="text-red-500 ml-5"><small>与ダメ
-          {(hasMighty && mightyApValue && minApDisplay !== maxApDisplay) ? (
+          {totalEffectiveMultiplier > 1 && (minApDisplay !== maxApDisplay) ? (
             <span className="w-auto mx-1 px-1 text-center text-xs font-bold">
-              {minApDisplay}~{maxApDisplay.toFixed(2)}
+              {minApDisplay}~{maxApDisplay.toFixed(1)}
             </span>
           ) : (
-            <span className="w-8 mx-1 px-1 text-center text-xs font-bold">2.5</span>
+            <span className="w-8 mx-1 px-1 text-center text-xs font-bold">{minApDisplay}</span>
           )}倍 </small></span>
           <br />
           <span className="text-blue-500 ml-5"><small>被ダメ
@@ -2178,6 +2196,10 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUp
               hasMighty={abilities.some((a: UnitAbility) => a.name === 'めっぽう強い')}
               mightyApValue={talentMightyApValue}
               mightyDmgValue={talentMightyDmgValue}
+              hasMassiveDamage={abilities.some((a: UnitAbility) => a.name === '超ダメージ')}
+              massiveDamageMultiplier={talentMassiveDamageMultiplier}
+              hasExtremeDamage={abilities.some((a: UnitAbility) => a.name === '極ダメージ')}
+              extremeDamageMultiplier={6}
               hasToughness={abilities.some((a: UnitAbility) => a.name === '打たれ強い' || a.name === '超打たれ強い')}
               toughnessMultiplier={abilities.some((a: UnitAbility) => a.name === '打たれ強い' || a.name === '超打たれ強い') ? talentToughnessValue : 1.0}
               hasNormalToughness={abilities.some((a: UnitAbility) => a.name === '打たれ強い')}

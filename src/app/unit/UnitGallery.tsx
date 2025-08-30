@@ -25,10 +25,23 @@ interface UnitGalleryItem {
   talentTypes: ('normal' | 'ultra')[];
   isLimited: boolean;
   isSeasonal: boolean;
+  isMystic: boolean;
+  isFestival: boolean;
   rarity: string;
 }
 
 // 本能・超本能IDからアイコンキーへのマッピング（UnitDisplayと完全一致）
+// sortKeyから幻・祭フラグを計算
+const isMysticUnit = (sortKey: number): boolean => {
+  const sortGroup = Math.floor(sortKey / 1000);
+  return sortGroup === 4805 || sortGroup === 5990;
+};
+
+const isFestivalUnit = (sortKey: number): boolean => {
+  const sortGroup = Math.floor(sortKey / 1000);
+  return sortGroup === 4802 || sortGroup === 4804 || sortGroup === 5950;
+};
+
 const getTalentIconKey = (talentId: number): string | null => {
   const talentIconMap: { [key: number]: string } = {
     // UnitDisplayから抽出したアイコンマッピング
@@ -107,6 +120,8 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
   const [currentPage, setCurrentPage] = useState(1);
   const [sortOrder, setSortOrder] = useState<'pokedex' | 'id'>('pokedex');
   const [showTalentsOnly, setShowTalentsOnly] = useState(true);
+  const [includeMystic, setIncludeMystic] = useState(false);
+  const [includeFestival, setIncludeFestival] = useState(false);
   const [includeSeasonal, setIncludeSeasonal] = useState(false);
   const [includeLimited, setIncludeLimited] = useState(false);
   const [selectedRarities, setSelectedRarities] = useState<string[]>(['超激レア']);
@@ -191,6 +206,8 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                 talentTypes,
                 isLimited: unitData.isLimited || false,
                 isSeasonal: unitData.isSeasonal || false,
+                isMystic: isMysticUnit(unitData.sortKey),
+                isFestival: isFestivalUnit(unitData.sortKey),
                 rarity: unitData.coreData.rarity.name
               };
             } catch {
@@ -251,6 +268,16 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
       );
     }
     
+    // 幻キャラフィルター（デフォルトは通常ユニットのみ、チェックONで幻キャラも含める）
+    if (!includeMystic) {
+      filtered = filtered.filter(unit => !unit.isMystic);
+    }
+    
+    // 祭キャラフィルター（デフォルトは通常ユニットのみ、チェックONで祭キャラも含める）
+    if (!includeFestival) {
+      filtered = filtered.filter(unit => !unit.isFestival);
+    }
+    
     // 季節キャラフィルター（デフォルトは通常ユニットのみ、チェックONで季節キャラも含める）
     if (!includeSeasonal) {
       filtered = filtered.filter(unit => !unit.isSeasonal);
@@ -279,7 +306,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
     }
     
     return filtered;
-  }, [units, debouncedSearchTerm, sortOrder, showTalentsOnly, includeSeasonal, includeLimited, selectedRarities]);
+  }, [units, debouncedSearchTerm, sortOrder, showTalentsOnly, includeMystic, includeFestival, includeSeasonal, includeLimited, selectedRarities]);
 
   // ページネーション
   const totalPages = Math.ceil(filteredAndSortedUnits.length / itemsPerPage);
@@ -368,7 +395,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
 
           {/* チェックボックスとページネーション */}
           <div className="flex justify-between items-center mb-2">
-            <div className="flex items-center gap-1">
+            <div className="flex items-center gap-1 flex-wrap">
               <label className="flex items-center text-[10px] text-gray-600">
                 <input
                   type="checkbox"
@@ -380,6 +407,32 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                   className="mr-1 scale-75"
                 />
                 本能実装済のみ
+              </label>
+              
+              <label className="flex items-center text-[10px] text-gray-600">
+                <input
+                  type="checkbox"
+                  checked={includeMystic}
+                  onChange={(e) => {
+                    setIncludeMystic(e.target.checked);
+                    setCurrentPage(1);
+                  }}
+                  className="mr-1 scale-75"
+                />
+                幻
+              </label>
+              
+              <label className="flex items-center text-[10px] text-gray-600">
+                <input
+                  type="checkbox"
+                  checked={includeFestival}
+                  onChange={(e) => {
+                    setIncludeFestival(e.target.checked);
+                    setCurrentPage(1);
+                  }}
+                  className="mr-1 scale-75"
+                />
+                祭
               </label>
               
               <label className="flex items-center text-[10px] text-gray-600">

@@ -1219,7 +1219,7 @@ function DynamicSuperToughness({ ability, hpUpMultiplier }: { ability: UnitAbili
             height={16}
             className="inline mr-1 align-top"
           />
-          超打たれ強い <span className="text-red-500"><small>被ダメ
+          超打たれ強い <span className="text-blue-500"><small>被ダメ
           <input
             type="number"
             value={damageMultiplier}

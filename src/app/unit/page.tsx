@@ -1028,12 +1028,12 @@ function UnitPageContent() {
                     <label className="font-bold text-[11px] text-gray-600">レア度・ターゲット</label>
                     <div className="flex gap-0.5 mt-1">
                       {[
-                        { key: '基本', icon: icons.rarityBasic },
+                        { key: '基本', icon: icons.rarityNormal },
                         { key: 'EX', icon: icons.rarityEx },
                         { key: 'レア', icon: icons.rarityRare },
                         { key: '激レア', icon: icons.raritySuperRare },
                         { key: '超激レア', icon: icons.rarityUberRare },
-                        { key: '伝説レア', icon: icons.rarityLegendRare }
+                        { key: '伝説レア', icon: icons.rarityLegendaryRare }
                       ].map(rarity => (
                         <label key={rarity.key} className="cursor-pointer">
                           <input

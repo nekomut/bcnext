@@ -561,12 +561,12 @@ export function UnitDisplay({
               
               const rarityName = unitData.coreData.rarity.name;
               const rarityIconMap: { [key: string]: string } = {
-                '基本': 'rarityBasic',
+                '基本': 'rarityNormal',
                 'EX': 'rarityEx', 
                 'レア': 'rarityRare',
                 '激レア': 'raritySuperRare',
                 '超激レア': 'rarityUberRare',
-                '伝説レア': 'rarityLegendRare'
+                '伝説レア': 'rarityLegendaryRare'
               };
               
               const iconKey = rarityIconMap[rarityName];

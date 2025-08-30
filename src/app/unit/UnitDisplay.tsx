@@ -808,6 +808,8 @@ export function UnitDisplay({
           totalHpMultiplier={baseHpUpMultiplier}
           talentMassiveDamageMultiplier={talentMassiveDamageMultiplier}
           setTalentMassiveDamageMultiplier={setTalentMassiveDamageMultiplier}
+          talentExtremeDamageMultiplier={talentExtremeDamageMultiplier}
+          abilities={abilities}
           hasOnlyRelicAkuTalent={hasOnlyRelicAkuTalent}
           hasOnlyRelicAkuTough={hasOnlyRelicAkuTough}
           hasOnlyRelicAkuMassiveDamage={hasOnlyRelicAkuMassiveDamage}
@@ -1346,14 +1348,22 @@ function DynamicColossusSlayer({
   hpUpMultiplier,
   hasMighty,
   mightyApValue,
-  mightyDmgValue
+  mightyDmgValue,
+  hasMassiveDamage,
+  massiveDamageMultiplier,
+  hasExtremeDamage,
+  extremeDamageMultiplier
 }: { 
   ability: UnitAbility, 
   attackUpMultiplier: number, 
   hpUpMultiplier: number,
   hasMighty?: boolean,
   mightyApValue?: number,
-  mightyDmgValue?: number
+  mightyDmgValue?: number,
+  hasMassiveDamage?: boolean,
+  massiveDamageMultiplier?: number,
+  hasExtremeDamage?: boolean,
+  extremeDamageMultiplier?: number
 }) {
   if (!ability.calculatedStats || !ability.isDynamic) return null;
   
@@ -1362,9 +1372,23 @@ function DynamicColossusSlayer({
     const baseApMultiplier = 1.6;
     const baseDmgMultiplier = 0.7;
     
-    // めっぽう強いがある場合の計算
+    // 超ダメージ・極ダメージ・めっぽう強いの複合計算
+    let effectiveMultiplier = 1;
+    
+    // 超ダメージまたは極ダメージの倍率を適用
+    if (hasMassiveDamage && massiveDamageMultiplier) {
+      effectiveMultiplier = massiveDamageMultiplier;
+    } else if (hasExtremeDamage && extremeDamageMultiplier) {
+      effectiveMultiplier = extremeDamageMultiplier;
+    }
+    
+    // めっぽう強いの倍率も考慮
+    if (hasMighty && mightyApValue) {
+      effectiveMultiplier *= mightyApValue;
+    }
+    
     const minApMultiplier = baseApMultiplier;
-    const maxApMultiplier = hasMighty && mightyApValue ? baseApMultiplier * mightyApValue : baseApMultiplier;
+    const maxApMultiplier = effectiveMultiplier > 1 ? baseApMultiplier * effectiveMultiplier : baseApMultiplier;
     
     const minDmgMultiplier = baseDmgMultiplier;
     const maxDmgMultiplier = hasMighty && mightyDmgValue ? baseDmgMultiplier * mightyDmgValue : baseDmgMultiplier;
@@ -1383,12 +1407,24 @@ function DynamicColossusSlayer({
       const isEnhanced = attackUpMultiplier > 1;
       const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
       
-      const minValues = [hit1Min, hit2Min, hit3Min].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
-      const maxValues = [hit1Max, hit2Max, hit3Max].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
+      const rangeValues = [];
+      if (hit1Min > 0) {
+        rangeValues.push(effectiveMultiplier > 1 && (minApMultiplier !== maxApMultiplier) 
+          ? `<b style="${colorClass}">${hit1Min.toLocaleString()}~${hit1Max.toLocaleString()}</b>`
+          : `<b style="${colorClass}">${hit1Min.toLocaleString()}</b>`);
+      }
+      if (hit2Min > 0) {
+        rangeValues.push(effectiveMultiplier > 1 && (minApMultiplier !== maxApMultiplier) 
+          ? `<b style="${colorClass}">${hit2Min.toLocaleString()}~${hit2Max.toLocaleString()}</b>`
+          : `<b style="${colorClass}">${hit2Min.toLocaleString()}</b>`);
+      }
+      if (hit3Min > 0) {
+        rangeValues.push(effectiveMultiplier > 1 && (minApMultiplier !== maxApMultiplier) 
+          ? `<b style="${colorClass}">${hit3Min.toLocaleString()}~${hit3Max.toLocaleString()}</b>`
+          : `<b style="${colorClass}">${hit3Min.toLocaleString()}</b>`);
+      }
       
-      const apDisplay = hasMighty && (minApMultiplier !== maxApMultiplier) 
-        ? `${minValues.join(' / ')}~${maxValues.join(' / ')}`
-        : minValues.join(' / ');
+      const apDisplay = rangeValues.join(' / ');
       
       // HP相当計算
       const minHpMultiplier = 1 / minDmgMultiplier;
@@ -1409,7 +1445,7 @@ function DynamicColossusSlayer({
       const isEnhanced = attackUpMultiplier > 1;
       const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
       
-      const apDisplay = hasMighty && (minApMultiplier !== maxApMultiplier)
+      const apDisplay = effectiveMultiplier > 1 && (minApMultiplier !== maxApMultiplier)
         ? `<b style="${colorClass}">${minAp.toLocaleString()}~${maxAp.toLocaleString()}</b>`
         : `<b style="${colorClass}">${minAp.toLocaleString()}</b>`;
       
@@ -1431,7 +1467,20 @@ function DynamicColossusSlayer({
   const baseApMultiplier = 1.6;
   const baseDmgMultiplier = 0.7;
   const minApDisplay = baseApMultiplier;
-  const maxApDisplay = hasMighty && mightyApValue ? baseApMultiplier * mightyApValue : baseApMultiplier;
+  
+  // 超ダメージ・極ダメージ・めっぽう強いを考慮した最大倍率
+  let totalEffectiveMultiplier = 1;
+  if (hasMassiveDamage && massiveDamageMultiplier) {
+    totalEffectiveMultiplier = massiveDamageMultiplier;
+  } else if (hasExtremeDamage && extremeDamageMultiplier) {
+    totalEffectiveMultiplier = extremeDamageMultiplier;
+  }
+  
+  if (hasMighty && mightyApValue) {
+    totalEffectiveMultiplier *= mightyApValue;
+  }
+  
+  const maxApDisplay = totalEffectiveMultiplier > 1 ? baseApMultiplier * totalEffectiveMultiplier : baseApMultiplier;
   const minDmgDisplay = baseDmgMultiplier;
   const maxDmgDisplay = hasMighty && mightyDmgValue ? baseDmgMultiplier * mightyDmgValue : baseDmgMultiplier;
   
@@ -1447,7 +1496,7 @@ function DynamicColossusSlayer({
             className="inline mr-1 align-top"
           />
           超生命体特効<br /> <span className="text-red-500 ml-5"><small>攻撃力
-          {hasMighty && (minApDisplay !== maxApDisplay) ? (
+          {totalEffectiveMultiplier > 1 && (minApDisplay !== maxApDisplay) ? (
             <span className="w-auto mx-1 px-1 text-center text-xs font-bold">
               {minApDisplay}~{maxApDisplay.toFixed(2)}
             </span>
@@ -1869,6 +1918,10 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUp
               hasMighty={abilities.some((a: UnitAbility) => a.name === 'めっぽう強い')}
               mightyApValue={talentMightyApValue}
               mightyDmgValue={talentMightyDmgValue}
+              hasMassiveDamage={abilities.some((a: UnitAbility) => a.name === '超ダメージ')}
+              massiveDamageMultiplier={talentMassiveDamageMultiplier}
+              hasExtremeDamage={abilities.some((a: UnitAbility) => a.name === '極ダメージ')}
+              extremeDamageMultiplier={6}
             />
           ) : ability.isDynamic && ability.name === "超獣特効" ? (
             <DynamicBehemothSlayer key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} hpUpMultiplier={hpUpMultiplier} />
@@ -2605,6 +2658,8 @@ function TalentsList({
   totalHpMultiplier,
   talentMassiveDamageMultiplier,
   setTalentMassiveDamageMultiplier,
+  talentExtremeDamageMultiplier,
+  abilities,
   hasOnlyRelicAkuTalent,
   hasOnlyRelicAkuTough,
   hasOnlyRelicAkuMassiveDamage
@@ -2682,6 +2737,8 @@ function TalentsList({
   totalHpMultiplier: number;
   talentMassiveDamageMultiplier: number;
   setTalentMassiveDamageMultiplier: (value: number) => void;
+  talentExtremeDamageMultiplier: number;
+  abilities: UnitAbility[];
   hasOnlyRelicAkuTalent: boolean;
   hasOnlyRelicAkuTough: boolean;
   hasOnlyRelicAkuMassiveDamage: boolean;
@@ -3999,17 +4056,61 @@ function TalentsList({
                       </div>
                     </div>
                   ) : /* 超生命体特効(63)の場合は計算結果を表示 */
-                  talent.id === 63 ? (
-                    <div className="text-right">
-                      <br />
-                      <div className="text-xs">
-                        <small className="text-red-500"><b>攻撃力</b></small> <b className={totalAttackMultiplier > 1 ? "text-red-500" : "text-gray-500"}>{Math.floor(currentAp * 1.6).toLocaleString()}</b>
+                  talent.id === 63 ? (() => {
+                    // 超生命体特効の倍率計算
+                    const baseColossusMultiplier = 1.6;
+                    let maxColossusMultiplier = baseColossusMultiplier;
+                    
+                    // 超ダメージまたは極ダメージがある場合の倍率計算
+                    const hasMassiveDamage = abilities.some((ability: UnitAbility) => ability.name === '超ダメージ');
+                    const hasExtremeDamage = abilities.some((ability: UnitAbility) => ability.name === '極ダメージ');
+                    
+                    if (hasMassiveDamage) {
+                      // 超ダメージ: 基本倍率 × めっぽう強い倍率 × 超ダメージ倍率
+                      const massiveMultiplier = talentMassiveDamageMultiplier;
+                      const mightyMultiplier = abilities.some((ability: UnitAbility) => ability.name === 'めっぽう強い') ? 1.8 : 1;
+                      maxColossusMultiplier = baseColossusMultiplier * massiveMultiplier * mightyMultiplier;
+                    } else if (hasExtremeDamage) {
+                      // 極ダメージ: 基本倍率 × めっぽう強い倍率 × 極ダメージ倍率
+                      const extremeMultiplier = talentExtremeDamageMultiplier;
+                      const mightyMultiplier = abilities.some((ability: UnitAbility) => ability.name === 'めっぽう強い') ? 1.8 : 1;
+                      maxColossusMultiplier = baseColossusMultiplier * extremeMultiplier * mightyMultiplier;
+                    } else {
+                      // めっぽう強いのみの場合
+                      const mightyMultiplier = abilities.some((ability: UnitAbility) => ability.name === 'めっぽう強い') ? 1.8 : 1;
+                      maxColossusMultiplier = baseColossusMultiplier * mightyMultiplier;
+                    }
+                    
+                    const minAp = Math.floor(currentAp * baseColossusMultiplier);
+                    const maxAp = Math.floor(currentAp * maxColossusMultiplier);
+                    
+                    return (
+                      <div className="text-right">
+                        <br />
+                        <div className="text-xs">
+                          {maxColossusMultiplier > baseColossusMultiplier ? (
+                            <>
+                              <small className="text-blue-500">
+                                <b>{baseColossusMultiplier}～{maxColossusMultiplier.toFixed(1)}倍</b>
+                              </small>
+                              <br />
+                              <small className="text-red-500"><b>攻撃力</b></small> <b className={totalAttackMultiplier > 1 ? "text-red-500" : "text-gray-500"}>{minAp.toLocaleString()}～{maxAp.toLocaleString()}</b>
+                            </>
+                          ) : (
+                            <>
+                              <small className="text-blue-500"><b>{baseColossusMultiplier}倍</b></small>
+                              <br />
+                              <small className="text-red-500"><b>攻撃力</b></small> <b className={totalAttackMultiplier > 1 ? "text-red-500" : "text-gray-500"}>{minAp.toLocaleString()}</b>
+                            </>
+                          )}
+                        </div>
+                        <div className="text-xs">
+                          <small className="text-blue-500"><b>体力(換算値)</b></small> <b className={totalHpMultiplier > 1 ? "text-blue-500" : "text-gray-500"}>{Math.floor(currentHp / 0.7).toLocaleString()}</b>
+                        </div>
                       </div>
-                      <div className="text-xs">
-                        <small className="text-blue-500"><b>体力(換算値)</b></small> <b className={totalHpMultiplier > 1 ? "text-blue-500" : "text-gray-500"}>{Math.floor(currentHp / 0.7).toLocaleString()}</b>
-                      </div>
-                    </div>
-                  ) : /* 超獣特効(64)の場合は計算結果を表示 */
+                    );
+                  })()
+                  : /* 超獣特効(64)の場合は計算結果を表示 */
                   talent.id === 64 ? (
                     <div className="text-right">
                       <br />

@@ -239,7 +239,7 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
         <div className="mb-1">
           <button
             onClick={onBackToSearch}
-            className="inline-flex items-center gap-1 px-2 py-1 text-xs font-medium text-gray-700 bg-white border border-gray-300 rounded hover:bg-gray-50 hover:border-gray-400 transition-colors"
+            className="inline-flex items-center gap-1 px-2 py-1 text-xs font-semibold text-gray-700 bg-orange-400 border border-gray-600 rounded hover:bg-orange-500 hover:border-gray-400 transition-colors"
           >
             <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -250,13 +250,13 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
       )}
       
       {/* イベント情報 */}
-      <div className="bg-white rounded-lg shadow-sm border mb-1">
+      <div className="bg-amber-50 rounded shadow-sm border mb-1">
         <div className="p-1">
           <div className="flex items-center gap-2 mb-1">
             <div>
-              <h2 className="text-sm font-bold text-gray-900 flex items-center gap-2">
+              <h2 className="text-[13px] font-bold text-gray-900 flex items-center gap-2">
                 #{stageData.eventId} {stageData.eventName}
-                <span className="inline-flex items-center px-1 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800">
+                <span className="inline-flex items-center px-1 py-0.5 rounded text-xs font-semibold text-orange-600">
                   {stageData.stages.length}ステージ
                 </span>
               </h2>
@@ -283,7 +283,7 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
                   <select
                     value={selectedStageId}
                     onChange={(e) => setSelectedStageId(parseInt(e.target.value))}
-                    className="text-xs text-gray-500 border border-gray-300 rounded px-2 py-1 bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="text-xs text-gray-500 border border-gray-300 rounded px-2 py-0.5 bg-white focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
                   >
                     {stageData.stages.map((stage, index) => (
                       <option key={index} value={index}>
@@ -299,9 +299,9 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
                     <button
                       key={index}
                       onClick={() => setSelectedStageId(index)}
-                      className={`px-2 py-1 text-xs font-medium rounded border transition-colors ${
+                      className={`px-2 py-0.5 text-xs font-medium rounded border transition-colors ${
                         selectedStageId === index
-                          ? 'bg-blue-600 text-white border-blue-600 shadow-sm'
+                          ? 'bg-orange-600 text-white border-orange-600 shadow-sm'
                           : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50 hover:border-gray-400'
                       }`}
                     >
@@ -328,7 +328,7 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
                   // 一時的にURL更新を無効化
                   // updateCrownUrl(newCrown);
                 }}
-                className="text-xs text-gray-500 border border-gray-300 rounded px-2 py-1 bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                className="text-xs text-gray-500 border border-gray-300 rounded px-2 py-1 bg-white focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
               >
                 {(() => {
                   const crownData = selectedStage.crownData || stageData.crownData;
@@ -362,7 +362,7 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
               type="checkbox"
               checked={showDetail}
               onChange={(e) => setShowDetail(e.target.checked)}
-              className="rounded border-gray-300 text-blue-600 focus:ring-blue-500 focus:ring-1"
+              className="rounded border-gray-300 text-orange-600 focus:ring-orange-500 focus:ring-1"
             />
             <span className="text-xs font-medium text-gray-700">詳細表示（フレーム情報含む）</span>
           </label>
@@ -370,7 +370,7 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
       </div>
 
       {/* ステージ詳細情報 */}
-      <div className="bg-white rounded-lg shadow-sm border">
+      <div className="bg-amber-50 rounded shadow-sm border">
         {/* ステージ基本情報 */}
         <StageBasicInfo stage={displayStage} />
 
@@ -413,7 +413,7 @@ function StageBasicInfo({ stage }: { stage: StageInfo }) {
   return (
     <div>
       <div className="p-1">
-        <h3 className="text-sm font-semibold text-gray-900 flex items-center gap-1">
+        <h3 className="text-[13px] font-semibold text-gray-900 flex items-center gap-1">
           {stage.stageId + 1}{': '}{stage.stageName}
         </h3>
       </div>

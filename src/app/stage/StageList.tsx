@@ -65,7 +65,7 @@ export function StageList({ events, searchTerm, onStageSelect, onSpecificStageSe
           </thead>
           <tbody className="divide-y divide-gray-200">
             {events.map((event) => (
-              <tr key={event.eventId} className="hover:bg-gray-50 transition-colors">
+              <tr key={event.eventId} className="hover:bg-amber-100 transition-colors">
                 <td className="px-0.5 py-0 align-top text-right">
                   <button
                     onClick={() => onStageSelect(event.eventId)}

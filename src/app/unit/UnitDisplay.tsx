@@ -2588,7 +2588,7 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUp
                         type="checkbox"
                         checked={attackUpEnabled}
                         onChange={(e) => setAttackUpEnabled(e.target.checked)}
-                        className="mr-1 align-middle"
+                        className="mr-1 align-middle accent-orange-600"
                       />
                       攻撃力アップ
                     </>
@@ -3214,7 +3214,7 @@ function TalentsList({
                         type="checkbox"
                         checked={talentWeakenEnabled}
                         onChange={(e) => setTalentWeakenEnabled(e.target.checked)}
-                        className="mr-1 align-middle"
+                        className="mr-1 align-middle accent-orange-600"
                       />
                     ) : null}
                     {talent.name} ({talent.id})
@@ -3234,7 +3234,7 @@ function TalentsList({
                         type="checkbox"
                         checked={talentFreezeEnabled}
                         onChange={(e) => setTalentFreezeEnabled(e.target.checked)}
-                        className="mr-1 align-middle"
+                        className="mr-1 align-middle accent-orange-600"
                       />
                     ) : null}
                     {talent.name} ({talent.id})
@@ -3252,7 +3252,7 @@ function TalentsList({
                       type="checkbox"
                       checked={talentSlowEnabled}
                       onChange={(e) => setTalentSlowEnabled(e.target.checked)}
-                      className="mr-1 align-middle"
+                      className="mr-1 align-middle accent-orange-600"
                     />
                     {talent.name} ({talent.id})
                   </>
@@ -3399,7 +3399,7 @@ function TalentsList({
                         type="checkbox"
                         checked={talentKnockbackEnabled}
                         onChange={(e) => setTalentKnockbackEnabled(e.target.checked)}
-                        className="mr-1 align-middle"
+                        className="mr-1 align-middle accent-orange-600"
                       />
                     ) : null}
                     {talent.name} ({talent.id})
@@ -3417,7 +3417,7 @@ function TalentsList({
                       type="checkbox"
                       checked={talentAttackUpEnabled}
                       onChange={(e) => setTalentAttackUpEnabled(e.target.checked)}
-                      className="mr-1 align-middle"
+                      className="mr-1 align-middle accent-orange-600"
                     />
                     {talent.name} ({talent.id})
                   </>
@@ -3445,7 +3445,7 @@ function TalentsList({
                       type="checkbox"
                       checked={talentCriticalEnabled}
                       onChange={(e) => setTalentCriticalEnabled(e.target.checked)}
-                      className="mr-1 align-middle"
+                      className="mr-1 align-middle accent-orange-600"
                     />
                     {talent.name} ({talent.id})
                   </>
@@ -3475,7 +3475,7 @@ function TalentsList({
                         type="checkbox"
                         checked={talentBarrierBreakerEnabled}
                         onChange={(e) => setTalentBarrierBreakerEnabled(e.target.checked)}
-                        className="mr-1 align-middle"
+                        className="mr-1 align-middle accent-orange-600"
                       />
                     ) : null}
                     {talent.name} ({talent.id})
@@ -3570,7 +3570,7 @@ function TalentsList({
                       type="checkbox"
                       checked={costReductionEnabled}
                       onChange={(e) => setCostReductionEnabled(e.target.checked)}
-                      className="mr-1 align-middle"
+                      className="mr-1 align-middle accent-orange-600"
                     />
                     {talent.name} ({talent.id})
                   </>
@@ -3587,7 +3587,7 @@ function TalentsList({
                       type="checkbox"
                       checked={rechargeSpeedUpEnabled}
                       onChange={(e) => setRechargeSpeedUpEnabled(e.target.checked)}
-                      className="mr-1 align-middle"
+                      className="mr-1 align-middle accent-orange-600"
                     />
                     {talent.name} ({talent.id})
                   </>
@@ -3604,7 +3604,7 @@ function TalentsList({
                       type="checkbox"
                       checked={moveSpeedUpEnabled}
                       onChange={(e) => setMoveSpeedUpEnabled(e.target.checked)}
-                      className="mr-1 align-middle"
+                      className="mr-1 align-middle accent-orange-600"
                     />
                     {talent.name} ({talent.id})
                   </>
@@ -3643,7 +3643,7 @@ function TalentsList({
                       type="checkbox"
                       checked={baseAttackUpEnabled}
                       onChange={(e) => setBaseAttackUpEnabled(e.target.checked)}
-                      className="mr-1 align-middle"
+                      className="mr-1 align-middle accent-orange-600"
                     />
                     {talent.name} ({talent.id})
                   </>
@@ -3660,7 +3660,7 @@ function TalentsList({
                       type="checkbox"
                       checked={baseHpUpEnabled}
                       onChange={(e) => setBaseHpUpEnabled(e.target.checked)}
-                      className="mr-1 align-middle"
+                      className="mr-1 align-middle accent-orange-600"
                     />
                     {talent.name} ({talent.id})
                   </>
@@ -3853,7 +3853,7 @@ function TalentsList({
                       type="checkbox"
                       checked={attackIntervalReductionEnabled}
                       onChange={(e) => setAttackIntervalReductionEnabled(e.target.checked)}
-                      className="mr-1 align-middle"
+                      className="mr-1 align-middle accent-orange-600"
                     />
                     {talent.name} ({talent.id})
                   </>

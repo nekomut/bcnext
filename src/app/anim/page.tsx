@@ -286,7 +286,7 @@ function AnimationPageContent() {
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2.5">
               <div 
-                className="bg-blue-600 h-2.5 rounded-full transition-all duration-300 ease-out" 
+                className="bg-orange-600 h-2.5 rounded-full transition-all duration-300 ease-out" 
                 style={{ width: `${progressPercentage}%` }}
               ></div>
             </div>
@@ -294,9 +294,9 @@ function AnimationPageContent() {
           
           {/* Animated Loading Dots */}
           <div className="flex space-x-1">
-            <div className="w-2 h-2 bg-blue-600 rounded-full animate-bounce"></div>
-            <div className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-            <div className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+            <div className="w-2 h-2 bg-orange-600 rounded-full animate-bounce"></div>
+            <div className="w-2 h-2 bg-orange-600 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+            <div className="w-2 h-2 bg-orange-600 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
           </div>
         </div>
       </div>
@@ -306,19 +306,19 @@ function AnimationPageContent() {
 
   return (
     <div>
-      <Link href="/" className="font-bold hover:text-green-600 px-1">bcnext</Link>|
-      <Link href="/stage" className="hover:text-green-600 px-1">Stage</Link>|
-      <Link href="/unit" className="hover:text-green-600 px-1">Unit</Link>|
-      <Link href="/seek" className="hover:text-green-600 px-1">Seek</Link>|
-      <Link href="/rare" className="hover:text-green-600 px-1">Rare</Link>|
-      <Link href="/normal" className="hover:text-green-600 px-1">Normal</Link>|
-      <Link href="/event" className="hover:text-green-600 px-1">Event</Link>|
+      <Link href="/" className="font-bold hover:text-orange-600 px-1">bcnext</Link>|
+      <Link href="/stage" className="hover:text-orange-600 px-1">Stage</Link>|
+      <Link href="/unit" className="hover:text-orange-600 px-1">Unit</Link>|
+      <Link href="/seek" className="hover:text-orange-600 px-1">Seek</Link>|
+      <Link href="/rare" className="hover:text-orange-600 px-1">Rare</Link>|
+      <Link href="/normal" className="hover:text-orange-600 px-1">Normal</Link>|
+      <Link href="/event" className="hover:text-orange-600 px-1">Event</Link>|
       <hr />
 
-    <div className="container mx-auto p-2">
+    <div className="container mx-auto p-1">
       
       {/* ユニット検索UI（unitスタイル） */}
-      <div className="p-2">
+      <div className="p-1">
         <div className="mb-1 flex gap-1 items-end">
           {/* 前のUnitボタン - 左端 */}
           {selectedUnit && !isNaN(parseInt(selectedUnit)) && (
@@ -333,7 +333,7 @@ function AnimationPageContent() {
                 }
               }}
               disabled={loading}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-0 py-0.5 rounded text-xs disabled:opacity-50 w-10"
+              className="bg-orange-600 hover:bg-orange-700 text-white px-0 py-0.5 rounded text-xs disabled:opacity-50 w-10"
             >
               ◁
             </button>
@@ -436,7 +436,7 @@ function AnimationPageContent() {
                 }
               }}
               disabled={loading}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-0 py-0.5 rounded text-xs disabled:opacity-50 w-10"
+              className="bg-orange-600 hover:bg-orange-700 text-white px-0 py-0.5 rounded text-xs disabled:opacity-50 w-10"
             >
               ▷
             </button>
@@ -445,11 +445,11 @@ function AnimationPageContent() {
       </div>
       
       {/* コントロール */}
-      <div className="bg-white shadow rounded-lg p-3 mb-3">
+      <div className="bg-amber-50 shadow rounded p-2 mb-1">
         
         {/* Form Tabs（anim0スタイル） */}
         {availableForms.length > 1 && (
-          <div className="flex mb-2.5 justify-between items-start">
+          <div className="flex mb-1 justify-between items-start">
             <div className="flex w-4/5">
               {availableForms.map((form, index) => (
                 <div key={form} className="w-1/4 px-0.5">
@@ -458,9 +458,9 @@ function AnimationPageContent() {
                       setSelectedForm(form);
                       updateURL({ form: form });
                     }}
-                    className={`w-full flex items-center justify-center p-0 rounded transition-colors ${
+                    className={`w-full h-12 flex items-center justify-center rounded transition-colors ${
                       selectedForm === form
-                        ? 'bg-blue-500'
+                        ? 'bg-orange-600'
                         : 'bg-gray-200 hover:bg-gray-300'
                     }`}
                   >
@@ -469,8 +469,8 @@ function AnimationPageContent() {
                       <Image 
                         src={`data:image/png;base64,${formIcons[index]}`}
                         alt={getFormDisplayName(form, selectedUnit)}
-                        width={48}
-                        height={48}
+                        width={60}
+                        height={60}
                         className="rounded object-cover"
                       />
                     )}
@@ -506,7 +506,7 @@ function AnimationPageContent() {
                     }}
                     className={`w-full p-1 rounded-md font-medium font-mono text-xs ${
                       selectedAnimation === anim
-                        ? 'bg-blue-500 hover:bg-blue-600 text-white'
+                        ? 'bg-orange-500 hover:bg-orange-700 text-white'
                         : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
                     }`}
                   >
@@ -555,7 +555,7 @@ function AnimationPageContent() {
                   }}
                   className={`w-full p-1 rounded-md font-medium font-mono text-xs ${
                     selectedAnimation === anim
-                      ? 'bg-blue-500 hover:bg-blue-600 text-white'
+                      ? 'bg-orange-600 hover:bg-orange-600 text-white'
                       : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
                   }`}
                 >
@@ -584,7 +584,7 @@ function AnimationPageContent() {
       </div>
 
       {/* Animation Viewer */}
-      <div className="bg-white shadow rounded-lg p-3">
+      <div className="bg-amber-50 shadow rounded p-1">
         {animationData ? (
           <AnimationViewer
             animationData={animationData}
@@ -611,13 +611,13 @@ function AnimationPageContent() {
 export default function AnimationPage() {
   return (
     <Suspense fallback={
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto p-2">
         <div className="flex flex-col justify-center items-center h-64 space-y-4">
           <div className="text-lg font-mono">読み込み中...</div>
           <div className="flex space-x-1">
-            <div className="w-2 h-2 bg-blue-600 rounded-full animate-bounce"></div>
-            <div className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
-            <div className="w-2 h-2 bg-blue-600 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
+            <div className="w-2 h-2 bg-orange-600 rounded-full animate-bounce"></div>
+            <div className="w-2 h-2 bg-orange-600 rounded-full animate-bounce" style={{ animationDelay: '0.1s' }}></div>
+            <div className="w-2 h-2 bg-orange-600 rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></div>
           </div>
         </div>
       </div>

@@ -52,13 +52,13 @@ export function StageList({ events, searchTerm, onStageSelect, onSpecificStageSe
         <table className="w-full">
           <thead>
             <tr className="bg-amber-200 border-b border-gray-200">
-              <th className="px-0.5 py-0 text-left text-xxs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-0.5 py-0 text-right text-xxs font-semibold text-gray-500 tracking-wider">
                 ID
               </th>
-              <th className="px-0.5 py-0 text-left text-xxs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-0.5 py-0 text-left text-xxs font-semibold text-gray-500 tracking-wider">
                 イベント
               </th>
-              <th className="px-3.5 py-0 text-left text-xxs font-medium text-gray-500 uppercase tracking-wider">
+              <th className="px-3.5 py-0 text-left text-xxs font-semibold text-gray-500 tracking-wider">
                 ステージ
               </th>
             </tr>
@@ -66,10 +66,10 @@ export function StageList({ events, searchTerm, onStageSelect, onSpecificStageSe
           <tbody className="divide-y divide-gray-200">
             {events.map((event) => (
               <tr key={event.eventId} className="hover:bg-gray-50 transition-colors">
-                <td className="px-0.5 py-0 align-top">
+                <td className="px-0.5 py-0 align-top text-right">
                   <button
                     onClick={() => onStageSelect(event.eventId)}
-                    className="inline-flex items-right px-0.5 py-0.5 text-xxs font-mono font-medium text-gray-600 hover:text-orange-800 hover:bg-amber-50 rounded transition-colors"
+                    className="inline-flex items-right px-0.5 py-0.5 text-xs font-mono font-medium text-gray-600 hover:text-orange-800 hover:bg-amber-50 rounded transition-colors"
                   >
                     <small>{event.eventId}</small>
                   </button>
@@ -77,7 +77,7 @@ export function StageList({ events, searchTerm, onStageSelect, onSpecificStageSe
                 <td className="px-0.5 py-0 align-top">
                   <button
                     onClick={() => onStageSelect(event.eventId)}
-                    className="text-left w-full font-medium text-xxs text-gray-600 hover:text-orange-800 hover:underline"
+                    className="text-left w-full font-semibold text-xs text-gray-600 hover:text-orange-800 hover:underline"
                   >
                     <small>{highlightText(event.eventName, searchTerm)}</small>
                   </button>
@@ -89,7 +89,7 @@ export function StageList({ events, searchTerm, onStageSelect, onSpecificStageSe
                       const isMatch = searchTerm && stageName.toLowerCase().includes(searchTerm.toLowerCase());
                       
                       return (
-                        <div key={stageId} className="text-xxs flex items-start gap-1">
+                        <div key={stageId} className="text-xs flex items-start gap-1">
                           <small>
                             <span className="font-mono text-right px-1 py-0 text-gray-500 w-6 inline-block">{stageId}</span>
                             <button
@@ -100,7 +100,7 @@ export function StageList({ events, searchTerm, onStageSelect, onSpecificStageSe
                                   onStageSelect(event.eventId);
                                 }
                               }}
-                              className={`flex-1 text-left text-xxxs hover:underline transition-colors ${
+                              className={`flex-1 text-left text-xxs hover:underline transition-colors ${
                                 isMatch ? 'text-orange-600 font-semibold hover:text-orange-800' : 'text-gray-600 hover:text-orange-800'
                               }`}
                             >

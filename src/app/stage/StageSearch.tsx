@@ -62,14 +62,14 @@ export function StageSearch({ onSearch, loading }: StageSearchProps) {
   };
 
   return (
-    <div className="bg-white rounded shadow-sm border p-1 mb-1">
+    <div className="bg-amber-50 rounded shadow-sm border p-1 mb-1">
       <div className="flex items-center gap-1 mb-1">
         <h2 className="text-[12px] font-semibold text-gray-900">ステージ検索</h2>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-1 mb-1">
         <div className="flex items-center gap-2">
-          <label htmlFor="stage-event-id" className="text-xs font-medium text-gray-700 whitespace-nowrap" style={{flexBasis: '38.2%'}}>イベントID</label>
+          <label htmlFor="stage-event-id" className="text-[11px] font-semibold text-gray-700 whitespace-nowrap" style={{flexBasis: '38.2%'}}>イベントID</label>
           <input
             id="stage-event-id"
             type="text"
@@ -77,13 +77,13 @@ export function StageSearch({ onSearch, loading }: StageSearchProps) {
             onChange={(e) => setEventId(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder="1173"
-            className="px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-transparent text-sm text-gray-500"
+            className="px-2 py-0.5 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-transparent text-xs text-gray-500"
             style={{flexBasis: '61.8%'}}
           />
         </div>
         
         <div className="flex items-center gap-2">
-          <label htmlFor="stage-name" className="text-xs font-medium text-gray-700 whitespace-nowrap" style={{flexBasis: '38.2%'}}>ステージ名</label>
+          <label htmlFor="stage-name" className="text-[11px] font-semibold text-gray-700 whitespace-nowrap" style={{flexBasis: '38.2%'}}>ステージ名</label>
           <input
             id="stage-name"
             type="text"
@@ -91,18 +91,18 @@ export function StageSearch({ onSearch, loading }: StageSearchProps) {
             onChange={(e) => setStageName(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder="メタル"
-            className="px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-transparent text-sm text-gray-500"
+            className="px-2 py-0.5 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-transparent text-xs text-gray-500"
             style={{flexBasis: '61.8%'}}
           />
         </div>
         
         <div className="flex items-center gap-2">
-          <label htmlFor="stage-type" className="text-xs font-medium text-gray-700 whitespace-nowrap" style={{flexBasis: '38.2%'}}>ステージタイプ</label>
+          <label htmlFor="stage-type" className="text-[11px] font-semibold text-gray-700 whitespace-nowrap" style={{flexBasis: '38.2%'}}>ステージタイプ</label>
           <select
             id="stage-type"
             value={typeId}
             onChange={(e) => setTypeId(e.target.value)}
-            className="px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-transparent text-sm text-gray-500"
+            className="px-2 py-0.5 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-transparent text-xs text-gray-500"
             style={{flexBasis: '61.8%'}}
           >
             <option value="0">レジェンドストーリー</option>
@@ -128,12 +128,12 @@ export function StageSearch({ onSearch, loading }: StageSearchProps) {
         </div>
         
         <div className="flex items-center gap-2">
-          <label htmlFor="stage-sort" className="text-xs font-medium text-gray-700 whitespace-nowrap" style={{flexBasis: '38.2%'}}>並び順</label>
+          <label htmlFor="stage-sort" className="text-[11px] font-semibold text-gray-700 whitespace-nowrap" style={{flexBasis: '38.2%'}}>並び順</label>
           <select
             id="stage-sort"
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as 'id-desc' | 'id-asc')}
-            className="px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-transparent text-sm text-gray-500"
+            className="px-2 py-0.5 border border-gray-300 rounded focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-transparent text-xs text-gray-500"
             style={{flexBasis: '61.8%'}}
           >
             <option value="id-desc">ID降順</option>

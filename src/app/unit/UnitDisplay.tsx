@@ -1452,7 +1452,7 @@ function DynamicColossusSlayer({
           : `<b style="${colorClass}">${hit3Min.toLocaleString()}</b>`);
       }
       
-      const apDisplay = rangeValues.join('<br />');
+      const apDisplay = rangeValues.join(' ');
       
       // HP相当計算（打たれ強い系とめっぽう強いの倍率も考慮）
       const actualToughnessMultiplier = hasToughness === true && toughnessMultiplier ? toughnessMultiplier : 1;
@@ -1721,21 +1721,21 @@ function DynamicBehemothSlayer({
       const rangeValues = [];
       if (hit1Min > 0) {
         rangeValues.push(totalEffectiveMultiplier > 1 && (minApMultiplier !== maxApMultiplier) 
-          ? `${hit1Min.toLocaleString()}~${hit1Max.toLocaleString()}`
-          : `${hit1Min.toLocaleString()}`);
+          ? `<b style="${colorClass}">${hit1Min.toLocaleString()}~${hit1Max.toLocaleString()}</b>`
+          : `<b style="${colorClass}">${hit1Min.toLocaleString()}</b>`);
       }
       if (hit2Min > 0) {
         rangeValues.push(totalEffectiveMultiplier > 1 && (minApMultiplier !== maxApMultiplier) 
-          ? `${hit2Min.toLocaleString()}~${hit2Max.toLocaleString()}`
-          : `${hit2Min.toLocaleString()}`);
+          ? `<b style="${colorClass}">${hit2Min.toLocaleString()}~${hit2Max.toLocaleString()}</b>`
+          : `<b style="${colorClass}">${hit2Min.toLocaleString()}</b>`);
       }
       if (hit3Min > 0) {
         rangeValues.push(totalEffectiveMultiplier > 1 && (minApMultiplier !== maxApMultiplier) 
-          ? `${hit3Min.toLocaleString()}~${hit3Max.toLocaleString()}`
-          : `${hit3Min.toLocaleString()}`);
+          ? `<b style="${colorClass}">${hit3Min.toLocaleString()}~${hit3Max.toLocaleString()}</b>`
+          : `<b style="${colorClass}">${hit3Min.toLocaleString()}</b>`);
       }
       
-      const apDisplay = `<b style="${colorClass}">${rangeValues.join('<br />')}</b>`;
+      const apDisplay = rangeValues.join(' ');
       
       // HP相当計算（打たれ強い系とめっぽう強いの倍率も考慮）
       let minDamageRatio: number, maxDamageRatio: number;
@@ -1975,10 +1975,10 @@ function DynamicSageSlayer({
         if (baseHit3 > 0) {
           rangeValues.push(`<b style="${colorClass}">${baseHit3.toLocaleString()}~${enhancedHit3.toLocaleString()}</b>`);
         }
-        apDisplay = rangeValues.join('<br />');
+        apDisplay = rangeValues.join(' ');
       } else {
         const values = [baseHit1, baseHit2, baseHit3].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
-        apDisplay = values.join('<br />');
+        apDisplay = values.join(' ');
       }
       
       // HP相当計算
@@ -2085,7 +2085,7 @@ function DynamicEvaAngelKiller({ ability, attackUpMultiplier, hpUpMultiplier }: 
       const isEnhanced = attackUpMultiplier > 1;
       const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
       const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => `<span style="${colorClass}">${v.toLocaleString()}</span>`);
-      const apDisplay = values.join(' ');
+      const apDisplay = values.join('<br />');
       
       // HP相当計算（statsは既にhpUpMultiplierが適用済みのenhancedStats）
       const hpMultiplier = 1 / dmgMult;
@@ -2194,7 +2194,7 @@ function DynamicWitchKiller({ ability, attackUpMultiplier, hpUpMultiplier }: { a
       const isEnhanced = attackUpMultiplier > 1;
       const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
       const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => `<span style="${colorClass}">${v.toLocaleString()}</span>`);
-      const apDisplay = values.join(' ');
+      const apDisplay = values.join('<br />');
       
       // HP相当計算（statsは既にhpUpMultiplierが適用済みのenhancedStats）
       const hpMultiplier = 1 / dmgMult;

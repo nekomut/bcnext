@@ -1964,9 +1964,18 @@ function DynamicSageSlayer({
       
       let apDisplay: string;
       if (hasRange) {
-        const baseValues = [baseHit1, baseHit2, baseHit3].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
-        const enhancedValues = [enhancedHit1, enhancedHit2, enhancedHit3].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
-        apDisplay = baseValues.join(' ') + '~' + enhancedValues.join(' ');
+        // 各段の範囲表示: min~max min~max min~max の形式
+        const rangeValues: string[] = [];
+        if (baseHit1 > 0) {
+          rangeValues.push(`<b style="${colorClass}">${baseHit1.toLocaleString()}~${enhancedHit1.toLocaleString()}</b>`);
+        }
+        if (baseHit2 > 0) {
+          rangeValues.push(`<b style="${colorClass}">${baseHit2.toLocaleString()}~${enhancedHit2.toLocaleString()}</b>`);
+        }
+        if (baseHit3 > 0) {
+          rangeValues.push(`<b style="${colorClass}">${baseHit3.toLocaleString()}~${enhancedHit3.toLocaleString()}</b>`);
+        }
+        apDisplay = rangeValues.join(' ');
       } else {
         const values = [baseHit1, baseHit2, baseHit3].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
         apDisplay = values.join(' ');

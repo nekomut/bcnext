@@ -158,7 +158,7 @@ export function UnitDisplay({
   const [talentMassiveDamageMultiplier, setTalentMassiveDamageMultiplier] = useState(4);
   
   // 極ダメージの状態
-  const [talentExtremeDamageMultiplier, setTalentExtremeDamageMultiplier] = useState(6);
+  const [talentExtremeDamageMultiplier, setTalentExtremeDamageMultiplier] = useState(5);
 
   // ユニットが変更されたときにフラグを再初期化
   useEffect(() => {
@@ -231,7 +231,7 @@ export function UnitDisplay({
     setTalentMightyDmgValue(0.4);
     setTalentToughnessValue(0.2);
     setTalentMassiveDamageMultiplier(4);
-    setTalentExtremeDamageMultiplier(6);
+    setTalentExtremeDamageMultiplier(5);
     
     // 能力・効果の攻撃力アップをリセット
     setAttackUpEnabled(false);
@@ -511,6 +511,22 @@ export function UnitDisplay({
     recharge: enhancedRecharge
   };
 
+  // ユニットの実際の極ダメージ倍率を取得
+  const getActualExtremeDamageMultiplier = () => {
+    const extremeDamageAbility = tempAbilities.find(ability => ability.name === '極ダメージ');
+    if (extremeDamageAbility && typeof extremeDamageAbility.value === 'string') {
+      // "5.0倍"のような文字列から数値を抽出
+      const match = extremeDamageAbility.value.match(/(\d+(?:\.\d+)?)/);
+      if (match) {
+        return parseFloat(match[1]);
+      }
+    }
+    // デフォルト値として5を使用（現在のユニットデータの一般的な値）
+    return 5;
+  };
+  
+  const actualExtremeDamageMultiplier = getActualExtremeDamageMultiplier();
+
   // 最終的なgetAbilities呼び出し（動的倍率付き）
   const abilities = getAbilities(
     unitData, actualCurrentForm, level, plusLevel, 
@@ -522,7 +538,7 @@ export function UnitDisplay({
     {
       mightyAp: talentMightyApValue,
       massiveDamage: talentMassiveDamageMultiplier,
-      extremeDamage: talentExtremeDamageMultiplier
+      extremeDamage: actualExtremeDamageMultiplier
     }
   );
 
@@ -1852,40 +1868,166 @@ function DynamicBehemothSlayer({
   );
 }
 
-function DynamicSageSlayer({ ability, attackUpMultiplier, hpUpMultiplier }: { ability: UnitAbility, attackUpMultiplier: number, hpUpMultiplier: number }) {
+function DynamicSageSlayer({ 
+  ability, 
+  attackUpMultiplier, 
+  hpUpMultiplier,
+  hasMighty = false,
+  mightyApMultiplier = 1.8,
+  mightyDmgMultiplier = 0.4,
+  hasMassiveDamage = false,
+  massiveDamageMultiplier = 4,
+  hasExtremeDamage = false,
+  extremeDamageMultiplier = 5,
+  hasToughness = false,
+  toughnessMultiplier = 0.2,
+  hasOnlyRelicAkuTalent = false
+}: { 
+  ability: UnitAbility, 
+  attackUpMultiplier: number, 
+  hpUpMultiplier: number,
+  hasMighty?: boolean,
+  mightyApMultiplier?: number,
+  mightyDmgMultiplier?: number,
+  hasMassiveDamage?: boolean,
+  massiveDamageMultiplier?: number,
+  hasExtremeDamage?: boolean,
+  extremeDamageMultiplier?: number,
+  hasToughness?: boolean,
+  toughnessMultiplier?: number,
+  hasOnlyRelicAkuTalent?: boolean
+}) {
   if (!ability.calculatedStats || !ability.isDynamic) return null;
+  
+  // 超賢者特効の基本倍率
+  const baseSageApMultiplier = 1.2;
+  const baseSageDmgMultiplier = 0.5;
+  
+  // 攻撃力倍率計算
+  let finalApMultiplier = baseSageApMultiplier;
+  if (hasExtremeDamage) {
+    finalApMultiplier = baseSageApMultiplier * extremeDamageMultiplier;
+    if (hasMighty) {
+      const mightyApValue = hasOnlyRelicAkuTalent ? 1.5 : mightyApMultiplier;
+      finalApMultiplier = baseSageApMultiplier * extremeDamageMultiplier * mightyApValue;
+    }
+  } else if (hasMassiveDamage) {
+    finalApMultiplier = baseSageApMultiplier * massiveDamageMultiplier;
+    if (hasMighty) {
+      const mightyApValue = hasOnlyRelicAkuTalent ? 1.5 : mightyApMultiplier;
+      finalApMultiplier = baseSageApMultiplier * massiveDamageMultiplier * mightyApValue;
+    }
+  } else if (hasMighty) {
+    const mightyApValue = hasOnlyRelicAkuTalent ? 1.5 : mightyApMultiplier;
+    finalApMultiplier = baseSageApMultiplier * mightyApValue;
+  }
+  
+  // 被ダメ倍率計算
+  let finalDmgMultiplier = baseSageDmgMultiplier;
+  if (hasMighty && hasToughness) {
+    const mightyDmgValue = hasOnlyRelicAkuTalent ? 0.5 : mightyDmgMultiplier;
+    finalDmgMultiplier = baseSageDmgMultiplier * mightyDmgValue * toughnessMultiplier;
+  } else if (hasMighty) {
+    const mightyDmgValue = hasOnlyRelicAkuTalent ? 0.5 : mightyDmgMultiplier;
+    finalDmgMultiplier = baseSageDmgMultiplier * mightyDmgValue;
+  } else if (hasToughness) {
+    finalDmgMultiplier = baseSageDmgMultiplier * toughnessMultiplier;
+  }
   
   const calculateDamage = () => {
     const stats = ability.calculatedStats!;
-    const apMultiplier = 1.2;
-    const dmgMultiplier = 0.5;
+    
+    // 基本攻撃力と強化攻撃力を計算
+    const baseApMultiplier = baseSageApMultiplier;
+    const enhancedApMultiplier = finalApMultiplier;
+    
+    // 基本HP倍率と強化HP倍率を計算
+    const baseHpMultiplier = 1 / baseSageDmgMultiplier;
+    const enhancedHpMultiplier = 1 / finalDmgMultiplier;
     
     if (stats.multihit) {
-      const hit1 = stats.atk1 ? Math.round(stats.atk1 * attackUpMultiplier * apMultiplier) : 0;
-      const hit2 = stats.atk2 ? Math.round(stats.atk2 * attackUpMultiplier * apMultiplier) : 0;
-      const hit3 = stats.atk3 ? Math.round(stats.atk3 * attackUpMultiplier * apMultiplier) : 0;
+      // 基本値計算
+      const baseHit1 = stats.atk1 ? Math.round(stats.atk1 * attackUpMultiplier * baseApMultiplier) : 0;
+      const baseHit2 = stats.atk2 ? Math.round(stats.atk2 * attackUpMultiplier * baseApMultiplier) : 0;
+      const baseHit3 = stats.atk3 ? Math.round(stats.atk3 * attackUpMultiplier * baseApMultiplier) : 0;
+      
+      // 強化値計算
+      const enhancedHit1 = stats.atk1 ? Math.round(stats.atk1 * attackUpMultiplier * enhancedApMultiplier) : 0;
+      const enhancedHit2 = stats.atk2 ? Math.round(stats.atk2 * attackUpMultiplier * enhancedApMultiplier) : 0;
+      const enhancedHit3 = stats.atk3 ? Math.round(stats.atk3 * attackUpMultiplier * enhancedApMultiplier) : 0;
       
       const isEnhanced = attackUpMultiplier > 1;
       const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
-      const values = [hit1, hit2, hit3].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
-      const apDisplay = values.join(' ');
       
-      // HP相当計算（2倍体力相当）
-      const hpMultiplier = 1 / dmgMultiplier; // 2倍
-      const hpEquivalent = Math.round(stats.hp * hpMultiplier);
+      // 範囲表示または固定値表示の判定
+      const hasRange = enhancedApMultiplier > baseApMultiplier;
       
-      return apDisplay + '<br /><b>' + hpEquivalent.toLocaleString() + '</b>';
+      let apDisplay: string;
+      if (hasRange) {
+        const baseValues = [baseHit1, baseHit2, baseHit3].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
+        const enhancedValues = [enhancedHit1, enhancedHit2, enhancedHit3].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
+        apDisplay = baseValues.join(' ') + '~' + enhancedValues.join(' ');
+      } else {
+        const values = [baseHit1, baseHit2, baseHit3].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
+        apDisplay = values.join(' ');
+      }
+      
+      // HP相当計算
+      const baseHpEquivalent = Math.round(stats.hp * baseHpMultiplier);
+      const enhancedHpEquivalent = Math.round(stats.hp * enhancedHpMultiplier);
+      
+      let hpDisplay: string;
+      if (finalDmgMultiplier < baseSageDmgMultiplier) {
+        hpDisplay = `<b>${baseHpEquivalent.toLocaleString()}~${enhancedHpEquivalent.toLocaleString()}</b>`;
+      } else {
+        hpDisplay = `<b>${baseHpEquivalent.toLocaleString()}</b>`;
+      }
+      
+      return apDisplay + '<br />' + hpDisplay;
     } else {
-      const ap = Math.round(stats.ap * attackUpMultiplier * apMultiplier);
+      // 基本値と強化値を計算
+      const baseAp = Math.round(stats.ap * attackUpMultiplier * baseApMultiplier);
+      const enhancedAp = Math.round(stats.ap * attackUpMultiplier * enhancedApMultiplier);
+      
       const isEnhanced = attackUpMultiplier > 1;
       const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
       
-      // HP相当計算（2倍体力相当）
-      const hpMultiplier = 1 / dmgMultiplier; // 2倍  
-      const hpEquivalent = Math.round(stats.hp * hpMultiplier);
+      // 攻撃力表示
+      let apDisplay: string;
+      if (enhancedApMultiplier > baseApMultiplier) {
+        apDisplay = `<b style="${colorClass}">${baseAp.toLocaleString()}~${enhancedAp.toLocaleString()}</b>`;
+      } else {
+        apDisplay = `<b style="${colorClass}">${baseAp.toLocaleString()}</b>`;
+      }
       
-      return `<b style="${colorClass}">${ap.toLocaleString()}</b><br /><b>${hpEquivalent.toLocaleString()}</b>`;
+      // HP相当計算
+      const baseHpEquivalent = Math.round(stats.hp * baseHpMultiplier);
+      const enhancedHpEquivalent = Math.round(stats.hp * enhancedHpMultiplier);
+      
+      let hpDisplay: string;
+      if (finalDmgMultiplier < baseSageDmgMultiplier) {
+        hpDisplay = `<b>${baseHpEquivalent.toLocaleString()}~${enhancedHpEquivalent.toLocaleString()}</b>`;
+      } else {
+        hpDisplay = `<b>${baseHpEquivalent.toLocaleString()}</b>`;
+      }
+      
+      return apDisplay + '<br />' + hpDisplay;
     }
+  };
+  
+  // 表示用の倍率計算
+  const displayApMultipliers = () => {
+    if (finalApMultiplier > baseSageApMultiplier) {
+      return `${baseSageApMultiplier.toFixed(1)}~${finalApMultiplier.toFixed(1)}`;
+    }
+    return baseSageApMultiplier.toFixed(1);
+  };
+  
+  const displayDmgMultipliers = () => {
+    if (finalDmgMultiplier < baseSageDmgMultiplier) {
+      return `${baseSageDmgMultiplier.toFixed(1)}~${finalDmgMultiplier.toFixed(2)}`;
+    }
+    return baseSageDmgMultiplier.toFixed(1);
   };
   
   return (
@@ -1900,10 +2042,10 @@ function DynamicSageSlayer({ ability, attackUpMultiplier, hpUpMultiplier }: { ab
             className="inline mr-1 align-top"
           />
           超賢者特効<br /> <span className="text-red-500 ml-5"><small>与ダメ
-          <span className="w-8 mx-1 px-1 text-center text-xs font-bold">1.2</span>倍 </small></span>
+          <span className="w-auto mx-1 px-1 text-center text-xs font-bold">{displayApMultipliers()}</span>倍 </small></span>
           <br />
-          <span className="text-blue-500 ml-5"><small>被ダメ
-          <span className="w-8 mx-1 px-1 text-center text-xs font-bold">0.5</span>倍 </small></span>
+          <span className="text-blue-500 ml-5"><small>被ダメ{' '}
+          <span className="w-auto mx-1 px-1 text-center text-xs font-bold">{displayDmgMultipliers()}</span>倍 </small></span>
         </div>
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
@@ -2182,7 +2324,7 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUp
               hasMassiveDamage={abilities.some((a: UnitAbility) => a.name === '超ダメージ')}
               massiveDamageMultiplier={talentMassiveDamageMultiplier}
               hasExtremeDamage={abilities.some((a: UnitAbility) => a.name === '極ダメージ')}
-              extremeDamageMultiplier={6}
+              extremeDamageMultiplier={5}
               hasToughness={abilities.some((a: UnitAbility) => a.name === '打たれ強い' || a.name === '超打たれ強い')}
               toughnessMultiplier={abilities.some((a: UnitAbility) => a.name === '打たれ強い' || a.name === '超打たれ強い') ? talentToughnessValue : 1.0}
               hasNormalToughness={abilities.some((a: UnitAbility) => a.name === '打たれ強い')}
@@ -2199,13 +2341,28 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUp
               hasMassiveDamage={abilities.some((a: UnitAbility) => a.name === '超ダメージ')}
               massiveDamageMultiplier={talentMassiveDamageMultiplier}
               hasExtremeDamage={abilities.some((a: UnitAbility) => a.name === '極ダメージ')}
-              extremeDamageMultiplier={6}
+              extremeDamageMultiplier={5}
               hasToughness={abilities.some((a: UnitAbility) => a.name === '打たれ強い' || a.name === '超打たれ強い')}
               toughnessMultiplier={abilities.some((a: UnitAbility) => a.name === '打たれ強い' || a.name === '超打たれ強い') ? talentToughnessValue : 1.0}
               hasNormalToughness={abilities.some((a: UnitAbility) => a.name === '打たれ強い')}
             />
           ) : ability.isDynamic && ability.name === "超賢者特効" ? (
-            <DynamicSageSlayer key={index} ability={ability} attackUpMultiplier={attackUpMultiplier} hpUpMultiplier={hpUpMultiplier} />
+            <DynamicSageSlayer 
+              key={index} 
+              ability={ability} 
+              attackUpMultiplier={attackUpMultiplier} 
+              hpUpMultiplier={hpUpMultiplier}
+              hasMighty={abilities.some((a: UnitAbility) => a.name === 'めっぽう強い')}
+              mightyApMultiplier={talentMightyApValue}
+              mightyDmgMultiplier={talentMightyDmgValue}
+              hasMassiveDamage={abilities.some((a: UnitAbility) => a.name === '超ダメージ')}
+              massiveDamageMultiplier={talentMassiveDamageMultiplier}
+              hasExtremeDamage={abilities.some((a: UnitAbility) => a.name === '極ダメージ')}
+              extremeDamageMultiplier={5}
+              hasToughness={abilities.some((a: UnitAbility) => a.name === '打たれ強い' || a.name === '超打たれ強い')}
+              toughnessMultiplier={talentToughnessValue}
+              hasOnlyRelicAkuTalent={hasOnlyRelicAkuTalent}
+            />
           ) : (
             <div key={index} className="bg-gray-50 p-1.5 rounded">
               <div className="flex justify-between items-center gap-2">
@@ -3757,14 +3914,32 @@ function TalentsList({
                     {(() => {
                       // めっぽう強いがあるかチェック
                       const hasMighty = unitData.coreData.forms[actualCurrentForm]?.stats[23] && unitData.coreData.forms[actualCurrentForm]?.stats[23] > 0;
-                      if (hasMighty) {
-                        // めっぽう強いの被ダメ倍率を計算
-                        const mightyDmgValue = hasOnlyRelicAkuTalent ? 0.5 : 0.4;
+                      // 打たれ強いがあるかチェック
+                      const hasToughness = unitData.coreData.forms[actualCurrentForm]?.stats[29] && unitData.coreData.forms[actualCurrentForm]?.stats[29] > 0;
+                      
+                      if (hasMighty || hasToughness) {
+                        // めっぽう強いまたは打たれ強いがある場合の範囲計算
                         const baseColossusMultiplier = 0.7;
-                        const enhancedColossusMultiplier = baseColossusMultiplier * mightyDmgValue;
+                        let enhancedColossusMultiplier = baseColossusMultiplier;
+                        
+                        if (hasMighty && hasToughness) {
+                          // 両方ある場合：めっぽう強い × 打たれ強い
+                          const mightyDmgValue = hasOnlyRelicAkuTalent ? 0.5 : 0.4;
+                          const toughnessMultiplier = 0.2;
+                          enhancedColossusMultiplier = baseColossusMultiplier * mightyDmgValue * toughnessMultiplier;
+                        } else if (hasMighty) {
+                          // めっぽう強いのみ
+                          const mightyDmgValue = hasOnlyRelicAkuTalent ? 0.5 : 0.4;
+                          enhancedColossusMultiplier = baseColossusMultiplier * mightyDmgValue;
+                        } else if (hasToughness) {
+                          // 打たれ強いのみ
+                          const toughnessMultiplier = 0.2;
+                          enhancedColossusMultiplier = baseColossusMultiplier * toughnessMultiplier;
+                        }
+                        
                         return (
                           <>
-                            <span className="w-8 mx-1 px-1 text-center text-xs font-bold">{baseColossusMultiplier.toFixed(2)}~{enhancedColossusMultiplier.toFixed(2)}</span>倍
+                            <span className="w-8 mx-1 px-1 text-center text-xs font-bold">{baseColossusMultiplier.toFixed(1)}~{enhancedColossusMultiplier.toFixed(2)}</span>倍
                           </>
                         );
                       } else {
@@ -3793,21 +3968,89 @@ function TalentsList({
                       </span>
                     )}
                     <br />
-                    <span className="text-red-500 ml-5"><small>与ダメ
-                    <span className="w-8 mx-1 px-1 text-center text-xs font-bold">2.5</span>倍 </small></span>
+                    <span className="text-red-500 ml-5"><small>攻撃力{' '}
+                    {(() => {
+                      // めっぽう強いがあるかチェック
+                      const hasMighty = unitData.coreData.forms[actualCurrentForm]?.stats[23] && unitData.coreData.forms[actualCurrentForm]?.stats[23] > 0;
+                      // 超ダメージがあるかチェック
+                      const hasMassiveDamage = unitData.coreData.forms[actualCurrentForm]?.stats[30] && unitData.coreData.forms[actualCurrentForm]?.stats[30] > 0;
+                      // 極ダメージがあるかチェック
+                      const hasExtremeDamage = unitData.coreData.forms[actualCurrentForm]?.stats[81] && unitData.coreData.forms[actualCurrentForm]?.stats[81] > 0;
+                      
+                      if (hasMighty || hasMassiveDamage || hasExtremeDamage) {
+                        // めっぽう強い、超ダメージ、または極ダメージがある場合の範囲計算
+                        const baseBehemothApMultiplier = 2.5;
+                        let enhancedBehemothApMultiplier = baseBehemothApMultiplier;
+                        
+                        if (hasExtremeDamage) {
+                          // 極ダメージ: 5倍
+                          const extremeApValue = 5;
+                          enhancedBehemothApMultiplier = baseBehemothApMultiplier * extremeApValue;
+                          if (hasMighty) {
+                            // めっぽう強いと極ダメージの組み合わせ
+                            const mightyApValue = hasOnlyRelicAkuTalent ? 1.5 : 1.8;
+                            enhancedBehemothApMultiplier = baseBehemothApMultiplier * extremeApValue * mightyApValue;
+                          }
+                        } else if (hasMassiveDamage) {
+                          // 超ダメージ: 4倍
+                          const massiveApValue = 4;
+                          enhancedBehemothApMultiplier = baseBehemothApMultiplier * massiveApValue;
+                          if (hasMighty) {
+                            // めっぽう強いと超ダメージの組み合わせ
+                            const mightyApValue = hasOnlyRelicAkuTalent ? 1.5 : 1.8;
+                            enhancedBehemothApMultiplier = baseBehemothApMultiplier * massiveApValue * mightyApValue;
+                          }
+                        } else if (hasMighty) {
+                          // めっぽう強いのみ
+                          const mightyApValue = hasOnlyRelicAkuTalent ? 1.5 : 1.8;
+                          enhancedBehemothApMultiplier = baseBehemothApMultiplier * mightyApValue;
+                        }
+                        
+                        return (
+                          <>
+                            <span className="w-auto mx-1 px-1 text-center text-xs font-bold">{baseBehemothApMultiplier.toFixed(1)}~{enhancedBehemothApMultiplier.toFixed(1)}</span>倍
+                          </>
+                        );
+                      } else {
+                        return (
+                          <>
+                            <span className="w-8 mx-1 px-1 text-center text-xs font-bold">2.5</span>倍
+                          </>
+                        );
+                      }
+                    })()}
+                    </small></span>
                     <br />
                     <span className="text-blue-500 ml-5"><small>被ダメ{' '}
                     {(() => {
+                      // めっぽう強いがあるかチェック
+                      const hasMighty = unitData.coreData.forms[actualCurrentForm]?.stats[23] && unitData.coreData.forms[actualCurrentForm]?.stats[23] > 0;
                       // 打たれ強いがあるかチェック
                       const hasToughness = unitData.coreData.forms[actualCurrentForm]?.stats[29] && unitData.coreData.forms[actualCurrentForm]?.stats[29] > 0;
-                      if (hasToughness) {
-                        // 打たれ強いがある場合の範囲計算
+                      
+                      if (hasMighty || hasToughness) {
+                        // めっぽう強いまたは打たれ強いがある場合の範囲計算
                         const baseBehemothMultiplier = 0.6;
-                        const toughnessMultiplier = 0.2; // 打たれ強いの被ダメ倍率
-                        const enhancedBehemothMultiplier = baseBehemothMultiplier * toughnessMultiplier;
+                        let enhancedBehemothMultiplier = baseBehemothMultiplier;
+                        
+                        if (hasMighty && hasToughness) {
+                          // 両方ある場合：めっぽう強い × 打たれ強い
+                          const mightyDmgValue = hasOnlyRelicAkuTalent ? 0.5 : 0.4;
+                          const toughnessMultiplier = 0.2;
+                          enhancedBehemothMultiplier = baseBehemothMultiplier * mightyDmgValue * toughnessMultiplier;
+                        } else if (hasMighty) {
+                          // めっぽう強いのみ
+                          const mightyDmgValue = hasOnlyRelicAkuTalent ? 0.5 : 0.4;
+                          enhancedBehemothMultiplier = baseBehemothMultiplier * mightyDmgValue;
+                        } else if (hasToughness) {
+                          // 打たれ強いのみ
+                          const toughnessMultiplier = 0.2;
+                          enhancedBehemothMultiplier = baseBehemothMultiplier * toughnessMultiplier;
+                        }
+                        
                         return (
                           <>
-                            <span className="w-8 mx-1 px-1 text-center text-xs font-bold">{enhancedBehemothMultiplier.toFixed(2)}~{baseBehemothMultiplier.toFixed(1)}</span>倍
+                            <span className="w-8 mx-1 px-1 text-center text-xs font-bold">{baseBehemothMultiplier.toFixed(1)}~{enhancedBehemothMultiplier.toFixed(2)}</span>倍
                           </>
                         );
                       } else {
@@ -3847,11 +4090,105 @@ function TalentsList({
                       </span>
                     )}
                     <br />
-                    <span className="text-red-500 ml-5"><small>与ダメ
-                    <span className="w-8 mx-1 px-1 text-center text-xs font-bold">1.2</span>倍 </small></span>
+                    <span className="text-red-500 ml-5"><small>攻撃力{' '}
+                    {(() => {
+                      // めっぽう強いがあるかチェック
+                      const hasMighty = unitData.coreData.forms[actualCurrentForm]?.stats[23] && unitData.coreData.forms[actualCurrentForm]?.stats[23] > 0;
+                      // 超ダメージがあるかチェック
+                      const hasMassiveDamage = unitData.coreData.forms[actualCurrentForm]?.stats[30] && unitData.coreData.forms[actualCurrentForm]?.stats[30] > 0;
+                      // 極ダメージがあるかチェック
+                      const hasExtremeDamage = unitData.coreData.forms[actualCurrentForm]?.stats[81] && unitData.coreData.forms[actualCurrentForm]?.stats[81] > 0;
+                      
+                      if (hasMighty || hasMassiveDamage || hasExtremeDamage) {
+                        // めっぽう強い、超ダメージ、または極ダメージがある場合の範囲計算
+                        const baseSageApMultiplier = 1.2;
+                        let enhancedSageApMultiplier = baseSageApMultiplier;
+                        
+                        if (hasExtremeDamage) {
+                          // 極ダメージ: 5倍
+                          const extremeApValue = 5;
+                          enhancedSageApMultiplier = baseSageApMultiplier * extremeApValue;
+                          if (hasMighty) {
+                            // めっぽう強いと極ダメージの組み合わせ
+                            const mightyApValue = hasOnlyRelicAkuTalent ? 1.5 : 1.8;
+                            enhancedSageApMultiplier = baseSageApMultiplier * extremeApValue * mightyApValue;
+                          }
+                        } else if (hasMassiveDamage) {
+                          // 超ダメージ: 4倍
+                          const massiveApValue = 4;
+                          enhancedSageApMultiplier = baseSageApMultiplier * massiveApValue;
+                          if (hasMighty) {
+                            // めっぽう強いと超ダメージの組み合わせ
+                            const mightyApValue = hasOnlyRelicAkuTalent ? 1.5 : 1.8;
+                            enhancedSageApMultiplier = baseSageApMultiplier * massiveApValue * mightyApValue;
+                          }
+                        } else if (hasMighty) {
+                          // めっぽう強いのみ
+                          const mightyApValue = hasOnlyRelicAkuTalent ? 1.5 : 1.8;
+                          enhancedSageApMultiplier = baseSageApMultiplier * mightyApValue;
+                        }
+                        
+                        return (
+                          <>
+                            <span className="w-auto mx-1 px-1 text-center text-xs font-bold">{baseSageApMultiplier.toFixed(1)}~{enhancedSageApMultiplier.toFixed(1)}</span>倍
+                          </>
+                        );
+                      } else {
+                        return (
+                          <>
+                            <span className="w-8 mx-1 px-1 text-center text-xs font-bold">1.2</span>倍
+                          </>
+                        );
+                      }
+                    })()}
+                    </small></span>
                     <br />
-                    <span className="text-blue-500 ml-5"><small>被ダメ
-                    <span className="w-8 mx-1 px-1 text-center text-xs font-bold">0.5</span>倍 </small></span>
+                    <span className="text-blue-500 ml-5">
+                      <small>被ダメ
+                        {(() => {
+                          // めっぽう強いがあるかチェック
+                          const hasMighty = unitData.coreData.forms[actualCurrentForm]?.stats[23] && unitData.coreData.forms[actualCurrentForm]?.stats[23] > 0;
+                          // 打たれ強いの能力を持っているかチェック
+                          const hasToughness = unitData.coreData.forms[actualCurrentForm]?.stats[29] && unitData.coreData.forms[actualCurrentForm]?.stats[29] > 0;
+                          
+                          if (hasMighty || hasToughness) {
+                            // めっぽう強いまたは打たれ強いがある場合の範囲計算
+                            const baseDamageMultiplier = 0.5;
+                            let enhancedDamageMultiplier = baseDamageMultiplier;
+                            
+                            if (hasMighty && hasToughness) {
+                              // 両方ある場合：めっぽう強い × 打たれ強い
+                              const mightyDmgValue = hasOnlyRelicAkuTalent ? 0.5 : 0.4;
+                              const toughnessMultiplier: number = talentToughnessValue;
+                              enhancedDamageMultiplier = baseDamageMultiplier * mightyDmgValue * toughnessMultiplier;
+                            } else if (hasMighty) {
+                              // めっぽう強いのみ
+                              const mightyDmgValue = hasOnlyRelicAkuTalent ? 0.5 : 0.4;
+                              enhancedDamageMultiplier = baseDamageMultiplier * mightyDmgValue;
+                            } else if (hasToughness) {
+                              // 打たれ強いのみ
+                              const toughnessMultiplier: number = talentToughnessValue;
+                              enhancedDamageMultiplier = baseDamageMultiplier * toughnessMultiplier;
+                            }
+                            
+                            return (
+                              <>
+                                <span className="w-8 mx-1 px-1 text-center text-xs font-bold">
+                                  {baseDamageMultiplier.toFixed(1)}~{enhancedDamageMultiplier.toFixed(2)}
+                                </span>倍
+                              </>
+                            );
+                          } else {
+                            // 打たれ強いがない場合：基本の0.5倍で表示
+                            return (
+                              <>
+                                <span className="w-8 mx-1 px-1 text-center text-xs font-bold">0.5</span>倍
+                              </>
+                            );
+                          }
+                        })()}
+                      </small>
+                    </span>
                   </>
                 ) : talent.id === 67 ? (
                   <>
@@ -4458,19 +4795,36 @@ function TalentsList({
                         </div>
                         <div className="text-xs">
                           {(() => {
-                            // 基本能力のめっぽう強いがあるかチェック（stats[23]）
+                            // 基本能力のめっぽう強いと打たれ強いがあるかチェック
                             const currentForm = unitData.coreData.forms[actualCurrentForm];
                             const hasMighty = currentForm?.stats[23] && currentForm?.stats[23] > 0;
-                            if (hasMighty) {
-                              // めっぽう強いがある場合：範囲で表示（最小値~最大値）
-                              const mightyDmgValue = hasOnlyRelicAkuTalent ? 0.5 : 0.4;
-                              const baseColossusMultiplier = 0.7;
-                              const enhancedColossusMultiplier = baseColossusMultiplier * mightyDmgValue;
+                            const hasToughness = currentForm?.stats[29] && currentForm?.stats[29] > 0;
+                            
+                            const baseColossusMultiplier = 0.7;
+                            
+                            if (hasMighty || hasToughness) {
+                              // めっぽう強いまたは打たれ強いがある場合：範囲で表示
+                              let enhancedMultiplier = baseColossusMultiplier;
+                              
+                              if (hasMighty && hasToughness) {
+                                // 両方ある場合：めっぽう強い × 打たれ強い
+                                const mightyDmgValue = hasOnlyRelicAkuTalent ? 0.5 : 0.4;
+                                const toughnessMultiplier = 0.2;
+                                enhancedMultiplier = baseColossusMultiplier * mightyDmgValue * toughnessMultiplier;
+                              } else if (hasMighty) {
+                                // めっぽう強いのみ
+                                const mightyDmgValue = hasOnlyRelicAkuTalent ? 0.5 : 0.4;
+                                enhancedMultiplier = baseColossusMultiplier * mightyDmgValue;
+                              } else if (hasToughness) {
+                                // 打たれ強いのみ
+                                const toughnessMultiplier = 0.2;
+                                enhancedMultiplier = baseColossusMultiplier * toughnessMultiplier;
+                              }
                               
                               // 最小体力(換算値)：基本の0.7で割った値
                               const minHp = Math.floor(currentHp / baseColossusMultiplier);
                               // 最大体力(換算値)：強化された被ダメ倍率で割った値
-                              const maxHp = Math.floor(currentHp / enhancedColossusMultiplier);
+                              const maxHp = Math.floor(currentHp / enhancedMultiplier);
                               
                               return (
                                 <>
@@ -4478,7 +4832,7 @@ function TalentsList({
                                 </>
                               );
                             } else {
-                              // めっぽう強いがない場合：基本の0.7で割る
+                              // めっぽう強いも打たれ強いもない場合：基本の0.7で割る
                               return (
                                 <>
                                   <small className="text-blue-500"><b>体力(換算値)</b></small> <b className={totalHpMultiplier > 1 ? "text-blue-500" : "text-gray-500"}>{Math.floor(currentHp / 0.7).toLocaleString()}</b>
@@ -4492,31 +4846,79 @@ function TalentsList({
                   })()
                   : /* 超獣特効(64)の場合は計算結果を表示 */
                   talent.id === 64 ? (() => {
-                    // 超獣特効の攻撃力計算（固定2.5倍）
-                    const ap = Math.floor(currentAp * 2.5);
+                    // 超獣特効の倍率計算
+                    const baseBehemothMultiplier = 2.5;
+                    let maxBehemothMultiplier = baseBehemothMultiplier;
+                    
+                    // 超ダメージまたは極ダメージがある場合の倍率計算
+                    const hasMassiveDamage = abilities.some((ability: UnitAbility) => ability.name === '超ダメージ');
+                    const hasExtremeDamage = abilities.some((ability: UnitAbility) => ability.name === '極ダメージ');
+                    
+                    if (hasMassiveDamage) {
+                      // 超ダメージ: 基本倍率 × めっぽう強い倍率 × 超ダメージ倍率
+                      const massiveMultiplier = talentMassiveDamageMultiplier;
+                      const mightyMultiplier = abilities.some((ability: UnitAbility) => ability.name === 'めっぽう強い') ? 1.8 : 1;
+                      maxBehemothMultiplier = baseBehemothMultiplier * massiveMultiplier * mightyMultiplier;
+                    } else if (hasExtremeDamage) {
+                      // 極ダメージ: 基本倍率 × めっぽう強い倍率 × 極ダメージ倍率
+                      const extremeMultiplier = talentExtremeDamageMultiplier;
+                      const mightyMultiplier = abilities.some((ability: UnitAbility) => ability.name === 'めっぽう強い') ? 1.8 : 1;
+                      maxBehemothMultiplier = baseBehemothMultiplier * extremeMultiplier * mightyMultiplier;
+                    } else {
+                      // めっぽう強いのみの場合
+                      const mightyMultiplier = abilities.some((ability: UnitAbility) => ability.name === 'めっぽう強い') ? 1.8 : 1;
+                      maxBehemothMultiplier = baseBehemothMultiplier * mightyMultiplier;
+                    }
+                    
+                    const minAp = Math.floor(currentAp * baseBehemothMultiplier);
+                    const maxAp = Math.floor(currentAp * maxBehemothMultiplier);
                     
                     return (
                       <div className="text-right">
                         <br />
                         <div className="text-xs">
-                          <small className="text-red-500"><b>攻撃力</b></small> <b className={totalAttackMultiplier > 1 ? "text-red-500" : "text-gray-500"}>{ap.toLocaleString()}</b>
+                          {maxBehemothMultiplier > baseBehemothMultiplier ? (
+                            <>
+                              <small className="text-red-500"><b>攻撃力</b></small> <b className={totalAttackMultiplier > 1 ? "text-red-500" : "text-gray-500"}>{minAp.toLocaleString()}～{maxAp.toLocaleString()}</b>
+                            </>
+                          ) : (
+                            <>
+                              <small className="text-red-500"><b>攻撃力</b></small> <b className={totalAttackMultiplier > 1 ? "text-red-500" : "text-gray-500"}>{minAp.toLocaleString()}</b>
+                            </>
+                          )}
                         </div>
                         <div className="text-xs">
                           {(() => {
-                            // 基本能力の打たれ強いがあるかチェック（stats[29]）
+                            // 基本能力のめっぽう強いと打たれ強いがあるかチェック
                             const currentForm = unitData.coreData.forms[actualCurrentForm];
+                            const hasMighty = currentForm?.stats[23] && currentForm?.stats[23] > 0;
                             const hasToughness = currentForm?.stats[29] && currentForm?.stats[29] > 0;
                             
-                            if (hasToughness) {
-                              // 打たれ強いがある場合：範囲で表示（最小値~最大値）
-                              const toughnessMultiplier = 0.2; // 打たれ強いの被ダメ倍率
-                              const baseBehemothMultiplier = 0.6;
-                              const enhancedBehemothMultiplier = baseBehemothMultiplier * toughnessMultiplier;
+                            const baseBehemothDmgMultiplier = 0.6;
+                            
+                            if (hasMighty || hasToughness) {
+                              // めっぽう強いまたは打たれ強いがある場合：範囲で表示
+                              let enhancedMultiplier = baseBehemothDmgMultiplier;
+                              
+                              if (hasMighty && hasToughness) {
+                                // 両方ある場合：めっぽう強い × 打たれ強い
+                                const mightyDmgValue = hasOnlyRelicAkuTalent ? 0.5 : 0.4;
+                                const toughnessMultiplier = 0.2;
+                                enhancedMultiplier = baseBehemothDmgMultiplier * mightyDmgValue * toughnessMultiplier;
+                              } else if (hasMighty) {
+                                // めっぽう強いのみ
+                                const mightyDmgValue = hasOnlyRelicAkuTalent ? 0.5 : 0.4;
+                                enhancedMultiplier = baseBehemothDmgMultiplier * mightyDmgValue;
+                              } else if (hasToughness) {
+                                // 打たれ強いのみ
+                                const toughnessMultiplier = 0.2;
+                                enhancedMultiplier = baseBehemothDmgMultiplier * toughnessMultiplier;
+                              }
                               
                               // 最小体力(換算値)：基本の0.6で割った値
-                              const minHp = Math.floor(currentHp / baseBehemothMultiplier);
+                              const minHp = Math.floor(currentHp / baseBehemothDmgMultiplier);
                               // 最大体力(換算値)：強化された被ダメ倍率で割った値
-                              const maxHp = Math.floor(currentHp / enhancedBehemothMultiplier);
+                              const maxHp = Math.floor(currentHp / enhancedMultiplier);
                               
                               return (
                                 <>
@@ -4524,7 +4926,7 @@ function TalentsList({
                                 </>
                               );
                             } else {
-                              // 打たれ強いがない場合：基本の0.6で割る
+                              // めっぽう強いも打たれ強いもない場合：基本の0.6で割る
                               return (
                                 <>
                                   <small className="text-blue-500"><b>体力(換算値)</b></small> <b className={totalHpMultiplier > 1 ? "text-blue-500" : "text-gray-500"}>{Math.floor(currentHp / 0.6).toLocaleString()}</b>
@@ -4536,17 +4938,99 @@ function TalentsList({
                       </div>
                     );
                   })() : /* 超賢者特効(66)の場合は計算結果を表示 */
-                  talent.id === 66 ? (
-                    <div className="text-right">
-                      <br />
-                      <div className="text-xs">
-                        <small className="text-red-500"><b>攻撃力</b></small> <b className={totalAttackMultiplier > 1 ? "text-red-500" : "text-gray-500"}>{Math.floor(currentAp * 1.2).toLocaleString()}</b>
+                  talent.id === 66 ? (() => {
+                    // 超賢者特効の倍率計算
+                    const baseSageMultiplier = 1.2;
+                    let maxSageMultiplier = baseSageMultiplier;
+                    
+                    // 超ダメージまたは極ダメージがある場合の倍率計算
+                    const hasMassiveDamage = abilities.some((ability: UnitAbility) => ability.name === '超ダメージ');
+                    const hasExtremeDamage = abilities.some((ability: UnitAbility) => ability.name === '極ダメージ');
+                    
+                    if (hasMassiveDamage) {
+                      // 超ダメージ: 基本倍率 × めっぽう強い倍率 × 超ダメージ倍率
+                      const massiveMultiplier = talentMassiveDamageMultiplier;
+                      const mightyMultiplier = abilities.some((ability: UnitAbility) => ability.name === 'めっぽう強い') ? 1.8 : 1;
+                      maxSageMultiplier = baseSageMultiplier * massiveMultiplier * mightyMultiplier;
+                    } else if (hasExtremeDamage) {
+                      // 極ダメージ: 基本倍率 × めっぽう強い倍率 × 極ダメージ倍率
+                      const extremeMultiplier = talentExtremeDamageMultiplier;
+                      const mightyMultiplier = abilities.some((ability: UnitAbility) => ability.name === 'めっぽう強い') ? 1.8 : 1;
+                      maxSageMultiplier = baseSageMultiplier * extremeMultiplier * mightyMultiplier;
+                    } else {
+                      // めっぽう強いのみの場合
+                      const mightyMultiplier = abilities.some((ability: UnitAbility) => ability.name === 'めっぽう強い') ? 1.8 : 1;
+                      maxSageMultiplier = baseSageMultiplier * mightyMultiplier;
+                    }
+                    
+                    const minAp = Math.floor(currentAp * baseSageMultiplier);
+                    const maxAp = Math.floor(currentAp * maxSageMultiplier);
+                    
+                    return (
+                      <div className="text-right">
+                        <br />
+                        <div className="text-xs">
+                          {maxSageMultiplier > baseSageMultiplier ? (
+                            <>
+                              <small className="text-red-500"><b>攻撃力</b></small> <b className={totalAttackMultiplier > 1 ? "text-red-500" : "text-gray-500"}>{minAp.toLocaleString()}～{maxAp.toLocaleString()}</b>
+                            </>
+                          ) : (
+                            <>
+                              <small className="text-red-500"><b>攻撃力</b></small> <b className={totalAttackMultiplier > 1 ? "text-red-500" : "text-gray-500"}>{minAp.toLocaleString()}</b>
+                            </>
+                          )}
+                        </div>
+                        <div className="text-xs">
+                          {(() => {
+                            // 基本能力のめっぽう強いと打たれ強いがあるかチェック
+                            const currentForm = unitData.coreData.forms[actualCurrentForm];
+                            const hasMighty = currentForm?.stats[23] && currentForm?.stats[23] > 0;
+                            const hasToughness = currentForm?.stats[29] && currentForm?.stats[29] > 0;
+                            
+                            const baseSageDmgMultiplier = 0.5;
+                            
+                            if (hasMighty || hasToughness) {
+                              // めっぽう強いまたは打たれ強いがある場合：範囲で表示
+                              let enhancedMultiplier = baseSageDmgMultiplier;
+                              
+                              if (hasMighty && hasToughness) {
+                                // 両方ある場合：めっぽう強い × 打たれ強い
+                                const mightyDmgValue = hasOnlyRelicAkuTalent ? 0.5 : 0.4;
+                                const toughnessMultiplier = 0.2;
+                                enhancedMultiplier = baseSageDmgMultiplier * mightyDmgValue * toughnessMultiplier;
+                              } else if (hasMighty) {
+                                // めっぽう強いのみ
+                                const mightyDmgValue = hasOnlyRelicAkuTalent ? 0.5 : 0.4;
+                                enhancedMultiplier = baseSageDmgMultiplier * mightyDmgValue;
+                              } else if (hasToughness) {
+                                // 打たれ強いのみ
+                                const toughnessMultiplier = 0.2;
+                                enhancedMultiplier = baseSageDmgMultiplier * toughnessMultiplier;
+                              }
+                              
+                              // 最小体力(換算値)：基本の0.5で割った値
+                              const minHp = Math.floor(currentHp / baseSageDmgMultiplier);
+                              // 最大体力(換算値)：強化された被ダメ倍率で割った値
+                              const maxHp = Math.floor(currentHp / enhancedMultiplier);
+                              
+                              return (
+                                <>
+                                  <small className="text-blue-500"><b>体力(換算値)</b></small> <b className={totalHpMultiplier > 1 ? "text-blue-500" : "text-gray-500"}>{minHp.toLocaleString()}~{maxHp.toLocaleString()}</b>
+                                </>
+                              );
+                            } else {
+                              // めっぽう強いも打たれ強いもない場合：基本の0.5で割る
+                              return (
+                                <>
+                                  <small className="text-blue-500"><b>体力(換算値)</b></small> <b className={totalHpMultiplier > 1 ? "text-blue-500" : "text-gray-500"}>{Math.floor(currentHp / 0.5).toLocaleString()}</b>
+                                </>
+                              );
+                            }
+                          })()}
+                        </div>
                       </div>
-                      <div className="text-xs">
-                        <small className="text-blue-500"><b>体力(換算値)</b></small> <b className={totalHpMultiplier > 1 ? "text-blue-500" : "text-gray-500"}>{Math.floor(currentHp / 0.5).toLocaleString()}</b>
-                      </div>
-                    </div>
-                  ) : /* 妨害無効化の本能の場合は何も表示しない */
+                    );
+                  })() : /* 妨害無効化の本能の場合は何も表示しない */
                   (
                     talent.id === 44 || 
                     talent.id === 45 || 

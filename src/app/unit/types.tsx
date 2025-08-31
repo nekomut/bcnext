@@ -365,7 +365,7 @@ export const getAbilities = (
     if (hit2_ap > 0) {
       timings.push(
         <>
-          <b className="text-gray-500"> / {frameToSecond(hit2_time).toFixed(2)}s <small className="text-gray-400"><b>({hit2_time}f)</b></small></b>
+          <b className="text-gray-500">{" "}{frameToSecond(hit2_time).toFixed(2)}s <small className="text-gray-400"><b>({hit2_time}f)</b></small></b>
         </>
       );
     }
@@ -373,7 +373,7 @@ export const getAbilities = (
     if (hit3_ap > 0) {
       timings.push(
         <>
-          <b className="text-gray-500"> / {frameToSecond(hit3_time).toFixed(2)}s <small className="text-gray-400"><b>({hit3_time}f)</b></small></b>
+          <b className="text-gray-500">{" "}{frameToSecond(hit3_time).toFixed(2)}s <small className="text-gray-400"><b>({hit3_time}f)</b></small></b>
         </>
       );
     }
@@ -409,9 +409,9 @@ export const getAbilities = (
       const rng2_1 = stats[100] || 0;
       const rng2_2 = rng2_1 + (stats[101] || 0);
       if ((stats[101] || 0) > 0) {
-        ranges.push(`/ ${rng2_1}~${rng2_2}`);
+        ranges.push(`${rng2_1}~${rng2_2}`);
       } else {
-        ranges.push(`/ ${rng2_2}~${rng2_1}`);
+        ranges.push(`${rng2_2}~${rng2_1}`);
       }
       
       // 3段目の範囲（存在する場合）
@@ -419,9 +419,9 @@ export const getAbilities = (
         const rng3_1 = stats[103] || 0;
         const rng3_2 = rng3_1 + (stats[104] || 0);
         if ((stats[104] || 0) > 0) {
-          ranges.push(`/ ${rng3_1}~${rng3_2}`);
+          ranges.push(`${rng3_1}~${rng3_2}`);
         } else {
-          ranges.push(`/ ${rng3_2}~${rng3_1}`);
+          ranges.push(`${rng3_2}~${rng3_1}`);
         }
       }
     } else {
@@ -676,7 +676,7 @@ export const getAbilities = (
       const colorClass = isEnhanced ? 'color: red;' : 'color: rgb(107, 114, 128);';
       const values = [hit1_3x, hit2_3x, hit3_3x].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
       const tilde = hasAdditionalDamage ? ' ~' : '';
-      savageValues = <span dangerouslySetInnerHTML={{ __html: `${values.join(' / ')}${tilde}` }} />;
+      savageValues = <span dangerouslySetInnerHTML={{ __html: `${values.join(' ')}${tilde}` }} />;
     } else {
       const savageAP = Math.round(calculatedStats.ap * attackUpMultiplier * 3 * mightyMultiplier);
       const isEnhanced = attackUpMultiplier > 1;
@@ -709,7 +709,7 @@ export const getAbilities = (
         additionalValues = (
           <>
             <br />
-            <span dangerouslySetInnerHTML={{ __html: superValues.join(' / ') }} />
+            <span dangerouslySetInnerHTML={{ __html: superValues.join(' ') }} />
           </>
         );
       } else {
@@ -741,7 +741,7 @@ export const getAbilities = (
         additionalValues = (
           <>
             <br />
-            <span dangerouslySetInnerHTML={{ __html: extremeValues.join(' / ') }} />
+            <span dangerouslySetInnerHTML={{ __html: extremeValues.join(' ') }} />
           </>
         );
       } else {

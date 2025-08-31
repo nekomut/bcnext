@@ -1452,7 +1452,7 @@ function DynamicColossusSlayer({
           : `<b style="${colorClass}">${hit3Min.toLocaleString()}</b>`);
       }
       
-      const apDisplay = rangeValues.join(' ');
+      const apDisplay = rangeValues.join('<br />');
       
       // HP相当計算（打たれ強い系とめっぽう強いの倍率も考慮）
       const actualToughnessMultiplier = hasToughness === true && toughnessMultiplier ? toughnessMultiplier : 1;
@@ -1735,7 +1735,7 @@ function DynamicBehemothSlayer({
           : `${hit3Min.toLocaleString()}`);
       }
       
-      const apDisplay = `<b style="${colorClass}">${rangeValues.join(' ')}</b>`;
+      const apDisplay = `<b style="${colorClass}">${rangeValues.join('<br />')}</b>`;
       
       // HP相当計算（打たれ強い系とめっぽう強いの倍率も考慮）
       let minDamageRatio: number, maxDamageRatio: number;
@@ -1975,10 +1975,10 @@ function DynamicSageSlayer({
         if (baseHit3 > 0) {
           rangeValues.push(`<b style="${colorClass}">${baseHit3.toLocaleString()}~${enhancedHit3.toLocaleString()}</b>`);
         }
-        apDisplay = rangeValues.join(' ');
+        apDisplay = rangeValues.join('<br />');
       } else {
         const values = [baseHit1, baseHit2, baseHit3].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
-        apDisplay = values.join(' ');
+        apDisplay = values.join('<br />');
       }
       
       // HP相当計算

@@ -1322,7 +1322,7 @@ export default function AnimationViewer({
       </div>
 
       {/* Parts List Section */}
-      <div className="bg-gray-50 p-1 rounded mt-1">
+      <div className="bg-amber-50 p-1 rounded mt-1">
         <div className="mt-2">
           {/* Parts/Sprites カウントラベル */}
           <div className="mb-2">
@@ -1370,13 +1370,13 @@ export default function AnimationViewer({
             </button>
             <button
               onClick={expandAllParts}
-              className="px-2 py-0 bg-blue-200 text-blue-700 rounded text-xxs hover:bg-blue-300 font-mono"
+              className="px-2 py-0 bg-orange-600 text-gray-600 rounded text-xxs hover:bg-orange-700 font-mono"
             >
               全展開
             </button>
             <button
               onClick={collapseAllParts}
-              className="px-2 py-0 bg-green-200 text-green-700 rounded text-xxs hover:bg-green-300 font-mono"
+              className="px-2 py-0 bg-amber-300 text-gray-600 rounded text-xxs hover:bg-amber-400 font-mono"
             >
               全折畳
             </button>
@@ -1385,7 +1385,7 @@ export default function AnimationViewer({
                 type="checkbox"
                 checked={showInactiveParts}
                 onChange={(e) => setShowInactiveParts(e.target.checked)}
-                className="w-3 h-3"
+                className="w-3 h-3 accent-orange-600"
               />
               非アクティブパーツ表示
             </label>
@@ -1393,7 +1393,7 @@ export default function AnimationViewer({
           
           {/* パーツ階層表示 */}
           <div className="text-xxxs text-gray-600 font-mono">
-            <div className="bg-white border rounded p-2">
+            <div className="bg-gray-50 border rounded p-1">
               {animationData[selectedForm] && animationData[selectedForm].mamodel && (() => {
                 const mamodel = animationData[selectedForm].mamodel;
                 
@@ -1648,7 +1648,7 @@ export default function AnimationViewer({
       </div>
 
       {/* Sprite Preview Section */}
-      <div className="bg-blue-50 p-2 rounded mt-1">
+      <div className="bg-amber-50 p-1 rounded mt-1">
         <button
           onClick={() => setSpritePreviewExpanded(!spritePreviewExpanded)}
           className="flex items-center justify-between w-full text-left text-xs font-medium text-gray-600 mb-1 font-mono hover:text-gray-800"
@@ -1691,7 +1691,7 @@ export default function AnimationViewer({
               if (selectedSpriteId < imgcut.n && imgcut.cuts[selectedSpriteId]) {
                 const [x, y, w, h] = imgcut.cuts[selectedSpriteId];
                 return (
-                  <span className="text-xs font-mono text-gray-600">
+                  <span className="text-xxs font-mono text-gray-600">
                     ({x}, {y}) [{w} × {h}]
                   </span>
                 );
@@ -1714,13 +1714,13 @@ export default function AnimationViewer({
       </div>
 
       {/* Data Section - anim0と同様の実装 */}
-      <div className="bg-gray-50 p-2 rounded mt-1">
-        <label className="block text-xs font-medium text-gray-600 mb-2 font-mono">
+      <div className="bg-amber-50 p-1 rounded mt-1">
+        <label className="block text-xs font-medium text-gray-600 mb-1 font-mono">
           Data
         </label>
         
         {/* imgcut データ */}
-        <div className="bg-white p-2 rounded mb-1">
+        <div className="bg-amber-50 p-1 rounded mb-0">
           <button
             onClick={() => setDataExpanded(prev => ({ ...prev, imgcut: !prev.imgcut }))}
             className="flex items-center justify-between w-full text-left text-xs font-medium text-gray-500 font-mono hover:text-gray-700"
@@ -1776,9 +1776,9 @@ export default function AnimationViewer({
               </div>
               
               {/* 変換後のanimationData */}
-              <div className="bg-blue-50 p-2 rounded">
-                <label className="block text-xxs font-medium text-blue-600 mb-1 font-mono">Converted animationData</label>
-                <pre className="whitespace-pre-wrap text-xxxs text-blue-600">{(() => {
+              <div className="bg-gray-50 p-2 rounded">
+                <label className="block text-xxs font-medium text-gray-600 mb-1 font-mono">Converted animationData</label>
+                <pre className="whitespace-pre-wrap text-xxxs text-gray-600">{(() => {
                   if (!animationData[selectedForm]?.imgcut) return 'No data';
                   
                   const data = animationData[selectedForm].imgcut;
@@ -1818,7 +1818,7 @@ export default function AnimationViewer({
         </div>
 
         {/* mamodel データ */}
-        <div className="bg-white p-2 rounded mb-1">
+        <div className="bg-amber-50 p-1 rounded mb-0">
           <button
             onClick={() => setDataExpanded(prev => ({ ...prev, mamodel: !prev.mamodel }))}
             className="flex items-center justify-between w-full text-left text-xs font-medium text-gray-500 font-mono hover:text-gray-700"
@@ -2006,7 +2006,7 @@ export default function AnimationViewer({
         </div>
 
         {/* maanim データ */}
-        <div className="bg-white p-2 rounded mb-1">
+        <div className="bg-amber-50 p-1 rounded mb-1">
           <button
             onClick={() => setDataExpanded(prev => ({ ...prev, maanim: !prev.maanim }))}
             className="flex items-center justify-between w-full text-left text-xs font-medium text-gray-500 font-mono hover:text-gray-700"

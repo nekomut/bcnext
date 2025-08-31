@@ -120,6 +120,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
   const [currentPage, setCurrentPage] = useState(1);
   const [sortOrder, setSortOrder] = useState<'pokedex' | 'id'>('pokedex');
   const [showTalentsOnly, setShowTalentsOnly] = useState(true);
+  const [includeRegular, setIncludeRegular] = useState(true);
   const [includeMystic, setIncludeMystic] = useState(false);
   const [includeFestival, setIncludeFestival] = useState(false);
   const [includeSeasonal, setIncludeSeasonal] = useState(false);
@@ -268,27 +269,29 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
       );
     }
     
-    // 幻キャラフィルター（デフォルトは通常ユニットのみ、チェックONで幻キャラも含める）
-    if (!includeMystic) {
-      filtered = filtered.filter(unit => !unit.isMystic);
-    }
+    // ユニットタイプによるフィルタリング
+    // 選択されたタイプのユニットのみを含める
+    const selectedTypes = [];
+    if (includeRegular) selectedTypes.push('regular');
+    if (includeMystic) selectedTypes.push('mystic');
+    if (includeFestival) selectedTypes.push('festival');
+    if (includeSeasonal) selectedTypes.push('seasonal');
+    if (includeLimited) selectedTypes.push('limited');
     
-    // 祭キャラフィルター（デフォルトは通常ユニットのみ、チェックONで祭キャラも含める）
-    if (!includeFestival) {
-      filtered = filtered.filter(unit => !unit.isFestival);
-    }
-    
-    // 季節キャラフィルター（デフォルトは通常ユニットのみ、チェックONで季節キャラも含める）
-    if (!includeSeasonal) {
-      filtered = filtered.filter(unit => !unit.isSeasonal);
-    }
-    
-    // 限定キャラフィルター（デフォルトは通常ユニットのみ、チェックONで限定キャラも含める）
-    if (!includeLimited) {
-      filtered = filtered.filter(unit => !unit.isLimited);
+    if (selectedTypes.length > 0) {
+      filtered = filtered.filter(unit => {
+        if (unit.isMystic && selectedTypes.includes('mystic')) return true;
+        if (unit.isFestival && selectedTypes.includes('festival')) return true;
+        if (unit.isSeasonal && selectedTypes.includes('seasonal')) return true;
+        if (unit.isLimited && selectedTypes.includes('limited')) return true;
+        // 恒常ユニット（幻・祭・季節・限定のいずれでもない）
+        if (!unit.isMystic && !unit.isFestival && !unit.isSeasonal && !unit.isLimited && selectedTypes.includes('regular')) return true;
+        return false;
+      });
     }
     
     // 本能・超本能を持つユニットのみフィルター
+    // ONの場合：選択されたタイプの中で本能・超本能を持つユニットのみ
     if (showTalentsOnly) {
       filtered = filtered.filter(unit => unit.talentIcons.length > 0);
     }
@@ -306,7 +309,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
     }
     
     return filtered;
-  }, [units, debouncedSearchTerm, sortOrder, showTalentsOnly, includeMystic, includeFestival, includeSeasonal, includeLimited, selectedRarities]);
+  }, [units, debouncedSearchTerm, sortOrder, showTalentsOnly, includeRegular, includeMystic, includeFestival, includeSeasonal, includeLimited, selectedRarities]);
 
   // ページネーション
   const totalPages = Math.ceil(filteredAndSortedUnits.length / itemsPerPage);
@@ -379,8 +382,8 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
 
       {!isCollapsed && (
         <>
-          {/* 検索フィールド */}
-          <div className="mb-2">
+          {/* 検索フィールドとページネーション */}
+          <div className="flex justify-between items-center gap-2 mb-2">
             <input
               type="text"
               placeholder="ユニット名またはIDで検索..."
@@ -389,24 +392,48 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                 setSearchTerm(e.target.value);
                 setCurrentPage(1);
               }}
-              className="w-full px-2 py-1 text-xs border border-gray-300 rounded focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+              className="flex-1 px-2 py-1 text-xs border border-gray-300 rounded focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
             />
+            
+            {totalPages > 1 && (
+              <div className="flex items-center gap-1">
+                <button
+                  onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
+                  disabled={currentPage === 1}
+                  className="px-2 py-1 border border-gray-300 rounded text-[10px] text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
+                >
+                  前
+                </button>
+                
+                <span className="px-1 py-1 text-[10px] text-gray-500">
+                  {currentPage} / {totalPages}
+                </span>
+                
+                <button
+                  onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
+                  disabled={currentPage === totalPages}
+                  className="px-2 py-1 border border-gray-300 rounded text-[10px] text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
+                >
+                  次
+                </button>
+              </div>
+            )}
           </div>
 
-          {/* チェックボックスとページネーション */}
-          <div className="flex justify-between items-center mb-2">
+          {/* チェックボックス */}
+          <div className="mb-2">
             <div className="flex items-center gap-1 flex-wrap">
               <label className="flex items-center text-[10px] text-gray-600">
                 <input
                   type="checkbox"
-                  checked={showTalentsOnly}
+                  checked={includeRegular}
                   onChange={(e) => {
-                    setShowTalentsOnly(e.target.checked);
+                    setIncludeRegular(e.target.checked);
                     setCurrentPage(1);
                   }}
                   className="mr-1 scale-75"
                 />
-                本能実装済のみ
+                恒常
               </label>
               
               <label className="flex items-center text-[10px] text-gray-600">
@@ -460,31 +487,22 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                 />
                 限定
               </label>
+              
+              <span className="text-gray-400 mx-1">|</span>
+              
+              <label className="flex items-center text-[10px] text-gray-600">
+                <input
+                  type="checkbox"
+                  checked={showTalentsOnly}
+                  onChange={(e) => {
+                    setShowTalentsOnly(e.target.checked);
+                    setCurrentPage(1);
+                  }}
+                  className="mr-1 scale-75"
+                />
+                本能実装済のみ
+              </label>
             </div>
-
-            {totalPages > 1 && (
-              <div className="flex items-center gap-1">
-                <button
-                  onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
-                  disabled={currentPage === 1}
-                  className="px-2 py-1 border border-gray-300 rounded text-[10px] text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
-                >
-                  前
-                </button>
-                
-                <span className="px-1 py-1 text-[10px] text-gray-500">
-                  {currentPage} / {totalPages}
-                </span>
-                
-                <button
-                  onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
-                  disabled={currentPage === totalPages}
-                  className="px-2 py-1 border border-gray-300 rounded text-[10px] text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
-                >
-                  次
-                </button>
-              </div>
-            )}
           </div>
 
           {/* レア度フィルター */}

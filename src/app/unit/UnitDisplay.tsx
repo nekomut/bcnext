@@ -717,7 +717,6 @@ export function UnitDisplay({
         </div>
       </div>
 
-
       {/* Form Tabs */}
       {validFormCount > 1 && (
         <div className="flex mb-2.5 gap-1 flex-wrap">
@@ -728,7 +727,7 @@ export function UnitDisplay({
                 setCurrentForm(index);
                 onParamsChange?.({ level, plusLevel, formId: index });
               }}
-              className={`flex items-center w-[85px] gap-0 px-0.5 sm:px-0.5 py-0 rounded text-xs sm:text-sm transition-colors ${
+              className={`flex items-center justify-center w-10 h-8 gap-0 px-0 py-0 rounded-sm transition-colors ${
                 actualCurrentForm === index
                   ? 'bg-orange-600 text-white'
                   : 'bg-amber-200 text-gray-400 hover:bg-gray-300'
@@ -739,12 +738,11 @@ export function UnitDisplay({
                 <Image 
                   src={`data:image/png;base64,${formIcons[index]}`}
                   alt={form.name || 'Form Icon'}
-                  width={24}
-                  height={24}
+                  width={32}
+                  height={32}
                   className="rounded object-cover"
                 />
               )}
-              <span className="truncate max-w-[90px] sm:max-w-none">{form.name || `Form ${index + 1}`}</span>
             </button>
           ))}
         </div>

@@ -17,13 +17,13 @@ interface UnitGalleryProgressBarProps {
 
 const UnitGalleryProgressBar: React.FC<UnitGalleryProgressBarProps> = ({ progress }) => {
   return (
-    <div className="mt-2 p-2 border border-gray-600 rounded bg-gray-50">
-      <h3 className="text-[12px] font-semibold text-gray-600 mb-2">
-        ユニット一覧
+    <div className="mt-2 p-2 border border-gray-600 rounded bg-amber-50">
+      <h3 className="text-[12px] font-semibold text-gray-600 mb-1">
+        ▷ ユニット一覧
       </h3>
       
       {/* 進捗数値表示 */}
-      <div className="text-sm text-gray-600 mb-2">
+      <div className="text-xxs text-gray-600 mb-1">
         {progress.current}/{progress.total} ユニット ({progress.percentage}%)
       </div>
 

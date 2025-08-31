@@ -337,7 +337,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
   }
 
   return (
-    <div className="mt-2 p-2 border border-gray-600 rounded bg-gray-50">
+    <div className="mt-2 p-2 border border-gray-600 rounded bg-amber-50">
       {/* ヘッダー、ソート順、表示件数 */}
       <div className="flex justify-between items-center mb-1">
         <h3 
@@ -361,7 +361,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                     setCurrentPage(1);
                   }
                 }}
-                className="w-12 border rounded px-1 py-0.5 text-[10px] text-gray-600 text-right"
+                className="w-12 border border-gray-400 rounded px-1 py-0.5 text-[10px] text-gray-600 text-right"
                 min="1"
                 max="1000"
               />
@@ -371,7 +371,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
             <select 
               value={sortOrder}
               onChange={(e) => setSortOrder(e.target.value as 'pokedex' | 'id')}
-              className="border rounded px-2 py-0.5 text-[10px] text-gray-600"
+              className="border border-gray-400 rounded px-2 py-0.5 text-[10px] text-gray-600"
             >
               <option value="pokedex">図鑑順</option>
               <option value="id">ID順</option>
@@ -392,7 +392,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                 setSearchTerm(e.target.value);
                 setCurrentPage(1);
               }}
-              className="flex-1 px-2 py-1 text-xs border border-gray-300 rounded focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+              className="flex-1 px-2 py-1 text-xs border border-gray-400 rounded focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
             />
             
             {totalPages > 1 && (
@@ -400,7 +400,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                 <button
                   onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
                   disabled={currentPage === 1}
-                  className="px-2 py-1 border border-gray-300 rounded text-[10px] text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
+                  className="px-2 py-1 border border-gray-400 rounded bg-amber-100 text-[10px] text-gray-600 disabled:opacity-30 disabled:cursor-not-allowed"
                 >
                   前
                 </button>
@@ -412,7 +412,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                 <button
                   onClick={() => setCurrentPage(Math.min(totalPages, currentPage + 1))}
                   disabled={currentPage === totalPages}
-                  className="px-2 py-1 border border-gray-300 rounded text-[10px] text-gray-600 disabled:opacity-50 disabled:cursor-not-allowed hover:bg-gray-100"
+                  className="px-2 py-1 border border-gray-400 rounded bg-amber-100 text-[10px] text-gray-600 disabled:opacity-30 disabled:cursor-not-allowed"
                 >
                   次
                 </button>
@@ -506,7 +506,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
           </div>
 
           {/* レア度フィルター */}
-          <div className="flex items-center gap-1 flex-wrap mb-2">
+          <div className="flex items-center gap-1 flex-wrap mb-1">
             {[
               { key: '基本', icon: icons.rarityNormal },
               { key: 'EX', icon: icons.rarityEx },
@@ -531,13 +531,13 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                 <div className={`${['基本', 'EX', 'レア'].includes(rarity.key) ? 'w-13' : 'w-14'} h-6 border-2 rounded flex items-center justify-center my-0 py-0 ${
                   selectedRarities.includes(rarity.key) 
                     ? 'border-blue-500 bg-blue-50' 
-                    : 'border-gray-300 bg-white hover:border-blue-400'
+                    : 'border-gray-500 bg-amber-300'
                 }`}>
                   <Image 
                     src={`data:image/png;base64,${rarity.icon}`} 
                     alt={rarity.key} 
-                    width={40} 
-                    height={40} 
+                    width={45} 
+                    height={42} 
                     className="object-contain"
                   />
                 </div>
@@ -546,16 +546,16 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
           </div>
 
           {/* ユニットリスト */}
-          <div className="space-y-0 mb-0">
+          <div className="space-y-0 m-0 p-0">
         {currentUnits.map((unit) => (
           <div
             key={unit.unitId}
-            className="flex items-center p-0.5 border border-gray-100 rounded bg-white hover:bg-gray-100 cursor-pointer"
+            className="flex items-center my-0 pt-0.5 bg-amber-50 cursor-pointer"
             title={`${unit.unitId}: ${unit.displayName}`}
           >
             {/* ユニットID（クリック可能） */}
             <div 
-              className="w-4 pl-1 text-xxs text-gray-500 font-mono flex-shrink-0 cursor-pointer hover:text-blue-600 hover:bg-blue-50 rounded"
+              className="w-4 pl-1.5 text-xxs text-gray-500 font-mono flex-shrink-0 cursor-pointer hover:text-blue-600 hover:bg-blue-50 rounded"
               onClick={(e) => {
                 e.stopPropagation();
                 onUnitSelect(parseInt(unit.unitId), 0); // 第1形態（formId=0）を選択
@@ -566,7 +566,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
             </div>
             
             {/* 形態アイコン（1-4形態） */}
-            <div className="flex gap-0 ml-3 mr-1">
+            <div className="flex gap-0 ml-3 mr-1 p-0">
               {Array.from({ length: 4 }, (_, formIndex) => {
                 const isCurrentForm = currentUnitId === parseInt(unit.unitId) && currentFormId === formIndex;
                 return (
@@ -574,10 +574,10 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                     key={formIndex}
                     className={`w-8 h-7 border-1 rounded-xs flex items-center justify-center ${
                       isCurrentForm 
-                        ? 'border-blue-500 bg-white border-2' 
+                        ? 'border-blue-500 bg-amber-50 border-2' 
                         : formIndex < unit.validFormCount 
-                        ? 'border-gray-300 bg-white hover:bg-blue-50 cursor-pointer hover:border-blue-400' 
-                        : 'border-gray-300 bg-white'
+                        ? 'border-gray-300 bg-amber-50 hover:bg-blue-50 cursor-pointer hover:border-blue-400' 
+                        : 'border-gray-300 bg-amber-50'
                     } ${formIndex < unit.validFormCount ? 'cursor-pointer' : ''}`}
                     onClick={(e) => {
                       e.stopPropagation();

@@ -431,7 +431,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                     setIncludeRegular(e.target.checked);
                     setCurrentPage(1);
                   }}
-                  className="mr-1 scale-75"
+                  className="mr-1 scale-75 accent-orange-600"
                 />
                 恒常
               </label>
@@ -444,7 +444,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                     setIncludeMystic(e.target.checked);
                     setCurrentPage(1);
                   }}
-                  className="mr-1 scale-75"
+                  className="mr-1 scale-75 accent-orange-600"
                 />
                 幻
               </label>
@@ -457,7 +457,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                     setIncludeFestival(e.target.checked);
                     setCurrentPage(1);
                   }}
-                  className="mr-1 scale-75"
+                  className="mr-1 scale-75 accent-orange-600"
                 />
                 祭
               </label>
@@ -470,7 +470,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                     setIncludeSeasonal(e.target.checked);
                     setCurrentPage(1);
                   }}
-                  className="mr-1 scale-75"
+                  className="mr-1 scale-75 accent-orange-600"
                 />
                 季節
               </label>
@@ -483,7 +483,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                     setIncludeLimited(e.target.checked);
                     setCurrentPage(1);
                   }}
-                  className="mr-1 scale-75"
+                  className="mr-1 scale-75 accent-orange-600"
                 />
                 限定
               </label>
@@ -498,7 +498,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                     setShowTalentsOnly(e.target.checked);
                     setCurrentPage(1);
                   }}
-                  className="mr-1 scale-75"
+                  className="mr-1 scale-75 accent-orange-600"
                 />
                 本能実装済のみ
               </label>
@@ -530,7 +530,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                 />
                 <div className={`${['基本', 'EX', 'レア'].includes(rarity.key) ? 'w-13' : 'w-14'} h-6 border-2 rounded flex items-center justify-center my-0 py-0 ${
                   selectedRarities.includes(rarity.key) 
-                    ? 'border-blue-500 bg-blue-50' 
+                    ? 'border-orange-600 bg-orange-400' 
                     : 'border-gray-500 bg-amber-300'
                 }`}>
                   <Image 

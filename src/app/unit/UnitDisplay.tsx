@@ -550,7 +550,7 @@ export function UnitDisplay({
   const maxPlusLevel = unitData.coreData.rarity.maxLevels[1];
 
   return (
-    <div className={`bg-white rounded-lg shadow-lg p-3 ${className}`}>
+    <div className={`bg-amber-50 rounded shadow p-3 ${className}`}>
       {/* Header */}
       <div className="mb-3 flex items-center gap-2 sm:gap-3">
         {/* Unit Icon and Rarity */}
@@ -616,7 +616,7 @@ export function UnitDisplay({
                 </span>
                 <Link 
                   href={animUrl}
-                  className="text-xs sm:text-sm hover:text-blue-600 transition-colors duration-200 opacity-75 hover:opacity-100 pb-1"
+                  className="text-xs sm:text-sm hover:text-blue-600 transition-colors duration-200 opacity-75 hover:opacity-100 pb-3"
                   title="アニメーション表示"
                 >
                   anim 🎬
@@ -653,7 +653,7 @@ export function UnitDisplay({
                     onParamsChange?.({ level: 1, plusLevel, formId: actualCurrentForm });
                   }
                 }}
-                className="border rounded px-1 sm:px-2 py-1 w-6 sm:w-16 text-right text-xs sm:text-sm text-gray-900"
+                className="border rounded px-1 sm:px-2 py-0.5 w-6 sm:w-16 text-right text-xs sm:text-sm text-gray-900"
               />
               <span>+</span>
               <input
@@ -682,7 +682,7 @@ export function UnitDisplay({
                     onParamsChange?.({ level, plusLevel: 0, formId: actualCurrentForm });
                   }
                 }}
-                className="border rounded px-0.5 sm:px-1 py-1 w-6 sm:w-16 text-right text-xs sm:text-sm text-gray-900"
+                className="border rounded px-0.5 sm:px-1 py-0.5 w-6 sm:w-16 text-right text-xs sm:text-sm text-gray-900"
               />
             </div>
             <span className="text-xs text-gray-500 pr-2">/ <small><b>{maxLevel} + {maxPlusLevel}</b></small></span>
@@ -696,7 +696,7 @@ export function UnitDisplay({
                   setPlusLevelInput('0');
                   onParamsChange?.({ level: targetLevel, plusLevel: 0, formId: actualCurrentForm });
                 }}
-                className="bg-blue-500 hover:bg-blue-600 text-white px-1 py-0.5 rounded text-xxs sm:text-sm"
+                className="bg-orange-600 hover:bg-orange-700 text-white px-1 py-0.5 rounded text-xxs sm:text-sm"
               >
                 Lv{targetLevel}
               </button>
@@ -709,7 +709,7 @@ export function UnitDisplay({
                 setPlusLevelInput(maxPlusLevel.toString());
                 onParamsChange?.({ level: maxLevel, plusLevel: maxPlusLevel, formId: actualCurrentForm });
               }}
-              className="bg-blue-500 hover:bg-blue-600 text-white px-1 py-0.5 rounded text-xxs sm:text-sm"
+              className="bg-orange-600 hover:bg-orange-700 text-white px-1 py-0.5 rounded text-xxs sm:text-sm"
             >
               Max
             </button>
@@ -728,10 +728,10 @@ export function UnitDisplay({
                 setCurrentForm(index);
                 onParamsChange?.({ level, plusLevel, formId: index });
               }}
-              className={`flex items-center gap-1 px-1 sm:px-1 py-0 rounded text-xs sm:text-sm transition-colors ${
+              className={`flex items-center w-[85px] gap-0 px-0.5 sm:px-0.5 py-0 rounded text-xs sm:text-sm transition-colors ${
                 actualCurrentForm === index
-                  ? 'bg-blue-500 text-white'
-                  : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+                  ? 'bg-orange-600 text-white'
+                  : 'bg-amber-200 text-gray-400 hover:bg-gray-300'
               }`}
             >
               {/* Form Icon */}
@@ -993,7 +993,7 @@ function DynamicMassiveDamage({ ability, attackUpMultiplier, massiveDamageMultip
   };
   
   return (
-    <div className="bg-gray-50 p-2 rounded">
+    <div className="bg-amber-50 p-2 rounded">
       <div className="flex justify-between items-center gap-2">
         <div className="font-bold text-xs text-gray-600">
           <Image
@@ -1096,7 +1096,7 @@ function DynamicExtremeDamage({ ability, attackUpMultiplier }: { ability: UnitAb
   };
   
   return (
-    <div className="bg-gray-50 p-2 rounded">
+    <div className="bg-amber-50 p-2 rounded">
       <div className="flex justify-between items-center gap-2">
         <div className="font-bold text-xs text-gray-600">
           <Image
@@ -1172,7 +1172,7 @@ function DynamicToughness({ ability, hpUpMultiplier }: { ability: UnitAbility, h
   };
   
   return (
-    <div className="bg-gray-50 p-2 rounded">
+    <div className="bg-amber-50 p-2 rounded">
       <div className="flex justify-between items-center gap-2">
         <div className="font-bold text-xs text-gray-600">
           <Image
@@ -1225,7 +1225,7 @@ function DynamicSuperToughness({ ability, hpUpMultiplier }: { ability: UnitAbili
   };
   
   return (
-    <div className="bg-gray-50 p-2 rounded">
+    <div className="bg-amber-50 p-2 rounded">
       <div className="flex justify-between items-center gap-2">
         <div className="font-bold text-xs text-gray-600">
           <Image
@@ -1305,7 +1305,7 @@ function DynamicMighty({ ability, attackUpMultiplier, hpUpMultiplier, mightyApVa
   };
   
   return (
-    <div className="bg-gray-50 p-2 rounded">
+    <div className="bg-amber-50 p-2 rounded">
       <div className="flex justify-between items-center gap-2">
         <div className="font-bold text-xs text-gray-600">
           <Image
@@ -1571,7 +1571,7 @@ function DynamicColossusSlayer({
   const mightyMaxDmgDisplay = hasMighty && mightyDmgValue ? baseDmgMultiplier * mightyDmgValue : baseDmgMultiplier; // めっぽう強い適用後の被ダメ（0.7 × mightyDmgValue = 最大値）
   
   return (
-    <div className="bg-gray-50 p-1.5 rounded">
+    <div className="bg-amber-50 p-1.5 rounded">
       <div className="flex justify-between items-center gap-2">
         <div className="font-bold text-xs text-gray-600">
           <Image
@@ -1812,7 +1812,7 @@ function DynamicBehemothSlayer({
   };
   
   return (
-    <div className="bg-gray-50 p-1.5 rounded">
+    <div className="bg-amber-50 p-1.5 rounded">
       <div className="flex justify-between items-center gap-2">
         <div className="font-bold text-xs text-gray-600">
           <Image
@@ -2040,7 +2040,7 @@ function DynamicSageSlayer({
   };
   
   return (
-    <div className="bg-gray-50 p-1.5 rounded">
+    <div className="bg-amber-50 p-1.5 rounded">
       <div className="flex justify-between items-center gap-2">
         <div className="font-bold text-xs text-gray-600">
           <Image
@@ -2115,7 +2115,7 @@ function DynamicEvaAngelKiller({ ability, attackUpMultiplier, hpUpMultiplier }: 
   };
   
   return (
-    <div className="bg-gray-50 p-2 rounded">
+    <div className="bg-amber-50 p-2 rounded">
       <div className="flex justify-between items-center gap-2">
         <div className="font-bold text-xs text-gray-600">
           <Image
@@ -2224,7 +2224,7 @@ function DynamicWitchKiller({ ability, attackUpMultiplier, hpUpMultiplier }: { a
   };
   
   return (
-    <div className="bg-gray-50 p-2 rounded">
+    <div className="bg-amber-50 p-2 rounded">
       <div className="flex justify-between items-center gap-2">
         <div className="font-bold text-xs text-gray-600">
           <Image
@@ -2373,7 +2373,7 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUp
               hasOnlyRelicAkuTalent={hasOnlyRelicAkuTalent}
             />
           ) : (
-            <div key={index} className="bg-gray-50 p-1.5 rounded">
+            <div key={index} className="bg-amber-50 p-1.5 rounded">
               <div className="flex justify-between items-center gap-2">
                 <div className="font-bold text-xs text-gray-600">
                   {ability.name === 'abilityLongDistance' ? (

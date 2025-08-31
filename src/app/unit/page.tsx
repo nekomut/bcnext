@@ -744,14 +744,13 @@ function UnitPageContent() {
   return (
     <>
       <meta name="format-detection" content="telephone=no, address=no, email=no" />
-      <Link href="/" className="font-bold hover:text-green-600 px-1">bcnext</Link>|
-      <Link href="/stage" className="hover:text-green-600 px-1">Stage</Link>|
-      <Link href="/unit" className="text-green-500 hover:text-green-600 px-1">Unit</Link>|
-      <Link href="/anim" className="hover:text-green-600 px-1">Anim</Link>|
-      <Link href="/seek" className="hover:text-green-600 px-1">Seek</Link>|
-      <Link href="/rare" className="hover:text-green-600 px-1">Rare</Link>|
-      <Link href="/normal" className="hover:text-green-600 px-1">Normal</Link>|
-      <Link href="/event" className="hover:text-green-600 px-1">Event</Link>|
+      <Link href="/" className="font-bold hover:text-orange-600 px-1">bcnext</Link>|
+      <Link href="/stage" className="hover:text-orange-600 px-1">Stage</Link>|
+      <Link href="/unit" className="text-orange-500 hover:text-orange-600 px-1">Unit</Link>|
+      <Link href="/seek" className="hover:text-orange-600 px-1">Seek</Link>|
+      <Link href="/rare" className="hover:text-orange-600 px-1">Rare</Link>|
+      <Link href="/normal" className="hover:text-orange-600 px-1">Normal</Link>|
+      <Link href="/event" className="hover:text-orange-600 px-1">Event</Link>|
       <hr />
       
       <div className='flex-wrap hidden'>
@@ -862,7 +861,7 @@ function UnitPageContent() {
             <button
               onClick={() => handleNavigation('prev')}
               disabled={navLoading.prev || navLoading.next || loading}
-              className={`bg-blue-500 hover:bg-blue-600 text-white px-0 py-0.5 rounded text-xs disabled:opacity-50 w-10 transition-all duration-200 ${
+              className={`bg-orange-600 hover:bg-orange-700 text-white px-0 py-0.5 rounded text-xs disabled:opacity-50 w-10 transition-all duration-200 ${
                 navLoading.prev ? 'animate-pulse' : ''
               }`}
             >
@@ -961,7 +960,7 @@ function UnitPageContent() {
             <button
               onClick={() => handleNavigation('next')}
               disabled={navLoading.prev || navLoading.next || loading}
-              className={`bg-blue-500 hover:bg-blue-600 text-white px-0 py-0.5 rounded text-xs disabled:opacity-50 w-10 transition-all duration-200 ${
+              className={`bg-orange-600 hover:bg-orange-700 text-white px-0 py-0.5 rounded text-xs disabled:opacity-50 w-10 transition-all duration-200 ${
                 navLoading.next ? 'animate-pulse' : ''
               }`}
             >
@@ -997,7 +996,7 @@ function UnitPageContent() {
                       ...advancedFilters, 
                       searchMode: e.target.value as 'OR' | 'AND'
                     })}
-                    className="mr-1 scale-75"
+                    className="mr-1 scale-75 accent-orange-600"
                   />
                   <span>AND</span>
                 </label>
@@ -1049,7 +1048,7 @@ function UnitPageContent() {
                           />
                           <div className={`${['基本', 'EX', 'レア'].includes(rarity.key) ? 'w-13' : 'w-14'} h-6 border-2 rounded flex items-center justify-center my-0 py-0 ${
                             advancedFilters.rarity.includes(rarity.key) 
-                              ? 'border-blue-500 bg-blue-50' 
+                              ? 'border-orange-600 bg-orange-400' 
                               : 'border-gray-500 bg-amber-300 hover:border-gray-400'
                           }`}>
                             <Image 
@@ -1099,8 +1098,8 @@ function UnitPageContent() {
                           <div 
                             className={`border-2 rounded-[7px] flex items-center justify-center my-0 py-0 ${
                               advancedFilters.targetTraits.includes(trait.key) 
-                                ? 'border-blue-500 bg-blue-50' 
-                                : 'border-gray-200 bg-white hover:border-gray-400'
+                                ? 'border-orange-600 bg-orange-400' 
+                                : 'border-amber-50 bg-amber-50'
                             }`}
                             style={{ width: '24px', height: '24px' }}
                           >
@@ -1138,7 +1137,7 @@ function UnitPageContent() {
                         ...advancedFilters, 
                         includeInstincts: e.target.checked
                       })}
-                      className="mr-1 scale-75"
+                      className="mr-1 scale-75 accent-orange-600"
                     />
                     本能・超本能を含める
                   </label>
@@ -1252,8 +1251,8 @@ function UnitPageContent() {
                               <div 
                                 className={`border-2 rounded-[5px] flex items-center justify-center mx-0.5 ${
                                   advancedFilters.abilityTypes.includes(ability.key as AbilityType) 
-                                    ? 'border-blue-500 bg-blue-50' 
-                                    : 'border-gray-200 bg-white hover:border-gray-400'
+                                    ? 'border-orange-600 bg-orange-400' 
+                                    : 'border-amber-50 bg-amber-50'
                                 }`}
                                 style={{ width: '24px', height: '24px' }}
                               >
@@ -1649,16 +1648,16 @@ function UnitPageContent() {
               <button 
                 onClick={handleAdvancedSearch}
                 disabled={loading}
-                className="bg-blue-500 hover:bg-blue-600 text-white px-3 py-1 rounded text-xs disabled:opacity-50 disabled:cursor-not-allowed w-20 flex items-center justify-center"
+                className="bg-orange-600 hover:bg-orange-600 text-white px-3 py-1 rounded text-xs disabled:opacity-50 disabled:cursor-not-allowed w-20 flex items-center justify-center"
               >
 {loading ? <SearchingAnimation /> : '検索実行'}
               </button>
               <button 
                 onClick={resetAdvancedFilters}
                 disabled={loading}
-                className="bg-gray-500 hover:bg-gray-600 text-white px-3 py-1 rounded text-xs disabled:opacity-50 w-18"
+                className="bg-gray-500 text-white px-3 py-1 rounded text-xs disabled:opacity-50 w-18"
               >
-                条件リセット
+                リセット
               </button>
             </div>
           </div>
@@ -1669,14 +1668,8 @@ function UnitPageContent() {
           <div className="mb-2">
             {/* 検索結果ヘッダー */}
             <div className="flex justify-between items-center mb-1">
-              <h4 className="text-xs font-semibold text-cyan-500">
+              <h4 className="text-xs font-semibold text-orange-500">
                 検索結果: {searchResults.length}件
-                <button
-                  onClick={() => setSearchResults([])}
-                  className="text-xxs text-red-500 hover:text-red-700 mx-2"
-                >
-                  結果をクリア
-                </button>
               </h4>
               
               <div className="flex items-center gap-2">

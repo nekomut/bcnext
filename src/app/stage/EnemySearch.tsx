@@ -221,7 +221,7 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
                   Web Worker エラー: {workerError} - フォールバックモードに切り替えます
                 </div>
               )}
-              {progress.current}/{progress.total} ({progress.percentage}%)
+              {progress.percentage}%
               {(progress as WorkerProgressInfo).status && (
                 <div className="text-xs text-gray-400 mt-1">
                   {(progress as WorkerProgressInfo).status}
@@ -230,7 +230,7 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div 
-                className="bg-blue-600 h-2 rounded-full transition-all duration-300"
+                className="bg-orange-600 h-2 rounded-full transition-all duration-300"
                 style={{ width: `${progress.percentage}%` }}
               ></div>
             </div>

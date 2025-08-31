@@ -1452,7 +1452,7 @@ function DynamicColossusSlayer({
           : `<b style="${colorClass}">${hit3Min.toLocaleString()}</b>`);
       }
       
-      const apDisplay = rangeValues.join(' ');
+      const apDisplay = rangeValues.join('|');
       
       // HP相当計算（打たれ強い系とめっぽう強いの倍率も考慮）
       const actualToughnessMultiplier = hasToughness === true && toughnessMultiplier ? toughnessMultiplier : 1;
@@ -1627,7 +1627,7 @@ function DynamicColossusSlayer({
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
             <br />
-            <span className="text-red-500"><small><b>攻撃力</b></small></span> <span dangerouslySetInnerHTML={{ __html: calculateDamage().split('<br />')[0] }}></span>
+            <span className="text-red-500"><small><b>攻撃力</b></small></span> <span dangerouslySetInnerHTML={{ __html: calculateDamage().split('<br />')[0].split('|').join('<br />') }}></span>
             <br />
             <span className="text-blue-500"><small><b>体力(換算値)</b></small></span> <span className={hpUpMultiplier > 1 ? "text-blue-500" : "text-gray-500"} dangerouslySetInnerHTML={{ __html: calculateDamage().split('<br />')[1] }}></span>
           </div>
@@ -1735,7 +1735,7 @@ function DynamicBehemothSlayer({
           : `<b style="${colorClass}">${hit3Min.toLocaleString()}</b>`);
       }
       
-      const apDisplay = rangeValues.join(' ');
+      const apDisplay = rangeValues.join('|');
       
       // HP相当計算（打たれ強い系とめっぽう強いの倍率も考慮）
       let minDamageRatio: number, maxDamageRatio: number;
@@ -1858,7 +1858,7 @@ function DynamicBehemothSlayer({
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
             <br />
-            <span className="text-red-500"><small><b>攻撃力</b></small></span> <span dangerouslySetInnerHTML={{ __html: calculateDamage().split('<br />')[0] }}></span>
+            <span className="text-red-500"><small><b>攻撃力</b></small></span> <span dangerouslySetInnerHTML={{ __html: calculateDamage().split('<br />')[0].split('|').join('<br />') }}></span>
             <br />
             <span className="text-blue-500"><small><b>体力(換算値)</b></small></span> <span className={hpUpMultiplier > 1 ? "text-blue-500" : "text-gray-500"} dangerouslySetInnerHTML={{ __html: calculateDamage().split('<br />')[1] }}></span>
           </div>
@@ -1975,7 +1975,7 @@ function DynamicSageSlayer({
         if (baseHit3 > 0) {
           rangeValues.push(`<b style="${colorClass}">${baseHit3.toLocaleString()}~${enhancedHit3.toLocaleString()}</b>`);
         }
-        apDisplay = rangeValues.join(' ');
+        apDisplay = rangeValues.join('|');
       } else {
         const values = [baseHit1, baseHit2, baseHit3].filter(v => v > 0).map(v => `<b style="${colorClass}">${v.toLocaleString()}</b>`);
         apDisplay = values.join(' ');
@@ -2059,7 +2059,7 @@ function DynamicSageSlayer({
         <div className="text-right flex-shrink-0 max-w-[50%]">
           <div className="text-gray-600 font-medium break-words">
             <br />
-            <span className="text-red-500"><small><b>攻撃力</b></small></span> <span dangerouslySetInnerHTML={{ __html: calculateDamage().split('<br />')[0] }}></span>
+            <span className="text-red-500"><small><b>攻撃力</b></small></span> <span dangerouslySetInnerHTML={{ __html: calculateDamage().split('<br />')[0].split('|').join('<br />') }}></span>
             <br />
             <span className="text-blue-500"><small><b>体力(換算値)</b></small></span> <span className={hpUpMultiplier > 1 ? "text-blue-500" : "text-gray-500"} dangerouslySetInnerHTML={{ __html: calculateDamage().split('<br />')[1] }}></span>
           </div>

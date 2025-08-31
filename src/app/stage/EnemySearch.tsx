@@ -241,9 +241,9 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
   }
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border mb-1">
-      <div className="p-2">
-        <h3 className="text-sm font-semibold text-gray-900 mb-1">逆引き検索（レジェンドストーリー）</h3>
+    <div className="bg-amber-50 rounded shadow-sm border mb-1">
+      <div className="p-1">
+        <h3 className="text-[12px] font-semibold text-gray-900 mb-1">逆引き検索（レジェンドストーリー）</h3>
         
         {/* 検索フィールド */}
         <div className="mb-1">
@@ -252,7 +252,7 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
             placeholder="敵名で検索..."
             value={searchTerm}
             onChange={(e) => handleSearch(e.target.value)}
-            className="w-full px-2 py-1 text-xs text-gray-500 border border-gray-300 rounded focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+            className="w-full px-2 py-1 text-xs text-gray-600 border border-gray-400 rounded focus:ring-1 focus:ring-orange-500 focus:border-orange-500"
           />
         </div>
 
@@ -270,14 +270,14 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
                     key={enemy.enemyId}
                     onClick={() => toggleEnemySelection(enemy.enemyId)}
                     className={`flex items-center gap-2 p-1 cursor-pointer hover:bg-gray-50 ${
-                      selectedEnemies.has(enemy.enemyId) ? 'bg-blue-50 border-l-2 border-blue-500' : ''
+                      selectedEnemies.has(enemy.enemyId) ? 'bg-amber-50 border-l-2 border-orange-500' : ''
                     }`}
                   >
                     <input
                       type="checkbox"
                       checked={selectedEnemies.has(enemy.enemyId)}
                       onChange={() => {}} // handled by div onClick
-                      className="rounded text-blue-600 focus:ring-blue-500"
+                      className="rounded text-gray-600 focus:ring-orange-500"
                     />
                     {enemy.icon && (
                       <Image
@@ -323,7 +323,7 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
                     <button
                       key={enemyId}
                       onClick={() => toggleEnemySelection(enemyId)}
-                      className="flex items-center gap-1 px-2 py-1 text-xs bg-blue-100 text-blue-800 rounded-lg hover:bg-blue-200 group"
+                      className="flex items-center gap-1 px-2 py-1 text-xs bg-amber-100 text-gray-800 rounded hover:bg-orange-200 group"
                       title="クリックで選択解除"
                     >
                       {enemy.icon && (
@@ -336,7 +336,7 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
                         />
                       )}
                       <span className="max-w-20 truncate">{enemy.enemyName}</span>
-                      <span className="ml-1 text-blue-600 group-hover:text-blue-800">×</span>
+                      <span className="ml-1 text-gray-600 group-hover:text-orange-800">×</span>
                     </button>
                   );
                 })}
@@ -345,14 +345,14 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
             <div className="flex gap-1">
               <button
                 onClick={clearSelection}
-                className="px-2 py-1 text-xs text-gray-600 bg-gray-100 rounded hover:bg-gray-200"
+                className="px-2 py-0.5 text-xs border border-gray-400 text-gray-600 bg-gray-100 rounded hover:bg-gray-200"
               >
                 全てクリア
               </button>
               <button
                 onClick={executeStageSearch}
                 disabled={searching}
-                className="px-2 py-1 text-xs text-white bg-blue-600 rounded hover:bg-blue-700 disabled:opacity-50"
+                className="px-2 py-0.5 text-xs text-white border border-gray-400 bg-orange-600 rounded hover:bg-blue-700 disabled:opacity-50"
               >
                 {searching ? '検索中...' : showResults ? '再検索' : 'レジェンドストーリー検索'}
               </button>
@@ -362,15 +362,15 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
 
         {/* 検索結果 */}
         {showResults && (
-          <div className="border border-gray-200 rounded mb-2">
-            <div className="p-2 bg-gray-50 border-b border-gray-200">
-              <div className="text-xs font-medium text-gray-700">
+          <div className="border border-gray-200 rounded mb-1">
+            <div className="p-1 bg-amber-50 border-b border-gray-200">
+              <div className="text-xxs font-medium text-gray-700">
                 レジェンドストーリー検索結果: {searchResults.length}ステージ
               </div>
             </div>
             <div className="max-h-60 overflow-y-auto">
               {searchResults.length === 0 ? (
-                <div className="p-2 text-xs text-gray-500 text-center">
+                <div className="p-2 text-xxs text-gray-500 text-center">
                   該当するステージが見つかりません
                 </div>
               ) : (
@@ -388,20 +388,20 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
                       <div
                         key={`${result.eventId}-${result.stageId}`}
                         onClick={() => handleStageSelect(result.eventId, result.stageId)}
-                        className="p-2 hover:bg-gray-50 cursor-pointer"
+                        className="p-1 hover:bg-amber-50 cursor-pointer"
                       >
                         <div className="flex items-center justify-between">
                           <div className="flex-1 min-w-0">
-                            <div className="text-xs text-gray-900 truncate">
+                            <div className="text-xxs text-gray-900 truncate">
                               {result.eventId}: <span className="font-bold">{result.eventName}</span> - {result.stageId + 1}: <span className="font-bold">{result.stageName}</span>
                             </div>
-                            <div className="text-xs text-gray-600">
+                            <div className="text-xxs text-gray-600">
                               (統率力: {result.requiredCost.toLocaleString()})
                             </div>
                           </div>
                           <div className="text-right">
-                            <div className="text-xs">
-                              <div className="text-blue-600 font-medium mb-1">
+                            <div className="text-xxs">
+                              <div className="text-orange-700 font-medium mb-1">
                                 {sameStageResults.length}体出現
                               </div>
                               <div className="flex flex-wrap gap-1 justify-end">

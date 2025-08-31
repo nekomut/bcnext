@@ -62,9 +62,9 @@ export function StageSearch({ onSearch, loading }: StageSearchProps) {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-sm border p-1 mb-1">
+    <div className="bg-white rounded shadow-sm border p-1 mb-1">
       <div className="flex items-center gap-1 mb-1">
-        <h2 className="text-base font-semibold text-gray-900">ステージ検索</h2>
+        <h2 className="text-[12px] font-semibold text-gray-900">ステージ検索</h2>
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-1 mb-1">
@@ -77,7 +77,7 @@ export function StageSearch({ onSearch, loading }: StageSearchProps) {
             onChange={(e) => setEventId(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder="1173"
-            className="px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
+            className="px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-transparent text-sm text-gray-500"
             style={{flexBasis: '61.8%'}}
           />
         </div>
@@ -91,7 +91,7 @@ export function StageSearch({ onSearch, loading }: StageSearchProps) {
             onChange={(e) => setStageName(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder="メタル"
-            className="px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
+            className="px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-transparent text-sm text-gray-500"
             style={{flexBasis: '61.8%'}}
           />
         </div>
@@ -102,7 +102,7 @@ export function StageSearch({ onSearch, loading }: StageSearchProps) {
             id="stage-type"
             value={typeId}
             onChange={(e) => setTypeId(e.target.value)}
-            className="px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
+            className="px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-transparent text-sm text-gray-500"
             style={{flexBasis: '61.8%'}}
           >
             <option value="0">レジェンドストーリー</option>
@@ -133,7 +133,7 @@ export function StageSearch({ onSearch, loading }: StageSearchProps) {
             id="stage-sort"
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as 'id-desc' | 'id-asc')}
-            className="px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-sm text-gray-500"
+            className="px-2 py-0.5 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-orange-500 focus:border-transparent text-sm text-gray-500"
             style={{flexBasis: '61.8%'}}
           >
             <option value="id-desc">ID降順</option>
@@ -142,12 +142,12 @@ export function StageSearch({ onSearch, loading }: StageSearchProps) {
         </div>
       </div>
       
-      <div className="flex flex-wrap gap-2 justify-end">
+      <div className="flex flex-wrap gap-1 justify-end">
         <button
           id="clear-button"
           onClick={handleClear}
           disabled={loading}
-          className="inline-flex items-center gap-1 bg-gray-600 hover:bg-gray-700 disabled:bg-gray-400 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-1 focus:ring-gray-500"
+          className="inline-flex items-center gap-1 border border-gray-400 bg-gray-600 hover:bg-gray-700 disabled:bg-gray-400 text-white px-3 py-0.5 rounded text-xs font-medium transition-colors focus:outline-none focus:ring-1 focus:ring-gray-500"
           aria-label="検索条件をクリア"
         >
           <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -160,7 +160,7 @@ export function StageSearch({ onSearch, loading }: StageSearchProps) {
           id="search-button"
           onClick={handleSearch}
           disabled={loading}
-          className="inline-flex items-center gap-1 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white px-3 py-1 rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-1 focus:ring-blue-500"
+          className="inline-flex items-center gap-1 border border-gray-400 bg-orange-600 hover:bg-orange-700 disabled:bg-orange-400 text-white px-3 py-0.5 rounded text-xs font-medium transition-colors focus:outline-none focus:ring-1 focus:ring-orange-500"
           aria-label="ステージを検索"
         >
           {loading ? (

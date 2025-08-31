@@ -4150,24 +4150,56 @@ function TalentsList({
                           const hasMighty = unitData.coreData.forms[actualCurrentForm]?.stats[23] && unitData.coreData.forms[actualCurrentForm]?.stats[23] > 0;
                           // 打たれ強いの能力を持っているかチェック
                           const hasToughness = unitData.coreData.forms[actualCurrentForm]?.stats[29] && unitData.coreData.forms[actualCurrentForm]?.stats[29] > 0;
+                          // 本能・超本能の打たれ強い(6)があるかチェック
+                          const hasTalentToughness = unitData.auxiliaryData.talents.hasTalents && 
+                            unitData.auxiliaryData.talents.talentList.some(talent => talent.id === 6);
                           
-                          if (hasMighty || hasToughness) {
+                          if (hasMighty || hasToughness || hasTalentToughness) {
                             // めっぽう強いまたは打たれ強いがある場合の範囲計算
                             const baseDamageMultiplier = 0.5;
                             let enhancedDamageMultiplier = baseDamageMultiplier;
                             
-                            if (hasMighty && hasToughness) {
-                              // 両方ある場合：めっぽう強い × 打たれ強い
+                            if (hasMighty && (hasToughness || hasTalentToughness)) {
+                              // めっぽう強いと打たれ強い（能力またはタレント）の組み合わせ
                               const mightyDmgValue = hasOnlyRelicAkuTalent ? 0.5 : 0.4;
-                              const toughnessMultiplier: number = talentToughnessValue;
+                              
+                              // 打たれ強いの倍率を決定（能力優先、なければタレント値）
+                              let toughnessMultiplier: number;
+                              if (hasToughness) {
+                                toughnessMultiplier = talentToughnessValue;
+                              } else {
+                                // 本能・超本能の打たれ強い(6)の倍率を取得
+                                const talentToughness = unitData.auxiliaryData.talents.talentList.find(talent => talent.id === 6);
+                                if (talentToughness) {
+                                  // data[2]は最小値、data[3]は最大値なので最大値を使用
+                                  const talentToughnessValueLocal = (talentToughness.data[3] || talentToughness.data[2] || 20) / 100;
+                                  toughnessMultiplier = talentToughnessValueLocal;
+                                } else {
+                                  toughnessMultiplier = 0.2; // デフォルト値
+                                }
+                              }
+                              
                               enhancedDamageMultiplier = baseDamageMultiplier * mightyDmgValue * toughnessMultiplier;
                             } else if (hasMighty) {
                               // めっぽう強いのみ
                               const mightyDmgValue = hasOnlyRelicAkuTalent ? 0.5 : 0.4;
                               enhancedDamageMultiplier = baseDamageMultiplier * mightyDmgValue;
-                            } else if (hasToughness) {
-                              // 打たれ強いのみ
-                              const toughnessMultiplier: number = talentToughnessValue;
+                            } else if (hasToughness || hasTalentToughness) {
+                              // 打たれ強い（能力またはタレント）のみ
+                              let toughnessMultiplier: number;
+                              if (hasToughness) {
+                                toughnessMultiplier = talentToughnessValue;
+                              } else {
+                                // 本能・超本能の打たれ強い(6)の倍率を取得
+                                const talentToughness = unitData.auxiliaryData.talents.talentList.find(talent => talent.id === 6);
+                                if (talentToughness) {
+                                  // data[2]は最小値、data[3]は最大値なので最大値を使用
+                                  const talentToughnessValueLocal = (talentToughness.data[3] || talentToughness.data[2] || 20) / 100;
+                                  toughnessMultiplier = talentToughnessValueLocal;
+                                } else {
+                                  toughnessMultiplier = 0.2; // デフォルト値
+                                }
+                              }
                               enhancedDamageMultiplier = baseDamageMultiplier * toughnessMultiplier;
                             }
                             
@@ -4986,25 +5018,57 @@ function TalentsList({
                             const currentForm = unitData.coreData.forms[actualCurrentForm];
                             const hasMighty = currentForm?.stats[23] && currentForm?.stats[23] > 0;
                             const hasToughness = currentForm?.stats[29] && currentForm?.stats[29] > 0;
+                            // 本能・超本能の打たれ強い(6)があるかチェック
+                            const hasTalentToughness = unitData.auxiliaryData.talents.hasTalents && 
+                              unitData.auxiliaryData.talents.talentList.some(talent => talent.id === 6);
                             
                             const baseSageDmgMultiplier = 0.5;
                             
-                            if (hasMighty || hasToughness) {
+                            if (hasMighty || hasToughness || hasTalentToughness) {
                               // めっぽう強いまたは打たれ強いがある場合：範囲で表示
                               let enhancedMultiplier = baseSageDmgMultiplier;
                               
-                              if (hasMighty && hasToughness) {
-                                // 両方ある場合：めっぽう強い × 打たれ強い
+                              if (hasMighty && (hasToughness || hasTalentToughness)) {
+                                // めっぽう強いと打たれ強い（能力またはタレント）の組み合わせ
                                 const mightyDmgValue = hasOnlyRelicAkuTalent ? 0.5 : 0.4;
-                                const toughnessMultiplier = 0.2;
+                                
+                                // 打たれ強いの倍率を決定（能力優先、なければタレント値）
+                                let toughnessMultiplier: number;
+                                if (hasToughness) {
+                                  toughnessMultiplier = talentToughnessValue;
+                                } else {
+                                  // 本能・超本能の打たれ強い(6)の倍率を取得
+                                  const talentToughness = unitData.auxiliaryData.talents.talentList.find(talent => talent.id === 6);
+                                  if (talentToughness) {
+                                    // data[2]は最小値、data[3]は最大値なので最大値を使用
+                                    const talentToughnessValueLocal = (talentToughness.data[3] || talentToughness.data[2] || 20) / 100;
+                                    toughnessMultiplier = talentToughnessValueLocal;
+                                  } else {
+                                    toughnessMultiplier = 0.2; // デフォルト値
+                                  }
+                                }
+                                
                                 enhancedMultiplier = baseSageDmgMultiplier * mightyDmgValue * toughnessMultiplier;
                               } else if (hasMighty) {
                                 // めっぽう強いのみ
                                 const mightyDmgValue = hasOnlyRelicAkuTalent ? 0.5 : 0.4;
                                 enhancedMultiplier = baseSageDmgMultiplier * mightyDmgValue;
-                              } else if (hasToughness) {
-                                // 打たれ強いのみ
-                                const toughnessMultiplier = 0.2;
+                              } else if (hasToughness || hasTalentToughness) {
+                                // 打たれ強い（能力またはタレント）のみ
+                                let toughnessMultiplier: number;
+                                if (hasToughness) {
+                                  toughnessMultiplier = talentToughnessValue;
+                                } else {
+                                  // 本能・超本能の打たれ強い(6)の倍率を取得
+                                  const talentToughness = unitData.auxiliaryData.talents.talentList.find(talent => talent.id === 6);
+                                  if (talentToughness) {
+                                    // data[2]は最小値、data[3]は最大値なので最大値を使用
+                                    const talentToughnessValueLocal = (talentToughness.data[3] || talentToughness.data[2] || 20) / 100;
+                                    toughnessMultiplier = talentToughnessValueLocal;
+                                  } else {
+                                    toughnessMultiplier = 0.2; // デフォルト値
+                                  }
+                                }
                                 enhancedMultiplier = baseSageDmgMultiplier * toughnessMultiplier;
                               }
                               

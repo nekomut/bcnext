@@ -555,7 +555,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
           >
             {/* ユニットID（クリック可能） */}
             <div 
-              className="w-4 pl-1.5 text-xxs text-gray-500 font-mono flex-shrink-0 cursor-pointer hover:text-blue-600 hover:bg-blue-50 rounded"
+              className="w-4 h-2.5 pl-1.5 text-xxs text-gray-500 font-mono flex-shrink-0 cursor-pointer hover:text-orange-600 rounded"
               onClick={(e) => {
                 e.stopPropagation();
                 onUnitSelect(parseInt(unit.unitId), 0); // 第1形態（formId=0）を選択
@@ -574,7 +574,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                     key={formIndex}
                     className={`w-8 h-7 border-1 rounded-xs flex items-center justify-center ${
                       isCurrentForm 
-                        ? 'border-blue-500 bg-amber-50 border-2' 
+                        ? 'border-orange-600 bg-amber-50 border-2' 
                         : formIndex < unit.validFormCount 
                         ? 'border-gray-300 bg-amber-50 hover:bg-blue-50 cursor-pointer hover:border-blue-400' 
                         : 'border-gray-300 bg-amber-50'

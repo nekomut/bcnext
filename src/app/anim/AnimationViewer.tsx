@@ -1167,7 +1167,7 @@ export default function AnimationViewer({
           ref={canvasRef}
           width={canvasWidth}
           height={canvasHeight}
-          className="border border-gray-300 bg-cyan-400 w-full max-w-full"
+          className="border border-gray-500 bg-cyan-400 w-full max-w-full"
           style={{ 
             width: '100%',
             height: 'auto',
@@ -1194,7 +1194,7 @@ export default function AnimationViewer({
       </div>
 
       {/* Frame Control */}
-      <div className="bg-gray-50 p-1 rounded mt-1">
+      <div className="bg-amber-50 p-1 rounded mt-1">
         <div className="flex items-center justify-between mb-1">
           <div className="flex items-center gap-2">
             <label className="text-xs font-medium text-gray-600 font-mono">
@@ -1238,7 +1238,7 @@ export default function AnimationViewer({
             <select
               value={fps}
               onChange={(e) => setFps(parseInt(e.target.value))}
-              className="px-1 py-0 border border-gray-300 rounded text-xs focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-600 font-mono"
+              className="px-1 py-0 border border-gray-400 rounded text-xs focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-600 font-mono"
             >
               <option value={10}>10</option>
               <option value={15}>15</option>
@@ -1261,48 +1261,48 @@ export default function AnimationViewer({
             immediateUpdateRef.current = true; // 即座更新フラグを設定
             setCurrentFrame(newFrame);
           }}
-          className="w-full"
+          className="w-full accent-orange-600"
           disabled={isPlaying}
         />
         
         {/* コントロールボタン */}
-        <div className="flex flex-wrap items-center justify-center gap-2 text-xs mt-2">
+        <div className="flex flex-wrap items-center justify-center gap-1 text-xs mt-1">
           <span className="text-gray-600 font-mono text-xxs">
             {zoom.toFixed(2)}x ({offsetX}, {offsetY})
           </span>
           <button
             onClick={() => setZoom(zoom + 0.05)}
-            className="px-2 py-1 bg-blue-500 text-white rounded font-mono"
+            className="px-2 py-1 bg-orange-600 text-white rounded font-mono"
           >
             +
           </button>
           <button
             onClick={() => setZoom(Math.max(0.05, zoom - 0.05))}
-            className="px-2 py-1 bg-blue-500 text-white rounded font-mono"
+            className="px-2 py-1 bg-orange-600 text-white rounded font-mono"
           >
             -
           </button>
           <button
             onClick={() => setOffsetY(offsetY - 20)}
-            className="px-2 py-1 bg-green-500 text-white rounded font-mono"
+            className="px-2 py-1 bg-amber-500 text-white rounded font-mono"
           >
             ↑
           </button>
           <button
             onClick={() => setOffsetY(offsetY + 20)}
-            className="px-2 py-1 bg-green-500 text-white rounded font-mono"
+            className="px-2 py-1 bg-amber-500 text-white rounded font-mono"
           >
             ↓
           </button>
           <button
             onClick={() => setOffsetX(offsetX - 20)}
-            className="px-2 py-1 bg-green-500 text-white rounded font-mono"
+            className="px-2 py-1 bg-amber-500 text-white rounded font-mono"
           >
             ←
           </button>
           <button
             onClick={() => setOffsetX(offsetX + 20)}
-            className="px-2 py-1 bg-green-500 text-white rounded font-mono"
+            className="px-2 py-1 bg-amber-500 text-white rounded font-mono"
           >
             →
           </button>

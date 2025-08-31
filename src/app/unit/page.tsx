@@ -982,7 +982,7 @@ function UnitPageContent() {
 
         {/* アドバンス検索パネル */}
         {isAdvancedSearchOpen && (
-          <div className="border border-gray-300 rounded p-2 mb-1 bg-gray-50">
+          <div className="border border-gray-300 rounded p-2 mb-1 bg-amber-50">
 
             {/* OR/AND検索モード選択 */}
             <div className="mb-1 border-gray-200">
@@ -1050,7 +1050,7 @@ function UnitPageContent() {
                           <div className={`${['基本', 'EX', 'レア'].includes(rarity.key) ? 'w-13' : 'w-14'} h-6 border-2 rounded flex items-center justify-center my-0 py-0 ${
                             advancedFilters.rarity.includes(rarity.key) 
                               ? 'border-blue-500 bg-blue-50' 
-                              : 'border-gray-200 bg-white hover:border-gray-400'
+                              : 'border-gray-500 bg-amber-300 hover:border-gray-400'
                           }`}>
                             <Image 
                               src={`data:image/png;base64,${rarity.icon}`} 
@@ -1292,7 +1292,7 @@ function UnitPageContent() {
                   <div className="flex gap-1">
                     {/* HP範囲 */}
                     <div className="flex items-center gap-1 w-1/2">
-                      <label className="text-[10px] text-gray-600 w-[60px]">HP</label>
+                      <label className="font-bold text-[10px] text-gray-600 w-[60px]">HP</label>
                       <input
                         type="number"
                         placeholder="最小"
@@ -1301,7 +1301,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           hpRange: {...advancedFilters.hpRange, min: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
+                        className="w-[50px] border border-gray-400 rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
                       />
                       ~
                       <input
@@ -1312,13 +1312,13 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           hpRange: {...advancedFilters.hpRange, max: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
+                        className="w-[50px] border border-gray-400 rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
                       />
                     </div>
                     
                     {/* 攻撃力範囲 */}
                     <div className="flex items-center gap-1 w-1/2">
-                      <label className="text-[10px] text-gray-600 w-[60px]">攻撃</label>
+                      <label className="font-bold text-[10px] text-gray-600 w-[60px]">攻撃</label>
                       <input
                         type="number"
                         placeholder="最小"
@@ -1327,7 +1327,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           attackRange: {...advancedFilters.attackRange, min: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
+                        className="w-[50px] border border-gray-400 rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
                       />
                       ~
                       <input
@@ -1338,7 +1338,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           attackRange: {...advancedFilters.attackRange, max: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
+                        className="w-[50px] border border-gray-400 rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
                       />
                     </div>
                   </div>
@@ -1349,7 +1349,7 @@ function UnitPageContent() {
                   <div className="flex gap-1">
                     {/* DPS範囲 */}
                     <div className="flex items-center gap-1 w-1/2">
-                      <label className="text-[10px] text-gray-600 w-[60px]">DPS</label>
+                      <label className="font-bold text-[10px] text-gray-600 w-[60px]">DPS</label>
                       <input
                         type="number"
                         placeholder="最小"
@@ -1358,7 +1358,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           dpsRange: {...advancedFilters.dpsRange, min: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
+                        className="w-[50px] border border-gray-400 rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
                       />
                       ~
                       <input
@@ -1369,13 +1369,13 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           dpsRange: {...advancedFilters.dpsRange, max: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
+                        className="w-[50px] border border-gray-400 rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
                       />
                     </div>
                     
                     {/* 射程範囲 */}
                     <div className="flex items-center gap-1 w-1/2">
-                      <label className="text-[10px] text-gray-600 w-[60px]">射程</label>
+                      <label className="font-bold text-[10px] text-gray-600 w-[60px]">射程</label>
                       <input
                         type="number"
                         placeholder="最小"
@@ -1384,7 +1384,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           rangeRange: {...advancedFilters.rangeRange, min: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
+                        className="w-[50px] border border-gray-400 rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
                       />
                       ~
                       <input
@@ -1395,7 +1395,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           rangeRange: {...advancedFilters.rangeRange, max: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
+                        className="w-[50px] border border-gray-400 rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
                       />
                     </div>
                   </div>
@@ -1406,7 +1406,7 @@ function UnitPageContent() {
                   <div className="flex gap-1">
                     {/* KB範囲 */}
                     <div className="flex items-center gap-1 w-1/2">
-                      <label className="text-[10px] text-gray-600 w-[60px]">KB</label>
+                      <label className="font-bold text-[10px] text-gray-600 w-[60px]">KB</label>
                       <input
                         type="number"
                         placeholder="最小"
@@ -1415,7 +1415,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           kbRange: {...advancedFilters.kbRange, min: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
+                        className="w-[50px] border border-gray-400 rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
                       />
                       ~
                       <input
@@ -1426,13 +1426,13 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           kbRange: {...advancedFilters.kbRange, max: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
+                        className="w-[50px] border border-gray-400 rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
                       />
                     </div>
                     
                     {/* 速度範囲 */}
                     <div className="flex items-center gap-1 w-1/2">
-                      <label className="text-[10px] text-gray-600 w-[60px]">速度</label>
+                      <label className="font-bold text-[10px] text-gray-600 w-[60px]">速度</label>
                       <input
                         type="number"
                         placeholder="最小"
@@ -1441,7 +1441,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           speedRange: {...advancedFilters.speedRange, min: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
+                        className="w-[50px] border border-gray-400 rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
                       />
                       ~
                       <input
@@ -1452,7 +1452,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           speedRange: {...advancedFilters.speedRange, max: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
+                        className="w-[50px] border border-gray-400 rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
                       />
                     </div>
                   </div>
@@ -1463,7 +1463,7 @@ function UnitPageContent() {
                   <div className="flex gap-1">
                     {/* コスト範囲 */}
                     <div className="flex items-center gap-1 w-1/2">
-                      <label className="text-[10px] text-gray-600 w-[60px]">コスト</label>
+                      <label className="font-bold text-[10px] text-gray-600 w-[60px]">コスト</label>
                       <input
                         type="number"
                         placeholder="最小"
@@ -1472,7 +1472,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           costRange: {...advancedFilters.costRange, min: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
+                        className="w-[50px] border border-gray-400 rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
                       />
                       ~
                       <input
@@ -1483,13 +1483,13 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           costRange: {...advancedFilters.costRange, max: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
+                        className="w-[50px] border border-gray-400 rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
                       />
                     </div>
                     
                     {/* 再生産範囲 */}
                     <div className="flex items-center gap-1 w-1/2">
-                      <label className="text-[10px] text-gray-600 w-[60px]">再生産</label>
+                      <label className="font-bold text-[10px] text-gray-600 w-[60px]">再生産</label>
                       <input
                         type="number"
                         step="0.1"
@@ -1499,7 +1499,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           rechargeRange: {...advancedFilters.rechargeRange, min: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
+                        className="w-[50px] border border-gray-400 rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
                       />
                       ~
                       <input
@@ -1511,7 +1511,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           rechargeRange: {...advancedFilters.rechargeRange, max: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
+                        className="w-[50px] border border-gray-400 rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
                       />
                     </div>
                   </div>
@@ -1522,7 +1522,7 @@ function UnitPageContent() {
                   <div className="flex gap-1">
                     {/* 攻撃発生範囲 */}
                     <div className="flex items-center gap-1 w-1/2">
-                      <label className="text-[10px] text-gray-600 w-[60px]">攻撃発生</label>
+                      <label className="font-bold text-[10px] text-gray-600 w-[60px]">攻撃発生</label>
                       <input
                         type="number"
                         step="0.1"
@@ -1532,7 +1532,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           foreswingRange: {...advancedFilters.foreswingRange, min: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
+                        className="w-[50px] border border-gray-400 rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
                       />
                       ~
                       <input
@@ -1544,13 +1544,13 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           foreswingRange: {...advancedFilters.foreswingRange, max: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
+                        className="w-[50px] border border-gray-400 rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
                       />
                     </div>
                     
                     {/* 攻撃間隔範囲 */}
                     <div className="flex items-center gap-1 w-1/2">
-                      <label className="text-[10px] text-gray-600 w-[60px]">攻撃間隔</label>
+                      <label className="font-bold text-[10px] text-gray-600 w-[60px]">攻撃間隔</label>
                       <input
                         type="number"
                         step="0.1"
@@ -1560,7 +1560,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           tbaRange: {...advancedFilters.tbaRange, min: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
+                        className="w-[50px] border border-gray-400 rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
                       />
                       ~
                       <input
@@ -1572,7 +1572,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           tbaRange: {...advancedFilters.tbaRange, max: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
+                        className="w-[50px] border border-gray-400 rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
                       />
                     </div>
                   </div>
@@ -1583,7 +1583,7 @@ function UnitPageContent() {
                   <div className="flex gap-1">
                     {/* 攻撃後硬直範囲 */}
                     <div className="flex items-center gap-1 w-1/2">
-                      <label className="text-[10px] text-gray-600 w-[60px]">攻撃後硬直</label>
+                      <label className="font-bold text-[10px] text-gray-600 w-[60px]">攻撃後硬直</label>
                       <input
                         type="number"
                         step="0.1"
@@ -1593,7 +1593,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           backswingRange: {...advancedFilters.backswingRange, min: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
+                        className="w-[50px] border border-gray-400 rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
                       />
                       ~
                       <input
@@ -1605,13 +1605,13 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           backswingRange: {...advancedFilters.backswingRange, max: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
+                        className="w-[50px] border border-gray-400 rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
                       />
                     </div>
                     
                     {/* 攻撃頻度範囲 */}
                     <div className="flex items-center gap-1 w-1/2">
-                      <label className="text-[10px] text-gray-600 w-[60px]">攻撃頻度</label>
+                      <label className="font-bold text-[10px] text-gray-600 w-[60px]">攻撃頻度</label>
                       <input
                         type="number"
                         step="0.01"
@@ -1621,7 +1621,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           freqRange: {...advancedFilters.freqRange, min: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
+                        className="w-[50px] border border-gray-400 rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
                       />
                       ~
                       <input
@@ -1633,7 +1633,7 @@ function UnitPageContent() {
                           ...advancedFilters, 
                           freqRange: {...advancedFilters.freqRange, max: e.target.value}
                         })}
-                        className="w-[50px] border rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
+                        className="w-[50px] border border-gray-400 rounded px-1 py-0.5 text-[10px] text-right text-gray-600"
                       />
                     </div>
                   </div>

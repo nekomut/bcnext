@@ -3796,8 +3796,29 @@ function TalentsList({
                     <span className="text-red-500 ml-5"><small>与ダメ
                     <span className="w-8 mx-1 px-1 text-center text-xs font-bold">2.5</span>倍 </small></span>
                     <br />
-                    <span className="text-blue-500 ml-5"><small>被ダメ
-                    <span className="w-8 mx-1 px-1 text-center text-xs font-bold">0.6</span>倍 </small></span>
+                    <span className="text-blue-500 ml-5"><small>被ダメ{' '}
+                    {(() => {
+                      // 打たれ強いがあるかチェック
+                      const hasToughness = unitData.coreData.forms[actualCurrentForm]?.stats[29] && unitData.coreData.forms[actualCurrentForm]?.stats[29] > 0;
+                      if (hasToughness) {
+                        // 打たれ強いがある場合の範囲計算
+                        const baseBehemothMultiplier = 0.6;
+                        const toughnessMultiplier = 0.2; // 打たれ強いの被ダメ倍率
+                        const enhancedBehemothMultiplier = baseBehemothMultiplier * toughnessMultiplier;
+                        return (
+                          <>
+                            <span className="w-8 mx-1 px-1 text-center text-xs font-bold">{enhancedBehemothMultiplier.toFixed(2)}~{baseBehemothMultiplier.toFixed(1)}</span>倍
+                          </>
+                        );
+                      } else {
+                        return (
+                          <>
+                            <span className="w-8 mx-1 px-1 text-center text-xs font-bold">0.6</span>倍
+                          </>
+                        );
+                      }
+                    })()}
+                    </small></span>
                   </>
                 ) : talent.id === 65 ? (
                   <>
@@ -4470,17 +4491,51 @@ function TalentsList({
                     );
                   })()
                   : /* 超獣特効(64)の場合は計算結果を表示 */
-                  talent.id === 64 ? (
-                    <div className="text-right">
-                      <br />
-                      <div className="text-xs">
-                        <small className="text-red-500"><b>攻撃力</b></small> <b className={totalAttackMultiplier > 1 ? "text-red-500" : "text-gray-500"}>{Math.floor(currentAp * 2.5).toLocaleString()}</b>
+                  talent.id === 64 ? (() => {
+                    // 超獣特効の攻撃力計算（固定2.5倍）
+                    const ap = Math.floor(currentAp * 2.5);
+                    
+                    return (
+                      <div className="text-right">
+                        <br />
+                        <div className="text-xs">
+                          <small className="text-red-500"><b>攻撃力</b></small> <b className={totalAttackMultiplier > 1 ? "text-red-500" : "text-gray-500"}>{ap.toLocaleString()}</b>
+                        </div>
+                        <div className="text-xs">
+                          {(() => {
+                            // 基本能力の打たれ強いがあるかチェック（stats[29]）
+                            const currentForm = unitData.coreData.forms[actualCurrentForm];
+                            const hasToughness = currentForm?.stats[29] && currentForm?.stats[29] > 0;
+                            
+                            if (hasToughness) {
+                              // 打たれ強いがある場合：範囲で表示（最小値~最大値）
+                              const toughnessMultiplier = 0.2; // 打たれ強いの被ダメ倍率
+                              const baseBehemothMultiplier = 0.6;
+                              const enhancedBehemothMultiplier = baseBehemothMultiplier * toughnessMultiplier;
+                              
+                              // 最小体力(換算値)：基本の0.6で割った値
+                              const minHp = Math.floor(currentHp / baseBehemothMultiplier);
+                              // 最大体力(換算値)：強化された被ダメ倍率で割った値
+                              const maxHp = Math.floor(currentHp / enhancedBehemothMultiplier);
+                              
+                              return (
+                                <>
+                                  <small className="text-blue-500"><b>体力(換算値)</b></small> <b className={totalHpMultiplier > 1 ? "text-blue-500" : "text-gray-500"}>{minHp.toLocaleString()}~{maxHp.toLocaleString()}</b>
+                                </>
+                              );
+                            } else {
+                              // 打たれ強いがない場合：基本の0.6で割る
+                              return (
+                                <>
+                                  <small className="text-blue-500"><b>体力(換算値)</b></small> <b className={totalHpMultiplier > 1 ? "text-blue-500" : "text-gray-500"}>{Math.floor(currentHp / 0.6).toLocaleString()}</b>
+                                </>
+                              );
+                            }
+                          })()}
+                        </div>
                       </div>
-                      <div className="text-xs">
-                        <small className="text-blue-500"><b>体力(換算値)</b></small> <b className={totalHpMultiplier > 1 ? "text-blue-500" : "text-gray-500"}>{Math.floor(currentHp / 0.6).toLocaleString()}</b>
-                      </div>
-                    </div>
-                  ) : /* 超賢者特効(66)の場合は計算結果を表示 */
+                    );
+                  })() : /* 超賢者特効(66)の場合は計算結果を表示 */
                   talent.id === 66 ? (
                     <div className="text-right">
                       <br />

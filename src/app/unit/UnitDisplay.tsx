@@ -862,6 +862,7 @@ export function UnitDisplay({
         <div className="w-1/2 flex flex-col">
           {validFormCount > 1 && (
             <>
+              <span className="text-[11px] font-semibold text-gray-600 m-0 px-1 py-0">進化形態</span>
               <div className="flex gap-0.5 flex-wrap">
                 {unitData.coreData.forms.slice(0, validFormCount).map((form, index) => (
                   <button
@@ -895,7 +896,7 @@ export function UnitDisplay({
           {/* Radar Chart Data Source Info */}
           <div className="mt-2 p-2 bg-orange-50 border border-orange-200 rounded text-xs">
             <div className="flex items-center gap-1 mb-1">
-              <div className="text-orange-700 font-semibold">統計データ</div>
+              <div className="text-orange-600 font-semibold">統計データ</div>
               <label className="text-xxs text-orange-600 cursor-pointer flex items-center">
                 <input
                   type="checkbox"
@@ -906,10 +907,10 @@ export function UnitDisplay({
                 Lv Max
               </label>
             </div>
-            <div className="text-orange-600">
+            <div className="text-orange-600 text-xxs font-semibold">
               {filteredUnitIds && filteredUnitIds.length > 0 ? (
                 <>
-                  - 選択中ユニット({filteredUnitIds.length}体)
+                  - {filteredUnitIds.length}体(選択中のみ)
                   <br />
                   - {radarUseMaxLevel ? 'Lv Max' : 'Lv50'}
                 </>

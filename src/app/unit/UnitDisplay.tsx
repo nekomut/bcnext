@@ -894,7 +894,7 @@ export function UnitDisplay({
           )}
           
           {/* Radar Chart Data Source Info */}
-          <div className="mt-2 p-2 bg-orange-50 border border-orange-200 rounded text-xs">
+          <div className="mt-2 p-1 bg-orange-50 border border-orange-200 rounded text-xs">
             <div className="flex items-center gap-1 mb-1">
               <div className="text-orange-600 font-semibold">統計データ</div>
               <label className="text-xxs text-orange-600 cursor-pointer flex items-center">

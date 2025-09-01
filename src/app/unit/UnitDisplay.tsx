@@ -920,11 +920,11 @@ export function UnitDisplay({
                   className="ml-1 px-1 py-0.5 text-xxs border border-orange-300 rounded bg-white text-orange-700"
                 >
                   <option value="zscore">Z-score</option>
-                  <option value="min-max">Min-Max</option>
-                  <option value="percentile">Percentile</option>
-                  <option value="log">Log</option>
-                  <option value="rank">Rank</option>
                   <option value="robust-zscore">Robust Z-score</option>
+                  <option value="log">Log</option>
+                  <option value="percentile">Percentile</option>
+                  <option value="rank">Rank</option>
+                  <option value="min-max">Min-Max</option>
                 </select>
               </label>
             </div>

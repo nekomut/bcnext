@@ -599,16 +599,16 @@ export function UnitDisplay({
             })()}
           </div>
         )}
-        
+
         {/* Unit Info */}
         <div className="flex-1 min-w-0">
+
           {/* Animation URL construction */}
           {(() => {
             const formMap = ['f', 'c', 's', 'u'];
             const formKey = formMap[actualCurrentForm] || 'f';
             const unitIdPadded = unitData.unitId.toString().padStart(3, '0');
             const animUrl = `/anim?unit=${unitIdPadded}&form=${formKey}&anim=maanim02`;
-            
             return (
               <h2 className="text-sm sm:text-base font-bold text-gray-800 break-words flex items-center gap-2">
                 <span className="flex-1">
@@ -624,9 +624,11 @@ export function UnitDisplay({
               </h2>
             );
           })()}
-          <div className="text-xs sm:text-sm text-gray-600 break-words flex items-center gap-1 flex-wrap">
+
+        {/* Display Unit Level */}
+          <div className="text-xs sm:text-sm text-gray-600 break-words flex items-center gap-0.5 flex-wrap">
             <div className="flex items-center gap-1">
-              <span>Lv</span>
+              <span className="text-[11px]">Lv</span>
               <input
                 type="text"
                 value={levelInput}
@@ -653,9 +655,9 @@ export function UnitDisplay({
                     onParamsChange?.({ level: 1, plusLevel, formId: actualCurrentForm });
                   }
                 }}
-                className="border rounded px-1 sm:px-2 py-0.5 w-6 sm:w-16 text-right text-xs sm:text-sm text-gray-900"
+                className="border rounded-sm px-1 sm:px-2 py-0.5 w-6 sm:w-16 h-5 text-right text-xs sm:text-sm text-gray-900 border-gray-500"
               />
-              <span>+</span>
+              <span className="w-1">+</span>
               <input
                 type="text"
                 value={plusLevelInput}
@@ -682,10 +684,10 @@ export function UnitDisplay({
                     onParamsChange?.({ level, plusLevel: 0, formId: actualCurrentForm });
                   }
                 }}
-                className="border rounded px-0.5 sm:px-1 py-0.5 w-6 sm:w-16 text-right text-xs sm:text-sm text-gray-900"
+                className="border rounded-sm px-0.5 sm:px-1 py-0.5 w-6 sm:w-16 h-5 text-right text-xs sm:text-sm text-gray-900 border-gray-500"
               />
             </div>
-            <span className="text-xs text-gray-500 pr-2">/ <small><b>{maxLevel} + {maxPlusLevel}</b></small></span>
+            <span className="text-xs text-gray-500 pr-2"><small><b>/ {maxLevel}+{maxPlusLevel}</b></small></span>
             {[45, 50, 55, 60].filter(lv => lv <= maxLevel).map(targetLevel => (
               <button
                 key={targetLevel}
@@ -696,7 +698,7 @@ export function UnitDisplay({
                   setPlusLevelInput('0');
                   onParamsChange?.({ level: targetLevel, plusLevel: 0, formId: actualCurrentForm });
                 }}
-                className="bg-orange-600 hover:bg-orange-700 text-white px-1 py-0.5 rounded text-xxs sm:text-sm"
+                className="bg-amber-300 hover:bg-orange-700 text-gray-600 h-5 px-0.5 py-0 rounded font-semibold text-xxs sm:text-sm border border-gray-600"
               >
                 Lv{targetLevel}
               </button>
@@ -709,7 +711,7 @@ export function UnitDisplay({
                 setPlusLevelInput(maxPlusLevel.toString());
                 onParamsChange?.({ level: maxLevel, plusLevel: maxPlusLevel, formId: actualCurrentForm });
               }}
-              className="bg-orange-600 hover:bg-orange-700 text-white px-1 py-0.5 rounded text-xxs sm:text-sm"
+              className="bg-orange-600 hover:bg-orange-700 text-white h-5 px-1 py-0 rounded text-xxs sm:text-sm border border-gray-600"
             >
               Max
             </button>
@@ -719,7 +721,7 @@ export function UnitDisplay({
 
       {/* Form Tabs */}
       {validFormCount > 1 && (
-        <div className="flex mb-2.5 gap-1 flex-wrap">
+        <div className="flex mb-2.5 gap-0.5 flex-wrap">
           {unitData.coreData.forms.slice(0, validFormCount).map((form, index) => (
             <button
               key={index}
@@ -730,7 +732,7 @@ export function UnitDisplay({
               className={`flex items-center justify-center w-10 h-8 gap-0 px-0 py-0 rounded-sm transition-colors ${
                 actualCurrentForm === index
                   ? 'bg-orange-600 text-white'
-                  : 'bg-amber-200 text-gray-400 hover:bg-gray-300'
+                  : 'bg-amber-50 text-gray-400'
               }`}
             >
               {/* Form Icon */}
@@ -738,8 +740,8 @@ export function UnitDisplay({
                 <Image 
                   src={`data:image/png;base64,${formIcons[index]}`}
                   alt={form.name || 'Form Icon'}
-                  width={32}
-                  height={32}
+                  width={38}
+                  height={38}
                   className="rounded object-cover"
                 />
               )}

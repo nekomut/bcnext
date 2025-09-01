@@ -698,7 +698,7 @@ export function UnitDisplay({
                   setPlusLevelInput('0');
                   onParamsChange?.({ level: targetLevel, plusLevel: 0, formId: actualCurrentForm });
                 }}
-                className="bg-amber-300 hover:bg-orange-700 text-gray-600 h-5 px-0.5 py-0 rounded font-semibold text-xxs sm:text-sm border border-gray-600"
+                className="bg-amber-300 text-gray-600 h-5 px-0.5 py-0 rounded font-semibold text-xxs sm:text-sm border border-gray-600"
               >
                 Lv{targetLevel}
               </button>
@@ -711,7 +711,7 @@ export function UnitDisplay({
                 setPlusLevelInput(maxPlusLevel.toString());
                 onParamsChange?.({ level: maxLevel, plusLevel: maxPlusLevel, formId: actualCurrentForm });
               }}
-              className="bg-orange-600 hover:bg-orange-700 text-white h-5 px-1 py-0 rounded text-xxs sm:text-sm border border-gray-600"
+              className="bg-orange-600 text-white h-5 px-1 py-0 rounded text-xxs sm:text-sm border border-gray-600"
             >
               Max
             </button>

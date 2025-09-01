@@ -769,9 +769,9 @@ export function UnitDisplay({
                   }
                 }}
                 options={Array.from({ length: maxLevel }, (_, i) => i + 1).filter((lv) => 
-                  lv === 1 || lv % 5 === 0 || lv === maxLevel || [45, 50, 55, 60].includes(lv)
+                  lv >= 45 && (lv % 5 === 0 || lv === maxLevel)
                 )}
-                className="border rounded-sm px-1 sm:px-2 py-0.5 w-12 sm:w-16 h-5 text-right text-xs sm:text-sm text-gray-900 border-gray-400"
+                className="border rounded px-1 sm:px-2 py-0.5 w-12 sm:w-16 h-5 text-right text-xs sm:text-sm text-gray-900 border-gray-400"
               />
               <span className="w-1">+</span>
               <EditableSelect
@@ -795,12 +795,13 @@ export function UnitDisplay({
                   }
                 }}
                 options={Array.from({ length: maxPlusLevel + 1 }, (_, i) => i).filter((lv) => 
-                  lv === 0 || lv % 5 === 0 || lv === maxPlusLevel || lv <= 10
+                  lv === 0 || lv % 5 === 0
                 )}
-                className="border rounded-sm px-0.5 sm:px-1 py-0.5 w-12 sm:w-16 h-5 text-right text-xs sm:text-sm text-gray-900 border-gray-400"
+                className="border rounded px-0.5 sm:px-1 py-0.5 w-12 sm:w-16 h-5 text-right text-xs sm:text-sm text-gray-900 border-gray-400"
               />
             </div>
-            <span className="text-xs text-gray-500 pr-2"><small><b>/ {maxLevel}+{maxPlusLevel}</b></small></span>
+            <span className="text-xs text-gray-500 pr-0.5"><small><b>/ {maxLevel}+{maxPlusLevel}</b></small></span>
+            {/*
             {[45, 50, 55, 60].filter(lv => lv <= maxLevel).map(targetLevel => (
               <button
                 key={targetLevel}
@@ -816,6 +817,7 @@ export function UnitDisplay({
                 Lv{targetLevel}
               </button>
             ))}
+            */}
             <button
               onClick={() => { 
                 setLevel(maxLevel); 

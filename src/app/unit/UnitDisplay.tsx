@@ -655,7 +655,7 @@ export function UnitDisplay({
                     onParamsChange?.({ level: 1, plusLevel, formId: actualCurrentForm });
                   }
                 }}
-                className="border rounded-sm px-1 sm:px-2 py-0.5 w-6 sm:w-16 h-5 text-right text-xs sm:text-sm text-gray-900 border-gray-500"
+                className="border rounded-sm px-1 sm:px-2 py-0.5 w-6 sm:w-16 h-5 text-right text-xs sm:text-sm text-gray-900 border-gray-400"
               />
               <span className="w-1">+</span>
               <input
@@ -684,7 +684,7 @@ export function UnitDisplay({
                     onParamsChange?.({ level, plusLevel: 0, formId: actualCurrentForm });
                   }
                 }}
-                className="border rounded-sm px-0.5 sm:px-1 py-0.5 w-6 sm:w-16 h-5 text-right text-xs sm:text-sm text-gray-900 border-gray-500"
+                className="border rounded-sm px-0.5 sm:px-1 py-0.5 w-6 sm:w-16 h-5 text-right text-xs sm:text-sm text-gray-900 border-gray-400"
               />
             </div>
             <span className="text-xs text-gray-500 pr-2"><small><b>/ {maxLevel}+{maxPlusLevel}</b></small></span>

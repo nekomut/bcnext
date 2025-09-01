@@ -245,10 +245,10 @@ export function UnitDisplay({
     setAttackUpEnabled(false);
   }, [unitData.unitId, unitData.auxiliaryData.talents.talentList, unitData.coreData.forms, initialFormId, unitData, level, plusLevel]);
 
-  // フィルタされたユニットリストが変更されたときにレーダーチャートを更新
+  // フィルタされたユニットリストまたは最大レベル設定が変更されたときにレーダーチャートを更新
   useEffect(() => {
     setRadarKey(prev => prev + 1);
-  }, [filteredUnitIds]);
+  }, [filteredUnitIds, radarUseMaxLevel]);
 
   // アイコンを読み込むuseEffect
   useEffect(() => {
@@ -543,6 +543,7 @@ export function UnitDisplay({
   // レーダーチャート用のデータを生成
   const createRadarData = (): UnitRadarData => {
     const radarLevel = radarUseMaxLevel ? maxLevel + maxPlusLevel : 50;
+    console.log(`Radar Chart: Using level ${radarLevel} (useMaxLevel: ${radarUseMaxLevel}, maxLevel: ${maxLevel}, maxPlusLevel: ${maxPlusLevel})`);
     const radarStats = calculateUnitStats(unitData, actualCurrentForm, radarLevel, 0, attackIntervalReductionMultiplier);
     
     return {
@@ -753,22 +754,9 @@ export function UnitDisplay({
       <div className="flex gap-3 mb-2.5">
         {/* Radar Chart - Left side 50% width */}
         <div className="w-1/2 flex flex-col">
-          <div className="flex items-center justify-between mb-1">
-            <div className="flex items-center gap-1">
-              <label className="text-xs text-gray-600 cursor-pointer">
-                <input
-                  type="checkbox"
-                  checked={radarUseMaxLevel}
-                  onChange={(e) => setRadarUseMaxLevel(e.target.checked)}
-                  className="mr-1"
-                />
-                最大Lv
-              </label>
-            </div>
-          </div>
           <div className="bg-white rounded border border-gray-200 p-2 flex-1 min-h-[100px]">
             <RadarChart 
-              key={radarKey}
+              key={`${radarKey}-${radarUseMaxLevel}`}
               unitData={createRadarData()} 
               useMaxLevel={radarUseMaxLevel}
               className="w-full h-full"
@@ -781,7 +769,6 @@ export function UnitDisplay({
         <div className="w-1/2 flex flex-col">
           {validFormCount > 1 && (
             <>
-              <h3 className="text-xs sm:text-sm font-semibold text-gray-800 mb-1">フォーム選択</h3>
               <div className="flex gap-0.5 flex-wrap">
                 {unitData.coreData.forms.slice(0, validFormCount).map((form, index) => (
                   <button
@@ -811,6 +798,37 @@ export function UnitDisplay({
               </div>
             </>
           )}
+          
+          {/* Radar Chart Data Source Info */}
+          <div className="mt-2 p-2 bg-orange-50 border border-orange-200 rounded text-xs">
+            <div className="flex items-center justify-between mb-1">
+              <div className="text-orange-700 font-semibold">統計データ</div>
+              <label className="text-xs text-orange-600 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={radarUseMaxLevel}
+                  onChange={(e) => setRadarUseMaxLevel(e.target.checked)}
+                  className="mr-1 scale-75 accent-orange-500"
+                />
+                Lv Max
+              </label>
+            </div>
+            <div className="text-orange-600">
+              {filteredUnitIds && filteredUnitIds.length > 0 ? (
+                <>
+                  - 選択中ユニット({filteredUnitIds.length}体)
+                  <br />
+                  - {radarUseMaxLevel ? 'Lv Max' : 'Lv50'}
+                </>
+              ) : (
+                <>
+                  - 全ユニット (約800体)
+                  <br />
+                  - {radarUseMaxLevel ? 'Lv Max' : 'Lv50'}
+                </>
+              )}
+            </div>
+          </div>
         </div>
       </div>
 

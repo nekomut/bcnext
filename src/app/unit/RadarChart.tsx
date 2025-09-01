@@ -133,7 +133,7 @@ export default function RadarChart({ unitData, useMaxLevel = false, className = 
     return {
       responsive: true,
       maintainAspectRatio: true,
-      aspectRatio: 1,
+      aspectRatio: 10/9, // 縦:横 = 9:10
       plugins: {
         legend: {
           display: false
@@ -268,7 +268,7 @@ export default function RadarChart({ unitData, useMaxLevel = false, className = 
 
   return (
     <div className={`relative ${className}`}>
-      <div className="w-full" style={{ aspectRatio: '1' }}>
+      <div className="w-full" style={{ aspectRatio: '10/9' }}>
         <Radar 
           key={`radar-${targetUnitIdsKey}-${useMaxLevel}`}
           ref={chartRef}

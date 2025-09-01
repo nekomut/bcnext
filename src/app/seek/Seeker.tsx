@@ -125,7 +125,7 @@ export default function Seeker() {
     <> 
       <p className="mx-1 mt-2 mb-0">GatyaSet:</p>
       <select
-        className="text-gray-800 mx-1 mt-0 mb-1"
+        className="text-gray-800 mx-1 mt-0 mb-1 rounded-sm"
         onChange={(event) => {
           const selectedGatyaSet = findGatyaSet(event.target.value);
           if (selectedGatyaSet) {
@@ -152,10 +152,10 @@ export default function Seeker() {
 
       {hasGatyaSet && (
         <>
-          <label className="align-middle">
+          <label className="align-middle text-[11px]">
             <input
               type="checkbox"
-              className="mx-1 align-text-bottom"
+              className="mx-1 align-text-bottom rounded"
               defaultChecked={guaranteed}
               onClick={(event) => {
                 setGuaranteed((event.target as HTMLInputElement).checked);
@@ -174,7 +174,7 @@ export default function Seeker() {
                 <select
                   key={i}
                   onChange={(e) => setUserRoll(i, e.target.value)}
-                  className="text-gray-800 max-w-xs mx-1 mb-1 "
+                  className="text-gray-800 max-w-xs mx-1 mb-1 rounded-sm"
                 >
                   <option value="null" defaultValue={roll === null ? "true" : "false"}>
                     -- Select roll {i + 1} --
@@ -193,7 +193,7 @@ export default function Seeker() {
 
           <button
             type="button"
-            className="button-blue mx-1"
+            className="bg-green-700 mx-1 px-1 py-0.5 rounded-sm"
             onClick={onClick}
             disabled={userRolls.every((roll) => roll === null) || isSearching}
           >

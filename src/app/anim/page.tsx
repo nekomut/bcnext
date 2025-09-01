@@ -14,13 +14,13 @@ import { getUnitData } from '../unit/types';
 function AnimationPageContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  
+
   // URLパラメータから初期値を取得（デフォルト：未選択状態）
   const initialUnit = searchParams.get('unit');
   const initialForm = searchParams.get('form'); // null if not specified
-  const initialAnim = searchParams.get('anim'); // null if not specified  
+  const initialAnim = searchParams.get('anim'); // null if not specified
   const initialPlaying = searchParams.get('playing') !== 'false'; // デフォルト：再生
-  
+
   const [selectedUnit, setSelectedUnit] = useState(initialUnit || '');
   const [inputUnit, setInputUnit] = useState(initialUnit || ''); // 入力中の値を管理
   const [animationData, setAnimationData] = useState<{ [form: string]: AnimationData } | null>(null);
@@ -29,26 +29,26 @@ function AnimationPageContent() {
   const [isPlaying, setIsPlaying] = useState(initialPlaying);
   const [loading, setLoading] = useState(false);
   const [loadingProgress, setLoadingProgress] = useState({ current: 0, total: 0, message: '' });
-  
+
   // Frame control states
   const [currentFrame, setCurrentFrame] = useState(0);
-  
+
   // Unit selection UI states (unitスタイル)
   const [selectedUnitName, setSelectedUnitName] = useState<string>('');
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const [nameFilter, setNameFilter] = useState<string>('');
-  
+
   // ナビゲーション順序設定
   const [navigationOrder, setNavigationOrder] = useState<'pokedex' | 'id'>('pokedex');
-  
+
   // Form icons state
   const [formIcons, setFormIcons] = useState<string[]>([]);
   const [iconsLoading, setIconsLoading] = useState(true);
 
   const availableForms = animationData ? Object.keys(animationData) : [];
-  const availableAnimations = availableForms.length > 0 && animationData && animationData[selectedForm] ? 
+  const availableAnimations = availableForms.length > 0 && animationData && animationData[selectedForm] ?
     Object.keys(animationData[selectedForm].maanim || {}) : [];
-  
+
   // フィルタリングされたユニット名リスト
   const filteredUnits = unitNamesData.filter(unit =>
     unit.displayName.toLowerCase().includes(nameFilter.toLowerCase()) ||
@@ -58,7 +58,7 @@ function AnimationPageContent() {
   // ナビゲーション用のユニットリストを取得する関数
   const getNavigationUnits = async (): Promise<{unitId: number, sortKey?: number}[]> => {
     const units: {unitId: number, sortKey?: number}[] = [];
-    
+
     for (const unitName of unitNamesData) {
       try {
         const unitData = await getUnitData(parseInt(unitName.unitId));
@@ -72,7 +72,7 @@ function AnimationPageContent() {
         // ユニットデータが見つからない場合はスキップ
       }
     }
-    
+
     // ナビゲーション順序でソート
     if (navigationOrder === 'pokedex') {
       units.sort((a, b) => {
@@ -83,7 +83,7 @@ function AnimationPageContent() {
     } else {
       units.sort((a, b) => a.unitId - b.unitId);
     }
-    
+
     return units;
   };
 
@@ -91,11 +91,11 @@ function AnimationPageContent() {
   const getAdjacentUnitIds = async (currentId: number): Promise<{prevId?: number, nextId?: number}> => {
     const units = await getNavigationUnits();
     const currentIndex = units.findIndex(unit => unit.unitId === currentId);
-    
+
     if (currentIndex === -1) {
       return {};
     }
-    
+
     return {
       prevId: currentIndex > 0 ? units[currentIndex - 1].unitId : undefined,
       nextId: currentIndex < units.length - 1 ? units[currentIndex + 1].unitId : undefined
@@ -105,25 +105,25 @@ function AnimationPageContent() {
   // URLパラメータを更新する関数
   const updateURL = useCallback((params: { unit?: string; form?: string; anim?: string; playing?: boolean }) => {
     const newSearchParams = new URLSearchParams(searchParams.toString());
-    
+
     if (params.unit !== undefined) newSearchParams.set('unit', params.unit);
     if (params.form !== undefined) newSearchParams.set('form', params.form);
     if (params.anim !== undefined) newSearchParams.set('anim', params.anim);
     if (params.playing !== undefined) newSearchParams.set('playing', params.playing.toString());
-    
+
     router.replace(`?${newSearchParams.toString()}`, { scroll: false });
   }, [router, searchParams]);
 
-  
+
   // ユニット名選択時の処理（unitスタイル）
   const handleUnitNameSelect = (unit: UnitNameData) => {
     setSelectedUnitName(unit.displayName);
     setNameFilter('');
     setIsDropdownOpen(false);
-    
+
     handleUnitChange(unit.unitId);
   };
-  
+
   // キーボード入力ハンドラ
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') {
@@ -140,7 +140,7 @@ function AnimationPageContent() {
         return unitData.forms[formIndex];
       }
     }
-    
+
     // Fallback to default form names
     const defaultFormNames: { [key: string]: string } = {
       'f': '第1形態',
@@ -179,24 +179,24 @@ function AnimationPageContent() {
     setInputUnit(unitId); // 入力フィールドも同期
     setLoading(true);
     setLoadingProgress({ current: 0, total: 3, message: 'アニメーションデータを読み込み中...' });
-    
+
     try {
       // Step 1: アニメーションデータの読み込み（common/util/animベース）
       setLoadingProgress({ current: 1, total: 3, message: 'アニメーションデータを読み込み中...' });
       const newAnimationData = await loadMultiFormAnimationData(unitId);
-      
+
       if (newAnimationData) {
         setAnimationData(newAnimationData);
-        
+
         // URLパラメータを更新
         updateURL({ unit: unitId });
-        
+
         // ユニット名を同期
         const unitData = unitNamesData.find(unit => unit.unitId === unitId);
         if (unitData) {
           setSelectedUnitName(unitData.displayName);
         }
-        
+
         // Step 2: アイコンデータの読み込み
         setLoadingProgress({ current: 2, total: 3, message: 'アイコンを読み込み中...' });
         try {
@@ -207,14 +207,14 @@ function AnimationPageContent() {
         } finally {
           setIconsLoading(false);
         }
-        
+
         setLoadingProgress({ current: 3, total: 3, message: '読み込み完了' });
-        
+
         // 短い遅延で読み込み完了を表示
         setTimeout(() => {
           setLoading(false);
         }, 300);
-        
+
         return true;
       } else {
         setLoadingProgress({ current: 0, total: 3, message: 'アニメーションデータが見つかりません' });
@@ -227,7 +227,7 @@ function AnimationPageContent() {
       return false;
     }
   }, [updateURL]);
-  
+
   // アイコン読み込み処理は削除（common/util/animベースでは不要）
 
   // Load initial unit on mount
@@ -239,7 +239,7 @@ function AnimationPageContent() {
         setLoading(false);
       }
     };
-    
+
     loadInitialUnit();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -253,16 +253,16 @@ function AnimationPageContent() {
       if (forms.length > 0) {
         const currentForm = searchParams.get('form');
         const currentAnim = searchParams.get('anim');
-        
+
         // URLで指定されたフォーム、または最後のフォーム（最終形態）を選択
         const targetForm = currentForm && forms.includes(currentForm) ? currentForm : forms[forms.length - 1];
         setSelectedForm(targetForm);
-        
+
         const formData = animationData[targetForm];
         const animations = formData ? Object.keys(formData.maanim || {}) : [];
         if (animations.length > 0) {
           // URLで指定されたアニメーション、または攻撃アニメーション（maanim02）を選択
-          const targetAnim = currentAnim && animations.includes(currentAnim) ? currentAnim : 
+          const targetAnim = currentAnim && animations.includes(currentAnim) ? currentAnim :
                            animations.find(anim => anim === 'maanim02') || animations[0];
           setSelectedAnimation(targetAnim);
         }
@@ -272,12 +272,12 @@ function AnimationPageContent() {
 
   if (loading) {
     const progressPercentage = loadingProgress.total > 0 ? Math.round((loadingProgress.current / loadingProgress.total) * 100) : 0;
-    
+
     return (
       <div className="container mx-auto p-4">
         <div className="flex flex-col justify-center items-center h-64 space-y-4">
           <div className="text-lg font-mono">{loadingProgress.message}</div>
-          
+
           {/* Progress Bar */}
           <div className="w-full max-w-md">
             <div className="flex justify-between text-sm font-mono text-gray-600 mb-2">
@@ -285,13 +285,13 @@ function AnimationPageContent() {
               <span>{progressPercentage}%</span>
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2.5">
-              <div 
-                className="bg-orange-600 h-2.5 rounded-full transition-all duration-300 ease-out" 
+              <div
+                className="bg-orange-600 h-2.5 rounded-full transition-all duration-300 ease-out"
                 style={{ width: `${progressPercentage}%` }}
               ></div>
             </div>
           </div>
-          
+
           {/* Animated Loading Dots */}
           <div className="flex space-x-1">
             <div className="w-2 h-2 bg-orange-600 rounded-full animate-bounce"></div>
@@ -316,7 +316,7 @@ function AnimationPageContent() {
       <hr />
 
     <div className="container mx-auto p-1">
-      
+
       {/* ユニット検索UI（unitスタイル） */}
       <div className="p-1">
         <div className="mb-1 flex gap-1 items-end">
@@ -326,7 +326,7 @@ function AnimationPageContent() {
               onClick={async () => {
                 const currentId = parseInt(selectedUnit);
                 const { prevId } = await getAdjacentUnitIds(currentId);
-                
+
                 if (prevId !== undefined) {
                   const formattedId = prevId.toString().padStart(3, '0');
                   await handleUnitChange(formattedId);
@@ -338,7 +338,7 @@ function AnimationPageContent() {
               ◁
             </button>
           )}
-          
+
           <div className="flex items-center gap-1">
             <label htmlFor="unitId" className="text-xs text-gray-200">Unit ID</label>
             <input
@@ -357,7 +357,7 @@ function AnimationPageContent() {
               className="border rounded px-1 py-0.5 text-xs w-8 sm:w-24 text-gray-900 text-center"
             />
           </div>
-          
+
           {/* ユニット名プルダウン */}
           <div className="relative flex-1">
             <div className="relative">
@@ -379,7 +379,7 @@ function AnimationPageContent() {
                 placeholder="ユニット名で選択..."
                 className="border rounded px-1 py-0.5 text-xs w-full text-gray-900"
               />
-              
+
               {isDropdownOpen && (
                 <div className="absolute z-10 w-full max-h-60 overflow-y-auto bg-white border border-gray-300 rounded-md shadow-lg mt-1">
                   {filteredUnits.slice(0, 50).map((unit) => (
@@ -394,13 +394,13 @@ function AnimationPageContent() {
                       {unit.displayName}
                     </div>
                   ))}
-                  
+
                   {filteredUnits.length > 50 && (
                     <div className="px-2 py-1 text-xs text-gray-500 italic">
                       検索結果が多すぎます。キーワードを絞ってください。
                     </div>
                   )}
-                  
+
                   {filteredUnits.length === 0 && nameFilter && (
                     <div className="px-2 py-1 text-xs text-gray-500 italic">
                       該当するユニットが見つかりません。
@@ -410,7 +410,7 @@ function AnimationPageContent() {
               )}
             </div>
           </div>
-          
+
           {/* ソート順選択プルダウン */}
           <div className="flex items-center gap-1">
             <select
@@ -422,14 +422,14 @@ function AnimationPageContent() {
               <option value="id">ID順</option>
             </select>
           </div>
-          
+
           {/* 次のUnitボタン - 右端 */}
           {selectedUnit && !isNaN(parseInt(selectedUnit)) && (
             <button
               onClick={async () => {
                 const currentId = parseInt(selectedUnit);
                 const { nextId } = await getAdjacentUnitIds(currentId);
-                
+
                 if (nextId !== undefined) {
                   const formattedId = nextId.toString().padStart(3, '0');
                   await handleUnitChange(formattedId);
@@ -443,10 +443,10 @@ function AnimationPageContent() {
           )}
         </div>
       </div>
-      
+
       {/* コントロール */}
       <div className="bg-amber-50 shadow rounded p-2 mb-1">
-        
+
         {/* Form Tabs（anim0スタイル） */}
         {availableForms.length > 1 && (
           <div className="flex mb-1 justify-between items-start">
@@ -458,19 +458,19 @@ function AnimationPageContent() {
                       setSelectedForm(form);
                       updateURL({ form: form });
                     }}
-                    className={`w-full h-12 flex items-center justify-center rounded transition-colors ${
+                    className={`w-full h-14 flex items-center justify-center rounded transition-colors ${
                       selectedForm === form
-                        ? 'bg-orange-600'
-                        : 'bg-gray-200 hover:bg-gray-300'
+                        ? 'bg-orange-500'
+                        : 'bg-amber-50 hover:bg-amber-50'
                     }`}
                   >
                     {/* Form Icon */}
                     {!iconsLoading && formIcons[index] && (
-                      <Image 
+                      <Image
                         src={`data:image/png;base64,${formIcons[index]}`}
                         alt={getFormDisplayName(form, selectedUnit)}
-                        width={60}
-                        height={60}
+                        width={70}
+                        height={70}
                         className="rounded object-cover"
                       />
                     )}
@@ -478,10 +478,10 @@ function AnimationPageContent() {
                 </div>
               ))}
             </div>
-            
+
             {/* Unit Calculator Link */}
             {selectedUnit && (
-              <Link 
+              <Link
                 href={`/unit?unit=${selectedUnit}&form=${selectedForm}`}
                 className="text-xs text-gray-500 hover:text-gray-700 hover:underline font-mono font-bold"
               >
@@ -490,7 +490,7 @@ function AnimationPageContent() {
             )}
           </div>
         )}
-        
+
         {/* Play Controls - レイアウト調整 */}
         {availableForms.length === 1 ? (
           /* 単一フォーム: フォームタブレイアウトと同じ構造 */
@@ -504,10 +504,10 @@ function AnimationPageContent() {
                       setSelectedAnimation(anim);
                       updateURL({ anim: anim });
                     }}
-                    className={`w-full p-1 rounded-md font-medium font-mono text-xs ${
+                    className={`w-full p-1 rounded-sm font-medium font-mono text-xs ${
                       selectedAnimation === anim
-                        ? 'bg-orange-500 hover:bg-orange-700 text-white'
-                        : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
+                        ? 'bg-amber-500 hover:bg-amber-500 text-gray-600 border-gray-500'
+                        : 'bg-gray-200 hover:bg-gray-300 text-gray-400 border-gray-400'
                     }`}
                   >
                     {getAnimationDisplayName(anim)}
@@ -531,10 +531,10 @@ function AnimationPageContent() {
                 </button>
               </div>
             </div>
-            
+
             {/* Unit Calculator Link - 右寄せ・上付き */}
             {selectedUnit && (
-              <Link 
+              <Link
                 href={`/unit?unit=${selectedUnit}`}
                 className="text-xs text-gray-500 hover:text-gray-700 hover:underline font-mono font-bold"
               >
@@ -553,10 +553,10 @@ function AnimationPageContent() {
                     setSelectedAnimation(anim);
                     updateURL({ anim: anim });
                   }}
-                  className={`w-full p-1 rounded-md font-medium font-mono text-xs ${
+                  className={`w-full py-0.5 rounded border font-medium font-mono text-xs ${
                     selectedAnimation === anim
-                      ? 'bg-orange-600 hover:bg-orange-600 text-white'
-                      : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
+                      ? 'bg-amber-500 hover:bg-amber-500 text-gray-600 border-gray-600'
+                      : 'bg-gray-200 hover:bg-gray-300 text-gray-400 border-gray-400'
                   }`}
                 >
                   {getAnimationDisplayName(anim)}
@@ -572,7 +572,7 @@ function AnimationPageContent() {
                   setIsPlaying(newPlaying);
                   updateURL({ playing: newPlaying });
                 }}
-                className={`w-full p-1 rounded-md text-white font-medium font-mono text-xs ${
+                className={`w-full py-0.5 rounded border border-gray-600 text-white font-medium font-mono text-xs ${
                   isPlaying ? 'bg-red-500 hover:bg-red-600' : 'bg-green-500 hover:bg-green-600'
                 }`}
               >

@@ -1,7 +1,15 @@
 'use client'
 
-import React from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import type { EventInfo } from './types';
+import StageDataManager from './StageDataManager';
+
+interface SpecialRule {
+  name: string;
+  explanation: string;
+  ruleTypes: Record<string, { Parameters: number[] }>;
+  contentsType: number;
+}
 
 interface StageListProps {
   events: EventInfo[];
@@ -11,6 +19,39 @@ interface StageListProps {
 }
 
 export function StageList({ events, searchTerm, onStageSelect, onSpecificStageSelect }: StageListProps) {
+  const [specialRules, setSpecialRules] = useState<Record<number, SpecialRule | null>>({});
+  const [loadingRules, setLoadingRules] = useState<Record<number, boolean>>({});
+
+  // 特別ルール情報を取得する関数
+  const loadSpecialRule = useCallback(async (eventId: number) => {
+    if (specialRules[eventId] !== undefined || loadingRules[eventId]) {
+      return; // 既に読み込み済みまたは読み込み中
+    }
+
+    setLoadingRules(prev => ({ ...prev, [eventId]: true }));
+    
+    try {
+      const stageData = await StageDataManager.loadStageData(eventId);
+      if (stageData?.specialRule) {
+        setSpecialRules(prev => ({ ...prev, [eventId]: stageData.specialRule }));
+      } else {
+        setSpecialRules(prev => ({ ...prev, [eventId]: null }));
+      }
+    } catch (error) {
+      console.error(`Failed to load special rule for event ${eventId}:`, error);
+      setSpecialRules(prev => ({ ...prev, [eventId]: null }));
+    } finally {
+      setLoadingRules(prev => ({ ...prev, [eventId]: false }));
+    }
+  }, [specialRules, loadingRules]);
+
+  // コンポーネントマウント時に全イベントの特別ルール情報を取得
+  useEffect(() => {
+    events.forEach(event => {
+      loadSpecialRule(event.eventId);
+    });
+  }, [events, loadSpecialRule]);
+
   if (events.length === 0) {
     return (
       <div className="bg-amber-50 rounded shadow-sm border p-4 text-center">
@@ -75,12 +116,32 @@ export function StageList({ events, searchTerm, onStageSelect, onSpecificStageSe
                   </button>
                 </td>
                 <td className="px-0.5 py-0 align-top">
-                  <button
-                    onClick={() => onStageSelect(event.eventId)}
-                    className="text-left w-full font-semibold text-xs text-gray-600 hover:text-orange-800 hover:underline"
-                  >
-                    <small>{highlightText(event.eventName, searchTerm)}</small>
-                  </button>
+                  <div className="flex flex-col">
+                    <button
+                      onClick={() => onStageSelect(event.eventId)}
+                      className="text-left w-full font-semibold text-xs text-gray-600 hover:text-orange-800 hover:underline"
+                    >
+                      <small>{highlightText(event.eventName, searchTerm)}</small>
+                    </button>
+                    
+                    {/* 特別ルール情報を表示 */}
+                    {specialRules[event.eventId] && (
+                      <div className="mt-0.5 px-0.5 py-0.5 bg-orange-100 border border-orange-200 rounded text-xxs text-orange-700">
+                        {specialRules[event.eventId]!.explanation && (
+                          <div className="text-xxxs leading-tight mt-0.5 whitespace-pre-line">
+                            {specialRules[event.eventId]!.explanation}
+                          </div>
+                        )}
+                      </div>
+                    )}
+                    
+                    {/* 読み込み中の表示 */}
+                    {loadingRules[event.eventId] && (
+                      <div className="mt-1 px-1 py-0.5 bg-gray-50 border border-gray-200 rounded text-xxs text-gray-500">
+                        特別ルール確認中...
+                      </div>
+                    )}
+                  </div>
                 </td>
                 <td className="px-0.5 py-0 align-top">
                   <div className="space-y-0">

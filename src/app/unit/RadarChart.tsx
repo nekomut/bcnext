@@ -102,7 +102,7 @@ export default function RadarChart({ unitData, useMaxLevel = false, className = 
       Math.max(-3, Math.min(3, normalizedData.attackPower)),
       Math.max(-3, Math.min(3, -normalizedData.foreswing)),
       Math.max(-3, Math.min(3, normalizedData.dps)),
-      Math.max(-3, Math.min(3, normalizedData.attackFrequency)),
+      Math.max(-3, Math.min(3, -normalizedData.attackFrequency)),
       Math.max(-3, Math.min(3, -normalizedData.cost)),
       Math.max(-3, Math.min(3, -normalizedData.recharge)),
       Math.max(-3, Math.min(3, normalizedData.range)),
@@ -133,7 +133,7 @@ export default function RadarChart({ unitData, useMaxLevel = false, className = 
     return {
       responsive: true,
       maintainAspectRatio: true,
-      aspectRatio: 10/9, // 縦:横 = 9:10
+      aspectRatio: 10/8.5, // 縦:横 = 9:10
       plugins: {
         legend: {
           display: false
@@ -268,13 +268,15 @@ export default function RadarChart({ unitData, useMaxLevel = false, className = 
 
   return (
     <div className={`relative ${className}`}>
-      <div className="w-full" style={{ aspectRatio: '10/9' }}>
-        <Radar 
-          key={`radar-${targetUnitIdsKey}-${useMaxLevel}`}
-          ref={chartRef}
-          data={getChartData()} 
-          options={getChartOptions()}
-        />
+      <div className="w-full overflow-hidden" style={{ aspectRatio: '10/8' }}>
+        <div style={{ marginTop: '2%', height: '100%' }}>
+          <Radar 
+            key={`radar-${targetUnitIdsKey}-${useMaxLevel}`}
+            ref={chartRef}
+            data={getChartData()} 
+            options={getChartOptions()}
+          />
+        </div>
       </div>
     </div>
   );

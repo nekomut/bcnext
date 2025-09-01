@@ -669,9 +669,9 @@ export function UnitDisplay({
   const maxPlusLevel = unitData.coreData.rarity.maxLevels[1];
 
   return (
-    <div className={`bg-amber-50 rounded shadow p-3 ${className}`}>
+    <div className={`bg-amber-50 rounded shadow p-2 ${className}`}>
       {/* Header */}
-      <div className="mb-3 flex items-center gap-2 sm:gap-3">
+      <div className="mb-1 flex items-center gap-2 sm:gap-3">
         {/* Unit Icon and Rarity */}
         {!iconsLoading && formIcons[actualCurrentForm] && (
           <div className="flex-shrink-0 flex flex-col items-center gap-1">
@@ -729,7 +729,7 @@ export function UnitDisplay({
             const unitIdPadded = unitData.unitId.toString().padStart(3, '0');
             const animUrl = `/anim?unit=${unitIdPadded}&form=${formKey}&anim=maanim02`;
             return (
-              <h2 className="text-sm sm:text-base font-bold text-gray-800 break-words flex items-center gap-2">
+              <h2 className="text-sm sm:text-base font-bold text-gray-800 break-words flex items-center gap-1">
                 <span className="flex-1">
                   <span className="text-xs sm:text-sm text-gray-600 font-normal">{unitData.unitId.toString().padStart(3, '0')}-{currentForm + 1}</span> {currentFormData.name || `Unit ${unitData.unitId.toString().padStart(3, '0')}`}
                 </span>
@@ -835,7 +835,7 @@ export function UnitDisplay({
       </div>
 
       {/* Radar Chart and Form Tabs Section */}
-      <div className="flex gap-3 mb-2.5">
+      <div className="flex gap-2 mb-2">
         {/* Radar Chart - Left side 50% width */}
         <div className="w-1/2 flex flex-col">
           <div className="bg-white rounded border border-gray-200 p-2 flex-1 min-h-[100px]">
@@ -1021,8 +1021,8 @@ export function UnitDisplay({
 
 function StatsTable({ stats, attackUpEnabled, hpUpEnabled, attackIntervalReductionEnabled, costReductionEnabled, moveSpeedUpEnabled, rechargeSpeedUpEnabled }: { stats: CalculatedStats, attackUpEnabled: boolean, hpUpEnabled: boolean, attackIntervalReductionEnabled: boolean, costReductionEnabled: boolean, moveSpeedUpEnabled: boolean, rechargeSpeedUpEnabled: boolean }) {
   return (
-    <div className="mb-2.5">
-      <h3 className="text-sm sm:text-base font-semibold mb-1 text-gray-800">基本ステータス</h3>
+    <div className="mb-1.5">
+      <h3 className="text-sm sm:text-base font-semibold mb-1 text-gray-600">基本ステータス</h3>
       <div className="grid grid-cols-2 gap-1.5 sm:gap-3 text-xs sm:text-sm">
         <StatItem label="体力" value={<b className={hpUpEnabled ? "text-blue-500" : "text-gray-500"}>{stats.hp.toLocaleString()}</b>} labelClassName="text-blue-500" />
 
@@ -2479,8 +2479,8 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUp
   talentToughnessValue: number
 }) {
   return (
-    <div className="mb-2.5">
-      <h3 className="text-sm sm:text-base font-semibold mb-0.3 text-gray-800">能力・効果</h3>
+    <div className="mb-2">
+      <h3 className="text-sm sm:text-base font-semibold mb-0 text-gray-600">能力・効果</h3>
       <div className="space-y-0.5">
         {abilities.filter(ability => !ability.isHidden).map((ability, index) => (
           ability.isDynamic && ability.name === "超ダメージ" ? (
@@ -3368,10 +3368,10 @@ function TalentsList({
 
   return (
     <div>
-      <h3 className="text-sm sm:text-base font-semibold mb-2 text-gray-800">本能・超本能</h3>
-      <div className="space-y-0.5">
+      <h3 className="text-sm sm:text-base font-semibold mb-1 text-gray-600">本能・超本能</h3>
+      <div className="space-y-0">
         {talents.map((talent, index) => (
-          <div key={index} className={`p-1.5 rounded ${talent.type === 'ultra' ? 'bg-red-50 border-l-4 border-red-500' : 'bg-yellow-50 border-l-4 border-yellow-500'}`}>
+          <div key={index} className={`p-1.5 rounded ${talent.type === 'ultra' ? 'bg-red-100 border-l-4 border-red-500' : 'bg-amber-100 border-l-4 border-yellow-500'}`}>
             <div className="flex justify-between items-center gap-2">
               <div className={`font-bold text-xs ${talent.type === 'ultra' ? 'text-red-600' : 'text-yellow-600'}`}>
 

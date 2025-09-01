@@ -8,7 +8,7 @@ import { UnitData, CalculatedStats, UnitAbility, UnitTalent, calculateUnitStats,
 import { icons } from '@/data/icons';
 import IconManager from './IconManager';
 import RadarChart from './RadarChart';
-import { UnitRadarData } from './RadarChartNormalizer';
+import { UnitRadarData, NormalizationType } from './RadarChartNormalizer';
 
 // Editable Select Component
 interface EditableSelectProps {
@@ -254,6 +254,7 @@ export function UnitDisplay({
 
   // レーダーチャート用の状態
   const [radarUseMaxLevel, setRadarUseMaxLevel] = useState(false);
+  const [normalizationType, setNormalizationType] = useState<NormalizationType>('zscore');
   const [radarKey, setRadarKey] = useState(0);
 
   // ユニットが変更されたときにフラグを再初期化
@@ -336,7 +337,7 @@ export function UnitDisplay({
   // フィルタされたユニットリスト、最大レベル設定、表示中ユニットのレベル、進化形態が変更されたときにレーダーチャートを更新
   useEffect(() => {
     setRadarKey(prev => prev + 1);
-  }, [filteredUnitIds, radarUseMaxLevel, level, plusLevel, currentForm]);
+  }, [filteredUnitIds, radarUseMaxLevel, normalizationType, level, plusLevel, currentForm]);
 
   // アイコンを読み込むuseEffect
   useEffect(() => {
@@ -850,11 +851,12 @@ export function UnitDisplay({
               </div>
             ) : (
               <RadarChart 
-                key={`${radarKey}-${radarUseMaxLevel}`}
+                key={`${radarKey}-${radarUseMaxLevel}-${normalizationType}`}
                 unitData={createRadarData()} 
                 useMaxLevel={radarUseMaxLevel}
                 className="w-full h-full"
                 targetUnitIds={filteredUnitIds}
+                normalizationType={normalizationType}
               />
             )}
           </div>
@@ -907,6 +909,23 @@ export function UnitDisplay({
                   className="mr-0.5 scale-75 accent-orange-500"
                 />
                 Lv Max
+              </label>
+            </div>
+            <div className="flex items-center gap-2 mb-1">
+              <label className="text-xxs text-orange-600 flex items-center">
+                正規化:
+                <select 
+                  value={normalizationType} 
+                  onChange={(e) => setNormalizationType(e.target.value as NormalizationType)}
+                  className="ml-1 px-1 py-0.5 text-xxs border border-orange-300 rounded bg-white text-orange-700"
+                >
+                  <option value="zscore">Z-score</option>
+                  <option value="min-max">Min-Max</option>
+                  <option value="percentile">Percentile</option>
+                  <option value="log">Log</option>
+                  <option value="rank">Rank</option>
+                  <option value="robust-zscore">Robust Z-score</option>
+                </select>
               </label>
             </div>
             <div className="text-orange-600 text-xxs font-semibold">

@@ -13,7 +13,7 @@ import {
   ChartData
 } from 'chart.js';
 import { Radar } from 'react-chartjs-2';
-import { UnitRadarData, RadarChartNormalizer, RadarChartNormalizationData } from './RadarChartNormalizer';
+import { UnitRadarData, RadarChartNormalizer, RadarChartNormalizationData, NormalizationType } from './RadarChartNormalizer';
 
 ChartJS.register(
   RadialLinearScale,
@@ -29,9 +29,10 @@ interface RadarChartProps {
   useMaxLevel?: boolean;
   className?: string;
   targetUnitIds?: number[];
+  normalizationType?: NormalizationType;
 }
 
-export default function RadarChart({ unitData, useMaxLevel = false, className = '', targetUnitIds }: RadarChartProps) {
+export default function RadarChart({ unitData, useMaxLevel = false, className = '', targetUnitIds, normalizationType = 'zscore' }: RadarChartProps) {
   const [normalizationData, setNormalizationData] = useState<RadarChartNormalizationData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -85,7 +86,7 @@ export default function RadarChart({ unitData, useMaxLevel = false, className = 
     }
 
     const normalizer = RadarChartNormalizer.getInstance();
-    const normalizedData = normalizer.normalizeUnitData(unitData, normalizationData.normalizationStats);
+    const normalizedData = normalizer.normalizeUnitData(unitData, normalizationData.normalizationStats, normalizationType, normalizationData.allUnitsData);
 
     const labels = [
       '攻撃発生',
@@ -101,13 +102,13 @@ export default function RadarChart({ unitData, useMaxLevel = false, className = 
     ];
 
     const dataValues = [
-      Math.max(-3, Math.min(3, -normalizedData.foreswing)),
-      Math.max(-3, Math.min(3, -normalizedData.attackFrequency)),
+      Math.max(-3, Math.min(3, normalizedData.foreswing)),      // 正規化時に既に反転済み
+      Math.max(-3, Math.min(3, normalizedData.attackFrequency)), // 正規化時に既に反転済み
       Math.max(-3, Math.min(3, normalizedData.dps)),
       Math.max(-3, Math.min(3, normalizedData.range)),
       Math.max(-3, Math.min(3, normalizedData.speed)),
-      Math.max(-3, Math.min(3, -normalizedData.recharge)),
-      Math.max(-3, Math.min(3, -normalizedData.cost)),
+      Math.max(-3, Math.min(3, normalizedData.recharge)),       // 正規化時に既に反転済み
+      Math.max(-3, Math.min(3, normalizedData.cost)),           // 正規化時に既に反転済み
       Math.max(-3, Math.min(3, normalizedData.kb)),
       Math.max(-3, Math.min(3, normalizedData.hp)),
       Math.max(-3, Math.min(3, normalizedData.attackPower))
@@ -173,7 +174,8 @@ export default function RadarChart({ unitData, useMaxLevel = false, className = 
                 case 9: unit = ''; break;
               }
               
-              return `正規化値: ${value.toFixed(2)} (実値: ${rawValue}${unit})`;
+              const normalizeTypeLabel = getNormalizationTypeLabel(normalizationType);
+              return `正規化値: ${value.toFixed(2)} (実値: ${rawValue}${unit}) [${normalizeTypeLabel}]`;
             }
           }
         }
@@ -236,6 +238,18 @@ export default function RadarChart({ unitData, useMaxLevel = false, className = 
       case 8: return unitData.hp.toString();
       case 9: return unitData.attackPower.toString();
       default: return '0';
+    }
+  };
+
+  const getNormalizationTypeLabel = (type: NormalizationType): string => {
+    switch (type) {
+      case 'robust-zscore': return 'Robust Z-score';
+      case 'zscore': return 'Z-score';
+      case 'min-max': return 'Min-Max';
+      case 'percentile': return 'Percentile';
+      case 'log': return 'Log';
+      case 'rank': return 'Rank';
+      default: return type;
     }
   };
 

@@ -19,9 +19,18 @@ export interface NormalizedUnitRadarData extends UnitRadarData {
   level: number;
 }
 
+export type NormalizationType = 'robust-zscore' | 'zscore' | 'min-max' | 'percentile' | 'log' | 'rank';
+
 export interface NormalizationStats {
+  // ロバストZ-score用
   median: number;
   mad: number;
+  // Z-score用
+  mean: number;
+  stdDev: number;
+  // Min-Max用
+  min: number;
+  max: number;
 }
 
 export interface RadarChartNormalizationData {
@@ -114,6 +123,94 @@ export class RadarChartNormalizer {
     return (value - median) / mad;
   }
 
+  private calculateMean(values: number[]): number {
+    return values.reduce((sum, value) => sum + value, 0) / values.length;
+  }
+
+  private calculateStandardDeviation(values: number[], mean: number): number {
+    const variance = values.reduce((sum, value) => sum + Math.pow(value - mean, 2), 0) / values.length;
+    const stdDev = Math.sqrt(variance);
+    return stdDev === 0 ? 1 : stdDev;
+  }
+
+  private zScore(value: number, mean: number, stdDev: number): number {
+    return (value - mean) / stdDev;
+  }
+
+  private minMaxNormalization(value: number, min: number, max: number): number {
+    if (max === min) return 0;
+    return ((value - min) / (max - min)) * 6 - 3; // -3 to 3 range
+  }
+
+  private percentileNormalization(value: number, values: number[]): number {
+    const sorted = [...values].sort((a, b) => a - b);
+    let rank = 0;
+    for (let i = 0; i < sorted.length; i++) {
+      if (sorted[i] >= value) {
+        rank = i;
+        break;
+      }
+    }
+    if (value >= sorted[sorted.length - 1]) {
+      rank = sorted.length - 1;
+    }
+    const percentile = rank / (sorted.length - 1);
+    return (percentile * 6) - 3; // 0-1 → -3 to 3
+  }
+
+  private logNormalization(value: number, values: number[]): number {
+    if (value <= 0) return -3;
+    const logValues = values.filter(v => v > 0).map(v => Math.log(v));
+    if (logValues.length === 0) return 0;
+    
+    const logValue = Math.log(value);
+    const mean = logValues.reduce((sum, v) => sum + v, 0) / logValues.length;
+    const variance = logValues.reduce((sum, v) => sum + Math.pow(v - mean, 2), 0) / logValues.length;
+    const stdDev = Math.sqrt(variance);
+    
+    if (stdDev === 0) return 0;
+    return (logValue - mean) / stdDev;
+  }
+
+  private rankNormalization(value: number, values: number[]): number {
+    const sorted = [...values].sort((a, b) => a - b);
+    let rank = 0;
+    for (let i = 0; i < sorted.length; i++) {
+      if (sorted[i] >= value) {
+        rank = i;
+        break;
+      }
+    }
+    if (value >= sorted[sorted.length - 1]) {
+      rank = sorted.length - 1;
+    }
+    return ((rank / (sorted.length - 1)) * 6) - 3; // 0-1 → -3 to 3
+  }
+
+  private normalizeValue(
+    value: number,
+    stats: NormalizationStats,
+    normalizationType: NormalizationType,
+    allValues?: number[]
+  ): number {
+    switch (normalizationType) {
+      case 'robust-zscore':
+        return this.robustZScore(value, stats.median, stats.mad);
+      case 'zscore':
+        return this.zScore(value, stats.mean, stats.stdDev);
+      case 'min-max':
+        return this.minMaxNormalization(value, stats.min, stats.max);
+      case 'percentile':
+        return allValues ? this.percentileNormalization(value, allValues) : this.minMaxNormalization(value, stats.min, stats.max);
+      case 'log':
+        return allValues ? this.logNormalization(value, allValues) : this.zScore(value, stats.mean, stats.stdDev);
+      case 'rank':
+        return allValues ? this.rankNormalization(value, allValues) : this.minMaxNormalization(value, stats.min, stats.max);
+      default:
+        return this.zScore(value, stats.mean, stats.stdDev);
+    }
+  }
+
   private extractRadarData(stats: CalculatedStats): UnitRadarData {
     return {
       hp: stats.hp,
@@ -198,14 +295,31 @@ export class RadarChartNormalizer {
       const values = allUnitsData.map(unit => unit[property]).filter(value => value > 0);
       
       if (values.length === 0) {
-        normalizationStats[property] = { median: 0, mad: 1 };
+        normalizationStats[property] = {
+          median: 0, mad: 1,
+          mean: 0, stdDev: 1,
+          min: 0, max: 1
+        };
         continue;
       }
 
+      // ロバストZ-score用
       const median = this.calculateMedian(values);
       const mad = this.calculateMAD(values, median);
+      
+      // Z-score用
+      const mean = this.calculateMean(values);
+      const stdDev = this.calculateStandardDeviation(values, mean);
+      
+      // Min-Max用
+      const min = Math.min(...values);
+      const max = Math.max(...values);
 
-      normalizationStats[property] = { median, mad };
+      normalizationStats[property] = {
+        median, mad,
+        mean, stdDev,
+        min, max
+      };
     }
 
     return normalizationStats;
@@ -237,19 +351,25 @@ export class RadarChartNormalizer {
 
   public normalizeUnitData(
     unitData: UnitRadarData,
-    normalizationStats: RadarChartNormalizationData['normalizationStats']
+    normalizationStats: RadarChartNormalizationData['normalizationStats'],
+    normalizationType: NormalizationType = 'zscore',
+    allUnitsData?: NormalizedUnitRadarData[]
   ): UnitRadarData {
+    const getValuesForProperty = (property: keyof UnitRadarData) => {
+      return allUnitsData ? allUnitsData.map(unit => unit[property]).filter(value => value > 0) : [];
+    };
+
     return {
-      hp: this.robustZScore(unitData.hp, normalizationStats.hp.median, normalizationStats.hp.mad),
-      attackPower: this.robustZScore(unitData.attackPower, normalizationStats.attackPower.median, normalizationStats.attackPower.mad),
-      dps: this.robustZScore(unitData.dps, normalizationStats.dps.median, normalizationStats.dps.mad),
-      range: this.robustZScore(unitData.range, normalizationStats.range.median, normalizationStats.range.mad),
-      cost: this.robustZScore(unitData.cost, normalizationStats.cost.median, normalizationStats.cost.mad),
-      recharge: this.robustZScore(unitData.recharge, normalizationStats.recharge.median, normalizationStats.recharge.mad),
-      foreswing: this.robustZScore(unitData.foreswing, normalizationStats.foreswing.median, normalizationStats.foreswing.mad),
-      attackFrequency: this.robustZScore(unitData.attackFrequency, normalizationStats.attackFrequency.median, normalizationStats.attackFrequency.mad),
-      speed: this.robustZScore(unitData.speed, normalizationStats.speed.median, normalizationStats.speed.mad),
-      kb: this.robustZScore(unitData.kb, normalizationStats.kb.median, normalizationStats.kb.mad)
+      hp: this.normalizeValue(unitData.hp, normalizationStats.hp, normalizationType, getValuesForProperty('hp')),
+      attackPower: this.normalizeValue(unitData.attackPower, normalizationStats.attackPower, normalizationType, getValuesForProperty('attackPower')),
+      dps: this.normalizeValue(unitData.dps, normalizationStats.dps, normalizationType, getValuesForProperty('dps')),
+      range: this.normalizeValue(unitData.range, normalizationStats.range, normalizationType, getValuesForProperty('range')),
+      cost: -this.normalizeValue(unitData.cost, normalizationStats.cost, normalizationType, getValuesForProperty('cost')), // 安いほど良い→負の値で反転
+      recharge: -this.normalizeValue(unitData.recharge, normalizationStats.recharge, normalizationType, getValuesForProperty('recharge')), // 短いほど良い→負の値で反転
+      foreswing: -this.normalizeValue(unitData.foreswing, normalizationStats.foreswing, normalizationType, getValuesForProperty('foreswing')), // 短いほど良い→負の値で反転
+      attackFrequency: -this.normalizeValue(unitData.attackFrequency, normalizationStats.attackFrequency, normalizationType, getValuesForProperty('attackFrequency')), // 短いほど良い→負の値で反転
+      speed: this.normalizeValue(unitData.speed, normalizationStats.speed, normalizationType, getValuesForProperty('speed')),
+      kb: this.normalizeValue(unitData.kb, normalizationStats.kb, normalizationType, getValuesForProperty('kb'))
     };
   }
 

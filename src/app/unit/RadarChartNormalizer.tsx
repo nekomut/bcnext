@@ -9,6 +9,8 @@ export interface UnitRadarData {
   recharge: number;
   foreswing: number;
   attackFrequency: number;
+  speed: number;
+  kb: number;
 }
 
 export interface NormalizedUnitRadarData extends UnitRadarData {
@@ -32,6 +34,8 @@ export interface RadarChartNormalizationData {
     recharge: NormalizationStats;
     foreswing: NormalizationStats;
     attackFrequency: NormalizationStats;
+    speed: NormalizationStats;
+    kb: NormalizationStats;
   };
   allUnitsData: NormalizedUnitRadarData[];
 }
@@ -119,7 +123,9 @@ export class RadarChartNormalizer {
       cost: stats.cost,
       recharge: stats.recharge,
       foreswing: stats.foreswing,
-      attackFrequency: stats.freq
+      attackFrequency: stats.freq,
+      speed: stats.speed,
+      kb: stats.kb
     };
   }
 
@@ -183,7 +189,7 @@ export class RadarChartNormalizer {
 
   private calculateNormalizationStats(allUnitsData: NormalizedUnitRadarData[]): RadarChartNormalizationData['normalizationStats'] {
     const properties: (keyof UnitRadarData)[] = [
-      'hp', 'attackPower', 'dps', 'range', 'cost', 'recharge', 'foreswing', 'attackFrequency'
+      'hp', 'attackPower', 'dps', 'range', 'cost', 'recharge', 'foreswing', 'attackFrequency', 'speed', 'kb'
     ];
 
     const normalizationStats = {} as RadarChartNormalizationData['normalizationStats'];
@@ -241,7 +247,9 @@ export class RadarChartNormalizer {
       cost: this.robustZScore(unitData.cost, normalizationStats.cost.median, normalizationStats.cost.mad),
       recharge: this.robustZScore(unitData.recharge, normalizationStats.recharge.median, normalizationStats.recharge.mad),
       foreswing: this.robustZScore(unitData.foreswing, normalizationStats.foreswing.median, normalizationStats.foreswing.mad),
-      attackFrequency: this.robustZScore(unitData.attackFrequency, normalizationStats.attackFrequency.median, normalizationStats.attackFrequency.mad)
+      attackFrequency: this.robustZScore(unitData.attackFrequency, normalizationStats.attackFrequency.median, normalizationStats.attackFrequency.mad),
+      speed: this.robustZScore(unitData.speed, normalizationStats.speed.median, normalizationStats.speed.mad),
+      kb: this.robustZScore(unitData.kb, normalizationStats.kb.median, normalizationStats.kb.mad)
     };
   }
 

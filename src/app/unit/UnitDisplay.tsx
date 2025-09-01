@@ -333,10 +333,10 @@ export function UnitDisplay({
     setAttackUpEnabled(false);
   }, [unitData.unitId, unitData.auxiliaryData.talents.talentList, unitData.coreData.forms, initialFormId, unitData, level, plusLevel]);
 
-  // フィルタされたユニットリスト、最大レベル設定、表示中ユニットのレベルが変更されたときにレーダーチャートを更新
+  // フィルタされたユニットリスト、最大レベル設定、表示中ユニットのレベル、進化形態が変更されたときにレーダーチャートを更新
   useEffect(() => {
     setRadarKey(prev => prev + 1);
-  }, [filteredUnitIds, radarUseMaxLevel, level, plusLevel]);
+  }, [filteredUnitIds, radarUseMaxLevel, level, plusLevel, currentForm]);
 
   // アイコンを読み込むuseEffect
   useEffect(() => {
@@ -642,7 +642,9 @@ export function UnitDisplay({
       cost: Math.max(0, radarStats.cost - costReduction),
       recharge: Math.max(0, radarStats.recharge - frameToSecond(rechargeSpeedUpBonus)),
       foreswing: radarStats.foreswing,
-      attackFrequency: radarStats.freq
+      attackFrequency: radarStats.freq,
+      speed: radarStats.speed,
+      kb: radarStats.kb
     };
   };
 

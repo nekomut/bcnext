@@ -95,7 +95,9 @@ export default function RadarChart({ unitData, useMaxLevel = false, className = 
       'コスト',
       '再生産',
       '射程',
-      '体力'
+      '体力',
+      '速度',
+      'KB'
     ];
 
     const dataValues = [
@@ -106,7 +108,9 @@ export default function RadarChart({ unitData, useMaxLevel = false, className = 
       Math.max(-3, Math.min(3, -normalizedData.cost)),
       Math.max(-3, Math.min(3, -normalizedData.recharge)),
       Math.max(-3, Math.min(3, normalizedData.range)),
-      Math.max(-3, Math.min(3, normalizedData.hp))
+      Math.max(-3, Math.min(3, normalizedData.hp)),
+      Math.max(-3, Math.min(3, normalizedData.speed)),
+      Math.max(-3, Math.min(3, normalizedData.kb))
     ];
 
     return {
@@ -165,6 +169,8 @@ export default function RadarChart({ unitData, useMaxLevel = false, className = 
                 case 5: unit = 's'; break;
                 case 6: unit = ''; break;
                 case 7: unit = ' HP'; break;
+                case 8: unit = ''; break;
+                case 9: unit = ''; break;
               }
               
               return `正規化値: ${value.toFixed(2)} (実値: ${rawValue}${unit})`;
@@ -227,6 +233,8 @@ export default function RadarChart({ unitData, useMaxLevel = false, className = 
       case 5: return unitData.recharge.toFixed(2);
       case 6: return unitData.range.toString();
       case 7: return unitData.hp.toString();
+      case 8: return unitData.speed.toString();
+      case 9: return unitData.kb.toString();
       default: return '0';
     }
   };

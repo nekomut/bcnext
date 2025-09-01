@@ -88,29 +88,29 @@ export default function RadarChart({ unitData, useMaxLevel = false, className = 
     const normalizedData = normalizer.normalizeUnitData(unitData, normalizationData.normalizationStats);
 
     const labels = [
-      '攻撃力',
-      '攻撃発生', 
+      '攻撃発生',
+      '攻撃頻度', 
       'DPS',
-      '攻撃頻度',
-      'コスト',
-      '再生産',
       '射程',
-      '体力',
       '速度',
-      'KB'
+      '再生産',
+      'コスト',
+      'KB',
+      '体力',
+      '攻撃力'
     ];
 
     const dataValues = [
-      Math.max(-3, Math.min(3, normalizedData.attackPower)),
       Math.max(-3, Math.min(3, -normalizedData.foreswing)),
-      Math.max(-3, Math.min(3, normalizedData.dps)),
       Math.max(-3, Math.min(3, -normalizedData.attackFrequency)),
-      Math.max(-3, Math.min(3, -normalizedData.cost)),
-      Math.max(-3, Math.min(3, -normalizedData.recharge)),
+      Math.max(-3, Math.min(3, normalizedData.dps)),
       Math.max(-3, Math.min(3, normalizedData.range)),
-      Math.max(-3, Math.min(3, normalizedData.hp)),
       Math.max(-3, Math.min(3, normalizedData.speed)),
-      Math.max(-3, Math.min(3, normalizedData.kb))
+      Math.max(-3, Math.min(3, -normalizedData.recharge)),
+      Math.max(-3, Math.min(3, -normalizedData.cost)),
+      Math.max(-3, Math.min(3, normalizedData.kb)),
+      Math.max(-3, Math.min(3, normalizedData.hp)),
+      Math.max(-3, Math.min(3, normalizedData.attackPower))
     ];
 
     return {
@@ -168,8 +168,8 @@ export default function RadarChart({ unitData, useMaxLevel = false, className = 
                 case 4: unit = '¥'; break;
                 case 5: unit = 's'; break;
                 case 6: unit = ''; break;
-                case 7: unit = ' HP'; break;
-                case 8: unit = ''; break;
+                case 7: unit = ''; break;
+                case 8: unit = ' HP'; break;
                 case 9: unit = ''; break;
               }
               
@@ -225,16 +225,16 @@ export default function RadarChart({ unitData, useMaxLevel = false, className = 
 
   const getRawValue = (dataIndex: number): string => {
     switch (dataIndex) {
-      case 0: return unitData.attackPower.toString();
-      case 1: return unitData.foreswing.toString();
+      case 0: return unitData.foreswing.toString();
+      case 1: return unitData.attackFrequency.toString();
       case 2: return unitData.dps.toString();
-      case 3: return unitData.attackFrequency.toString();
-      case 4: return unitData.cost.toString();
+      case 3: return unitData.range.toString();
+      case 4: return unitData.speed.toString();
       case 5: return unitData.recharge.toFixed(2);
-      case 6: return unitData.range.toString();
-      case 7: return unitData.hp.toString();
-      case 8: return unitData.speed.toString();
-      case 9: return unitData.kb.toString();
+      case 6: return unitData.cost.toString();
+      case 7: return unitData.kb.toString();
+      case 8: return unitData.hp.toString();
+      case 9: return unitData.attackPower.toString();
       default: return '0';
     }
   };

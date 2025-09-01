@@ -409,7 +409,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                 setSearchTerm(e.target.value);
                 setCurrentPage(1);
               }}
-              className="flex-1 px-2 py-1 text-xs border border-gray-400 rounded focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+              className="flex-1 px-2 py-1 text-xs text-gray-600 border border-gray-400 rounded focus:ring-1 focus:ring-orange-500 focus:border-orange-500"
             />
             
             {totalPages > 1 && (

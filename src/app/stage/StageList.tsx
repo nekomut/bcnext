@@ -126,12 +126,15 @@ export function StageList({ events, searchTerm, onStageSelect, onSpecificStageSe
                     
                     {/* 特別ルール情報を表示 */}
                     {specialRules[event.eventId] && (
-                      <div className="mt-0.5 px-0.5 py-0.5 bg-orange-100 border border-orange-200 rounded text-xxs text-orange-700">
-                        {specialRules[event.eventId]!.explanation && (
+                      <div className="mt-0 px-0 py-0 font-semibold text-xxs text-orange-600">
+                        <div className="font-medium">
+                          特別ルール: {specialRules[event.eventId]!.name || '特別ルール'}
+                        </div>
+                        {/*specialRules[event.eventId]!.explanation && (
                           <div className="text-xxxs leading-tight mt-0.5 whitespace-pre-line">
                             {specialRules[event.eventId]!.explanation}
                           </div>
-                        )}
+                        )*/}
                       </div>
                     )}
                     

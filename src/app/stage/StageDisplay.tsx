@@ -260,11 +260,11 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
                   {stageData.stages.length}ステージ
                 </span>
               </h2>
-              <p className="text-xs text-gray-600">
+              <p className="text-xxs text-gray-600">
                 {stageData.typeName} ({stageData.typeId}) | マップID: {stageData.mapId} | プレフィックス: {stageData.prefix}
               </p>
               {stageData.specialRule && stageData.specialRule !== null && (
-                <div className="text-xs text-yellow-800 bg-yellow-100 rounded-md px-1 py-0.5 mt-0 whitespace-pre-line">
+                <div className="text-xxs text-yellow-800 bg-yellow-100 rounded-md px-1 py-0.5 mt-0 whitespace-pre-line">
                   {stageData.specialRule.explanation}
                 </div>
               )}
@@ -299,10 +299,10 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
                     <button
                       key={index}
                       onClick={() => setSelectedStageId(index)}
-                      className={`px-2 py-0.5 text-xs font-medium rounded border transition-colors ${
+                      className={`px-2 py-0.5 text-xs rounded border transition-colors ${
                         selectedStageId === index
-                          ? 'bg-orange-600 text-white border-orange-600 shadow-sm'
-                          : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50 hover:border-gray-400'
+                          ? 'font-semibold bg-orange-400 text-gray-700 border-gray-600 shadow-sm'
+                          : 'font-medium bg-white text-gray-500 border-gray-400 hover:bg-gray-50 hover:border-gray-400'
                       }`}
                     >
                       <span className="font-mono">{stage.stageId}</span>: {stage.stageName}
@@ -362,9 +362,9 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
               type="checkbox"
               checked={showDetail}
               onChange={(e) => setShowDetail(e.target.checked)}
-              className="rounded border-gray-300 text-orange-600 focus:ring-orange-500 focus:ring-1"
+              className="rounded border-gray-300 accent-orange-400"
             />
-            <span className="text-xs font-medium text-gray-700">詳細表示（フレーム情報含む）</span>
+            <span className="text-xxs font-medium text-gray-700">詳細表示（フレーム情報含む）</span>
           </label>
         </div>
       </div>
@@ -418,7 +418,7 @@ function StageBasicInfo({ stage }: { stage: StageInfo }) {
         </h3>
       </div>
       <div className="p-1">
-        <div className="flex flex-wrap items-center gap-2 text-xs">
+        <div className="flex flex-wrap items-center gap-2 text-xxs">
           <div className="flex items-center gap-1">
             <span className="font-medium text-gray-500">必要統率力:</span>
             <span className="font-semibold text-gray-900">{formatNumber(stage.requiredCost)}</span>

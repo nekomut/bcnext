@@ -160,7 +160,7 @@ export function StageSearch({ onSearch, loading }: StageSearchProps) {
           id="search-button"
           onClick={handleSearch}
           disabled={loading}
-          className="inline-flex items-center gap-1 border border-gray-400 bg-orange-600 hover:bg-orange-700 disabled:bg-orange-400 text-white px-3 py-0.5 rounded text-xs font-medium transition-colors focus:outline-none focus:ring-1 focus:ring-orange-500"
+          className="inline-flex items-center gap-1 border border-gray-600 bg-orange-400 hover:bg-orange-600 disabled:bg-orange-300 text-gray-700 px-3 py-0.5 rounded text-xs font-semibold transition-colors focus:outline-none focus:ring-1 focus:ring-orange-500"
           aria-label="ステージを検索"
         >
           {loading ? (

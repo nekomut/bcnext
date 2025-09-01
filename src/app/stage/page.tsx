@@ -227,7 +227,7 @@ function StagePageContent() {
   return (
     <div>
       <Link href="/" className="font-bold hover:text-orange-600 px-1">bcnext</Link>|
-      <Link href="/stage" className="text-orange-500 hover:text-orange-600 px-1">Stage</Link>|
+      <Link href="/stage" className="text-orange-400 hover:text-orange-600 px-1">Stage</Link>|
       <Link href="/unit" className="hover:text-orange-600 px-1">Unit</Link>|
       <Link href="/seek" className="hover:text-orange-600 px-1">Seek</Link>|
       <Link href="/rare" className="hover:text-orange-600 px-1">Rare</Link>|

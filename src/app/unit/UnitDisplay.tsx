@@ -7,6 +7,8 @@ import Link from 'next/link';
 import { UnitData, CalculatedStats, UnitAbility, UnitTalent, calculateUnitStats, getAbilities, frameToSecond, getValidFormCount, calculateTalentEffect } from './types';
 import { icons } from '@/data/icons';
 import IconManager from './IconManager';
+import RadarChart from './RadarChart';
+import { UnitRadarData } from './RadarChartNormalizer';
 
 interface UnitDisplayProps {
   unitData: UnitData;
@@ -18,6 +20,7 @@ interface UnitDisplayProps {
   initialFormId?: number;
   className?: string;
   onParamsChange?: (params: { level: number; plusLevel: number; formId: number }) => void;
+  filteredUnitIds?: number[];
 }
 
 export function UnitDisplay({
@@ -26,7 +29,8 @@ export function UnitDisplay({
   initialPlusLevel = 0,
   initialFormId,
   className = "",
-  onParamsChange
+  onParamsChange,
+  filteredUnitIds
 }: UnitDisplayProps) {
   // 最終形態を自動選択するロジック
   const validFormCount = getValidFormCount(unitData);
@@ -160,6 +164,10 @@ export function UnitDisplay({
   // 極ダメージの状態
   const [talentExtremeDamageMultiplier, setTalentExtremeDamageMultiplier] = useState(5);
 
+  // レーダーチャート用の状態
+  const [radarUseMaxLevel, setRadarUseMaxLevel] = useState(false);
+  const [radarKey, setRadarKey] = useState(0);
+
   // ユニットが変更されたときにフラグを再初期化
   useEffect(() => {
     // 新しいユニットに対して最終形態を自動選択
@@ -236,6 +244,11 @@ export function UnitDisplay({
     // 能力・効果の攻撃力アップをリセット
     setAttackUpEnabled(false);
   }, [unitData.unitId, unitData.auxiliaryData.talents.talentList, unitData.coreData.forms, initialFormId, unitData, level, plusLevel]);
+
+  // フィルタされたユニットリストが変更されたときにレーダーチャートを更新
+  useEffect(() => {
+    setRadarKey(prev => prev + 1);
+  }, [filteredUnitIds]);
 
   // アイコンを読み込むuseEffect
   useEffect(() => {
@@ -527,6 +540,23 @@ export function UnitDisplay({
   
   const actualExtremeDamageMultiplier = getActualExtremeDamageMultiplier();
 
+  // レーダーチャート用のデータを生成
+  const createRadarData = (): UnitRadarData => {
+    const radarLevel = radarUseMaxLevel ? maxLevel + maxPlusLevel : 50;
+    const radarStats = calculateUnitStats(unitData, actualCurrentForm, radarLevel, 0, attackIntervalReductionMultiplier);
+    
+    return {
+      hp: Math.round(radarStats.hp * baseHpUpMultiplier),
+      attackPower: Math.round(radarStats.ap * totalAttackMultiplier),
+      dps: radarStats.freq > 0 ? Math.round(Math.round(radarStats.ap * totalAttackMultiplier) / radarStats.freq * 30 * 100) / 100 : 0,
+      range: radarStats.range,
+      cost: Math.max(0, radarStats.cost - costReduction),
+      recharge: Math.max(0, radarStats.recharge - frameToSecond(rechargeSpeedUpBonus)),
+      foreswing: radarStats.foreswing,
+      attackFrequency: radarStats.freq
+    };
+  };
+
   // 最終的なgetAbilities呼び出し（動的倍率付き）
   const abilities = getAbilities(
     unitData, actualCurrentForm, level, plusLevel, 
@@ -719,36 +749,70 @@ export function UnitDisplay({
         </div>
       </div>
 
-      {/* Form Tabs */}
-      {validFormCount > 1 && (
-        <div className="flex mb-2.5 gap-0.5 flex-wrap">
-          {unitData.coreData.forms.slice(0, validFormCount).map((form, index) => (
-            <button
-              key={index}
-              onClick={() => {
-                setCurrentForm(index);
-                onParamsChange?.({ level, plusLevel, formId: index });
-              }}
-              className={`flex items-center justify-center w-10 h-8 gap-0 px-0 py-0 rounded-sm transition-colors ${
-                actualCurrentForm === index
-                  ? 'bg-orange-600 text-white'
-                  : 'bg-amber-50 text-gray-400'
-              }`}
-            >
-              {/* Form Icon */}
-              {!iconsLoading && formIcons[index] && (
-                <Image 
-                  src={`data:image/png;base64,${formIcons[index]}`}
-                  alt={form.name || 'Form Icon'}
-                  width={38}
-                  height={38}
-                  className="rounded object-cover"
+      {/* Radar Chart and Form Tabs Section */}
+      <div className="flex gap-3 mb-2.5">
+        {/* Radar Chart - Left side 50% width */}
+        <div className="w-1/2 flex flex-col">
+          <div className="flex items-center justify-between mb-1">
+            <div className="flex items-center gap-1">
+              <label className="text-xs text-gray-600 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={radarUseMaxLevel}
+                  onChange={(e) => setRadarUseMaxLevel(e.target.checked)}
+                  className="mr-1"
                 />
-              )}
-            </button>
-          ))}
+                最大Lv
+              </label>
+            </div>
+          </div>
+          <div className="bg-white rounded border border-gray-200 p-2 flex-1 min-h-[100px]">
+            <RadarChart 
+              key={radarKey}
+              unitData={createRadarData()} 
+              useMaxLevel={radarUseMaxLevel}
+              className="w-full h-full"
+              targetUnitIds={filteredUnitIds}
+            />
+          </div>
         </div>
-      )}
+
+        {/* Form Tabs - Right side 50% width */}
+        <div className="w-1/2 flex flex-col">
+          {validFormCount > 1 && (
+            <>
+              <h3 className="text-xs sm:text-sm font-semibold text-gray-800 mb-1">フォーム選択</h3>
+              <div className="flex gap-0.5 flex-wrap">
+                {unitData.coreData.forms.slice(0, validFormCount).map((form, index) => (
+                  <button
+                    key={index}
+                    onClick={() => {
+                      setCurrentForm(index);
+                      onParamsChange?.({ level, plusLevel, formId: index });
+                    }}
+                    className={`flex items-center justify-center w-10 h-8 gap-0 px-0 py-0 rounded-sm transition-colors ${
+                      actualCurrentForm === index
+                        ? 'bg-orange-600 text-white'
+                        : 'bg-amber-50 text-gray-400'
+                    }`}
+                  >
+                    {/* Form Icon */}
+                    {!iconsLoading && formIcons[index] && (
+                      <Image 
+                        src={`data:image/png;base64,${formIcons[index]}`}
+                        alt={form.name || 'Form Icon'}
+                        width={38}
+                        height={38}
+                        className="rounded object-cover"
+                      />
+                    )}
+                  </button>
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+      </div>
 
       {/* Stats Table */}
       <StatsTable stats={enhancedStats} attackUpEnabled={totalAttackMultiplier > 1} hpUpEnabled={baseHpUpMultiplier > 1} attackIntervalReductionEnabled={attackIntervalReductionEnabled && actualCurrentForm >= 2} costReductionEnabled={costReductionEnabled && actualCurrentForm >= 2} moveSpeedUpEnabled={moveSpeedUpEnabled && actualCurrentForm >= 2} rechargeSpeedUpEnabled={rechargeSpeedUpEnabled && actualCurrentForm >= 2} />

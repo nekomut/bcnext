@@ -13,11 +13,13 @@
     "@anthropic-ai/claude-code": "^1.0.51",
     "@tailwindcss/postcss": "^4.0.6",
     "autoprefixer": "^10.4.20",
+    "chart.js": "^4.5.0",
     "i": "^0.3.7",
     "next": "^15.1.4",
     "next-router-mock": "^0.9.13",
     "playwright": "^1.54.1",
     "react": "^19.0.0",
+    "react-chartjs-2": "^5.3.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {

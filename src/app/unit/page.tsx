@@ -1756,6 +1756,7 @@ function UnitPageContent() {
             initialLevel={level}
             initialPlusLevel={plusLevel}
             initialFormId={formId}
+            filteredUnitIds={filteredUnits.map(unit => parseInt(unit.unitId))}
             onParamsChange={(params) => {
               setLevel(params.level);
               setPlusLevel(params.plusLevel);

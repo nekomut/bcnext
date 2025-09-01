@@ -10,6 +10,92 @@ import IconManager from './IconManager';
 import RadarChart from './RadarChart';
 import { UnitRadarData } from './RadarChartNormalizer';
 
+// Editable Select Component
+interface EditableSelectProps {
+  value: string;
+  onChange: (value: string) => void;
+  onBlur: (value: string) => void;
+  options: number[];
+  className?: string;
+  placeholder?: string;
+}
+
+function EditableSelect({ 
+  value, 
+  onChange, 
+  onBlur, 
+  options, 
+  className = "", 
+  placeholder = "" 
+}: EditableSelectProps) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [inputValue, setInputValue] = useState(value);
+
+  useEffect(() => {
+    setInputValue(value);
+  }, [value]);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = e.target.value;
+    if (newValue === '' || /^\d+$/.test(newValue)) {
+      setInputValue(newValue);
+      onChange(newValue);
+    }
+  };
+
+  const handleInputBlur = () => {
+    onBlur(inputValue);
+    setIsOpen(false);
+  };
+
+  const handleOptionSelect = (option: number) => {
+    const optionStr = option.toString();
+    setInputValue(optionStr);
+    onChange(optionStr);
+    onBlur(optionStr);
+    setIsOpen(false);
+  };
+
+  return (
+    <div className="relative inline-block">
+      <div className="flex">
+        <input
+          type="text"
+          value={inputValue}
+          onChange={handleInputChange}
+          onBlur={handleInputBlur}
+          onFocus={() => setIsOpen(true)}
+          placeholder={placeholder}
+          className={`${className} pr-6`}
+        />
+        <button
+          type="button"
+          onClick={() => setIsOpen(!isOpen)}
+          onBlur={() => setTimeout(() => setIsOpen(false), 150)}
+          className="absolute right-1 top-0 h-full px-1 text-gray-500 hover:text-gray-700"
+        >
+          ▼
+        </button>
+      </div>
+      
+      {isOpen && (
+        <div className="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded-md shadow-lg max-h-40 overflow-y-auto">
+          {options.map((option) => (
+            <button
+              key={option}
+              type="button"
+              onClick={() => handleOptionSelect(option)}
+              className="block w-full px-2 py-1 text-left text-xs hover:bg-gray-100 focus:bg-gray-100"
+            >
+              {option}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 interface UnitDisplayProps {
   unitData: UnitData;
   formId?: number;
@@ -21,6 +107,7 @@ interface UnitDisplayProps {
   className?: string;
   onParamsChange?: (params: { level: number; plusLevel: number; formId: number }) => void;
   filteredUnitIds?: number[];
+  galleryLoading?: boolean;
 }
 
 export function UnitDisplay({
@@ -30,7 +117,8 @@ export function UnitDisplay({
   initialFormId,
   className = "",
   onParamsChange,
-  filteredUnitIds
+  filteredUnitIds,
+  galleryLoading = false
 }: UnitDisplayProps) {
   // 最終形態を自動選択するロジック
   const validFormCount = getValidFormCount(unitData);
@@ -245,10 +333,10 @@ export function UnitDisplay({
     setAttackUpEnabled(false);
   }, [unitData.unitId, unitData.auxiliaryData.talents.talentList, unitData.coreData.forms, initialFormId, unitData, level, plusLevel]);
 
-  // フィルタされたユニットリストまたは最大レベル設定が変更されたときにレーダーチャートを更新
+  // フィルタされたユニットリスト、最大レベル設定、表示中ユニットのレベルが変更されたときにレーダーチャートを更新
   useEffect(() => {
     setRadarKey(prev => prev + 1);
-  }, [filteredUnitIds, radarUseMaxLevel]);
+  }, [filteredUnitIds, radarUseMaxLevel, level, plusLevel]);
 
   // アイコンを読み込むuseEffect
   useEffect(() => {
@@ -542,9 +630,9 @@ export function UnitDisplay({
 
   // レーダーチャート用のデータを生成
   const createRadarData = (): UnitRadarData => {
-    const radarLevel = radarUseMaxLevel ? maxLevel + maxPlusLevel : 50;
-    console.log(`Radar Chart: Using level ${radarLevel} (useMaxLevel: ${radarUseMaxLevel}, maxLevel: ${maxLevel}, maxPlusLevel: ${maxPlusLevel})`);
-    const radarStats = calculateUnitStats(unitData, actualCurrentForm, radarLevel, 0, attackIntervalReductionMultiplier);
+    // 表示中ユニットは常に現在のレベル設定を使用（統計データのレベル設定とは独立）
+    const radarStats = calculateUnitStats(unitData, actualCurrentForm, level + plusLevel, 0, attackIntervalReductionMultiplier);
+    console.log(`Radar Chart: 表示ユニット Lv${level + plusLevel}, 統計データ基準: ${radarUseMaxLevel ? 'Lv Max' : 'Lv50'}`);
     
     return {
       hp: Math.round(radarStats.hp * baseHpUpMultiplier),
@@ -660,21 +748,15 @@ export function UnitDisplay({
           <div className="text-xs sm:text-sm text-gray-600 break-words flex items-center gap-0.5 flex-wrap">
             <div className="flex items-center gap-1">
               <span className="text-[11px]">Lv</span>
-              <input
-                type="text"
+              <EditableSelect
                 value={levelInput}
-                onChange={(e) => {
-                  const value = e.target.value;
-                  // 数値または空文字列のみ許可
-                  if (value === '' || /^\d+$/.test(value)) {
-                    setLevelInput(value);
-                    const numValue = value === '' ? 1 : Math.max(1, Math.min(maxLevel, parseInt(value) || 1));
-                    setLevel(numValue);
-                    onParamsChange?.({ level: numValue, plusLevel, formId: actualCurrentForm });
-                  }
+                onChange={(value) => {
+                  setLevelInput(value);
+                  const numValue = value === '' ? 1 : Math.max(1, Math.min(maxLevel, parseInt(value) || 1));
+                  setLevel(numValue);
+                  onParamsChange?.({ level: numValue, plusLevel, formId: actualCurrentForm });
                 }}
-                onBlur={(e) => {
-                  const value = e.target.value.trim();
+                onBlur={(value) => {
                   if (value && !isNaN(Number(value))) {
                     const numValue = Math.max(1, Math.min(maxLevel, Number(value)));
                     setLevel(numValue);
@@ -686,24 +768,21 @@ export function UnitDisplay({
                     onParamsChange?.({ level: 1, plusLevel, formId: actualCurrentForm });
                   }
                 }}
-                className="border rounded-sm px-1 sm:px-2 py-0.5 w-6 sm:w-16 h-5 text-right text-xs sm:text-sm text-gray-900 border-gray-400"
+                options={Array.from({ length: maxLevel }, (_, i) => i + 1).filter((lv) => 
+                  lv === 1 || lv % 5 === 0 || lv === maxLevel || [45, 50, 55, 60].includes(lv)
+                )}
+                className="border rounded-sm px-1 sm:px-2 py-0.5 w-12 sm:w-16 h-5 text-right text-xs sm:text-sm text-gray-900 border-gray-400"
               />
               <span className="w-1">+</span>
-              <input
-                type="text"
+              <EditableSelect
                 value={plusLevelInput}
-                onChange={(e) => {
-                  const value = e.target.value;
-                  // 数値または空文字列のみ許可
-                  if (value === '' || /^\d+$/.test(value)) {
-                    setPlusLevelInput(value);
-                    const numValue = value === '' ? 0 : Math.max(0, Math.min(maxPlusLevel, parseInt(value) || 0));
-                    setPlusLevel(numValue);
-                    onParamsChange?.({ level, plusLevel: numValue, formId: actualCurrentForm });
-                  }
+                onChange={(value) => {
+                  setPlusLevelInput(value);
+                  const numValue = value === '' ? 0 : Math.max(0, Math.min(maxPlusLevel, parseInt(value) || 0));
+                  setPlusLevel(numValue);
+                  onParamsChange?.({ level, plusLevel: numValue, formId: actualCurrentForm });
                 }}
-                onBlur={(e) => {
-                  const value = e.target.value.trim();
+                onBlur={(value) => {
                   if (value && !isNaN(Number(value))) {
                     const numValue = Math.max(0, Math.min(maxPlusLevel, Number(value)));
                     setPlusLevel(numValue);
@@ -715,7 +794,10 @@ export function UnitDisplay({
                     onParamsChange?.({ level, plusLevel: 0, formId: actualCurrentForm });
                   }
                 }}
-                className="border rounded-sm px-0.5 sm:px-1 py-0.5 w-6 sm:w-16 h-5 text-right text-xs sm:text-sm text-gray-900 border-gray-400"
+                options={Array.from({ length: maxPlusLevel + 1 }, (_, i) => i).filter((lv) => 
+                  lv === 0 || lv % 5 === 0 || lv === maxPlusLevel || lv <= 10
+                )}
+                className="border rounded-sm px-0.5 sm:px-1 py-0.5 w-12 sm:w-16 h-5 text-right text-xs sm:text-sm text-gray-900 border-gray-400"
               />
             </div>
             <span className="text-xs text-gray-500 pr-2"><small><b>/ {maxLevel}+{maxPlusLevel}</b></small></span>
@@ -755,13 +837,22 @@ export function UnitDisplay({
         {/* Radar Chart - Left side 50% width */}
         <div className="w-1/2 flex flex-col">
           <div className="bg-white rounded border border-gray-200 p-2 flex-1 min-h-[100px]">
-            <RadarChart 
-              key={`${radarKey}-${radarUseMaxLevel}`}
-              unitData={createRadarData()} 
-              useMaxLevel={radarUseMaxLevel}
-              className="w-full h-full"
-              targetUnitIds={filteredUnitIds}
-            />
+            {galleryLoading ? (
+              <div className="flex items-center justify-center h-full">
+                <div className="text-center">
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto mb-2"></div>
+                  <p className="text-sm text-gray-600">Initializing...</p>
+                </div>
+              </div>
+            ) : (
+              <RadarChart 
+                key={`${radarKey}-${radarUseMaxLevel}`}
+                unitData={createRadarData()} 
+                useMaxLevel={radarUseMaxLevel}
+                className="w-full h-full"
+                targetUnitIds={filteredUnitIds}
+              />
+            )}
           </div>
         </div>
 
@@ -801,14 +892,14 @@ export function UnitDisplay({
           
           {/* Radar Chart Data Source Info */}
           <div className="mt-2 p-2 bg-orange-50 border border-orange-200 rounded text-xs">
-            <div className="flex items-center justify-between mb-1">
+            <div className="flex items-center gap-1 mb-1">
               <div className="text-orange-700 font-semibold">統計データ</div>
-              <label className="text-xs text-orange-600 cursor-pointer">
+              <label className="text-xxs text-orange-600 cursor-pointer flex items-center">
                 <input
                   type="checkbox"
                   checked={radarUseMaxLevel}
                   onChange={(e) => setRadarUseMaxLevel(e.target.checked)}
-                  className="mr-1 scale-75 accent-orange-500"
+                  className="mr-0.5 scale-75 accent-orange-500"
                 />
                 Lv Max
               </label>

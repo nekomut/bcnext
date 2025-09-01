@@ -14,6 +14,7 @@ interface UnitGalleryProps {
   currentUnitId?: number;
   currentFormId?: number;
   onFilterChange?: (filteredUnitIds: number[]) => void;
+  onLoadingChange?: (isLoading: boolean) => void;
 }
 
 interface UnitGalleryItem {
@@ -113,7 +114,7 @@ const getTalentIconKey = (talentId: number): string | null => {
   return talentIconMap[talentId] || 'abilityStrengthen'; // デフォルトアイコン
 };
 
-const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, currentFormId, onFilterChange }) => {
+const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, currentFormId, onFilterChange, onLoadingChange }) => {
   const [units, setUnits] = useState<UnitGalleryItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -256,6 +257,13 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
   useEffect(() => {
     loadUnitsIncrementally();
   }, [loadUnitsIncrementally]);
+
+  // loading状態変更を親コンポーネントに通知
+  useEffect(() => {
+    if (onLoadingChange) {
+      onLoadingChange(loading);
+    }
+  }, [loading, onLoadingChange]);
 
   // 最適化されたフィルタリング・ソート処理
   const filteredAndSortedUnits = useMemo(() => {

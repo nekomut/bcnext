@@ -124,6 +124,7 @@ function UnitPageContent() {
   
   // UnitGalleryのフィルタされたユニットID用のstate
   const [galleryFilteredUnitIds, setGalleryFilteredUnitIds] = useState<number[]>([]);
+  const [galleryLoading, setGalleryLoading] = useState<boolean>(true);
   const [advancedFilters, setAdvancedFilters] = useState<AdvancedFilters>({
     searchMode: 'AND',
     rarity: [],
@@ -1763,6 +1764,7 @@ function UnitPageContent() {
               galleryFilteredUnitIds : 
               undefined
             }
+            galleryLoading={galleryLoading}
             onParamsChange={(params) => {
               setLevel(params.level);
               setPlusLevel(params.plusLevel);
@@ -1792,6 +1794,7 @@ function UnitPageContent() {
           currentUnitId={currentUnit?.unitId}
           currentFormId={formId}
           onFilterChange={setGalleryFilteredUnitIds}
+          onLoadingChange={setGalleryLoading}
         />
       </div>
     </>

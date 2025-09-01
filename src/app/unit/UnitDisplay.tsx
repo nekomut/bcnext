@@ -674,7 +674,7 @@ export function UnitDisplay({
   return (
     <div className={`bg-amber-50 rounded shadow p-2 ${className}`}>
       {/* Header */}
-      <div className="mb-1 flex items-center gap-2 sm:gap-3">
+      <div className="mb-2 flex items-center gap-2 sm:gap-3">
         {/* Unit Icon and Rarity */}
         {!iconsLoading && formIcons[actualCurrentForm] && (
           <div className="flex-shrink-0 flex flex-col items-center gap-1">
@@ -837,8 +837,10 @@ export function UnitDisplay({
         </div>
       </div>
 
+      <h3 className="text-sm sm:text-base font-bold py-1 text-gray-600 underline">基本ステータス</h3>
+
       {/* Radar Chart and Form Tabs Section */}
-      <div className="flex gap-2 mb-2">
+      <div className="flex gap-2 mb-0">
         {/* Radar Chart - Left side 50% width */}
         <div className="w-1/2 flex flex-col">
           <div className="bg-white rounded border border-gray-200 p-2 flex-1 min-h-[100px]">
@@ -1042,8 +1044,7 @@ export function UnitDisplay({
 
 function StatsTable({ stats, attackUpEnabled, hpUpEnabled, attackIntervalReductionEnabled, costReductionEnabled, moveSpeedUpEnabled, rechargeSpeedUpEnabled }: { stats: CalculatedStats, attackUpEnabled: boolean, hpUpEnabled: boolean, attackIntervalReductionEnabled: boolean, costReductionEnabled: boolean, moveSpeedUpEnabled: boolean, rechargeSpeedUpEnabled: boolean }) {
   return (
-    <div className="mb-1.5">
-      <h3 className="text-sm sm:text-base font-semibold mb-1 text-gray-600">基本ステータス</h3>
+    <div className="mb-2">
       <div className="grid grid-cols-2 gap-1.5 sm:gap-3 text-xs sm:text-sm">
         <StatItem label="体力" value={<b className={hpUpEnabled ? "text-blue-500" : "text-gray-500"}>{stats.hp.toLocaleString()}</b>} labelClassName="text-blue-500" />
 
@@ -2501,7 +2502,7 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUp
 }) {
   return (
     <div className="mb-2">
-      <h3 className="text-sm sm:text-base font-semibold mb-0 text-gray-600">能力・効果</h3>
+      <h3 className="text-sm sm:text-base font-bold mb-0 text-gray-600 underline">能力・効果</h3>
       <div className="space-y-0.5">
         {abilities.filter(ability => !ability.isHidden).map((ability, index) => (
           ability.isDynamic && ability.name === "超ダメージ" ? (
@@ -3389,7 +3390,7 @@ function TalentsList({
 
   return (
     <div>
-      <h3 className="text-sm sm:text-base font-semibold mb-1 text-gray-600">本能・超本能</h3>
+      <h3 className="text-sm sm:text-base font-bold mb-1 text-gray-600 underline">本能・超本能</h3>
       <div className="space-y-0">
         {talents.map((talent, index) => (
           <div key={index} className={`p-1.5 rounded ${talent.type === 'ultra' ? 'bg-red-100 border-l-4 border-red-500' : 'bg-amber-100 border-l-4 border-yellow-500'}`}>

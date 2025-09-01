@@ -13,6 +13,7 @@ interface UnitGalleryProps {
   onUnitSelect: (unitId: number, formId: number) => void;
   currentUnitId?: number;
   currentFormId?: number;
+  onFilterChange?: (filteredUnitIds: number[]) => void;
 }
 
 interface UnitGalleryItem {
@@ -112,7 +113,7 @@ const getTalentIconKey = (talentId: number): string | null => {
   return talentIconMap[talentId] || 'abilityStrengthen'; // デフォルトアイコン
 };
 
-const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, currentFormId }) => {
+const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, currentFormId, onFilterChange }) => {
   const [units, setUnits] = useState<UnitGalleryItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -310,6 +311,14 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
     
     return filtered;
   }, [units, debouncedSearchTerm, sortOrder, showTalentsOnly, includeRegular, includeMystic, includeFestival, includeSeasonal, includeLimited, selectedRarities]);
+
+  // フィルタされたユニットIDをコールバックで通知
+  useEffect(() => {
+    if (onFilterChange) {
+      const filteredUnitIds = filteredAndSortedUnits.map(unit => parseInt(unit.unitId));
+      onFilterChange(filteredUnitIds);
+    }
+  }, [filteredAndSortedUnits, onFilterChange]);
 
   // ページネーション
   const totalPages = Math.ceil(filteredAndSortedUnits.length / itemsPerPage);

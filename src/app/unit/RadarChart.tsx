@@ -37,6 +37,9 @@ export default function RadarChart({ unitData, useMaxLevel = false, className = 
   const [error, setError] = useState<string | null>(null);
   const chartRef = useRef<ChartJS<'radar'> | null>(null);
 
+  // targetUnitIds配列の変更を確実に検出するためのキーを生成
+  const targetUnitIdsKey = targetUnitIds ? targetUnitIds.sort((a, b) => a - b).join(',') : 'all';
+
   useEffect(() => {
     let isCancelled = false;
 
@@ -74,7 +77,7 @@ export default function RadarChart({ unitData, useMaxLevel = false, className = 
     return () => {
       isCancelled = true;
     };
-  }, [useMaxLevel, targetUnitIds]);
+  }, [useMaxLevel, targetUnitIdsKey, targetUnitIds]);
 
   const getChartData = (): ChartData<'radar'> => {
     if (!normalizationData) {
@@ -267,6 +270,7 @@ export default function RadarChart({ unitData, useMaxLevel = false, className = 
     <div className={`relative ${className}`}>
       <div className="w-full" style={{ aspectRatio: '1' }}>
         <Radar 
+          key={`radar-${targetUnitIdsKey}-${useMaxLevel}`}
           ref={chartRef}
           data={getChartData()} 
           options={getChartOptions()}

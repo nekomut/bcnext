@@ -121,6 +121,9 @@ function UnitPageContent() {
   const [currentResultPage, setCurrentResultPage] = useState<number>(1);
   const [sortOption, setSortOption] = useState<string>('pokedex');
   const [isStatsCollapsed, setIsStatsCollapsed] = useState<boolean>(true);
+  
+  // UnitGalleryのフィルタされたユニットID用のstate
+  const [galleryFilteredUnitIds, setGalleryFilteredUnitIds] = useState<number[]>([]);
   const [advancedFilters, setAdvancedFilters] = useState<AdvancedFilters>({
     searchMode: 'AND',
     rarity: [],
@@ -1756,7 +1759,10 @@ function UnitPageContent() {
             initialLevel={level}
             initialPlusLevel={plusLevel}
             initialFormId={formId}
-            filteredUnitIds={filteredUnits.map(unit => parseInt(unit.unitId))}
+            filteredUnitIds={galleryFilteredUnitIds.length > 0 ? 
+              galleryFilteredUnitIds : 
+              undefined
+            }
             onParamsChange={(params) => {
               setLevel(params.level);
               setPlusLevel(params.plusLevel);
@@ -1785,6 +1791,7 @@ function UnitPageContent() {
           }}
           currentUnitId={currentUnit?.unitId}
           currentFormId={formId}
+          onFilterChange={setGalleryFilteredUnitIds}
         />
       </div>
     </>

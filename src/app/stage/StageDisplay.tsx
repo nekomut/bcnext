@@ -314,44 +314,48 @@ export function StageDisplay({ stageData, onBackToSearch }: StageDisplayProps) {
           </div>
         )}
 
-        {/* 星倍率選択 */}
-        {(stageData.crownData || selectedStage.crownData) && (
-          <div className="px-1 pb-1">
-            <div className="flex items-center gap-2">
-              <label className="text-xs font-medium text-gray-700">難易度:</label>
-              <select 
-                value={selectedCrown} 
-                onChange={(e) => {
-                  const newCrown = parseInt(e.target.value);
-                  console.log('Dropdown onChange - setting crown to:', newCrown);
-                  setSelectedCrown(newCrown);
-                  // 一時的にURL更新を無効化
-                  // updateCrownUrl(newCrown);
-                }}
-                className="text-xs text-gray-500 border border-gray-300 rounded px-2 py-1 bg-white focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
-              >
-                {(() => {
-                  const crownData = selectedStage.crownData || stageData.crownData;
-                  
-                  if (!crownData) {
-                    // crownDataがない場合でもテスト用のオプションを表示（星1から開始）
-                    return [1, 2, 3].map(crown => (
+        {/* 星倍率選択 - 星一つしか存在しない場合は非表示 */}
+        {(() => {
+          const crownData = selectedStage.crownData || stageData.crownData;
+          const hasCrownData = crownData && crownData.crownCount > 1;
+          const hasTestData = !crownData && [1, 2, 3].length > 1; // テスト用データの場合も複数星があれば表示
+          
+          return (hasCrownData || hasTestData) && (
+            <div className="px-1 pb-1">
+              <div className="flex items-center gap-2">
+                <label className="text-xs font-medium text-gray-700">難易度:</label>
+                <select 
+                  value={selectedCrown} 
+                  onChange={(e) => {
+                    const newCrown = parseInt(e.target.value);
+                    console.log('Dropdown onChange - setting crown to:', newCrown);
+                    setSelectedCrown(newCrown);
+                    // 一時的にURL更新を無効化
+                    // updateCrownUrl(newCrown);
+                  }}
+                  className="text-xs text-gray-500 border border-gray-300 rounded px-2 py-1 bg-white focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                >
+                  {(() => {
+                    if (!crownData) {
+                      // crownDataがない場合でもテスト用のオプションを表示（星1から開始）
+                      return [1, 2, 3].map(crown => (
+                        <option key={crown} value={crown}>
+                          {'★'.repeat(crown)} ({100 + crown * 50}%)
+                        </option>
+                      ));
+                    }
+                    
+                    return Array.from({length: crownData.crownCount}, (_, i) => i + 1).map(crown => (
                       <option key={crown} value={crown}>
-                        {'★'.repeat(crown)} ({100 + crown * 50}%)
+                        {'★'.repeat(crown)} ({crownData.magnifications[crown - 1]}%)
                       </option>
                     ));
-                  }
-                  
-                  return Array.from({length: crownData.crownCount}, (_, i) => i + 1).map(crown => (
-                    <option key={crown} value={crown}>
-                      {'★'.repeat(crown)} ({crownData.magnifications[crown - 1]}%)
-                    </option>
-                  ));
-                })()}
-              </select>
+                  })()}
+                </select>
+              </div>
             </div>
-          </div>
-        )}
+          );
+        })()}
 
         {/* 倍率適用状態の表示 */}
 

@@ -358,6 +358,32 @@ export class EAnimD extends EAnimI {
   private createEPartArray(): EPart[] {
     const entities: EPart[] = new Array(this.mamodel.n);
     
+    // Unit 025 form=s maanim01 特別処理の判定
+    const isUnit025FormS = this.a.id === 25 && this.a.name === 'maanim01';
+    const shouldApplySpecialTreatment = isUnit025FormS && this.mamodel.n <= 78;
+    
+    // Unit 025 form=s maanim01 opacity=0設定パーツ一覧
+    const unit025OpacityZeroParts = [
+      // { partId: 61, spriteId: 56 }, // hit1<color=0>
+      // { partId: 62, spriteId: 56 }, // hit1<color=0>
+      // { partId: 50, spriteId:  0 }, // めらめら1
+      // { partId: 51, spriteId:  0 }, // めらめら1
+      { partId: 70, spriteId: 56 }, // hit1
+      { partId: 48, spriteId:  3 }, // en
+      { partId: 49, spriteId:  0 }, // light
+      { partId: 56, spriteId:  0 }, // b
+      { partId: 60, spriteId: 62 }, // 黒ぼう
+      { partId: 64, spriteId: 62 }, // 黒ぼう
+      { partId: 68, spriteId: 64 }, // kaminari
+      // { partId: 54, spriteId:  0 }, // hit1
+      { partId: 73, spriteId: 59 }, // 雷
+      { partId: 65, spriteId: 63 }, // 岩
+      { partId: 66, spriteId: 63 }, // 岩
+      { partId: 67, spriteId: 63 }, // 岩
+      { partId: 74, spriteId: 58 }, // 加算雷
+      { partId: 77, spriteId: 64 }  // kaminari
+    ];
+    
     // 1. 全パーツのインスタンスを作成（setValue()は後で実行）
     // 重要: mamodel.parts[i]はパーツiのデータを表し、entities[i]に配置される
     for (let i = 0; i < this.mamodel.n; i++) {
@@ -389,14 +415,34 @@ export class EAnimD extends EAnimI {
           entities
         );
       } else {
-        entities[i] = new EPart(
-          this.mamodel,
-          this,
-          modelPart,
-          typeof this.mamodel.strs0[i] === 'string' ? this.mamodel.strs0[i] : '',
-          i, // パーツインデックス（indプロパティ）
-          entities
-        );
+        // Unit 025 form=s maanim01 特別処理: opacity=0設定のチェック
+        const shouldSetOpacityZero = shouldApplySpecialTreatment && 
+          unit025OpacityZeroParts.some(part => i === part.partId && modelPart[2] === part.spriteId);
+        
+        if (shouldSetOpacityZero) {
+          console.log(`Unit 025 form=s maanim01: Part#${i} Sprite#${modelPart[2]} opacity=0 特別処理を適用`);
+          // modelPartをコピーしてopacity（index 11）を0に変更
+          const modifiedPart = [...modelPart];
+          modifiedPart[11] = 0; // opacity = 0
+          
+          entities[i] = new EPart(
+            this.mamodel,
+            this,
+            modifiedPart,
+            typeof this.mamodel.strs0[i] === 'string' ? this.mamodel.strs0[i] : '',
+            i, // パーツインデックス（indプロパティ）
+            entities
+          );
+        } else {
+          entities[i] = new EPart(
+            this.mamodel,
+            this,
+            modelPart,
+            typeof this.mamodel.strs0[i] === 'string' ? this.mamodel.strs0[i] : '',
+            i, // パーツインデックス（indプロパティ）
+            entities
+          );
+        }
       }
     }
     

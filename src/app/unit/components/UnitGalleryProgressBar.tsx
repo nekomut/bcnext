@@ -30,7 +30,7 @@ const UnitGalleryProgressBar: React.FC<UnitGalleryProgressBarProps> = ({ progres
       {/* シンプルなプログレスバー */}
       <div className="w-full bg-gray-200 rounded-full h-2 mb-2">
         <div 
-          className="bg-orange-600 h-2 rounded-full transition-all duration-300"
+          className="bg-orange-400 h-2 rounded-full transition-all duration-300"
           style={{ width: `${Math.max(0, Math.min(100, progress.percentage))}%` }}
         />
       </div>
@@ -44,11 +44,11 @@ export const ErrorProgressBar: React.FC<{ error: string; onRetry: () => void }> 
   return (
     <div className="mt-2 p-4 border border-red-300 rounded bg-red-50">
       <div className="flex items-center gap-2 mb-2">
-        <span className="text-red-600">❌</span>
-        <span className="text-sm font-medium text-red-800">読み込みエラー</span>
+        <span className="text-red-400">❌</span>
+        <span className="text-sm font-medium text-red-500">読み込みエラー</span>
       </div>
       
-      <div className="text-xs text-red-700 mb-3">
+      <div className="text-xs text-red-500 mb-3">
         {error}
       </div>
       

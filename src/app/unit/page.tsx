@@ -748,13 +748,13 @@ function UnitPageContent() {
   return (
     <>
       <meta name="format-detection" content="telephone=no, address=no, email=no" />
-      <Link href="/" className="font-bold hover:text-orange-600 px-1">bcnext</Link>|
-      <Link href="/stage" className="hover:text-orange-600 px-1">Stage</Link>|
-      <Link href="/unit" className="text-orange-500 hover:text-orange-600 px-1">Unit</Link>|
-      <Link href="/seek" className="hover:text-orange-600 px-1">Seek</Link>|
-      <Link href="/rare" className="hover:text-orange-600 px-1">Rare</Link>|
-      <Link href="/normal" className="hover:text-orange-600 px-1">Normal</Link>|
-      <Link href="/event" className="hover:text-orange-600 px-1">Event</Link>|
+      <Link href="/" className="font-bold hover:text-orange-500 px-1">bcnext</Link>|
+      <Link href="/stage" className="hover:text-orange-500 px-1">Stage</Link>|
+      <Link href="/unit" className="text-orange-400 hover:text-orange-500 px-1">Unit</Link>|
+      <Link href="/seek" className="hover:text-orange-500 px-1">Seek</Link>|
+      <Link href="/rare" className="hover:text-orange-500 px-1">Rare</Link>|
+      <Link href="/normal" className="hover:text-orange-500 px-1">Normal</Link>|
+      <Link href="/event" className="hover:text-orange-500 px-1">Event</Link>|
       <hr />
       
       <div className='flex-wrap hidden'>
@@ -865,11 +865,11 @@ function UnitPageContent() {
             <button
               onClick={() => handleNavigation('prev')}
               disabled={navLoading.prev || navLoading.next || loading}
-              className={`bg-orange-600 hover:bg-orange-700 text-white px-0 py-0.5 rounded text-xs disabled:opacity-50 w-10 transition-all duration-200 ${
+              className={`bg-orange-400 hover:bg-orange-500 font-semibold text-xs text-gray-700 px-0 py-0.5 rounded disabled:opacity-50 w-10 transition-all duration-200 ${
                 navLoading.prev ? 'animate-pulse' : ''
               }`}
             >
-              {navLoading.prev ? '⋯' : '◁'}
+              {navLoading.prev ? '⋯' : '◀'}
             </button>
           )}
           
@@ -964,11 +964,11 @@ function UnitPageContent() {
             <button
               onClick={() => handleNavigation('next')}
               disabled={navLoading.prev || navLoading.next || loading}
-              className={`bg-orange-600 hover:bg-orange-700 text-white px-0 py-0.5 rounded text-xs disabled:opacity-50 w-10 transition-all duration-200 ${
+              className={`bg-orange-400 hover:bg-orange-500 font-semibold text-xs text-gray-700 px-0 py-0.5 rounded disabled:opacity-50 w-10 transition-all duration-200 ${
                 navLoading.next ? 'animate-pulse' : ''
               }`}
             >
-              {navLoading.next ? '⋯' : '▷'}
+              {navLoading.next ? '⋯' : '▶'}
             </button>
           )}
         </div>
@@ -1000,7 +1000,7 @@ function UnitPageContent() {
                       ...advancedFilters, 
                       searchMode: e.target.value as 'OR' | 'AND'
                     })}
-                    className="mr-1 scale-75 accent-orange-600"
+                    className="mr-1 scale-75 accent-orange-400"
                   />
                   <span>AND</span>
                 </label>
@@ -1141,7 +1141,7 @@ function UnitPageContent() {
                         ...advancedFilters, 
                         includeInstincts: e.target.checked
                       })}
-                      className="mr-1 scale-75 accent-orange-600"
+                      className="mr-1 scale-75 accent-orange-400"
                     />
                     本能・超本能を含める
                   </label>
@@ -1652,7 +1652,7 @@ function UnitPageContent() {
               <button 
                 onClick={handleAdvancedSearch}
                 disabled={loading}
-                className="bg-orange-600 hover:bg-orange-600 text-white px-3 py-1 rounded text-xs disabled:opacity-50 disabled:cursor-not-allowed w-20 flex items-center justify-center"
+                className="bg-orange-400 hover:bg-orange-500 font-semibold text-xs text-gray-700 border border-gray-600 rounded px-3 py-1 disabled:opacity-50 disabled:cursor-not-allowed w-20 flex items-center justify-center"
               >
 {loading ? <SearchingAnimation /> : '検索実行'}
               </button>

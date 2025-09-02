@@ -217,7 +217,7 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
             <div className="text-sm text-gray-500 mb-1">
               {usingWorker ? '敵データベースを読み込み中... ' : '敵データベースを読み込み中... (フォールバック) '}
               {workerError && (
-                <div className="text-orange-600 text-xs mt-1">
+                <div className="text-orange-400 text-xs mt-1">
                   Web Worker エラー: {workerError} - フォールバックモードに切り替えます
                 </div>
               )}
@@ -230,7 +230,7 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
             </div>
             <div className="w-full bg-gray-200 rounded-full h-2">
               <div 
-                className="bg-orange-600 h-2 rounded-full transition-all duration-300"
+                className="bg-orange-400 h-2 rounded-full transition-all duration-300"
                 style={{ width: `${progress.percentage}%` }}
               ></div>
             </div>

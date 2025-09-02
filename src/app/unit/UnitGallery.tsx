@@ -448,7 +448,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                     setIncludeRegular(e.target.checked);
                     setCurrentPage(1);
                   }}
-                  className="mr-1 scale-75 accent-orange-600"
+                  className="mr-1 scale-75 accent-orange-400"
                 />
                 恒常
               </label>
@@ -461,7 +461,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                     setIncludeMystic(e.target.checked);
                     setCurrentPage(1);
                   }}
-                  className="mr-1 scale-75 accent-orange-600"
+                  className="mr-1 scale-75 accent-orange-400"
                 />
                 幻
               </label>
@@ -474,7 +474,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                     setIncludeFestival(e.target.checked);
                     setCurrentPage(1);
                   }}
-                  className="mr-1 scale-75 accent-orange-600"
+                  className="mr-1 scale-75 accent-orange-400"
                 />
                 祭
               </label>
@@ -487,7 +487,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                     setIncludeSeasonal(e.target.checked);
                     setCurrentPage(1);
                   }}
-                  className="mr-1 scale-75 accent-orange-600"
+                  className="mr-1 scale-75 accent-orange-400"
                 />
                 季節
               </label>
@@ -500,7 +500,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                     setIncludeLimited(e.target.checked);
                     setCurrentPage(1);
                   }}
-                  className="mr-1 scale-75 accent-orange-600"
+                  className="mr-1 scale-75 accent-orange-400"
                 />
                 限定
               </label>
@@ -515,7 +515,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                     setShowTalentsOnly(e.target.checked);
                     setCurrentPage(1);
                   }}
-                  className="mr-1 scale-75 accent-orange-600"
+                  className="mr-1 scale-75 accent-orange-400"
                 />
                 本能実装済のみ
               </label>
@@ -572,7 +572,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
           >
             {/* ユニットID（クリック可能） */}
             <div 
-              className="w-4 h-2.5 pl-1.5 text-xxs text-gray-500 font-mono flex-shrink-0 cursor-pointer hover:text-orange-600 rounded"
+              className="w-4 h-2.5 pl-1.5 text-xxs text-gray-500 font-mono flex-shrink-0 cursor-pointer hover:text-orange-400 rounded"
               onClick={(e) => {
                 e.stopPropagation();
                 onUnitSelect(parseInt(unit.unitId), 0); // 第1形態（formId=0）を選択
@@ -591,7 +591,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                     key={formIndex}
                     className={`w-8 h-7 border-1 rounded-xs flex items-center justify-center ${
                       isCurrentForm 
-                        ? 'border-orange-600 bg-amber-50 border-2' 
+                        ? 'border-orange-500 bg-amber-50 border-2' 
                         : formIndex < unit.validFormCount 
                         ? 'border-gray-300 bg-amber-50 hover:bg-blue-50 cursor-pointer hover:border-blue-400' 
                         : 'border-gray-300 bg-amber-50'

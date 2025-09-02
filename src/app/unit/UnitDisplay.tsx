@@ -829,7 +829,7 @@ export function UnitDisplay({
                 setPlusLevelInput(maxPlusLevel.toString());
                 onParamsChange?.({ level: maxLevel, plusLevel: maxPlusLevel, formId: actualCurrentForm });
               }}
-              className="bg-orange-600 text-white h-5 px-1 py-0 rounded text-xxs sm:text-sm border border-gray-600"
+              className="bg-orange-400 font-semibold text-gray-700 h-5 px-1 py-0 rounded text-xxs sm:text-sm border border-gray-700"
             >
               Max
             </button>
@@ -879,7 +879,7 @@ export function UnitDisplay({
                     }}
                     className={`flex items-center justify-center w-10 h-8 gap-0 px-0 py-0 rounded-sm transition-colors ${
                       actualCurrentForm === index
-                        ? 'bg-orange-600 text-white'
+                        ? 'bg-orange-500 text-white'
                         : 'bg-amber-50 text-gray-400'
                     }`}
                   >
@@ -900,10 +900,10 @@ export function UnitDisplay({
           )}
           
           {/* Radar Chart Data Source Info */}
-          <div className="mt-2 p-1 bg-orange-50 border border-orange-200 rounded text-xs">
+          <div className="mt-2 p-1 bg-orange-100 border border-orange-400 rounded text-xs">
             <div className="flex items-center gap-1 mb-1">
-              <div className="text-orange-600 font-semibold">統計データ</div>
-              <label className="text-xxs text-orange-600 cursor-pointer flex items-center">
+              <div className="text-orange-500 font-semibold">統計データ</div>
+              <label className="text-xxs text-orange-500 cursor-pointer flex items-center">
                 <input
                   type="checkbox"
                   checked={radarUseMaxLevel}
@@ -914,12 +914,12 @@ export function UnitDisplay({
               </label>
             </div>
             <div className="flex items-center gap-2 mb-1">
-              <label className="text-xxs text-orange-600 flex items-center">
-                正規化:
+              <label className="font-semibold text-xxs text-orange-400 flex items-center">
+                ・正規化:
                 <select 
                   value={normalizationType} 
                   onChange={(e) => setNormalizationType(e.target.value as NormalizationType)}
-                  className="ml-1 px-1 py-0.5 text-xxs border border-orange-300 rounded bg-white text-orange-700"
+                  className="ml-1 px-1 py-0.5 text-xxs border border-orange-300 rounded bg-white text-orange-500"
                 >
                   <option value="zscore">Z-score</option>
                   <option value="robust-zscore">Robust Z-score</option>
@@ -930,18 +930,14 @@ export function UnitDisplay({
                 </select>
               </label>
             </div>
-            <div className="text-orange-600 text-xxs font-semibold">
+            <div className="text-orange-400 text-xxs font-semibold">
               {filteredUnitIds && filteredUnitIds.length > 0 ? (
                 <>
-                  - {filteredUnitIds.length}体(選択中のみ)
-                  <br />
-                  - {radarUseMaxLevel ? 'Lv Max' : 'Lv50'}
+                  ・{radarUseMaxLevel ? 'Lv Max' : 'Lv50'} {filteredUnitIds.length}体(選択中のみ)
                 </>
               ) : (
                 <>
-                  - 全ユニット (約800体)
-                  <br />
-                  - {radarUseMaxLevel ? 'Lv Max' : 'Lv50'}
+                  全ユニット (約800体) {radarUseMaxLevel ? 'Lv Max' : 'Lv50'}
                 </>
               )}
             </div>
@@ -2786,7 +2782,7 @@ function AbilitiesList({ abilities, attackUpMultiplier, hpUpMultiplier, attackUp
                         type="checkbox"
                         checked={attackUpEnabled}
                         onChange={(e) => setAttackUpEnabled(e.target.checked)}
-                        className="mr-1 align-middle accent-orange-600"
+                        className="mr-1 align-middle accent-orange-400"
                       />
                       攻撃力アップ
                     </>
@@ -3412,7 +3408,7 @@ function TalentsList({
                         type="checkbox"
                         checked={talentWeakenEnabled}
                         onChange={(e) => setTalentWeakenEnabled(e.target.checked)}
-                        className="mr-1 align-middle accent-orange-600"
+                        className="mr-1 align-middle accent-orange-400"
                       />
                     ) : null}
                     {talent.name} ({talent.id})
@@ -3432,7 +3428,7 @@ function TalentsList({
                         type="checkbox"
                         checked={talentFreezeEnabled}
                         onChange={(e) => setTalentFreezeEnabled(e.target.checked)}
-                        className="mr-1 align-middle accent-orange-600"
+                        className="mr-1 align-middle accent-orange-400"
                       />
                     ) : null}
                     {talent.name} ({talent.id})
@@ -3450,7 +3446,7 @@ function TalentsList({
                       type="checkbox"
                       checked={talentSlowEnabled}
                       onChange={(e) => setTalentSlowEnabled(e.target.checked)}
-                      className="mr-1 align-middle accent-orange-600"
+                      className="mr-1 align-middle accent-orange-400"
                     />
                     {talent.name} ({talent.id})
                   </>
@@ -3597,7 +3593,7 @@ function TalentsList({
                         type="checkbox"
                         checked={talentKnockbackEnabled}
                         onChange={(e) => setTalentKnockbackEnabled(e.target.checked)}
-                        className="mr-1 align-middle accent-orange-600"
+                        className="mr-1 align-middle accent-orange-400"
                       />
                     ) : null}
                     {talent.name} ({talent.id})
@@ -3615,7 +3611,7 @@ function TalentsList({
                       type="checkbox"
                       checked={talentAttackUpEnabled}
                       onChange={(e) => setTalentAttackUpEnabled(e.target.checked)}
-                      className="mr-1 align-middle accent-orange-600"
+                      className="mr-1 align-middle accent-orange-400"
                     />
                     {talent.name} ({talent.id})
                   </>
@@ -3643,7 +3639,7 @@ function TalentsList({
                       type="checkbox"
                       checked={talentCriticalEnabled}
                       onChange={(e) => setTalentCriticalEnabled(e.target.checked)}
-                      className="mr-1 align-middle accent-orange-600"
+                      className="mr-1 align-middle accent-orange-400"
                     />
                     {talent.name} ({talent.id})
                   </>
@@ -3673,7 +3669,7 @@ function TalentsList({
                         type="checkbox"
                         checked={talentBarrierBreakerEnabled}
                         onChange={(e) => setTalentBarrierBreakerEnabled(e.target.checked)}
-                        className="mr-1 align-middle accent-orange-600"
+                        className="mr-1 align-middle accent-orange-400"
                       />
                     ) : null}
                     {talent.name} ({talent.id})
@@ -3768,7 +3764,7 @@ function TalentsList({
                       type="checkbox"
                       checked={costReductionEnabled}
                       onChange={(e) => setCostReductionEnabled(e.target.checked)}
-                      className="mr-1 align-middle accent-orange-600"
+                      className="mr-1 align-middle accent-orange-400"
                     />
                     {talent.name} ({talent.id})
                   </>
@@ -3785,7 +3781,7 @@ function TalentsList({
                       type="checkbox"
                       checked={rechargeSpeedUpEnabled}
                       onChange={(e) => setRechargeSpeedUpEnabled(e.target.checked)}
-                      className="mr-1 align-middle accent-orange-600"
+                      className="mr-1 align-middle accent-orange-400"
                     />
                     {talent.name} ({talent.id})
                   </>
@@ -3802,7 +3798,7 @@ function TalentsList({
                       type="checkbox"
                       checked={moveSpeedUpEnabled}
                       onChange={(e) => setMoveSpeedUpEnabled(e.target.checked)}
-                      className="mr-1 align-middle accent-orange-600"
+                      className="mr-1 align-middle accent-orange-400"
                     />
                     {talent.name} ({talent.id})
                   </>
@@ -3841,7 +3837,7 @@ function TalentsList({
                       type="checkbox"
                       checked={baseAttackUpEnabled}
                       onChange={(e) => setBaseAttackUpEnabled(e.target.checked)}
-                      className="mr-1 align-middle accent-orange-600"
+                      className="mr-1 align-middle accent-orange-400"
                     />
                     {talent.name} ({talent.id})
                   </>
@@ -3858,7 +3854,7 @@ function TalentsList({
                       type="checkbox"
                       checked={baseHpUpEnabled}
                       onChange={(e) => setBaseHpUpEnabled(e.target.checked)}
-                      className="mr-1 align-middle accent-orange-600"
+                      className="mr-1 align-middle accent-orange-400"
                     />
                     {talent.name} ({talent.id})
                   </>
@@ -4051,7 +4047,7 @@ function TalentsList({
                       type="checkbox"
                       checked={attackIntervalReductionEnabled}
                       onChange={(e) => setAttackIntervalReductionEnabled(e.target.checked)}
-                      className="mr-1 align-middle accent-orange-600"
+                      className="mr-1 align-middle accent-orange-400"
                     />
                     {talent.name} ({talent.id})
                   </>

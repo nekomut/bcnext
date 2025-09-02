@@ -644,10 +644,10 @@ export function UnitDisplay({
       recharge: Math.max(0, radarStats.recharge - frameToSecond(rechargeSpeedUpBonus)),
       foreswing: radarStats.foreswing,
       attackFrequency: radarStats.freq,
-      speed: radarStats.speed,
+      speed: radarStats.speed + speedUpBonus,
       kb: radarStats.kb
     };
-  };
+  };;
 
   // 最終的なgetAbilities呼び出し（動的倍率付き）
   const abilities = getAbilities(

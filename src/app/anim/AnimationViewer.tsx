@@ -100,6 +100,9 @@ export default function AnimationViewer({
   const [selectedSpriteId, setSelectedSpriteId] = useState<number>(0);
   const [spriteImage, setSpriteImage] = useState<HTMLImageElement | null>(null);
   
+  // Unit 025専用の影チェックボックス用状態
+  const [showShadow, setShowShadow] = useState<boolean>(false);
+  
   // アニメーションシステム
   const [eAnimD, setEAnimD] = useState<EAnimD | null>(null);
   
@@ -121,7 +124,7 @@ export default function AnimationViewer({
   const [rawJsonData, setRawJsonData] = useState<Record<string, unknown> | null>(null);
 
 
-  // Sprite Preview折り畳み用の状態変数
+  // Sprite Preview折りたたみ用の状態変数
   const [spritePreviewExpanded, setSpritePreviewExpanded] = useState<boolean>(true);
 
   // パーツリスト表示用の状態変数
@@ -365,7 +368,7 @@ export default function AnimationViewer({
     return coord.toString().padStart(5, ' ');
   };
 
-  // 全展開/全折り畳み制御
+  // 全展開/全折りたたみ制御
   const expandAllParts = useCallback(() => {
     if (!animationData[selectedForm] || !animationData[selectedForm].mamodel) return;
     const mamodel = animationData[selectedForm].mamodel;
@@ -430,6 +433,9 @@ export default function AnimationViewer({
       return;
     }
     
+    // Unit 025で影チェックボックスがONの場合は025Kを使用
+    const effectiveUnitId = (unitId === '025' && showShadow) ? '025K' : unitId;
+    
     try {
       // Next.jsのbasePathを考慮したパスを生成（anim0と同じ方式）
       const isGitHubPages = typeof window !== 'undefined' && window.location.hostname === 'nekomut.github.io';
@@ -437,9 +443,9 @@ export default function AnimationViewer({
       
       // 画像データ読み込み（複数URLフォールバック）
       const urlsToTry = [
-        `${basePath}/data/anim/${unitId}`,
-        `./data/anim/${unitId}`,
-        `${typeof window !== 'undefined' && window.location.origin || ''}${basePath}/data/anim/${unitId}`
+        `${basePath}/data/anim/${effectiveUnitId}`,
+        `./data/anim/${effectiveUnitId}`,
+        `${typeof window !== 'undefined' && window.location.origin || ''}${basePath}/data/anim/${effectiveUnitId}`
       ].filter(Boolean);
       
       let response: Response | null = null;
@@ -460,7 +466,7 @@ export default function AnimationViewer({
       }
       
       if (!response || !response.ok) {
-        console.warn(`All URLs failed to load sprite image for unit ${unitId}. Last error: ${lastError?.message || 'unknown'}`);
+        console.warn(`All URLs failed to load sprite image for unit ${effectiveUnitId}. Last error: ${lastError?.message || 'unknown'}`);
         return;
       }
       
@@ -505,9 +511,9 @@ export default function AnimationViewer({
       setSpriteImage(img);
       
     } catch (error) {
-      console.error(`スプライト読み込みエラー (${unitId}, ${selectedForm}):`, error);
+      console.error(`スプライト読み込みエラー (${effectiveUnitId}, ${selectedForm}):`, error);
     }
-  }, [unitId, selectedForm, animationData]);
+  }, [unitId, selectedForm, animationData, showShadow]);
 
 
   // アニメーションシステム初期化処理
@@ -1021,6 +1027,14 @@ export default function AnimationViewer({
     loadSprites();
   }, [selectedForm, loadSprites]);
 
+  // Unit 025の影チェックボックス変更時にスプライト画像を再読み込み
+  useEffect(() => {
+    if (unitId === '025') {
+      setSpriteImage(null);
+      loadSprites();
+    }
+  }, [showShadow, unitId, loadSprites]);
+
   // 外部currentFrameとの同期（アニメーション停止時のみ、ボタンクリック時は無視）
   useEffect(() => {
     const now = Date.now();
@@ -1197,8 +1211,8 @@ export default function AnimationViewer({
       <div className="bg-amber-50 p-1 rounded mt-1">
         <div className="flex items-center justify-between mb-1">
           <div className="flex items-center gap-2">
-            <label className="text-xs font-medium text-gray-600 font-mono">
-              Frame {String(currentFrame).padStart(3, '0')}/{String(eAnimD ? eAnimD.len() : 0).padStart(3, '0')}
+            <label className="text-xs font-medium text-gray-700 font-mono">
+              Frame <small>{String(currentFrame).padStart(3, '0')}/{String(eAnimD ? eAnimD.len() : 0).padStart(3, '0')}</small>
             </label>
             <button
               onClick={() => {
@@ -1211,7 +1225,7 @@ export default function AnimationViewer({
                 immediateUpdateRef.current = true; // 即座更新フラグを設定
                 setCurrentFrame(newFrame);
               }}
-              className="text-sm text-gray-600 hover:text-gray-800 font-mono"
+              className="text-sm text-gray-700 hover:text-gray-800 font-mono"
               disabled={isPlaying}
             >
               ◁
@@ -1227,18 +1241,18 @@ export default function AnimationViewer({
                 immediateUpdateRef.current = true; // 即座更新フラグを設定
                 setCurrentFrame(newFrame);
               }}
-              className="text-sm text-gray-600 hover:text-gray-800 font-mono"
+              className="text-sm text-gray-700 hover:text-gray-800 font-mono"
               disabled={isPlaying}
             >
               ▷
             </button>
           </div>
           <div className="flex items-center gap-1">
-            <label className="text-xs font-medium text-gray-600 font-mono">FPS</label>
+            <label className="text-xxs font-medium text-gray-700 font-mono">FPS</label>
             <select
               value={fps}
               onChange={(e) => setFps(parseInt(e.target.value))}
-              className="px-1 py-0 border border-gray-400 rounded text-xs focus:outline-none focus:ring-1 focus:ring-blue-500 text-gray-600 font-mono"
+              className="px-1 py-0 border border-gray-400 rounded text-xs focus:outline-none focus:ring-1 focus:ring-orange-500 text-gray-700 font-mono"
             >
               <option value={10}>10</option>
               <option value={15}>15</option>
@@ -1261,60 +1275,60 @@ export default function AnimationViewer({
             immediateUpdateRef.current = true; // 即座更新フラグを設定
             setCurrentFrame(newFrame);
           }}
-          className="w-full accent-orange-600"
+          className="w-full accent-orange-400"
           disabled={isPlaying}
         />
         
         {/* コントロールボタン */}
         <div className="flex flex-wrap items-center justify-center gap-1 text-xs mt-1">
-          <span className="text-gray-600 font-mono text-xxs">
+          <span className="text-gray-700 font-mono text-xxs">
             {zoom.toFixed(2)}x ({offsetX}, {offsetY})
           </span>
           <button
             onClick={() => setZoom(zoom + 0.05)}
-            className="px-2 py-1 bg-orange-600 text-white rounded font-mono"
+            className="px-2 py-1 bg-orange-400 text-gray-700 rounded font-mono border border-gray-700"
           >
             +
           </button>
           <button
             onClick={() => setZoom(Math.max(0.05, zoom - 0.05))}
-            className="px-2 py-1 bg-orange-600 text-white rounded font-mono"
+            className="px-2 py-1 bg-orange-400 text-gray-700 rounded font-mono border border-gray-700"
           >
             -
           </button>
           <button
             onClick={() => setOffsetY(offsetY - 20)}
-            className="px-2 py-1 bg-amber-500 text-white rounded font-mono"
+            className="px-2 py-1 bg-amber-500 text-gray-700 rounded font-mono border border-gray-700"
           >
             ↑
           </button>
           <button
             onClick={() => setOffsetY(offsetY + 20)}
-            className="px-2 py-1 bg-amber-500 text-white rounded font-mono"
+            className="px-2 py-1 bg-amber-500 text-gray-700 rounded font-mono border border-gray-700"
           >
             ↓
           </button>
           <button
             onClick={() => setOffsetX(offsetX - 20)}
-            className="px-2 py-1 bg-amber-500 text-white rounded font-mono"
+            className="px-2 py-1 bg-amber-500 text-gray-700 rounded font-mono border border-gray-700"
           >
             ←
           </button>
           <button
             onClick={() => setOffsetX(offsetX + 20)}
-            className="px-2 py-1 bg-amber-500 text-white rounded font-mono"
+            className="px-2 py-1 bg-amber-500 text-gray-700 rounded font-mono border border-gray-700"
           >
             →
           </button>
           <button
             onClick={() => setShowRefLines(!showRefLines)}
-            className={`px-2 py-1 rounded ${showRefLines ? 'bg-red-500' : 'bg-gray-500'} text-white font-mono text-xxs`}
+            className={`px-2 py-1 rounded ${showRefLines ? 'bg-red-500' : 'bg-gray-400'} text-gray-700 font-semibold text-xxs border border-gray-700`}
           >
             Grid
           </button>
           <button
             onClick={() => setShowBounds(!showBounds)}
-            className={`px-2 py-1 rounded ${showBounds ? 'bg-purple-500' : 'bg-gray-500'} text-white font-mono text-xxs`}
+            className={`px-2 py-1 rounded ${showBounds ? 'bg-purple-400' : 'bg-gray-400'} text-gray-700 font-semibold text-xxs border border-gray-700`}
           >
             Bound
           </button>
@@ -1338,7 +1352,7 @@ export default function AnimationViewer({
                 setHiddenParts(new Set());
                 setHiddenSprites(new Set());
               }}
-              className="px-2 py-0 bg-gray-200 text-gray-700 rounded text-xxs hover:bg-gray-300 font-mono"
+              className="px-2 py-0 bg-gray-200 text-gray-700 rounded text-xxs hover:bg-gray-300 font-mono border border-gray-700"
             >
               全選択
             </button>
@@ -1364,19 +1378,19 @@ export default function AnimationViewer({
                 setHiddenParts(new Set(allPartIds));
                 setHiddenSprites(allPartSpriteKeys);
               }}
-              className="px-2 py-0 bg-gray-200 text-gray-700 rounded text-xxs hover:bg-gray-300 font-mono"
+              className="px-2 py-0 bg-gray-200 text-gray-700 rounded text-xxs hover:bg-gray-300 font-mono border border-gray-700"
             >
               全解除
             </button>
             <button
               onClick={expandAllParts}
-              className="px-2 py-0 bg-orange-600 text-gray-600 rounded text-xxs hover:bg-orange-700 font-mono"
+              className="px-2 py-0 bg-orange-400 text-gray-600 rounded text-xxs hover:bg-orange-700 font-mono border border-gray-700"
             >
               全展開
             </button>
             <button
               onClick={collapseAllParts}
-              className="px-2 py-0 bg-amber-300 text-gray-600 rounded text-xxs hover:bg-amber-400 font-mono"
+              className="px-2 py-0 bg-amber-300 text-gray-600 rounded text-xxs hover:bg-amber-400 font-mono border border-gray-700"
             >
               全折畳
             </button>
@@ -1392,8 +1406,8 @@ export default function AnimationViewer({
           </div>
           
           {/* パーツ階層表示 */}
-          <div className="text-xxxs text-gray-600 font-mono">
-            <div className="bg-gray-50 border rounded p-1">
+          <div className="text-xxxs text-gray-700 font-mono">
+            <div className="bg-gray-50 border border-gray-700 rounded p-1">
               {animationData[selectedForm] && animationData[selectedForm].mamodel && (() => {
                 const mamodel = animationData[selectedForm].mamodel;
                 
@@ -1492,7 +1506,7 @@ export default function AnimationViewer({
                     <div key={`part-${partId}`} className="py-0 my-0" style={{ paddingLeft: `${indentLevel}px` }}>
                       {/* パーツ（親） */}
                       <div className={`py-0 my-0 flex items-center gap-1 font-mono text-xxs ${!isPartActive ? 'opacity-40' : ''}`}>
-                        {/* 折り畳みボタン */}
+                        {/* 折りたたみボタン */}
                         {hasChildren ? (
                           <button
                             onClick={() => togglePartExpansion(partId)}
@@ -1649,13 +1663,27 @@ export default function AnimationViewer({
 
       {/* Sprite Preview Section */}
       <div className="bg-amber-50 p-1 rounded mt-1">
-        <button
-          onClick={() => setSpritePreviewExpanded(!spritePreviewExpanded)}
-          className="flex items-center justify-between w-full text-left text-xs font-medium text-gray-600 mb-1 font-mono hover:text-gray-800"
-        >
-          Sprite Preview
-          <span className="text-gray-400">{spritePreviewExpanded ? '▼' : '▶'}</span>
-        </button>
+        <div className="flex items-center w-full mb-1">
+          <button
+            onClick={() => setSpritePreviewExpanded(!spritePreviewExpanded)}
+            className="flex items-center gap-1 text-left text-xs font-medium text-gray-600 font-mono hover:text-gray-800"
+          >
+            <span className="text-gray-400">{spritePreviewExpanded ? '▼' : '▶'}</span>
+            <span>Sprite Preview</span>
+          </button>
+          {/* Unit 025専用の影チェックボックス */}
+          {unitId === '025' && (
+            <label className="flex items-center gap-1 ml-2 text-xxs font-medium text-gray-600 font-mono">
+              <input
+                type="checkbox"
+                checked={showShadow}
+                onChange={(e) => setShowShadow(e.target.checked)}
+                className="w-3 h-3 accent-orange-400"
+              />
+              影スプライト
+            </label>
+          )}
+        </div>
         {spritePreviewExpanded && (
           <div className="space-y-2">
           {/* Sprite ID Selector */}
@@ -1663,7 +1691,7 @@ export default function AnimationViewer({
             <select
               value={selectedSpriteId}
               onChange={(e) => setSelectedSpriteId(Number(e.target.value))}
-              className="text-xs font-mono border rounded px-1 py-0.5 text-gray-500"
+              className="text-xxs font-mono border border-gray-600 rounded px-1 py-0.5 text-gray-700"
             >
               {animationData[selectedForm] && animationData[selectedForm].imgcut && (() => {
                 const formData = animationData[selectedForm];
@@ -1874,9 +1902,9 @@ export default function AnimationViewer({
               </div>
               
               {/* 変換後のanimationData */}
-              <div className="bg-blue-50 p-2 rounded">
+              <div className="bg-orange-50 p-2 rounded">
                 <div className="flex items-center justify-between mb-2">
-                  <label className="block text-xxs font-medium text-blue-600 font-mono">Converted animationData</label>
+                  <label className="block text-xxs font-medium text-orange-400 font-mono">Converted animationData</label>
                   <div className="flex gap-2">
                     <button
                       onClick={() => {
@@ -2062,9 +2090,11 @@ export default function AnimationViewer({
               </div>
               
               {/* 変換後のanimationData */}
-              <div className="bg-blue-50 p-2 rounded">
-                <label className="block text-xxs font-medium text-blue-600 mb-1 font-mono">Converted animationData</label>
-                <pre className="whitespace-pre-wrap text-xxxs text-blue-600">{animationData[selectedForm]?.maanim?.[selectedAnimation] ? (() => {
+              <div className="bg-gray-50 p-2 rounded">
+                <label className="block text-xxs font-medium text-gray-600 mb-1 font-mono">Converted animationData</label>
+                <pre className="whitespace-pre-wrap text-xxxs text-gray-600">{(() => {
+                  if (!animationData[selectedForm]?.maanim?.[selectedAnimation]) return 'No data';
+                  
                   const data = animationData[selectedForm].maanim[selectedAnimation];
                   // データをクリーンアップしてからJSON化
                   const cleanData = JSON.parse(JSON.stringify(data, (_, value) => {
@@ -2078,7 +2108,7 @@ export default function AnimationViewer({
                   const jsonStr = JSON.stringify(cleanData, null, 2);
                   
                   // ネストした配列のみ1行にする
-                  let result = jsonStr.replace(/(  )\[\s*\n([\s\S]*?)\n\s*\]/g, (match, indent, content) => {
+                  return jsonStr.replace(/(  )\[\s*\n([\s\S]*?)\n\s*\]/g, (match, indent, content) => {
                     // インデントが2スペース以上（ネストした配列）の場合のみ処理
                     const lines = content.split('\n').map((line: string) => line.trim()).filter((line: string) => line);
                     
@@ -2095,16 +2125,7 @@ export default function AnimationViewer({
                     
                     return match;
                   });
-                  
-                  // ints配列を特別に1行にする
-                  result = result.replace(/("ints":\s*)\[\s*\n([\s\S]*?)\n\s*\]/g, (_, intsLabel, content) => {
-                    const lines = content.split('\n').map((line: string) => line.trim()).filter((line: string) => line);
-                    const items = lines.map((line: string) => line.replace(/,$/, ''));
-                    return `${intsLabel}[${items.join(', ')}]`;
-                  });
-                  
-                  return result;
-                })() : 'No data'}</pre>
+                })()}</pre>
               </div>
             </div>
           )}

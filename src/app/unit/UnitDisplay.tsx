@@ -1162,7 +1162,6 @@ export function UnitDisplay({
                   <option value="robust-zscore">Robust Z-score</option>
                   <option value="log">Log</option>
                   <option value="percentile">Percentile</option>
-                  <option value="rank">Rank</option>
                   <option value="min-max">Min-Max</option>
                 </select>
               </label>

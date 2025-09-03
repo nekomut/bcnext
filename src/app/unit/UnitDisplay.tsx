@@ -915,11 +915,10 @@ export function UnitDisplay({
             </div>
             <div className="flex items-center gap-2 mb-1">
               <label className="font-semibold text-xxs text-orange-400 flex items-center">
-                ・正規化:
                 <select 
                   value={normalizationType} 
                   onChange={(e) => setNormalizationType(e.target.value as NormalizationType)}
-                  className="ml-1 px-1 py-0.5 text-xxs border border-orange-300 rounded bg-white text-orange-500"
+                  className="px-1 py-0.5 text-xxs border border-orange-300 rounded bg-white text-orange-500"
                 >
                   <option value="zscore">Z-score</option>
                   <option value="robust-zscore">Robust Z-score</option>
@@ -930,10 +929,10 @@ export function UnitDisplay({
                 </select>
               </label>
             </div>
-            <div className="text-orange-400 text-xxs font-semibold">
+            <div className="px-1 text-orange-400 text-xxs font-semibold">
               {filteredUnitIds && filteredUnitIds.length > 0 ? (
                 <>
-                  ・{radarUseMaxLevel ? 'Lv Max' : 'Lv50'} {filteredUnitIds.length}体(選択中のみ)
+                  {radarUseMaxLevel ? 'Lv Max' : 'Lv50'} {filteredUnitIds.length} units
                 </>
               ) : (
                 <>

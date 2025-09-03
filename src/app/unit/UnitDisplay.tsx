@@ -1,14 +1,20 @@
 // Common unit display component
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { UnitData, CalculatedStats, UnitAbility, UnitTalent, calculateUnitStats, getAbilities, frameToSecond, getValidFormCount, calculateTalentEffect } from './types';
 import { icons } from '@/data/icons';
 import IconManager from './IconManager';
 import RadarChart from './RadarChart';
-import { UnitRadarData, NormalizationType } from './RadarChartNormalizer';
+import { UnitRadarData, NormalizationType, RadarChartNormalizer, RadarChartNormalizationData } from './RadarChartNormalizer';
+import dynamic from 'next/dynamic';
+
+const StatsHistogram = dynamic(() => import('./StatsHistogram'), {
+  ssr: false,
+  loading: () => <div className="text-center py-4">チャートを読み込み中...</div>
+});
 
 // Editable Select Component
 interface EditableSelectProps {
@@ -254,6 +260,7 @@ export function UnitDisplay({
 
   // レーダーチャート用の状態
   const [radarUseMaxLevel, setRadarUseMaxLevel] = useState(false);
+  const [showStatsModal, setShowStatsModal] = useState(false);
   const [normalizationType, setNormalizationType] = useState<NormalizationType>('zscore');
   const [radarKey, setRadarKey] = useState(0);
 
@@ -650,6 +657,96 @@ export function UnitDisplay({
   };;
 
   // 最終的なgetAbilities呼び出し（動的倍率付き）
+  // レーダーチャートの統計データ状態
+  const [radarStatsData, setRadarStatsData] = useState<UnitRadarData[] | null>(null);
+  const [isLoadingStats, setIsLoadingStats] = useState(false);
+  const [statsInfo, setStatsInfo] = useState<{unitCount: number, formCount: number} | null>(null);
+  const [normalizationData, setNormalizationData] = useState<RadarChartNormalizationData | null>(null);
+  const [selectedStatType, setSelectedStatType] = useState<keyof UnitRadarData>('hp');
+  const [selectedNormalizationType, setSelectedNormalizationType] = useState<NormalizationType>('robust-zscore');
+
+  // フォールバック用のデモデータ生成（UnitRadarData形式）
+  const generateFallbackData = useCallback((): UnitRadarData[] => {
+    const targetIds = filteredUnitIds && filteredUnitIds.length > 0 ? filteredUnitIds : 
+      Array.from({ length: 823 }, (_, i) => i);
+    
+    return targetIds.flatMap(unitId => {
+      try {
+        // 複数フォームを想定して2-3個のバリエーションを生成
+        const formCount = (unitId % 3) + 1; // 1-3フォーム
+        return Array.from({ length: formCount }, (_, formIndex) => {
+          const formMultiplier = 1 + (formIndex * 0.3); // フォームごとの補正
+          const levelMultiplier = radarUseMaxLevel ? 3.2 : 1.8;
+          
+          // 各統計値を生成
+          const baseHp = Math.max(100, 1000 + unitId * 150 + Math.sin(unitId * 0.1) * 5000);
+          const baseAp = Math.max(50, 500 + unitId * 75 + Math.cos(unitId * 0.1) * 2500);
+          
+          const radarData: UnitRadarData = {
+            hp: Math.round(baseHp * levelMultiplier * formMultiplier),
+            attackPower: Math.round(baseAp * levelMultiplier * formMultiplier),
+            dps: Math.round((baseAp * levelMultiplier * formMultiplier) / (3 + Math.sin(unitId) * 2)),
+            range: Math.round(200 + unitId * 5 + Math.sin(unitId * 0.2) * 100),
+            cost: Math.round(Math.max(50, 300 + unitId * 10 + Math.cos(unitId * 0.15) * 200)),
+            recharge: Math.round(Math.max(30, 60 + unitId * 2 + Math.sin(unitId * 0.25) * 30)),
+            foreswing: Math.round(Math.max(5, 15 + unitId * 0.5 + Math.cos(unitId * 0.3) * 10)),
+            attackFrequency: Math.round(Math.max(30, 90 + unitId * 3 + Math.sin(unitId * 0.2) * 40)),
+            speed: Math.round(Math.max(1, 8 + unitId * 0.2 + Math.cos(unitId * 0.1) * 5)),
+            kb: Math.round(Math.max(1, 3 + unitId * 0.1 + Math.sin(unitId * 0.4) * 2))
+          };
+          
+          return radarData;
+        });
+      } catch {
+        // フォールバック値
+        return [{
+          hp: 1000, attackPower: 500, dps: 166, range: 200, cost: 300,
+          recharge: 60, foreswing: 15, attackFrequency: 90, speed: 8, kb: 3
+        }];
+      }
+    });
+  }, [filteredUnitIds, radarUseMaxLevel]);
+
+  // RadarChartNormalizerから実際の統計データを取得
+  useEffect(() => {
+    const loadRadarStats = async () => {
+      if (isLoadingStats) return;
+      
+      setIsLoadingStats(true);
+      try {
+        const normalizer = RadarChartNormalizer.getInstance();
+        const normalizationData = await normalizer.getNormalizedData(radarUseMaxLevel, filteredUnitIds);
+        
+        // 全ユニットデータを抽出（全ての統計値を含む）
+        const allUnitsRadarData = normalizationData.allUnitsData
+          .filter(unit => unit.hp > 0); // HP > 0 のユニットのみ
+        
+        // ユニット数とフォーム数を計算
+        const uniqueUnitIds = new Set(allUnitsRadarData.map(unit => unit.unitId));
+        const unitCount = uniqueUnitIds.size;
+        const formCount = allUnitsRadarData.length;
+        
+        setRadarStatsData(allUnitsRadarData);
+        setStatsInfo({ unitCount, formCount });
+        setNormalizationData(normalizationData);
+      } catch {
+        console.error('Error loading radar stats data');
+        // フォールバック用のデモデータを設定
+        const fallbackData = generateFallbackData();
+        setRadarStatsData(fallbackData);
+        
+        // フォールバック時のユニット情報も設定
+        const targetIds = filteredUnitIds && filteredUnitIds.length > 0 ? filteredUnitIds : 
+          Array.from({ length: 823 }, (_, i) => i);
+        setStatsInfo({ unitCount: targetIds.length, formCount: fallbackData.length });
+      } finally {
+        setIsLoadingStats(false);
+      }
+    };
+
+    loadRadarStats();
+  }, [filteredUnitIds, radarUseMaxLevel, generateFallbackData]);
+
   const abilities = getAbilities(
     unitData, actualCurrentForm, level, plusLevel, 
     totalAttackMultiplier, baseHpUpMultiplier, 
@@ -670,6 +767,147 @@ export function UnitDisplay({
 
   const maxLevel = unitData.coreData.rarity.maxLevels[0];
   const maxPlusLevel = unitData.coreData.rarity.maxLevels[1];
+
+  // 統計データを生成する関数（レーダーチャートと同じデータソースを使用）
+  const generateStatsData = () => {
+    if (radarStatsData) {
+      // 選択された統計項目の値を抽出
+      const values = radarStatsData.map(unit => unit[selectedStatType]).filter(val => val > 0);
+      return { rawData: values };
+    }
+    
+    // データが読み込まれていない場合はフォールバックデータを使用
+    const fallbackData = generateFallbackData();
+    const values = fallbackData.map(unit => unit[selectedStatType]).filter(val => val > 0);
+    return { rawData: values };
+  };
+
+  // 正規化されたデータを生成する関数
+  const generateNormalizedData = () => {
+    if (!radarStatsData || !normalizationData) {
+      // フォールバック: 簡単なZ-Score計算
+      const rawData = generateStatsData().rawData;
+      const mean = rawData.reduce((sum, val) => sum + val, 0) / rawData.length;
+      const variance = rawData.reduce((sum, val) => sum + Math.pow(val - mean, 2), 0) / rawData.length;
+      const stdDev = Math.sqrt(variance);
+      return rawData.map(val => (val - mean) / stdDev);
+    }
+
+    // RadarChartNormalizerを使用して正規化
+    const normalizer = RadarChartNormalizer.getInstance();
+    
+    return radarStatsData.map(unitData => {
+      const unitRadarData: UnitRadarData = {
+        hp: unitData.hp,
+        attackPower: unitData.attackPower,
+        dps: unitData.dps,
+        range: unitData.range,
+        cost: unitData.cost,
+        recharge: unitData.recharge,
+        foreswing: unitData.foreswing,
+        attackFrequency: unitData.attackFrequency,
+        speed: unitData.speed,
+        kb: unitData.kb
+      };
+      
+      const normalizedData = normalizer.normalizeUnitData(
+        unitRadarData,
+        normalizationData.normalizationStats,
+        selectedNormalizationType,
+        normalizationData.allUnitsData
+      );
+      
+      return normalizedData[selectedStatType];
+    });
+  };
+
+  // Z-scoreを計算する関数（フォールバック用）
+  // const calculateZScores = (data: number[]) => {
+  //   const mean = data.reduce((sum, val) => sum + val, 0) / data.length;
+  //   const variance = data.reduce((sum, val) => sum + Math.pow(val - mean, 2), 0) / data.length;
+  //   const stdDev = Math.sqrt(variance);
+  //   
+  //   return data.map(val => (val - mean) / stdDev);
+  // };
+
+  // 統計項目の定義
+  const statTypeOptions: { value: keyof UnitRadarData; label: string }[] = [
+    { value: 'hp', label: '体力' },
+    { value: 'attackPower', label: '攻撃力' },
+    { value: 'foreswing', label: '攻撃発生' },
+    { value: 'attackFrequency', label: '攻撃頻度' },
+    { value: 'dps', label: 'DPS' },
+    { value: 'range', label: '射程' },
+    { value: 'speed', label: '速度' },
+    { value: 'recharge', label: '再生産' },
+    { value: 'cost', label: 'コスト' },
+    { value: 'kb', label: 'KB' }
+  ];
+
+  // 正規化手法の定義（レーダーチャートと同じ順番・名前）
+  const normalizationTypeOptions: { value: NormalizationType; label: string; description: string }[] = [
+    { value: 'zscore', label: 'Z-score', description: '平均0、標準偏差1の標準正規分布' },
+    { value: 'robust-zscore', label: 'Robust Z-score', description: '中央値とMADを使用した外れ値に強い正規化' },
+    { value: 'log', label: 'Log', description: '対数変換後のZ-Score正規化' },
+    { value: 'percentile', label: 'Percentile', description: '順位による-3～3の範囲正規化' },
+    { value: 'min-max', label: 'Min-Max', description: '最小値-最大値による-3～3の範囲正規化' }
+  ];
+
+  const statsData = generateStatsData();
+  const normalizedData = generateNormalizedData();
+
+  // 現在のユニットの統計値を取得
+  const getCurrentUnitStatValue = (statType: keyof UnitRadarData) => {
+    switch (statType) {
+      case 'hp': return enhancedStats.hp;
+      case 'attackPower': return enhancedStats.ap;
+      case 'dps': return enhancedStats.dps;
+      case 'range': return enhancedStats.range;
+      case 'cost': return enhancedStats.cost;
+      case 'recharge': return enhancedStats.recharge;
+      case 'foreswing': return frameToSecond(enhancedStats.frames[0]);
+      case 'attackFrequency': return frameToSecond(enhancedStats.frames[0] + enhancedStats.frames[1]);
+      case 'speed': return enhancedStats.speed;
+      case 'kb': return enhancedStats.kb;
+      default: return 0;
+    }
+  };
+
+  const currentUnitRawValue = getCurrentUnitStatValue(selectedStatType);
+  
+  // 現在のユニットの正規化値を計算
+  const getCurrentUnitNormalizedValue = () => {
+    if (!radarStatsData || !normalizationData) {
+      // フォールバック: 簡単なZ-Score計算
+      const rawData = statsData.rawData;
+      const mean = rawData.reduce((sum, val) => sum + val, 0) / rawData.length;
+      const variance = rawData.reduce((sum, val) => sum + Math.pow(val - mean, 2), 0) / rawData.length;
+      const stdDev = Math.sqrt(variance);
+      return (currentUnitRawValue - mean) / stdDev;
+    }
+
+    // RadarChartNormalizerを使用して正規化
+    const normalizer = RadarChartNormalizer.getInstance();
+    const currentUnitRadarData: UnitRadarData = {
+      hp: enhancedStats.hp,
+      attackPower: enhancedStats.ap,
+      dps: enhancedStats.dps,
+      range: enhancedStats.range,
+      cost: enhancedStats.cost,
+      recharge: enhancedStats.recharge,
+      foreswing: frameToSecond(enhancedStats.frames[0]),
+      attackFrequency: frameToSecond(enhancedStats.frames[0] + enhancedStats.frames[1]),
+      speed: enhancedStats.speed,
+      kb: enhancedStats.kb
+    };
+    
+    const normalizedUnit = normalizer.normalizeUnitData(currentUnitRadarData, normalizationData.normalizationStats, selectedNormalizationType);
+    return normalizedUnit[selectedStatType];
+  };
+
+  const currentUnitNormalizedValue = getCurrentUnitNormalizedValue();
+  
+  const currentNormalizationLabel = normalizationTypeOptions.find(option => option.value === selectedNormalizationType)?.label || '正規化';
 
   return (
     <div className={`bg-amber-50 rounded shadow p-2 ${className}`}>
@@ -939,6 +1177,14 @@ export function UnitDisplay({
                   {radarUseMaxLevel ? 'Lv Max' : 'Lv50'} All units
                 </>
               )}
+              <div className="mt-1">
+                <button 
+                  onClick={() => setShowStatsModal(true)}
+                  className="text-blue-500 hover:text-blue-700 underline text-xxs cursor-pointer"
+                >
+                  統計データ詳細
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -1032,6 +1278,85 @@ export function UnitDisplay({
           hasOnlyRelicAkuTough={hasOnlyRelicAkuTough}
           hasOnlyRelicAkuMassiveDamage={hasOnlyRelicAkuMassiveDamage}
         />
+      )}
+
+      {/* 統計データ詳細モーダル */}
+      {showStatsModal && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded shadow max-w-md w-full max-h-[90vh] overflow-y-auto">
+            <div className="p-2">
+              <div className="flex justify-between items-center mb-1">
+                <h2 className="text-[14px] font-bold text-gray-800">統計データ詳細</h2>
+                <button
+                  onClick={() => setShowStatsModal(false)}
+                  className="text-gray-500 hover:text-gray-700 text-[14px] font-bold"
+                >
+                  ×
+                </button>
+              </div>
+              {isLoadingStats ? (
+                <div className="text-center py-1">
+                  <div className="text-xs text-gray-600">統計データを読み込み中...</div>
+                  <div className="text-xxs text-gray-500 mt-2">レーダーチャートデータから体力値を抽出しています</div>
+                </div>
+              ) : (
+                <div>
+                  <div className="mb-1">
+                    <div className="text-[11px] text-gray-600 mb-1">
+                      {statsInfo ? (
+                        <>
+                          対象ユニット数: {statsInfo.unitCount}体（{statsInfo.formCount}形態)
+                        </>
+                      ) : (
+                        <>
+                          対象データ数: {statsData.rawData.length}個
+                        </>
+                      )}
+                    </div>
+                    {/* 統計項目・正規化手法選択プルダウン */}
+                    <div className="mb-2 grid grid-cols-2 gap-4">
+                      <div>
+                        <select
+                          value={selectedStatType}
+                          onChange={(e) => setSelectedStatType(e.target.value as keyof UnitRadarData)}
+                          className="w-full border border-gray-300 rounded px-3 py-1 text-xs text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        >
+                          {statTypeOptions.map(option => (
+                            <option key={option.value} value={option.value}>
+                              {option.label}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                      
+                      <div>
+                        <select
+                          value={selectedNormalizationType}
+                          onChange={(e) => setSelectedNormalizationType(e.target.value as NormalizationType)}
+                          className="w-full border border-gray-300 rounded px-3 py-1 text-xs text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          title={normalizationTypeOptions.find(option => option.value === selectedNormalizationType)?.description}
+                        >
+                          {normalizationTypeOptions.map(option => (
+                            <option key={option.value} value={option.value} title={option.description}>
+                              {option.label}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <StatsHistogram
+                    rawData={statsData.rawData}
+                    zScoreData={normalizedData}
+                    normalizationMethod={currentNormalizationLabel}
+                    currentUnitRawValue={currentUnitRawValue}
+                    currentUnitNormalizedValue={currentUnitNormalizedValue}
+                  />
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
       )}
     </div>
   );

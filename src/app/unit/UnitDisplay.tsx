@@ -913,6 +913,9 @@ export function UnitDisplay({
                 Lv Max
               </label>
             </div>
+            <div className="px-1 text-orange-400 text-xxs font-semibold">
+              {radarUseMaxLevel ? 'Lv Max' : 'Lv50'} {filteredUnitIds.length} units
+            </div>
             <div className="flex items-center gap-2 mb-1">
               <label className="font-semibold text-xxs text-orange-400 flex items-center">
                 <select 
@@ -928,17 +931,6 @@ export function UnitDisplay({
                   <option value="min-max">Min-Max</option>
                 </select>
               </label>
-            </div>
-            <div className="px-1 text-orange-400 text-xxs font-semibold">
-              {filteredUnitIds && filteredUnitIds.length > 0 ? (
-                <>
-                  {radarUseMaxLevel ? 'Lv Max' : 'Lv50'} {filteredUnitIds.length} units
-                </>
-              ) : (
-                <>
-                  全ユニット (約800体) {radarUseMaxLevel ? 'Lv Max' : 'Lv50'}
-                </>
-              )}
             </div>
           </div>
         </div>

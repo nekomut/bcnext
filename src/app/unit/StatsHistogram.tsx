@@ -92,7 +92,7 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
   };
 
   // 生データ用のchartOptions
-  const createRawDataChartOptions = (maxValue: number) => ({
+  const createRawDataChartOptions = () => ({
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
@@ -112,19 +112,12 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
         ticks: {
           maxRotation: 0,
           minRotation: 0,
-          callback: function(value: unknown, index: number, ticks: unknown[]) {
-            const ticksArray = ticks as unknown[];
-            // 最初のラベル（0相当）と最後のラベル（最大値相当）だけ表示
-            if (index === 0) {
-              return '0';
-            }
-            if (index === ticksArray.length - 1) {
-              return Math.round(maxValue).toLocaleString();
-            }
+          callback: function() {
+            // 標準のラベルは非表示にして、カスタムプラグインで描画
             return '';
           },
-          maxTicksLimit: 20, // ラベル数を確保
-          autoSkip: false, // 自動スキップを無効化
+          maxTicksLimit: 20,
+          autoSkip: false,
         },
       },
     },
@@ -135,7 +128,7 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
 
   // 生データの最大値を取得
   const rawMaxValue = rawData.length > 0 ? Math.max(...rawData) : 0;
-  const rawDataChartOptions = createRawDataChartOptions(rawMaxValue);
+  const rawDataChartOptions = createRawDataChartOptions();
 
   const rawChartData = {
     labels: rawHistogram.labels,
@@ -162,6 +155,32 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
       },
     ],
   };
+
+  // X軸ラベルの配置を調整するプラグイン
+  const createLabelAlignPlugin = (maxValue: number) => ({
+    id: 'labelAlign',
+    afterDraw: (chart: Chart) => {
+      const ctx = chart.ctx;
+      const chartArea = chart.chartArea;
+      
+      // 既存のラベルを消して新しく描画
+      ctx.save();
+      ctx.fillStyle = '#666';
+      ctx.font = '10px sans-serif';
+      
+      // 左端に「0」を左寄せで描画
+      ctx.textAlign = 'left';
+      const leftX = chartArea.left;
+      ctx.fillText('0', leftX, chartArea.bottom + 20);
+      
+      // 右端に最大値を右寄せで描画
+      ctx.textAlign = 'right';
+      const rightX = chartArea.right;
+      ctx.fillText(Math.round(maxValue).toLocaleString(), rightX, chartArea.bottom + 20);
+      
+      ctx.restore();
+    }
+  });
 
   // 現在のユニットの位置を示すカスタムプラグイン（生データ用）
   const createVerticalLinePlugin = (value: number | undefined, binLabels: string[], color: string) => ({
@@ -218,9 +237,9 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
       // 値をビン位置にマッピング（範囲外も処理）
       let position = ((value - minRange) / (maxRange - minRange)) * bins;
       
-      // 範囲外の場合は端に表示
+      // 範囲外の場合は端に表示（Chart.jsの有効範囲は0-(bins-1)）
       if (position < 0) position = 0;
-      if (position > bins) position = bins;
+      if (position >= bins) position = bins - 1;
       
       const x = chart.scales.x.getPixelForValue(position);
       
@@ -245,7 +264,28 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
     }
   });
 
-  // 正規化グラフ専用のchartOptions（X軸ラベルを整数表示）
+  // Z-Score用のカスタムラベルプラグイン
+  const createZScoreLabelPlugin = () => ({
+    id: 'zScoreLabelAlign',
+    afterDraw: (chart: Chart) => {
+      const ctx = chart.ctx;
+      const chartArea = chart.chartArea;
+      
+      ctx.save();
+      ctx.fillStyle = '#666';
+      ctx.font = '10px sans-serif';
+      ctx.textAlign = 'right';
+      
+      // 10個目のバー（インデックス9）の位置に「0」を右寄せで表示
+      const barIndex = 10; // 11個目のバー（0ベースで10）
+      const x = chart.scales.x.getPixelForValue(barIndex);
+      ctx.fillText('0', x, chartArea.bottom + 20);
+      
+      ctx.restore();
+    }
+  });
+
+  // 正規化グラフ専用のchartOptions（X軸ラベルを非表示）
   const zScoreChartOptions = {
     responsive: true,
     maintainAspectRatio: false,
@@ -265,16 +305,8 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
         ticks: {
           maxRotation: 0,
           minRotation: 0,
-          textAlign: 'right',
-          callback: function(_value: unknown, index: number) {
-            // 20ビンを7つの整数ラベルにマッピング
-            const labels = [-3, -2, -1, 0, 1, 2, 3];
-            // インデックス0,3,6,9,12,15,18に対応してラベルを表示
-            const targetIndices = [1, 4, 7, 10, 13, 16, 19];
-            const labelIndex = targetIndices.indexOf(index);
-            if (labelIndex >= 0) {
-              return labels[labelIndex];
-            }
+          callback: function() {
+            // 標準のラベルは非表示にして、カスタムプラグインで描画
             return '';
           },
           maxTicksLimit: 20,
@@ -316,7 +348,10 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
           <Bar 
             data={rawChartData} 
             options={rawDataChartOptions} 
-            plugins={[createVerticalLinePlugin(currentUnitRawValue, rawHistogram.labels, '#FF6B6B')]}
+            plugins={[
+              createLabelAlignPlugin(rawMaxValue),
+              createVerticalLinePlugin(currentUnitRawValue, rawHistogram.labels, '#FF6B6B')
+            ]}
           />
         </div>
       </div>
@@ -339,7 +374,10 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
           <Bar 
             data={zScoreChartData} 
             options={zScoreChartOptions} 
-            plugins={[createZScoreVerticalLinePlugin(currentUnitNormalizedValue, '#FF6B6B')]}
+            plugins={[
+              createZScoreLabelPlugin(),
+              createZScoreVerticalLinePlugin(currentUnitNormalizedValue, '#FF6B6B')
+            ]}
           />
         </div>
       </div>

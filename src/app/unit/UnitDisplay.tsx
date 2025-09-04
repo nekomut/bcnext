@@ -1314,7 +1314,7 @@ export function UnitDisplay({
                   <StatsHistogram
                     key={`${selectedStatType}-${selectedNormalizationType}`}
                     rawData={statsData.rawData}
-                    zScoreData={normalizedData}
+                    normalizedData={normalizedData}
                     normalizationMethod={currentNormalizationLabel}
                     currentUnitName={currentFormData.name || `Unit ${unitData.unitId.toString().padStart(3, '0')}`}
                     currentUnitRawValue={(() => {

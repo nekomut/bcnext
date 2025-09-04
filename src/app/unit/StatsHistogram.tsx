@@ -28,14 +28,14 @@ ChartJS.register(
 
 interface StatsHistogramProps {
   rawData: number[];
-  zScoreData: number[];
+  normalizedData: number[];
   normalizationMethod?: string;
   currentUnitRawValue?: number;
   currentUnitNormalizedValue?: number;
   currentUnitName?: string;
 }
 
-const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, normalizationMethod = 'Z-Score', currentUnitRawValue, currentUnitNormalizedValue, currentUnitName }) => {
+const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, normalizedData, normalizationMethod = 'Z-Score', currentUnitRawValue, currentUnitNormalizedValue, currentUnitName }) => {
   console.log('StatsHistogram received:', { currentUnitRawValue, currentUnitNormalizedValue, normalizationMethod });
   // 生データのヒストグラム作成
   const createHistogram = (data: number[], bins: number = 20) => {
@@ -63,8 +63,8 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
     return { labels, counts };
   };
 
-  // Z-Scoreのヒストグラム作成（-3～3の固定範囲）
-  const createZScoreHistogram = (data: number[], bins: number = 20) => {
+  // 正規化データのヒストグラム作成（-3～3の固定範囲）
+  const createNormalizedHistogram = (data: number[], bins: number = 20) => {
     if (data.length === 0) return { labels: [], counts: [] };
     
     const min = -3;
@@ -125,7 +125,7 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
   });
 
   const rawHistogram = createHistogram(rawData);
-  const zScoreHistogram = createZScoreHistogram(zScoreData);
+  const normalizedHistogram = createNormalizedHistogram(normalizedData);
 
   // 生データの最大値を取得
   const rawMaxValue = rawData.length > 0 ? Math.max(...rawData) : 0;
@@ -144,12 +144,12 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
     ],
   };
 
-  const zScoreChartData = {
-    labels: zScoreHistogram.labels,
+  const normalizedChartData = {
+    labels: normalizedHistogram.labels,
     datasets: [
       {
         label: 'ユニット数',
-        data: zScoreHistogram.counts,
+        data: normalizedHistogram.counts,
         backgroundColor: '#10B981',
         borderColor: '#047857',
         borderWidth: 1,
@@ -221,16 +221,16 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
     }
   });
 
-  // Z-Score用の縦線プラグイン（-3〜3範囲、範囲外も表示）
-  const createZScoreVerticalLinePlugin = (value: number | undefined, color: string) => ({
-    id: 'zscoreVerticalLine',
+  // 正規化データ用の縦線プラグイン（-3〜3範囲、範囲外も表示）
+  const createNormalizedVerticalLinePlugin = (value: number | undefined, color: string) => ({
+    id: 'normalizedVerticalLine',
     afterDraw: (chart: Chart) => {
       if (value === undefined) return;
       
       const ctx = chart.ctx;
       const chartArea = chart.chartArea;
       
-      // Z-Score値を-3〜3の範囲にマッピング（20ビン）
+      // 正規化値を-3〜3の範囲にマッピング（20ビン）
       const minRange = -3;
       const maxRange = 3;
       const bins = 20;
@@ -265,9 +265,9 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
     }
   });
 
-  // Z-Score用のカスタムラベルプラグイン
-  const createZScoreLabelPlugin = () => ({
-    id: 'zScoreLabelAlign',
+  // 正規化データ用のカスタムラベルプラグイン
+  const createNormalizedLabelPlugin = () => ({
+    id: 'normalizedLabelAlign',
     afterDraw: (chart: Chart) => {
       const ctx = chart.ctx;
       const chartArea = chart.chartArea;
@@ -277,8 +277,8 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
       ctx.font = '10px sans-serif';
       ctx.textAlign = 'right';
       
-      // 10個目のバー（インデックス9）の位置に「0」を右寄せで表示
-      const barIndex = 10; // 11個目のバー（0ベースで10）
+      // 中央より少し左の位置に「0」を右寄せで表示
+      const barIndex = 9.7; // 中央（10）より少し左の位置
       const x = chart.scales.x.getPixelForValue(barIndex);
       ctx.fillText('0', x, chartArea.bottom + 20);
       
@@ -287,7 +287,7 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
   });
 
   // 正規化グラフ専用のchartOptions（X軸ラベルを非表示）
-  const zScoreChartOptions = {
+  const normalizedChartOptions = {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
@@ -323,9 +323,9 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
     rawData.reduce((sum, val) => sum + Math.pow(val - rawMean, 2), 0) / rawData.length
   );
 
-  const zMean = zScoreData.reduce((a, b) => a + b, 0) / zScoreData.length;
-  const zStdDev = Math.sqrt(
-    zScoreData.reduce((sum, val) => sum + Math.pow(val - zMean, 2), 0) / zScoreData.length
+  const normalizedMean = normalizedData.reduce((a, b) => a + b, 0) / normalizedData.length;
+  const normalizedStdDev = Math.sqrt(
+    normalizedData.reduce((sum, val) => sum + Math.pow(val - normalizedMean, 2), 0) / normalizedData.length
   );
 
   return (
@@ -363,8 +363,8 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
           {normalizationMethod}分布
         </h3>
         <div className="text-xxs text-gray-600 mt-0">
-          平均: {zMean.toFixed(2)}{" "} 
-          標準偏差: {zStdDev.toFixed(2)}
+          平均: {normalizedMean.toFixed(2)}{" "} 
+          標準偏差: {normalizedStdDev.toFixed(2)}
           {currentUnitNormalizedValue !== undefined && (
             <span className="text-red-500 font-semibold ml-4">
               {currentUnitName || '選択中ユニット'}: {currentUnitNormalizedValue.toFixed(2)}
@@ -373,11 +373,11 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
         </div>
         <div className="h-64 w-full">
           <Bar 
-            data={zScoreChartData} 
-            options={zScoreChartOptions} 
+            data={normalizedChartData} 
+            options={normalizedChartOptions} 
             plugins={[
-              createZScoreLabelPlugin(),
-              createZScoreVerticalLinePlugin(currentUnitNormalizedValue, '#FF6B6B')
+              createNormalizedLabelPlugin(),
+              createNormalizedVerticalLinePlugin(currentUnitNormalizedValue, '#FF6B6B')
             ]}
           />
         </div>

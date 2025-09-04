@@ -25,6 +25,7 @@ interface UnitGalleryItem {
   validFormCount: number;
   talentIcons: string[];
   talentTypes: ('normal' | 'ultra')[];
+  talentNPs: number[];
   isLimited: boolean;
   isSeasonal: boolean;
   isMystic: boolean;
@@ -130,6 +131,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
   const [selectedRarities, setSelectedRarities] = useState<string[]>(['超激レア']);
   const [itemsPerPage, setItemsPerPage] = useState(400);
   const [isCollapsed, setIsCollapsed] = useState(false);
+  const [showNP, setShowNP] = useState(false);
   
   // デバウンス用の検索語
   const [searchTerm, setSearchTerm] = useState('');
@@ -187,6 +189,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
               // 本能・超本能のアイコンを取得
               const talentIcons: string[] = [];
               const talentTypes: ('normal' | 'ultra')[] = [];
+              const talentNPs: number[] = [];
               if (unitData.auxiliaryData.talents.hasTalents || unitData.auxiliaryData.talents.hasUltra) {
                 const talents = unitData.auxiliaryData.talents.talentList;
                 
@@ -195,6 +198,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                   if (iconKey) {
                     talentIcons.push(iconKey);
                     talentTypes.push(talent.type);
+                    talentNPs.push(talent.npCost || 0);
                   }
                 }
               }
@@ -207,6 +211,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                 validFormCount,
                 talentIcons,
                 talentTypes,
+                talentNPs,
                 isLimited: unitData.isLimited || false,
                 isSeasonal: unitData.isSeasonal || false,
                 isMystic: isMysticUnit(unitData.sortKey),
@@ -378,7 +383,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                     setCurrentPage(1);
                   }
                 }}
-                className="w-12 border border-gray-400 rounded px-1 py-0.5 text-[10px] text-gray-600 text-right"
+                className="w-12 border border-gray-400 hover:border-orange-600 rounded px-1 py-0.5 text-[10px] text-gray-600 text-right"
                 min="1"
                 max="1000"
               />
@@ -519,6 +524,19 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                 />
                 本能実装済のみ
               </label>
+              
+              <label className="flex items-center text-[10px] text-gray-600">
+                <input
+                  type="checkbox"
+                  checked={showNP}
+                  onChange={(e) => {
+                    setShowNP(e.target.checked);
+                    setCurrentPage(1);
+                  }}
+                  className="mr-1 scale-75 accent-orange-400"
+                />
+                NP表示
+              </label>
             </div>
           </div>
 
@@ -593,7 +611,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                       isCurrentForm 
                         ? 'border-orange-500 bg-amber-50 border-2' 
                         : formIndex < unit.validFormCount 
-                        ? 'border-gray-300 bg-amber-50 hover:bg-blue-50 cursor-pointer hover:border-blue-400' 
+                        ? 'border-gray-300 bg-amber-50 cursor-pointer' 
                         : 'border-gray-300 bg-amber-50'
                     } ${formIndex < unit.validFormCount ? 'cursor-pointer' : ''}`}
                     onClick={(e) => {
@@ -626,21 +644,31 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
             <div className="flex gap-0">
               {unit.talentIcons.map((iconKey, index) => {
                 const talentType = unit.talentTypes[index];
+                const talentNP = unit.talentNPs[index];
                 const borderColor = talentType === 'ultra' ? 'border-red-300' : 'border-amber-200';
                 const bgColor = talentType === 'ultra' ? 'bg-red-300' : 'bg-amber-200';
                 return (
                   <div 
                     key={index}
-                    className={`w-6 h-6 flex items-center justify-center rounded-[5px] border-2 ${borderColor} ${bgColor}`}
-                    title={`${talentType === 'ultra' ? '超本能' : '本能'}: ${iconKey}`}
+                    className={showNP ? "flex flex-col items-center" : ""}
                   >
-                    <Image 
-                      src={`data:image/png;base64,${icons[iconKey as keyof typeof icons]}`} 
-                      alt={iconKey} 
-                      width={20} 
-                      height={20} 
-                      className="object-contain"
-                    />
+                    <div 
+                      className={`w-6 h-6 flex items-center justify-center rounded-[5px] border-2 ${borderColor} ${bgColor}`}
+                      title={`${talentType === 'ultra' ? '超本能' : '本能'}: ${iconKey}${showNP ? ` (NP: ${talentNP})` : ''}`}
+                    >
+                      <Image 
+                        src={`data:image/png;base64,${icons[iconKey as keyof typeof icons]}`} 
+                        alt={iconKey} 
+                        width={20} 
+                        height={20} 
+                        className="object-contain"
+                      />
+                    </div>
+                    {showNP && (
+                      <div className="text-[8px] text-gray-600 leading-none mt-0.5">
+                        {talentNP}
+                      </div>
+                    )}
                   </div>
                 );
               })}

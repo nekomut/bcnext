@@ -745,7 +745,7 @@ export function UnitDisplay({
     };
 
     loadRadarStats();
-  }, [filteredUnitIds, radarUseMaxLevel, generateFallbackData]);
+  }, [filteredUnitIds, radarUseMaxLevel, generateFallbackData, isLoadingStats]);
 
   const abilities = getAbilities(
     unitData, actualCurrentForm, level, plusLevel, 

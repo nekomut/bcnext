@@ -265,18 +265,19 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
         ticks: {
           maxRotation: 0,
           minRotation: 0,
-          callback: function(value: unknown, index: number) {
+          textAlign: 'right',
+          callback: function(_value: unknown, index: number) {
             // 20ビンを7つの整数ラベルにマッピング
             const labels = [-3, -2, -1, 0, 1, 2, 3];
             // インデックス0,3,6,9,12,15,18に対応してラベルを表示
-            const targetIndices = [0, 3, 6, 9, 12, 15, 18];
+            const targetIndices = [1, 4, 7, 10, 13, 16, 19];
             const labelIndex = targetIndices.indexOf(index);
             if (labelIndex >= 0) {
               return labels[labelIndex];
             }
             return '';
           },
-          maxTicksLimit: 7,
+          maxTicksLimit: 20,
         },
       },
     },
@@ -301,22 +302,22 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
         <h3 className="text-[12px] font-semibold mb-0 text-gray-800">
           生データ分布
         </h3>
+        <div className="text-xxs text-gray-600 mt-0">
+          平均: {rawMean.toFixed(0)}{" "}
+          中央値: {rawMedian?.toFixed(0) || 'N/A'}{" "} 
+          標準偏差: {rawStdDev.toFixed(0)}
+          {currentUnitRawValue !== undefined && (
+            <span className="text-red-500 font-semibold ml-4 text-right">
+              表示中ユニット: {currentUnitRawValue.toFixed(0)}
+            </span>
+          )}
+        </div>
         <div className="h-64 w-full">
           <Bar 
             data={rawChartData} 
             options={rawDataChartOptions} 
             plugins={[createVerticalLinePlugin(currentUnitRawValue, rawHistogram.labels, '#FF6B6B')]}
           />
-        </div>
-        <div className="text-xxs text-gray-600 mt-2">
-          平均: {rawMean.toFixed(1)}{" "}
-          中央値: {rawMedian?.toFixed(1) || 'N/A'}{" "} 
-          標準偏差: {rawStdDev.toFixed(2)}
-          {currentUnitRawValue !== undefined && (
-            <span className="text-red-500 font-semibold ml-4 text-right">
-              現在のユニット: {currentUnitRawValue.toFixed(1)}
-            </span>
-          )}
         </div>
       </div>
 
@@ -325,21 +326,21 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
         <h3 className="text-[12px] font-semibold pt-1 mb-0 text-gray-800">
           {normalizationMethod}分布
         </h3>
+        <div className="text-xxs text-gray-600 mt-0">
+          平均: {zMean.toFixed(2)}{" "} 
+          標準偏差: {zStdDev.toFixed(2)}
+          {currentUnitNormalizedValue !== undefined && (
+            <span className="text-red-500 font-semibold ml-4">
+              表示中ユニット: {currentUnitNormalizedValue.toFixed(2)}
+            </span>
+          )}
+        </div>
         <div className="h-64 w-full">
           <Bar 
             data={zScoreChartData} 
             options={zScoreChartOptions} 
             plugins={[createZScoreVerticalLinePlugin(currentUnitNormalizedValue, '#FF6B6B')]}
           />
-        </div>
-        <div className="text-xxs text-gray-600 mt-2">
-          平均: {zMean.toFixed(3)}{" "} 
-          標準偏差: {zStdDev.toFixed(3)}
-          {currentUnitNormalizedValue !== undefined && (
-            <span className="text-red-500 font-semibold ml-4">
-              現在のユニット: {currentUnitNormalizedValue.toFixed(3)}
-            </span>
-          )}
         </div>
       </div>
     </div>

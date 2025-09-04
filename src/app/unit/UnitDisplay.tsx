@@ -1316,6 +1316,7 @@ export function UnitDisplay({
                     rawData={statsData.rawData}
                     zScoreData={normalizedData}
                     normalizationMethod={currentNormalizationLabel}
+                    currentUnitName={currentFormData.name || `Unit ${unitData.unitId.toString().padStart(3, '0')}`}
                     currentUnitRawValue={(() => {
                       const value = getCurrentUnitStatValue(selectedStatType);
                       console.log(`Current unit ${selectedStatType}:`, value);

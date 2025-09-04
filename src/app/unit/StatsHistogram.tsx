@@ -32,9 +32,10 @@ interface StatsHistogramProps {
   normalizationMethod?: string;
   currentUnitRawValue?: number;
   currentUnitNormalizedValue?: number;
+  currentUnitName?: string;
 }
 
-const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, normalizationMethod = 'Z-Score', currentUnitRawValue, currentUnitNormalizedValue }) => {
+const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, normalizationMethod = 'Z-Score', currentUnitRawValue, currentUnitNormalizedValue, currentUnitName }) => {
   console.log('StatsHistogram received:', { currentUnitRawValue, currentUnitNormalizedValue, normalizationMethod });
   // 生データのヒストグラム作成
   const createHistogram = (data: number[], bins: number = 20) => {
@@ -340,7 +341,7 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
           標準偏差: {rawStdDev.toFixed(0)}
           {currentUnitRawValue !== undefined && (
             <span className="text-red-500 font-semibold ml-4 text-right">
-              表示中ユニット: {currentUnitRawValue.toFixed(0)}
+              {currentUnitName || '選択中ユニット'}: {currentUnitRawValue.toFixed(0)}
             </span>
           )}
         </div>
@@ -366,7 +367,7 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
           標準偏差: {zStdDev.toFixed(2)}
           {currentUnitNormalizedValue !== undefined && (
             <span className="text-red-500 font-semibold ml-4">
-              表示中ユニット: {currentUnitNormalizedValue.toFixed(2)}
+              {currentUnitName || '選択中ユニット'}: {currentUnitNormalizedValue.toFixed(2)}
             </span>
           )}
         </div>

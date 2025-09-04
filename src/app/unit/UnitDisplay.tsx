@@ -873,39 +873,6 @@ export function UnitDisplay({
     }
   };
 
-  const currentUnitRawValue = getCurrentUnitStatValue(selectedStatType);
-  
-  // 現在のユニットの正規化値を計算
-  const getCurrentUnitNormalizedValue = () => {
-    if (!radarStatsData || !normalizationData) {
-      // フォールバック: 簡単なZ-Score計算
-      const rawData = statsData.rawData;
-      const mean = rawData.reduce((sum, val) => sum + val, 0) / rawData.length;
-      const variance = rawData.reduce((sum, val) => sum + Math.pow(val - mean, 2), 0) / rawData.length;
-      const stdDev = Math.sqrt(variance);
-      return (currentUnitRawValue - mean) / stdDev;
-    }
-
-    // RadarChartNormalizerを使用して正規化
-    const normalizer = RadarChartNormalizer.getInstance();
-    const currentUnitRadarData: UnitRadarData = {
-      hp: enhancedStats.hp,
-      attackPower: enhancedStats.ap,
-      dps: enhancedStats.dps,
-      range: enhancedStats.range,
-      cost: enhancedStats.cost,
-      recharge: enhancedStats.recharge,
-      foreswing: frameToSecond(enhancedStats.frames[0]),
-      attackFrequency: frameToSecond(enhancedStats.frames[0] + enhancedStats.frames[1]),
-      speed: enhancedStats.speed,
-      kb: enhancedStats.kb
-    };
-    
-    const normalizedUnit = normalizer.normalizeUnitData(currentUnitRadarData, normalizationData.normalizationStats, selectedNormalizationType);
-    return normalizedUnit[selectedStatType];
-  };
-
-  const currentUnitNormalizedValue = getCurrentUnitNormalizedValue();
   
   const currentNormalizationLabel = normalizationTypeOptions.find(option => option.value === selectedNormalizationType)?.label || '正規化';
 
@@ -1345,11 +1312,44 @@ export function UnitDisplay({
                     </div>
                   </div>
                   <StatsHistogram
+                    key={`${selectedStatType}-${selectedNormalizationType}`}
                     rawData={statsData.rawData}
                     zScoreData={normalizedData}
                     normalizationMethod={currentNormalizationLabel}
-                    currentUnitRawValue={currentUnitRawValue}
-                    currentUnitNormalizedValue={currentUnitNormalizedValue}
+                    currentUnitRawValue={(() => {
+                      const value = getCurrentUnitStatValue(selectedStatType);
+                      console.log(`Current unit ${selectedStatType}:`, value);
+                      return value;
+                    })()}
+                    currentUnitNormalizedValue={(() => {
+                      if (!radarStatsData || !normalizationData) {
+                        // フォールバック: 簡単なZ-Score計算
+                        const rawData = statsData.rawData;
+                        const mean = rawData.reduce((sum, val) => sum + val, 0) / rawData.length;
+                        const variance = rawData.reduce((sum, val) => sum + Math.pow(val - mean, 2), 0) / rawData.length;
+                        const stdDev = Math.sqrt(variance);
+                        const currentValue = getCurrentUnitStatValue(selectedStatType);
+                        return (currentValue - mean) / stdDev;
+                      }
+
+                      // RadarChartNormalizerを使用して正規化
+                      const normalizer = RadarChartNormalizer.getInstance();
+                      const currentUnitRadarData: UnitRadarData = {
+                        hp: enhancedStats.hp,
+                        attackPower: enhancedStats.ap,
+                        dps: enhancedStats.dps,
+                        range: enhancedStats.range,
+                        cost: enhancedStats.cost,
+                        recharge: enhancedStats.recharge,
+                        foreswing: frameToSecond(enhancedStats.frames[0]),
+                        attackFrequency: frameToSecond(enhancedStats.frames[0] + enhancedStats.frames[1]),
+                        speed: enhancedStats.speed,
+                        kb: enhancedStats.kb
+                      };
+                      
+                      const normalizedUnit = normalizer.normalizeUnitData(currentUnitRadarData, normalizationData.normalizationStats, selectedNormalizationType, normalizationData.allUnitsData);
+                      return normalizedUnit[selectedStatType];
+                    })()}
                   />
                 </div>
               )}

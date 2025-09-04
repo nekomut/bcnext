@@ -35,6 +35,7 @@ interface StatsHistogramProps {
 }
 
 const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, normalizationMethod = 'Z-Score', currentUnitRawValue, currentUnitNormalizedValue }) => {
+  console.log('StatsHistogram received:', { currentUnitRawValue, currentUnitNormalizedValue, normalizationMethod });
   // 生データのヒストグラム作成
   const createHistogram = (data: number[], bins: number = 20) => {
     if (data.length === 0) return { labels: [], counts: [] };
@@ -90,8 +91,8 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
     return { labels, counts };
   };
 
-  // 生データ用のchartOptions（X軸ラベルを6段階表示）
-  const createRawDataChartOptions = (minValue: number, maxValue: number) => ({
+  // 生データ用のchartOptions
+  const createRawDataChartOptions = (maxValue: number) => ({
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
@@ -107,30 +108,22 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
         },
       },
       x: {
+        beginAtZero: true,
         ticks: {
           maxRotation: 0,
           minRotation: 0,
           callback: function(value: unknown, index: number, ticks: unknown[]) {
-            const totalTicks = ticks.length;
-            
-            // 5つのポイントを指定: 0%, 25%, 50%, 75%, 100%
-            const targetIndices = [
-              0, // 0% (最小値)
-              Math.floor(totalTicks * 0.25), // 25%
-              Math.floor(totalTicks * 0.5),  // 50%
-              Math.floor(totalTicks * 0.75), // 75%
-              totalTicks - 1 // 100% (最大値)
-            ];
-            
-            if (targetIndices.includes(index)) {
-              // 実際の値の範囲で表示値を計算
-              const valueRange = maxValue - minValue;
-              const actualValue = minValue + (index / (totalTicks - 1)) * valueRange;
-              return Math.round(actualValue).toLocaleString();
+            const ticksArray = ticks as unknown[];
+            // 最初のラベル（0相当）と最後のラベル（最大値相当）だけ表示
+            if (index === 0) {
+              return '0';
             }
-            return null; // 空文字列ではなくnullを返す
+            if (index === ticksArray.length - 1) {
+              return Math.round(maxValue).toLocaleString();
+            }
+            return '';
           },
-          maxTicksLimit: 20, // 元のビン数を維持
+          maxTicksLimit: 20, // ラベル数を確保
           autoSkip: false, // 自動スキップを無効化
         },
       },
@@ -140,10 +133,9 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
   const rawHistogram = createHistogram(rawData);
   const zScoreHistogram = createZScoreHistogram(zScoreData);
 
-  // 生データの最小値・最大値を取得
-  const rawMinValue = rawData.length > 0 ? Math.min(...rawData) : 0;
+  // 生データの最大値を取得
   const rawMaxValue = rawData.length > 0 ? Math.max(...rawData) : 0;
-  const rawDataChartOptions = createRawDataChartOptions(rawMinValue, rawMaxValue);
+  const rawDataChartOptions = createRawDataChartOptions(rawMaxValue);
 
   const rawChartData = {
     labels: rawHistogram.labels,
@@ -175,6 +167,7 @@ const StatsHistogram: React.FC<StatsHistogramProps> = ({ rawData, zScoreData, no
   const createVerticalLinePlugin = (value: number | undefined, binLabels: string[], color: string) => ({
     id: 'verticalLine',
     afterDraw: (chart: Chart) => {
+      console.log('Vertical line plugin executing with value:', value, 'binLabels:', binLabels);
       if (value === undefined) return;
       
       const ctx = chart.ctx;

@@ -28,17 +28,17 @@ export default function GatyaSets() {
   let selectedGatyaSets = getQueryParam("gatyasets")?.split(",") || [];
 
   return (
-    <div className="flex flex-wrap gap-2">
+    <div className="flex flex-wrap gap-0.5 ml-1">
       {GatyaSetList.map((gatyaset) => {
         selectedGatyaSets = getQueryParam("gatyasets")?.split(",") || DEFAULTS.gatyasets.split(","); 
         const isSelected = selectedGatyaSets.includes(gatyaset.shortName);
         return (
           <button
             key={gatyaset.shortName}
-            className={`px-3 py-2 rounded border transition-colors ${
+            className={`mt-0.5 mx-0 px-1 py-0.5 rounded border transition-colors ${
               isSelected 
-                ? 'bg-blue-500 text-white border-blue-500' 
-                : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
+                ? 'text-amber-400 border-amber-400 font-semibold' 
+                : 'text-gray-600 border-gray-600 hover:bg-gray-700'
             }`}
             onClick={() => {
               let newSelectedGatyaSets: string[];

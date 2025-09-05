@@ -28,37 +28,38 @@ export default function GatyaSets() {
   let selectedGatyaSets = getQueryParam("gatyasets")?.split(",") || [];
 
   return (
-    <>
+    <div className="flex flex-wrap gap-2">
       {GatyaSetList.map((gatyaset) => {
         selectedGatyaSets = getQueryParam("gatyasets")?.split(",") || DEFAULTS.gatyasets.split(","); 
+        const isSelected = selectedGatyaSets.includes(gatyaset.shortName);
         return (
-          <label key={gatyaset.shortName} htmlFor={`ckbox-${gatyaset.shortName}`}>
-            <input
-              type="checkbox"
-              className="mx-1 my-1"
-              id={`ckbox-${gatyaset.shortName}`}
-              name={gatyaset.shortName}
-              defaultChecked={selectedGatyaSets.includes(gatyaset.shortName)}
-              onClick={(event) => {
-                let newSelectedGatyaSets;
-                if ((event.target as HTMLInputElement).checked) {
-                  newSelectedGatyaSets = [
-                    ...selectedGatyaSets,
-                    gatyaset.shortName,
-                  ].filter((number, index, self) => self.indexOf(number) === index);
-                } else {
-                  newSelectedGatyaSets = selectedGatyaSets.filter(
-                    (gatyasetName) => gatyasetName !== gatyaset.shortName
-                  );
-                }
-                setQueryParam("gatyasets", newSelectedGatyaSets.join(","));
-              }}
-            ></input>
+          <button
+            key={gatyaset.shortName}
+            className={`px-3 py-2 rounded border transition-colors ${
+              isSelected 
+                ? 'bg-blue-500 text-white border-blue-500' 
+                : 'bg-white text-gray-700 border-gray-300 hover:bg-gray-50'
+            }`}
+            onClick={() => {
+              let newSelectedGatyaSets: string[];
+              if (isSelected) {
+                newSelectedGatyaSets = selectedGatyaSets.filter(
+                  (gatyasetName) => gatyasetName !== gatyaset.shortName
+                );
+              } else {
+                newSelectedGatyaSets = [
+                  ...selectedGatyaSets,
+                  gatyaset.shortName,
+                ].filter((number, index, self) => self.indexOf(number) === index);
+              }
+              setQueryParam("gatyasets", newSelectedGatyaSets.join(","));
+            }}
+          >
             {gatyaset.name}
             ({gatyaset.gatyasetId})
-          </label>
+          </button>
         );
       })}
-    </>
+    </div>
   );
 };

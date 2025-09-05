@@ -20,6 +20,7 @@ export const zip = (arr1: Array<Roll[]>, arr2: Array<Roll[]>) => arr1.map((_, i)
 const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: GatyaSetTrackRolls[] }) => {  
 
   const [copiedSeed, setCopiedSeed] = useState<string | null>(null);
+  const [showGuaranteedColumns, setShowGuaranteedColumns] = useState<{[key: number]: boolean}>({});
   const searchParams = useSearchParams();
   const getQueryParam = (key: keyof typeof DEFAULTS) => {
     return searchParams.get(key);
@@ -37,6 +38,13 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
       })
       .catch(err => console.error('クリップボードへのコピーに失敗しました', err));
   };
+
+  const toggleGuaranteedColumn = (gatyasetId: number) => {
+    setShowGuaranteedColumns(prev => ({
+      ...prev,
+      [gatyasetId]: !prev[gatyasetId]
+    }));
+  };
   
   return (
     <table>
@@ -48,8 +56,19 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
           {rollsA.map((roll, i) => (
           <React.Fragment key={i}>
             <th className='rolltable-header'></th>
-            <th className='rolltable-header'>{roll.gatyasetName}({roll.gatyasetId})</th>
-            {(roll.gatyasetGuaranteed > 0) && (
+            <th className='rolltable-header'>
+              {roll.gatyasetName}({roll.gatyasetId})
+              {(roll.gatyasetGuaranteed > 0) && (
+                <input
+                  type="checkbox"
+                  checked={showGuaranteedColumns[roll.gatyasetId] || false}
+                  onChange={() => toggleGuaranteedColumn(roll.gatyasetId)}
+                  className="ml-2"
+                  title="確定枠カラムの表示/非表示"
+                />
+              )}
+            </th>
+            {(roll.gatyasetGuaranteed > 0) && showGuaranteedColumns[roll.gatyasetId] && (
               <>
                 <th className='rolltable-header'></th>
                 <th className='rolltable-header'></th>
@@ -109,7 +128,7 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
                     </>
                   )}
                 </td>
-                {(rollsA[j].gatyasetGuaranteed > 0) && (
+                {(rollsA[j].gatyasetGuaranteed > 0) && showGuaranteedColumns[rollsA[j].gatyasetId] && (
                   <>
                     <td className="rolltable-cell-numeric rolltable-guaranteed-A">{unit.unitIfGuaranteed?.unitIndex}</td>
                     <td className="rolltable-cell-unitname">
@@ -173,7 +192,7 @@ const TrackTable = ({ rollsA, rollsB }: { rollsA: GatyaSetTrackRolls[]; rollsB: 
                     </>
                   )}
                 </td>
-                {(rollsB[j].gatyasetGuaranteed > 0) && (
+                {(rollsB[j].gatyasetGuaranteed > 0) && showGuaranteedColumns[rollsB[j].gatyasetId] && (
                   <>
                     <td className="rolltable-cell-numeric rolltable-guaranteed-B">{unit.unitIfGuaranteed?.unitIndex}</td>
                     <td className="rolltable-cell-unitname">

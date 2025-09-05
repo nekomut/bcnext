@@ -2,7 +2,7 @@ import { GatyaSet } from "@/data/gatyasets";
 
 export const Set980: GatyaSet = {
   name: "アイアンウォーズ（11体目）新規",
-  guaranteed: -1,
+  guaranteed: 10,
   shortName: "980",
   gatyasetId: 980,
   rateCumSum: [0, 6970, 9470, 9970, 10000],

@@ -38,7 +38,7 @@ export default function GatyaSets() {
             className={`mt-0.5 mx-0 px-1 py-0.5 rounded border transition-colors ${
               isSelected 
                 ? 'text-amber-400 border-amber-400 font-semibold' 
-                : 'text-gray-600 border-gray-600 hover:bg-gray-700'
+                : 'text-gray-600 border-gray-600'
             }`}
             onClick={() => {
               let newSelectedGatyaSets: string[];

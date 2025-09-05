@@ -55,7 +55,7 @@ export default function GatyaSets() {
               }}
             ></input>
             {gatyaset.name}
-            <span className="text-yellow-500 font-bold">{gatyaset.guaranteed! > 0 ? '確定':''}</span>
+            {/*<span className="text-yellow-500 font-bold">{gatyaset.guaranteed! > 0 ? '確定':''}</span>*/}
             ({gatyaset.gatyasetId})
           </label>
         );

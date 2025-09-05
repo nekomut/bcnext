@@ -1106,7 +1106,7 @@ export function UnitDisplay({
           
           {/* Radar Chart Data Source Info */}
           <div className="mt-2 p-1 bg-orange-100 border border-orange-400 rounded text-xs">
-            <div className="flex items-center gap-1 mb-1">
+            <div className="flex items-center gap-1 mb-0.5">
               <div className="text-orange-500 font-semibold">統計データ</div>
               <label className="text-xxs text-orange-500 cursor-pointer flex items-center">
                 <input
@@ -1117,6 +1117,17 @@ export function UnitDisplay({
                 />
                 Lv Max
               </label>
+            </div>
+            <div className="px-1 text-orange-400 text-xxs font-semibold">
+              {filteredUnitIds && filteredUnitIds.length > 0 ? (
+                <>
+                  {radarUseMaxLevel ? 'Lv Max' : 'Lv50'} {filteredUnitIds.length} units
+                </>
+              ) : (
+                <>
+                  {radarUseMaxLevel ? 'Lv Max' : 'Lv50'} All units
+                </>
+              )}
             </div>
             <div className="flex items-center gap-2 mb-1">
               <label className="font-semibold text-xxs text-orange-400 flex items-center">
@@ -1134,23 +1145,12 @@ export function UnitDisplay({
               </label>
             </div>
             <div className="px-1 text-orange-400 text-xxs font-semibold">
-              {filteredUnitIds && filteredUnitIds.length > 0 ? (
-                <>
-                  {radarUseMaxLevel ? 'Lv Max' : 'Lv50'} {filteredUnitIds.length} units
-                </>
-              ) : (
-                <>
-                  {radarUseMaxLevel ? 'Lv Max' : 'Lv50'} All units
-                </>
-              )}
-              <div className="mt-1">
-                <button 
-                  onClick={() => setShowStatsModal(true)}
-                  className="text-blue-500 hover:text-blue-700 underline text-xxs cursor-pointer"
-                >
-                  統計データ詳細
-                </button>
-              </div>
+              <button 
+                onClick={() => setShowStatsModal(true)}
+                className="font-semibold text-blue-500 hover:text-blue-700 underline text-xxs cursor-pointer"
+              >
+                統計データ詳細
+              </button>
             </div>
           </div>
         </div>

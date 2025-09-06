@@ -590,7 +590,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
           >
             {/* ユニットID（クリック可能） */}
             <div 
-              className="w-2 h-2.5 pl-0.5 text-[9px] text-gray-500 font-mono flex-shrink-0 cursor-pointer hover:text-orange-400 rounded"
+              className="w-2 h-2.5 pl-0.5 font-medium text-[9px] text-gray-500 flex-shrink-0 cursor-pointer hover:text-orange-400 rounded"
               onClick={(e) => {
                 e.stopPropagation();
                 onUnitSelect(parseInt(unit.unitId), 0); // 第1形態（formId=0）を選択
@@ -670,7 +670,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                       />
                     </div>
                     {showNP && (
-                      <div className="font-mono text-[7px] text-gray-600 leading-none mt-0">
+                      <div className="font-medium text-[8px] text-gray-600 leading-none mt-0">
                         {talentNP}
                       </div>
                     )}
@@ -682,7 +682,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
               {showNP && unit.talentIcons.length > 0 && (
                 <div className="flex flex-col items-center">
                   <div className="w-6 h-6"></div>
-                  <div className="font-mono text-[7px] text-red-500 leading-none mt-0 ml-0 pl-0">
+                  <div className="font-medium text-[8px] text-red-500 leading-none mt-0 ml-0 pl-0">
                     {unit.talentNPs.reduce((sum, np) => sum + np, 0)}
                   </div>
                 </div>

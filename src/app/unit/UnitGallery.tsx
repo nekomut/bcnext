@@ -670,7 +670,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                       />
                     </div>
                     {showNP && (
-                      <div className="text-[8px] text-gray-600 leading-none mt-0.5">
+                      <div className="text-[8px] text-gray-600 leading-none mt-0">
                         {talentNP}
                       </div>
                     )}
@@ -682,7 +682,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
               {showNP && unit.talentIcons.length > 0 && (
                 <div className="flex flex-col items-center">
                   <div className="w-6 h-6"></div>
-                  <div className="text-[8px] text-red-500 font-bold leading-none mt-0.5 ml-0 pl-0">
+                  <div className="text-[8px] text-red-500 font-bold leading-none mt-0 ml-0 pl-0">
                     {unit.talentNPs.reduce((sum, np) => sum + np, 0)}
                   </div>
                 </div>

@@ -590,7 +590,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
           >
             {/* ユニットID（クリック可能） */}
             <div 
-              className="w-4 h-2.5 pl-1.5 text-xxs text-gray-500 font-mono flex-shrink-0 cursor-pointer hover:text-orange-400 rounded"
+              className="w-2 h-2.5 pl-0.5 text-[9px] text-gray-500 font-mono flex-shrink-0 cursor-pointer hover:text-orange-400 rounded"
               onClick={(e) => {
                 e.stopPropagation();
                 onUnitSelect(parseInt(unit.unitId), 0); // 第1形態（formId=0）を選択
@@ -598,6 +598,11 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
               title={`Unit ${unit.unitId} 第1形態を表示`}
             >
               {unit.unitId}
+            </div>
+            
+            {/* sortKey（非表示ブロック） */}
+            <div className="hidden">
+              {unit.sortKey}
             </div>
             
             {/* 形態アイコン（1-4形態） */}
@@ -672,6 +677,16 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
                   </div>
                 );
               })}
+              
+              {/* NP合計値の表示ブロック */}
+              {showNP && unit.talentIcons.length > 0 && (
+                <div className="flex flex-col items-center">
+                  <div className="w-6 h-6"></div>
+                  <div className="text-[8px] text-red-500 font-bold leading-none mt-0.5 ml-0 pl-0">
+                    {unit.talentNPs.reduce((sum, np) => sum + np, 0)}
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         ))}

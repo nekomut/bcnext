@@ -75,7 +75,6 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
   const [selectedEnemies, setSelectedEnemies] = useState<Set<string>>(new Set());
   const [searchResults, setSearchResults] = useState<EnemyStageResult[]>([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const [searching, setSearching] = useState(false);
   const [showResults, setShowResults] = useState(false);
 
   // 使用する実装を決定
@@ -148,7 +147,6 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
   const executeAutoSearch = useCallback(async (enemyIds: string[]) => {
     if (enemyIds.length === 0) return;
 
-    setSearching(true);
     try {
       const results = await searchStagesByEnemies(enemyIds);
       const sortedResults = sortEnemyStageResults(results);
@@ -156,8 +154,6 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
       setShowResults(true);
     } catch (error) {
       console.error('Failed to search stages:', error);
-    } finally {
-      setSearching(false);
     }
   }, []);
 
@@ -197,12 +193,6 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
     setSearchResults([]);
     setShowResults(false);
   }, []);
-
-  // ステージ検索実行（手動）
-  const executeStageSearch = useCallback(async () => {
-    if (selectedEnemies.size === 0) return;
-    await executeAutoSearch(Array.from(selectedEnemies));
-  }, [selectedEnemies, executeAutoSearch]);
 
   // ステージ選択時の処理
   const handleStageSelect = useCallback((eventId: number, stageId: number) => {
@@ -252,7 +242,7 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
             placeholder="敵名で検索..."
             value={searchTerm}
             onChange={(e) => handleSearch(e.target.value)}
-            className="w-full px-2 py-1 text-xs text-gray-600 border border-gray-400 rounded focus:ring-1 focus:ring-orange-500 focus:border-orange-500"
+            className="w-full px-2 py-1 text-xs text-gray-600 border border-gray-400 rounded focus:ring-1 focus:ring-orange-500 focus:border-orange-500 ring-orange-400"
           />
         </div>
 
@@ -269,7 +259,7 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
                   <div
                     key={enemy.enemyId}
                     onClick={() => toggleEnemySelection(enemy.enemyId)}
-                    className={`flex items-center gap-2 p-1 cursor-pointer hover:bg-gray-50 ${
+                    className={`flex items-center gap-1 px-1 py-0 cursor-pointer hover:bg-gray-50 ${
                       selectedEnemies.has(enemy.enemyId) ? 'bg-amber-50 border-l-2 border-orange-500' : ''
                     }`}
                   >
@@ -283,16 +273,16 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
                       <Image
                         src={`data:image/png;base64,${enemy.icon}`}
                         alt={enemy.enemyName}
-                        className="w-6 h-6 flex-shrink-0"
+                        className="w-5 h-5 flex-shrink-0"
                         width={24}
                         height={24}
                       />
                     )}
                     <div className="flex-1 min-w-0">
-                      <div className="text-xs font-medium text-gray-900 truncate">
+                      <div className="text-xxs font-medium text-gray-900 truncate">
                         {enemy.enemyName}
                       </div>
-                      <div className="text-xs text-gray-500">
+                      <div className="text-xxs text-gray-500">
                         ID: {enemy.enemyId} | HP: {enemy.baseStats.hp.toLocaleString()}
                       </div>
                     </div>
@@ -312,9 +302,15 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
 
         {/* 選択中の敵表示 */}
         {selectedEnemies.size > 0 && (
-          <div className="mb-2">
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-xs text-gray-600">選択中の敵 ({selectedEnemies.size}体):</span>
+          <div className="mb-0.5">
+            <div className="items-center gap-1 mb-1">
+              <span className="w-17 px-1 text-xxs text-gray-600">選択中 ({selectedEnemies.size}体)</span>
+              <button
+                onClick={clearSelection}
+                className="w-10 h-5 px-1 py-0 text-xxs border border-gray-400 text-gray-600 bg-gray-100 rounded hover:bg-gray-200"
+              >
+                クリア
+              </button>
               <div className="flex flex-wrap gap-1">
                 {Array.from(selectedEnemies).map((enemyId) => {
                   const enemy = enemyDatabase.get(enemyId);
@@ -341,21 +337,6 @@ export function EnemySearch({ onStageSelect }: EnemySearchProps) {
                   );
                 })}
               </div>
-            </div>
-            <div className="flex gap-1">
-              <button
-                onClick={clearSelection}
-                className="px-2 py-0.5 text-xs border border-gray-400 text-gray-600 bg-gray-100 rounded hover:bg-gray-200"
-              >
-                全てクリア
-              </button>
-              <button
-                onClick={executeStageSearch}
-                disabled={searching}
-                className="px-2 py-0.5 text-xs text-white border border-gray-400 bg-orange-600 rounded hover:bg-blue-700 disabled:opacity-50"
-              >
-                {searching ? '検索中...' : showResults ? '再検索' : 'レジェンドストーリー検索'}
-              </button>
             </div>
           </div>
         )}

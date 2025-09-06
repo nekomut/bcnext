@@ -270,7 +270,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
     }
   }, [loading, onLoadingChange]);
 
-  // 最適化されたフィルタリング・ソート処理
+  // 最適化されたフィルタリング・ソート処理とNP合計値計算
   const filteredAndSortedUnits = useMemo(() => {
     let filtered = units;
     
@@ -325,6 +325,13 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
     return filtered;
   }, [units, debouncedSearchTerm, sortOrder, showTalentsOnly, includeRegular, includeMystic, includeFestival, includeSeasonal, includeLimited, selectedRarities]);
 
+  // NP合計値の計算
+  const totalNP = useMemo(() => {
+    return filteredAndSortedUnits.reduce((total, unit) => {
+      return total + unit.talentNPs.reduce((sum, np) => sum + np, 0);
+    }, 0);
+  }, [filteredAndSortedUnits]);
+
   // フィルタされたユニットIDをコールバックで通知
   useEffect(() => {
     if (onFilterChange) {
@@ -367,7 +374,7 @@ const UnitGallery: React.FC<UnitGalleryProps> = ({ onUnitSelect, currentUnitId, 
           onClick={() => setIsCollapsed(!isCollapsed)}
         >
           <span>{isCollapsed ? '▶' : '▼'}</span>
-          ユニット一覧 ({filteredAndSortedUnits.length}体)
+          ユニット一覧 <small>({filteredAndSortedUnits.length}体{showNP ? ` ${totalNP.toLocaleString()}NP` : ''})</small>
         </h3>
         
         {!isCollapsed && (
